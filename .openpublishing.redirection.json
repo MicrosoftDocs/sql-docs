@@ -72147,6 +72147,51 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/configure-windows/server-properties-advanced-page.md",
+      "redirect_url": "/ssms/server-properties/advanced-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-connections-page.md",
+      "redirect_url": "/ssms/server-properties/connections-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-database-settings-page.md",
+      "redirect_url": "/ssms/server-properties/database-settings-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-filestream-page.md",
+      "redirect_url": "/ssms/server-properties/advanced-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-general-page.md",
+      "redirect_url": "/ssms/server-properties/general-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-memory-page.md",
+      "redirect_url": "/ssms/server-properties/memory-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-misc-server-settings-page.md",
+      "redirect_url": "/ssms/server-properties/advanced-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-processors-page.md",
+      "redirect_url": "/ssms/server-properties/processors-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/server-properties-security-page.md",
+      "redirect_url": "/ssms/server-properties/security-page",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
       "redirect_url": "/sql/connect/odbc/odbc-driver-support-for-high-availability-disaster-recovery",
       "redirect_document_id": false

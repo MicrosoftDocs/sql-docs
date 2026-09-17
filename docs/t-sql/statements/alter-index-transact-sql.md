@@ -271,7 +271,7 @@ Applies to rowstore indexes.
 
 - ON
 
-  - Specifies to compact all pages that contain data of these large object (LOB) data types: **image**, **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**. Compacting this data can reduce the data size on disk.
+  - Specifies to compact all pages that contain data of these large object (LOB) data types: **image**, **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **json**, and **xml**. Compacting this data can reduce the data size on disk.
   - For a clustered index, this compacts all LOB columns that are contained in the table.
   - For a nonclustered index, this compacts all LOB columns that are nonkey (included) columns in the index.
   - `REORGANIZE ALL` performs LOB compaction on all indexes. For each index, this compacts all LOB columns in the clustered index, underlying table, or included columns in a nonclustered index.

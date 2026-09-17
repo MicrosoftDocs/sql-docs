@@ -26,6 +26,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 The [bulk copy program utility (bcp)](bcp-utility.md) bulk copies data between an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a data file in a user-specified format.
 
+- For information about authentication when connecting **`bcp`** to Azure SQL Database, see [Authenticate with Microsoft Entra ID in bcp](bcp-authentication.md).
 - For detailed information about using **`bcp`** with Azure Synapse Analytics, see [Load data with bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 - **`bcp`** is currently in preview in [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)].
 - **`bcp`** can't import data in [!INCLUDE [fabric-se](../../includes/fabric-se.md)].

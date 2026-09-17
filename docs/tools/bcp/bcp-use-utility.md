@@ -24,11 +24,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 [!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
 
-The bulk copy program utility (**bcp**) bulk copies data between an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a data file in a user-specified format.
+The bulk copy program utility (**`bcp`**) bulk copies data between an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a data file in a user-specified format.
 
 ## Remarks
 
-- For information about where to find or how to run the **bcp** utility and about the command prompt utilities syntax conventions, see [SQL command-line utilities (Database Engine)](../command-prompt-utility-reference-database-engine.md).
+- For information about where to find or how to run the **`bcp`** utility and about the command prompt utilities syntax conventions, see [SQL command-line utilities (Database Engine)](../command-prompt-utility-reference-database-engine.md).
 
 - For information on preparing data for bulk import or export operations, see [Prepare data for bulk export or import](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
@@ -36,12 +36,12 @@ The bulk copy program utility (**bcp**) bulk copies data between an instance of 
 
 - The characters `<`, `>`, `|`, `&`, and `^` are special command shell characters, and they must be preceded by the escape character (`^`), or enclosed in quotation marks when used in a string (for example, `"StringContaining&Symbol"`). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value. For more information, see [Using additional special characters](/windows-server/administration/windows-commands/set_1#remarks).
 
-- **bcp** is currently in preview in [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)].
-- **bcp** can't import data in [!INCLUDE [fabric-se](../../includes/fabric-se.md)].
+- **`bcp`** is currently in preview in [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)].
+- **`bcp`** can't import data in [!INCLUDE [fabric-se](../../includes/fabric-se.md)].
 
 ## Native data file support
 
-In [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], the **bcp** utility supports native data files compatible with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] versions starting with [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] and later.
+In [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], the **`bcp`** utility supports native data files compatible with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] versions starting with [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] and later.
 
 ## Computed columns and timestamp columns
 
@@ -58,7 +58,7 @@ Computed and **timestamp** columns are bulk copied from [!INCLUDE [ssNoVersion](
   For example, the following `bcp out` command creates a data file named `Currency Types.dat`:
 
   ```console
-  bcp AdventureWorks2022.Sales.Currency out "Currency Types.dat" -T -c
+  bcp AdventureWorks2025.Sales.Currency out "Currency Types.dat" -T -c
   ```
 
 - To specify a database name that contains a space or quotation mark, you must use the `-q` option.
@@ -71,7 +71,7 @@ Computed and **timestamp** columns are bulk copied from [!INCLUDE [ssNoVersion](
 
 ## Data validation
 
-**bcp** now enforces data validation and data checks that can cause scripts to fail if they're executed on invalid data in a data file. For example, **bcp** now verifies that:
+**`bcp`** now enforces data validation and data checks that can cause scripts to fail if they encounter invalid data in a data file. For example, **`bcp`** now verifies that:
 
 - The native representations of float or real data types are valid.
 
@@ -101,11 +101,19 @@ This section has recommendations for character mode (`-c`) and native mode (`-n`
 
 ## Examples
 
-The examples in this section make use of the `WideWorldImporters` sample database for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, Azure SQL Database, and Azure SQL Managed Instance. `WideWorldImporters` can be downloaded from <https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0>. See [RESTORE Statements](../../t-sql/statements/restore-statements-transact-sql.md) for the syntax to restore the sample database.
+The code samples in this article use both the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] and `WideWorldImporters` sample databases. For more information, see:
+
+- [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md)
+- [Wide World Importers sample databases](../../samples/wide-world-importers-what-is.md)
+
+For syntax to restore sample databases, see [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).
 
 ### Example test conditions
 
-Except where specified otherwise, the examples assume that you use Windows Authentication and have a trusted connection to the server instance on which you're running the **bcp** command. A directory named `D:\bcp` is used in many of the examples. Replace `<server_name>` and other placeholder values with values for your environment.
+Except where specified otherwise, the examples assume that you use Windows Authentication and have a trusted connection to the server instance on which you're running the **`bcp`** command. Many of the examples use a directory named `D:\bcp`. Replace `<server_name>` and other placeholder values with values for your environment.
+
+> [!NOTE]  
+> Examples that connect to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] use Microsoft Entra authentication (`-G`). For more information, see [Authenticate with Microsoft Entra ID in bcp](bcp-authentication.md).
 
 The following Transact-SQL script creates an empty copy of the `WideWorldImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint:
 
@@ -146,7 +154,7 @@ bcp -v
 
 ### B. Copy table rows into a data file (with a trusted connection)
 
-The following examples illustrate the `out` option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.
+The following examples show the `out` option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.
 
 - **Basic**
 
@@ -172,7 +180,7 @@ Review `Error_out.log` and `Output_out.log`. `Error_out.log` should be blank. Co
 
 ### C. Copy table rows into a data file (with mixed-mode authentication)
 
-The following example illustrates the `out` option on the `WideWorldImporters.Warehouse.StockItemTransactions` table. This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.
+The following example shows the `out` option on the `WideWorldImporters.Warehouse.StockItemTransactions` table. This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.
 
 The example assumes that you use mixed-mode authentication, and you must use the `-U` switch to specify your login ID. Also, unless you're connecting to the default instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on the local computer, use the `-S` switch to specify the system name and, optionally, an instance name.
 
@@ -184,7 +192,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\bcp\StockItemTrans
 
 ### D. Copy data from a file to a table
 
-The following examples illustrate the `in` option on the `WideWorldImporters.Warehouse.StockItemTransactions_bcp` table using files created previously.
+The following examples show the `in` option on the `WideWorldImporters.Warehouse.StockItemTransactions_bcp` table using files created previously.
 
 - **Basic**
 
@@ -284,7 +292,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\bcp\StockItemTr
 
 ### J. Specify a code page
 
-The following partial code example shows **bcp** import while specifying a code page 65001:
+The following partial code example shows **`bcp`** import while specifying a code page 65001:
 
 ```console
 bcp MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
@@ -292,7 +300,7 @@ bcp MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 
 ### K. Example output file using a custom field and row terminators
 
-This example shows two sample files, generated by **bcp** using custom field and row terminators.
+This example shows two sample files, generated by **`bcp`** using custom field and row terminators.
 
 1. Create a table `dbo.T1` in the `tempdb` database, with two columns, `ID` and `Name`.
 
@@ -346,9 +354,48 @@ This example shows two sample files, generated by **bcp** using custom field and
    > [!NOTE]  
    > The row terminator is always added, even to the last record. The field terminator, however, isn't added to the last field.
 
+### L. Copy table rows to a data file (Azure SQL Database)
+
+The following example shows the `out` option on the `SalesLT.Customer` table in the `AdventureWorksLT` sample database on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. This example creates a data file named `Customer.bcp` and copies the table data into it using **character** format. Replace `<server_name>` with a value for your environment.
+
+> [!NOTE]  
+> The `-G` switch enables Microsoft Entra authentication. For more information, see [Authenticate with Microsoft Entra ID in bcp](bcp-authentication.md).
+
+At a command prompt, enter the following command:
+
+```console
+bcp SalesLT.Customer out D:\bcp\Customer.bcp -c -S <server_name>.database.windows.net -d AdventureWorksLT -G
+```
+
+### M. Copy data from a file to a table (Azure SQL Database)
+
+The following example shows the `in` option on the `SalesLT.Customer` table in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], using the `Customer.bcp` data file you previously created. Replace `<server_name>` with a value for your environment.
+
+> [!NOTE]  
+> The `-E` switch preserves the identity values from the data file.
+
+At a command prompt, enter the following command:
+
+```console
+bcp SalesLT.Customer in D:\bcp\Customer.bcp -c -S <server_name>.database.windows.net -d AdventureWorksLT -G -E
+```
+
+### N. Copy data from a query to a data file (Azure SQL Database)
+
+To copy the result set from a Transact-SQL statement to a data file on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], use the `queryout` option. The following example copies customer names from the `SalesLT.Customer` table in the `AdventureWorksLT` database into the `Customer_A.txt` data file. Replace `<server_name>` with a value for your environment.
+
+> [!NOTE]  
+> Use the `-t` switch to create a comma-delimited file.
+
+At a command prompt, enter the following command:
+
+```console
+bcp "SELECT CustomerID, FirstName, LastName, CompanyName FROM SalesLT.Customer WHERE CompanyName LIKE 'A%'" queryout D:\bcp\Customer_A.txt -t, -c -S <server_name>.database.windows.net -d AdventureWorksLT -G
+```
+
 ## Additional examples
 
-The following articles contain examples of using **bcp**:
+The following articles contain examples of using **`bcp`**:
 
 - Data formats for bulk import or bulk export (SQL Server)
 

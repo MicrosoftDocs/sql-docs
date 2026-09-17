@@ -4,7 +4,7 @@ description: "Run Data Definition Language (DDL) statements to configure encrypt
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, randolphwest
-ms.date: 01/28/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -149,7 +149,7 @@ CREATE TABLE [HR].[Employees](
 The below query performs an exact match search on the encrypted `SSN` string column.
 
 ```sql
-DECLARE @SSN AS CHAR (11) = '795-73-9838';
+DECLARE @SSN AS CHAR (11) = '987-65-4320';
 
 SELECT *
 FROM [HR].[Employees]
@@ -161,7 +161,7 @@ WHERE [SSN] = @SSN;
 The below query performs a pattern matching search on the encrypted `SSN` string column, searching for employees with the specified last for digits of a social security number.
 
 ```sql
-DECLARE @SSN AS CHAR (11) = '795-73-9838';
+DECLARE @SSN AS CHAR (11) = '987-65-4320';
 
 SELECT *
 FROM [HR].[Employees]

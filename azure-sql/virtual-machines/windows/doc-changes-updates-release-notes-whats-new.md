@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, dpless
-ms.date: 07/10/2026
+ms.date: 09/15/2026
 ms.service: azure-vm-sql-server
 ms.topic: whats-new
 ms.custom:
@@ -52,6 +52,12 @@ The following table lists features of SQL Server on Azure VMs that have been mad
 ## Documentation changes
 
 Learn about significant changes to the SQL Server on Azure VMs documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### September 2026
+
+| Changes | Details |
+| --- | --- |
+| **SQL VM deployment failure resolved** | The issue that caused SQL Server on Azure VM deployments to fail when `tempdb` was placed on the local temp disk for Azure VM images with uninitialized ephemeral disks has been resolved. The issue continues to impact self-installed SQL Server instances. To learn more about the issue and see a list of affected VMs, review [SQL Server failures](/troubleshoot/sql/azure-sql/sql-deployment-fails-drive-not-ready). |
 
 ### June 2026
 

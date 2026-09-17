@@ -323,7 +323,7 @@ SELECT @utcdate as 'utc_date';
     - A scalar UDF can't be inlined via expression block when the scalar UDF body contains a time-dependent built-in function such as `GETDATE()`. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
     - A scalar UDF can't be inlined via expression block when the scalar UDF body contains [AI Functions](/fabric/data-warehouse/ai-functions), [Aggregate functions](../functions/aggregate-functions-transact-sql.md), the [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md), [Metadata functions](../functions/metadata-functions-transact-sql.md), [Security functions](../functions/security-functions-transact-sql.md), or other [system functions](../functions/system-functions-transact-sql.md).
 
-- A scalar UDF can't be inlined via scalar UDF inlining in the following conditions when:
+- A scalar UDF can't be inlined via scalar UDF inlining in the following conditions.
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains `WHILE` loop, `BREAK` or `CONTINUE` statement. 
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains multiple `RETURN` statements.
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains a time-dependent built-in function such as `GETDATE()`. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).

@@ -5,7 +5,7 @@ description: Use Auditing to analyze logs in Log Analytics, Event Hubs, or throu
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, vanto
-ms.date: 03/03/2026
+ms.date: 09/17/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -64,34 +64,32 @@ If you chose to write audit logs to an Azure storage account, there are several 
 
 - Audit logs are aggregated in the account you chose during setup. You can explore audit logs by using a tool such as [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer). In Azure storage, auditing logs are saved as a collection of blob files within a container named **sqldbauditlogs**. For more information about the hierarchy of the storage folders, naming conventions, and log format, see the [SQL Database audit log format](audit-log-format.md).
 
-  1. In the [Azure portal](https://portal.azure.com), search for **SQL databases** and select your database, or search for **SQL servers** and select your server.
-  1. On the resource menu under **Security**, select **Auditing**.
-  1. At the top of the **Auditing** page, select **View audit logs**. The **Audit records** page opens, and you can view the logs.
-  1. You can view specific dates by selecting **Filter** at the top of the **Audit records** page.
-  1. You can switch between audit records that were created by the *server audit policy* and the *database audit policy* by toggling **Audit Source**.
+   1. In the [Azure portal](https://portal.azure.com), search for **SQL databases** and select your database, or search for **SQL servers** and select your server.
+   1. On the resource menu under **Security**, select **Auditing**.
+   1. At the top of the **Auditing** page, select **View audit logs**. The **Audit records** page opens, and you can view the logs.
+   1. You can view specific dates by selecting **Filter** at the top of the **Audit records** page.
+   1. You can switch between audit records that were created by the *server audit policy* and the *database audit policy* by toggling **Audit Source**.
+
 - Use the system function `sys.fn_get_audit_file` (T-SQL) to return the audit log data in tabular format. For more information on using this function, see [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).
 
 - Use **Merge Audit Files** in SQL Server Management Studio (starting with SSMS 17):
 
-  1. From the SSMS menu, select **File** > **Open** > **Merge Audit Files**.
+   1. From the SSMS menu, select **File** > **Open** > **Merge Audit Files**.
 
-     :::image type="content" source="media/auditing-analyze-audit-logs/merge-audit-files.png" alt-text="Screenshot that shows the Merge Audit Files menu option.":::
+      :::image type="content" source="media/auditing-analyze-audit-logs/merge-audit-files.png" alt-text="Screenshot that shows the Merge Audit Files menu option.":::
 
-  1. The **Add Audit Files** dialog box opens. Select one of the **Add** options to choose whether to merge audit files from a local disk or import them from Azure Storage. You're required to provide your Azure Storage details and account key.
+   1. The **Add Audit Files** dialog box opens. Select one of the **Add** options to choose whether to merge audit files from a local disk or import them from Azure Storage. You must provide your Azure Storage details and account key.
 
-  1. After all files to merge have been added, select **OK** to complete the merge operation.
+   1. After you add all files to merge, select **OK** to complete the merge operation.
 
-  1. The merged file opens in SSMS, where you can view and analyze it, as well as export it to an XEL or CSV file, or to a table.
+   1. The merged file opens in SSMS, where you can view and analyze it, as well as export it to an XEL or CSV file, or to a table.
 
 - Use Power BI. You can view and analyze audit log data in Power BI. For more information, see [Using Azure Log Analytics in Power BI](/power-bi/transform-model/log-analytics/desktop-log-analytics-overview).
 - Download log files from your Azure Storage blob container via the portal or by using a tool such as [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer).
-  - After you have downloaded a log file locally, double-click the file to open, view, and analyze the logs in SSMS.
-  - You can also download multiple files simultaneously in Azure Storage Explorer. To do so, right-click a specific subfolder and select **Save as** to save in a local folder.
-
-- More methods:
-
-  - After downloading several files or a subfolder that contains log files, you can merge them locally as described in the SSMS Merge Audit Files instructions described previously.
-  - View blob auditing logs programmatically: [Query Extended Events Files](https://sqlscope.wordpress.com/2014/11/15/reading-extended-event-files-using-client-side-tools-only/) by using PowerShell.
+    - After you download a log file locally, double-click the file to open, view, and analyze the logs in SSMS.
+    - You can also download multiple files simultaneously in Azure Storage Explorer. To do so, right-click a specific subfolder and select **Save as** to save in a local folder.
+- After downloading several files or a subfolder that contains log files, you can merge them locally as described in the SSMS Merge Audit Files instructions described previously.
+- View blob auditing logs programmatically: [Query Extended Events Files](https://sqlscope.wordpress.com/2014/11/15/reading-extended-event-files-using-client-side-tools-only/) by using PowerShell.
 
 ## Related content
 

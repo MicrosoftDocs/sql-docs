@@ -5,7 +5,7 @@ description: SQL Auditing for Azure SQL Database and Azure Synapse Analytics tra
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: peskount, srsaluru, vanto, mathoma
-ms.date: 04/15/2026
+ms.date: 09/17/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
@@ -62,14 +62,33 @@ For environments with many databases running heavy OLTP workloads, using server-
    - **Switch to database-level auditing**. Each database writes to its own audit log folder, reducing the total volume scanned and making retrieval faster.
    - **Review the audit configuration**. Determine whether capturing all batch-completed events is necessary, or if a custom filtered configuration can meet your security and compliance requirements.
 
+### Protect sensitive information in audit logs
+
+When dynamic SQL is constructed by concatenating input values directly into the SQL statement, those values become part of the statement text. If the statement is audited, sensitive information included in the statement text may therefore be captured in the audit log.
+
+To reduce the risk of exposing sensitive information, follow these best practices:
+
+- **Avoid dynamic SQL for operations that contain sensitive values**
+
+   For security-sensitive administrative operations, avoid constructing statements by concatenating sensitive values into dynamic SQL. Where possible, use native SQL statements or other approaches that prevent sensitive values from being embedded directly in the statement text.
+
+   Dynamic SQL statements that are constructed from user-accessible strings also make your applications vulnerable to [SQL injection attacks](/sql/relational-databases/security/sql-injection). SQL injection is an attack in which malicious code is inserted into strings that are later passed to the database for parsing and execution. You must test any procedure that constructs T-SQL for SQL injection vulnerabilities, because the database engine executes all syntactically valid queries that it receives. Use parameters for data values, and never concatenate parameter values into query text. Properly parameterized values are treated as data rather than executable SQL syntax.
+
+- **Restrict access to audit logs**
+
+   Limit access to audit logs to authorized users and administrators. Inside the SQL Database Engine, SQL permissions govern audit access within the SQL Database Engine and can vary depending on the platform and audit scope. Follow the principle of least privilege and grant only the permissions required to manage or review audit information. Microsoft documents separate server-level and database-level audit permission models, and Azure SQL Database differs from SQL Server in the availability of server-level permissions.
+
+   Access to audit logs outside of the SQL Database Engine depends on permissions in the configured destination (such as Azure Storage, Log Analytics, or Event Hubs). Follow the principle of least privilege and grant only the permissions required to manage or review audit information.
+
+   Restricting access to audit data helps reduce the risk of unauthorized disclosure when sensitive information is present in recorded audit events.
+
 ## Auditing limitations
 
 - Enabling auditing on a paused **Azure Synapse SQL pool** isn't supported. To enable auditing, resume the **Synapse SQL pool**.
 - Enabling auditing by using User Assigned Managed Identity (UAMI) isn't supported on **Azure Synapse**.
 - Currently, managed identities aren't supported for Azure Synapse, unless the storage account is behind a virtual network or firewall.
 
-> [!NOTE]
-> For Azure Synapse Analytics, auditing to a storage account behind a VNet requires the server's **system-assigned managed identity** with the **Storage Blob Data Contributor** role. User-assigned managed identities (UAMI) aren't supported for Synapse auditing. If you need to audit to a storage account that uses Microsoft Entra-only authentication, configure the system-assigned managed identity on the server and grant it the Storage Blob Data Contributor role on the target storage account. For more information, see [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md).
+- For Azure Synapse Analytics, auditing to a storage account behind a virtual network (VNet) requires the server's **system-assigned managed identity** with the **Storage Blob Data Contributor** role. User-assigned managed identities (UAMI) aren't supported for Synapse auditing. If you need to audit to a storage account that uses Microsoft Entra-only authentication, configure the system-assigned managed identity on the server and grant it the Storage Blob Data Contributor role on the target storage account. For more information, see [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md).
 - Due to performance constraints, we don't audit the `tempdb` and **temporary tables**. While the batch completed action group captures statements against temporary tables, it might not correctly populate the object names. However, the source table is always audited, ensuring that all inserts from the source table to temporary tables are recorded.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure auditing for a [logical server in Azure](logical-servers.md) or Azure SQL Database with the log destination as a storage account, the authentication mode must match the configuration for that storage account. If using storage access keys as the authentication type, the target storage account must be enabled with access to the storage account keys. If the storage account is configured to only use authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), auditing can be configured to use managed identities for authentication.

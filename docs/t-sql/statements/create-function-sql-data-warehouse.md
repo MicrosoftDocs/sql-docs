@@ -4,7 +4,7 @@ description: User-defined functions accept parameters, perform an action, such a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, srdjanmatin
-ms.date: 09/16/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -272,7 +272,10 @@ The `inline_eligibility_mask` property explains which type of inlining is applic
 - A value of `2` means that the UDF is eligible for inlining via Expression block. 
 - A value of `3` means that UDF is eligible for either inlining technique.
 
-> [!IMPORTANT]
+> [!NOTE]
+> Expression block inlining is an technique designed for data warehouse-scale workloads.
+
+> [!WARNING]
 > If a scalar UDF is inlineable via scalar UDF inlining only, it doesn't guarantee it is always inlined when the query is compiled.
 
 Use the following sample query to check whether a scalar UDF is inlineable:
@@ -320,15 +323,13 @@ SELECT @utcdate as 'utc_date';
     - A scalar UDF can't be inlined via expression block when the scalar UDF body contains a time-dependent built-in function such as `GETDATE()`. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
     - A scalar UDF can't be inlined via expression block when the scalar UDF body contains [AI Functions](/fabric/data-warehouse/ai-functions), [Aggregate functions](../functions/aggregate-functions-transact-sql.md), the [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md), [Metadata functions](../functions/metadata-functions-transact-sql.md), [Security functions](../functions/security-functions-transact-sql.md), or other [system functions](../functions/system-functions-transact-sql.md).
 
-- A scalar UDF can't be inlined via scalar UDF inlining in the following conditions. For more information, see [Inlining of scalar UDF](#inlining-of-scalar-udf).
+- A scalar UDF can't be inlined via scalar UDF inlining in the following conditions when:
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains `WHILE` loop, `BREAK` or `CONTINUE` statement. 
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains multiple `RETURN` statements.
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains a time-dependent built-in function such as `GETDATE()`. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
     - A scalar UDF can't be inlined via scalar UDF inlining when the scalar UDF body contains the [STRING_AGG function](../functions/string-agg-transact-sql.md), [JSON_ARRAYAGG function](../functions/json-arrayagg-transact-sql.md), or other [system functions](../functions/system-functions-transact-sql.md).
-
-- You can nest user-defined functions. That is, one user-defined function can call another. The nesting level increments when the called function starts execution, and decrements when the called function finishes execution. In Fabric Data Warehouse, you can nest user-defined functions up to four levels when a UDF body references a table, view, or inline table-valued function, or up to 32 levels otherwise. If you exceed the maximum levels of nesting, the calling function chain fails.
-
-- For more information, see [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements).
+    - You can nest user-defined functions. That is, one user-defined function can call another. The nesting level increments when the called function starts execution, and decrements when the called function finishes execution. In Fabric Data Warehouse, you can nest user-defined functions up to four levels when a UDF body references a table, view, or inline table-valued function, or up to 32 levels otherwise. If you exceed the maximum levels of nesting, the calling function chain fails.
+    - For more information, see [Scalar UDF inlining requirements](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=fabric&preserve-view=true#inlineable-scalar-udf-requirements).
 
 - A scalar UDF can't be used in all query shapes, depending on which inlining technique is applicable.
    - For scalar UDF inlining:

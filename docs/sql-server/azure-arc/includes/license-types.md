@@ -18,7 +18,7 @@ The following table identifies the capabilities and use rights offered with each
 | [Flexible Virtualization Benefit licensing guide](https://download.microsoft.com/download/9/3/d/93d32de6-f268-45ed-ba25-2f9a6756b6af/SQL_Server_2022_Licensing_guide.pdf)| No | Yes | Yes |
 | [Option to license by virtual machine](https://download.microsoft.com/download/9/3/d/93d32de6-f268-45ed-ba25-2f9a6756b6af/SQL_Server_2022_Licensing_guide.pdf) | No | Yes | Yes |
 | [Free Power BI Report Server license](../manage-license-billing.md#manage-ssxs) | Yes<sup>1</sup> | Yes | Yes |
-| [180-day dual-use benefit](https://download.microsoft.com/download/9/3/d/93d32de6-f268-45ed-ba25-2f9a6756b6af/SQL_Server_2022_Licensing_guide.pdf) | No | Yes | Yes |
+| [180-day dual-use benefit](../manage-license-billing.md#180-day-dual-use-benefit) | No | Yes | Yes |
 | [Connect your SQL Server to Azure Arc](../connect.md)<sup>2</sup> | Yes | Yes | Yes |
 | [ESU Subscription](../extended-security-updates.md) | No | Yes | Yes |
 | [SQL Server inventory](../overview.md#manage-your-sql-server-instances-at-scale-from-a-single-point-of-control) | Yes | Yes | Yes |

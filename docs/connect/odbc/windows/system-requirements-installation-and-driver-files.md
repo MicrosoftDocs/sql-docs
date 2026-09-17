@@ -4,7 +4,7 @@ description: This article describes the system requirements for the Microsoft OD
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -89,6 +89,13 @@ The following matrix indicates driver version support for Windows operating syst
 ## Installing Microsoft ODBC Driver for SQL Server
 
 The driver is installed when you run `msodbcsql.msi` from one of the [Downloads for Windows](../download-odbc-driver-for-sql-server.md#download-for-windows).
+
+### C runtime compatibility
+
+> [!IMPORTANT]
+> A native application that deploys an older Microsoft Visual C++ runtime app-local can force a newer ODBC driver to load that runtime instead of the version required by the driver. For example, this issue can occur when an application built with the Visual Studio 2019 (`v142`) platform toolset includes an older runtime in the application directory. The version mismatch can cause failures when the application loads or uses the ODBC driver.
+>
+> Don't deploy the Visual C++ runtime app-local. If your application requires an app-local deployment, make sure that its runtime is at least as new as the latest build tools used to build any application component, including the ODBC driver. For more information, see [C++ binary compatibility between Visual Studio versions: Restrictions](/cpp/porting/binary-compat-2015-2017#restrictions).
 
 > [!NOTE]  
 > Users with Driver version 17.1.0.1 or earlier are advised to manually uninstall the existing driver before proceeding with the installation of the updated version.

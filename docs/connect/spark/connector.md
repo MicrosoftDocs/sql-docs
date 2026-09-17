@@ -4,7 +4,7 @@ description: "Learn how to use the Apache Spark connector for SQL Server and Azu
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 09/15/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -125,7 +125,7 @@ To include the connector in your projects, download this repository and build th
 
 ## Write to a new SQL table
 
-> [!WARNING]  
+> [!CAUTION]  
 > The `overwrite` mode first drops the table if it already exists in the database. Use this option with care to avoid unexpected data loss.
 
 If you use mode `overwrite` without the option `truncate` when recreating the table, the operation removes indexes. Also, a columnstore table changes to a heap table. To keep existing indexes, set the `truncate` option to `true`. For example, `.option("truncate","true")`.

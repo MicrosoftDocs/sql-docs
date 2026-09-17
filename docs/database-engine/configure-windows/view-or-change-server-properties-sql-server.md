@@ -1,9 +1,9 @@
 ---
-title: "View or Change Server Properties (SQL Server)"
+title: View or Change Server Properties (SQL Server)
 description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/26/2025
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
@@ -30,40 +30,36 @@ Steps depend on the tool:
 
 ## Limitations
 
-When using `sp_configure`, you must run either `RECONFIGURE` or `RECONFIGURE WITH OVERRIDE` after setting a configuration option. The `RECONFIGURE WITH OVERRIDE` statement is usually reserved for configuration options that should be used with extreme caution. However, `RECONFIGURE WITH OVERRIDE` works for all configuration options, and you can use it in place of `RECONFIGURE`.
+When you use `sp_configure`, you must run either `RECONFIGURE` or `RECONFIGURE WITH OVERRIDE` after setting a configuration option. The `RECONFIGURE WITH OVERRIDE` statement is usually reserved for configuration options that require extreme caution. However, `RECONFIGURE WITH OVERRIDE` works for all configuration options, and you can use it in place of `RECONFIGURE`.
 
 > [!NOTE]  
-> `RECONFIGURE` executes within a transaction. If any of the reconfigure operations fail, none of the reconfigure operations will take effect.
+> `RECONFIGURE` runs within a transaction. If any of the reconfigure operations fail, none of the reconfigure operations take effect.
 
-Some property pages present information obtained via Windows Management Instrumentation (WMI). To display those pages, WMI must be installed on the computer running [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Some property pages present information obtained through Windows Management Instrumentation (WMI). To display those pages, you must install WMI on the computer running [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ## Server-level roles
 
 For more information, see [Server-level roles](../../relational-databases/security/authentication-access/server-level-roles.md).
 
-Execute permissions on `sp_configure` with no parameters or with only the first parameter are granted to all users by default. To execute `sp_configure` with both parameters to change a configuration option or to run the `RECONFIGURE` statement, a user must be granted the `ALTER SETTINGS` server-level permission. The `ALTER SETTINGS` permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.
+All users are granted execute permissions on `sp_configure` with no parameters or with only the first parameter. To execute `sp_configure` with both parameters to change a configuration option or to run the `RECONFIGURE` statement, a user must be granted the `ALTER SETTINGS` server-level permission. The **sysadmin** and **serveradmin** fixed server roles implicitly hold the `ALTER SETTINGS` permission.
 
 <a id="SSMSProcedure"></a>
 
 ## SQL Server Management Studio
 
-### View or change server properties
-
-1. In Object Explorer, right-click a server, and then select **Properties**.
-
-1. In the **Server Properties** dialog box, select a page to view or change server information about that page. Some properties are read-only.
+In Object Explorer, right-click a server and select **Properties**. For more information about each page of the **Server Properties** dialog box, see [Server Properties window](/ssms/server-properties/server-properties-window).
 
 <a id="TsqlProcedure"></a>
 
 ## Transact-SQL
 
-### View server properties by using the SERVERPROPERTY built-in function
+### View server properties by using the built-in SERVERPROPERTY function
 
 1. Connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 
 1. From the Standard bar, select **New Query**.
 
-1. Copy and paste the following example into the query window and select **Execute**. This example uses the [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) built-in function in a `SELECT` statement to return information about the current server. This scenario is useful when there are multiple instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installed on a Windows-based server, and the client must open another connection to the same instance that is used by the current connection.
+1. Copy and paste the following example into the query window and select **Execute**. This example uses the built-in [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) function in a `SELECT` statement to return information about the current server. This scenario is useful when there are multiple instances of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installed on a Windows-based server, and the client must open another connection to the same instance that is used by the current connection.
 
    ```sql
    SELECT CONVERT (sysname, SERVERPROPERTY('servername'));
@@ -155,7 +151,7 @@ Some server properties can be viewed or changed by using SQL Server Configuratio
 
 ## Restart after changes
 
-For some properties, you might need to restart the server before the change can take effect.
+For some properties, you need to restart the server before the change takes effect.
 
 ## Related content
 

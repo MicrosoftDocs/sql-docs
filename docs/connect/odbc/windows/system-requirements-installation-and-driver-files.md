@@ -90,15 +90,15 @@ The following matrix indicates driver version support for Windows operating syst
 
 The driver is installed when you run `msodbcsql.msi` from one of the [Downloads for Windows](../download-odbc-driver-for-sql-server.md#download-for-windows).
 
+> [!NOTE]  
+> Users with Driver version 17.1.0.1 or earlier are advised to manually uninstall the existing driver before proceeding with the installation of the updated version.
+
 ### C runtime compatibility
 
 > [!IMPORTANT]
-> A native application that deploys an older Microsoft Visual C++ runtime app-local can force a newer ODBC driver to load that runtime instead of the version required by the driver. For example, this issue can occur when an application built with the Visual Studio 2019 (`v142`) platform toolset includes an older runtime in the application directory. The version mismatch can cause failures when the application loads or uses the ODBC driver.
+> A native application that uses local deployment for an older Microsoft Visual C++ runtime can force a newer ODBC driver to load that runtime instead of the version required by the driver. For example, this issue can occur when an application built with the Visual Studio 2019 (`v142`) platform toolset includes an older runtime in the application directory. The version mismatch can cause failures when the application loads or uses the ODBC driver.
 >
-> Don't deploy the Visual C++ runtime app-local. If your application requires an app-local deployment, make sure that its runtime is at least as new as the latest build tools used to build any application component, including the ODBC driver. For more information, see [C++ binary compatibility between Visual Studio versions: Restrictions](/cpp/porting/binary-compat-2015-2017#restrictions).
-
-> [!NOTE]  
-> Users with Driver version 17.1.0.1 or earlier are advised to manually uninstall the existing driver before proceeding with the installation of the updated version.
+> Don't use local deployment for the Visual C++ runtime. If your application requires local deployment, make sure that its runtime is at least as new as the latest build tools used to build any application component, including the ODBC driver. For more information, see [C++ binary compatibility between Visual Studio versions: Restrictions](/cpp/porting/binary-compat-2015-2017#restrictions).
 
 ### Side-by-side with Native Client
 

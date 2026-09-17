@@ -4,7 +4,7 @@ description: Learn how to use Always Encrypted with the JDBC driver to encrypt s
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 07/31/2024
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -640,7 +640,7 @@ This example inserts a row into the Patients table. Note the following items:
 // <Insert keystore-specific code here>
 try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
         PreparedStatement insertStatement = sourceConnection.prepareStatement("INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)")) {
-    insertStatement.setString(1, "795-73-9838");
+    insertStatement.setString(1, "987-65-4320");
     insertStatement.setString(2, "Catherine");
     insertStatement.setString(3, "Abel");
     insertStatement.setDate(4, Date.valueOf("1996-09-10"));
@@ -668,7 +668,7 @@ The following example demonstrates filtering data based on encrypted values and 
 try (Connection connection = DriverManager.getConnection(connectionUrl);
         PreparedStatement selectStatement = connection
                 .prepareStatement("\"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;\"");) {
-    selectStatement.setString(1, "795-73-9838");
+    selectStatement.setString(1, "987-65-4320");
     ResultSet rs = selectStatement.executeQuery();
     while (rs.next()) {
         System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
@@ -749,7 +749,7 @@ To prevent such errors, make sure:
 - you use prepared statements and parameters to send data targeting encrypted columns. The following example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal inside as a parameter. This query will fail:
 
 ```java
-ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
+ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='987-65-4320'");
 ```
 
 ## Force encryption on input parameters

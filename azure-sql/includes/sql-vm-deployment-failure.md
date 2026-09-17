@@ -1,9 +1,9 @@
 ---
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 10/07/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.topic: include
 ---
-> [!WARNING]
-> Placing `tempdb` on the local temp disk isn't supported for Azure VM images with uninitialized ephemeral disks, such as the **FXmdsv2**. This issue only affects Azure Virtual Machines with the new NVMe interface that also has local ephemeral storage. These deployments through the Azure portal might fail, and SQL Server can fail to start. Either use a different VM series, or place `tempdb` on non-ephemeral storage both when you deploy the SQL Server image through the Azure portal, and when you install SQL Server manually. To learn more about the issue and see a list of affected VMs, review [VM deployment and SQL Server failures](/troubleshoot/sql/azure-sql/sql-deployment-fails-drive-not-ready).
+> [!NOTE]
+> Self-installed SQL Server instances fail to start when you place `tempdb` on the local temp disk for Azure VM images with uninitialized ephemeral disks, such as the **FXmdsv2**. Deploy a SQL Server image through Azure Marketplace, use a different VM series, or use the [Azure VM ephemeral NVMe storage script](https://github.com/Azure-Samples/azuresandbox/tree/main/extras/scripts/vm-mssql-win/NVMe) to initialize drives before SQL Server starts. To learn more about the issue and see a list of affected VMs, review [SQL Server failures](/troubleshoot/sql/azure-sql/sql-deployment-fails-drive-not-ready).

@@ -4,7 +4,7 @@ description: Learn how to query columns in Always Encrypted using SQL Server Man
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -65,7 +65,7 @@ To execute a query that sends a value that targets an encrypted column, for exam
 
 ### Example
 
-Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the below script will attempt to find a row containing `'795-73-9838'` in the SSN column and return the value of the `LastName` column, providing Always Encrypted is enabled for the database connection,  Parameterization for Always Encrypted is enabled for the Query Editor window, and you have access to the column master key configured for the `SSN` column.
+Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the following script attempts to find a row containing `'987-65-4320'` in the `SSN` column and returns the value of the `LastName` column, providing Always Encrypted is enabled for the database connection, Parameterization for Always Encrypted is enabled for the Query Editor window, and you have access to the column master key configured for the `SSN` column.
 
 :::image type="content" source="../../../relational-databases/security/encryption/media/always-encrypted-patients.png" alt-text="Screenshot of the query using a variable for @SSN and the resulting row returned." lightbox="../../../relational-databases/security/encryption/media/always-encrypted-patients.png":::
 
@@ -112,7 +112,7 @@ Parameterization for Always Encrypted is a feature in SQL Server Management Stud
 Without parameterization, the .NET Framework Data Provider passes each statement, you author in the Query Editor, as a non-parameterized query. If the query contains literals or Transact-SQL variables that target encrypted columns, the .NET Framework Data Provider for SQL Server won't be able to detect and encrypt them, before sending the query to the database. As a result, the query will fail due to type mismatch (between the plaintext literal Transact-SQL variable and the encrypted column). For example, the following query will fail without parameterization, assuming the `SSN` column is encrypted.
 
 ```sql
-DECLARE @SSN NCHAR(11) = '795-73-9838'
+DECLARE @SSN NCHAR(11) = '987-65-4320'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
 ```
@@ -152,7 +152,7 @@ If both Parameterization for Always Encrypted and the Always Encrypted behavior 
 Below are examples of variables, SQL Server Management Studio will parameterize.
 
 ```sql
-DECLARE @SSN char(11) = '795-73-9838';
+DECLARE @SSN char(11) = '987-65-4320';
    
 DECLARE @BirthDate date = '19990104';
 DECLARE @Salary money = $30000;
@@ -200,7 +200,7 @@ Another example below, shows two variables that meet prerequisite conditions for
 > As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
 
 ```sql
-DECLARE @SSN nchar(11) = '795-73-9838'
+DECLARE @SSN nchar(11) = '987-65-4320'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
 ```

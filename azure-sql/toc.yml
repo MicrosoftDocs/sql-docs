@@ -1667,7 +1667,7 @@
           href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
         - name: Azure Elastic SAN Storage
           href: virtual-machines/windows/storage-configuration-azure-elastic-san.md
-        - name: Place tempdb to ephemeral disk
+        - name: Place tempdb on ephemeral storage
           href: virtual-machines/windows/tempdb-ephemeral-storage.md
       - name: Optimize performance
         items:

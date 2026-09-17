@@ -3,7 +3,7 @@ title: "go-mssqldb Always Encrypted"
 description: "Use Always Encrypted with the go-mssqldb driver and local certificate, Windows Certificate Store, or Azure Key Vault key providers."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 04/30/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -136,7 +136,7 @@ func main() {
     _, err = db.ExecContext(ctx,
         "INSERT INTO Patients (Name, SSN) VALUES (@p1, @p2)",
         sql.Named("p1", "Alice"),
-        sql.Named("p2", "123-45-6789"))
+        sql.Named("p2", "987-65-4321"))
     if err != nil {
         log.Fatal(err)
     }

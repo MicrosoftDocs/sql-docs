@@ -4,7 +4,7 @@ description: Learn how to use Always Encrypted with the PHP Drivers for SQL Serv
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 12/12/2019
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -107,7 +107,7 @@ SQLSRV driver and [sqlsrv_prepare](sqlsrv-prepare.md):
 ```php
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
-$ssn = "795-73-9838";
+$ssn = "987-65-4320";
 $firstName = "Catherine";
 $lastName = "Abel;
 $birthDate = "1996-10-19";
@@ -122,7 +122,7 @@ SQLSRV driver and [sqlsrv_query](sqlsrv-query.md):
 ```php
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
-$ssn = "795-73-9838";
+$ssn = "987-65-4320";
 $firstName = "Catherine";
 $lastName = "Abel";
 $birthDate = "1996-10-19";
@@ -140,7 +140,7 @@ PDO_SQLSRV driver and [PDO::prepare](pdo-prepare.md):
 ```php
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
-$ssn = "795-73-9838";
+$ssn = "987-65-4320";
 $firstName = "Catherine";
 $lastName = "Able";
 $birthDate = "1996-10-19";
@@ -169,7 +169,7 @@ SQLSRV:
 ```php
 // since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
 $query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
-$ssn = "795-73-9838";
+$ssn = "987-65-4320";
 $stmt = sqlsrv_prepare($conn, $query, array(&$ssn));
 // during sqlsrv_execute, the driver encrypts the ssn value and passes it to the database
 sqlsrv_execute($stmt);
@@ -182,7 +182,7 @@ PDO_SQLSRV:
 ```php
 // since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
 $query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
-$ssn = "795-73-9838";
+$ssn = "987-65-4320";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(1, $ssn);
 // during PDOStatement::execute, the driver encrypts the ssn value and passes it to the database
@@ -245,7 +245,7 @@ Any value that targets an encrypted column needs to be encrypted before being se
 - You use bind parameter to send data targeting encrypted columns. The following example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN):
 
 ```php
-$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
+$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='987-65-4320'";
 ```
 
 ## Controlling performance impact of Always Encrypted

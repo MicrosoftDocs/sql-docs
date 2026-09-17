@@ -79,6 +79,10 @@ Following are some examples of [!INCLUDE [ssNoVersion](../../../includes/ssnover
  > [!NOTE]  
  > If you're using multiple subnets and have a static DNS, you need to have a process in place to update the DNS record associated with the listener before you perform a failover. Otherwise the network name won't come online.
 
+## Configure SQL Server Agent for multi-subnet failover and failover cluster instances
+
+When you configure a multi-subnet failover cluster instance on a custom port (other than 1433), the initial SQL Server Agent connection uses `MultiSubnetFailover=Yes`. When you configure SQL Server Agent, consider using a local alias on each node to route to the non-default TCP port. For more information, see [Problem: SQL Server Agent can't connect to a multi-subnet failover cluster instance on a custom port](failover-cluster-troubleshooting.md#problem-sql-server-agent-cant-connect-to-a-multi-subnet-failover-cluster-instance-on-a-custom-port).
+
 <a id="RelatedContent"></a>
 
 ## Related content

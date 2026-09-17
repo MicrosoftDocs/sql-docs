@@ -98,7 +98,7 @@ The driver is installed when you run `msodbcsql.msi` from one of the [Downloads 
 > [!IMPORTANT]
 > A native application that uses local deployment for an older Microsoft Visual C++ runtime can force a newer ODBC driver to load that runtime instead of the version required by the driver. For example, this issue can occur when an application built with the Visual Studio 2019 (`v142`) platform toolset includes an older runtime in the application directory. The version mismatch can cause failures when the application loads or uses the ODBC driver.
 >
-> Don't use local deployment for the Visual C++ runtime. If your application requires local deployment, make sure that its runtime is at least as new as the latest build tools used to build any application component, including the ODBC driver. For more information, see [C++ binary compatibility between Visual Studio versions: Restrictions](/cpp/porting/binary-compat-2015-2017#restrictions).
+> Don't use local deployment for the Visual C++ runtime. If your application requires local deployment, ensure its runtime is at least as new as the latest build tools used to build any application component, including the ODBC driver. For more information, see [C++ binary compatibility between Visual Studio versions: Restrictions](/cpp/porting/binary-compat-2015-2017#restrictions).
 
 ### Side-by-side with Native Client
 

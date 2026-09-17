@@ -4802,26 +4802,8 @@ items:
       href: sql-server/install/uninstall-reporting-services.md
   - name: Reference
     items:
-    - name: Server properties
-      items:
-      - name: General Page
-        href: database-engine/configure-windows/server-properties-general-page.md
-      - name: Memory Page
-        href: database-engine/configure-windows/server-properties-memory-page.md
-      - name: Processors Page
-        href: database-engine/configure-windows/server-properties-processors-page.md
-      - name: Security Page
-        href: database-engine/configure-windows/server-properties-security-page.md
-      - name: Connections Page
-        href: database-engine/configure-windows/server-properties-connections-page.md
-      - name: Database Settings Page
-        href: database-engine/configure-windows/server-properties-database-settings-page.md
-      - name: Misc Server Settings Page
-        href: database-engine/configure-windows/server-properties-misc-server-settings-page.md
-      - name: FILESTREAM Page
-        href: database-engine/configure-windows/server-properties-filestream-page.md
-      - name: Advanced Page
-        href: database-engine/configure-windows/server-properties-advanced-page.md
+    - name: Server Properties window >
+      href: /ssms/server-properties/server-properties-window
 - name: Migrate & load data
   items:
   - name: Migration documentation

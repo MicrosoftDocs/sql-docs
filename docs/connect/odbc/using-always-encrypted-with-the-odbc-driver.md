@@ -4,7 +4,7 @@ description: Learn how to develop ODBC applications using Always Encrypted and t
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 08/08/2022
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -146,7 +146,7 @@ This example inserts a row into the Patients table. Note the following details:
     SQLLEN cbdate;   // size of date structure  
 
     SQLCHAR SSN[12];
-    strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
+    strcpy_s((char*)SSN, _countof(SSN), "987-65-4320");
 
     SQLWCHAR* firstName = L"Catherine";
     SQLWCHAR* lastName = L"Abel";
@@ -191,7 +191,7 @@ The following example demonstrates filtering data based on encrypted values, and
 
 ```cpp
 SQLCHAR SSN[12];
-strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
+strcpy_s((char*)SSN, _countof(SSN), "987-65-4320");
 
 SQLWCHAR* firstName = L"Catherine";
 SQLWCHAR* lastName = L"Abel";
@@ -240,7 +240,7 @@ The following example illustrates retrieving binary encrypted data from encrypte
 
 ```cpp
 SQLCHAR SSN[12];
-strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
+strcpy_s((char*)SSN, _countof(SSN), "987-65-4320");
 
 SQLWCHAR* firstName = L"Catherine";
 SQLWCHAR* lastName = L"Abel";
@@ -346,7 +346,7 @@ Any value that targets an encrypted column needs to be encrypted before being se
 - You use SQLBindParameter to send data targeting encrypted columns. The example below shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal as an argument to SQLBindParameter.
 
 ```cpp
-string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
+string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='987-65-4320'";
 ```
 
 ### Precautions when using SQLSetPos and SQLMoreResults

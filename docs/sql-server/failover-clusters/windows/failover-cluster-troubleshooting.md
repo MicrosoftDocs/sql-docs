@@ -4,10 +4,11 @@ description: Learn about troubleshooting failover clusters, including recovering
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 10/20/2025
+ms.date: 09/03/2026
 ms.service: sql
 ms.subservice: failover-cluster-instance
 ms.topic: how-to
+ai-usage: ai-assisted
 helpviewer_keywords:
   - "troubleshooting, failover clustering"
   - "failover clustering, troubleshooting"
@@ -177,6 +178,74 @@ To fully enable MS DTC, use the following steps:
 1. In the **Distributed Transaction Coordinator** window, select the **Logon** tab, and set the logon account `NT AUTHORITY\NetworkService`.
 
 1. Select **Apply** and **OK** to close the **Distributed Transaction Coordinator** window. Close the **Computer Management** window. Close the **Administrative Tools** window.
+
+### Problem: SQL Server Agent can't connect to a multi-subnet failover cluster instance on a custom port
+
+**Issue:** SQL Server Agent can't connect to the local Database Engine when all of the following conditions are true:
+
+1. SQL Server is installed as a multi-subnet failover cluster instance.
+1. The failover cluster instance is a default instance.
+1. The Database Engine listens on a fixed TCP port other than the default 1433.
+1. SQL Server Agent connects to the local instance during startup.
+
+For a multi-subnet failover cluster instance, the initial SQL Server Agent connection uses `MultiSubnetFailover=Yes`. This setting causes the client to use TCP. The connection doesn't fall back to shared memory or named pipes. When the target is `(local)` and no port is specified, the connection attempts TCP port 1433. The connection fails if the Database Engine isn't listening on that port.
+
+You might see a connection similar to the following in an ODBC trace:
+
+```connectionstring
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=(local);APP=SQLAgent - Initial Boot Probe;DATABASE=master;MultiSubnetFailover=YES;
+```
+
+**Resolution:** Create a TCP alias that directs the SQL Server Agent connection to the virtual network name and configured TCP port of the failover cluster instance. Configure the alias on every node that can host the failover cluster instance.
+
+#### Step 1: Confirm the configured TCP port
+
+1. On the active node, open **SQL Server Configuration Manager**.
+1. Expand **SQL Server Network Configuration**, and then select **Protocols for MSSQLSERVER**.
+1. Open **TCP/IP**, and then select the **IP Addresses** tab.
+1. If **Listen All** is set to **Yes**, note the value of **TCP Port** under **IPAll**.
+1. If **Listen All** is set to **No**, note the **TCP Port** value for each enabled IP address used by the failover cluster instance.
+1. Confirm that the SQL Server error log shows that the Database Engine is listening on the expected port.
+
+For more information, see [Configure SQL Server to listen on a specific TCP port](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).
+
+#### Step 2: Create the TCP alias on every cluster node
+
+Complete these steps on every node that can host the failover cluster instance:
+
+1. Open the SQL Server client alias configuration tool that applies to the installed SQL Server version.
+1. Create a new alias.
+1. In **Alias Name**, enter a unique name for the local SQL Server Agent connection. Use the same alias name on every node.
+1. Select **TCP/IP** as the protocol.
+1. In **Server**, enter the virtual network name of the failover cluster instance. Don't enter the physical node name.
+1. In **Port No**, enter the fixed TCP port identified in step 1.
+1. Save the alias.
+
+For detailed instructions and version requirements, see [Create or delete a server alias for use by a client](../../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).
+
+> [!IMPORTANT] 
+> A SQL Server alias is a client configuration. Create an identical alias on every node that can own the failover cluster instance. Otherwise, SQL Server Agent might fail after the instance moves to a node where the alias isn't configured.
+
+#### Step 3: Configure SQL Server Agent to use the alias
+
+1. In SQL Server Management Studio, connect to the failover cluster instance.
+1. In **Object Explorer**, expand the instance.
+1. Right-click on **SQL Server Agent**, and then select **Properties**.
+1. Under **Select a page**, select **Connection**.
+1. In **Alias local host server**, enter the alias name created in step 2.
+1. Select **OK**.
+1. Restart SQL Server Agent.
+
+For more information, see [Set a SQL Server alias for the SQL Server Agent service](/sql/ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms).
+
+#### Step 4: Validate the configuration
+
+1. Confirm that SQL Server Agent starts successfully.
+1. Review the SQL Server Agent log and confirm that Agent connected to the intended local Database Engine instance.
+1. Run a simple SQL Server Agent job to confirm that jobs can connect to the instance.
+1. At a time when it wouldn't disrupt normal business activities, move the failover cluster instance to another possible owner node.
+1. Confirm that SQL Server Agent starts and the test job succeeds on that node.
+1. Repeat the test for every possible owner node.
 
 ## Use extended stored procedures and COM objects
 

@@ -4,7 +4,7 @@ description: Set up local development environments, Docker containers, and CI pi
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -169,7 +169,7 @@ CMD ["python", "app.py"]
 Your `requirements.txt`:
 
 ```text
-mssql-python>=1.14.0
+mssql-python>=1.15.0
 ```
 
 Build and run:

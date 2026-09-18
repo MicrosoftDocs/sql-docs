@@ -4,7 +4,7 @@ description: Learn how to install the mssql-python driver on Windows, Linux, and
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -40,7 +40,7 @@ pip install --upgrade mssql-python
 To install a specific version:
 
 ```bash
-pip install mssql-python==1.14.0
+pip install mssql-python==1.15.0
 ```
 
 ## Verify the installation
@@ -59,7 +59,7 @@ print(f"Parameter style: {mssql_python.paramstyle}")
 Expected output:
 
 ```output
-mssql-python version: 1.14.0
+mssql-python version: 1.15.0
 DB-API level: 2.0
 Thread safety: 1
 Parameter style: pyformat

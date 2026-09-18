@@ -4,7 +4,7 @@ description: "Learn how to use the Apache Spark connector for SQL Server and Azu
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 09/16/2026
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -46,7 +46,7 @@ You can also build the connector from source or download the JAR from the Releas
 
 | Component | Versions supported |
 | --- | --- |
-| Apache Spark | 2.4.x, 3.0.x, 3.1.x, 3.3.x, 3.4.x |
+| Apache Spark | 2.4.x, 3.0.x, 3.1.x, 3.3.x (beta), 3.4.x (beta) |
 | Scala | 2.11, 2.12 |
 | Microsoft JDBC Driver for SQL Server | 8.4 |
 | Microsoft SQL Server | SQL Server 2008 or later |

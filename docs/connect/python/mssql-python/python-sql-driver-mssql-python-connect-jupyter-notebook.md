@@ -4,7 +4,7 @@ description: Connect to a SQL database from a Jupyter Notebook in Visual Studio 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -80,7 +80,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
    ---
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 

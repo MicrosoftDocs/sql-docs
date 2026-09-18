@@ -2,6 +2,8 @@
   href: oledb-driver-for-sql-server.md
 - name: Get started
   items:
+  - name: Connect and query with C++
+    href: quickstart-cpp.md
   - name: Download
     href: download-oledb-driver-for-sql-server.md
   - name: System requirements

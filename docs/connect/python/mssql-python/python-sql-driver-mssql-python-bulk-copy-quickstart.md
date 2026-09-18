@@ -40,7 +40,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - A destination database with a valid connection string. The user must have permission to create and write to tables. If you don't have a second database, you can use the same database and a different schema for the destination tables.
 [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 

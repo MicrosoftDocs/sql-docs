@@ -1,7 +1,7 @@
 ---
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 06/29/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: include
@@ -21,16 +21,16 @@ Create or connect to a SQL database on one of the following platforms:
 
 ### [Microsoft SQL Server](#tab/sql-server)
 
-[Install SQL Server from the Installation Wizard](../../../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[Install SQL Server from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
 
-[AdventureWorks sample databases](../../../../samples/adventureworks-install-configure.md)
+[AdventureWorks sample databases](../../samples/adventureworks-install-configure.md)
 
 ### [SQL Server container](#tab/container)
 
-[Create a SQL Server container in Docker](../../../../linux/install-upgrade/quickstart-install-docker.md)
+[Create a SQL Server container in Docker](../../linux/install-upgrade/quickstart-install-docker.md)
 
-[Create a SQL Server container with sqlcmd](../../../../tools/sqlcmd/quickstart-sqlcmd-create-container.md)
+[Create a SQL Server container with sqlcmd](../../tools/sqlcmd/quickstart-sqlcmd-create-container.md)
 
-[Create a SQL Server container with the MSSQL extension for VS Code](../../../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md)
+[Create a SQL Server container with the MSSQL extension for VS Code](../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md)
 
 ---

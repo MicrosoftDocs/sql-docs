@@ -38,7 +38,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
 [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 

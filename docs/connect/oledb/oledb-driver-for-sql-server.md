@@ -4,7 +4,7 @@ description: The Microsoft OLE DB Driver for SQL Server connects C and C++ appli
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
-ms.date: 08/26/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -32,7 +32,7 @@ The Microsoft OLE DB Driver for SQL Server is a standalone data access applicati
 ## Choose your starting point
 
 - To decide whether OLE DB is the right API for your application, start with [When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md).
-- To install the driver and start writing code, go to [Download OLE DB Driver for SQL Server](download-oledb-driver-for-sql-server.md), [System requirements](system-requirements-for-oledb-driver-for-sql-server.md), and [Building applications with OLE DB Driver for SQL Server](applications/building-applications-with-oledb-driver-for-sql-server.md).
+- To install the driver and build an end-to-end C++ application, start with [Connect and query with C++](quickstart-cpp.md).
 - To connect to Azure SQL with passwordless authentication, go to [Using Microsoft Entra ID](features/using-azure-active-directory.md) and [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 - To move from `SQLNCLI` or `SQLOLEDB`, go to [Updating an application to OLE DB Driver for SQL Server from MDAC](applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md) and [Major version differences](major-version-differences.md).
 - To use the driver from ADO, go to [Using ADO with OLE DB Driver for SQL Server](applications/using-ado-with-oledb-driver-for-sql-server.md).
@@ -151,6 +151,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 
 | Article | Description |
 | --- | --- |
+| [Connect and query with C++](quickstart-cpp.md) | Install the driver, connect to Azure SQL Database, SQL database in Fabric, or SQL Server, execute a parameterized query, and verify the result. |
 | [When to use OLE DB Driver](when-to-use-oledb-driver-for-sql-server.md) | When to choose OLE DB Driver for SQL Server over the other SQL Server drivers. |
 | [Download](download-oledb-driver-for-sql-server.md) | Installer downloads for every supported driver version. |
 | [System requirements](system-requirements-for-oledb-driver-for-sql-server.md) | Supported operating systems, SQL Server versions, and prerequisites to install first. |

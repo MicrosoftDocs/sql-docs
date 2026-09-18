@@ -4,7 +4,7 @@ description: Install mssql-python, connect to a SQL database, run queries, and i
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 06/29/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -34,7 +34,7 @@ Use the local SQL authentication example in this article only for local developm
 
 Create or connect to a database on SQL Server, Azure SQL Database, or SQL database in Fabric. Use the following steps to set up a database with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema, and keep the connection string for later.
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Setup
 

@@ -4,7 +4,7 @@ description: The connection string properties for the Microsoft JDBC Driver for 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 08/27/2026
+ms.date: 09/10/2026
 ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: connectivity
@@ -36,7 +36,18 @@ You can specify the connection string properties in various ways:
 
 - You can use unknown values for property names. The JDBC driver doesn't validate case sensitivity.
 
-- You can use synonyms. The driver resolves them in order, just as it does with duplicate property names.
+- You can use synonyms. The driver resolves them in order, just as it does with duplicate property names. Starting with version 13.6, the driver also accepts these common cross-driver aliases:
+
+  | Alias | JDBC property |
+  | --- | --- |
+  | `app` | `applicationName` |
+  | `columnEncryption` | `columnEncryptionSetting` |
+  | `connectTimeout` | `loginTimeout` |
+  | `quotedId` | `quotedIdentifier` |
+  | `trusted_connection` | `integratedSecurity` |
+  | `uid` | `user` |
+
+  Alias matching is case-insensitive.
 
 - The [!INCLUDE [jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for `ANSI_DEFAULTS` and `IMPLICIT_TRANSACTIONS`. The [!INCLUDE [jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets `ANSI_DEFAULTS` to `ON` and `IMPLICIT_TRANSACTIONS` to `OFF`.
 
@@ -64,6 +75,8 @@ The following sections describe all the currently available connection string pr
 - **Default**: `null`
 
 (Version 12.4+) The name of the callback-implementing class to use with the access token callback.
+
+(Version 13.6+) The value must be a valid Java binary class name. The driver rejects an invalid value before attempting to load the class.
 
 ### `applicationIntent`
 
@@ -307,6 +320,15 @@ The name of the database to connect to.
 
 If you don't specify a database name, the connection uses the default database.
 
+### `defaultTransactionIsolation`
+
+- **Type**: `String` [`READ_UNCOMMITTED` | `READ_COMMITTED` | `REPEATABLE_READ` | `SERIALIZABLE` | `SNAPSHOT`]
+- **Default**: `null`
+
+(Version 13.6+) The transaction isolation level that the driver applies when it establishes the connection. Values are case-insensitive. If you don't set this property, the server uses its default transaction isolation level.
+
+You can also configure this property by using the `setDefaultTransactionIsolation` method on `SQLServerDataSource`.
+
 ### `datetimeParameterType`
 
 - **Type**: `String` [`datetime` | `datetime2` | `datetimeoffset`]
@@ -483,6 +505,8 @@ With `UsePlatformDefault`, the driver traverses all IP addresses in their initia
 - **Default**: `SQLJDBCDriver`
 
 (Version 6.2+) Each connection to SQL Server can use its own JAAS Login Configuration name to establish a Kerberos connection. You can pass the name of the configuration entry through this property. Use this property when [creating a Kerberos configuration file](using-kerberos-integrated-authentication-to-connect-to-sql-server.md#creating-a-kerberos-configuration-file). By default, the driver looks for the name `SQLJDBCDriver`.
+
+To load the entry from an external JAAS configuration file, set the `java.security.auth.login.config` JVM system property to a local file path or `file:` URI. Starting with version 13.6, the driver rejects nonlocal URLs, such as `http:`, `https:`, `ldap:`, `jar:`, and `rmi:` URLs. To bypass the JVM-wide JAAS configuration and use the driver's default configuration, set `useDefaultJaasConfig=true`.
 
 If the driver doesn't find an external configuration, it sets `useDefaultCcache=true` for IBM JVMs, and `useTicketCache=true` for other JVMs.
 
@@ -810,6 +834,8 @@ For more information about using `serverSpn` with Java Kerberos, see [Using Kerb
 
 (Version 8.4+) Specifies the class name for a custom socket factory to use instead of the default socket factory.
 
+(Version 13.6+) The value must be a valid Java binary class name. The driver rejects an invalid value before attempting to load the class.
+
 ### `socketTimeout`
 
 - **Type**: `int`
@@ -859,6 +885,8 @@ When `transparentNetworkIPResolution=true`, the first connection attempt uses 50
 - **Default**: `null`
 
 (Version 6.4+) The fully qualified class name of a custom `javax.net.ssl.TrustManager` implementation.
+
+(Version 13.6+) The value must be a valid Java binary class name. The driver rejects an invalid value before attempting to load the class.
 
 ### `trustManagerConstructorArg`
 

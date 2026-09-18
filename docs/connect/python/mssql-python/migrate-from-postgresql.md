@@ -4,7 +4,7 @@ description: Guide for migrating Python applications from PostgreSQL to Microsof
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -32,7 +32,7 @@ Microsoft SQL includes capabilities that simplify security, compliance, and oper
 
 Before you begin, ensure you have Python 3.10 or later, and a target SQL database.
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 PostgreSQL drivers require external native libraries.  
 

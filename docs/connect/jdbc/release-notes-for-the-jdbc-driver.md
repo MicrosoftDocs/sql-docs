@@ -4,7 +4,7 @@ description: This article lists the releases of the Microsoft JDBC Driver for SQ
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 03/13/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -15,6 +15,96 @@ ms.custom:
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
 This article lists the releases of the *Microsoft JDBC Driver for SQL Server*. For each release version, the changes are named and described.
+
+<a id="136"></a>
+
+## 13.6
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 13.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2378970)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 13.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2379145)**
+
+Release number: 13.6.0  
+Released: September 10, 2026
+
+If you need to download the driver in a language other than the one detected for you, use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x40a)
+
+### 13.6 Compliance
+
+| Compliance change | Details |
+| --- | --- |
+| Download the latest updates for JDBC Driver 13.6. | &bull; &nbsp; [GitHub, 13.6.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v13.6.0)<br />&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 13.6 package are named according to Java version compatibility.<br /><br />For example, the mssql-jdbc-13.6.0.jre11.jar file from the 13.6 package should be used with Java 11 (or higher). |
+| Compatible with Java Development Kit (JDK) versions 26.0, 25.0, 21.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 13.6 for SQL Server is now compatible with Java Development Kit (JDK) version 26.0 in addition to JDK 25.0, 21.0, 17.0, 11.0, and 1.8. |
+
+### 13.6 releases
+
+Release number: 13.6.0  
+Released: September 10, 2026
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 13.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2378970)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 13.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2379145)**
+
+If you need to download the driver in a language other than the one detected for you, use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2379145&clcid=0x40a)
+
+### New features in 13.6
+
+| Feature | Details |
+| --- | --- |
+| Enhanced routing for Azure SQL Hyperscale reader endpoints | Added TDS feature negotiation and environment-change handling to route connections across named replicas while preserving the routed database name. [GitHub PR #2935](https://github.com/microsoft/mssql-jdbc/pull/2935). |
+| Java 26 support | Added support for building and testing the driver on JDK 26. [GitHub PR #2939](https://github.com/microsoft/mssql-jdbc/pull/2939). |
+| Default transaction isolation connection property | Added `defaultTransactionIsolation` to set `READ_UNCOMMITTED`, `READ_COMMITTED`, `REPEATABLE_READ`, `SERIALIZABLE`, or `SNAPSHOT` when a connection is established. [GitHub PR #2918](https://github.com/microsoft/mssql-jdbc/pull/2918). |
+| Cross-driver connection string aliases | Added case-insensitive aliases for six common connection properties: `uid`, `trusted_connection`, `app`, `connectTimeout`, `columnEncryption`, and `quotedId`. Existing JDBC property names continue to work unchanged. [GitHub PR #3011](https://github.com/microsoft/mssql-jdbc/pull/3011). |
+| Parameter length hints | Added `ISQLServerPreparedStatement.defineParameterType` and length handling in the four-argument `setObject` overload for character and binary parameters. Tighter parameter declarations can reduce SQL Server memory grants. [GitHub PR #2960](https://github.com/microsoft/mssql-jdbc/pull/2960). |
+| Nanosecond performance callback timing | Added an option for `PerformanceLogCallback` to report timing with nanosecond granularity. Millisecond timing remains the default. [GitHub PR #2944](https://github.com/microsoft/mssql-jdbc/pull/2944). |
+| SQL context in performance callbacks | Added `getCurrentUserSql()` and `getCurrentStatementType()` to `PerformanceLogCallback`. [GitHub PR #2965](https://github.com/microsoft/mssql-jdbc/pull/2965). |
+| Application name in performance callbacks | Added `getCurrentApplicationName()` to `PerformanceLogCallback` so applications can identify the connection or pool that produced an event by its `applicationName` property. [GitHub PR #3018](https://github.com/microsoft/mssql-jdbc/pull/3018). |
+
+### Changes in 13.6
+
+| Change | Details |
+| --- | --- |
+| `setObject` parameter length hints | For supported character and binary target types, the four-argument `setObject` overload treats a positive `scaleOrLength` value as an advisory hint. The driver widens an undersized hint to the actual value length and ignores nonpositive hints. `defineParameterType()` remains an enforced declaration. Length validation now measures `varchar` and `char` values in bytes, preventing silent truncation of multibyte values when `sendStringParametersAsUnicode=false`. [GitHub PR #2960](https://github.com/microsoft/mssql-jdbc/pull/2960), [GitHub PR #3026](https://github.com/microsoft/mssql-jdbc/pull/3026). |
+| Vector TVP capability validation | The driver now validates negotiated vector support before writing table-valued parameter column metadata. It rejects FLOAT16 vectors on vector version 1 connections and native vector values when `vectorTypeSupport=off`. [GitHub PR #2997](https://github.com/microsoft/mssql-jdbc/pull/2997). |
+| Always Encrypted enclave attestation validation | Strengthened VSM/HGS enclave attestation validation. [GitHub PR #2993](https://github.com/microsoft/mssql-jdbc/pull/2993). |
+| JNDI references omit sensitive properties | `SQLServerDataSource.getReference()` no longer includes sensitive connection properties in emitted JNDI references. [GitHub PR #2992](https://github.com/microsoft/mssql-jdbc/pull/2992). |
+| SQLXML secure processing | Enabled secure-processing and DTD/external-entity protections for the `SAXSource` and `StAXSource` paths in `SQLServerSQLXML`, matching the existing `DOMSource` protections. [GitHub PR #2915](https://github.com/microsoft/mssql-jdbc/pull/2915). |
+| Active Directory Interactive callback hardening | Changed the interactive authentication callback to use the `form_post` response mode. [GitHub PR #2956](https://github.com/microsoft/mssql-jdbc/pull/2956). |
+| Kerberos JAAS configuration handling | The `java.security.auth.login.config` system property must resolve to a local file path or `file:` URI. Remote configuration sources are rejected before Kerberos authentication begins. [GitHub PR #2961](https://github.com/microsoft/mssql-jdbc/pull/2961). |
+| Deferred initialization of configurable classes | User-supplied classes are validated before static initialization for properties such as `trustManagerClass`, `socketFactoryClass`, and `accessTokenCallbackClass`. [GitHub PR #2914](https://github.com/microsoft/mssql-jdbc/pull/2914). |
+| Reflective class-name validation | Values for properties that load custom classes, including `trustManagerClass`, `socketFactoryClass`, and `accessTokenCallbackClass`, must be valid Java binary class names. Invalid values now fail before the driver attempts to load the class. [GitHub PR #3004](https://github.com/microsoft/mssql-jdbc/pull/3004). |
+| Result set read-path optimization | Reduced allocations while reading result sets and added fast paths for common string, `DECIMAL`, `NUMERIC`, `MONEY`, and `SMALLMONEY` values. [GitHub PR #2974](https://github.com/microsoft/mssql-jdbc/pull/2974), [GitHub PR #2975](https://github.com/microsoft/mssql-jdbc/pull/2975), [GitHub PR #2991](https://github.com/microsoft/mssql-jdbc/pull/2991). |
+| Reduced disabled-logging overhead | Guarded external entry and exit logging across the driver to avoid unnecessary work when `FINER` logging is disabled. [GitHub PR #2955](https://github.com/microsoft/mssql-jdbc/pull/2955). |
+| Bulk copy table-name validation | Destination table names in `SQLServerBulkCopy` and prepared-statement batch inserts that use bulk copy are now safely escaped as multipart identifiers. Existing valid unquoted, bracketed, schema-qualified, and database-qualified names continue to work. [GitHub PR #3020](https://github.com/microsoft/mssql-jdbc/pull/3020). |
+| XA component packaging | The legacy `sqljdbc_xa.dll` is no longer included in the driver package. XA distributed transactions use the built-in extended stored procedures available in SQL Server 2017 CU16 and later, enabled by running `EXEC sp_sqljdbc_xa_install`. [GitHub PR #3017](https://github.com/microsoft/mssql-jdbc/pull/3017). |
+| JDBC 4.3 support wording | Clarified that the JRE 11 and later artifacts are built against the JDBC 4.3 API with partial support. [GitHub PR #2967](https://github.com/microsoft/mssql-jdbc/pull/2967). |
+| Dependency updates | Updated optional `azure-identity` and `azure-security-keyvault-keys` dependencies. Updated Bouncy Castle to 1.84 and `azure-core-http-netty` to 1.16.6, which resolves Netty 4.1.137.Final, to address security vulnerabilities. [GitHub PR #2984](https://github.com/microsoft/mssql-jdbc/pull/2984), [GitHub PR #3021](https://github.com/microsoft/mssql-jdbc/pull/3021). |
+
+### Fixes in 13.6
+
+| Fix | Details |
+| --- | --- |
+| PLP chunk-size overflow | Prevented integer overflow when reading unsigned 32-bit PLP chunk sizes. [GitHub PR #2916](https://github.com/microsoft/mssql-jdbc/pull/2916). |
+| Federated authentication login timeout | Ensured `loginTimeout` bounds socket I/O during federated authentication when `socketTimeout` is unset. [GitHub PR #2927](https://github.com/microsoft/mssql-jdbc/pull/2927). |
+| User-agent construction | Populated unavailable user-agent fields with `Unknown` so runtime exceptions during environment-data collection don't produce malformed telemetry. [GitHub PR #2926](https://github.com/microsoft/mssql-jdbc/pull/2926). |
+| Index metadata ordinal positions | Corrected `getIndexInfo()` ordinal positions for included and columnstore index columns. [GitHub PR #2943](https://github.com/microsoft/mssql-jdbc/pull/2943). |
+| Multi-statement prepared update counts | Restored intermediate update counts from multi-statement prepared-statement execution. [GitHub PR #2941](https://github.com/microsoft/mssql-jdbc/pull/2941). |
+| Prepared-statement parameter markers | Removed extra whitespace around generated parameter markers. [GitHub PR #2958](https://github.com/microsoft/mssql-jdbc/pull/2958). |
+| Always Encrypted enclave CEK caching | Routed enclave column encryption key lookups through `SQLServerSymmetricKeyCache` to avoid repeated key-store requests. [GitHub PR #2964](https://github.com/microsoft/mssql-jdbc/pull/2964). |
+| Socket and I/O exception chains | Preserved the original exception cause in socket and I/O error paths. [GitHub PR #2970](https://github.com/microsoft/mssql-jdbc/pull/2970). |
+| `SQLServerError` serialization | Prevented infinite recursion and `StackOverflowError` when frameworks serialize `SQLServerError` as a bean. [GitHub PR #2971](https://github.com/microsoft/mssql-jdbc/pull/2971). |
+| Android TLS handshake | Prevented login TLS handshake hangs with the Conscrypt security provider on Android. [GitHub PR #2980](https://github.com/microsoft/mssql-jdbc/pull/2980). |
+| Custom access-token callback errors | Preserved the original exception when a custom `accessTokenCallbackClass` fails, improving diagnostic details. [GitHub PR #2990](https://github.com/microsoft/mssql-jdbc/pull/2990). |
+| Named callable-statement parameter scale and length | Preserved the scale or length supplied to named `SQLServerCallableStatement.setObject` overloads for temporal values, streams, and vectors, including when Always Encrypted is enabled. [GitHub PR #2998](https://github.com/microsoft/mssql-jdbc/pull/2998). |
+| Generated keys for tables without identity columns | `getGeneratedKeys()` now returns an empty result set when a statement doesn't generate an identity value, instead of returning a row containing `null`. [GitHub PR #3002](https://github.com/microsoft/mssql-jdbc/pull/3002). |
+| Managed identity credential recovery | Failed cached credentials are evicted for `ActiveDirectoryManagedIdentity` and `ActiveDirectoryDefault` authentication, allowing a later token request to recover without restarting the JVM. [GitHub PR #3003](https://github.com/microsoft/mssql-jdbc/pull/3003). |
+| `getColumns()` metadata requests | Cached `sp_columns_170` availability per connection so servers earlier than SQL Server 2025 are probed at most once, avoiding a failed server request for every call before falling back to `sp_columns_100`. [GitHub PR #3019](https://github.com/microsoft/mssql-jdbc/pull/3019). |
+| Closed prepared and callable statements | Parameter-related calls on a closed prepared or callable statement now throw the standard closed-statement `SQLServerException` instead of a `NullPointerException`. [GitHub PR #2995](https://github.com/microsoft/mssql-jdbc/pull/2995). |
+
+## Previous releases
 
 <a id="134"></a>
 
@@ -93,8 +183,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | supportsIntegrityEnhancementFacility() returns accurate value | Corrected DatabaseMetaData.supportsIntegrityEnhancementFacility() to return true for SQL Server. [GitHub Issue #2828](https://github.com/microsoft/mssql-jdbc/issues/2828). |
 | Fix bulk copy for batch insert to support InputStream data | Enabled setBinaryStream() to work correctly with Bulk Copy for Batch Insert into VARBINARY(MAX) columns. [GitHub Issue #2826](https://github.com/microsoft/mssql-jdbc/issues/2826). |
 | Addressed failure on Azure Synapse serverless SQL pool caused by the unsupported sp_statistics procedure | Added a try–catch fallback in getIndexInfoAzureDW() to query sys.indexes, sys.index_columns, sys.columns, and sys.tables when sp_statistics is unavailable. [GitHub Issue #2839](https://github.com/microsoft/mssql-jdbc/issues/2839). |
-
-## Previous releases
 
 <a id="132"></a>
 

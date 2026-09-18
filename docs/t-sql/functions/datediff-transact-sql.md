@@ -354,7 +354,7 @@ SELECT @result;
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 These examples use different types of expressions as arguments for the *startdate* and *enddate* parameters.
 

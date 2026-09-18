@@ -46,7 +46,7 @@ Specifies ISO compliant behavior of the Equals (`=`) and Not Equal To (`<>`) com
 SET ANSI_NULLS { ON | OFF }
 ```
 
-#### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)]
+#### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)]
 
 ```syntaxsql
 SET ANSI_NULLS ON

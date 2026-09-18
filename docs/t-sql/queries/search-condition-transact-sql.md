@@ -270,7 +270,7 @@ WHERE CountryRegionCode NOT IN ('US')
     AND City LIKE N'Pa%';
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### C. Use WHERE with LIKE
 

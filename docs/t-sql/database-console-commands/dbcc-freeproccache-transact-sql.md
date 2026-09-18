@@ -44,7 +44,7 @@ Syntax for SQL Server and Azure SQL Database:
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]

@@ -40,7 +40,7 @@ The `SET ARITHIGNORE` setting controls whether the query returns error messages 
 SET ARITHIGNORE { ON | OFF }
 ```
 
-#### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)]
+#### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)]
 
 ```syntaxsql
 
@@ -104,7 +104,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example demonstrates divide-by-zero and the overflow errors. This example doesn't return an error message for these errors because `ARITHIGNORE` is `OFF`.    
 

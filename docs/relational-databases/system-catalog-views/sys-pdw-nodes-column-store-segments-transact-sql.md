@@ -37,7 +37,7 @@ Contains a row for each column in a columnstore index.
 | **on_disk_size**            | **bigint** | Size of segment in bytes.                                    |
 | **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node. |
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 Join sys.pdw_nodes_column_store_segments with other system tables to determine the number of columnstore segments per logical table.
 

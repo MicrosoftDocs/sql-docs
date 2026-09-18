@@ -61,7 +61,7 @@ SELECT HAS_DBACCESS('AdventureWorks2022');
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
  The following example tests whether current user has access to the `AdventureWorksPDW2012` database.  
   
 ```sql  

@@ -54,7 +54,7 @@ This set is the results for the `DBCC PDW_SHOWPARTITIONSTATS` command.
 | pdw_node_id | int | Compute node for the data. |
 | distribution_id | int | Distribution identifier for the data. |
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### A. DBCC PDW_SHOWPARTITIONSTATS basic syntax examples
 

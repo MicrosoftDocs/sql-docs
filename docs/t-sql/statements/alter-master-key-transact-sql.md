@@ -76,7 +76,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]
+Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]
 
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
@@ -129,7 +129,7 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<password>';
 GO
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example creates a new database master key for `AdventureWorksPDW2012` and re-encrypts the keys below it in the encryption hierarchy. Replace `<password>` with a strong, unique password.
 

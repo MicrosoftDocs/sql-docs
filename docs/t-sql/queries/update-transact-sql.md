@@ -1097,7 +1097,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### AD. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause isn't used to specify the row (or rows) to update.  

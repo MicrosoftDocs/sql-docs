@@ -134,7 +134,7 @@ Zelig
 dbo  
 ```  
   
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### E. Use USER_NAME without an ID
 

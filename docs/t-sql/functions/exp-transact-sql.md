@@ -83,7 +83,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### C. Finding the exponent of a number  
  The following example returns the exponential value of the specified value (`10`).  

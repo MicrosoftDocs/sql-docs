@@ -240,7 +240,7 @@ column_a     column_b    Previous value for column_b    Next value for column_b
 7            11          NULL                           NULL
 ```
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### A. Compare values between quarters  
 

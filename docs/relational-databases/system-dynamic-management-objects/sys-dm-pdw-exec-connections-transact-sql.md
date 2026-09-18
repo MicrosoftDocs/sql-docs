@@ -41,7 +41,7 @@ Requires `VIEW SERVER STATE` permission on the server.
 | `dm_pdw_exec_sessions.session_id` | `dm_pdw_exec_connections.session_id` | One-to-one |
 | `dm_pdw_exec_requests.connection_id` | `dm_pdw_exec_connections.connection_id` | Many to one |
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following Transact-SQL example is a typical query to gather information about a query's own connection.
 

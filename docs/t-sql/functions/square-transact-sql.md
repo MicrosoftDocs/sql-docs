@@ -55,7 +55,7 @@ Cyl Vol
 15.707963267948966  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
  The following example returns the square of each value in the `volume` column in the `containers` table.  
   
 ```sql  

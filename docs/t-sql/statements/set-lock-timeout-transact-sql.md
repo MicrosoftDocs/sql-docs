@@ -66,7 +66,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### B. Set the lock timeout to wait forever for a lock to be released.  
  The following example sets the lock timeout to wait forever and never expire. This is the default behavior that is already set at the beginning of each connection.  

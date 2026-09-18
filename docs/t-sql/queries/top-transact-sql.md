@@ -41,7 +41,7 @@ Syntax for SQL Server and Azure SQL Database:
 ]
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```syntaxsql
 [
@@ -369,7 +369,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example returns the top 31 rows that match the query criteria. The `ORDER BY` clause ensures that the 31 returned rows are the first 31 rows based on an alphabetical ordering of the `LastName` column.
 

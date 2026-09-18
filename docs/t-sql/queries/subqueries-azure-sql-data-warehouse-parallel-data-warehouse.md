@@ -24,7 +24,7 @@ For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/querie
   
 -   [Basics](#Basics)  
   
--   [Examples: Azure Synapse Analytics and Parallel Data Warehouse](#Examples)  
+-   [Examples: Azure Synapse Analytics](#examples)  
   
 ##  <a name="Basics"></a> Basics  
  Subquery  
@@ -36,8 +36,10 @@ For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/querie
  Correlated subquery  
  A subquery that refers to a table in the outer query.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- This section provides examples of subqueries supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+<a id="examples"></a>
+
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
+ This section provides examples of subqueries supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
 ### A. TOP and ORDER BY in a subquery  
   

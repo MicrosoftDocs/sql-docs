@@ -781,7 +781,7 @@ FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### N. Use the INNER JOIN syntax
 

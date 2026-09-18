@@ -76,7 +76,7 @@ WHERE ISNUMERIC(PostalCode) <> 1;
 GO
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example uses `ISNUMERIC` to return whether the database name and ID are numeric values.
 

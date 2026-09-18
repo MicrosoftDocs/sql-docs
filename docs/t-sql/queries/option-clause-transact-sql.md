@@ -113,7 +113,7 @@ OPTION (HASH GROUP, FAST 10);
 GO
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### B. SELECT statement with a label in the OPTION clause
 

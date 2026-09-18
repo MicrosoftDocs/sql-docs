@@ -46,7 +46,7 @@ Syntax for [!INCLUDE [ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!I
 SET ANSI_PADDING { ON | OFF }
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)].
+Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)].
 
 ```syntaxsql
 SET ANSI_PADDING ON

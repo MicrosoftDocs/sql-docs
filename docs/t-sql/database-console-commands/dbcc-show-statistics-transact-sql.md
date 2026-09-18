@@ -70,7 +70,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 [ ; ]
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]:
 
 ```syntaxsql
 DBCC SHOW_STATISTICS ( table_name , target )
@@ -204,11 +204,11 @@ In versions before [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Service Pa
 
 In order to view the statistics object in Fabric Data Warehouse or the SQL analytics endpoint, the user must have the `SELECT` permission on the table, or a member of the Viewer Fabric workspace role or higher role membership.
 
-## Permissions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Permissions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 `DBCC SHOW_STATISTICS` requires `SELECT` permission on the table or membership in the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-## Limitations and Restrictions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Limitations and Restrictions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 `DBCC SHOW_STATISTICS` shows statistics stored in the `Shell` database at the Control node level. It doesn't show statistics that are autocreated by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on the Compute nodes.
 

@@ -39,7 +39,7 @@ An optional alias preposition. When working with range variable aliasing, the AS
 
 The desired temporary reference name for the table or column. Any valid object name can be used.
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example shows a query with multiple joins. Both table and column aliasing are demonstrated in this example. These examples use the [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). 
 

@@ -118,7 +118,7 @@ The following tables list SQL Server features and their support status in the cu
 | Apache Arrow fetch | Supported |
 | sql_variant columns | Supported |
 | Native UUID | Supported |
-| Connection resiliency | Supported |
+| Idle connection resiliency (`ConnectRetryCount`) | Supported |
 | Read-only routing | Supported |
 | Table-valued parameters (TVPs) | Not supported |
 

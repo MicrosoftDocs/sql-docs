@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 
 ::: moniker range=">=aps-pdw-2016||=azure-sqldw-latest"
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 ## CREATE TABLE (Azure Synapse Analytics)
 

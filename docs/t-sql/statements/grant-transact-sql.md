@@ -47,7 +47,7 @@ GRANT { ALL [ PRIVILEGES ] }
       [ WITH GRANT OPTION ] [ AS principal ]
 ```
 
-Syntax for Azure Synapse Analytics, Parallel Data Warehouse, and Microsoft Fabric warehouse.
+Syntax for Azure Synapse Analytics and Microsoft Fabric warehouse.
 
 ```syntaxsql
 GRANT

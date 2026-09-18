@@ -10,11 +10,11 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sp_pdw_add_network_credentials (Azure Synapse Analytics)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 `sp_pdw_add_network_credentials` stores network credentials in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and associates them with a server. For example, use this stored procedure to give [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appropriate read/write permissions to perform database backup and restore operations on a target server, or to create a backup of a certificate used for transparent data encryption (TDE).
 

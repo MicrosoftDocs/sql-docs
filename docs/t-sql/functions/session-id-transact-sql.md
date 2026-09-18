@@ -12,7 +12,7 @@ dev_langs:
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # SESSION_ID (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
   Returns the ID of the current [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] session.  
   

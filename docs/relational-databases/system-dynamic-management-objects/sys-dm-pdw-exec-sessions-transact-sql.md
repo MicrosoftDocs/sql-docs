@@ -9,11 +9,11 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_sessions (Transact-SQL)
 
-[!INCLUDE [asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Holds information about all sessions currently or recently open. The `sys.dm_pdw_exec_sessions` dynamic management view (DMV) lists one row per session.
 

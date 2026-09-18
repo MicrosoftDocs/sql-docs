@@ -13,7 +13,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Ties the materialized view to internal object names by object_id.
 

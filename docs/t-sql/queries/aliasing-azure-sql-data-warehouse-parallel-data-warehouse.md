@@ -10,10 +10,10 @@ ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - ignite-2024
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 
-# Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
+# Aliasing (Azure Synapse Analytics)
 
 [!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 

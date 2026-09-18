@@ -10,7 +10,7 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_column_distribution_properties (Transact-SQL)
 [!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]

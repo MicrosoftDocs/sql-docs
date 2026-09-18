@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_groups (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
  Returns details for workload groups.  
   

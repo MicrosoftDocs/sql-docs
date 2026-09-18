@@ -40,7 +40,7 @@ Return the query plan with recommendations to optimize the SQL statement perform
 
 ## Permissions
 
- Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics)](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
 
 ## Return value
 

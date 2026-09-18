@@ -16643,7 +16643,7 @@ items:
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Aliasing (Azure Synapse Analytics)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16655,7 +16655,7 @@ items:
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Subqueries (Azure Synapse Analytics)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table value constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md

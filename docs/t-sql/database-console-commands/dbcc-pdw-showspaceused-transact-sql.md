@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
 # DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
 Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 

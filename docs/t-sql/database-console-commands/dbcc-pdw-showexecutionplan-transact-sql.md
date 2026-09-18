@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
 # DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
 Displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execution plan for a query running on a specific [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Compute node or Control node. Use this to troubleshoot query performance problems while queries are running on the Compute nodes and Control node.
 

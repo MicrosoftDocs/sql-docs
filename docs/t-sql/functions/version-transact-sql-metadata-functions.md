@@ -12,7 +12,7 @@ dev_langs:
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Version - Transact-SQL Metadata functions
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
  Returns the version of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] running on the appliance.  
   

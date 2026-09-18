@@ -15,7 +15,7 @@ monikerRange: "= azure-sqldw-latest"
 
 # DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Shows the storage space used result set caching for an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 

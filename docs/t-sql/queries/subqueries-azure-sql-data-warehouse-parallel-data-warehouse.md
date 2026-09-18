@@ -1,7 +1,7 @@
 ---
 title: Subqueries
 titleSuffix: "Azure Synapse Analytics"
-description: Subqueries in Azure Synapse Analytics, Parallel Data Warehouse, Microsoft Fabric.
+description: Subqueries in Azure Synapse Analytics and Microsoft Fabric.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/03/2017"

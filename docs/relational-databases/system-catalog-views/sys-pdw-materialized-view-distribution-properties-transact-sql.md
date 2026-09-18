@@ -13,7 +13,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Displays distribution information materialized views.  
   

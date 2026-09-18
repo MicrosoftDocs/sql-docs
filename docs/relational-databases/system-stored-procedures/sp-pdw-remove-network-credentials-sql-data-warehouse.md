@@ -10,11 +10,11 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 `sp_pdw_remove_network_credentials` removes network credentials stored in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to access a network file share. For example, use this stored procedure to remove permission for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to perform backup and restore operations on a server that resides within your own network.
 

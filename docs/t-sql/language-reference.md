@@ -70,9 +70,9 @@ For example, this article applies to all versions, and has the following label.
 
 [!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Another example, the following label indicates an article that applies only to Azure Synapse Analytics and Parallel Data Warehouse.
+Another example, the following label indicates an article that applies only to Azure Synapse Analytics.
 
-[!INCLUDE [asa-pdw](../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../includes/applies-to-version/asa.md)]
 
 In some cases, the article is used by a product or service, but all of the arguments aren't supported. In this case, other **Applies to** sections are inserted into the appropriate argument descriptions in the body of the article.
 

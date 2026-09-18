@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.dm_pdw_nodes_exec_text_query_plan  (Transact-SQL)
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or for a specific statement within the batch.
 

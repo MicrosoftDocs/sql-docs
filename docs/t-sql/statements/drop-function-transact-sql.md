@@ -41,7 +41,7 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```
 
 ```syntaxsql
- -- Azure Synapse Analytics, Parallel Data Warehouse, Microsoft Fabric
+ -- Azure Synapse Analytics and Microsoft Fabric
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 

@@ -22,7 +22,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # ALTER MATERIALIZED VIEW (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Modifies a previously created materialized view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.  
   

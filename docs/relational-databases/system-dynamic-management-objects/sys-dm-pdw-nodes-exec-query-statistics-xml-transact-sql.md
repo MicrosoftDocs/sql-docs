@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 
 # dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics.
 

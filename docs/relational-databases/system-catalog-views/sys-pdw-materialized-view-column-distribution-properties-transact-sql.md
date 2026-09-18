@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) 
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Displays distribution information for columns in a materialized view.  
   

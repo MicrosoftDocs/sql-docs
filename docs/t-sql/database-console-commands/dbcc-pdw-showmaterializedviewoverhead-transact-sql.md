@@ -15,7 +15,7 @@ monikerRange: "= azure-sqldw-latest"
 
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 

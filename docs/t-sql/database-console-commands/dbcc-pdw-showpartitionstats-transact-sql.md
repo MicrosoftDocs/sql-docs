@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
 Displays the size and number of rows for each partition of a table in a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 

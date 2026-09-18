@@ -120,6 +120,7 @@ The following tables list SQL Server features and their support status in the cu
 | Native UUID | Supported |
 | Connection resiliency | Supported |
 | Read-only routing | Supported |
+| Table-valued parameters (TVPs) | Not supported |
 
 ### DB-API 2.0 compliance
 

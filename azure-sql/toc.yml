@@ -36,6 +36,8 @@
         href: maintenance-window-azure-sql.md
     - name: Security
       items:
+      - name: Secure your Azure SQL Database
+        href: database/secure-database.md
       - name: Security overview
         displayName: compliance, fedramp, soc, fact, fisc, hitrust, pci, iso
         href: database/security-overview.md
@@ -44,8 +46,6 @@
       - name: Security controls by Azure Policy
         displayName: regulatory, compliance, standards, domains
         href: ./database/security-controls-policy.md
-      - name: Security baseline
-        href: /security/benchmark/azure/baselines/azure-sql-security-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: Microsoft Defender for SQL

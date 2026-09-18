@@ -100,7 +100,7 @@ Skip to the [Configuring server-side timeout settings for automatic rollback of 
 > [!NOTE]
 > This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
 >
-> The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.
+> These components aren't required for XA functionality with JDBC Driver 13.6 and later when you connect to SQL Server 2017 CU16 or higher. Therefore, the driver package no longer includes the sqljdbc_xa directory or its xa_install.sql and sqljdbc_xa.dll components. These legacy instructions apply only to driver packages earlier than 13.6.
 
 You can configure the JDBC driver distributed transaction components by following these steps:
 
@@ -130,7 +130,7 @@ There are three ways to verify the version of sqljdbc_xa.dll currently installed
 > [!NOTE]
 > This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
 
-When you install a new version of the JDBC driver, you should also use sqljdbc_xa.dll from the new version to upgrade sqljdbc_xa.dll on the server.
+For driver packages earlier than 13.6, use the newest available sqljdbc_xa.dll when you upgrade the driver. JDBC Driver 13.6 and later don't include this DLL.
 
 > [!IMPORTANT]
 > You should upgrade sqljdbc_xa.dll during a maintenance window or when there are no MS DTC transactions in progress.

@@ -4,7 +4,7 @@ description: Learn how to build REST APIs with FastAPI and mssql-python for Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -21,7 +21,7 @@ FastAPI is a modern Python web framework for building APIs. Combined with mssql-
 - The `mssql-python`, `fastapi`, `uvicorn`, `pydantic`, and `PyJWT` packages. Install all with `pip install fastapi uvicorn mssql-python pydantic pyjwt`.
 - [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 The examples in this article use the **AdventureWorksLT** sample database, specifically the `SalesLT.Product` table. If you don't have AdventureWorksLT installed, see [AdventureWorks sample databases](/sql/samples/adventureworks-install-configure).
 

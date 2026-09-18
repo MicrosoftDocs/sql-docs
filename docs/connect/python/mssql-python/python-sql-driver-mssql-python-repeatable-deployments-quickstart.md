@@ -4,7 +4,7 @@ description: Use uv to create repeatable Python environments for database applic
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -38,7 +38,7 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
 [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
@@ -91,7 +91,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.14.0",
+       "mssql-python>=1.15.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
    ]

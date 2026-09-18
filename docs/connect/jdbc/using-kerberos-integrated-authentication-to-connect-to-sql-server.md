@@ -4,7 +4,7 @@ description: Learn how to configure Kerberos integrated authentication to connec
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 07/31/2024
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -145,6 +145,9 @@ forwardable = yes
 ## Enabling the domain configuration file and the login module configuration file
 
 You can enable a domain configuration file with -Djava.security.krb5.conf. You can enable a login module configuration file with **-Djava.security.auth.login.config**.
+
+> [!IMPORTANT]
+> Starting with Microsoft JDBC Driver 13.6, the `java.security.auth.login.config` system property must specify a filesystem path or `file:` URI. Relative paths, absolute paths, mounted or mapped drives, and UNC paths are supported. The driver rejects non-file URLs, including `http:`, `https:`, `ldap:`, `jar:`, and `rmi:` URLs. To bypass the JVM-wide JAAS configuration and use the driver's default configuration, set the `useDefaultJaasConfig` connection property to `true`.
 
 For example, the following command can be used to start the application:
 

@@ -4,7 +4,7 @@ description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 02/15/2023
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -47,6 +47,12 @@ To enable enclave computations for a database connection, you need to set the fo
   - If you're using `NONE` attestation protocol, this property can be left blank.
 
 Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+
+Starting with version 13.6, when `enclaveAttestationProtocol=HGS`, the driver validates that the signed VBS enclave report is bound to the enclave public key used for the session. Attestation fails if the report and session key don't match. No connection string changes are required.
+
+## Column encryption key caching
+
+Starting with version 13.6, the driver routes enclave column encryption key lookups through `SQLServerSymmetricKeyCache`, consistent with non-enclave Always Encrypted operations. Repeated enclave queries can reuse a cached plaintext column encryption key instead of making another request to the column master key store. This behavior reduces key-store requests and query latency, especially with remote stores such as Azure Key Vault, and requires no application changes.
 
 ## Working with secure enclaves
 

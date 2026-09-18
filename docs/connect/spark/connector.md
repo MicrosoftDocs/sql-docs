@@ -1,13 +1,14 @@
 ---
 title: "Apache Spark Connector for SQL Server and Azure SQL"
 description: "Learn how to use the Apache Spark connector for SQL Server and Azure SQL."
-author: avinandac
-ms.author: avinandac
-ms.reviewer: hudequei, randolphwest
-ms.date: 01/02/2026
+author: dlevy-msft-sql
+ms.author: dlevy
+ms.reviewer: vanto, randolphwest
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Apache Spark connector: SQL Server and Azure SQL
@@ -15,21 +16,25 @@ ms.topic: concept-article
 The Apache Spark connector for SQL Server and Azure SQL is a high-performance connector that you can use to include transactional data in big data analytics and persist results for ad hoc queries or reporting. By using the connector, you can use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs.
 
 > [!NOTE]  
-> This connector isn't actively maintained. This article is only retained for archival purposes.
+> This connector is no longer maintained. The upstream project was archived in February 2025, and this article is only retained for archival purposes. For new work against SQL Server or Azure SQL, use the [Apache Spark built-in JDBC data source](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html) with the [Microsoft JDBC Driver for SQL Server](../jdbc/microsoft-jdbc-driver-for-sql-server.md).
 
 This library contains the source code for the Apache Spark Connector for SQL Server and Azure SQL platforms.
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-Two versions of the connector are available through Maven: a 2.4.x compatible version and a 3.0.x compatible version. [Download the connectors from maven.org](https://search.maven.org/search?q=spark-mssql-connector) and import them using coordinates:
+Import the connector using the coordinate that matches your Spark version:
 
 | Connector | Maven Coordinate |
 | --- | --- |
 | Spark 2.4.x compatible connector | `com.microsoft.azure:spark-mssql-connector:1.0.2` |
 | Spark 3.0.x compatible connector | `com.microsoft.azure:spark-mssql-connector_2.12:1.1.0` |
 | Spark 3.1.x compatible connector | `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0` |
+| Spark 3.3.x compatible connector (beta) | `com.microsoft.azure:spark-mssql-connector_2.12:1.3.0-BETA` |
+| Spark 3.4.x compatible connector (beta) | No Maven coordinate. Download the `spark-mssql-connector_2.12-1.4.0-BETA.jar` asset from the [GitHub releases page](https://github.com/microsoft/sql-spark-connector/releases). |
 
-You can also build the connector from source or download the JAR from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+The Spark 3.3.x and Spark 3.4.x connectors are beta releases, and neither reached general availability before the project was archived. The 1.3.0-BETA release isn't compatible with the Microsoft JDBC Driver for SQL Server 7.0.1, Spark 2.4, or Spark 3.0. The upstream 1.3.0 release notes tell you to import version `1.3.0`, but that version was never published. Use `1.3.0-BETA` instead.
+
+You can also build the connector from source or download the JAR from the Release section in GitHub. For source code and release history, see the archived [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported features
 
@@ -41,7 +46,7 @@ You can also build the connector from source or download the JAR from the Releas
 
 | Component | Versions supported |
 | --- | --- |
-| Apache Spark | 2.4.x, 3.0.x, 3.1.x |
+| Apache Spark | 2.4.x, 3.0.x, 3.1.x, 3.3.x (beta), 3.4.x (beta) |
 | Scala | 2.11, 2.12 |
 | Microsoft JDBC Driver for SQL Server | 8.4 |
 | Microsoft SQL Server | SQL Server 2008 or later |
@@ -112,7 +117,7 @@ To fix the error:
 
 For more information, see the resolution to [https://github.com/microsoft/sql-spark-connector/issues/26](https://github.com/microsoft/sql-spark-connector/issues/26#issuecomment-672006339).
 
-## Get Started
+## Get started
 
 The Apache Spark Connector for SQL Server and Azure SQL is based on the Spark DataSourceV1 API and SQL Server Bulk API. It uses the same interface as the built-in JDBC Spark-SQL connector. By using this integration, you can easily integrate the connector and migrate your existing Spark jobs by updating the format parameter with `com.microsoft.sqlserver.jdbc.spark`.
 
@@ -120,7 +125,7 @@ To include the connector in your projects, download this repository and build th
 
 ## Write to a new SQL table
 
-> [!WARNING]  
+> [!CAUTION]  
 > The `overwrite` mode first drops the table if it already exists in the database. Use this option with care to avoid unexpected data loss.
 
 If you use mode `overwrite` without the option `truncate` when recreating the table, the operation removes indexes. Also, a columnstore table changes to a heap table. To keep existing indexes, set the `truncate` option to `true`. For example, `.option("truncate","true")`.

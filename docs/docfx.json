@@ -680,9 +680,6 @@
         ],
         "ado/**/*.md": [
           "sql-server-ver15"
-        ],
-        "analytics-platform-system/**/*.{md,yml,yaml}": [
-          "aps-pdw-2016-au7"
         ]
       }
     },

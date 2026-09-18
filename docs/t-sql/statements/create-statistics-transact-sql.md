@@ -89,8 +89,6 @@ ON { table_or_indexed_view_name } ( column [ , ...n ] )
 
 <update_stats_stream_option> ::=
     [ STATS_STREAM = stats_stream ]
-    [ ROWCOUNT = numeric_constant ]
-    [ PAGECOUNT = numeric_constant ]
 ```
 
 Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
@@ -296,7 +294,7 @@ The [sys.sql_expression_dependencies](../../relational-databases/system-catalog-
 
 - Updating statistics isn't supported on external tables. To update statistics on an external table, drop and re-create the statistics.
 - You can list up to 64 columns per statistics object.
-- The `MAXDOP` option isn't compatible with `STATS_STREAM`, `ROWCOUNT`, and `PAGECOUNT` options.
+- The `MAXDOP` option isn't compatible with the `STATS_STREAM` option.
 - The `MAXDOP` option is limited by the Resource Governor workload group `MAX_DOP` setting, if used.
 - `CREATE` and `DROP STATISTICS` on external tables aren't supported in Azure SQL Database.
 

@@ -4,7 +4,7 @@ description: Learn about the dependencies that the Microsoft JDBC Driver for SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 03/13/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -127,6 +127,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with the Azure Key Vault provider
 
+- JDBC driver version 13.6.0—Dependency versions: Azure-security-keyvault-keys (version 4.11.1), and Azure-identity (version 1.18.4), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 13.4.0—Dependency versions: Azure-security-keyvault-keys (version 4.10.5), and Azure-identity (version 1.18.2), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 13.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.9.2), and Azure-identity (version 1.15.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 12.10.0—Dependency versions: Azure-security-keyvault-keys (version 4.9.2), and Azure-identity (version 1.15.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
@@ -156,6 +157,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ### Work with Microsoft Entra authentication
 
+- JDBC driver version 13.6.0—Dependency versions: Azure-identity (version 1.18.4), and its dependencies.
 - JDBC driver version 13.4.0—Dependency versions: Azure-identity (version 1.18.2), and its dependencies.
 - JDBC driver version 13.2.0—Dependency versions: Azure-identity (version 1.15.3), and its dependencies.
 - JDBC driver version 12.10.0—Dependency versions: Azure-identity (version 1.15.3), and its dependencies.

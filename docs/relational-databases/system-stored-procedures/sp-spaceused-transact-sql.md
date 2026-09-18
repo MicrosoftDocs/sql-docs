@@ -48,7 +48,7 @@ sys.sp_spaceused
 
 ## Arguments
 
-For [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');`), rather than relying upon the ordinal position of parameters.
+For [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');`), rather than relying upon the ordinal position of parameters.
 
 #### [ @objname = ] N'*objname*'
 
@@ -57,7 +57,7 @@ The qualified or nonqualified name of the table, indexed view, or queue for whic
 If *@objname* isn't specified, results are returned for the whole database.
 
 > [!NOTE]  
-> [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
+> [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only supports database and table objects.
 
 #### [ @updateusage = ] '*updateusage*'
 

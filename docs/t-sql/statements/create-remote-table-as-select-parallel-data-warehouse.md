@@ -51,7 +51,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 
 #### *table_name*
 
- The name of the new table. For details on permitted table names, see "Object Naming Rules" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ The name of the new table. For details on permitted table names, see [Reserved Database Names](/previous-versions/sql/analytics-platform-system/reserved-database-names).  
 
  The remote table is created as a heap. It does not have check constraints or triggers. The collation of the remote table columns is the same as the collation of the source table columns. This applies to columns of type **char**, **nchar**, **varchar**, and **nvarchar**.  
 

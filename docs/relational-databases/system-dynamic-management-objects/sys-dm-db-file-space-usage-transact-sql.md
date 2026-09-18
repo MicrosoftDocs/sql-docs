@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 Returns space usage information for each data file in the database.
 
 > [!NOTE]  
-> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_db_file_space_usage`.  [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_db_file_space_usage`.  [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -42,8 +42,8 @@ Returns space usage information for each data file in the database.
 | `internal_object_reserved_page_count` | **bigint** | Total number of pages in uniform extents allocated for internal objects in the file. Unused pages from an allocated extent are included in the count.<br /><br />IAM pages aren't included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br />There is no catalog view or dynamic management object that returns the page count of each internal object. |
 | `mixed_extent_page_count` | **bigint** | Total number of allocated and unallocated pages in allocated mixed extents in the file. Mixed extents contain pages allocated to different objects. This count does include all the IAM pages in the file. |
 | `modified_extent_page_count` | **bigint** | **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and later versions.<br /><br />Total number of pages modified in allocated extents of the file since last full database backup. The modified page count can be used to track the number of differential changes in the database since last full backup, to decide if differential backup is needed. |
-| `pdw_node_id` | **int** | **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |
-| `distribution_id` | **int** | **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br />The unique numeric ID associated with the distribution. |
+| `pdw_node_id` | **int** | **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br />The identifier for the node that this distribution is on. |
+| `distribution_id` | **int** | **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br />The unique numeric ID associated with the distribution. |
 
 ## Remarks
 

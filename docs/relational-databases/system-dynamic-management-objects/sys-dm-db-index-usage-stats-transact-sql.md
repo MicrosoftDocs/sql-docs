@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 > The DMV `sys.dm_db_index_usage_stats` does not return information about memory-optimized indexes or spatial indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  To call this view from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use `sys.dm_pdw_nodes_db_index_usage_stats`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+>  To call this view from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use `sys.dm_pdw_nodes_db_index_usage_stats`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +54,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 |**last_system_scan**|**datetime**|Time of last system scan.|  
 |**last_system_lookup**|**datetime**|Time of last system lookup.|  
 |**last_system_update**|**datetime**|Time of last system update.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  
  Every individual seek, scan, lookup, or update on the specified index by one query execution is counted as a use of that index and increments the corresponding counter in this view. Information is reported both for operations caused by user-submitted queries, and for operations caused by internally generated queries, such as scans for gathering statistics.  

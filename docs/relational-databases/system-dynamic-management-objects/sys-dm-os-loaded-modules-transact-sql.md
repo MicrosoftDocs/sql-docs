@@ -23,9 +23,6 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016"
 
   Returns a row for each module loaded into the server address space.  
   
-> [!NOTE]  
->  To call this from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_loaded_modules**.  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|Address of the module in the process.|  
@@ -40,7 +37,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016"
 |**company**|**nvarchar(256)**|Name of company that created the module.|  
 |**description**|**nvarchar(256)**|Description of the module.|  
 |**name**|**nvarchar(255)**|Name of module. Includes the full path of the module.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: Analytics Platform System (PDW)<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  

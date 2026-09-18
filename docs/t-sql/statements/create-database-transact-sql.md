@@ -1658,7 +1658,7 @@ WITH (
 
 #### *database_name*
 
-The name of the new database. For more information on permitted database names, see "Object Naming Rules" and "Reserved Database Names" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+The name of the new database. For more information on permitted database names, see [Reserved Database Names](/previous-versions/sql/analytics-platform-system/reserved-database-names).
 
 #### AUTOGROW = { ON | OFF }
 
@@ -1666,13 +1666,13 @@ Specifies whether the *replicated_size*, *distributed_size*, and *log_size* para
 
 If `AUTOGROW` is `ON`, *replicated_size*, *distributed_size*, and *log_size* grow as required with each data insert, update, or other action that requires more storage than has already been allocated.
 
-If `AUTOGROW` is `OFF`, the sizes don't grow automatically. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] returns an error when attempting an action that requires *replicated_size*, *distributed_size*, or *log_size* to grow beyond their specified value.
+If `AUTOGROW` is `OFF`, the sizes don't grow automatically.
 
 `AUTOGROW` is either `ON` for all sizes or `OFF` for all sizes. For example, it's not possible to set `AUTOGROW ON` for *log_size*, but not set it for *replicated_size*.
 
 #### *replicated_size* [ GB ]
 
-A positive number. Sets the size (in integer or decimal gigabytes) for the total space allocated to replicated tables and corresponding data *on each Compute node*. For minimum and maximum *replicated_size* requirements, see "Minimum and Maximum Values" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+A positive number. Sets the size (in integer or decimal gigabytes) for the total space allocated to replicated tables and corresponding data *on each Compute node*.
 
 If `AUTOGROW` is `ON`, replicated tables can grow beyond this limit.
 
@@ -1680,7 +1680,7 @@ If `AUTOGROW` is `OFF`, an error is returned if a user attempts to create a new 
 
 #### *distributed_size* [ GB ]
 
-A positive number. The size, in integer or decimal gigabytes, for the total space allocated to distributed tables (and corresponding data) *across the appliance*. For minimum and maximum *distributed_size* requirements, see "Minimum and Maximum Values" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+A positive number. The size, in integer or decimal gigabytes, for the total space allocated to distributed tables (and corresponding data) *across the appliance*.
 
 If `AUTOGROW` is `ON`, distributed tables are permitted to grow beyond this limit.
 
@@ -1689,8 +1689,6 @@ If `AUTOGROW` is `OFF`, an error is returned if a user attempts to create a new 
 #### *log_size* [ GB ]
 
 A positive number. The size (in integer or decimal gigabytes) for the transaction log *across the appliance*.
-
-For minimum and maximum *log_size* requirements, see "Minimum and Maximum Values" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 If `AUTOGROW` is `ON`, the log file is permitted to grow beyond this limit. Use the [DBCC SHRINKLOG - Analytics Platform System (PDW)](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) statement to reduce the size of the log files to their original size.
 
@@ -1719,8 +1717,6 @@ Databases are created with database compatibility level 120, which is the compat
 ## Limitations
 
 The `CREATE DATABASE` statement isn't allowed in an explicit transaction. For more information, see [Transact-SQL statements](statements.md).
-
-For information on minimum and maximum constraints on databases, see "Minimum and Maximum Values" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 At the time a database is created, there must be enough available free space *on each Compute node* to allocate the combined total of the following sizes:
 

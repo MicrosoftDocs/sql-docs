@@ -137,7 +137,7 @@ For tables with one or more of these characteristics, use the `DELETE` statement
 
 `TRUNCATE TABLE` can't activate a trigger because the operation doesn't log individual row deletions. For more information, see [CREATE TRIGGER (Transact-SQL)](create-trigger-transact-sql.md).
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw](../../includes/sspdw-md.md)]:
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 - `TRUNCATE TABLE` isn't allowed within the `EXPLAIN` statement.
 

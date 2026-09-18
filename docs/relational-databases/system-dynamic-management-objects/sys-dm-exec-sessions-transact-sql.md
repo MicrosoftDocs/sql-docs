@@ -29,7 +29,7 @@ Returns one row per authenticated session on [!INCLUDE [ssNoVersion](../../inclu
 The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests` dynamic management views map to the deprecated [sys.sysprocesses](../system-compatibility-views/sys-sysprocesses-transact-sql.md) system compatibility view.
 
 > [!NOTE]  
-> To call this view from [!INCLUDE [ssazuresynapse_sqlpool_only](../../includes/ssazuresynapse_sqlpool_only.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). Use `sys.dm_exec_sessions` for [!INCLUDE [ssazuresynapse-svrless-sqlpool-only](../../includes/ssazuresynapse-svrless-sqlpool-only.md)] or [!INCLUDE [fabric](../../includes/fabric.md)].
+> To call this view from [!INCLUDE [ssazuresynapse_sqlpool_only](../../includes/ssazuresynapse_sqlpool_only.md)], see [sys.dm_pdw_nodes_exec_sessions](sys-dm-pdw-exec-sessions-transact-sql.md). Use `sys.dm_exec_sessions` for [!INCLUDE [ssazuresynapse-svrless-sqlpool-only](../../includes/ssazuresynapse-svrless-sqlpool-only.md)] or [!INCLUDE [fabric](../../includes/fabric.md)].
 
 | Column name | Data type | Nullable | Description |
 | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | `database_id` | **smallint** | No | ID of the current database for each session.<br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.<br /><br />**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions. |
 | `authenticating_database_id` | **int** | Yes | ID of the database authenticating the principal. For logins, the value is `0`. For contained database users, the value is the database ID of the contained database.<br /><br />**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions. |
 | `open_transaction_count` | **int** | No | Number of open transactions per session.<br /><br />**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions. |
-| `pdw_node_id` | **int** | No | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. |
+| `pdw_node_id` | **int** | No | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. |
 | `page_server_reads` | **bigint** | No | Number of page server reads performed, by requests in this session, during this session.<br /><br />**Applies to**: Azure SQL Database Hyperscale. |
 | `contained_availability_group_id` | **uniqueidentifier** | Yes | ID of the contained availability group.<br /><br />**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. |
 

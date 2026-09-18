@@ -97,7 +97,7 @@ Name of the index, statistics, or column for which to display statistics informa
 
 If an automatically created statistic doesn't exist for a column target, error message 2767 is returned.
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], *target* can't be a column name.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], *target* can't be a column name.
 
 In [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)], *target* can be either the name of a single-column histogram statistics or a column. If a column name is used for *target*, this command returns distribution information only about the automatically generated histogram statistic. To view the information about a manually created histogram statistic, specify the statistics name as *target*.
 

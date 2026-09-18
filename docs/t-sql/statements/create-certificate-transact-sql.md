@@ -248,7 +248,7 @@ GO
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the ['CLR strict security'](../../database-engine/configure-windows/clr-strict-security.md) server configuration option prevents loading assemblies without first setting up the security for them. Load the certificate, create a login from it, grant `UNSAFE ASSEMBLY` to that login, and then load the assembly.
 
 ### D. Creating a self-signed certificate  
- The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The following example creates a certificate called `Shipping04` without specifying an encryption password.
   
 ```sql  
 CREATE CERTIFICATE Shipping04   
@@ -263,9 +263,9 @@ CREATE CERTIFICATE Shipping04
     FROM FILE = 'c:\storedcerts\shipping04cert.pfx'
     WITH 
     FORMAT = 'PFX', 
-	PRIVATE KEY (
+    PRIVATE KEY (
         DECRYPTION BY PASSWORD = '9n34khUbhk$w4ecJH5gh'
-	);  
+    );  
 ```
   
 ## Related content

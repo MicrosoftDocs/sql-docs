@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 | `is_enlisted` |**bit**|1 = Enlisted distributed transaction.<br /><br /> 0 = Not an enlisted distributed transaction.|  
 | `is_bound` |**bit**|1 = The transaction is active on the session via bound sessions.<br /><br /> 0 = The transaction is not active on the session via bound sessions.|  
 | `open_transaction_count` |**int**|The number of open transactions for each session.|  
-| `pdw_node_id` |**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+| `pdw_node_id` |**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 
 ## Permissions
 
@@ -57,7 +57,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
  By executing multiple requests in autocommit mode using multiple active result sets (MARS), it's possible to have more than one active transaction on a single session. In such cases, `sys.dm_tran_session_transactions` shows multiple rows for the same `session_id`, one for each transaction running under that session.  
 
- To call from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_tran_session_transactions`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+ To call from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_tran_session_transactions`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
 
 ## Related content
 

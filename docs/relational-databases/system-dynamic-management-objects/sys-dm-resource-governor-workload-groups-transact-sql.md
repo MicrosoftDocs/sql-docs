@@ -29,7 +29,7 @@ ms.custom:
 Returns workload group statistics and the current in-memory configuration of the workload group.
 
 > [!NOTE]
->  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_resource_governor_workload_groups**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name **sys.dm_pdw_nodes_resource_governor_workload_groups**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ Returns workload group statistics and the current in-memory configuration of the
 | `tempdb_data_space_kb` | **bigint** | **Applies to**: Starting with [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)]<br /><br />The current data space consumed in the `tempdb` data files by all sessions in the workload group, in kilobytes. Nullable. |
 | `peak_tempdb_data_space_kb` | **bigint** | **Applies to**: Starting with [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)]<br /><br />The peak data space consumed in the `tempdb` data files by all sessions in the workload group since the server startup, or since resource governor statistics were reset, in kilobytes. Nullable.|
 | `total_tempdb_data_limit_violation_count` | **bigint** | **Applies to**: Starting with [!INCLUDE [sql-server-2025](../../includes/sssql25-md.md)]<br /><br />The number of times a request was aborted with error 1138 because it would exceed the limit on tempdb data space consumption for the workload group. Nullable. |
-| `pdw_node_id` | **int** | **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on. |
+| `pdw_node_id` | **int** | **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on. |
 
 ## Remarks
 

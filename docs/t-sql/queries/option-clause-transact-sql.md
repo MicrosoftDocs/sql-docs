@@ -58,7 +58,7 @@ OPTION ( <query_option> [ , ...n ] )
     | FOR TIMESTAMP AS OF '<point_in_time>'
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)] and [!INCLUDE [fabric-se](../../includes/fabric-se.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric-se](../../includes/fabric-se.md)]:
 
 ```syntaxsql
 OPTION ( <query_option> [ , ...n ] )

@@ -25,7 +25,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 ||
 Returns information about session dispatcher pools. Dispatcher pools are thread pools used by system components to perform background processing.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_dispatcher_pools**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name **sys.dm_pdw_nodes_os_dispatcher_pools**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +37,7 @@ Returns information about session dispatcher pools. Dispatcher pools are thread 
 |dispatcher_timeout_ms|**int**|The time, in milliseconds, that a dispatcher will wait for new work before exiting. Is not nullable.|  
 |dispatcher_waiting_count|**int**|The number of idle dispatcher threads. Is not nullable.|  
 |queue_length|**int**|The number of work items waiting to be handled by the dispatcher pool. Is not nullable.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions
 

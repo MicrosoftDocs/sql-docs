@@ -48,7 +48,6 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions (Windows and Linux)
 - [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], for details, review [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview)
 - [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], for details, review [Data virtualization with Azure SQL Database (Preview)](/azure/azure-sql/database/data-virtualization-overview)
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [pdw](../../includes/sspdw-md.md)]
 - [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] (for dedicated SQL pools)
 
   - Data virtualization in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is available in two modes, PolyBase and native. For more information, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).

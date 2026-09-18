@@ -955,7 +955,7 @@ WHERE r.command = 'RESTORE DATABASE'
 Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.
 
 > [!NOTE]  
-> Restoring the `master` system database includes restoring appliance login information. To restore the `master` database, use the [Restore the master Database](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation. For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+> Restoring the `master` system database includes restoring appliance login information. To restore the `master` database, use the [Restore the master Database](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation. For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see [Backup and Restore](/previous-versions/sql/analytics-platform-system/backup-and-restore-overview).
 
 ## Syntax
 
@@ -984,7 +984,7 @@ RESTORE HEADERONLY
 
 #### RESTORE DATABASE *database_name*
 
-Specifies to restore a user database to a database called *database_name*. The restored database can have a different name than the source database that was backed up. *database_name* cannot already exist as a database on the destination appliance. For more information on permitted database names, see "Object Naming Rules" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+Specifies to restore a user database to a database called *database_name*. The restored database can have a different name than the source database that was backed up. *database_name* cannot already exist as a database on the destination appliance. For more information on permitted database names, see [Reserved Database Names](/previous-versions/sql/analytics-platform-system/reserved-database-names).
 
 Restoring a user database restores a full database backup and then optionally restores a differential backup to the appliance. A restore of a user database includes restoring database users, and database roles.
 

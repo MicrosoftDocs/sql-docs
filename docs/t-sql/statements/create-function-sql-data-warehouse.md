@@ -503,12 +503,11 @@ WHERE dbo.cleanInput (t.name) ='myvalue';
 
 [!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function (UDF) in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. A user-defined function is a [!INCLUDE [tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. User-defined table-valued functions (TVFs) return a table data type.
+  Creates a user-defined function (UDF) in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. A user-defined function is a [!INCLUDE [tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. User-defined table-valued functions (TVFs) return a table data type.
 
 > [!TIP]
 > For syntax in Fabric Data Warehouse, see the version of [CREATE FUNCTION](create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) for Fabric Data Warehouse.
 
-- In [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value.
 - In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], `CREATE FUNCTION` can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions.
 - In serverless SQL pools in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], `CREATE FUNCTION` can create inline table-value functions but not scalar functions. 
 

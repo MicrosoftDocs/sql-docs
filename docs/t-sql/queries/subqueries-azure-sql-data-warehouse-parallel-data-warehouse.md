@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 # Subqueries
 [!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-This topic gives examples of using subqueries in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], or [!INCLUDE [fabric](../../includes/fabric.md)] Warehouse.
+This topic gives examples of using subqueries in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [fabric](../../includes/fabric.md)] Warehouse.
   
 For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   

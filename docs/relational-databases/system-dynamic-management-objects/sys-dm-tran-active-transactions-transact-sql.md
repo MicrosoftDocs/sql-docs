@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 | `dtc_status` |**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 | `dtc_isolation_level` |**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 | `filestream_transaction_id` |**varbinary(128)**|**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-| `pdw_node_id` |**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+| `pdw_node_id` |**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 
 ## Permissions
 
@@ -56,7 +56,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
 
-To call this dynamic management view from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_tran_active_transactions` [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
+To call this dynamic management view from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_tran_active_transactions` [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
 
 ## Examples
 

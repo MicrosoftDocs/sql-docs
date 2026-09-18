@@ -34,7 +34,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 ||
 > User Instances are a feature of [!INCLUDE[ssexpress-2012-md](../../includes/ssexpress-2012-md.md)] only.  
 
 > [!NOTE]  
-> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_child_instances**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name **sys.dm_pdw_nodes_os_child_instances**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column|Data type|Description|  
 |------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 ||
 |**os_process_id**|**Int**|The process number of the Windows process for this user instance.|  
 |**os_process_creation_date**|**Datetime**|The date and time when this user instance process was last started.|  
 |**heart_beat**|**nvarchar(5)**|Current state of this user instance; either ALIVE or DEAD.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  

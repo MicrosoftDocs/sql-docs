@@ -24,8 +24,6 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
   Contains a row for each external data source in the current database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
-  Contains a row for each external data source on the server for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
-
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |`data_source_id`|**int**|Object ID for the external data source.||  

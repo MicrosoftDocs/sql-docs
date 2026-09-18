@@ -271,9 +271,11 @@ Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tiger
 
 To determine when statistics were last updated, use the [STATS_DATE](../functions/stats-date-transact-sql.md) function.
 
-### PDW / Azure Synapse Analytics
+<a id="pdw--azure-synapse-analytics"></a>
 
-The following syntax isn't supported by [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
+### Azure Synapse Analytics
+
+The following syntax isn't supported by [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 UPDATE STATISTICS t1 (a, b);

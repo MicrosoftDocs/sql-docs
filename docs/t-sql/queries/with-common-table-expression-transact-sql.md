@@ -160,7 +160,7 @@ The following guidelines apply to using a recursive common table expression:
 
 ## Common table expressions in Azure Synapse Analytics and Analytics Platform System (PDW)
 
-The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] have following features and requirements:
+The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] have the following features and requirements:
 
 - A CTE can be specified in a `SELECT` statement.
 

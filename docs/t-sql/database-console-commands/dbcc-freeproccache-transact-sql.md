@@ -133,7 +133,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Requires **ALTER SERVER STATE** permission on the server.
 
@@ -149,9 +149,9 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 Multiple `DBCC FREEPROCCACHE` commands can be run concurrently.
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
 
-`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to recompile the parallel query plan that is generated on the Control node.
+`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to recompile the parallel query plan that is generated on the Control node.
 
 `DBCC FREEPROCCACHE` can be canceled during execution.
 

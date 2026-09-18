@@ -104,7 +104,7 @@ The default value of a parameter is used when:
 > If the default value is a character string that contains embedded blanks or punctuation, or if it starts with a number (for example, `6abc`), it must be enclosed in single, straight quotation marks.  
 
 > [!NOTE]
-> Default parameters are not supported in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)].
+> Default parameters are not supported in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)].
 
 If no value can be specified appropriately as a default for the parameter, specify `NULL` as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
 

@@ -71,13 +71,13 @@ If the right table is local, the join is performed locally. If both tables are r
 
 #### REDUCE
 
-***Applies to:*** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 Reduces the number of rows to be moved for the table on the right side of the join in order to make two distribution incompatible tables compatible. The REDUCE hint is also called a semi-join hint.
 
 #### REPLICATE
 
-***Applies to:*** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)] [!INCLUDE [Fabric Warehouse](../../includes/fabric-dw.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)] [!INCLUDE [Fabric Warehouse](../../includes/fabric-dw.md)]
 
 Causes a broadcast move operation, where a specific table to be replicated across all distribution nodes.
 
@@ -87,9 +87,9 @@ Causes a broadcast move operation, where a specific table to be replicated acros
 
 #### REDISTRIBUTE [(columns_count)]
 
-***Applies to:*** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
-Forces two data sources to be distributed on columns specified in the JOIN clause. For a distributed table, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] performs a shuffle move on the first column of both tables For a replicated table, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] performs a trim move. To understand these move types, see the "DMS Query Plan Operations" section in the "Understanding Query Plans" article in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. This hint can improve performance when the query plan is using a broadcast move to resolve a distribution incompatible join.
+Forces two data sources to be distributed on columns specified in the JOIN clause. For a distributed table, [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] performs a shuffle move on the first column of both tables For a replicated table, [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] performs a trim move. This hint can improve performance when the query plan is using a broadcast move to resolve a distribution incompatible join.
 
 ***Applies to:*** [!INCLUDE [fabric](../../includes/fabric.md)] [!INCLUDE [Fabric Warehouse](../../includes/fabric-dw.md)]
 

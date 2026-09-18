@@ -1492,11 +1492,13 @@ WITH COPY_ONLY;
 
 Creates a backup of a [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE](restore-statements-transact-sql.md) for disaster recovery, or to copy a database from one appliance to another.
 
-**Before you begin**, see "Acquire and Configure a Backup Server" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
-
 There are two types of backups in [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. A *full database backup* is a backup of an entire [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database. A *differential database backup* only includes changes made since the last full backup. A backup of a user database includes database users, and database roles. A backup of the `master` database includes logins.
 
-For more information about [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+For more information about [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database backups, see [Backup and Restore](/previous-versions/sql/analytics-platform-system/backup-and-restore-overview.
+
+## Prerequisites
+
+- [Acquire and Configure a Backup Server](/previous-versions/sql/analytics-platform-system/acquire-and-configure-backup-server)
 
 ## Syntax
 
@@ -1602,7 +1604,7 @@ Transaction log backups of the `master` system database aren't supported.
 
 The backup files are stored in a format suitable only for restoring the backup to a [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] appliance by using the [RESTORE DATABASE](restore-statements-transact-sql.md) statement.
 
-The backup with the `BACKUP DATABASE` statement can't be used to transfer data or user information to SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databases. For that functionality, you can use the remote table copy feature. For more information, see "Remote Table Copy" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+The backup with the `BACKUP DATABASE` statement can't be used to transfer data or user information to SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databases. For that functionality, you can use the remote table copy feature. For more information, see [Remote Table Copy](/previous-versions/sql/analytics-platform-system/remote-table-copy).
 
 [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] uses [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup technology to back up and restore databases. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup options are preconfigured to use backup compression. You can't set backup options such as compression, checksum, block size, and buffer count.
 

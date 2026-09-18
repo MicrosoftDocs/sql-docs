@@ -375,12 +375,12 @@ The `GROUP BY` clause supports all `GROUP BY` features that are included in the 
 
 ### WITH (DISTRIBUTED_AGG)
 
-**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The `DISTRIBUTED_AGG` query hint forces the massively parallel processing (MPP) system to redistribute a table on a specific column before performing an aggregation. You can use the `DISTRIBUTED_AGG` query hint on only one column in the `GROUP BY` clause. After the query finishes, the redistributed table is dropped. The original table isn't changed.
 
 > [!NOTE]  
-> The `DISTRIBUTED_AGG` query hint provides backward compatibility with earlier [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] versions and doesn't improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations.
+> The `DISTRIBUTED_AGG` query hint provides backward compatibility, and doesn't improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations.
 
 ## Remarks
 

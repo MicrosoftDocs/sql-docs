@@ -50,7 +50,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 
 #### WITH NO_INFOMSGS
 
-Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 #### COMPUTE
 
@@ -77,7 +77,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: SQL Server, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: SQL Server
 
 - Requires **sysadmin** permission on the server
 

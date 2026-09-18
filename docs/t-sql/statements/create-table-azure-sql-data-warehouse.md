@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 
 ## CREATE TABLE (Azure Synapse Analytics)
 
- Creates a new table in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. 
+ Creates a new table in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. 
 
  To understand tables and how to use them, see [Tables in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
 

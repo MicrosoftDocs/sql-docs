@@ -117,7 +117,7 @@ When executed with no parameters, `sp_configure` returns a result set with five 
 
 In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-In [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] region.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] region.
 
 In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, Hadoop is no longer supported in PolyBase.
 

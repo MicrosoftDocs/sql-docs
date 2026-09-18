@@ -37,11 +37,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 ## Syntax
 
-Modify an external data source. Syntax for SQL Server (2016, 2017 and 2019) and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)].
+Modify an external data source. Syntax for SQL Server (2016, 2017 and 2019).
 
 ```syntaxsql
 -- Modify an external data source
--- Applies to: SQL Server (2016, 2017 and 2019) and APS
+-- Applies to: SQL Server (2016, 2017 and 2019)
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
         LOCATION = '<prefix>://<path>[:<port>]' [,] |

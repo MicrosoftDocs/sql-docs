@@ -126,7 +126,7 @@ ALTER AUTHORIZATION ON
 
 |Class|Product|
 |-|-|
-|OBJECT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|OBJECT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].|
 |ASSEMBLY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
 |ASYMMETRIC KEY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
 |AVAILABILITY GROUP |**Applies to:** SQL Server 2012 and later.|
@@ -140,7 +140,7 @@ ALTER AUTHORIZATION ON
 |REMOTE SERVICE BINDING|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
 |ROLE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
 |ROUTE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
-|SCHEMA|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|SCHEMA|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].|
 |SEARCH PROPERTY LIST|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
 |SERVER ROLE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
 |SERVICE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
@@ -361,7 +361,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 
 ### F. Changing the owner of a database
 
- **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
 
  The following example change the owner of the `Parts` database to the login `MichikoOsada`.
 

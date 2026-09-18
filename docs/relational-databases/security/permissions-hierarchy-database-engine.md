@@ -28,7 +28,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] manages a hierarchical collectio
 
 The following illustration shows the relationships among the [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions hierarchies.
 
-The permissions system works the same in all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssAPS](../../includes/ssaps-md.md)], however some features aren't available in all versions. For example, server-level permission can't be configured in Azure products.
+The permissions system works the same in all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. However, some features aren't available in all versions. For example, server-level permission can't be configured in Azure products.
 
 ![Diagram of Database Engine permissions hierarchies](../../relational-databases/security/media/wj-security-layers.gif "Diagram of Database Engine permissions hierarchies")
   

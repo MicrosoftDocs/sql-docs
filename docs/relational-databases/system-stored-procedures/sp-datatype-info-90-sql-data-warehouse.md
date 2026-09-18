@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 
 [!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
 
-Returns information about the data types supported by the current environment in [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)], [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
+Returns information about the data types supported by the current environment in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -332,7 +332,7 @@ Specifies all rows from the right table not meeting the join condition are inclu
 
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer uses one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints (Transact-SQL)](../queries/hints-transact-sql-join.md).
 
-For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse, these join hints apply to `INNER` joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. 
+For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse, these join hints apply to `INNER` joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. 
 
 For more information on `REDUCE`, `REPLICATE`, and `REDISTRIBUTE`, see [Join hints (Transact-SQL)](hints-transact-sql-join.md). 
 

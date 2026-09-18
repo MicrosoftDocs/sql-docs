@@ -53,7 +53,7 @@ Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
 match_expression [ NOT ] LIKE pattern
 ```
 
-`ESCAPE` and `STRING_ESCAPE` are not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+`ESCAPE` and `STRING_ESCAPE` are not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Arguments
 

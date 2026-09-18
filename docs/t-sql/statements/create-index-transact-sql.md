@@ -64,7 +64,7 @@ Creates a relational index on a table or view. Also called a rowstore index beca
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] currently don't support unique constraints. Any examples referencing unique constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md.md](../../includes/ssazuremi-md.md)].
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] currently doesn't support unique constraints. Any examples referencing unique constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md.md](../../includes/ssazuremi-md.md)].
 
 For information on index design guidelines, refer to the [SQL Server index design guide](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -978,7 +978,7 @@ Requires the `ALTER` permission on the table or view or membership in the `db_dd
 
 ## Limitations and restrictions
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you can't create:
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you can't create:
 
 - A clustered or nonclustered rowstore index on a data warehouse table when a columnstore index already exists. This behavior is different from SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which allows both rowstore and columnstore indexes to co-exist on the same table.
 - You can't create an index on a view.

@@ -118,7 +118,7 @@ Not all query execution operators can be executed in batch mode. For example, da
 |top sort||no|no|yes||
 |window aggregates||Not available|Not available|yes|New operator in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].|
 
-<sup>1</sup> Applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and higher, and all vCore tiers, and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+<sup>1</sup> Applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and higher, and all vCore tiers, and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 For more information, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
 

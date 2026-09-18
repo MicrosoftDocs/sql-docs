@@ -53,7 +53,7 @@ Sorts data returned by a query in [!INCLUDE [ssNoVersion](../../includes/ssnover
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!NOTE]  
-> `ORDER BY` isn't supported in `SELECT`/`INTO` or `CREATE TABLE AS SELECT` (CTAS) statements in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)].
+> `ORDER BY` isn't supported in `SELECT`/`INTO` or `CREATE TABLE AS SELECT` (CTAS) statements in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Syntax
 

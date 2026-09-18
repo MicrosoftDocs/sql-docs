@@ -405,7 +405,7 @@ The `mssql-python` driver raises `NotSupportedError` if you call `cursor.callpro
 
 ### Table-valued parameters (TVPs)
 
-Table-valued parameters aren't supported by the `mssql-python` driver. For the full feature support matrix, see [Support lifecycle](support-lifecycle.md#feature-compatibility). If you need to pass a set of rows to a stored procedure, use these alternatives:
+The `mssql-python` driver doesn't support table-valued parameters. For the full feature support matrix, see [Support lifecycle](support-lifecycle.md#feature-compatibility). If you need to pass a set of rows to a stored procedure, use these alternatives:
 
 - Insert into a temp table first, then have the stored procedure read from it.
 - Use `bulkcopy()` to load data into a staging table.

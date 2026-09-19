@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 
 # CREATE TABLE
 
-::: moniker range=">=aps-pdw-2016||=azure-sqldw-latest"
+::: moniker range="=azure-sqldw-latest"
 
 [!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 

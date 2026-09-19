@@ -114,7 +114,7 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || >=aps-pdw-2016 ||
 >  The **sys.dm_exec_query_transformation_stats** dynamic management view is identified for informational purposes only. Not supported. Future compatibility is not guaranteed.  
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = azure-sqldw-latest"
+::: moniker range="=azure-sqldw-latest"
   
 This section contains Azure Synapse Analytics or Parallel Data Warehouse dynamic management views (DMVs):
 

@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
+monikerRange: "=azure-sqldw-latest || =fabric"
 ---
 # CREATE FUNCTION
 
@@ -499,7 +499,7 @@ WHERE dbo.cleanInput (t.name) ='myvalue';
 - [Fabric Data Warehouse Migration Assistant](/fabric/data-warehouse/migration-assistant/)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016 || =azure-sqldw-latest"
+::: moniker range="=azure-sqldw-latest"
 
 [!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 

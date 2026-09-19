@@ -35,7 +35,7 @@ helpviewer_keywords:
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
 dev_langs:
   - TSQL
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest"
 ---
 
 # CREATE DATABASE
@@ -60,9 +60,6 @@ Select one of the following tabs for the syntax, arguments, remarks, permissions
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -959,9 +956,6 @@ GO
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 ## SQL Database
@@ -1359,9 +1353,6 @@ AS COPY OF [test_db]
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 ## Azure SQL Managed Instance
@@ -1468,9 +1459,6 @@ CREATE DATABASE MyLedgerDB
     :::column:::
         ***\* Azure Synapse<br />Analytics \****
     :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 ## Azure Synapse Analytics
@@ -1555,7 +1543,7 @@ Specifies the compute size (service objective). The service levels for Gen2 are 
 
 Use [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md) to see the database properties.
 
-Use [ALTER DATABASE - Azure Synapse Analytics](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) to change the max size, or service objective values later.
+Use [ALTER DATABASE - Azure Synapse Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) to change the max size, or service objective values later.
 
 Azure Synapse is set to `COMPATIBILITY_LEVEL 130` and can't be changed. For more information, see [ALTER DATABASE compatibility level](alter-database-transact-sql-compatibility-level.md).
 
@@ -1608,170 +1596,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS;
 
 ## Related content
 
-- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [CREATE TABLE](create-table-azure-sql-data-warehouse.md)
-- [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
-
-::: moniker-end
-
-::: moniker range=">=aps-pdw-2016"
-
-:::row:::
-    :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        ***\* Analytics Platform<br />System (PDW) \****
-    :::column-end:::
-:::row-end:::
-
-## Analytics Platform System
-
-## Overview
-
-In Analytics Platform System, this statement is used to create a new database on an Analytics Platform System appliance. Use this statement to create all files associated with an appliance database and to set maximum size and auto-growth options for the database tables and transaction log.
-
-## Syntax
-
-For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-```syntaxsql
-CREATE DATABASE database_name
-WITH (
-    [ AUTOGROW = ON | OFF , ]
-    REPLICATED_SIZE = replicated_size [ GB ] ,
-    DISTRIBUTED_SIZE = distributed_size [ GB ] ,
-    LOG_SIZE = log_size [ GB ] )
-[ ; ]
-```
-
-## Arguments
-
-#### *database_name*
-
-The name of the new database. For more information on permitted database names, see [Reserved Database Names](/previous-versions/sql/analytics-platform-system/reserved-database-names).
-
-#### AUTOGROW = { ON | OFF }
-
-Specifies whether the *replicated_size*, *distributed_size*, and *log_size* parameters automatically grow as needed beyond their specified sizes. Default value is `OFF`.
-
-If `AUTOGROW` is `ON`, *replicated_size*, *distributed_size*, and *log_size* grow as required with each data insert, update, or other action that requires more storage than has already been allocated.
-
-If `AUTOGROW` is `OFF`, the sizes don't grow automatically.
-
-`AUTOGROW` is either `ON` for all sizes or `OFF` for all sizes. For example, it's not possible to set `AUTOGROW ON` for *log_size*, but not set it for *replicated_size*.
-
-#### *replicated_size* [ GB ]
-
-A positive number. Sets the size (in integer or decimal gigabytes) for the total space allocated to replicated tables and corresponding data *on each Compute node*.
-
-If `AUTOGROW` is `ON`, replicated tables can grow beyond this limit.
-
-If `AUTOGROW` is `OFF`, an error is returned if a user attempts to create a new replicated table, insert data into an existing replicated table, or update an existing replicated table in a manner that would increase the size beyond *replicated_size*.
-
-#### *distributed_size* [ GB ]
-
-A positive number. The size, in integer or decimal gigabytes, for the total space allocated to distributed tables (and corresponding data) *across the appliance*.
-
-If `AUTOGROW` is `ON`, distributed tables are permitted to grow beyond this limit.
-
-If `AUTOGROW` is `OFF`, an error is returned if a user attempts to create a new distributed table, insert data into an existing distributed table, or update an existing distributed table in a manner that would increase the size beyond *distributed_size*.
-
-#### *log_size* [ GB ]
-
-A positive number. The size (in integer or decimal gigabytes) for the transaction log *across the appliance*.
-
-If `AUTOGROW` is `ON`, the log file is permitted to grow beyond this limit. Use the [DBCC SHRINKLOG - Analytics Platform System (PDW)](../database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) statement to reduce the size of the log files to their original size.
-
-If `AUTOGROW` is `OFF`, an error is returned to the user for any action that would increase the log size on an individual Compute node beyond *log_size*.
-
-## Permissions
-
-Requires the `CREATE ANY DATABASE` permission in the `master` database, or membership in the **sysadmin** fixed server role.
-
-The following example provides the permission to create a database to the database user Fay.
-
-```sql
-USE master;
-GO
-
-GRANT CREATE ANY DATABASE TO [Fay];
-GO
-```
-
-## Remarks
-
-Databases are created with database compatibility level 120, which is the compatibility level for [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)]. This ensures that the database can use all of the [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] functionality that PDW uses.
-
-<a id="limitations-and-restrictions"></a>
-
-## Limitations
-
-The `CREATE DATABASE` statement isn't allowed in an explicit transaction. For more information, see [Transact-SQL statements](statements.md).
-
-At the time a database is created, there must be enough available free space *on each Compute node* to allocate the combined total of the following sizes:
-
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database with tables the size of *replicated_table_size*.
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database with tables the size of (*distributed_table_size* / number of Compute nodes).
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] logs the size of (*log_size* / number of Compute nodes).
-
-## Locking
-
-Takes a shared lock on the `DATABASE` object.
-
-## Metadata
-
-After this operation succeeds, an entry for this database appears in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) metadata views.
-
-## Examples: Analytics Platform System (PDW)
-
-### A. Basic database creation examples
-
-The following example creates the database `mytest` with a storage allocation of 100 GB per Compute node for replicated tables, 500 GB per appliance for distributed tables, and 100 GB per appliance for the transaction log. In this example, `AUTOGROW` is off by default.
-
-```sql
-CREATE DATABASE mytest
-  WITH
-    (REPLICATED_SIZE = 100 GB,
-    DISTRIBUTED_SIZE = 500 GB,
-    LOG_SIZE = 100 GB );
-```
-
-The following example creates the database `mytest` with the same parameters, except that `AUTOGROW` is turned on. This allows the database to grow outside the specified size parameters.
-
-```sql
-CREATE DATABASE mytest
-  WITH
-    (AUTOGROW = ON,
-    REPLICATED_SIZE = 100 GB,
-    DISTRIBUTED_SIZE = 500 GB,
-    LOG_SIZE = 100 GB);
-```
-
-### B. Create a database with partial gigabyte sizes
-
-The following example creates the database `mytest`, with `AUTOGROW` off, a storage allocation of 1.5 GB per Compute node for replicated tables, 5.25 GB per appliance for distributed tables, and 10 GB per appliance for the transaction log.
-
-```sql
-CREATE DATABASE mytest
-  WITH
-    (REPLICATED_SIZE = 1.5 GB,
-    DISTRIBUTED_SIZE = 5.25 GB,
-    LOG_SIZE = 10 GB);
-```
-
-## Related content
-
-- [ALTER DATABASE (Transact-SQL)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE (Transact-SQL)](drop-database-transact-sql.md)
 
 ::: moniker-end

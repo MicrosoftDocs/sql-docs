@@ -20,11 +20,11 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ms.custom: devx-track-azurepowershell
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)
 
-::: moniker range=">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
+::: moniker range="=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [sqlserver2022-asa-pdws](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
 

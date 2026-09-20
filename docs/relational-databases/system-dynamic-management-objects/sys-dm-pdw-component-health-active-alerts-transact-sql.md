@@ -27,8 +27,6 @@ monikerRange: ">=aps-pdw-2016"
 |previous_value|**nvarchar(255)**|Used when the alert is of type StatusChange. This is the previous component status. Value is NULL for alerts of type Threshold. See [sys.pdw_health_alerts &#40;Transact-SQL&#41;](../system-catalog-views/sys-pdw-health-alerts-transact-sql.md) for a list of alert types.|NULL|  
 |create_time|**datetime**|Time and date when the alert was generated.|NOT NULL|  
   
- For information about the maximum rows retained by this view, see "Minimum and Maximum Values" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
-  
 ## Related content
 
 - [SQL and Parallel Data Warehouse Dynamic Management Views](azure-synapse-analytics-dynamic-management-objects.md)

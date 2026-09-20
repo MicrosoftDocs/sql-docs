@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data classification"
 ---
 # Using data classification
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../../includes/applies-to-version/sql-asdb-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

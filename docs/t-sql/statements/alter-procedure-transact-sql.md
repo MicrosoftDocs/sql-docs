@@ -63,7 +63,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 ```  
   
 ```syntaxsql  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
     [ { @parameterdata_type } [= ] ] [ ,...n ]  

@@ -205,7 +205,7 @@ FROM pub_info AS pr
 ORDER BY pr.pub_id ASC;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Use SUBSTRING with a character string
 

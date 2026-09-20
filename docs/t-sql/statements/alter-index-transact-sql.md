@@ -142,7 +142,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 ALTER INDEX { index_name | ALL }

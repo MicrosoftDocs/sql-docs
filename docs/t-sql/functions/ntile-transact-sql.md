@@ -159,7 +159,7 @@ David        Campbell             4        1,573,012.94  98055
 Lynn         Tsoflias             4        1,421,810.92  98055
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Divide rows into groups
 

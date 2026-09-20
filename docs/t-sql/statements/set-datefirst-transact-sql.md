@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 SET DATEFIRST { number | @number_var }   
 ```  
   
-#### Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+#### Syntax for Azure Synapse Analytics  
 
 ```syntaxsql 
 SET DATEFIRST 7 ;  

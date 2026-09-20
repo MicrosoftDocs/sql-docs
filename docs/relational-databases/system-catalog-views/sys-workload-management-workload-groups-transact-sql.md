@@ -38,6 +38,6 @@ Requires VIEW SERVER STATE permission.
 
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)
 - [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

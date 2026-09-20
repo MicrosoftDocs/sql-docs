@@ -111,7 +111,7 @@ The `sp_statistics` system stored procedure is equivalent to `SQLStatistics` in 
 
 Requires `SELECT` permission on the schema.
 
-## Example: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Example: Azure Synapse Analytics
 
 The following example returns information about the `DimEmployee` table from the `AdventureWorks` sample database.
 

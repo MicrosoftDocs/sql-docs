@@ -32,7 +32,7 @@ Returns a list of objects that can be queried in the current environment. This m
 
 ## Syntax
 
-Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Analytics Platform System (PDW):
+Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics:
 
 ```syntaxsql
 sys.sp_tables
@@ -120,7 +120,7 @@ EXECUTE sp_tables
     @table_qualifier = 'AdventureWorks2022';
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Return a list of objects that can be queried in the current environment
 

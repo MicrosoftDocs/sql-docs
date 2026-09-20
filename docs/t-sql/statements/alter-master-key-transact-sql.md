@@ -79,7 +79,7 @@ ALTER MASTER KEY <alter_option>
 Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Analytics Platform System
+-- Syntax for Azure Synapse Analytics
 
 ALTER MASTER KEY <alter_option>
 

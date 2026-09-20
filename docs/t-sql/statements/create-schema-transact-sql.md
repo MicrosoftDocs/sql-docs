@@ -54,7 +54,7 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
     }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
@@ -175,7 +175,7 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### B. Create a schema and a table in the schema
 

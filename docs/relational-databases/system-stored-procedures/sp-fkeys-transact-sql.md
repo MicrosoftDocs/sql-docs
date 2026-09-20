@@ -123,7 +123,7 @@ EXECUTE sp_fkeys
     @pktable_owner = N'HumanResources';
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example retrieves a list of foreign keys for the `DimDate` table in the `AdventureWorksPDW2012` database. No rows are returned because [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't support foreign keys.
 

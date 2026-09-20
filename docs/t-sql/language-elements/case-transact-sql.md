@@ -398,7 +398,7 @@ FROM Production.Product
 ORDER BY ListPrice DESC;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### H. Use a SELECT statement with a CASE expression
 

@@ -1,7 +1,7 @@
 ---
 title: "Aliasing"
 titleSuffix: Azure Synapse Analytics
-description: "Aliasing in Azure Synapse Analytics and Parallel Data Warehouse."
+description: "Aliasing in Azure Synapse Analytics."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/12/2024

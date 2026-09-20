@@ -248,7 +248,7 @@ Syntax for Azure SQL Database.
 }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 -- Execute a stored procedure

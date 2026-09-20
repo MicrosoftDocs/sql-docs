@@ -101,7 +101,7 @@ The catalog views in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 
         [Spatial Data Catalog Views](spatial-data-catalog-views.md)
 
-        [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 
         [Stretch Database Catalog Views - sys.remote_data_archive_databases](/previous-versions/sql/relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases)
 

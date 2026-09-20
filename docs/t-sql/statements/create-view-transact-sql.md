@@ -71,7 +71,7 @@ AS select_statement
 }
 ```  
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   

@@ -52,7 +52,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ , ...n ] ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 RAISERROR ( { msg_str | @local_variable }

@@ -191,7 +191,7 @@ GO
 11
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### F. Search from the start of a string expression
 

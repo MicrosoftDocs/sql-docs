@@ -47,7 +47,7 @@ Syntax for SQL Server and Azure SQL Database:
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 match_expression [ NOT ] LIKE pattern

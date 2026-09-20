@@ -52,7 +52,7 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]
 ```
 
-Syntax for Fabric Data Warehouse, Azure Synapse Analytics, and Analytics Platform System (PDW).
+Syntax for Fabric Data Warehouse and Azure Synapse Analytics.
 
 ```syntaxsql
 BEGIN { TRAN | TRANSACTION }
@@ -156,7 +156,7 @@ Requires membership in the `public` role.
 
 ### A. Use an explicit transaction
 
-**Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Analytics Platform System (PDW)
+**Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ```sql
 BEGIN TRANSACTION;
@@ -169,7 +169,7 @@ COMMIT TRANSACTION;
 
 ### B. Roll back a transaction
 
-**Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Analytics Platform System (PDW)
+**Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example shows the effect of rolling back a transaction. In this example, the `ROLLBACK` statement rolls back the `INSERT` statement, but the created table still exists.
 

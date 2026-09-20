@@ -75,7 +75,7 @@ ORDER BY order_by_expression
 }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW):
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 [ ORDER BY
@@ -594,7 +594,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.
 

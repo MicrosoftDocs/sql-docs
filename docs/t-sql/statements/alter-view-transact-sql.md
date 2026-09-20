@@ -45,7 +45,7 @@ AS select_statement
 ```
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
   
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   

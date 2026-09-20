@@ -116,7 +116,7 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || =azure-sqldw-late
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"
   
-This section contains Azure Synapse Analytics or Parallel Data Warehouse dynamic management views (DMVs):
+This section contains Azure Synapse Analytics dynamic management views (DMVs):
 
 :::row:::
     :::column:::

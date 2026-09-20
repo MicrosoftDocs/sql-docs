@@ -19,7 +19,7 @@ Use `sp_pdw_database_encryption` to enable transparent data encryption (TDE) for
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_pdw_database_encryption [ [ @enabled = ] enabled ]

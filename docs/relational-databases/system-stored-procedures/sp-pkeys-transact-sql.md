@@ -29,7 +29,7 @@ Returns primary key information for a single table in the current environment.
 
 ## Syntax
 
-Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Analytics Platform System (PDW).
+Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics.
 
 ```syntaxsql
 sys.sp_pkeys
@@ -95,7 +95,7 @@ EXECUTE sp_pkeys
     @table_owner = N'HumanResources';
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example retrieves the primary key for the `DimAccount` table in the `AdventureWorksPDW2012` database. It returns zero rows indicating that the table doesn't have a primary key.
 

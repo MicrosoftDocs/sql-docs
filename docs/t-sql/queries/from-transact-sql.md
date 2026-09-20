@@ -132,7 +132,7 @@ Syntax for SQL Server, Azure SQL Database, and SQL database in Fabric:
         <date_time_literal> | @date_time_variable
 ```
 
-Syntax for Parallel Data Warehouse, Azure Synapse Analytics:
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 FROM { <table_source> [ , ...n ] }

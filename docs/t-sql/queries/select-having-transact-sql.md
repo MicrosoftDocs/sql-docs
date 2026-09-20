@@ -64,7 +64,7 @@ HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### B. Retrieve total sales exceeding a given value
 

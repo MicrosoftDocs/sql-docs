@@ -138,7 +138,7 @@ The following options extend the basic `GROUP BY` clause to support hierarchical
 
 - **WITH (DISTRIBUTED_AGG)**
 
-  Hints distributed execution for aggregations when grouping by a single column. Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW) are the only platforms that support this option.
+  Hints distributed execution for aggregations when grouping by a single column. Only Azure Synapse Analytics dedicated SQL pools support this option.
 
 ### GROUP BY *column-expression* [ ,...n ]
 
@@ -511,7 +511,7 @@ HAVING DATEPART(yyyy, OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy, OrderDate);
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Basic use of the GROUP BY clause
 

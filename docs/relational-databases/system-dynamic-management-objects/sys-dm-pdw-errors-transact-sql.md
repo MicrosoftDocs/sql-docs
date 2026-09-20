@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_pdw_errors (Transact-SQL)"
-description: sys.dm_pdw_errors holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
+description: sys.dm_pdw_errors holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/23/2024
@@ -16,7 +16,7 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 
-  Holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
+  Holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools.
 
 > [!NOTE]
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  

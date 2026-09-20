@@ -39,7 +39,7 @@ DROP USER [ IF EXISTS ] user_name
 ```  
   
 ```syntaxsql  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics
   
 DROP USER user_name  
 ```  

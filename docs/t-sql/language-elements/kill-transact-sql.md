@@ -53,7 +53,7 @@ KILL { session_id [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBAC
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric:
+Syntax for Azure Synapse Analytics and Microsoft Fabric:
 
 ```syntaxsql
 KILL 'session_id'

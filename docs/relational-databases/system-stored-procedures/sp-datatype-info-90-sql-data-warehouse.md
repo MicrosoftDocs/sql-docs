@@ -78,7 +78,7 @@ None.
 
 Requires membership in the **public** role.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *@data_type* value of `-9`.
 

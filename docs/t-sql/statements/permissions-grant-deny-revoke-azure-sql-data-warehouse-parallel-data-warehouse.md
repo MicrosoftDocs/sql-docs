@@ -1,7 +1,7 @@
 ---
 title: "GRANT-DENY-REVOKE permissions"
-titleSuffix: "Azure Synapse Analytics, Analytics Platform System (PDW), Microsoft Fabric"
-description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Analytics Platform System (PDW), Microsoft Fabric)"
+titleSuffix: "Azure Synapse Analytics, Microsoft Fabric"
+description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Microsoft Fabric)"
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/03/2025
@@ -32,7 +32,7 @@ monikerRange: "=azure-sqldw-latest||=fabric"
 ## Syntax  
   
 ```syntaxsql
--- Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Azure Synapse Analytics and Microsoft Fabric
 GRANT   
     <permission> [ ,...n ]  
     [ ON [ <class_type> :: ] securable ]   

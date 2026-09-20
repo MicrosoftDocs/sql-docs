@@ -55,7 +55,7 @@ When called in a `CATCH` block where an error occurs, `ERROR_SEVERITY` returns t
 
 `ERROR_SEVERITY` typically operates in a nested `CATCH` block. `ERROR_SEVERITY` returns the error severity value specific to the scope of the `CATCH` block that referenced that `CATCH` block. For example, the `CATCH` block of an outer `TRY...CATCH` construct could have an inner `TRY...CATCH` construct. Inside that inner `CATCH` block, `ERROR_SEVERITY` returns the severity value of the error that invoked the inner `CATCH` block. If `ERROR_SEVERITY` runs in the outer `CATCH` block, it returns the error severity value of the error that invoked that outer `CATCH` block.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. Use ERROR_SEVERITY in a CATCH block
 

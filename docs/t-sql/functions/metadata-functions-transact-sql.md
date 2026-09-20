@@ -35,9 +35,9 @@ Find out where you're running (instance and database) and who you're running as 
 | [ORIGINAL_DB_NAME](original-db-name-transact-sql.md) | Returns the original database name before a restore sequence. |
 | [APP_NAME](app-name-transact-sql.md) | Returns the application name for the current session. |
 | [DATABASE_PRINCIPAL_ID](database-principal-id-transact-sql.md) | Returns the principal ID for a database security principal. |
-| [VERSION](version-transact-sql-metadata-functions.md) | Returns the version string for Azure Synapse Analytics and Analytics Platform System (PDW). |
+| [VERSION](version-transact-sql-metadata-functions.md) | Returns the version string for Azure Synapse Analytics. |
 
-<sup>1</sup> **Applies to**: Azure Synapse Analytics and Analytics Platform System (PDW) only
+<sup>1</sup> **Applies to**: Azure Synapse Analytics only
 
 ## Object identification and name resolution
 

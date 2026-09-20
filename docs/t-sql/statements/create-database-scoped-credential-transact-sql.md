@@ -86,7 +86,7 @@ Specifies the name of the account to use when connecting outside the server.
 
 #### SECRET = '*secret*'
 
-Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into Azure Synapse Analytics or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
+Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into Azure Synapse Analytics, the Secret must be the Azure Storage Key.
 
 > [!WARNING]  
 > The SAS key value might begin with a question mark (`?`). When you use the SAS key, remove the leading `?`.

@@ -96,7 +96,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### Basic syntax example
 

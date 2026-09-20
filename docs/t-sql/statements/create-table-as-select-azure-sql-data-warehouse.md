@@ -594,7 +594,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-This syntax isn't supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and Parallel Data Warehouse. This example shows how to rewrite the previous SELECT..INTO statement as a CTAS statement. You can choose any of the DISTRIBUTION options described in the CTAS syntax. This example uses the ROUND_ROBIN distribution method.
+This syntax isn't supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. This example shows how to rewrite the previous SELECT..INTO statement as a CTAS statement. You can choose any of the DISTRIBUTION options described in the CTAS syntax. This example uses the ROUND_ROBIN distribution method.
 
 ```sql
 CREATE TABLE #tmp_fct

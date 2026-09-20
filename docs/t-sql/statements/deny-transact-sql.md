@@ -58,7 +58,7 @@ DENY   { ALL [ PRIVILEGES ] }
 { see the tables below }  
 ```  
   
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric warehouse
+Syntax for Azure Synapse Analytics and Microsoft Fabric warehouse
 
 ```syntaxsql 
 DENY   

@@ -209,7 +209,7 @@ Shipping and Receiving       9.00        19.2308     10.8718     6
 Tool Design                  8.62        29.8462     23.5054     6
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Use COUNT and DISTINCT
 

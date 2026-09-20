@@ -285,7 +285,7 @@ John                           Wood                           Marketing Speciali
 Peng                           Wu                             Quality Assurance Supervisor
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### F. Use EXISTS
 

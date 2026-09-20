@@ -103,7 +103,7 @@ Is Clustered Index Depth Fill Factor
 1            2           0
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### B. Return properties for index on FactResellerSales table
 

@@ -371,7 +371,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ::: moniker range="=azure-sqldw-latest"
 
-## Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+## Syntax for Azure Synapse Analytics
 
 ```syntaxsql
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }

@@ -50,7 +50,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>
 ```
 
-Syntax for Microsoft Fabric, Azure Synapse Analytics, and Parallel Data Warehouse.
+Syntax for Microsoft Fabric and Azure Synapse Analytics.
 
 ```syntaxsql
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }

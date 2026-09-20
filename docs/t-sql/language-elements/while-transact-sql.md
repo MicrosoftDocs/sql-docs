@@ -43,7 +43,7 @@ WHILE boolean_expression
     { sql_statement | statement_block | BREAK | CONTINUE }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 WHILE boolean_expression
@@ -142,7 +142,7 @@ DEALLOCATE Employee_Cursor;
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. WHILE loop
 

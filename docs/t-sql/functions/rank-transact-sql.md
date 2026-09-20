@@ -141,7 +141,7 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               13
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C: Ranking rows within a partition
 

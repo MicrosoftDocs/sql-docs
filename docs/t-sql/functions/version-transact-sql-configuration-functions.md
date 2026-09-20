@@ -113,12 +113,12 @@ SELECT @@VERSION AS 'SQL Server Version';
   Enterprise Developer Edition (64-bit) on Linux (Ubuntu 24.04.3 LTS) <X64>
   ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### B. Return the current version of Azure Synapse Analytics
 
 ```sql
-SELECT @@VERSION AS 'SQL Server PDW Version';
+SELECT @@VERSION AS 'Azure Synapse Analytics Version';
 ```
 
 ## Related content

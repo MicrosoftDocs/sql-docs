@@ -82,7 +82,7 @@ WHERE CountryRegionName = 'Australia';
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example returns the number of characters in the column `FirstName` and the first name (`FirstName`) and family name (`LastName`) of employees located in `Australia`.
 

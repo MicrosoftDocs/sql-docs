@@ -125,7 +125,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]
 ```
 
-Transact-SQL syntax for stored procedures in Azure Synapse Analytics and Parallel Data Warehouse:
+Transact-SQL syntax for stored procedures in Azure Synapse Analytics:
 
 ```syntaxsql
 CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name

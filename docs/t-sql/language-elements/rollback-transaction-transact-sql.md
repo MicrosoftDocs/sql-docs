@@ -48,7 +48,7 @@ ROLLBACK { TRAN | TRANSACTION }
 [ ; ]
 ```
 
-Syntax for Fabric Data Warehouse, Azure Synapse Analytics, and Parallel Data Warehouse Database.
+Syntax for Fabric Data Warehouse and Azure Synapse Analytics.
 
 ```syntaxsql
 ROLLBACK { TRAN | TRANSACTION }

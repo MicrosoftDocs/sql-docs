@@ -528,7 +528,7 @@ WHERE dbo.cleanInput (t.name) ='myvalue';
 ### Scalar function syntax
 
 ```syntaxsql
--- Transact-SQL Scalar Function Syntax (in dedicated pools in Azure Synapse Analytics and Parallel Data Warehouse)
+-- Transact-SQL Scalar Function Syntax (in dedicated pools in Azure Synapse Analytics)
 -- Not available in the serverless SQL pools in Azure Synapse Analytics
 
 CREATE FUNCTION [ schema_name. ] function_name   

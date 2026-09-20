@@ -167,7 +167,7 @@ BEGIN
 END
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Define a series of statements that run together
 

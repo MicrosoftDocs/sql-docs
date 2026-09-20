@@ -46,7 +46,7 @@ ALTER SCHEMA schema_name
 ```  
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 ALTER SCHEMA schema_name   
    TRANSFER [ OBJECT :: ] securable_name   

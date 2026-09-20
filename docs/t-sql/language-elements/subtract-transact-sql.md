@@ -86,7 +86,7 @@ Subtract Date
 1900-01-08 15:00:00.000
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Use subtraction in a SELECT statement
 

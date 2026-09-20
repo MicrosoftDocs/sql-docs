@@ -29,7 +29,7 @@ ms.custom:
 ---
 # CREATE LOGIN (Transact-SQL)
 
-Creates a login for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, or Analytics Platform System databases. Choose one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
+Creates a login for SQL Server, Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics databases. Choose one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
 
 CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
 

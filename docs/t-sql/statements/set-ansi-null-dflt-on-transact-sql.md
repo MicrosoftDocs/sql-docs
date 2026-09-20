@@ -40,7 +40,7 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 ```
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 SET ANSI_NULL_DFLT_ON ON
 ```

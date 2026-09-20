@@ -54,7 +54,7 @@ SET
 }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
+Syntax for Azure Synapse Analytics and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression
@@ -368,7 +368,7 @@ DECLARE @p AS Point = CONVERT (Point, '');
 SET @p.SetXY (22, 23);
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 

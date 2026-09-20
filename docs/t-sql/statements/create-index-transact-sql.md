@@ -202,7 +202,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 }
 ```
 
-### Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+### Syntax for Azure Synapse Analytics
 
 ```syntaxsql
 

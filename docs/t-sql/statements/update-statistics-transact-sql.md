@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_constant ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 UPDATE STATISTICS [ schema_name . ] table_name
@@ -357,7 +357,7 @@ UPDATE STATISTICS Production.Product (Products)
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Update statistics on a table
 

@@ -41,7 +41,7 @@ sys.sp_droprolemember
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_droprolemember N'rolename' , 'membername'
@@ -85,7 +85,7 @@ The following example removes the user `JonB` from the role `Sales`.
 EXECUTE sp_droprolemember 'Sales', 'Jonb';
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example removes the user `JonB` from the role `Sales`.
 

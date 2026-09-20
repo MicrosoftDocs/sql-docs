@@ -41,7 +41,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 [ ; ]
 ```
 
-Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System syntax.
+Azure SQL Database and Azure Synapse Analytics syntax.
 
 ```syntaxsql
 DROP DATABASE database_name

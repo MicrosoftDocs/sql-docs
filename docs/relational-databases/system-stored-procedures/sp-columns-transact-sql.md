@@ -122,7 +122,7 @@ EXECUTE sp_columns
     @table_owner = N'HumanResources';
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example returns column information for a specified table.
 

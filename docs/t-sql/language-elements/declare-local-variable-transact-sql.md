@@ -120,7 +120,7 @@ DECLARE
 }
 ```
 
-The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
+The following syntax is for Azure Synapse Analytics and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 DECLARE
@@ -418,7 +418,7 @@ For more information about how to create a user-defined table type, see [CREATE 
 DECLARE @LocationTVP AS LocationTableType;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### F. Use DECLARE
 

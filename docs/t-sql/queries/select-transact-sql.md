@@ -76,7 +76,7 @@ SELECT [ ALL | DISTINCT ]
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric:
+Syntax for Azure Synapse Analytics and Microsoft Fabric:
 
 ```syntaxsql
 [ WITH <common_table_expression> [ , ...n ] ]

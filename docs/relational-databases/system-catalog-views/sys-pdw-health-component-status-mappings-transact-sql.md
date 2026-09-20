@@ -25,4 +25,4 @@ monikerRange: "=azure-sqldw-latest"
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](azure-synapse-analytics-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)

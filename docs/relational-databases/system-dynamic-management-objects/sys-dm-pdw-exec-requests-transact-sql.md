@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_pdw_exec_requests (Transact-SQL)"
-description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
+description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools.
 author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf, randolphwest
@@ -18,7 +18,7 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 
-Holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW). It lists one row per request/query.
+Holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools. It lists one row per request/query.
 
 > [!NOTE]  
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool, use [sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md).

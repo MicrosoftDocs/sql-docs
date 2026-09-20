@@ -25,5 +25,5 @@ Returns distribution information for columns.
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor)

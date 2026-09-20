@@ -818,7 +818,7 @@ In [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and earlier versions, a
 
 - Switch a partition from the table with the columnstore index into an empty staging table. If there's a columnstore index on the staging table, disable the columnstore index. Perform any updates. Build (or rebuild) the columnstore index. Switch the staging table back into the (now empty) partition of the main table.
 
-## Examples: Azure Synapse Analytics, Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. Change a clustered index to a clustered columnstore index
 

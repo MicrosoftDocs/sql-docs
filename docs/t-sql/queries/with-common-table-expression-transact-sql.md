@@ -158,7 +158,7 @@ The following guidelines apply to using a recursive common table expression:
 
 - Analytic and aggregate functions in the recursive part of the CTE are applied to the set for the current recursion level and not to the set for the CTE. Functions like `ROW_NUMBER` operate only on the subset of data passed to them by the current recursion level and not the entire set of data passed to the recursive part of the CTE. For more information, see example I. Use analytical functions in a recursive CTE that follows.
 
-## Common table expressions in Azure Synapse Analytics and Analytics Platform System (PDW)
+## Common table expressions in Azure Synapse Analytics
 
 The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] have the following features and requirements:
 
@@ -626,7 +626,7 @@ Lvl  N
 
 `N` returns 1 for each pass of the recursive part of the CTE because only the subset of data for that recursion level is passed to `ROWNUMBER`. For each of the iterations of the recursive part of the query, only one row is passed to `ROWNUMBER`.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### J. Use a common table expression within a CTAS statement
 

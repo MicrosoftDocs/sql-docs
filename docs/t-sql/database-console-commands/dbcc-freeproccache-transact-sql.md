@@ -145,7 +145,7 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role.
 
-## Remarks for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Remarks for Azure Synapse Analytics
 
 Multiple `DBCC FREEPROCCACHE` commands can be run concurrently.
 
@@ -155,13 +155,13 @@ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], clearing 
 
 `DBCC FREEPROCCACHE` can be canceled during execution.
 
-## Limitations and restrictions for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Limitations and restrictions for Azure Synapse Analytics
 
 `DBCC FREEPROCCACHE` can't run within a transaction.
 
 `DBCC FREEPROCCACHE` isn't supported in an EXPLAIN statement.
 
-## Metadata for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Metadata for Azure Synapse Analytics
 
 A new row is added to the `sys.pdw_exec_requests` system view when `DBCC FREEPROCCACHE` is run.
 
@@ -220,7 +220,7 @@ DBCC FREEPROCCACHE ('default');
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### D. DBCC FREEPROCCACHE basic syntax
 

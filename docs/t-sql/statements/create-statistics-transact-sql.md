@@ -91,7 +91,7 @@ ON { table_or_indexed_view_name } ( column [ , ...n ] )
     [ STATS_STREAM = stats_stream ]
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 CREATE STATISTICS statistics_name

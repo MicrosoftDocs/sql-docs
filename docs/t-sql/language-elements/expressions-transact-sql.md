@@ -42,7 +42,7 @@ Syntax for SQL Server and Azure SQL Database.
 }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 -- Expression in a SELECT statement

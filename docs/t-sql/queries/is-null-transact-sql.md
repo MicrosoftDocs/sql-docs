@@ -90,7 +90,7 @@ ORDER BY Name;
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### B. Return the full names of all employees with initials
 

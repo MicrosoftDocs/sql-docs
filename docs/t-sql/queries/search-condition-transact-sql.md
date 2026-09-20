@@ -90,7 +90,7 @@ Syntax for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCL
     edge_table_name | edge_table_alias
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 < search_condition > ::=

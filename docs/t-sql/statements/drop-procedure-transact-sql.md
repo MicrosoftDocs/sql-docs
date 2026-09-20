@@ -42,7 +42,7 @@ Syntax for SQL Server, Azure SQL Managed Instance, and Azure SQL Database:
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ , ...n ]
 ```
 
-Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric:
+Syntax for Azure Synapse Analytics and Microsoft Fabric:
 
 ```syntaxsql
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }

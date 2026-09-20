@@ -179,7 +179,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 285              NULL        2007        172,524.45           1,941,678.09         19,416,780.93
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. A simple SUM example
 

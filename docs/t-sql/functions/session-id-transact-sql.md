@@ -21,7 +21,7 @@ monikerRange: "=azure-sqldw-latest"
 ## Syntax  
   
 ```syntaxsql  
--- Azure Synapse Analytics and Parallel Data Warehouse  
+-- Azure Synapse Analytics
 SESSION_ID ( )  
 ```  
   

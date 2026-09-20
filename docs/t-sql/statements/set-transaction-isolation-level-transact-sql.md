@@ -50,7 +50,7 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED

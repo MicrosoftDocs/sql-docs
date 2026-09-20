@@ -42,7 +42,7 @@ Syntax for SQL Server, Azure SQL Database, serverless SQL pool in Azure Synapse 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 SET QUOTED_IDENTIFIER ON

@@ -95,7 +95,7 @@ DROP INDEX
 { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }

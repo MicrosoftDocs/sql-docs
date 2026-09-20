@@ -102,7 +102,7 @@ ORDER BY 1, 2
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 - [sys.pdw_nodes_column_store_segments (Transact-SQL)](sys-pdw-nodes-column-store-segments-transact-sql.md)
 - [sys.pdw_nodes_column_store_dictionaries (Transact-SQL)](sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

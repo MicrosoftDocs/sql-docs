@@ -79,7 +79,7 @@ DECLARE @sql AS NVARCHAR (MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName)
 EXECUTE sp_executesql @sql;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example takes the character string `abc def` and uses the `[` and `]` characters to create a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] delimited identifier.
 

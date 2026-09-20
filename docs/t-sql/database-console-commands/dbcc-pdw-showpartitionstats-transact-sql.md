@@ -1,6 +1,6 @@
 ---
 title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
-description: DBCC PDW_SHOWPARTITIONSTATS displays the size and number of rows for each partition of a table in Azure Synapse Analytics or Analytics Platform System (PDW).
+description: DBCC PDW_SHOWPARTITIONSTATS displays the size and number of rows for each partition of a table in Azure Synapse Analytics.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/05/2022

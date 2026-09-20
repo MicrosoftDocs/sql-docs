@@ -22,7 +22,7 @@ monikerRange: "=azure-sqldw-latest"
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_pdw_remove_network_credentials 'target_server_name'
@@ -59,7 +59,7 @@ To list all credentials and to verify the credentials have been removed, use [sy
 
 To add credentials, use [sp_pdw_add_network_credentials (Azure Synapse Analytics)](sp-pdw-add-network-credentials-sql-data-warehouse.md).
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. Remove credentials for performing a database backup
 

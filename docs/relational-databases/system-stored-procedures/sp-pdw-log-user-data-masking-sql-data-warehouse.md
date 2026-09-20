@@ -22,7 +22,7 @@ Use `sp_pdw_log_user_data_masking` to enable user data masking in [!INCLUDE [ssa
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ]

@@ -38,7 +38,7 @@ Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Fabri
 DROP ROLE [ IF EXISTS ] role_name
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+Syntax for Azure Synapse Analytics
 
 ```syntaxsql
 DROP ROLE role_name

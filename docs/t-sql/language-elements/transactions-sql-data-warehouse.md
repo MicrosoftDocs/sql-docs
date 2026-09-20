@@ -11,7 +11,7 @@ ms.custom:
   - ignite-2024
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest "
+monikerRange: "=azure-sqldw-latest"
 ---
 # Transactions (Azure Synapse Analytics)
 

@@ -9,7 +9,7 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # Version - Transact-SQL Metadata functions
 [!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]

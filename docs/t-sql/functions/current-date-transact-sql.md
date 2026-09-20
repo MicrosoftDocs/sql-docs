@@ -30,7 +30,7 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver17 || >=sql-server-linux-ver17 || >=aps-pdw-2016 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: ">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # CURRENT_DATE (Transact-SQL)
 

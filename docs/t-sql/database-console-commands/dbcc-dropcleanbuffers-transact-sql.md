@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "DBCC DROPCLEANBUFFERS statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # DBCC DROPCLEANBUFFERS (Transact-SQL)

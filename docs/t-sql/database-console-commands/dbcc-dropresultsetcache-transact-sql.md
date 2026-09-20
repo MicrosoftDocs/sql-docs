@@ -10,7 +10,7 @@ ms.subservice: data-warehouse
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: "= azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # DBCC DROPRESULTSETCACHE (Transact-SQL)

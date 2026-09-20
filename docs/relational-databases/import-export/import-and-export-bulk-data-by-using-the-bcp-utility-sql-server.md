@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "bulk exporting [SQL Server], bcp utility"
   - "bulk importing [SQL Server], bcp utility"
   - "bcp utility [SQL Server], about bcp utility"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # Import and export bulk data using bcp (SQL Server)

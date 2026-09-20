@@ -10,7 +10,7 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
+monikerRange: "=azure-sqldw-latest||=fabric"
 ---
 # Permissions: GRANT, DENY, REVOKE 
 [!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]

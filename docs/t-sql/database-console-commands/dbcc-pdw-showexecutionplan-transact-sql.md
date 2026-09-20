@@ -9,7 +9,7 @@ ms.subservice: data-warehouse
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)

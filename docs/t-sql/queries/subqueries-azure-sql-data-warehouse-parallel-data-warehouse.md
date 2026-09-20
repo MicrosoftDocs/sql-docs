@@ -10,7 +10,7 @@ ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - ignite-2024
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
+monikerRange: "=azure-sqldw-latest || =fabric"
 ---
 
 # Subqueries

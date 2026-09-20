@@ -42,7 +42,6 @@ The **uniqueidentifier** type is considered a character type for the purposes of
 
 These tools and features do not support the `uniqueidentifier` data type:
 - PolyBase
-- [dwloader loading tool](../../analytics-platform-system/dwloader.md) for Parallel Data Warehouse
 
 ## Examples  
 The following example converts a `uniqueidentifier` value to a `char` data type.

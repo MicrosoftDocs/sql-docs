@@ -100,7 +100,6 @@ helpviewer_keywords:
 | [!INCLUDE [ssSDS](../../includes/sssds-md.md)] | [Microsoft Azure SQL Database](#Azure) | Built-in [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | Extends System.Data.SqlClient | N/A | N/A | [!INCLUDE [ssSDS](../../includes/sssds-md.md)] | Yes | Yes |
 | SQL Managed Instance | [Microsoft Azure SQL Database](#Azure) | Built-in [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | Extends System.Data.SqlClient | N/A | N/A | SQL Managed Instance | Yes | Yes |
 | Azure Synapse Analytics | [Microsoft Azure SQL Database](#Azure) | Built-in [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | Extends System.Data.SqlClient | N/A | N/A | Azure Synapse Analytics | Yes | Yes |
-| [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance | [Microsoft Parallel Data Warehouse](#PWD) | Deprecated [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | N/A | N/A | N/A | Analytics Platform System (PDW) | No | No |
 | [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional or tabular database | [Microsoft SQL Server Analysis Services](#AnalysisServices) | Built-in [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | Uses ADOMD.NET | Yes | Yes | SQL Server 2012 [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] and later | Yes | Yes |
 | Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) | [Microsoft SQL Server Analysis Services](#AnalysisServices) | Built-in [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | Uses ADOMD.NET | Yes | Yes | SQL Server 2019 [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] and later | Yes | Yes |
 | Azure Analysis Services<br />(Starting with Reporting Services 2017) | [Microsoft SQL Server Analysis Services](#AnalysisServices) | Built-in [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension | Uses ADOMD.NET | Yes | Yes | SQL Server 2017 [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] and later | Yes | Yes |
@@ -153,11 +152,6 @@ helpviewer_keywords:
  If you use the query designer in graphical mode, the query is analyzed and possibly rewritten. A text-based query designer is also available for writing queries. Use the text-based query designer when you want to control the exact [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is used for a query.   
   
  Retrieving data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Azure Synapse Analytics and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is similar, but there are a few requirements that apply only to [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. For more information, see [Azure SQL Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
-  
- [Return to Data sources table](#DataSourcesTable)  
-  
-###  <a name="PWD"></a> Microsoft SQL Server Parallel Data Warehouse Processing Extension  
-This data source has been deprecated. Use the SQL Server data source type to connect to Microsoft Analytics Platform (APS).
   
  [Return to Data sources table](#DataSourcesTable)  
   

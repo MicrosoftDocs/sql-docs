@@ -418,8 +418,6 @@ These optimizations are similar to those available with the `BULK INSERT` comman
  When TOP is used with INSERT the referenced rows are not arranged in any order and the ORDER BY clause can not be directly specified in this statements. If you need to use TOP to insert rows in a meaningful chronological order, you must use TOP together with an ORDER BY clause that is specified in a subselect statement. See the Examples section that follows in this topic.
  
 INSERT queries that use SELECT with ORDER BY to populate rows guarantees how identity values are computed but not the order in which the rows are inserted.
-
-In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, inline functions, derived tables, subqueries and common table expressions, unless TOP is also specified.
   
 ## Logging Behavior  
  The INSERT statement is always fully logged except when using the OPENROWSET function with the BULK keyword or when using `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. These operations can be minimally logged. For more information, see the section "Best Practices for Bulk Loading Data" earlier in this topic.  
@@ -1024,7 +1022,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### Y. Using a label and a query hint with the INSERT statement  
- This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md).  
+ This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION clause](../queries/option-clause-transact-sql.md).  
   
 ```sql
 -- Uses AdventureWorks  

@@ -276,7 +276,7 @@ For more information on troubleshooting PolyBase and Kerberos, see [Troubleshoot
 ### Mapred-site.xml missing needed values
 
 **Scenario:**  
-SQL Server or APS is set up with supported HDP Cluster. Queries that do not require pushdown work, but fails with the following message when 'FORCE PUSHDOWN' hint is used with the following error messages:
+SQL Server is set up with supported HDP Cluster. Queries that do not require pushdown work, but fails with the following message when 'FORCE PUSHDOWN' hint is used with the following error messages:
 
 > Msg 7320, Level 16, State 110, Line 35<BR>
 > Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to JobSubmitter_PollJobStatus: Error [org.apache.hadoop.ipc.RemoteException(java.lang.NullPointerException): java.lang.NullPointerException<BR>
@@ -372,7 +372,7 @@ Even if you had the right directory structure to begin with, follow step #2 to b
 ### Unexpected characters in configuration files
 
 **Scenario:**  
-Setting up SQL Server or APS with a Hadoop cluster, which involves modifying yarn-site.xml, hdfs-site.xml, and other configuration files. The following SQL Server error message is observed:
+Setting up SQL Server with a Hadoop cluster, which involves modifying yarn-site.xml, hdfs-site.xml, and other configuration files. The following SQL Server error message is observed:
 
 > Msg 105019, Level 16, State 1, Line 1<BR>
 > Microsoft.SqlServer.DataWarehouse.Common.ErrorHandling.MppSqlException: EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message:com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException: Invalid byte 1 of 1-byte UTF-8 sequence.: Error [com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException: Invalid byte 1 of 1-byte UTF-8 sequence.] occurred while accessing external file.' ---><BR>

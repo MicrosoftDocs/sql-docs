@@ -79,4 +79,4 @@ Requires `VIEW DATABASE STATE` permission.
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

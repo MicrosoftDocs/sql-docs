@@ -238,7 +238,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);
 ```
 
-The following example prevents the pushdown of the `WHERE` clause to the MapReduce job on the external Hadoop table. All rows are returned to PDW where the `WHERE` clause is applied.
+The following example prevents the pushdown of the `WHERE` clause to the MapReduce job on the external Hadoop table. All rows are returned to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] where the `WHERE` clause is applied.
 
 ```sql
 SELECT ID FROM External_Table_AS A

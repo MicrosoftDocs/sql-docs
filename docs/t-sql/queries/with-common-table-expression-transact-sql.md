@@ -188,8 +188,6 @@ The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includ
 
 - When a CTE is used in a statement that is part of a batch, the statement before it must be followed by a semicolon.
 
-- When used in statements prepared by `sp_prepare`, CTEs behave the same way as other `SELECT` statements in APS PDW. However, if CTEs are used as part of CETAS prepared by `sp_prepare`, the behavior can defer from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and other APS PDW statements because of the way binding is implemented for `sp_prepare`. If `SELECT` that references CTE is using a wrong column that doesn't exist in CTE, the `sp_prepare` passes without detecting the error, but the error is thrown during `sp_execute` instead.
-
 ## Examples
 
 ### A. Create a common table expression

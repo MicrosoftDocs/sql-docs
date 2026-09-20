@@ -41,22 +41,6 @@ monikerRange: "=azure-sqldw-latest"
 
 The following example joins `sys.dm_pdw_nodes_database_encryption_keys` to other system tables to indicate the encryption state for each node of the TDE protected databases.  
 
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
-
-```sql  
-SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
-PD.pdw_node_id AS NodeID, DM.physical_name AS PhysDBName,   
-keys.encryption_state  
-FROM sys.dm_pdw_nodes_database_encryption_keys AS keys  
-JOIN sys.pdw_nodes_pdw_physical_databases AS PD  
-    ON keys.database_id = PD.database_id AND keys.pdw_node_id = PD.pdw_node_id  
-JOIN sys.pdw_database_mappings AS DM  
-    ON DM.physical_name = PD.physical_name  
-JOIN sys.databases AS D  
-    ON D.database_id = DM.database_id  
-ORDER BY D.database_id, PD.pdw_node_ID;  
-```  
-
 [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] 
 
 ```sql
@@ -85,7 +69,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
   
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)
 - [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)
 - [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 - [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)

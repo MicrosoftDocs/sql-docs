@@ -42,4 +42,4 @@ Holds information about all steps that compose a given request or query in [!INC
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

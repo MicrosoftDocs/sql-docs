@@ -82,14 +82,14 @@ For more new features of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], 
 
 The PolyBase feature provides connectivity to the following external data sources:
 
-| External data sources | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
-| --- | --- | --- | --- | --- |
-| Oracle, MongoDB, Teradata | Read | Read | No | No |
-| Generic ODBC | Read (Windows Only) | Read (Windows Only) | No | No |
-| Azure Storage | Read/Write | Read/Write | Read/Write | Read/Write |
-| Hadoop | Read/Write | No | Read/Write | No |
-| SQL Server | Read | Read | No | No |
-| S3-compatible object storage | No | Read/Write | No | No |
+| External data sources | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] with PolyBase | [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
+| --- | --- | --- | --- |
+| Oracle, MongoDB, Teradata | Read | Read | No |
+| Generic ODBC | Read (Windows Only) | Read (Windows Only) | No |
+| Azure Storage | Read/Write | Read/Write | Read/Write |
+| Hadoop | Read/Write | No | No |
+| SQL Server | Read | Read | No |
+| S3-compatible object storage | No | Read/Write | No |
 
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions don't support Hadoop.
 - [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.

@@ -34,5 +34,5 @@ monikerRange: "=azure-sqldw-latest"
   
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)
 - [sys.dm_pdw_wait_stats (Transact-SQL)](sys-dm-pdw-wait-stats-transact-sql.md)

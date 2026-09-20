@@ -53,7 +53,7 @@ Users are orphaned in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## Detect orphaned users
 
-**For [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and PDW**
+**For [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]**
 
 To detect orphaned users in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] based on missing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins, run the following statement in the user database:
 

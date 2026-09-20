@@ -39,4 +39,4 @@ monikerRange: "=azure-sqldw-latest"
 ## Related content
 
 - [sys.dm_pdw_exec_requests (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md)
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

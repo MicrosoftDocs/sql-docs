@@ -57,15 +57,6 @@ CASE
 END
 ```
 
-Syntax for Parallel Data Warehouse.
-
-```syntaxsql
-CASE
-     WHEN when_expression THEN result_expression [ ...n ]
-     [ ELSE else_result_expression ]
-END
-```
-
 ## Arguments
 
 #### *input_expression*

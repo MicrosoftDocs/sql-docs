@@ -102,31 +102,6 @@ The following example adds the database user `Mary5` to the `Production` databas
 EXECUTE sp_addrolemember 'Production', 'Mary5';
 ```
 
-## Examples: Analytics Platform System (PDW)
-
-### C. Add a Windows login
-
-The following example adds the login `LoginMary` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database as user `UserMary`. The user `UserMary` is then added to the `Production` role.
-
-> [!NOTE]  
-> Because the login `LoginMary` is known as the database user `UserMary` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, the user name `UserMary` must be specified. The statement will fail unless a `Mary5` login exists. Logins and users usually have the same name. This example uses different names to differentiate the actions affecting the login vs. the user.
-
-```sql
--- Uses AdventureWorks2022
-CREATE USER UserMary FOR LOGIN LoginMary;
-GO
-
-EXECUTE sp_addrolemember 'Production', 'UserMary';
-```
-
-### D. Add a database user
-
-The following example adds the database user `UserMary` to the `Production` database role in the current database.
-
-```sql
-EXECUTE sp_addrolemember 'Production', 'UserMary';
-```
-
 ## Related content
 
 - [Security stored procedures (Transact-SQL)](security-stored-procedures-transact-sql.md)

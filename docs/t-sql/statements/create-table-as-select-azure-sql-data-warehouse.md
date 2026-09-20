@@ -67,7 +67,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     {   
         CLUSTERED COLUMNSTORE INDEX --default for Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
-      | HEAP --default for Parallel Data Warehouse   
+      | HEAP
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
     }  
       | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
@@ -239,7 +239,7 @@ To avoid data movement in subsequent queries, you can specify `REPLICATE` at the
 
 ### A. Use CTAS to copy a table
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 Perhaps one of the most common uses of `CTAS` is creating a copy of a table so that you can change the DDL. If, for example,  you originally created your table as `ROUND_ROBIN` and now want change it to a table distributed on a column, `CTAS` is how you would change the distribution column. `CTAS` can also be used to change partitioning, indexing, or column types.
 
@@ -316,7 +316,7 @@ DROP TABLE FactInternetSales_old;
 
 ### B. Use CTAS to change column attributes
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 This example uses CTAS to change data types, nullability, and collation for several columns in the `DimCustomer2` table.  
   
@@ -377,7 +377,7 @@ DROP TABLE DimCustomer2_old;
 <a id="ctas-change-distribution-method-bk"></a>
 
 ### C. Use CTAS to change the distribution method for a table
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 This simple example shows how to change the distribution method for a table. To show the mechanics of how to do this, it changes a hash-distributed table to round-robin and then changes the round-robin table back to hash distributed. The final table matches the original table.
 
@@ -430,7 +430,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 
 ### D. Use CTAS to convert a table to a replicated table
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since `DimSalesTerritory` is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
 
@@ -454,7 +454,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### E. Use CTAS to create a table with fewer columns
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example creates a round-robin distributed table named `myTable (c, ln)`. The new table only has two columns. It uses the column aliases in the SELECT statement for the names of the columns.  
   
@@ -477,7 +477,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 
 ### F. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause (Transact-SQL)](../queries/option-clause-transact-sql.md).  
   
@@ -501,7 +501,7 @@ OPTION ( HASH JOIN );
 
 ### G. Use CTAS to import data from Azure Blob storage
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
 
 To import data from an external table, use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is the same as the syntax for selecting data from a regular table.  
   
@@ -533,44 +533,6 @@ AS SELECT * FROM ClickStreamExt
 ;  
 ```  
 
-<a id="ctas-import-Hadoop-bk"></a>
-  
-### H. Use CTAS to import Hadoop data from an external table
-
-Applies to: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] is the same as the syntax for selecting data from a regular table.  
-  
- The following example defines an external table on a Hadoop cluster. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Hadoop text-delimited files and stores the data into a new [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] table.  
-  
-```sql  
--- Create the external table called ClickStream.  
-CREATE EXTERNAL TABLE ClickStreamExt (   
-    url VARCHAR(50),  
-    event_date DATE,  
-    user_IP VARCHAR(50)  
-)  
-WITH (  
-    LOCATION = 'hdfs://MyHadoop:5000/tpch1GB/employee.tbl',  
-    FORMAT_OPTIONS ( FIELD_TERMINATOR = '|')  
-)  
-;  
-  
--- Use your own processes to create the Hadoop text-delimited files 
--- on the Hadoop Cluster.  
-  
--- Use CREATE TABLE AS SELECT to import the Hadoop data into a new 
--- table called ClickStreamPDW  
-CREATE TABLE ClickStreamPDW   
-WITH  
-  (  
-    CLUSTERED COLUMNSTORE INDEX,  
-    DISTRIBUTION = HASH (user_IP)  
-  )  
-AS SELECT * FROM ClickStreamExt  
-;   
-```  
- 
 <a id="examples-workarounds-bk"></a>
  
 ## Examples using CTAS to replace SQL Server code
@@ -582,9 +544,9 @@ Use CTAS to work around some unsupported features. Besides being able to run you
 
 <a id="ctas-replace-select-into-bk"></a>
 
-### I. Use CTAS instead of SELECT..INTO
+### H. Use CTAS instead of SELECT..INTO
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 SQL Server code typically uses SELECT..INTO to populate a table with the results of a SELECT statement. This is an example of a SQL Server SELECT..INTO statement.
 
@@ -609,9 +571,9 @@ FROM    [dbo].[FactInternetSales]
 ```
 
 <a id="ctas-replace-implicit-joins-bk"></a>
-### J. Use CTAS to simplify merge statements
+### I. Use CTAS to simplify merge statements
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
 
@@ -649,9 +611,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a id="ctas-data-type-and-nullability-bk"></a>
 
-### K. Explicitly state data type and nullability of output
+### J. Explicitly state data type and nullability of output
 
-Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
 
 When migrating SQL Server code to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you might find you run across this type of coding pattern:
 
@@ -805,7 +767,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 You can see therefore that type consistency and maintaining nullability properties on a CTAS is a good engineering best practice. It helps to maintain integrity in your calculations and also ensures that partition switching is possible.
 
-### L. Create an ordered clustered columnstore index with MAXDOP 1
+### K. Create an ordered clustered columnstore index with MAXDOP 1
 
 ```sql
 CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )

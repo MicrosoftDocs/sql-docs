@@ -27,8 +27,6 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 
  To understand tables and how to use them, see [Tables in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview).
 
- Discussions about [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] in this article apply to both [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
-
 > [!NOTE]
 > For SQL Server and Azure SQL platforms, visit [CREATE TABLE](create-table-transact-sql.md?view=azuresqldb-current&preserve-view=true) and select your desired product version.
 > For [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], see [CREATE TABLE](create-table-transact-sql.md?view=fabric&preserve-view=true).
@@ -66,14 +64,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     {
        CLUSTERED COLUMNSTORE INDEX -- default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
-      | HEAP --default for Parallel Data Warehouse
+      | HEAP
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
       | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) 
       | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
-      | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
+      | DISTRIBUTION = REPLICATE
     }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
@@ -151,7 +149,7 @@ For guidance on choosing the type of table, see [Indexing tables in [!INCLUDE [s
 Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This behavior is the default for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
  
  `HEAP`
-  Stores the table as a heap. This behavior is the default for [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. 
+  Stores the table as a heap.
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Stores the table as a clustered index with one or more key columns. This behavior stores the data by row. Use *index_column_name* to specify the name of one or more key columns in the index. For more information, see [Rowstore Tables](#rowstore-table-heap-or-clustered-index).
@@ -184,7 +182,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 `DISTRIBUTION = REPLICATE`
-Stores one copy of the table on each Compute node. For [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the table is stored on a distribution database on each Compute node. For [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE [ssPDW](../../includes/sspdw-md.md)].
+Stores one copy of the table on each Compute node. For [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the table is stored on a distribution database on each Compute node.
   
 <a id="TablePartitionOptions"></a>
 
@@ -349,7 +347,7 @@ For minimum and maximum limits in Azure Synapse Analytics, see [[!INCLUDE [ssazu
  
 ### Determine the number of table partitions
 
-Each user-defined table is divided into multiple smaller tables that are stored in separate locations called distributions. [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses 60 distributions. In [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], the number of distributions depends on the number of Compute nodes.
+Each user-defined table is divided into multiple smaller tables that are stored in separate locations called distributions. [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses 60 distributions.
  
 Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions plus one empty partition, there will be 300 partitions (5 x 60= 300). If the table is a clustered columnstore index, there will be one columnstore index per partition, which means you'll have 300 columnstore indexes.
 
@@ -682,7 +680,7 @@ WITH
 > [!NOTE]
 > For [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], see [CREATE TABLE](create-table-transact-sql.md?view=fabric&preserve-view=true).
 > For SQL Server and Azure SQL platforms, visit [CREATE TABLE](create-table-transact-sql.md?view=azuresqldb-current&preserve-view=true) and select your desired product version from the version dropdown list.
-> For reference to [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], visit [CREATE TABLE (Azure Synapse Analytics)](create-table-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true).
+> For reference to [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], visit [CREATE TABLE (Azure Synapse Analytics)](create-table-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 

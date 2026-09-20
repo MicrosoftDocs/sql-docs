@@ -51,15 +51,6 @@ CREATE DATABASE ENCRYPTION KEY
 ```  
   
   
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-
-CREATE DATABASE ENCRYPTION KEY  
-       WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
-   ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
-[ ; ]  
-```  
-
 ## Arguments
 
 WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  

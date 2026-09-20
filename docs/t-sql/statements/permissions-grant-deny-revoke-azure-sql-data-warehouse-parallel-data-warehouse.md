@@ -110,7 +110,7 @@ REVOKE
   
  Some statements require multiple permissions. For example, to create a table requires the **CREATE TABLE** permissions in the database, and the **ALTER SCHEMA** permission for the table that will contain the table.  
   
- [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
+ [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
   
  In [!INCLUDE [fabric](../../includes/fabric.md)], currently the CREATE USER cannot be explicitly executed. When GRANT or DENY is executed, the user will be created automatically. 
 
@@ -253,7 +253,7 @@ REVOKE
   
 -   The **USE** statement does not require permissions. All principals can run the **USE** statement on any database.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="Examples"></a> Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
 ### A. Granting a server level permission to a login  
  The following two statements grant a server level permission to a login.  

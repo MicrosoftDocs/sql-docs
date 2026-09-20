@@ -44,21 +44,6 @@ ALTER DATABASE ENCRYPTION KEY
 ```
   
   
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-ALTER DATABASE ENCRYPTION KEY  
-    {  
-      {  
-        REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
-        [ ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name ]  
-      }  
-      |  
-      ENCRYPTION BY SERVER   CERTIFICATE Encryptor_Name    
-    }  
-[ ; ]  
-```  
- 
 ## Arguments
  REGENERATE WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY }  
  Specifies the encryption algorithm that is used for the encryption key.  

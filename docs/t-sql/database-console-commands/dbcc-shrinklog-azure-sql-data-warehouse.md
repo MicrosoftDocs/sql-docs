@@ -1,6 +1,6 @@
 ---
-title: DBCC SHRINKLOG - Analytics Platform System (PDW)
-description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Analytics Platform System (PDW) database.
+title: DBCC SHRINKLOG - Azure Synapse Analytics
+description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Azure Synapse Analytics database.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/28/2023
@@ -12,7 +12,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest"
 ---
 
-# DBCC SHRINKLOG - Analytics Platform System (PDW)
+# DBCC SHRINKLOG - Azure Synapse Analytics
 
 [!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
@@ -73,4 +73,3 @@ GO
 ## Related content
 
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
-- [Parallel Data Warehouse components - Analytics Platform System](/previous-versions/sql/analytics-platform-system/parallel-data-warehouse-overview)

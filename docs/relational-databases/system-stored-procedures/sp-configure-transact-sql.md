@@ -39,13 +39,6 @@ sys.sp_configure
 [ ; ]
 ```
 
-Syntax for Analytics Platform System (PDW).
-
-```syntaxsql
-sp_configure
-[ ; ]
-```
-
 ## Arguments
 
 #### [ @configname = ] '*configname*'
@@ -154,36 +147,6 @@ GO
 EXECUTE sp_configure 'recovery interval', '3';
 
 RECONFIGURE WITH OVERRIDE;
-```
-
-## Examples: Analytics Platform System (PDW)
-
-### C. List all available configuration settings
-
-The following example shows how to list all configuration options.
-
-```sql
-EXECUTE sp_configure;
-```
-
-The result returns the option name followed by the minimum and maximum values for the option. The `config_value` is the value that [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses when reconfiguration is complete. The `run_value` is the value that is currently being used. The `config_value` and `run_value` are usually the same unless the value is in the process of being changed.
-
-### D. List the configuration settings for one configuration name
-
-```sql
-EXECUTE sp_configure @configname = 'hadoop connectivity';
-```
-
-### E. Set Hadoop connectivity
-
-Setting Hadoop connectivity requires a few more steps in addition to running `sp_configure`. For the full procedure, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
-
-```syntaxsql
-sp_configure [ @configname = ] 'hadoop connectivity',
-             [ @configvalue = ] { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 }
-[ ; ]
-RECONFIGURE;
-[ ; ]
 ```
 
 ## Related content

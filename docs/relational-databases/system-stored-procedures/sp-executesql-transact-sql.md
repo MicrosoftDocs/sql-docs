@@ -33,7 +33,7 @@ Executes a [!INCLUDE [tsql](../../includes/tsql-md.md)] statement or batch that 
 
 ## Syntax
 
-Syntax for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [ssazurepdw_md](../../includes/ssazurepdw_md.md)].
+Syntax for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ```syntaxsql
 sp_executesql [ @stmt = ] N'statement'

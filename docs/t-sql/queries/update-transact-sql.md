@@ -117,17 +117,6 @@ ON <join_condition>
 }  
 ```
 
-```syntaxsql
--- Syntax for Parallel Data Warehouse
-
-UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
-SET { column_name = { expression | NULL } } [ ,...n ]  
-[ FROM from_clause ]  
-[ WHERE <search_condition> ]   
-[ OPTION ( LABEL = label_name ) ]  
-[;]  
-```  
-  
 ## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  

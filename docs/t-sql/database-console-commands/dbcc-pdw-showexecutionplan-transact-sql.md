@@ -31,13 +31,6 @@ DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id , spid )
 [;]
 ```
 
-Syntax for Analytics Platform System (PDW):
-
-```syntaxsql
-DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id , spid )
-[;]
-```
-
 > [!NOTE]  
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
@@ -46,10 +39,6 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id , spid )
 #### *distribution_id*
 
  Identifier for the distribution that is running the query plan. This is an integer and can't be `NULL`. Value must be between 1 and 60. Used when targeting [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
-
-#### *pdw_node_id*
-
- Identifier for the node that is running the query plan. This is an integer and can't be `NULL`. Used when targeting an Appliance.
 
 #### *spid*
 
@@ -88,38 +77,6 @@ If you are curious as to what `distribution_id` 1 was running in session 375, yo
 
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN (1, 375);
-```
-
-## Examples: Analytics Platform System (PDW)
-
-### B. DBCC PDW_SHOWEXECUTIONPLAN basic syntax
-
- The query that is running too long is either running a DMS query plan operation or a SQL query plan operation.
-
-If the query is running a DMS query plan operation, you can use the following query to retrieve a list of the node IDs and session IDs for steps that aren't complete.
-
-```sql
-SELECT [sql_spid]
-    , [pdw_node_id]
-    , [request_id]
-    , [dms_step_index]
-    , [type]
-    , [start_time]
-    , [end_time]
-    , [status]
-FROM sys.dm_pdw_dms_workers
-WHERE [status] <> 'StepComplete'
-    AND [status] <> 'StepError'
-    AND pdw_node_id = 201001
-ORDER BY request_id
-    , [dms_step_index]
-    , [distribution_id];
-```
-
-Based on the results of the preceding query, use the `sql_spid` and `pdw_node_id` as parameters to `DBCC PDW_SHOWEXECUTIONPLAN`. For example, the following command shows the execution plan for `pdw_node_id` 201001 and `sql_spid` 375.
-
-```sql
-DBCC PDW_SHOWEXECUTIONPLAN (201001, 375);
 ```
 
 ## Related content

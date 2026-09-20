@@ -93,16 +93,6 @@ ON <join_condition>
 }  
 ```
 
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-DELETE 
-    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
-    [ WHERE <search_condition> ]   
-    [ OPTION ( <query_options> [ ,...n ]  ) ]  
-[; ]  
-```  
-  
 ## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the DELETE statement. The result set is derived from a SELECT statement.  

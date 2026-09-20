@@ -89,15 +89,6 @@ GROUP BY {
 } [ , ...n ]
 ```
 
-Syntax for Analytics Platform System (PDW):
-
-```syntaxsql
-GROUP BY {
-      column-name [ WITH (DISTRIBUTED_AGG) ]
-    | column-expression
-} [ , ...n ]
-```
-
 ## Arguments
 
 ### *column-expression*

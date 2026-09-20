@@ -135,10 +135,6 @@ Requires the `CONTROL` permission on the database, or `ALTER ANY DATABASE` permi
 
 Only the server-level principal login (created by the provisioning process) or members of the **dbmanager** database role can drop a database.
 
-### Analytics Platform System (PDW)
-
-Requires the `CONTROL` permission on the database, or `ALTER ANY DATABASE` permission, or membership in the **db_owner** fixed database role.
-
 ## Examples
 
 ### A. Drop a single database

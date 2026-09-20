@@ -48,7 +48,7 @@ SUBSTRING ( expression , start , length )
 
 ::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
-Syntax for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssazurepdw_md](../../includes/ssazurepdw_md.md)], and [!INCLUDE [fabric-dw-short](../../includes/fabric-dw-short.md)] and [!INCLUDE [fabric-se-short](../../includes/fabric-se-short.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
+Syntax for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric-dw-short](../../includes/fabric-dw-short.md)] and [!INCLUDE [fabric-se-short](../../includes/fabric-se-short.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
 
 ```syntaxsql
 SUBSTRING ( expression , start [ , length ] )
@@ -263,7 +263,7 @@ NULL
 
 ### E. Use SUBSTRING with optional length argument
 
-**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssazurepdw_md](../../includes/ssazurepdw_md.md)], [!INCLUDE [fabric-se-short](../../includes/fabric-se-short.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]
+**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [fabric-se-short](../../includes/fabric-se-short.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]
 
 The following example shows how to return only a part of a character string from a given start position. Since the *length* argument isn't provided, the function returns the remaining characters in the string.
 

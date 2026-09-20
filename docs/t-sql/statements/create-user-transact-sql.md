@@ -190,20 +190,6 @@ CREATE USER user_name
 
 ```
 
-Syntax for Parallel Data Warehouse  
-
-```syntaxsql
-CREATE USER user_name   
-    [ { { FOR | FROM }  
-      {   
-        LOGIN login_name   
-      }   
-      | WITHOUT LOGIN  
-    ]   
-    [ WITH DEFAULT_SCHEMA = schema_name ]  
-[;]  
-```  
-  
 ## Arguments
 
 #### *user_name*  
@@ -430,7 +416,7 @@ Requires CREATE USER permission on the database.
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
-Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2022` statement. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
+Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2022` statement. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], you must make a new connection to the user database.
 
 ```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  

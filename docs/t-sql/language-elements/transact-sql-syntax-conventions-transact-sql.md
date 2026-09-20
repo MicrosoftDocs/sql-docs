@@ -153,7 +153,7 @@ Many code examples prefix Unicode character string constants with the letter `N`
 
 ## "Applies to" references
 
-The [!INCLUDE [tsql](../../includes/tsql-md.md)] reference articles encompass multiple versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], starting with [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], as well as [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [ssazurepdw_md](../../includes/ssazurepdw_md.md)].
+The [!INCLUDE [tsql](../../includes/tsql-md.md)] reference articles encompass multiple versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], starting with [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], as well as [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 A section near the top of each article indicates which products support the article's subject. If a product is omitted, then the feature described by the article isn't available in that product.
 

@@ -94,28 +94,6 @@ ALTER AUTHORIZATION ON
     }
 ```
 
-```syntaxsql
--- Syntax for Parallel Data Warehouse
-
-ALTER AUTHORIZATION ON
-     [ <class_type> :: ] <entity_name>
-     TO { principal_name | SCHEMA OWNER }
-    [;]
-
-<class_type> ::= {
-    DATABASE
-     | SCHEMA
-     | OBJECT
-    }
-
-<entity_name> ::=
-    {
-    database_name
-     | schema_name
-     | [ schema_name. ] object_name
-    }
-```
-
 > [!NOTE]
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 

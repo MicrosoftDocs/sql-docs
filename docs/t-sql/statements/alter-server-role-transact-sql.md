@@ -37,14 +37,6 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
-  
-ALTER SERVER ROLE  server_role_name  DROP MEMBER login;  
-```  
-  
 ## Arguments
 
 #### *server_role_name*
@@ -148,22 +140,6 @@ JOIN sys.server_principals AS SP
 JOIN sys.server_principals AS SP2   
     ON SRM.member_principal_id = SP2.principal_id  
 ORDER BY  SP.name,  SP2.name  
-```  
-  
-## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
-  
-### H. Add a member to a server role
-The following example adds the login `Anna` to the `LargeRC` server role.  
-  
-```sql
-ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
-```  
-  
-### I. Remove a login from a resource class
-The following example drops Anna's membership in the `LargeRC` server role.  
-  
-```sql
-ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
 ## Related content

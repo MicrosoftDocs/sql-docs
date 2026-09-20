@@ -56,17 +56,6 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
 ```  
   
    
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
-      WITH PRIVATE KEY   
-      (   
-        FILE ='path_to_private_key_file',  
-        ENCRYPTION BY PASSWORD ='encryption_password'   
-      )   
-```  
-  
 ## Arguments
  *certname*  
  Is the name of the certificate to back up.

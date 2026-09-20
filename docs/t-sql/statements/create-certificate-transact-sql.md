@@ -87,31 +87,6 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
    
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-CREATE CERTIFICATE certificate_name   
-    { <generate_new_keys> | FROM <existing_keys> }  
-    [ ; ]  
-  
-<generate_new_keys> ::=   
-    WITH SUBJECT = 'certificate_subject_name'   
-    [ , <date_options> [ ,...n ] ]   
-  
-<existing_keys> ::=   
-    {   
-      FILE ='path_to_file'  
-      WITH PRIVATE KEY   
-         (   
-           FILE = 'path_to_private_key'  
-           , DECRYPTION BY PASSWORD ='password'   
-         )  
-    }  
-  
-<date_options> ::=  
-    START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
-```  
-  
 ## Arguments
  *certificate_name*  
  Is the name for the certificate in the database.  

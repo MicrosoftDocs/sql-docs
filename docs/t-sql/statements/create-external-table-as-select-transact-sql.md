@@ -26,7 +26,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16
 
 ::: moniker range="=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 
-[!INCLUDE [sqlserver2022-asa-pdws](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
+[!INCLUDE [sqlserver2022-asas](../../includes/applies-to-version/sqlserver2022-asa.md)]
 
 Creates an external table and then exports, in parallel, the results of a [!INCLUDE [tsql](../../includes/tsql-md.md)] SELECT statement.
 

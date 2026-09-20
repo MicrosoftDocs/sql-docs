@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_os_process_memory (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
   Most memory allocations that are attributed to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process space are controlled through interfaces that allow for tracking and accounting of those allocations. However, memory allocations might be performed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] address space that bypasses internal memory management routines. Values are obtained through calls to the base operating system. They are not manipulated by methods internal to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except when it adjusts for locked or large page allocations.  
   

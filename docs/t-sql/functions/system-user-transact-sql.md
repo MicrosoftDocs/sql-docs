@@ -25,7 +25,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SYSTEM_USER (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   

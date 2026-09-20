@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sp_unprepare (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
 Discards the execution plan created by the `sp_prepare` stored procedure. `sp_unprepare` is invoked by specifying `ID = 15` in a tabular data stream (TDS) packet.
 

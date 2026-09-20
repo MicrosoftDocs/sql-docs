@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-201
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
   Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   

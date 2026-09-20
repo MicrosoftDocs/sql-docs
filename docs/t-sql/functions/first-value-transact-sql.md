@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # FIRST_VALUE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-edge-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-edge-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the first value in an ordered set of values.
 

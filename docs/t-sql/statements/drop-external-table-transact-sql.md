@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # DROP EXTERNAL TABLE (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricdw.md)]
 
  Removes an [external table](create-external-table-transact-sql.md) from a database, but doesn't delete the external data.  
 

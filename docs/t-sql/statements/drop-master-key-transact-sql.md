@@ -25,7 +25,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # DROP MASTER KEY (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw-fabric](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdbmi-asa-fabric](../../includes/applies-to-version/sql-asdbmi-asa-fabricsqldb.md)]
 
   Removes the master key from the current database.  
   

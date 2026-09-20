@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sp_prepare (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
 Prepares a parameterized [!INCLUDE [tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution. `sp_prepare` is invoked by specifying `ID = 11` in a tabular data stream (TDS) packet.
 

@@ -27,7 +27,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # SET ANSI_PADDING (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Controls the way the column stores values shorter than the defined size of the column, and the way the column stores values that have trailing blanks in **char**, **varchar**, **binary**, and **varbinary** data.
 - `SET ANSI_PADDING ON` - preserves the trailing blanks in the string values when they are inserted into a column. This is ANSI-compliant behavior.

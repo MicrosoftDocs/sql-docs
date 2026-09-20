@@ -20,7 +20,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Controls a group of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings that collectively specify some ISO standard behavior.  
   

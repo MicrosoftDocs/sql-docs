@@ -27,7 +27,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
   Exports a certificate to a file.
 

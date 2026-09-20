@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 ---
 # Create a Server Role
 
-[!INCLUDE [sql-pdw](../../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a new server role in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   

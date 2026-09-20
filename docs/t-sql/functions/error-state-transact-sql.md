@@ -24,7 +24,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 
 # ERROR_STATE (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Returns the state number of the error that caused the CATCH block of a TRY...CATCH construct to be run.  
   

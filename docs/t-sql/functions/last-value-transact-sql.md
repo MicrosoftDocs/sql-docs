@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # LAST_VALUE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-edge-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-edge-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the last value in an ordered set of values.
 

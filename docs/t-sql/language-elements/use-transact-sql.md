@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 ---
 # USE (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw-fabricdw](../../includes/applies-to-version/sql-asdbmi-pdw-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-fabricdw](../../includes/applies-to-version/sql-asdbmi-fabricdw.md)]
 
 Changes the database context to the specified database or database snapshot.
 

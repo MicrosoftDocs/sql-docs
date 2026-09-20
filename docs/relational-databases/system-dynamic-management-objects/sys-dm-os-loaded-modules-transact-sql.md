@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each module loaded into the server address space.  
   

@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sp_execute (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
 Executes a prepared [!INCLUDE [tsql](../../includes/tsql-md.md)] statement using a specified handle and optional parameter value. `sp_execute` is invoked by specifying `ID = 12` in a tabular data stream (TDS) packet.
 

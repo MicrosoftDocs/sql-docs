@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "queries [ODBC]"
 ---
 # Profiling ODBC Driver Performance Data - Log Long-Running Queries
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver-specific options to log long-running queries. When run, this sample creates Odbcqry.log, which contains a list of queries whose execution exceeds an interval set by the application. This sample is not supported on IA64. This sample was developed for ODBC version 3.0 or later.  
   

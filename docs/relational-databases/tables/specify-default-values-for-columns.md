@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Specify default values for columns
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricsqldb.md)]
 
 You can use [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) to specify a default value that is entered into the table column. You can set a default by using the Object Explorer, or by executing [!INCLUDE [tsql](../../includes/tsql-md.md)].
 

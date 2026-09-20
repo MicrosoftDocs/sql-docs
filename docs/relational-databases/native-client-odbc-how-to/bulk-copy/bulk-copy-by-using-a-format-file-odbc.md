@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
 ---
 # Bulk Copy by Using a Format File (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to use the ODBC bcp_init function with a format file.  
   

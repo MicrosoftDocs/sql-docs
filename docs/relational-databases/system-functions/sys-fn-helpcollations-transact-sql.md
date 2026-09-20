@@ -22,7 +22,7 @@ monikerRange: "=azure-sqldw-latest || =azuresqldb-current || >=sql-server-2017 |
 ---
 # sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
   Returns a list of all supported collations.  
   

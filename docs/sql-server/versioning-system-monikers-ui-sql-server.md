@@ -13,7 +13,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-lat
 
 # Versioning system for SQL documentation
 
-[!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
 This article explains our *versioning system* for SQL documentation. The versioning system knows about products and their versions. The system enables you to choose the product and version you're interested in. The system then displays the appropriate documentation.
 

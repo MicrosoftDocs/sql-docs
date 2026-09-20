@@ -29,7 +29,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates an encryption key for transparently encrypting a database. For more information about transparent data encryption (TDE), see [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   

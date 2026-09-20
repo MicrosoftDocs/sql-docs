@@ -13,7 +13,7 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 ---
 # sys.sp_datatype_info_90 (Transact-SQL)
 
-[!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [applies-to-version/asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
 Returns information about the data types supported by the current environment in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
 

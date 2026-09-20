@@ -24,7 +24,7 @@ ms.custom:
 
 # sys.dm_resource_governor_workload_groups (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns workload group statistics and the current in-memory configuration of the workload group.
 

@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # Import and export bulk data using bcp (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides an overview of using the [bcp utility](../../tools/bcp/bcp-utility.md) to export data from anywhere in a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database where a `SELECT` statement works, including partitioned views.
 

@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Use non-XML format files (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 In [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*.
 

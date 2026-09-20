@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # sqlps utility
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The **sqlps** utility starts a Windows PowerShell session with the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider and cmdlets loaded and registered. You can enter PowerShell commands or scripts that use the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components to work with instances of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and their objects.
 

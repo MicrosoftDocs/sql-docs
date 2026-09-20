@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # QUOTENAME (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns a Unicode string with the delimiters added to make the input string a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [delimited identifier](../../relational-databases/databases/database-identifiers.md#rules-for-delimited-identifiers).
 

@@ -21,7 +21,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asa-asdbmi-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asa-asdbmi-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Returns information about all latch waits organized by class. 
   

@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # ALTER CERTIFICATE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Changes the password used to encrypt the private key of a certificate, removes the private key, or imports the private key if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   

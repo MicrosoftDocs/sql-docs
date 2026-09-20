@@ -21,7 +21,7 @@ dev_langs:
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # sys.key_constraints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabric](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabric](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
   Contains a row for each object that is a primary key or unique constraint. Includes **sys.objects.type** PK and UQ.  
   

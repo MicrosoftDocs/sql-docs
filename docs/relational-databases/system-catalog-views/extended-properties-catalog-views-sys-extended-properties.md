@@ -20,7 +20,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Extended properties catalog views - sys.extended_properties
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Returns a row for each extended property in the current database.
 

@@ -9,7 +9,7 @@ ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Sparse Columns Support in SQL Server Native Client (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]

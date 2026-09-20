@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Controls the locking and row versioning behavior of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements issued by a connection to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 

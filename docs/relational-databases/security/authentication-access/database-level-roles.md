@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Database-level roles
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 To easily manage the permissions in your databases, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] provides several roles that are security principals that group other principals. They are like *groups* in the Windows operating system. Database-level roles are database-wide in their permissions scope.
 

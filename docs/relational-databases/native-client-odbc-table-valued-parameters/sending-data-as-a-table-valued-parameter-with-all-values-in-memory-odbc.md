@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), sending data to a stored procedure with all values in memory"
 ---
 # Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic describes how to send data to a stored procedure as a table-valued parameter when all values are in memory. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   

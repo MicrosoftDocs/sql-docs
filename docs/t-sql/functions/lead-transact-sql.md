@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # LEAD (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Accesses data from a subsequent row in the same result set without the use of a self-join starting with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]. `LEAD` provides access to a row at a given physical offset that follows the current row. Use this analytic function in a `SELECT` statement to compare values in the current row with values in a following row.
 

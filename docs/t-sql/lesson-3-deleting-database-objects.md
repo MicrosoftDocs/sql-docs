@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Lesson 3: Delete database objects
 
-[!INCLUDE[sql-asdb-asdbmi-pdw-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE[sql-asdb-asdbmi-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 > [!NOTE]  
 > The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.

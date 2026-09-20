@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest"
 ---
 # sys.dm_os_cluster_nodes (Transact-SQL)
-[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
 Returns one row for each node in the failover cluster instance configuration. If the current instance is a failover clustered instance, it returns a list of nodes on which this failover cluster instance (formerly "virtual server") has been defined. If the current server instance is not a failover clustered instance, it returns an empty rowset.  
   

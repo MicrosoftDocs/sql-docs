@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux
 ---
 # sys.sp_configure (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Displays or changes global configuration settings for the current server.
 

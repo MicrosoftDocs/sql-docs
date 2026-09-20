@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "SQL Server Native Client, updating applications"
 ---
 # Updating an Application to SQL Server Native Client from MDAC
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

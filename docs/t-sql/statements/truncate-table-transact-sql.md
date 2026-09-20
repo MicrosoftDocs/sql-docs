@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # TRUNCATE TABLE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 Removes all rows from a table or specified partitions of a table, without logging the individual row deletions. `TRUNCATE TABLE` is similar to the `DELETE` statement with no `WHERE` clause; however, `TRUNCATE TABLE` is faster and uses fewer system and transaction log resources.
 

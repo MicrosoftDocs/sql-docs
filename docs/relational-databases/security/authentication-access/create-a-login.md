@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Create a login
 
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article describes how to create a login in [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)] or Azure [!INCLUDE [ssSDS](../../../includes/sssds-md.md)] by using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) or [!INCLUDE [tsql](../../../includes/tsql-md.md)]. A login is the identity of the person or process that is connecting to an instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
 

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters in SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The following are the schema rowsets that have been changed or added to support table-valued parameters.  
   

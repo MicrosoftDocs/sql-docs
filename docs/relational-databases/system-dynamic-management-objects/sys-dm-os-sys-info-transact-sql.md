@@ -22,7 +22,7 @@ monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sys.dm_os_sys_info (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a miscellaneous set of useful information about the computer, and about the resources available to and consumed by [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)].
 

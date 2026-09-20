@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # sp_cursorprepexec (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor. `sp_cursorprepexec` combines the functions of `sp_cursorprepare` and `sp_cursorexecute`. This procedure is invoked by specifying `ID = 5` in a tabular data stream (TDS) packet.
 

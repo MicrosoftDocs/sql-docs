@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Start the sqlcmd utility
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The [sqlcmd utility](sqlcmd-utility.md) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in [SQLCMD mode](/ssms/scripting/sqlcmd-scripts-query-editor) in [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms), and in a Windows script file or in [an operating system (Cmd.exe) job step](/ssms/agent/create-a-cmdexec-job-step) of a SQL Server Agent job.
 

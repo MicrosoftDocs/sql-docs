@@ -12,7 +12,7 @@ helpviewer_keywords:
 apitype: "DLLExport"
 ---
 # SQLDrivers
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The ODBC Driver Manager returns all **SQLDrivers** attribute specification strings. For more information about attribute string and value definition, see the [Data Access and Storage Developer Center](../../connect/sql-data-developer.md), or you can view the [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md) online.  
   

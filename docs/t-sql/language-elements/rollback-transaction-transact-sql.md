@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # ROLLBACK TRANSACTION (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 This statement rolls back an explicit or implicit transaction to the beginning of the transaction, or to a savepoint inside the transaction. You use `ROLLBACK TRANSACTION` to erase all data modifications made from the start of the transaction or from a savepoint. `ROLLBACK TRANSACTION` also frees the resources held by the transaction.
 

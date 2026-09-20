@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # SELECT - HAVING clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Specifies a search condition for a group or an aggregate. You can use `HAVING` only with the `SELECT` statement. Typically, you use `HAVING` with a `GROUP BY` clause. When you don't use `GROUP BY`, there's an implicit single, aggregated group.
 

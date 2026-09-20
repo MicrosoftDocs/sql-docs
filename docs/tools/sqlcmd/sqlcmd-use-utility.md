@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Use sqlcmd
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 **sqlcmd** is a command-line utility for ad hoc, interactive execution of Transact-SQL (T-SQL) statements and scripts. It also automates T-SQL scripting tasks. To use **sqlcmd** interactively or to build script files for **sqlcmd**, you should understand T-SQL. You can use **sqlcmd** in various ways. For example:
 

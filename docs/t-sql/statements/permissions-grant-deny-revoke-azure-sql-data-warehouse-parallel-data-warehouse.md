@@ -13,7 +13,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest||=fabric"
 ---
 # Permissions: GRANT, DENY, REVOKE 
-[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE[applies-to-version/asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
   Use **GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
   

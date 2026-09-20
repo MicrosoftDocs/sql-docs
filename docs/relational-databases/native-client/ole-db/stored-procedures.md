@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 ---
 # Stored Procedures in SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]

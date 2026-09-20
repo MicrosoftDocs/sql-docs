@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # SQL Server internals and architecture guides
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The following guides are available. They discuss general concepts and apply to all platforms that use the SQL Database Engine, unless stated otherwise in the respective guide.
 

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "cursors [ODBC], how to topics"
 ---
 # Use Cursors (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To use cursors  

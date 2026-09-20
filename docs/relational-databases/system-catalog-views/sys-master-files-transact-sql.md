@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 ---
 # sys.master_files (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Contains a row per file of a database as stored in the `master` database. `sys.master_files` is a single, system-wide view.
 

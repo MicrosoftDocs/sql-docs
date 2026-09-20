@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # ALTER FUNCTION (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
   Alters an existing [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR function that was previously created by executing the `CREATE FUNCTION` statement, without changing permissions and without affecting any dependent functions, stored procedures, or triggers.  
 

@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # TOP (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. When you use `TOP` with the `ORDER BY` clause, the result set is limited to the first *n* number of ordered rows. Otherwise, `TOP` returns the first *n* number of rows in an undefined order. Use this clause to specify the number of rows returned from a `SELECT` statement. Or, use `TOP` to specify the rows affected by an `INSERT`, `UPDATE`, `MERGE`, or `DELETE` statement.
 

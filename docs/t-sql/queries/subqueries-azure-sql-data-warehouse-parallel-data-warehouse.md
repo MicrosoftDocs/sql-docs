@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 ---
 
 # Subqueries
-[!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [applies-to-version/asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
 This topic gives examples of using subqueries in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [fabric](../../includes/fabric.md)] Warehouse.
   

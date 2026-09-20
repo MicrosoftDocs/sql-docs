@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), descriptor fields"
 ---
 # Table-Valued Parameter Descriptor Fields
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Support for table-valued parameters includes new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific fields in ODBC application parameter descriptors (APDs) and implementation parameter descriptors (IPDs).  
   

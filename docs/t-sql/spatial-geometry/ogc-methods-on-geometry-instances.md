@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ai-usage: ai-assisted
 ---
 # OGC methods on geometry instances
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 SQL Server's **geometry** data type implements methods defined by the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0. These standardized methods ensure that spatial calculations conform to industry standards and work consistently with other geospatial applications.
 

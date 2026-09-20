@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # sp_describe_first_result_set (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the metadata for the first possible result set of the [!INCLUDE [tsql](../../includes/tsql-md.md)] batch. Returns an empty result set if the batch returns no results. Raises an error if the [!INCLUDE [ssDE](../../includes/ssde-md.md)] can't determine the metadata for the first query that will be executed by performing a static analysis. The dynamic management function [sys.dm_exec_describe_first_result_set](../system-dynamic-management-objects/sys-dm-exec-describe-first-result-set-transact-sql.md) returns the same information.
 

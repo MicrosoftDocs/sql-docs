@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
  Modifies an external data source used to create an external table, used for PolyBase and data virtualization features. The external data source can be Hadoop or Azure Blob Storage (WASBS) for SQL SERVER and Azure Blob Storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 

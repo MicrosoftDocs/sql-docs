@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Specify compatibility data formats when using bcp (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article describes the data-format attributes, field-specific prompts, and how to store field-by-field data in a non-XML format file of the **`bcp`** utility. This information can help when you bulk export [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data for bulk import into another program, such as another database program. The default data formats (native, character, or Unicode) in the source table might be incompatible with the data layout that the other program expects. If an incompatibility exists, you must describe the data layout when you export the data.
 

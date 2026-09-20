@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], RPC syntax"
 ---
 # Execute SQL Server Native Client Stored Procedure with RPC and Process Output
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when **IMultipleResults::GetResult** returns DB_S_NORESULT, or when the **IMultipleResults** interface is completely released, whichever occurs first.  
   

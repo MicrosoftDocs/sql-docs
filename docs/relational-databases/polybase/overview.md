@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azure-sqldw-lat
 
 # PolyBase overview
 
-[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
 PolyBase enables data virtualization for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 

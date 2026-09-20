@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # PERCENTILE_DISC (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Computes a specific percentile for sorted values in an entire rowset or within a rowset's distinct partitions in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a given percentile value *P*, `PERCENTILE_DISC` sorts the expression values in the `ORDER BY` clause. It then returns the value with the smallest `CUME_DIST` value given (with respect to the same sort specification) that's greater than or equal to *P*. For example, `PERCENTILE_DISC (0.5)` computes the 50th percentile (that is, the median) of an expression. `PERCENTILE_DISC` calculates the percentile based on a discrete distribution of the column values. The result is equal to a specific column value.
 

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "MS DTC, about distributed transaction support"
 ---
 # Supporting Distributed Transactions
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

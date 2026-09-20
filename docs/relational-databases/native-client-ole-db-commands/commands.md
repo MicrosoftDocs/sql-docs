@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "commands [OLE DB]"
 ---
 # SQL Server Native Client Commands
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ICommand** interface and command objects, which are described in this section:  
   

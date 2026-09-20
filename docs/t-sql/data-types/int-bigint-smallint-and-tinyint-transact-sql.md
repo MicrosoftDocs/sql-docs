@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Exact-number data types that use integer data. To save space in the database, use the smallest data type that can reliably contain all possible values. For example, **tinyint** would be sufficient for a small lookup table with status values, because it can store as many as 256 rows. But **tinyint** isn't sufficient for a list of employees, because your company could have hundreds or thousands of employees.
 

@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # nchar and nvarchar (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Character data types that are either fixed-size, **nchar**, or variable-size, **nvarchar**. In [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions, when a [Supplementary Character](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) (SC) enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-16](https://wikipedia.org/wiki/UTF-16) character encoding. If a non-SC collation is specified, then these data types store only the subset of character data supported by the [UCS-2](https://wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) character encoding.
 

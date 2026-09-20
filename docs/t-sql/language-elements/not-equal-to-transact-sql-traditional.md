@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # Not equal to (Transact-SQL) - traditional
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Compares two expressions (a comparison operator). When you compare non-null expressions, the result is `TRUE` if the left operand isn't equal to the right operand. Otherwise, the result is `FALSE`. If either or both operands are `NULL`, see [SET ANSI_NULLS](../statements/set-ansi-nulls-transact-sql.md).
 

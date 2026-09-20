@@ -11,7 +11,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-late
 ---
 # WideWorldImportersDW database catalog
 
-[!INCLUDE [sql-asa-pdw](../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa](../includes/applies-to-version/sql-asa.md)]
 
 Explanations for the schemas, tables, and stored procedures in the WideWorldImportersDW database. 
 

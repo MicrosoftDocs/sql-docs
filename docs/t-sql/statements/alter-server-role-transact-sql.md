@@ -18,7 +18,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqldb-current"
 ---
 # ALTER SERVER ROLE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Changes the membership of a server role or changes name of a user-defined server role. Fixed server roles cannot be renamed.  
   

@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Change tracking - sys.dm_tran_commit_table
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Displays one row for each transaction that is committed for a table that is tracked by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] change tracking. The `sys.dm_tran_commit_table` management view, which is provided for supportability purposes and exposes the transaction-related information that change tracking stores in the `sys.syscommittab` system table. The `sys.syscommittab` table provides an efficient persistent mapping from a database-specific transaction ID to the transaction's commit log sequence number (LSN) and commit timestamp. The data that is stored in the `sys.syscommittab` table and exposed in this management view is subject to cleanup according to the retention period specified when change tracking was configured.
 

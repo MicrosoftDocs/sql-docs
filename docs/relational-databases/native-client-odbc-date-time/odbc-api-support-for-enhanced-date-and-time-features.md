@@ -13,7 +13,7 @@ helpviewer_keywords:
 
 # ODBC API support for enhanced date and time features
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Enhanced date and time types (such as `date`, `time`, `datetime2`, and `datetimeoffset`) require the ODBC driver to support richer metadata, extended precision, and more flexible binding semantics.  
 The following ODBC and bulk copy APIs are grouped according to how they contribute to discovery, binding, retrieval, descriptor management, and high-volume ingestion of enhanced date and time values.

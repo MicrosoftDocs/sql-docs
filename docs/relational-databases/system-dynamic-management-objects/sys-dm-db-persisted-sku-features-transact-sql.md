@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Some features of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] change the way that information is stored in the database files. These features are restricted to specific editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. A database that contains these features can't be moved to an edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that doesn't support them. Use the `sys.dm_db_persisted_sku_features` dynamic management view to list edition-specific features that are enabled in the current database.
 

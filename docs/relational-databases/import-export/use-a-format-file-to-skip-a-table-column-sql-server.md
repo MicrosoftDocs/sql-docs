@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Use a format file to skip a table column (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article describes how to use a format file to skip importing a table column when the data for the skipped column doesn't exist in the source data file. A data file can contain fewer fields than the number of columns in the destination table - that is, you can skip importing a column - only if at least one of the following two conditions is true in the destination table:
 

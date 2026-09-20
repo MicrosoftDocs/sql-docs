@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest"
 ---
 # sys.dm_os_hosts (Transact-SQL)
-[!INCLUDE [sql-asa-pdw-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asa-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns all the hosts currently registered in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This view also returns the resources that are used by these hosts.  
   

@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Convert a rowstore table to a clustered columnstore index, or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload, or to improve data compression and query performance for data warehousing workloads.
 

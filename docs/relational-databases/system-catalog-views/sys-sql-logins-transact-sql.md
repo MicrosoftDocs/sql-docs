@@ -22,7 +22,7 @@ ms.custom:
 ---
 # sys.sql_logins (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns one row for every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication login.
 

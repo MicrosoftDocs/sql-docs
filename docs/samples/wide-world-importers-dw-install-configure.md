@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-late
 ---
 # Install and configure WideWorldImportersDW sample database
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article contains installation and configuration instructions for the `WideWorldImportersDW` database.
 

@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Lesson 1: Create and query database objects
 
-[!INCLUDE [sql-asdb-asdbmi-pdw-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 > [!NOTE]  
 > The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.
@@ -66,7 +66,7 @@ When you create a database, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.m
 
 ## Create a table
 
-[!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
 To create a table, you must provide a name for the table, and the names and data types of each column in the table. It's also a good practice to indicate whether null values are allowed in each column. To create a table, you must have the `CREATE TABLE` permission, and the `ALTER SCHEMA` permission on the schema that will contain the table. The [db_ddladmin](../relational-databases/security/authentication-access/database-level-roles.md) fixed database role has these permissions.
 

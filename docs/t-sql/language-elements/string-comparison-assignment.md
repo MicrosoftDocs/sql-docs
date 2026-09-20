@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # = (String comparison or assignment)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Compares two strings in a `WHERE` or `HAVING` clause or sets a variable or column to string or result of a string operation on the right side of the equation. For example, if a variable `@x` equals `'Adventure'`, then `WHERE @x = 'Adventure'` compares original value of `@x` is equal to the string value `'Adventure'` exactly. Also you can use the `=` operator as an assignment operator. For example, you can call `SET @a = 'AdventureWorks'`.
 

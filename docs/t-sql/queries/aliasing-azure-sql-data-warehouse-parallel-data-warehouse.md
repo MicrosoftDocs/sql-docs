@@ -15,7 +15,7 @@ monikerRange: "=azure-sqldw-latest"
 
 # Aliasing (Azure Synapse Analytics)
 
-[!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [applies-to-version/asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
 Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] [!INCLUDE [DWsql](../../includes/dwsql-md.md)] queries. Table aliases are often used in `JOIN` queries because the `JOIN` syntax requires fully qualified object names when referencing columns.  
 

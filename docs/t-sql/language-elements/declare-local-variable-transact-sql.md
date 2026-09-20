@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # DECLARE @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Variables are declared in the body of a batch or procedure with the `DECLARE` statement and are assigned values by using either a `SET` or `SELECT` statement. Cursor variables can be declared with this statement and used with other cursor-related statements. After declaration, all variables are initialized as `NULL`, unless a value is provided as part of the declaration.
 

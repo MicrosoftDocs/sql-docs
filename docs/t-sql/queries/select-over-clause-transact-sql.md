@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # SELECT - OVER clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `OVER` clause determines the partitioning and ordering of a rowset before the associated window function is applied. That is, the `OVER` clause defines a window or user-specified set of rows within a query result set. A window function then computes a value for each row in the window. You can use the `OVER` clause with functions to compute aggregated values such as moving averages, cumulative aggregates, running totals, or top *N* per group results.
 

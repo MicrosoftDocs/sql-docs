@@ -16,7 +16,7 @@ f1_keywords:
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Table Column Properties (SQL Server Management Studio)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricsqldb.md)]
 
   These properties appear in the bottom pane of Table Designer. Unless otherwise noted, you can edit these properties in the Properties window when the column is selected. The **Column Properties** can be displayed in categories or alphabetically. Many properties only appear or can only be changed for certain data types.  
   

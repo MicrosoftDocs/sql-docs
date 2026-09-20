@@ -27,7 +27,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SET ANSI_NULLS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Specifies ISO compliant behavior of the Equals (`=`) and Not Equal To (`<>`) comparison operators when they are used with `NULL` values in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)].
 - `SET ANSI_NULLS ON` - Evaluates both `{expression} = NULL` and `{expression} <> NULL` as `False` if the value of `{expression}` is `NULL`. This behavior is ANSI-compliant.

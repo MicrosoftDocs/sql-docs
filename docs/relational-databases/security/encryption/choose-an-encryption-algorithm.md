@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # Choose an encryption algorithm
 
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Encryption is one of several defenses available to the administrator who wants to secure an instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
 

@@ -246,7 +246,7 @@ Earlier vector index versions have the following additional limitations. To chec
 
 - **Manual TOP_N tuning**: You must manually adjust the `TOP_N` parameter in `VECTOR_SEARCH` to compensate for post-filtering, often requiring oversized values to get the desired number of results.
   
-- The table must have a primary key clustered index on an INT column.
+- The table must have a primary key clustered index on a single INT column.
 
 ### Current limitations (applies to the latest version too)
 

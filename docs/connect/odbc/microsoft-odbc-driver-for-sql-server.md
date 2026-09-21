@@ -23,7 +23,7 @@ The **sqlcmd** and **bcp** utilities work with this driver, but they install sep
 ## Choose your starting point
 
 - To install the driver, go to [System requirements, installation, and driver files](windows/system-requirements-installation-and-driver-files.md) for Windows, or [Install the ODBC driver on Linux](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md), [Install the ODBC driver on macOS](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md), and [Install the unixODBC driver manager](linux-mac/installing-the-driver-manager.md).
-- To write your first application, go to [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md) and [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md).
+- To write your first application, go to [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md), then [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md) for the connection string options. If your compiler can't find the headers or your build won't link, go to [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md).
 - To connect to Azure SQL with passwordless authentication, go to [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md).
 - To make an existing app resilient to transient failures, go to [Connection resiliency](connection-resiliency.md) and [High availability and disaster recovery](odbc-driver-support-for-high-availability-disaster-recovery.md).
 - To upgrade from version 17, go to [Major version differences](major-version-differences.md) and [Connection encryption troubleshooting](connection-troubleshooting.md).
@@ -137,6 +137,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | Article | Description |
 | --- | --- |
 | [Download ODBC Driver for SQL Server](download-odbc-driver-for-sql-server.md) | Installer and package downloads for every supported driver version, on all three platforms. |
+| [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md) | Which headers to include, in what order, which libraries to link, and how to choose between asynchronous execution and threads. |
 | [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md) | A complete C++ sample that connects, runs a query, and reads results, so you can confirm your setup end to end. |
 | [Support lifecycle](support-lifecycle.md) | Which driver versions are still supported, and the date each one leaves support. |
 | [Major version differences](major-version-differences.md) | What breaks when you move from version 17 to version 18, starting with the encryption default change. |

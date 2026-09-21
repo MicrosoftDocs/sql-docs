@@ -3,8 +3,8 @@ title: Using Always Encrypted
 description: Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 09/15/2026
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -656,7 +656,7 @@ For an example of implementing your own keystore provider, see [Custom Keystore 
 
 ### Asynchronous operations
 
-While the ODBC driver will allow the use of [asynchronous operations](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) with Always Encrypted, there's a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
+While the ODBC driver supports [asynchronous operations](develop-cpp-applications.md#choose-between-asynchronous-execution-and-threads) with Always Encrypted, enabling Always Encrypted affects the performance of these operations. The call to `sys.sp_describe_parameter_encryption` to get encryption metadata for the statement is blocking. The driver waits for the server to return the metadata before it returns `SQL_STILL_EXECUTING`.
 
 ### Retrieve data in parts with SQLGetData
 

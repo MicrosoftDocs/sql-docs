@@ -3,7 +3,7 @@ title: "Microsoft go-mssqldb Driver for SQL Server"
 description: "The go-mssqldb driver is a pure Go database/sql driver for Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, Fabric Data Warehouse, and Azure Synapse Analytics."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -308,6 +308,10 @@ For more information about each part of this sample, see [Azure SQL Database](az
 | [Linux and macOS](linux-macos.md) | Cross-platform setup, Kerberos, NTLM, and certificate paths. |
 | [Protocols](protocols.md) | TCP, named pipes, shared memory, DAC, and SQL Browser. |
 | [Logging and diagnostics](logging-diagnostics.md) | Log flags, `SetLogger`, and `SetContextLogger`. |
+
+## Request a feature
+
+To request a feature, open an issue in the [go-mssqldb GitHub repository](https://github.com/microsoft/go-mssqldb/issues/new/choose).
 
 ## Related content
 

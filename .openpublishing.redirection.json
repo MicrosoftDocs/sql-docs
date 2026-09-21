@@ -68008,6 +68008,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/native-client/odbc/creating-a-driver-application.md",
+      "redirect_url": "/sql/connect/odbc/develop-cpp-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md",
+      "redirect_url": "/sql/connect/odbc/develop-cpp-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md",
+      "redirect_url": "/sql/connect/odbc/develop-cpp-applications",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/native-client/ole-db/index.md",
       "redirect_url": "/sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db",
       "redirect_document_id": false

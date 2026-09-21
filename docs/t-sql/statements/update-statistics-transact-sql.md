@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "statistical information [SQL Server], updating"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # UPDATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Updates query optimization [statistics](../../relational-databases/statistics/statistics.md) on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.
 
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_constant ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 UPDATE STATISTICS [ schema_name . ] table_name
@@ -271,9 +271,11 @@ Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tiger
 
 To determine when statistics were last updated, use the [STATS_DATE](../functions/stats-date-transact-sql.md) function.
 
-### PDW / Azure Synapse Analytics
+<a id="pdw--azure-synapse-analytics"></a>
 
-The following syntax isn't supported by [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
+### Azure Synapse Analytics
+
+The following syntax isn't supported by [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 UPDATE STATISTICS t1 (a, b);
@@ -355,7 +357,7 @@ UPDATE STATISTICS Production.Product (Products)
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Update statistics on a table
 

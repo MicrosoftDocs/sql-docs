@@ -29,13 +29,13 @@ helpviewer_keywords:
   - "importing data, bcp utility"
   - "file importing [SQL Server]"
   - "column exporting [SQL Server]"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric || =fabric-sqldb"
 ---
 # bcp utility
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The bulk copy program utility (**`bcp`**) bulk copies data between an instance of the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] and a data file in a user-specified format.
 
@@ -95,7 +95,7 @@ For information on how to install the command-line tools on macOS and Linux, see
 
 ## Syntax
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 > [!NOTE]  
 > To view supported **`bcp`** syntax for **Microsoft Fabric Data Warehouse**, see [Syntax for Fabric Data Warehouse](?view=fabric&preserve-view=true#syntax).
@@ -322,7 +322,7 @@ If you don't specify a server, the **`bcp`** utility connects to the default ins
 
 Specifies the database to connect to. By default, **`bcp`** connects to your default database. If you specify `-d <database_name>` and a three-part name (database_name.schema.table, passed as the first parameter to **`bcp`**), an error occurs because you can't specify the database name twice. If *database_name* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-d` and the database name.
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -U *login_id*
 
@@ -452,7 +452,7 @@ Performs the bulk copy operation by using Unicode characters. This option doesn'
 
 For more information, see [Use Unicode character format to import or export data (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -z
 
@@ -496,7 +496,7 @@ Specifies the number of rows per batch of imported data. Each batch is imported 
 
 The `-b` and the `-h "ROWS_PER_BATCH=<bb>"` hint are mutually exclusive. Use `-b` when you want **`bcp`** to control batching explicitly, or use `ROWS_PER_BATCH` to hint the server optimizer when sending the data as a single transaction.
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -h "*hints* [, ... *n*]"
 

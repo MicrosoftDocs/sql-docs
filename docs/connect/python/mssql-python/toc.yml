@@ -124,6 +124,10 @@
     href: error-handling.md
   - name: Troubleshooting
     href: troubleshooting.md
+  - name: Installation and connection issues
+    href: troubleshoot-installation-connection.md
+  - name: Query, data, and operation issues
+    href: troubleshoot-query-data-and-operations.md
 - name: Migration and reference
   items:
   - name: Migrate from pyodbc

@@ -13,7 +13,7 @@ ms.custom:
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 

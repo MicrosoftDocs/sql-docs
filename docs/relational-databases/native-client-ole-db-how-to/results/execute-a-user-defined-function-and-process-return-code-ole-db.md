@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "user-defined functions [OLE DB]"
 ---
 # Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  
   

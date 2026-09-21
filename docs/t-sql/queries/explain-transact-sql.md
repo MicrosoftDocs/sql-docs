@@ -40,7 +40,7 @@ Return the query plan with recommendations to optimize the SQL statement perform
 
 ## Permissions
 
- Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics)](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
 
 ## Return value
 
@@ -619,7 +619,7 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 - [sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_mappings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](../../relational-databases/system-catalog-views/azure-synapse-analytics-catalog-views.md)
 - [System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)
 - [T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
 - [CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)

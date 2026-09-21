@@ -24,7 +24,7 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 
 ::: moniker range="=azure-sqldw-latest"
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 

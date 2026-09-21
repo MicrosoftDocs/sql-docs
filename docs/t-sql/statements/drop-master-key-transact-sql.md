@@ -22,10 +22,10 @@ helpviewer_keywords:
   - "deleting Database Master Keys"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # DROP MASTER KEY (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw-fabric](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdbmi-asa-fabric](../../includes/applies-to-version/sql-asdbmi-asa-fabricsqldb.md)]
 
   Removes the master key from the current database.  
   
@@ -55,7 +55,7 @@ DROP MASTER KEY;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
  The following example removes the master key.  
   
 ```sql  

@@ -13,7 +13,7 @@ helpviewer_keywords:
 
 # Server configuration: optimize for ad hoc workloads
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The `optimize for ad hoc workloads` option is used to improve the efficiency of the plan cache for workloads that contain many single use ad hoc batches. When this option is set to `1`, the Database Engine stores a small compiled plan stub in the plan cache when a batch is compiled for the first time, instead of the full compiled plan. This option might help to relieve memory pressure by not allowing the plan cache to become filled with compiled plans that aren't reused. However, enabling this option might affect your ability to troubleshoot single-use plans.
 

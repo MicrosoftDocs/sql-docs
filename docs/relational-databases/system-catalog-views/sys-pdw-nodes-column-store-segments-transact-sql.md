@@ -9,11 +9,11 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
 Contains a row for each column in a columnstore index.
 
@@ -37,7 +37,7 @@ Contains a row for each column in a columnstore index.
 | **on_disk_size**            | **bigint** | Size of segment in bytes.                                    |
 | **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node. |
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 Join sys.pdw_nodes_column_store_segments with other system tables to determine the number of columnstore segments per logical table.
 
@@ -76,7 +76,7 @@ Requires **VIEW SERVER STATE** permission.
 
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 - [sys.pdw_nodes_column_store_row_groups (Transact-SQL)](sys-pdw-nodes-column-store-row-groups-transact-sql.md)
 - [sys.pdw_nodes_column_store_dictionaries (Transact-SQL)](sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

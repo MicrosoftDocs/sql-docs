@@ -16,7 +16,6 @@ This article provides a high level overview for connecting to the [!INCLUDE [ssd
 - [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]
 - [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
 - [!INCLUDE [ssazuremi-md](../includes/ssazuremi-md.md)]
-- [!INCLUDE [ssazurepdw_md](../includes/ssazurepdw_md.md)]
 - [!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]
 - [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)]
 - [!INCLUDE [Fabric SE DW](../includes/fabric-se-dw.md)]

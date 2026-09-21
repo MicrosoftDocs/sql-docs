@@ -25,12 +25,12 @@ helpviewer_keywords:
   - "denying permissions [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # DENY (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
   Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships. DENY takes precedence over all permissions, except that DENY does not apply to object owners or members of the sysadmin fixed server role.
   **Security Note** Members of the sysadmin fixed server role and object owners cannot be denied permissions."
@@ -58,7 +58,7 @@ DENY   { ALL [ PRIVILEGES ] }
 { see the tables below }  
 ```  
   
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric warehouse
+Syntax for Azure Synapse Analytics and Microsoft Fabric warehouse
 
 ```syntaxsql 
 DENY   

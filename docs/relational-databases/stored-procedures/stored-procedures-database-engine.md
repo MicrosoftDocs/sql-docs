@@ -13,11 +13,11 @@ ms.custom:
 helpviewer_keywords:
   - "storing programs as stored procedures"
   - "stored procedures [SQL Server], about stored procedures"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Stored procedures (Database Engine)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 A stored procedure in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE [tsql](../../includes/tsql-md.md)] statements, or a reference to a [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:
 

@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 Returns information about the connections established to this instance of the database engine and the details of each connection. Returns server wide connection information for SQL Server and Azure SQL Managed Instance. Returns connection information for the current database in Azure SQL Database. Returns connection information for all databases in the same elastic pool for databases in [elastic pools](/azure/azure-sql/database/elastic-pool-overview) in Azure SQL Database.
 
 > [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool or [!INCLUDE[fabric](../../includes/fabric.md)] use `sys.dm_exec_connections`.
+> To call this from dedicated SQL pool in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], see [sys.dm_pdw_exec_connections (Transact-SQL)](sys-dm-pdw-exec-connections-transact-sql.md). For serverless SQL pool or [!INCLUDE[fabric](../../includes/fabric.md)] use `sys.dm_exec_connections`.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,7 +53,7 @@ Returns information about the connections established to this instance of the da
 |connection_id|**uniqueidentifier**|Identifies each connection uniquely. Is not nullable.|  
 |parent_connection_id|**uniqueidentifier**|Identifies the primary connection that the MARS session is using. Is nullable.|  
 |most_recent_sql_handle|**varbinary(64)**|The SQL handle of the last request executed on this connection. The `most_recent_sql_handle` column is always in sync with the `most_recent_session_id` column. Is nullable.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions
 

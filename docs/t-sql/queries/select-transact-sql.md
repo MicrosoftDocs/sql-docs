@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SELECT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Use the `SELECT` statement to retrieve rows from the database. `SELECT` lets you choose one or many rows or columns from one or many tables in the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)].
 
@@ -76,7 +76,7 @@ SELECT [ ALL | DISTINCT ]
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric:
+Syntax for Azure Synapse Analytics and Microsoft Fabric:
 
 ```syntaxsql
 [ WITH <common_table_expression> [ , ...n ] ]

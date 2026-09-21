@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "exporting data, bcp utility"
   - "importing data, bcp utility"
   - "copying data [SQL Server], bcp utility"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # How to use the bcp utility
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 The bulk copy program utility (**`bcp`**) bulk copies data between an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a data file in a user-specified format.
 

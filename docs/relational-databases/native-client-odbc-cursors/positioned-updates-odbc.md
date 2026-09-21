@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ODBC cursors, positioned updates"
 ---
 # Positioned Updates (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ODBC supports two methods for performing positioned updates in a cursor:  
   

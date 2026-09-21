@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "IRow interface"
 ---
 # Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The **IRow** interface allows direct access to columns of a single row in the result set. Thus, **IRow** is an efficient way to retrieve columns from a result set with one row.  
   

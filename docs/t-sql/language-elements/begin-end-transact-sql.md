@@ -23,11 +23,11 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ai-usage: ai-assisted
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # BEGIN...END (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Encloses a sequence of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements into a logical block of code. This use of `BEGIN` is unrelated to the `BEGIN TRANSACTION` and `BEGIN ATOMIC` statements.
 
@@ -167,7 +167,7 @@ BEGIN
 END
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Define a series of statements that run together
 

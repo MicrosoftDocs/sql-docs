@@ -19,7 +19,7 @@ ms.custom: sfi-ropc-blocked
 
   Selects data from a [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] database and copies that data to a new table in an SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use `CREATE REMOTE TABLE AS SELECT` for scenarios that require [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
 
- To configure the remote server, see [Remote Table Copy](../../analytics-platform-system/remote-table-copy.md).  
+ To configure the remote server, see [Remote Table Copy](/previous-versions/sql/analytics-platform-system/remote-table-copy).  
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -51,7 +51,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 
 #### *table_name*
 
- The name of the new table. For details on permitted table names, see "Object Naming Rules" in the [!INCLUDE [pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ The name of the new table. For details on permitted table names, see [Reserved Database Names](/previous-versions/sql/analytics-platform-system/reserved-database-names).  
 
  The remote table is created as a heap. It does not have check constraints or triggers. The collation of the remote table columns is the same as the collation of the source table columns. This applies to columns of type **char**, **nchar**, **varchar**, and **nvarchar**.  
 
@@ -74,7 +74,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  The TCP port number for the connection. You can specify a TCP port number from 0 to 65535 for an instance of SQL Server that is not listening on the default port 1433. For example: `ServerA,1450` or `<ip address>,1435`.
 
    > [!NOTE]  
-   > We recommend connecting to a remote server by using the IP address. Depending on your network configuration, connecting by using the computer name might require additional steps to use your non-appliance DNS server to resolve the name to the correct server. This step is not necessary when connecting with an IP address. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names in Analytics Platform System](../../analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).
+   > We recommend connecting to a remote server by using the IP address. Depending on your network configuration, connecting by using the computer name might require additional steps to use your non-appliance DNS server to resolve the name to the correct server. This step is not necessary when connecting with an IP address. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names in Analytics Platform System](/previous-versions/sql/analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names).
 
 #### *user_name*
 
@@ -187,4 +187,4 @@ AT ( 'Data Source = SQLA, 1433; User ID = <user name>; Password = <password>;' )
 
 ## Related content
 
-- [Remote Table Copy](../../analytics-platform-system/remote-table-copy.md)
+- [Remote Table Copy](/previous-versions/sql/analytics-platform-system/remote-table-copy)

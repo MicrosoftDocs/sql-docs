@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "statistics [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Statistics
@@ -479,7 +479,7 @@ WHERE s.object_id = OBJECT_ID(N'Sales.SalesOrderDetail')
   AND s.name = N'IX_SalesOrderDetail_ProductID';
 ```
 
-To determine whether the current database's [automatic statistics creation and update options](../../t-sql/statements/alter-database-transact-sql.md#set-auto_create_statistics--on--off-) are enabled, use: 
+To determine whether the current database's [automatic statistics creation and update options](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) are enabled, use:
 
 ```sql
 SELECT [name],

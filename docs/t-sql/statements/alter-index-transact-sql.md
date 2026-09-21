@@ -45,12 +45,12 @@ helpviewer_keywords:
   - "index reorganize [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # ALTER INDEX (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Modifies an existing table or view index (rowstore, columnstore, or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.
 
@@ -142,7 +142,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 ALTER INDEX { index_name | ALL }

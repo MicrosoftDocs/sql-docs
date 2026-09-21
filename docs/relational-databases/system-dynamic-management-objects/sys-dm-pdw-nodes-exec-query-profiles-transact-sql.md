@@ -15,7 +15,7 @@ monikerRange: "=azure-sqldw-latest"
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Monitors real time data warehouse query progress while the query is in execution. 
 
@@ -75,5 +75,5 @@ The same remarks in [sys.dm_exec_query_profiles](sys-dm-exec-query-profiles-tran
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)
 - [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)

@@ -14,7 +14,7 @@ apiname: ["bcp_readfmt", "bcp_readfmtA", "bcp_readfmtW"]
 apitype: "DLLExport"
 ---
 # bcp_readfmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Reads a data file format definition from the specified format file.  
   

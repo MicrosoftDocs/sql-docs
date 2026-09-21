@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "PolyBase, external file format"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store, OneLake in Microsoft Fabric, or for the input and output streams associated with external streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table. To create an External Table, see [CREATE EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md).
 
@@ -382,7 +382,7 @@ Details:
 
 #### ENCODING = {'UTF8' | 'UTF16'}
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. 
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], PolyBase can read UTF8 and UTF16-LE encoded delimited text files. 
 
 In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
@@ -392,7 +392,7 @@ In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Remarks
 
- The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
  The Hadoop format is only supported in SQL Server 2016, 2017, and 2019.
 
@@ -424,7 +424,7 @@ Using compressed files always comes with the tradeoff between transferring less 
 
 Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
-In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the maximum number of data reader processes is 20 readers per node. 
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the maximum number of data reader processes is 20 readers per node. 
 
 ## Examples
 

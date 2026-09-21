@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ---
 # Bulk Copy a SELECT Result Set (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to use bulk copy functions to bulk copy out the result set of a SELECT statement. This sample was developed for ODBC version 3.0 or later.  
   

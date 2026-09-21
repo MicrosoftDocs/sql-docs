@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "expressions [SQL Server], predicates"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Predicates
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 A *predicate* is an expression that evaluates to `TRUE`, `FALSE`, or `UNKNOWN`. Predicates are used in the search condition of [WHERE](where-transact-sql.md) clauses and [HAVING](select-having-transact-sql.md) clauses, the join conditions of [FROM](from-transact-sql.md) clauses, and other constructs where a Boolean value is required.
 

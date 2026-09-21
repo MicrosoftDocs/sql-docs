@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters, inserting data into"
 ---
 # Inserting Data into Table-Valued Parameters (Native Client OLE DB Provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider supports two models for the consumer to specify data for table-valued parameter rows: a push model and a pull model. 
   

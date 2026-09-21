@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
 ---
 # Rowsets and SQL Server Cursors (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns result sets to consumers using two methods:  
   

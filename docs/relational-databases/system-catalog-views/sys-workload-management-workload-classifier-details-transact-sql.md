@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_classifier_details (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
   Returns details for each classifier.  
   
@@ -30,7 +30,7 @@ Requires VIEW SERVER STATE permission.
 
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [CREATE WORKLOAD CLASSIFIER (Transact-SQL)](../../t-sql/statements/create-workload-classifier-transact-sql.md)
 - [Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
 - [Workload Importance](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

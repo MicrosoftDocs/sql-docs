@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "catalog metadata [ODBC]"
 ---
 # Metadata - Catalog
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic describes the column metadata returned by **SQLColumns** and **SQLProcedureColumns**, and the data type metadata returned by **SQLGetTypeInfo**.  
   

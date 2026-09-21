@@ -13,7 +13,7 @@ ms.custom:
 ---
 # Microsoft OLE DB Driver for SQL Server known issues
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

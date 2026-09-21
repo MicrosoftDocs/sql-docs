@@ -19,16 +19,16 @@ helpviewer_keywords:
   - "sys.dm_os_waiting_tasks dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.dm_os_waiting_tasks (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Returns information about the wait queue of tasks that are waiting on some resource. For more information about tasks, see the [Thread and task architecture guide](../thread-and-task-architecture-guide.md).
 
 > [!NOTE]  
-> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_os_waiting_tasks`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_os_waiting_tasks`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ Returns information about the wait queue of tasks that are waiting on some resou
 | `blocking_session_id` | **smallint** | ID of the session blocking the request. If this column is `NULL`, the request isn't blocked, or the session information of the blocking session isn't available (or can't be identified).<br /><br />`-2` = The blocking resource is owned by an orphaned distributed transaction.<br /><br />`-3` = The blocking resource is owned by a deferred recovery transaction.<br /><br />`-4` = `session_id` of the blocking latch owner couldn't be determined due to internal latch state transitions. |
 | `blocking_exec_context_id` | **int** | ID of the execution context of the blocking task. |
 | `resource_description` | **nvarchar(3072)** | Description of the resource being consumed. For more information, see [The resource_description column](#resource_description-column). |
-| `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
+| `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
 
 <a id="resource_description-column"></a>
 

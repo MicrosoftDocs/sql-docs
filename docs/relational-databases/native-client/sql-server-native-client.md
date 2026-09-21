@@ -11,7 +11,7 @@ ms.topic: concept-article
 ---
 # SQL Server Native Client
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Native Client, also known as SNAC or SQLNCLI, refers to the ODBC and OLE DB drivers for SQL Server, prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 

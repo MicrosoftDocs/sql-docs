@@ -23,10 +23,10 @@ helpviewer_keywords:
   - "wait time for lock releases [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SET LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
   Specifies the number of milliseconds a statement waits for a lock to be released.  
   
@@ -66,7 +66,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### B. Set the lock timeout to wait forever for a lock to be released.  
  The following example sets the lock timeout to wait forever and never expire. This is the default behavior that is already set at the beginning of each connection.  

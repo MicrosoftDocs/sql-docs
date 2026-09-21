@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "MS DTC, using"
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To update two or more SQL Server instances by using MS DTC  

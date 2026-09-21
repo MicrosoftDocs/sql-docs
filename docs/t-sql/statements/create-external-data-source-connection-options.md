@@ -13,12 +13,12 @@ f1_keywords:
   - "CREATE_EXTERNAL_DATA_SOURCE CONNECTION_OPTIONS"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqledge-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqledge-current"
 ---
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This article provides additional detail for `CONNECTION_OPTIONS` depending on the provider. The [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md) `CONNECTION_OPTIONS` argument can vary depending on the external data provider.
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
 ---
 # Creating a Rowset with IOpenRowset
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

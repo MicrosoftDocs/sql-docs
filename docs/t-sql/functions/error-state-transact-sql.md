@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "states [SQL Server], error numbers"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # ERROR_STATE (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Returns the state number of the error that caused the CATCH block of a TRY...CATCH construct to be run.  
   
@@ -93,7 +93,7 @@ END CATCH;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### C. Using ERROR_STATE in a CATCH block with other error-handling tools  
  The following example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error state, information that relates to the error is returned.  

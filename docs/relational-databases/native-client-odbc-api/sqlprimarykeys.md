@@ -12,7 +12,7 @@ helpviewer_keywords:
 apitype: "DLLExport"
 ---
 # SQLPrimaryKeys
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   A table might have a column or columns that can serve as unique row identifiers, and tables created without a PRIMARY KEY constraint return an empty result set to SQLPrimaryKeys. The ODBC function [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md) reports row identifier candidates for tables without primary keys.  
   

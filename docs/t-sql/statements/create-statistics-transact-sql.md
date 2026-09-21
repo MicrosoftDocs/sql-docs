@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "NORECOMPUTE clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # CREATE STATISTICS (Transact-SQL)
@@ -91,7 +91,7 @@ ON { table_or_indexed_view_name } ( column [ , ...n ] )
     [ STATS_STREAM = stats_stream ]
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 CREATE STATISTICS statistics_name

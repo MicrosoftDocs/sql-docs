@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "PolyBase, create data source"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqledge-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Creates an external data source for querying external data, used for PolyBase and data virtualization features.
 
@@ -37,8 +37,6 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
      Use of the version selector above the TOC is important for this document.
      The Fabric moniker is for Fabric Data Warehouse. The fabric-sqldb moniker is for SQL database in Fabric.
      Pay attention to each ::: moniker range.-->
-<!-- At this time the Azure SQL Edge moniker azuresqledge-current isn't functional in sql-docs.  
-     Per PMs, we have added Azure SQL Edge content to Azure SQL Database range. -->
 
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017"
 
@@ -54,9 +52,6 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
     :::column:::
         [Microsoft Fabric Data Warehouse](create-external-data-source-transact-sql.md?view=fabric&preserve-view=true)
@@ -2102,7 +2097,7 @@ WITH (
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current || =azuresqledge-current"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
@@ -2116,9 +2111,6 @@ WITH (
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
     :::column:::
         [Microsoft Fabric Data Warehouse](create-external-data-source-transact-sql.md?view=fabric&preserve-view=true)
@@ -2406,9 +2398,6 @@ WITH (
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
         [Microsoft Fabric Data Warehouse](create-external-data-source-transact-sql.md?view=fabric&preserve-view=true)
     :::column-end:::
     :::column:::
@@ -2676,252 +2665,6 @@ WITH (
 
 ::: moniker-end
 
-::: moniker range=">=aps-pdw-2016"
-
-:::row:::
-    :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Managed<br />Instance](create-external-data-source-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
-    :::column-end:::
-    :::column:::
-        [Microsoft Fabric Data Warehouse](create-external-data-source-transact-sql.md?view=fabric&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Microsoft Fabric SQL database](create-external-data-source-transact-sql.md?view=fabric-sqldb&preserve-view=true)
-    :::column-end:::
-:::row-end:::
-
-&nbsp;
-
-## Overview: Analytics Platform System
-
-**Applies to**: [!INCLUDE [ssazurepdw_md](../../includes/ssazurepdw_md.md)]
-
-Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support the following use case: Data virtualization and data load using [PolyBase in SQL Server](../../relational-databases/polybase/overview.md).
-
-:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-## Syntax
-
-```syntaxsql
-CREATE EXTERNAL DATA SOURCE <data_source_name>
-WITH
-  ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
-    [ [ , ] CREDENTIAL = <credential_name> ]
-    [ [ , ] TYPE = HADOOP ]
-    [ [ , ] RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]' )
-[ ; ]
-```
-
-## Arguments
-
-#### data_source_name
-
-Specifies the user-defined name for the data source. The name must be unique within the server in [!INCLUDE [ssPDW](../../includes/sspdw-md.md)].
-
-#### LOCATION = '*\<prefix>://\<path[:port]>*'
-
-Provides the connectivity protocol and path to the external data source.
-
-| External Data Source | Connector location prefix | Location path |
-| --- | --- | --- |
-| Cloudera CDH or Hortonworks HDP | `hdfs` | `<Namenode>[:port]` |
-| Azure Storage Account | `wasb[s]` | `<container>@<storage_account>.blob.core.windows.net` |
-
-Location path:
-
-- `<Namenode>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
-- `<container>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
-- `<storage_account>` = the storage account name of the Azure resource.
-
-Additional notes and guidance when setting the location:
-
-- The PDW engine doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
-- Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
-- `wasbs` is recommended as data will be sent using a secure TLS connection.
-- Hierarchical Namespaces aren't supported when used with Azure Storage accounts over wasb://.
-- To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute [ALTER EXTERNAL DATA SOURCE](alter-external-data-source-transact-sql.md) to point to the new location.
-
-#### CREDENTIAL = *credential_name*
-
-Specifies a database-scoped credential for authenticating to the external data source.
-
-Additional notes and guidance when creating a credential:
-
-- To load data from Azure Storage into Azure Synapse or PDW, use an Azure Storage Key.
-- `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
-
-#### TYPE = * [ HADOOP ] *
-
-Specifies the type of the external data source being configured. This parameter isn't always required.
-
-- Use HADOOP when the external data source is Cloudera CDH, Hortonworks HDP, or Azure Storage.
-
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop).
-
-#### RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:port]'
-
-In [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], don't specify RESOURCE_MANAGER_LOCATION unless connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account.
-
-Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. For a complete list of supported Hadoop versions, see [PolyBase connectivity configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
-
-When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer makes a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and SQL, which can lead to improved query performance.
-
-If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries. [Create external data source to reference Hadoop with push-down enabled](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
-
-The RESOURCE_MANAGER_LOCATION value isn't validated when you create the external data source. Entering an incorrect value might cause query failure at execution time whenever push-down is attempted as the provided value wouldn't be able to resolve.
-
-In order for PolyBase to function correctly with a Hadoop external data source, the ports for the following Hadoop cluster components must be open:
-
-- HDFS ports
-  - Namenode
-  - Datanode
-- Resource Manager
-  - Job submission
-- Job history
-
-If the port isn't specified, the default value is chosen using the current setting for 'hadoop connectivity' configuration.
-
-| Hadoop Connectivity | Default Resource Manager Port |
-| --- | --- |
-| `1` | 50300 |
-| `2` | 50300 |
-| `3` | 8021 |
-| `4` | 8032 |
-| `5` | 8050 |
-| `6` | 8032 |
-| `7` | 8050 |
-
-The following table shows the default ports for these components. There's Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
-
-| **Hadoop cluster component** | **Default Port** |
-| --- | --- |
-| NameNode | 8020 |
-| DataNode (Data transfer, non-privilege IPC port) | 50010 |
-| DataNode (Data transfer, privilege IPC port) | 1019 |
-| Resource Manager Job Submission (Hortonworks 1.3) | 50300 |
-| Resource Manager Job Submission (Cloudera 4.3) | 8021 |
-| Resource Manager Job Submission (Hortonworks 2.0 on Windows, Cloudera 5.x on Linux) | 8032 |
-| Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050 |
-| Resource Manager Job History | 10020 |
-
-## Permissions
-
-Requires `CONTROL` permission on database in [!INCLUDE [ssPDW](../../includes/sspdw-md.md)].
-
-> [!NOTE]  
-> In previous releases of PDW, create external data source required `ALTER ANY EXTERNAL DATA SOURCE` permissions.
-
-## Locking
-
-Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
-
-## Security
-
-PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
-
-A SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
-
-`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account aren't valid.: Error [Parameters provided to connect to the Azure storage account aren't valid.] occurred while accessing external file.'`
-
-## Examples
-
-### A. Create external data source to reference Hadoop
-
-To create an external data source to reference your Hortonworks HDP or Cloudera CDH, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-
-```sql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### B. Create external data source to reference Hadoop with push-down enabled
-
-Specify the `RESOURCE_MANAGER_LOCATION` option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase makes a cost-based decision to determine whether the query computation should be pushed to Hadoop.
-
-```sql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8020',
-    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
-);
-```
-
-### C. Create external data source to reference Kerberos-secured Hadoop
-
-To verify if the Hadoop cluster is Kerberos-secured, check the value of `hadoop.security.authentication` property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
-
-```sql
--- Create a database master key if one does not already exist, using your own password.
--- This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
-
--- Create a database scoped credential with Kerberos user name and password.
-CREATE DATABASE SCOPED CREDENTIAL HadoopUser1
-WITH IDENTITY = '<hadoop_user_name>',
-     SECRET = '<hadoop_password>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050',
-    CREDENTIAL = HadoopUser1,
-    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
-);
-```
-
-### D. Create external data source to access data in Azure Storage using the wasb:// interface
-
-In this example, the external data source is an Azure V2 Storage account named `logs`. The storage container is named `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces aren't supported when accessing data via the `wasb://` interface. When connecting to the Azure Storage via `wasb` or `wasbs`, authentication must be done with a storage account key, not with a shared access signature (SAS).
-
-This example shows how to create the database scoped credential for authentication to Azure storage. Specify the Azure storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure storage.
-
-```sql
--- Create a database master key if one does not already exist, using your own password.
--- This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
-WITH IDENTITY = '<my_account>',
-     SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'wasbs://daily@logs.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-
-## Related content
-
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](create-external-file-format-transact-sql.md)
-- [CREATE EXTERNAL TABLE (Transact-SQL)](create-external-table-transact-sql.md)
-- [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)
-- [Using Shared Access Signatures (SAS)](/azure/storage/common/storage-sas-overview)
-
-::: moniker-end
-
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -2936,9 +2679,6 @@ WITH (
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
     :::column:::
         [Microsoft Fabric Data Warehouse](create-external-data-source-transact-sql.md?view=fabric&preserve-view=true)
@@ -3171,9 +2911,6 @@ For more examples, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
-    :::column-end:::
-    :::column:::
         **_\*Microsoft Fabric Data Warehouse \*_**
     :::column-end:::
     :::column:::
@@ -3293,9 +3030,6 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
     :::column:::
         [Microsoft Fabric Data Warehouse](create-external-data-source-transact-sql.md?view=fabric&preserve-view=true)

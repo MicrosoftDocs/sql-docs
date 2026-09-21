@@ -11,13 +11,13 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Queries
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-  Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and SQL Database. Most also work in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (review each individual statement for details). Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+  Data Manipulation Language (DML) is a vocabulary used to retrieve and work with data in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and SQL Database. Most also work in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] (review each individual statement for details). Use these statements to add, modify, query, or remove data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## In This Section  
  The following table lists the DML statements that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  

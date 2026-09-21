@@ -38,11 +38,11 @@ helpviewer_keywords:
   - "FETCH clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SELECT - ORDER BY clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Sorts data returned by a query in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:
 
@@ -53,7 +53,7 @@ Sorts data returned by a query in [!INCLUDE [ssNoVersion](../../includes/ssnover
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!NOTE]  
-> `ORDER BY` isn't supported in `SELECT`/`INTO` or `CREATE TABLE AS SELECT` (CTAS) statements in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)].
+> `ORDER BY` isn't supported in `SELECT`/`INTO` or `CREATE TABLE AS SELECT` (CTAS) statements in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Syntax
 
@@ -75,7 +75,7 @@ ORDER BY order_by_expression
 }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW):
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 [ ORDER BY
@@ -594,7 +594,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.
 

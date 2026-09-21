@@ -12,11 +12,11 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "table creation [SQL Server], Visual Database Tools"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create tables (Database Engine)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricsqldb.md)]
 
 You can create a new table, name it, and add it to an existing database, by using the table designer in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_clock_hands dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest"
 ---
 # sys.dm_os_memory_cache_clock_hands (Transact-SQL)
-[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
   Returns the status of each hand for a specific cache clock.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_cache_clock_hands**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name **sys.dm_pdw_nodes_os_memory_cache_clock_hands**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 ||
 |**last_tick_time**|**bigint**|Last time, in milliseconds, that the clock hand moved. Is not nullable.|  
 |**round_start_time**|**bigint**|Time, in milliseconds, of the previous sweep. Is not nullable.|  
 |**last_round_start_time**|**bigint**|Total time, in milliseconds, taken by the clock to complete the previous round. Is not nullable.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
 

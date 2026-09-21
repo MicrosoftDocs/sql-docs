@@ -12,7 +12,7 @@ helpviewer_keywords:
 apitype: "DLLExport"
 ---
 # SQLProcedureColumns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   **SQLProcedureColumns** returns one row reporting the return value attributes of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures.  
   

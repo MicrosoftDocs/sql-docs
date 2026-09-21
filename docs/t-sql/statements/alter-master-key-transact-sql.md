@@ -26,11 +26,11 @@ helpviewer_keywords:
   - "DROP ENCRYPTION BY SERVICE MASTER KEY phrase"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # ALTER MASTER KEY (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Changes the properties of a database master key.
 
@@ -76,10 +76,10 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]
+Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Analytics Platform System
+-- Syntax for Azure Synapse Analytics
 
 ALTER MASTER KEY <alter_option>
 
@@ -129,7 +129,7 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<password>';
 GO
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example creates a new database master key for `AdventureWorksPDW2012` and re-encrypts the keys below it in the encryption hierarchy. Replace `<password>` with a strong, unique password.
 

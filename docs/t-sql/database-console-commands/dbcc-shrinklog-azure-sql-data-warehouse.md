@@ -1,6 +1,6 @@
 ---
-title: DBCC SHRINKLOG - Analytics Platform System (PDW)
-description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Analytics Platform System (PDW) database.
+title: DBCC SHRINKLOG - Azure Synapse Analytics
+description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Azure Synapse Analytics database.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/28/2023
@@ -9,14 +9,14 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016"
+monikerRange: "=azure-sqldw-latest"
 ---
 
-# DBCC SHRINKLOG - Analytics Platform System (PDW)
+# DBCC SHRINKLOG - Azure Synapse Analytics
 
-[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
-Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use `DBCC SHRINKLOG` to reduce fragmentation and reduce the log size.
+Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use `DBCC SHRINKLOG` to reduce fragmentation and reduce the log size.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -73,4 +73,3 @@ GO
 ## Related content
 
 - [DBCC (Transact-SQL)](dbcc-transact-sql.md)
-- [Parallel Data Warehouse components - Analytics Platform System](../../analytics-platform-system/parallel-data-warehouse-overview.md)

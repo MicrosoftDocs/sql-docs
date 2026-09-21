@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "declaring variables"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # DECLARE @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Variables are declared in the body of a batch or procedure with the `DECLARE` statement and are assigned values by using either a `SET` or `SELECT` statement. Cursor variables can be declared with this statement and used with other cursor-related statements. After declaration, all variables are initialized as `NULL`, unless a value is provided as part of the declaration.
 
@@ -120,7 +120,7 @@ DECLARE
 }
 ```
 
-The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
+The following syntax is for Azure Synapse Analytics and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 DECLARE
@@ -418,7 +418,7 @@ For more information about how to create a user-defined table type, see [CREATE 
 DECLARE @LocationTVP AS LocationTableType;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### F. Use DECLARE
 

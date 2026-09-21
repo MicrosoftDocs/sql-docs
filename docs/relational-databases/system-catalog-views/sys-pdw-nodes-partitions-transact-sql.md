@@ -9,10 +9,10 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_partitions (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
   Contains a row for each partition of all the tables, and most types of indexes in a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database. All tables and indexes contain at least one partition, whether or not they are explicitly partitioned.  
   
@@ -31,11 +31,11 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Permissions  
  Requires `CONTROL SERVER` permission.  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
 
 ### Example A: Display rows in each partition within each distribution 
 
-**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Applies to:** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
  
 To display the number of rows in each partition within each distribution, use [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
@@ -63,4 +63,4 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)

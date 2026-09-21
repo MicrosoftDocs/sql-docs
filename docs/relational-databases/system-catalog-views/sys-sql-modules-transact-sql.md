@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "sys.sql_modules catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # sys.sql_modules (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns a row for each object that is a SQL language-defined module in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], including natively compiled scalar user-defined function. Objects of type `P`, `RF`, `V`, `TR`, `FN`, `IF`, `TF`, and `R` have an associated SQL module. Stand-alone defaults, objects of type `D`, also have a SQL module definition in this view. For a description of these types, see the `type` column in the [sys.objects](sys-objects-transact-sql.md) catalog view.
 

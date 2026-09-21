@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "ALTER EXTERNAL DATA SOURCE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqledge-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azuresqledge-current || =fabric || =fabric-sqldb"
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
  Modifies an external data source used to create an external table, used for PolyBase and data virtualization features. The external data source can be Hadoop or Azure Blob Storage (WASBS) for SQL SERVER and Azure Blob Storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
@@ -37,11 +37,11 @@ monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >
 
 ## Syntax
 
-Modify an external data source. Syntax for SQL Server (2016, 2017 and 2019) and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)].
+Modify an external data source. Syntax for SQL Server (2016, 2017 and 2019).
 
 ```syntaxsql
 -- Modify an external data source
--- Applies to: SQL Server (2016, 2017 and 2019) and APS
+-- Applies to: SQL Server (2016, 2017 and 2019)
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
         LOCATION = '<prefix>://<path>[:<port>]' [,] |

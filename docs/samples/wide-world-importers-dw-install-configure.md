@@ -9,11 +9,11 @@ ms.service: sql
 ms.subservice: samples
 ms.topic: how-to
 ms.custom: intro-installation
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || >=aps-pdw-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current"
 ---
 # Install and configure WideWorldImportersDW sample database
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article contains installation and configuration instructions for the `WideWorldImportersDW` database.
 

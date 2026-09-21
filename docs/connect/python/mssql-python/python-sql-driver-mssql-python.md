@@ -1,10 +1,10 @@
 ---
-title: "Microsoft Python Driver for SQL Server - mssql-python"
+title: Microsoft Python Driver for SQL Server - mssql-python
 description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.reviewer: vanto, randolphwest, sumitsar
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: get-started
@@ -255,7 +255,9 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | --- | --- |
 | [Container and local development](container-local-development.md) | Set up Docker containers, devcontainers, and CI pipelines for Python applications that connect to SQL. |
 | [Performance tuning](performance-tuning.md) | Pool tuning, prepared statements, batch sizes, and bulk copy. |
-| [Troubleshooting](troubleshooting.md) | Common errors, logging, and certificate diagnostics. |
+| [Troubleshooting](troubleshooting.md) | Find guidance by symptom or error message. |
+| [Installation and connection troubleshooting](troubleshoot-installation-connection.md) | Resolve installation, connection, container, and CI issues. |
+| [Query, data, and operation troubleshooting](troubleshoot-query-data-and-operations.md) | Resolve query, data type, performance, transaction, and bulk copy issues. |
 | [Module configuration](module-configuration.md) | Module-level settings, logging hooks, and feature flags. |
 
 ## Migrate to mssql-python

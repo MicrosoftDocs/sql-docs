@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # SET NOCOUNT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 Controls whether a message that shows the number of rows affected by a [!INCLUDE [tsql](../../includes/tsql-md.md)] statement or stored procedure is returned after the result set. This message is an extra result set.
 

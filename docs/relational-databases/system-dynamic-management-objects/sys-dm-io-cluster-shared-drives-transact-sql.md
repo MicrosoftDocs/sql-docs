@@ -16,15 +16,12 @@ helpviewer_keywords:
   - "sys.dm_io_cluster_shared_drives dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_io_cluster_shared_drives (Transact-SQL)
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This view returns the drive name of each of the shared drives if the current server instance is a clustered server. If the current server instance is not a clustered instance it returns an empty rowset.  
-  
-> [!NOTE]  
->  To call this from [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_io_cluster_shared_drives**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

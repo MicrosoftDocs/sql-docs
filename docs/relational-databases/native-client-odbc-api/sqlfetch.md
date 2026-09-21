@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "SQLFetch function"
 ---
 # SQLFetch
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SQLFetch supports enhanced date and time features.  
   

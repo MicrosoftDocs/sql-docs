@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "buffer manager, SQL Server"
   - "buffer pool, SQL Server"
   - "resource monitor, SQL Server"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Memory management architecture guide
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ## Windows Virtual Memory Manager
 

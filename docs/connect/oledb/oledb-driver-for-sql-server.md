@@ -4,7 +4,7 @@ description: The Microsoft OLE DB Driver for SQL Server connects C and C++ appli
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
-ms.date: 09/14/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -297,6 +297,10 @@ There are three generations of Microsoft OLE DB providers for SQL Server. Use `M
 | [OLE DB interfaces](ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) | The OLE DB interfaces and methods that exhibit provider-specific behavior in this driver. |
 | [Schema rowset support](ole-db/schema-rowset-support-ole-db.md) | Provider-specific schema rowset behavior, including metadata returned from linked servers. |
 | [Finding more information](finding-more-oledb-driver-for-sql-server-information.md) | Specifications, samples, and community resources outside this documentation set. |
+
+## Request a feature
+
+To request a feature, submit an idea through [SQL Server feedback](https://aka.ms/sqlfeedback).
 
 ## Related content
 

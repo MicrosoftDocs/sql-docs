@@ -3,7 +3,7 @@ title: "ODBC"
 description: SQL Server supports ODBC, by using the SQL Server Native Client ODBC driver, as a native API for C and C++ applications that communicate with SQL Server.
 author: markingmyname
 ms.author: maghan
-ms.date: "03/17/2017"
+ms.date: "09/10/2026"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
@@ -32,7 +32,7 @@ helpviewer_keywords:
   
 -   [Data Source Names and 64-Bit Operating Systems](../../../relational-databases/native-client/odbc/data-source-names-and-64-bit-operating-systems.md)  
   
--   [Creating a SQL Server Native Client ODBC Driver Application](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
+-   [Develop C and C++ applications with the ODBC driver](../../../connect/odbc/develop-cpp-applications.md)
   
 -   [Communicating with SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   

@@ -4,7 +4,7 @@ description: Microsoft.Data.SqlClient connects .NET applications to SQL Server, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/15/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -259,6 +259,10 @@ For more information about each part of this configuration, see:
 | [Microsoft.Data.SqlClient API reference](/dotnet/api/microsoft.data.sqlclient) | Browse .NET API reference for the driver. |
 | [AppContext switches](appcontext-switches.md) | Configure compatibility and security behavior. |
 | [Find additional SqlClient information](find-additional-sqlclient-driver-information.md) | Find source code, support, and community resources. |
+
+## Request a feature
+
+To request a feature, open an issue in the [Microsoft.Data.SqlClient GitHub repository](https://github.com/dotnet/SqlClient/issues/new/choose).
 
 ## Related content
 

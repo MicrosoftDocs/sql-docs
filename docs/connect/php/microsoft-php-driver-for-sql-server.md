@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 08/21/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -289,6 +289,10 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [About code samples in the documentation](about-code-examples-in-the-documentation.md) | Conventions used by the code samples in this section. |
 | [Code samples for the PHP SQL driver](code-samples-for-php-sql-driver.md) | End-to-end example applications for SQLSRV and PDO_SQLSRV. |
 | [Support resources](support-resources-for-the-php-sql-driver.md) | Community and support channels. |
+
+## Request a feature
+
+To request a feature, open an issue in the [Microsoft Drivers for PHP for SQL Server GitHub repository](https://github.com/microsoft/msphpsql/issues/new/choose).
 
 ## Related content
 

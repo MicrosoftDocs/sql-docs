@@ -3183,13 +3183,6 @@ items:
           href: relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md
         - name: Create a Format File
           href: relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md
-      - name: Creating a driver application
-        href: relational-databases/native-client/odbc/creating-a-driver-application.md
-        items:
-        - name: Asynchronous Mode & SQLCancel
-          href: relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
-        - name: Multithreaded Applications
-          href: relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md
     - name: SQL ODBC APIs for Native Clients
       items:
       - name: SQLBindCol

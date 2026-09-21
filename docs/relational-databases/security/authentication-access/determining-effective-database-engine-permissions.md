@@ -13,11 +13,11 @@ ms.custom:
 helpviewer_keywords:
   - "permissions, effective"
   - "effective permissions"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Determine effective Database Engine permissions
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article describes how to determine who has permissions to various objects in the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../../../includes/ssde-md.md)]. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] implements two permission systems for the [!INCLUDE [ssde-md](../../../includes/ssde-md.md)]. An older system of fixed roles has preconfigured permissions. Beginning with [!INCLUDE [ssversion2005-md](../../../includes/ssversion2005-md.md)] a more flexible and precise system is available.
 

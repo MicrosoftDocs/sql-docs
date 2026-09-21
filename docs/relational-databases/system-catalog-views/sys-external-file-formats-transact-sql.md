@@ -9,19 +9,17 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.external_file_formats (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdbmi-asa.md)]
 
   Contains a row for each external file format in the current database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
-  
- Contains a row for each external file format on the server for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Object ID for the external file format.||  
-|name|**sysname**|Name of the file format. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], this is unique for the database. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], this is unique for the server.||  
+|name|**sysname**|Name of the file format. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], this is unique for the database.||  
 |format_type|**tinyint**|The file format type.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
 |field_terminator|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the field terminator.||  
 |string_delimiter|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the string delimiter.||  

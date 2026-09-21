@@ -21,10 +21,10 @@ helpviewer_keywords:
   - "dropping roles"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-fabricsqldb.md)]
 
   Removes a role from the database.  
   
@@ -38,7 +38,7 @@ Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Fabri
 DROP ROLE [ IF EXISTS ] role_name
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+Syntax for Azure Synapse Analytics
 
 ```syntaxsql
 DROP ROLE role_name

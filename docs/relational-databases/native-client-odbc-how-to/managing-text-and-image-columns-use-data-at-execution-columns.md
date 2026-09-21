@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "data-at-execution"
 ---
 # Managing text and image Columns - Use Data-at-Execution Columns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To use data-at-execution text, ntext, or image columns  

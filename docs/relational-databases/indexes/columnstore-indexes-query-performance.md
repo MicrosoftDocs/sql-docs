@@ -9,12 +9,12 @@ ms.subservice: table-view-index
 ms.topic: best-practice
 ms.custom:
   - ignite-2025
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Columnstore indexes - query performance
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article includes recommendations for achieving the fast query performance with columnstore indexes.
 
@@ -118,7 +118,7 @@ Not all query execution operators can be executed in batch mode. For example, da
 |top sort||no|no|yes||
 |window aggregates||Not available|Not available|yes|New operator in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].|
 
-<sup>1</sup> Applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and higher, and all vCore tiers, and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+<sup>1</sup> Applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and higher, and all vCore tiers, and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 For more information, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
 

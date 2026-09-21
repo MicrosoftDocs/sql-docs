@@ -31,12 +31,12 @@ helpviewer_keywords:
   - "summary values [SQL Server]"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # SELECT - GROUP BY clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 A `SELECT` statement clause that divides the query result into groups of rows, usually by performing one or more aggregations on each group. The `SELECT` statement returns one row for each group.
 
@@ -89,15 +89,6 @@ GROUP BY {
 } [ , ...n ]
 ```
 
-Syntax for Analytics Platform System (PDW):
-
-```syntaxsql
-GROUP BY {
-      column-name [ WITH (DISTRIBUTED_AGG) ]
-    | column-expression
-} [ , ...n ]
-```
-
 ## Arguments
 
 ### *column-expression*
@@ -138,7 +129,7 @@ The following options extend the basic `GROUP BY` clause to support hierarchical
 
 - **WITH (DISTRIBUTED_AGG)**
 
-  Hints distributed execution for aggregations when grouping by a single column. Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW) are the only platforms that support this option.
+  Hints distributed execution for aggregations when grouping by a single column. Only Azure Synapse Analytics dedicated SQL pools support this option.
 
 ### GROUP BY *column-expression* [ ,...n ]
 
@@ -375,12 +366,12 @@ The `GROUP BY` clause supports all `GROUP BY` features that are included in the 
 
 ### WITH (DISTRIBUTED_AGG)
 
-**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The `DISTRIBUTED_AGG` query hint forces the massively parallel processing (MPP) system to redistribute a table on a specific column before performing an aggregation. You can use the `DISTRIBUTED_AGG` query hint on only one column in the `GROUP BY` clause. After the query finishes, the redistributed table is dropped. The original table isn't changed.
 
 > [!NOTE]  
-> The `DISTRIBUTED_AGG` query hint provides backward compatibility with earlier [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] versions and doesn't improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations.
+> The `DISTRIBUTED_AGG` query hint provides backward compatibility, and doesn't improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations.
 
 ## Remarks
 
@@ -511,7 +502,7 @@ HAVING DATEPART(yyyy, OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy, OrderDate);
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Basic use of the GROUP BY clause
 

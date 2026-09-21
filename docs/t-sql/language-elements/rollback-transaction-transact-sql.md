@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "savepoints [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # ROLLBACK TRANSACTION (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 This statement rolls back an explicit or implicit transaction to the beginning of the transaction, or to a savepoint inside the transaction. You use `ROLLBACK TRANSACTION` to erase all data modifications made from the start of the transaction or from a savepoint. `ROLLBACK TRANSACTION` also frees the resources held by the transaction.
 
@@ -48,7 +48,7 @@ ROLLBACK { TRAN | TRANSACTION }
 [ ; ]
 ```
 
-Syntax for Fabric Data Warehouse, Azure Synapse Analytics, and Parallel Data Warehouse Database.
+Syntax for Fabric Data Warehouse and Azure Synapse Analytics.
 
 ```syntaxsql
 ROLLBACK { TRAN | TRANSACTION }

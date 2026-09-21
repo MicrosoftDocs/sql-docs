@@ -20,7 +20,7 @@ This view stores properties for the different alerts that can occur on the syste
 |Column Name|Data Type|Description|Range|
 |-----------------|---------------|-----------------|-----------|
 |alert_id|**int**|Unique identifier of the alert.<br />Key for this view.|NOT NULL|
-|component_id|**int**|ID of the component this alert applies to. The component is a general component identifier, such as "Power Supply," and is not specific to an installation. See [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|
+|component_id|**int**|ID of the component this alert applies to. The component is a general component identifier, such as "Power Supply," and is not specific to an installation. See [sys.pdw_health_components &#40;Transact-SQL&#41;](sys-pdw-health-components-transact-sql.md).|NOT NULL|
 |alert_name|**nvarchar(255)**|Name of the alert.|NOT NULL|
 |state|**nvarchar(32)**|State of the alert.|NOT NULL<br /><br /> Possible values:<br />'Operational'<br />'NonOperational'<br />'Degraded'<br />'Failed'|
 |severity|**nvarchar(32)**|Severity of the alert.|NOT NULL<br /><br /> Possible values:<br />'Informational'<br />'Warning'<br />'Error'|
@@ -32,4 +32,4 @@ This view stores properties for the different alerts that can occur on the syste
 
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](azure-synapse-analytics-catalog-views.md)

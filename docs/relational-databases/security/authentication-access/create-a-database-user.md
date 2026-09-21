@@ -23,11 +23,11 @@ helpviewer_keywords:
   - "CREATE USER [Management Studio]"
   - "users [SQL Server], adding"
   - "mapping database users"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Create a database user
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article describes how to create the most common types of database users. There are 13 types of users. The complete list is provided in the article [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md). All varieties of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] support database users, but not necessarily all types of users.
 

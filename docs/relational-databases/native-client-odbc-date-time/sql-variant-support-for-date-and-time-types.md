@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "sql_variant data type"
 ---
 # sql_variant Support for Date and Time Types
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic describes how the **sql_variant** data type supports enhanced date and time functionality.  
   

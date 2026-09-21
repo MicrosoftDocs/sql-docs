@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), metadata"
 ---
 # Additional Table-Valued Parameter Metadata
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   To retrieve metadata for a table-valued parameter, an application calls SQLProcedureColumns. For a table-valued parameter, SQLProcedureColumns returns a single row. Two additional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific columns, SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME, have been added to provide schema and catalog information for table types associated with table-valued parameters. In conformance with the ODBC specification, SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME appear before all driver-specific columns added in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and after all columns mandated by ODBC itself.  
   

@@ -25,11 +25,11 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ai-usage: ai-assisted
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=aps-pdw-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Creates a database credential. A database credential isn't mapped to a server login or database user. The database uses the credential to access the external resource, when it performs an operation that requires access.
 
@@ -86,7 +86,7 @@ Specifies the name of the account to use when connecting outside the server.
 
 #### SECRET = '*secret*'
 
-Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into Azure Synapse Analytics or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
+Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into Azure Synapse Analytics, the Secret must be the Azure Storage Key.
 
 > [!WARNING]  
 > The SAS key value might begin with a question mark (`?`). When you use the SAS key, remove the leading `?`.

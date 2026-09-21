@@ -35,11 +35,11 @@ helpviewer_keywords:
   - "derived tables"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 In Transact-SQL, the FROM clause is available on the following statements:
 
@@ -132,7 +132,7 @@ Syntax for SQL Server, Azure SQL Database, and SQL database in Fabric:
         <date_time_literal> | @date_time_variable
 ```
 
-Syntax for Parallel Data Warehouse, Azure Synapse Analytics:
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 FROM { <table_source> [ , ...n ] }
@@ -332,7 +332,7 @@ Specifies all rows from the right table not meeting the join condition are inclu
 
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer uses one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints (Transact-SQL)](../queries/hints-transact-sql-join.md).
 
-For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse, these join hints apply to `INNER` joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. 
+For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse, these join hints apply to `INNER` joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. 
 
 For more information on `REDUCE`, `REPLICATE`, and `REDISTRIBUTE`, see [Join hints (Transact-SQL)](hints-transact-sql-join.md). 
 
@@ -781,7 +781,7 @@ FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### N. Use the INNER JOIN syntax
 

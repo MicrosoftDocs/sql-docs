@@ -1,6 +1,6 @@
 ---
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
-description: DBCC PDW_SHOWSPACEUSED Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in Azure Synapse Analytics or Analytics Platform System (PDW).
+description: DBCC PDW_SHOWSPACEUSED Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in Azure Synapse Analytics.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/05/2022
@@ -9,14 +9,14 @@ ms.subservice: data-warehouse
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
-Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
+Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -77,7 +77,7 @@ The following is the result set for one table.
 | pdw_node_id | int | Compute node that is used for reporting the space usage. | |
 | distribution_id | int | Distribution that is used for reporting the space usage. | For Parallel Data Warehouse, its value is -1 for replicated tables. |
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. DBCC PDW_SHOWSPACEUSED basic syntax
 

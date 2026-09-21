@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (OLE DB)"
 ---
 # OLE DB Table-Valued Parameter Type Support (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic describes OLE DB type support for table-value parameters.  
   

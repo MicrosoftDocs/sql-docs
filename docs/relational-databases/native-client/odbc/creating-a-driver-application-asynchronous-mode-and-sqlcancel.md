@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, asynchronous mode"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

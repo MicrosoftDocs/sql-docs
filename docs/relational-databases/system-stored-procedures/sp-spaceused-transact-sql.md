@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "sp_spaceused"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.sp_spaceused (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The `sp_spaceused` system stored procedure displays either:
 
@@ -48,7 +48,7 @@ sys.sp_spaceused
 
 ## Arguments
 
-For [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');`), rather than relying upon the ordinal position of parameters.
+For [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');`), rather than relying upon the ordinal position of parameters.
 
 #### [ @objname = ] N'*objname*'
 
@@ -57,7 +57,7 @@ The qualified or nonqualified name of the table, indexed view, or queue for whic
 If *@objname* isn't specified, results are returned for the whole database.
 
 > [!NOTE]  
-> [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
+> [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only supports database and table objects.
 
 #### [ @updateusage = ] '*updateusage*'
 

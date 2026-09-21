@@ -27,4 +27,4 @@ monikerRange: ">=aps-pdw-2016"
   
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [SQL and Parallel Data Warehouse Dynamic Management Views](azure-synapse-analytics-dynamic-management-objects.md)

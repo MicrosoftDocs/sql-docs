@@ -23,4 +23,4 @@ monikerRange: ">=aps-pdw-2016"
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](azure-synapse-analytics-catalog-views.md)

@@ -66,16 +66,6 @@ USE AdventureWorks2022;
 DROP CERTIFICATE Shipping04;
 ```
 
-## Examples: Analytics Platform System (PDW)
-
-The following example drops the certificate `Shipping04`.
-
-```sql
-USE master;
-
-DROP CERTIFICATE Shipping04;
-```
-
 ## Related content
 
 - [BACKUP CERTIFICATE (Transact-SQL)](backup-certificate-transact-sql.md)

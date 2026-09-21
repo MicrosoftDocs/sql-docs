@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-late
 ---
 # SQL samples
 
-[!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa-fabricsqldb.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 

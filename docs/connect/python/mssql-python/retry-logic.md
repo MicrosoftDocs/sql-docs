@@ -3,8 +3,8 @@ title: Retry Logic and Connection Resiliency with mssql-python
 description: Learn how to implement robust retry logic and handle transient failures when connecting to SQL Server and Azure SQL using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest, sumitsar
+ms.date: 09/12/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -390,7 +390,7 @@ rows = execute_with_failover_retry(
 
 ### Retry on deadlock
 
-Deadlocks (error 1205) are transient. Retry with a short random delay to break the deadlock cycle. Retrying handles the immediate failure, but recurring deadlocks indicate a design problem that you should investigate server-side. For guidance on analyzing and resolving the root cause, see [Deadlock errors](troubleshooting.md#deadlock-errors).
+Deadlocks (error 1205) are transient. Retry with a short random delay to break the deadlock cycle. Retrying handles the immediate failure, but recurring deadlocks indicate a design problem that you should investigate server-side. For guidance on analyzing and resolving the root cause, see [Deadlock errors](troubleshoot-query-data-and-operations.md#deadlock-errors).
 
 ```python
 def execute_with_deadlock_retry(cursor, query: str, params: dict,

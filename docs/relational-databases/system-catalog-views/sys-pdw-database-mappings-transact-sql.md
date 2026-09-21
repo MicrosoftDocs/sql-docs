@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016"
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar(36)**|The physical name for the database on the Compute nodes.<br /><br /> **physical_name** and **database_id** form the key for this view.||  
-|database_id|**int**|The object ID for the database. See [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** and **database_id** form the key for this view.||  
+|database_id|**int**|The object ID for the database. See [sys.databases &#40;Transact-SQL&#41;](sys-databases-transact-sql.md).<br /><br /> **physical_name** and **database_id** form the key for this view.||  
   
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example joins sys.pdw_database_mappings to other system tables to show how databases are mapped.  
@@ -36,7 +36,7 @@ ORDER BY DB.database_id, Phys.pdw_node_id;
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](azure-synapse-analytics-catalog-views.md)
 - [sys.pdw_index_mappings (Transact-SQL)](sys-pdw-index-mappings-transact-sql.md)
 - [sys.pdw_table_mappings (Transact-SQL)](sys-pdw-table-mappings-transact-sql.md)
 - [sys.pdw_nodes_pdw_physical_databases (Transact-SQL)](sys-pdw-nodes-pdw-physical-databases-transact-sql.md)

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "status information [ODBC]"
 ---
 # Diagnostic Records and Fields
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Diagnostic records are associated with ODBC environment, connection, statement, or descriptor handles. When any ODBC function raises a return code other than SQL_SUCCESS or SQL_INVALID_HANDLE, the handle called by the function has associated diagnostic records that contain informational or error messages. These records are retained until another function is called using that handle, at which time they are discarded. There is no limit to the number of diagnostic records that can be associated with a handle at any one time.  
   

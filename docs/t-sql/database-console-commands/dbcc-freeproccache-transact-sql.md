@@ -23,11 +23,11 @@ helpviewer_keywords:
   - "clearing procedure cache"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Removes all elements from the plan cache, removes a specific plan from the plan cache by specifying a plan handle or SQL handle, or removes all cache entries associated with a specified resource pool.
 
@@ -44,7 +44,7 @@ Syntax for SQL Server and Azure SQL Database:
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
@@ -133,7 +133,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Requires **ALTER SERVER STATE** permission on the server.
 
@@ -145,23 +145,23 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role.
 
-## Remarks for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Remarks for Azure Synapse Analytics
 
 Multiple `DBCC FREEPROCCACHE` commands can be run concurrently.
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
 
-`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to recompile the parallel query plan that is generated on the Control node.
+`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to recompile the parallel query plan that is generated on the Control node.
 
 `DBCC FREEPROCCACHE` can be canceled during execution.
 
-## Limitations and restrictions for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Limitations and restrictions for Azure Synapse Analytics
 
 `DBCC FREEPROCCACHE` can't run within a transaction.
 
 `DBCC FREEPROCCACHE` isn't supported in an EXPLAIN statement.
 
-## Metadata for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Metadata for Azure Synapse Analytics
 
 A new row is added to the `sys.pdw_exec_requests` system view when `DBCC FREEPROCCACHE` is run.
 
@@ -220,7 +220,7 @@ DBCC FREEPROCCACHE ('default');
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### D. DBCC FREEPROCCACHE basic syntax
 

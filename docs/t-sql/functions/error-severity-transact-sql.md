@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "ERROR_SEVERITY function"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # ERROR_SEVERITY (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This function returns the severity value of the error where an error occurs, if that error caused the `CATCH` block of a `TRY...CATCH` construct to execute.
 
@@ -55,7 +55,7 @@ When called in a `CATCH` block where an error occurs, `ERROR_SEVERITY` returns t
 
 `ERROR_SEVERITY` typically operates in a nested `CATCH` block. `ERROR_SEVERITY` returns the error severity value specific to the scope of the `CATCH` block that referenced that `CATCH` block. For example, the `CATCH` block of an outer `TRY...CATCH` construct could have an inner `TRY...CATCH` construct. Inside that inner `CATCH` block, `ERROR_SEVERITY` returns the severity value of the error that invoked the inner `CATCH` block. If `ERROR_SEVERITY` runs in the outer `CATCH` block, it returns the error severity value of the error that invoked that outer `CATCH` block.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. Use ERROR_SEVERITY in a CATCH block
 

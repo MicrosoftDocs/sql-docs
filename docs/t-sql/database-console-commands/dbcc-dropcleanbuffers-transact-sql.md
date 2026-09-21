@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "DBCC DROPCLEANBUFFERS statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
 
@@ -40,7 +40,7 @@ Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
@@ -50,7 +50,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 
 #### WITH NO_INFOMSGS
 
-Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 #### COMPUTE
 
@@ -77,7 +77,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: SQL Server, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: SQL Server
 
 - Requires **sysadmin** permission on the server
 

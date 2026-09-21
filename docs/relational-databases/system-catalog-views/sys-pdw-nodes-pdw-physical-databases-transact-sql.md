@@ -18,8 +18,8 @@ monikerRange: ">=aps-pdw-2016"
   
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|The object ID for the database. Note that this value is not same as a database_id in the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) view.|  
-|physical_name|**sysname**|The physical name for the database on the Shell/Compute nodes. This value is same as a value in the physical_name column in the [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) view.|  
+|database_id|**int**|The object ID for the database. This value isn't the same as a database_id in the [sys.databases &#40;Transact-SQL&#41;](sys-databases-transact-sql.md) view.|  
+|physical_name|**sysname**|The physical name for the database on the Shell/Compute nodes. This value is the same as a value in the physical_name column in the [sys.pdw_database_mappings &#40;Transact-SQL&#41;](sys-pdw-database-mappings-transact-sql.md) view.|  
 |pdw_node_id|**int**|Unique numeric id associated with the node.|  
   
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -79,6 +79,6 @@ SELECT TOP 1 encryption_state
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](azure-synapse-analytics-catalog-views.md)
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
 - [sys.pdw_database_mappings (Transact-SQL)](sys-pdw-database-mappings-transact-sql.md)

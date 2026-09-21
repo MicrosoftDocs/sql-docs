@@ -12,7 +12,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
   Returns the state of the cache associated with a replicated table by **object_id**.  
   
@@ -34,4 +34,4 @@ SELECT t.[name], p.[object_id], p.[state]
 
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)

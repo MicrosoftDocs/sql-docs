@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB data source properties [SQL Server Native Client]"
 ---
 #  SQL Server Native Client Data Source Information Properties
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT]
 > [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]

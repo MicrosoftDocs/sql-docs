@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "processors [SQL Server], types"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # @@VERSION (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `@@VERSION` configuration function returns information about the system and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] build information.
 
@@ -113,12 +113,12 @@ SELECT @@VERSION AS 'SQL Server Version';
   Enterprise Developer Edition (64-bit) on Linux (Ubuntu 24.04.3 LTS) <X64>
   ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### B. Return the current version of Azure Synapse Analytics
 
 ```sql
-SELECT @@VERSION AS 'SQL Server PDW Version';
+SELECT @@VERSION AS 'Azure Synapse Analytics Version';
 ```
 
 ## Related content

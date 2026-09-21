@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

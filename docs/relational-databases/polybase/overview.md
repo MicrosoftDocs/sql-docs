@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || >=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azure-sqldw-latest"
 ---
 
 # PolyBase overview
 
-[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa](../../includes/applies-to-version/sql-asa.md)]
 
 PolyBase enables data virtualization for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -48,7 +48,6 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions (Windows and Linux)
 - [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], for details, review [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview)
 - [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], for details, review [Data virtualization with Azure SQL Database (Preview)](/azure/azure-sql/database/data-virtualization-overview)
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [pdw](../../includes/sspdw-md.md)]
 - [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] (for dedicated SQL pools)
 
   - Data virtualization in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] is available in two modes, PolyBase and native. For more information, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
@@ -83,14 +82,14 @@ For more new features of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], 
 
 The PolyBase feature provides connectivity to the following external data sources:
 
-| External data sources | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] with PolyBase | APS PDW | [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
-| --- | --- | --- | --- | --- |
-| Oracle, MongoDB, Teradata | Read | Read | No | No |
-| Generic ODBC | Read (Windows Only) | Read (Windows Only) | No | No |
-| Azure Storage | Read/Write | Read/Write | Read/Write | Read/Write |
-| Hadoop | Read/Write | No | Read/Write | No |
-| SQL Server | Read | Read | No | No |
-| S3-compatible object storage | No | Read/Write | No | No |
+| External data sources | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 2016-2019 with PolyBase | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] with PolyBase | [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
+| --- | --- | --- | --- |
+| Oracle, MongoDB, Teradata | Read | Read | No |
+| Generic ODBC | Read (Windows Only) | Read (Windows Only) | No |
+| Azure Storage | Read/Write | Read/Write | Read/Write |
+| Hadoop | Read/Write | No | No |
+| SQL Server | Read | Read | No |
+| S3-compatible object storage | No | Read/Write | No |
 
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions don't support Hadoop.
 - [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.

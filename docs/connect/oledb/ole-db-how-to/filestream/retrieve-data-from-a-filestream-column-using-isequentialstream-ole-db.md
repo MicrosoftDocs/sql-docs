@@ -13,7 +13,7 @@ ms.custom:
 ---
 # Retrieve data from a FILESTREAM column using ISequentialStream (OLE DB)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 
 [!INCLUDE [driver_oledb_download](../../../../includes/driver_oledb_download.md)]

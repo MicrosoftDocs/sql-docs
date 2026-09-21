@@ -31,12 +31,12 @@ helpviewer_keywords:
   - "DROP INDEX statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # DROP INDEX (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Removes one or more relational, spatial, filtered, or XML indexes from the current database. You can drop a clustered index and move the resulting table to another filegroup or partition scheme in a single transaction by specifying the `MOVE TO` option.
 
@@ -95,7 +95,7 @@ DROP INDEX
 { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }

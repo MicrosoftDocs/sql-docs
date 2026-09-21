@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (properties)"
 ---
 # OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Properties)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic provides information about OLE DB properties and property sets that are associated with table-valued parameter rowset objects.  
   

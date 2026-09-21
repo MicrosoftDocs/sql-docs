@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "CONTINUE keyword"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # WHILE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Sets a condition for the repeated execution of a SQL statement or statement block. The statements are executed repeatedly as long as the specified condition is true. The execution of statements in the `WHILE` loop can be controlled from inside the loop with the `BREAK` and `CONTINUE` keywords.
 
@@ -43,7 +43,7 @@ WHILE boolean_expression
     { sql_statement | statement_block | BREAK | CONTINUE }
 ```
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 WHILE boolean_expression
@@ -142,7 +142,7 @@ DEALLOCATE Employee_Cursor;
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. WHILE loop
 

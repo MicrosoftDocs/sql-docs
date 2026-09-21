@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "cursors [ODBC], how to topics"
 ---
 # Using Cursors How-to Topics (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   To use cursors, you must first set connection and statement attributes that control ODBC cursor behavior. Cursors allow an application to retrieve multiple rows on each fetch and execute UPDATE, INSERT, or DELETE statements at the current location of the cursor.  
   

@@ -21,7 +21,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Creates a classifier object for use in workload management. The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition. Classifiers are evaluated with every request submitted. If a request isn't matched to a classifier, it's assigned to the default workload group. The default workload group is the `smallrc` resource class.
 

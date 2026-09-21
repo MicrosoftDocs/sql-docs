@@ -20,17 +20,17 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ms.custom: devx-track-azurepowershell
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)
 
-::: moniker range=">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
+::: moniker range="=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 
-[!INCLUDE [sqlserver2022-asa-pdws](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
+[!INCLUDE [sqlserver2022-asas](../../includes/applies-to-version/sqlserver2022-asa.md)]
 
 Creates an external table and then exports, in parallel, the results of a [!INCLUDE [tsql](../../includes/tsql-md.md)] SELECT statement.
 
-- [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)] support Hadoop or Azure Blob storage.
+- [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] supports Hadoop or Azure Blob storage.
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions support `CREATE EXTERNAL TABLE AS SELECT` (CETAS) to create an external table and then export, in parallel, the result of a [!INCLUDE [tsql](../../includes/tsql-md.md)] SELECT statement to Azure Data Lake Storage (ADLS) Gen2, Azure Storage Account V2, and S3-compatible object storage.
 
 > [!NOTE]
@@ -79,7 +79,7 @@ The name of a table column.
 
 #### LOCATION
 
-**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 '*hdfs_folder*'**  
 Specifies where to write the results of the SELECT statement on the external data source. The location is a folder name and can optionally include a path that's relative to the root folder of the Hadoop cluster or Blob storage. PolyBase creates the path and folder if it doesn't already exist.
@@ -176,7 +176,7 @@ Populates the new table with the results from a SELECT statement. *select_criter
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
 - In general, you need to have permissions to **List** folder content and **Write** to the LOCATION folder for CETAS.
-- In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Azure Blob storage.
+- In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], **Write** permission to read and write to the external folder on the Hadoop cluster or in Azure Blob storage.
 - In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], it is also required to set proper permissions on the external location. **Write** permission to output the data to the location and **Read** permission to access it.
 - For Azure Blob Storage and Azure Data Lake Gen2 the `SHARED ACCESS SIGNATURE` token must be granted the following privileges on the container: **Read**, **Write**, **List**, **Create**.
 - For Azure Blog Storage, the `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
@@ -193,7 +193,7 @@ When you create the external table, the database attempts to connect to the exte
 
 If `CREATE EXTERNAL TABLE AS SELECT` is canceled or fails, the database makes a one-time attempt to remove any new files and folders already created on the external data source.
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], the database reports any Java errors that occur on the external data source during the data export.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the database reports any Java errors that occur on the external data source during the data export.
 
 ## <a id="GeneralRemarks"></a> Remarks
 
@@ -205,9 +205,7 @@ The `CREATE EXTERNAL TABLE AS SELECT` statement always creates a nonpartitioned 
 
 For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled by using `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
 
-For query plans in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], created with EXPLAIN, the database uses these query plan operations for external tables: External shuffle move, External broadcast move, External partition move.
-
-In [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], as a prerequisite for creating an external table, the appliance administrator needs to configure Hadoop connectivity. For more information, see "Configure Connectivity to External Data (Analytics Platform System)" in the Analytics Platform System documentation, which you can download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48241).
+For query plans in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] created with EXPLAIN, the database uses these query plan operations for external tables: External shuffle move, External broadcast move, External partition move.
 
 ## Limitations and restrictions
 
@@ -226,11 +224,11 @@ CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and D
 
 ### Limitations and restrictions for Azure Synapse Analytics
 
-- In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools, and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs.
+- In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools, PolyBase can consume a maximum of 33,000 files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33,000 files. We recommend that users of Hadoop and PolyBase keep file paths short and use no more than 30,000 files per HDFS folder. When too many files are referenced, a JVM out-of-memory exception occurs.
 
 - In serverless SQL pools, external tables can't be created in a location where you currently have data. To reuse a location that has been used to store data, the location must be manually deleted on ADLS. For more limitations and best practices, see [Filter optimization best practices](/azure/synapse-analytics/sql/best-practices-serverless-sql-pool#filter-optimization).
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools, and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], when `CREATE EXTERNAL TABLE AS SELECT` selects from an RCFile, the column values in the RCFile must not contain the pipe (`|`) character.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dedicated SQL pools, when `CREATE EXTERNAL TABLE AS SELECT` selects from an RCFile, the column values in the RCFile must not contain the pipe (`|`) character.
 
 [SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md) has no effect on CREATE EXTERNAL TABLE AS SELECT. To achieve a similar behavior, use [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).
 
@@ -240,7 +238,7 @@ Review [Naming and Referencing Containers, Blobs, and Metadata](/rest/api/storag
 
 The following characters present in data can cause errors including rejected records with `CREATE EXTERNAL TABLE AS SELECT` to Parquet files.
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)], this also applies to ORC files.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], this also applies to ORC files.
 
 - `|`
 - `"` (quotation mark character)
@@ -294,7 +292,7 @@ CETAS can be used to store result sets with the following SQL data types:
 
 ### A. Create a Hadoop table by using CREATE EXTERNAL TABLE AS SELECT
 
-**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example creates a new external table named `hdfsCustomer` that uses the column definitions and data from the source table `dimCustomer`.
 
@@ -325,7 +323,7 @@ GO
 
 ### B. Use a query hint with CREATE EXTERNAL TABLE AS SELECT
 
-**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 This query shows the basic syntax for using a query join hint with the `CREATE EXTERNAL TABLE AS SELECT` statement. After the query is submitted, the database uses the hash join strategy to generate the query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md).
 
@@ -351,7 +349,7 @@ GO
 
 ### C. Use CETAS to change column attributes
 
-**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssaps-md](../../includes/ssaps-md.md)]
+**Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 This example uses CETAS to change data types, nullability, and collation for several columns in the `FactInternetSales` table.
 

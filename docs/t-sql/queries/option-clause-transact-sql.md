@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "OPTION clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # OPTION clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-FabricDW-fabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-FabricDW-fabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Specifies that the indicated query hint should be used throughout the entire query. Each query hint can be specified only one time, although multiple query hints are permitted. Only one `OPTION` clause can be specified with the statement.
 
@@ -58,7 +58,7 @@ OPTION ( <query_option> [ , ...n ] )
     | FOR TIMESTAMP AS OF '<point_in_time>'
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)] and [!INCLUDE [fabric-se](../../includes/fabric-se.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [fabric-se](../../includes/fabric-se.md)]:
 
 ```syntaxsql
 OPTION ( <query_option> [ , ...n ] )
@@ -113,7 +113,7 @@ OPTION (HASH GROUP, FAST 10);
 GO
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### B. SELECT statement with a label in the OPTION clause
 
@@ -238,7 +238,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);
 ```
 
-The following example prevents the pushdown of the `WHERE` clause to the MapReduce job on the external Hadoop table. All rows are returned to PDW where the `WHERE` clause is applied.
+The following example prevents the pushdown of the `WHERE` clause to the MapReduce job on the external Hadoop table. All rows are returned to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] where the `WHERE` clause is applied.
 
 ```sql
 SELECT ID FROM External_Table_AS A

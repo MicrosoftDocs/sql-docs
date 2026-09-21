@@ -4,57 +4,46 @@
   items:
   - name: Install, update, and deploy
     href: download-microsoft-sqlclient-data-provider.md
-  - name: Getting started
+  - name: Connect and query
     href: get-started-sqlclient-driver.md
-    items:
-    - name: 'Step 1: Configure development environment'
-      href: step-1-configure-development-environment-ado-net-development.md
-    - name: 'Step 2: Create a SQL database'
-      href: step-2-create-sql-database-ado-net-development.md
-    - name: 'Step 3: Proof of concept connecting to SQL'
-      href: step-3-connect-sql-ado-net.md
-    - name: 'Step 4: Connect resiliently to SQL'
-      href: step-4-connect-resiliently-sql-ado-net.md
-  - name: ADO.NET architecture with Microsoft.Data.SqlClient
+  - name: ADO.NET architecture
     href: overview-sqlclient-driver.md
   - name: Namespace and compatibility
     href: introduction-microsoft-data-sqlclient-namespace.md
-  - name: Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient
+  - name: Migrate from System.Data.SqlClient
     href: migrate-system-data-sql-client-to-microsoft-data-sql-client.md
-  - name: What's new
+  - name: Release notes
     href: microsoft-data-sql-client-release-notes.md
   - name: Support lifecycle
     href: sqlclient-driver-support-lifecycle.md
 - name: Configure and connect
   items:
-  - name: Connecting To Data Source
+  - name: Connect to a data source
     href: connecting-to-data-source.md
-    items:
-    - name: Establishing Connection
-      href: establishing-connection.md
-    - name: Connection Events
-      href: connection-events.md
-  - name: Connection Strings
+  - name: Establish a connection
+    href: establishing-connection.md
+  - name: Connection events
+    href: connection-events.md
+  - name: Connection strings
     href: connection-strings.md
-    items:
-    - name: Connection String Builders
-      href: connection-string-builders.md
-    - name: Connection Strings And Configuration Files
-      href: connection-strings-and-configuration-files.md
-    - name: Connection String Syntax
-      href: connection-string-syntax.md
-    - name: Encryption and certificate validation
-      href: encryption-and-certificate-validation.md
-  - name: Connection Pooling
+  - name: Build connection strings
+    href: connection-string-builders.md
+  - name: Store connection strings
+    href: connection-strings-and-configuration-files.md
+  - name: Connection string syntax
+    href: connection-string-syntax.md
+  - name: Connection options
+    href: connection-options.md
+  - name: Encryption and certificates
+    href: encryption-and-certificate-validation.md
+  - name: Connection pooling overview
     href: connection-pooling.md
-    items:
-    - name: SQL Server Connection Pooling (ADO.NET)
-      href: sql-server-connection-pooling.md
-  - name: DbProviderFactories
+  - name: SQL Server connection pooling
+    href: sql-server-connection-pooling.md
+  - name: Provider factories
     href: dbproviderfactories.md
-    items:
-    - name: Obtain a SqlClientFactory
-      href: obtain-sqlclientfactory.md
+  - name: Obtain a SqlClientFactory
+    href: obtain-sqlclientfactory.md
 - name: Authenticate and secure
   items:
   - name: Protecting connection information

@@ -28,12 +28,12 @@ helpviewer_keywords:
   - "CREATE INDEX statement"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Convert a rowstore table to a clustered columnstore index, or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload, or to improve data compression and query performance for data warehousing workloads.
 
@@ -127,7 +127,7 @@ CREATE [ NONCLUSTERED ]  COLUMNSTORE INDEX index_name
     | column_name { IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !< } constant )
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)]:
 
 ```syntaxsql
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
@@ -818,7 +818,7 @@ In [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] and earlier versions, a
 
 - Switch a partition from the table with the columnstore index into an empty staging table. If there's a columnstore index on the staging table, disable the columnstore index. Perform any updates. Build (or rebuild) the columnstore index. Switch the staging table back into the (now empty) partition of the main table.
 
-## Examples: Azure Synapse Analytics, Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. Change a clustered index to a clustered columnstore index
 

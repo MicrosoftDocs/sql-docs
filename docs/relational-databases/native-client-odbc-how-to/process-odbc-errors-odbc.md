@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "errors [ODBC]"
 ---
 # Process ODBC Errors (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Two ODBC function calls can be used to retrieve ODBC messages: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) and [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). To obtain primary ODBC-related information in the **SQLState**, **pfNative**, and **ErrorMessage** diagnostic fields, call [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) until it returns SQL_NO_DATA. For each diagnostic record, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) can be called to retrieve individual fields. All driver-specific fields must be retrieved using **SQLGetDiagField**.  
   

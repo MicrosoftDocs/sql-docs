@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "failover [SQL Server], managing metadata"
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017"
 ---
 # Troubleshoot orphaned users (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Users are orphaned in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] when a database user is based on a login in the `master` database but the login no longer exists in `master`. This can occur when the login is deleted or when the database is moved to another server on which the login doesn't exist. This article describes how to find orphaned users and remap them to logins.
 
@@ -53,7 +53,7 @@ Users are orphaned in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## Detect orphaned users
 
-**For [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and PDW**
+**For [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]**
 
 To detect orphaned users in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] based on missing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins, run the following statement in the user database:
 

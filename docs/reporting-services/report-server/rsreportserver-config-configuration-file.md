@@ -626,13 +626,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			</Extension>
 			<Extension Name="RPL" Type="Microsoft.ReportingServices.Rendering.RPLRendering.RPLRenderer,Microsoft.ReportingServices.RPLRendering" Visible="false" LogAllExecutionRequests="false"/>
 		</Render>
-		<!--
-        For the SQLPDW extension to work, install the SQL Server PDW Client Tools on the report server.
-        NOTE: The SQLPDW extension is deprecated. It supports old versions of SQL Server Parallel Data Warehouse (PDW).        
-        To connect to Analytics Platform System, use the SQL (SQL Server) extension.        
-        For the ORACLE extension to work, install the Oracle Data Provider for NET (ODP.NET) on the report server.
-        For TERADATA extension to work, install the .NET Provider for Teradata on the report server.
-      -->
 		<Data>
 			<Extension Name="SQL" Type="Microsoft.ReportingServices.DataExtensions.SqlConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
 			<Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.DataExtensions.SqlAzureConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>

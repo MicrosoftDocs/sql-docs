@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "SQLGetData function"
 ---
 # Fetching Result Data
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   An ODBC application has three options for fetching result data.  
   

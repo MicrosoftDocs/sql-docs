@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_pdw_exec_requests (Transact-SQL)"
-description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
+description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools.
 author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf, randolphwest
@@ -10,15 +10,15 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 
-Holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW). It lists one row per request/query.
+Holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools. It lists one row per request/query.
 
 > [!NOTE]  
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool, use [sys.dm_exec_requests](sys-dm-exec-requests-transact-sql.md).
@@ -79,4 +79,4 @@ Requires `VIEW DATABASE STATE` permission.
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

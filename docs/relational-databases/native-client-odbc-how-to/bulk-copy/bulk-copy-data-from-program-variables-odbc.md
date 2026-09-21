@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "bulk copy [ODBC]"
 ---
 # Bulk Copy Data from Program Variables (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to use bulk copy functions to bulk copy data from program variables to SQL Server using **bcp_bind** and **bcp_sendrow**. (Error-checking code is removed to simplify this example.)  
   

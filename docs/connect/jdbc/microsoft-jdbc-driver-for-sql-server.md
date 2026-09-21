@@ -4,7 +4,7 @@ description: Task hub for connecting Java applications to SQL Server, Azure SQL,
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, vanto, davidengel, machavan, sunilbs
-ms.date: 08/27/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -19,8 +19,9 @@ The Microsoft Java Database Connectivity (JDBC) Driver for SQL Server is a Type 
 
 ## Choose your starting point
 
-- To set up a Java development environment and run your first query, start with [Step 1: Configure development environment](step-1-configure-development-environment-for-java-development.md), [Step 2: Create a SQL database](step-2-create-a-sql-database-for-java-development.md), and [Step 3: Proof of concept connecting to SQL using Java](step-3-proof-of-concept-connecting-to-sql-using-java.md).
-- To connect to Azure SQL with passwordless authentication, start with [Connect using Microsoft Entra authentication](connecting-using-azure-active-directory-authentication.md) and [Building the connection URL](building-the-connection-url.md).
+- To add the driver and run your first parameterized query, start with the [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md).
+- To choose a hosted database or SQL Server container, see [Choose your database](getting-started-with-the-jdbc-driver.md#choose-your-database).
+- To connect to Azure SQL or SQL database in Fabric without storing a password in your application, follow the quickstart's [Microsoft Entra configuration](getting-started-with-the-jdbc-driver.md#azure-sql-or-fabric-with-microsoft-entra-authentication). For other authentication modes, see [Connect using Microsoft Entra authentication](connecting-using-azure-active-directory-authentication.md).
 - To add the driver to a Maven, Gradle, or other build, go to [Download Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md).
 - To make an existing app resilient to transient failures, go to [Connection resiliency](connection-resiliency.md) and [Configurable retry logic](configurable-retry-logic.md).
 - To diagnose a connection or query problem, go to [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md) and [Troubleshooting connectivity](troubleshooting-connectivity.md).
@@ -117,7 +118,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [System requirements](system-requirements-for-the-jdbc-driver.md) | Supported Java, operating system, and SQL Server versions. |
 | [Support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md) | Detailed compatibility matrix for JDBC driver releases. |
 | [Download Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) | Download links, Maven coordinates, and release artifacts. |
-| [Getting started with the JDBC driver](getting-started-with-the-jdbc-driver.md) | Install the driver, configure your environment, and run your first query. |
+| [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md) | Build a complete application, configure authentication, and verify a parameterized query result. |
 | [Overview of the JDBC driver](overview-of-the-jdbc-driver.md) | Architecture, supported features, and JDBC specification compliance. |
 
 ## Configure and connect

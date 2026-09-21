@@ -118,7 +118,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |Type|Default|  
 |----------|-------------|  
 |Authentication|A default report server instance supports Windows Authentication, including impersonation and delegation features if they're enabled in your domain.|  
-|Data processing|A default report server instance includes data processing extensions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse, and ODBC data sources.|  
+|Data processing|A default report server instance includes data processing extensions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, and ODBC data sources.|  
 |Rendering|A default report server instance includes rendering extensions for HTML, Excel, CSV, XML, Image, Word, SharePoint list, and PDF.|  
 |Delivery|A default report server instance includes an e-mail delivery extension and a file share delivery extension. If the report server is configured for SharePoint integration, you can use a delivery extension that saves reports to a SharePoint library.|  
   

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters, executing commands containing"
 ---
 # Executing SQL Server Native Client Commands Containing Table-Valued Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Executing a command that contains table-valued parameters requires two phases:  
   

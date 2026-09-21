@@ -30,12 +30,12 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || >=aps-pdw-2016 || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Optimize index maintenance to improve query performance and reduce resource consumption
 
-[!INCLUDE [SQL Server Azure SQL Database PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 This article helps you decide when and how to perform index maintenance. It covers concepts such as index fragmentation and page density, and their impact on query performance and resource consumption. It describes two index maintenance methods: [reorganizing an index](#reorganize-an-index) and [rebuilding an index](#rebuild-an-index). The article also suggests an index maintenance [strategy](#index-maintenance-strategy) that balances potential performance improvements against resource consumption required for maintenance.
 

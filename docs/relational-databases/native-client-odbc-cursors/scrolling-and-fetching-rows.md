@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "ODBC cursors, scrolling rows"
 ---
 # Scrolling and Fetching Rows
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   To use a scrollable cursor, an ODBC application must:  
   

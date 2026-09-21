@@ -15,12 +15,12 @@ f1_keywords:
   - "devlang-tsql"
 helpviewer_keywords:
   - "Transact-SQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # Transact-SQL reference (Database Engine)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This article gives the basics about how to find and use the Microsoft [!INCLUDE [tsql](../includes/tsql-md.md)] (T-SQL) reference articles. T-SQL is central to using Microsoft SQL products and services. All tools and applications that communicate with a SQL Server database do so by sending T-SQL commands.
 
@@ -68,11 +68,11 @@ The T-SQL reference articles encompass multiple versions of SQL Server, starting
 
 For example, this article applies to all versions, and has the following label.
 
-[!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Another example, the following label indicates an article that applies only to Azure Synapse Analytics and Parallel Data Warehouse.
+Another example, the following label indicates an article that applies only to Azure Synapse Analytics.
 
-[!INCLUDE [asa-pdw](../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../includes/applies-to-version/asa.md)]
 
 In some cases, the article is used by a product or service, but all of the arguments aren't supported. In this case, other **Applies to** sections are inserted into the appropriate argument descriptions in the body of the article.
 

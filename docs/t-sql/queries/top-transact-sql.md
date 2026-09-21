@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # TOP (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. When you use `TOP` with the `ORDER BY` clause, the result set is limited to the first *n* number of ordered rows. Otherwise, `TOP` returns the first *n* number of rows in an undefined order. Use this clause to specify the number of rows returned from a `SELECT` statement. Or, use `TOP` to specify the rows affected by an `INSERT`, `UPDATE`, `MERGE`, or `DELETE` statement.
 
@@ -41,7 +41,7 @@ Syntax for SQL Server and Azure SQL Database:
 ]
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```syntaxsql
 [
@@ -369,7 +369,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO
 ```
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example returns the top 31 rows that match the query criteria. The `ORDER BY` clause ensures that the 31 returned rows are the first 31 rows based on an alphabetical ordering of the `LastName` column.
 

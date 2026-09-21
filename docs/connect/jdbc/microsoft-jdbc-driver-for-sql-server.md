@@ -4,7 +4,7 @@ description: Task hub for connecting Java applications to SQL Server, Azure SQL,
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, vanto, davidengel, machavan, sunilbs
-ms.date: 09/14/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -242,6 +242,10 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [JDBC driver API reference](reference/jdbc-driver-api-reference.md) | Classes, interfaces, methods, and fields exposed by the driver. |
 | [Sample JDBC driver applications](sample-jdbc-driver-applications.md) | End-to-end code samples. |
 | [FAQ](frequently-asked-questions-faq-for-jdbc-driver.yml) | Frequently asked questions. |
+
+## Request a feature
+
+To request a feature, open an issue in the [Microsoft JDBC Driver for SQL Server GitHub repository](https://github.com/microsoft/mssql-jdbc/issues/new/choose).
 
 ## Related content
 

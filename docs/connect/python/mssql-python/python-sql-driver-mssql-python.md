@@ -269,6 +269,10 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | [Migrate from SQLite](migrate-from-sqlite.md) | Move local SQLite workloads to SQL Server or Azure SQL. |
 | [Migrate from PostgreSQL](migrate-from-postgresql.md) | One-stop guide for Python developers moving from PostgreSQL to SQL Server with mssql-python. |
 
+## Request a feature
+
+To request a feature, open an issue in the [mssql-python GitHub repository](https://github.com/microsoft/mssql-python/issues/new/choose).
+
 ## Related content
 
 - [Support lifecycle for mssql-python](support-lifecycle.md)

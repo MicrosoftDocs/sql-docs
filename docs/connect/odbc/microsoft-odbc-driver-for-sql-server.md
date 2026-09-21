@@ -4,7 +4,7 @@ description: The Microsoft ODBC Driver for SQL Server connects C and C++ applica
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 09/03/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -208,6 +208,10 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | --- | --- |
 | [ODBC driver on Windows](windows/microsoft-odbc-driver-for-sql-server-on-windows.md) | A version-by-version summary of what the driver supports on Windows, and an index of the Windows-specific articles. |
 | [Features of the ODBC driver on Windows](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md) | Which release introduced each Windows feature, plus the behavior changes that came with it. |
+
+## Request a feature
+
+To request a feature, submit an idea through [SQL Server feedback](https://aka.ms/sqlfeedback).
 
 ## Related content
 

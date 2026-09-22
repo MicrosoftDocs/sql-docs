@@ -1,6 +1,182 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-alerts-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-alerts-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-diag-processing-stats-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-diag-processing-stats-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-node-status-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-node-status-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-event-logs-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-event-logs-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-performance-counters-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-performance-counters-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-file-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-file-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/t-sql/language-elements/create-diagnostics-session-transact-sql.md",
+      "redirect_url": "/previous-versions/sql/t-sql/language-elements/create-diagnostics-session-transact-sql",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
+      "source_path": "docs/t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md",
+      "redirect_url": "/previous-versions/sql/t-sql/statements/create-remote-table-as-select-parallel-data-warehouse",
+      "redirect_document_id": false,
+      "monikers": [
+        "aps-pdw-2016-au7"
+      ]
+    },
+    {
       "source_path": "docs/analytics-platform-system/acquire-and-configure-backup-server.md",
       "redirect_url": "/previous-versions/sql/analytics-platform-system/acquire-and-configure-backup-server",
       "redirect_document_id": false,

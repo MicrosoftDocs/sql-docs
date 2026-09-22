@@ -680,6 +680,72 @@
         ],
         "ado/**/*.md": [
           "sql-server-ver15"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-diag-processing-stats-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-node-status-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-event-logs-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-performance-counters-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-file-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "t-sql/language-elements/create-diagnostics-session-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md": [
+          "aps-pdw-2016-au7"
         ]
       }
     },

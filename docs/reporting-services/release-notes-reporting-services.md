@@ -25,8 +25,7 @@ For the release notes for Report Viewer controls, see [Release notes for the Rep
 *(Product Version: 16.0.1119.11)*
 
 - Fixed an issue where some SSAS Multidimensional reports hung during query processing when dataset queries began with long multiline comments.
-- Fixed an issue where the web portal failed to load after OData servicing updates.
-- Updated report rendering components
+- Fixed an issue where the web portal failed to load.
 - Security improvements.
 - Accessibility improvements.
 

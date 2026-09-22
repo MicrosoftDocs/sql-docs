@@ -28,7 +28,7 @@ For the release notes for Report Viewer controls, see [Release notes for the Rep
 - Fixed issue where the web portal could fail to load after OData servicing updates
 - Updated report rendering components
 - Security improvements.
-- Accessibility improvements
+- Accessibility improvements.
 
 ## 16.0.9388.19190, 2025/09/22
 *(Product Version: 16.0.1118.33)*

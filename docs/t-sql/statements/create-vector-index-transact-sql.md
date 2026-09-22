@@ -254,7 +254,7 @@ The current preview has the following limitations:
 
 - Vector indexes can't be partitioned. No partition support.
 
-- The table must have a primary key clustered index.
+- The table must have a primary key clustered index on an **int** column.
 
 - Vector indexes aren't replicated to subscribers.
 

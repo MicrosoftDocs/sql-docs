@@ -244,6 +244,9 @@ Earlier vector index versions have the following additional limitations. To chec
 
 - **Read-only tables**: Tables with vector indexes are read-only. No DML operations (INSERT, UPDATE, DELETE, MERGE) are allowed after the vector index is created. Use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration to enable DML operations if you can tolerate stale search results.
 
+  > [!NOTE]  
+  > The `ALLOW_STALE_VECTOR_INDEX` database scoped configuration isn't currently available in SQL Server 2025. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](alter-database-scoped-configuration-transact-sql.md).
+
 - **Manual TOP_N tuning**: You must manually adjust the `TOP_N` parameter in `VECTOR_SEARCH` to compensate for post-filtering, often requiring oversized values to get the desired number of results.
 
 ### Current limitations (applies to the latest version too)

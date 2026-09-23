@@ -102,6 +102,8 @@
     href: duckdb-integration.md
   - name: FastAPI integration
     href: fastapi-integration.md
+  - name: Test and deploy FastAPI applications
+    href: fastapi-testing-deployment.md
   - name: Flask integration
     href: flask-integration.md
   - name: SQLAlchemy integration

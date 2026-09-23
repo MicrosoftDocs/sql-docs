@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on ma
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, sunilbs, mcimfl
-ms.date: 08/25/2026
+ms.date: 09/19/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: install-set-up-deploy
@@ -121,7 +121,7 @@ If the tap succeeded but the install fails with `Refusing to load formula ... fr
 
 ## Related content
 
-- [C / C++ ODBC example application accesses a SQL database](../cpp-code-example-app-connect-access-sql-db.md)
+- [Connect and query with C++ and ODBC](../cpp-code-example-app-connect-access-sql-db.md)
 - [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md)
 - [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
 - [System Requirements (Linux and macOS)](system-requirements.md)

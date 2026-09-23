@@ -4,7 +4,7 @@ description: Describes how to configure change event streaming.
 author: nzagorac-ms
 ms.author: nzagorac
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/15/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.topic: how-to
 ai-usage: ai-assisted
@@ -44,7 +44,7 @@ To configure change event streaming, you need the following resources, permissio
 - A login in the [db_owner](../../security/authentication-access/database-level-roles.md#fixed-database-roles) role or that has [CONTROL DATABASE](../../security/permissions-database-engine.md#permissions-database-engine) permission for the database where you intend to enable CES.
 - For [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], enable the [preview feature database scoped configuration](../../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). Azure SQL Database doesn't require this configuration.
 - For Azure SQL Database configured to use [outbound firewall rules](/azure/azure-sql/database/outbound-firewall-rule-overview), and for Azure SQL Managed Instance [virtual network configuration](/azure/azure-sql/managed-instance/vnet-existing-add-subnet): [Firewall ports to open](/azure/event-hubs/event-hubs-faq#what-ports-do-i-need-to-open-on-the-firewall)
-- For Azure SQL Database configured to use a [Network Security Perimeter](/azure/azure-sql/database/network-security-perimeter), allow access to the destination Azure Event Hubs:
+- For Azure SQL Database configured to use a [Network Security Perimeter](/azure/azure-sql/database/network-security-perimeter), add an outbound rule that names the destination Event Hubs FQDN. The rule is required in enforced mode. It isn't required in transition mode, but add it before you switch. If the Event Hubs namespace has a perimeter of its own, allow the SQL logical server there as well:
   - [Firewall ports to open](/azure/event-hubs/event-hubs-faq#what-ports-do-i-need-to-open-on-the-firewall)
   - [Network Security Perimeter for Azure Event Hubs](/azure/event-hubs/network-security-perimeter).
 
@@ -474,8 +474,10 @@ The following list describes permissions and data residency limitations:
 
 ### Networking and connectivity
 
-The following list describes a network and connectivity limitation:
+The following list describes network and connectivity limitations:
 - Currently, CES can only stream to Azure Event Hubs public endpoints. Service endpoints and private endpoints aren't currently supported.
+- In Azure SQL Database, a [network security perimeter](/azure/azure-sql/database/network-security-perimeter) in enforced mode blocks the destination unless an outbound rule names its FQDN. Only FQDN-based rules work. Without the rule, `sp_create_event_stream_group` fails with error 23674, state 1, returned as error 23626.
+- After a perimeter rule change blocks the destination, an existing stream stops publishing and records error 23674 in [sys.dm_change_feed_errors](../../system-dynamic-management-objects/sys-dm-change-feed-errors.md). Perimeter changes take effect immediately, and the stream group itself doesn't change. Because the stream can't deliver, the transaction log can't truncate. For more information, see [Transaction log growth](#transaction-log-growth).
 - When using the AMQP protocol on Azure SQL Managed Instance or SQL Server 2025 (for existing stream groups not yet migrated), set the Azure Event Hubs [Minimum TLS version](/azure/event-hubs/transport-layer-security-enforce-minimum-version) configuration option to 1.2. CES doesn't work with TLS 1.3 over the AMQP protocol.
 
 ## Related content

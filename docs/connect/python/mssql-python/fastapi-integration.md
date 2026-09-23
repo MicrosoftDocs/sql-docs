@@ -4,7 +4,7 @@ description: Learn how to build REST APIs with FastAPI and mssql-python for Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 09/14/2026
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -18,7 +18,6 @@ FastAPI is a modern Python web framework for building APIs. Combined with mssql-
 ## Prerequisites
 
 - Python 3.10 or later.
-- The `mssql-python`, `fastapi`, `uvicorn`, `pydantic`, and `PyJWT` packages. Install all with `pip install fastapi uvicorn mssql-python pydantic pyjwt`.
 - [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
 [!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
@@ -57,7 +56,7 @@ After you activate the environment, `python`, `pip`, and `pytest` all resolve to
 Install the required packages with pip:
 
 ```bash
-pip install fastapi uvicorn mssql-python pydantic pyjwt
+pip install fastapi uvicorn mssql-python pydantic
 ```
 
 ### Project structure
@@ -71,24 +70,22 @@ my_api/
 ├── models.py
 ├── schemas.py
 ├── crud.py
-├── test_api.py
 └── routers/
     └── products.py
 ```
 
 ## Database connection management
 
-FastAPI uses dependency injection to provide resources like database connections to route handlers. The pattern in this section creates a context manager that opens a connection, yields a cursor, and handles commit/rollback/close automatically.
+FastAPI uses dependency injection to provide resources like database connections to route handlers. The pattern in this section opens a connection, yields a cursor, and uses the mssql-python connection context manager to commit on success, roll back on an exception, and close the connection.
 
 ### Create database.py
 
-The `get_connection_string()` function builds the ODBC connection string from configuration values. The `get_db()` context manager and `get_db_dependency()` generator both follow the same pattern: open a connection, yield a cursor, commit on success, roll back on error, and always close when done. FastAPI's `Depends()` calls `get_db_dependency()` once per request and manages its lifecycle.
+The `get_connection_string()` function builds the ODBC connection string from configuration values. FastAPI's `Depends()` calls `get_db_dependency()` once per request and manages its lifecycle.
 
 ```python
 # database.py
 import mssql_python
-from contextlib import contextmanager
-from typing import Generator
+from collections.abc import Generator
 
 # Configuration
 DATABASE_CONFIG = {
@@ -110,34 +107,11 @@ def get_connection_string() -> str:
 > `ActiveDirectoryDefault` uses `DefaultAzureCredential`, which tries multiple credential providers in sequence. The first connection can be slow because the SDK walks the chain until it finds a working provider. In production, if you know which credential type your environment uses, specify it directly (for example, `ActiveDirectoryMSI` for managed identity) to avoid the chain walk. For more information, see [Microsoft Entra authentication](entra-authentication.md).
 
 ```python
-@contextmanager
-def get_db() -> Generator:
-    """Database connection context manager for FastAPI dependency injection."""
-    conn = mssql_python.connect(get_connection_string())
-    cursor = conn.cursor()
-    try:
-        yield cursor
-        conn.commit()
-    except Exception:
-        conn.rollback()
-        raise
-    finally:
-        cursor.close()
-        conn.close()
-
-def get_db_dependency():
+def get_db_dependency() -> Generator:
     """FastAPI dependency for database cursor."""
-    conn = mssql_python.connect(get_connection_string())
-    cursor = conn.cursor()
-    try:
-        yield cursor
-        conn.commit()
-    except Exception:
-        conn.rollback()
-        raise
-    finally:
-        cursor.close()
-        conn.close()
+    with mssql_python.connect(get_connection_string()) as conn:
+        with conn.cursor() as cursor:
+            yield cursor
 ```
 
 ## Pydantic models
@@ -433,8 +407,8 @@ def health_check(cursor = Depends(get_db_dependency)):
     try:
         cursor.execute("SELECT 1")
         return {"status": "healthy", "database": "connected"}
-    except Exception as e:
-        raise HTTPException(status_code=503, detail=f"Database unhealthy: {str(e)}")
+    except Exception:
+        raise HTTPException(status_code=503, detail="Database unavailable")
 ```
 
 ### Run the application
@@ -443,253 +417,49 @@ def health_check(cursor = Depends(get_db_dependency)):
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-## Error handling
+## Test and deploy the application
 
-FastAPI lets you register global exception handlers for specific exception types. When you catch `mssql_python.DatabaseError` and `mssql_python.IntegrityError`, FastAPI returns structured JSON errors with appropriate HTTP status codes instead of generic 500 responses.
+Use the companion article to finish the application:
 
-### Global exception handler
+### Error handling
 
-Add these handlers to `main.py`, right after the `app = FastAPI(...)` line. FastAPI runs the matching handler whenever a route raises that exception type, so you don't need a `try`/`except` block in every route.
+The companion article covers database exception handling.
 
-```python
-# main.py
-from fastapi import Request
-from fastapi.responses import JSONResponse
-import mssql_python
+#### Global exception handler
 
-@app.exception_handler(mssql_python.DatabaseError)
-async def database_exception_handler(request: Request, exc: mssql_python.DatabaseError):
-    """Handle database errors globally."""
-    return JSONResponse(
-        status_code=500,
-        content={"detail": "Database error occurred", "type": "database_error"}
-    )
+See [Handle database errors](fastapi-testing-deployment.md#handle-database-errors).
 
-@app.exception_handler(mssql_python.IntegrityError)
-async def integrity_exception_handler(request: Request, exc: mssql_python.IntegrityError):
-    """Handle integrity constraint violations."""
-    error_msg = str(exc)
-    
-    if "UNIQUE" in error_msg:
-        return JSONResponse(
-            status_code=409,
-            content={"detail": "Resource already exists", "type": "duplicate_error"}
-        )
-    elif "FOREIGN KEY" in error_msg:
-        return JSONResponse(
-            status_code=400,
-            content={"detail": "Referenced resource not found", "type": "reference_error"}
-        )
-    
-    return JSONResponse(
-        status_code=400,
-        content={"detail": "Data integrity error", "type": "integrity_error"}
-    )
-```
+### Connection pooling
 
-> [!NOTE]
-> Deleting a product that other rows still reference raises `mssql_python.IntegrityError` from the foreign key constraint, and the handler returns a 400 instead of removing the row. In the AdventureWorksLT sample, most products in `SalesLT.Product` are referenced by `SalesLT.SalesOrderDetail`, so `DELETE` fails for them by design. To test a successful delete, create a product with `POST /products` and delete that one, or remove the referencing rows first.
+The companion article covers connection pool configuration.
 
-## Connection pooling
+#### Enhanced database module
 
-Without connection pooling, each request opens and closes a TCP connection to Microsoft SQL, which adds latency. Connection pooling keeps a set of idle connections ready for reuse. Call `mssql_python.pooling()` once at startup. With pooling enabled, `conn.close()` in `get_db_dependency()` returns the connection to the pool instead of actually closing it.
+See [Configure connection pooling](fastapi-testing-deployment.md#configure-connection-pooling).
 
-### Enhanced database module
+### Authentication middleware
 
-Enable pooling by calling `mssql_python.pooling()` at startup and configure it with appropriate max size and timeout settings:
+See [Add authentication dependencies](fastapi-testing-deployment.md#add-authentication-dependencies).
 
-```python
-# database.py with connection pooling
-import mssql_python
-from contextlib import contextmanager
-import os
+### Testing
 
-# Configure pool
-mssql_python.pooling(max_size=20, idle_timeout=300)
+The companion article covers integration testing.
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "Server=<server>.database.windows.net;Database=<database>;"
-    "Authentication=ActiveDirectoryDefault;Encrypt=yes"
-)
+#### Test setup
 
-def get_db_dependency():
-    """FastAPI dependency with connection pooling."""
-    conn = mssql_python.connect(DATABASE_URL)
-    cursor = conn.cursor()
-    try:
-        yield cursor
-        conn.commit()
-    except Exception:
-        conn.rollback()
-        raise
-    finally:
-        cursor.close()
-        conn.close()  # Returns to pool
-```
+See [Test the application](fastapi-testing-deployment.md#test-the-application).
 
-## Authentication middleware
+### Deployment configuration
 
-You can combine database access with authentication by chaining FastAPI dependencies. The following example validates a JWT bearer token, looks up the matching person record in the AdventureWorksLT sample database, and makes the result available to protected routes.
+The companion article covers deployment configuration and operations.
 
-```python
-# auth.py
-from fastapi import Depends, HTTPException
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-import jwt
+#### Environment variables
 
-security = HTTPBearer()
-
-def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(security),
-    cursor = Depends(get_db_dependency)
-):
-    """Validate JWT and return the matching AdventureWorksLT person."""
-    try:
-        token = credentials.credentials
-        # Replace with a strong secret loaded from environment variables
-        payload = jwt.decode(token, "your-secret-key", algorithms=["HS256"])
-        person_id = int(payload.get("sub"))
-        
-        if not person_id:
-            raise HTTPException(status_code=401, detail="Invalid token")
-        
-        cursor.execute("""
-            SELECT BusinessEntityID, FirstName, LastName
-            FROM Person.Person
-            WHERE BusinessEntityID = %(id)s
-        """, {"id": person_id})
-        
-        person = cursor.fetchone()
-        if not person:
-            raise HTTPException(status_code=401, detail="User not found")
-        
-        return {
-            "id": person.BusinessEntityID,
-            "first_name": person.FirstName,
-            "last_name": person.LastName
-        }
-        
-    except (TypeError, ValueError):
-        raise HTTPException(status_code=401, detail="Invalid token subject")
-    except jwt.ExpiredSignatureError:
-        raise HTTPException(status_code=401, detail="Token expired")
-    except jwt.InvalidTokenError:
-        raise HTTPException(status_code=401, detail="Invalid token")
-
-# Protected endpoint
-@app.get("/me")
-def get_me(current_user: dict = Depends(get_current_user)):
-    return current_user
-```
-
-## Testing
-
-FastAPI provides a `TestClient` built on `httpx` that sends requests to your application without starting a real HTTP server. Write tests with `pytest` to verify routes, status codes, and response shapes.
-
-Before running the tests in this section, install the test dependencies:
-
-```bash
-pip install pytest httpx
-```
-
-> [!NOTE]
-> If you're on the latest Starlette or setting up a new environment, prefer `httpx2` over `httpx`. Recent Starlette versions use `httpx2` for `TestClient` and emit a deprecation warning when only `httpx` is installed. Install it with `pip install pytest httpx2`.
-
-### Test setup
-
-Create a test file that uses `TestClient` to verify route behavior and response schemas:
-
-```python
-# test_api.py
-from fastapi.testclient import TestClient
-from main import app
-import uuid
-import pytest
-
-client = TestClient(app)
-
-def test_list_products():
-    response = client.get("/products")
-    assert response.status_code == 200
-    data = response.json()
-    assert "items" in data
-    assert "total" in data
-
-def test_create_product():
-    suffix = uuid.uuid4().hex[:8]
-    name = f"Test Product {suffix}"
-    product_data = {
-        "name": name,
-        "product_number": f"TEST-{suffix}",
-        "price": 19.99,
-        "color": "Red",
-        "size": "M",
-        "category_id": 1
-    }
-    response = client.post("/products", json=product_data)
-    assert response.status_code == 201
-    data = response.json()
-    assert data["name"] == name
-    assert data["price"] == 19.99
-
-def test_get_product_not_found():
-    response = client.get("/products/99999")
-    assert response.status_code == 404
-
-def test_health_check():
-    response = client.get("/health")
-    assert response.status_code == 200
-    assert response.json()["status"] == "healthy"
-```
-
-Run the tests with `pytest` from the project root, the same directory as `main.py`:
-
-```bash
-pytest
-```
-
-These tests run against your live database rather than mocks, so `test_create_product` inserts a real row into `SalesLT.Product`. In AdventureWorksLT, both `Name` and `ProductNumber` have unique constraints, so the test generates a unique value for each on every run. If you hardcode those values instead, the test fails with a conflict on the second run unless you delete the row first.
-
-## Deployment configuration
-
-Use Pydantic's `BaseSettings` to load configuration from environment variables and `.env` files. This approach keeps secrets out of source code and makes it easy to switch between environments. Install the settings package with `pip install pydantic-settings`.
-
-### Environment variables
-
-Create a settings module that loads configuration from environment variables, allowing you to manage secrets and deployment-specific values outside your code:
-
-```python
-# config.py
-from pydantic_settings import BaseSettings, SettingsConfigDict
-
-class Settings(BaseSettings):
-    database_server: str = "<server>.database.windows.net"
-    database_name: str = "<database>"
-    pool_size: int = 10
-
-    model_config = SettingsConfigDict(env_file=".env")
-
-settings = Settings()
-
-def get_connection_string() -> str:
-    return (
-        f"Server={settings.database_server};"
-        f"Database={settings.database_name};"
-        "Authentication=ActiveDirectoryDefault;"
-        "Encrypt=yes"
-    )
-```
-
-Then update `database.py` to import `get_connection_string` from `config` instead of defining its own copy. By removing the duplicated function, you ensure the app reads connection settings from a single source.
-
-```python
-# database.py
-from config import get_connection_string
-```
+See [Configure deployment settings](fastapi-testing-deployment.md#configure-deployment-settings) and the [deployment checklist](fastapi-testing-deployment.md#deployment-checklist).
 
 ## Related content
 
+- [Test and deploy FastAPI applications with mssql-python](fastapi-testing-deployment.md)
 - [Manage connections with mssql-python](connection-management.md)
 - [Connection pooling with mssql-python](connection-pooling.md)
 - [Error handling and SQLSTATE codes for mssql-python](error-handling.md)

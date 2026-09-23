@@ -19,7 +19,8 @@ ai-usage: ai-assisted
 
 ## Choose your starting point
 
-- To get a local SQL Server sample running quickly, start with [Quickstart: Connect with the mssql-python driver](python-sql-driver-mssql-python-quickstart.md).
+- To connect to SQL Server, Azure SQL Database, or SQL database in Microsoft Fabric and run your first query, start with [Quickstart: Connect with the mssql-python driver](python-sql-driver-mssql-python-quickstart.md).
+- To create a local SQL Server container, start with [Container and local development](container-local-development.md).
 - To connect to Azure SQL with passwordless authentication, start with [Microsoft Entra authentication](entra-authentication.md) and [Connection strings](connection-strings.md).
 - To explore data interactively, start with [Connect from a Jupyter Notebook](python-sql-driver-mssql-python-connect-jupyter-notebook.md) or [Rapid prototyping](python-sql-driver-mssql-python-rapid-prototyping-quickstart.md).
 - To move large volumes of data efficiently, go to [Bulk copy operations](bulk-copy.md) or the [Bulk copy quickstart](python-sql-driver-mssql-python-bulk-copy-quickstart.md).
@@ -244,6 +245,7 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | [Polars integration](polars-integration.md) | Use Polars with mssql-python for columnar workloads. |
 | [DuckDB integration](duckdb-integration.md) | Query SQL Server data alongside local DuckDB tables. |
 | [FastAPI integration](fastapi-integration.md) | Wire mssql-python into FastAPI services. |
+| [Test and deploy FastAPI applications](fastapi-testing-deployment.md) | Configure pooling, errors, authentication, tests, and deployment settings for FastAPI services. |
 | [Flask integration](flask-integration.md) | Use mssql-python in Flask applications. |
 | [Async patterns](asynchronous-patterns.md) | Combine mssql-python with `asyncio` and thread pools. |
 | [Data access and analytics patterns](data-access-analytics-patterns.md) | Choose the right read path for cursor access, Arrow extraction, pandas, Polars, and DuckDB analytics over SQL data. |

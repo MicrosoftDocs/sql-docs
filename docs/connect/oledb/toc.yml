@@ -306,6 +306,8 @@
     href: ole-db-transactions/supporting-distributed-transactions.md
 - name: Diagnose and troubleshoot
   items:
+  - name: Troubleshooting
+    href: troubleshooting.md
   - name: Accessing diagnostic information in the extended events log
     href: features/accessing-diagnostic-information-in-the-extended-events-log.md
   - name: Known issues

@@ -36,7 +36,7 @@ The Microsoft OLE DB Driver for SQL Server is a standalone data access applicati
 - To connect to Azure SQL with passwordless authentication, go to [Using Microsoft Entra ID](features/using-azure-active-directory.md) and [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 - To move from `SQLNCLI` or `SQLOLEDB`, go to [Updating an application to OLE DB Driver for SQL Server from MDAC](applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md) and [Major version differences](major-version-differences.md).
 - To use the driver from ADO, go to [Using ADO with OLE DB Driver for SQL Server](applications/using-ado-with-oledb-driver-for-sql-server.md).
-- To diagnose a connection or query problem, go to [Accessing diagnostic information in the extended events log](features/accessing-diagnostic-information-in-the-extended-events-log.md) and [Known issues](oledb-driver-for-sql-server-known-issues.md).
+- To diagnose a connection or query problem, start with [Troubleshooting](troubleshooting.md).
 
 ## Production baseline for Azure SQL
 
@@ -265,6 +265,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 
 | Article | Description |
 | --- | --- |
+| [Troubleshooting](troubleshooting.md) | Diagnose provider, authentication, certificate, network, parameter, conversion, and timeout failures by symptom. |
 | [Errors](ole-db-errors/errors.md) | How the driver reports failures, and which interfaces carry the detail. |
 | [Retrieving error information](ole-db-errors/retrieving-error-information.md) | Walk the error interfaces to read message text, SQLSTATE, and the native error number. |
 | [Accessing diagnostic information in the extended events log](features/accessing-diagnostic-information-in-the-extended-events-log.md) | Turn on driver tracing and read the resulting extended events log. |

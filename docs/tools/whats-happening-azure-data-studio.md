@@ -123,6 +123,15 @@ Like Azure Data Studio, Visual Studio Code runs on **Windows**, **macOS**, and *
 | **Azure Cosmos DB** | Manage Azure Cosmos DB API for MongoDB. | [Azure Databases for Visual Studio Code](/azure/cosmos-db/visual-studio-code-extension) |
 | **Azure Cosmos DB Migration for MongoDB** | Migrate MongoDB to Azure Cosmos DB. | Pending announcement |
 
+## Third party alternatives
+
+Along with first-party replacements for Azure Data Studio there are a number of open source and commercial alternatives
+
+- [Beekeeper Studio](https://beekeeperstudio.io) is an open source database manager with great support for Azure databases. It is probably the most visually similar to Azure Data Studio on this list.
+- [DataGrip](https://www.jetbrains.com/datagrip/) is a commercial database manager from JetBrains. It is considered a powerful IDE.
+- [DBeaver](https://dbeaver.io) is an open source database manager built in Java. It's stable and has good support for Azure databases. It is powerful with a classic interface.
+
+
 ## Why retire Azure Data Studio?
 
 Retiring Azure Data Studio consolidates SQL development tools into Visual Studio Code and other supported tools like [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms). This allows the product team to focus investment on fewer, more capable tools.

@@ -429,7 +429,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 <a id="deployment-configuration"></a>
 <a id="environment-variables"></a>
 
-For error handling, connection pooling, authentication, testing, and deployment guidance, see [Test and deploy FastAPI applications with mssql-python](fastapi-testing-deployment.md).
+For guidance on error handling, connection pooling, authentication, testing, and deployment, see [Test and deploy FastAPI applications with mssql-python](fastapi-testing-deployment.md).
 
 ## Related content
 

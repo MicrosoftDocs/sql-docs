@@ -149,7 +149,7 @@ To configure the update policy, set `databaseFormat` to one of the following val
 
 ## New instances
 
-You can choose the **SQL Server 2022**, **SQL Server 2025** or **Always-up-to-date** policy when you create your instance by using the Azure portal, PowerShell, Azure CLI, or REST API.
+When you create your instance, select the **SQL Server 2022**, **SQL Server 2025**, or **Always-up-to-date** policy. Use the Azure portal, PowerShell, Azure CLI, or REST API to create your instance.
 
 > [!IMPORTANT]
 > Make sure to add update policy configuration to your deployment templates, so that you don't rely on system defaults that might change over time. 

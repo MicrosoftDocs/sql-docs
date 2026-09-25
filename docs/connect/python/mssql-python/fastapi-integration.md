@@ -415,6 +415,17 @@ def health_check(cursor = Depends(get_db_dependency)):
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+The server listens on `http://localhost:8000`. Keep this terminal running while you exercise the API.
+
+### Exercise the API
+
+Open `http://localhost:8000/docs` in a browser. FastAPI displays interactive documentation for every route.
+
+1. Expand **GET /health**, select **Try it out**, and then select **Execute**. Verify that the response has status code `200` and reports a healthy database connection.
+1. Expand **GET /products**, select **Try it out**, set `page_size` to `5`, and then select **Execute**. The response contains five products and pagination details.
+1. Copy an `id` value from the response. Expand **GET /products/{product_id}**, select **Try it out**, enter the copied value for `product_id`, and then select **Execute**.
+1. Expand **GET /products/search/**, select **Try it out**, enter a search term such as `bike` for `q`, and then select **Execute**.
+
 ## Test and deploy the application
 
 <a id="error-handling"></a>

@@ -4,7 +4,7 @@ description: Learn how to build REST APIs with FastAPI and mssql-python for Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 09/18/2026
+ms.date: 09/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -419,43 +419,17 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ## Test and deploy the application
 
-Use the companion article to finish the application:
+<a id="error-handling"></a>
+<a id="global-exception-handler"></a>
+<a id="connection-pooling"></a>
+<a id="enhanced-database-module"></a>
+<a id="authentication-middleware"></a>
+<a id="testing"></a>
+<a id="test-setup"></a>
+<a id="deployment-configuration"></a>
+<a id="environment-variables"></a>
 
-### Error handling
-
-The companion article covers database exception handling.
-
-#### Global exception handler
-
-See [Handle database errors](fastapi-testing-deployment.md#handle-database-errors).
-
-### Connection pooling
-
-The companion article covers connection pool configuration.
-
-#### Enhanced database module
-
-See [Configure connection pooling](fastapi-testing-deployment.md#configure-connection-pooling).
-
-### Authentication middleware
-
-See [Add authentication dependencies](fastapi-testing-deployment.md#add-authentication-dependencies).
-
-### Testing
-
-The companion article covers integration testing.
-
-#### Test setup
-
-See [Test the application](fastapi-testing-deployment.md#test-the-application).
-
-### Deployment configuration
-
-The companion article covers deployment configuration and operations.
-
-#### Environment variables
-
-See [Configure deployment settings](fastapi-testing-deployment.md#configure-deployment-settings) and the [deployment checklist](fastapi-testing-deployment.md#deployment-checklist).
+For error handling, connection pooling, authentication, testing, and deployment guidance, see [Test and deploy FastAPI applications with mssql-python](fastapi-testing-deployment.md).
 
 ## Related content
 

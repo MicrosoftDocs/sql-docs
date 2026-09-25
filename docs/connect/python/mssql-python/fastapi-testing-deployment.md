@@ -1,8 +1,8 @@
 ---
 title: Test and Deploy FastAPI Applications with mssql-python
 description: Learn how to configure, secure, test, and deploy FastAPI applications that use mssql-python with Microsoft SQL.
-author: dlevy-msft-sql
-ms.author: dlevy
+author: mahyon
+ms.author: mahyon
 ms.reviewer: vanto, randolphwest
 ms.date: 09/24/2026
 ms.service: sql

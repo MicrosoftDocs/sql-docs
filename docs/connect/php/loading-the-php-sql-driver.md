@@ -1,10 +1,10 @@
 ---
-title: "Loading the Microsoft Drivers for PHP"
-description: "This page provides instructions for loading the Microsoft Drivers for PHP for SQL Server into the PHP process space."
+title: Loading the Microsoft Drivers for PHP
+description: Install and load the Microsoft Drivers for PHP for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 08/21/2026
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -15,31 +15,59 @@ helpviewer_keywords:
 
 # Loading the Microsoft Drivers for PHP for SQL Server
 
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
-
 This page provides instructions for loading the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] into the PHP process space.
-  
-You can download the prebuilt drivers for your platform from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page. Each installation package contains SQLSRV and PDO_SQLSRV driver files in threaded and non threaded variants. On Windows, they're also available in 32-bit and 64-bit variants. See [System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md) for a list of the driver files that are contained in each package. The driver file must match the PHP version, architecture, and threadedness of your PHP environment.
 
-On Linux and macOS, you can alternatively install the drivers with PIE or PECL, as described in the [installation tutorial](installation-tutorial-linux-mac.md).
+## Install the drivers on Windows with PIE
 
-On Windows, you can install the drivers with [PIE](https://github.com/php/pie), the PHP Installer for Extensions, in version 5.13.3 and later versions. PIE replaces the deprecated PECL package system, and it enables the extension for you, so you don't download a driver file or edit **php.ini** by hand. Windows needs no build toolchain, because the extensions are distributed as precompiled DLLs. PIE itself requires PHP 8.1 and later versions to run, though it can install an extension into any other PHP installation on the machine.
+[PIE](https://github.com/php/pie), the PHP Installer for Extensions, installs the matching precompiled driver files and enables them in the PHP command-line configuration. Windows doesn't need a build toolchain.
 
-```console
-pie install microsoft/sqlsrv
-pie install microsoft/pdo_sqlsrv
-```
+1. Install a [supported PHP version](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support) and the [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md).
 
-Install each driver with its own command. For instructions on installing PIE, see the [PIE documentation](https://github.com/php/pie).
+1. Run `php --ini`. If **Loaded Configuration File** is `(none)`, copy **php.ini-development** from the PHP installation directory to **php.ini** in the same directory.
 
-On Windows, PIE needs the `openssl` extension to reach the package repository. A PHP installation from the php.net **.zip** package uses the stock **php.ini-development** file, which doesn't enable it, and PIE stops with `The package "composer/ca-bundle" requires the extension "openssl"`. Set `extension_dir` and enable the extension in **php.ini** before you run PIE:
+1. In **php.ini**, set the extension directory and enable the `openssl` and `zip` extensions:
 
-```ini
-extension_dir = "ext"
-extension=openssl
-```
+   ```ini
+   extension_dir = "ext"
+   extension=openssl
+   extension=zip
+   ```
 
-Package-managed PHP installations on Linux and macOS enable `openssl` already, so this step applies only to Windows.
+1. From a writable working directory, download the latest stable `pie.phar`. The command works in Command Prompt and PowerShell:
+
+   ```console
+   curl.exe -fL --output pie.phar https://github.com/php/pie/releases/latest/download/pie.phar
+   ```
+
+   If you have the [GitHub CLI](https://cli.github.com/), verify that the PHP Foundation published the file:
+
+   ```console
+   gh attestation verify --owner php .\pie.phar
+   ```
+
+1. Install both drivers by using the PHP executable on `PATH`:
+
+   ```console
+   php .\pie.phar install microsoft/sqlsrv
+   php .\pie.phar install microsoft/pdo_sqlsrv
+   ```
+
+1. Verify that the same PHP command-line runtime loads both drivers:
+
+   ```console
+   php --ri sqlsrv
+   php --ri pdo_sqlsrv
+   ```
+
+For other PIE installation methods, see the [PIE usage documentation](https://github.com/php/pie/blob/1.5.0/docs/usage.md).
+
+## Install the drivers on Linux and macOS
+
+Install the drivers and their platform dependencies with PIE as described in the [Linux and macOS installation tutorial](installation-tutorial-linux-mac.md).
+
+## Install prebuilt drivers manually
+
+You can download the prebuilt drivers from the [Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md) page. The Windows download is a ZIP that contains SQLSRV and PDO_SQLSRV driver files for each supported PHP version, architecture, and thread-safety mode. Select the files that match your PHP environment. See [System requirements](system-requirements-for-the-php-sql-driver.md#driver-versions) for the file list.
 
 You can also build the drivers from source either when building PHP or by using `phpize`. If you choose to build the drivers from source, you have the option of building them statically into PHP instead of building them as shared extensions by adding `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (on Linux and macOS) or `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) to the `./configure` command when building PHP. For more information on the PHP build system and `phpize`, see the [PHP documentation](http://php.net/manual/install.php).
 
@@ -59,27 +87,27 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 
     On Windows:
 
-    ```
+    ```ini
     extension=php_sqlsrv_83_ts.dll
     ```
 
     On Linux, if you downloaded the prebuilt binaries for your distribution:
 
-    ```
+    ```ini
     extension=php_sqlsrv_83_nts.so
     ```
 
     If you compiled the SQLSRV binary from source, or installed it with PIE or PECL, its name is sqlsrv.so:
 
-    ```
+    ```ini
     extension=sqlsrv.so
     ```
 
-2. To enable the **PDO_SQLSRV** driver, the PHP Data Objects (PDO) extension must be available, either as a built-in extension, or as a dynamically loaded extension.
+1. To enable the **PDO_SQLSRV** driver, the PHP Data Objects (PDO) extension must be available, either as a built-in extension or as a dynamically loaded extension.
 
     On Windows, the prebuilt PHP binaries come with PDO built-in, so there's no need to modify php.ini to load it. If, however, you compiled PHP from source and specified a separate PDO extension to be built, its name is `php_pdo.dll`, and you must copy it to your extension directory and add the following line to php.ini:
 
-    ```
+    ```ini
     extension=php_pdo.dll
     ```
 
@@ -87,13 +115,13 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 
     To find out which directory the extension-specific .ini files are located, run `php --ini` and note the directory listed under `Scan for additional .ini files in:`. Find the file that loads pdo.so. It should be prefixed with a number, such as 10-pdo.ini. The numerical prefix indicates the loading order of the .ini files, while files that don't have a numerical prefix are loaded alphabetically. Create a file to load the PDO_SQLSRV driver file called either 30-pdo_sqlsrv.ini (any number larger than the one that prefixes pdo.ini works) or pdo_sqlsrv.ini (if pdo.ini isn't prefixed with a number), and add the following line to it, changing the filename as appropriate:
 
-    ```
+    ```ini
     extension=php_pdo_sqlsrv_3_nts.so
     ```
 
     As with SQLSRV, if you compiled the PDO_SQLSRV binary from source, or installed it with PIE or PECL, its name is pdo_sqlsrv.so:
 
-    ```
+    ```ini
     extension=pdo_sqlsrv.so
     ```
 
@@ -101,7 +129,7 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 
     If you compiled PHP from source with built-in PDO support, you don't require a separate .ini file, and you can add the previous line to php.ini.
 
-3. Restart the Web server.
+1. Restart the web server.
 
 > [!NOTE]
 > To determine whether the driver is successfully loaded, run a script that calls [phpinfo()](https://php.net/manual/en/function.phpinfo.php).

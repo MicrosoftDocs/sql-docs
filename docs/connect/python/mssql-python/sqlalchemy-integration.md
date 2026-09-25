@@ -2,9 +2,9 @@
 title: Use mssql-python with SQLAlchemy
 description: Learn how to use the mssql-python driver with SQLAlchemy ORM and Core for Microsoft SQL and Azure SQL database access.
 author: dlevy-msft-sql
-ms.author: dlevy
+ms.author: mahyon
 ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.date: 09/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -13,38 +13,34 @@ ai-usage: ai-assisted
 
 # Use mssql-python with SQLAlchemy
 
-**SQLAlchemy** is the most widely used Python ORM and database toolkit. Starting with **SQLAlchemy** 2.1.0b2, a built-in dialect for the mssql-python driver lets you use **SQLAlchemy** ORM and Core with Microsoft SQL and Azure SQL Database.
-
-> [!IMPORTANT]
-> The mssql-python dialect was added in **SQLAlchemy** 2.1.0b2 (released April 16, 2026). **SQLAlchemy** 2.1 is currently a **pre-release** series and is **not recommended for production use**. Before upgrading from **SQLAlchemy** 2.0, understand:
->
-> - **APIs might change** before final stable release (2.1 GA)
-> - **Test thoroughly** on your workload before deployment
-> - **Use stable SQLAlchemy 2.0.x** for production systems until 2.1 reaches GA
-> - **Pin your dependency** to a specific version (for example, `sqlalchemy==2.1.0b2`) rather than using version ranges
->
-> See the [Known Limitations](#known-limitations) section for details on when to use pre-release versions.
+**SQLAlchemy** is the most widely used Python ORM and database toolkit. **SQLAlchemy** 2.1 includes a built-in dialect for the `mssql-python` driver that you can use to work with **SQLAlchemy** ORM and Core with Microsoft SQL and Azure SQL Database.
 
 ## Prerequisites
 
-- Python 3.10 or later. **SQLAlchemy** 2.1 dropped support for Python 3.9 and earlier.
-- The `mssql-python` and `sqlalchemy` packages (2.1.0b2 or later).
+- Python 3.11 or later. **SQLAlchemy** 2.1 dropped support for Python 3.10 and earlier.
+- The `mssql-python` and `sqlalchemy` packages (2.1 or later).
 
 The examples in this article use the **AdventureWorksLT** sample database. If you don't have AdventureWorksLT installed, see [AdventureWorks sample databases](/sql/samples/adventureworks-install-configure).
 
-## Install the pre-release
+## Install SQLAlchemy and mssql-python
 
-Because **SQLAlchemy** 2.1 is in beta, `pip install sqlalchemy` installs the latest stable 2.0.x release by default. Install the pre-release explicitly:
+Use **SQLAlchemy**'s `mssql-python` optional dependency to install both packages:
 
 ```bash
-pip install mssql-python "sqlalchemy>=2.1.0b2"
+pip install "sqlalchemy[mssql-python]>=2.1"
+```
+
+**SQLAlchemy** defines the `mssql-python` extra with `mssql-python>=1.9.0`. The existing separate-package form is also supported:
+
+```bash
+pip install "sqlalchemy>=2.1" mssql-python
 ```
 
 Verify the installed version:
 
 ```python
 import sqlalchemy
-print(sqlalchemy.__version__)  # Should show 2.1.0b2 or later
+print(sqlalchemy.__version__)  # Should show 2.1.0 or later
 ```
 
 ## Connection URLs
@@ -587,43 +583,26 @@ If you're migrating from `mssql+pyodbc`, the mssql-python dialect is similar bec
 | ODBC driver installation | Requires separate ODBC driver (for example, ODBC Driver 18 for SQL Server). | Installed automatically as a package dependency. No separate ODBC driver installation needed. |
 | Connection URL | `mssql+pyodbc://user:pass@host/db?driver=ODBC+Driver+18+for+SQL+Server` | `mssql+mssqlpython://user:pass@host/db` |
 | `fast_executemany` | Supported via `create_engine(..., fast_executemany=True)`. | Not applicable. The driver handles batch performance internally. |
-| Availability | Stable, included in **SQLAlchemy** since 1.x. | Pre-release (**SQLAlchemy** 2.1.0b2+). |
+| Availability | Stable, included in **SQLAlchemy** since 1.x. | Stable, included in **SQLAlchemy** 2.1 or later. |
 
-## Known Limitations
+## Upgrade considerations
 
-The mssql-python dialect for **SQLAlchemy** is in **pre-release**. Before using in production, understand these implications:
+SQLAlchemy 2.1 includes behavioral changes that might affect applications upgrading from earlier releases:
 
-- **API Changes**: Method signatures, exception types, and behavior might change before the final stable release. Always pin your **SQLAlchemy** version to a specific pre-release build (for example, `sqlalchemy==2.1.0b2`) and test upgrades thoroughly.
+- SQLAlchemy 2.1 requires Python 3.11 or later.
+- Upgrade SQLAlchemy 1.x applications to SQLAlchemy 2.0 before moving to 2.1.
+- Test existing SQLAlchemy 2.0 applications against the behavioral changes described in [What's New in SQLAlchemy 2.1?](https://docs.sqlalchemy.org/en/21/changelog/migration_21.html)
 
-- **Limited Testing**: The dialect has less community testing than the stable `mssql+pyodbc` dialect. You might encounter edge cases or missing features.
-
-- **Feature Gaps**: Some advanced ORM or Core features might not work. Refer to [SQLAlchemy MSSQL dialect documentation](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html) and test your use cases before committing to a project.
-
-- **No Support Guarantee**: Microsoft and **SQLAlchemy** provide best-effort support, but issues might not be resolved before the stable release.
-
-**When to Use the Pre-Release**:
-
-- Development and testing environments
-- Proof-of-concept projects
-- Migrating from `mssql+pyodbc` if you want to avoid the external ODBC driver dependency
-- Projects where you can respond to API changes and perform regression testing
-
-**When NOT to Use the Pre-Release**:
-
-- Production systems with strict stability requirements
-- Multi-year legacy applications where dependency updates are rare
-- Critical business workloads until **SQLAlchemy** 2.1 reaches stable GA
-
-For the latest pre-release dialect status and known issues, check the [mssql-python GitHub repository](https://github.com/microsoft/mssql-python).
+The examples in this article use SQLAlchemy's synchronous API. Applications that use SQLAlchemy asyncio support must install the `asyncio` extra because SQLAlchemy 2.1 no longer installs `greenlet` by default.
 
 ## Troubleshooting
 
 ### "No module named 'sqlalchemy.dialects.mssql.mssqlpython'"
 
-This error means your installed **SQLAlchemy** version doesn't include the mssql-python dialect. The dialect requires version 2.1.0b2 or later. Install a supported version:
+This error means that your installed **SQLAlchemy** version doesn't include the `mssql-python` dialect. Install SQLAlchemy 2.1 or later with its `mssql-python` dependency:
 
 ```bash
-pip install "sqlalchemy>=2.1.0b2"
+pip install --upgrade "sqlalchemy[mssql-python]>=2.1"
 ```
 
 ### Connection failures

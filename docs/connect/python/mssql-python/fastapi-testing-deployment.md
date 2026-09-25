@@ -4,7 +4,7 @@ description: Learn how to configure, secure, test, and deploy FastAPI applicatio
 author: mahyon
 ms.author: mahyon
 ms.reviewer: vanto, randolphwest
-ms.date: 09/24/2026
+ms.date: 09/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -28,7 +28,7 @@ After you build a FastAPI application with mssql-python, configure it for deploy
 
 Use Pydantic Settings to load deployment-specific values from environment variables. This approach keeps secrets out of source code and gives each environment its own database, pool, and authentication configuration.
 
-Create `config.py`:
+In the project root, create `config.py` next to `database.py`:
 
 ```python
 from pydantic_settings import BaseSettings

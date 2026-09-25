@@ -50,7 +50,7 @@ The **SQL Server 2022** update policy aligns your database format with SQL Serve
 
 When you use the SQL Server 2022 update policy, consider the following points:
 
-- The **SQL Server 2022** update policy is the default update policy for newly deployed instances using PowerShell, CLI or versions of REST API prior to 2026-08-01-preview. 
+- The **SQL Server 2022** update policy is the default update policy for newly deployed instances by using PowerShell, CLI, or versions of REST API prior to 2026-08-01-preview. 
 - Your internal database format stays aligned with SQL Server 2022. 
 - You receive all the latest updates available for SQL Server 2022. 
 - You can [restore your database](restore-database-to-sql-server.md) to SQL Server 2022 from Azure SQL Managed Instance. 

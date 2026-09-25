@@ -36,7 +36,7 @@ The **SQL Server 2025** update policy aligns your database format with [!INCLUDE
 
 When you use the SQL Server 2025 update policy, consider the following points:
 
-- The **SQL Server 2025** update policy is the default update policy for newly deployed instances using Azure portal or REST API starting with version 2026-08-01-preview.
+- The **SQL Server 2025** update policy is the default update policy for newly deployed instances by using Azure portal or REST API starting with version 2026-08-01-preview.
 - Your internal database format stays aligned with [!INCLUDE [sssql25-md](../../docs/includes/sssql25-md.md)].
 - You receive all the latest updates available for [!INCLUDE [sssql25-md](../../docs/includes/sssql25-md.md)].
 - You can [restore your database](restore-database-to-sql-server.md) to [!INCLUDE [sssql25-md](../../docs/includes/sssql25-md.md)] from Azure SQL Managed Instance.

@@ -4,7 +4,7 @@ description: Learn how to build REST APIs with FastAPI and mssql-python for Micr
 author: mahyon
 ms.author: mahyon
 ms.reviewer: vanto, randolphwest
-ms.date: 09/24/2026
+ms.date: 09/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -101,18 +101,16 @@ def get_connection_string() -> str:
         "Authentication=ActiveDirectoryDefault;"
         "Encrypt=yes"
     )
-```
 
-> [!NOTE]
-> `ActiveDirectoryDefault` uses `DefaultAzureCredential`, which tries multiple credential providers in sequence. The first connection can be slow because the SDK walks the chain until it finds a working provider. In production, if you know which credential type your environment uses, specify it directly (for example, `ActiveDirectoryMSI` for managed identity) to avoid the chain walk. For more information, see [Microsoft Entra authentication](entra-authentication.md).
-
-```python
 def get_db_dependency() -> Generator:
     """FastAPI dependency for database cursor."""
     with mssql_python.connect(get_connection_string()) as conn:
         with conn.cursor() as cursor:
             yield cursor
 ```
+
+> [!NOTE]
+> `ActiveDirectoryDefault` uses `DefaultAzureCredential`, which tries multiple credential providers in sequence. The first connection can be slow because the SDK walks the chain until it finds a working provider. In production, if you know which credential type your environment uses, specify it directly (for example, `ActiveDirectoryMSI` for managed identity) to avoid the chain walk. For more information, see [Microsoft Entra authentication](entra-authentication.md).
 
 ## Pydantic models
 

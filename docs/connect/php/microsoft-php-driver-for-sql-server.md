@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Drivers for PHP for SQL Server"
+title: Microsoft Drivers for PHP for SQL Server
 description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for connecting PHP applications to Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
@@ -23,7 +23,7 @@ Both drivers connect to Azure SQL Database, SQL database in Microsoft Fabric, Az
 
 ## Choose your starting point
 
-- To set up a PHP development environment and run your first query, start with [Step 1: Configure development environment](step-1-configure-development-environment-for-php-development.md), then [Step 2: Create a SQL database](step-2-create-a-sql-database-for-php-development.md) and [Step 3: Proof of concept connecting to SQL using PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md).
+- To verify your installation and run a parameterized query by using SQLSRV or PDO_SQLSRV, start with [Quickstart: Connect and query with the Microsoft Drivers for PHP](getting-started-with-the-php-sql-driver.md).
 - To install the driver on Linux or macOS, start with the [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md) and [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md).
 - To connect to Azure SQL with passwordless authentication, start with [Connect using Microsoft Entra authentication](azure-active-directory.md) and [Connection options](connection-options.md).
 - To make an existing app resilient to transient failures, go to [Idle connection resiliency](connection-resiliency.md) and [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md).
@@ -194,7 +194,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md) | Download links and release artifacts. |
 | [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md) | Install the driver and its ODBC prerequisites on Linux and macOS. |
 | [Loading the drivers](loading-the-php-sql-driver.md) | Enable the extensions in `php.ini`. |
-| [Getting started with the PHP SQL driver](getting-started-with-the-php-sql-driver.md) | End-to-end walkthrough that ties the four getting-started steps together. |
+| [Quickstart: Connect and query with the Microsoft Drivers for PHP](getting-started-with-the-php-sql-driver.md) | Verify the extensions, configure a connection, and run the same parameterized query with SQLSRV or PDO_SQLSRV. |
 | [Overview of the PHP SQL driver](overview-of-the-php-sql-driver.md) | What's in the package, and when to choose SQLSRV or PDO_SQLSRV. |
 
 ## Configure and connect

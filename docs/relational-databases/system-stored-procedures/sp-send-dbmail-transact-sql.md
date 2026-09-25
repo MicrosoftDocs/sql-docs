@@ -175,7 +175,7 @@ In this case, no error occurs.
 The following error might occur when setting *@query_result_no_padding* to `1` and providing a parameter for *@query_no_truncate*:
 
 ```output
-Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the @query_result_no_append and @query_no_truncate options are mutually exclusive.
+Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the @query_result_no_padding and @query_no_truncate options are mutually exclusive.
 ```
 
 If you set the *@query_result_no_padding* to `1` and you set the *@query_no_truncate* parameter, an error is raised.

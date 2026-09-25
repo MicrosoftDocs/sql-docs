@@ -4,7 +4,7 @@ description: Learn how to configure, secure, test, and deploy FastAPI applicatio
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest
-ms.date: 09/17/2026
+ms.date: 09/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -21,7 +21,7 @@ After you build a FastAPI application with mssql-python, configure it for deploy
 - Install the production and test dependencies:
 
   ```bash
-  pip install pydantic-settings pyjwt pytest httpx
+  pip install pydantic-settings pyjwt pytest httpx2
   ```
 
 ## Configure deployment settings

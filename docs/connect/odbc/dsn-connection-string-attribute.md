@@ -4,7 +4,7 @@ description: How to connect using the ODBC driver. Find keywords for connection 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, sunilbs, mcimfl, randolphwest
-ms.date: 08/26/2026
+ms.date: 09/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -174,6 +174,9 @@ Each alias configures the same option as its equivalent ODBC keyword:
 | `MultipleActiveResultSets` | `MARS_Connection` | Turns Multiple Active Result Sets (MARS) on or off. Accepts `Yes` or `No`. |
 | `WorkstationID` | `WSID` | Sets the workstation ID, typically the network name of the computer that runs the application. `HOST_NAME()` returns this value. |
 | `FailoverPartner` | `Failover_Partner` | Specifies the failover partner server for database mirroring. Supported on Windows only. |
+
+> [!NOTE]
+> In version 18.7, `MultipleActiveResultSets` doesn't accept the `True` or `False` values used by `Microsoft.Data.SqlClient`. Use `Yes` or `No` instead. This limitation will be fixed in a future release. The equivalent ODBC keyword, `MARS_Connection`, continues to accept only `Yes` or `No`.
 
 The driver applies the following rules to these aliases:
 

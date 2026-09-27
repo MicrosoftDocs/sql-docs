@@ -176,7 +176,7 @@ Each alias configures the same option as its equivalent ODBC keyword:
 | `FailoverPartner` | `Failover_Partner` | Specifies the failover partner server for database mirroring. Supported on Windows only. |
 
 > [!NOTE]
-> In version 18.7, `MultipleActiveResultSets` doesn't accept the `True` or `False` values used by `Microsoft.Data.SqlClient`. Use `Yes` or `No` instead. This limitation will be fixed in a future release. The equivalent ODBC keyword, `MARS_Connection`, continues to accept only `Yes` or `No`.
+> In version 18.7, `MultipleActiveResultSets` accepts `Yes` or `No`, but not `True` or `False`.
 
 The driver applies the following rules to these aliases:
 

@@ -4,8 +4,8 @@ titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use SQL Notebooks in the MSSQL extension for Visual Studio Code to write and run SQL queries in Jupyter notebook format.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: tsiddique, roblescarlos
-ms.date: 06/01/2026
+ms.reviewer: yoleichen
+ms.date: 09/23/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -38,7 +38,7 @@ SQL Notebooks offers these capabilities:
 
 - Use GitHub Copilot for inline query suggestions in code cells and chat-driven notebook authoring to generate complete notebooks from natural language descriptions.
 
-- Combine SQL cells with other language kernels (such as Python) in the same notebook by installing the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
+- Choose the MSSQL kernel or another installed notebook kernel, such as Python by installing the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) to switch between languages.
 
 - Export and share notebooks as `.ipynb` files that others can open in Visual Studio Code or any Jupyter-compatible environment.
 
@@ -50,7 +50,7 @@ Before you use SQL Notebooks, ensure the following requirements are met:
 
 - An active database connection is established through the MSSQL extension. For connection steps, see [Connect to a database with the MSSQL extension for Visual Studio Code](mssql-database-connections.md).
 
-- (Optional) The [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) for Visual Studio Code, if you want to use other kernels such as Python alongside SQL in the same notebook.
+- (Optional) The [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) for Visual Studio Code, if you want to create notebooks with other kernels, such as Python.
 
 ## Create a SQL notebook
 
@@ -110,9 +110,11 @@ You can use Markdown cells to add formatted text, headings, lists, and links alo
 
 Select the cell again to return to edit mode.
 
-## Use multiple kernels
+## Select a notebook kernel
 
-The MSSQL extension provides the SQL kernel out of the box. You can extend your notebooks with more language kernels by installing the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter), which bundles support for Python and other kernels. You can combine SQL data queries with Python data processing and visualization cells in the same notebook.
+The MSSQL extension provides the SQL kernel out of the box. Install the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) to make other kernels, such as Python, available in Visual Studio Code.
+
+Visual Studio Code can make multiple kernels available for a notebook. The kernel that you select for the notebook executes its code cells. Select the **MSSQL** kernel for a T-SQL notebook or another kernel for a notebook that uses a different language.
 
 ## GitHub Copilot integration
 

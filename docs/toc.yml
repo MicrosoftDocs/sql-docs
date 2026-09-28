@@ -8977,7 +8977,7 @@ items:
           href: tools/visual-studio-code-extensions/mssql/mssql-data-api-builder.md
         - name: Query profiler
           href: tools/visual-studio-code-extensions/mssql/mssql-query-profiler.md
-        - name: Format T-SQL (Preview)
+        - name: Format T-SQL
           href: tools/visual-studio-code-extensions/mssql/mssql-sql-formatter.md
         - name: SQL Notebooks
           href: tools/visual-studio-code-extensions/mssql/mssql-sql-notebooks.md

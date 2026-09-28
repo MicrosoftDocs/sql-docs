@@ -8,6 +8,7 @@ ms.date: 09/08/2025
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: partner-tools
+ai-usage: ai-assisted
 ---
 
 # SQL Server monitoring partners

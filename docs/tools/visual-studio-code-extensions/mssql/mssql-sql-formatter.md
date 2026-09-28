@@ -5,7 +5,7 @@ description: Learn how to format T-SQL in Visual Studio Code with the SQL format
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: yoleichen
-ms.date: 08/17/2026
+ms.date: 09/28/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: how-to
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 ---
 # Format Transact-SQL in the MSSQL extension for Visual Studio Code
 
-Consistent formatting makes Transact-SQL (T-SQL) easier to read, review, and maintain, especially when multiple people contribute to the same codebase. The MSSQL extension for Visual Studio Code includes a built-in SQL formatter (Preview) that you can run on demand, configure for automatic formatting on save, and customize through Visual Studio Code settings.
+Consistent formatting makes Transact-SQL (T-SQL) easier to read, review, and maintain, especially when multiple people contribute to the same codebase. The MSSQL extension for Visual Studio Code includes a built-in SQL formatter that you can run on demand, configure for automatic formatting on save, and customize through Visual Studio Code settings.
 
 The T-SQL formatting functionality in the MSSQL extension is built on [ScriptDOM](https://github.com/microsoft/sqlscriptdom), an open-source .NET library that parses T-SQL and generates scripts based on abstract syntax trees.
 
@@ -51,35 +51,14 @@ Configure formatting in the Visual Studio Code Settings UI or in user or workspa
 
 In the Settings editor, search for **Mssql** > **Format** to view the available options. In `settings.json`, use the corresponding `mssql.format.*` settings.
 
-- The preview formatter is enabled by default. Its options use the `mssql.format.options.*` namespace.
-
-- The five existing formatter settings remain available when the preview formatter is enabled. The preview formatter adds the `mssql.format.options.*` settings.
-
-:::image type="content" source="media/mssql-sql-formatter/settings.png" alt-text="Screenshot of the SQL formatter settings in the Visual Studio Code Settings editor." lightbox="media/mssql-sql-formatter/settings.png":::
-
 ## Supported settings
 
-The tables list existing formatter settings followed by preview formatter settings.
-
-### Existing formatter settings
-
-| Setting | Type | Default | Description |
-| --- | --- | --- | --- |
-| `mssql.format.alignColumnDefinitionsInColumns` | bool | `false` | Align column definitions in columns. |
-| `mssql.format.datatypeCasing` | enum | `none` | Format data types as `uppercase`, `lowercase`, or `none` (not formatted). |
-| `mssql.format.keywordCasing` | enum | `none` | Format keywords as `uppercase`, `lowercase`, or `none` (not formatted). |
-| `mssql.format.placeCommasBeforeNextStatement` | bool | `false` | Place commas at the beginning of each item in a list, for example `, mycolumn2`, instead of at the end, for example `mycolumn1,`. |
-| `mssql.format.placeSelectStatementReferencesOnNewLine` | bool | `false` | Place references in a `SELECT` statement on separate lines. For `SELECT C1, C2 FROM T1`, both C1 and C2 are on separate lines. |
-
-### Preview formatter settings
-
-These `mssql.format.options.*` settings add on top of the existing formatter settings when you enable the preview formatter.
+The following settings configure the SQL formatter.
 
 #### General
 
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mssql.format.enablePreviewFormatter` | bool | `true` | Use the SQL formatter (Preview). |
 | `mssql.format.showParseErrorNotification` | bool | `true` | Show a notification when the formatter can't fully parse the T-SQL. |
 | `mssql.format.options.sqlVersion` | enum | `sql170` | T-SQL version used to parse and generate formatted scripts. |
 | `mssql.format.options.sqlEngineType` | enum | `all` | [!INCLUDE [ssde-md](../../../includes/ssde-md.md)] type used to parse and generate formatted scripts. Valid values are `all`, `standalone`, and `sqlAzure`. |
@@ -89,8 +68,18 @@ These `mssql.format.options.*` settings add on top of the existing formatter set
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
 | `mssql.format.options.alignClauseBodies` | bool | `true` | Align bodies of `FROM`, `WHERE`, `GROUP BY`, and similar clauses. |
-| `mssql.format.options.alignColumnDefinitionFields` | bool | `true` | Align column-definition fields, such as name, type, and constraints. |
+| `mssql.format.options.alignColumnDefinitionFields` | bool | `true` | Align column-definition fields, such as names, data types, and constraints. |
 | `mssql.format.options.alignSetClauseItem` | bool | `true` | Align `SET` clause items in `UPDATE` statements. |
+| `mssql.format.options.clauseBodyAlignment` | enum | `aligned` | Keep clause bodies `aligned` with their keywords or place them on the next line as `indented`. |
+
+#### Casing and identifiers
+
+| Setting | Type | Default | Description |
+| --- | --- | --- | --- |
+| `mssql.format.options.builtInFunctionCasing` | enum | `preserve` | Casing style for supported built-in function names, such as `GETDATE` and `COALESCE`. Valid values are `preserve`, `uppercase`, `lowercase`, and `pascalCase`. |
+| `mssql.format.options.identifierBracketing` | enum | `preserve` | Preserve, add, or remove optional square brackets around identifiers. Valid values are `preserve`, `includeBrackets`, and `excludeBrackets`. Required brackets are retained. |
+| `mssql.format.options.identifierCasing` | enum | `preserve` | Casing style for object identifiers. Valid values are `preserve`, `uppercase`, `lowercase`, and `pascalCase`. |
+| `mssql.format.options.keywordCasing` | enum | `uppercase` | Keyword casing style. Valid values are `uppercase`, `lowercase`, and `pascalCase`. |
 
 #### Paths
 
@@ -104,52 +93,73 @@ These `mssql.format.options.*` settings add on top of the existing formatter set
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
 | `mssql.format.options.asKeywordOnOwnLine` | bool | `true` | Place `AS` on its own line. |
-| `mssql.format.options.keywordCasing` | enum | `uppercase` | Keyword casing style. Valid values are `uppercase`, `lowercase`, and `pascalCase`. |
+| `mssql.format.options.columnAliasStyle` | enum | `asKeyword` | Format column aliases using `AS`, an equals sign, or their original syntax. Valid values are `asKeyword`, `equalsSign`, and `preserve`. |
+| `mssql.format.options.commaPlacement` | enum | `trailing` | Place commas at the end of list items (`trailing`) or at the beginning of the next item (`leading`). |
+| `mssql.format.options.leadingCommaSpaceCount` | integer | `1` | Number of spaces after a leading comma. Valid values are `0` and `1`. |
+| `mssql.format.options.persistTrailingGo` | bool | `false` | Preserve trailing `GO` batch separators from the original script. |
 | `mssql.format.options.preserveComments` | bool | `true` | Preserve comments during formatting. |
-| `mssql.format.options.numNewlinesAfterStatement` | int | `1` | Number of line breaks after each statement, from `0` through `5`. |
+| `mssql.format.options.terminateBlockStatements` | bool | `false` | Add semicolon terminators after `BEGIN...END` and `TRY...CATCH` blocks. |
 
 #### Indentation
 
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mssql.format.options.indentSetClause` | bool | `false` | Indent `SET` clause in `UPDATE` statements. |
-| `mssql.format.options.indentViewBody` | bool | `false` | Indent `VIEW` body. |
+| `mssql.format.options.indentSetClause` | bool | `false` | Indent `SET` clauses in `UPDATE` statements. |
+| `mssql.format.options.indentViewBody` | bool | `false` | Indent `VIEW` bodies. |
 
 #### Multiline
 
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mssql.format.options.multilineInsertSourcesList` | bool | `true` | `INSERT` sources as multiline. |
-| `mssql.format.options.multilineInsertTargetsList` | bool | `true` | `INSERT` columns as multiline. |
-| `mssql.format.options.multilineSelectElementsList` | bool | `true` | `SELECT` columns as multiline. |
-| `mssql.format.options.multilineSetClauseItems` | bool | `true` | `SET` items as multiline. |
-| `mssql.format.options.multilineViewColumnsList` | bool | `true` | `VIEW` columns as multiline. |
-| `mssql.format.options.multilineWherePredicatesList` | bool | `true` | `WHERE` predicates as multiline. |
+| `mssql.format.options.multilineGroupByElementsList` | bool | `false` | Format `GROUP BY` elements as a multiline list. |
+| `mssql.format.options.multilineHavingPredicatesList` | bool | `true` | Format `HAVING` predicates separated by `AND` or `OR` on multiple lines. |
+| `mssql.format.options.multilineInsertSourcesList` | bool | `true` | Format `INSERT` sources as multiline lists. |
+| `mssql.format.options.multilineInsertTargetsList` | bool | `true` | Format `INSERT` columns as multiline lists. |
+| `mssql.format.options.multilineInValuesList` | bool | `false` | Format values in an `IN` predicate as a multiline list. |
+| `mssql.format.options.multilineNestedFunctionCalls` | bool | `false` | Format nested function calls on separate indented lines while keeping isolated function calls on one line. |
+| `mssql.format.options.multilineOrderByElementsList` | bool | `false` | Format `ORDER BY` elements as a multiline list. |
+| `mssql.format.options.multilinePartitionByElementsList` | bool | `false` | Format `PARTITION BY` elements in window specifications as a multiline list. |
+| `mssql.format.options.multilineProcedureParametersList` | bool | `false` | Format procedure and function parameters on separate lines. |
+| `mssql.format.options.multilineSelectElementsList` | bool | `true` | Format `SELECT` columns as multiline lists. |
+| `mssql.format.options.multilineSetClauseItems` | bool | `true` | Format `SET` clause items as multiline lists. |
+| `mssql.format.options.multilineViewColumnsList` | bool | `true` | Format `VIEW` columns as multiline lists. |
+| `mssql.format.options.multilineWherePredicatesList` | bool | `true` | Format `WHERE` predicates as multiline lists. |
+| `mssql.format.options.multilineWithOptionsList` | bool | `false` | Format supported `WITH` and `OPTION` clause values on separate lines. |
 
 #### New line
 
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mssql.format.options.newLineBeforeCloseParenthesisInMultilineList` | bool | `true` | New line before close parenthesis in multiline list. |
-| `mssql.format.options.newLineBeforeFromClause` | bool | `true` | New line before `FROM` clause. |
-| `mssql.format.options.newLineBeforeGroupByClause` | bool | `true` | New line before `GROUP BY` clause. |
-| `mssql.format.options.newLineBeforeHavingClause` | bool | `true` | New line before `HAVING` clause. |
-| `mssql.format.options.newLineBeforeJoinClause` | bool | `true` | New line before `JOIN` clause. |
-| `mssql.format.options.newLineBeforeOffsetClause` | bool | `true` | New line before `OFFSET` clause. |
-| `mssql.format.options.newLineBeforeOpenParenthesisInMultilineList` | bool | `false` | New line before open parenthesis in multiline list. |
-| `mssql.format.options.newLineBeforeOrderByClause` | bool | `true` | New line before `ORDER BY` clause. |
-| `mssql.format.options.newLineBeforeOutputClause` | bool | `true` | New line before `OUTPUT` clause. |
-| `mssql.format.options.newLineBeforeWhereClause` | bool | `true` | New line before `WHERE` clause. |
-| `mssql.format.options.newLineBeforeWindowClause` | bool | `true` | New line before `WINDOW` clause. |
-| `mssql.format.options.newlineFormattedCheckConstraint` | bool | `false` | Newline formatted `CHECK` constraint. |
-| `mssql.format.options.newLineFormattedIndexDefinition` | bool | `false` | Newline formatted index definition. |
+| `mssql.format.options.newLineAfterJoinKeyword` | bool | `true` | Place the joined table source on a new line after the `JOIN` keyword. |
+| `mssql.format.options.newLineBeforeCloseParenthesisInMultilineList` | bool | `true` | Place a new line before the closing parenthesis of a multiline list. |
+| `mssql.format.options.newLineBeforeFromClause` | bool | `true` | Place a new line before the `FROM` clause. |
+| `mssql.format.options.newLineBeforeGroupByClause` | bool | `true` | Place a new line before the `GROUP BY` clause. |
+| `mssql.format.options.newLineBeforeHavingClause` | bool | `true` | Place a new line before the `HAVING` clause. |
+| `mssql.format.options.newLineBeforeJoinClause` | bool | `true` | Place a new line before `JOIN` clauses. |
+| `mssql.format.options.newLineBeforeOffsetClause` | bool | `true` | Place a new line before the `OFFSET` clause. |
+| `mssql.format.options.newLineBeforeOnClause` | bool | `true` | Place the `ON` clause of a join on a new line. |
+| `mssql.format.options.newLineBeforeOpenParenthesisInMultilineList` | bool | `false` | Place a new line before the opening parenthesis of a multiline list. |
+| `mssql.format.options.newLineBeforeOrderByClause` | bool | `true` | Place a new line before the `ORDER BY` clause. |
+| `mssql.format.options.newLineBeforeOutputClause` | bool | `true` | Place a new line before the `OUTPUT` clause. |
+| `mssql.format.options.newLineBeforeWhereClause` | bool | `true` | Place a new line before the `WHERE` clause. |
+| `mssql.format.options.newLineBeforeWindowClause` | bool | `true` | Place a new line before the `WINDOW` clause. |
+| `mssql.format.options.newlineFormattedCheckConstraint` | bool | `false` | Place the `CHECK` clause of a constraint on its own line. |
+| `mssql.format.options.newLineFormattedIndexDefinition` | bool | `false` | Place `UNIQUE`, `INCLUDE`, and `WHERE` portions of inline index definitions on separate lines. |
+
+#### Statement and batch spacing
+
+| Setting | Type | Default | Description |
+| --- | --- | --- | --- |
+| `mssql.format.options.numNewlinesAfterBatches` | integer | `1` | Number of line breaks after each `GO` batch separator, from `0` through `5`. |
+| `mssql.format.options.numNewlinesAfterBatchStatement` | integer | `2` | Number of line breaks after each top-level statement in a batch, from `0` through `5`. |
+| `mssql.format.options.numNewlinesAfterStatement` | integer | `1` | Number of line breaks after each statement, from `0` through `5`. |
 
 #### Spacing
 
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mssql.format.options.spaceBetweenDataTypeAndParameters` | bool | `true` | Space between data type and parentheses, for example `VARCHAR (255)`. |
-| `mssql.format.options.spaceBetweenParametersInDataType` | bool | `true` | Space between parameters in data types. |
+| `mssql.format.options.spaceBetweenDataTypeAndParameters` | bool | `true` | Insert a space between a data type and its parentheses, for example `VARCHAR (255)`. |
+| `mssql.format.options.spaceBetweenParametersInDataType` | bool | `true` | Insert spaces between parameters in a data type, for example `DECIMAL (10, 2)`. |
 
 ### Example settings file
 

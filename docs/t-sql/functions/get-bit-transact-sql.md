@@ -4,7 +4,7 @@ description: "Transact-SQL reference for the GET_BIT function."
 author: thesqlsith
 ms.author: derekw
 ms.reviewer: randolphwest
-ms.date: 12/29/2025
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -54,6 +54,8 @@ The *bit_offset* parameter in `GET_BIT` is used to identify the *n*th bit of the
 `GET_BIT` will throw an error if *bit_offset* is negative or greater than the last bit in the data type.
 
 ## Remarks
+
+The `GET_BIT` function isn't available in SQL Server 2019 or earlier versions.
 
 Distributed Query functionality for the bit manipulation functions within linked server or ad hoc queries (`OPENQUERY`) aren't supported.
 

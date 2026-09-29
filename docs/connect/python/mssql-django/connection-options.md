@@ -1,10 +1,10 @@
 ---
 title: Connection Options for mssql-django
-description: Configure ODBC driver selection, DSN, FreeTDS, timeouts, and connection retries in the mssql-django OPTIONS dictionary.
+description: Configure the Python database driver, ODBC driver selection, DSN, FreeTDS, MARS, timeouts, and connection retries in the mssql-django OPTIONS dictionary.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/11/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -13,11 +13,33 @@ ai-usage: ai-assisted
 
 # Connection options for mssql-django
 
-This article explains the `OPTIONS` dictionary settings in your Django `DATABASES` configuration. These settings control how `mssql-django` connects to SQL Server through the ODBC driver.
+This article explains the `OPTIONS` dictionary settings in your Django `DATABASES` configuration. These settings control how `mssql-django` connects to SQL Server.
+
+## Python database driver selection
+
+`mssql-django` 2.0 and later versions connect through either `pyodbc`, the default, or Microsoft's `mssql-python` driver. Select `mssql-python` for a database alias with the `python_driver` option:
+
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": "mssql",
+        "NAME": "<database>",
+        "USER": "<user_id>",
+        "PASSWORD": "<password>",
+        "HOST": "<server>",
+        "PORT": "1433",
+        "OPTIONS": {
+            "python_driver": "mssql_python",
+        },
+    },
+}
+```
+
+Don't set `driver` on this path. The `mssql-python` path ignores the `driver`, `dsn`, `host_is_server`, and `unicode_results` options, validates `extra_params` against an allow list, and doesn't enable MARS. For the full list of behavior differences, see [Select the database driver for mssql-django](select-database-driver.md). The rest of this article describes the default `pyodbc` path unless noted.
 
 ## ODBC driver selection
 
-As of `mssql-django` 1.7, the backend defaults to ODBC Driver 18 for SQL Server. If ODBC Driver 18 isn't installed, the backend automatically falls back to ODBC Driver 17.
+On the `pyodbc` path, the backend defaults to ODBC Driver 18 for SQL Server. If ODBC Driver 18 isn't installed, the backend automatically falls back to ODBC Driver 17. An explicitly configured driver doesn't fall back.
 
 > [!NOTE]
 > ODBC Driver 18 enables `Encrypt=yes` by default and validates the server certificate. Connections that worked with Driver 17 can fail with an SSL/TLS trust error. To resolve the failure:
@@ -162,6 +184,34 @@ When connecting to Azure SQL Database, Azure SQL Managed Instance, SQL database 
 - You can't use it with database mirroring. The driver returns an error when the connection string specifies `Failover_Partner`, and also when the server reports that the database is mirrored. Database mirroring is deprecated in all supported versions of SQL Server. Use Always On availability groups instead.
 
 [!INCLUDE [trust-server-certificate-caution](includes/trust-server-certificate-caution.md)]
+
+## Disable MARS
+
+On the `pyodbc` path, the backend enables Multiple Active Result Sets (MARS) by default when it uses a Microsoft ODBC driver on Windows. Some endpoints reject the `MARS_Connection` keyword, including Microsoft Fabric Warehouse. To connect to one of those endpoints, set `MARS_Connection=no` in that alias's `extra_params`:
+
+```python
+DATABASES = {
+    "warehouse": {
+        "ENGINE": "mssql",
+        "NAME": "<database>",
+        "USER": "<user_id>",
+        "PASSWORD": "<password>",
+        "HOST": "<server>.datawarehouse.fabric.microsoft.com",
+        "OPTIONS": {
+            "driver": "ODBC Driver 18 for SQL Server",
+            "extra_params": "Authentication=ActiveDirectoryServicePrincipal;MARS_Connection=no",
+        },
+    },
+}
+```
+
+Starting with `mssql-django` 2.0, an explicit `MARS_Connection` value is honored, and the match ignores case, so the backend doesn't append a conflicting default. In version 1.8.0 and earlier versions, the Windows default overwrote the explicit value and the connection failed.
+
+With MARS disabled, `QuerySet.iterator()` reads the full result into memory before yielding rows so that a nested query can reuse the connection. Account for the memory cost on large querysets.
+
+For other authentication methods, keep the corresponding authentication settings and append `MARS_Connection=no` to `extra_params`. This connection setting doesn't imply full Microsoft Fabric Warehouse support for Django migrations or other SQL Server features.
+
+The `mssql-python` path doesn't enable MARS and rejects the `MARS_Connection` keyword, so this setting applies only to `pyodbc`.
 
 ## Connection timeouts and retries
 
@@ -312,6 +362,7 @@ For more information about isolation levels on per-connection databases, see [Re
 ## Related content
 
 - [mssql-django configuration reference](configuration-reference.md)
+- [Select the database driver for mssql-django](select-database-driver.md)
 - [Microsoft Entra authentication with mssql-django](microsoft-entra-authentication.md)
 - [Retry logic and connection resilience with mssql-django](retry-logic.md)
 - [Security best practices for mssql-django](security-best-practices.md)

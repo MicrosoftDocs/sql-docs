@@ -3,8 +3,8 @@ title: Migrate Django Apps from PostgreSQL to SQL Server
 description: Detailed guide for migrating Django applications from PostgreSQL to SQL Server using the mssql-django backend, covering contrib.postgres replacements, full-text search, and connection pooling.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,9 +17,11 @@ This article is a detailed migration guide for Django applications moving from P
 
 ## Prerequisites
 
-- Python 3.8 or later
-- Microsoft ODBC Driver 17 or 18 for SQL Server. See [Install mssql-django](installation.md).
-- SQL Server 2016 or later, or Azure SQL Database
+- Python 3.10 through 3.14
+- A supported Python database driver. See [Select a database driver](select-database-driver.md) and [Install mssql-django](installation.md).
+- SQL Server 2017 or later versions, Azure SQL Database, or SQL database in Fabric
+
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Switch the database backend
 
@@ -73,7 +75,7 @@ The `django.contrib.postgres` module provides PostgreSQL-specific fields, functi
 
 PostgreSQL `ArrayField` stores arrays natively. SQL Server doesn't have an array column type.
 
-**Option 1: JSONField** (works with Django 3.2 and later versions)
+**Option 1: JSONField**
 
 ```python
 # Before
@@ -231,9 +233,6 @@ Product.objects.values("category").annotate(
 )
 ```
 
-> [!NOTE]  
-> `STRING_AGG` requires SQL Server 2017 or later or Azure SQL Database.
-
 ## Full-text search migration
 
 PostgreSQL full-text search uses `tsvector`, `tsquery`, and `GIN` indexes. SQL Server has a separate full-text search engine.
@@ -385,7 +384,7 @@ DATABASES = {
             "driver": "ODBC Driver 18 for SQL Server",
         },
         "CONN_MAX_AGE": 600,  # Reuse connections for 10 minutes
-        "CONN_HEALTH_CHECKS": True,  # Django 4.1+
+        "CONN_HEALTH_CHECKS": True,
     },
 }
 ```
@@ -414,7 +413,7 @@ Entry.objects.raw(
 
 ## JSONB queries
 
-PostgreSQL's `jsonb` type supports rich query operators. SQL Server stores JSON as **nvarchar(max)** with query functions available since SQL Server 2016.
+PostgreSQL's `jsonb` type supports rich query operators. SQL Server stores JSON as **nvarchar(max)** and provides built-in JSON query functions.
 
 Django's `JSONField` lookup syntax works on both backends for basic operations:
 

@@ -26,6 +26,7 @@ Consider the following points when using zone redundancy for SQL Managed Instanc
 
 - Zone redundancy is available in [select regions](#supported-regions).
 - Zone redundancy for the [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md) is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware.
+- Next-gen General Purpose zone redundancy requires Azure Elastic SAN zone-redundant storage (ZRS). It isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
 - Zone redundancy can be enabled, and disabled. The operation to enable or disable zone redundancy is a fully online [scaling operation](../database/scale-resources.md) executed in the background.
 - To enable zone redundancy, your SQL managed instance **Backup storage redundancy** must use *Zone-redundant* or *Geo-zone-redundant* storage.
 

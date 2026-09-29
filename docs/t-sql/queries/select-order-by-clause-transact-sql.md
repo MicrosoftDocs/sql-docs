@@ -1,10 +1,10 @@
 ---
-title: "ORDER BY Clause (Transact-SQL)"
+title: ORDER BY Clause (Transact-SQL)
 description: The ORDER BY clause sorts data returned by a query in the SQL Server Database Engine.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 02/02/2026
+ms.reviewer: jovanpop, randolphwest, wiassaf
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -56,8 +56,9 @@ Sorts data returned by a query in [!INCLUDE [ssNoVersion](../../includes/ssnover
 > `ORDER BY` isn't supported in `SELECT`/`INTO` or `CREATE TABLE AS SELECT` (CTAS) statements in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Syntax
+:::moniker range="=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
-Syntax for SQL Server and Azure SQL Database.
+Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric
 
 ```syntaxsql
 ORDER BY order_by_expression
@@ -75,6 +76,36 @@ ORDER BY order_by_expression
 }
 ```
 
+:::moniker-end
+
+:::moniker range="=fabric"
+
+Syntax for Fabric Data Warehouse and SQL analytics endpoint.
+
+```syntaxsql
+ORDER BY
+{
+    order_by_expression
+    [ COLLATE collation_name ]
+    [ ASC | DESC ]
+    [ , ...n ]
+  | ALL [ ASC | DESC ]
+}
+[ <offset_fetch> ]
+
+<offset_fetch> ::=
+{
+    OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }
+    [
+      FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY
+    ]
+}
+```
+
+:::moniker-end
+
+:::moniker range="=azure-sqldw-latest"
+
 Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
@@ -85,6 +116,7 @@ Syntax for Azure Synapse Analytics:
     } [ , ...n ]
 ]
 ```
+:::moniker-end
 
 ## Arguments
 
@@ -122,9 +154,28 @@ Specifies that the `ORDER BY` operation should be performed according to the col
 
 Specifies that the values in the specified column should be sorted in ascending or descending order. `ASC` sorts from the lowest value to highest value. `DESC` sorts from highest value to lowest value. `ASC` is the default sort order. `NULL` values are treated as the lowest possible values.
 
+:::moniker range="fabric"
+
+#### ALL
+
+**Applies to**: Fabric Data Warehouse and SQL analytics endpoint only.
+
+The `ORDER BY ALL` clause specifies that the result set is sorted by all columns in the projection list.
+
+```sql
+SELECT name, object_id, SCHEMA_NAME(schema_id) AS schema_name
+, CONCAT_WS('.',  SCHEMA_NAME(schema_id), name) AS full_name
+FROM sys.objects
+ORDER BY ALL;
+```
+
+The optional `ASC` and `DESC` keywords determine the sort order applied to all projected columns. `ASC` sorts all values from lowest to highest, while `DESC` sorts all values from highest to lowest. If neither option is specified, `ASC` is used by default. `NULL` values are treated as the lowest possible values during sorting.
+
+::: moniker-end
+
 #### OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }
 
-**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)], [!INCLUDE [fabric-se](../../includes/fabric-se.md)].
 
 Specifies the number of rows to skip before the query starts to return rows from the query expression. The value can be an integer constant or expression that's greater than or equal to zero.
 
@@ -136,7 +187,7 @@ In query execution plans, the offset row count value appears in the **Offset** a
 
 #### FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY
 
-**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+**Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)], [!INCLUDE [fabric-se](../../includes/fabric-se.md)].
 
 Specifies the number of rows to return after the `OFFSET` clause has been processed. The value can be an integer constant or expression that's greater than or equal to one.
 

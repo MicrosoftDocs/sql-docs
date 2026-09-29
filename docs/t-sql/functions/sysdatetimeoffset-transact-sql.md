@@ -1,9 +1,9 @@
 ---
-title: "SYSDATETIMEOFFSET (Transact-SQL)"
-description: "SYSDATETIMEOFFSET (Transact-SQL)"
+title: SYSDATETIMEOFFSET (Transact-SQL)
+description: SYSDATETIMEOFFSET returns a datetimeoffset(7) value that contains the date and time (including offset) of the computer running the Database Engine.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,107 +27,118 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "time [SQL Server], system"
 dev_langs:
-  - "TSQL"
+  - TSQL
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SYSDATETIMEOFFSET (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
-  Returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is included.  
-  
- For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```syntaxsql
-SYSDATETIMEOFFSET ( )  
-```  
+The `SYSDATETIMEOFFSET` Transact-SQL (T-SQL) function returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is included.
 
-## Return Type  
- **datetimeoffset(7)**  
-  
-## Remarks  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can refer to SYSDATETIMEOFFSET anywhere they can refer to a **datetimeoffset** expression.  
-  
- SYSDATETIMEOFFSET is a nondeterministic function. Views and expressions that reference this function in a column cannot be indexed.  
-  
+For an overview of all [!INCLUDE [tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and time data types and functions](date-and-time-data-types-and-functions-transact-sql.md).
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+SYSDATETIMEOFFSET ( )
+```
+
+## Return types
+
+**datetimeoffset(7)**
+
+## Remarks
+
+[!INCLUDE [tsql](../../includes/tsql-md.md)] statements can refer to SYSDATETIMEOFFSET anywhere they can refer to a **datetimeoffset** expression.
+
+SYSDATETIMEOFFSET is a nondeterministic function. Views and expressions that reference this function in a column can't be indexed.
+
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.  
-  
-## Examples  
- The following examples use the six [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time, or both. The values are returned in series; therefore, their fractional seconds might be different.  
-  
-### A. Showing the formats that are returned by the date and time functions  
- The following example shows the different formats that are returned by the date and time functions.  
-  
+> [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.
+
+## Examples
+
+The following examples use the six [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time, or both. The values are returned in series; therefore, their fractional seconds might be different.
+
+### A. Show the formats that are returned by the date and time functions
+
+The following example shows the different formats that are returned by the date and time functions.
+
 ```sql
-SELECT SYSDATETIME() AS [SYSDATETIME()]  
-    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
-    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
-    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
-    ,GETDATE() AS [GETDATE()]  
-    ,GETUTCDATE() AS [GETUTCDATE()];  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-SYSDATETIME()      2007-04-30 13:10:02.0474381
-SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
-SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
-CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
-GETDATE()          2007-04-30 13:10:02.047
-GETUTCDATE()       2007-04-30 20:10:02.047
-```  
-  
-### B. Converting date and time to date  
- The following example shows you how to convert date and time values to `date`.  
-  
+SELECT SYSDATETIME(),
+       SYSDATETIMEOFFSET(),
+       SYSUTCDATETIME(),
+       CURRENT_TIMESTAMP,
+       GETDATE(),
+       GETUTCDATE(),
+       CURRENT_DATE;
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+SYSDATETIME()        2026-09-01 16:15:37.7418724
+SYSDATETIMEOFFSET()  2026-09-01 16:15:37.7418724 -06:00
+SYSUTCDATETIME()     2026-09-01 22:15:37.7418724
+CURRENT_TIMESTAMP    2026-09-01 16:15:37.740
+GETDATE()            2026-09-01 16:15:37.740
+GETUTCDATE()         2026-09-01 22:15:37.740
+CURRENT_DATE         2026-09-01
+```
+
+### B. Convert date and time to date
+
+The following example shows you how to convert date and time values to `date`.
+
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-```  
-  
-### C. Converting date and time to times  
- The following example shows you how to convert date and time values to `time`.  
-  
+SELECT CONVERT (DATE, SYSDATETIME()),
+       CONVERT (DATE, SYSDATETIMEOFFSET()),
+       CONVERT (DATE, SYSUTCDATETIME()),
+       CONVERT (DATE, CURRENT_TIMESTAMP),
+       CONVERT (DATE, GETDATE()),
+       CONVERT (DATE, GETUTCDATE()),
+       CURRENT_DATE;
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+SYSDATETIME()        2026-09-01
+SYSDATETIMEOFFSET()  2026-09-01
+SYSUTCDATETIME()     2026-09-01
+CURRENT_TIMESTAMP    2026-09-01
+GETDATE()            2026-09-01
+GETUTCDATE()         2026-09-01
+CURRENT_DATE         2026-09-01
+```
+
+### C. Convert date and time to times
+
+The following example shows you how to convert date and time values to `time`.
+
 ```sql
-SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
-    ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
-    ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  
-    ,CONVERT (time, CURRENT_TIMESTAMP) AS [CURRENT_TIMESTAMP]  
-    ,CONVERT (time, GETDATE()) AS [GETDATE()]  
-    ,CONVERT (time, GETUTCDATE()) AS [GETUTCDATE()];  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-SYSDATETIME()      13:18:45.3490361
-SYSDATETIMEOFFSET()13:18:45.3490361
-SYSUTCDATETIME()   20:18:45.3490361
-CURRENT_TIMESTAMP  13:18:45.3470000
-GETDATE()          13:18:45.3470000
-GETUTCDATE()       20:18:45.3470000
-```  
-  
+SELECT CONVERT (TIME, SYSDATETIME()),
+       CONVERT (TIME, SYSDATETIMEOFFSET()),
+       CONVERT (TIME, SYSUTCDATETIME()),
+       CONVERT (TIME, CURRENT_TIMESTAMP),
+       CONVERT (TIME, GETDATE()),
+       CONVERT (TIME, GETUTCDATE());
+```
+
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+
+```output
+SYSDATETIME()        16:15:37.7418724
+SYSDATETIMEOFFSET()  16:15:37.7418724
+SYSUTCDATETIME()     22:15:37.7418724
+CURRENT_TIMESTAMP    16:15:37.740
+GETDATE()            16:15:37.740
+GETUTCDATE()         22:15:37.740
+```
+
 ## Related content
 
 - [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)

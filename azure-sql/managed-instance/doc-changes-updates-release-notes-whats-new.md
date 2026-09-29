@@ -2,25 +2,26 @@
 title: What's new?
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the new features and documentation improvements for Azure SQL Managed Instance.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf, randolphwest
-ms.date: 08/17/2026
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
   - ignite-2025
+ai-usage: ai-assisted
 ---
 # What's new in Azure SQL Managed Instance?
-[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 > * [Azure SQL Managed Instance](doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 > * [SQL Server on Azure VMs](../virtual-machines/windows/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 
-This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
+This article summarizes the documentation changes for new features and improvements in recent releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -34,24 +35,27 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | Feature | Details |
 | ---| --- |
 |[Approximate or fuzzy string matching](/sql/relational-databases/fuzzy-string-match/overview)| Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption.|
-| [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction) | Reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. |
 | [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview) | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. |
 |[Database watcher for Azure SQL](../database-watcher-overview.md) | Database watcher is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement).|
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
-| [Flexible memory](resource-limits.md#flexible-memory) | Save on cost and better serve your workload needs by modifying the memory allocation for your SQL managed instance. Flexible memory is in preview on Premium-series hardware for Business Critical instances (locally redundant and zone-redundant) and for zone-redundant Next-gen General Purpose instances. |
+| [Flexible memory](resource-limits.md#flexible-memory) | Save on cost and better serve your workload needs by modifying the memory allocation for your SQL managed instance. Flexible memory remains in preview for zone-redundant Next-gen General Purpose instances on Premium-series hardware. |
+| [Link support for multiple availability group databases](managed-instance-link-extend-availability-group.md) | Extend an Always On availability group containing multiple databases between SQL Server and Azure SQL Managed Instance through one link. Start with an existing group or let SSMS create a single-node group for standalone databases. |
 |[Modernization Advisor](../virtual-machines/modernization-advisor.md) | Use the Modernization Advisor in the Azure portal to help you determine if migrating to Azure SQL Managed Instance from a SQL Server VM saves you money or optimizes performance. |
 |[SDK-style SQL project](/sql/tools/sql-database-projects/sql-database-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.|
 |[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker between instances of Azure SQL Managed Instance, and between SQL Server and Azure SQL Managed Instance. |
-|[Vector data type and functions](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) | Working with vector data is now easier in Azure SQL Managed Instance with the introduction of a new [vector data type](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) and [vector functions](/sql/t-sql/functions/vector-functions-transact-sql?view=azuresqlmi-current&preserve-view=true). For more information, see [Intelligent applications with Azure SQL Managed Instance](ai-artificial-intelligence-intelligent-applications.md#vectors). |
+|[Vector vector indexes and vector search](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) | [Vector index](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true) and [vector search](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqlmi-current&preserve-view=true) features are in preview for instances with the **SQL Server 2025** [update policy](update-policy.md). For more information, see [Intelligent applications with Azure SQL Managed Instance](/sql/sql-server/ai/artificial-intelligence-intelligent-applications#vectors). |
 | [Query Store for readable secondary replicas](/sql/relational-databases/performance/query-store-for-secondary-replicas) | Query Store for readable secondary replicas enables Query Store insights for workloads that run on secondary replicas. When enabled, secondary replicas stream query execution information (such as runtime and wait statistics) to the primary replica, where the data is persisted in Query Store and made visible across all replicas. |
 | [Zone redundancy for Next-gen General Purpose](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) | Improve resilience to availability zone outages by enabling zone redundancy for a Next-gen General Purpose SQL managed instance. The preview also supports flexible memory for zone-redundant instances on Premium-series hardware. |
 
 ## General availability (GA)
 
-The following table lists features of Azure SQL Managed Instance that have been made generally available (GA) within the last 12 months:
+The following table lists features of Azure SQL Managed Instance that became generally available (GA) in the last 12 months:
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+|[Flexible memory](resource-limits.md#flexible-memory) | September 2026 | Save on cost and better serve your workload needs by modifying the memory allocation for Business Critical SQL managed instances. |
+| **Automatic index compaction** | September 2026 | [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction) helps you reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. Available for instances with the **Always-up-to-date** [update policy](update-policy.md) only. |
+|[Vector data type, vector indexes, and functions](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) | Vector features are generally available for instances with the **Always up to date** [update policy](update-policy.md). Working with vector data in Azure SQL Managed Instance includes the [vector data type](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true), [CREATE VECTOR INDEX](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true), [VECTOR_SEARCH](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqlmi-current&preserve-view=true), and [vector functions](/sql/t-sql/functions/vector-functions-transact-sql?view=azuresqlmi-current&preserve-view=true). For more information, see [Intelligent applications with Azure SQL Managed Instance](/sql/sql-server/ai/artificial-intelligence-intelligent-applications#vectors) and [Vector indexes and vector search general availability](https://aka.ms/azuresql-vectorindex-ga).|
 |[Automatic backup immutability](../automatic-backup-immutability.md) | August 2026 | Automatic backup immutability protects the most recent seven days of point-in-time restore backups in Azure SQL Managed Instance. |
 |[Internal connectivity testing](connectivity-testing-overview.md) | May 2026 | Azure SQL Managed Instance now performs automatic internal connectivity tests to monitor service reliability and accelerate issue detection. |
 |[Block T-SQL CRUD commands](../database/block-crud-tsql.md) | March 2026 | Azure administrators can block T-SQL commands to create or modify Azure SQL resources. |
@@ -72,6 +76,12 @@ The following table lists features of Azure SQL Managed Instance that have been 
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### September 2026
+
+| Changes | Details |
+| --- | --- |
+| **Link support for multiple availability group databases preview** | Extend an Always On availability group that contains multiple databases between SQL Server and Azure SQL Managed Instance through one link. Start with an existing group or let SSMS create a single-node group for standalone databases. This feature is currently in preview. For supportability, opt-in, and configuration steps, see [Extend an Always On availability group with Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md). |
 
 ### August 2026
 
@@ -99,14 +109,14 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Flexible memory preview** | It's now possible to modify the memory allocation for your Business Critical SQL managed instance based on your workload needs. This capability is now in preview for this service tier. Flexible memory is generally available (GA) for the Next-gen General Purpose service tier. To learn more, review [Flexible memory](resource-limits.md#flexible-memory). |
+| **Flexible memory preview** | You can now modify the memory allocation for your Business Critical SQL managed instance based on your workload needs. This capability is now in preview for this service tier. Flexible memory is generally available (GA) for the Next-gen General Purpose service tier. To learn more, review [Flexible memory](resource-limits.md#flexible-memory). |
 
 ### March 2026
 
 | Changes | Details |
 | --- | --- |
-| **Automatic index compaction preview** | Automatic index compaction helps you reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. This feature is now in preview. To learn more, review [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction). |
-| **Block T-SQL CRUD GA** | Allow Azure administrators to block the creation or modification of Azure SQL Managed Instance resources through T-SQL. This is enforced at the subscription level to block T-SQL commands from affecting SQL managed instance resources. This feature is generally available for Azure SQL Managed Instance. To learn more, review [Block T-SQL CRUD](../database/block-crud-tsql.md). |
+| **Automatic index compaction preview** | Automatic index compaction helps you reduce the consumption of storage space, disk I/O, and memory, and improve workload performance without investing time and effort into index maintenance jobs. This feature is now in preview. To learn more, review [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction). |
+| **Block T-SQL CRUD GA** | Allow Azure administrators to block the creation or modification of Azure SQL Managed Instance resources through T-SQL. This block is enforced at the subscription level to block T-SQL commands from affecting SQL managed instance resources. This feature is generally available for Azure SQL Managed Instance. To learn more, review [Block T-SQL CRUD](../database/block-crud-tsql.md). |
 | **Change event streaming preview** | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. This feature is now in preview for Azure SQL Managed Instance configured with the SQL Server 2025 and Always-up-to-date update policy. To learn more, review [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview).
 | **Deploy free instance with command line tools** | You can now create your free SQL managed instance by using [Azure PowerShell](free-offer.md?tabs=powershell#create-a-free-sql-managed-instance), the [Azure CLI](free-offer.md?tabs=azure-cli#create-a-free-sql-managed-instance), and the [REST API](free-offer.md?tabs=rest-api#create-a-free-sql-managed-instance). |
 | **Easily upgrade your free instance** | You can now easily upgrade your free SQL managed instance to a paid offer in the Azure portal. To upgrade, navigate to the **Overview** page for your instance and select **Upgrade** from the navigation bar to open the **Compute + storage** page, where you can choose the paid offer under **Offer type**. For more information, see [Free SQL Managed Instance](free-offer.md#upgrade-to-paid-instance). |
@@ -156,7 +166,7 @@ For previous news, see the [What's new archive](doc-changes-updates-release-note
 
 ## Known issues
 
-The known issues content has moved to a dedicated [known issues in SQL Managed Instance](doc-changes-updates-known-issues.md) article. 
+See the dedicated [known issues in SQL Managed Instance](doc-changes-updates-known-issues.md) article. 
 
 
 ## Contribute to content

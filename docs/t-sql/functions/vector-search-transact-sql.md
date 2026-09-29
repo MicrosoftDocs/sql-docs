@@ -4,7 +4,7 @@ description: VECTOR_SEARCH search for vectors similar to a given query vectors u
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: pookam, randolphwest, wiassaf
-ms.date: 03/18/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,46 +19,39 @@ helpviewer_keywords:
   - "vector, search"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
-# VECTOR_SEARCH (Transact-SQL) (Preview)
+# VECTOR_SEARCH (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
 Search for vectors similar to a given query vectors using an approximate nearest neighbors vector search algorithm. To learn more about how vector indexing and vector search works, and the differences between exact and approximate search, refer to [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md).
-
-## Azure SQL Database and SQL database in Fabric
-
-The feature is in preview. Make sure to check out the [current limitations](#limitations) before using it.
-
-[!INCLUDE [preview-note](../../includes/preview.md)]
 
 > [!IMPORTANT]
 > For optimal performance and to access the latest vector search capabilities, use vector indexes created with the latest version. For more information about upgrading existing indexes and comparing versions, see [CREATE VECTOR INDEX - Upgrade vector indexes to the latest version](../statements/create-vector-index-transact-sql.md#upgrade-vector-indexes-to-the-latest-version).
 
-### Regional availability
+## Feature availability
 
-This feature is being deployed across Azure SQL Database and SQL database in Microsoft Fabric. During the rollout, availability and behavior might vary by region and by index version. If a feature or syntax isn't available, it becomes available automatically as deployment completes. For current regional availability status, see [Feature availability by region](/azure/azure-sql/database/region-availability#vector-search).
+- Vector index and `VECTOR_SEARCH` is generally available (GA) in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb-md](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy). 
+- Vector index and `VECTOR_SEARCH` is a preview feature in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **SQL Server 2025** update policy.
 
 > [!WARNING]
 > **Deprecation notice**: The `TOP_N` parameter in `VECTOR_SEARCH` is deprecated and maintained only for backward compatibility with earlier version vector indexes. New implementations should use `SELECT TOP (N) WITH APPROXIMATE` syntax instead. For more information, see [Syntax](#syntax).
 
-## SQL Server 2025 Preview feature
+## SQL Server 2025 preview feature
 
-In SQL Server 2025 this function is in preview and is subject to change. In order to use this feature, you must enable the `PREVIEW_FEATURES` [database scoped configuration](../statements/alter-database-scoped-configuration-transact-sql.md).
-
-Make sure to check out the [current limitations](#limitations) before using it.
+In SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true), vector indexes and the `VECTOR_SEARCH` function are in preview and subject to change. In order to use this feature, you must enable the `PREVIEW_FEATURES` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
-> The latest version of Vector Indexes is only available in Azure SQL Database and SQL database in Microsoft Fabric currently.
+> The latest version of vector indexes is available in Azure SQL Database, SQL database in Microsoft Fabric, and Azure SQL Managed Instance with the **Always-up-to-date** update policy.
 
 ## Key enhancements with latest vector indexes
 
 Vector indexes created with the latest version introduce significant enhancements:
 
-- **Full DML support**: Removes the previous limitation that made vector-indexed tables read-only after index creation. You can now perform INSERT, UPDATE, DELETE, and MERGE operations while maintaining vector index functionality with automatic, real-time index maintenance
-- **Iterative filtering**: Predicates in the WHERE clause are applied during the vector search process, not after retrieval
+- **Full DML support**: Removes the previous limitation that made vector-indexed tables read-only after index creation. You can now perform `INSERT`, `UPDATE`, `DELETE`, and `MERGE` operations while maintaining vector index functionality with automatic, real-time index maintenance
+- **Iterative filtering**: Predicates in the `WHERE` clause are applied during the vector search process, not after retrieval
 - **Optimizer-driven**: The query optimizer automatically determines whether to use the DiskANN index or kNN search based on query characteristics
 - **Advanced quantization**: Vector quantization techniques have been integrated to provide better storage efficiency and faster query performance, with these optimizations being transparent to users
 
@@ -69,7 +62,7 @@ Vector indexes created with the latest version introduce significant enhancement
 **With latest version Vector Indexes:**
 
 > [!IMPORTANT]
-> When querying tables that use the latest vector index version, approximate vector search must use the TOP (N) APPROXIMATE syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest-neighbor results.
+> When querying tables that use the latest vector index version, approximate vector search must use the `TOP (N) APPROXIMATE` syntax. This syntax requirement indicates that the query is explicitly requesting approximate nearest-neighbor results.
 
 ```syntaxsql
 SELECT TOP (N) WITH APPROXIMATE
@@ -146,8 +139,8 @@ If the table specified in the `TABLE` argument already contains a column named `
 > The `distance` column is the only valid ordering key for approximate vector search results.
 
 ## Limitations
-- **Ascending order only**: The `distance` column must be ordered in ascending order (ASC). Descending order (DESC) is not supported.
 
+- **Ascending order only**: The `distance` column must be ordered in ascending order (ASC). Descending order (DESC) is not supported.
 
 ### Version-specific behavior
 
@@ -931,6 +924,6 @@ The following operations can be used directly with `VECTOR_SEARCH` without requi
 
 - [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md)
 - [Vector data type](../data-types/vector-data-type.md)
-- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../statements/create-vector-index-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL)](../statements/create-vector-index-transact-sql.md)
 - [sys.dm_db_vector_indexes (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-vector-indexes-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)

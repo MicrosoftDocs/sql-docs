@@ -186,9 +186,20 @@ When you first create a [link](managed-instance-link-feature-overview.md), the f
 
 If a transaction log backup occurs on the primary replica during initial seeding of the full backup, the transaction log truncates. Link creation fails with error 1412 since the data in the transaction log necessary for initial seeding is no longer available. If you see error 1412 in the SQL Server error log on Azure SQL Managed Instance, then you must [drop](managed-instance-link-configure-how-to-ssms.md#drop-a-link) and recreate the link.
 
-To preemptively avoid this issue, pause transaction log backups during the initial seeding phase. 
+On builds that support it, use [trace flag 12381](#prevent-premature-log-truncation-with-trace-flag-12381) to prevent premature log truncation. On earlier builds, pause transaction log backups during the initial seeding phase.
 
 If transaction log backups are necessary during the initial seeding phase, especially for very large databases, you can choose to [manually prevent log truncation](#manual-prevention-of-log-truncation) or automate the process with a T-SQL script to auto-pause log backups in critical phases, and when it's safe.
+
+#### Prevent premature log truncation with trace flag 12381
+
+On SQL Server builds that support trace flag `12381`, enable it before creating links, especially when seeding large databases or many databases in multiple-database link mode. Errors 1408 or 1412 in the SQL Managed Instance error log during seeding can indicate that required log records were truncated. Use the flag to prevent that truncation when recreating the affected link. It doesn't repair an already failed link or resolve unrelated replication errors.
+
+While the flag is enabled, you can continue taking transaction log backups, but the required log records remain retained and aren't made reusable by log truncation. Log truncation is different from shrinking the physical log file.
+
+> [!WARNING]
+> Monitor transaction log usage, growth rate, and free disk space on SQL Server while trace flag 12381 is enabled. Retained log records can fill the transaction log or its disk. Disable the flag as soon as seeding finishes for all links being created. Don't leave it enabled for ongoing replication.
+
+Continue regular transaction log backups after seeding finishes. For instructions to enable and disable trace flags, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql) and [DBCC TRACEOFF](/sql/t-sql/database-console-commands/dbcc-traceoff-transact-sql).
 
 #### Manual prevention of log truncation
 

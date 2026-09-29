@@ -1,9 +1,10 @@
 ---
-title: "CURRENT_TIMEZONE_ID (Transact-SQL)"
-description: "CURRENT_TIMEZONE_ID (Transact-SQL)"
+title: CURRENT_TIMEZONE_ID (Transact-SQL)
+description: CURRENT_TIMEZONE_ID returns the ID of the time zone that a server or instance observes.
 author: MladjoA
 ms.author: mlandzic
-ms.date: "05/18/2020"
+ms.reviewer: randolphwest
+ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -23,46 +24,48 @@ helpviewer_keywords:
   - "time zone id [SQL Server], functions"
   - "CURRENT_TIMEZONE_ID function [SQL Server]"
 dev_langs:
-  - "TSQL"
+  - TSQL
 ---
 # CURRENT_TIMEZONE_ID (Transact-SQL)
 
 [!INCLUDE [sqlserver2022-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricsqldb.md)]
 
-This function returns the ID of the time zone observed by a server or an instance. For Azure SQL Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
-  
-> [!NOTE]  
-> For SQL Database time zone is always set to UTC and `CURRENT_TIMEZONE_ID` returns the id of the UTC time zone.
-  
-## Syntax  
-  
+The `CURRENT_TIMEZONE_ID` Transact-SQL (T-SQL) function returns the ID of the time zone that a server or instance observes. For [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], the return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
+
+[!INCLUDE [change-time-zone](../includes/change-time-zone.md)]
+
+See [Date and time data types and functions](date-and-time-data-types-and-functions-transact-sql.md) for an overview of all the [!INCLUDE [tsql](../../includes/tsql-md.md)] date and time data types and functions.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-CURRENT_TIMEZONE_ID ( )  
+CURRENT_TIMEZONE_ID ( )
 ```
-  
+
 ## Arguments
 
 This function takes no arguments.
-  
-## Return Type  
+
+## Return types
 
 **varchar**
-  
-## Remarks  
 
-`CURRENT_TIMEZONE_ID` is a non-deterministic function. Views and expressions that reference this column cannot be indexed.
-  
-## Example
+## Remarks
 
-The value returned will reflect the actual time zone and language settings of the server or the instance.
+`CURRENT_TIMEZONE_ID` is a non-deterministic function. You can't index views and expressions that reference this column.
+
+## Examples
+
+The value returned reflects the actual time zone and language settings of the server or the instance.
 
 ```sql
-SELECT CURRENT_TIMEZONE_ID();  
-/* Returned:  
-W. Europe Standard Time
-*/
-```  
-  
+SELECT CURRENT_TIMEZONE_ID();
+```
+
+The result is `W. Europe Standard Time`.
+
 ## Related content
 
 - [SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)

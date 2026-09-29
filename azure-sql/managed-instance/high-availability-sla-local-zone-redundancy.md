@@ -80,6 +80,9 @@ Next-gen General Purpose is an architectural upgrade to the existing General Pur
 
 Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware.
 
+> [!IMPORTANT]
+> Next-gen General Purpose zone redundancy requires Azure Elastic SAN zone-redundant storage (ZRS). As a result, it isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
+
 ### Business Critical service tier
 
 The Business Critical service tier uses the local storage availability model, which integrates compute resources (database engine process) and storage (locally attached SSD) on a single node. Availability is achieved by replicating both compute and storage to additional nodes.
@@ -115,6 +118,8 @@ The following diagram demonstrates the zone redundancy architecture for the Gene
 ### Next-gen General Purpose service tier
 
 Zone redundancy for the Next-gen General Purpose service tier is currently in preview. A zone-redundant configuration distributes service components across availability zones and uses the upgraded Elastic SAN remote storage layer. The preview supports flexible memory on Premium-series hardware, so you can adjust memory independently from the number of vCores.
+
+Next-gen General Purpose zone redundancy requires Azure Elastic SAN zone-redundant storage (ZRS), which isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
 
 ### Business Critical service tier
 

@@ -4,7 +4,7 @@ description: CREATE VECTOR INDEX creates an index on vector data to allow approx
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: pookam, randolphwest, wiassaf
-ms.date: 03/18/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -24,36 +24,32 @@ helpviewer_keywords:
   - "DISKANN"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
-# CREATE VECTOR INDEX (Transact-SQL) (Preview)
+# CREATE VECTOR INDEX (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-Create an approximate index on a vector column to improve performances of nearest neighbors search. To learn more about how vector indexing and vector search works, and the differences between exact and approximate search, refer to [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md).
+Create an approximate index on a vector column to improve performance of nearest neighbors searches. To learn more about how vector indexing and vector search works, and the differences between exact and approximate search, see [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md).
 
-## Azure SQL Database and SQL database in Fabric
+## Feature availability
 
-The feature is in preview. Check [Limitations and considerations](#limitations-and-considerations) before proceeding.
 
-[!INCLUDE [preview-note](../../includes/preview.md)]
+- Vector index and `VECTOR_SEARCH` are generally available (GA) in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb-md](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy). 
+- Vector index and `VECTOR_SEARCH` are preview features in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **SQL Server 2025** update policy.
 
 > [!WARNING]
-> **Deprecation notice**: Vector indexes created using an earlier data structure are supported in the current release but will be retired in a future version. To ensure future compatibility and access to the latest vector search capabilities, migrate existing vector indexes using the steps in the [Migrating from earlier vector index versions](#migrating-from-earlier-vector-index-versions) section.
+> **Deprecation notice**: Vector indexes created by using an earlier data structure are supported in the current release but will be retired in a future version. To ensure future compatibility and access to the latest vector search capabilities, migrate existing vector indexes by using the steps in the [Migrating from earlier vector index versions](#migrating-from-earlier-vector-index-versions) section.
 
-### Regional availability
+## SQL Server 2025 preview feature
 
-This feature is being deployed across Azure SQL Database and SQL database in Microsoft Fabric. During the rollout, availability and behavior might vary by region and by index version. If a feature or syntax isn't available, it becomes available automatically as deployment completes. For current regional availability status, see [Feature availability by region](/azure/azure-sql/database/region-availability#vector-search).
+In SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true), vector indexes and the `VECTOR_SEARCH` function are in preview and subject to change. To use this feature, you must enable the `PREVIEW_FEATURES` [database scoped configuration](alter-database-scoped-configuration-transact-sql.md).
 
-## SQL Server 2025 Preview feature
-
-In SQL Server 2025 this function is in preview and is subject to change. In order to use this feature, you must enable the `PREVIEW_FEATURES` [database scoped configuration](alter-database-scoped-configuration-transact-sql.md).
-
-Make sure to check out the [current limitations](#limitations-and-considerations) before using it.
+Check the [current limitations](#limitations-and-considerations) before using it.
 
 > [!NOTE]
-> The latest version of Vector Indexes is only available in Azure SQL Database and SQL database in Microsoft Fabric currently.
+> The latest version of vector indexes is available in Azure SQL Database, SQL database in Microsoft Fabric, and Azure SQL Managed Instance with the **Always-up-to-date** update policy.
 
 ## Syntax
 
@@ -105,38 +101,37 @@ Overrides the **max degree of parallelism** configuration option for the index o
 
 - `1`
 
-  Suppresses parallel plan generation.
+   Suppresses parallel plan generation.
 
-- \>1
+- \>`1`
 
-  Restricts the maximum degree of parallelism used in a parallel index operation to the specified number or less based on the current system workload.
+   Restricts the maximum degree of parallelism used in a parallel index operation to the specified number or less based on the current system workload.
 
 - `0` (default)
 
-  Uses the degree of parallelism specified at the server, database, or workload group level, unless reduced based on the current system workload.
+   Uses the degree of parallelism specified at the server, database, or workload group level, unless reduced based on the current system workload.
 
-For more information, see [Configure parallel index operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
+   For more information, see [Configure parallel index operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
-> [!NOTE]  
-> Parallel index operations aren't available in every edition of SQL Server. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
+   Parallel index operations aren't available in every edition of SQL Server. [!INCLUDE [editions-latest](../../includes/editions-latest.md)]
 
 ## Upgrade vector indexes to the latest version
 
 > [!IMPORTANT]
-> **Deprecation notice**: Vector indexes created using an earlier data structure are supported in the current release but will be retired in a future version. To ensure future compatibility and access to the latest vector search capabilities, migrate existing vector indexes using the steps below.
+> **Deprecation notice**: The current release supports vector indexes created by using an earlier data structure, but a future version will retire that support. To ensure future compatibility and access to the latest vector search capabilities, migrate existing vector indexes by using the following steps.
 
 Newly created vector indexes automatically use the latest data structure, which provides:
 
-- **[Full DML support](#dml-support)**: Removes the previous limitation that made vector-indexed tables read-only after index creation. You can now perform INSERT, UPDATE, DELETE, and MERGE operations while maintaining vector index functionality with automatic, real-time index maintenance
-- **[Iterative filtering](../functions/vector-search-transact-sql.md#iterative-filtering-behavior)**: Predicates in the WHERE clause are applied during the vector search process, not after retrieval
-- **Optimizer-driven**: The query optimizer automatically determines whether to use the DiskANN index or kNN search based on query characteristics
-- **Advanced quantization**: Vector quantization techniques have been integrated to provide better storage efficiency and faster query performance, with these optimizations being transparent to users
+- **[Full DML support](#dml-support)**: Removes the previous limitation that made vector-indexed tables read-only after index creation. You can now perform `INSERT`, `UPDATE`, `DELETE`, and `MERGE` operations while maintaining vector index functionality with automatic, real-time index maintenance.
+- **[Iterative filtering](../functions/vector-search-transact-sql.md#iterative-filtering-behavior)**: Applies predicates in the `WHERE` clause during the vector search process, not after retrieval.
+- **Optimizer-driven**: The query optimizer automatically determines whether to use the DiskANN index or kNN search based on query characteristics.
+- **Advanced quantization**: Integrates vector quantization techniques to provide better storage efficiency and faster query performance. These optimizations are transparent to users.
 
-For details on [earlier vector index version limitations](#earlier-vector-index-version-limitations), see the Limitations and considerations section.
+For details about [earlier vector index version limitations](#earlier-vector-index-version-limitations), see the Limitations and considerations section.
 
 ### Migrating from earlier vector index versions
 
-Vector indexes created using an earlier version must be dropped and recreated to enable the latest capabilities. This section explains how to identify, migrate, and verify vector index versions.
+To enable the latest capabilities, you must drop and recreate vector indexes that use an earlier version. This section explains how to identify, migrate, and verify vector index versions.
 
 #### Step 1: Identify existing vector indexes
 
@@ -167,18 +162,18 @@ ORDER BY t.name, i.name;
 
 **Uses latest version**
 
-- Already supports iterative filtering, full DML support, optimizer-driven execution and improved quantization
-- No migration required
+- Already supports iterative filtering, full DML support, optimizer-driven execution, and improved quantization.
+- No migration required.
 
 **Created using an earlier version**
 
-- Uses legacy post-filter behavior
-- Doesn't support the latest vector search capabilities
-- Migration is strongly recommended to ensure future compatibility
+- Uses legacy post-filter behavior.
+- Doesn't support the latest vector search capabilities.
+- Migration is strongly recommended to ensure future compatibility.
 
 #### Step 2: Drop and recreate the vector index
 
-Vector indexes created using an earlier format can't be upgraded in place. To enable the latest DiskANN capabilities, drop and recreate the index.
+You can't upgrade vector indexes that use an earlier format in place. To enable the latest DiskANN capabilities, drop and recreate the index.
 
 > [!WARNING]
 > **Service impact**: Dropping a vector index immediately disables approximate vector search on the affected table until the index is recreated. Plan migrations during maintenance windows for production systems.
@@ -201,11 +196,11 @@ CREATE VECTOR INDEX vec_idx
 ```
 
 > [!NOTE]
-> Vector indexes created using the current `CREATE VECTOR INDEX` statement automatically use the latest DiskANN format. No additional options or flags are required.
+> Vector indexes created by using the current `CREATE VECTOR INDEX` statement automatically use the latest DiskANN format. No additional options or flags are required.
 
 #### Step 3: Verify the index version
 
-After recreation, verify the index is using the latest version:
+After you recreate the index, verify that it's using the latest version:
 
 ```sql
 SELECT
@@ -238,36 +233,40 @@ To resolve this error, remove the `TOP_N` parameter from `VECTOR_SEARCH` and use
 
 ### Earlier vector index version limitations
 
-Earlier vector index versions have the following additional limitations. To check your index version, see [Verify the index version](#step-3-verify-the-index-version).
+Earlier vector index versions have the following limitations. To check your index version, see [Verify the index version](#step-3-verify-the-index-version).
 
-- **[Post-filtering only](../functions/vector-search-transact-sql.md#iterative-filtering-behavior)**: Predicates are applied only after vector retrieval, not during the search process. This can result in fewer rows returned than expected when filters are applied.
+- **[Post-filtering only](../functions/vector-search-transact-sql.md#iterative-filtering-behavior)**: Predicates apply only after vector retrieval, not during the search process. This behavior can result in fewer rows returned than expected when you apply filters.
 
-- **Read-only tables**: Tables with vector indexes are read-only. No DML operations (INSERT, UPDATE, DELETE, MERGE) are allowed after the vector index is created. Use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration to enable DML operations if you can tolerate stale search results.
+- **Read-only tables**: Tables with vector indexes are read-only. You can't perform DML operations (`INSERT`, `UPDATE`, `DELETE`, `MERGE`) after creating the vector index. Use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration to enable DML operations if you can tolerate stale search results.
 
-- **Manual TOP_N tuning**: You must manually adjust the `TOP_N` parameter in `VECTOR_SEARCH` to compensate for post-filtering, often requiring oversized values to get the desired number of results.
+- **Manual TOP_N tuning**: You must manually adjust the `TOP_N` parameter in `VECTOR_SEARCH` to compensate for post-filtering. You often need oversized values to get the desired number of results.
 
 ### Current limitations (applies to the latest version too)
 
 The current preview has the following limitations:
 
-- Vector indexes can't be partitioned. No partition support.
+- You can't partition vector indexes.
 
 - The table must have a primary key clustered index on an **int** column.
 
 - Vector indexes aren't replicated to subscribers.
 
-- Tables with vector indexes can't be truncated using `TRUNCATE TABLE`. To remove all data, drop the vector index first, truncate the table, repopulate with at least 100 rows, then recreate the index. For more information, see [TRUNCATE TABLE restrictions](../functions/vector-search-transact-sql.md#truncate-table-restrictions).
+- You can't truncate tables with vector indexes by using `TRUNCATE TABLE`. To remove all data, drop the vector index first, truncate the table, repopulate with at least 100 rows, then recreate the index. For more information, see [TRUNCATE TABLE restrictions](../functions/vector-search-transact-sql.md#truncate-table-restrictions).
 
-- Vector indexes can't be deployed with DacPac or BACPAC. Vector indexes require at least 100 rows with non-NULL vectors at creation time. When you import a database using DacPac, BACPAC, or the Import/Export service, the import process creates schema objects (including vector indexes) before loading data, which causes the import to fail.
+- Vector indexes can't be deployed with DacPac. You can deploy databases that contain vector indexes with BACPAC starting with [DacFx version 170.5.96](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx/170.5.96). Vector indexes are created after the table data is loaded, and the indexed table must contain at least 100 rows with non-`NULL` vector values.
 
-  **Workaround**: Drop vector indexes before exporting the database, and recreate the indexes after import.
+  During a schema-only DACPAC deployment, the deployment can succeed without creating the vector index if the target table contains fewer than 100 rows with non-`NULL` vector values. DacFx doesn't automatically create the skipped index when rows are added later. After loading at least 100 qualifying rows, create the vector index by using a post-deployment script, publishing the DACPAC again, or running `CREATE VECTOR INDEX`.
+
+  After an import or deployment, verify that the vector index was created by querying `sys.vector_indexes`.
+
+  As a workaround before DacFx version 170.5.96, drop vector indexes before exporting the database, and recreate the indexes after import.
 
 ### Minimum data requirements
 
-Vector indexes require a minimum number of rows with non-NULL vector values before the index can be created.
+Vector indexes require a minimum number of rows with non-`NULL` vector values before you can create the index.
 
-- **Minimum row count**: At least 100 rows with non-NULL vector values must exist in the table.
-- **Error behavior**: Attempting to create a vector index on a table with fewer than 100 rows fails with error Msg 42266.
+- **Minimum row count**: The table must have at least 100 rows with non-`NULL` vector values.
+- **Error behavior**: If you try to create a vector index on a table with fewer than 100 rows, the operation fails and returns error Msg 42266.
 
 **Example error:**
 
@@ -277,11 +276,11 @@ Cannot create a vector index. The table contains only 8 rows with non-null vecto
 but at least 100 are required for vector index creation.
 ```
 
-**Best practice**: Populate the table with at least 100 rows before creating the vector index. For development and testing scenarios where fewer rows are needed, `VECTOR_SEARCH` works without an index using a brute-force scan approach, though performance degrades with larger datasets.
+**Best practice**: Populate the table with at least 100 rows before creating the vector index. For development and testing scenarios where you need fewer rows, `VECTOR_SEARCH` works without an index by using a brute-force scan approach. However, this method degrades performance with larger datasets.
 
 ## DML support
 
-Once a DiskANN vector index is created using the latest version, the table is no longer read-only. You can freely modify data using standard data manipulation language (DML) operations, and changes are automatically reflected in vector search results.
+When you create a DiskANN vector index by using the latest version, the table is no longer read-only. You can modify data by using standard data manipulation language (DML) operations, and the changes automatically appear in vector search results.
 
 This capability makes vector search suitable for live, transactional workloads where data changes over time.
 
@@ -292,7 +291,7 @@ This capability makes vector search suitable for live, transactional workloads w
 - For large-scale data replacement (for example, deleting most rows and inserting an entirely new set of embeddings), consider dropping and recreating the vector index after the data load to ensure optimal search quality.
 
 > [!NOTE]
-> DML support is only available with vector indexes created using the latest version. Earlier versions require tables to be read-only or use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration.
+> DML support is only available with vector indexes created by using the latest version. Earlier versions require tables to be read-only or use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration.
 
 ### Monitoring vector index maintenance
 
@@ -355,7 +354,7 @@ This composite strategy can improve query performance significantly compared to 
 
 ### Avoid datasets with high duplicate embeddings
 
-Vector indexing works best when embeddings represent diverse semantic content. Datasets with a high proportion of duplicate vectors aren't recommended for vector indexing.
+Vector indexing works best when embeddings represent diverse semantic content. Don't use datasets with a high proportion of duplicate vectors for vector indexing.
 
 High duplication can lead to:
 
@@ -367,12 +366,12 @@ High duplication can lead to:
 
 ### Large-scale data replacement scenarios
 
-Vector indexes support inserts, updates, and deletes. However, when most or all embeddings are replaced—for example, re-embedding a dataset with a new model—the existing index might no longer reflect the new data distribution.
+Vector indexes support inserts, updates, and deletes. However, when you replace most or all embeddings—for example, re-embedding a dataset with a new model—the existing index might no longer reflect the new data distribution.
 
 In large-scale replacement scenarios:
 
-- Vector search queries continue to return valid results
-- But Recall and Ranking quality may degrade, because the index structure was built for a different embedding distribution.
+- Vector search queries continue to return valid results.
+- Recall and ranking quality might degrade, because the index structure was built for a different embedding distribution.
 
 **Best practice**: When performing near-complete data replacement (delete and insert of fresh embeddings), drop and recreate the vector index after loading the new data. Recreating the index ensures it's optimized for the new embedding distribution and restores predictable query behavior.
 
@@ -382,15 +381,15 @@ For more information, review [Known issues](../../sql-server/sql-server-2025-kno
 
 ## Permissions
 
-The user must have `ALTER` permission on the table.
+You need `ALTER` permission on the table.
 
 ## Examples
 
 Download and import the [Wikipedia article with vector embeddings](https://github.com/Azure-Samples/azure-sql-db-openai?tab=readme-ov-file#download-and-import-the-wikipedia-article-with-vector-embeddings) sample.
 
-Examples assume the existence of a table named `wikipedia_articles` with a column `title_vector` of type `vector` that stores title's embeddings of Wikipedia articles. `title_vector` is assumed to be an embedding generated with an embedding model like *text-embedding-ada-002* or *text-embedding-3-small*, which returns vectors with 1,536 dimensions.
+These examples assume a table named `wikipedia_articles` with a column `title_vector` of type `vector` that stores the title embeddings of Wikipedia articles. The `title_vector` uses an embedding model like *text-embedding-ada-002* or *text-embedding-3-small*, which returns vectors with 1,536 dimensions.
 
-For more examples, including end-to-end solutions, go to the [Azure SQL Database Vector Search Samples GitHub repo](https://github.com/Azure-Samples/azure-sql-db-vector-search).
+For more examples, including end-to-end solutions, see the [Azure SQL Database Vector Search Samples GitHub repo](https://github.com/Azure-Samples/azure-sql-db-vector-search).
 
 ### Example 1
 
@@ -404,7 +403,7 @@ CREATE VECTOR INDEX vec_idx
 
 ### Example 2
 
-The following example creates a vector index on the `title_vector` column using the (negative) `dot` product metric, limiting the parallelism to 8 and storing the vector in the `SECONDARY` filegroup.
+The following example creates a vector index on the `title_vector` column using the (negative) `dot` product metric. It limits the parallelism to 8 and stores the vector in the `SECONDARY` filegroup.
 
 ```sql
 CREATE VECTOR INDEX vec_idx
@@ -415,14 +414,14 @@ CREATE VECTOR INDEX vec_idx
 
 ### Example 3
 
-A basic end-to-end example using `CREATE VECTOR INDEX` and the related `VECTOR_SEARCH` function. The embeddings are mocked. In a real world scenario, embeddings are generated using an embedding model and [AI_GENERATE_EMBEDDINGS](../functions/ai-generate-embeddings-transact-sql.md), or an external library such as [OpenAI SDK](https://github.com/openai/openai-dotnet?tab=readme-ov-file#how-to-generate-text-embeddings).
+This example uses `CREATE VECTOR INDEX` and the related `VECTOR_SEARCH` function. The embeddings are mocked. In a real-world scenario, generate embeddings by using an embedding model and [AI_GENERATE_EMBEDDINGS](../functions/ai-generate-embeddings-transact-sql.md), or use an external library such as [OpenAI SDK](https://github.com/openai/openai-dotnet?tab=readme-ov-file#how-to-generate-text-embeddings).
 
 > [!NOTE]
-> Latest version vector indexes require at least 100 rows of data before index creation. This example inserts 100 rows to meet this requirement. For more information, see [Minimum data requirements](#minimum-data-requirements).
+> Latest version vector indexes require at least 100 rows of data before you can create the index. This example inserts 100 rows to meet this requirement. For more information, see [Minimum data requirements](#minimum-data-requirements).
 
 The following code block demonstrates `CREATE VECTOR INDEX` with mock embeddings:
 
-1. Enables the preview feature (required for SQL Server 2025 only; not needed for Azure SQL Database or SQL database in Fabric).
+1. Enable the preview feature (required for SQL Server 2025 only; not needed for Azure SQL Database or SQL database in Fabric).
 1. Create a sample table `dbo.Articles` with a column `embedding` with data type **vector(5)**.
 1. Insert 100 rows of sample data with mock embedding data.
 1. Create a vector index on `dbo.Articles.embedding`.
@@ -511,7 +510,7 @@ ORDER BY s.distance, t.title;
 
 ### Example 4: Working with DML operations
 
-The following examples demonstrate DML operations on a table with a vector index created using the latest version.
+The following examples demonstrate DML operations on a table with a vector index created by using the latest version.
 
 #### Delete rows
 
@@ -522,7 +521,7 @@ DELETE FROM dbo.wikipedia_articles
 WHERE id = 12345;
 ```
 
-After the delete completes, the removed row no longer appears in vector search queries.
+After the delete operation finishes, the removed row no longer appears in vector search queries.
 
 #### Insert new rows
 
@@ -553,7 +552,7 @@ SET title_vector = @new_embedding,
 WHERE id = 50000;
 ```
 
-If a vector column is updated, the index is updated accordingly so future vector searches use the new embedding.
+If you update a vector column, the index updates accordingly so future vector searches use the new embedding.
 
 #### Use MERGE for complex operations
 
@@ -580,13 +579,13 @@ WHEN NOT MATCHED BY SOURCE AND target.id > 100000 THEN
     DELETE;
 ```
 
-The vector index is automatically updated to reflect all changes made by the `MERGE` statement.
+The vector index automatically updates to reflect all changes made by the `MERGE` statement.
 
 ## Related content
 
 - [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md)
 - [Vector data type](../data-types/vector-data-type.md)
-- [VECTOR_SEARCH (Transact-SQL) (Preview)](../functions/vector-search-transact-sql.md)
+- [VECTOR_SEARCH (Transact-SQL)](../functions/vector-search-transact-sql.md)
 - [sys.vector_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-vector-indexes-transact-sql.md)
 - [sys.dm_db_vector_indexes (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-db-vector-indexes-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)

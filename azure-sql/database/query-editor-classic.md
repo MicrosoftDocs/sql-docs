@@ -1,11 +1,11 @@
 ---
-title: Azure portal query editor (Classic experience)
+title: Azure portal query editor (Classic experience) (Preview)
 titleSuffix: Azure SQL Database
 description: Learn about the Classic experience of the Azure portal query editor for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic
-ms.date: 03/11/2026
+ms.date: 09/01/2026
 ms.update-cycle: 365-days
 ms.service: azure-sql-database
 ms.subservice: development
@@ -13,15 +13,15 @@ ms.topic: concept-article
 monikerRange: "=azuresql||=azuresql-db"
 ROBOTS: NOINDEX
 ---
-# Azure portal query editor (Classic experience)
+# Azure portal query editor (Classic experience) (Preview)
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 The Query editor (Classic experience) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database.
 
 > [!IMPORTANT]
-> For the new Azure portal SQL query editor experience, see [Azure portal query editor for Azure SQL Database](query-editor.md).
+> The classic Azure portal SQL query editor remains a preview feature. For the new Azure portal SQL query editor experience, see [Azure portal query editor for Azure SQL Database](query-editor.md).
 
-- For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor (Classic experience)](connect-query-portal-classic.md).
+- For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor (Classic experience) (Preview)](connect-query-portal-classic.md).
 - For more advanced object explorer capabilities and management functions, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
 - If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
 
@@ -53,14 +53,11 @@ Users need at least the Azure role-based access control (RBAC) permission **Read
 
 ## Navigate query editor
 
-There are four main sections of the query editor:
+The query editor has four main sections:
 
 - Navigation bar
 - Object explorer
 - Query window
-- Copilot for Azure SQL Database
-
-   :::image type="content" source="media/query-editor-classic/query-editor.png" alt-text="Screenshot from the Azure portal showing red rectangles highlighting the Query editor in the main menu and the Navigation bar, Object Explorer, and Query window." lightbox="media/query-editor-classic/query-editor.png":::
 
 ### Navigation bar
 
@@ -90,10 +87,6 @@ The **Save query** button allows you to save the query text to your computer as 
 The **Export data as** button allows you to export the query results to your computer as a *.json*, *.csv*, or *.xml* file.
 
 The query execution time, or errors, are shown in the status bar.
-
-### Microsoft Copilot in Azure SQL Database (preview)
-
-[Copilot for Azure SQL Database](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true) within the Azure portal provides relevant answers to user questions, simplifying database management by applying database context, documentation, dynamic management views, Query Store, and other knowledge sources.
 
 ## Data editor
 

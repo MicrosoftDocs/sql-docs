@@ -78,6 +78,13 @@ landingContent:
             url: /fabric/database/sql/overview
   - title: Azure SQL & Microsoft Fabric
     linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Fabric Database Hub
+          url: /fabric/database/hub/
+        - text: Monitor Microsoft SQL in Fabric
+          url: /fabric/database/hub/monitor-sql
+          
       - linkListType: overview
         links:
           - text: Azure SQL family of products

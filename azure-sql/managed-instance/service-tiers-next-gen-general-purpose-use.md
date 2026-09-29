@@ -106,6 +106,7 @@ az sql mi create \
 ## Remarks
 
 - Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports flexible memory for zone-redundant instances on Premium-series hardware. For more information, see [availability through local and zone redundancy](high-availability-sla-local-zone-redundancy.md) and [flexible memory](resource-limits.md#flexible-memory).
+- Next-gen General Purpose zone redundancy requires Azure Elastic SAN zone-redundant storage (ZRS). It isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
 
 ## Related content
 

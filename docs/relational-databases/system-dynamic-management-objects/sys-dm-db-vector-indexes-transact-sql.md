@@ -4,7 +4,7 @@ description: sys.dm_db_vector_indexes provides real-time insights into vector in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: pookam, randolphwest, wiassaf
-ms.date: 03/07/2026
+ms.date: 09/22/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -21,73 +21,92 @@ helpviewer_keywords:
   - "vector indexes [SQL Server], monitoring"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # sys.dm_db_vector_indexes (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-Returns real-time insights into vector index health and performance. Use this view for monitoring vector index maintenance operations and identifying indexes that need attention.
+The `sys.dm_db_vector_indexes` dynamic management view returns real-time information about vector index health and background maintenance. Use this view to monitor DiskANN graph catch-up operations and identify vector indexes that might require attention.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| `object_id` | **int** | Table object ID. |
-| `index_id` | **int** | Index ID. |
-| `approximate_staleness_percent` | **decimal(10,2)** | Percentage of changes pending index update. Higher values indicate more pending changes. |
-| `quantized_keys_used_percent` | **decimal(10,2)** | Percentage of key space consumed by the index. |
-| `last_background_task_time` | **datetime2** | Last background maintenance timestamp. Indicates when the last maintenance operation completed. |
-| `last_background_task_succeeded` | **bit** | Success status of last maintenance task. 1 indicates success, 0 indicates failure. |
-| `last_background_task_duration_seconds` | **bigint** | Duration of last maintenance task in seconds. |
-| `last_background_task_processed_inserts` | **bigint** | Number of insert operations processed in the last maintenance task. |
-| `last_background_task_processed_deletes` | **bigint** | Number of delete operations processed in the last maintenance task. |
-| `last_background_task_error_message` | **nvarchar(max)** | Error message if the last maintenance task failed. NULL if the task succeeded. |
+| `object_id` | **int** | Object ID of the table that contains the vector index. |
+| `index_id` | **int** | ID of the vector index. |
+| `graph_catchup_pending_percent` | **decimal(10,2)** | Approximate percentage of changes waiting to be incorporated into the DiskANN graph. The value moves toward zero as background maintenance processes the pending changes. The value can be `NULL` if no graph catch-up task has executed. |
+| `quantized_keys_used_percent` | **decimal(10,2)** | Percentage of the quantized key space used by the vector index. |
+| `last_background_task_execution_time` | **datetime2** | Time when the most recent background maintenance task executed. `NULL` if no background task has executed. |
+| `last_background_task_succeeded` | **bit** | Success status of the most recent background maintenance task. `1` indicates success, `0` indicates failure, and `NULL` indicates that no background task has executed. |
+| `last_background_task_duration_seconds` | **bigint** | Duration of the most recent background maintenance task, in seconds. `NULL` if no background task has executed. |
+| `last_background_task_processed_inserts` | **bigint** | Number of inserts processed by the most recent background maintenance task. `NULL` if no background task has executed. |
+| `last_background_task_processed_deletes` | **bigint** | Number of deletes processed by the most recent background maintenance task. `NULL` if no background task has executed. |
+| `last_background_task_error_message` | **nvarchar(max)** | Error message reported by the most recent background maintenance task. `NULL` if no error was reported or no background task has executed. |
 
 ## Remarks
 
-This view returns information for all vector indexes in the current database. Vector indexes perform background maintenance to incorporate DML changes (inserts, updates, deletes). The `approximate_staleness_percent` column indicates how many changes are pending incorporation into the index structure.
+This view returns one row for each vector index in the current database.
 
-### Analyze approximate_staleness_percent
+Vector indexes use asynchronous background maintenance to incorporate data modifications, including inserts, updates, and deletes, into the DiskANN graph. The `graph_catchup_pending_percent` column shows the approximate percentage of changes that are still waiting to be incorporated into the graph.
 
-The `approximate_staleness_percent` column indicates what percentage of data changes haven't yet been processed by the background maintenance task that keeps your vector index up-to-date. When you insert, update, or delete rows in a table with a vector index, those changes don't immediately get incorporated into the DiskANN graph structure. Instead, the changes are queued and processed by a background maintenance task. The staleness percentage drops back toward 0% as the backlog is processed.
+### Feature availability
 
-For example, if you have a table with 10,000 rows and a vector index, and you insert 500 new rows, the staleness percent is approximately 5% (500 pending changes out of 10,500 total rows). As the background maintenance processes these 500 inserts, the staleness percentage drops back toward zero.
+The [vector data type](../../t-sql/data-types/vector-data-type.md) and [vector functions](../../t-sql/functions/vector-functions-transact-sql.md) are generally available in SQL Server 2025, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric.
 
-#### Impact on VECTOR_SEARCH queries
+[Vector indexes](../../t-sql/statements/create-vector-index-transact-sql.md) are generally available in Azure SQL Database, SQL database in Fabric, and Azure SQL Managed Instance configured with the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
 
-`VECTOR_SEARCH` uses the current state of the DiskANN graph combined with pending changes that haven't been fully incorporated yet. This means:
+Vector indexes are preview features in SQL Server 2025 and Azure SQL Managed Instance configured with the **SQL Server 2025** update policy.
 
-- Even when staleness is higher than zero, your `VECTOR_SEARCH` queries still return results and include recently inserted or updated rows.
-- However, the search algorithm can't use the full graph structure for optimal ranking until background maintenance completes.
-- Ranking accuracy might be reduced. The similarity scores and ordering might be less optimal for rows not yet fully integrated into the index structure.
+### Analyze graph_catchup_pending_percent
 
-Search quality is best when all vectors are properly integrated into the graph and staleness percentage is zero.
+The `graph_catchup_pending_percent` column indicates the approximate percentage of data changes that aren't yet incorporated into the DiskANN graph.
 
-#### Interpret staleness values
+When you insert, update, or delete rows in a table with a vector index, the changes aren't immediately incorporated into the graph. The changes are queued and processed asynchronously by a background maintenance task.
 
-There's no universal threshold for "high" staleness because it depends on your workload pattern. Use these guidelines to interpret the values you see:
+A temporary nonzero value after data modifications is expected. The percentage moves toward zero as background maintenance incorporates pending changes into the graph.
 
-1. **During batch loads**: 20-30% staleness that drops to near zero within minutes is expected and normal.
-1. **During regular operations**: 0-5% staleness indicates the background maintenance is keeping pace with your workload.
+A value of zero indicates that graph maintenance has caught up. A NULL value can indicate that no graph catch-up task has executed yet.
 
-Investigate your index health if you encounter any of the following scenarios:
+### Impact on VECTOR_SEARCH queries
 
-- **Sustained high staleness**: Values consistently above 10-15% during regular operations suggest the background maintenance can't keep up with your DML rate.
-- **Reduced recall**: You notice a measurable drop in the relevance of `VECTOR_SEARCH` results.
-- **Task failures**: The `last_background_task_succeeded` value is 0. The background process is encountering errors and can't update the index.
+`VECTOR_SEARCH` continues to operate while graph catch-up is in progress. It uses the current DiskANN graph together with changes that aren't yet fully incorporated into the graph.
+
+This behavior means:
+
+- `VECTOR_SEARCH` can still consider recently inserted or updated rows.
+- Rows that aren't fully incorporated into the graph can't take full advantage of graph navigation.
+- Search performance or recall can be affected while a large graph catch-up backlog is being processed.
+- Search quality and performance are most predictable when `graph_catchup_pending_percent` is zero or remains consistently low.
+
+### Interpret graph catch-up values
+
+There's no universal threshold for a high graph catch-up percentage. An appropriate threshold depends on the workload, rate of data modification, database configuration, and expected maintenance interval.
+
+During batch loading or periods of high DML activity, expect a temporary increase in graph catch-up percentage. Monitor whether the value moves toward zero after the workload decreases.
+
+Investigate the vector index if you observe any of the following conditions:
+
+- **Sustained graph catch-up backlog:** `graph_catchup_pending_percent` remains elevated and doesn't move toward zero.
+- **Background task failure:** `last_background_task_succeeded` is 0.
+- **Background task error:** `last_background_task_error_message` contains an error.
+- **Reduced recall:** `VECTOR_SEARCH` returns fewer relevant results than expected.
+- **Unexpected performance degradation:** Vector search latency increases while the graph catch-up backlog remains elevated.
+
+`NULL` values for the background task columns don't necessarily indicate a failure. They can indicate that no background maintenance task has executed yet.
 
 ### When to rebuild a vector index
 
-Consider rebuilding a vector index when you observe **performance or recall degradation**, not based solely on staleness percentage. Rebuild scenarios include:
+Consider rebuilding a vector index when you observe measurable performance or recall degradation. Don't rebuild an index based only on a temporary nonzero `graph_catchup_pending_percent` value.
 
-- **Significant recall quality drop**: Vector search returns fewer relevant results than expected
-- **Large-scale data replacement**: When most or all embeddings are replaced (for example, re-embedding with a new model)
+Scenarios in which rebuilding might be appropriate include:
 
-For detailed guidance on data quality and maintenance scenarios, see [Data quality and maintenance guidance for vector indexes](../../t-sql/statements/create-vector-index-transact-sql.md#data-quality-and-maintenance-guidance-for-vector-indexes).
+- **Significant recall degradation:** Vector search returns fewer relevant results than expected after graph catch-up completes.
+- **Large-scale data replacement:** Most or all embeddings are replaced, such as when data is re-embedded with a different model.
+- **Persistent maintenance problems:** The graph catch-up percentage doesn't decrease and background maintenance repeatedly fails.
 
-Monitor this metric to understand index maintenance patterns and identify indexes requiring attention.
+For more information, see [Data quality and maintenance guidance for vector indexes](../../t-sql/statements/create-vector-index-transact-sql.md#data-quality-and-maintenance-guidance-for-vector-indexes).
 
 ## Permissions
 
@@ -97,38 +116,82 @@ Requires `VIEW DATABASE STATE` permission on the database.
 
 ### A. Monitor all vector indexes
 
-The following query monitors all vector indexes in the current database, showing staleness and maintenance status.
+The following query returns graph catch-up and background maintenance information for all vector indexes in the current database:
 
 ```sql
-SELECT 
+SELECT
     DB_NAME() AS database_name,
-    OBJECT_NAME(object_id) AS table_name,
-    index_id,
-    approximate_staleness_percent,
-    last_background_task_succeeded
-FROM sys.dm_db_vector_indexes
-ORDER BY approximate_staleness_percent DESC;
+    OBJECT_SCHEMA_NAME(v.object_id) AS schema_name,
+    OBJECT_NAME(v.object_id) AS table_name,
+    i.name AS vector_index_name,
+    v.graph_catchup_pending_percent,
+    v.quantized_keys_used_percent,
+    v.last_background_task_execution_time,
+    v.last_background_task_succeeded,
+    v.last_background_task_duration_seconds,
+    v.last_background_task_processed_inserts,
+    v.last_background_task_processed_deletes,
+    v.last_background_task_error_message
+FROM sys.dm_db_vector_indexes AS v
+INNER JOIN sys.indexes AS i
+    ON i.object_id = v.object_id
+    AND i.index_id = v.index_id
+ORDER BY
+    v.graph_catchup_pending_percent DESC,
+    schema_name,
+    table_name,
+    vector_index_name;
 ```
 
-### B. Identify indexes needing attention
+### B. Monitor a specific table
 
-The following query finds vector indexes with high staleness or recent maintenance failures.
+The following query returns vector index maintenance information for the `dbo.Articles` table:
 
 ```sql
-SELECT 
-    OBJECT_NAME(object_id) AS table_name,
-    approximate_staleness_percent,
-    last_background_task_error_message
-FROM sys.dm_db_vector_indexes
-WHERE 
-    approximate_staleness_percent > 15.0  -- Example value, adjust based on your workload
-    OR last_background_task_succeeded = 0  -- Recent failure
-ORDER BY approximate_staleness_percent DESC;
+SELECT
+    OBJECT_SCHEMA_NAME(v.object_id) AS schema_name,
+    OBJECT_NAME(v.object_id) AS table_name,
+    i.name AS vector_index_name,
+    v.graph_catchup_pending_percent,
+    v.last_background_task_execution_time,
+    v.last_background_task_succeeded,
+    v.last_background_task_error_message
+FROM sys.dm_db_vector_indexes AS v
+INNER JOIN sys.indexes AS i
+    ON i.object_id = v.object_id
+    AND i.index_id = v.index_id
+WHERE v.object_id = OBJECT_ID(N'dbo.Articles');
+```
+
+<a id="b-identify-indexes-needing-attention"></a>
+
+### C. Identify indexes that might require attention
+
+The following example uses 15 percent as an illustrative monitoring threshold. Select a threshold appropriate for your workload:
+
+```sql
+DECLARE @GraphCatchupThreshold decimal(10,2) = 15.0;
+
+SELECT
+    OBJECT_SCHEMA_NAME(v.object_id) AS schema_name,
+    OBJECT_NAME(v.object_id) AS table_name,
+    i.name AS vector_index_name,
+    v.graph_catchup_pending_percent,
+    v.last_background_task_execution_time,
+    v.last_background_task_succeeded,
+    v.last_background_task_error_message
+FROM sys.dm_db_vector_indexes AS v
+INNER JOIN sys.indexes AS i
+    ON i.object_id = v.object_id
+    AND i.index_id = v.index_id
+WHERE
+    v.graph_catchup_pending_percent > @GraphCatchupThreshold
+    OR v.last_background_task_succeeded = 0
+    OR v.last_background_task_error_message IS NOT NULL
+ORDER BY v.graph_catchup_pending_percent DESC;
 ```
 
 ## Related content
 
-- [System dynamic management views and functions](system-dynamic-management-objects.md)
-- [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
-- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../../t-sql/statements/create-vector-index-transact-sql.md)
-- [VECTOR_SEARCH (Transact-SQL) (Preview)](../../t-sql/functions/vector-search-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL)](../../t-sql/statements/create-vector-index-transact-sql.md)
+- [VECTOR_SEARCH (Transact-SQL)](../../t-sql/functions/vector-search-transact-sql.md)

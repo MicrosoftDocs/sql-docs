@@ -4,7 +4,7 @@ description: Learn how auto-pause and auto-resume work in the serverless compute
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendalv, moslake, mathoma, dfurman
-ms.date: 07/28/2026
+ms.date: 09/15/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: concept-article
@@ -17,7 +17,8 @@ ai-usage: ai-assisted
 
 This article explains the auto-pause and auto-resume behavior for the [serverless compute tier](serverless-tier-overview.md) in Azure SQL Database, and how it interacts with various features of Azure SQL Database.
 
-Currently, the General Purpose service tier is the only service tier that supports serverless auto-pausing and auto-resuming.
+- Serverless auto-pause and auto-resume are available in the General Purpose service tier.
+- Serverless auto-pause and auto-resume are a preview feature of Azure SQL Database Hyperscale.
 
 To monitor a serverless database state, see [Monitor pause and resume status](serverless-tier-monitor.md#monitor-pause-and-resume-status).
 
@@ -30,7 +31,10 @@ Auto-pause starts if all the following conditions are true during the auto-pause
 - Number of sessions = 0
 - CPU = 0 for user workload running in the user resource pool
 
- By default, there's a [one-hour auto-pause delay](serverless-tier-overview.md?view=azuresql-db&preserve-view=true#performance-configuration).
+For more information, see [serverless performance configuration](serverless-tier-overview.md?view=azuresql-db&preserve-view=true#performance-configuration).
+
+- In General Purpose service tier, the default auto-pause delay is 60 minutes, and the minimum is 15 minutes.
+- For Hyperscale auto-pause (preview), the default auto-pause delay is 60 minutes, and the minimum is 60 minutes.
 
 ### Features that prevent auto-pause
 
@@ -77,13 +81,13 @@ The [Azure Monitor activity log](/azure/azure-monitor/platform/activity-log?tabs
 
 ## Latency
 
-The latency is generally on the order of one minute to auto-resume and 1-10 minutes to auto-pause. The latency for either operation can be as low as the order of one second.
+The latency is generally about one minute to auto-resume and 1-10 minutes to auto-pause after the criteria for resume or pause is met. The latency for either operation can be as low as about one second.
 
-## Customer managed transparent data encryption
+## Customer-managed transparent data encryption
 
 ### Key deletion or revocation
 
-If you use [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (bring your own key or BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, the database remains in the auto-paused state. In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
+If you use [customer-managed transparent data encryption](transparent-data-encryption-byok-overview.md) (bring your own key or BYOK) and the serverless database is paused when key deletion or revocation occurs, the database stays in the auto-paused state. In this case, after the database resumes, the database becomes inaccessible within about 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, the database also becomes inaccessible within about 10 minutes in the same way as with provisioned compute databases.
 
 ### Key rotation
 
@@ -111,7 +115,12 @@ For connection retry logic options and recommendations, see:
 
 ### Troubleshooting auto-pause
 
-If you enable auto-pausing and don't use features that block auto-pausing, but the database doesn't auto-pause after the delay period, application or user sessions might be preventing auto-pausing.
+If you enable auto-pause and don't use features that block auto-pause, but the database doesn't auto-pause after the delay period, application or user sessions might be preventing auto-pause.
+
+> [!IMPORTANT]
+> The presence of open sessions, with or without concurrent CPU utilization in the user resource pool, is the most common reason for a serverless database to not auto-pause as expected.
+
+#### Detect connections that prevent auto-pause
 
 To see if any application or user sessions are currently connected to the database, run the following query:
 
@@ -141,14 +150,16 @@ WHERE s.session_id <> @@SPID
       );
 ```
 
+- If the result set isn't empty, it indicates that sessions currently prevent auto-pause.
+- If the result set is empty, it's still possible that sessions were open, possibly for a short time, at some point earlier during the auto-pause delay period. To check for activity during the delay period, use [Auditing](auditing-overview.md) and examine audit data for the relevant period.
+
 > [!TIP]
-> After running the query, make sure to disconnect from the database. Otherwise, the open session used by the query prevents auto-pausing.
+> After running the query, disconnect from the database. Otherwise, the open session used by the query prevents auto-pause.
 
-- If the result set isn't empty, it indicates that sessions currently prevent auto-pausing.
-- If the result set is empty, it's still possible that sessions were open, possibly for a short time, at some point earlier during the auto-pause delay period. To check for activity during the delay period, use [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md) and examine audit data for the relevant period.
+## Limitations
 
-> [!IMPORTANT]
-> The presence of open sessions, with or without concurrent CPU utilization in the user resource pool, is the most common reason for a serverless database to not auto-pause as expected.
+- In the current preview of serverless auto-pause and auto-resume for Azure SQL Database Hyperscale, named replicas aren't supported with auto-pause and auto-resume.
+- In the current preview of serverless auto-pause and auto-resume for Azure SQL Database Hyperscale, the minimum auto-pause delay is 60 minutes. General purpose serverless databases with auto-pause less than 60 minutes that are upgraded to Hyperscale serverless will have auto-pause disabled after upgrade. Autopause must be manually re-enabled after upgrade to Azure SQL Database Hyperscale.
 
 ## Related content
 

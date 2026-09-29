@@ -18,11 +18,13 @@ This article outlines best practices for using the [Managed Instance link](manag
 
 ## Take log backups regularly
 
-If SQL Server is your initial primary, take the first log backup on SQL Server *after* initial seeding finishes, when the database is no longer in the *Restoring...* state on Azure SQL Managed Instance. Then take **SQL Server transaction log backups regularly** to keep the transaction log file size healthy while SQL Server is in the primary role. 
+Before creating links, especially for large databases or many databases in multiple-database link mode, use [trace flag 12381 on supported SQL Server builds](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381) to prevent premature log truncation during seeding. Log backups can continue while the flag is enabled, but retained log records aren't made reusable. Monitor log usage, growth rate, and free disk space, and disable the flag as soon as seeding finishes for all links being created. Seeding errors 1408 or 1412 in the SQL Managed Instance error log can indicate premature log truncation. Review the linked troubleshooting guidance before recreating the link.
+
+When SQL Server is primary, you can continue transaction log backups during seeding if trace flag 12381 is enabled on a supported build. If you pause log backups to prevent premature truncation, resume them after initial seeding finishes. If you haven't started log backups, take the first one after initial seeding finishes. After seeding completes for all links being created, disable the flag if you enabled it and take **SQL Server transaction log backups regularly** while SQL Server remains primary.
 
 The link feature replicates data by using the [distributed availability groups](/sql/database-engine/availability-groups/windows/distributed-availability-groups) technology based on Always On availability groups. Distributed availability group data replication is based on replicating transaction log records. The primary SQL Server instance can't truncate any transaction log records from the database until they're replicated to the database on the secondary replica. If network connection issues cause transaction log record replication to be slow or blocked, the log file keeps growing on the primary instance. The intensity of workload and the network speed determine the growth speed. If a network connection outage is prolonged and the workload on primary instance is heavy, the log file can take all available storage space.
 
-Taking regular transaction log backups truncates the transaction log and minimizes the risk of running out of space on the primary SQL Server instance due to log file growth. No extra action is necessary when SQL Managed Instance is the primary since [log backups are already taken automatically](automated-backups-overview.md). By taking log backups regularly on your SQL Server primary, you make your database more resilient to unplanned log growth events. Consider scheduling daily log backup tasks by using a SQL Server Agent job.
+Regular transaction log backups allow inactive log records to become reusable when nothing else prevents truncation. They don't release records retained by trace flag 12381, replication, or an active transaction, and they don't shrink the physical log file. No extra action is necessary when SQL Managed Instance is primary since [log backups are already taken automatically](automated-backups-overview.md). Schedule regular SQL Server log backups based on your workload and monitor log usage and free disk space.
 
 You can use a Transact-SQL (T-SQL) script to back up the log file, such as the sample provided in this section. Replace the placeholders in the sample script with name of your database, name and path of the backup file, and the description.
 
@@ -102,7 +104,7 @@ You might need to manually rotate the certificate used to secure the database mi
 
 ### SQL Server
 
-The certificate that you use to secure the database mirroring endpoint on SQL Server can expire. If the certificate expires, it can lead link degradation. To prevent this problem, *rotate the certificate* before it expires.
+The certificate that you use to secure the database mirroring endpoint on SQL Server can expire. If the certificate expires, it can lead to link degradation. To prevent this problem, *rotate the certificate* before it expires.
 
 Use the following Transact-SQL (T-SQL) command to check the expiration date of the current certificate: 
 

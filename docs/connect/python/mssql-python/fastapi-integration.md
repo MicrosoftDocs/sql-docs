@@ -1,10 +1,10 @@
 ---
 title: Use mssql-python with FastAPI
 description: Learn how to build REST APIs with FastAPI and mssql-python for Microsoft SQL and Azure SQL database access.
-author: dlevy-msft-sql
-ms.author: dlevy
+author: mahyon
+ms.author: mahyon
 ms.reviewer: vanto, randolphwest
-ms.date: 09/18/2026
+ms.date: 09/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -101,18 +101,16 @@ def get_connection_string() -> str:
         "Authentication=ActiveDirectoryDefault;"
         "Encrypt=yes"
     )
-```
 
-> [!NOTE]
-> `ActiveDirectoryDefault` uses `DefaultAzureCredential`, which tries multiple credential providers in sequence. The first connection can be slow because the SDK walks the chain until it finds a working provider. In production, if you know which credential type your environment uses, specify it directly (for example, `ActiveDirectoryMSI` for managed identity) to avoid the chain walk. For more information, see [Microsoft Entra authentication](entra-authentication.md).
-
-```python
 def get_db_dependency() -> Generator:
     """FastAPI dependency for database cursor."""
     with mssql_python.connect(get_connection_string()) as conn:
         with conn.cursor() as cursor:
             yield cursor
 ```
+
+> [!NOTE]
+> `ActiveDirectoryDefault` uses `DefaultAzureCredential`, which tries multiple credential providers in sequence. The first connection can be slow because the SDK walks the chain until it finds a working provider. In production, if you know which credential type your environment uses, specify it directly (for example, `ActiveDirectoryMSI` for managed identity) to avoid the chain walk. For more information, see [Microsoft Entra authentication](entra-authentication.md).
 
 ## Pydantic models
 
@@ -417,45 +415,30 @@ def health_check(cursor = Depends(get_db_dependency)):
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+The server listens on `http://localhost:8000`. Keep this terminal running while you exercise the API.
+
+### Exercise the API
+
+Open `http://localhost:8000/docs` in a browser. FastAPI displays interactive documentation for every route.
+
+1. Expand **GET /health**, select **Try it out**, and then select **Execute**. Verify that the response has status code `200` and reports a healthy database connection.
+1. Expand **GET /products**, select **Try it out**, set `page_size` to `5`, and then select **Execute**. The response contains five products and pagination details.
+1. Copy an `id` value from the response. Expand **GET /products/{product_id}**, select **Try it out**, enter the copied value for `product_id`, and then select **Execute**.
+1. Expand **GET /products/search/**, select **Try it out**, enter a search term such as `bike` for `q`, and then select **Execute**.
+
 ## Test and deploy the application
 
-Use the companion article to finish the application:
+<a id="error-handling"></a>
+<a id="global-exception-handler"></a>
+<a id="connection-pooling"></a>
+<a id="enhanced-database-module"></a>
+<a id="authentication-middleware"></a>
+<a id="testing"></a>
+<a id="test-setup"></a>
+<a id="deployment-configuration"></a>
+<a id="environment-variables"></a>
 
-### Error handling
-
-The companion article covers database exception handling.
-
-#### Global exception handler
-
-See [Handle database errors](fastapi-testing-deployment.md#handle-database-errors).
-
-### Connection pooling
-
-The companion article covers connection pool configuration.
-
-#### Enhanced database module
-
-See [Configure connection pooling](fastapi-testing-deployment.md#configure-connection-pooling).
-
-### Authentication middleware
-
-See [Add authentication dependencies](fastapi-testing-deployment.md#add-authentication-dependencies).
-
-### Testing
-
-The companion article covers integration testing.
-
-#### Test setup
-
-See [Test the application](fastapi-testing-deployment.md#test-the-application).
-
-### Deployment configuration
-
-The companion article covers deployment configuration and operations.
-
-#### Environment variables
-
-See [Configure deployment settings](fastapi-testing-deployment.md#configure-deployment-settings) and the [deployment checklist](fastapi-testing-deployment.md#deployment-checklist).
+For guidance on error handling, connection pooling, authentication, testing, and deployment, see [Test and deploy FastAPI applications with mssql-python](fastapi-testing-deployment.md).
 
 ## Related content
 

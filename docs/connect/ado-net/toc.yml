@@ -34,8 +34,6 @@
     href: connection-string-syntax.md
   - name: Connection options
     href: connection-options.md
-  - name: Encryption and certificates
-    href: encryption-and-certificate-validation.md
   - name: Connection pooling overview
     href: connection-pooling.md
   - name: SQL Server connection pooling
@@ -46,16 +44,18 @@
     href: obtain-sqlclientfactory.md
 - name: Authenticate and secure
   items:
+  - name: Encryption and certificate validation
+    href: encryption-and-certificate-validation.md
   - name: Protecting connection information
     href: protecting-connection-information.md
   - name: SQL Server security
     href: sql/sql-server-security.md
     items:
-    - name: Authentication
+    - name: SQL Server and Windows authentication
       href: sql/authentication-sql-server.md
     - name: Microsoft Entra authentication
       href: sql/azure-active-directory-authentication.md
-    - name: Application security scenarios
+    - name: Security best practices
       href: sql/application-security-scenarios-sql-server.md
       items:
       - name: Writing secure dynamic SQL
@@ -264,7 +264,7 @@
       href: sql/detect-changes-sqldependency.md
     - name: SqlCommand execution with a SqlNotificationRequest
       href: sql/sqlcommand-execution-sqlnotificationrequest.md
-  - name: SqlClient support for high availability, disaster recovery
+  - name: High availability and disaster recovery
     href: sql/sqlclient-support-high-availability-disaster-recovery.md
 - name: SQL Server features
   items:
@@ -281,7 +281,7 @@
       href: sql/context-connection.md
     - name: Snapshot isolation in SQL Server
       href: sql/snapshot-isolation-sql-server.md
-    - name: SqlClient support for LocalDB
+    - name: LocalDB and local development
       href: sql/sqlclient-support-localdb.md
     - name: Data Discovery and Classification in SqlClient
       href: sql/data-classification.md

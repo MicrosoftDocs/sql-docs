@@ -3,7 +3,7 @@ title: Connect to the SQL Server Database Engine
 description: Learn how to connect to the Database Engine used by SQL Server and Azure SQL services
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/25/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -31,10 +31,10 @@ The following table describes some of the more common client tools.
 | **[SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms)** | GUI | Windows |
 | **[MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md)** | GUI | Windows, macOS, Linux |
 | **[sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)** | CLI | Windows, macOS, Linux |
-| **[bcp](../tools/bcp-utility.md)** | CLI | Windows, macOS, Linux |
+| **[bcp](../tools/bcp/bcp-utility.md)** | CLI | Windows, macOS, Linux |
 
 > [!NOTE]  
-> Client tools include at least one client library. For more information about connecting with a client library, see [Connection modules for Microsoft SQL Database](../connect/sql-connection-libraries.md).
+> Client tools include at least one client library. For more information, see [Microsoft SQL drivers and frameworks](../connect/sql-connection-libraries.md).
 
 ## Connection options
 
@@ -53,7 +53,7 @@ The protocol and port are optional because they have default values. Depending o
 | --- | --- | --- | --- |
 | **Protocol** | `tcp` (TCP/IP), `np` (named pipes), or `lpc` (shared memory). | `np` is the default when connecting to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].<br /><br />`tcp` is the default when connecting to Azure SQL services. | **Protocol** is optional, and is frequently excluded when connecting to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on the same computer as the client tool.<br /><br />For more information, see [Network protocol considerations](#network-protocol-considerations) in the next section. |
 | **Instance** | The name of the server or instance. For example, `MyServer` or `MyServer\MyInstance`. | `localhost` | If the [!INCLUDE [ssde-md](../includes/ssde-md.md)] is located on the same computer as the client tool, you might be able to connect using `localhost`, `127.0.0.1`, or even `.` (a single period).<br /><br />If you're connecting to a named instance, you must specify the server name and the instance name, separated by a slash. For example, `MyServer\MyInstance`. A named instance on the local machine is specified by `.\MyInstance`. [!INCLUDE [ssexpress-md](../includes/ssexpress-md.md)] uses `MyServer\SQLEXPRESS`. |
-| **Port** | Any TCP port. | `1433` | The default TCP port for connecting to the default instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is `1433`. However, your infrastructure team might configure custom ports.<br /><br />[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, including [!INCLUDE [ssexpress-md](../includes/ssexpress-md.md)] edition, can be configured as a named instance and might also have a custom port.<br /><br />For connecting to Azure SQL services, see the [Connect to Azure SQL](#connect-to-azure-sql) section.<br /><br />For more information about custom ports with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
+| **Port** | Any TCP port. | `1433` | The default TCP port for connecting to the default instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is `1433`. However, your infrastructure team might configure custom ports.<br /><br />[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows, including [!INCLUDE [ssexpress-md](../includes/ssexpress-md.md)] edition, can be configured as a named instance and might also have a custom port.<br /><br />For connecting to Azure SQL services, see the [Connect to Azure SQL](#connect-to-azure-sql) section.<br /><br />For more information about custom ports with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [SQL Server Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager.md). |
 
 ## Network protocol considerations
 

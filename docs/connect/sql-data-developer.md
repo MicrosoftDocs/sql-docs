@@ -3,7 +3,7 @@ title: "SQL Data Developer"
 description: "Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud."
 author: David-Engel
 ms.author: davidengel
-ms.date: 02/11/2025
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -26,7 +26,7 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [SQL Server Management Tools with SSMS](/ssms/sql-server-management-studio-ssms): Use SQL Server Management Studio (SSMS) on Windows to configure, monitor, and administer instances of SQL Server.
 
 ## SQL Data access
-* [SQL Client Drivers](sql-connection-libraries.md):  Use SQL drivers to connect, query, update, insert, or delete data from a SQL database.
+* [Microsoft SQL drivers and frameworks](sql-connection-libraries.md): Use SQL drivers and frameworks to connect, query, update, insert, or delete data from a SQL database.
 * [Entity Framework](/ef/): Use the  Entity Framework to easily access databases using LINQ, with direct access to SQL Server and the option to control the mapping between an Entity Data Model (EDM) and raw relational structures. 
 * [Windows Communication Foundation (WCF)](/dotnet/framework/wcf/): Use  Data Services for a near-turnkey solution to easily create and consume OData services on both the web and intranet
 * [Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10)): Use the  Sync Framework to enable offline access to any data type, any data store, any transfer protocol, and any network topology.

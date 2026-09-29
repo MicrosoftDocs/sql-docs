@@ -3,8 +3,8 @@ title: Troubleshoot mssql-django
 description: Diagnose and resolve common issues when using the mssql-django Django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/03/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -15,11 +15,13 @@ ai-usage: ai-assisted
 
 Diagnose and resolve common issues with the `mssql-django` backend for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 
+`mssql-django` 2.0 supports the default pyodbc driver path and an opt-in mssql-python driver path. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
+
 ## Connection issues
 
 This section covers the most common connection errors and how to resolve them.
 
-### ODBC driver not found
+### ODBC driver not found on the pyodbc path
 
 **Symptoms**:
 
@@ -37,7 +39,7 @@ Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 
 
 - **ODBC driver not installed**
 
-  Install the Microsoft ODBC Driver for SQL Server. For download links, see [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
+  Install the Microsoft ODBC Driver for SQL Server when you use the default pyodbc path. For download links, see [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md). The mssql-python path doesn't use an externally installed ODBC driver.
 
 - **Multiple driver versions installed**
 
@@ -47,10 +49,10 @@ Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 
   DATABASES = {
       "default": {
           "ENGINE": "mssql",
-          "NAME": "<your-database>",
-          "USER": "<your-username>",
-          "PASSWORD": "<your-password>",
-          "HOST": "<your-server>",
+          "NAME": "<database>",
+          "USER": "<user_id>",
+          "PASSWORD": "<password>",
+          "HOST": "<server>",
           "PORT": "1433",
           "OPTIONS": {
               "driver": "ODBC Driver 17 for SQL Server",
@@ -71,6 +73,62 @@ Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 
 
   - On Linux/macOS, run `odbcinst -q -d`.
   - On Windows, check **ODBC Data Sources** in **Administrative Tools**.
+
+### mssql-python rejects a connection option
+
+**Symptoms**:
+
+An alias that sets `"python_driver": "mssql_python"` fails during connection setup after you move pyodbc connection-string keywords into `OPTIONS["extra_params"]`, with one of these errors:
+
+```output
+mssql_python.exceptions.ConnectionStringParseError: Connection string parsing failed:
+  Unknown keyword 'longasmax' is not recognized
+```
+
+```output
+mssql_python.exceptions.ConnectionStringParseError: Connection string parsing failed:
+  Reserved keyword 'driver' is controlled by the driver and cannot be specified by the user
+```
+
+The keyword name in the message is lowercased, so a keyword you wrote as `LongAsMax` appears as `longasmax`. `ConnectionStringParseError` isn't part of the DB-API exception hierarchy, so Django doesn't rewrap it as a `django.db.utils` error.
+
+**Possible causes and solutions**:
+
+- **pyodbc-only keyword in `extra_params`**
+
+  The mssql-python path validates `extra_params` against an allow list. `DRIVER` and `APP` are reserved for the driver and produce the `Reserved keyword` form. `DSN`, `SERVERNAME`, `MARS_Connection`, and pyodbc-only keywords such as `LongAsMax`, `ColumnEncryption`, `WSID`, `AnsiNPW`, `QuotedId`, `Regional`, `UseFMTONLY`, `Current Language`, `Network Library`, `Description`, and `Connect Timeout` aren't in the allow list and produce the `Unknown keyword` form. Remove the keyword, or use the default pyodbc path for an alias that needs that ODBC option.
+
+- **Driver option expected to control mssql-python**
+
+  The mssql-python path ignores `driver`, `dsn`, `host_is_server`, and `unicode_results`. `HOST` and `PORT` become `SERVER=<server>,<port>`, and an empty `HOST` becomes `localhost`.
+
+### mssql-python dependency is too old
+
+**Symptoms**:
+
+An alias that sets `"python_driver": "mssql_python"` fails at connection setup with one of these errors:
+
+```output
+django.core.exceptions.ImproperlyConfigured: mssql-python 1.15.0 or newer is required; you have 1.14.0
+```
+
+```output
+django.core.exceptions.ImproperlyConfigured: The 'python_driver' connection option requests mssql-python, but the module could not be imported: No module named 'mssql_python'. Install it with 'pip install "mssql-python>=1.15.0"'.
+```
+
+The second form means the `mssql_python` module isn't importable at all.
+
+**Solution**: Install `mssql-python>=1.15.0`. `mssql-django` 2.0 declares `mssql-python>=1.15.0`, so a normal `pip install mssql-django` resolves a compatible version on supported platforms.
+
+### Driver 17 fallback doesn't apply to mssql-python
+
+**Symptoms**:
+
+An alias that sets `"python_driver": "mssql_python"` still fails even though Microsoft ODBC Driver 17 for SQL Server is installed.
+
+There's no distinctive error for this case. The mssql-python path ignores the `driver` option silently, so the connection fails with whatever underlying error applies. If you moved the driver name into `extra_params` instead, you get a `Reserved keyword 'driver'` error. See [mssql-python rejects a connection option](#mssql-python-rejects-a-connection-option).
+
+**Solution**: Use the default pyodbc path if the alias must use an externally installed ODBC Driver 17. The mssql-python path doesn't fall back to Driver 17, and it ignores the `driver` option. That path doesn't need a separately installed ODBC driver.
 
 ### Connection refused
 
@@ -103,7 +161,13 @@ django.db.utils.OperationalError: ('08001', '[08001] ... TCP Provider: Error cod
 **Symptoms**:
 
 ```output
-django.db.utils.OperationalError: ('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<username>'.")
+django.db.utils.OperationalError: ('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<user_id>'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<user_id>'. (18456)")
+```
+
+On the mssql-python path:
+
+```output
+django.db.utils.OperationalError: Driver Error: Invalid authorization specification; DDBC Error: [Microsoft][SQL Server]Login failed for user '<user_id>'.
 ```
 
 **Possible causes and solutions**:
@@ -111,6 +175,12 @@ django.db.utils.OperationalError: ('28000', "[28000] [Microsoft][ODBC Driver 18 
 - **Incorrect credentials**
 
   Verify the username and password.
+
+- **The database in `NAME` doesn't exist**
+
+  On SQL Server, the mssql-python path raises the same `OperationalError` with the same message as a bad password, so the message alone doesn't tell you which one you hit. Confirm that the database exists before you change credentials. Point `NAME` at `master` to test the login on its own: if that connects, the credentials are correct and the database is the problem. The pyodbc path reports this case separately as `Cannot open database "<database>" requested by the login. The login failed. (4060)`.
+
+  Azure SQL Database reports this case differently. The mssql-python path raises `Driver Error: General error; DDBC Error: [Microsoft][SQL Server]Cannot open server "<server>" requested by the login.  The login failed.` The message names the server, but the server name is fine. Check `NAME` instead.
 
 - **User doesn't exist**
 
@@ -169,7 +239,7 @@ IndexError: Replacement index N out of range for positional args tuple
 
 The query works without the `GROUP BY` clause and works without the escaped `%%` literal, but fails when both are present alongside a real `%s` parameter.
 
-**Solution**: Upgrade to `mssql-django` 1.7.4 or later. Version 1.7.4 narrows the placeholder-rewriting regex to `%%` and `%s` only, so escaped `%%` literals are preserved verbatim and no phantom placeholders are injected.
+**Solution**: Upgrade to a current `mssql-django` release. The backend narrows the placeholder-rewriting regex to `%%` and `%s` only, so escaped `%%` literals are preserved verbatim and no phantom placeholders are injected.
 
 ### `NotImplementedError` for `IntegerChoices` in raw GROUP BY queries
 
@@ -181,7 +251,44 @@ NotImplementedError: Not supported type <enum '...'> (StatusChoices.IN_PROGRESS)
 
 The same enum value works in ORM queries and in raw queries without `GROUP BY`, but fails when passed as a parameter to a raw query that contains a `GROUP BY` clause.
 
-**Solution**: Upgrade to `mssql-django` 1.7.4 or later. Version 1.7.4 uses `isinstance` for parameter type checks in the `GROUP BY` path, so `IntegerChoices` (an `int` subclass) binds correctly. `bool` still binds `BIT`, and plain `int` is unchanged.
+**Solution**: Upgrade to a current `mssql-django` release. The backend uses `isinstance` for parameter type checks in the `GROUP BY` path, so `IntegerChoices` (an `int` subclass) binds correctly. `bool` still binds **bit**, and plain `int` is unchanged.
+
+## Regex lookup issues
+
+### `__regex` or `__iregex` returns no rows
+
+**Symptoms**: The query runs without error and returns an empty result set, even though rows match the pattern.
+
+```python
+Product.objects.filter(name__regex=r"^Widget \d+$")  # no rows, though "Widget 42" exists
+```
+
+**Cause**: `dbo.REGEXP_LIKE` ignores literal whitespace in the pattern. The pattern is matched as though it were `^Widget\d+$`, which no value containing a space can satisfy. Nothing raises, so the empty result looks like a data problem.
+
+**Solution**: Write whitespace as an escape or a character class:
+
+```python
+Product.objects.filter(name__regex=r"^Widget\s\d+$")
+Product.objects.filter(name__regex=r"^Widget[ ]\d+$")
+```
+
+### `Cannot find ... dbo.REGEXP_LIKE`
+
+**Symptoms**:
+
+```output
+django.db.utils.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot find either column "dbo" or the user-defined function or aggregate "dbo.REGEXP_LIKE", or the name is ambiguous. (4121) (SQLExecDirectW)')
+```
+
+On the `mssql-python` path:
+
+```output
+django.db.utils.ProgrammingError: Driver Error: Syntax error or access violation; DDBC Error: [Microsoft][SQL Server]Cannot find either column "dbo" or the user-defined function or aggregate "dbo.REGEXP_LIKE", or the name is ambiguous.
+```
+
+**Cause**: The CLR assembly isn't installed in the database you're querying. It's installed per database, not per server.
+
+**Solution**: Run `python manage.py install_regex_clr <database>` against that database. Rerun it after dropping and recreating a database. See [Set up regex lookups](limitations.md#set-up-regex-lookups).
 
 ## Date and time issues
 
@@ -191,7 +298,7 @@ The same enum value works in ORM queries and in raw queries without `GROUP BY`, 
 
 Timestamps written with Django `Now()`, `auto_now`, or `auto_now_add` are shifted when the SQL Server host time zone isn't UTC.
 
-**Solution**: Upgrade to `mssql-django` 1.7.2 or later. Version 1.7.2 fixes time zone-aware `Now()` SQL generation and **datetimeoffset** offset handling.
+**Solution**: Upgrade to a current `mssql-django` release. The backend generates time zone-aware `Now()` SQL, preserves **datetimeoffset** offsets, and reads time zone data through `zoneinfo` and `tzdata`.
 
 ### `AttributeError` when calling `.explain()`
 
@@ -201,7 +308,7 @@ Timestamps written with Django `Now()`, `auto_now`, or `auto_now_add` are shifte
 AttributeError: ... explain_format ...
 ```
 
-**Solution**: Upgrade to `mssql-django` 1.7.2 or later. Version 1.7.2 fixes compiler compatibility for Django 4.0 and later explain metadata.
+**Solution**: Upgrade to a current `mssql-django` release. The backend handles explain metadata for every supported Django version.
 
 ### Cannot alter AutoField
 
@@ -225,7 +332,7 @@ django.db.utils.ProgrammingError: ... could not drop constraint ...
 
 ## Encoding issues
 
-Encoding errors typically occur when `pyodbc` misinterprets character data from SQL Server.
+Encoding errors typically occur on the pyodbc path when `pyodbc` misinterprets character data from SQL Server.
 
 ### Unicode encoding errors
 
@@ -235,7 +342,7 @@ Encoding errors typically occur when `pyodbc` misinterprets character data from 
 UnicodeDecodeError: 'utf-8' codec can't decode byte ...
 ```
 
-**Solution**: Configure `pyodbc` encoding in the `OPTIONS` dictionary:
+**Solution**: Configure `pyodbc` encoding in the `OPTIONS` dictionary. The mssql-python path ignores `unicode_results`.
 
 ```python
 "OPTIONS": {
@@ -246,7 +353,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte ...
 
 ## FreeTDS issues
 
-FreeTDS requires specific configuration that differs from the Microsoft ODBC driver.
+FreeTDS requires pyodbc-specific configuration that differs from the Microsoft ODBC driver.
 
 ### host_is_server error
 
@@ -360,7 +467,7 @@ When a migration fails partway through, use this rollback sequence to return to 
 
 ## Docker and container issues
 
-Container images require explicit ODBC driver installation and build dependencies.
+Container images require explicit ODBC driver installation and build dependencies when you use the default pyodbc path. The mssql-python path has no separate ODBC driver install, but it still needs the unixODBC runtime, because the backend imports pyodbc when Django loads it.
 
 ### ODBC driver not found in container
 
@@ -374,11 +481,53 @@ Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 
 
 - **ODBC driver not installed in the container image**
 
-  Slim or Alpine base images don't include the ODBC driver. Add the Microsoft APT repository and install `msodbcsql18` in your Dockerfile. See [Deploy to App Service](deploy-azure-app-service.md#deploy-to-app-service) for a complete Dockerfile example.
+  Slim or Alpine base images don't include the ODBC driver. Add the Microsoft APT repository and install `msodbcsql18` in your Dockerfile when you use pyodbc. See [Deploy to App Service](deploy-azure-app-service.md#deploy-to-app-service) for a complete Dockerfile example.
 
 - **Missing `unixodbc-dev` package**
 
   The `pyodbc` wheel links against `libodbc.so`. Install `unixodbc-dev` (Debian/Ubuntu) or `unixODBC-devel` (RHEL/Fedora) before installing Python packages.
+
+- **`apt-get autoremove` stripped `libgssapi-krb5-2` after the driver install**
+
+  `msodbcsql18` loads `libgssapi-krb5-2` at run time without declaring it as a dependency. The library usually arrives as a dependency of `curl`, so purging `curl` with `--auto-remove`, or running `apt-get autoremove` afterward, removes it. The image builds clean and every connection then fails. Install `libgssapi-krb5-2` explicitly, and don't autoremove after the driver install.
+
+### Driver 17 reported missing when you installed version 18
+
+**Symptoms**:
+
+```output
+Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)")
+```
+
+The error names version 17, but `odbcinst -q -d` shows version 18 registered and `dpkg -l msodbcsql18` shows it installed.
+
+**Cause**: Version 18 is registered but fails to load, so mssql-django falls back to version 17, which isn't installed. The fallback reports the driver it tried second, not the one that failed.
+
+**Solution**: Install `libgssapi-krb5-2` and rebuild. See the preceding autoremove note for how the library goes missing.
+
+### Error loading pyodbc module in a container
+
+**Symptoms**:
+
+```output
+django.core.exceptions.ImproperlyConfigured: Error loading pyodbc module: libodbc.so.2: cannot open shared object file: No such file or directory
+```
+
+**Cause**: The image has no unixODBC runtime. mssql-django imports pyodbc when Django loads the backend, so this error happens on the mssql-python path too, before any connection is attempted.
+
+**Solution**: Install `unixodbc` (or `unixodbc-dev`).
+
+### mssql-python driver fails to load
+
+**Symptoms**:
+
+```output
+django.db.utils.OperationalError: Driver Error: Connection operation failed; DDBC Error: Failed to load the driver.
+```
+
+**Cause**: The driver that ships with `mssql-python` needs the Kerberos runtime libraries, which slim base images don't include.
+
+**Solution**: Install `libkrb5-3` and `libgssapi-krb5-2`.
 
 ### pyodbc fails to build on slim images
 
@@ -419,8 +568,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg \
     && curl -fsSL https://packages.microsoft.com/config/debian/12/prod.list > /etc/apt/sources.list.d/mssql-release.list \
     && apt-get update \
-    && ACCEPT_EULA=Y apt-get install -y --no-install-recommends msodbcsql18 \
-    && apt-get purge -y --auto-remove curl gnupg2 \
+    && ACCEPT_EULA=Y apt-get install -y --no-install-recommends msodbcsql18 libgssapi-krb5-2 \
+    && apt-get purge -y curl gnupg2 \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=builder /wheels /wheels
 RUN pip install --no-cache-dir /wheels/*

@@ -5,19 +5,20 @@ description: Links to Azure SQL Database quickstarts showing how to connect to a
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 01/14/2025
+ms.date: 09/21/2026
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: concept-article
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ms.custom: [sqldbrb=1, sfi-image-nochange]
+ai-usage: ai-assisted
 ---
 
 # Azure SQL Database and Azure SQL Managed Instance connect and query articles
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Layer Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
+This article links to examples that show how to connect to and query Azure SQL Database and Azure SQL Managed Instance. For Transport Layer Security (TLS) recommendations, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
 
 Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for a brief connect and query overview:
 
@@ -32,8 +33,8 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 | [SQL Server Management Studio (SSMS)](connect-query-ssms.md) | This quickstart demonstrates how to use SSMS to connect to a database, and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
 | [Azure portal](connect-query-portal.md) | This quickstart demonstrates how to use the [query editor](query-editor.md) to connect to a database (Azure SQL Database only), and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
 | [Visual Studio Code](connect-query-vscode.md) | This quickstart demonstrates how to use Visual Studio Code to connect to a database, and then use Transact-SQL statements to query, insert, update, and delete data in the database. |
-| [.NET with Visual Studio](connect-query-dotnet-visual-studio.md) | This quickstart demonstrates how to use the .NET framework to create a C# program with Visual Studio to connect to a database and use Transact-SQL statements to query data. |
-| [.NET core](connect-query-dotnet-core.md) | This quickstart demonstrates how to use .NET Core on Windows/Linux/macOS to create a C# program to connect to a database and use Transact-SQL statements to query data. |
+| [.NET with Visual Studio](connect-query-dotnet-visual-studio.md) | This quickstart demonstrates how to use .NET and C# with Visual Studio to connect to a database and query data with Transact-SQL statements. |
+| [.NET](connect-query-dotnet-core.md) | This quickstart demonstrates how to use .NET on Windows, Linux, or macOS to connect to a database and query data with Transact-SQL statements. |
 | [Go](connect-query-go.md) | This quickstart demonstrates how to use Go to connect to a database. Transact-SQL statements to query and modify data are also demonstrated. |
 | [Java](connect-query-java.md) | This quickstart demonstrates how to use Java to connect to a database and then use Transact-SQL statements to query data. |
 | [Node.js](connect-query-nodejs.md) | This quickstart demonstrates how to use Node.js to create a program to connect to a database and use Transact-SQL statements to query data. |
@@ -79,43 +80,18 @@ Standard (PCI-DSS).
 
 Non-Microsoft drivers might not use TLS by default. This can be a factor when connecting to Azure SQL Database or Azure SQL Managed Instance. Applications with embedded drivers might not allow you to control these connection settings. We recommend that you examine the security of such drivers and applications before using them on systems that interact with sensitive data.
 
-## Libraries
+<a id="libraries"></a>
+<a id="data-access-frameworks"></a>
 
-You can use various libraries and frameworks to connect to Azure SQL Database or Azure SQL Managed Instance. You can then build an app by using SQL Server on Linux or Windows, or a SQL Server container on Linux.
+## Drivers and frameworks
 
-The following table lists connectivity libraries or *drivers* that client applications can use from various languages to connect to and use SQL Server running on-premises or in the cloud. You can use them on Linux, Windows, or in containers, and use them to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-
-| Language | Platform | Additional resources | Download | Get started |
-| :--- | :--- | :--- | :--- | :--- |
-| **C#** | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server and Azure SQL Database](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) | |
-| **C++** | Windows, Linux, macOS | [Microsoft ODBC driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | [Download](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | |
-| **Go** | Windows, Linux, macOS | [Microsoft Go driver for SQL Server](/sql/connect/golang/microsoft-go-mssqldb-driver) | [Install](/sql/connect/golang/microsoft-go-mssqldb-driver) | [Get started](connect-query-go.md) |
-| **Java** | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) | |
-| **Node.js** | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) | |
-| **PHP** | Windows, Linux, macOS | [Microsoft Drivers for PHP for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) | |
-| **Python** | Windows, Linux, macOS | [mssql-python](/sql/connect/python/mssql-python/python-sql-driver-mssql-python) | [Install](/sql/connect/python/mssql-python/python-sql-driver-mssql-python-quickstart#install-the-mssql-python-package) | |
-| **Ruby** | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) | |
-
-### Data-access frameworks
-
-The following table lists examples of object-relational mapping (ORM) frameworks and web frameworks that client applications can use with SQL Server, Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics. You can use the frameworks on Linux, Windows, or in containers.
-
-| Language | Platform | ORM |
-| :--- | :--- | :--- |
-| **C#** | Windows, Linux, macOS | [Entity Framework](/ef); [Entity Framework Core](/ef/core/index) |
-| **Go** | Windows, Linux, macOS | [GORM](https://gorm.io/) |
-| **Java** | Windows, Linux, macOS | [Hibernate ORM](https://hibernate.org/orm) |
-| **Node.js** | Windows, Linux, macOS | [Sequelize ORM](https://sequelize.org/) |
-| **PHP** | Windows, Linux, macOS | [Laravel (Eloquent)](https://laravel.com/docs/eloquent); [Doctrine](https://www.doctrine-project.org/projects/orm.html) |
-| **Python** | Windows, Linux, macOS | [Django](https://www.djangoproject.com/) |
-| **Ruby** | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |
+Use the [Microsoft SQL drivers and frameworks](/sql/connect/sql-connection-libraries/) article to choose a driver or provider and, when applicable, a framework or data access library. To build an application that connects to Azure SQL Database or Azure SQL Managed Instance, use the language quickstarts in this article.
 
 ## Related content
 
 - [Azure SQL Database and Azure Synapse Analytics connectivity architecture](connectivity-architecture.md)
-- [SQL Server drivers](/sql/connect/sql-connection-libraries/)
 - [Quickstart: Use .NET (C#) to query a database](connect-query-dotnet-core.md)
-- [Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance](connect-query-go.md)
+- [Quickstart: Use Go to query a database in Azure SQL Database or Azure SQL Managed Instance](connect-query-go.md)
 - [Quickstart: Use Node.js to query a database in Azure SQL Database or Azure SQL Managed Instance](connect-query-nodejs.md)
 - [Quickstart: Use PHP to query a database in Azure SQL Database or Azure SQL Managed Instance](connect-query-php.md)
 - [Quickstart: Use Python to query a database in Azure SQL Database or Azure SQL Managed Instance](connect-query-python.md)

@@ -3,8 +3,8 @@ title: Limitations and Unsupported Features in mssql-django
 description: Limitations and unsupported features of the mssql-django Django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/27/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -33,6 +33,7 @@ The following Django features aren't supported or have limited support with the 
 | Annotate/exists in `ORDER BY` | Not supported | Using annotate or exists expressions in `order_by` might not work. |
 | Right-hand power and datetime arithmetic | Not supported | Right-hand power operations (for example, `F('value') ** 2` works but `2 ** F('value')` fails) and division with `timedelta` aren't supported. |
 | Time zones and timedeltas | Limited | Time zones and timedeltas aren't fully supported. See [Time zone support in mssql-django](timezone-support.md). |
+| `QuerySet.iterator()` without MARS | Limited | The mssql-python path doesn't enable Multiple Active Result Sets (MARS). On the pyodbc path, MARS is enabled by default with a Microsoft ODBC driver on Windows, and `MARS_Connection` in `extra_params` is honored case-insensitively. When MARS is off, `QuerySet.iterator()` buffers the whole result in memory before yielding. `chunk_size` doesn't change this behavior. |
 | `NthValue` window function | Not supported | SQL Server doesn't support `NTH_VALUE()`. Use `FIRST_VALUE`, `LAST_VALUE`, or a subquery. |
 | `ignore_conflicts` in `bulk_create` | Not supported | `bulk_create(objs, ignore_conflicts=True)` isn't supported. SQL Server has no equivalent to PostgreSQL's `ON CONFLICT DO NOTHING`. |
 | JSONField `contains` lookup | Not supported | Use key-path lookups instead (for example, `filter(metadata__color="blue")`). See [JSONField limitations](#jsonfield-limitations). |
@@ -90,24 +91,15 @@ For more information, see [Test Django apps with SQL Server](testing.md).
 
 | mssql-django version | Notes |
 | --- | --- |
-| 1.8.0 | Django 6.1 support. The query compiler uses `quote_name` on Django 6.1. Foreign key introspection returns the ON DELETE rule. Database-level referential actions and bitwise aggregates aren't supported. |
-| 1.7.4 | Fixed `IndexError` on `GROUP BY` queries that mix escaped `%%` literals with real params. Fixed `NotImplementedError` for `IntegerChoices` params in raw `GROUP BY` queries. |
-| 1.7.3 | Fixed `FA001` for `Authentication=` modes other than `ActiveDirectoryMsi`. Fixed `KeyError` on subclassed `DatabaseWrapper` (regression from 1.7.1). |
-| 1.7.2 | Fixed time zone handling for **datetimeoffset** and `Now()` with `USE_TZ=True`. Fixed `.explain()` compatibility for Django 4.0 and later. |
-| 1.7.1 | SQL database in Fabric (EngineEdition 12) fix. Descending index `AlterField` fix. |
-| 1.7 | ODBC Driver 18 is the default. Django 6.0, Python 3.14, SQL Server 2025 support added. |
-| 1.6 | Django 5.1 and 5.2 support. Enhanced JSON functionality. |
-| 1.5 | Bug fixes for AutoField, parameter formatting, and schema queries. |
-| 1.4 | Django 5.0 support. `db_comment` support. |
-| 1.3 | Django 4.2 support. |
-| 1.2 | Django 4.1 support. Time zone support. `return_rows_bulk_insert` option. SQL Server 2022 support. |
-| 1.1 | Django 3.2 and 4.0 support. |
+| 2.0 | Supports Python 3.10 through 3.14, Django 5.2, 6.0, and 6.1, SQL Server 2017, 2019, 2022, and 2025, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Adds the mssql-python driver path while keeping pyodbc as the default. For more information, see [Select the database driver for mssql-django](select-database-driver.md). |
+| 1.8.0 | Use this version for projects that require Python 3.8, Python 3.9, or a Django version earlier than 5.2. |
+
+The tested mssql-django 2.0 combinations are Django 5.2 with Python 3.10 through 3.13, and Django 6.0 or 6.1 with Python 3.12 through 3.14. If the backend connects to an unrecognized newer SQL Server major version, it uses the latest capability set it knows instead of failing version validation. This behavior doesn't declare untested features supported.
 
 ## Django version-specific notes
 
 | Django version | Notes |
 | --- | --- |
-| 5.1 | `inspectdb` can inspect tables with composite primary keys, but it doesn't generate complete model definitions for them. |
 | 5.2 | `CompositePrimaryKey` support is partial. `inspectdb` still requires manual fixes, tuple comparison against subqueries requires Django 5.2.4 and later versions, and some migration plus JSONField bulk/CASE WHEN update paths still have test exclusions. For more information, see the [GitHub repository](https://github.com/microsoft/mssql-django). |
 | 6.0 | Requires Python 3.12 and later versions. All 5.2 limitations apply. The backend handles all 6.0 API changes transparently. |
 | 6.1 | Requires Python 3.12 and later versions. All 6.0 limitations apply. Requires `mssql-django` 1.8.0 and later versions. Database-level referential actions (`DB_CASCADE`, `DB_SET_NULL`, `DB_SET_DEFAULT`) and bitwise aggregates (`BitAnd`, `BitOr`, `BitXor`) aren't supported. |
@@ -127,13 +119,13 @@ The `mssql-django` backend supports Django's `__regex` and `__iregex` lookups, b
 Run the management command, passing your database name:
 
 ```bash
-python manage.py install_regex_clr <your-database-name>
+python manage.py install_regex_clr <database>
 ```
 
 This command performs the following steps:
 
 1. Enables CLR on the server (`sp_configure 'clr enabled', 1`) if not already enabled.
-1. Sets `clr strict security` to `0` (required for `SAFE` assemblies on SQL Server 2017+).
+1. Sets `clr strict security` to `0` (required for `SAFE` assemblies on SQL Server 2017 and later versions).
 1. Creates the `regex_clr` assembly from the bundled DLL.
 1. Creates the `dbo.REGEXP_LIKE` scalar function.
 
@@ -146,13 +138,16 @@ After installing the assembly, use `__regex` and `__iregex` in querysets:
 
 ```python
 # Case-sensitive regex
-products = Product.objects.filter(name__regex=r"^Widget \d+$")
+products = Product.objects.filter(name__regex=r"^Widget\s\d+$")
 
 # Case-insensitive regex
-products = Product.objects.filter(name__iregex=r"^widget \d+$")
+products = Product.objects.filter(name__iregex=r"^widget\s\d+$")
 ```
 
 The backend translates these lookups to `dbo.REGEXP_LIKE(column, pattern, case_flag) = 1`.
+
+> [!IMPORTANT]  
+> `dbo.REGEXP_LIKE` ignores literal whitespace in the pattern. A pattern such as `^Widget \d+$` matches as though it were `^Widget\d+$`, so it returns no rows against the value `Widget 42`. Write spaces as `\s` or as a character class such as `[ ]`. Nothing raises, so the empty result looks like a data problem.
 
 > [!NOTE]  
 > You must run the `install_regex_clr` command once per database. If the database is dropped and recreated (for example, during testing), run the command again.

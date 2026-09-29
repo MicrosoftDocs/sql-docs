@@ -3,8 +3,8 @@ title: Retry Logic and Connection Resilience with mssql-django
 description: Implement retry logic for transient database errors in Django applications using the mssql-django backend with SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -262,9 +262,9 @@ DATABASES = {
 - `CONN_MAX_AGE=600`: Reuse connections for 10 minutes. Good balance for most web applications.
 - `CONN_MAX_AGE=None`: Keep connections open indefinitely. Use only with a retry mechanism for stale connections.
 
-## CONN_HEALTH_CHECKS (Django 4.1 and later)
+## CONN_HEALTH_CHECKS
 
-Django 4.1 introduced `CONN_HEALTH_CHECKS`, which validates a reused connection before each request. Enable it alongside `CONN_MAX_AGE` to detect stale connections automatically:
+`CONN_HEALTH_CHECKS` validates a reused connection before each request. Enable it alongside `CONN_MAX_AGE` to detect stale connections automatically:
 
 ```python
 DATABASES = {
@@ -291,7 +291,7 @@ With health checks enabled, Django issues a lightweight validation query before 
 - **Log every retry.** Retries that succeed silently can hide performance problems. Log at `WARNING` level so you can track frequency.
 - **Don't retry nontransient errors.** Authentication failures, permission errors, and syntax errors don't benefit from retries.
 - **Retry the entire transaction.** Wrap `transaction.atomic()` inside the retry logic, not the other way around.
-- **Enable `CONN_HEALTH_CHECKS`** (Django 4.1 and later) for web applications that use `CONN_MAX_AGE`.
+- **Enable `CONN_HEALTH_CHECKS`** for web applications that use `CONN_MAX_AGE`.
 
 ## Related content
 

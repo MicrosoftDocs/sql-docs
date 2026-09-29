@@ -1802,7 +1802,7 @@
         href: /cli/azure/azure-cli-reference-for-sql
       - name: T-SQL
         href: /sql/t-sql/language-reference
-      - name: SQL Server Drivers
+      - name: Microsoft SQL drivers and frameworks
         href: /sql/connect/sql-connection-libraries
       - name: REST
         href: /rest/api/
@@ -2020,9 +2020,9 @@
     - name: Resource Manager templates for SQL
       displayName: ARM
       href: /azure/templates/microsoft.sql/allversions
-  - name: SQL Server drivers
+  - name: Microsoft SQL drivers and frameworks
     items:
-    - name: Connection drivers
+    - name: Overview
       href: /sql/connect/sql-connection-libraries
     - name: ADO.NET
       href: /sql/connect/ado-net/microsoft-ado-net-sql-server?view=sql-server-ver15&preserve-view=true

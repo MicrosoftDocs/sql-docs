@@ -2,7 +2,7 @@
   href: ../connect/index.yml
 - name: Welcome to SQL Server >
   href: ../sql-server/index.yml
-- name: SQL Server drivers
+- name: Microsoft SQL drivers and frameworks
   href: ../connect/sql-connection-libraries.md
 - name: Driver feature support matrix
   href: ../connect/driver-feature-matrix.md

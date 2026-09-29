@@ -38,7 +38,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  If the provided index value has a numeric data type other than **int**, then the value is implicitly converted to an integer. If the index value exceeds the bounds of the array of values, then CHOOSE returns null.  
   
 #### *val_1 ... val_n*  
- List of comma separated values of any data type.  
+ List of comma separated values of any data type. There is a limit of 3925 parameters.
   
 ## Return Types  
  Returns the data type with the highest precedence from the set of types passed to the function. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  

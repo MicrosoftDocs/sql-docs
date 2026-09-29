@@ -309,6 +309,19 @@ For an availability group replica to qualify for passive disaster recovery licen
 
 - No instances of [associated services](#manage-ssxs) can be running in the same OSE. For example, if SQL Server Integration Services is running on the machine, even if all engine instances are passive, the Integration Services instance will be billed.
 
+
+### Associated SQL Server services on HADR servers
+
+SQL Server associated services, such as SQL Server Integration Services (SSIS), are evaluated separately from the SQL Server Database Engine for licensing and billing. **Configuring the Database Engine as an HADR or passive instance does not automatically make associated SQL Server services on that server passive.**
+
+For **pay\-as\-you\-go billing**, the running state of the service is considered. If an associated service isn't running, it doesn't participate in regular pay\-as\-you\-go usage generation.
+
+For **Extended Security Updates (ESU)**, running state isn't used to exclude an otherwise eligible associated service from billing. Therefore, an associated service such as SSIS can generate ESU charges even when the service isn't running.
+
+When multiple SQL Server versions are installed on the same server, each associated service is evaluated according to its own version and applicable eligibility requirements. Don't infer the licensing or ESU eligibility of an associated service solely from the version or HADR status of the Database Engine.
+
+
+
 ### Limitations
 
 The current passive instance detection logic has the following limitations:

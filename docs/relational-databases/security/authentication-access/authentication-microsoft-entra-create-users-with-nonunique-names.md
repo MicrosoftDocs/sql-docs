@@ -5,7 +5,7 @@ description: Learn how to mitigate naming conflicts for Microsoft Entra logins a
 author: tameikal-msft
 ms.author: talawren
 ms.reviewer: vanto, mathoma
-ms.date: 10/30/2025
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: concept-article
@@ -43,7 +43,7 @@ CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
 
 ## The `WITH OBJECT_ID` extension
 
-The *duplicate display name* error occurs because Microsoft Entra ID allows duplicate display names for [Microsoft Entra application (service principal)](../../../connect/sql-connection-libraries.md), while SQL Server and Azure SQL require unique names to create Microsoft Entra logins and users. To mitigate this problem, the Data Definition Language (DDL) statement to create logins and users has been extended to include the Object ID of the Azure resource with the `WITH OBJECT_ID` clause.
+The *duplicate display name* error occurs because Microsoft Entra ID allows duplicate display names for [Microsoft Entra application and service principal objects](/entra/identity-platform/app-objects-and-service-principals), while SQL Server and Azure SQL require unique names to create Microsoft Entra logins and users. To mitigate this problem, the Data Definition Language (DDL) statement to create logins and users has been extended to include the Object ID of the Azure resource with the `WITH OBJECT_ID` clause.
 
 > [!NOTE]
 > Most nonunique display names in Microsoft Entra ID are related to service principals, though occasionally group names can also be nonunique. Microsoft Entra user principal names are unique, as two users can't have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.

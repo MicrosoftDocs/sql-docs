@@ -3,7 +3,7 @@ title: Transaction Management in mssql-django
 description: Configure transaction handling and isolation levels in Django applications using the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -3,8 +3,8 @@ title: Django Backend for SQL Server - mssql-django
 description: Overview and task hub for installing, configuring, querying, authenticating, deploying, and troubleshooting Django applications with the mssql-django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/27/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # Django backend for SQL Server - mssql-django
 
-`mssql-django` is Microsoft's Django database backend for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Set `ENGINE` to `"mssql"` in your Django `DATABASES` configuration to connect. The backend builds on [pyodbc](https://pypi.org/project/pyodbc/) and the [Microsoft ODBC Driver for SQL Server](../../odbc/microsoft-odbc-driver-for-sql-server.md), and supports Django 3.2 through 6.1, Python 3.8 through 3.14, and SQL Server 2016 through 2025.
+`mssql-django` is Microsoft's Django database backend for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Set `ENGINE` to `"mssql"` in your Django `DATABASES` configuration to connect. Version 2.0 supports Django 5.2 through 6.1, Python 3.10 through 3.14, and SQL Server 2017 through 2025. It connects through either [pyodbc](https://pypi.org/project/pyodbc/) with the [Microsoft ODBC Driver for SQL Server](../../odbc/microsoft-odbc-driver-for-sql-server.md), which is the default, or Microsoft's [mssql-python](../mssql-python/python-sql-driver-mssql-python.md) driver.
 
 ## Choose your starting point
 
@@ -242,8 +242,9 @@ For more information about each part of this configuration, see [Configuration r
 ## Key features
 
 - **Drop-in Django backend**: Set `ENGINE` to `"mssql"` and Django's ORM, migrations, admin, and management commands work against SQL Server.
-- **Built on pyodbc and ODBC Driver 18**: TLS-encrypted connections by default and broad platform support on Windows, Linux, and macOS.
-- **Wide version matrix**: Django 3.2 through 6.1, Python 3.8 through 3.14, and SQL Server 2016 through 2025.
+- **Support for mssql-python**: Choose Microsoft's `mssql-python` driver for any database alias and skip the separate ODBC driver installation. The default driver is `pyodbc` with an externally installed Microsoft ODBC Driver.
+- **Encrypted connections by default**: ODBC Driver 18 for SQL Server, the default on the `pyodbc` path, encrypts connections and validates the server certificate on Windows, Linux, and macOS.
+- **Current version matrix**: Django 5.2 through 6.1, Python 3.10 through 3.14, and SQL Server 2017 through 2025.
 - **Microsoft Entra ID authentication**: Passwordless connections with managed identity, service principal, interactive, and integrated flows via `extra_params`.
 - **Django migrations**: Schema migrations against SQL Server, including SQL Server-specific column types.
 - **JSONField support**: Native `JSONField` backed by the **nvarchar(max)** storage and Django lookups.
@@ -256,7 +257,7 @@ For more information about each part of this configuration, see [Configuration r
 
 | Article | Description |
 | --- | --- |
-| [Installation](installation.md) | Install `mssql-django` and the Microsoft ODBC Driver for SQL Server. |
+| [Installation](installation.md) | Install `mssql-django` and, for the default `pyodbc` path, the Microsoft ODBC Driver for SQL Server. |
 | [Quickstart: Connect Django to SQL Server](quickstart.md) | Connect a Django project to SQL Server and run your first migration. |
 
 ## Configure and connect
@@ -264,7 +265,8 @@ For more information about each part of this configuration, see [Configuration r
 | Article | Description |
 | --- | --- |
 | [Configuration reference](configuration-reference.md) | Full reference for the Django `DATABASES` dictionary with mssql-django. |
-| [Connection options](connection-options.md) | `OPTIONS`, `extra_params`, timeouts, and ODBC driver configuration. |
+| [Connection options](connection-options.md) | `OPTIONS`, `extra_params`, timeouts, MARS, and ODBC driver configuration. |
+| [Select the database driver](select-database-driver.md) | Opt a database alias into `mssql-python` instead of the default `pyodbc` driver. |
 | [Connection pooling](connection-pooling.md) | `CONN_MAX_AGE`, `CONN_HEALTH_CHECKS`, and external pool integration. |
 | [Retry logic and connection resilience](retry-logic.md) | Detect transient errors and retry connections and queries. |
 | [Microsoft Entra authentication](microsoft-entra-authentication.md) | Passwordless authentication with managed identity, service principal, interactive, and integrated flows. |

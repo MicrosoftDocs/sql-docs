@@ -9190,8 +9190,8 @@ items:
       items:
       - name: Overview
         href: linux/sql-server-linux-develop-overview.md
-      - name: Connectivity libraries
-        href: linux/sql-server-linux-develop-connectivity-libraries.md
+      - name: Microsoft SQL drivers and frameworks
+        href: /sql/connect/sql-connection-libraries
       - name: Use Visual Studio Code
         href: tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md
       - name: Use SSDT

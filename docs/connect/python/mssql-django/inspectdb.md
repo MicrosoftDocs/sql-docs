@@ -3,8 +3,8 @@ title: Reverse-Engineer Models with Inspectdb
 description: Generate Django models from existing SQL Server databases using the inspectdb management command with mssql-django.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -70,6 +70,8 @@ python manage.py inspectdb --schema "sales"
 ```
 
 This feature is useful for SQL Server databases that organize tables across multiple schemas.
+
+In `mssql-django` 2.0 and later versions, `inspectdb --schema` escapes single quotes in the schema name before it builds the Transact-SQL (T-SQL) metadata query. Schema names that contain a single quote no longer produce malformed T-SQL.
 
 ### Work with models from multiple schemas
 

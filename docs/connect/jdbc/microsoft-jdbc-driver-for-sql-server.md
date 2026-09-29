@@ -4,7 +4,7 @@ description: Task hub for connecting Java applications to SQL Server, Azure SQL,
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, vanto, davidengel, machavan, sunilbs
-ms.date: 09/17/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -253,4 +253,4 @@ To request a feature, open an issue in the [Microsoft JDBC Driver for SQL Server
 - [Microsoft JDBC Driver for SQL Server on Maven Central](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc)
 - [Release notes for the Microsoft JDBC Driver for SQL Server](release-notes-for-the-jdbc-driver.md)
 - [Finding additional JDBC driver information](finding-additional-jdbc-driver-information.md)
-- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)
+- [Microsoft SQL drivers and frameworks](../sql-connection-libraries.md)

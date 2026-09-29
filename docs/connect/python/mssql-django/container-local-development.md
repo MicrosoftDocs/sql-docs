@@ -3,8 +3,8 @@ title: Container and Local Development with mssql-django
 description: Set up local development environments, Docker containers, devcontainers, and CI pipelines for Django applications that use the mssql-django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/27/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,9 +17,12 @@ This guide covers environment setup for Django developers working with the `mssq
 
 ## Prerequisites
 
-- Python 3.8 and later versions (Django 6.0 and later versions require at least Python 3.12)
+- Python 3.10 through 3.14. Django 6.0 and 6.1 require Python 3.12 and later versions.
 - Docker Desktop (for container-based development)
-- Microsoft ODBC Driver 17 or 18 for SQL Server. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
+- Microsoft ODBC Driver 17 or 18 for SQL Server when you use the default pyodbc path. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
+- A base image compatible with the required `mssql-python` package: Windows x64, Windows ARM64 with Python 3.11 and later versions, macOS 15 and later versions, or Linux x64/ARM64 with glibc 2.28 and later versions or musl 1.2 and later versions. SUSE Linux on ARM64 isn't supported.
+
+The mssql-python path doesn't require a separate Microsoft ODBC Driver for SQL Server install. It still needs the unixODBC runtime, because the backend imports pyodbc when Django loads it. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
 
 ## Local SQL Server with sqlcmd (recommended)
 
@@ -86,7 +89,7 @@ Once the container is running, you can browse databases, run queries, and manage
 If you prefer to manage containers directly, the official SQL Server container image works with two environment variables:
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourStr0ngP@ssword" \
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<strong_password>" \
   -p 1433:1433 --name sql1 \
   -d mcr.microsoft.com/mssql/server:2022-latest
 ```
@@ -103,10 +106,10 @@ python manage.py createsuperuser
 
 ## Dockerfile for Django applications
 
-Create a minimal Dockerfile for a Django application that connects to SQL Server. The ODBC driver is the key dependency that doesn't come with the Python base image:
+Create a minimal Dockerfile for a Django application that connects to SQL Server through the default pyodbc path. The ODBC driver is the key dependency that doesn't come with the Python base image:
 
 ```dockerfile
-FROM python:3-slim
+FROM python:3.12-slim
 
 # Install ODBC Driver 18 for SQL Server
 RUN apt-get update && \
@@ -118,7 +121,6 @@ RUN apt-get update && \
     apt-get update && \
     ACCEPT_EULA=Y apt-get install -y --no-install-recommends msodbcsql18 unixodbc-dev && \
     apt-get purge -y curl gnupg2 && \
-    apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
@@ -134,20 +136,31 @@ EXPOSE 8000
 CMD ["gunicorn", "myproject.wsgi:application", "--bind", "0.0.0.0:8000"]
 ```
 
+> [!IMPORTANT]  
+> Don't add `apt-get autoremove -y` after the purge. It removes `libgssapi-krb5-2`, which the ODBC driver loads at run time but doesn't declare as a dependency. The build still succeeds, and every connection then fails. The pyodbc error is misleading: version 18 fails to load, mssql-django falls back to version 17, and the error names the missing version 17 rather than the version 18 that failed.
+
 Your `requirements.txt`:
 
 ```text
-django>=5.2
-mssql-django>=1.5
+django>=5.2,<6.2
+mssql-django>=2.0
 gunicorn>=22.0
+```
+
+If your database alias uses the mssql-python driver path with `"python_driver": "mssql_python"`, you still need unixODBC, because the backend imports pyodbc when Django loads it. You don't need the Microsoft package repository or `msodbcsql18`, so the ODBC installation block shrinks to:
+
+```dockerfile
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends unixodbc libkrb5-3 libgssapi-krb5-2 && \
+    rm -rf /var/lib/apt/lists/*
 ```
 
 Build and run:
 
 ```bash
 docker build -t mydjango .
-docker run -e DB_HOST=host.docker.internal -e DB_NAME=mydb \
-  -e DB_USER=<your-username> -e DB_PASSWORD=<your-password> \
+docker run -e "DB_HOST=host.docker.internal" -e "DB_NAME=<database>" \
+  -e "DB_USER=<user_id>" -e "DB_PASSWORD=<password>" \
   -p 8000:8000 mydjango
 ```
 
@@ -179,9 +192,9 @@ Create a `.devcontainer/devcontainer.json` for Visual Studio Code that includes 
 }
 ```
 
-This devcontainer installs the ODBC driver and Python dependencies but doesn't include a SQL Server instance. Start one inside the devcontainer using `sqlcmd create mssql --accept-eula` (since Docker-in-Docker is available) or use the [Docker Compose approach](#include-sql-server-with-docker-compose) for a built-in SQL Server service.
+This devcontainer installs the ODBC driver for the default pyodbc path and Python dependencies but doesn't include a SQL Server instance. Start one inside the devcontainer using `sqlcmd create mssql --accept-eula` (since Docker-in-Docker is available) or use the [Docker Compose approach](#include-sql-server-with-docker-compose) for a built-in SQL Server service. If you use the mssql-python path, replace the `msodbcsql18` install in the post-create script with `sudo apt-get install -y unixodbc libkrb5-3 libgssapi-krb5-2`.
 
-Create `.devcontainer/post-create.sh` to install the ODBC driver and Python dependencies:
+Create `.devcontainer/post-create.sh` to install the ODBC driver for pyodbc and Python dependencies:
 
 ```bash
 #!/bin/bash
@@ -218,7 +231,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       ACCEPT_EULA: "Y"
-      MSSQL_SA_PASSWORD: "YourStr0ngP@ssword"
+      MSSQL_SA_PASSWORD: "<strong_password>"
     ports:
       - "1433:1433"
 ```
@@ -268,7 +281,7 @@ Choose an authentication approach based on where your application runs and where
 
 ### Local development against Azure SQL
 
-For local development against Azure SQL, use either `Authentication=ActiveDirectoryDefault` in `OPTIONS["extra_params"]` (with `mssql-django` 1.7.3 and later, plus a compatible Microsoft ODBC Driver) or the `TOKEN` setting with `DefaultAzureCredential`. `DefaultAzureCredential` automatically picks up your `az login` session:
+For local development against Azure SQL, use either `Authentication=ActiveDirectoryDefault` in `OPTIONS["extra_params"]` on the pyodbc path, or the `TOKEN` setting with `DefaultAzureCredential`. `DefaultAzureCredential` automatically picks up your `az login` session:
 
 ```python
 from azure.identity import DefaultAzureCredential
@@ -280,7 +293,7 @@ DATABASES = {
     "default": {
         "ENGINE": "mssql",
         "NAME": "mydb",
-        "HOST": "myserver.database.windows.net",
+        "HOST": "<server>.database.windows.net",
         "PORT": "1433",
         "TOKEN": token,
         "OPTIONS": {
@@ -306,7 +319,7 @@ DATABASES = {
   "default": {
     "ENGINE": "mssql",
     "NAME": "mydb",
-    "HOST": "myserver.database.windows.net",
+    "HOST": "<server>.database.windows.net",
     "PORT": "1433",
     "TOKEN": token,
     "OPTIONS": {
@@ -337,7 +350,7 @@ jobs:
         image: mcr.microsoft.com/mssql/server:2022-latest
         env:
           ACCEPT_EULA: Y
-          MSSQL_SA_PASSWORD: YourStr0ngP@ssword
+          MSSQL_SA_PASSWORD: "<strong_password>"
         ports:
           - 1433:1433
         options: >-
@@ -351,9 +364,9 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
-      - name: Install ODBC Driver
+      - name: Install ODBC Driver for pyodbc
         run: |
           curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | \
               sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
@@ -368,9 +381,9 @@ jobs:
       - name: Run tests
         env:
           DB_HOST: localhost
-          DB_NAME: master
-          DB_USER: <username>
-          DB_PASSWORD: <password>
+          DB_NAME: "master"
+          DB_USER: "<user_id>"
+          DB_PASSWORD: "<password>"
         run: python manage.py test
 ```
 
@@ -389,7 +402,7 @@ resources:
       image: mcr.microsoft.com/mssql/server:2022-latest
       env:
         ACCEPT_EULA: Y
-        MSSQL_SA_PASSWORD: YourStr0ngP@ssword
+        MSSQL_SA_PASSWORD: "<strong_password>"
       ports:
         - 1433:1433
 
@@ -402,7 +415,7 @@ services:
 steps:
   - task: UsePythonVersion@0
     inputs:
-      versionSpec: "3.x"
+      versionSpec: "3.12"
 
   - script: |
       curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | \
@@ -417,10 +430,10 @@ steps:
   - script: python manage.py test
     displayName: Run tests
     env:
-      DB_HOST: localhost
-      DB_NAME: master
-      DB_USER: <username>
-      DB_PASSWORD: <password>
+      DB_HOST: "localhost"
+      DB_NAME: "master"
+      DB_USER: "<user_id>"
+      DB_PASSWORD: "<password>"
 ```
 
 ## Environment-based settings.py
@@ -451,7 +464,7 @@ Store credentials in a `.env` file for local development (add `.env` to `.gitign
 ```text
 DB_HOST=localhost
 DB_NAME=mydb
-DB_USER=<username>
+DB_USER=<user_id>
 DB_PASSWORD=<password>
 ```
 
@@ -465,7 +478,7 @@ pip install django-environ
 import environ
 
 env = environ.Env()
-environ.Env.read_env()  # Reads .env file
+environ.Env.read_env()  # Reads .env from the directory holding this settings file
 
 DATABASES = {
     "default": {
@@ -477,6 +490,7 @@ DATABASES = {
         "PORT": env("DB_PORT", default="1433"),
         "OPTIONS": {
             "driver": "ODBC Driver 18 for SQL Server",
+            "extra_params": env("DB_EXTRA_PARAMS", default="TrustServerCertificate=yes"),
         },
     },
 }
@@ -491,10 +505,13 @@ DATABASES = {
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |
-| `Can't open lib 'ODBC Driver 18 for SQL Server'` | ODBC driver not installed in the container. | Install `msodbcsql18` in your Dockerfile or post-create script. |
+| `Can't open lib 'ODBC Driver 18 for SQL Server'` | ODBC driver not installed in the container for the pyodbc path, or `apt-get autoremove` stripped `libgssapi-krb5-2` after the install. | Install `msodbcsql18` in your Dockerfile or post-create script, and don't run `apt-get autoremove` afterward. |
+| `Can't open lib 'ODBC Driver 17 for SQL Server'` when you installed version 18 | Version 18 is registered but fails to load, so mssql-django falls back to version 17, which isn't installed. The usual cause is a missing `libgssapi-krb5-2`. | Install `libgssapi-krb5-2`, and don't run `apt-get autoremove` after purging `curl`. |
+| `Error loading pyodbc module: libodbc.so.2` | The container has no unixODBC runtime. The backend imports pyodbc when Django loads it, even on the mssql-python path. | Install `unixodbc` (or `unixodbc-dev`). |
+| `DDBC Error: Failed to load the driver` | The mssql-python driver can't load its own dependencies. | Install `libkrb5-3` and `libgssapi-krb5-2`. |
 | Connection refused on port 1433 | SQL Server container not ready. | Add a health check or wait for the service to start. |
-| `Login failed for user '<username>'` | Credentials are incorrect or password doesn't meet complexity requirements. | Use the correct SQL login for your container, and ensure the password meets complexity requirements. |
-| `Cannot open database` | Database doesn't exist yet. | Create the database before running `migrate`, or use `master` for initial setup. |
+| `Login failed for user '<user_id>'` | Credentials are incorrect or password doesn't meet complexity requirements. On the mssql-python path, a database that doesn't exist raises this same message. | Use the correct SQL login for your container, and ensure the password meets complexity requirements. If the login is correct, confirm the database in `NAME` exists. |
+| `Cannot open database` | Database doesn't exist yet. The pyodbc path reports this case; the mssql-python path reports `Login failed` instead. | Create the database before running `migrate`, or use `master` for initial setup. |
 | Slow first connection in container | DNS resolution or credential chain startup. | For local SQL Server, use `localhost` instead of a hostname. |
 | `SSL Provider: [error:0A000086]` | TLS certificate validation failure with self-signed cert. | Add `TrustServerCertificate=yes` to `extra_params` for development only. |
 

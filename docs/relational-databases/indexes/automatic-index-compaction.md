@@ -4,7 +4,7 @@ description: Describes the automatic index compaction feature in the SQL Server 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman
-ms.date: 07/11/2026
+ms.date: 09/29/2026
 ms.service: sql
 ms.topic: concept-article
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"

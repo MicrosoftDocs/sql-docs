@@ -4,7 +4,7 @@ description: The vector data type stores vector data optimized for machine learn
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: pookam, randolphwest
-ms.date: 02/18/2026
+ms.date: 09/22/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: quickstart
@@ -28,25 +28,9 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 
 [!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-The **vector** data type is designed to store vector data optimized for operations such as similarity search and machine learning applications. Vectors are stored in an optimized binary format but are exposed as JSON arrays for convenience. Each element of the vector is stored as a single-precision (4-byte) floating-point value.
+The **vector** data type stores vector data optimized for operations such as similarity search and machine learning applications. Vectors are stored in an optimized binary format but are exposed as JSON arrays for convenience. Each element of the vector is stored as a single-precision (4-byte) floating-point value.
 
-To provide a familiar experience for developers, the **vector** data type is created and displayed as a JSON array. For example, a vector with three dimensions can be represented as `'[0.1, 2, 30]'`. Implicit and explicit conversion from and to the **vector** type can be done using **varchar**, **nvarchar**, and **json** types.
-
-> [!NOTE]  
-> [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] supports half-precision (`float16`) vectors. For more information, see [Half-precision float support in vector data type](vector-data-type-half-precision-float.md).
-
-`float16` vector is currently available for preview. To test, enable the `PREVIEW_FEATURES` database scoped configuration option. For details, review [PREVIEW_FEATURES = { ON | OFF }](../statements/alter-database-scoped-configuration-transact-sql.md#preview_features---on--off-).
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION
-SET PREVIEW_FEATURES = ON;
-GO
-```
-
-For limitations, review [Limitations](#limitations) and [Known issues](#known-issues).
-
-> [!NOTE]  
-> Vector features are available in Azure SQL Managed Instance configured with the [Always-up-to-date](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy) policy.
+To provide a familiar experience for developers, the **vector** data type is created and displayed as a JSON array. For example, a vector with three dimensions can be represented as `'[0.1, 2, 30]'`. You can implicitly and explicitly convert between the **vector** type and **varchar**, **nvarchar**, and **json** types.
 
 For more information on working with vector data, see:
 
@@ -61,7 +45,7 @@ The usage syntax for the **vector** type is similar to all other SQL Server data
 column_name VECTOR ( { <dimensions> } ) [ NOT NULL | NULL ]
 ```
 
-By default, the base type is `float32`. To use **half-precision**, you need to specify `float16` explicitly.
+By default, the base type is **float32**. To use **half-precision**, specify **float16** explicitly.
 
 ```syntaxsql
 column_name VECTOR ( <dimensions> [ , <base_type> ] ) [ NOT NULL | NULL ]
@@ -69,23 +53,52 @@ column_name VECTOR ( <dimensions> [ , <base_type> ] ) [ NOT NULL | NULL ]
 
 ### Dimensions
 
-A vector must have at least one dimension. The maximum number of dimensions supported is 1998.
+A vector must have at least one dimension. The maximum number of dimensions depends on the vector base type:
+
+- **float32** supports up to 1,998 dimensions.
+- **float16** supports up to 3,996 dimensions.
+
+## Feature availability
+
+The **vector** data type is available under all database compatibility levels. If you don't specify a base type, the vector uses **float32**.
+
+Vector features are available in Azure SQL Managed Instance configured with the [Always-up-to-date](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy) policy.
+
+### Half-precision float16 vectors
+
+- Half-precision (**float16**) vectors are generally available in Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. No preview configuration is required.
+
+- In SQL Server 2025 (17.x), half-precision (**float16**) vectors are available in preview. To use **float16** in SQL Server 2025, you must enable the `PREVIEW_FEATURES` database scoped configuration option. For more information, see [Enable preview features in SQL Server 2025](#enable-preview-features-in-sql-server-2025).
+
+For more information about half-precision vectors, see [Half-precision float support in the vector data type](vector-data-type-half-precision-float.md).
+
+### Enable preview features in SQL Server 2025
+
+For some preview features in SQL Server 2025, you must enable the `PREVIEW_FEATURES` database scoped configuration option.
+
+   ```sql
+   ALTER DATABASE SCOPED CONFIGURATION
+   SET PREVIEW_FEATURES = ON;
+   GO
+   ```
+
+For more information, see [PREVIEW_FEATURES](../statements/alter-database-scoped-configuration-transact-sql.md#preview_features---on--off-).
 
 ## Examples
 
 ### A. Column definition
 
-The **vector** type can be used in column definition contained in a `CREATE TABLE` statement, for example:
+Use the **vector** type in column definitions within a `CREATE TABLE` statement. For example:
 
 The following example creates a table with a vector column and inserts data into it.
 
-You can define a **vector** column in a table using either the default base type (`float32`) or explicitly specify `float16` for half-precision storage.
+Define a **vector** column in a table by using either the default base type **float32** or **float16** for half-precision storage.
 
 ```sql
 CREATE TABLE dbo.vectors
 (
     id INT PRIMARY KEY,
-    v VECTOR(3) NOT NULL -- Uses default base type (`float32`)
+    v VECTOR(3) NOT NULL -- Uses default base type (**float32**)
 );
 
 CREATE TABLE dbo.vectors_fp16
@@ -105,9 +118,9 @@ FROM dbo.vectors;
 
 ### B. Usage in variables
 
-The following example declares vectors using the new **vector** data type and calculates distances using the `VECTOR_DISTANCE` function.
+The following example declares vectors by using the new **vector** data type and calculates distances by using the `VECTOR_DISTANCE` function.
 
-The **vector** type can be used with variables:
+Use the **vector** type with variables:
 
 ```sql
 DECLARE @v AS VECTOR(3) = '[0.1, 2, 30]';
@@ -119,7 +132,7 @@ SELECT @v;
 
 ### C. Usage in stored procedures or functions
 
-The **vector** data type can be used as parameter in stored procedure or functions. For example:
+You can use the **vector** data type as a parameter in stored procedures or functions. For example:
 
 ```sql
 CREATE PROCEDURE dbo.SampleStoredProcedure
@@ -132,22 +145,9 @@ BEGIN
 END
 ```
 
-## Feature availability
-
-The new **vector** type is available under all database compatibility levels.
-
-Support for `float16` vectors is currently gated under the `PREVIEW_FEATURES` configuration.
-You must explicitly enable it before using `VECTOR(..., float16)`.
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION
-SET PREVIEW_FEATURES = ON;
-GO
-```
-
 ## Conversions
 
-- The **vector** type can't be used with the **sql_variant** type or assigned to a **sql_variant** variable or column. This restriction is similar to **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **xml**, **json**, and CLR-based data types.
+- You can't use the **vector** type with the **sql_variant** type or assign it to a **sql_variant** variable or column. This restriction is similar to **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **xml**, **json**, and CLR-based data types.
 
 ## Compatibility
 
@@ -156,9 +156,6 @@ GO
 SQL Server stores vectors in an optimized binary format but exposes them as JSON arrays for convenience.
 
 **Supported** drivers use enhancements to the TDS protocol to transmit vector data more efficiently in binary format and present them to applications as native vector types. This approach reduces payload size, eliminates the overhead of JSON parsing, and preserves full floating-point precision. As a result, it improves both performance and accuracy when working with high-dimensional vectors in AI and machine learning scenarios.
-
-> [!NOTE]  
-> `float16` vectors are currently transmitted as **varchar(max)** (JSON array) over TDS. Binary transport support for `float16` isn't yet available in drivers like ODBC, JDBC, and .NET.
 
 #### Native Driver Support
 
@@ -169,6 +166,10 @@ These capabilities require versions of the following drivers. Ensure you're usin
 - **Microsoft.Data.SqlClient**: Version **6.1.0** introduces the `SqlVector` type, extending `System.Data.SqlDbTypes`.
 - **Microsoft JDBC Driver for SQL Server**: Version **13.1.0 Preview** introduces the `microsoft.sql.Types.VECTOR` type and `microsoft.sql.Vector` class.
 
+> [!NOTE]
+> Native binary transport for **float16** vectors is supported in [Microsoft JDBC Driver 13.4 for SQL Server](https://github.com/microsoft/mssql-jdbc/releases/tag/v13.4.0) and [Microsoft ODBC Driver 18.7.1 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md). These drivers serialize and deserialize half-precision vector values using the native wire format, reducing the network payload compared to the JSON representation.
+> Use these driver versions or later for native **float16** transport. Drivers that don't support native **float16** transport can continue to work with vectors represented as `varchar(max)` JSON arrays.
+>
 > [!NOTE]  
 > For clients that don't support the updated TDS protocol, SQL Server continues to expose vector data as **varchar(max)** types to ensure backward compatibility. Client applications can work with vector data as if it were a JSON array. The SQL Database Engine automatically converts vectors to and from a JSON array, making the new type transparent for the client. Hence drivers and all languages are automatically compatible with the new type.
 
@@ -285,7 +286,7 @@ namespace VectorSampleApp
 ```
 
 > [!NOTE]  
-> If you're not using the latest .NET drivers, you can still work with vector data in [!INCLUDE [c-sharp-md](../../includes/c-sharp-md.md)] by serializing and deserializing it as a JSON string using the `JsonSerializer` class. This ensures compatibility with the `varchar(max)` representation of vectors exposed by SQL Server for older clients.
+> If you don't use the latest .NET drivers, you can still work with vector data in [!INCLUDE [c-sharp-md](../../includes/c-sharp-md.md)] by serializing and deserializing it as a JSON string by using the `JsonSerializer` class. This approach ensures compatibility with the `varchar(max)` representation of vectors that SQL Server exposes for older clients.
 
 ```csharp
 using Microsoft.Data.SqlClient;
@@ -317,7 +318,7 @@ class Program
 
 **Applies to:** Microsoft JDBC Driver for SQL Server 13.1.0 and later versions.
 
-Example of insertion of **vector** data into table:
+Example of inserting **vector** data into a table:
 
 ```java
 @Test
@@ -391,7 +392,7 @@ Example of selecting **vector** data from a table:
 
 ### [Python](#tab/python)
 
-This sample is using Python with the [mssql-python driver](../../connect/python/mssql-python/python-sql-driver-mssql-python.md). Applications can write and read vector data using `json.loads` and `json.dumps`:
+This sample uses Python with the [mssql-python driver](../../connect/python/mssql-python/python-sql-driver-mssql-python.md). Applications can write and read vector data by using `json.loads` and `json.dumps`:
 
 ```python
 import json
@@ -435,7 +436,7 @@ The **vector** type has the following limitations:
 
 ### Tables
 
-- Column-level constraints aren't supported, except for `NULL`/`NOT NULL` constraints.
+- Column-level constraints aren't supported, except for `NULL` and `NOT NULL` constraints.
 
   - `DEFAULT` and `CHECK` constraints aren't supported for **vector** columns.
 
@@ -443,31 +444,32 @@ The **vector** type has the following limitations:
 
   - There's no notion of uniqueness for vectors, so unique constraints aren't applicable.
 
-  - Checking the range of values within a vector is also not applicable.
+  - Checking the range of values within a vector isn't applicable.
 
 - Vectors don't support comparison, addition, subtraction, multiplication, division, concatenation, or any other mathematical, logical, and compound assignment operators.
 
-- **vector** columns can't be used in memory-optimized tables.
+- You can't use **vector** columns in memory-optimized tables.
 
 ### Indexes
 
-- B-tree indexes or columnstore indexes aren't allowed on **vector** columns. However, a **vector** column can be specified as an included column in an index definition.
+- You can't use B-tree indexes or columnstore indexes on **vector** columns. However, you can include a **vector** column as an included column in an index definition.
+- [Vector indexes](../statements/create-vector-index-transact-sql.md) create an approximate index on a vector column to improve the performance of nearest neighbors search. To learn more about how vector indexing and vector search works, and the differences between exact and approximate search, see [Vector search and vector indexes in the SQL Database Engine](../../sql-server/ai/vectors.md).
 
 ### Table schema metadata
 
-- [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) system stored procedure doesn't correctly return the **vector** data type. Therefore, many data access clients and driver see a **varchar** or **nvarchar** data type.
+- The [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) system stored procedure doesn't correctly return the **vector** data type. As a result, many data access clients and drivers see a **varchar** or **nvarchar** data type.
 
 ### Ledger tables
 
-- Stored procedure `sp_verify_database_ledger` generates an error if the database contains a table with a **vector** column.
+- The stored procedure `sp_verify_database_ledger` generates an error if the database contains a table with a **vector** column.
 
 ### User-defined types
 
-- Creation of alias type using `CREATE TYPE` for the **vector** type isn't allowed, similar to the behavior of the **xml** and **json** data types.
+- You can't create an alias type using `CREATE TYPE` for the **vector** type. This restriction is similar to the behavior of the **xml** and **json** data types.
 
 ### Always Encrypted
 
-- **vector** type isn't supported with Always Encrypted feature.
+- The **vector** type isn't supported with the Always Encrypted feature.
 
 ## Known issues
 

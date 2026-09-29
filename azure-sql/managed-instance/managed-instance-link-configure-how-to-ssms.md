@@ -5,7 +5,7 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil
-ms.date: 03/31/2026
+ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023, build-2024
@@ -15,7 +15,7 @@ ms.topic: how-to
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Learn how to configure a [link](managed-instance-link-feature-overview.md) between SQL Server and Azure SQL Managed Instance by using SQL Server Management Studio (SSMS). The link replicates databases from your initial primary to your secondary replica in near-real time.
+Learn how to configure a single-database mode [link](managed-instance-link-feature-overview.md) between SQL Server and Azure SQL Managed Instance by using SQL Server Management Studio (SSMS). The link replicates databases from your initial primary to your secondary replica in near-real time.
 
 After you create the link, you can fail over to your secondary replica for migration or disaster recovery.
 
@@ -34,19 +34,19 @@ If you plan to use your secondary managed instance for only disaster recovery, y
 
 Use the instructions in this article to manually set up the link between SQL Server and Azure SQL Managed Instance. After you create the link, your source database gets a read-only copy on your target secondary replica. 
 
-## Prerequisites 
+## Prerequisites
 
 To replicate your databases to your secondary replica through the link, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- [SQL Server Management Studio v19.2 or later](/ssms/sql-server-management-studio-ssms).
+- The latest [SQL Server Management Studio (SSMS)](/ssms/install/install). Multiple-database link mode requires SSMS 22.10.2 or later.
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 Consider the following:
 
-- The link feature supports one database per link. To replicate multiple databases from an instance, create a link for each individual database. For example, to replicate 10 databases to SQL Managed Instance, create 10 individual links.
+- This article describes single-database link mode, which replicates one database per link. For an existing Always On availability group with multiple databases, follow [Extend an Always On availability group to Azure SQL Managed Instance (preview)](managed-instance-link-extend-availability-group.md).
 - Collation between SQL Server and SQL Managed Instance should be the same. A mismatch in collation can cause a mismatch in server name casing and prevent a successful connection from SQL Server to SQL Managed Instance.
 - Error 1475 on your initial SQL Server primary indicates that you need to start a new backup chain by creating a full backup without the `COPY ONLY` option.
 - To establish a link, or fail over, *from* SQL Managed Instance to SQL Server 2025, you must configure your SQL managed instance with the [SQL Server 2025 update policy](update-policy.md#sql-server-2025-update-policy). Data replication and failover *from* SQL Managed Instance to SQL Server 2025 isn't supported by instances configured with a mismatched update policy.
@@ -55,12 +55,12 @@ Consider the following:
 
 ## Permissions
 
-For SQL Server, you need **sysadmin** permissions. 
+For SQL Server, you need **sysadmin** permissions.
 
 For Azure SQL Managed Instance, you need to be a member of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role, or have the following custom role permissions: 
 
-|Microsoft.Sql/ resource|Necessary permissions| 
-|---- | ---- | 
+|Microsoft.Sql/ resource|Necessary permissions|
+|---- | ---- |
 |Microsoft.Sql/managedInstances| /read, /write|
 |Microsoft.Sql/managedInstances/hybridCertificate | /action |
 |Microsoft.Sql/managedInstances/databases| /read, /delete, /write, /completeRestore/action, /readBackups/action, /restoreDetails/read| 
@@ -91,6 +91,8 @@ For more information, see [Create a Full Database Backup](/sql/relational-databa
 
 ## Create link to replicate database
 
+Before starting the wizard, use [trace flag 12381 on supported SQL Server builds](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381) to prevent premature log truncation during seeding, especially for large databases. Log backups can continue while required records are retained. Monitor SQL Server log growth and free disk space, and disable the flag when seeding finishes for all links you're creating.
+
 In the following steps, use the **New Managed Instance link** wizard in SSMS to create a link between your initial primary and your secondary replica. 
 
 After you create the link, your source database gets a read-only copy on your target secondary replica.
@@ -104,7 +106,7 @@ After you create the link, your source database gets a read-only copy on your ta
 1. On the **Specify Link Options** page, provide a name for your link. If you select multiple databases, the wizard automatically appends the database name to the end of the name you provide so you don't have to include it yourself. Check the boxes if you want to enable connectivity troubleshooting and, for SQL Server 2022 or SQL Server 2025, if you plan to use the link for two-way disaster recovery. Select **Next**.
 
    > [!NOTE]
-   > Starting with SSMS v22.7.0, you can preview adding multiple databases when creating a link in SSMS. This feature is temporarily disabled unless you request access. For more information, see the [access request form](https://aka.ms/milink-multidb-prpr).
+   > To replicate multiple databases through one link, use [multiple-database link mode (preview)](managed-instance-link-extend-availability-group.md) with SSMS 22.10.2 or later and enable the mode on every SQL Server replica. No access request is required. The steps in this article configure single-database links.
 
 1. On the **Requirements** page, the wizard validates requirements to establish a link to your secondary. Select **Next** after all the requirements are validated, or resolve any requirements that aren't met and then select **Re-run Validation**. 
 1. On the **Select Databases** page, choose the database you want to replicate to your secondary replica via the link. Selecting multiple databases creates multiple distributed availability groups, one for each link. Select **Next**. 
@@ -140,7 +142,7 @@ Regardless of which instance is primary, you can also right-click the linked dis
 
 ## Take first transaction log backup
 
-If SQL Server is your initial primary, take the first [transaction log backup](/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) on SQL Server *after* initial seeding finishes. At that point, the database is no longer in the **Restoring...** state on Azure SQL Managed Instance. Then, take [SQL Server transaction log backups regularly](managed-instance-link-best-practices.md#take-log-backups-regularly) to minimize excessive log growth while SQL Server is in the primary role.
+When SQL Server is primary, you can continue transaction log backups during seeding if you enable [trace flag 12381](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381) on a supported build. If you pause log backups to prevent premature truncation, resume them after initial seeding finishes. If you haven't started log backups, take the first [transaction log backup](/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) after initial seeding finishes. After seeding completes for all links you're creating, disable the flag if you enabled it and take [SQL Server transaction log backups regularly](managed-instance-link-best-practices.md#take-log-backups-regularly) while SQL Server remains primary.
 
 If SQL Managed Instance is your primary, you don't need to take any action as Azure SQL Managed Instance takes log backups automatically.
 

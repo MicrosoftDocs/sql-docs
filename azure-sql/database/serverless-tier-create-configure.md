@@ -4,7 +4,7 @@ description: Learn how to create a new serverless database, move an existing dat
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendalv, moslake, mathoma, dfurman
-ms.date: 07/28/2026
+ms.date: 09/14/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: how-to
@@ -79,6 +79,7 @@ $params = @{
     ComputeGeneration = 'Gen5'
     MinVcore = 0.5
     MaxVcore = 2
+    AutoPauseDelayInMinutes = 60
 }
 New-AzSqlDatabase @params
 ```
@@ -102,6 +103,7 @@ $params = @{
     HighAvailabilityReplicaCount = 1
     BackupStorageRedundancy = 'Zone'
     ZoneRedundant = $true
+    AutoPauseDelayInMinutes = 60
 }
 New-AzSqlDatabase @params
 ```
@@ -147,7 +149,8 @@ az sql db create -g $resourceGroupName `
 --compute-model Serverless `
 -f Gen5 `
 --min-capacity 0.5 `
--c 2 
+-c 2 `
+--auto-pause-delay 60
 ```
 
 Create a new serverless Hyperscale database with one high availability replica and zone redundancy by using the following Azure CLI example:
@@ -167,8 +170,8 @@ az sql db create -g $resourceGroupName `
 -c 2 `
 --ha-replicas 1 `
 --backup-storage-redundancy Zone `
---zone-redundant
-
+--zone-redundant `
+--auto-pause-delay 60
 ```
 
 ---
@@ -205,6 +208,8 @@ CREATE DATABASE testdb
 You can move a database between the provisioned compute tier and serverless compute tier.
 
 You can also move a serverless database from the General Purpose service tier to the Hyperscale service tier. For more information, see [Convert an existing database to Hyperscale](convert-to-hyperscale.md).
+
+Currently, [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) are a preview feature of Azure SQL Database Hyperscale. The same Azure CLI syntax is used for both General Purpose and Hyperscale. In the General Purpose service tier, the default auto-pause delay is 60 minutes, and the minimum is 15 minutes. For Hyperscale auto-pause (preview), the default auto-pause delay is 60 minutes, and the minimum is 60 minutes.
 
 When you move a database between compute tiers, specify the **compute model** parameter as either `Serverless` or `Provisioned` when using PowerShell or Azure CLI. When using T-SQL, specify the `SERVICE_OBJECTIVE`. Review [resource limits](resource-limits-vcore-single-databases.md) to identify the appropriate service objective.  
 
@@ -253,6 +258,7 @@ $params = @{
     ComputeGeneration = 'Gen5'
     MinVcore = 1
     MaxVcore = 4
+    AutoPauseDelayInMinutes = 1440
 }
 Set-AzSqlDatabase @params
 ```
@@ -298,7 +304,8 @@ az sql db update -g $resourceGroupName `
 --compute-model Serverless `
 --family Gen5 `
 --min-capacity 1 `
---capacity 4
+--capacity 4 `
+--auto-pause-delay 1440
 
 ```
 
@@ -332,7 +339,9 @@ MODIFY ( SERVICE_OBJECTIVE = 'HS_S_Gen5_2') ;
 
 ### Use PowerShell
 
-Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to change the maximum or minimum vCores, and the auto-pause delay. Use the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` parameters. The Hyperscale tier doesn't currently support serverless auto-pausing, so the auto-pause delay parameter only applies to the General Purpose tier.
+Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) to change the maximum or minimum vCores, and the auto-pause delay. Use the `MaxVcore`, `MinVcore`, and `AutoPauseDelayInMinutes` parameters.
+
+The same PowerShell syntax is used for both General Purpose and Hyperscale. Currently, [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) are a preview feature of Azure SQL Database Hyperscale. 
 
 For example, to modify the `MaxVcore`, `MinVcore`, or `AutoPauseDelayInMinutes`
 
@@ -354,7 +363,9 @@ Set-AzSqlDatabase @params
 
 ### Use Azure CLI
 
-Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) to change the maximum or minimum vCores, and the auto-pause delay. Use the `capacity`, `min-capacity`, and `auto-pause-delay` parameters. The Hyperscale tier doesn't currently support serverless auto-pausing, so the auto-pause delay parameter only applies to the General Purpose tier. 
+Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) to change the maximum or minimum vCores, and the auto-pause delay. Use the `capacity`, `min-capacity`, and `auto-pause-delay` parameters. 
+
+The same Azure CLI syntax is used for both General Purpose and Hyperscale. Currently, [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) are a preview feature of Azure SQL Database Hyperscale. 
 
 For example, to modify the database to use a different minimum or maximum number of vCores, or to change the autopause delay:
 

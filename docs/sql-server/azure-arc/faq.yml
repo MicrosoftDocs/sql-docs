@@ -3,7 +3,7 @@ metadata:
   title: Frequently asked questions
   description: Provides questions and answers frequently asked about SQL Server enabled by Azure Arc.
   ms.topic: faq
-  ms.date: 08/21/2026
+  ms.date: 09/23/2026
   ai-usage: ai-assisted
   ms.author: mathoma
   author: MashaMSFT
@@ -33,6 +33,10 @@ sections:
           No. Feature availability can differ in US Virginia Government cloud compared to the commercial Azure cloud.
           
           For current supported features and limitations, review [SQL Server enabled by Azure Arc in US Virginia Government](us-government-region.md) and [Release notes - SQL Server enabled by Azure Arc](release-notes.md).
+
+      - question: How can I monitor my SQL Server instances in Azure Arc alongside other Microsoft SQL databases?
+        answer: |
+          The [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub) provides a unified operational experience for managing database estates across Azure, Microsoft Fabric, on-premises environments, and supported multicloud environments. For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub/).
 
   - name: Pay-as-you-go billing
     questions:

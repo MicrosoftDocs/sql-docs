@@ -4,7 +4,7 @@ description: This article describes index maintenance concepts, and a recommende
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman, randolphwest
-ms.date: 03/11/2026
+ms.date: 09/11/2026
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: how-to
@@ -110,7 +110,7 @@ You can reduce index fragmentation and increase page density by using one of the
 - Rebuild an index
 
 > [!TIP]  
-> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction (preview)](automatic-index-compaction.md).
+> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction](automatic-index-compaction.md).
 
 For [partitioned](../partitions/partitioned-tables-and-indexes.md) indexes, you can use either of the following methods on all partitions or a single partition of an index.
 

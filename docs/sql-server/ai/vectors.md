@@ -4,7 +4,7 @@ description: How to create, manage, and search vectors in the SQL Database Engin
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: pookam, jovanpop, randolphwest
-ms.date: 07/24/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.topic: language-reference
 ms.collection:
@@ -94,7 +94,9 @@ Using an exact search is recommended when you don't have many vectors to search 
 ### Approximate vector index and vector search (approximate nearest neighbors)
 
 > [!NOTE]
-> Approximate vector index and vector search are in preview and currently only available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [fabric-sqldb-md](../../includes/fabric-sqldb.md)].
+> - The [vector data type](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) and [vector functions](/sql/t-sql/functions/vector-functions-transact-sql?view=azuresqlmi-current&preserve-view=true) are generally available in SQL Server 2025, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric. 
+> - [Vector indexes](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true) are generally available in Azure SQL Database, SQL database in Fabric, and Azure SQL Managed Instance in the **Always up to date** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
+> - [Vector indexes](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true) are preview features in SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
 
 > [!WARNING]
 > The following example uses the legacy `TOP_N` parameter, which is only supported with earlier version vector indexes. For the latest syntax using `SELECT TOP (N) WITH APPROXIMATE`, see [VECTOR_SEARCH (Transact-SQL)](/sql/t-sql/functions/vector-search-transact-sql) and [CREATE VECTOR INDEX (Transact-SQL)](/sql/t-sql/statements/create-vector-index-transact-sql).
@@ -135,7 +137,7 @@ ORDER BY s.distance
 - [Vector data type](../../t-sql/data-types/vector-data-type.md)
 - [Vector functions](../../t-sql/functions/vector-functions-transact-sql.md)
 - [VECTOR_DISTANCE (Transact-SQL)](../../t-sql/functions/vector-distance-transact-sql.md)
-- [VECTOR_SEARCH (Transact-SQL) (Preview)](../../t-sql/functions/vector-search-transact-sql.md)
-- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../../t-sql/statements/create-vector-index-transact-sql.md)
+- [VECTOR_SEARCH (Transact-SQL)](../../t-sql/functions/vector-search-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL)](../../t-sql/statements/create-vector-index-transact-sql.md)
 - [Azure SQL Database Vector Search Samples](https://github.com/Azure-Samples/azure-sql-db-vector-search)
 - [Intelligent applications and AI](/azure/azure-sql/database/ai-artificial-intelligence-intelligent-applications)

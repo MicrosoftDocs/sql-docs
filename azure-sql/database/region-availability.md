@@ -3,8 +3,8 @@ title: Feature Availability by Region
 description: Learn about feature availability by region for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: peskount, rokhot, shrtiwar
-ms.date: 04/02/2026
+ms.reviewer: peskount, rokhot, shrtiwar, pookam
+ms.date: 09/22/2026
 ms.service: azure-sql-database
 ms.topic: concept-article
 ms.custom:
@@ -45,7 +45,7 @@ Standard-series (Gen5) hardware is available in [all public regions worldwide wh
 
 ### Hyperscale premium-series availability
 
-[Premium-series hardware](service-tiers-sql-database-vcore.md#hyperscale-premium-series) is available for single databases and elastic pools. 
+[Azure SQL Database Hyperscale](service-tier-hyperscale.md) [Premium-series hardware](service-tiers-sql-database-vcore.md#hyperscale-premium-series) is available for single databases and elastic pools.
 
 [Premium-series memory optimized hardware](service-tiers-sql-database-vcore.md#hyperscale-premium-series) is not currently available in the following regions:
 
@@ -103,25 +103,34 @@ US Gov Arizona supports **Hyperscale premium-series** up to 80 vCores.
 
 US Gov Texas and US Gov Virginia support **Hyperscale premium-series** up to 128 vCores.
 
-160 vCore and 192 vCore hardware for **Hyperscale premium-series** for single databases and elastic pools are a preview feature in the following regions:
+### Azure SQL Database Hyperscale premium-series 160 and 192 vCore hard availability
+
+The following regions offer 160 vCore and 192 vCore hardware for **Hyperscale premium-series** single databases and elastic pools:
 
 #### [Americas](#tab/americas)
 
-- Australia East
 - Canada Central
+- Central US
+- East US
 - East US 2
 - South Central US
+- South US
 - West US 2
+- West US 3
 
 #### [Asia Pacific](#tab/asia)
 
+- Australia East
 - Southeast Asia
+- India South Central
 
 #### [Europe, the Middle East, and Africa](#tab/emea)
 
 - North Europe
-- UK South
 - West Europe
+- Germany West Central
+- Sweden Central
+- UK South
 
 ---
 
@@ -346,14 +355,6 @@ Currently, all regions with serverless support 40 vCores and provide [availabili
 | UK West | [!INCLUDE [yes](../includes/yes.md)]  |  |
 
 ---
-
-## Vector search
-
-[Vector search](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqldb-current&preserve-view=true) enables approximate nearest neighbor search using DiskANN vector indexes in Azure SQL Database and SQL database in Microsoft Fabric.
-
-[!INCLUDE [vector-search](../includes/regional-support/vector-search.md)]
-
-- For regional availability in SQL database in Fabric, see [Fabric region availability](/fabric/admin/region-availability).
 
 ## Database watcher availability
 

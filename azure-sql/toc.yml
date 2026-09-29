@@ -100,6 +100,10 @@
         href: database/monitor-tune-overview.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
+      - name: Fabric Database Hub
+        href: /fabric/database/hub/
+      - name: Monitor Microsoft SQL in Fabric
+        href: /fabric/database/hub/monitor-sql
       - name: Database watcher (preview)
         items:
         - name: Database watcher overview
@@ -1473,6 +1477,8 @@
         href: managed-instance/managed-instance-link-configure-how-to-ssms.md
       - name: Configure link with scripts
         href: managed-instance/managed-instance-link-configure-how-to-scripts.md
+      - name: Extend an Always On availability group (preview)
+        href: managed-instance/managed-instance-link-extend-availability-group.md
       - name: Fail over a link
         href: managed-instance/managed-instance-link-failover-how-to.md
       - name: Migrate with the link

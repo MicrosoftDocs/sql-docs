@@ -4,13 +4,14 @@ description: Learn how to register your SQL Server on Linux Azure Virtual Machin
 author: adbadram
 ms.author: adbadram
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/05/2026
+ms.date: 09/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: how-to
 ms.custom:
   - devx-track-azurecli, devx-track-azurepowershell, linux-related-content
 tags: azure-resource-manager
+ai-usage: ai-assisted
 ---
 # Register a Linux SQL Server VM with the SQL Server IaaS Agent extension
 
@@ -25,6 +26,9 @@ Register your SQL Server VM with the [SQL Server IaaS Agent extension](sql-serve
 ## Overview
 
 When you register with the extension, you create the **SQL virtual machine** resource within your subscription. This resource is separate from the virtual machine resource. When you unregister your SQL Server VM from the extension, you remove the **SQL virtual machine** resource but keep the actual virtual machine.
+
+> [!NOTE]  
+> When you deploy SQL Server on Linux VMs by using the [Azure portal deployment experience (preview)](sql-server-on-linux-vm-what-is-iaas-overview.md#azure-portal-deployment), Azure automatically registers them with the extension. Use this article if you installed SQL Server yourself, or if you want to register a VM again after you unregister it.
 
 To use the extension, you must first [register your subscription with the **Microsoft.SqlVirtualMachine** provider](#register-your-subscription-with-the-resource-provider). This registration grants the extension the ability to create resources within that subscription.
 
@@ -154,6 +158,6 @@ An error indicates that the SQL Server VM isn't registered with the extension.
 ## Related content
 
 - [Overview of SQL Server on Linux Azure Virtual Machines](sql-server-on-linux-vm-what-is-iaas-overview.md)
-- [FAQ for SQL Server on Windows VMs](frequently-asked-questions-faq.yml)
+- [FAQ for SQL Server on Linux VMs](frequently-asked-questions-faq.yml)
 - [Pricing guidance for SQL Server on Azure VMs](../windows/pricing-guidance.md)
 - [What's new with SQL Server on Azure Virtual Machines?](../windows/doc-changes-updates-release-notes-whats-new.md)

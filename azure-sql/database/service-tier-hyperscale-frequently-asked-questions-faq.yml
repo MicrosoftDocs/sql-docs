@@ -11,7 +11,7 @@ metadata:
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: dfurman, mathoma, dinethi, adbadram
-  ms.date: 05/19/2026
+  ms.date: 09/14/2026
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -201,7 +201,10 @@ sections:
       - question: |
           Can I pause my compute at any time?
         answer: |
-          Not at this time. However you can scale your compute and the number of replicas down to reduce cost during nonpeak times, or use [serverless](serverless-tier-overview.md) to automatically scale compute based on usage. 
+          No. Hyperscale compute can't be paused manually.
+
+          - Scale your compute and the number of replicas down to reduce cost during nonpeak times.
+          - Use [serverless](serverless-tier-overview.md) to automatically scale compute based on usage. Currently, [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) are a preview feature of Azure SQL Database Hyperscale.
 
       - question: |
           Can I provision a compute replica with extra RAM for my memory-intensive workload?

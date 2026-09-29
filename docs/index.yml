@@ -50,6 +50,10 @@ productDirectory:
     - title: Microsoft Fabric
       imageSrc: media/index/fabric-databases-icon.svg
       links:
+        - url: /fabric/database/hub/
+          text: Fabric Database Hub
+        - url: /fabric/database/hub/monitor-sql
+          text: Monitor Microsoft SQL in Fabric
         - url: /fabric/database/sql/overview
           text: SQL database in Fabric
         - url: /fabric/mirroring/overview

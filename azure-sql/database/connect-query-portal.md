@@ -1,11 +1,11 @@
 ---
 title: Query SQL Database with Query Editor in the Azure Portal
 titleSuffix: Azure SQL Database
-description: Learn how to connect to an Azure SQL database and use the Azure portal query editor (preview) to run Transact-SQL (T-SQL) queries.
+description: Learn how to connect to an Azure SQL database and use the Azure portal query editor to run Transact-SQL (T-SQL) queries.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic, mathoma
-ms.date: 03/11/2026
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: quickstart
@@ -27,7 +27,7 @@ monikerRange: "=azuresql || =azuresql-db"
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-In this quickstart, connect to an Azure SQL database in the Azure portal and use query editor to run Transact-SQL (T-SQL) queries. The Azure SQL Database query editor (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. 
+In this quickstart, connect to an Azure SQL database in the Azure portal and use the query editor to run Transact-SQL (T-SQL) queries. The [Azure SQL Database query editor](query-editor.md) is a tool to run SQL queries against Azure SQL Database in the Azure portal.
 
 - If you don't already have an Azure SQL Database created, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
 
@@ -57,7 +57,7 @@ Follow these steps to connect to your database within the query editor.
 
 1. Go to your SQL database in the Azure portal. For example, visit [your Azure SQL hub page](https://aka.ms/azuresqlhub), select **Azure SQL Database**, and then select **SQL databases**. Select your Azure SQL Database.
 
-1. On your SQL database **Overview** page, select **Query editor (preview)** from the resource menu.
+1. On your SQL database **Overview** page, select **Query editor** from the resource menu.
 
    :::image type="content" source="media/connect-query-portal/find-query-editor.png" alt-text="Screenshot that shows selecting query editor.":::
 
@@ -85,7 +85,7 @@ The results look like you'd expect from any T-SQL query tool:
 
 This portion of quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
 
-On the **Query editor (preview)** page, run the following example queries against your `AdventureWorksLT` sample database.
+On the **Query editor** page, run the following example queries against your `AdventureWorksLT` sample database.
 
 > [!TIP]
 > New to Azure SQL Database? Get up to speed with in-depth free training content: [Azure SQL Fundamentals](/training/paths/azure-sql-fundamentals/) or review the [Azure SQL glossary of terms](../glossary-terms.md).

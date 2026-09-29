@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest, dpless
-ms.date: 09/15/2026
+ms.date: 09/23/2026
 ms.service: azure-vm-sql-server
 ms.topic: whats-new
 ms.custom:
@@ -38,6 +38,7 @@ The following table lists the features of SQL Server on Azure VMs that are curre
 | --- | --- |
 | [Modernization Advisor](../modernization-advisor.md) | Use the Modernization Advisor in the Azure portal to help you determine if migrating to Azure SQL Managed Instance saves you money or optimizes performance. |
 | [Premium SSD v2 in the Azure portal](storage-configuration-premium-ssd-v2.md) | Deploy your SQL Server on Azure VM with Premium SSD v2 disks in the Azure portal for improved throughput and performance. |  
+| [Azure portal script-based deployment for SQL Server on Linux VMs](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md#azure-portal-deployment) | Deploy SQL Server on Linux Azure VMs from a supported RHEL or Ubuntu base image. Azure installs and configures SQL Server during VM provisioning and automatically registers the VM with the SQL Server IaaS Agent extension. This experience replaces the deprecated precreated SQL Server on Linux Azure Marketplace images. |
 | [Unified inventory](unified-inventory-sql-vm.md) | View your SQL Server on Azure VM and SQL Server enabled by Azure Arc resources in a single pane in the Azure portal. With unified inventory, you can view your *SQL Server instance* resources, making it easier to monitor and maintain your SQL Server workloads in Azure. |
 
 ## General availability (GA)
@@ -57,6 +58,7 @@ Learn about significant changes to the SQL Server on Azure VMs documentation. Fo
 
 | Changes | Details |
 | --- | --- |
+| **Azure portal script-based deployment for SQL Server on Linux VMs preview** | Precreated SQL Server on Linux Azure Marketplace images are deprecated. Instead, you start from a supported Linux base image, and Azure installs and configures SQL Server during VM provisioning and registers the VM with the SQL Server IaaS Agent extension. You can start from the **Create a virtual machine** page in the Azure portal or from the Azure SQL hub. This feature is currently in preview. To learn more, see [Azure portal deployment](../linux/sql-server-on-linux-vm-what-is-iaas-overview.md#azure-portal-deployment) and [Provision a Linux VM running SQL Server](../linux/sql-vm-create-portal-quickstart.md). |
 | **SQL VM deployment failure resolved** | The issue that caused SQL Server on Azure VM deployments to fail when `tempdb` was placed on the local temp disk for Azure VM images with uninitialized ephemeral disks has been resolved. The issue continues to impact self-installed SQL Server instances. To learn more about the issue and see a list of affected VMs, review [SQL Server failures](/troubleshoot/sql/azure-sql/sql-deployment-fails-drive-not-ready). |
 
 ### June 2026

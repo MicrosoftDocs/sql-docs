@@ -1,10 +1,10 @@
 ---
-title: "PERCENTILE_CONT (Transact-SQL)"
+title: PERCENTILE_CONT (Transact-SQL)
 description: PERCENTILE_CONT calculates a percentile based on a continuous distribution of the column value.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/23/2024
+ms.reviewer: jovanpop, wiassaf
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -24,15 +24,29 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-Calculates a percentile based on a continuous distribution of the column value in the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)]. The result is interpolated, and might not equal any of the specific values in the column.
+The `PERCENTILE_CONT` function calculates a percentile based on a continuous distribution of the column value in the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)]. The result is interpolated, and might not equal any of the specific values in the column.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
+:::moniker range="fabric"
+
+Aggregation function syntax:
 
 ```syntaxsql
 PERCENTILE_CONT ( numeric_literal )
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )
+```
+
+:::moniker-end
+
+Analytic function syntax:
+
+```syntaxsql
+PERCENTILE_CONT ( numeric_literal )
+    WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] 
+    [ OVER ( [ <partition_by_clause> ] ) ]
+    )
     OVER ( [ <partition_by_clause> ] )
 ```
 
@@ -50,6 +64,13 @@ Specifies a list of numeric values to sort and compute the percentile over. Only
 
 Divides the result set produced by the `FROM` clause into partitions to which the percentile function is applied. For more information, see [SELECT - OVER Clause](../queries/select-over-clause-transact-sql.md). The `ORDER BY` clause and `<rows or range clause>` of the `OVER` syntax can't be specified in a `PERCENTILE_CONT` function.
 
+:::moniker range="fabric"
+
+> [!NOTE]
+> The `OVER` clause is optional in Fabric Data Warehouse and the SQL analytics endpoint. `PERCENTILE_CONT` can be used in either aggregate or analytic (window) form.
+
+:::moniker-end
+
 ## Return types
 
 **float(53)**
@@ -59,6 +80,8 @@ Divides the result set produced by the `FROM` clause into partitions to which th
 `WITHIN GROUP` is a reserved keyword, starting with compatibility level `110`. For more information, see [ALTER DATABASE Compatibility Level](../statements/alter-database-transact-sql-compatibility-level.md).
 
 ## Remarks
+
+The aggregate form of `PERCENTILE_CONT`, which omits the `OVER` clause, isn't supported in SQL Server, Azure SQL Database, Azure SQL Managed Instance, or SQL database in Fabric.
 
 Any nulls in the data set are ignored.
 

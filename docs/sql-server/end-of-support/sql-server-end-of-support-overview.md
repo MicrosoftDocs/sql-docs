@@ -4,7 +4,7 @@ description: Learn about the different options available for SQL Server products
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, wiassaf
-ms.date: 08/31/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: concept-article
@@ -189,7 +189,7 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 ## Modernize with Azure SQL Database Hyperscale
 
-Consider migrating your workload to the [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale) of Azure SQL Database. Hyperscale is a managed platform as a service (PaaS) database that separates compute from storage. The service tier supports up to 128 TB per database and up to 128 vCores (up to 192 vCores currently in preview). This architecture supports scaling compute without moving data.
+Consider migrating your workload to the [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale) of Azure SQL Database. Hyperscale is a managed platform as a service (PaaS) database that separates compute from storage. The service tier supports up to 128 TB per database and up to 192 vCores. This architecture supports scaling compute without moving data.
 
 ### Benefits
 
@@ -207,7 +207,7 @@ Consider migrating your workload to the [Hyperscale service tier](/azure/azure-s
 - **Feature differences**: Azure SQL Database uses a database-level service model and differs from SQL Server in some Transact-SQL features and instance-level capabilities. Review [T-SQL differences between SQL Server and Azure SQL Database](/azure/azure-sql/database/transact-sql-tsql-differences-sql-server) and [Azure SQL Database and Azure SQL Managed Instance feature differences](/azure/azure-sql/database/features-comparison) before migration.
 - **Application changes**: Applications that use cross-database queries, linked servers, SQL Server Agent jobs, or other instance-level objects might require changes. Azure SQL Database provides alternatives for some features, such as elastic queries and [elastic jobs](/azure/azure-sql/database/elastic-jobs-overview).
 - **Networking**: Azure SQL Database provides a public endpoint by default. Configure [Azure Private Link](/azure/azure-sql/database/private-endpoint-overview) or [virtual network service endpoints](/azure/azure-sql/database/vnet-service-endpoint-rule-overview) if your deployment requires private or restricted connectivity.
-- **Serverless compute**: Hyperscale serverless doesn't support auto-pause. Compare its idle compute costs with General Purpose serverless when evaluating intermittent workloads.
+- **Serverless compute**: Currently, [serverless auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql-db&preserve-view=true) are a preview feature of Azure SQL Database Hyperscale.
 
 ### Resources
 

@@ -176,7 +176,7 @@ Each alias configures the same option as its equivalent ODBC keyword:
 | `FailoverPartner` | `Failover_Partner` | Specifies the failover partner server for database mirroring. Supported on Windows only. |
 
 > [!NOTE]
-> In version 18.7, `MultipleActiveResultSets` accepts `Yes` or `No`, but not `True` or `False`. This limitation will be fixed in a future release.
+> In version 18.7, `MultipleActiveResultSets` accepts `Yes` or `No`, but not `True` or `False`.
 
 The driver applies the following rules to these aliases:
 

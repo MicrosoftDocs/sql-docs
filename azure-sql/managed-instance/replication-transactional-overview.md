@@ -5,7 +5,7 @@ description: Learn about using SQL Server transactional replication with Azure S
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, randolphwest
-ms.date: 02/20/2026
+ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: concept-article
@@ -244,7 +244,7 @@ For more information about configuring transactional replication, see the follow
 - [Configure replication between a SQL Managed Instance publisher and subscriber](../managed-instance/replication-between-two-instances-configure-tutorial.md).
 - [Configure replication between a SQL Managed Instance publisher, SQL Managed Instance distributor, and SQL Server subscriber](../managed-instance/replication-two-instances-and-sql-server-configure-tutorial.md).
 - [Create a publication](/sql/relational-databases/replication/publish/create-a-publication).
-- [Create a push subscription](/sql/relational-databases/replication/create-a-push-subscription) by using the server name as the subscriber (for example `N'azuresqldbdns.database.windows.net`), and the database in Azure SQL Database name as the destination database (for example, `Adventureworks`).
+- [Create a push subscription](/sql/relational-databases/replication/create-a-push-subscription) by using the server name as the subscriber (for example `<Azure SQL logical server name>.database.windows.net`), and the database in Azure SQL Database name as the destination database (for example, `AdventureWorks`).
 
 ## Related content
 

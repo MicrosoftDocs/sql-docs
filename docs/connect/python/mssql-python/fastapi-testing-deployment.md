@@ -1,10 +1,10 @@
 ---
 title: Test and Deploy FastAPI Applications with mssql-python
 description: Learn how to configure, secure, test, and deploy FastAPI applications that use mssql-python with Microsoft SQL.
-author: dlevy-msft-sql
-ms.author: dlevy
+author: mahyon
+ms.author: mahyon
 ms.reviewer: vanto, randolphwest
-ms.date: 09/17/2026
+ms.date: 09/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -21,14 +21,14 @@ After you build a FastAPI application with mssql-python, configure it for deploy
 - Install the production and test dependencies:
 
   ```bash
-  pip install pydantic-settings pyjwt pytest httpx
+  pip install pydantic-settings pyjwt pytest httpx2
   ```
 
 ## Configure deployment settings
 
 Use Pydantic Settings to load deployment-specific values from environment variables. This approach keeps secrets out of source code and gives each environment its own database, pool, and authentication configuration.
 
-Create `config.py`:
+In the project root, create `config.py` next to `database.py`:
 
 ```python
 from pydantic_settings import BaseSettings
@@ -55,6 +55,26 @@ def get_connection_string() -> str:
 ```
 
 Set `DATABASE_SERVER`, `DATABASE_NAME`, and `JWT_SECRET` in the deployment environment. Pydantic Settings reads the uppercase environment variable names automatically.
+
+For local testing, replace the database placeholders and set the variables in the activated environment. Run `pytest` later from the same terminal.
+
+# [Windows](#tab/windows)
+
+```powershell
+$env:DATABASE_SERVER = "<server>.database.windows.net"
+$env:DATABASE_NAME = "<database>"
+$env:JWT_SECRET = python -c "import secrets; print(secrets.token_urlsafe(32))"
+```
+
+# [Linux/macOS](#tab/linux-macos)
+
+```bash
+export DATABASE_SERVER="<server>.database.windows.net"
+export DATABASE_NAME="<database>"
+export JWT_SECRET="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
+```
+
+---
 
 > [!NOTE]
 > `ActiveDirectoryDefault` tries multiple credential providers in sequence. In production, specify the authentication mode for the deployed identity, such as `ActiveDirectoryMSI` for managed identity, to avoid walking the credential chain. For available modes, see [Microsoft Entra authentication with mssql-python](entra-authentication.md).

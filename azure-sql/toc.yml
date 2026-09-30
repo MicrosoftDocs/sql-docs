@@ -738,6 +738,8 @@
         href: database/identify-query-performance-issues.md
       - name: Use DMVs to monitor performance
         href: database/monitoring-with-dmvs.md
+      - name: Enable performance monitoring (preview)
+        href: database/enable-performance-monitoring-sql-database.md
       - name: Azure Monitor metrics and alerts for SQL Database
         href: database/monitoring-metrics-alerts.md
     - name: Hyperscale databases
@@ -1681,6 +1683,8 @@
           href: virtual-machines/windows/sql-assessment-for-sql-vm.md
         - name: Analyze I/O performance
           href: virtual-machines/windows/storage-performance-analysis.md
+        - name: Enable performance monitoring (preview)
+          href: virtual-machines/windows/enable-performance-monitoring-sql-vm.md
         - name: VM vCore customization
           href: virtual-machines/windows/vm-vcore-customization-for-sql.md
       - name: Security
@@ -1983,6 +1987,8 @@
       href: database/monitoring-sql-database-azure-monitor-reference.md
     - name: Azure SQL Managed Instance
       href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
+    - name: Performance monitoring telemetry (preview)
+      href: database/query-performance-monitoring-telemetry.md
   - name: Tools
     items:
     - name: SQL Server tools overview

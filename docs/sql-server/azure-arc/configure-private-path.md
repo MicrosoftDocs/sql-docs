@@ -14,8 +14,6 @@ This article describes how to configure communication for a SQL Server enabled b
 
 This design deploys forward proxy servers in Azure to allow SQL Server to communicate over a site-to-site VPN or ExpressRouteConnection with private IP addresses. The proxies communicate with Arc URLs over the Azure backbone network.
 
-> [!IMPORTANT]  
-> This implementation uses [Azure Firewall Explicit proxy](/azure/firewall/explicit-proxy) - which is currently available in preview.
 
 The following diagram represents this pattern.
 

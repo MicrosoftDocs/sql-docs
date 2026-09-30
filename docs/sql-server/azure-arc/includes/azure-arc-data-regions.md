@@ -41,6 +41,8 @@ SQL Server enabled by Azure Arc is available in the following regions:
 #### [Europe, the Middle East, and Africa](#tab/emea)
 
 - France Central
+- Germany West Central
+- Italy North
 - North Europe
 - Norway East
 - South Africa North

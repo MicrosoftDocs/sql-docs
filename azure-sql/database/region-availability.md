@@ -4,7 +4,7 @@ description: Learn about feature availability by region for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: peskount, rokhot, shrtiwar, pookam
-ms.date: 09/22/2026
+ms.date: 09/30/2026
 ms.service: azure-sql-database
 ms.topic: concept-article
 ms.custom:
@@ -133,10 +133,6 @@ The following regions offer 160 vCore and 192 vCore hardware for **Hyperscale pr
 - UK South
 
 ---
-
-### Fsv2-series availability
-
-Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
 
 ### DC-series availability
 

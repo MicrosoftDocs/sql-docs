@@ -53174,6 +53174,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/linux/sql-server-linux-develop-connectivity-libraries.md",
+      "redirect_url": "/sql/connect/sql-connection-libraries",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/failover-clusters/high-availability-solutions-sql-server.md",
       "redirect_url": "/sql/database-engine/sql-server-business-continuity-dr",
       "redirect_document_id": false

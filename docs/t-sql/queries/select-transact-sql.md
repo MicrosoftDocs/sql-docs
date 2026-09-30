@@ -3,8 +3,8 @@ title: "SELECT (Transact-SQL)"
 description: The SELECT statement retrieves rows from the database and enables the selection of rows or columns from tables in the SQL Server Database Engine.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 02/02/2026
+ms.reviewer: jovanpop, randolphwest, wiassaf
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -42,6 +42,7 @@ Because the full syntax `SELECT` statement is complex, detailed syntax elements 
 - [WHERE clause](where-transact-sql.md)
 - [GROUP BY clause](select-group-by-transact-sql.md)
 - [HAVING clause](select-having-transact-sql.md)
+- [QUALIFY clause](select-qualify-clause-transact-sql.md?view=fabric&preserve-view=true) (in Fabric Data Warehouse *only*)
 - [WINDOW clause](select-window-transact-sql.md)
 - [ORDER BY clause](select-order-by-clause-transact-sql.md)
 
@@ -91,6 +92,7 @@ SELECT <select_criteria>
     [ WHERE <search_condition> ]
     [ GROUP BY <group_by_clause> ]
     [ HAVING <search_condition> ]
+    [ QUALIFY <filter_condition> ]
     [ ORDER BY <order_by_expression> ]
     [ OPTION ( <query_option> [ , ...n ] ) ]
 ```
@@ -116,6 +118,7 @@ The following steps show the logical processing order, or binding order, for a `
 1. `GROUP BY`
 1. `WITH CUBE` or `WITH ROLLUP`
 1. `HAVING`
+1. `QUALIFY` (in Fabric Data Warehouse *only*)
 1. `SELECT`
 1. `DISTINCT`
 1. `ORDER BY`

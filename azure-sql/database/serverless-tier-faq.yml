@@ -5,7 +5,7 @@ metadata:
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: kendalv, moslake, mathoma, dfurman
-  ms.date: 07/28/2026
+  ms.date: 09/14/2026
   ms.service: azure-sql-database
   ms.subservice: service-overview
   ms.topic: faq
@@ -24,7 +24,9 @@ sections:
       - question: |
           Does Azure SQL Database Hyperscale support the serverless compute tier?
         answer: |
-          Yes, the serverless compute tier is supported in the Hyperscale service tier. However, Hyperscale doesn't currently support auto-pause and auto-resume. 
+          Yes, the serverless compute tier is supported in the Hyperscale service tier. 
+          
+          Currently, [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) are a preview feature of Azure SQL Database Hyperscale.
 
       - question: |
           Which service tiers support the serverless compute tier?

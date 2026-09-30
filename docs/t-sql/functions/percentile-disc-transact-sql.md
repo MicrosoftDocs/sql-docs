@@ -1,10 +1,10 @@
 ---
-title: "PERCENTILE_DISC (Transact-SQL)"
+title: PERCENTILE_DISC (Transact-SQL)
 description: PERCENTILE_DISC computes a specific percentile for sorted values in an entire rowset or within a rowset's distinct partitions.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/20/2025
+ms.reviewer: jovanpop, wiassaf
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,16 +20,30 @@ dev_langs:
   - TSQL
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
-
 # PERCENTILE_DISC (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-Computes a specific percentile for sorted values in an entire rowset or within a rowset's distinct partitions in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a given percentile value *P*, `PERCENTILE_DISC` sorts the expression values in the `ORDER BY` clause. It then returns the value with the smallest `CUME_DIST` value given (with respect to the same sort specification) that's greater than or equal to *P*. For example, `PERCENTILE_DISC (0.5)` computes the 50th percentile (that is, the median) of an expression. `PERCENTILE_DISC` calculates the percentile based on a discrete distribution of the column values. The result is equal to a specific column value.
+The `PERCENTILE_DISC` function computes a specific percentile for sorted values in an entire rowset or within a rowset's distinct partitions. For a given percentile value *P*, `PERCENTILE_DISC` sorts the expression values in the `ORDER BY` clause. It then returns the value with the smallest `CUME_DIST` value given (with respect to the same sort specification) that's greater than or equal to *P*. For example, `PERCENTILE_DISC (0.5)` computes the 50th percentile (that is, the median) of an expression. `PERCENTILE_DISC` calculates the percentile based on a discrete distribution of the column values. The result is equal to a specific column value.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
+
+:::moniker range="fabric"
+
+Aggregation function syntax:
+
+```syntaxsql
+PERCENTILE_DISC ( numeric_literal )
+    WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] 
+    [ OVER ( [ <partition_by_clause> ] ) ]
+    )
+```
+
+:::moniker-end
+
+Analytic function syntax:
 
 ```syntaxsql
 PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )
@@ -50,6 +64,13 @@ Specifies a list of values to sort and compute the percentile over. Only one *or
 
 Divides the `FROM` clause's result set into partitions. The percentile function is applied to these partitions. For more information, see [SELECT - OVER clause](../queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause>can't be specified in a `PERCENTILE_DISC` function.
 
+:::moniker range="fabric"
+
+> [!NOTE]
+> The `OVER` clause is optional in Fabric Data Warehouse and the SQL analytics endpoint. `PERCENTILE_DISC` can be used in either aggregate or analytic (window) form.
+
+:::moniker-end
+
 ## Return types
 
 The return type is determined by the *order_by_expression* type.
@@ -63,6 +84,8 @@ Under compatibility level 110 and higher, `WITHIN GROUP` is a reserved keyword. 
 Any nulls in the data set are ignored.
 
 `PERCENTILE_DISC` is nondeterministic. For more information, see [Deterministic and nondeterministic functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+
+The aggregate form of `PERCENTILE_DISC`, which omits the `OVER` clause, isn't supported in SQL Server, Azure SQL Database, Azure SQL Managed Instance, or SQL database in Fabric.
 
 ## Examples
 

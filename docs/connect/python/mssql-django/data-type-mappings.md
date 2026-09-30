@@ -3,8 +3,8 @@ title: Django Field to SQL Server Type Mappings
 description: Review how Django model field types map to SQL Server data types in the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -39,7 +39,7 @@ This article documents how Django model field types map to SQL Server data types
 | `PositiveBigIntegerField` | **bigint** | With a CHECK constraint `>= 0`. |
 | `PositiveSmallIntegerField` | **smallint** | With a CHECK constraint `>= 0`. |
 | `GenericIPAddressField` | **nvarchar(39)** | IPv4 or IPv6 address. |
-| `JSONField` | **nvarchar(max)** | With JSON check constraint. Requires SQL Server 2016+. |
+| `JSONField` | **nvarchar(max)** | With JSON check constraint. |
 | `SlugField` | **nvarchar(50)** | CharField with slug validation. |
 | `TextField` | **nvarchar(max)** | Unlimited-length Unicode text. |
 | `TimeField` | **time** | Time without date. |

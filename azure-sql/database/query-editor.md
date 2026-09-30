@@ -5,7 +5,7 @@ description: Learn how to run T-SQL queries all from within the browser via the 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic, mathoma
-ms.date: 03/11/2026
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: development
 ms.topic: concept-article
@@ -29,7 +29,7 @@ monikerRange: "=azuresql||=azuresql-db"
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database.
+The Query editor is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database.
 
 - For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor](connect-query-portal.md).
 - For more advanced object explorer capabilities and management functions, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md) or the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code).

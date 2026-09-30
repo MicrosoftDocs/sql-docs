@@ -4,7 +4,7 @@ description: Microsoft.Data.SqlClient connects .NET applications to SQL Server, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/17/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -270,4 +270,4 @@ To request a feature, open an issue in the [Microsoft.Data.SqlClient GitHub repo
 - [Microsoft.Data.SqlClient on NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient)
 - [Release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/README.md)
 - [ADO.NET overview](/dotnet/framework/data/adonet/)
-- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)
+- [Microsoft SQL drivers and frameworks](../sql-connection-libraries.md)

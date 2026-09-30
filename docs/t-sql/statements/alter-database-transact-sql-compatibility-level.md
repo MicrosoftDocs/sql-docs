@@ -4,7 +4,7 @@ description: Sets Transact-SQL and query processing behaviors to be compatible w
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/29/2026
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -62,6 +62,8 @@ The version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] with w
 For the recommended workflow for upgrading the compatibility level, see [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Additionally, for an assisted experience with upgrading the database compatibility level, see [Upgrade databases using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
 ## Remarks
+
+`ALTER DATABASE ... SET COMPATIBILITY_LEVEL` isn't supported in Fabric Data Warehouse.
 
 For all installations of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. New databases are set to this level unless the `model` database has a lower compatibility level. For databases attached or restored from any earlier version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the database keeps its existing compatibility level, if it's at least minimum allowed for that instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Moving a database with a compatibility level lower than the allowed level by the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.
 

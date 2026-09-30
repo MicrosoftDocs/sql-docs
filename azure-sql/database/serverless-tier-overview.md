@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendalv, moslake, mathoma, dfurman
-ms.date: 07/28/2026
+ms.date: 09/14/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: concept-article
@@ -13,13 +13,12 @@ ms.custom:
   - "devx-track-azurecli"
   - "devx-track-azurepowershell"
 monikerRange: "=azuresql||=azuresql-db"
+ai-usage: ai-assisted
 ---
 # Serverless compute tier for Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Serverless is a [compute tier](service-tiers-sql-database-vcore.md#compute) for single databases in Azure SQL Database that automatically scales compute based on workload demand and bills for the amount of compute used per second. The serverless compute tier also automatically pauses databases during inactive periods when only storage is billed and automatically resumes databases when activity returns. The serverless compute tier is available in the [General Purpose](service-tiers-sql-database-vcore.md#general-purpose) service tier and the [Hyperscale](service-tier-hyperscale.md) service tier.
-
-Currently, auto-pause and auto-resume are only supported in the General Purpose service tier.
 
 ## Overview
 
@@ -39,7 +38,8 @@ The following table shows the available values for these parameters.
    |Parameter|Value choices|Default value|
    |---|---|---|---|
    |Minimum vCores|Depends on maximum vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
-   |Auto-pause delay|Minimum: 15 minutes<br>Maximum: 10,080 minutes (seven days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
+   |Auto-pause delay for General Purpose|Minimum: 15 minutes<br>Maximum: 10,080 minutes (seven days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
+   |Auto-pause delay for Hyperscale|Minimum: 60 minutes<br>Maximum: 10,080 minutes (seven days)<br>Increments: 1 minute<br>Disable auto-pause: -1|60 minutes|
 
 ### Cost
 
@@ -57,15 +57,15 @@ Serverless is price-performance optimized for single databases with intermittent
 
 ### Scenarios well suited for serverless compute
 
-- Single databases with intermittent, unpredictable usage patterns interspersed with periods of inactivity, and lower average compute utilization over time.
-- Single databases in the provisioned compute tier that are frequently rescaled and customers who prefer to delegate compute rescaling to the service.
-- New single databases without usage history where compute sizing is difficult or not possible to estimate before deployment in an Azure SQL Database.
+- Use serverless compute for single databases with intermittent, unpredictable usage patterns interspersed with periods of inactivity and lower average compute utilization over time.
+- Use serverless compute for single databases in the provisioned compute tier that are frequently rescaled, or when you prefer to delegate compute rescaling to the service.
+- Use serverless compute for new single databases without usage history when compute sizing is difficult or impossible to estimate before deployment in Azure SQL Database.
 
 ### Scenarios well suited for provisioned compute
 
-- Single databases with more regular, predictable usage patterns and higher average compute utilization over time.
-- Databases that can't tolerate performance trade-offs resulting from more frequent memory trimming or delays in resuming from a paused state.
-- Multiple databases with intermittent, unpredictable usage patterns that can be consolidated into elastic pools for better price-performance optimization.
+- Use provisioned compute for single databases with more regular, predictable usage patterns and higher average compute utilization over time.
+- Use provisioned compute for databases that can't tolerate performance tradeoffs from more frequent memory trimming or delays in resuming from a paused state.
+- Use provisioned compute for multiple databases with intermittent, unpredictable usage patterns that can be consolidated into elastic pools for better price-performance optimization.
 
 ### Compare compute tiers
 
@@ -76,8 +76,16 @@ The following table summarizes distinctions between the serverless compute tier 
 |**Database usage pattern**| Intermittent, unpredictable usage with lower average compute utilization over time. | More regular usage patterns with higher average compute utilization over time, or multiple databases using elastic pools.|
 | **Performance management effort** |Lower|Higher|
 |**Compute scaling**|Automatic|Manual|
-|**Compute responsiveness**|Lower after inactive periods|Immediate|
+|**Initial compute responsiveness**|Lower after inactive periods|Immediate|
 |**Billing granularity**|Per second|Per hour|
+
+<!-- The following sentences repeat and rephrase the content in the preceding table for maximum context clarity. Keep this prose summary synchronized with the preceding table. -->
+
+- The best database usage pattern for serverless compute is intermittent and unpredictable with lower average compute utilization over time. The best usage pattern for provisioned compute is more regular with higher average compute utilization over time or includes multiple databases in elastic pools.
+- Serverless compute requires lower performance management effort. Provisioned compute requires higher performance management effort.
+- Serverless compute scales automatically. Provisioned compute scales manually.
+- Serverless compute has lower initial responsiveness after inactive periods. Provisioned compute responds immediately.
+- Serverless compute is billed per second. Provisioned compute is billed per hour.
 
 ## Purchasing model and service tier
 
@@ -100,6 +108,9 @@ For more information about auto-scaling and the responsiveness of the serverless
 <a id="auto-pause-and-auto-resume"></a>
 
 ## Auto-pause and auto-resume
+
+- Serverless auto-pause and auto-resume are available in the General Purpose service tier.
+- Serverless auto-pause and auto-resume are a preview feature of Azure SQL Database Hyperscale.
 
 For detailed information about auto-pause and auto-resume behavior, triggers, troubleshooting, and connectivity, see [Auto-pause and auto-resume in the serverless compute tier](serverless-tier-auto-pause-resume.md).
 
@@ -135,7 +146,7 @@ For more information on monitoring pause and resume events of your serverless da
 
 ## Resource limits
 
-For resource limits, see [serverless compute tier](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).
+For resource limits, see [General Purpose serverless compute](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5) and [Hyperscale serverless compute](resource-limits-vcore-single-databases.md#hyperscale---serverless-compute---standard-series-gen5).
 
 ## Billing
 

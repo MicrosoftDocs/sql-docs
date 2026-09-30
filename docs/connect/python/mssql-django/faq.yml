@@ -4,8 +4,8 @@ metadata:
   description: Frequently asked questions about the mssql-django Django backend for SQL Server.
   author: dlevy-msft-sql
   ms.author: dlevy
-  ms.reviewer: randolphwest
-  ms.date: 06/19/2026
+  ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+  ms.date: 09/18/2026
   ms.service: sql
   ms.subservice: connectivity
   ms.topic: faq
@@ -18,7 +18,7 @@ sections:
     questions:
       - question: What is mssql-django?
         answer: |
-          The `mssql-django` package is a Microsoft-maintained Django database backend for SQL Server. It allows Django applications to connect to SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric using the pyodbc driver.
+          The `mssql-django` package is a Microsoft-maintained Django database backend for SQL Server. It allows Django applications to connect to SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Version 2.0 and later versions connect through either the `pyodbc` driver, which is the default, or Microsoft's `mssql-python` driver.
 
           Install it with pip:
 
@@ -28,11 +28,23 @@ sections:
 
       - question: What versions of Django does mssql-django support?
         answer: |
-          The `mssql-django` package v1.7 supports Django 3.2, 4.0, 4.1, 4.2, 5.0, 5.1, 5.2, and 6.0. Check the [support lifecycle](support-lifecycle.md) for the full compatibility matrix.
+          The `mssql-django` package version 2.0 supports Django 5.2, 6.0, and 6.1. Projects on Django 3.2 through 5.1 stay on version 1.8.0. Check the [support lifecycle](support-lifecycle.md) for the full compatibility matrix.
 
       - question: What versions of Python are supported?
         answer: |
-          The `mssql-django` package supports Python 3.8 and later. The specific Python version must also be compatible with your Django version. For example, Django 5.0 requires Python 3.10 and later versions, and Django 6.0 requires Python 3.12 and later versions. See [Support lifecycle](support-lifecycle.md) for the full compatibility matrix.
+          The `mssql-django` package version 2.0 supports Python 3.10 through 3.14. The specific Python version must also be compatible with your Django version: Django 5.2 is tested with Python 3.10 through 3.13, and Django 6.0 and 6.1 are tested with Python 3.12 through 3.14. See [Support lifecycle](support-lifecycle.md) for the full compatibility matrix.
+
+      - question: Which Python database driver does mssql-django use?
+        answer: |
+          Version 2.0 and later versions support two drivers, selected for each database alias. `pyodbc` is the default and needs an externally installed Microsoft ODBC Driver for SQL Server. To use Microsoft's `mssql-python` driver instead, which needs no separate ODBC driver install, add `python_driver` to that alias's `OPTIONS` dictionary:
+
+          ```python
+          "OPTIONS": {
+              "python_driver": "mssql_python",
+          },
+          ```
+
+          Aliases that omit the option keep using `pyodbc`. For the behavior differences between the two paths, see [Select the database driver for mssql-django](select-database-driver.md).
 
       - question: Is mssql-django maintained by Microsoft?
         answer: |
@@ -56,13 +68,15 @@ sections:
 
       - question: Which ODBC driver should I use?
         answer: |
-          Use Microsoft ODBC Driver 18 for SQL Server. It's the default in `mssql-django` 1.7 and later, and the backend automatically falls back to ODBC Driver 17 if version 18 isn't installed. Specify the driver explicitly in the `OPTIONS` dictionary only if you need to pin a specific version:
+          On the default `pyodbc` path, use Microsoft ODBC Driver 18 for SQL Server. It's the default, and the backend automatically falls back to ODBC Driver 17 if version 18 isn't installed. Specify the driver explicitly in the `OPTIONS` dictionary only if you need to pin a specific version, which also turns off the fallback:
 
           ```python
           "OPTIONS": {
               "driver": "ODBC Driver 18 for SQL Server",
           },
           ```
+
+          The `mssql-python` path ignores the `driver` option and uses the ODBC Driver 18 that `pip` installs with it.
 
       - question: How do I connect to Azure SQL Database?
         answer: |
@@ -146,7 +160,7 @@ sections:
 
       - question: Why does bulk_update fail with nullable fields?
         answer: |
-          In `mssql-django` 1.7, the backend handles all-NULL updates automatically. In earlier versions, use the `default` parameter in `bulk_update` to avoid `NULL` in `CASE WHEN ... THEN NULL` expressions, which cause SQL Server type inference errors:
+          The backend handles all-NULL updates automatically. If you need to control the placeholder value, use the `default` parameter in `bulk_update`, which keeps `NULL` out of `CASE WHEN ... THEN NULL` expressions that cause SQL Server type inference errors:
 
           ```python
           Product.objects.bulk_update(products, ["description"], default="")

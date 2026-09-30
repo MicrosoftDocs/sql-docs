@@ -5,7 +5,7 @@ description: Learn about the capabilities of SQL Server migration in Azure Arc.
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: mathoma
-ms.date: 04/16/2026
+ms.date: 09/15/2026
 ms.topic: how-to
 ms.collection: ce-skilling-ai-copilot
 
@@ -33,7 +33,9 @@ SQL Server migration in Azure Arc is available by default for all SQL Server ins
 
 ## Migration targets
 
-You can migrate to [Azure SQL Managed Instance](migrate-to-azure-sql-managed-instance.md) or [SQL Server on Azure VMs](migrate-to-sql-server-on-azure-vms.md).
+You can migrate to [Azure SQL Database](migrate-to-azure-sql-database.md), [Azure SQL Managed Instance](migrate-to-azure-sql-managed-instance.md), or [SQL Server on Azure VMs](migrate-to-sql-server-on-azure-vms.md).
+
+Migration to Azure SQL Database is currently in [preview](release-notes.md#preview).
 
 ## Microsoft Copilot assisted migration
 
@@ -97,7 +99,7 @@ The assessment is available for any instance of SQL Server enabled by Azure Arc.
 
 ## Database migration
 
-On the **Database migration** pane, you can migrate your SQL Server databases to Azure SQL Managed Instance or SQL Server on Azure VMs. The migration process is fully managed and automated from the Azure portal. Once you're ready to start, you can use the tiles to assess your SQL Server databases, choose a migration target, and start the migration process.
+On the **Database migration** pane, you can migrate your SQL Server databases to Azure SQL Managed Instance, SQL Server on Azure VMs, or Azure SQL Database. The Azure portal fully manages and automates the migration process. When you're ready, use the tiles to assess your SQL Server databases, choose a migration target, and start the migration process.
 
 **Database migration** guides you through the migration with easy to follow tiles for each step of the process:
 
@@ -109,6 +111,8 @@ The **Database Migration** pane also has a useful summary of the migration statu
 
 ## Related content
 
+- [Prepare for migration to Azure SQL Database](migration-sql-database-prepare.md)
+- [Migrate to Azure SQL Database](migrate-to-azure-sql-database.md)
 - [Track migration journey by using migration dashboard - SQL Server enabled by Azure Arc](migration-inventory.md)
 - [Assess migration readiness - SQL Server enabled by Azure Arc](migration-assessment.md)
 - [Prepare environment for a Managed Instance link migration - SQL Server migration in Azure Arc](migration-sql-mi-prepare-link.md)

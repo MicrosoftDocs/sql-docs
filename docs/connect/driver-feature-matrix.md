@@ -1,9 +1,10 @@
 ---
 title: Driver Feature Support Matrix
 description: Compare feature support in Microsoft SQL drivers for .NET, ODBC, OLE DB, Go, JDBC, Node.js, JavaScript, PHP, and Python.
-author: David-Engel
-ms.author: davidengel
-ms.date: 09/21/2026
+author: dlevy-msft-sql
+ms.author: dlevy
+ms.reviewer: davidengel, singhsaura, mcimfl, sunilbs, cmalhotra, sumitsar, vbeiranvand
+ms.date: 09/24/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -99,7 +100,7 @@ Driver version qualifiers appear only when a capability isn't available in every
 | [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](php/always-encrypted-secure-enclaves.md) | No | No | No |
 | [Microsoft Entra access token authentication](/entra/identity-platform/access-tokens) | [Yes](php/azure-active-directory.md) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](python/mssql-python/entra-authentication.md#access-token-authentication) | [Yes](golang/entra-authentication.md) |
 | [Microsoft Entra password authentication (deprecated)](/azure/azure-sql/database/authentication-aad-overview) | [Yes](php/azure-active-directory.md) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](python/mssql-python/entra-authentication.md#password-authentication-deprecated) | [Yes](golang/entra-authentication.md) |
-| [Microsoft Entra integrated authentication](/azure/azure-sql/database/authentication-aad-overview) | No | No | [Yes](python/mssql-python/entra-authentication.md#windows-integrated-authentication) | No |
+| [Microsoft Entra integrated authentication](/azure/azure-sql/database/authentication-aad-overview) | [Yes](php/azure-active-directory.md) | No | [Yes](python/mssql-python/entra-authentication.md#windows-integrated-authentication) | [Partial](golang/entra-authentication.md#activedirectoryintegrated) (applications must supply `ActiveDirectoryTokenProvider`) |
 | [Microsoft Entra Interactive (MFA) authentication](/azure/azure-sql/database/authentication-aad-overview) | No | No | [Yes](python/mssql-python/entra-authentication.md#interactive-authentication) | [Yes](golang/entra-authentication.md) |
 | [Microsoft Entra managed identity authentication](/entra/identity/managed-identities-azure-resources/overview) | [Yes](php/azure-active-directory.md) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](python/mssql-python/entra-authentication.md#managed-identity) | [Yes](golang/entra-authentication.md) |
 | [Microsoft Entra service principal authentication](/entra/identity-platform/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](python/mssql-python/entra-authentication.md#service-principal-authentication) | [Yes](golang/entra-authentication.md) |
@@ -109,7 +110,7 @@ Driver version qualifiers appear only when a capability isn't available in every
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | No | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | [Yes](python/mssql-python/bulk-copy.md) | [Yes](golang/bulk-operations.md) |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](php/release-notes-php-sql-driver.md#whats-new-in-58) | No | No | No |
 | Multiple Active Result Sets (MARS) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | No | No | No |
-| [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | [Partial](php/default-php-data-types.md) (via UDT binary or stream) | [Partial](https://tediousjs.github.io/tedious/api-datatypes.html) (UDT buffer) | [Partial](python/mssql-python/spatial-data.md) (binary or WKT) | [Partial](golang/data-type-mappings.md) (via UDT) |
+| [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | [Partial](php/default-php-data-types.md) (via UDT binary or stream) | [Partial](https://tediousjs.github.io/tedious/api-datatypes.html) (UDT buffer) | [Partial](python/mssql-python/spatial-data.md) (raw binary; WKT when queries call `STAsText()`) | [Partial](golang/data-type-mappings.md) (via UDT) |
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | No | [Yes](golang/table-valued-parameters.md) |
 | MultiSubnetFailover | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](python/mssql-python/availability-groups.md) | [Yes](golang/connection-options.md) (enabled by default) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | No | No | No |

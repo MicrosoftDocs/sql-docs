@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 09/17/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -298,4 +298,4 @@ To request a feature, open an issue in the [Microsoft Drivers for PHP for SQL Se
 
 - [Microsoft Drivers for PHP for SQL Server on GitHub](https://github.com/microsoft/msphpsql)
 - [Microsoft ODBC Driver for SQL Server](../odbc/microsoft-odbc-driver-for-sql-server.md)
-- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)
+- [Microsoft SQL drivers and frameworks](../sql-connection-libraries.md)

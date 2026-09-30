@@ -498,7 +498,7 @@ Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series 
 
 The following table covers these SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`, `HS_PRMS_64`, `HS_PRMS_80`, `HS_PRMS_128`, `HS_PRMS_160`, and `HS_PRMS_192`:
 
-| vCores | 24 | 32 | 40 | 64 | 80 | 128 | 160<sup>5</sup> | 192<sup>5</sup> |
+| vCores | 24 | 32 | 40 | 64 | 80 | 128 | 160 | 192|
 |:-|-:|-:|-:|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series |
 | Memory (GB) | 124.6 | 166.1 | 207.6 | 332.2 | 415.2 | 625 | 830.4 | 843.7 |
@@ -530,7 +530,6 @@ The following table covers these SLOs: `HS_PRMS_24`, `HS_PRMS_32`, `HS_PRMS_40`,
 
 <sup>4</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
  
-<sup>5</sup> Currently, the 160 and 192 vCore options are a preview feature.
 
 ## Hyperscale - provisioned compute - premium-series memory optimized
 

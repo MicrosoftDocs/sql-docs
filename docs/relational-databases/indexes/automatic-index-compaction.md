@@ -4,20 +4,17 @@ description: Describes the automatic index compaction feature in the SQL Server 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman
-ms.date: 07/24/2026
+ms.date: 09/29/2026
 ms.service: sql
 ms.topic: concept-article
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
-# Automatic index compaction (preview)
+# Automatic index compaction
 
 [!INCLUDE [ssazure-sqldb-sqlmi-autd-fabricsqldb](../../includes/applies-to-version/ssazure-sqldb-sqlmi-autd-fabricsqldb.md)]
 
 Automatic index compaction helps you reduce the consumption of storage space, disk I/O, CPU, memory, and improve workload performance without investing time and effort into index maintenance jobs. Index compaction is performed continuously and with low overhead as the data in the database changes.
-
-> [!NOTE]  
-> Automatic index compaction is currently in preview in Azure SQL Database, Azure SQL Managed Instance with the Always-up-to-date [update policy](/azure/azure-sql/managed-instance/update-policy), and SQL database in Fabric.
 
 For answers to common questions, see [Frequently asked questions (FAQ)](#frequently-asked-questions-faq).
 
@@ -186,7 +183,7 @@ If a query is blocked, check the command of the head blocker in [sys.dm_exec_req
 
 ### Does it honor the fill factor?
 
-Auto compaction doesn't use the free page space reserved by [fill factor](specify-fill-factor-for-an-index.md). However, if that reserved space is already used by the previous DML statements, then compaction doesn't free it up.
+Auto compaction doesn't fill the free page space reserved by [fill factor](specify-fill-factor-for-an-index.md). However, if that reserved space is already filled by the previous DML statements, then compaction doesn't currently free it up.
 
 ### Does it work if an index uses row or page compression?
 

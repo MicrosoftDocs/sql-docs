@@ -1,10 +1,10 @@
 ---
-title: "CURRENT_DATE (Transact-SQL)"
+title: CURRENT_DATE (Transact-SQL)
 description: CURRENT_DATE returns the current database system date as a date value, without the database time and time zone offset.
 author: PratimDasgupta
 ms.author: prdasgu
 ms.reviewer: randolphwest
-ms.date: 08/25/2025
+ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -29,19 +29,21 @@ helpviewer_keywords:
   - "CURRENT_DATE function [SQL Server]"
   - "time [SQL Server], system"
 dev_langs:
-  - "TSQL"
+  - TSQL
 monikerRange: ">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # CURRENT_DATE (Transact-SQL)
 
 [!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-This function returns the current database system date as a **date** value, without the database time and time zone offset. `CURRENT_DATE` derives this value from the underlying operating system on the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] runs.
+The `CURRENT_DATE` Transact-SQL (T-SQL) function returns the current database system date as a **date** value, without the database time and time zone offset. `CURRENT_DATE` derives this value from the underlying operating system on which the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] runs.
 
 > [!NOTE]  
 > `SYSDATETIME` and `SYSUTCDATE` have more precision, as measured by fractional seconds precision, than `GETDATE` and `GETUTCDATE`. The `SYSDATETIMEOFFSET` function includes the system time zone offset. You can assign `SYSDATETIME`, `SYSUTCDATETIME`, and `SYSDATETIMEOFFSET` to a variable of any of the date and time types.
 
 This function is the ANSI SQL equivalent to `CAST(GETDATE() AS DATE)`. For more information, see [GETDATE](getdate-transact-sql.md).
+
+[!INCLUDE [change-time-zone](../includes/change-time-zone.md)]
 
 See [Date and time data types and functions](date-and-time-data-types-and-functions-transact-sql.md) for an overview of all the [!INCLUDE [tsql](../../includes/tsql-md.md)] date and time data types and functions.
 
@@ -85,17 +87,19 @@ SELECT SYSDATETIME(),
 
 [!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
-| Data type | Value |
-| --- | --- |
-| `SYSDATETIME()` | 2024-06-26 14:04:21.6172014 |
-| `SYSDATETIMEOFFSET()` | 2024-06-26 14:04:21.6172014 -05:00 |
-| `SYSUTCDATETIME()` | 2024-06-26 19:04:21.6172014 |
-| `CURRENT_TIMESTAMP` | 2024-06-26 14:04:21.617 |
-| `GETDATE()` | 2024-06-26 14:04:21.617 |
-| `GETUTCDATE()` | 2024-06-26 19:04:21.617 |
-| `CURRENT_DATE` | 2024-06-26 |
+```output
+SYSDATETIME()        2026-09-01 16:15:37.7418724
+SYSDATETIMEOFFSET()  2026-09-01 16:15:37.7418724 -06:00
+SYSUTCDATETIME()     2026-09-01 22:15:37.7418724
+CURRENT_TIMESTAMP    2026-09-01 16:15:37.740
+GETDATE()            2026-09-01 16:15:37.740
+GETUTCDATE()         2026-09-01 22:15:37.740
+CURRENT_DATE         2026-09-01
+```
 
 ### B. Get the current system date
+
+The following example shows you how to convert date and time values to the **date** data type.
 
 ```sql
 SELECT CONVERT (DATE, SYSDATETIME()),
@@ -109,15 +113,15 @@ SELECT CONVERT (DATE, SYSDATETIME()),
 
 [!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
-| Data type | Value |
-| --- | --- |
-| `SYSDATETIME()` | 2024-06-26 |
-| `SYSDATETIMEOFFSET()` | 2024-06-26 |
-| `SYSUTCDATETIME()` | 2024-06-26 |
-| `CURRENT_TIMESTAMP` | 2024-06-26 |
-| `GETDATE()` | 2024-06-26 |
-| `GETUTCDATE()` | 2024-06-26 |
-| `CURRENT_DATE` | 2024-06-26 |
+```output
+SYSDATETIME()        2026-09-01
+SYSDATETIMEOFFSET()  2026-09-01
+SYSUTCDATETIME()     2026-09-01
+CURRENT_TIMESTAMP    2026-09-01
+GETDATE()            2026-09-01
+GETUTCDATE()         2026-09-01
+CURRENT_DATE         2026-09-01
+```
 
 ## Related content
 

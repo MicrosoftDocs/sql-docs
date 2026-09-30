@@ -755,7 +755,7 @@ Perform these steps on **all nodes** in this section.
 
 The following commands are used to install SQL Server:
 
-1. Download the Microsoft SQL Server 2019 SLES repository configuration file:
+1. Download the Microsoft SQL Server 2022 SLES repository configuration file:
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo
@@ -1220,7 +1220,7 @@ sudo systemctl enable pacemaker
            op monitor timeout=60s interval=12s role=Slave \
            op notify timeout=60s interval=0
    primitive rsc_st_azure stonith:fence_azure_arm \
-           params subscriptionId=xxxxxxx resourceGroup=amvindomain tenantId=xxxxxxx login=xxxxxxx passwd="******" cmk_monitor_retries=4 pcmk_action_limit=3 power_timeout=240 pcmk_reboot_timeout=900 pcmk_host_map="sles1:sles1;les2:sles2;sles3:sles3" \
+           params subscriptionId=xxxxxxx resourceGroup=amvindomain tenantId=xxxxxxx login=xxxxxxx passwd="******" pcmk_monitor_retries=4 pcmk_action_limit=3 power_timeout=240 pcmk_reboot_timeout=900 pcmk_host_map="sles1:sles1;sles2:sles2;sles3:sles3" \
            op monitor interval=3600 timeout=120
    ms ms-ag_cluster ag_cluster \
            meta master-max=1 master-node-max=1 clone-max=3 clone-node-max=1 notify=true

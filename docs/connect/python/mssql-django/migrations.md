@@ -3,8 +3,8 @@ title: Database Migrations with mssql-django
 description: Run Django database migrations with SQL Server using the mssql-django backend, including known edge cases.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # Database migrations with mssql-django
 
-This article explains how Django's migration system works with SQL Server through the `mssql-django` backend and documents known edge cases.
+This article explains how Django's migration system works with SQL Server through the `mssql-django` backend and documents edge cases.
 
 ## Create and apply migrations
 
@@ -70,7 +70,7 @@ class Migration(migrations.Migration):
     ]
 ```
 
-## Known migration edge cases
+## Migration edge cases
 
 The following migration operations require workarounds when targeting SQL Server.
 
@@ -122,7 +122,15 @@ class Migration(migrations.Migration):
     ]
 ```
 
-Look up the actual constraint name in your database before running this T-SQL code. Django generates constraint names that include a short hash, so the name in your schema doesn't match the placeholder shown here.
+Look up the actual constraint name in your database before running this Transact-SQL (T-SQL) code. Django generates constraint names that include a short hash, so the name in your schema doesn't match the placeholder shown here.
+
+### Database-level referential actions
+
+Django 6.1 adds database-level referential actions such as `DB_CASCADE`, `DB_SET_NULL`, and `DB_SET_DEFAULT`. SQL Server rejects foreign key graphs with multiple cascade paths to the same table, so `mssql-django` doesn't support these values on any SQL Server version. Using one of these values raises the Django system check `fields.E324`. Use the standard Django-level `on_delete` behavior instead.
+
+### Bitwise aggregates
+
+Django 6.1 adds `BitAnd`, `BitOr`, and `BitXor`. SQL Server has no native bitwise aggregate function, and `mssql-django` doesn't emulate these aggregates. Calling them raises `NotSupportedError`.
 
 ## Squash migrations
 
@@ -137,7 +145,7 @@ python manage.py squashmigrations myapp 0001 0010
 
 ## Generated columns (computed columns)
 
-The `mssql-django` backend supports Django's `GeneratedField` (Django 5.0 and later), which maps to SQL Server computed columns.
+The `mssql-django` backend supports Django's `GeneratedField`, which maps to SQL Server computed columns.
 
 ### Stored (PERSISTED) generated columns
 
@@ -157,7 +165,7 @@ class Product(models.Model):
     )
 ```
 
-This generates: `total_price AS ([price] * (1 + [tax_rate])) PERSISTED`.
+This generates: `[total_price] AS (([price] * (1 + [tax_rate]))) PERSISTED`. SQL Server normalizes the expression when it stores it, so `sys.computed_columns` reports `([price]*((1)+[tax_rate]))`.
 
 ### Virtual generated columns
 
@@ -183,7 +191,7 @@ class Employee(models.Model):
 
 ## Table and column comments
 
-The `mssql-django` backend supports Django's `db_comment` feature (Django 4.2 and later). Comments are stored as `MS_Description` extended properties on the SQL Server object.
+The `mssql-django` backend supports Django's `db_comment` feature in supported Django versions. Comments are stored as `MS_Description` extended properties on the SQL Server object.
 
 ### Table comments
 

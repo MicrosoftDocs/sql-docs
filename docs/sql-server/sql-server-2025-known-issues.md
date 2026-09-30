@@ -69,7 +69,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\P
 - [!INCLUDE [sssql16-md](../includes/sssql16-md.md)]
 - [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
 
-This can happen when the existing operating system environment is missing the Microsoft Visual C++ Redistributable for Visual Studio 2022, or an older version of this component is installed.
+This issue occurs when the existing operating system environment is missing the Microsoft Visual C++ Redistributable for Visual Studio 2022, or when an older version of this component is installed.
 
 When this happens, the installation log includes an entry like the following example:
 
@@ -94,13 +94,13 @@ To get the redistributable file, review [Microsoft Visual C++ Redistributable la
 
 **Issue**: Database mail on Linux doesn't work when SQL Server is configured to enforce strict encryption.
 
-**Workaround**: Do not enforce strict encryption.
+**Workaround**: Don't enforce strict encryption.
 
 ## SQLPS
 
 **Issue**: SQLPS.exe, the SQL Agent PowerShell subsystem, and the SQLPS PowerShell module don't work when SQL is configured to enforce strict encryption.
 
-**Workaround**: Do not enforce strict encryption.
+**Workaround**: Don't enforce strict encryption.
 
 The SQL Server Agent job `syspolicy_purge_history` reports a failure on step 3. This job runs daily by default. An instance that doesn't enforce strict encryption doesn't reproduce this problem; another option is to disable the job.
 
@@ -144,7 +144,7 @@ Error: 33204, Severity: 17, State: 1.
 SQL Server Audit could not write to the security log.
 ```
 
-We have identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
+We identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 
 **Workaround**: Use one of the following methods:
 
@@ -159,7 +159,7 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security\MSSQL$<InstanceName>$Audit\EventSourceFlags
   ```
 
-  Server audits must be restarted for the new registry setting to take effect:
+  Restart server audits for the new registry setting to take effect:
 
   ```sql
   ALTER SERVER AUDIT [AuditName] WITH (STATE = OFF);
@@ -169,6 +169,11 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
   ```
 
 ## Vector index
+
+In SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true), vector indexes and the `VECTOR_SEARCH` function are in preview and subject to change. In order to use this feature, you must enable the `PREVIEW_FEATURES` [database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+> [!NOTE]
+> The latest version of vector indexes is available in Azure SQL Database, SQL database in Microsoft Fabric, and Azure SQL Managed Instance with the **Always-up-to-date** update policy.
 
 - **Issue**: When you build a vector index by using the `CREATE VECTOR INDEX` statement, or when you use the vector index through `VECTOR_SEARCH`, you see the following warning message:
 
@@ -236,7 +241,7 @@ You can also run a full unattended upgrade from the command line, as long as you
 
 **Workaround**: Download the Express edition installer instead, and choose the **LocalDB** option from the package selection screen.
 
-We have identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
+We identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 
 ## SQL Server might become slow or unresponsive after creating or bringing online a large number of databases
 
@@ -244,7 +249,7 @@ We have identified a fix for a future release of [!INCLUDE [sssql25-md](../inclu
 
 **Workaround**: Enable startup [trace flag 15608](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf15608) and restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. You must enable the trace flag at startup. Enabling it after startup doesn't stop background threads that are already created for databases that were brought online. In scenarios with no secondary replicas, this trace flag is still required as a temporary mitigation to prevent the per database background thread from being created during database startup.
 
-We have identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
+We identified a fix for a future release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 
 ## Linked server queries that use MSDASQL fail with error 7416
 

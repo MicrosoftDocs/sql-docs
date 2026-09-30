@@ -3,7 +3,7 @@ title: "GRAPH_ID_FROM_NODE_ID (Transact-SQL)"
 description: "GRAPH_ID_FROM_NODE_ID (Transact-SQL)"
 author: "WilliamDAssafMSFT"
 ms.author: "wiassaf"
-ms.date: 08/16/2022
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,9 +19,9 @@ dev_langs:
 monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # GRAPH_ID_FROM_NODE_ID (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [SQL Server 2017 Azure SQL Database Azure SQL Managed Instance SQL database in Fabric](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
-Returns the internal graph ID for a given node ID.
+In SQL Graph tables, the `GRAPH_ID_FROM_NODE_ID` function returns the internal graph ID for a given node ID.
 
 ## Syntax  
   
@@ -49,6 +49,8 @@ Returns the internal graph ID, which is a **bigint**.
 - For `GRAPH_ID_FROM_NODE_ID` to return a value, the supplied character representation (JSON) must be valid and the named `schema.table` within the JSON, must be a valid node table.
 - If a graph ID is returned by the function, it's only guaranteed that it will be a valid integer. No checks are made whether the graph ID is present in the node table.
 - The data type and behavior of graph IDs are implementation specific details, and are subject to change. For example, you shouldn't assume that graph IDs in a given node table are sequential.
+
+Graph tables were introduced in SQL Server 2017. The `GRAPH_ID_FROM_NODE_ID` function isn't available in SQL Server 2016 or in Fabric Data Warehouse.
   
 ## Examples
 

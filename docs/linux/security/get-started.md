@@ -24,22 +24,22 @@ If you're a Linux user who is new to [!INCLUDE [ssnoversion-md](../../includes/s
 Grant others access to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] by creating a login in the `master` database with the [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) statement. For example:
 
 ```sql
-CREATE LOGIN Larry
+CREATE LOGIN Sasha
     WITH PASSWORD = '<password>';
 ```
 
 > [!CAUTION]  
 > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-Logins can connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and have access (with limited permissions) to the `master` database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database, so you must create them separately in each database to grant access.
+Logins can connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and have access (with limited permissions) to the `master` database. To connect to a user database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database, so you must create them separately in each database to grant access.
 
-The following example switches to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, and then uses the [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) statement to create a user named `Larry` that maps to the login named `Larry`. Though the login and the user are related (mapped to each other), they're different objects. The login is a server-level principal. The user is a database-level principal.
+The following example switches to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, and then uses the [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) statement to create a user named `Sasha` that maps to the login named `Sasha`. Though the login and the user are related (mapped to each other), they're different objects. The login is a server-level principal. The user is a database-level principal.
 
 ```sql
 USE AdventureWorks2025;
 GO
 
-CREATE USER Larry;
+CREATE USER Sasha;
 GO
 ```
 
@@ -49,36 +49,36 @@ GO
 Later you can authorize other logins to create more logins by granting them the `ALTER ANY LOGIN` permission. Inside a database, you can authorize other users to create more users by granting them the `ALTER ANY USER` permission. For example:
 
 ```sql
-GRANT ALTER ANY LOGIN TO Larry;
+GRANT ALTER ANY LOGIN TO Sasha;
 GO
 
 USE AdventureWorks2025;
 GO
 
-GRANT ALTER ANY USER TO Jerry;
+GRANT ALTER ANY USER TO Sasha;
 GO
 ```
 
-Now the login `Larry` can create more logins, and the user `Jerry` can create more users.
+Now the login `Sasha` can create more logins, and the user `Sasha` can create more users.
 
 ## Grant access with least privileges
 
 Administrators and database owners are usually the first users to connect to a user database. These accounts have all permissions on the database. Don't use these accounts for tasks that need fewer permissions.
 
-When you're just getting started, you can assign some general categories of permissions with the built-in *fixed database roles*. For example, the **db_datareader** fixed database role can read all tables in the database, but can't make changes. Grant membership in a fixed database role with the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement. The following example adds the user `Jerry` to the **db_datareader** fixed database role.
+When you're just getting started, you can assign some general categories of permissions with the built-in *fixed database roles*. For example, the **db_datareader** fixed database role can read all tables in the database, but can't make changes. Grant membership in a fixed database role with the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement. The following example adds the user `Sasha` to the **db_datareader** fixed database role.
 
 ```sql
 USE AdventureWorks2025;
 GO
 
-ALTER ROLE db_datareader ADD MEMBER Jerry;
+ALTER ROLE db_datareader ADD MEMBER Sasha;
 ```
 
 For a list of the fixed database roles, see [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md).
 
 Later, when you're ready to configure more precise access to your data (highly recommended), create your own user-defined database roles with the [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) statement. Then assign specific granular permissions to your custom roles.
 
-For example, the following statements create a database role named `Sales`, grant the `Sales` group the ability to read, update, and delete rows from the `Orders` table, and then add the user `Jerry` to the `Sales` role.
+For example, the following statements create a database role named `Sales`, grant the `Sales` group the ability to read, update, and delete rows from the `Orders` table, and then add the user `Sasha` to the `Sales` role.
 
 ```sql
 CREATE ROLE Sales;
@@ -87,7 +87,7 @@ GRANT SELECT ON OBJECT::Orders TO Sales;
 GRANT UPDATE ON OBJECT::Orders TO Sales;
 GRANT DELETE ON OBJECT::Orders TO Sales;
 
-ALTER ROLE Sales ADD MEMBER Jerry;
+ALTER ROLE Sales ADD MEMBER Sasha;
 ```
 
 For more information about the permission system, see [Get started with Database Engine permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -115,7 +115,7 @@ GRANT SELECT ON Sales.SalesOrderHeader TO Manager;
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
 ```
 
-Create a new schema and inline table-valued function. The function returns `1` when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login, or when the user who runs the query is the `Manager` user.
+Create a new schema and inline table-valued function. The function returns `1` when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` user, or when the user who runs the query is the `Manager` user.
 
 ```sql
 CREATE SCHEMA Security;
@@ -128,7 +128,7 @@ WITH SCHEMABINDING
 AS
 RETURN
     SELECT 1 AS fn_securitypredicate_result
-    WHERE ('SalesPerson' + CAST (@SalesPersonId AS VARCHAR (16)) = USER_NAME())
+    WHERE ('SalesPerson' + CAST (@SalesPersonID AS VARCHAR (16)) = USER_NAME())
           OR (USER_NAME() = 'Manager')
 ```
 

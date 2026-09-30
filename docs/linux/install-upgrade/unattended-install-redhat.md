@@ -18,7 +18,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-This sample bash script installs [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample bash script installs [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the SQL Server command-line tools, and SQL Server Agent, and performing post-installation steps. You can optionally install SQL Server Full-Text Search and create an administrative user.
 
 > [!TIP]  
 > If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](quickstart-install-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](setup.md).
@@ -33,7 +33,7 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../../includes/ssnov
 
 This example installs [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on RHEL 8.x. If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or RHEL, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file. To customize it, You must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file. To customize it, you must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -56,7 +56,7 @@ MSSQL_PID='evaluation'
 # Enable SQL Server Agent (recommended)
 SQL_ENABLE_AGENT='y'
 
-# Install SQL Server Full Text Search (optional)
+# Install SQL Server Full-Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
 
 # Create an additional user with sysadmin privileges (optional)
@@ -97,7 +97,7 @@ then
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 fi
 
-# Optional SQL Server Full Text Search installation:
+# Optional SQL Server Full-Text Search installation:
 if [ ! -z $SQL_INSTALL_FULLTEXT ]
 then
     echo Installing SQL Server Full-Text Search...
@@ -121,21 +121,25 @@ sudo systemctl restart mssql-server
 # Connect to server and get the version:
 counter=1
 errstatus=1
-while [ $counter -le 5 ] && [ $errstatus = 1 ]
+while [ $counter -le 5 ] && [ $errstatus -ne 0 ]
 do
   echo Waiting for SQL Server to start...
   sleep 5s
-  /opt/mssql-tools/bin/sqlcmd \
-    -S localhost \
-    -U sa \
-    -P $MSSQL_SA_PASSWORD \
-    -Q "SELECT @@VERSION" 2>/dev/null
-  errstatus=$?
+  if /opt/mssql-tools/bin/sqlcmd \
+      -S localhost \
+      -U sa \
+      -P $MSSQL_SA_PASSWORD \
+      -Q "SELECT @@VERSION" 2>/dev/null
+  then
+    errstatus=0
+  else
+    errstatus=$?
+  fi
   ((counter++))
 done
 
 # Display error if connection failed:
-if [ $errstatus = 1 ]
+if [ $errstatus -ne 0 ]
 then
   echo Cannot connect to SQL Server, installation aborted
   exit $errstatus
@@ -182,11 +186,7 @@ To run the script:
 
 The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation. The others are custom variables created for the script. The sample script performs the following steps:
 
-1. Import the public Microsoft GPG keys.
-
 1. Register the Microsoft repositories for SQL Server and the command-line tools.
-
-1. Update the local repositories.
 
 1. Install SQL Server.
 
@@ -196,15 +196,15 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
+1. Enable SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set. The sample sets it by default.
 
-1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
+1. Optionally install SQL Server Full-Text Search if the variable `SQL_INSTALL_FULLTEXT` is set.
 
 1. Unblock port 1433 for TCP on the system firewall, necessary to connect to SQL Server from another system.
 
 1. Optionally set trace flags for deadlock tracing (requires uncommenting the lines).
 
-1. SQL Server is now installed, to make it operational, restart the process.
+1. Restart the SQL Server service after making configuration changes.
 
 1. Verify that SQL Server is installed correctly, while hiding any error messages.
 

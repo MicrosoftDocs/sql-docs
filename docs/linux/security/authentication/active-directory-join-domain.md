@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This article provides general guidance on how to join a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux host machine to an Active Directory domain. There are two methods: use a built-in SSSD package, or use third-party Active Directory providers. Examples of third-party domain join products are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/one-identity-safeguard-authentication-services), and [Centrify](https://delinea.com/centrify).
+This article provides general guidance on how to join a Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to an Active Directory domain. There are two methods: use a built-in SSSD package, or use third-party Active Directory providers. Examples of third-party domain join products are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity Safeguard Authentication Services (VAS)](https://www.oneidentity.com/products/one-identity-safeguard-authentication-services), and [Centrify](https://delinea.com/centrify).
 
 This guide includes steps to check your Active Directory configuration. However, it isn't intended to provide instructions on how to join a machine to a domain when using third-party utilities.
 
@@ -25,9 +25,9 @@ This guide includes steps to check your Active Directory configuration. However,
 
 ## Prerequisites
 
-Before you configure Active Directory authentication, you need to set up an Active Directory domain controller, Windows, on your network. Then join your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux host to an Active Directory domain.
+Before you configure Active Directory authentication, you need to set up a computer running Windows Server as an Active Directory domain controller on your network. Then join the Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to an Active Directory domain.
 
-The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x, and SUSE Linux Enterprise Server (SLES) 12 operating systems. Actual steps might slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses **netplan** while Red Hat Enterprise Linux (RHEL) 8.x uses **nmcli** among other tools to manage and configure network. You should engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
+The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x, and SUSE Linux Enterprise Server (SLES) 12 operating systems. Actual steps might differ slightly depending on your environment and operating system version. For example, Ubuntu 18.04 uses **netplan** while RHEL 8.x uses **nmcli** among other tools to manage and configure network. You should engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
 
 > [!NOTE]  
 > Starting in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
@@ -36,11 +36,11 @@ The sample steps described in this article are for guidance only and refer to Ub
 
 When you set up a computer running Windows Server as a domain controller, you might not have a rDNS zone by default. Ensure that an applicable rDNS zone exists for both the domain controller and the IP address of the Linux machine that will be running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
-Also ensure that a PTR record that points to your domain controllers exists.
+Also ensure that PTR records that point to your domain controllers exist.
 
 ## Check the connection to a domain controller
 
-Check that you can contact the domain controller by using both the short and the fully qualified names of the domain, and by using the hostname of the domain controller. The IP of the domain controller also should resolve to the FQDN of the domain controller:
+Check that you can contact the domain controller by using both the short and the fully qualified names of the domain, and by using the hostname of the domain controller. The IP address of the domain controller should also resolve to the fully qualified domain name (FQDN) of the domain controller:
 
 ```bash
 ping contoso
@@ -197,7 +197,7 @@ nameserver 10.0.0.4
 1. Next, check that your `/etc/resolv.conf` file contains a line like the following example:
 
    ```bash
-   /etc/resolv.conf
+   sudo vi /etc/resolv.conf
    ```
 
    The output looks similar to the following example:
@@ -251,16 +251,16 @@ nameserver 10.0.0.4
 
 ## Join to the Active Directory domain
 
-After the basic configuration and connectivity with domain controller is verified, there are two options for joining a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux host machine with the Active Directory domain controller:
+After you verify the basic configuration and connectivity with the domain controller, there are two options for joining a Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to the Active Directory domain:
 
 - [Option 1: Use an SSSD package](#option1)
-- [Option 2: Use third-party OpenLDAP provider utilities](#option2)
+- [Option 2: Use third-party Active Directory provider utilities](#option2)
 
 <a id="option1"></a>
 
 ### Option 1: Use SSSD package to join Active Directory domain
 
-This method joins the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] host to an Active Directory domain using **realmd** and **sssd** packages.
+This method joins the Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to an Active Directory domain using **realmd** and **sssd** packages.
 
 This is the preferred method of joining a Linux host to an Active Directory domain controller.
 
@@ -268,14 +268,14 @@ For the most current instructions, refer to the official documentation provided 
 
 | Distribution | Reference article |
 | --- | --- |
-| **RHEL 8** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#connecting-rhel-systems-directly-to-ad-using-sssd_integrating-rhel-systems-directly-with-active-directory) |
-| **RHEL 9** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#overview-of-direct-integration-using-sssd_connecting-rhel-systems-directly-to-ad-using-sssd) |
+| **RHEL 8** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#discovering-and-joining-an-ad-domain-using-sssd_connecting-rhel-systems-directly-to-ad-using-sssd) |
+| **RHEL 9** | [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#discovering-and-joining-an-ad-domain-using-sssd_connecting-rhel-systems-directly-to-ad-using-sssd) |
 | **SLES** | [Joining Active Directory using Windows domain membership](https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-security-ad.html#sec-security-ad-winbind) |
 | **Ubuntu** | [How to set up SSSD with Active Directory](https://ubuntu.com/server/docs/how-to-set-up-sssd-with-active-directory) |
 
-Use the following steps to join a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] host to an Active Directory domain:
+Use the following steps to join a Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to an Active Directory domain:
 
-1. Use **realmd** to join your host machine to your Active Directory Domain. You must first install both the **realmd** and Kerberos client packages on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
+1. Use **realmd** to join your host machine to your Active Directory domain. You must first install both the **realmd** and Kerberos client packages on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux host using your Linux distribution's package manager:
 
    ### [RHEL](#tab/rhel)
 
@@ -338,41 +338,64 @@ Use the following steps to join a [!INCLUDE [ssnoversion-md](../../../includes/s
    | --- | --- |
    | `Necessary packages are not installed` | Install those packages using your Linux distribution's package manager before running the realm join command again. |
    | `Insufficient permissions to join the domain` | Check with a domain administrator that you have sufficient permissions to join Linux machines to your domain. |
-   | `KDC reply did not match expectations` | You might not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command realm discover contoso.com. |
+   | `KDC reply did not match expectations` | You might not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command `realm discover contoso.com`. |
 
    [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] uses SSSD and NSS for mapping user accounts and groups to security identifiers (SIDs). SSSD must be configured and running for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to create Active Directory logins successfully. **realmd** usually does this automatically as part of joining the domain, but in some cases, you must do this separately.
 
-   For more information, see how to [configure SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   For more information, see how to [configure SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_authentication_and_authorization_in_rhel/configuring-user-authentication-using-authselect_configuring-authentication-and-authorization-in-rhel#data-providers-in-etc-nsswitchconf_configuring-user-authentication-using-authselect).
 
-1. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user. The following example uses **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), and [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) commands for this.
+1. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user. The following example uses **id**, [kinit](https://web.mit.edu/kerberos/krb5-latest/doc/user/user_commands/kinit.html), and [klist](https://web.mit.edu/kerberos/krb5-latest/doc/user/user_commands/klist.html) commands for this.
+
+   Use `id` to confirm that SSSD can resolve the domain user and group memberships:
 
    ```bash
    id user@contoso.com
+   ```
 
+   The output should show the domain user's user ID, group ID, and group memberships:
+
+   ```output
    uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
+   ```
 
+   Use `kinit` to request a Kerberos ticket for the domain user:
+
+   ```bash
    kinit user@CONTOSO.COM
+   ```
 
+   The command should prompt for the domain user's password:
+
+   ```output
    Password for user@CONTOSO.COM:
+   ```
 
+   Use `klist` to verify the Kerberos ticket:
+
+   ```bash
    klist
+   ```
+
+   The output should identify the domain user as the default principal:
+
+   ```output
    Ticket cache: FILE:/tmp/krb5cc_1000
    Default principal: user@CONTOSO.COM
    ```
 
-   If `id user\@contoso.com` returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/trouble#SSSD-Troubleshooting).
+   If `id user@contoso.com` returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_authentication_and_authorization_in_rhel/assembly_troubleshooting-authentication-with-sssd-in-idm_configuring-authentication-and-authorization-in-rhel#proc_enabling-detailed-logging-for-sssd-with-the-sssctl-command_assembly_troubleshooting-authentication-with-sssd-in-idm).
 
-   If `kinit user\@CONTOSO.COM` returns, `KDC reply didn't match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
+   If `kinit user@CONTOSO.COM` returns, `KDC reply didn't match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
-For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/windows_integration_guide/realmd-domain).
+For more information, see the Red Hat documentation for [Discovering and joining an AD Domain using SSSD](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index#discovering-and-joining-an-ad-domain-using-sssd_connecting-rhel-systems-directly-to-ad-using-sssd).
 
 <a id="option2"></a>
 
-### Option 2: Use third-party OpenLDAP provider utilities
+### Option 2: Use third-party Active Directory provider utilities
 
-You can use third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/one-identity-safeguard-authentication-services), or [Centrify](https://delinea.com/centrify). This article doesn't cover steps for each individual utility. You must first use one of these utilities to join the Linux host for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to the domain before continuing forward.
+You can use third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/one-identity-safeguard-authentication-services), or [Centrify](https://delinea.com/centrify). This article doesn't cover steps for each individual utility. You must first use one of these utilities to join the Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to the domain before you continue.
 
-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't use third-party integrator's code or library for any Active Directory-related queries. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] always queries Active Directory using OpenLDAP library calls directly in this setup. The third-party integrators are only used to join the Linux host to Active Directory domain, and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't have any direct communication with these utilities.
+[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't use code or libraries from third-party integrators for any Active Directory-related queries. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] always queries Active Directory using OpenLDAP library calls directly in this setup. The third-party integrators are only used to join the Linux host to an Active Directory domain, and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't have any direct communication with these utilities.
 
 > [!IMPORTANT]  
 > See the recommendations for using the `mssql-conf network.disablesssd` configuration option in the Additional configuration options section of the article [Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md#additionalconfig).
@@ -406,11 +429,11 @@ The following command should return the fully qualified domain name (FQDN) of th
 host <IP address of SQL Server host>
 ```
 
-The output of this command should be similar to `<reversed IP address>.in-addr.arpa domain name pointer SqlHost.contoso.com`. If this command doesn't return your host's FQDN, or if the FQDN is incorrect, add a reverse DNS entry for your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux host to your DNS server.
+The output of this command should be similar to `<reversed IP address>.in-addr.arpa domain name pointer SqlHost.contoso.com`. If this command doesn't return your host's FQDN, or if the FQDN is incorrect, add a reverse DNS entry for the Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to your DNS server.
 
 ## Next step
 
-In this article, you covered how to configure a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory Authentication. To finish configuring [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux to support Active Directory accounts, follow these instructions.
+In this article, you configured a Linux host that runs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with Active Directory authentication. To finish configuring [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux to support Active Directory accounts, follow these instructions.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md)

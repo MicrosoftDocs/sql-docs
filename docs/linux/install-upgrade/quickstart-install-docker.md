@@ -107,12 +107,12 @@ This quickstart creates [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] co
 
 This image consists of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on Linux, based on Ubuntu. You can use it with the Docker Engine 1.8+ on Linux.
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 14 and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 28, the container images include the [new mssql-tools18](setup-tools.md#install-tools-on-linux) package. The previous directory `/opt/mssql-tools/bin` is being phased out. The new directory for Microsoft ODBC 18 tools is `/opt/mssql-tools18/bin`, aligning with the latest tools offering. For more information about changes and security enhancements, see [ODBC Driver 18.0 for SQL Server Released](https://techcommunity.microsoft.com/blog/sqlserver/odbc-driver-18-0-for-sql-server-released/3169228).
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 14 and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 28, the container images include the [mssql-tools18](setup-tools.md#install-tools-on-linux) package. Microsoft ODBC 18 tools use the `/opt/mssql-tools18/bin` directory instead of `/opt/mssql-tools/bin`. For more information about changes and security enhancements, see [ODBC Driver 18.0 for SQL Server Released](https://techcommunity.microsoft.com/blog/sqlserver/odbc-driver-18-0-for-sql-server-released/3169228).
 
 The examples in this article use the `docker` command. However, most of these commands also work with Podman. Podman provides a command-line interface similar to the Docker Engine. You can [find out more about Podman](https://docs.podman.io/en/latest).
 
 > [!IMPORTANT]  
-> **`sqlcmd`** doesn't currently support the `MSSQL_PID` parameter when creating containers. If you use the **`sqlcmd`** instructions in this quickstart, you create a container with the Developer edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Use the command line interface (CLI) instructions to create a container using the license of your choice. For more information, see [Deploy and connect to SQL Server Linux containers](../containers/deploy.md).
+> **`sqlcmd`** doesn't currently support the `MSSQL_PID` parameter when creating containers. If you use the **`sqlcmd`** instructions in this quickstart, you create a container with the Developer edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Use the command-line interface (CLI) instructions to create a container using the license of your choice. For more information, see [Deploy and connect to SQL Server Linux containers](../containers/deploy.md).
 
 <a id="requirements"></a>
 
@@ -211,7 +211,7 @@ The previous command pulls the latest [!INCLUDE [sssql17-md](../../includes/sssq
 
 ### Run the container
 
-To run the Linux container image with Docker, use the following command from a Bash shell or elevated PowerShell command prompt.
+To run the Linux container image with Docker, use the following command in your selected shell.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -243,9 +243,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
-   -p 1433:1433 --name sql1 --hostname sql1 `
-   -d `
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
+   -p 1433:1433 --name sql1 --hostname sql1 ^
+   -d ^
    mcr.microsoft.com/mssql/server:2017-latest
 ```
 
@@ -335,11 +335,11 @@ The following table provides a description of the parameters in the previous `sq
 
 | Parameter | Description |
 | --- | --- |
-| `--ACCEPT-EULA` | Include the `ACCEPT-EULA` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
+| `--accept-eula` | Include the `--accept-eula` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
 | `--port 1433` | Map a TCP port on the host environment and a TCP port in the container. In this example, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
 | `--name sql1` | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
 | `--hostname sql1` | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
-| `--tag 2017-latest` | The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image. |
+| `--tag 2017-latest` | Specify the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image tag. |
 
 ---
 
@@ -384,7 +384,7 @@ The following table provides a description of the parameters in the previous `sq
    sudo docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL query:
+   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL (T-SQL) query:
 
    ```sql
    SELECT @@SERVERNAME,
@@ -414,7 +414,7 @@ For the bash commands in this article, the `sudo` command is used. If you don't 
 
 ## [CLI](#tab/cli)
 
-### Pull the container from the registry
+### Pull the container image from the registry
 
 Pull the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Linux container image from the Microsoft Container Registry.
 
@@ -452,7 +452,7 @@ The previous command pulls the latest [!INCLUDE [sssql19-md](../../includes/sssq
 
 ### Run the container
 
-To run the Linux container image with Docker, use the following command from a Bash shell or elevated PowerShell command prompt.
+To run the Linux container image with Docker, use the following command in your selected shell.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -479,17 +479,14 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
    mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-> [!CAUTION]  
-> [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
-   -p 1433:1433 --name sql1 --hostname sql1 `
-   -d `
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
+   -p 1433:1433 --name sql1 --hostname sql1 ^
+   -d ^
    mcr.microsoft.com/mssql/server:2019-latest
 ```
 
@@ -549,7 +546,7 @@ This quickstart creates [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] co
 - [SQL Server 2022](quickstart-install-docker.md?view=sql-server-linux-ver16&preserve-view=true#pullandrun2022)
 - [SQL Server 2017](quickstart-install-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017)
 
-The previous command pulls the latest [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Linux container image. If you want to pull a specific image, change the tag name, such as `2019-GA-ubuntu-16.04`. To see all available images, run the following command:
+The previous command uses the latest [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Linux container image. If you want to pull a specific image, change the tag name, such as `2019-GA-ubuntu-16.04`. To see all available images, run the following command:
 
 ::: zone pivot="cs1-bash"
 
@@ -577,15 +574,15 @@ sqlcmd create mssql get-tags
 
 By default, this quickstart creates a container with the Developer edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The process for running production editions in containers is slightly different. For more information, see [Run production container images](../containers/deploy.md#production).
 
-The following table provides a description of the parameters in the previous `docker run` example:
+The following table provides a description of the parameters in the previous `sqlcmd create mssql` example:
 
 | Parameter | Description |
 | --- | --- |
-| `--ACCEPT_EULA` | Include the `ACCEPT_EULA` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
+| `--accept-eula` | Include the `--accept-eula` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
 | `--port 1433` | Map a TCP port on the host environment and a TCP port in the container. In this example, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
 | `--name sql1` | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
 | `--hostname sql1` | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
-| `--tag 2019-latest` | The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image. |
+| `--tag 2019-latest` | Specify the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image tag. |
 
 ---
 
@@ -630,7 +627,7 @@ The following table provides a description of the parameters in the previous `do
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL query:
+   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following T-SQL query:
 
    ```sql
    SELECT @@SERVERNAME,
@@ -698,7 +695,7 @@ The previous command pulls the latest [!INCLUDE [sssql22-md](../../includes/sssq
 
 ### Run the container
 
-To run the Linux container image with Docker, use the following command from a Bash shell or elevated PowerShell command prompt.
+To run the Linux container image with Docker, use the following command in your selected shell.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -730,9 +727,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
-   -p 1433:1433 --name sql1 --hostname sql1 `
-   -d `
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
+   -p 1433:1433 --name sql1 --hostname sql1 ^
+   -d ^
    mcr.microsoft.com/mssql/server:2022-latest
 ```
 
@@ -764,7 +761,7 @@ The system administrator account (`sa`) is created on the [!INCLUDE [ssnoversion
 
 1. Choose a strong password to use for the `sa` account. [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-1. Use `docker exec` to run **`sqlcmd`** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input.
+1. Use `docker exec` to run **`sqlcmd`** to change the password using T-SQL. In the following example, the old and new passwords are read from user input.
 
    ::: zone pivot="cs1-bash"
 
@@ -790,8 +787,8 @@ The system administrator account (`sa`) is created on the [!INCLUDE [ssnoversion
    ::: zone pivot="cs1-cmd"
 
    ```cmd
-   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd `
-      -S localhost -U sa -P "<password>" `
+   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd ^
+      -S localhost -U sa -P "<password>" ^
       -Q "ALTER LOGIN sa WITH PASSWORD='<new-password>'"
    ```
 
@@ -845,7 +842,7 @@ This quickstart creates [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] co
 - [SQL Server 2019](quickstart-install-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019)
 - [SQL Server 2017](quickstart-install-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017)
 
-The previous command pulls the latest [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Linux container image. If you want to pull a specific image, change the tag name, such as `2022-CU11-ubuntu-22.04`. To see all available images, run the following command:
+The previous command uses the latest [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Linux container image. If you want to pull a specific image, change the tag name, such as `2022-CU11-ubuntu-22.04`. To see all available images, run the following command:
 
 ::: zone pivot="cs1-bash"
 
@@ -873,15 +870,15 @@ sqlcmd create mssql get-tags
 
 By default, this quickstart creates a container with the Developer edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The process for running production editions in containers is slightly different. For more information, see [Run production container images](../containers/deploy.md#production).
 
-The following table provides a description of the parameters in the previous `docker run` example:
+The following table provides a description of the parameters in the previous `sqlcmd create mssql` example:
 
 | Parameter | Description |
 | --- | --- |
-| `--ACCEPT-EULA` | Include the `--ACCEPT-EULA` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
+| `--accept-eula` | Include the `--accept-eula` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
 | `--port 1433` | Map a TCP port on the host environment and a TCP port in the container. In this example, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
 | `--name sql1` | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
 | `--hostname sql1` | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
-| `--tag 2022-latest` | The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image. |
+| `--tag 2022-latest` | Specify the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image tag. |
 
 **`sqlcmd`** disables the `sa` password and creates a new login based on the current user when it creates a container. Use the following command to view your login information. You need it in later steps.
 
@@ -952,7 +949,7 @@ sqlcmd config view --raw
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL query:
+   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following T-SQL query:
 
    ```sql
    SELECT @@SERVERNAME,
@@ -1018,7 +1015,7 @@ The previous command pulls the latest [!INCLUDE [sssql25-md](../../includes/sssq
 
 ### Run the container
 
-To run the Linux container image with Docker, use the following command from a Bash shell or elevated PowerShell command prompt.
+To run the Linux container image with Docker, use the following command in your selected shell.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -1050,9 +1047,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" `
-   -p 1433:1433 --name sql1 --hostname sql1 `
-   -d `
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
+   -p 1433:1433 --name sql1 --hostname sql1 ^
+   -d ^
    mcr.microsoft.com/mssql/server:2025-latest
 ```
 
@@ -1084,7 +1081,7 @@ The system administrator account (`sa`) is created on the [!INCLUDE [ssnoversion
 
 1. Choose a strong password to use for the `sa` account. [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-1. Use `docker exec` to run **`sqlcmd`** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input.
+1. Use `docker exec` to run **`sqlcmd`** to change the password using T-SQL. In the following example, the old and new passwords are read from user input.
 
    ::: zone pivot="cs1-bash"
 
@@ -1110,8 +1107,8 @@ The system administrator account (`sa`) is created on the [!INCLUDE [ssnoversion
    ::: zone pivot="cs1-cmd"
 
    ```cmd
-   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd `
-      -S localhost -U sa -P "<password>" `
+   docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd ^
+      -S localhost -U sa -P "<password>" ^
       -Q "ALTER LOGIN sa WITH PASSWORD='<new-password>'"
    ```
 
@@ -1165,7 +1162,7 @@ This quickstart creates [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] co
 - [SQL Server 2019](quickstart-install-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019)
 - [SQL Server 2017](quickstart-install-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017)
 
-The previous command pulls the latest [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Linux container image. If you want to pull a specific image, change the tag name, such as `2025-ubuntu-GA-22.04`. To see all available images, run the following command:
+The previous command uses the latest [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Linux container image. If you want to pull a specific image, change the tag name, such as `2025-ubuntu-GA-22.04`. To see all available images, run the following command:
 
 ::: zone pivot="cs1-bash"
 
@@ -1193,15 +1190,15 @@ sqlcmd create mssql get-tags
 
 By default, this quickstart creates a container with the Developer edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The process for running production editions in containers is slightly different. For more information, see [Run production container images](../containers/deploy.md#production).
 
-The following table provides a description of the parameters in the previous `docker run` example:
+The following table provides a description of the parameters in the previous `sqlcmd create mssql` example:
 
 | Parameter | Description |
 | --- | --- |
-| `--ACCEPT-EULA` | Include the `--ACCEPT-EULA` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
+| `--accept-eula` | Include the `--accept-eula` flag to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] image. |
 | `--port 1433` | Map a TCP port on the host environment and a TCP port in the container. In this example, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
 | `--name sql1` | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
 | `--hostname sql1` | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
-| `--tag 2025-latest` | The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image. |
+| `--tag 2025-latest` | Specify the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image tag. |
 
 **`sqlcmd`** disables the `sa` password and creates a new login based on the current user when it creates a container. Use the following command to view your login information. You need it in later steps.
 
@@ -1272,7 +1269,7 @@ sqlcmd config view --raw
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following Transact-SQL query:
+   The `--hostname` parameter, as discussed previously, changes the internal name of the container to a custom value. This value is the name you see returned in the following T-SQL query:
 
    ```sql
    SELECT @@SERVERNAME,
@@ -1289,7 +1286,7 @@ sqlcmd config view --raw
 
 The following steps use the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] command-line tool, [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
-1. Use the `docker exec -it` command to start an interactive Bash shell inside your running container. In the following example, `sql1` is name specified by the `--name` parameter when you created the container.
+1. Use the `docker exec -it` command to start an interactive Bash shell inside your running container. In the following example, `sql1` is the name specified by the `--name` parameter when you created the container.
 
    ::: zone pivot="cs1-bash"
 
@@ -1357,13 +1354,13 @@ The following steps use the [!INCLUDE [ssnoversion-md](../../includes/ssnoversio
 
 ## Create and query data
 
-The following sections show you how to use **`sqlcmd`** and Transact-SQL to create a new database, add data, and run a query.
+The following sections show you how to use **`sqlcmd`** and T-SQL to create a new database, add data, and run a query.
 
 ### Create a new database
 
 The following steps create a new database named `TestDB`.
 
-1. From the **`sqlcmd`** command prompt, paste the following Transact-SQL command to create a test database:
+1. From the **`sqlcmd`** command prompt, paste the following T-SQL command to create a test database:
 
    ```sql
    CREATE DATABASE TestDB;
@@ -1386,7 +1383,7 @@ The following steps create a new database named `TestDB`.
 
 Next, create a new table named `Inventory` and insert two new rows.
 
-1. From the *sqlcmd* command prompt, switch context to the new `TestDB` database:
+1. From the **`sqlcmd`** command prompt, switch context to the new `TestDB` database:
 
    ```sql
    USE TestDB;
@@ -1445,7 +1442,7 @@ Now, run a query to return data from the `Inventory` table.
    QUIT
    ```
 
-1. To exit the interactive command-prompt in your container, type `exit`. Your container continues to run after you exit the interactive Bash shell.
+1. To exit the interactive command prompt in your container, type `exit`. Your container continues to run after you exit the interactive Bash shell.
 
 <a id="connectexternal"></a>
 
@@ -1488,7 +1485,7 @@ The following steps use **`sqlcmd`** outside of your container to connect to [!I
    > [!CAUTION]  
    > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-1. Run Transact-SQL commands. When finished, type `QUIT`.
+1. Run T-SQL commands. When finished, type `QUIT`.
 
 ## [sqlcmd](#tab/sqlcmd)
 
@@ -1522,7 +1519,7 @@ The following steps use **`sqlcmd`** outside of your container to connect to [!I
 
    ::: zone-end
 
-1. Run Transact-SQL commands. When finished, type `QUIT`.
+1. Run T-SQL commands. When finished, type `QUIT`.
 
 ---
 
@@ -1536,7 +1533,7 @@ Other common tools to connect to [!INCLUDE [ssnoversion-md](../../includes/ssnov
 
 ## [CLI](#tab/cli)
 
-If you want to remove the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container used in this tutorial, run the following commands:
+If you want to remove the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container used in this quickstart, run the following commands:
 
 ::: zone pivot="cs1-bash"
 
@@ -1567,7 +1564,7 @@ docker rm sql1
 
 ## [sqlcmd](#tab/sqlcmd)
 
-If you want to remove the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container used in this tutorial, run the following command:
+If you want to remove the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container used in this quickstart, run the following command:
 
 ::: zone pivot="cs1-bash"
 

@@ -15,10 +15,10 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This tutorial provides an example of how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
+SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This tutorial provides an example of how to create a SQL Server Agent job on Linux using both Transact-SQL (T-SQL) and SQL Server Management Studio (SSMS).
 
 > [!div class="checklist"]
-> - Install SQL Server Agent on Linux
+> - Enable SQL Server Agent on Linux
 > - Create a new job to perform daily database backups
 > - Schedule and run the job
 > - Perform the same steps in SSMS (optional)
@@ -60,7 +60,7 @@ To use SQL Server Agent on Linux, you must first enable SQL Server Agent on a ma
    ```
 
 > [!NOTE]  
-> Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 4, SQL Server Agent is included with the `mssql-server` package and is disabled by default. For Agent set up before CU 4, see [Install SQL Server Agent on Linux](install-upgrade/setup-sql-agent.md).
+> Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 4, SQL Server Agent is included with the `mssql-server` package and is disabled by default. For SQL Server Agent on SQL Server before CU 4, see [Install SQL Server Agent on Linux](install-upgrade/setup-sql-agent.md).
 
 ## Create a sample database
 
@@ -68,7 +68,7 @@ Use the following steps to create a sample database named `SampleDB`. This datab
 
 1. On your Linux machine, open a bash terminal session.
 
-1. Use **`sqlcmd`** to run a Transact-SQL `CREATE DATABASE` command.
+1. Use **`sqlcmd`** to run a T-SQL `CREATE DATABASE` command.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -Q 'CREATE DATABASE SampleDB'
@@ -82,10 +82,10 @@ Use the following steps to create a sample database named `SampleDB`. This datab
 
 ## Create a job with Transact-SQL
 
-The following steps create a SQL Server Agent job on Linux with Transact-SQL commands. The job runs a daily backup of the sample database, `SampleDB`.
+The following steps create a SQL Server Agent job on Linux with T-SQL commands. The job runs a daily backup of the sample database, `SampleDB`.
 
 > [!TIP]  
-> You can use any T-SQL client to run these commands. For example, on Linux you can use [Install the sqlcmd and bcp SQL Server command-line tools on Linux](install-upgrade/setup-tools.md) or [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the UI interface for job management, which is described in the next section.
+> You can use any T-SQL client to run these commands. For example, on Linux you can use [Install the sqlcmd and bcp SQL Server command-line tools on Linux](install-upgrade/setup-tools.md) or [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the SSMS interface for job management, which is described in the next section.
 
 1. Use [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) to create a job named `Daily SampleDB Backup`.
 
@@ -103,19 +103,19 @@ The following steps create a SQL Server Agent job on Linux with Transact-SQL com
 
    ```sql
    EXECUTE sp_add_jobstep
-       @job_name = N'Daily SampleDB Backup',
-       @step_name = N'Backup database',
-       @subsystem = N'TSQL',
-       @command = N'BACKUP DATABASE SampleDB TO DISK = \
-                        N''/var/opt/mssql/data/SampleDB.bak'' WITH NOFORMAT, NOINIT, \
-                        NAME = ''SampleDB-full'', SKIP, NOREWIND, NOUNLOAD, STATS = 10', @retry_attempts = 5, @retry_interval = 5;
+         @job_name = N'Daily SampleDB Backup',
+         @step_name = N'Backup database',
+         @subsystem = N'TSQL',
+         @command = N'BACKUP DATABASE SampleDB TO DISK = N''/var/opt/mssql/data/SampleDB.bak'' WITH NOFORMAT, NOINIT, NAME = ''SampleDB-full'', SKIP, NOREWIND, NOUNLOAD, STATS = 10',
+         @retry_attempts = 5,
+         @retry_interval = 5;
    GO
    ```
 
-1. Then create a daily schedule for your job with [sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md).
+1. Then create a daily schedule for your job with [sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).
 
    ```sql
-   -- Creates a schedule called 'Daily'
+   -- Creates a schedule called 'Daily SampleDB'
    EXECUTE dbo.sp_add_schedule
        @schedule_name = N'Daily SampleDB',
        @freq_type = 4,
@@ -129,7 +129,7 @@ The following steps create a SQL Server Agent job on Linux with Transact-SQL com
 1. Attach the job schedule to the job with [sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
 
    ```sql
-   -- Sets the 'Daily' schedule to the 'Daily SampleDB Backup' Job
+   -- Sets the 'Daily SampleDB' schedule to the 'Daily SampleDB Backup' job
    EXECUTE sp_attach_schedule
        @job_name = N'Daily SampleDB Backup',
        @schedule_name = N'Daily SampleDB';
@@ -148,7 +148,7 @@ The following steps create a SQL Server Agent job on Linux with Transact-SQL com
 1. Start the job with [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
 
    ```sql
-   EXECUTE dbo.sp_start_job N' Daily SampleDB Backup';
+   EXECUTE dbo.sp_start_job N'Daily SampleDB Backup';
    GO
    ```
 
@@ -162,7 +162,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
    :::image type="content" source="media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt-text="Screenshot of creating a SampleDB database." lightbox="media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png":::
 
-1. Verify that SQL Agent was [Install SQL Server Agent on Linux](install-upgrade/setup-sql-agent.md) and configured correctly. Look for the plus sign next to SQL Server Agent in the Object Explorer. If SQL Server Agent isn't enabled, try restarting the **mssql-server** service on Linux.
+1. Verify that [SQL Server Agent is installed](install-upgrade/setup-sql-agent.md) and configured correctly. Look for the plus sign next to SQL Server Agent in Object Explorer. If SQL Server Agent isn't enabled, try restarting the **mssql-server** service on Linux.
 
    :::image type="content" source="media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png" alt-text="Screenshot showing how to verify SQL Server Agent was installed.":::
 
@@ -195,8 +195,8 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 In this tutorial, you learned how to:
 
 > [!div class="checklist"]
-> - Install SQL Server Agent on Linux
-> - Use Transact-SQL and system stored procedures to create jobs
+> - Enable SQL Server Agent on Linux
+> - Use T-SQL and system stored procedures to create jobs
 > - Create a job that performs daily database backups
 > - Use SSMS UI to create and manage jobs
 

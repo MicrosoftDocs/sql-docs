@@ -18,7 +18,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-A [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] two-node shared disk failover cluster instance provides server-level redundancy for high availability. In this tutorial, you learn how to create a two-node failover cluster instance of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux. The specific steps that you'll complete include:
+A [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] two-node shared disk [failover cluster instance](shared-disk-cluster-concepts.md) provides server-level redundancy for high availability. In this tutorial, you learn how to create a two-node failover cluster instance of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux. The specific steps that you'll complete include:
 
 > [!div class="checklist"]
 > - Set up and configure Linux
@@ -28,13 +28,13 @@ A [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] two-node shar
 > - Install and configure Pacemaker on each cluster node
 > - Configure the failover cluster instance
 
-This article explains how to create a two-node shared disk failover cluster instance (FCI) for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. The article includes instructions and script examples for Red Hat Enterprise Linux (RHEL). Ubuntu distributions are similar to RHEL so the script examples will normally also work on Ubuntu.
+This article explains how to create a two-node shared disk failover cluster instance (FCI) for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. The article includes instructions and script examples for Red Hat Enterprise Linux (RHEL).
 
 For conceptual information, see [Failover cluster instances on Linux](shared-disk-cluster-concepts.md).
 
 ## Prerequisites
 
-To complete the following end-to-end scenario, you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
+To complete the following end-to-end scenario, you need two machines to deploy the two-node cluster and another server for storage. The following steps outline how these servers will be configured.
 
 ## Set up and configure Linux
 
@@ -45,7 +45,7 @@ The first step is to configure the operating system on the cluster nodes. On eac
 ## Install and configure SQL Server
 
 1. Install and set up [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on both nodes. For detailed instructions, see [Installation guidance for SQL Server on Linux](../../install-upgrade/setup.md).
-1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.
+1. Designate one node as primary and the other as secondary for configuration purposes. Use these terms throughout this guide.
 1. On the secondary node, stop and disable [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
    The following example stops and disables [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
 
@@ -55,7 +55,7 @@ The first step is to configure the operating system on the cluster nodes. On eac
    ```
 
    > [!NOTE]  
-   > At set up time, a Server Master Key is generated for the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance and placed at `var/opt/mssql/secrets/machine-key`. On Linux, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], always runs as a local account called `mssql`. Because it's a local account, its identity isn't shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local `mssql` account can access it to decrypt the Server Master Key.
+   > At set up time, a Server Master Key is generated for the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] always runs as a local account called `mssql`. Because it's a local account, its identity isn't shared across nodes. Therefore, you need to copy the encryption key from the primary node to the secondary node so each local `mssql` account can access it to decrypt the Server Master Key.
 
 1. On the primary node, create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
@@ -186,26 +186,26 @@ This example creates an FCI in the group NewLinFCIGrp. The name of the resource 
    #### [iSCSI](#tab/iscsi)
 
    ```bash
-   sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group RGName
+   sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group <RGName>
    ```
 
-   - `<iSCSIDIskResourceName>` is the name of the resource associated with the iSCSI disk
+   - `<iSCSIDiskResourceName>` is the name of the resource associated with the iSCSI disk
    - `<VolumeGroupName>` is the name of the volume group
    - `<LogicalVolumeName>` is the name of the logical volume that was created
-   - `<FolderToMountiSCSIDIsk>` is the folder to mount the disk (for system databases and the default location, it would be `/var/opt/mssql/data`)
+   - `<FolderToMountiSCSIDisk>` is the folder to mount the disk (for system databases and the default location, it would be `/var/opt/mssql/data`)
    - `<FileSystemType>` would be ext4 or XFS, depending on how things were formatted and what the distribution supports.
 
    #### [NFS](#tab/nfs)
 
    ```bash
-   sudo pcs resource create <NFSDiskResourceName> Filesystem device="<IPAddressOfNFSServer>:<FolderOnNFSServer>" directory="<FolderToMountNFSShare>" fstype=nfs4 options=" nfsvers=4.2,timeo=14,intr" --group RGName
-   mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o
+   sudo pcs resource create <NFSDiskResourceName> Filesystem device="<IPAddressOfNFSServer>:<FolderOnNFSServer>" directory="<FolderToMountNFSShare>" fstype=nfs4 options="nfsvers=4.2,timeo=14,intr" --group <RGName>
+   mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
    ```
 
-   - `<NFSDIskResourceName>` is the name of the resource associated with the NFS share
+   - `<NFSDiskResourceName>` is the name of the resource associated with the NFS share
    - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
    - `<FolderOnNFSServer>` is the name of the NFS share
-   - `<FolderToMountNFSShare>` is the folder to mount the disk (for system databases and the default location, it would be /var/opt/mssql/data)
+   - `<FolderToMountNFSShare>` is the folder to mount the disk (for system databases and the default location, it would be `/var/opt/mssql/data`)
 
    An example is shown here:
 
@@ -216,7 +216,7 @@ This example creates an FCI in the group NewLinFCIGrp. The name of the resource 
    #### [SMB](#tab/smb)
 
    ```bash
-   sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
+   sudo pcs resource create <SMBDiskResourceName> Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
    ```
 
    - `<ServerName>` is the name of the server with the SMB share
@@ -224,7 +224,7 @@ This example creates an FCI in the group NewLinFCIGrp. The name of the resource 
    - `<FolderName>` is the name of the folder created in the last step
    - `<UserName>` is the name of the user to access the share
    - `<Password>` is the password for the user
-   - `<ADDomain>` is the Active Directory DS domain (if applicable when using a Windows Server-based SMB share)
+   - `<ADDomain>` is the Active Directory Domain Services (AD DS) domain (if applicable when using a Windows Server-based SMB share)
    - `<mssqlUID>` is the UID of the `mssql` user
    - `<mssqlGID>` is the GID of the `mssql` user
    - `<RGName>` is the name of the resource group
@@ -246,7 +246,7 @@ This example creates an FCI in the group NewLinFCIGrp. The name of the resource 
 1. Create the FCI resource. You get no response back if there isn't a problem.
 
    ```bash
-   sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
+   sudo pcs resource create <FCIResourceName> ocf:mssql:fci op defaults timeout=60s --group <RGName>
    ```
 
    - `<FCIResourceName>` isn't only the name of the resource, but the friendly name that is associated with the FCI. This is what users and applications use to connect.
@@ -260,9 +260,9 @@ This example creates an FCI in the group NewLinFCIGrp. The name of the resource 
 
 1. Issue the statement `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`. It should return the name of the node that the FCI is running on.
 
-1. Manually fail the FCI to the other nodes. See the instructions under [Operate failover cluster instance on Linux](shared-disk-cluster-operate.md).
+1. Manually fail the FCI to the other node. See the instructions under [Operate failover cluster instance on Linux](shared-disk-cluster-operate.md).
 
-1. Finally, fail the FCI back to the original node and remove the colocation constraint.
+1. Finally, fail the FCI back to the original node.
 
 ## Summary
 

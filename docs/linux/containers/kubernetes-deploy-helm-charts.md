@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-This quickstart takes you through the steps to deploy SQL Server on Linux containers to [Azure Kubernetes Service](/azure/aks/) (AKS) with [Helm charts](/azure/aks/quickstart-helm), from a Windows client machine.
+This quickstart takes you through the steps to deploy a SQL Server on Linux container to [Azure Kubernetes Service](/azure/aks/) (AKS) with [Helm charts](/azure/aks/quickstart-helm), from a Windows client machine.
 
 AKS is a managed Kubernetes service for deploying and managing container clusters. [Helm](https://helm.sh/) is an open-source packaging tool that helps you install and manage the lifecycle of Kubernetes applications.
 
@@ -38,7 +38,7 @@ On your Windows client machine, you need the following tools.
 
 If you prefer to use a different client operating system, you need to select the appropriate packages for that platform.
 
-### Install kubectl using the Az PowerShell module
+### Install kubectl using Azure CLI
 
 You use **kubectl** to interact with the Kubernetes cluster. For more information, see [az aks install-cli](/cli/azure/aks#az-aks-install-cli).
 
@@ -77,9 +77,9 @@ az aks install-cli
 
 ## Review the sample Helm chart
 
-You're now ready to deploy the SQL Server on AKS cluster via the Helm chart.
+You're now ready to deploy SQL Server to the AKS cluster via the Helm chart.
 
-This quickstart provides a sample "as-is" [sample "as-is" Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart). The sample is for reference only. Remember to review the `readme` file to understand the configuration values that match your configuration requirements.
+This quickstart provides a [sample "as-is" Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart). The sample is for reference only. Remember to review the `readme` file to understand the configuration values that match your configuration requirements.
 
 If you want to deploy SQL Server in StatefulSet mode, which is the recommended mode for SQL Server deployments, you can view a [sample "as-is" StatefulSet-based Helm chart](https://github.com/microsoft/mssql-docker/tree/master/linux/sample-helm-chart-statefulset-deployment) deployment instead.
 

@@ -14,7 +14,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article introduces [SQL Server PowerShell](/powershell/sql-server/sql-server-powershell) and walks you through a couple of examples on how to use it with PowerShell on macOS and Linux. PowerShell is now an open source project on [GitHub](https://github.com/powershell/powershell).
+This article introduces [SQL Server PowerShell](/powershell/sql-server/sql-server-powershell) and walks you through a couple of examples on how to use it with PowerShell on macOS and Linux. PowerShell is an open source project on [GitHub](https://github.com/powershell/powershell).
 
 For more information about Windows PowerShell, see [What is Windows PowerShell?](/powershell/scripting/what-is-windows-powershell)
 
@@ -45,7 +45,7 @@ For more information on how to install the `SqlServer` module from the PowerShel
 
 ## Use the SqlServer module
 
-Let's start by launching PowerShell. If you're on macOS or Linux, Open a *terminal session* on your computer, and type `pwsh` to launch a new PowerShell session. On Windows, use <kbd>Win</kbd>+<kbd>R</kbd>, and type `pwsh` to launch a new PowerShell session.
+Let's start by launching PowerShell. If you're on macOS or Linux, open a *terminal session* on your computer, and type `pwsh` to launch a new PowerShell session. On Windows, use <kbd>Win</kbd>+<kbd>R</kbd>, and type `pwsh` to launch a new PowerShell session.
 
 ```console
 pwsh
@@ -86,11 +86,11 @@ Copy and paste the following commands at the PowerShell prompt. When you run the
 Optionally, you can just replace the `$serverInstance` variable with the IP address or the hostname of your SQL Server instance.
 
 ```powershell
-# Prompt for instance & credentials to login into SQL Server
+# Prompt for instance and credentials to connect to SQL Server
 $serverInstance = Read-Host "Enter the name of your instance"
 $credential = Get-Credential
 
-# Connect to the Server and return a few properties
+# Connect to the server and return a few properties
 Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
@@ -108,11 +108,11 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## Use the SQL Server PowerShell Provider
 
-Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider). Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline. By default this provider is presented as a PSDrive named `SQLSERVER:\`, which you can use to connect & navigate SQL Server instances that your domain account has access to. See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to set up Active Directory authentication for SQL Server on Linux.
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider). The provider allows you to navigate a SQL Server instance as if you were navigating the tree structure in Object Explorer, but at the command line. By default, this provider is presented as a PSDrive named `SQLSERVER:\`, which you can use to connect to and navigate SQL Server instances that your domain account can access. See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to set up Active Directory authentication for SQL Server on Linux.
 
 You can also use SQL authentication with the SQL Server PowerShell Provider. To do so, use the `New-PSDrive` cmdlet to create a new PSDrive and supply the proper credentials to connect.
 
-In the following example, you see an example of how to create a new PSDrive using SQL authentication.
+The following example creates a new PSDrive using SQL authentication.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -134,7 +134,7 @@ dir SQLonDocker:\Databases
 
 Here's what the output might look like. You might notice this output is similar to what SQL Server Management Studio (SSMS) displays at the Databases node. It displays the user databases, but not the system databases.
 
-```powershell
+```output
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
@@ -149,18 +149,18 @@ If you need to see all databases on your instance, one option is to use the `Get
 
 ## Get databases
 
-An important cmdlet to know is the `Get-SqlDatabase`. For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used. If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object is retrieved. However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance are returned.
+An important cmdlet to know is `Get-SqlDatabase`. For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used. If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object is retrieved. However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance is returned.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
 
-# Connect to the Instance and retrieve all databases
+# Connect to the instance and retrieve all databases
 Get-SqlDatabase -ServerInstance ServerB -Credential $credential
 ```
 
-Here's a sample of what the Get-SqlDatabase command returns:
+Here's a sample of what the `Get-SqlDatabase` command returns:
 
-```powershell
+```output
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
@@ -177,7 +177,7 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 ## Examine SQL Server error logs
 
-The following steps use PowerShell to examine error logs connect on your SQL Server instance on Linux.
+The following steps use PowerShell to examine error logs on your SQL Server instance on Linux.
 
 Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following steps:
 
@@ -188,7 +188,7 @@ Copy and paste the following commands at the PowerShell prompt. They might take 
 Optionally, you can replace the `$serverInstance` variable with the IP address or the hostname of your SQL Server instance.
 
 ```powershell
-# Prompt for instance & credentials to login into SQL Server
+# Prompt for instance and credentials to connect to SQL Server
 $serverInstance = Read-Host "Enter the name of your instance"
 $credential = Get-Credential
 

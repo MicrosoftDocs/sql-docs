@@ -35,7 +35,7 @@ In this article, use PowerShell to run the SQL Assessment API for [!INCLUDE [ssn
 
 The SQL Assessment API provides output in JSON format. To configure the SQL Assessment API, complete the following steps:
 
-1. Create a login for SQL Server assessments using SQL Authentication in the instance you want to assess. Use the following Transact-SQL (T-SQL) script to create a login and strong password. [!INCLUDE [password-complexity](includes/password-complexity.md)]
+1. Create a login for SQL Server assessments using SQL Authentication in the instance you want to assess. Use the following Transact-SQL script to create a login and a strong password. [!INCLUDE [password-complexity](includes/password-complexity.md)]
 
    ```sql
    USE [master];
@@ -44,11 +44,11 @@ The SQL Assessment API provides output in JSON format. To configure the SQL Asse
    CREATE LOGIN [assessmentLogin]
        WITH PASSWORD = N'<password>';
 
-   ALTER SERVER ROLE [CONTROL SERVER] ADD MEMBER [assessmentLogin];
+   GRANT CONTROL SERVER TO [assessmentLogin];
    GO
    ```
 
-   The `CONTROL SERVER` role works for most of the assessments. However, a few assessments might need **sysadmin** privileges. If you aren't running those assessments, use `CONTROL SERVER` permissions.
+    The `CONTROL SERVER` permission works for most of the assessments. However, a few assessments might need **sysadmin** privileges. If you aren't running those assessments, use `CONTROL SERVER` permissions.
 
 1. Store the credentials for connecting to the instance. Replace `<password>` with the password you used in the previous step.
 
@@ -66,7 +66,7 @@ The SQL Assessment API provides output in JSON format. To configure the SQL Asse
 
 ## Download the assessment script
 
-The following sample script calls the SQL Assessment API using the credentials you created in the preceding steps. The script generates an output file in JSON format at this location: `/var/opt/mssql/log/assessments`.
+The following sample script calls the SQL Assessment API using the credentials you created in the preceding steps. The script generates JSON output in the `/var/opt/mssql/log/assessments` directory.
 
 > [!NOTE]  
 > The SQL Assessment API can also generate output in CSV and XML formats.

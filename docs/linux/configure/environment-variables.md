@@ -41,12 +41,12 @@ You can use several different environment variables to configure [!INCLUDE [ssno
 | `MSSQL_IP_ADDRESS` | Sets the IP address. Currently, the IP address must be IPv4 style (0.0.0.0). |
 | `MSSQL_BACKUP_DIR` | Sets the default backup directory location. |
 | `MSSQL_DATA_DIR` | Changes the directory where the new SQL Server database data files (`.mdf`) are created. |
-| `MSSQL_LOG_DIR` | Changes the directory where the new SQL Server database log (`.ldf`) files are created. |
+| `MSSQL_LOG_DIR` | Changes the directory where the new SQL Server database log files (`.ldf`) are created. |
 | `MSSQL_DUMP_DIR` | Changes the directory where SQL Server deposits the memory dumps and other troubleshooting files by default. |
 | `MSSQL_ENABLE_HADR` | Enables availability groups. For example, `1` enables and `0` disables the feature. |
-| `MSSQL_AGENT_ENABLED` | Enables SQL Server Agent. For example, `true` enables, and `false` disables the agent. By default, the agent is disabled. |
-| `MSSQL_MASTER_DATA_FILE` | Sets the location of the `master` database data file. Must be named `master.mdf` until first run of SQL Server. |
-| `MSSQL_MASTER_LOG_FILE` | Sets the location of the `master` database log file. Must be named `mastlog.ldf` until first run of SQL Server. |
+| `MSSQL_AGENT_ENABLED` | Enables SQL Server Agent. For example, `true` enables and `false` disables the agent. By default, the agent is disabled. |
+| `MSSQL_MASTER_DATA_FILE` | Sets the location of the `master` database data file. Must be named `master.mdf` until the first run of SQL Server. |
+| `MSSQL_MASTER_LOG_FILE` | Sets the location of the `master` database log file. Must be named `mastlog.ldf` until the first run of SQL Server. |
 | `MSSQL_ERROR_LOG_FILE` | Sets the location of the `errorlog` files. For example, `/var/opt/mssql/log/errorlog`. |
 
 ### SQL Server editions

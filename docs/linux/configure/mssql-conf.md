@@ -32,7 +32,7 @@ You can use this utility to set the following parameters:
 | [Authenticate with Windows](#windows-active-directory) | Settings for Windows Server Active Directory authentication. |
 | [Collation](#collation) | Set a new collation for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends feedback to Microsoft. |
-| [Database Mail Profile](#dbmail) | Set the default database mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
+| [Database Mail profile](#dbmail) | Set the default Database Mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Default data directory](#datadir) | Change the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database data files (`.mdf`). |
 | [Default log directory](#datadir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database log files (`.ldf`). |
 | [Default master database directory](#masterdatabasedir) | Changes the default directory for the `master` database and log files. |
@@ -40,7 +40,7 @@ You can use this utility to set the following parameters:
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
 | [Default error log directory](#errorlogdir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Error Log, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
-| [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [Dump type](#coredump) | Choose the type of memory dump file to collect. |
 | [Edition](#edition) | Set the edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
@@ -62,7 +62,7 @@ You can use this utility to set the following parameters:
 | [Authenticate with Windows](#windows-active-directory) | Settings for Windows Server Active Directory authentication. |
 | [Collation](#collation) | Set a new collation for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends feedback to Microsoft. |
-| [Database Mail Profile](#dbmail) | Set the default database mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
+| [Database Mail profile](#dbmail) | Set the default Database Mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Default data directory](#datadir) | Change the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database data files (`.mdf`). |
 | [Default log directory](#datadir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database log files (`.ldf`). |
 | [Default master database file directory](#masterdatabasedir) | Changes the default directory for the `master` database files on existing SQL installation. |
@@ -70,7 +70,7 @@ You can use this utility to set the following parameters:
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
 | [Default error log directory](#errorlogdir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Error Log, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
-| [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [Dump type](#coredump) | Choose the type of memory dump file to collect. |
 | [Edition](#edition) | Set the edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
@@ -79,7 +79,7 @@ You can use this utility to set the following parameters:
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [Machine Learning Services EULAs](#mlservices-eula) | Accept R and Python EULAs for `mlservices` packages. Applies to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] only. |
 | [Network settings](#network) | Additional network settings for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
-| [outboundnetworkaccess](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](../install-upgrade/setup-machine-learning.md) R, Python, and Java extensions. |
+| [Outbound network access](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](../install-upgrade/setup-machine-learning.md) R, Python, and Java extensions. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens for connections. |
 | [TLS](#tls) | Configure Transport Layer Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
@@ -95,7 +95,7 @@ You can use this utility to set the following parameters:
 | [Authenticate with Windows](#windows-active-directory) | Settings for Windows Server Active Directory authentication. |
 | [Collation](#collation) | Set a new collation for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends feedback to Microsoft. |
-| [Database Mail Profile](#dbmail) | Set the default database mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
+| [Database Mail profile](#dbmail) | Set the default Database Mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Default data directory](#datadir) | Change the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database data files (`.mdf`). |
 | [Default log directory](#datadir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database log files (`.ldf`). |
 | [Default master database file directory](#masterdatabasedir) | Changes the default directory for the `master` database files on existing SQL installation. |
@@ -103,7 +103,7 @@ You can use this utility to set the following parameters:
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
 | [Default error log directory](#errorlogdir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Error Log, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
-| [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [Dump type](#coredump) | Choose the type of memory dump file to collect. |
 | [Edition](#edition) | Set the edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
@@ -131,7 +131,7 @@ You can use this utility to set the following parameters:
 | [Collation](#collation) | Set a new collation for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Custom password policy](#custom-password-policies) | Password policies enforce complexity, expiration, and password changes. |
 | [Customer feedback](#customerfeedback) | Choose whether or not [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends feedback to Microsoft. |
-| [Database Mail Profile](#dbmail) | Set the default database mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
+| [Database Mail profile](#dbmail) | Set the default Database Mail profile for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. |
 | [Default data directory](#datadir) | Change the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database data files (`.mdf`). |
 | [Default log directory](#datadir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database log files (`.ldf`). |
 | [Default master database file directory](#masterdatabasedir) | Changes the default directory for the `master` database files on existing SQL installation. |
@@ -139,7 +139,7 @@ You can use this utility to set the following parameters:
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
 | [Default error log directory](#errorlogdir) | Changes the default directory for new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Error Log, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
-| [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [Dump type](#coredump) | Choose the type of memory dump file to collect. |
 | [Edition](#edition) | Set the edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
@@ -212,7 +212,7 @@ To change this setting, use the following steps:
 
 ### Set the default Database Mail profile for SQL Server on Linux
 
-The `sqlagent.databasemailprofile` allows you to set the default DB Mail profile for email alerts.
+The `sqlagent.databasemailprofile` allows you to set the default Database Mail profile for email alerts.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
@@ -220,15 +220,15 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 
 <a id="agenterrorlog"></a>
 
-### SQL Agent error logs
+### SQL Server Agent error logs
 
-The `sqlagent.errorlogfile` and `sqlagent.errorlogginglevel` settings allows you to set the SQL Agent log file path and logging level respectively.
+The `sqlagent.errorlogfile` and `sqlagent.errorlogginglevel` settings allow you to set the SQL Server Agent log file path and logging level respectively.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogfile <path>
 ```
 
-SQL Agent logging levels are bitmask values that equal:
+SQL Server Agent logging levels are bitmask values that equal:
 
 - `1` = Errors
 - `2` = Warnings
@@ -361,7 +361,7 @@ For more information, see [Set custom password policy for SQL logins in SQL Serv
 The `telemetry.customerfeedback` setting changes whether [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends feedback to Microsoft or not. By default, this value is set to `true` for all editions. To change the value, run the following commands:
 
 > [!IMPORTANT]  
-> You can not turn off customer feedback for free editions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], Express and Developer.
+> You can't turn off customer feedback for free editions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], Express and Developer.
 
 1. Run the **`mssql-conf`** script as root with the `set` command for `telemetry.customerfeedback`. The following example turns off customer feedback by specifying `false`.
 
@@ -420,11 +420,11 @@ The `filelocation.defaultdatadir` and `filelocation.defaultlogdir` settings chan
 
 ## Change the default `master` database file directory location
 
-The `filelocation.masterdatafile` and `filelocation.masterlogfile` setting changes the location where the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../../includes/ssde-md.md)] looks for the `master` database files. By default, this location is `/var/opt/mssql/data`.
+The `filelocation.masterdatafile` and `filelocation.masterlogfile` settings change the location where the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../../includes/ssde-md.md)] looks for the `master` database files. By default, this location is `/var/opt/mssql/data`.
 
 To change these settings, use the following steps:
 
-1. Create the target directory for new error log files. The following example creates a new `/tmp/masterdatabasedir` directory:
+1. Create the target directory for the `master` database files. The following example creates a new `/tmp/masterdatabasedir` directory:
 
    ```bash
    sudo mkdir /tmp/masterdatabasedir
@@ -467,13 +467,13 @@ To change these settings, use the following steps:
    ```
 
    > [!NOTE]  
-   > If [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can't find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases is automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] successfully starts up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old `sa` password aren't updated in the new `master` database. You'll have to stop [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to continue using the existing metadata.
+   > If [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can't find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases is automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] successfully starts up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL Server Agent jobs, or old `sa` password aren't updated in the new `master` database. You'll have to stop [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to continue using the existing metadata.
 
 <a id="masterdatabasename"></a>
 
 ## Change the name of `master` database files
 
-The `filelocation.masterdatafile` and `filelocation.masterlogfile` setting changes the location where the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../../includes/ssde-md.md)] looks for the `master` database files. You can also use this to change the name of the `master` database and log files.
+The `filelocation.masterdatafile` and `filelocation.masterlogfile` settings change the location where the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssde-md](../../includes/ssde-md.md)] looks for the `master` database files. You can also use these settings to change the name of the `master` database and log files.
 
 To change these settings, use the following steps:
 
@@ -487,7 +487,7 @@ To change these settings, use the following steps:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
 
    > [!IMPORTANT]  
@@ -527,7 +527,7 @@ To set up this new location, use the following commands:
    sudo chgrp mssql /tmp/dump
    ```
 
-1. Use **`mssql-conf`** to change the default data directory with the `set` command:
+1. Use **`mssql-conf`** to change the default dump directory with the `set` command:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdumpdir /tmp/dump
@@ -621,9 +621,9 @@ Users can still generate memory dumps manually when automatic core dump is disab
 
 There are two options for controlling the type of memory dumps that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] collects: `coredump.coredumptype` and `coredump.captureminiandfull`. These relate to the two phases of core dump capture.
 
-The first phase capture is controlled by the `coredump.coredumptype` setting, which determines the type of dump file generated during an exception. The second phase is enabled when the `coredump.captureminiandfull` setting. If `coredump.captureminiandfull` is set to true, the dump file specified by `coredump.coredumptype` is generated, and a second mini dump is also generated. Setting `coredump.captureminiandfull` to false disables the second capture attempt.
+The first capture phase is controlled by the `coredump.coredumptype` setting, which determines the type of dump file generated during an exception. The second phase is enabled by the `coredump.captureminiandfull` setting. If `coredump.captureminiandfull` is set to `true`, the dump file specified by `coredump.coredumptype` is generated, and a second mini dump is also generated. Setting `coredump.captureminiandfull` to `false` disables the second capture attempt.
 
-1. Decide whether to capture both mini and full dumps with the `coredump.captureminiandfull` setting.
+1. Decide whether to capture a second mini dump with the `coredump.captureminiandfull` setting.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
@@ -659,7 +659,7 @@ The edition of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can
 The `hadr.hadrenabled` option enables availability groups on your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. The following command enables availability groups by setting `hadr.hadrenabled` to 1. You must restart [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for the setting to take effect.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
@@ -759,7 +759,7 @@ The `network.rpcport` and `distributedtransaction.servertcpport` settings are us
 1. Run the **`mssql-conf`** script as root with the `set` command for `network.rpcport`:
 
    ```bash
-   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rpc_port>
    ```
 
 1. Then set the `distributedtransaction.servertcpport` setting:
@@ -798,7 +798,7 @@ There are several other settings for **`mssql-conf`** that you can use to monito
 
 ## Accept Machine Learning Services EULAs
 
-Adding [machine learning R or Python packages](../install-upgrade/setup-machine-learning.md) to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to `mlservices` EULAs. The same EULA parameter is used for R and Python, depending on what you installed.
+Adding [machine learning R or Python packages](../install-upgrade/setup-machine-learning.md) to the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] requires that you accept the licensing terms for open-source distributions of R and Python. The following example lists the available commands and options related to `mlservices` EULAs. The same EULA parameter is used for R and Python, depending on what you installed.
 
 ```bash
 # For all packages: database engine and mlservices
@@ -809,10 +809,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Adds the EULA section to the INI and sets acceptulam to yes
+# Adds the EULA section to the INI and sets accepteulaml to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance and removes the setting
+# Rescinds EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -912,7 +912,7 @@ The following options configure TLS for an instance of [!INCLUDE [ssnoversion-md
 | `network.forceencryption` | If 1, then [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |
 | `network.forcestrict` | If 1, then [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] enforces [strict encryption](../../relational-databases/security/networking/tds-8.md#strict-connection-encryption) on all endpoints. By default, this option is 0.<br /><br />**Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions. |
 | `network.tlscert` | The absolute path to the certificate file that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/certs/mssql.pem` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
-| `network.tlskey` | The absolute path to the private key file that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/private/mssql.key` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
+| `network.tlskey` | The absolute path to the private key file that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/private/mssql.key` The private key file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 | `network.tlsprotocols` | A comma-separated list of which TLS protocols are allowed by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client doesn't support any allowed protocol, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] rejects the connection attempt. For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0). If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
 | `network.tlsciphers` | Specifies which ciphers are allowed by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://docs.openssl.org/master/man1/ciphers). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | `network.kerberoskeytabfile` | Path to the Kerberos keytab file |
@@ -935,7 +935,7 @@ The following options are additional network settings configurable using **`mssq
 | `network.ipaddress` | IP address for incoming connections. |
 | `network.kerberoscredupdatefrequency` | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer. |
 | `network.privilegedadaccount` | Privileged Active Directory user to use for Active Directory authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](../security/authentication/active-directory-tutorial.md#spn) |
-| <a id="ipv6dnsrecordslimit"></a>`network.ipv6dnsrecordslimit` | Set a configurable limit to the number of AAAA records returned by DNS requests. Value is a positive integer between `0` and `5`. This option is guarantees that WinHTTP requests with the default number of retries (6) attempt at least one IPv4 address. |
+| <a id="ipv6dnsrecordslimit"></a>`network.ipv6dnsrecordslimit` | Set a configurable limit to the number of AAAA records returned by DNS requests. The value is an integer between `0` and `5`. This option guarantees that WinHTTP requests with the default number of retries (6) attempt at least one IPv4 address. |
 | `uncmapping` | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
 | `ldaphostcanon` | Set whether OpenLDAP should canonicalize hostnames during the bind step. Values can be `true` or `false`. |
 
@@ -1009,7 +1009,7 @@ The results provide various configuration options and a short description for ea
 
 ## mssql.conf format
 
-The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](../containers/deploy.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in [Configure usage and diagnostic data collection for SQL Server on Linux](usage-diagnostic-data-configuration.md).
+The following `/var/opt/mssql/mssql.conf` file provides examples of settings. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](../containers/deploy.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in [Configure usage and diagnostic data collection for SQL Server on Linux](usage-diagnostic-data-configuration.md).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"

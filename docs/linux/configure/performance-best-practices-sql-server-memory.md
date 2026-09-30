@@ -25,7 +25,7 @@ This article covers memory configuration for [!INCLUDE [ssnoversion-md](../../in
 
 To ensure there's enough free physical memory for the Linux operating system, the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] process uses only 80 percent of the physical RAM by default. For some systems with large amounts of physical RAM, 20 percent might be a significant number. For example, on a system with 1 TB of RAM, the default setting leaves around 200 GB of RAM unused. In this situation, you might want to configure the memory limit to a higher value.
 
-You can adjust this value using the **`mssql-conf`** tool or the `MSSQL_MEMORY_LIMIT_MB` environment variable. For more information, see the [memory.memorylimitmb](../sql-server-linux-configure-mssql-conf.md#memorylimit) setting that controls the memory visible to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (in units of MB). For detailed sizing guidance, see [Guidelines for setting memory limits on Linux and in containers](#guidelines-for-setting-memory-limits).
+You can adjust this value using the [mssql-conf](mssql-conf.md) tool or the `MSSQL_MEMORY_LIMIT_MB` environment variable. For more information, see the [memory.memorylimitmb](mssql-conf.md#memorylimit) setting that controls the memory visible to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] (in units of MB). For detailed sizing guidance, see [Guidelines for setting memory limits on Linux and in containers](#guidelines-for-setting-memory-limits).
 
 ## Control group (cgroup) v2 support
 
@@ -41,9 +41,9 @@ You can adjust this value using the **`mssql-conf`** tool or the `MSSQL_MEMORY_L
 | --- | --- | --- |
 | **Host** | Hardware / VM configuration | Physical RAM on the server or virtual machine (VM). |
 | **cgroup limit** (`docker run --memory`, `systemd`, or manual) | Container runtime, `systemd` slice, or manual `cgroup` configuration | Kernel-enforced ceiling (`memory.max`) for all processes in the `cgroup`. Optional on bare-metal Linux. |
-| **SQL Server process** (`memorylimitmb` / `MSSQL_MEMORY_LIMIT_MB`) | `mssql-conf` or environment variable | Total memory across all SQL Server components. Must be lower than the `cgroup` limit (if present) or host memory. |
-| **Buffer pool** (`max_server_memory`) | `sp_configure` | The cache of 8-KB data pages. Must be lower than `memorylimitmb`. |
-| **Headroom** | Calculated (gap between limits) | The gap between the `cgroup` limit (or host memory) and `memorylimitmb`, reserved for OS overhead and auxiliary processes. |
+| **SQL Server process** (`memory.memorylimitmb` / `MSSQL_MEMORY_LIMIT_MB`) | `mssql-conf` or environment variable | Total memory across all SQL Server components. Must be lower than the `cgroup` limit (if present) or host memory. |
+| **Buffer pool** (`max_server_memory`) | `sp_configure` | The cache of 8-KB data pages. Must be lower than `memory.memorylimitmb`. |
+| **Headroom** | Calculated (gap between limits) | The gap between the `cgroup` limit (or host memory) and `memory.memorylimitmb`, reserved for OS overhead and auxiliary processes. |
 
 :::image type="content" source="media/performance-best-practices-sql-server-memory/linux-memory-stack.png" alt-text="Diagram showing nested memory control layers.":::
 
@@ -51,15 +51,15 @@ When setting memory limits for [!INCLUDE [ssnoversion-md](../../includes/ssnover
 
 - In container deployments, use `cgroup` to limit the overall memory available to the container. This setting establishes the upper bound for all processes inside the container.
 
-- The memory limit (whether set by `memorylimitmb` or the `MSSQL_MEMORY_LIMIT_MB` environment variable) controls the total memory that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux can allocate across all its components, such as the buffer pool, SQLPAL, SQL Server Agent, LibOS, PolyBase, Full-Text Search, and any other process loaded in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux.
+- The memory limit (whether set by `memory.memorylimitmb` or the `MSSQL_MEMORY_LIMIT_MB` environment variable) controls the total memory that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux can allocate across all its components, such as the buffer pool, SQLPAL, SQL Server Agent, LibOS, PolyBase, Full-Text Search, and any other process loaded in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux.
 
-- The `MSSQL_MEMORY_LIMIT_MB` environment variable takes precedence over `memorylimitmb` defined in `mssql.conf`.
+- The `MSSQL_MEMORY_LIMIT_MB` environment variable takes precedence over `memory.memorylimitmb` defined in `mssql.conf`.
 
-- `memorylimitmb` can't exceed the actual physical memory of the host system.
+- `memory.memorylimitmb` can't exceed the actual physical memory of the host system.
 
-- Set `memorylimitmb` lower than the host system memory and the `cgroup` limit (if present), to ensure there's enough free physical memory for the Linux operating system. If you don't explicitly set `memorylimitmb`, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses 80 percent of the lesser value between total system memory and the `cgroup` limit (if present).
+- Set `memory.memorylimitmb` lower than the host system memory and the `cgroup` limit (if present), to ensure there's enough free physical memory for the Linux operating system. If you don't explicitly set `memory.memorylimitmb`, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses 80 percent of the lesser value between total system memory and the `cgroup` limit (if present).
 
-- The [max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) server configuration option limits only the size of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] buffer pool, and doesn't govern overall memory usage for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. Always set this value lower than `memorylimitmb` to ensure sufficient memory remains for the other components described in the previous bullet.
+- The [max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) server configuration option limits only the size of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] buffer pool, and doesn't govern overall memory usage for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. Always set this value lower than `memory.memorylimitmb` to ensure sufficient memory remains for the other components described in the previous bullet.
 
 ### Headroom between SQL Server and container memory limits
 

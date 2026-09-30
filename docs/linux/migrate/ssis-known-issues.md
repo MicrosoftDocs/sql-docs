@@ -22,7 +22,7 @@ This article describes limitations and known issues for SQL Server Integration S
 The following features aren't supported in this release of SSIS on Linux:
 
 - SSIS Catalog database
-- Scheduled package execution by SQL Agent
+- Scheduled package execution by SQL Server Agent
 - Windows Authentication
 - Third-party components
 - Change Data Capture (CDC)
@@ -56,11 +56,11 @@ The following built-in Integration Services components are supported on Linux. S
 
 | Task | Limitations |
 | --- | --- |
-| Execute Process task | Only supports in-process mode. |
-| File System task | The *Move directory* and *Set file attributes* actions aren't supported. |
-| Script task | Only supports standard .NET Framework APIs. |
-| Send Mail task | Only supports anonymous user mode. |
-| Transfer Database task | UNC paths aren't supported. |
+| Execute Process Task | Only supports in-process mode. |
+| File System Task | The *Move directory* and *Set file attributes* actions aren't supported. |
+| Script Task | Only supports standard .NET Framework APIs. |
+| Send Mail Task | Only supports anonymous user mode. |
+| Transfer Database Task | UNC paths aren't supported. |
 
 ## Supported and unsupported maintenance plan tasks
 
@@ -98,7 +98,7 @@ The following maintenance plan tasks are supported on Linux:
 | Component | Limitations |
 | --- | --- |
 | ADO.NET source and destination | Only support the SQLClient data provider. |
-| Flat File source and destination | 1. Only support Windows-style file paths, to which the default path mapping rule is applied. For example, `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`.<br /><br />2. Azure File share that mounted on Red Hat 7 isn't supported. |
+| Flat File source and destination | 1. Only support Windows-style file paths, to which the default path mapping rule is applied. For example, `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`.<br /><br />2. An Azure File share mounted on Red Hat 7 isn't supported. |
 | OData source | Only supports Basic authentication. |
 | ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
 | OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
@@ -149,7 +149,7 @@ The SSIS log providers for Text files, for XML files, and for SQL Server Profile
 
 ## Python 3 support
 
-Python 3 is supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 21 and later versions. For more information, see [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md).
+Python 3 is supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 21 and later versions. For more information, see [Release notes for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 | Distribution | Package name | Package version |
 | --- | --- | --- |

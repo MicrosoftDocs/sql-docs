@@ -46,7 +46,7 @@ Make sure your certificates follow these requirements:
 - The `Subject` property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer.
 
   > [!NOTE]  
-  > Wild card certificates are supported.
+  > Wildcard certificates are supported.
 
 ## Configure the OpenSSL libraries for use (optional)
 
@@ -75,15 +75,15 @@ The following section describes setting up client initiated encryption.
 > [!CAUTION]  
 > This example uses a self-signed certificate. Self-signed certificates shouldn't be used for production scenarios. You should use CA certificates.
 
-Ensure that the folders where you save your certificates and private keys, are accessible by the `mssql` user/group, and have permission set to `700` (`drwx-----`). You can create folders manually with permission set to `700` (`drwx------`) and owned by the `mssql` user/group, or set the permission to `755` (`drwxr-xr-x`), owned by other user but still accessible to the `mssql` user group. For example, you can create a folder called `sslcert` under the path `/var/opt/mssql/`, and save the certificate and the private key with permissions on the files set to `600`, as shown in the following sample.
+Ensure that the folders where you save your certificates and private keys are accessible by the `mssql` user or group and have permissions set to `700` (`drwx------`). You can create folders manually with permissions set to `700` (`drwx------`) and owned by the `mssql` user or group. Alternatively, set the permissions to `755` (`drwxr-xr-x`) and make sure the folders are accessible to the `mssql` group. For example, you can create a folder called `sslcert` under the path `/var/opt/mssql/` and save the certificate and the private key with permissions on the files set to `600`, as shown in the following sample.
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365
 sudo chown mssql:mssql mssql.pem mssql.key
 sudo chmod 600 mssql.pem mssql.key
-#Saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
-sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x
-#Saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
+# Save the certificate to the certs folder under /etc/ssl/
+sudo mv mssql.pem /etc/ssl/certs/
+# Save the private key to the private folder under /etc/ssl/
 sudo mv mssql.key /etc/ssl/private/
 ```
 
@@ -114,28 +114,28 @@ systemctl restart mssql-server
 
 ### Register the certificate on your client machine (Windows, Linux, or macOS)
 
-- If you're using CA signed certificate, you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine.
+- If you're using a CA-signed certificate, copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine.
 
-- If you're using the self-signed certificate, copy the `.pem` file to the following folders respective to distribution and execute the commands to enable them:
+- If you're using the self-signed certificate, copy the `.pem` file to the folder for your distribution and run the command to enable it:
 
-- **Ubuntu**: Copy the certificate to `/usr/share/ca-certificates/`, rename its extension to `.crt`, and use `dpkg-reconfigure ca-certificates` to enable it as system CA certificate.
+  - **Ubuntu**: Copy the certificate to `/usr/share/ca-certificates/`, rename its extension to `.crt`, and use `dpkg-reconfigure ca-certificates` to enable it as a system CA certificate.
 
-- **RHEL**: Copy the certificate to `/etc/pki/ca-trust/source/anchors/` and use `update-ca-trust` to enable it as system CA certificate.
+  - **RHEL**: Copy the certificate to `/etc/pki/ca-trust/source/anchors/` and use `update-ca-trust` to enable it as a system CA certificate.
 
-- **SUSE**: Copy the certificate to `/usr/share/pki/trust/anchors/` and use `update-ca-certificates` to enable it as system CA certificate.
+  - **SUSE**: Copy the certificate to `/usr/share/pki/trust/anchors/` and use `update-ca-certificates` to enable it as a system CA certificate.
 
-- **Windows**: Import the `.pem` file as a certificate under **Current User > Trusted Root Certification Authorities > Certificates**.
+  - **Windows**: Import the `.pem` file as a certificate under **Current User** > **Trusted Root Certification Authorities** > **Certificates**.
 
-- **macOS**:
+  - **macOS**:
 
-  - Copy the certificate to `/usr/local/etc/openssl/certs`
-  - Run the following command to get the hash value:
+    - Copy the certificate to `/usr/local/etc/openssl/certs`.
+    - Run the following command to get the hash value:
 
-    ```bash
-    /usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout
-    ```
+      ```bash
+      /usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout
+      ```
 
-  - Rename the certificate to the value. For example: `mv mssql.pem dc2dd900.0`. Make sure `dc2dd900.0` is in `/usr/local/etc/openssl/certs`
+    - Rename the certificate to the value. For example, use `mv mssql.pem dc2dd900.0`. Make sure `dc2dd900.0` is in `/usr/local/etc/openssl/certs`.
 
 ### Example connection strings
 
@@ -237,19 +237,21 @@ systemctl restart mssql-server
 | Error message | Fix |
 | --- | --- |
 | `The certificate chain was issued by an authority that is not trusted.` | This error occurs when clients are unable to verify the signature on the certificate presented by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] during the TLS handshake. Make sure the client trusts either the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] certificate directly, or the CA that signed the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] certificate. |
-| `The target principal name is incorrect.` | Make sure that Common Name field on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]'s certificate matches the server name specified in the client's connection string. |
+| `The target principal name is incorrect.` | Make sure that the common name field on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]'s certificate matches the server name specified in the client's connection string. |
 | `An existing connection was forcibly closed by the remote host.` | This error can occur when the client doesn't support the TLS protocol version required by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For example, if [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is configured to require TLS 1.2, make sure your clients also support the TLS 1.2 protocol. |
 
 ### Ubuntu 20.04 and other recent Linux distribution releases
 
-**Symptom**
+#### Symptom
 
 When a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Linux instance loads a certificate that was created with a signature algorithm using less than 112 bits of security (examples: MD5, SHA-1), you might observe a connection failure error, like this example:
 
-> A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.) (Microsoft SQL Server, Error: 10054)
+```output
+A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.) (Microsoft SQL Server, Error: 10054)
+```
 
 The error is due to OpenSSL security level 2 being enabled by default on Ubuntu 20.04 and later versions. Security level 2 prohibits TLS connections that have less than 112 bits of security from being established.
 
-**Solution**
+#### Solution
 
 Install a certificate with a signature algorithm using at least 112 bits of security. Signature algorithms that satisfy this requirement include SHA-224, SHA-256, SHA-384, and SHA-512.

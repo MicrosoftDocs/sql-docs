@@ -350,7 +350,7 @@ To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Ub
 
 At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your Ubuntu machine and is ready to use.
 
-### [Ubuntu 24.04](#tab/2505ubuntu2404)
+### [Ubuntu 24.04](#tab/2025ubuntu2404)
 
 **Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 1 and later versions.
 
@@ -399,7 +399,7 @@ At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is 
 
 ::: moniker-end
 
-## Disable the SA account as a best practice
+## Disable the `sa` account as a best practice
 
 [!INCLUDE [connect-with-sa](../includes/connect-with-sa.md)]
 

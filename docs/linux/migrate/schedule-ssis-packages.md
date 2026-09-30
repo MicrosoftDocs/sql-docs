@@ -17,7 +17,7 @@ ms.custom:
 
 When you run SQL Server Integration Services (SSIS) and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows, you can automate the execution of SSIS packages by using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent. When you run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and SSIS on Linux, however, the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent utility isn't available to schedule jobs on Linux. Instead, you use the cron service, which is widely used on Linux platforms to automate package execution.
 
-This article provides examples that show how to automate the execution of SSIS packages. The examples are written to run on Red Hat Enterprise. The code is similar for other Linux distributions, such as Ubuntu.
+This article provides examples that show how to automate the execution of SSIS packages. The examples are written to run on Red Hat Enterprise Linux. The code is similar for other Linux distributions, such as Ubuntu.
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ To schedule the previously described job to run daily at 2:10 AM, add the follow
 
 ```output
 # run <SSIS package name> at 2:10 AM every day
-10 2 * * * $/HOME/SSIS/jobs/SSISpackageName.daily
+10 2 * * * $HOME/SSIS/jobs/SSISpackageName.daily
 ```
 
 Save the crontab file, and then quit the editor.

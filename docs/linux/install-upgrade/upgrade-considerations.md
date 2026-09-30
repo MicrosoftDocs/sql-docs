@@ -66,7 +66,7 @@ If you perform an in-place upgrade, the previous [!INCLUDE [ssnoversion-md](../.
 
 ## No setup program
 
-Unlike [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux doesn't have a setup program. Instead, it's distributed in packages for each component. To install or upgrade the database engine and other components, use the package manager included with your Linux distribution. For installation steps, see [Installation guidance for SQL Server on Linux](setup.md). For information about configuring package repositories, see [Configure repositories for installing and upgrading SQL Server on Linux](change-repo.md).
+Unlike [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux doesn't have a setup program. Instead, it's distributed in packages for each component. To install or upgrade the Database Engine and other components, use the package manager included with your Linux distribution. For installation steps, see [Installation guidance for SQL Server on Linux](setup.md). For information about configuring package repositories, see [Configure repositories for installing and upgrading SQL Server on Linux](change-repo.md).
 
 ## Upgrade in place
 
@@ -123,7 +123,7 @@ For more information about using backup and restore on Linux, see [Back up and r
 
 ### Point to the new instance
 
-After migrating user databases, point new users to the new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance using one of several methods (for example, renaming the server, using a DNS entry, and modifying connection strings). Compared to an in-place upgrade, migrating to a new instance reduces risk and downtime, and gives you an opportunity to upgrade hardware and the operating system at the same time.
+After migrating user databases, point users to the new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance using one of several methods (for example, renaming the server, using a DNS entry, and modifying connection strings). Compared to an in-place upgrade, migrating to a new instance reduces risk and downtime, and gives you an opportunity to upgrade hardware and the operating system at the same time.
 
 ## Related content
 

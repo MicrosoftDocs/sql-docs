@@ -23,7 +23,7 @@ sections:
           answer: |
              1. **What Linux platforms are supported?**
 
-                SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. It also supported running in a container with Docker. For the latest information about the supported versions, see [Supported platforms](install-upgrade/setup.md#supportedplatforms).
+                SQL Server is currently supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It is also supported running in a container with Docker. For the latest information about the supported versions, see [Supported platforms](install-upgrade/setup.md#supportedplatforms).
 
              1. **Will SQL Server on Linux work on other platforms**?
 
@@ -39,7 +39,7 @@ sections:
 
              1. **I am coming from a Windows SQL Server background. Are there resources to help learn how to use SQL Server on Linux?**
 
-                The [quickstarts](install-upgrade/setup.md#platforms) provide step-by-step instructions on how to install SQL Server on Linux and run Transact-SQL queries. Other tutorials provide additional instructions on using SQL Server on Linux. For a third-party list of tips, see the [MSSQLTIPS list of SQL Server on Linux Tips](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
+                The [quickstarts](install-upgrade/setup.md#platforms) provide step-by-step instructions on how to install SQL Server on Linux and run Transact-SQL (T-SQL) queries. Other tutorials provide additional instructions on using SQL Server on Linux. For a third-party list of tips, see the [MSSQLTIPS list of SQL Server on Linux Tips](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
 
         - question: Licensing
           answer: |
@@ -67,7 +67,7 @@ sections:
 
              1. **How do I verify the installed version and edition of SQL Server on Linux?**
 
-                Connect to the SQL Server instance with a client tool such as the [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md), or Visual Studio Code. Then run the following Transact-SQL query to verify the version and edition of SQL Server that you are running: 
+                Connect to the SQL Server instance with a client tool such as the [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md), or Visual Studio Code. Then run the following T-SQL query to verify the version and edition of SQL Server that you are running: 
 
                 ```sql
                 SELECT @@VERSION
@@ -108,11 +108,11 @@ sections:
 
              1. **Are commands like sqlcmd and bcp available on Linux?**
 
-                Yes, [sqlcmd and bcp](install-upgrade/setup-tools.md) are natively available on Linux, macOS, and Windows. In addition, use the new [mssql-scripter](https://github.com/Microsoft/mssql-scripter) command-line tool on Linux, macOS, or Windows to generate T-SQL scripts for your SQL database running anywhere.
+                Yes, [sqlcmd and bcp](install-upgrade/setup-tools.md) are natively available on Linux, macOS, and Windows. In addition, use the [mssql-scripter](https://github.com/Microsoft/mssql-scripter) command-line tool on Linux, macOS, or Windows to generate T-SQL scripts for your SQL database running anywhere.
 
              1. **Is it possible to view Activity Monitor when connected through SSMS on Windows for an instance running on Linux?**
 
-                Yes, you can use SSMS on Windows to connect remotely, and use tools/ features such as Activity Monitor commands on a Linux instance.
+                Yes, you can use SSMS on Windows to connect remotely, and use tools and features such as Activity Monitor commands on a Linux instance.
 
              1. **What tools are available to monitor SQL Server performance on Linux?**
 
@@ -137,7 +137,7 @@ sections:
 
                 Yes. For more information, see [Active Directory Authentication with SQL Server on Linux](security/authentication/active-directory-tutorial.md).
 
-             1. **Are Always On availability groups and clustering supported in Linux?**
+             1. **Are Always On availability groups and clustering supported on Linux?**
 
                 Failover clustering and high availability on Linux are achieved with Pacemaker on Linux. For more information, see [Business continuity and database recovery - SQL Server on Linux](business-continuity/overview.md).
 
@@ -151,7 +151,7 @@ sections:
 
              1. **Can I migrate my data from Oracle and other database engines to SQL Server on Linux?**
 
-                Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json).
+                Yes. SQL Server Migration Assistant (SSMA) supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json).
 
              1. **What permissions are required for SQL Server files?**
 
@@ -163,13 +163,13 @@ sections:
 
              1. **Can I change the ownership of SQL Server files and directories from the installed `mssql` account and group?**
 
-                We don't support changing the ownership of SQL Server directory and files from the default installation. The `mssql` account and group are specifically used for SQL Server and has no interactive login access.
+                We don't support changing the ownership of SQL Server directories and files from the default installation. The `mssql` account and group are specifically used for SQL Server. The account has no interactive login access.
                 
-             1. **Is Symbolic links supported for SQL Server data and log directories?** 
+             1. **Are symbolic links supported for SQL Server data and log directories?** 
                  
                 No, symbolic links aren't supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](configure/mssql-conf.md#datadir).
               
-             1. **Can we remove the Builtin\Administrator account from SQL Server on Linux and containers instances?** 
+             1. **Can we remove the Builtin\Administrator account from SQL Server on Linux and container instances?** 
                  
                 Dropping *Builtin\administrators* for SQL Server on Linux breaks execution of some of the system stored procedures. We suggest to not remove or drop the *Builtin\administrator* account from SQL Server on Linux/containers.
                  

@@ -29,7 +29,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 ## Preinstall checklist
 
-- [Installation guidance for SQL Server on Linux](setup.md) and verify the installation.
+- Review [Installation guidance for SQL Server on Linux](setup.md) and verify the installation.
 
 - Check the SQL Server Linux repositories for the Python and R extensions.
   If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
@@ -39,7 +39,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
   - Register the `packages.microsoft.com` repo as described later in this article to install the MRO distribution: `microsoft-r-open-mro` and `microsoft-r-open-mkl`.
   - See the installation sections later in this article for how to install MRO.
 
-- You should have a tool for running T-SQL commands.
+- You should have a tool for running Transact-SQL (T-SQL) commands.
 
   - [!INCLUDE [connect-instance-client](../../includes/connect-instance-client.md)]
 
@@ -68,7 +68,7 @@ Follow these steps to install SQL Server Machine Learning Services on Red Hat En
 
 ### Install MRO on RHEL
 
-The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as `mssql-mlservices-mml-r`, automatically include MRO as a package dependency.
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as `mssql-mlservices-mlm-r`, automatically include MRO as a package dependency.
 
 ```bash
 # Import the Microsoft repository key
@@ -88,7 +88,7 @@ Installation Options for Python and R:
 
 - Install language support based on your requirements (single or multiple languages).
 - The *full installation* provides all available features including pretrained machine learning models.
-- The *minimal installation* excludes the models but still has all of the functionality.
+- The *minimum installation* excludes the models but still has all of the functionality.
 
 > [!TIP]  
 > If possible, run `yum clean all` to refresh packages on the system before installation.
@@ -103,7 +103,7 @@ Includes:
 - Microsoft-openmpi
 - Extensions (Python, R)
 - Machine learning libraries
-- Pre-Trained models for Python and R
+- Pretrained models for Python and R
 
 ```bash
 # Install as root or sudo
@@ -127,7 +127,7 @@ Includes:
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python extensions
-# Be sure to include -9.4.6* in mlservices package names
+# Be sure to include -9.4.7* in mlservices package names
 sudo yum install mssql-mlservices-packages-py-9.4.7*
 sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
@@ -140,7 +140,7 @@ Follow these steps to install SQL Server Machine Learning Services on Ubuntu.
 
 ### Install MRO on Ubuntu
 
-The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as `mssql-mlservices-mml-r`, automatically include MRO as a package dependency.
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as `mssql-mlservices-mlm-r`, automatically include MRO as a package dependency.
 
 ```bash
 # Install as root
@@ -152,7 +152,7 @@ apt-get install apt-transport-https
 # If you are on Ubuntu 20.04, install the following package (MRO 3.5 has a dependency on libtinfo.so.5 in Ubuntu 20.04)
 apt-get install libncurses5
 
-# Set the location of the package repo the "prod" directory containing the distribution.
+# Set the location of the package repo at the "prod" directory containing the distribution.
 # This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
 
@@ -166,8 +166,8 @@ sudo apt-get update
 Installation Options for Python and R:
 
 - Install language support based on your requirements (single or multiple languages).
-- The *full installation* provides all available features the including pretrained machine learning models.
-- The *minimal installation* excludes the models but still has all of the functionality.
+- The *full installation* provides all available features, including pretrained machine learning models.
+- The *minimum installation* excludes the models but still has all of the functionality.
 
 > [!TIP]  
 > If possible, run `apt-get update` to refresh packages on the system before installation.
@@ -220,7 +220,7 @@ Follow these steps to install SQL Server Machine Learning Services on SUSE Linux
 
 ### Install MRO on SLES
 
-The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as `mssql-mlservices-mml-r`, automatically include MRO as a package dependency.
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as `mssql-mlservices-mlm-r`, automatically include MRO as a package dependency.
 
 ```bash
 # Install as root
@@ -237,8 +237,8 @@ zypper update
 Installation Options for Python and R:
 
 - Install language support based on your requirements (single or multiple languages).
-- The *full installation* provides all available features the including pretrained machine learning models.
-- The *minimal installation* excludes the models but still has all of the functionality.
+- The *full installation* provides all available features, including pretrained machine learning models.
+- The *minimum installation* excludes the models but still has all of the functionality.
 
 ### Full installation
 
@@ -390,7 +390,7 @@ Follow the [Offline installation](setup.md#offline) instructions for steps on in
 
 ### Download site
 
-Download packages from <https://packages.microsoft.com/>. All of the `mlservices` packages for Python and R are colocated with database engine package. Base version for the `mlservices` packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
+Download packages from <https://packages.microsoft.com/>. All of the `mlservices` packages for Python and R are colocated with the database engine package. Base version for the `mlservices` packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
 ### RHEL/8 paths
 

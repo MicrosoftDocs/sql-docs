@@ -35,7 +35,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Install and set up [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on both nodes. For detailed instructions, see [Installation guidance for SQL Server on Linux](../../install-upgrade/setup.md).
 
-1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.
+1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
 
 1. On the secondary node, stop and disable [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. The following example stops and disables [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
 
@@ -45,7 +45,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    ```
 
    > [!NOTE]  
-   > At setup time, a server master key (SMK) is generated for the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] always runs as a local account called `mssql`. Because it's a local account, its identity isn't shared across nodes. You must copy the encryption key from the primary node to each secondary node so each local `mssql` account can access it to decrypt the SMK.
+   > At setup time, a server master key (SMK) is generated for the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] always runs as a local account called `mssql`. Because it's a local account, its identity isn't shared across nodes. You must copy the encryption key from the primary node to the secondary node so the local `mssql` account can access it to decrypt the SMK.
 
 1. On the primary node, create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
@@ -76,7 +76,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo ip addr show
    ```
 
-   Set the computer name on each node. Give each node a unique name that is 15 characters or less. Set the computer name by adding it to `/etc/hostname` using [YAST](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html) or [manually](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html).
+   Set the computer name on each node. Give each node a unique name that is 15 characters or less. Set the computer name by adding it to `/etc/hostname` using [YaST](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html) or [manually](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html).
 
    The following example shows `/etc/hosts` with additions for two nodes named `SLES1` and `SLES2`.
 
@@ -149,7 +149,7 @@ At this point, both instances of [!INCLUDE [ssnoversion-md](../../../includes/ss
 
 ## Install and configure Pacemaker on each cluster node
 
-1. **On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login**. The following command creates and populates this file:
+1. **On both cluster nodes, create a file to store the SQL Server login name and password for the Pacemaker login**. The following command creates and populates this file:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -162,7 +162,7 @@ At this point, both instances of [!INCLUDE [ssnoversion-md](../../../includes/ss
    > [!CAUTION]  
    > [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
 
-1. **All cluster nodes must access each other through SSH**. Tools like `hb_report` or `crm_report` (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes. Otherwise, they can only collect data from the current node. If you use a non-standard SSH port, use the `-X` option (see `man` page). For example, if your SSH port is 3479, invoke an `hb_report` with:
+1. **All cluster nodes must access each other through SSH**. Tools like `hb_report` or `crm_report` (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes. Otherwise, they can only collect data from the current node. If you use a non-standard SSH port, use the `-X` option (see `man` page). For example, if your SSH port is 3479, invoke `crm_report` with:
 
    ```bash
    crm_report -X "-p 3479" [...]
@@ -192,7 +192,7 @@ At this point, both instances of [!INCLUDE [ssnoversion-md](../../../includes/ss
 
    It shows that one node, SLES1, is configured.
 
-1. **Add nodes to an existing cluster**. Next, join the SLES2 node to the cluster. Follow the instructions in the SUSE article, [Adding the Second Node](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html#sec-ha-inst-quick-setup-2nd-node).
+1. **Add the second node to the existing cluster**. Next, join the SLES2 node to the cluster. Follow the instructions in the SUSE article, [Adding the Second Node](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html#sec-ha-inst-quick-setup-2nd-node).
 
    When finished, check the cluster status with **crm status**. If you successfully add a second node, the output looks similar to the following example:
 
@@ -271,7 +271,7 @@ To manage your cluster resources, see the following SUSE article:
 
 ### Manual failover
 
-Although resources are configured to automatically fail over or migrate to other cluster nodes on hardware or software failure, you can also move them manually using the Pacemaker GUI or the command line.
+Although resources are configured to automatically fail over or migrate to the other cluster node on hardware or software failure, you can also move them manually using the Pacemaker GUI or the command line.
 
 Use the `migrate` command for this task. For example, to migrate the SQL resource to a cluster node named `SLES2`, run:
 
@@ -282,4 +282,4 @@ migrate mssqlha SLES2
 
 ## Related content
 
-- [SUSE Linux Enterprise High Availability Extension - Administration Guide](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html#sec-ha-inst-quick-installation)
+- [SUSE Linux Enterprise High Availability Extension Installation and Setup Quick Start](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html#sec-ha-inst-quick-installation)

@@ -97,13 +97,13 @@ ndctl create-namespace -f -e namespace0.0 --mode=fsdax --map=dev
 
 Before you set the map option in the preceding command, keep the following points in mind:
 
-- For best performance when accessing and updating these NVDIMM page entries for this device, use `-map=mem`
-- If the capacity of the NVDIMM is too large (greater than 512 GB), set `-map=dev`, which affects I/O throughput and reduces performance
+- For best performance when accessing and updating these NVDIMM page entries for this device, use `--map=mem`
+- If the capacity of the NVDIMM is too large (greater than 512 GB), set `--map=dev`, which affects I/O throughput and reduces performance
 
 For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] log files on PMEM devices, configure the PMEM devices to use sector/Block Translation Table (BTT). This configuration provides the sector atomicity that [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] log files require for this storage technology. Perform workload performance validations. Compare the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] log performance for your workload between this solution and best-in-class NVMe SSDs, and then select the one that best meets your needs.
 
 ```bash
-ndctl create-namespace -f -e namespace0.0 --mode= sector
+ndctl create-namespace -f -e namespace0.0 --mode=sector
 ```
 
 ### Disable forced flush behavior
@@ -119,7 +119,7 @@ Because PMEM devices are `O_DIRECT` (direct I/O) safe, you can [disable the forc
 
 For more information about the changes introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CU 6, see [KB 4131496](https://support.microsoft.com/help/4131496). For more information about forced unit access (FUA) internals, see [FUA internals](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
-#### SQL Server and Forced Unit Access (FUA) I/O subsystem capability
+#### SQL Server and forced unit access (FUA) I/O subsystem capability
 
 [!INCLUDE [linux-forced-unit-access](../includes/linux-forced-unit-access.md)]
 

@@ -63,9 +63,9 @@ You can install just the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.m
 
 | Server components | Description |
 | --- | --- |
-| SQL Server Database Engine | [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE [ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, Full-Text Search, tools for managing relational and XML data, and in database analytics integration. |
+| SQL Server Database Engine | [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE [ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, Full-Text Search, tools for managing relational and XML data, and in-database analytics integration. |
 
-**Enterprise Developer, Standard Developer, Enterprise Core, and Evaluation editions**
+### Enterprise Developer, Standard Developer, Enterprise Core, and Evaluation editions
 
 For features supported by Enterprise Developer, Standard Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the following tables.
 
@@ -79,9 +79,7 @@ The Developer editions continue to support only one client for [SQL Server Distr
 | Feature | Enterprise | Standard | Express |
 | --- | :---: | :---: | :---: |
 | Maximum compute capacity used by a single instance - SQL Server Database Engine <sup>1</sup> | Operating system maximum | Limited to lesser of 4 sockets or 32 cores | Limited to lesser of 1 socket or 4 cores |
-| Maximum compute capacity used by a single instance - Analysis Services or Reporting Services | Operating system maximum | Limited to lesser of 4 sockets or 32 cores | Limited to lesser of 1 socket or 4 cores |
 | Maximum memory for buffer pool per instance of SQL Server Database Engine | Operating system maximum | 256&nbsp;GB | 1,410&nbsp;MB |
-| Maximum capacity for the [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of SQL Server Database Engine | 32 * (max server memory configuration) | 4 * (max server memory configuration) | N/A |
 | Maximum memory for columnstore segment cache per instance of SQL Server Database Engine | Unlimited memory | 32&nbsp;GB | 352&nbsp;MB |
 | Maximum memory-optimized data size per database in SQL Server Database Engine | Unlimited memory | 32&nbsp;GB | 352&nbsp;MB |
 | Maximum relational database size | 524&nbsp;PB | 524&nbsp;PB | 10&nbsp;GB |
@@ -149,7 +147,7 @@ The Developer editions continue to support only one client for [SQL Server Distr
 | Bulk insert improvements | Yes | Yes | Yes |
 | `tempdb` database files on **tmpfs** filesystem | Yes | Yes | Yes |
 
-<sup>1</sup> In-Memory OLTP data size and columnstore segment cache are limited to the amount of memory specified by edition in the [Scale limits](#scale-limits) section. The max degree of parallelism is limited. The degree of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for Express edition. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and columnstore segment cache are limited to the amount of memory specified by edition in the [Scale limits](#scale-limits) section. The max degree of parallelism is limited. The degree of parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for Express edition. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 ## Intelligent query processing
 
@@ -270,7 +268,6 @@ The Developer editions continue to support only one client for [SQL Server Distr
 
 <sup>1</sup> Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features).
 
-
 ## Integration Services
 
 For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
@@ -296,7 +293,7 @@ The following features and services aren't available for [!INCLUDE [sssql25](../
 | --- | --- | --- |
 | **Database engine** | Merge replication | |
 | | Distributed query with third-party connections | |
-| | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] using T-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | System extended stored procedures (`xp_cmdshell`, etc.) | This feature is [deprecated](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md). If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | FileTable, FILESTREAM | If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set | |
@@ -317,12 +314,12 @@ The following features and services aren't available for [!INCLUDE [sssql25](../
 | | Reporting Services | [Configure Power BI Report Server catalog databases for SQL Server on Linux](configure/power-bi-report-server-catalog.md). Run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Reporting Services (SSRS) on Windows, and host the catalog databases for SSRS on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux deployments. |
 
 > [!NOTE]  
-> The latest [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] features that depend on Azure Arc agent, including Microsoft Entra Authentication (previously known as Azure Active Directory authentication), Microsoft Purview, Pay-as-you-go for SQL Server, and Defender integration, are currently not supported for SQL Server deployed in containers. [!INCLUDE [ssazurearc-md](../includes/ssazurearc.md)] [doesn't support SQL Server running in containers](../sql-server/azure-arc/overview.md#unsupported-configurations).
+> The latest [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] features that depend on Azure Arc agent, including Microsoft Entra authentication (previously known as Azure Active Directory authentication), Microsoft Purview, Pay-as-you-go for SQL Server, and Defender integration, are currently not supported for SQL Server deployed in containers. [!INCLUDE [ssazurearc-md](../includes/ssazurearc.md)] [doesn't support SQL Server running in containers](../sql-server/azure-arc/overview.md#unsupported-configurations).
 
 [!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
 ## Related content
 
 - [What's new in SQL Server 2025](../sql-server/what-s-new-in-sql-server-2025.md)
-- [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
+- [Installation guidance for SQL Server on Linux](install-upgrade/setup.md)
 - [SQL Server technical documentation](../sql-server/index.yml)

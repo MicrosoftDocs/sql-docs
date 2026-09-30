@@ -37,11 +37,11 @@ To enable **tmpfs** support for [!INCLUDE [ssnoversion-md](../../includes/ssnove
    Use the `mkdir` command to create a directory for the `tempdb` database. Ensure that it's owned by the `mssql` user and group to allow [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] access:
 
    ```bash
-   mkdir /var/opt/mssql/tempdb
+   sudo mkdir /var/opt/mssql/tempdb
    sudo chown mssql. /var/opt/mssql/tempdb
    ```
 
-1. Mount tmpfs filesystem.
+1. Mount the tmpfs filesystem.
 
    Use the following command to mount the **tmpfs** filesystem:
 
@@ -63,7 +63,7 @@ To enable **tmpfs** support for [!INCLUDE [ssnoversion-md](../../includes/ssnove
 
 1. Update `tempdb` file location.
 
-   Ensure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is up and running. Connect to your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance using SQL Server Management Studio (SSMS) and running the following T-SQL commands.
+    Ensure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is up and running. Connect to your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance using SQL Server Management Studio (SSMS), and run the following Transact-SQL (T-SQL) commands.
 
    Identify all the `tempdb` files using the following T-SQL script, then run the `ALTER DATABASE` command to update the `tempdb` file location:
 
@@ -99,9 +99,9 @@ To enable **tmpfs** support for [!INCLUDE [ssnoversion-md](../../includes/ssnove
    sudo systemctl restart mssql-server
    ```
 
-1. Verify `tempdb` files location.
+1. Verify `tempdb` file locations.
 
-   Once [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is up and running, verify that the `tempdb` data and log files are now located in the new directory, by connecting to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] using a tool like SQL Server Management Studio (SSMS).
+    Once [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is up and running, verify that the `tempdb` data and log files are now located in the new directory by connecting to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] using a tool like SSMS.
 
    ```sql
    SELECT [name],
@@ -117,7 +117,7 @@ You should now see all the `tempdb` database files on the new mount path that is
 You can also hot-resize the **tmpfs** mount in case the `tempdb` is full. To hot-resize, run the following command to resize the **tmpfs** mount to 6 GB:
 
 ```bash
-mount -o remount,size=6G /var/opt/mssql/tempdb
+sudo mount -o remount,size=6G /var/opt/mssql/tempdb
 ```
 
 Optionally, make the new size persist across restarts by modifying the `fstab` entry:
@@ -132,24 +132,24 @@ For developer workloads, **tmpfs** can be used for user databases. **tmpfs** fil
 
 However, **tmpfs** for user databases is **not** supported. You can provide feedback related to user databases on **tmpfs** on [GitHub](https://github.com/microsoft/mssql-docker/issues).
 
-### Host only `tempdb` databases on tmpfs filesystem
+### Host only the `tempdb` database on the tmpfs filesystem
 
 If you're deploying a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container and want to ensure that the container uses **tmpfs** for the `tempdb`, you can run the following command:
 
 ```bash
 docker run \
   -e ACCEPT_EULA=Y \
-  -e MSSQL_SA_PASSWORD = <password>\
+  -e 'MSSQL_SA_PASSWORD=<password>' \
   --tmpfs /var/opt/mssql/tempdb:uid=10001,gid=10001,size=4G \
   -p 5433:1433 \
   --name sql1 \
   -h sql1 \
-  --d mcr.microsoft.com/mssql/server:2025-latest
+  -d mcr.microsoft.com/mssql/server:2025-latest
 ```
 
-The `--tmpfs` command sets the size to 4 GB and the `uid` (user ID) and `gid` (group ID) to `10001` to ensure that the required permissions are set correctly for the `tempdb` files to be created.
+The `--tmpfs` option sets the size to 4 GB and the `uid` (user ID) and `gid` (group ID) to `10001` to ensure that the required permissions are set correctly for the `tempdb` files to be created.
 
-Once the container is up and running, connect to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] using SSMS and move the `tempdb` files to the new location `/var/opt/mssql/tempdb` with the following T-SQL commands:
+Once the container is up and running, connect to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance using SSMS, and update the `tempdb` file locations to `/var/opt/mssql/tempdb` with the following T-SQL commands:
 
 ```sql
 SELECT [name],
@@ -158,7 +158,7 @@ FROM sys.master_files
 WHERE database_id = 2;
 ```
 
-Based on the number of files that you see, modify the following command. In this example, there are four `tempdb` files and one log file. Use the following commands to move these files to their new location:
+Based on the number of files that you see, modify the following command. In this example, there are four `tempdb` data files and one log file. Use the following commands to update the file locations:
 
 ```sql
 ALTER DATABASE tempdb
@@ -182,7 +182,7 @@ MODIFY FILE (NAME = templog, FILENAME = '/var/opt/mssql/tempdb/templog.ldf');
 GO
 ```
 
-After moving the files, stop and restart the container using the following commands
+After you update the file locations, stop and restart the container using the following commands:
 
 ```bash
 docker stop sql1
@@ -196,7 +196,7 @@ docker start sql1
 
 ```bash
 docker run -e ACCEPT_EULA=Y \
-  -e MSSQL_SA_PASSWORD=<password> \
+  -e 'MSSQL_SA_PASSWORD=<password>' \
   --tmpfs /var/opt/mssql/data:uid=10001,gid=10001,size=4G \
   -p 5434:1433 \
   --name sql2 \

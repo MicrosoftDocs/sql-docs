@@ -48,6 +48,9 @@ To begin working with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.m
 ### High availability
 
 - [High availability for SQL Server containers](../business-continuity/containers/high-availability-overview.md)
+
+### Operations and troubleshooting
+
 - [How to use distributed transactions with SQL Server Linux containers](configure-distributed-transactions.md)
 - [Troubleshoot SQL Server Docker containers](troubleshoot.md)
 

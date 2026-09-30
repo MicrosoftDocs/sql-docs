@@ -47,11 +47,11 @@ This article explains how to configure a SQL Server Always On availability group
 
 ## Create the availability group
 
-Create the AG. Set `CLUSTER_TYPE = EXTERNAL`. In addition, set each replica with `FAILOVER_MODE = EXTERNAL`. Depending on the environment's requirements, set `AVAILABILITY_MODE` to either `SYNCHRONOUS_COMMIT` or `ASYNCHRONOUS_COMMIT.`
+Create the AG. Set `CLUSTER_TYPE = EXTERNAL`. In addition, set each replica with `FAILOVER_MODE = EXTERNAL`. Depending on the environment's requirements, set `AVAILABILITY_MODE` to either `SYNCHRONOUS_COMMIT` or `ASYNCHRONOUS_COMMIT`.
 
-**Paxos protocol** plays a critical role in the internal communication and configuration consistency of Always On availability groups (AGs) in SQL Server, particularly in cluster-agnostic or external cluster configurations. Paxos maintains consistency of the AG configuration across replicas, prevent split-brain scenarios, and ensures only primary is responsible for configuration updates.
+**Paxos protocol** plays a critical role in the internal communication and configuration consistency of Always On availability groups (AGs) in SQL Server, particularly in cluster-agnostic or external cluster configurations. Paxos maintains consistency of the AG configuration across replicas, prevents split-brain scenarios, and ensures only primary is responsible for configuration updates.
 
-The following Transact-SQL script creates an AG named `ag1`. The script configures the AG replicas with `SEEDING_MODE = MANUAL`. This setting requires you to manually initialize secondary replicas with a copy of the database before adding them to the AG. Update the following script for your environment. Replace the `<node1>`, `<node2>`, and `<node3>` values with the names of the SQL Server instances that host the replicas. This AG also configures the configuration only replica `<node3>`. The configuration only replica maintains configuration information about the availability group in the `master` database but doesn't contain the user databases in the availability group. Replace the `<5022>` value with the port you set for the endpoint. Run the following Transact-SQL script on the primary SQL Server replica:
+The following Transact-SQL (T-SQL) script creates an AG named `ag1`. The script configures the AG replicas with `SEEDING_MODE = MANUAL`. This setting requires you to manually initialize secondary replicas with a copy of the database before adding them to the AG. Update the following script for your environment. Replace the `<node1>`, `<node2>`, and `<node3>` values with the names of the SQL Server instances that host the replicas. This AG also configures the configuration only replica `<node3>`. The configuration only replica maintains configuration information about the availability group in the `master` database but doesn't contain the user databases in the availability group. Replace the `<5022>` value with the port you set for the endpoint. Run the following T-SQL script on the primary SQL Server replica:
 
 ```sql
 CREATE availability group [ag1]
@@ -70,7 +70,7 @@ CREATE availability group [ag1]
             FAILOVER_MODE = EXTERNAL,
             SEEDING_MODE = MANUAL,
             SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
-
+        ),
         N'<node3>' WITH (
             ENDPOINT_URL = N'tcp://<node3>:<5022>',
             AVAILABILITY_MODE = CONFIGURATION_ONLY
@@ -81,7 +81,7 @@ ALTER availability group [ag1] GRANT CREATE ANY DATABASE;
 
 ### Join secondary SQL Server instances to the AG
 
-The following Transact-SQL script joins a server to an AG named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL script to join the AG:
+The following T-SQL script joins a server to an AG named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following T-SQL script to join the AG:
 
 ```sql
 ALTER availability group [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);

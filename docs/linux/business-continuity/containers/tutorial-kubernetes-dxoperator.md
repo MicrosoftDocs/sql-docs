@@ -17,16 +17,16 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always On availability groups (AGs) for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux based containers deployed to an Azure Kubernetes Service (AKS) cluster, using DH2i DxOperator. These procedures also apply to Azure Red Hat OpenShift clusters. The primary distinction is the deployment of an [Azure Red Hat OpenShift cluster](/azure/openshift/quickstart-portal), followed by substituting `kubectl` commands with `oc` in the following steps.
+This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always On availability groups (AGs) for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux based containers deployed to an [Azure Kubernetes Service](/azure/aks/what-is-aks) (AKS) cluster, using DH2i DxOperator. These procedures also apply to [Azure Red Hat OpenShift](/azure/openshift/quickstart-portal) clusters. The primary distinction is the deployment of an Azure Red Hat OpenShift cluster, followed by substituting `kubectl` commands with `oc` in the following steps.
 
 Using the steps in this article, you learn how to deploy a StatefulSet and use the DH2i DxOperator to create and configure an AG with three replicas, hosted on AKS.
 
 This tutorial consists of the following steps:
 
 > [!div class="checklist"]
-> - Create a `configmap` object on AKS cluster with mssql-conf settings
-> - Install DxOperator
+> - Create a `ConfigMap` object on AKS cluster with mssql-conf settings
 > - Create secret objects
+> - Install DxOperator
 > - Deploy a three-replica SQL Server availability group using a YAML file
 > - Connect to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -36,9 +36,9 @@ This tutorial consists of the following steps:
 
 - A valid DxEnterprise license with AG features and tunnels enabled. For more information, see the [developer edition](https://dh2i.com/trial/) for nonproduction usage, or [DxEnterprise software](https://dh2i.com/dxenterprise-high-availability/) for production workloads.
 
-## Create the `configmap` object
+## Create the `ConfigMap` object
 
-1. In AKS, create the `configmap` object, which has **[mssql-conf](../../configure/mssql-conf.md)** settings based on your requirements. In this example, you create the `configmap` by using a file called `mssqlconfig.yaml` with the following parameters.
+1. In AKS, create the `ConfigMap` object, which has **[mssql-conf](../../configure/mssql-conf.md)** settings based on your requirements. In this example, you create the `ConfigMap` by using a file called `mssqlconfig.yaml` with the following parameters.
 
    ```yaml
    apiVersion: v1
@@ -207,7 +207,7 @@ To install DxOperator, download the DxOperator YAML file by using the following 
 
    ```output
    NAME                     TYPE           CLUSTER-IP   EXTERNAL-IP     PORT(S)                                         AGE
-   contoso-cluster-lb       LoadBalancer   10.1.0.21    172.212.20.29   1433:30484/TCP,14033:30694/TCP,7979:30385/TCP   3m18s
+   contoso-cluster-lb       LoadBalancer   10.1.0.21    172.212.20.29   1433:30484/TCP,51433:30694/TCP,7979:30385/TCP   3m18s
    contoso-sql-0            ClusterIP      None         <none>          7979/TCP,7980/TCP,7981/UDP,5022/TCP,1433/TCP    79m
    contoso-sql-0-lb         LoadBalancer   10.1.0.210   4.255.19.171    7979:32374/TCP,1433:32444/TCP                   79m
    contoso-sql-1            ClusterIP      None         <none>          7979/TCP,7980/TCP,7981/UDP,5022/TCP,1433/TCP    79m

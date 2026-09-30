@@ -30,9 +30,9 @@ Starting with [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1, hig
 
 ## How the configuration affects default resource settings
 
-The `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` cluster resource setting guarantees that the specified number of secondary replicas write transaction data to the log before the primary replica commits each transaction. When you use an external cluster manager, this setting affects both high availability and data protection. The default value for the setting depends on the architecture at the time the cluster resource is created. When you install the SQL Server resource agent, `mssql-server-ha`, and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly.
+The `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` cluster resource setting guarantees that the specified number of secondary replicas write transaction data to the log before the primary replica commits each transaction. For more information, see [Understand SQL Server resource agent for Pacemaker](#pacemakerNotify). When you use an external cluster manager, this setting affects both high availability and data protection. The default value for the setting depends on the architecture at the time the cluster resource is created. When you install the SQL Server resource agent, `mssql-server-ha`, and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly.
 
-If supported by the configuration, the resource agent parameter `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
+If supported by the configuration, the resource agent parameter `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection.
 
 The following sections explain the default behavior for the cluster resource.
 
@@ -59,8 +59,8 @@ An availability group with three synchronous replicas can provide read-scale, hi
 | `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=` | 0 | 1 <sup>1</sup> | 2 |
 | Primary outage | Automatic failover. Might have data loss. New primary is R/W. | Automatic failover. New primary is R/W. | Automatic failover. New primary is unavailable for read or write transactions until former primary recovers and rejoins availability group as secondary. |
 | One secondary replica outage | Primary is R/W. Available secondary is available for Reads. | Primary is R/W. Available secondary is available for Reads. | The primary remains unavailable for read or write transactions until failed secondary recovers and rejoins availability group. |
-| Two secondary replicas outage | The primary is available only for reads and not for writes until one of the secondary replicas recovers and rejoins the availability group. | The primary is available only for reads and not for writes until one of the secondary replicas recovers and rejoins the availability group. | The primary remains unavailable for read or write transactions until all failed secondary replicas recover and rejoins the availability group. |
-| Primary and one secondary replica outage | Automatic failover. Might have data loss. The new primary is available only for reads and not for writes until one of the secondary replicas recovers and rejoins the availability group. | Automatic failover. The new primary is available only for reads and writes until one of the secondary replicas recovers and rejoins the availability group. | Automatic failover. New primary remains unavailable for read or write transactions until former primary and the secondary replica recovers and rejoins availability group. |
+| Two secondary replicas outage | The primary is available only for reads and not for writes until one of the secondary replicas recovers and rejoins the availability group. | The primary is available only for reads and not for writes until one of the secondary replicas recovers and rejoins the availability group. | The primary remains unavailable for read or write transactions until all failed secondary replicas recover and rejoin the availability group. |
+| Primary and one secondary replica outage | Automatic failover. Might have data loss. The new primary is available only for reads and not for writes until one of the secondary replicas recovers and rejoins the availability group. | Automatic failover. The new primary is available only for reads and writes until one of the secondary replicas recovers and rejoins the availability group. | Automatic failover. New primary remains unavailable for read or write transactions until former primary and the secondary replica recover and rejoin availability group. |
 
 <sup>1</sup> Default
 
@@ -96,7 +96,7 @@ An availability group with two (or more) synchronous replicas and a configuratio
 In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration-only replica. The secondary replica also receives user data. The configuration-only replica doesn't receive user data. The secondary replica is in synchronous availability mode. The configuration-only replica doesn't contain the databases in the availability group, only metadata about the availability group. Configuration data on the configuration-only replica is committed synchronously.
 
 > [!NOTE]  
-> An availability group with configuration-only replica is new for [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1. All instances of SQL Server in the availability group must be [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1 or later versions.
+> An availability group with configuration-only replica is supported in [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1. All instances of SQL Server in the availability group must be [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1 or later versions.
 
 The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior.
 
@@ -111,7 +111,7 @@ The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The fo
 <sup>1</sup> Default
 
 > [!NOTE]  
-> The instance of SQL Server that hosts the configuration-only replica can also host other databases. It can also participate as a configuration-only database for more than one availability group.
+> The instance of SQL Server that hosts the configuration-only replica can also host other databases. It can also participate as a configuration-only replica for more than one availability group.
 
 ## Requirements
 

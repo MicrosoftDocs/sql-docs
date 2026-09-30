@@ -31,7 +31,7 @@ For other deployment scenarios, see:
 - [Linux](../install-upgrade/setup.md)
 - [Container cluster on Azure or Red Hat OpenShift](../install-upgrade/quickstart-containers-azure.md)
 
-This article specifically focuses on using the `mssql-server-linux` image. SQL Server deployments in Windows containers aren't covered by support. For development and testing, you can create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/blob/master/windows/mssql-server-windows-developer/dockerfile_1). Sample files are for reference only.
+This article specifically focuses on using the `mcr.microsoft.com/mssql/server` image. SQL Server deployments in Windows containers aren't covered by support. For development and testing, you can create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/blob/master/windows/mssql-server-windows-developer/dockerfile_1). Sample files are for reference only.
 
 > [!IMPORTANT]  
 > Before choosing to run a SQL Server container for production use cases, review the [Technical support policy for Microsoft SQL Server](/troubleshoot/sql/database-engine/install/windows/support-policy-sql-server) to ensure that you're running on a supported configuration.
@@ -62,7 +62,7 @@ You can connect and query SQL Server in a container from either outside the cont
 The following example uses **`sqlcmd`** to connect to SQL Server running in a container. The IP address in the connection string is the IP address of the host machine that is running the container.
 
 > [!NOTE]  
-> Newer versions of **`sqlcmd`** (in **mssql-tools18**) are secure by default. If using version 18 or higher, you need to add the `No` option to **`sqlcmd`** to specify that encryption is optional, not mandatory.
+> Newer versions of **`sqlcmd`** (in **mssql-tools18**) are secure by default. If using version 18 or higher, you need to add the `-No` option to **`sqlcmd`** to specify that encryption is optional, not mandatory.
 
 ::: zone pivot="cs1-bash"
 
@@ -116,7 +116,7 @@ sqlcmd -S 10.3.2.4,1400 -U sa -P "<password>"
 
 ### Tools inside the container
 
-Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the [SQL Server command-line tools](../install-upgrade/setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the [SQL Server command-line tools](../install-upgrade/setup-tools.md) are included in the container image. If you attach to the image with an interactive command prompt, you can run the tools locally.
 
 1. Use the `docker exec -it` command to start an interactive Bash shell inside your running container. In the following example `e69e056c702d` is the container ID.
 
@@ -138,7 +138,7 @@ Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the [SQL Se
 
 1. When finished with **`sqlcmd`**, type `exit`.
 
-1. When finished with the interactive command-prompt, type `exit`. Your container continues to run after you exit the interactive Bash shell.
+1. When finished with the interactive command prompt, type `exit`. Your container continues to run after you exit the interactive Bash shell.
 
 <a id="version"></a>
 
@@ -257,7 +257,7 @@ Packages
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 
-1. Identify the Docker `tag` for the release you want to use. To view the available tags, see the [Microsoft Artifact Registry](https://mcr.microsoft.com/product/mssql/server/tags).
+1. Identify the Docker `tag` for the release you want to use. To view the available tags, see the [Microsoft Container Registry](https://mcr.microsoft.com/product/mssql/server/tags).
 
 1. Pull the SQL Server container image with the tag. For example, to pull the `2019-CU18-ubuntu-20.04` image, replace `<image_tag>` in the following command with `2019-CU18-ubuntu-20.04`.
 
@@ -305,7 +305,7 @@ These steps can also be used to downgrade an existing container. For example, yo
 
 The documentation for SQL Server Linux container images points to Ubuntu-based containers. Beginning with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], you can use containers based on Red Hat Enterprise Linux (RHEL). An example of the image for RHEL will look like `mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8`.
 
-For example, the following command pulls the Cumulative Update 18 for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] container that uses RHEL 8:
+For example, the following command pulls the Cumulative Update 18 container image for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] that uses RHEL 8:
 
 ::: zone pivot="cs1-bash"
 
@@ -337,7 +337,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU18-rhel-8.4
 
 ## Run production container images
 
-The [quickstart](../install-upgrade/quickstart-install-docker.md) in the previous section runs the free Developer edition of SQL Server from the Microsoft Artifact Registry. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
+The [quickstart](../install-upgrade/quickstart-install-docker.md) runs the free Developer edition of SQL Server from the Microsoft Container Registry. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
 
 > [!NOTE]  
 > Web edition isn't available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
@@ -533,7 +533,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1402:1433 -d 
 Now there are two instances of SQL Server running in separate containers. Clients can connect to each SQL Server instance by using the IP address of the container host and the port number for the container.
 
 > [!NOTE]  
-> Newer versions of **`sqlcmd`** (in **mssql-tools18**) are secure by default. If using version 18 or higher, you need to add the `No` option to **`sqlcmd`** to specify that encryption is optional, not mandatory.
+> Newer versions of **`sqlcmd`** (in **mssql-tools18**) are secure by default. If using version 18 or higher, you need to add the `-No` option to **`sqlcmd`** to specify that encryption is optional, not mandatory.
 
 ::: zone pivot="cs1-bash"
 
@@ -613,7 +613,7 @@ This updates the SQL Server image for any new containers you create, but it does
 <!--SQL Server 2025 on Linux-->
 ::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-- Get started with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] container images on Docker by going through the [quickstart](../install-upgrade/quickstart-install-docker.md)
+- Get started with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] container images on Docker by going through the [quickstart](../install-upgrade/quickstart-install-docker.md)
 
 ::: moniker-end
 

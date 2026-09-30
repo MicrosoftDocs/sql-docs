@@ -20,20 +20,20 @@ This article describes how to configure the time zone for [!INCLUDE [sssql22-md]
 
 ## Overview
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions on Linux uses Windows time zones internally. All Transact-SQL (T-SQL) commands use Windows time zones, for example the [CURRENT_TIMEZONE_ID](../../t-sql/functions/current-timezone-id-transact-sql.md) function and [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) query operator.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions on Linux use Windows time zones internally. All Transact-SQL commands use Windows time zones, for example the [CURRENT_TIMEZONE_ID](../../t-sql/functions/current-timezone-id-transact-sql.md) function and [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) query operator.
 
 1. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux first determines which time zone to use, using the first valid result from the following sequence:
 
    - the `TZ` environment variable, if set;
    - the `/etc/localtime` symbolic link, if it exists;
-   - the value `/etc/timezone`, if the file exists;
-   - the `ZONE=` attribute from `/etc/sysconfig/clock`, if they exist.
+   - the value in `/etc/timezone`, if the file exists;
+   - the `ZONE=` attribute from `/etc/sysconfig/clock`, if the attribute exists.
 
 1. The resulting Linux time zone is then mapped to a corresponding Windows time zone via a fixed [Time zone mapping](#time-zone-mapping) table.
 
 ## Time zone mapping
 
-The Windows time zone is derived from the Linux `tz` timezone using the following mapping.
+The Windows time zone is derived from the Linux `tz` time zone using the following mapping.
 
 Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. For instance, if `TZ` is set to `America/Knox_IN` and the `/usr/share/zoneinfo/America/Knox_IN` entry is a symbolic link to `/usr/share/zoneinfo/America/Indiana/Knox`, the Windows time zone is resolved to `Central Standard Time` via the `America/Indiana/Knox` mapping entry.
 

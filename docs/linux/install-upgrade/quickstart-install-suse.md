@@ -254,7 +254,7 @@ At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is 
 
 ::: moniker-end
 
-## Disable the SA account as a best practice
+## Disable the `sa` account as a best practice
 
 [!INCLUDE [connect-with-sa](../includes/connect-with-sa.md)]
 

@@ -106,7 +106,7 @@ Because [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux shar
 - **Query Store** for monitoring query performance and managing execution plans.
 - **Automatic tuning** and **intelligent query processing (IQP)** to improve performance without application changes, including adaptive joins, memory grant feedback, parameter-sensitive plan optimization, and related enhancements.
 
-These features are enabled through standard Transact-SQL configuration and database compatibility levels.
+These features are enabled through standard Transact-SQL (T-SQL) configuration and database compatibility levels.
 
 #### Security
 
@@ -124,7 +124,7 @@ These capabilities help organizations meet compliance and data protection requir
 
 #### Automation and maintenance
 
-SQL Server Agent is available on Linux to run scheduled and automated tasks, including Transact-SQL (T-SQL) jobs, Database Mail, and [log shipping](business-continuity/use-log-shipping.md). The agent is included in the SQL Server package and can be enabled by using the `mssql-conf` utility.
+SQL Server Agent is available on Linux to run scheduled and automated tasks, including T-SQL jobs, Database Mail, and [log shipping](business-continuity/use-log-shipping.md). The agent is included in the SQL Server package and can be enabled by using the `mssql-conf` utility.
 
 #### High availability and disaster recovery
 

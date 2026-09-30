@@ -20,18 +20,18 @@ The snapshot folder is a directory that you have designated as a share; agents t
 
 :::image type="content" source="media/snapshot-shares/snapshot-share-replication.png" alt-text="Diagram of SQL Server replication using a Samba share between a publisher and subscriber." lightbox="media/snapshot-shares/snapshot-share-replication.png":::
 
-### Replication snapshot folder share explained
+## Replication snapshot folder share explained
 
-Before the examples, let's walk through how SQL Server uses samba shares in replication. Following is a basic example of how this works.
+Before the examples, let's walk through how SQL Server replication uses Samba shares. The following list provides a basic example of how this works.
 
-1. Samba shares are configured that files written to `/local/path1` by the replication agents on publisher can be seen by the subscriber
-1. SQL Server is configured to use share paths when setting up the publisher on the distribution server such that all instances would look at the `//share/path`
-1. SQL Server finds the local path from the `//share/path` to know where to look for the files
-1. SQL Server reads/writes to local paths backed by a samba share
+1. Samba shares are configured so that files written to `/local/path1` by the replication agents on the publisher can be seen by the subscriber.
+1. SQL Server is configured to use share paths when setting up the publisher on the distribution server such that all instances look at the `//share/path`.
+1. SQL Server finds the local path from the `//share/path` to know where to look for the files.
+1. SQL Server reads from and writes to local paths backed by a Samba share.
 
-## Configure a samba share for the snapshot folder
+## Configure a Samba share for the snapshot folder
 
-Replication agents will need a shared directory between replication hosts to access snapshot folders on other machines. For example, in transactional pull replication, the distribution agent resides on the subscriber, which requires access to the distributor to get articles. In this section, we'll go through an example of how to configure a samba share on two replication hosts.
+Replication agents will need a shared directory between replication hosts to access snapshot folders on other machines. For example, in transactional pull replication, the distribution agent resides on the subscriber, which requires access to the distributor to get articles. In this section, we'll go through an example of how to configure a Samba share on two replication hosts.
 
 ## Steps
 
@@ -69,7 +69,7 @@ sudo service smbd restart
 
 ### Set up the Samba share on distributor (host1)
 
-1. Set-up user and password for samba:
+1. Set up a user and password for Samba:
 
    ```bash
    sudo smbpasswd -a mssql
@@ -82,7 +82,7 @@ sudo service smbd restart
    path = </local/path/on/host/1>
    writable = yes
    create mask = 770
-   directory mask
+   directory mask = 770
    valid users = mssql
    ```
 
@@ -110,7 +110,7 @@ sudo service smbd restart
 
 ### Mount the Samba share on subscriber (host2)
 
-Edit the command with the correct paths and run the following command on machine2:
+Edit the command with the correct paths, and then run it on `host2`:
 
 ```bash
 sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -120,19 +120,19 @@ sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql
 
 ```bash
 mount //host1/mssql_data /var/opt/mssql/repldata_shared -o user=mssql,uid=mssql,gid=mssql
-
-user=mssql <- sets the login name for samba
-uid=mssql  <- makes the mssql user as the owner of the mounted directory
-gid=mssql  <- sets the mssql group as the owner of the mounted directory
 ```
+
+- `user=mssql` sets the login name for Samba.
+- `uid=mssql` makes the `mssql` user the owner of the mounted directory.
+- `gid=mssql` makes the `mssql` group the owner of the mounted directory.
 
 ### Configure SQL Server on both Linux hosts to use snapshot share
 
-Add the following section to `mssql.conf` on both machines. Use wherever the samba share for the `//share/path`. In this example, it would be `//host1/mssql_data`.
+Add the following section to `mssql.conf` on both machines. Use the Samba share path for `//share/path`. In this example, the share path is `//host1/mssql_data`.
 
 ```ini
 [uncmapping]
-//share/path = /local/path/on/hosts/
+//share/path = /local/path/on/host/
 ```
 
 **Example**
@@ -141,20 +141,20 @@ On `host1`:
 
 ```ini
 [uncmapping]
-//host1/mssql_data = /local/path/on/hosts/1
+//host1/mssql_data = /var/opt/mssql/repldata
 ```
 
 On `host2`:
 
 ```ini
 [uncmapping]
-//host1/mssql_data = /local/path/on/hosts/2
+//host1/mssql_data = /var/opt/mssql/repldata_shared
 ```
 
 ### Configure publisher with shared paths
 
-- When setting up replication, use the shares path (example `//host1/mssql_data`
-- Map `//host1/mssql_data` to a local directory and the mapping added to `mssql.conf`.
+- When setting up replication, use the share path (for example, `//host1/mssql_data`).
+- Map `//host1/mssql_data` to a local directory, and add the mapping to `mssql.conf`.
 
 ## Related content
 

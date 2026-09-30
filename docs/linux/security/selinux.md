@@ -21,7 +21,7 @@ Security-Enhanced Linux (SELinux) is a security architecture for Linux systems. 
 
 For details about how to enable SELinux for Red Hat systems, see [SELinux Architecture](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/sect-security-enhanced_linux-introduction-selinux_architecture). You can also get started with an [SELinux-enabled operating system](https://www.redhat.com/technologies/linux-platforms/enterprise-linux/server/trial) for free.
 
-[SQL Server 2022 on Linux](../sql-server-linux-overview.md) is officially certified with RHEL 9 (as of July 2024), and is now generally available on the [Red Hat Ecosystem Catalog](https://catalog.redhat.com/software/applications/detail/253877).
+[SQL Server 2022 on Linux](../sql-server-linux-overview.md) is officially certified with RHEL 9 (as of July 2024), and is generally available on the [Red Hat Ecosystem Catalog](https://catalog.redhat.com/software/applications/detail/253877).
 
 ## SQL Server and SELinux
 
@@ -183,7 +183,7 @@ The following example demonstrates changing the database location when [!INCLUDE
    -rw-rw----. 1 mssql mssql system_u:object_r:mssql_db_t:s0 8388608 Aug  2 14:27 TestDatabase.mdf
    ```
 
-   In the previous example, you can see the file has the `mssql_db_t` type associated with the new files created.
+   In the previous example, you can see that the new files have the `mssql_db_t` type.
 
 ## Related content
 

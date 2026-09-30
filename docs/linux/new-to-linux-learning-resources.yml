@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
 title: "New to Linux: Learning resources"
-summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server on Linux for users who are familiar with SQL Server but new to Linux.
+summary: Tutorials, quickstarts, and other educational resources for users who are familiar with SQL Server but new to Linux.
 
 metadata:
   title: "New to Linux: Learning Resources"
-  description: A collection of resources meant to teach you to use SQL Server on Linux for new-to-Linux users.
+  description: Learning resources for users who are familiar with SQL Server but new to Linux.
   author: rwestMSFT
   ms.author: randolphwest
   ms.reviewer: amitkh, atsingh
@@ -56,7 +56,7 @@ landingContent:
             url: sql-server-linux-configure-mssql-conf.md#datadir
           - text: Set trace flags
             url: sql-server-linux-configure-mssql-conf.md#traceflags
-          - text: Join domain
+          - text: Join a domain
             url: sql-server-linux-active-directory-authentication.md
           - text: Load sample data
             url: ../samples/adventureworks-install-configure.md
@@ -69,9 +69,9 @@ landingContent:
         links:
           - text: Business continuity options
             url: sql-server-linux-business-continuity-dr.md
-          - text: Deploy Pacemaker Cluster
+          - text: Deploy a Pacemaker cluster
             url: sql-server-linux-deploy-pacemaker-cluster.md
-          - text: Configure availability group
+          - text: Configure an availability group
             url: sql-server-linux-create-availability-group.md
 
   - title: "Module 6: Monitor and tune"
@@ -80,9 +80,9 @@ landingContent:
         links:
           - text: Performance dashboard
             url: https://www.youtube.com/watch?v=cVdfhBVmeig
-          - text: Query store
+          - text: Query Store
             url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
-          - text: DMVs
+          - text: Dynamic management views (DMVs)
             url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
           - text: Additional learning - Performance features of SQL Server on Linux
             url: sql-server-linux-performance-get-started.md

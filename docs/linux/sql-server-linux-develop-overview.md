@@ -36,7 +36,7 @@ If you have an existing database application, you can change its connection stri
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 
-Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also work with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Although they don't run natively on Linux, you can still manage remote [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances on Linux.
+Windows tools such as SQL Server Management Studio (SSMS), SQL Server Data Tools (SSDT), and PowerShell also work with remote [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances on Linux.
 
 See the following articles for more information:
 
@@ -47,11 +47,11 @@ See the following articles for more information:
 > [!NOTE]  
 > Make sure that you're using the latest versions of these tools for the best experience.
 
-## Use new SQL tools for Linux
+## Use SQL tools on Linux
 
 You can use the [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) on Linux, macOS, and Windows. For a step-by-step walkthrough, see [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md).
 
-You can also use command-line tools that are native for Linux. These tools include the following:
+You can also use command-line tools that are native to Linux. These tools include the following:
 
 - [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)
 - [bcp](migrate/bulk-copy.md)

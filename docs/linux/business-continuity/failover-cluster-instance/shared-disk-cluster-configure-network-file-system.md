@@ -25,14 +25,14 @@ NFS, or network file system, is a common method for sharing disks in the Linux w
 
 The source hosting NFS (either a Linux server or something else) must be using/compliant with version 4.2 or later. Earlier versions don't work with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux.
 
-When configuring the folders to be shared on the NFS server, make sure they follow these guidelines general options:
+When configuring the folders to be shared on the NFS server, follow these general guidelines:
 
 - `rw` to ensure that the folder can be read from and written to
 - `sync` to ensure guaranteed writes to the folder
 - Don't use `no_root_squash` as an option; it's considered a security risk
 - Make sure the folder has full rights (`777`) applied
 
-Ensure that your security standards are enforced for accessing. When configuring the folder, make sure that only the servers participating in the FCI should see the NFS folder. In the following example, a modified `/etc/exports` on a Linux-based NFS solution is shown, where the folder is restricted to `FCIN1` and `FCIN2`.
+Ensure that your security standards for access are enforced. When configuring the folder, make sure that only the servers participating in the FCI should see the NFS folder. In the following example, a modified `/etc/exports` on a Linux-based NFS solution is shown, where the folder is restricted to `FCIN1` and `FCIN2`.
 
 ```output
 # /etc/exports: the access control list for filesystems which may be exported
@@ -97,7 +97,7 @@ Ensure that your security standards are enforced for accessing. When configuring
    - Verify that the files are in the directory.
 
      ```bash
-     ls TempDir
+     ls <TempDir>
      ```
 
      - `<TempDir>` is the name of the folder from the previous step.
@@ -123,7 +123,7 @@ Ensure that your security standards are enforced for accessing. When configuring
      ```
 
      - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
-     - `<FolderOnNFSServer>` is the name of the NFS share. The following example syntax matches the NFS information from Step 2.
+     - `<FolderOnNFSServer>` is the name of the NFS share. The following example syntax matches the earlier `/etc/exports` example.
 
      ```bash
      mount -t nfs4 10.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -138,7 +138,7 @@ Ensure that your security standards are enforced for accessing. When configuring
      Here's the expected output.
 
      ```output
-     10.201.202.63:/var/nfs/fcil on /var/opt/mssql/data type nfs4 (rw,relatime,vers=4.2,rsize=524288,wsize=524288,namlen=255,hard, proto=tcp,port=0,timeo=14, retrans=2,sec=sys,clientaddr=10.201.202.128,local lock=none, addr=10.201.202.63)
+     10.201.202.63:/var/nfs/fci1 on /var/opt/mssql/data type nfs4 (rw,relatime,vers=4.2,rsize=524288,wsize=524288,namlen=255,hard, proto=tcp,port=0,timeo=14, retrans=2,sec=sys,clientaddr=10.201.202.128,local lock=none, addr=10.201.202.63)
      ```
 
    - Switch to the `mssql` user.
@@ -147,7 +147,7 @@ Ensure that your security standards are enforced for accessing. When configuring
      su mssql
      ```
 
-   - Copy the files from the temporary directory /var/opt/mssql/data.
+   - Copy the files from the temporary directory to `/var/opt/mssql/data`.
 
      ```bash
      cp /var/opt/mssql/tmp/* /var/opt/mssql/data
@@ -184,12 +184,12 @@ Ensure that your security standards are enforced for accessing. When configuring
    - If you aren't creating any other NFS mounts, unmount the share. If you're creating other mounts, don't unmount.
 
      ```bash
-     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
+     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data
      ```
 
      - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
      - `<FolderOnNFSServer>` is the name of the NFS share
-     - `<FolderMountedIn>` is the folder created in the previous step.
+     - `/var/opt/mssql/data` is the mount point established earlier in this procedure.
 
 1. For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 5.
 
@@ -245,7 +245,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 
      - `<IPAddressOfNFSServer>` is the IP address of the NFS server that you're going to use
      - `<FolderOnNFSServer>` is the name of the NFS share
-     - `<FolderMountedIn>` is the folder created in the previous step.
+     - `<FolderToMountIn>` is the folder created earlier in this procedure.
 
 1. Repeat the steps on the other nodes.
 

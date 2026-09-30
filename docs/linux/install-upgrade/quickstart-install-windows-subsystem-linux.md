@@ -169,7 +169,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" \
 
 ### Add persistent storage with WSL for SQL Server containers
 
-Create data volumes as described in [Mount a host directory as data volume](../containers/configure.md?pivots=cs1-bash#mount-a-host-directory-as-data-volume).
+Create a data volume as described in [Use a named data volume](../containers/configure.md?pivots=cs1-bash#use-a-named-data-volume).
 
 For example, run the following command to set up a volume called `sql_volume` located at `/var/opt/mssql/`.
 

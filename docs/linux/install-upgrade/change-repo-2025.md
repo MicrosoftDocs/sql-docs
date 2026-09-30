@@ -54,7 +54,7 @@ First, verify whether you already registered a SQL Server repository.
    sudo ls /etc/yum.repos.d
    ```
 
-1. Look for a file that configures the SQL Server directory, such as `mssql-server.repo`.
+1. Look for a file that configures the SQL Server repository, such as `mssql-server.repo`.
 
 1. Display the contents of the file using `cat`.
 
@@ -115,7 +115,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 The following commands for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] point to the RHEL 8 repository. RHEL 8 doesn't come preinstalled with `python2`, which [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires. For more information, see [Installing Microsoft SQL Server on Red Hat Enterprise Linux 8 Beta](https://www.redhat.com/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta).
 
-Depending on the version of RHEL you use, ensure the paths match `/rhel/8`, `/rhel/9`, or `/rhel10`. Our packages are agnostic to RHEL minor versions. This means that if you use RHEL 8.7, you need to use the path `/rhel/8` to configure your repository.
+Depending on the version of RHEL you use, ensure the paths match `/rhel/8`, `/rhel/9`, or `/rhel/10`. Our packages are agnostic to RHEL minor versions. This means that if you use RHEL 8.7, you need to use the path `/rhel/8` to configure your repository.
 
 | Repository | Version | Release | Command |
 | --- | --- | --- |
@@ -128,7 +128,7 @@ Depending on the version of RHEL you use, ensure the paths match `/rhel/8`, `/rh
 
 Configure the new repository for SQL Server installations and upgrades.
 
-- Starting with [!INCLUDE [sssql25-md](../../includes/sssql22-md.md)] CU 1, Ubuntu 24.04 is supported.
+- Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 1, Ubuntu 24.04 is supported.
 - Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 10, Ubuntu 22.04 is supported.
 - Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 10, Ubuntu 20.04 is supported.
 - Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 3 and [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CU 20, Ubuntu 18.04 is supported.

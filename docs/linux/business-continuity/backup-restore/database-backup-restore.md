@@ -15,7 +15,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-You can back up SQL Server databases on Linux in many ways. On a Linux server, you can use **`sqlcmd`** to connect to the SQL Server and back up databases. From Windows, you can connect to SQL Server on Linux and back up databases with the user interface. The backup functionality is the same across platforms. For example, you can back up databases locally, to remote drives, or to [SQL Server backup to URL for Azure Blob Storage](../../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+You can back up SQL Server databases on Linux in many ways. On a Linux server, you can use the [sqlcmd utility](../../../tools/sqlcmd/sqlcmd-utility.md) to connect to the SQL Server and back up databases. From Windows, you can connect to SQL Server on Linux and back up databases with the user interface. The backup functionality is the same across platforms. For example, you can back up databases locally, to remote drives, or to [SQL Server backup to URL for Azure Blob Storage](../../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 > [!IMPORTANT]  
 > SQL Server on Linux only supports backing up to Azure Blob Storage with block blobs. Using a storage key for backup and restore uses a page blob, which isn't supported. Use a shared access signature (SAS) instead. For information on block blobs versus page blobs, see [Backup to block blob vs. page blob](../../../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
@@ -95,9 +95,9 @@ SQL Server completes the database backup.
 
 The following steps walk you through restoring a database with SSMS.
 
-1. In SSMS, right-click **Databases** and select **Restore Databases...**.
+1. In SSMS, right-click **Databases** and select **Restore Database...**.
 
-1. Under **Source**, select **Device:** and then select the ellipses (...).
+1. Under **Source**, select **Device:** and then select the ellipsis (***...***).
 
 1. Locate your database backup file and select **OK**.
 

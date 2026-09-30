@@ -15,16 +15,16 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-If you're a Linux user who is new to SQL Server, the following tasks walk you through some of the performance features. These aren't unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the depth documentation for that area.
+If you're a Linux user who is new to SQL Server, the following tasks walk you through some of the performance features. These aren't unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to in-depth documentation for that area.
 
 > [!NOTE]  
 > The following examples use the `AdventureWorks2022` sample database. For instructions on how to obtain and install this sample database, see [Migrate a SQL Server database from Windows to Linux using backup and restore](migrate/restore-database.md).
 
 ## Create a columnstore index
 
-A columnstore index is a technology for storing and querying large stores of data in a columnar data format, called a columnstore.
+A [columnstore index](../relational-databases/indexes/columnstore-indexes-overview.md) is a technology for storing and querying large stores of data in a columnar data format, called a columnstore.
 
-1. Add a columnstore index to the `SalesOrderDetail` table by executing the following Transact-SQL commands:
+1. Add a columnstore index to the `SalesOrderDetail` table by executing the following Transact-SQL (T-SQL) commands:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -61,7 +61,7 @@ A columnstore index is a technology for storing and querying large stores of dat
 
 ## Use In-Memory OLTP
 
-SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems. This section walks you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
+SQL Server provides [In-Memory OLTP](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) features that can greatly improve the performance of application systems. This section walks you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table.
 
 ### Configure database for In-Memory OLTP
 
@@ -93,7 +93,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
    GO
    ```
 
-1. Before you can create a memory-optimized table, you must first create a memory optimized filegroup, and a container for data files:
+1. Before you can create a memory-optimized table, you must first create a memory-optimized filegroup, and a container for data files:
 
    ```sql
    ALTER DATABASE AdventureWorks2022
@@ -177,7 +177,7 @@ SQL Server supports natively compiled stored procedures that access memory-optim
 
 ## Use Query Store
 
-Query Store collects detailed performance information about queries, execution plans, and runtime statistics.
+[Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) collects detailed performance information about queries, execution plans, and runtime statistics.
 
 Before [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], Query Store isn't enabled by default, and can be enabled with ALTER DATABASE:
 
@@ -202,9 +202,9 @@ FROM sys.query_store_plan AS Pl
 
 ## Query dynamic management views
 
-Dynamic management views return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance.
+[Dynamic management views and functions](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance.
 
-To query the dm_os_wait stats dynamic management view:
+To query the [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT wait_type,

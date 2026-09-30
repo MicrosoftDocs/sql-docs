@@ -45,7 +45,7 @@ Your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration
 > [!IMPORTANT]  
 > For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], it's critical that you understand data persistence in Docker. In addition to the discussion in this section, see Docker's documentation on [how to manage data in Docker containers](https://docs.docker.com/engine/storage/volumes).
 
-### Mount a host directory as data volume
+### Mount a host directory as a data volume
 
 The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v <host directory>:/var/opt/mssql` flag, where `<host directory>` is any given path. For instance: `C:\SQL` on Windows, or `~/sqlvolumes` on Linux. This allows the data to be restored between container executions.
 
@@ -192,9 +192,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
 
 This technique also enables you to share and view the files on the host outside of Docker.
 
-### Use data volume containers
+### Use a named data volume
 
-The second option is to use a data volume container. You can create a data volume container by specifying a volume name instead of a host directory with the `-v` parameter. The following example creates a shared data volume named `sqlvolume`.
+The second option is to use a named data volume. You can create a named data volume by specifying a volume name instead of a host directory with the `-v` parameter. The following example creates a shared data volume named `sqlvolume`.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
@@ -321,10 +321,10 @@ docker volume ls
 
 If you then create another container with the same volume name, the new container uses the same [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data contained in the volume.
 
-To remove a data volume container, use the `docker volume rm` command.
+To remove a data volume, use the `docker volume rm` command.
 
 > [!WARNING]  
-> If you delete the data volume container, any [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data in the container is *permanently* deleted.
+> If you delete the data volume, any [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data in the volume is *permanently* deleted.
 
 ### Backup and restore
 
@@ -335,7 +335,7 @@ In addition to these container techniques, you can also use standard [!INCLUDE [
 
 ## Enable VDI backup and restore in containers
 
-Virtual Device Interface (VDI) backup and restore operations are now supported in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container deployments beginning with CU15 for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and CU28 for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Follow these steps to enable VDI-based backup or restores for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers:
+Virtual Device Interface (VDI) backup and restore operations are supported in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container deployments beginning with CU15 for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and CU28 for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Follow these steps to enable VDI-based backup or restore for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers:
 
 1. When deploying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers, use the `--shm-size` option. To begin, set the sizing to 1 GB, as shown in the following command. Replace `<password>` with a valid password.
 
@@ -350,7 +350,7 @@ Virtual Device Interface (VDI) backup and restore operations are now supported i
 
    The option `--shm-size` allows you to configure the size of the shared memory directory (`/dev/shm`) inside the container, which is set to 64 MB by default. This default size of the shared memory is insufficient to support VDI backups. We recommend that you configure this to a minimum of 1 GB when you deploy [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers and want to support VDI backups.
 
-1. You must also enable the new parameter `memory.enablecontainersharedmemory` in `mssql.conf` inside the container. You can mount `mssql.conf` at the deployment of the container using the `-v` option as described in the [Persist your data](#persist) section, or after you deploy the container by manually updating `mssql.conf` inside the container. Here's a sample `mssql.conf` file with the `memory.enablecontainersharedmemory` setting set to `true`.
+1. You must also enable the `memory.enablecontainersharedmemory` parameter in `mssql.conf` inside the container. You can mount `mssql.conf` at the deployment of the container using the `-v` option as described in the [Persist your data](#persist) section, or after you deploy the container by manually updating `mssql.conf` inside the container. Here's a sample `mssql.conf` file with the `memory.enablecontainersharedmemory` setting set to `true`.
 
    ```ini
    [memory]
@@ -365,7 +365,7 @@ To copy a file out of the container, use the following command:
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-You can get the Container ID by running the command `docker ps -a`.
+You can get the container ID by running the command `docker ps -a`.
 
 **Example:**
 
@@ -448,7 +448,7 @@ The following information has been given:
 Therefore TZ='America/Los_Angeles' will be used.
 ```
 
-You can use this information to set the same environment variable in your Linux container. The following example shows how to run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a container in the `Americas/Los_Angeles` time zone:
+You can use this information to set the same environment variable in your Linux container. The following example shows how to run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a container in the `America/Los_Angeles` time zone:
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
@@ -478,7 +478,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" ^
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
 -p 1433:1433 --name sql1 ^
 -e "TZ=America/Los_Angeles" ^
 -d mcr.microsoft.com/mssql/server:2017-latest
@@ -515,9 +515,9 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" `
--p 1433:1433 --name sql1 `
--e "TZ=America/Los_Angeles" `
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
+-p 1433:1433 --name sql1 ^
+-e "TZ=America/Los_Angeles" ^
 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
@@ -552,7 +552,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" ^
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
 -p 1433:1433 --name sql1 ^
 -e "TZ=America/Los_Angeles" ^
 -d mcr.microsoft.com/mssql/server:2022-latest
@@ -589,7 +589,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" `
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<password>" ^
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
 -p 1433:1433 --name sql1 ^
 -e "TZ=America/Los_Angeles" ^
 -d mcr.microsoft.com/mssql/server:2025-latest
@@ -863,7 +863,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" ^
 
 ::: moniker-end
 
-## Use mssql-config to configure SQL Server inside a container
+## Use `mssql-conf` to configure SQL Server inside a container
 
 You can use the [mssql-conf tool](../configure/mssql-conf.md) to set parameters in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers.
 

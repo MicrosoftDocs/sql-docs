@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This article explains how to operate a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] failover cluster instance (FCI) on Linux. To create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI on Linux, see [Configure failover cluster instance on Linux (RHEL)](shared-disk-cluster-configure.md).
+This article explains how to operate a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] [failover cluster instance (FCI)](shared-disk-cluster-concepts.md) on Linux. To create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI on Linux, see [Configure failover cluster instance on Linux (RHEL)](shared-disk-cluster-configure.md).
 
 ## Architecture description
 
@@ -184,6 +184,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`.
    sudo systemctl enable pcsd
    sudo systemctl start pcsd
    sudo systemctl enable pacemaker
+   sudo systemctl start pacemaker
    ```
 
 1. Install the FCI resource agent for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Run the following command on the new node.
@@ -239,7 +240,7 @@ The following example shows a healthy Pacemaker quorum output:
 
 ```output
 Cluster name: MyAppSQL
-Last updated: Wed Oct 31 12:00:00 2024  Last change: Wed Oct 31 11:00:00 2024 by root via crm_resource on sqlvmnode1
+Last updated: Thu Oct 31 12:00:00 2024  Last change: Thu Oct 31 11:00:00 2024 by root via crm_resource on sqlvmnode1
 Stack: corosync
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum
 3 nodes and 1 resource configured

@@ -95,7 +95,7 @@ For more information about this XE session, see [Configure Extended Events for a
 
 The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service on Linux uses certificates to authenticate communication between the mirroring endpoints.
 
-The following Transact-SQL script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Connect to the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. To create the certificate, run the following Transact-SQL script:
+The following Transact-SQL (T-SQL) script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Connect to the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. To create the certificate, run the following T-SQL script:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master-key-password>';
@@ -129,7 +129,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] replica. Update the script with strong passwords. The decryption password is the same password that you used to create the `.pvk` file in a previous step. To create the certificate, run the following script on all secondary servers:
+The following T-SQL script creates a master key and a certificate from the backup that you created on the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] replica. Update the script with strong passwords. The decryption password is the same password that you used to create the `.pvk` file in a previous step. To create the certificate, run the following script on all secondary servers:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master-key-password>';
@@ -148,9 +148,9 @@ In the previous example, replace `<private-key-password>` with the same password
 
 Database mirroring endpoints use the Transmission Control Protocol (TCP) to send and receive messages between the server instances that participate in database mirroring sessions, or host availability replicas. The database mirroring endpoint listens on a unique TCP port number.
 
-The following Transact-SQL script creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint and gives connection permission to the certificate that you created. Before you run the script, replace the values between `< ... >`. Optionally, you can include an IP address `LISTENER_IP = (0.0.0.0)`. The listener IP address must be an IPv4 address. You can also use `0.0.0.0`.
+The following T-SQL script creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint and gives connection permission to the certificate that you created. Before you run the script, replace the values between `< ... >`. Optionally, you can include an IP address `LISTENER_IP = (0.0.0.0)`. The listener IP address must be an IPv4 address. You can also use `0.0.0.0`.
 
-Update the following Transact-SQL script for your environment on all [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances:
+Update the following T-SQL script for your environment on all [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances:
 
 ```sql
 CREATE ENDPOINT [Hadr_endpoint]

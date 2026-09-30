@@ -18,25 +18,25 @@ ms.custom:
 
 By default, [!INCLUDE [msconame-md](../../includes/msconame-md.md)] collects information about how its customers use [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Specifically, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] collects information about the installation experience, usage, and performance. This information helps [!INCLUDE [msconame-md](../../includes/msconame-md.md)] improve the product to better meet customer needs. For example, [!INCLUDE [msconame-md](../../includes/msconame-md.md)] collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], and determine whether features should be added to the product to better serve customers.
 
-This document provides details about what kind of information is collected, and about how to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux to send that collected information to [!INCLUDE [msconame-md](../../includes/msconame-md.md)]. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] includes a privacy statement that explains what information we do and don't collect from users. For more information, see the [privacy statement](../../sql-server/sql-server-privacy.md).
+This article provides details about what kind of information is collected, and about how to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux to send that collected information to [!INCLUDE [msconame-md](../../includes/msconame-md.md)]. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] includes a privacy statement that explains what information we do and don't collect from users. For more information, see the [privacy statement](../../sql-server/sql-server-privacy.md).
 
-Specifically, [!INCLUDE [msconame-md](../../includes/msconame-md.md)] doesn't send any of the following types of information through this mechanism:
+Specifically, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't collect or send any of the following types of information through this mechanism:
 
 - Any values from inside user tables
 - Any sign-in credentials or other authentication information
 - Personal data
 
-[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] always collects and sends information about the installation experience from the setup process so that we can quickly find and fix any installation problems that the customer is experiencing. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can be configured not to send information (on a per-server instance basis) to [!INCLUDE [msconame-md](../../includes/msconame-md.md)] through **`mssql-conf`**. **`mssql-conf`** is a configuration script that installs with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu.
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] always collects and sends information about the installation experience from the setup process so that we can quickly find and fix any installation problems that the customer is experiencing. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] can be configured not to send information (on a per-server instance basis) to [!INCLUDE [msconame-md](../../includes/msconame-md.md)] through the [mssql-conf](mssql-conf.md) configuration script, which installs with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu.
 
 > [!NOTE]  
 > You can disable the sending of information to [!INCLUDE [msconame-md](../../includes/msconame-md.md)] only in paid versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 ## Disable usage and diagnostic data collection
 
-This option lets you change if [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends usage and diagnostic data collection to [!INCLUDE [msconame-md](../../includes/msconame-md.md)] or not. By default, this value is set to true. To change the value, run the following commands:
+This option lets you choose whether [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sends usage and diagnostic data to [!INCLUDE [msconame-md](../../includes/msconame-md.md)]. By default, this value is set to `true`. To change the value, run the following commands:
 
 > [!IMPORTANT]  
-> You can not turn off usage and diagnostic data collection for free editions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], Express and Developer.
+> You can't turn off sending usage and diagnostic data for free editions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], Express and Developer.
 
 ### On Red Hat, SUSE, and Ubuntu
 
@@ -189,14 +189,14 @@ To enable Local Audit in a Linux container, you must have the container [persist
    sudo mkdir <host directory>/audit
    ```
 
-1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = <host directory>/audit` in the host directory:
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = /var/opt/mssql/audit` in the host directory:
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
    ```
 
    ```bash
-   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   echo 'userrequestedlocalauditdirectory = /var/opt/mssql/audit' >> <host directory>/mssql.conf
    ```
 
 1. Run the container image:
@@ -219,14 +219,14 @@ To enable Local Audit in a Linux container, you must have the container [persist
    sudo mkdir <host directory>/audit
    ```
 
-1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = <host directory>/audit` in the host directory:
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = /var/opt/mssql/audit` in the host directory:
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
    ```
 
    ```bash
-   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   echo 'userrequestedlocalauditdirectory = /var/opt/mssql/audit' >> <host directory>/mssql.conf
    ```
 
 1. Run the container image:
@@ -249,14 +249,14 @@ To enable Local Audit in a Linux container, you must have the container [persist
    sudo mkdir <host directory>/audit
    ```
 
-1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = <host directory>/audit` in the host directory:
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = /var/opt/mssql/audit` in the host directory:
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
    ```
 
    ```bash
-   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   echo 'userrequestedlocalauditdirectory = /var/opt/mssql/audit' >> <host directory>/mssql.conf
    ```
 
 1. Run the container image:
@@ -279,14 +279,14 @@ To enable Local Audit in a Linux container, you must have the container [persist
    sudo mkdir <host directory>/audit
    ```
 
-1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = <host directory>/audit` in the host directory:
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = /var/opt/mssql/audit` in the host directory:
 
-   ```csharp
+   ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
    ```
 
-   ```php
-   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```bash
+   echo 'userrequestedlocalauditdirectory = /var/opt/mssql/audit' >> <host directory>/mssql.conf
    ```
 
 1. Run the container image:

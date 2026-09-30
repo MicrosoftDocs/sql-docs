@@ -45,10 +45,10 @@ This tutorial demonstrates how to move and restore a [!INCLUDE [ssnoversion-md](
 
 > [!div class="checklist"]
 > - Pull and run the latest [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container image.
-> - Copy the Wide World Importers database file into the container.
+> - Copy the Wide World Importers database backup file into the container.
 > - Restore the database in the container.
-> - Run Transact-SQL statements to view and modify the database.
-> - Backup the modified database.
+> - Run Transact-SQL (T-SQL) statements to view and modify the database.
+> - Back up the modified database.
 
 ## Prerequisites
 
@@ -102,12 +102,12 @@ This section provides deployment options for your environment.
 
 1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container shows `Exited`, see [Troubleshoot SQL Server Docker containers](../containers/troubleshoot.md).
 
-  ```bash
-  $ sudo docker ps -a
+   ```bash
+   $ sudo docker ps -a
 
-  CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
-  941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
-  ```
+   CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+   941e1bdf8e1d        mcr.microsoft.com/mssql/server:2017-latest   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+   ```
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -150,7 +150,7 @@ This section provides deployment options for your environment.
    $ sudo docker ps -a
 
    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
-   941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+   941e1bdf8e1d        mcr.microsoft.com/mssql/server:2019-latest   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
 ::: moniker-end
@@ -194,7 +194,7 @@ This section provides deployment options for your environment.
    $ sudo docker ps -a
 
    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
-   941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+   941e1bdf8e1d        mcr.microsoft.com/mssql/server:2022-latest   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
 ::: moniker-end
@@ -238,7 +238,7 @@ This section provides deployment options for your environment.
    $ sudo docker ps -a
 
    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
-   941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+   941e1bdf8e1d        mcr.microsoft.com/mssql/server:2025-latest   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
 ::: moniker-end
@@ -257,7 +257,7 @@ This tutorial uses the [Wide World Importers sample databases for Microsoft SQL]
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. Next, download the [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) file to your host machine. The following commands navigate to the home/user directory and downloads the backup file as `wwi.bak`.
+1. Next, download the [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) file to your host machine. The following commands navigate to the home/user directory and download the backup file as `wwi.bak`.
 
    ```bash
    cd ~
@@ -272,17 +272,17 @@ This tutorial uses the [Wide World Importers sample databases for Microsoft SQL]
 
 ### Restore the database
 
-The backup file is now located inside the container. Before restoring the backup, it's important to know the logical file names and file types inside the backup. The following Transact-SQL commands inspect the backup and perform the restore using **`sqlcmd`** in the container.
+The backup file is now located inside the container. Before restoring the backup, it's important to know the logical file names and file types inside the backup. The following T-SQL commands inspect the backup and perform the restore using **`sqlcmd`** in the container.
 
 > [!TIP]  
 > [!INCLUDE [connect-instance-client](../../includes/connect-instance-client.md)] This tutorial uses **`sqlcmd`** inside the container. To connect, use the host port that was mapped to port 1433 in the container. In this example, the host and port are `localhost,1401` on the host machine, and `Host_IP_Address,1401` remotely.
 
-1. Run **`sqlcmd`** inside the container to list out logical file names and paths inside the backup. This is done with the `RESTORE FILELISTONLY` Transact-SQL statement.
+1. Run **`sqlcmd`** inside the container to list out logical file names and paths inside the backup. This is done with the `RESTORE FILELISTONLY` T-SQL statement.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd -S localhost \
       -U sa -P '<new-password>' \
-      -Q 'RESTORE FILELISTONLY FROM DISK = "/var/opt/mssql/backup/wwi.bak"' \
+      -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'" \
       | tr -s ' ' | cut -d ' ' -f 1-2
    ```
 
@@ -302,7 +302,7 @@ The backup file is now located inside the container. Before restoring the backup
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd \
       -S localhost -U sa -P '<new-password>' \
-      -Q 'RESTORE DATABASE WideWorldImporters FROM DISK = "/var/opt/mssql/backup/wwi.bak" WITH MOVE "WWI_Primary" TO "/var/opt/mssql/data/WideWorldImporters.mdf", MOVE "WWI_UserData" TO "/var/opt/mssql/data/WideWorldImporters_userdata.ndf", MOVE "WWI_Log" TO "/var/opt/mssql/data/WideWorldImporters.ldf", MOVE "WWI_InMemory_Data_1" TO "/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1"'
+      -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
    The results should look similar to the following output:
@@ -374,12 +374,12 @@ Follow these steps to make a change in the database.
             10 USB food flash drive - chocolate bar
    ```
 
-1. Update the description of the first item with the following `UPDATE` statement:
+1. Update the name of the first item with the following `UPDATE` statement:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd \
       -S localhost -U sa -P '<new-password>' \
-      -Q 'UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName="USB missile launcher (Dark Green)" WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1'
+      -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
    You should see an output similar to the following text:
@@ -394,7 +394,7 @@ Follow these steps to make a change in the database.
 
 After you restore your database into a container, you might also want to regularly create database backups inside the running container. The steps follow a similar pattern to the previous steps but in reverse.
 
-1. Use the `BACKUP DATABASE` Transact-SQL command to create a database backup in the container. This tutorial creates a new backup file, `wwi_2.bak`, in the previously created `/var/opt/mssql/backup` directory.
+1. Use the `BACKUP DATABASE` T-SQL command to create a database backup in the container. This tutorial creates a new backup file, `wwi_2.bak`, in the previously created `/var/opt/mssql/backup` directory.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools18/bin/sqlcmd \
@@ -459,12 +459,12 @@ In addition to taking database backups for protecting your data, you can also us
 1. The Wide World Importers database is now in the new container. Run a query to verify the previous change you made.
 
    ```bash
-   sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
+   sudo docker exec -it sql2 /opt/mssql-tools18/bin/sqlcmd \
       -S localhost -U sa -P '<new-password>' \
       -Q 'SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1'
    ```
 
-   The `sa` password isn't the password you specified for the `sql2` container, `MSSQL_SA_PASSWORD=<password>`. All of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data was restored from `sql1`, including the changed password from earlier in the tutorial. In effect, some options like this are ignored due to restoring the data in /var/opt/mssql. For this reason, the password is `<new-password>` as shown here.
+   The `sa` password isn't the password you specified for the `sql2` container, `MSSQL_SA_PASSWORD=<password>`. All of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data was restored from `sql1`, including the changed password from earlier in the tutorial. In effect, some options like this are ignored due to restoring the data in `/var/opt/mssql`. For this reason, the password is `<new-password>` as shown here.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -498,7 +498,7 @@ In addition to taking database backups for protecting your data, you can also us
       -Q 'SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1'
    ```
 
-   The `sa` password isn't the password you specified for the `sql2` container, `MSSQL_SA_PASSWORD=<password>`. All of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data was restored from `sql1`, including the changed password from earlier in the tutorial. In effect, some options like this are ignored due to restoring the data in /var/opt/mssql. For this reason, the password is `<new-password>` as shown here.
+   The `sa` password isn't the password you specified for the `sql2` container, `MSSQL_SA_PASSWORD=<password>`. All of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data was restored from `sql1`, including the changed password from earlier in the tutorial. In effect, some options like this are ignored due to restoring the data in `/var/opt/mssql`. For this reason, the password is `<new-password>` as shown here.
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -608,7 +608,7 @@ Follow these steps to make a change in the database.
             10 USB food flash drive - chocolate bar
    ```
 
-1. Update the description of the first item with the following `UPDATE` statement:
+1. Update the name of the first item with the following `UPDATE` statement:
 
    ```bash
    sqlcmd -Q "UPDATE Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM Warehouse.StockItems WHERE StockItemID=1"
@@ -626,7 +626,7 @@ Follow these steps to make a change in the database.
 
 After you restore your database into a container, you might also want to regularly create database backups inside the running container. The steps follow a similar pattern to the previous steps but in reverse.
 
-1. Use the `BACKUP DATABASE` Transact-SQL command to create a database backup in the container. This tutorial creates a new backup file, `wwi_2.bak` in the `/var/opt/mssql/backup` directory.
+1. Use the `BACKUP DATABASE` T-SQL command to create a database backup in the container. This tutorial creates a new backup file, `wwi_2.bak`, in the `/var/opt/mssql/backup` directory.
 
    ```bash
    sqlcmd -Q "BACKUP DATABASE [WideWorldImporters-Full] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -657,7 +657,7 @@ After you restore your database into a container, you might also want to regular
 
 Now that the backup is copied off the container, it can be cleaned up. The following steps completely remove the `sql1` container.
 
-1. Remove the container. **`sqlcmd`** has built-in safeguards to prevent deleting a container that is in use. The way it determines if a container is still in use is whether it has any user databases. For production scenarios, you should delete user databases individually after verifying they're no long in use. For development/testing, you can use the `--force` parameter to delete the container without deleting the user database.
+1. Remove the container. **`sqlcmd`** has built-in safeguards to prevent deleting a container that is in use. The way it determines if a container is still in use is whether it has any user databases. For production scenarios, you should delete user databases individually after verifying they're no longer in use. For development/testing, you can use the `--force` parameter to delete the container without deleting the user database.
 
    ```bash
    sqlcmd delete --force
@@ -670,32 +670,32 @@ Now that the backup is copied off the container, it can be cleaned up. The follo
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] in a container. You learned how to:
+In this tutorial, you learned how to restore a database backup in a Linux container running [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. You learned how to:
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] in a container. You learned how to:
+In this tutorial, you learned how to restore a database backup in a Linux container running [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. You learned how to:
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
 ::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] in a container. You learned how to:
+In this tutorial, you learned how to restore a database backup in a Linux container running [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. You learned how to:
 
 ::: moniker-end
 <!--SQL Server 2025 on Linux-->
 ::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] in a container. You learned how to:
+In this tutorial, you learned how to restore a database backup in a Linux container running [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. You learned how to:
 
 ::: moniker-end
 
 > [!div class="checklist"]
-> - Create [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux container images.
+> - Create [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Linux containers.
 > - Copy [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database backups into a container.
-> - Run Transact-SQL statements with **`sqlcmd`**.
+> - Run T-SQL statements with **`sqlcmd`**.
 > - Create and extract backup files from a container.
 > - Use data volume containers to persist [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] production data.
 

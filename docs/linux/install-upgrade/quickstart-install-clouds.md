@@ -51,7 +51,7 @@ If you choose to run a paid edition of [!INCLUDE [ssnoversion-md](../../includes
 
    1. Add an inbound rule to allow traffic on the port on which [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens (default TCP port 1433).
 
-## Digital Ocean
+## DigitalOcean
 
 1. Sign in to the [control panel](https://cloud.digitalocean.com/login) and select **Create a droplet**.
 

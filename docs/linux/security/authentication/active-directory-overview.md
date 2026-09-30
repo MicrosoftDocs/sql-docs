@@ -18,13 +18,13 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This article provides an overview of Active Directory authentication for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux. Active Directory authentication is also known as Integrated authentication in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
+This article provides an overview of Active Directory authentication for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux. Active Directory authentication is also known as integrated authentication in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 ## Active Directory authentication overview
 
 Active Directory authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
 
-Active Directory Authentication has the following advantages over [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication:
+Active Directory authentication has the following advantages over [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] authentication:
 
 - Users authenticate via single sign-on, without being prompted for a password.
 - By creating logins for Active Directory groups, you can manage access and permissions in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] using Active Directory group memberships.
@@ -33,9 +33,9 @@ Active Directory Authentication has the following advantages over [!INCLUDE [ssN
 
 ## Configuration steps
 
-In order to use Active Directory authentication, you must have an Active Directory Domain Controller (Windows) on your network.
+To use Active Directory authentication, you must have a computer running Windows Server as an Active Directory domain controller on your network.
 
-The details for how to configure Active Directory authentication are provided in the tutorial, [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md). The following list provides a summary with a link to each section in the tutorial:
+The details for how to configure Active Directory authentication are provided in the tutorial, [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md). The following list summarizes the tutorial and links to the relevant sections:
 
 1. [Join SQL Server on a Linux host to an Active Directory domain](active-directory-join-domain.md).
 1. [Create an Active Directory user for SQL Server and set the Service Principal Name](active-directory-tutorial.md#createuser).
@@ -47,9 +47,9 @@ The details for how to configure Active Directory authentication are provided in
 
 ## Known issues
 
-- At this time, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` authentication method will be enabled in a future release.
+- At this time, the only authentication method supported for a database mirroring endpoint is `CERTIFICATE`. The `WINDOWS` authentication method will be enabled in a future release.
 
-- SQL Server on Linux doesn't support NTLM protocol for remote connections. Local connection might work using NTLM.
+- SQL Server on Linux doesn't support the NTLM protocol for remote connections. A local connection might work using NTLM.
 
 ## Related content
 

@@ -27,8 +27,8 @@ This tutorial explains how to configure [!INCLUDE [ssnoversion-md](../../include
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> - Install **`adutil`**
-> - Join Linux host to Active Directory domain
+> - Install [adutil](../security/authentication/adutil-introduction.md)
+> - Join a Linux host to an Active Directory domain
 > - Create an Active Directory user for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and set the Service Principal Name (SPN) using the **`adutil`** tool
 > - Create the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service keytab file
 > - Create the `mssql.conf` and `krb5.conf` files to be used by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container
@@ -49,11 +49,11 @@ To set up your container, you need to know in advance the port that will be used
 
 When you register Service Principal Names (SPN), you can use the hostname of the machine or the name of the container. However, you should configure it according to what you'd like to see, when you connect to the container externally.
 
-Make sure there's a forwarding host (`A`) entry added in Active Directory for the Linux host IP address, mapping to the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container. In this tutorial, the IP address of `sql1` host machine is `10.0.0.10`, and my [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container name is `sql1`. Add the forwarding host entry in Active Directory, as shown in the screenshot. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
+Make sure there's a forwarding host (`A`) entry added in Active Directory for the Linux host IP address, mapping to the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container. In this tutorial, the IP address of the `sql1` host machine is `10.0.0.10`, and the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container name is `sql1`. Add the forwarding host entry in Active Directory, as shown in the screenshot. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
 
 :::image type="content" source="media/tutorial-adutil/host-a-record.png" alt-text="Screenshot of adding a host record.":::
 
-For this tutorial, we're using an environment in Azure with three virtual machines (VMs). One VM acting as the Windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has [!INCLUDE [ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `sql1`, which hosts the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers. All machines are joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](../security/authentication/active-directory-join-domain.md).
+For this tutorial, we're using an environment in Azure with three virtual machines (VMs). One VM acts as the Windows domain controller (DC) for the `contoso.com` domain. The domain controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has [!INCLUDE [ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)] (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `sql1`, which hosts the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] containers. All machines are joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](../security/authentication/active-directory-join-domain.md).
 
 > [!NOTE]  
 > Joining the host container machine to the domain isn't mandatory, as you can see later in this article.
@@ -93,12 +93,12 @@ Enabling Active Directory authentication on [!INCLUDE [ssnoversion-md](../../inc
    Passwords might be specified in any of the three ways:
 
    - Password flag: `--password <password>`
-   - Environment variables - `ADUTIL_ACCOUNT_PWD`
+   - Environment variable: `ADUTIL_ACCOUNT_PWD`
    - Interactive input
 
-   The precedence of password entry methods follows the order of options listed above. The recommended options are to provide the password using Environment variables or interactive input, as they more secure compared to the password flag.
+   The precedence of password entry methods follows the order of options listed above. The recommended options are to provide the password using the environment variable or interactive input, as they are more secure than the password flag.
 
-   You can specify the name of the account using the distinguished name (`-distname`) as shown above, or you can also use the Organizational Unit (OU) name as well. The OU name (`--ou`) takes precedence over distinguished name in case you specify both. You can run the below command for more details:
+   You can specify the name of the account using the distinguished name (`--distname`) as shown above, or you can use the Organizational Unit (OU) name. The OU name (`--ou`) takes precedence over the distinguished name if you specify both. Run the following command for more details:
 
    ```bash
    adutil user create --help
@@ -113,12 +113,12 @@ Enabling Active Directory authentication on [!INCLUDE [ssnoversion-md](../../inc
    - `addauto` will create the SPNs automatically, provided sufficient privileges are present for the **`kinit`** account.
    - `-n`: Name of the account the SPNs will be assigned to.
    - `-s`: The service name to use for generating SPNs. In this case, it's for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service, and hence the service name is MSSQLSvc.
-   - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. Provide the FQDN for the container name as well. In this case, the container name is `sql1` and the FQDN is `sql1.contoso.com`.
+   - `-H`: The hostname to use for generating SPNs. If not specified, the local host's fully qualified domain name (FQDN) will be used. Provide the FQDN for the container name as well. In this case, the container name is `sql1` and the FQDN is `sql1.contoso.com`.
    - `-p`: The port to use for generating SPNs. If not specified, SPNs are generated without a port. Connections will only work in this case when the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is listening to the default port, `1433`.
 
 ### Create SQL Server service keytab file
 
-Create the keytab file that contains entries for each of the four SPNs created previously, and one for the user. The keytab file will be mounted to the container, so it can be created at any location on the host. You can safely change this path, as long as the resulting keytab is mounted correctly when using docker/podman to deploy the container.
+Create the keytab file that contains entries for each of the four SPNs created previously, and one for the user. The keytab file will be mounted to the container, so it can be created at any location on the host. You can safely change this path, as long as the resulting keytab is mounted correctly when using Docker or Podman to deploy the container.
 
 To create the keytab for all the SPNs, we can use the `createauto` option. Replace `<password>` with a valid password.
 
@@ -135,7 +135,7 @@ adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1
 
 When given a choice to choose the encryption types, you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose an encryption type supported by the host and domain.
 
-If you'd like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the **`adutil`** commands, run the following command.
+To choose the encryption type noninteractively, specify your choice with the `-e` argument in the previous command. For additional help on the **`adutil`** commands, run the following command.
 
 ```bash
 adutil keytab createauto --help
@@ -153,9 +153,9 @@ adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --passwo
 - `-k`: Path where you would like the `mssql.keytab` file to be created. In the previous example, the directory `/container/sql1/secrets` should already exist on the host.
 - `-p`: Principal to add to the keytab.
 
-The **`adutil`** keytab create/autocreate doesn't overwrite the previous files; it appends to the file if already present.
+The **`adutil`** keytab `create` and `createauto` commands don't overwrite an existing file. They append entries to it.
 
-Ensure the keytab created has the right permissions set when deploying the container.
+Ensure the created keytab has the correct permissions when you deploy the container.
 
 ```bash
 chmod 440 /container/sql1/secrets/mssql.keytab
@@ -167,7 +167,7 @@ At this point, you can copy `mssql.keytab` from the current Linux host to the Li
 
 ## Create config files to be used by the SQL Server container
 
-1. Create an `mssql.conf` file with the settings for Active Directory. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1`, which is our container directory. The content of the `mssql.conf` is shown as follows:
+1. Create an `mssql.conf` file with the settings for Active Directory. This file can be created anywhere on the host and needs to be mounted correctly during the `docker run` command. In this example, we placed this file `mssql.conf` under `/container/sql1`, which is our container directory. The content of the `mssql.conf` is shown as follows:
 
    ```ini
    [network]
@@ -200,7 +200,7 @@ At this point, you can copy `mssql.keytab` from the current Linux host to the Li
 
 1. Copy all files, `mssql.conf`, `krb5.conf`, `mssql.keytab` to a location that will be mounted to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] container. In this example, these files are placed on the host at the following locations: `mssql.conf` and `krb5.conf` at `/container/sql1/`. `mssql.keytab` is placed at the location `/container/sql1/secrets/`.
 
-1. Make sure there's enough permission on these folders for the user running the docker/podman command. When the container starts, the user needs access to the folder path created. In this example, we provided the below permissions given to the folder path:
+1. Make sure the user running the Docker or Podman command has sufficient permissions on these folders. When the container starts, the user needs access to the folder path created. In this example, we assigned the following permissions to the folder path:
 
    ```bash
    sudo chmod 755 /container/sql1/
@@ -224,14 +224,14 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" \
 > [!CAUTION]  
 > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-When running container on LSM (Linux Security Module) like SELinux enabled hosts, you need to mount the volumes using the `Z` option, which tells docker to label the content with a private unshared label. For more information, see [configure the SE Linux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label).
+When you run a container on a host with a Linux Security Module (LSM), such as SELinux, mount the volumes using the `Z` option. This option tells Docker to label the content with a private unshared label. For more information, see [Configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label).
 
 Our example would contain the following commands. Replace `<password>` with a valid password.
 
 ```bash
 sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 5433:1433 --name sql1 \
--v /container/sql1:/var/opt/mssql/ \
--v /container/sql1/krb5.conf:/etc/krb5.conf \
+-v /container/sql1:/var/opt/mssql/:Z \
+-v /container/sql1/krb5.conf:/etc/krb5.conf:Z \
 --dns-search contoso.com \
 --dns 10.0.0.4 \
 --add-host adVM.contoso.com:10.0.0.4 \
@@ -263,7 +263,7 @@ FROM sys.server_principals;
 
 [!INCLUDE [connect-instance-client](../../includes/connect-instance-client.md)]
 
-Sign in to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with Windows credentials using the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com,5433`.
+Sign in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with Windows credentials using the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] name and port number (the name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com,5433`.
 
 The following command shows how to connect to your container with **`sqlcmd`**.
 

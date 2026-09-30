@@ -25,17 +25,17 @@ SQL Server container images can use the Microsoft Distributed Transaction Coordi
 
 ## Configuration
 
-To enable MSDTC transaction in SQL Server containers, you must set two new environment variables:
+To enable MSDTC transactions in SQL Server containers, you must set two environment variables:
 
-- `MSSQL_RPC_PORT`: the TCP port that RPC endpoint mapper service binds to and listens on.
-- `MSSQL_DTC_TCP_PORT`: the port that MSDTC service is configured to listen on.
+- `MSSQL_RPC_PORT`: the TCP port that the RPC Endpoint Mapper service binds to and listens on.
+- `MSSQL_DTC_TCP_PORT`: the port that the MSDTC service is configured to listen on.
 
 ### Pull and run
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
-The following example shows how to use these environment variables to pull and run a single SQL Server 2017 container configured for MSDTC. This allows it to communicate with any application on any hosts.
+The following example shows how to use these environment variables to pull and run a single SQL Server 2017 container configured for MSDTC. This allows it to communicate with any application on any host.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -60,7 +60,7 @@ docker run `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">=sql-server-linux-ver15 || >=sql-server-ver15"
 
-The following example shows how to use these environment variables to pull and run a single [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] container configured for MSDTC. This allows it to communicate with any application on any hosts.
+The following example shows how to use these environment variables to pull and run a single [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] container configured for MSDTC. This allows it to communicate with any application on any host.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -86,13 +86,13 @@ docker run `
 > [!CAUTION]  
 > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-In this command, the **RPC Endpoint Mapper** service is bound to port 135, and the **MSDTC** service is bound to port 51000 within the container's virtual network. SQL Server TDS communication occurs on port 1433, also within the container's virtual network. These ports are externally exposed to host as TDS port 51433, RPC endpoint mapper port 135, and MSDTC port 51000.
+In this command, the **RPC Endpoint Mapper** service is bound to port 135, and the **MSDTC** service is bound to port 51000 within the container's virtual network. SQL Server TDS communication occurs on port 1433, also within the container's virtual network. These ports are externally exposed to the host as TDS port 51433, RPC endpoint mapper port 135, and MSDTC port 51000.
 
-The RPC Endpoint Mapper and MSDTC port don't have to be the same on the host and the container. So while RPC Endpoint Mapper port was configured to be 135 on container, it could potentially be mapped to port 13501 or any other available port on the host server.
+The RPC Endpoint Mapper and MSDTC ports don't have to be the same on the host and the container. So while the RPC Endpoint Mapper port was configured to be 135 in the container, it could potentially be mapped to port 13501 or any other available port on the host server.
 
 ## Configure the firewall
 
-In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that the SQL Server container exposes for external communication. In the previous example, this would be ports 135, 51433, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC endpoint mapper port 51000 of the container was mapped to the host's port 51001, then port 51001 (not 51000) should be opened in the firewall for communication with the host.
+In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that the SQL Server container exposes for external communication. In the previous example, this would be ports 135, 51433, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if MSDTC port 51000 of the container was mapped to the host's port 51001, then port 51001 (not 51000) should be opened in the firewall for communication with the host.
 
 The following example shows how to create these rules on Ubuntu.
 
@@ -137,7 +137,7 @@ The following diagram shows the process when an MSDTC client connects to MSDTC o
 
 ### Scenario 2: SQL Server connecting to SQL Server in a Kubernetes container
 
-The following diagram shows the process when one SQL Server Linux container connects to MSDTC on a second SQL Server Linux container, on Kubernetes.
+The following diagram shows the process when one SQL Server Linux container connects to MSDTC on a second SQL Server Linux container on Kubernetes.
 
 :::image type="content" source="media/configure-distributed-transactions/msdtc-double.svg" alt-text="Diagram showing the process when one SQL Server Linux container connects to MSDTC on a second SQL Server Linux container.":::
 
@@ -160,7 +160,7 @@ kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="<password>
 
 You notice the following points in the manifest file:
 
-1. In the cluster, we create the following objects: `StorageClass`, two SQL Server pods deployed as `statefulset` deployments, and two load balancer services to connect to the respective SQL Server instances.
+1. The manifest creates the following objects: a `StorageClass`, two SQL Server pods deployed by a `StatefulSet`, and two load balancer services to connect to the respective SQL Server instances.
 
 1. You also notice that the load balancer services are deployed with static IP addresses, which can be configured on Azure Kubernetes Service. See [Use a static public IP address and DNS label with the Azure Kubernetes Service (AKS) load balancer](/azure/aks/static-ip). Creating the load balancer services with static IP addresses ensures that the external IP address doesn't change if the load balancer service is deleted and recreated.
 
@@ -283,7 +283,7 @@ spec:
     name: nonrootport
 ```
 
-Assuming you created the resource in the default namespace, when you run the `kubectl get all` command after the previous deployment to see all the resources created, you should see the output shown in the following example.
+Assuming you created the resources in the default namespace, when you run the `kubectl get all` command after the previous deployment to see all the resources created, you should see the output shown in the following example.
 
 ```output
 NAME          READY   STATUS    RESTARTS   AGE
@@ -321,7 +321,7 @@ GO
 > [!CAUTION]  
 > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-Now you can start the distributed transaction, and this code sample shows you the `sys.sysprocesses` from the `mssql-0` instance:
+Now you can start the distributed transaction. The following code sample queries the [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) compatibility view on the `mssql-0` instance:
 
 ```sql
 SET XACT_ABORT ON;

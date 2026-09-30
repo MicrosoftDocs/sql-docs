@@ -14,7 +14,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article shows how to set up Database Mail and use it with SQL Server Agent (**`mssql-server-agent`**) on Linux.
+This article shows how to set up [Database Mail](../relational-databases/database-mail/database-mail.md) and use it with SQL Server Agent (**`mssql-server-agent`**) on Linux.
 
 ## 1. Enable Database Mail
 
@@ -64,7 +64,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## 4. Add the Database Mail account to a Database Mail profile
+## 4. Grant public access to the Database Mail profile
 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
@@ -74,7 +74,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 GO
 ```
 
-## 5. Add account to profile
+## 5. Add the account to the profile
 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profileaccount_sp

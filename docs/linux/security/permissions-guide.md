@@ -67,8 +67,8 @@ For more information on how to change user data location, log file location, or 
 
 | Agent | Runs as (Linux) | Connects to | Required database roles/rights |
 | --- | --- | --- | --- |
-| Snapshot Agent | `mssql` (via SQL Agent job) | Distributor | **db_owner** in distribution database; read/write on snapshot folder |
-| Log Reader Agent | `mssql` | Publisher & Distributor | **db_owner** in publication database and distribution. Might need **sysadmin** when you use [initialize from backup](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md) |
+| Snapshot Agent | `mssql` (via SQL Server Agent job) | Distributor | **db_owner** in distribution database; read/write on snapshot folder |
+| Log Reader Agent | `mssql` | Publisher & Distributor | **db_owner** in publication database and distribution database. Might need **sysadmin** when you use [initialize from backup](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md) |
 | Distribution Agent (push) | `mssql` | Distributor to Subscriber | **db_owner** in distribution; **db_owner** in subscription database. Read snapshot folder. PAL member. |
 | Distribution Agent (pull) | `mssql` (on Subscriber) | Subscriber to Distributor<br />Distributor to Subscriber | Same as Distribution Agent (push), but snapshot share permissions apply on Subscriber host |
 | Merge Agent | `mssql` | Publisher, Distributor, Subscriber | **db_owner** in distribution. PAL member. Read snapshot folder. Read/write in publication & subscription databases. |

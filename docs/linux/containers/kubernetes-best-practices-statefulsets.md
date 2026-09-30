@@ -84,7 +84,7 @@ Choosing the right [workload deployment type](https://kubernetes.io/docs/concept
 
 ### StatefulSet workloads
 
-SQL Server is a database application and thus mostly should be deployed as a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) workload type. Deploying workloads as StatefulSet helps provide features like unique network identifies, persistent and stable storage and more. For more about this type of workload, refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).
+SQL Server is a database application and thus mostly should be deployed as a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) workload type. Deploying workloads as StatefulSet helps provide features like unique network identities, persistent and stable storage and more. For more about this type of workload, refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).
 
 When deploying more than one replica of SQL Server containers using the same deployment YAML script as a StatefulSet workload, an important parameter to consider is [Pod management policies](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#pod-management-policies), that is, `.spec.podManagementPolicy`.
 
@@ -92,7 +92,7 @@ There are two values possible for this setting:
 
 - **OrderedReady**: This is the default value, and the behavior is as described in the [deployment and scaling guarantees](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#deployment-and-scaling-guarantees).
 
-- **Parallel**: This is the alternate policy that creates and launches the pods (in this case SQL Server pods) in parallel, without waiting for other pods to be created Similarly, all pods are deleted in parallel during termination. You can use this option when you're deploying SQL Server instances that are independent of each other, and when you don't intend to follow an order to start or delete the SQL Server instances.
+- **Parallel**: This is the alternate policy that creates and launches the pods (in this case SQL Server pods) in parallel, without waiting for other pods to be created. Similarly, all pods are deleted in parallel during termination. You can use this option when you're deploying SQL Server instances that are independent of each other, and when you don't intend to follow an order to start or delete the SQL Server instances.
 
   ```yaml
   apiVersion: apps/v1
@@ -414,7 +414,7 @@ For non-production workloads, where performance and availability aren't a high p
 
 ### Burstable QoS sample
 
-To define a `Burstable` YAML example, you specify the resource *requests*, not the resource *limits*; or you specify the *limits*, which is higher than *requests*. The following code displays only the difference from the previous example, in order to define a [burstable](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-burstable) workload.
+To define a `Burstable` YAML example, you specify the resource *requests*, not the resource *limits*; or you specify the *limits*, which are higher than the *requests*. The following code displays only the difference from the previous example, in order to define a [burstable](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-burstable) workload.
 
 ```yaml
 apiVersion: apps/v1
@@ -461,9 +461,9 @@ Tolerations:               node.kubernetes.io/memory-pressure:NoSchedule op=Exis
 ...
 ```
 
-### Best effort QoS sample
+### BestEffort QoS sample
 
-To define a `BestEffort` YAML example, remove the resource *requests* and resource *limits*. You'll end up with the best effort QoS, as defined in [Create a Pod that gets assigned a QoS class of BestEffort](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-besteffort). As before, the following code displays only the difference from the `Guaranteed` example, in order to define a [best effort](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-besteffort) workload. These are the least recommended options for SQL Server pods, as they would probably be the first ones to be terminated in the case of resource contention. Even for test and QA scenarios, we recommend using the Burstable option for SQL Server.
+To define a `BestEffort` YAML example, remove the resource *requests* and resource *limits*. You'll end up with the `BestEffort` QoS, as defined in [Create a Pod that gets assigned a QoS class of BestEffort](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-besteffort). As before, the following code displays only the difference from the `Guaranteed` example, in order to define a [BestEffort](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-besteffort) workload. These are the least recommended options for SQL Server pods, as they would probably be the first ones to be terminated in the case of resource contention. Even for test and QA scenarios, we recommend using the Burstable option for SQL Server.
 
 ```yaml
 apiVersion: apps/v1

@@ -22,12 +22,12 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 You can install Machine Learning Services on Ubuntu and Red Hat Enterprise Linux (RHEL). SUSE Linux Enterprise Server (SLES) isn't supported.
 
-You can install ML Services on a Docker container running a Linux distribution. Inside the Docker container, the steps would be the same as below.
+You can install Machine Learning Services on a Docker container running a Linux distribution. Inside the Docker container, the steps are the same as follows.
 
 For more information, see [the Supported platforms section in the installation guidance for SQL Server on Linux](setup.md#supportedplatforms).
 
 > [!IMPORTANT]  
-> This article refers to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](setup-machine-learning.md). For SQL Server on Windows, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md).
+> This article refers to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](setup-machine-learning.md). For SQL Server on Windows, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md).
 
 ## Pre-install checklist
 
@@ -36,7 +36,7 @@ For more information, see [the Supported platforms section in the installation g
 - Check the SQL Server Linux repositories for the Python and R extensions.
   If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility** package install commands using the same repo registration.
 
-- You should have a tool for running T-SQL commands.
+- You should have a tool for running Transact-SQL (T-SQL) commands.
 
   - [!INCLUDE [connect-instance-client](../../includes/connect-instance-client.md)]
 
@@ -46,7 +46,7 @@ For more information, see [the Supported platforms section in the installation g
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system.
 
-Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Linux:
+The following installation package is available for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Linux:
 
 | Package name | Applies-to | Description |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql2
    yum install mssql-server-extensibility
    ```
 
-1. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
+1. Review and accept the End User License Agreement (EULA) for SQL Server Machine Learning Services.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
@@ -80,7 +80,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql2
    sudo systemctl restart mssql-server
    ```
 
-## Install runtimes and packages
+<a id="install-runtimes-and-packages"></a>
 
 ## Setup R support
 
@@ -119,14 +119,14 @@ Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql2
 
 ### Configure R runtime with SQL Server
 
-1. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
+1. Configure the installed R runtime with SQL Server for Linux. The following commands use the default R installation paths. Update the paths if you installed R elsewhere.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
    ```
 
-1. Restart the `Launchpadd` service.
+1. Restart the `mssql-launchpadd` service.
 
    ```bash
    systemctl restart mssql-launchpadd.service
@@ -155,7 +155,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql2
 
 ### Install Python runtime
 
-1. Download and install Python. Choose version Python 3.10 specifically, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions provided. Also, install the shared python runtime library for the runtime version. For example, to install `libpython3.10` for Ubuntu: `sudo apt-get install libpython3.10`.
+1. Download and install Python. Choose Python 3.10 specifically, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions provided. Also, install the shared Python runtime library for the runtime version. For example, to install `libpython3.10` for Ubuntu: `sudo apt-get install libpython3.10`.
 
 1. Download and install `revoscalepy` for the root user.
 
@@ -172,14 +172,14 @@ Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql2
 
 ### Configure Python runtime with SQL Server
 
-1. Configure the installed Python runtime with SQL Server, where `pythonbinpath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
+1. Configure the installed Python runtime with SQL Server, where `pythonbinpath` is set to the path of the installed Python binary, and `datadirectories` includes the path where the packages are installed for the desired version of Python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
    ```
 
-1. Restart the `Launchpadd` service.
+1. Restart the `mssql-launchpadd` service.
 
    ```bash
    systemctl restart mssql-launchpadd.service
@@ -195,7 +195,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../../includes/sssql2
    GO
    ```
 
-1. Verify the installation by executing a simple T-SQL command to return the version of python:
+1. Verify the installation by executing a simple T-SQL command to return the version of Python:
 
    ```sql
    EXECUTE sp_execute_external_script
@@ -245,14 +245,14 @@ To validate installation, use any of the following methods:
 
 ## Offline installation
 
-Follow the [Offline installation](setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list below.
+Follow the [Offline installation](setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list above.
 
 > [!TIP]  
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
-## Standalone RevoScale packages for Python and R runtime
+## Standalone RevoScale packages for Python and R runtimes
 
-RevoScale packages are also supported as a standalone package with Python and R runtimes. In order to setup Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections respectively.
+RevoScale packages are also supported as standalone packages with Python and R runtimes. To set up a Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections, respectively.
 
 ## Related content
 

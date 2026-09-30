@@ -29,7 +29,7 @@ For background information about failover, see [Failover and Failover Modes (Alw
 Use the cluster management tools to fail over an AG managed by an external cluster manager. For example, if a solution uses Pacemaker to manage a Linux cluster, use `pcs` to perform manual failovers on Red Hat Enterprise Linux (RHEL) or Ubuntu. On SUSE Linux Enterprise Server (SLES), use `crm`. (Starting in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.)
 
 > [!IMPORTANT]  
-> Under normal operations, don't fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. For instructions to force failover with potential data loss, see [Force failover](#forceFailover).
+> Under normal operations, don't fail over with Transact-SQL (T-SQL) or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. For instructions to force failover with potential data loss, see [Force failover](#forceFailover).
 
 <a id="manualFailover"></a>
 
@@ -63,9 +63,9 @@ To manually fail over an AG resource named `ag_cluster` to cluster node named *n
   crm resource migrate ag_cluster nodeName2 --lifetime=30S
   ```
 
-When you use the `--lifetime` option, the location constraint created to move the resource is temporary in nature and is valid for 30 seconds in previous example.
+When you use the `--lifetime` option, the location constraint created to move the resource is temporary in nature and is valid for 30 seconds in the previous example.
 
-The temporary constraint isn't cleared automatically and might show up in the constraint list, but as an expired constraint. Expired constraints don't affect the failover behavior of pacemaker cluster. If you don't use the `--lifetime` option when moving the resource, you should remove a location constraint that is automatically added, which is noted in the following section.
+The temporary constraint isn't cleared automatically and might show up in the constraint list, but as an expired constraint. Expired constraints don't affect the failover behavior of Pacemaker cluster. If you don't use the `--lifetime` option when moving the resource, you should remove a location constraint that is automatically added, which is noted in the following section.
 
 <a id="removeLocConstraint"></a>
 
@@ -90,7 +90,7 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
   `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
   > [!NOTE]  
-  > The AG resource name in pacemaker clusters on Red Hat Enterprise Linux 8.x and Ubuntu 18.04 might resemble *ag_cluster-clone* as the nomenclature regarding resources has been evolving to use *promotable clone*.
+  > The AG resource name in Pacemaker clusters on Red Hat Enterprise Linux 8.x and Ubuntu 18.04 might resemble *ag_cluster-clone* as the nomenclature regarding resources has been evolving to use *promotable clone*.
 
 - **RHEL/Ubuntu example**
 
@@ -166,7 +166,7 @@ This process for forcing failover is specific to SQL Server on Linux.
        @value = N'yes';
    ```
 
-1. Fail over the AG with Transact-SQL. In the following example, replace `<MyAg>` with the name of your AG. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
+1. Fail over the AG with T-SQL. In the following example, replace `<MyAg>` with the name of your AG. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
 
    ```sql
    ALTER AVAILABILITY GROUP <MyAg> FORCE_FAILOVER_ALLOW_DATA_LOSS;
@@ -186,11 +186,11 @@ This process for forcing failover is specific to SQL Server on Linux.
    If you deleted the cluster resource, recreate it. To recreate the cluster resource, follow the instructions at [Create availability group resource](cluster-pacemaker.md?tabs=rhel#create-availability-group-resource).
 
 > [!IMPORTANT]  
-> Don't use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).
+> Don't use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and follow the instructions for [normal manual failover](#manualFailover).
 
 ## Database-level monitoring and failover trigger
 
-For `CLUSTER_TYPE=EXTERNAL`, the failover trigger semantics are different compared to WSFC. When the AG is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the AG health to report a fault. In response, the cluster manager triggers a failover action. On Linux, the SQL Server instance can't communicate with the cluster. Monitoring for database health is done *outside-in*. If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the AG), the cluster checks if the database state is `ONLINE` every time it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different to `ONLINE`, it triggers a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action, and the database state being updated in `sys.databases.`
+For `CLUSTER_TYPE=EXTERNAL`, the failover trigger semantics are different compared to WSFC. When the AG is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the AG health to report a fault. In response, the cluster manager triggers a failover action. On Linux, the SQL Server instance can't communicate with the cluster. Monitoring for database health is done *outside-in*. If a user opts in to database-level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the AG), the cluster checks if the database state is `ONLINE` every time it runs a monitoring action. The cluster queries the state in [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For any state different to `ONLINE`, it triggers a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action, and the database state being updated in `sys.databases`.
 
 Automatic failover requires at least one synchronous replica.
 

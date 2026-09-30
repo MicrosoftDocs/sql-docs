@@ -52,10 +52,11 @@ valid users = SQLSambaUser
 
    Note the `uid`, `gid`, and groups.
 
-1. Execute `sudo smbclient -L //NameOrIP/ShareName -U User`.
+1. Execute `sudo smbclient -L //<NameOrIP>/<ShareName> -U <User>`.
 
    - `<NameOrIP>` is the DNS name or IP address of the server hosting the SMB share.
    - `<ShareName>` is the name of the SMB share.
+   - `<User>` is the name of the user to access the share.
 
 1. For system databases, or anything stored in the default data location, follow these steps. Otherwise skip to step 5.
 
@@ -104,7 +105,7 @@ valid users = SQLSambaUser
       ls <TempDir>
       ```
 
-      \<TempDir> is the name of the folder from Step d.
+      - `<TempDir>` is the name of the folder from the previous step.
 
    1. Delete the files from the existing [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] data directory.
 
@@ -123,14 +124,14 @@ valid users = SQLSambaUser
    1. Mount the SMB share in the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] data folder. This example shows the syntax for connecting to a Windows Server-based SMB 3.0 share.
 
       ```bash
-      mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
+      mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<Domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
 
       - `<ServerName>` is the name of the server with the SMB share
       - `<ShareName>` is the name of the share
       - `<UserName>` is the name of the user to access the share
       - `<Password>` is the password for the user
-      - `<domain>` is the name of Active Directory
+      - `<Domain>` is the name of Active Directory
       - `<mssqlUID>` is the UID of the `mssql` user
       - `<mssqlGID>` is the GID of the `mssql` user
 
@@ -146,7 +147,7 @@ valid users = SQLSambaUser
       su mssql
       ```
 
-   1. Copy the files from the temporary directory `/var/opt/mssql/data`.
+   1. Copy the files from the temporary directory `/var/opt/mssql/tmp`.
 
       ```bash
       cp /var/opt/mssql/tmp/* /var/opt/mssql/data
@@ -183,14 +184,12 @@ valid users = SQLSambaUser
    1. If you're finished, unmount the share. Otherwise, unmount after you finish testing or adding disks.
 
       ```bash
-      sudo umount //<IPAddressorServerName>/<ShareName>/<FolderMountedIn>
+      sudo umount <FolderMountedIn>
       ```
 
-      - `<IPAddressOrServerName>` is the IP address or name of the SMB host
-      - `<ShareName>` is the name of the share
-      - `<FolderMountedIn>` is the name of the folder where SMB is mounted
+      - `<FolderMountedIn>` is the full path of the folder where SMB is mounted
 
-1. For things other than system databases, such as user databases or backups, follow these steps. If you use only the default location, skip to Step 14.
+1. For things other than system databases, such as user databases or backups, follow these steps. If you use only the default location, skip to the next step.
 
    1. Switch to the superuser.
 
@@ -233,12 +232,10 @@ valid users = SQLSambaUser
    1. Unmount the share.
 
       ```bash
-      sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
+      sudo umount <FolderMountedIn>
       ```
 
-      - `<IPAddressOrServerName>` is the IP address or name of the SMB host
-      - `<ShareName>` is the name of the share
-      - `<FolderMountedIn>` is the name of the folder where SMB is mounted.
+      - `<FolderMountedIn>` is the full path of the folder where SMB is mounted.
 
 1. Repeat the steps on the other nodes.
 

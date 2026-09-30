@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || =sqlallproducts-a
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This article provides you details on how Active Directory authentication works for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] deployed on Linux or containers.
+This article provides details about how Active Directory authentication works for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] deployed on Linux or containers.
 
 ## Concepts
 
@@ -41,7 +41,7 @@ When you work in a heterogeneous (mixed) environment where you have Windows and 
 
 Server processes on Linux or Unix systems can't be configured to run processes with a Windows service account. When you want a Linux or Unix system to automatically log into Active Directory on startup, you must use a *keytab* file.
 
-A keytab is a cryptographic file containing a representation of a Kerberos-protected service and its long-term *key* of its associated service principal name in the Key Distribution Center (KDC). The key isn't the password itself.
+A keytab is a cryptographic file containing a representation of a Kerberos-protected service and the long-term *key* of its associated service principal name in the Key Distribution Center (KDC). The key isn't the password itself.
 
 Keytabs are used to either:
 
@@ -124,11 +124,11 @@ As with Kerberos authentication on Windows, the first two steps to obtain a tick
 
 ## Configure Kerberos for SQL Server containers
 
-Active Directory authentication for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] in containers is essentially the same as [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux. The only difference is the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] host SPN. In the previous scenario, the SPN was `MSSQLSvc/<host>:<port>` because we were connecting via the name of the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] host. Now however, we need to connect to the container.
+Active Directory authentication for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] in containers is essentially the same as [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux. The only difference is the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] host SPN. In the previous scenario, the SPN was `MSSQLSvc/<host>:<port>` because we were connecting via the name of the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] host. Now you must connect to the container.
 
-For [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] containers, you can create the `krb5.conf` file inside the container. The host node running the container doesn't need to be part of the domain, but should be able to reach to the domain controller to which the container will try to connect.
+For [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] containers, you can create the `krb5.conf` file inside the container. The host node running the container doesn't need to be part of the domain, but should be able to reach the domain controller to which the container will try to connect.
 
-Because we are connecting to a container, the server name in the client connection might be different than just the hostname. It could be the hostname, the container name, or another alias. In addition, there's a good chance that the exposed port for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] won't be the default `1433`.
+Because you are connecting to a container, the server name in the client connection might be different than just the hostname. It could be the hostname, the container name, or another alias. In addition, there's a good chance that the exposed port for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] won't be the default `1433`.
 
 You must use the SPN that is stored in `mssql.keytab` to connect to the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] container. For example, if the SPN in `mssql.keytab` is `MSSQLSvc/sqlcontainer.domain.com:8000`, you would use `sqlcontainer.domain.com,8000` as your connection string in the client.
 
@@ -143,7 +143,7 @@ You might be wondering why there's a user account in the keytab if you only need
 
 Imagine you have a user *adUser*, which is a member of a group *adGroup*. If *adGroup* is added as a login to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], that means *adUser* has permission to sign in to the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance as well. While *adUser* is still connected to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], a domain admin might remove *adUser* from *adGroup*. Now *adUser* should no longer have permission to sign in to [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], but they have already passed the Kerberos authentication process and are connected.
 
-We periodically run a process called *group refresh* to protect against a scenario where a connected user is no longer allowed to perform a privileged action (such as creating a login or altering a database).
+A background process called *group refresh* runs periodically to protect against a scenario where a connected user is no longer allowed to perform a privileged action (such as creating a login or altering a database).
 
 [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] has a privileged Active Directory account that it uses for group refresh. This account is either configured using **`mssql-conf`** with the **network.privilegedadaccount** setting, or defaults to the machine account of the host machine (`<hostname>$`).
 

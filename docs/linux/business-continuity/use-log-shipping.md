@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-Log shipping is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] high availability (HA) configuration where a database from a primary server is replicated onto one or more secondary servers. Log shipping allows backup files from the source database to restore onto the secondary server. The primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database.
+Log shipping is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] high availability (HA) configuration where a database from a primary server is replicated onto one or more secondary servers. Log shipping allows you to restore backup files from the source database onto the secondary server. The primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database.
 
 :::image type="content" source="media/use-log-shipping/log-shipping.png" alt-text="Diagram of the log shipping workflow from primary server backup to secondary server restore.":::
 
@@ -28,7 +28,7 @@ As described in the previous diagram, a log shipping session involves the follow
 
 ## Prerequisites
 
-- [Install SQL Server Agent on Linux](../install-upgrade/setup-sql-agent.md)
+- [Install SQL Server Agent on Linux](../install-upgrade/setup-sql-agent.md) on the primary and secondary servers.
 
 ## Set up a network share for log shipping using CIFS
 
@@ -117,13 +117,13 @@ As described in the previous diagram, a log shipping session involves the follow
    sudo chmod 0660 /var/opt/mssql/.tlogcreds
    ```
 
-1. Add the line to `etc/fstab` to persist the share. Replace `<ip_address_of_primary_server>` with the appropriate value:
+1. Add the line to `/etc/fstab` to persist the share. Replace `<ip_address_of_primary_server>` with the appropriate value:
 
    ```text
    //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
    ```
 
-1. Mount the shares:
+1. Mount the share:
 
    ```bash
    sudo mount -a

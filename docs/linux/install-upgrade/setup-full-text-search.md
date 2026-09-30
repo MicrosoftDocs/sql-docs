@@ -33,7 +33,7 @@ Install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Full-Text 
 
 ## [Red Hat Enterprise Linux](#tab/rhel)
 
-Use the following commands to install `mssql-server-fts` on Red Hat Enterprise Linux.
+Use the following command to install `mssql-server-fts` on Red Hat Enterprise Linux.
 
 ```bash
 sudo yum install -y mssql-server-fts
@@ -46,14 +46,14 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-text Search package download in the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the Full-Text Search package download in the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ## [SUSE Linux Enterprise Server](#tab/sles)
 
 > [!NOTE]  
 > Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
 
-Use the following commands to install `mssql-server-fts` on SUSE Linux Enterprise Server.
+Use the following command to install `mssql-server-fts` on SUSE Linux Enterprise Server.
 
 ```bash
 sudo zypper install mssql-server-fts
@@ -66,7 +66,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-text Search package download in the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the Full-Text Search package download in the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ## [Ubuntu](#tab/ubuntu)
 
@@ -84,13 +84,13 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-text Search package download in the [Release notes for SQL Server 2025 on Linux](../sql-server-linux-release-notes-2025.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the Full-Text Search package download in the [Release notes for SQL Server 2025 on Linux](../sql-server-linux-release-notes-2025.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ---
 
 ## Supported languages
 
-Full-Text Search uses [word breakers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the `sys.fulltext_languages` catalog view.
+Full-Text Search uses [word breakers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view.
 
 ::: moniker range="<=sql-server-linux-ver16 || <=sql-server-ver16"
 
@@ -225,7 +225,7 @@ The following word breakers are installed with [!INCLUDE [sssql25-md](../../incl
 
 Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-You can see a list of installed filters with the following Transact-SQL query:
+You can see a list of installed filters with the following Transact-SQL (T-SQL) query:
 
 ```sql
 EXECUTE sp_help_fulltext_system_components 'filter';
@@ -468,7 +468,7 @@ The following filters are installed for [!INCLUDE [sssql25-md](../../includes/ss
 
 To use Semantic Search, first restore the Semantic Language Statistics database to your machine.
 
-1. Use a tool, such as [sqlcmd](setup-tools.md), to run the following Transact-SQL command on your Linux [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. This command restores the Language Statistics database. If necessary, update the paths to match your configuration.
+1. Use a tool, such as [sqlcmd](setup-tools.md), to run the following T-SQL command on your Linux [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. This command restores the Language Statistics database. If necessary, update the paths to match your configuration.
 
    ```sql
    RESTORE DATABASE [semanticsdb]
@@ -480,7 +480,7 @@ To use Semantic Search, first restore the Semantic Language Statistics database 
    GO
    ```
 
-1. Run the following Transact-SQL command to register the semantic language statistics database.
+1. Run the following T-SQL command to register the semantic language statistics database.
 
    ```sql
    EXECUTE sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';

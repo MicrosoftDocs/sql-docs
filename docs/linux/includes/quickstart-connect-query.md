@@ -36,13 +36,13 @@ The following steps use the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.m
 
 The following sections walk you through using **`sqlcmd`** to create a new database, add data, and run a basic query.
 
-For more information about writing Transact-SQL statements and queries, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md).
+For more information about writing Transact-SQL (T-SQL) statements and queries, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### Create a new database
 
 The following steps create a new database named `TestDB`.
 
-1. From the **`sqlcmd`** command prompt, paste the following Transact-SQL command to create a test database:
+1. From the **`sqlcmd`** command prompt, paste the following T-SQL command to create a test database:
 
    ```sql
    CREATE DATABASE TestDB;
@@ -138,7 +138,7 @@ In addition to **`sqlcmd`**, you can use the following cross-platform tools to m
 
 | Tool | Description |
 | --- | --- |
-| [Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md) | A cross-platform GUI code editor that runs Transact-SQL statements with the [MSSQL extension](../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md). |
+| [Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md) | A cross-platform GUI code editor that runs T-SQL statements with the [MSSQL extension](../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md). |
 | [PowerShell](../sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
 
 ## Connect from Windows

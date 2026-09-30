@@ -25,11 +25,11 @@ The [SQL Server Agent](/ssms/agent/sql-server-agent) runs scheduled SQL Server j
 
 Before using the SQL Server Agent on Linux, use the following steps to enable or install it.
 
-1. Add your hostname (with and without domain) in the `/etc/hosts` files. The following lines show an example of the format for these entries:
+1. Add your hostname (with and without domain) in the `/etc/hosts` file. The following lines show an example of the format for these entries:
 
    ```bash
-   "IP Address" "hostname"
-   "IP Address" "hostname.domain.com"
+   <IP address> <hostname>
+   <IP address> <hostname.domain.com>
    ```
 
 1. Follow the instructions in one of the following sections based on your version of SQL Server:

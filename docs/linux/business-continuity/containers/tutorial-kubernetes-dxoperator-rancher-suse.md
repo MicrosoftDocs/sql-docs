@@ -31,7 +31,7 @@ This tutorial consists of the following steps:
 > [!div class="checklist"]
 > - Configure Rancher Prime on AKS
 > - Install DxOperator
-> - Deploy SQL Server containers and configure the always on availability groups using the DH2i DxOperator
+> - Deploy SQL Server containers and configure the Always On availability groups using the DH2i DxOperator
 > - Connect and manage [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] containers using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
@@ -71,7 +71,7 @@ After you install your Kubernetes cluster, follow the instructions in [Installin
    1. Provide the key name as `DX_PASSKEY`, and value of the DxEnterprise cluster passkey.
    1. Select **Add**.
    1. Add the key name as `DX_LICENSE`, with value of the DxEnterprise license key.
-   1. Select **Create** to finish creating the license key.
+   1. Select **Create** to finish creating the secret.
 
       :::image type="content" source="media/tutorial-kubernetes-dxoperator-rancher-suse/rancher-secrets.png" alt-text="Screenshot of the license and passkey secrets." lightbox="media/tutorial-kubernetes-dxoperator-rancher-suse/rancher-secrets.png":::
 
@@ -129,7 +129,7 @@ Simulate the failover to verify.
 1. Select the `DxEnterprisesqlag-0` pod
 1. Select **Delete**, then select **Delete** again when prompted
 
-Fetch the external IP address of the secondary pod.
+Fetch the external IP address of the surviving pod.
 
 1. Select **Services** on Rancher web UI
 1. Select `DxEnterprisesqlag-1-lb`

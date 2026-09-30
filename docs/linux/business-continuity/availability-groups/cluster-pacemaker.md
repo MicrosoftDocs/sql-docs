@@ -18,7 +18,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to create a three-node cluster on Linux using Pacemaker, and add a previously created availability group as a resource in the cluster. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](high-availability.md).
+This article describes how to create a three-node cluster on Linux using [Pacemaker](https://clusterlabs.org/), and add a previously created availability group as a resource in the cluster. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](high-availability.md).
 
 [!INCLUDE [bias-sensitive-term-t](../../../includes/bias-sensitive-term-t.md)]
 
@@ -30,7 +30,7 @@ The following sections walk through the steps to set up a Pacemaker cluster and 
 
 # [Red Hat Enterprise Linux](#tab/rhel)
 
-The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index) built on top of [Pacemaker](https://clusterlabs.org/).
+The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index) built on top of Pacemaker.
 
 > [!NOTE]  
 > Access to Red Hat full documentation requires a valid subscription.
@@ -215,9 +215,9 @@ sudo pcs constraint order promote <NameForAGResource>-clone then start virtualip
 ```
 
 > [!IMPORTANT]  
-> After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs` and in SLES use `crm` tools.
+> After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL (T-SQL) to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs` and in SLES use `crm` tools.
 
-Manually fail over the availability group with `pcs`. Don't initiate failover with Transact-SQL. For instructions, see [Failover](failover-high-availability.md#failover).
+Manually fail over the availability group with `pcs`. Don't initiate failover with T-SQL. For instructions, see [Failover](failover-high-availability.md#failover).
 
 ## Related content
 
@@ -237,7 +237,7 @@ The procedure for creating an availability group for high availability differs b
 
 1. [Configure SQL Server on the cluster nodes](../../install-upgrade/setup.md).
 
-1. [Create the availability group](failover-high-availability.md).
+1. [Create the availability group](configure.md).
 
 1. Configure a cluster resource manager, like Pacemaker. These instructions are in this article.
 
@@ -297,7 +297,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
    For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://documentation.suse.com/sle-ha/15-SP6/html/SLE-HA-all/article-installation.html#sec-ha-inst-quick-installation).
 
-1. Install [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] resource agent package on both nodes.
+1. Install [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] resource agent package on all nodes.
 
    ```bash
    sudo zypper install mssql-server-ha
@@ -326,7 +326,7 @@ Refer to [SLES installation instructions](https://documentation.suse.com/sle-ha/
 
    1. Enter a multicast port. The script proposes 5405 as default.
 
-   1. To configure `SBD ()`, enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster.
+   1. To configure `SBD`, enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster.
 
    Finally, the script will start the Pacemaker service to bring the one-node cluster online and enable the Web management interface Hawk2. The URL to use for Hawk2 is displayed on the screen.
 
@@ -448,7 +448,7 @@ sudo crm configure property stonith-enabled=true
 ```
 
 > [!IMPORTANT]  
-> Disabling fencing is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a fencing implementation depending on your environment and keep it enabled. SUSE doesn't provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor doesn't offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+> Disabling fencing is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a fencing implementation depending on your environment and keep it enabled. SUSE doesn't provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequently, the cluster vendor doesn't offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
 ### Configure the cluster resources for SQL Server
 
@@ -466,7 +466,7 @@ systemctl enable pacemaker
 
 #### Create availability group resource
 
-The following command creates and configures the availability group resource for three replicas of availability group [ag1]. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload-dependent and need to be carefully adjusted for each deployment.
+The following command creates and configures the availability group resource for three replicas of availability group `ag1`. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload-dependent and need to be carefully adjusted for each deployment.
 Run the command on one of the nodes in the cluster:
 
 1. Run `crm configure` to open the crm prompt:
@@ -541,9 +541,9 @@ sudo crm configure \
 ```
 
 > [!IMPORTANT]  
-> After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`.
+> After you configure the cluster and add the availability group as a cluster resource, you can't use T-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`.
 
-Manually fail over the availability group with `crm`. Don't initiate failover with Transact-SQL. For more information, see [Failover](failover-high-availability.md#failover).
+Manually fail over the availability group with `crm`. Don't initiate failover with T-SQL. For more information, see [Failover](failover-high-availability.md#failover).
 
 For more information, see:
 
@@ -795,7 +795,7 @@ For more information, including `mssql-pcsag` service management and configurati
 
 ### Create virtual IP resource
 
-To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Before you run the script, replace the values between `< ... >` with a valid IP address.
+To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Before you run the script, replace `10.128.16.240` with a valid IP address.
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=10.128.16.240
@@ -839,7 +839,7 @@ To add an ordering constraint, run the following command on one node:
 sudo pcs constraint order promote <NameForAGResource>-clone then start virtualip kind=Mandatory
 ```
 
-After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools.
+After you configure the cluster and add the availability group as a cluster resource, you can't use T-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools.
 
 ## Related content
 

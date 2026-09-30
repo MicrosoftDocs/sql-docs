@@ -70,7 +70,7 @@ For information on setting up an availability group for servers with multiple NI
 
 ## Create the AG
 
-The examples in this section explain how to create the availability group using Transact-SQL. You can also use the SQL Server Management Studio Availability Group Wizard. When you create an AG using the wizard, it returns an error when you join the replicas to the AG. To fix this error, grant `ALTER`, `CONTROL`, and `VIEW DEFINITIONS` to the pacemaker on the AG on all replicas. Once you grant permissions on the primary replica, join the nodes to the AG through the wizard, but for HA to function properly, grant permission on all replicas.
+The examples in this section explain how to create the availability group using Transact-SQL (T-SQL). You can also use the SQL Server Management Studio Availability Group Wizard. When you create an AG using the wizard, it returns an error when you join the replicas to the AG. To fix this error, grant `ALTER`, `CONTROL`, and `VIEW DEFINITION` to the Pacemaker user on the AG on all replicas. Once you grant permissions on the primary replica, join the nodes to the AG through the wizard, but for HA to function properly, grant permission on all replicas.
 
 For a high availability configuration that ensures automatic failover, the AG requires at least three replicas. Either of the following configurations can support high availability:
 
@@ -87,13 +87,13 @@ Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP
 
 - Availability group: `CLUSTER_TYPE = EXTERNAL`.
 
-  Specifies that an external cluster entity manages the AG. Pacemaker is an example of an external cluster entity. When the AG cluster type is external,
+   Specifies that an external cluster entity manages the AG. Pacemaker is an example of an external cluster entity.
 
 - Set primary and secondary replicas: `FAILOVER_MODE = EXTERNAL`.
 
   Specifies that the replica interacts with an external cluster manager, like Pacemaker.
 
-The following Transact-SQL scripts create an AG for high availability named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the `<node1>`, `<node2>`, or `<node3>` values with the names of the SQL Server instances that host the replicas. Replace the `<5022>` with the port you set for the data mirroring endpoint. To create the AG, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
+The following T-SQL scripts create an AG for high availability named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the `<node1>`, `<node2>`, or `<node3>` values with the names of the SQL Server instances that host the replicas. Replace the `<5022>` with the port you set for the data mirroring endpoint. To create the AG, run the following T-SQL on the SQL Server instance that hosts the primary replica.
 
 Run **only one** of the following scripts:
 
@@ -215,14 +215,14 @@ You can also configure an AG with `CLUSTER_TYPE=EXTERNAL` using SQL Server Manag
 
 ### Join secondary replicas to the AG
 
-The Pacemaker user needs `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant these permissions, run the following Transact-SQL script after creating the availability group on the primary replica. Run the script on each secondary replica immediately after adding them to the availability group. Before running the script, replace `<pacemakerLogin>` with the name of the Pacemaker user account. If you don't have a login for Pacemaker, [create a sql server login for Pacemaker](cluster-pacemaker.md?tabs=ubuntu#create-a-sql-server-login-for-pacemaker).
+The Pacemaker user needs `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant these permissions, run the following T-SQL script after creating the availability group on the primary replica. Run the script on each secondary replica immediately after adding them to the availability group. Before running the script, replace `<pacemakerLogin>` with the name of the Pacemaker user account. If you don't have a login for Pacemaker, [create a SQL Server login for Pacemaker](cluster-pacemaker.md?tabs=ubuntu#create-a-sql-server-login-for-pacemaker).
 
 ```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
-The following Transact-SQL script joins a SQL Server instance to an AG named `ag1`. Update the script for your environment. On each SQL Server instance that hosts a secondary replica, run the following Transact-SQL to join the AG.
+The following T-SQL script joins a SQL Server instance to an AG named `ag1`. Update the script for your environment. On each SQL Server instance that hosts a secondary replica, run the following T-SQL to join the AG.
 
 ```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -241,7 +241,7 @@ If you followed the steps in this article, you have an AG that isn't yet cluster
 
 ## Remarks
 
-After you configure the cluster and add the AG as a cluster resource, you can't use Transact-SQL to fail over the AG resources. SQL Server cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The SQL Server service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu, use `pcs`. In SLES, use `crm`.
+After you configure the cluster and add the AG as a cluster resource, you can't use T-SQL to fail over the AG resources. SQL Server cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The SQL Server service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu, use `pcs`. In SLES, use `crm`.
 
 If the AG is a cluster resource, there's a known issue in the current release where forced failover with data loss to an asynchronous replica doesn't work. This issue will be fixed in an upcoming release. Manual or automatic failover to a synchronous replica succeeds.
 

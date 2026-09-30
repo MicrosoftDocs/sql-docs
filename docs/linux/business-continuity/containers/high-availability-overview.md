@@ -18,13 +18,13 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 
 Create and manage your SQL Server instances natively in Kubernetes.
 
-Deploy SQL Server to docker containers managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails.
+Deploy SQL Server to Docker containers managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails.
 
-SQL Server 2017 introduces a Docker image that can deploy on Kubernetes. You can configure the image with a Kubernetes persistent volume claim (PVC). Kubernetes monitors the SQL Server process in the container. If the process, pod, container, or node fail, Kubernetes automatically bootstraps another instance and reconnects to the storage.
+SQL Server 2017 introduced a Docker image that can deploy on Kubernetes. You can configure the image with a [Kubernetes persistent volume claim (PVC)](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims). Kubernetes monitors the SQL Server process in the container. If the process, pod, container, or node fails, Kubernetes automatically bootstraps another instance and reconnects to the storage.
 
 ## Container with SQL Server instance on Kubernetes
 
-Kubernetes 1.6 and later has support for [*storage classes*](https://kubernetes.io/docs/concepts/storage/storage-classes/), [*persistent volume claims*](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [*Azure disk volume type*](/azure/aks/azure-disk-csi).
+Kubernetes 1.6 and later has support for [*storage classes*](https://kubernetes.io/docs/concepts/storage/storage-classes/), *persistent volume claims*, and the [*Azure disk volume type*](/azure/aks/azure-disk-csi).
 
 In this configuration, Kubernetes plays the role of the container orchestrator.
 
@@ -34,7 +34,7 @@ In the preceding diagram, `mssql-server` is a SQL Server instance (container) in
 
 Kubernetes orchestrates the resources in the cluster. When a node hosting a SQL Server instance container fails, it bootstraps a new container with a SQL Server instance and attaches it to the same persistent storage.
 
-SQL Server on Linux supports containers on Kubernetes, OpenShift, and DH2i.
+SQL Server on Linux supports containers on Kubernetes, OpenShift, and DH2i DxEnterprise.
 
 ## Related content
 

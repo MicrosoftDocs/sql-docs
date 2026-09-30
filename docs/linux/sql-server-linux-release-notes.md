@@ -137,20 +137,20 @@ If you update existing SQL Server packages, run the appropriate update command f
 
 ### [SQL Server 2022](#tab/sql2022)
 
-When you configure the CU repository (`mssql-server-2022`), you get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](install-upgrade/change-repo-2025.md).
+When you configure the CU repository (`mssql-server-2022`), you get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server on Linux](install-upgrade/change-repo.md).
 
 If you update existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install SQL Server Full-Text Search on Linux](install-upgrade/setup-full-text-search.md)
 - [Install SQL Server Integration Services (SSIS) on Linux](install-upgrade/setup-ssis.md)
-- [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](install-upgrade/setup-machine-learning.md)
+- [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](install-upgrade/setup-machine-learning-sql-2022.md)
 - [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md)
 - [Install SQL Server Agent on Linux](install-upgrade/setup-sql-agent.md)
 
 ### [SQL Server 2019](#tab/sql2019)
 
-When you configure the CU repository (`mssql-server-2019`), you get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](install-upgrade/change-repo-2025.md).
+When you configure the CU repository (`mssql-server-2019`), you get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server on Linux](install-upgrade/change-repo.md).
 
 If you update existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
@@ -163,7 +163,7 @@ If you update existing SQL Server packages, run the appropriate update command f
 
 ### [SQL Server 2017](#tab/sql2017)
 
-When you configure the CU repository (`mssql-server-2017`), you get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](install-upgrade/change-repo-2025.md).
+When you configure the CU repository (`mssql-server-2017`), you get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for installing and upgrading SQL Server on Linux](install-upgrade/change-repo.md).
 
 If you update existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 

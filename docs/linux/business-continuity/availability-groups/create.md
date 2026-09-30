@@ -26,17 +26,17 @@ The tutorial includes the following tasks:
 > [!div class="checklist"]
 > - Enable availability groups.
 > - Create availability group endpoints and certificates.
-> - Use [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] (SSMS) or Transact-SQL to create an availability group.
+> - Use [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] (SSMS) or Transact-SQL (T-SQL) to create an availability group.
 > - Create the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] login and permissions for Pacemaker.
 > - Create availability group resources in a Pacemaker cluster (External type only).
 
 ## Prerequisites
 
-Deploy the Pacemaker high availability cluster. For more information, see [Deploy a Pacemaker cluster for SQL Server on Linux](../failover-cluster-instance/deploy-pacemaker-cluster.md).
+If you plan to create an availability group with a cluster type of External, deploy the Pacemaker high availability cluster. For more information, see [Deploy a Pacemaker cluster for SQL Server on Linux](../failover-cluster-instance/deploy-pacemaker-cluster.md).
 
 ## Enable the availability groups feature
 
-Unlike on Windows, you can't use PowerShell or [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Configuration Manager to enable the availability groups (AG) feature. On Linux, you can enable the availability groups feature in two ways: use the **`mssql-conf`** utility, or edit the `mssql.conf` file manually.
+Unlike on Windows, you can't use PowerShell or [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Configuration Manager to enable the availability groups (AG) feature. On Linux, you can enable the availability groups feature in two ways: use the [mssql-conf utility](../../configure/mssql-conf.md), or edit the `mssql.conf` file manually.
 
 > [!IMPORTANT]  
 > You must enable the AG feature for configuration-only replicas, even on [!INCLUDE [ssexpress-md](../../../includes/ssexpress-md.md)].
@@ -71,10 +71,10 @@ sudo systemctl restart mssql-server
 
 An availability group uses TCP endpoints for communication. Under Linux, SQL Server supports endpoints for an AG only if you use certificates for authentication. You must restore the certificate from one instance on all other instances that participate as replicas in the same AG. You need the certificate process even for a configuration-only replica.
 
-You can only create endpoints and restore certificates by using Transact-SQL. You can also use non-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-generated certificates. You also need a process to manage and replace any certificates that expire.
+You can only create endpoints and restore certificates by using T-SQL. You can also use non-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-generated certificates. You also need a process to manage and replace any certificates that expire.
 
 > [!IMPORTANT]  
-> If you plan to use the [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] wizard to create the AG, you still need to create and restore the certificates by using Transact-SQL on Linux.
+> If you plan to use the [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] wizard to create the AG, you still need to create and restore the certificates by using T-SQL on Linux.
 
 For full syntax on the options available for the various commands (including security), see:
 
@@ -312,7 +312,7 @@ This example creates certificates for a three-node configuration. The instance n
 
 ## Create the availability group
 
-This section shows how to use [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] (SSMS) or Transact-SQL to create the availability group for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+This section shows how to use [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] (SSMS) or T-SQL to create the availability group for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
 ### Use SQL Server Management Studio
 
@@ -336,11 +336,11 @@ This section shows how to create an AG with a cluster type of External by using 
 
 1. All three instances appear on the **Specify Replicas** dialog. If you use a cluster type of External, for the secondary replica that is a true secondary, make sure the availability mode matches that of the primary replica and set the failover mode to External. For the configuration-only replica, select an availability mode of Configuration only.
 
-   The following example shows an AG with two replicas, a cluster type of External, and a configuration-only replica.
+   The following example shows an AG with two full replicas, a cluster type of External, and one configuration-only replica.
 
    :::image type="content" source="media/create/readable-secondary.png" alt-text="Screenshot of Create Availability Group showing the readable secondary option." lightbox="media/create/readable-secondary.png":::
 
-   The following example shows an AG with two replicas, a cluster type of None, and a configuration-only replica.
+   The following example shows an AG with two full replicas, a cluster type of None, and one configuration-only replica.
 
    :::image type="content" source="media/create/replicas-page.png" alt-text="Screenshot of Create Availability Group showing the Replicas page." lightbox="media/create/replicas-page.png":::
 
@@ -350,7 +350,7 @@ This section shows how to create an AG with a cluster type of External by using 
 
    :::image type="content" source="media/create/listener.png" alt-text="Screenshot of Create Availability Group showing the listener option." lightbox="media/create/listener.png":::
 
-1. If you create a listener for readable scenarios, SSMS allows the creation of read-only routing in the wizard. You can also add it later by using SSMS or Transact-SQL. To add read-only routing now:
+1. If you create a listener for readable scenarios, SSMS allows the creation of read-only routing in the wizard. You can also add it later by using SSMS or T-SQL. To add read-only routing now:
 
    1. Select the **Read-Only Routing** tab.
 
@@ -370,18 +370,17 @@ This section shows how to create an AG with a cluster type of External by using 
 
 ### Use Transact-SQL
 
-This section shows examples of creating an AG by using Transact-SQL. You can configure the listener and read-only routing after creating the AG. You can modify the AG itself by using `ALTER AVAILABILITY GROUP`, but you can't change the cluster type in [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)]. If you didn't mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None.
+This section shows examples of creating an AG by using T-SQL. You can configure the listener and read-only routing after creating the AG. You can modify the AG itself by using [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md), but you can't change the cluster type in [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)]. If you didn't mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None.
 
 For more information and other options, see:
 
 - [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
-- [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 - [Configure read-only routing for an Always On availability group](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 - [Configure a listener for an Always On availability group](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### Example A: Two replicas with a configuration-only replica (External cluster type)
+#### Example A: Two full replicas with a configuration-only replica (External cluster type)
 
-This example shows how to create a two-replica AG that uses a configuration-only replica.
+This example shows how to create an AG with two full replicas and one configuration-only replica.
 
 1. Execute the following statement on the primary replica node, which contains the read/write copy of the databases. This example uses automatic seeding.
 
@@ -391,7 +390,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
    FOR DATABASE <DBName>
    REPLICA ON
    N'LinAGN1' WITH (
-      ENDPOINT_URL = N' TCP://LinAGN1.FullyQualified.Name:5022',
+      ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name:5022',
       FAILOVER_MODE = EXTERNAL,
       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT
    ),
@@ -436,7 +435,7 @@ This example shows you how to configure read-only routing as part of the initial
 
    ```sql
    CREATE AVAILABILITY GROUP [<AGName>] WITH (CLUSTER_TYPE = EXTERNAL)
-   FOR DATABASE < DBName > REPLICA ON
+   FOR DATABASE <DBName> REPLICA ON
        N'LinAGN1' WITH (
            ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name:5022',
            FAILOVER_MODE = EXTERNAL,
@@ -505,7 +504,7 @@ This example shows you how to configure read-only routing as part of the initial
 
 #### Example C: Two replicas with read-only routing (None cluster type)
 
-This example creates a two-replica configuration that uses a cluster type of None. Use this configuration for the read-scale scenario where you don't expect failover. This step creates the listener that is the primary replica and configures read-only routing with round-robin functionality.
+This example creates a two-replica configuration that uses a cluster type of None. Use this configuration for the read-scale scenario where you don't expect failover. This step creates the listener for the primary replica and configures read-only routing with round-robin functionality.
 
 1. Execute the following statement on the node that acts as the primary replica, and contains the fully read/write copy of the databases. This example uses automatic seeding.
 
@@ -514,12 +513,12 @@ This example creates a two-replica configuration that uses a cluster type of Non
    WITH (CLUSTER_TYPE = NONE)
    FOR DATABASE <DBName> REPLICA ON
        N'LinAGN1' WITH (
-           ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name: <PortOfEndpoint>',
+           ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name:<PortOfEndpoint>',
            FAILOVER_MODE = MANUAL,
            AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
            PRIMARY_ROLE(
                ALLOW_CONNECTIONS = READ_WRITE,
-               READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name'.'LinAGN2.FullyQualified.Name'))
+               READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))
            ),
            SECONDARY_ROLE(
                ALLOW_CONNECTIONS = ALL,
@@ -553,7 +552,7 @@ This example creates a two-replica configuration that uses a cluster type of Non
      - `PortOfInstance` is the port number for the instance of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
    - `ListenerName` is a placeholder name that's different from any of the underlying replicas.
    - `PrimaryReplicaIPAddress` is the IP address of the primary replica.
-     - `SubnetMask` is the subnet mask of `IPAddress`. In [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and previous versions, this value is `255.255.255.255`. In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, this value is `0.0.0.0`.
+       - `SubnetMask` is the subnet mask of `PrimaryReplicaIPAddress`. In [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and previous versions, this value is `255.255.255.255`. In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, this value is `0.0.0.0`.
 
 1. Join the secondary replica to the AG and initiate automatic seeding.
 
@@ -602,7 +601,7 @@ A Pacemaker high availability cluster that uses [!INCLUDE [ssnoversion-md](../..
    sudo chmod 400 /var/opt/mssql/secrets/passwd
    ```
 
-1. Repeat Steps 1-5 on the other servers that serve as replicas.
+1. Repeat Steps 1-3 on the other servers that serve as replicas.
 
 ## Create the availability group resources in the Pacemaker cluster (External only)
 
@@ -676,19 +675,19 @@ Although Pacemaker and `mssql-pcsag` are separate components, they operate toget
 
 Pacemaker HA agent v2 also supports flexible automatic failover policies, including configuration of [failure-condition level](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#failure-condition-level) and [health-check timeout](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#HCtimeout).
 
-- **Example**: The following Transact-SQL statement changes the failure-condition level of an existing availability group named AG1 to level 2:
+- **Example**: The following T-SQL statement changes the failure-condition level of an existing availability group named AG1 to level 2:
 
   ```sql
   ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 2);
   ```
 
-- **Example**: The following Transact-SQL statement changes the health-check timeout threshold of an existing availability group named AG1 to 60,000 milliseconds (60 seconds).
+- **Example**: The following T-SQL statement changes the health-check timeout threshold of an existing availability group named AG1 to 60,000 milliseconds (60 seconds).
 
   ```sql
   ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);
   ```
 
-- **Example**: After applying the configuration, use the following Transact-SQL statement to verify the configured failure-condition level and health-check timeout for availability groups.
+- **Example**: After applying the configuration, use the following T-SQL statement to verify the configured failure-condition level and health-check timeout for availability groups.
 
   ```sql
   SELECT failure_condition_level,

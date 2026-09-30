@@ -36,7 +36,7 @@ To run an SSIS package on a Linux computer, do the following things:
 1. Run the following command:
 
    ```bash
-   dtexec /F \<package name \> /DE <protection password>
+   dtexec /F <package name>
    ```
 
 ## Run an encrypted (password-protected) package
@@ -60,7 +60,7 @@ There are three ways to run an SSIS package that's encrypted with a password:
 1. Specify the `/de` option to provide the password on the command line, as shown in the following example. This method isn't recommended because it stores the decryption password with the command in the command history.
 
    ```bash
-   opt/ssis/bin/dtexec /f package.dtsx /de test
+   /opt/ssis/bin/dtexec /f package.dtsx /de test
 
    Warning: Using /De[crypt] <password> may store decryption password in command history.
 
@@ -76,11 +76,11 @@ There are three ways to run an SSIS package that's encrypted with a password:
 
 ## Deploy packages
 
-You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service aren't available on Linux for package deployment and storage.
+You can only store packages in the file system on Linux. The SSIS Catalog database and the legacy SSIS service aren't available on Linux for package deployment and storage.
 
 ## Schedule packages
 
-You can use Linux system scheduling tools such as `cron` to schedule packages. You can't use SQL Agent on Linux to schedule package execution in this release. For more info, see [Schedule SQL Server Integration Services package execution on Linux with cron](schedule-ssis-packages.md).
+You can use Linux system scheduling tools such as `cron` to schedule packages. You can't use SQL Server Agent on Linux to schedule package execution. For more info, see [Schedule SQL Server Integration Services package execution on Linux with cron](schedule-ssis-packages.md).
 
 ## Limitations and known issues
 
@@ -98,7 +98,7 @@ SSIS includes the following features:
 - A variety of transformations for cleaning, aggregating, merging, and copying data
 - Application programming interfaces (APIs) for extending SSIS with your own custom scripts and components
 
-To get started with SSIS, download the latest version of [SSIS How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md).
+To get started with SSIS, follow the [SSIS How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md) tutorial.
 
 To learn more about SSIS, see the following articles:
 

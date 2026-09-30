@@ -64,7 +64,7 @@ The following section shows how to manage the execution of [!INCLUDE [ssNoVersio
 
 ### Manage the execution of the SQL Server Linux container
 
-You can get the status and container ID of the latest created [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Linux container by running the following command (The ID is under the `CONTAINER ID` column):
+You can get the status and container ID of the most recently created [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Linux container by running the following command. The ID is under the `CONTAINER ID` column.
 
    ```bash
    sudo docker ps -l
@@ -73,8 +73,8 @@ You can get the status and container ID of the latest created [!INCLUDE [ssNoVer
 You can stop or restart the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] service as needed using the following commands:
 
    ```bash
-   sudo docker stop <container ID>
-   sudo docker restart <container ID>
+   sudo docker stop <container_id>
+   sudo docker restart <container_id>
    ```
 
 > [!TIP]  
@@ -84,7 +84,8 @@ You can stop or restart the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.m
 
 The [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] logs to the `/var/opt/mssql/log/errorlog` file in both the Linux and container installations. You need to be in **superuser** mode to browse this directory.
 
-The installer logs to: `/var/opt/mssql/setup-<time stamp representing time of install>`
+The installer writes logs to `/var/opt/mssql/setup-<installation_timestamp>`.
+
 You can browse the `errorlog` files with any UTF-16 compatible tool like **vim** or **cat** as follows:
 
 ```bash
@@ -97,27 +98,27 @@ If you prefer, you can also convert the files to UTF-8 to read them with **more*
 sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
 ```
 
-## Extended events
+## Extended Events
 
-Extended events can be queried via a SQL command. For more information, see [extended events](../relational-databases/extended-events/extended-events.md).
+Extended Events can be queried via a SQL command. For more information, see [Extended Events overview](../relational-databases/extended-events/extended-events.md).
 
 ## Crash dumps
 
-Look for dumps in the log directory in Linux. Check under the `/var/opt/mssql/log` directory for Linux Core dumps (`.tar.gz2` extension) or SQL minidumps (`.mdmp` extension).
+Look for dumps in the log directory in Linux. Check under the `/var/opt/mssql/log` directory for Linux core dumps (`.tar.gz2` extension) or SQL minidumps (`.mdmp` extension).
 
 For example, to view core dumps:
 
 ```bash
-sudo ls /var/opt/mssql/log | grep .tar.gz2
+sudo ls /var/opt/mssql/log | grep '\.tar\.gz2$'
 ```
 
-For SQL dumps, use this script:
+For SQL minidumps, use this script:
 
 ```bash
-sudo ls /var/opt/mssql/log | grep .mdmp
+sudo ls /var/opt/mssql/log | grep '\.mdmp$'
 ```
 
-## Start SQL Server in minimal configuration or in single user mode
+## Start SQL Server in minimal configuration or in single-user mode
 
 ### Start SQL Server in minimal configuration mode
 
@@ -127,11 +128,11 @@ This mode is useful if the setting of a configuration value (for example, over-c
    sudo -u mssql /opt/mssql/bin/sqlservr -f
    ```
 
-### Start SQL Server in single user mode
+### Start SQL Server in single-user mode
 
 Sometimes you might have to start an instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode by using the startup option `-m`. For more information, see [startup parameters](../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options). For example, you might want to change server configuration options or recover a damaged `master` database or other system database.
 
-For example, use the following script to start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single user mode:
+For example, use the following script to start [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode:
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m
@@ -212,14 +213,14 @@ Many factors affect performance, including database design, hardware, and worklo
 Then, explore some of the available tools for troubleshooting performance problems.
 
 - [Monitor performance by using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [System dynamic management views](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)
+- [System dynamic management views and functions](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)
 - [Performance Dashboard in SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## Common issues
 
 1. You can't connect to your remote [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance.
 
-   See the troubleshooting section of the article, [Connect to SQL Server on Linux](#connection).
+   See [Troubleshoot connection failures](#connection).
 
 1. You experience the error message: `ERROR: Hostname must be 15 characters or less.`
 
@@ -252,7 +253,7 @@ Then, explore some of the available tools for troubleshooting performance proble
    - Does work:
 
      ```bash
-     sqlcmd -S myserver -U sa -P Test\$\$
+     sudo sqlcmd -S myserver -U sa -P Test\$\$
      ```
 
 ## Related content

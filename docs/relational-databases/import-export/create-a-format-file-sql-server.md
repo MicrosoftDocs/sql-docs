@@ -10,11 +10,11 @@ ms.subservice: data-movement
 ms.topic: how-to
 helpviewer_keywords:
   - "format files [SQL Server], creating"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Create a format file with bcp (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article describes how to use the [bcp utility](../../tools/bcp/bcp-utility.md) to create a format file for a particular table. The format file is based on the data-type option specified (`-n`, `-c`, `-w`, or `-N`) and the table or view delimiters.
 

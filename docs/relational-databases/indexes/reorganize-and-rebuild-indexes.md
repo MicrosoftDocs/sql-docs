@@ -4,7 +4,7 @@ description: This article describes index maintenance concepts, and a recommende
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dfurman, randolphwest
-ms.date: 03/11/2026
+ms.date: 09/11/2026
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: how-to
@@ -30,12 +30,12 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || >=aps-pdw-2016 || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Optimize index maintenance to improve query performance and reduce resource consumption
 
-[!INCLUDE [SQL Server Azure SQL Database PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 This article helps you decide when and how to perform index maintenance. It covers concepts such as index fragmentation and page density, and their impact on query performance and resource consumption. It describes two index maintenance methods: [reorganizing an index](#reorganize-an-index) and [rebuilding an index](#rebuild-an-index). The article also suggests an index maintenance [strategy](#index-maintenance-strategy) that balances potential performance improvements against resource consumption required for maintenance.
 
@@ -71,7 +71,7 @@ What is **page density** (also known as page fullness) and how it affects perfor
 
 Both fragmentation and page density are among the factors to consider when deciding whether to perform index maintenance, and which maintenance method to use.
 
-Fragmentation is defined differently for [rowstore](clustered-and-nonclustered-indexes-described.md) and [columnstore](columnstore-indexes-overview.md) indexes. For rowstore indexes, [sys.dm_db_index_physical_stats()](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) lets you determine fragmentation and page density in a specific index or in multiple indexes. For partitioned indexes, `sys.dm_db_index_physical_stats()` provides this information for each partition.
+Fragmentation is defined differently for [rowstore](clustered-and-nonclustered-indexes-described.md) and [columnstore](columnstore-indexes-overview.md) indexes. For rowstore indexes, [sys.dm_db_index_physical_stats()](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md) lets you determine fragmentation and page density in a specific index or in multiple indexes. For partitioned indexes, `sys.dm_db_index_physical_stats()` provides this information for each partition.
 
 The result set returned by `sys.dm_db_index_physical_stats` includes the following columns:
 
@@ -80,7 +80,7 @@ The result set returned by `sys.dm_db_index_physical_stats` includes the followi
 | `avg_fragmentation_in_percent` | Logical fragmentation (out-of-order pages in the index). |
 | `avg_page_space_used_in_percent` | Average page density. |
 
-For compressed row groups in columnstore indexes, fragmentation is defined as the ratio of deleted rows to total rows, expressed as a percentage. [sys.dm_db_column_store_row_group_physical_stats](../system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) lets you determine the number of total and deleted rows per row group in a specific index, all indexes on a table, or all indexes in a database.
+For compressed row groups in columnstore indexes, fragmentation is defined as the ratio of deleted rows to total rows, expressed as a percentage. [sys.dm_db_column_store_row_group_physical_stats](../system-dynamic-management-objects/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) lets you determine the number of total and deleted rows per row group in a specific index, all indexes on a table, or all indexes in a database.
 
 The result set returned by `sys.dm_db_column_store_row_group_physical_stats` includes the following columns:
 
@@ -110,7 +110,7 @@ You can reduce index fragmentation and increase page density by using one of the
 - Rebuild an index
 
 > [!TIP]  
-> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction (preview)](automatic-index-compaction.md).
+> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction](automatic-index-compaction.md).
 
 For [partitioned](../partitions/partitioned-tables-and-indexes.md) indexes, you can use either of the following methods on all partitions or a single partition of an index.
 
@@ -345,7 +345,7 @@ dbo          ProspectiveBuyer      PK_ProspectiveBuyer_ProspectiveBuyerKey  CLUS
 dbo          DimCustomer           IX_DimCustomer_CustomerAlternateKey      NONCLUSTERED  0                            99.5197553743514               78          IN_ROW_DATA
 ```
 
-For more information, see [sys.dm_db_index_physical_stats](../system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
+For more information, see [sys.dm_db_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### Check the fragmentation of a columnstore index
 

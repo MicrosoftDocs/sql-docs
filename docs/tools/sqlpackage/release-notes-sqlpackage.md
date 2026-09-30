@@ -1,10 +1,10 @@
 ---
 title: DacFx and SqlPackage Release Notes
-description: Release notes for Microsoft SqlPackage.
+description: Review features, fixes, and changes in current and previous releases of Microsoft DacFx and the SqlPackage command-line utility.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: drskwier, llali
-ms.date: 06/03/2026
+ms.reviewer: mahyon, llali
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: release-notes
@@ -12,6 +12,8 @@ ms.collection:
   - data-tools
 ms.custom:
   - "tools|sos"
+  - msecd-doc-authoring-108
+ai-usage: ai-assisted
 ---
 
 # Release notes for SqlPackage
@@ -32,6 +34,63 @@ The **Applies to** column in each section is scoped as follows:
 ## Current releases (170.x)
 
 The following releases are the currently supported versions of SqlPackage.
+
+## 170.5.96.0 SqlPackage
+
+**Release date:** September 15, 2026
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 170.5.96.0
+```
+
+| Platform | Download |
+| --- | --- |
+| Windows .NET 10 | [.zip file](https://go.microsoft.com/fwlink/?linkid=2379708) |
+| Windows .NET Framework | [.msi file](https://go.microsoft.com/fwlink/?linkid=2379707) |
+| macOS .NET 10 | [.zip file](https://go.microsoft.com/fwlink/?linkid=2379817) |
+| Linux .NET 10 | [.zip file](https://go.microsoft.com/fwlink/?linkid=2379816) |
+
+### Features
+
+| Feature | Details | Applies to |
+| --- | --- | --- |
+| Extract | Added the `DacExtractOptions.PermissionGranteeScope` property and the `DacPermissionGranteeScope.DatabaseRolesOnly` option to extract only permissions granted or denied to database roles. By default, extract operations continue to include permissions for all database principals. The option is also available as a SqlPackage extract property. | SqlPackage CLI; DacFx API / Schema compare |
+| Platform | Added the read-only `SqlCmdVariables` and `TargetPlatform` properties to `DacPackage`, which let callers inspect a package's SQLCMD variables and target platform before deployment. | DacFx API / Schema compare |
+| Schema compare | Added the `IncludeAll()` and `ExcludeAll()` methods to `SchemaComparisonResult` to change the inclusion state of all excludable schema differences. | DacFx API / Schema compare |
+| SQL projects | Added `SkipExistingModelValidation` to `TSqlObjectOptions`. This option lets model add, update, and delete operations proceed when the model already has errors, supporting live IntelliSense model updates in SQL projects. | DacFx API / Schema compare |
+| Vector | Added support for vector column dimensions and base types in table-valued parameters and function return types. | MSBuild / SQL projects; DacFx API / Schema compare |
+| ScriptDom | Updated ScriptDom to version 180.102.0. | Platform |
+
+### Fixes
+
+| Feature | Details | Applies to |
+| --- | --- | --- |
+| Code analysis | Fixed an issue where rule SR0007 incorrectly reported nullable-column warnings for the null-safe `IS DISTINCT FROM` and `IS NOT DISTINCT FROM` predicates. [GitHub issue](https://github.com/microsoft/DacFx/issues/825) | MSBuild / SQL projects |
+| Deployment | Fixed an issue where `DoNotDropExtendedProperties=True` wasn't honored because of conflicting deployment options. [GitHub issue](https://github.com/microsoft/DacFx/issues/139) | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed an issue where DacFx generated an unnecessary `ALTER TRIGGER` statement when a trigger schema wasn't defined. [GitHub issue](https://github.com/microsoft/DacFx/issues/761) | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed an issue where publishing inline constraints from a project emitted a redundant `ALTER TABLE ... ADD CONSTRAINT` statement. [GitHub issue](https://github.com/microsoft/DacFx/issues/792) | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed an issue where deployment generated an incorrect drop statement for unnamed default constraints. [GitHub issue](https://github.com/microsoft/DacFx/issues/807) | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed an issue where `sp_addextendedproperty` used `@level1type=N'NULL'` for an extended property on a security policy. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed an issue where a BACPAC import or deployment could deploy a stored procedure that uses `OPENROWSET(BULK ..., DATA_SOURCE = ...)` before its external data source. [GitHub issue](https://github.com/microsoft/DacFx/issues/809) | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed an issue where a deployment preview report didn't show default constraints that a table rebuild would re-create after column reordering. The generated deployment script was already correct. [GitHub issue](https://github.com/microsoft/vscode-mssql/issues/21132) | SqlPackage CLI; DacFx API / Schema compare |
+| Export | Fixed an issue where a large BACPAC export failed with a `Stream was too long` overflow in `System.IO.Packaging`. | SqlPackage CLI |
+| Export | Fixed an issue when exporting large, fixed-length Always Encrypted columns to a BACPAC. | SqlPackage CLI |
+| Extract | Fixed an `InvalidCastException` when extracting object-level permissions on a security policy. [GitHub issue](https://github.com/microsoft/DacFx/issues/800) | SqlPackage CLI; DacFx API / Schema compare |
+| Extract | Fixed an issue where Azure SQL Database extraction lost user-to-login mappings for Microsoft Entra external logins or conventional SQL logins. [GitHub issue](https://github.com/microsoft/DacFx/issues/571) | SqlPackage CLI; DacFx API / Schema compare |
+| Extract | Fixed an issue where extracting a SQL project emitted per-batch `SET ANSI_NULLS` and `SET QUOTED_IDENTIFIER` options into the generated `.sqlproj`, which prevented deployment of objects that require those options in Data Warehouse in Microsoft Fabric. | SqlPackage CLI; MSBuild / SQL projects |
+| Extract | Fixed an issue where reverse engineering failed with `SQL72018: SqlExternalLanguage could not be imported` when system-defined external languages were present in SQL Server 2027. | SqlPackage CLI; DacFx API / Schema compare |
+| Extract | Fixed an issue where reverse engineering external languages on Azure SQL Managed Instance failed because `is_system_language` couldn't be bound. | SqlPackage CLI; DacFx API / Schema compare |
+| Import | Fixed an issue where a BACPAC import left a large `VARBINARY(MAX)` value empty when the table's only unique key contained a `NULL` column. | SqlPackage CLI |
+| Import | Fixed an issue where cloud BACPAC imports with vector indexes failed before table data was loaded. Vector index creation now completes during the data phase. | SqlPackage CLI |
+| Platform | Fixed an issue where legacy DACPAC deserialization failed on non-seekable package-part streams. | SqlPackage CLI; DacFx API / Schema compare |
+| Platform | Fixed an issue where `DacPackage.Unpack` allowed package-part paths to resolve outside the requested destination directory. | DacFx API / Schema compare |
+| Schema compare | Fixed an issue where schema comparison against Data Warehouse in Microsoft Fabric included primary key and other constraints from excluded tables in the generated deployment script. | DacFx API / Schema compare |
+| Schema compare | Fixed an issue where schema comparison emitted redundant child-element scripts for inline-scriptable elements. | DacFx API / Schema compare |
+| SQL projects | Fixed an issue where `SQL71558` identifier-casing warnings were reported for references resolved through synonyms. [GitHub issue](https://github.com/microsoft/DacFx/issues/819) | MSBuild / SQL projects |
+| SQL projects | Fixed an issue where creating or updating a SQL project produced nondeterministic object ordering. [GitHub issue](https://github.com/microsoft/DacFx/issues/795) | MSBuild / SQL projects |
+| SQL projects | Fixed an issue where SQL project builds failed when referencing external data, such as with `OPENROWSET`. [GitHub issue](https://github.com/microsoft/DacFx/issues/802) | MSBuild / SQL projects |
+| SQL projects | Fixed `VECTOR_SEARCH` table alias and distance column resolution in SQL project builds. | MSBuild / SQL projects; DacFx API / Schema compare |
+| SQL projects | Updated error message locations to use `(line,col)` instead of `(line,col,line,col)`. | MSBuild / SQL projects |
 
 ## 170.4.83.3 SqlPackage
 

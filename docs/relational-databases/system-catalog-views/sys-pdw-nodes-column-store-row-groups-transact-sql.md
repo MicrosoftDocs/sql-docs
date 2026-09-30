@@ -9,10 +9,10 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
   Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
   
@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Permissions  
  Requires **VIEW SERVER STATE** permission.  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
  The following example joins the **sys.pdw_nodes_column_store_row_groups** table to other system tables to return information about specific tables. The calculated `PercentFull` column is an estimate of the efficiency of the row group. To find information on a single table remove the comment hyphens in front of the WHERE clause and provide a table name.  
   
 ```sql
@@ -102,7 +102,7 @@ ORDER BY 1, 2
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 - [sys.pdw_nodes_column_store_segments (Transact-SQL)](sys-pdw-nodes-column-store-segments-transact-sql.md)
 - [sys.pdw_nodes_column_store_dictionaries (Transact-SQL)](sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

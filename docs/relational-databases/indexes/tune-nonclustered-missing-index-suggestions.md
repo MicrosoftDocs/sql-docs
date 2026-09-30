@@ -52,7 +52,7 @@ The missing indexes feature consists of two components:
 
 - When writing or tuning a query, you can use [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms) to [display the estimated execution plan](../performance/display-the-estimated-execution-plan.md) without running the query, or execute the query and [display an actual execution plan](../performance/display-an-actual-execution-plan.md).
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md), when enabled, collects execution plans.
-- You can identify cached execution plans by querying DMVs such as [sys.dm_exec_text_query_plan](../system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md).
+- You can identify cached execution plans by querying DMVs such as [sys.dm_exec_text_query_plan](../system-dynamic-management-objects/sys-dm-exec-text-query-plan-transact-sql.md).
 
 For example, you can use the following query to generate missing index requests against the [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
@@ -105,10 +105,10 @@ You can retrieve information about missing indexes by querying the dynamic manag
 
 | Dynamic management view | Information returned |
 | --- | --- |
-| [sys.dm_db_missing_index_group_stats](../system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md) | Returns summary information about missing index groups, for example, the performance improvements that could be gained by implementing a specific group of missing indexes. |
-| [sys.dm_db_missing_index_groups](../system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md) | Returns information about a specific group of missing indexes, such as the group identifier and the identifiers of all missing indexes that are contained in that group. |
-| [sys.dm_db_missing_index_details](../system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) | Returns detailed information about a missing index; for example, it returns the name and identifier of the table where the index is missing, and the columns and column types that should make up the missing index. |
-| [sys.dm_db_missing_index_columns](../system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md) | Returns information about the database table columns that are missing an index. |
+| [sys.dm_db_missing_index_group_stats](../system-dynamic-management-objects/sys-dm-db-missing-index-group-stats-transact-sql.md) | Returns summary information about missing index groups, for example, the performance improvements that could be gained by implementing a specific group of missing indexes. |
+| [sys.dm_db_missing_index_groups](../system-dynamic-management-objects/sys-dm-db-missing-index-groups-transact-sql.md) | Returns information about a specific group of missing indexes, such as the group identifier and the identifiers of all missing indexes that are contained in that group. |
+| [sys.dm_db_missing_index_details](../system-dynamic-management-objects/sys-dm-db-missing-index-details-transact-sql.md) | Returns detailed information about a missing index; for example, it returns the name and identifier of the table where the index is missing, and the columns and column types that should make up the missing index. |
+| [sys.dm_db_missing_index_columns](../system-dynamic-management-objects/sys-dm-db-missing-index-columns-transact-sql.md) | Returns information about the database table columns that are missing an index. |
 
 The following query uses the missing index DMVs to generate `CREATE INDEX` statements. The index creation statements here are intended to assist you in crafting your own DDL after examining all of the requests for the table along with existing indexes on the table.
 
@@ -243,7 +243,7 @@ Tradeoffs are common in index tuning. It's likely that for many datasets, the `C
 Indexes might be modified in multiple ways:
 
 - You can use the [CREATE INDEX Statement with the DROP_EXISTING clause](../../t-sql/statements/create-index-transact-sql.md#drop_existing-clause). You might wish to [rename the indexes](rename-indexes.md) following the modification so that the name still accurately describes the index definition, depending on your naming convention.
-- You can use the [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md) statement followed by a [CREATE INDEX Statement](../../odbc/microsoft/create-index-statement.md).
+- You can use the [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md) statement followed by a [CREATE INDEX Statement](/previous-versions/sql/odbc/microsoft/create-index-statement).
 
 The order of index keys matters when combining the index suggestions: `City` as a leading column is different from `StateProvinceID` as a leading column. Learn more in [nonclustered index design guidelines](../sql-server-index-design-guide.md#Nonclustered).
 

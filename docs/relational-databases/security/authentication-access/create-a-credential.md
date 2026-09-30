@@ -70,7 +70,7 @@ Requires ALTER ANY CREDENTIAL permission to create or modify a credential and AL
     -- Creates the credential called "AlterEgo.".   
     -- The credential contains the Windows user "Mary5" and a password.  
     CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',   
-        SECRET = '<EnterStrongPasswordHere>';  
+        SECRET = '<password>';
     GO  
     ```  
   

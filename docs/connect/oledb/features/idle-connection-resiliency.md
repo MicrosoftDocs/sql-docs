@@ -3,7 +3,7 @@ title: "Idle Connection Resiliency"
 description: "Learn about how the driver uses idle connection resiliency to automatically detect and restore connections that have been broken due to network issues."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/04/2021"
 ms.service: sql
 ms.subservice: connectivity

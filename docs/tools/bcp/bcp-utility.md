@@ -4,7 +4,7 @@ description: The bulk copy program (bcp) utility bulk copies data between an ins
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mahyon
-ms.date: 08/11/2026
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: article
@@ -29,13 +29,13 @@ helpviewer_keywords:
   - "importing data, bcp utility"
   - "file importing [SQL Server]"
   - "column exporting [SQL Server]"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric || =fabric-sqldb"
 ---
 # bcp utility
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The bulk copy program utility (**`bcp`**) bulk copies data between an instance of the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] and a data file in a user-specified format.
 
@@ -47,6 +47,9 @@ The bulk copy program utility (**`bcp`**) bulk copies data between an instance o
 ::: moniker range="=fabric"
 
 [!INCLUDE [fabric-dw](../../includes/applies-to-version/fabric-dw.md)]
+
+> [!IMPORTANT]  
+> This feature is in [preview](/fabric/fundamentals/preview).
 
 The bulk copy program utility (**`bcp`**) bulk copies data between [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)] and a data file in a user-specified format.
 
@@ -92,7 +95,7 @@ For information on how to install the command-line tools on macOS and Linux, see
 
 ## Syntax
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 > [!NOTE]  
 > To view supported **`bcp`** syntax for **Microsoft Fabric Data Warehouse**, see [Syntax for Fabric Data Warehouse](?view=fabric&preserve-view=true#syntax).
@@ -219,7 +222,7 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [-n](#-n-native) | Yes | Yes | Yes |
 | [-N](#-n-unicode) | Yes | No | Yes |
 | [-w](#-w) | Yes | Yes | Yes |
-| [-z[0\|1]](#-z) | No | Yes <sup>2</sup> | No |
+| [-z[0\|1]](#-z) | Yes <sup>2</sup> | Yes <sup>2</sup> | No |
 | [**Format files**](#format-files) | | | |
 | [-f *format_file*](#-f-format_file) | Yes | Yes | Yes |
 | [-x](#-x) | Yes | No | Yes |
@@ -247,7 +250,7 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [-v](#-v) | Yes | Yes | Yes |
 
 <sup>1</sup> Requires **`bcp`** version 18 or later, which ships with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].  
-<sup>2</sup> ODBC 18.6.1.1 and later versions.
+<sup>2</sup> Requires **`bcp`** version 18.6.1.1 or later for `-z` and `-z0`. The `-z1` option requires **`bcp`** version 18.7.1.1 or later.
 
 ### Object and transfer mode
 
@@ -319,7 +322,7 @@ If you don't specify a server, the **`bcp`** utility connects to the default ins
 
 Specifies the database to connect to. By default, **`bcp`** connects to your default database. If you specify `-d <database_name>` and a three-part name (database_name.schema.table, passed as the first parameter to **`bcp`**), an error occurs because you can't specify the database name twice. If *database_name* begins with a hyphen (`-`) or a forward slash (`/`), don't add a space between `-d` and the database name.
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -U *login_id*
 
@@ -449,15 +452,13 @@ Performs the bulk copy operation by using Unicode characters. This option doesn'
 
 For more information, see [Use Unicode character format to import or export data (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -z
 
-**Applies to**: **`bcp`** (ODBC), Linux and macOS only. Windows isn't supported.
-
 Enables **vector** data type support in the **`bcp`** utility. This feature is currently disabled by default. When disabled, vector data is imported or exported as JSON float array strings. When enabled, and when connecting to [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, vector data is imported or exported in native **vector** binary.
 
-Use `-z0` for `float32` vector support and `-z1` for `float16` vector support. Currently, ODBC doesn't support `-z1`.
+Use `-z0` for `float32` vector support and `-z1` for `float16` vector support.
 ::: moniker-end
 
 ### Format files
@@ -495,7 +496,7 @@ Specifies the number of rows per batch of imported data. Each batch is imported 
 
 The `-b` and the `-h "ROWS_PER_BATCH=<bb>"` hint are mutually exclusive. Use `-b` when you want **`bcp`** to control batching explicitly, or use `ROWS_PER_BATCH` to hint the server optimizer when sending the data as a single transaction.
 
-::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
+::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -h "*hints* [, ... *n*]"
 

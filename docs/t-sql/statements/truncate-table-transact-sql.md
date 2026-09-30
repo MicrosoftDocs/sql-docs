@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "dropping rows"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # TRUNCATE TABLE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 Removes all rows from a table or specified partitions of a table, without logging the individual row deletions. `TRUNCATE TABLE` is similar to the `DELETE` statement with no `WHERE` clause; however, `TRUNCATE TABLE` is faster and uses fewer system and transaction log resources.
 
@@ -50,7 +50,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>
 ```
 
-Syntax for Microsoft Fabric, Azure Synapse Analytics, and Parallel Data Warehouse.
+Syntax for Microsoft Fabric and Azure Synapse Analytics.
 
 ```syntaxsql
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -137,7 +137,7 @@ For tables with one or more of these characteristics, use the `DELETE` statement
 
 `TRUNCATE TABLE` can't activate a trigger because the operation doesn't log individual row deletions. For more information, see [CREATE TRIGGER (Transact-SQL)](create-trigger-transact-sql.md).
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw](../../includes/sspdw-md.md)]:
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 - `TRUNCATE TABLE` isn't allowed within the `EXPLAIN` statement.
 

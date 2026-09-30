@@ -2,14 +2,14 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 05/30/2025
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
 | [9001](../mssqlserver-9001-database-engine-error.md) | 21 | Yes | The log for database '%.\*ls' is not available. Check the operating system error log for related error messages. Resolve any errors and restart the database. |
 | [9002](../mssqlserver-9002-database-engine-error.md) | 17 | Yes | The transaction log for database '%ls' is full due to '%ls' and the holdup lsn is %S_LSN. |
-| [9003](../mssqlserver-9003-database-engine-error.md) | 20 | Yes | The log scan number %S_LSN passed to log scan in database '%.\*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup. |
+| [9003](../mssqlserver-9003-database-engine-error.md) | 20 | Yes | The log scan number %S_LSN passed to log scan in database '%.\*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication (for more information, see [https://go.microsoft.com/fwlink/?linkid=2371323](https://go.microsoft.com/fwlink/?linkid=2371323)). Otherwise, restore from backup if the problem results in a failure during startup. |
 | [9004](../mssqlserver-9004-database-engine-error.md) | 21 | Yes | An error occurred while processing the log for database '%.\*ls'. If possible, restore from backup. If a backup is not available, it might be necessary to rebuild the log. |
 | 9005 | 16 | No | Invalid parameter passed to OpenRowset(DBLog, ...). |
 | 9006 | 10 | No | Cannot shrink log file %d (%s) because total number of logical log files cannot be fewer than %d. |

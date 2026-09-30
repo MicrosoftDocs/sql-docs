@@ -3,7 +3,7 @@ title: "About OLE DB connection properties"
 description: In OLE DB Driver for SQL Server, consumers set property values to request specific object behavior. Learn about setting properties.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "05/20/2020"
 ms.service: sql
 ms.subservice: connectivity
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "property values [OLE DB Driver for SQL Server]"
 ---
 # About OLE DB Properties
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

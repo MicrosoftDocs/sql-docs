@@ -1,11 +1,11 @@
 ---
-title: "ALTER DATABASE SCOPED CONFIGURATION"
+title: ALTER DATABASE SCOPED CONFIGURATION
 titleSuffix: SQL Server (Transact-SQL)
 description: Enable several database configuration settings at the individual database level.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: derekw, bobward, jovanpop, wiassaf, mariyaali, randolphwest
-ms.date: 06/29/2026
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: derekw, bobward, jovanpop, mariyaali, randolphwest
+ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -23,26 +23,26 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
 dev_langs:
-  - "TSQL"
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric-sqldb"
+  - TSQL
 ai-usage: ai-assisted
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric-sqldb"
 ---
 
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricsqldb.md)]
 
-Use this command to enable several database configuration settings at the **individual database** level.
+Use the `ALTER DATABASE SCOPED CONFIGURATION` Transact-SQL (T-SQL) command to enable several database configuration settings at the **individual database** level.
 
 [!INCLUDE [alter-db](../../includes/alter-db.md)]
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Different `DATABASE SCOPED CONFIGURATION` options are supported in different versions and platforms of the SQL Database Engine. This article describes **all** `DATABASE SCOPED CONFIGURATION` options. Versions where applicable are noted. Make sure that you use the syntax that's available in the version of service that you're using.
 
 The following settings are supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)], and in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **Applies to** line for each setting in the [Arguments](#arguments) section:
 
 - Clear procedure cache.
-- Set the MAXDOP parameter to a recommended value (1, 2, ...) for the primary database based on what works best for that particular workload, and set a different value for secondary replica databases used by reporting queries. For guidance on choosing a MAXDOP, review [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+- Set the `MAXDOP` parameter to a recommended value (1, 2, ...) for the primary database based on what works best for that particular workload, and set a different value for secondary replica databases used by reporting queries. For guidance on choosing a `MAXDOP`, review [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 - Set the query optimizer cardinality estimation model independent of the database to compatibility level.
 - Enable or disable parameter sniffing at the database level.
 - Enable or disable query optimization hotfixes at the database level.
@@ -56,7 +56,7 @@ The following settings are supported in [!INCLUDE [ssazure-sqldb](../../includes
 - Enable or disable the autodrop functionality of global temporary tables.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Enable or disable the new `String or binary data would be truncated` error message.
-- Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
+- Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specify the number of minutes a paused resumable index operation is paused before it's automatically aborted by the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)].
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
 - Enable or disable uploading ledger digests to Azure Blob Storage.
@@ -67,18 +67,18 @@ The following settings are supported in [!INCLUDE [ssazure-sqldb](../../includes
 
 ## Syntax
 
-Syntax for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]:
+Syntax for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]:
 
 ```syntaxsql
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY ] SET <set_options> }
 }
-| CLEAR PROCEDURE_CACHE [plan_handle]
-| SET < set_options >
-[;]
+| CLEAR PROCEDURE_CACHE [ plan_handle ]
+| SET <set_options>
+[ ; ]
 
-< set_options > ::=
+<set_options> ::=
 {
       ACCELERATED_PLAN_FORCING = { ON | OFF }
     | ALLOW_BUILTIN_TVF_IN_ALL_COMPAT_LEVELS = { ON | OFF }
@@ -93,7 +93,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
-    | FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }   
+    | FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
     | FULLTEXT_INDEX_VERSION = <version>
     | IDENTITY_CACHE = { ON | OFF }
     | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
@@ -125,6 +125,65 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+Syntax for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]:
+
+```syntaxsql
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    { [ FOR SECONDARY ] SET <set_options> }
+}
+| CLEAR PROCEDURE_CACHE [ plan_handle ]
+| SET <set_options>
+[ ; ]
+
+<set_options> ::=
+{
+      ACCELERATED_PLAN_FORCING = { ON | OFF }
+    | ALLOW_BUILTIN_TVF_IN_ALL_COMPAT_LEVELS = { ON | OFF }
+    | ALLOW_STALE_VECTOR_INDEX = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | CE_FEEDBACK = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | DOP_FEEDBACK = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
+    | FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
+    | FULLTEXT_INDEX_VERSION = <version>
+    | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTO_DROP = { ON | OFF }
+    | LAST_QUERY_PLAN_STATS = { ON | OFF }
+    | LEDGER_DIGEST_STORAGE_ENDPOINT = { <endpoint URL string> | OFF }
+    | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | MAXDOP = { <value> | PRIMARY }
+    | MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = { ON | OFF }
+    | MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | OPTIMIZED_PLAN_FORCING = { ON | OFF }
+    | OPTIMIZED_SP_EXECUTESQL = { ON | OFF }
+    | OPTIONAL_PARAMETER_OPTIMIZATION = { ON | OFF }
+    | PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
+    | PARAMETER_SNIFFING = { ON | OFF | PRIMARY }
+    | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | PREVIEW_FEATURES = { ON | OFF }
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY }
+    | READABLE_SECONDARY_TEMPORARY_STATS_AUTO_CREATE = { ON | OFF | PRIMARY }
+    | READABLE_SECONDARY_TEMPORARY_STATS_AUTO_UPDATE = { ON | OFF | PRIMARY }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | TIME_ZONE = { 'time_zone_value' | 'LOCAL' }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
+}
+```
+
 Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
@@ -132,9 +191,9 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
     SET <set_options>
 }
-[;]
+[ ; ]
 
-< set_options > ::=
+<set_options> ::=
 {
     DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 | 30 | 40 | 50 | 9000 }
 }
@@ -187,7 +246,7 @@ When disabled, built-in TVFs are only recognized starting with a specific compat
 
 **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]
 
-Currently in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], vector indexes make tables read-only. To allow the table to be writable, use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], earlier vector index versions make tables read-only. To allow a table with an earlier vector index to be writable, use the `ALLOW_STALE_VECTOR_INDEX` database scoped configuration.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
@@ -199,7 +258,7 @@ FROM sys.database_scoped_configurations
 WHERE [name] = 'ALLOW_STALE_VECTOR_INDEX';
 ```
 
-When `ALLOW_STALE_VECTOR_INDEX = ON`, the vector index isn't updated when you insert or update new data in the table. To refresh the vector index, you must drop and recreate it.
+When `ALLOW_STALE_VECTOR_INDEX = ON`, the earlier vector index isn't updated when you insert or update new data in the table. To refresh the vector index, you must drop and recreate it. The latest vector index version supports DML operations and automatic index maintenance without this configuration. For more information, see [Upgrade vector indexes to the latest version](create-vector-index-transact-sql.md#upgrade-vector-indexes-to-the-latest-version).
 
 > [!NOTE]  
 > The `ALLOW_STALE_VECTOR_INDEX` database scoped configuration option isn't currently available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
@@ -258,21 +317,21 @@ Identifies parallelism inefficiencies for repeating queries, based on elapsed ti
 
 **Applies to**: [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Allows you to select options to cause the engine to automatically elevate supported operations to online. 
+Allows you to select options to cause the engine to automatically elevate supported operations to online.
 
 This option only applies to DDL statements that support the `WITH (ONLINE = <syntax>)`. XML indexes aren't affected.
 
-The default is `OFF`, which means operations aren't elevated to online unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of `ELEVATE_ONLINE`. These options only apply to operations that are supported for online. You can override the default setting by submitting a statement with the ONLINE option specified.
+The default is `OFF`, which means operations aren't elevated to online unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of `ELEVATE_ONLINE`. These options only apply to operations that are supported for online. You can override the default setting by submitting a statement with the `ONLINE` option specified.
 
 `FAIL_UNSUPPORTED`
 
-This value elevates all supported DDL operations to ONLINE. Operations that don't support online execution fail and throw an error.
+This value elevates all supported DDL operations to `ONLINE`. Operations that don't support online execution fail and throw an error.
 
 Adding a column to a table is an online operation in the general case. In some scenarios, for example when [adding a non-nullable column](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation), a column can't be added online. In those cases, if `FAIL_UNSUPPORTED` is set, the operation fails.
 
 `WHEN_SUPPORTED`
 
-This value elevates operations that support ONLINE. Operations that don't support online are run offline.
+This value elevates operations that support `ONLINE`. Operations that don't support online are run offline.
 
 For more information, see [Guidelines for online index operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
@@ -300,13 +359,13 @@ For more information, see [Guidelines for online index operations](../../relatio
 
 **Applies to**: [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Controls whether execution statistics for scalar user-defined functions (UDF) appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some intensive workloads that are scalar UDF-heavy, collecting function execution statistics might cause a noticeable performance overhead. You can avoid this overhead by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`. The default is `ON`.
+Controls whether execution statistics for scalar user-defined functions (UDF) appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-function-stats-transact-sql.md) system view. For some intensive workloads that are scalar UDF-heavy, collecting function execution statistics might cause a noticeable performance overhead. You can avoid this overhead by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`. The default is `ON`.
 
 #### FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
 
 **Applies to**: [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-When you troubleshoot long running queries with lightweight query execution statistics profiling or the [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV, `FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION` causes SQL Server generates a Showplan XML fragment that includes the `ParameterRuntimeValue`.
+When you troubleshoot long running queries with lightweight query execution statistics profiling or the [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV, `FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION` causes SQL Server generates a Showplan XML fragment that includes the `ParameterRuntimeValue`.
 
 > [!IMPORTANT]  
 > Don't enable the `FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION` database scoped configuration option continuously in a production environment. Enable it only for time-limited troubleshooting purposes. This database scoped configuration option adds extra and possibly significant CPU and memory overhead as SQL Server creates a Showplan XML fragment with runtime parameter information, whether the `sys.dm_exec_query_statistics_xml` DMV or lightweight query execution statistics profile infrastructure is enabled or not.
@@ -329,7 +388,7 @@ The `FULLTEXT_INDEX_VERSION` configuration also controls which full-text compone
 - [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)
 - [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)
 - [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)
-- [sys.dm_fts_parser](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)
+- [sys.dm_fts_parser](../../relational-databases/system-dynamic-management-objects/sys-dm-fts-parser-transact-sql.md)
 
 #### IDENTITY_CACHE = { ON | OFF }
 
@@ -353,7 +412,7 @@ In SQL Server 2017 (14.x) only, the option `INTERLEAVED_EXECUTION_TVF` had the o
 
 **Applies to**: [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Allows you to control whether a [Row-level security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. The default is `OFF`. When `ISOLATE_SECURITY_POLICY_CARDINALITY` is ON, an RLS predicate doesn't affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate is 10. When this database scoped configuration is ON, query optimization estimates 1 million rows. It's recommended to use the default value for most workloads.
+Allows you to control whether a [Row-level security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. The default is `OFF`. When `ISOLATE_SECURITY_POLICY_CARDINALITY` is `ON`, an RLS predicate doesn't affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to `OFF`, the cardinality estimate of this predicate is 10. When this database scoped configuration is `ON`, query optimization estimates 1 million rows. It's recommended to use the default value for most workloads.
 
 #### GLOBAL_TEMPORARY_TABLE_AUTO_DROP = { ON | OFF }
 
@@ -368,7 +427,7 @@ Sets the autodrop functionality for [global temporary tables](create-table-trans
 
 **Applies to**: [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md). The default is `OFF`.
+Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-stats-transact-sql.md). The default is `OFF`.
 
 #### LEDGER_DIGEST_STORAGE_ENDPOINT = { &lt;endpoint URL string&gt; | OFF }
 
@@ -401,15 +460,15 @@ Allows you to enable or disable the [lightweight query profiling infrastructure]
 
 **\<value>**
 
-Specifies the default **max degree of parallelism (MAXDOP)** setting that should be used for statements. 0 is the default value and indicates that the server configuration is used instead. The MAXDOP at the database scope overrides (unless it's set to 0) the `max degree of parallelism` set at the server level by `sp_configure`. Query hints can still override the database scoped MAXDOP in order to tune specific queries that need different setting. All these settings are limited by the MAXDOP set for the [workload group](create-workload-group-transact-sql.md).
+Specifies the default **max degree of parallelism (MAXDOP)** setting that should be used for statements. 0 is the default value and indicates that the server configuration is used instead. The `MAXDOP` at the database scope overrides (unless it's set to 0) the `max degree of parallelism` set at the server level by `sp_configure`. Query hints can still override the database scoped `MAXDOP` in order to tune specific queries that need different setting. All these settings are limited by the `MAXDOP` set for the [workload group](create-workload-group-transact-sql.md).
 
-Use the MAXDOP option to limit the number of processors to use in parallel plan execution. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
+Use the `MAXDOP` option to limit the number of processors to use in parallel plan execution. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
-The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks, which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and task architecture guide](../../relational-databases/thread-and-task-architecture-guide.md).
+The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks, which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-objects/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and task architecture guide](../../relational-databases/thread-and-task-architecture-guide.md).
 
 To set this option at the instance level, see [Server configuration: max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
-In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the MAXDOP database-scoped configuration for new single and elastic pool databases is set to 8 by default. For more information and recommendations on configuring MAXDOP optimally in Azure SQL Database, see [Configure MAXDOP on Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism?view=azuresql-db&preserve-view=true).
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the `MAXDOP` database-scoped configuration for new single and elastic pool databases is set to 8 by default. For more information and recommendations on configuring `MAXDOP` optimally in Azure SQL Database, see [Configure MAXDOP on Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism?view=azuresql-db&preserve-view=true).
 
 - To set this option at the query level, use the `MAXDOP` [query hint](../queries/hints-transact-sql-query.md).
 - To set this option at the server level, use the **max degree of parallelism (MAXDOP)** [server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
@@ -485,7 +544,7 @@ Enables or disables [parameter sniffing](../../relational-databases/query-proces
 
 PRIMARY
 
-This value is valid only on secondaries while the database is on the primary. It specifies that the value for this setting on all secondaries is the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) changes, the value on the secondaries changes accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
+This value is valid only on secondaries while the database is on the primary. It specifies that the value for this setting on all secondaries is the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) changes, the value on the secondaries changes accordingly without the need to set the secondaries value explicitly. `PRIMARY` is the default setting for the secondaries.
 
 For more information on `PARAMETER_SNIFFING`, see ["I smell a parameter!"](/archive/blogs/queryoptteam/i-smell-a-parameter).
 
@@ -526,13 +585,13 @@ For an example of how to use this option, see [Using preview features in SQL Ser
 Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is `OFF`, which disables query optimization hotfixes that were released after the highest available compatibility level for a specific version (post-RTM). Setting `QUERY_OPTIMIZER_HOTFIXES` to `ON` is equivalent to enabling [trace flag 4199](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf4199).
 
 - To set this option at the query level, add the `QUERYTRACEON` [query hint](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
-- To enable this feature at the query level in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] with Service Pack 1 and later versions, add the USE HINT [query hint](../queries/hints-transact-sql-query.md#use_hint) instead of using the trace flag.
+- To enable this feature at the query level in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] with Service Pack 1 and later versions, add the `USE HINT` [query hint](../queries/hints-transact-sql-query.md#use_hint) instead of using the trace flag.
 
-When you use the `QUERYTRACEON` hint to enable the default Query Optimizer of SQL Server 7.0 through [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] versions or Query Optimizer hotfixes, it creates an OR condition between the query hint and the database scoped configuration setting. If either option is enabled, the database scoped configurations apply.
+When you use the `QUERYTRACEON` hint to enable the default Query Optimizer of SQL Server 7.0 through [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] versions or Query Optimizer hotfixes, it creates an `OR` condition between the query hint and the database scoped configuration setting. If either option is enabled, the database scoped configurations apply.
 
 PRIMARY
 
-This value is valid only on secondaries while the database is on the primary. It specifies that the value for this setting on all secondaries is the value set for the primary. If the configuration for the primary changes, the value on the secondaries changes accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
+This value is valid only on secondaries while the database is on the primary. It specifies that the value for this setting on all secondaries is the value set for the primary. If the configuration for the primary changes, the value on the secondaries changes accordingly without the need to set the secondaries value explicitly. `PRIMARY` is the default setting for the secondaries.
 
 For more information on `QUERY_OPTIMIZER_HOTFIXES`, see [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/help/974006).
 
@@ -559,6 +618,18 @@ The default is `ON`.
 Enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 or higher. The default is `ON`. Row mode memory grant feedback is a feature that's part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md#row-mode-memory-grant-feedback) introduced in [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]. Row mode is supported in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. For more information on memory grant feedback, see [Memory grant feedback](../../relational-databases/performance/intelligent-query-processing-memory-grant-feedback.md).
 
 For database compatibility level 140 or lower versions, this database scoped configuration has no effect.
+
+<a id="local-time-zone"></a>
+
+#### TIME_ZONE = { '*time_zone_value*' | 'LOCAL' }
+
+**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+
+Specifies the time zone value. *time_zone_value* is **nvarchar(128)**, with a default of `LOCAL`.
+
+If `LOCAL` is specified, then the current default time zone value of the session is set to the original time zone value of the session, which can be either database scoped option or the instance default.
+
+A list of installed time zones is exposed through the [sys.time_zone_info](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) system view.
 
 #### TSQL_SCALAR_UDF_INLINING = { ON | OFF }
 
@@ -589,15 +660,15 @@ For database compatibility level 140 or lower versions, error message 2628 remai
 
 **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
+Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md).
 
-Module-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).
+Module-level execution statistics for natively compiled T-SQL modules are collected if either this option is `ON`, or if statistics collection is enabled through [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).
 
 #### XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
 
 **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
-Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is `OFF`. The execution statistics are reflected in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
 Statement-level execution statistics for natively compiled T-SQL modules are collected if either this option is `ON`, or if statistics collection is enabled through [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
@@ -607,7 +678,7 @@ For more information about performance monitoring of natively compiled [!INCLUDE
 
 **Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] only
 
-Sets [!INCLUDE [tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once you set it, when a query runs on that database, it uses only the compatible features. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to AUTO by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations. The default is `AUTO`.
+Sets [!INCLUDE [tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once you set it, when a query runs on that database, it uses only the compatible features. At each compatibility level, various query processing enhancements are supported. Each level absorbs the functionality of the preceding level. A database's compatibility level is set to `AUTO` by default when it's first created and this is the recommended setting. The compatibility level is preserved even after database pause/resume, backup/restore operations. The default is `AUTO`.
 
 | Compatibility Level | Comments |
 | --- | --- |
@@ -647,21 +718,22 @@ To check if a configuration is enabled (1) or disabled (0) in a database, query 
 
 ```sql
 USE <user_database>;
+
 SELECT
     name,
     value,
     value_for_secondary
 FROM sys.database_scoped_configurations
-WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
+WHERE [name] = 'LEGACY_CARDINALITY_ESTIMATION';
 ```
 
 ## Limitations
 
 ### MAXDOP
 
-Granular settings can override the global settings, and the resource governor can cap all other MAXDOP settings. The following logic applies to the `MAXDOP` setting:
+Granular settings can override the global settings, and the resource governor can cap all other `MAXDOP` settings. The following logic applies to the `MAXDOP` setting:
 
-- Query hint overrides both the `sp_configure` and the database scoped configuration. If the resource group MAXDOP is set for the workload group:
+- Query hint overrides both the `sp_configure` and the database scoped configuration. If the resource group `MAXDOP` is set for the workload group:
 
   - If the query hint is set to zero (0), it's overridden by the resource governor setting.
 
@@ -697,7 +769,7 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION TO [Joe];
 
 ### B. Set MAXDOP
 
-This example sets MAXDOP = 1 for a primary database and MAXDOP = 4 for a secondary database in a geo-replication scenario.
+This example sets `MAXDOP = 1` for a primary database and `MAXDOP = 4` for a secondary database in a geo-replication scenario.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
@@ -708,7 +780,7 @@ FOR SECONDARY
 SET MAXDOP = 4;
 ```
 
-This example sets MAXDOP for a secondary database to be the same as it's set for its primary database in a geo-replication scenario.
+This example sets `MAXDOP` for a secondary database to be the same as it's set for its primary database in a geo-replication scenario.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
@@ -876,7 +948,7 @@ WHERE [name] = 'PREVIEW_FEATURES';
 
 ### O. Allow vector index to go stale
 
-In the current preview state of Azure SQL Database and Fabric SQL database, vector indexes make tables read-only. To make the table writable, enable the following database scoped configuration:
+In Azure SQL Database and SQL database in Fabric, earlier vector index versions make tables read-only. To make a table with an earlier vector index writable, enable the following database scoped configuration:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
@@ -887,7 +959,7 @@ FROM sys.database_scoped_configurations
 WHERE [name] = 'ALLOW_STALE_VECTOR_INDEX';
 ```
 
-When `ALLOW_STALE_VECTOR_INDEX = ON`, the vector index isn't updated when you insert or update new data in the table. To refresh the vector index, you must drop and recreate it.
+When `ALLOW_STALE_VECTOR_INDEX = ON`, the earlier vector index isn't updated when you insert or update new data in the table. To refresh the vector index, you must drop and recreate it. The latest vector index version supports DML operations and automatic index maintenance without this configuration.
 
 This configuration option isn't currently available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 

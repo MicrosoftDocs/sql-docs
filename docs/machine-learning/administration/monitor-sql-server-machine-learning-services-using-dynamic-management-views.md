@@ -25,7 +25,7 @@ In this article, you will find the DMVs that are specific for SQL Server Machine
 + Resource Governor resource pools, including external resource pools
 + Installed packages for Python and R
 
-For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md).
 
 > [!TIP]
 > You can also use the custom reports to monitor SQL Server Machine Learning Services. For more information, see [Monitor machine learning using custom reports in Management Studio](monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md).
@@ -36,13 +36,13 @@ The following dynamic management views can be used when monitoring machine learn
 
 | Dynamic management view | Type | Description |
 |-------------------------|------|-------------|
-| [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execution | Returns a row for each active worker account that is running an external script. |
-| [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execution | Returns one row for each type of external script request. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Execution | Returns a row per performance counter maintained by the server. If you use the search condition `WHERE object_name LIKE '%External Scripts%'`, you can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R or Python calls were issued on the instance overall. |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Returns information about the current external resource pool state in Resource Governor, the current configuration of resource pools, and resource pool statistics. |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Returns CPU affinity information about the current external resource pool configuration in Resource Governor. Returns one row per scheduler in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks. |
+| [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-external-script-requests.md) | Execution | Returns a row for each active worker account that is running an external script. |
+| [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-external-script-execution-stats.md) | Execution | Returns one row for each type of external script request. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) | Execution | Returns a row per performance counter maintained by the server. If you use the search condition `WHERE object_name LIKE '%External Scripts%'`, you can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R or Python calls were issued on the instance overall. |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Returns information about the current external resource pool state in Resource Governor, the current configuration of resource pools, and resource pool statistics. |
+| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Returns CPU affinity information about the current external resource pool configuration in Resource Governor. Returns one row per scheduler in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks. |
 
-For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## Settings and configuration
 
@@ -50,7 +50,7 @@ View the Machine Learning Services installation setting and configuration option
 
 ![Output from the settings and configuration query](media/dmv-settings-and-configuration.png "Output from the settings and configuration query")
 
-Run the query below to get this output. For more information on the views and functions used, see [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
+Run the query below to get this output. For more information on the views and functions used, see [sys.dm_server_registry](../../relational-databases/system-dynamic-management-objects/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -85,7 +85,7 @@ View the active sessions running external scripts.
 
 ![Output from the active settings query](media/dmv-active-sessions.png "Output from the active settings query")
 
-Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
+Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md).
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -108,7 +108,7 @@ The query returns the following columns:
 | database_name         | Name of the current database for each session. |
 | login_name            | SQL Server login name under which the session is currently executing. |
 | wait_time             | If the request is currently blocked, this column returns the duration in milliseconds, of the current wait. Is not nullable. |
-| wait_type             | If the request is currently blocked, this column returns the type of wait. For information about types of waits, see [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
+| wait_type             | If the request is currently blocked, this column returns the type of wait. For information about types of waits, see [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md). |
 | last_wait_type        | If this request has previously been blocked, this column returns the type of the last wait. |
 | total_elapsed_time    | Total time elapsed in milliseconds since the request arrived. |
 | cpu_time              | CPU time in milliseconds that is used by the request. |
@@ -125,7 +125,7 @@ View the execution statistics for the external runtime for R and Python. Only st
 
 ![Output from the execution statistics query](media/dmv-execution-statistics.png "Output from the execution statistics query")
 
-Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). The query only returns functions that have been executed more than once.
+Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-external-script-execution-stats.md). The query only returns functions that have been executed more than once.
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -148,7 +148,7 @@ View the performance counters related to the execution of external scripts.
 
 ![Output from the performance counters query](media/dmv-performance-counters.png "Output from the performance counters query")
 
-Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
+Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md).
 
 ```sql
 SELECT counter_name, cntr_value
@@ -174,7 +174,7 @@ View information about the memory used by the OS, SQL Server, and the external p
 
 ![Output from the memory usage query](media/dmv-memory-usage.png "Output from the memory usage query")
 
-Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
+Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pools.md) and [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-objects/sys-dm-os-sys-info-transact-sql.md).
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -198,7 +198,7 @@ View information about the maximum memory configuration in percentage of SQL Ser
 
 ![Output from the memory configuration query](media/dmv-memory-configuration.png "Output from the memory configuration query")
 
-Run the query below to get this output. For more information on the views used, see [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Run the query below to get this output. For more information on the views used, see [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -226,7 +226,7 @@ In [SQL Server Resource Governor](../../relational-databases/resource-governor/r
 
 ![Output from the resource pools query](media/dmv-resource-pools.png "Output from the resource pools query")
 
-Run the query below to get this output. For more information on the dynamic management views used, see  [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Run the query below to get this output. For more information on the dynamic management views used, see  [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name

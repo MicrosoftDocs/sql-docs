@@ -3,8 +3,8 @@ title: "What's New in mssql-django"
 description: Learn about new features and changes in each version of the mssql-django Django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,6 +14,57 @@ ai-usage: ai-assisted
 # What's new in mssql-django
 
 This article describes new features, improvements, and changes in each version of the `mssql-django` Django database backend.
+
+## Version 2.0
+
+**Release date**: September 2026
+
+Version 2.0 adds Microsoft's `mssql-python` driver as a per-database alternative to `pyodbc`, moves the supported Python, Django, and SQL Server matrix forward, and ships compatibility and reliability fixes. `pyodbc` remains the default driver.
+
+### Highlights
+
+- **mssql-python driver support**: A database alias opts in with `"python_driver": "mssql_python"` in its `OPTIONS` dictionary. The driver covers connections, connection pooling, retries, transactions and savepoints, **datetimeoffset** values, introspection, and Microsoft Entra authentication. Aliases that omit the option keep using `pyodbc`, so nothing changes until you opt in. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
+- **No separate ODBC driver install on the mssql-python path**: An alias on `mssql-python` doesn't need an externally installed Microsoft ODBC Driver for SQL Server. Aliases that stay on `pyodbc` still do.
+- **Modernized support matrix**: Python 3.10 through 3.14, Django 5.2 through 6.1, and SQL Server 2017 through 2025. Django 6.0 and later versions require Python 3.12 or later.
+
+### Bug fixes
+
+- **Explicit MARS settings are honored**: An explicit `MARS_Connection` value in `extra_params` is preserved instead of being overwritten with the Windows default, and the match ignores case. Setting `MARS_Connection=no` now works against endpoints that reject MARS, including Microsoft Fabric Warehouse. With MARS disabled, ORM iteration buffers results before yielding them so a nested query can reuse the connection, which costs more memory on large querysets. This connection fix doesn't add full Warehouse support for migrations or other SQL Server features.
+- **Bracket wildcards are escaped in expression lookups**: Pattern lookups that compare two fields with an `F()` expression, such as `contains` and `startswith`, escape the SQL Server `[` wildcard. Bracket characters are matched as data instead of as wildcard syntax.
+- **Quotes are escaped in inspectdb schema names**: A single quote in the `inspectdb --schema` value is escaped in the metadata query, so schema names that contain a quote no longer produce malformed Transact-SQL (T-SQL).
+- **An empty HOST connects to localhost on the mssql-python path**: An omitted `HOST`, which Django fills in as an empty string, resolves to `localhost` instead of failing validation with an empty `SERVER=` value. This behavior matches the `pyodbc` default for local instances.
+
+### Improvements
+
+- **pytz replaced with zoneinfo and tzdata**: Time zone handling uses the standard library `zoneinfo` module, with the `tzdata` package supplying the IANA time zone database in environments that don't ship one, such as Windows and minimal container images. Offsets stay correct across the year for zones with negative daylight saving offsets. `pytz` is no longer a dependency.
+- **Newer SQL Server versions are accepted**: A SQL Server major version that the backend doesn't recognize uses the latest capability set the backend knows about instead of failing version validation. You can connect to a new SQL Server release before a matching `mssql-django` release ships. Accepting the connection doesn't declare untested features as supported.
+
+### Breaking changes
+
+- Python 3.8 and 3.9, and Django 3.2 through 5.1, are no longer supported. The compatibility code for earlier versions remains in place, but those combinations aren't tested or listed.
+- `mssql-python` 1.15.0 or later is a required dependency even when an alias uses `pyodbc`. Installation is limited to platforms that have a compatible `mssql-python` distribution, which excludes SUSE Linux on ARM64. Projects on other platforms stay on version 1.8.0.
+- Declared SQL Server support starts with SQL Server 2017, and declared native connectivity support is limited to Microsoft ODBC Driver 17 and Microsoft ODBC Driver 18.
+
+## Version 1.8.0
+
+**Release date**: August 2026
+
+Version 1.8.0 adds support for Django 6.1 while continuing to support Django 3.2 through 6.0. Moving a project from Django 6.0 to 6.1 requires no code changes unless you use one of the two Django 6.1 features described in this section.
+
+### Highlights
+
+- **Django 6.1 support**: Validated against Django 6.1 while continuing to support Django 3.2 through 6.0. The dependency constraint widens from `django>=3.2,<6.1` to `django>=3.2,<6.2`.
+- **Query compiler uses `quote_name` on Django 6.1**: Django 6.1 deprecated `quote_name_unless_alias`. The backend now calls `SQLCompiler.quote_name` on Django 6.1 and later versions, gated by version so earlier Django versions are unchanged. Sliced and offset queries, such as `qs[a:b]` and `OFFSET ... FETCH`, compile without deprecation warnings.
+- **Foreign key introspection returns the ON DELETE rule**: Django 6.1 expanded `get_relations()` to include the database-level ON DELETE rule. The backend returns the expected three-part shape and maps SQL Server `NO ACTION` foreign keys accordingly, so `inspectdb` and foreign key introspection produce correct models.
+
+### Django 6.1 features that aren't supported
+
+Two Django 6.1 additions are unavailable on this backend, for different reasons:
+
+- **Database-level referential actions** (`DB_CASCADE`, `DB_SET_NULL`, `DB_SET_DEFAULT`): SQL Server rejects foreign key graphs with multiple cascade paths to the same table (error 1785), so there's no native path for this feature on any SQL Server version. Using one of these values raises the Django system check `fields.E324`, which points you to the standard Django-level `on_delete`.
+- **Bitwise aggregates** (`BitAnd`, `BitOr`, `BitXor`): SQL Server has no native bitwise aggregate function, and the backend doesn't emulate them, so these aggregates raise `NotSupportedError`.
+
+For more information, see [Limitations and unsupported features in mssql-django](limitations.md).
 
 ## Version 1.7.4
 
@@ -131,6 +182,7 @@ Version 1.7.1 is a backward-compatible patch release with bug fixes.
 ## Related content
 
 - [Install mssql-django](installation.md)
+- [Select the database driver for mssql-django](select-database-driver.md)
 - [mssql-django support and lifecycle](support-lifecycle.md)
 - [Limitations and unsupported features in mssql-django](limitations.md)
 - [mssql-django releases on GitHub](https://github.com/microsoft/mssql-django/releases)

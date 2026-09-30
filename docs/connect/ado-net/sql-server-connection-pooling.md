@@ -1,130 +1,210 @@
 ---
-title: SQL Server connection pooling
-description: Learn how Microsoft SqlClient Data Provider for SQL Server minimizes the cost of opening connections by using SQL Server connection pooling, which reduces overhead for new connections.
+title: SQL Server connection pooling with Microsoft.Data.SqlClient
+description: Configure and diagnose Microsoft.Data.SqlClient connection pooling for SQL Server and Azure SQL production workloads.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 03/07/2023
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
 dev_langs:
-  - "csharp"
-ms.custom: sfi-ropc-nochange
+  - csharp
+ai-usage: ai-assisted
 ---
-# SQL Server connection pooling (ADO.NET)
 
-[!INCLUDE [dotnet-all](../../includes/products/applies-full/dotnet-all.md)]
+# SQL Server connection pooling with Microsoft.Data.SqlClient
 
-[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+Microsoft.Data.SqlClient connection pooling reuses authenticated physical connections. `SqlConnection.Open` or `OpenAsync` checks a pool for a usable connection. `Close`, `Dispose`, or `DisposeAsync` resets and returns it. This approach avoids a network connection, authentication, and session setup for every operation.
 
-Connecting to a database server typically consists of several time-consuming steps. A physical channel such as a socket or a named pipe must be established, the initial handshake with the server must occur, the connection string information must be parsed, the connection must be authenticated by the server, checks must be run for enlisting in the current transaction, and so on.
+Pooling is enabled by default. Use this application pattern:
 
-In practice, most applications use only one or a few different configurations for connections. This means that during application execution, many identical connections will be repeatedly opened and closed. To minimize the cost of opening connections, Microsoft SqlClient Data Provider for SQL Server uses an optimization technique called *connection pooling*.
+```csharp
+await using var connection = new SqlConnection(connectionString);
+await connection.OpenAsync(cancellationToken);
 
-Connection pooling reduces the number of times that new connections must be opened. The *pooler* maintains ownership of the physical connection. It manages connections by keeping alive a set of active connections for each given connection configuration. Whenever a user calls `Open` on a connection, the pooler looks for an available connection in the pool. If a pooled connection is available, it returns it to the caller instead of opening a new connection. When the application calls `Close` on the connection, the pooler returns it to the pooled set of active connections instead of closing it. Once the connection is returned to the pool, it is ready to be reused on the next `Open` call.
+using var command = new SqlCommand(sql, connection);
+await command.ExecuteNonQueryAsync(cancellationToken);
+```
 
-Only connections with the same configuration can be pooled. Microsoft SqlClient Data Provider for SQL Server keeps several pools at the same time, one for each configuration. Connections are separated into pools by connection string, and by Windows identity when integrated security is used. Connections are also pooled based on whether they are enlisted in a transaction. When using <xref:Microsoft.Data.SqlClient.SqlConnection.ChangePassword%2A>, the <xref:Microsoft.Data.SqlClient.SqlCredential> instance affects the connection pool. Different instances of <xref:Microsoft.Data.SqlClient.SqlCredential> will use different connection pools, even if the user ID and password are the same.
+Open late, dispose early, and let the pool manage physical connections. Don't keep one `SqlConnection` open globally.
 
-Pooling connections can significantly enhance the performance and scalability of your application. By default, connection pooling is enabled in the Microsoft SqlClient Data Provider for SQL Server. Unless you explicitly disable it, the pooler optimizes the connections as they are opened and closed in your application. You can also supply several connection string modifiers to control connection pooling behavior. For more information, see "**Controlling Connection Pooling with Connection String Keywords**" later in this topic.
+## Understand pool keys
 
-> [!IMPORTANT]
-> When connection pooling is enabled, and if a timeout error or other login error occurs, an exception will be thrown and subsequent connection attempts will fail for the next **5** seconds, the "`blocking period`". If the application attempts to connect within the blocking period, the first exception will be thrown again. Subsequent failures after a blocking period ends will result in a new blocking periods that is twice as long as the previous blocking period, up to a *maximum of **1** minute*.
+A connection can be reused only from its matching pool. The pool key includes more than the destination server.
 
-> [!NOTE]
-> The "`blocking period`" mechanism doesn't apply to Azure SQL Server by default. This behavior can be changed by modifying the <xref:Microsoft.Data.SqlClient.PoolBlockingPeriod> property in <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString> except for *.NET Standard*.
+| Input | Pool behavior |
+| --- | --- |
+| Connection string | The text must match exactly. Keyword order differences create separate pools, even when the effective settings are equivalent. |
+| Windows integrated authentication | The Windows identity is part of the key. The same string used under different identities creates different pools. |
+| `SqlCredential` | The object instance is part of the key. Separate instances create separate pools even when they contain the same user name and password. |
+| `SqlConnection.AccessToken` | The access token value is part of the key. Replacing token strings can create new pools and leave connections authenticated with old tokens in existing pools. |
+| `SqlConnection.AccessTokenCallback` | The callback is part of the key. Reuse the same callback instance for connections that should share a pool. The returned token value isn't the pool key. |
+| Custom SSPI context provider | The provider instance participates in the connection configuration. Reuse one provider instance for connections that should pool together. |
+| Ambient transaction | Enlisted connections use transaction-specific subdivisions inside the matching pool. |
 
-## Pool creation and assignment
+The database, authentication mode, encryption options, application name, pooling options, and every other connection string value contribute through the exact string.
 
-When a connection is first opened, a connection pool is created based on an exact matching algorithm that associates the pool with the connection string in the connection. Each connection pool is associated with a distinct connection string. When a new connection is opened, if the connection string is not an exact match to an existing pool, a new pool is created.
+Build one canonical connection string and reuse it. Avoid per-request values in `Application Name`, `Workstation ID`, or other keywords.
 
-> [!NOTE]
-> Connections are pooled per _process_, per _application domain_, per _connection string_ and when integrated security is used, per _Windows identity_. Connection strings must also be an exact match; keywords supplied in a different order for the same connection will be pooled separately.
+## Choose token APIs that can pool
 
-> [!NOTE]
-> If `MinPoolSize` is either not specified in the connection string or is specified as zero, the connections in the pool will be closed after a period of inactivity. However, if the specified `MinPoolSize` is greater than zero, the connection pool is not destroyed until the `AppDomain` is unloaded and the process ends. Maintenance of inactive or empty pools involves minimal system overhead.
+For Microsoft Entra ID access tokens, use an authentication mode supplied by Microsoft.Data.SqlClient or a stable <xref:Microsoft.Data.SqlClient.SqlConnection.AccessTokenCallback%2A>.
 
-> [!NOTE]
-> The pool is automatically cleared when a fatal error occurs, such as a failover.
+`AccessTokenCallback` was introduced in Microsoft.Data.SqlClient 5.2. The driver calls it when it needs a token and can request a refreshed token for a reused pool. Keep the callback deterministic for the authentication parameters that the driver supplies, and reuse the same delegate instance.
 
-In the following C# example, three new <xref:Microsoft.Data.SqlClient.SqlConnection> objects are created, but only two connection pools are required to manage them. Note that the first and second connection strings differ by the value assigned for `Initial Catalog`.  
+When code sets <xref:Microsoft.Data.SqlClient.SqlConnection.AccessToken%2A> directly:
 
+- The token string becomes part of the pool key.
+- The application owns token expiration and refresh.
+- A pooled physical connection can outlive the token used to create it.
+- Call <xref:Microsoft.Data.SqlClient.SqlConnection.ClearPool%2A> after replacing an expired token if that pool can no longer be used safely.
 
-[!code-csharp[SqlConnection_Pooling#1](~/../sqlclient/doc/samples/SqlConnection_Pooling.cs#1)]
+Don't create a new callback lambda or credential object for every request. Object identity differences can fragment the pools.
 
-## Add connections
+Microsoft.Data.SqlClient 7.0 adds <xref:Microsoft.Data.SqlClient.SqlConnection.SspiContextProvider%2A> for custom Kerberos or NTLM negotiation. Treat the provider as application-scoped connection configuration, not per-request state.
 
-A connection pool is created for each unique connection string. When a pool is created, multiple connection objects are created and added to the pool so that the minimum pool size requirement is satisfied. Connections are added to the pool as needed, up to the maximum pool size specified (**100 is the default**). Connections are released back into the pool when they are closed or disposed.
+## Size each pool
 
-When a <xref:Microsoft.Data.SqlClient.SqlConnection> object is requested, it is obtained from the pool if a usable connection is available. To be usable, a connection must be unused, have a matching transaction context or be unassociated with any transaction context, and have a valid link to the server.
+These connection string options control one pool:
 
-The connection pooler satisfies requests for connections by reallocating connections as they are released back into the pool. If the maximum pool size has been reached and no usable connection is available, the request is queued. The pooler then tries to reclaim any connections until the time-out is reached (**the default is 15 seconds**). If the pooler cannot satisfy the request before the connection times out, an exception is thrown.
+| Keyword | Default | Effect |
+| --- | --- | --- |
+| `Pooling` | `true` | Enables or disables pooling. |
+| `Min Pool Size` | `0` | Sets the minimum number of physical connections the pool retains after it's created. |
+| `Max Pool Size` | `100` | Sets the maximum number of physical connections in the pool. |
+| `Connect Timeout` | 15 seconds | Sets how long `Open` waits when no usable connection is available. |
+| `Load Balance Timeout` | `0` seconds | Discards a connection when it returns to the pool if its age exceeds the configured value. `Connection Lifetime` is an alias. |
 
-> [!CAUTION]
-> We strongly recommend that you always close the connection when you are finished using it so that the connection will be returned to the pool. You can do this using either the `Close` or `Dispose` methods of the `Connection` object, or by opening all connections inside a `using` statement in C#, or a `Using` statement in Visual Basic. Connections that are not explicitly closed might not be added or returned to the pool. For more information, see [using Statement](/dotnet/csharp/language-reference/keywords/using-statement) or [How to: Dispose of a System Resource](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) for Visual Basic.
+The pool creates connections as demand grows until it reaches `Max Pool Size`. When all connections are in use, later opens wait for a connection to return. If the wait exceeds `Connect Timeout`, the open fails.
 
-> [!NOTE]
-> Do not call `Close` or `Dispose` on a `Connection`, a `DataReader`, or any other managed object in the `Finalize` method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a `Finalize` method in your class definition. For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/index).
+Don't raise `Max Pool Size` before checking:
 
-For more info about the events associated with opening and closing connections, see [Audit Login Event Class](../../relational-databases/event-classes/audit-login-event-class.md) and [Audit Logout Event Class](../../relational-databases/event-classes/audit-logout-event-class.md) in the SQL Server documentation.
+- Every connection and reader is disposed on every path.
+- Commands and transactions finish promptly.
+- The query workload isn't blocked or saturated.
+- The database connection limit can handle `Max Pool Size` multiplied by every pool in every application instance.
 
-## Remove connections
+A positive `Min Pool Size` keeps connections open during idle periods. Use it only when measurements justify warm connections. It usually works against scale-to-zero, serverless auto-pause, and burstable cloud designs.
 
-If [LoadBalanceTimeout](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder.loadbalancetimeout) (or `Connection Lifetime`) is set, when a connection is returned to the pool, its creation time is compared with the current time and the connection is destroyed if that time span (in seconds) exceeds the value specified by `LoadBalanceTimeout`. This is useful in clustered configurations to force load balancing between a running server and a server just brought online.
+With the default `Load Balance Timeout=0`, periodic cleanup normally removes unused connections above `Min Pool Size` after about four to eight minutes, or the pool removes them when it detects that the server connection is broken. Treat that interval as implementation behavior, not a per-connection idle guarantee. The pool doesn't send a validation query before every checkout because that round trip removes much of the pooling benefit.
 
-If LoadBalanceTimeout (or Connection Lifetime) isn't set (default value = 0), the connection pooler removes a connection from the pool after it has been idle for approximately **4-8** minutes (in a random two-pass fashion), or if the pooler detects that the connection with the server has been severed.
+## Handle authentication blocking periods
 
-> [!NOTE]
-> A severed connection can be detected only after attempting to communicate with the server. If a connection is found that is no longer connected to the server, it is marked as invalid. Invalid connections are removed from the connection pool only when they are closed or reclaimed.
+After an authentication timeout or other authentication failure, the pool can enter a blocking period. During that period, matching open attempts rethrow the original exception without making another authentication attempt.
 
-If a connection exists to a server that has disappeared, this connection can be drawn from the pool even if the connection pooler has not detected the severed connection and marked it as invalid. This is the case because the overhead of checking that the connection is still valid would eliminate the benefits of having a pooler by causing another round trip to the server to occur. When this occurs, the first attempt to use the connection will detect that the connection has been severed, and an exception is thrown.
+The first blocking period is five seconds. After another failure, the period doubles up to one minute.
 
-## Clear the pool
+`Pool Blocking Period` controls this behavior:
 
-Microsoft SqlClient Data Provider for SQL Server introduced two new methods to clear the pool: <xref:Microsoft.Data.SqlClient.SqlConnection.ClearAllPools%2A> and <xref:Microsoft.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` clears the connection pools for a given provider, and `ClearPool` clears the connection pool that is associated with a specific connection.
+| Value | Behavior |
+| --- | --- |
+| `Auto` | Enables blocking for ordinary SQL Server endpoints and disables it for recognized Azure SQL endpoint suffixes. A vanity DNS name might not receive the Azure behavior. |
+| `AlwaysBlock` | Enables the blocking period for every endpoint. |
+| `NeverBlock` | Disables the blocking period. |
 
-> [!NOTE]
-> If there are connections being used at the time of the call, they are marked appropriately. When they are closed, they are discarded instead of being returned to the pool.
+Keep `Auto` unless the application's measured retry design requires a different choice. Disabling the blocking period can turn a credential, firewall, or outage problem into an authentication storm.
 
-## Transaction support
+The blocking period is separate from configurable retry logic. A retry provider that opens the same pool during a blocking period receives the cached exception.
 
-Connections are drawn from the pool and assigned based on transaction context. Unless `Enlist=false` is specified in the connection string, the connection pool makes sure that the connection is enlisted in the <xref:System.Transactions.Transaction.Current%2A> context. When a connection is closed and returned to the pool with an enlisted `System.Transactions` transaction, it is set aside in such a way that the next request for that connection pool with the same `System.Transactions` transaction will return the same connection if it is available. If such a request is issued, and there are no pooled connections available, a connection is drawn from the non-transacted part of the pool and enlisted. If no connections are available in either area of the pool, a new connection is created and enlisted.
+## Manage connection lifetime and clearing
 
-When a connection is closed, it is released back into the pool and into the appropriate subdivision based on its transaction context. Therefore, you can close the connection without generating an error, even though a distributed transaction is still pending. This allows you to commit or abort the distributed transaction later.
+The pool automatically clears the affected pool when it recognizes a fatal error, such as a failover. The pool closes idle connections and discards checked-out connections when they return.
 
-## Control connection pooling with connection string keywords
+Use the clearing APIs for a known configuration or credential boundary:
 
-The `ConnectionString` property of the <xref:Microsoft.Data.SqlClient.SqlConnection> object supports connection string key/value pairs that can be used to adjust the behavior of the connection pooling logic. For more information, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- <xref:Microsoft.Data.SqlClient.SqlConnection.ClearPool%2A> clears the pool associated with one `SqlConnection` configuration.
+- <xref:Microsoft.Data.SqlClient.SqlConnection.ClearAllPools%2A> clears every Microsoft.Data.SqlClient pool in the process or application domain.
 
-## Pool fragmentation
+The pool closes idle connections in a cleared pool. The pool marks connections that are currently in use so it discards them when returned.
 
-Pool fragmentation is a common problem in many Web applications where the application can create a large number of pools that are not freed until the process exits. This leaves a large number of connections open and consuming memory, which results in poor performance.
+Clearing pools causes later opens to perform physical logins. Don't use it as periodic maintenance, a general error handler, or a substitute for disposing connections.
 
-### Pool fragmentation due to integrated security
+`Load Balance Timeout` provides gradual age-based turnover. Use it when a deployment or clustered service needs old physical connections to leave over time. Confirm that the chosen value doesn't cause excessive hard connects.
 
-Connections are pooled according to the connection string plus the user identity. Therefore, if you use Basic authentication or Windows Authentication on the Web site and an integrated security login, you get one pool per user. Although this improves the performance of subsequent database requests for a single user, that user cannot take advantage of connections made by other users. It also results in at least one connection per user to the database server. This is a side effect of a particular Web application architecture that developers must weigh against security and auditing requirements.
+## Understand transactions
 
-### Pool fragmentation due to many databases
+With `Enlist=true`, the default, a connection opened inside `System.Transactions.Transaction.Current` automatically enlists in that transaction.
 
-Many Internet service providers host several Web sites on a single server. They may use a single database to confirm a Forms authentication login and then open a connection to a specific database for that user or group of users. The connection to the authentication database is pooled and used by everyone. However, there is a separate pool of connections to each database, which increase the number of connections to the server.
+When an enlisted connection closes, the pool places it in a transaction-specific subdivision. A later open under the same transaction can reuse it. The physical connection doesn't return to the general pool until the transaction completes.
 
-This is also a side-effect of the application design. There is a relatively simple way to avoid this side effect without compromising security when you connect to SQL Server. Instead of connecting to a separate database for each user or group, connect to the same database on the server and then execute the Transact-SQL USE statement to change to the desired database.
- 
-The following code fragment demonstrates creating an initial connection to the `master` database and then switching to the desired database specified in the `databaseName` string variable.
+Long or abandoned ambient transactions can therefore:
 
-[!code-csharp[SqlConnection_Pooling_Use_Statement#1](~/../sqlclient/doc/samples/SqlConnection_Pooling_Use_Statement.cs#1)]
+- Hold physical connections out of the general pool.
+- Consume pool capacity after the logical connection closes.
+- Keep server locks and transaction state alive.
 
-## Application roles and connection pooling
+Keep transactions bounded, complete them explicitly, and monitor stasis connections. Set `Enlist=false` only when the connection must remain outside an ambient transaction.
 
-After a SQL Server application role has been activated by calling the `sp_setapprole` system stored procedure, the security context of that connection cannot be reset. However, if pooling is enabled, the connection is returned to the pool, and an error occurs when the pooled connection is reused.
+## Prevent pool fragmentation
 
-### Application role alternatives
+Pool fragmentation creates many small pools instead of a few reusable pools. Common causes include:
 
-We recommend that you take advantage of security mechanisms that you can use instead of application roles.
+- Connection string keyword order or alias differences.
+- One connection string per customer, user, request, or database.
+- Integrated authentication under many Windows identities.
+- New `SqlCredential`, access token callback, or SSPI provider instances per request.
+- Direct access tokens that change on each refresh.
+- High-cardinality application names or workstation IDs.
+
+Normalize connection strings with `SqlConnectionStringBuilder` and centralize connection creation.
+
+If the application intentionally connects to many databases or identities, include the resulting pool count in capacity planning. Don't run `USE` with an untrusted database name to collapse pools. Database isolation, permissions, session state, and pool reset behavior must remain explicit.
+
+## Account for application roles and session state
+
+The pool resets reusable SQL Server session state before assigning a physical connection to another logical connection. Application code should still set any required session state within its unit of work.
+
+SQL Server application roles activated with `sp_setapprole` can't be reset safely for ordinary pooling. Prefer database users, contained users, roles, row-level security, or another authorization design. If an application role is unavoidable, use a documented cookie-based reversal pattern or disable pooling for that isolated path after testing.
+
+Dispose readers, finish or roll back transactions, and don't leave commands running when the connection closes. Don't rely on temporary tables or other session state surviving across logical connections.
+
+## Use cloud-hosted pooling patterns
+
+For Azure App Service, Azure Functions, containers, Kubernetes, and other horizontally scaled hosts:
+
+- Calculate the possible database connections across all instances, processes, pool keys, and replicas.
+- Use managed identity or a stable access token callback instead of rotating token strings in connection objects.
+- Keep `Min Pool Size=0` unless a measured cold-start requirement justifies retained sessions.
+- Expect a new instance to start with an empty pool.
+- Keep connection strings identical across instances that serve the same workload.
+- Bound connection attempts and retries to avoid synchronized login bursts during failover or scale-out.
+- Set `MultiSubnetFailover=true` for Azure SQL and other supported multi-address TCP endpoints.
+
+Connection pools are local to the application process. They aren't shared across application instances, containers, or hosts.
+
+## Diagnose pool behavior
+
+Use [SqlClient diagnostic counters](diagnostic-counters.md) to observe:
+
+- Hard connects and disconnects, which represent physical server connections.
+- Soft connects and disconnects, which represent pool checkout and return.
+- Active and free pooled connections.
+- Active pool groups and pools.
+- Stasis connections.
+- Reclaimed connections where application code didn't dispose the logical connection.
+
+Correlate client counters with SQL Server sessions, waits, blocking, and resource limits. A pool timeout can mean a connection leak, slow queries, blocked transactions, too much concurrency, pool fragmentation, or a database capacity limit.
+
+Use [event source tracing](enable-eventsource-tracing.md) for targeted pooler traces. Tracing is verbose. Enable it for a bounded diagnostic window and protect any captured connection metadata.
+
+## Production checklist
+
+- Keep pooling enabled.
+- Reuse one canonical connection string per workload and database.
+- Dispose connections, commands, readers, and transactions on every path.
+- Reuse credential, token callback, and SSPI provider instances.
+- Set finite connection and command timeouts.
+- Size the total connection budget across every application instance.
+- Monitor hard connects, pool counts, free connections, stasis, and timeouts.
+- Clear pools only for a credential, token, or configuration boundary that the provider can't detect, or when diagnostics confirm that stale connections remain.
+- Load test scale-out, failover, and credential refresh behavior before production.
 
 ## Related content
 
-- [Connection pooling](connection-pooling.md)
-- [SQL Server and ADO.NET](sql/index.md)
-- [Diagnostic counters in SqlClient](diagnostic-counters.md)
-- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)
+- [Connect to a data source](connecting-to-data-source.md)
+- [Connection strings](connection-strings.md)
+- [Connection options](connection-options.md).
+- [SqlClient diagnostic counters](diagnostic-counters.md)
+- [Configurable retry logic](configurable-retry-logic.md)
+- [Microsoft Entra ID authentication](sql/azure-active-directory-authentication.md)

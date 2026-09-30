@@ -1,10 +1,10 @@
 ---
-title: "Microsoft Python Driver for SQL Server - mssql-python"
+title: Microsoft Python Driver for SQL Server - mssql-python
 description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest, sumitsar
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: get-started
@@ -19,7 +19,8 @@ ai-usage: ai-assisted
 
 ## Choose your starting point
 
-- To get a local SQL Server sample running quickly, start with [Quickstart: Connect with the mssql-python driver](python-sql-driver-mssql-python-quickstart.md).
+- To connect to SQL Server, Azure SQL Database, or SQL database in Microsoft Fabric and run your first query, start with [Quickstart: Connect with the mssql-python driver](python-sql-driver-mssql-python-quickstart.md).
+- To create a local SQL Server container, start with [Container and local development](container-local-development.md).
 - To connect to Azure SQL with passwordless authentication, start with [Microsoft Entra authentication](entra-authentication.md) and [Connection strings](connection-strings.md).
 - To explore data interactively, start with [Connect from a Jupyter Notebook](python-sql-driver-mssql-python-connect-jupyter-notebook.md) or [Rapid prototyping](python-sql-driver-mssql-python-rapid-prototyping-quickstart.md).
 - To move large volumes of data efficiently, go to [Bulk copy operations](bulk-copy.md) or the [Bulk copy quickstart](python-sql-driver-mssql-python-bulk-copy-quickstart.md).
@@ -119,7 +120,7 @@ def execute_with_retry(
 
 def main() -> None:
     # Read configuration from the environment; never hard-code secrets.
-    server = os.environ["SQL_SERVER"]      # for example, myserver.database.windows.net
+    server = os.environ["SQL_SERVER"]      # for example, <server>.database.windows.net
     database = os.environ["SQL_DATABASE"]  # for example, AdventureWorks
     client_id = os.getenv("AZURE_CLIENT_ID")  # set for a user-assigned managed identity
 
@@ -244,6 +245,7 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | [Polars integration](polars-integration.md) | Use Polars with mssql-python for columnar workloads. |
 | [DuckDB integration](duckdb-integration.md) | Query SQL Server data alongside local DuckDB tables. |
 | [FastAPI integration](fastapi-integration.md) | Wire mssql-python into FastAPI services. |
+| [Test and deploy FastAPI applications](fastapi-testing-deployment.md) | Configure pooling, errors, authentication, tests, and deployment settings for FastAPI services. |
 | [Flask integration](flask-integration.md) | Use mssql-python in Flask applications. |
 | [Async patterns](asynchronous-patterns.md) | Combine mssql-python with `asyncio` and thread pools. |
 | [Data access and analytics patterns](data-access-analytics-patterns.md) | Choose the right read path for cursor access, Arrow extraction, pandas, Polars, and DuckDB analytics over SQL data. |
@@ -255,7 +257,9 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | --- | --- |
 | [Container and local development](container-local-development.md) | Set up Docker containers, devcontainers, and CI pipelines for Python applications that connect to SQL. |
 | [Performance tuning](performance-tuning.md) | Pool tuning, prepared statements, batch sizes, and bulk copy. |
-| [Troubleshooting](troubleshooting.md) | Common errors, logging, and certificate diagnostics. |
+| [Troubleshooting](troubleshooting.md) | Find guidance by symptom or error message. |
+| [Installation and connection troubleshooting](troubleshoot-installation-connection.md) | Resolve installation, connection, container, and CI issues. |
+| [Query, data, and operation troubleshooting](troubleshoot-query-data-and-operations.md) | Resolve query, data type, performance, transaction, and bulk copy issues. |
 | [Module configuration](module-configuration.md) | Module-level settings, logging hooks, and feature flags. |
 
 ## Migrate to mssql-python
@@ -266,6 +270,10 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | [Migrate from pymssql](migrate-from-pymssql.md) | Replace pymssql with mssql-python while preserving behavior. |
 | [Migrate from SQLite](migrate-from-sqlite.md) | Move local SQLite workloads to SQL Server or Azure SQL. |
 | [Migrate from PostgreSQL](migrate-from-postgresql.md) | One-stop guide for Python developers moving from PostgreSQL to SQL Server with mssql-python. |
+
+## Request a feature
+
+To request a feature, open an issue in the [mssql-python GitHub repository](https://github.com/microsoft/mssql-python/issues/new/choose).
 
 ## Related content
 

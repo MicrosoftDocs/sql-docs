@@ -47,7 +47,7 @@ When SET SHOWPLAN_XML is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 SET SHOWPLAN_XML is intended to return output as **nvarchar(max)** for applications such as the **sqlcmd** utility, where the XML output is subsequently used by other tools to display and process the query plan information.
 
 > [!NOTE]
-> The dynamic management view, `sys.dm_exec_query_plan`, returns the same information as SET SHOWPLAN XML in the **xml** data type. This information is returned from the `query_plan` column of `sys.dm_exec_query_plan`. For more information, see [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).
+> The dynamic management view, `sys.dm_exec_query_plan`, returns the same information as SET SHOWPLAN XML in the **xml** data type. This information is returned from the `query_plan` column of `sys.dm_exec_query_plan`. For more information, see [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-transact-sql.md).
 
 SET SHOWPLAN_XML cannot be specified inside a stored procedure. It must be the only statement in a batch.
 
@@ -56,7 +56,7 @@ SET SHOWPLAN_XML returns information as a set of XML documents. Each batch after
 > [!NOTE]
 > If **Include Actual Execution Plan** is selected in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], this SET option does not produce XML Showplan output. Clear the **Include Actual Execution Plan** button before using this SET option.
 
-Estimated execution plans through SSMS and [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) are available for dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in Azure Synapse Analytics. To retrieve an actual execution plan for dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in Azure Synapse Analytics, there are different commands. For more information, see [Monitor your Azure Synapse Analytics dedicated SQL pool workload using DMVs](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-manage-monitor#monitor-query-execution).
+Estimated execution plans through SSMS and [SET SHOWPLAN_XML](set-showplan-xml-transact-sql.md) are available for dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in Azure Synapse Analytics. To retrieve an actual execution plan for dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in Azure Synapse Analytics, there are different commands. For more information, see [Monitor your Azure Synapse Analytics dedicated SQL pool workload using DMVs](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-manage-monitor#monitor-query-execution).
 
 ### Location of SHOWPLAN output
 

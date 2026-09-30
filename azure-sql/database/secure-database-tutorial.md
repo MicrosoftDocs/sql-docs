@@ -168,7 +168,7 @@ To add a user with SQL authentication:
 1. In the query window, enter the following command:
 
    ```sql
-   CREATE USER ApplicationUser WITH PASSWORD = 'YourStrongPassword1';
+   CREATE USER ApplicationUser WITH PASSWORD = '<password>';
    ```
 
 1. On the toolbar, select **Execute** to create the user.

@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 # ODBC API implementation details
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Open Database Connectivity (ODBC) is a Microsoft Win32 API that enables applications to access data in ODBC-compliant data sources. This article explains how ODBC processes function calls, manages handles, interacts with drivers, and provides diagnostics. It gives developers a clearer understanding of how ODBC operates between applications, the Driver Manager, and database drivers.
 

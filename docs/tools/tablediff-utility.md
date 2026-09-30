@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], tablediff"
   - "troubleshooting [SQL Server replication], non-convergence"
   - "non-convergence [SQL Server]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # tablediff utility
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The **tablediff** utility is used to compare the data in two tables for non-convergence, and is useful for troubleshooting nonconvergence in a replication topology. This utility can be used from the command prompt or in a batch file to perform the following tasks:
 

@@ -27,7 +27,7 @@ The following resources can help define a performance baseline:
 
 - [Monitor CPU usage](https://techcommunity.microsoft.com/blog/azuresqlblog/monitor-cpu-usage-on-sql-server-and-azure-sql/680777#M131)
 - [Monitor memory usage](/sql/relational-databases/performance-monitor/monitor-memory-usage) and determine the amount of memory used by different components such as buffer pool, plan cache, column-store pool, [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage), etc. In addition, you should find average and peak values of the Page Life Expectancy memory performance counter.
-- Monitor disk IO usage on the source SQL Server instance using the [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) view or [performance counters](/sql/relational-databases/performance-monitor/monitor-disk-usage).
+- Monitor disk IO usage on the source SQL Server instance using the [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-objects/sys-dm-io-virtual-file-stats-transact-sql) view or [performance counters](/sql/relational-databases/performance-monitor/monitor-disk-usage).
 - Monitor workload and query performance by examining Dynamic Management Views (or Query Store if you're migrating from SQL Server 2016 and later). Identify average duration and CPU usage of the most important queries in your workload.
 
 Any performance issues on the source SQL Server should be addressed before migration. Migrating known issues to any new system might cause unexpected results and invalidate any performance comparison.

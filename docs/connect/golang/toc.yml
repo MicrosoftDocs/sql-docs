@@ -1,0 +1,80 @@
+- name: Microsoft go-mssqldb driver for SQL Server
+  href: microsoft-go-mssqldb-driver.md
+- name: Get started
+  items:
+  - name: Installation and system requirements
+    href: installation.md
+  - name: "Quickstart: Connect and query"
+    href: quickstart.md
+  - name: Migrate from other drivers
+    href: migration-guide.md
+  - name: What's new
+    href: whats-new.md
+  - name: Support and lifecycle
+    href: support-lifecycle.md
+- name: Configure connections
+  items:
+  - name: Connection strings
+    href: connection-strings.md
+  - name: Connection options
+    href: connection-options.md
+  - name: Encryption and certificates
+    href: encryption-certificates.md
+  - name: SQL Server and Windows authentication
+    href: authentication.md
+  - name: Microsoft Entra ID authentication
+    href: entra-authentication.md
+  - name: Security best practices
+    href: security-best-practices.md
+- name: Reference
+  items:
+  - name: Limitations
+    href: known-limitations.md
+  - name: FAQ
+    href: faq.yml
+- name: Work with data
+  items:
+  - name: Data type mappings
+    href: data-type-mappings.md
+  - name: Queries and statements
+    href: queries-statements.md
+  - name: Transactions
+    href: transactions.md
+  - name: Error handling and retry patterns
+    href: error-handling.md
+  - name: Stored procedures
+    href: stored-procedures.md
+  - name: Bulk operations
+    href: bulk-operations.md
+  - name: Table-valued parameters
+    href: table-valued-parameters.md
+  - name: JSON and XML data
+    href: json-xml-data.md
+  - name: Always Encrypted
+    href: always-encrypted.md
+  - name: Use GORM with SQL Server
+    href: use-go-orm-library-with-go-mssqldb.md
+  - name: Use sqlx with SQL Server
+    href: use-go-sql-extensions-library-with-go-mssqldb.md
+- name: Deploy and operate
+  items:
+  - name: Connection pooling
+    href: connection-pooling.md
+  - name: Concurrent programming
+    href: concurrent-programming.md
+  - name: Performance tuning
+    href: performance-tuning.md
+  - name: Azure SQL Database
+    href: azure-sql.md
+  - name: Troubleshooting
+    href: troubleshooting.md
+  - name: Test patterns
+    href: testing.md
+- name: Platform and protocol guides
+  items:
+  - name: Linux and macOS
+    href: linux-macos.md
+  - name: Protocols
+    href: protocols.md
+  - name: Logging and diagnostics
+    href: logging-diagnostics.md

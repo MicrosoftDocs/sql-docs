@@ -3,8 +3,8 @@ title: Deploy a Django App with SQL Server to Azure App Service
 description: Deploy a Django application using mssql-django to Azure App Service with ODBC driver configuration and managed identity.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -32,7 +32,7 @@ odbcinst -j
 ```
 
 > [!NOTE]  
-> Azure App Service typically includes ODBC Driver 17 and/or 18 pre-installed on Linux plans. Windows App Service plans also include the ODBC driver.
+> Azure App Service typically includes ODBC Driver 17 and ODBC Driver 18 preinstalled on Linux plans. Windows App Service plans also include the ODBC driver. If you select the `mssql_python` driver instead of `pyodbc`, that path has no separate ODBC driver install, so you don't depend on what the plan preinstalls. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
 
 ## Use environment variables for secrets
 
@@ -205,14 +205,15 @@ Use a custom image when you need a specific ODBC driver version, additional syst
 
 App Service exposes managed identity to apps through the `IDENTITY_ENDPOINT` and `IDENTITY_HEADER` environment variables, not the standard Azure Instance Metadata Service (IMDS) endpoint at `169.254.169.254` that the ODBC driver expects when `Authentication=ActiveDirectoryMsi` is set. In a custom container, the ODBC driver's MSI mode can't reach IMDS, so the connection hangs until the login timer expires. Fetch the access token in Python and pass it to `mssql-django` through the `TOKEN` setting. Use the `settings.py` pattern shown in [Use access tokens with ManagedIdentityCredential](#use-access-tokens-with-managedidentitycredential).
 
-Create a `Dockerfile` in your project root. The Dockerfile installs the ODBC driver, keeps the Kerberos runtime that the driver needs for Microsoft Entra authentication, and starts the app under `gunicorn`:
+Create a `Dockerfile` in your project root. The Dockerfile installs the ODBC driver, keeps the Kerberos runtime that the driver needs, and starts the app under `gunicorn`:
 
 ```dockerfile
 FROM python:3.12-slim
 
 # Install ODBC driver and runtime dependencies. libgssapi-krb5-2 is listed
 # explicitly so apt-get --auto-remove keeps it after curl and gnupg2 are
-# purged; msodbcsql18 needs it at runtime for Microsoft Entra authentication.
+# purged; msodbcsql18 loads it at run time for every connection but doesn't
+# declare it as a dependency.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     gnupg2 \

@@ -59,12 +59,12 @@ helpviewer_keywords:
   - "table changes [SQL Server]"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # ALTER TABLE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 Modifies a table definition by altering, adding, or dropping columns and constraints. `ALTER TABLE` also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
 
@@ -369,9 +369,9 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ::: moniker-end
 
-::: moniker range=">=aps-pdw-2016 || =azure-sqldw-latest"
+::: moniker range="=azure-sqldw-latest"
 
-## Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+## Syntax for Azure Synapse Analytics
 
 ```syntaxsql
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
@@ -491,7 +491,7 @@ The name of the table to alter. If the table isn't in the current database or if
 
 Specifies the named column to alter.
 
-::: moniker range=">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 `ALTER TABLE ... ALTER COLUMN` for Fabric Data Warehouse has different capabilities. For more information, see [the Fabric Data Warehouse version of this article](alter-table-transact-sql.md?view=fabric&preserve-view=true#alter-column).
 
@@ -807,7 +807,7 @@ Specifies that one or more column definitions, computed column definitions, or t
 
 Specifies the names of the columns that the system uses to record the period of time for which a record is valid. You can specify existing columns or create new columns as part of the `ADD PERIOD FOR SYSTEM_TIME` argument. Set up the columns with the data type of **datetime2** and define them as `NOT NULL`. If you define a period column as `NULL`, an error results. You can define a [column_constraint](alter-table-column-constraint-transact-sql.md) and/or [Specify default values for columns](../../relational-databases/tables/specify-default-values-for-columns.md) for the system_start_time and system_end_time columns. See Example A in the following [System Versioning](#system_versioning) examples that demonstrates using a default value for the system_end_time column.
 
-Use this argument with the `SET SYSTEM_VERSIONING` argument to make an existing table a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md).
+Use this argument with the `SET SYSTEM_VERSIONING` argument to make an existing table a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal/overview.md).
 
 As of [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], users can mark one or both period columns with `HIDDEN` flag to implicitly hide these columns such that `SELECT * FROM <table_name>` doesn't return a value for the columns. By default, period columns aren't hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.
 
@@ -1010,7 +1010,7 @@ If you specify *partition_scheme_name*, the rules for [CREATE TABLE (Transact-SQ
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the data type, nullability constraint, and primary key constraint requirements for system versioning are met. The system records the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument isn't used, the name of this history table is `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table doesn't exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal-tables.md).
+Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the data type, nullability constraint, and primary key constraint requirements for system versioning are met. The system records the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument isn't used, the name of this history table is `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table doesn't exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal tables](../../relational-databases/tables/temporal/overview.md).
 
 #### HISTORY_RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }
 
@@ -1306,7 +1306,7 @@ You can change the length, precision, or scale of a column by specifying a new s
 
 Changes you specify in `ALTER TABLE` take effect immediately. If the changes require modifications to the rows in the table, `ALTER TABLE` updates the rows. `ALTER TABLE` acquires a schema modify (Sch-M) lock on the table to ensure that no other connections reference even the metadata for the table during the change, except online index operations that require a short Sch-M lock at the end. In an `ALTER TABLE...SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in large tables, such as dropping a column or, on some editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], adding a `NOT NULL` column with a default value, can take a long time to complete and generate many log records. Run these `ALTER TABLE` statements with the same care as any `INSERT`, `UPDATE`, or `DELETE` statement that affects many rows.
 
-::: moniker range=">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+::: moniker range="=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 
 ### Extended Events (XEvents) for partition switch
 
@@ -2177,7 +2177,7 @@ GO
 
 ### System versioning
 
-The following four examples help you become familiar with the syntax for using system versioning. For additional assistance, see [Get started with system-versioned temporal tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
+The following four examples help you become familiar with the syntax for using system versioning. For additional assistance, see [Get started with system-versioned temporal tables](../../relational-databases/tables/temporal/get-started.md).
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
@@ -2265,7 +2265,7 @@ ALTER TABLE Department
 DROP TABLE DepartmentHistory;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following examples A through C use the `FactResellerSales` table in the [!INCLUDE [ssawPDW](../../includes/ssawpdw-md.md)] database.
 

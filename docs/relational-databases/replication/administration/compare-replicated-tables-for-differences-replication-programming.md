@@ -1,5 +1,5 @@
 ---
-title: "Compare differences between replicated tables (Replication SP)"
+title: Compare Differences Between Replicated Tables (Replication SP)
 description: Use replication stored procedures to compare the differences between replicated tables on the Publisher and the Subscriber.
 author: "MashaMSFT"
 ms.author: "mathoma"
@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
 ---
 # Compare differences between replicated tables (Replication Programming)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
+  Article validation checks if the published data for table articles at the Publisher and Subscriber are identical. If they're not, it can indicate non-convergence. For more information, see [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). However, validation only returns pass or fail information and doesn't provide any details about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
   
 > [!NOTE]  
 >  The **tablediff** utility is only supported for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servers.  
@@ -31,18 +31,18 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
     -   **-sourcedatabase** - name of the database containing the correct data.  
   
-    -   **-sourcetable** - name of the source table for the article being compared.  
+    -   **-sourcetable** - name of the source table for the article you're comparing.  
   
     -   (Optional) **-sourceschema** - schema owner of the source table, if not the default schema.  
   
     -   (Optional) **-sourceuser** and **-sourcepassword** when using SQL Server Authentication to connect to the Publisher.  
   
         > [!IMPORTANT]  
-        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
+        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, secure the file to prevent unauthorized access.  
   
     -   **-destinationserver** - name of the server on which the data is being compared, usually a Subscriber.  
   
-    -   **-destinationdatabase** - name of a the database being compared.  
+    -   **-destinationdatabase** - name of the database being compared.  
   
     -   **-destinationtable** - name of the table being compared.  
   
@@ -51,7 +51,7 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
     -   (Optional) **-destinationuser** and **-destinationpassword** when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication to connect to the Subscriber.  
   
         > [!IMPORTANT]  
-        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
+        >  When possible, use Windows Authentication. If you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, prompt users to enter security credentials at runtime. If you must store credentials in a script file, secure the file to prevent unauthorized access.  
   
     -   (Optional) Use **-c** to do a column-level comparison.  
   

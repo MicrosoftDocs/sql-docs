@@ -29,11 +29,11 @@ helpviewer_keywords:
   - "NOT LIKE keyword"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # LIKE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Determines whether a specific character string matches a specified pattern. A pattern can include regular characters and wildcard characters. During pattern matching, regular characters must exactly match the characters specified in the character string. However, wildcard characters can be matched with arbitrary fragments of the character string. Using wildcard characters makes the `LIKE` operator more flexible than using the `=` and `!=` string comparison operators. If any one of the arguments isn't of character string data type, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converts it to character string data type, if it's possible.
 
@@ -47,13 +47,13 @@ Syntax for SQL Server and Azure SQL Database:
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
+Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
 match_expression [ NOT ] LIKE pattern
 ```
 
-`ESCAPE` and `STRING_ESCAPE` are not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+`ESCAPE` and `STRING_ESCAPE` are not supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## Arguments
 
@@ -362,7 +362,7 @@ ORDER BY LastName ASC,
 GO
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 ### E. Use LIKE with the `%` wildcard character
 

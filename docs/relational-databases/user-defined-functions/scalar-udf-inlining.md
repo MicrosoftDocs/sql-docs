@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-ver15 || >=sql-server-linux-v
 
 [!INCLUDE [SQL Server 2019 SQL Database SQL Managed Instance FabricSE Fabric DW FabricSQLDB](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
-This article introduces scalar UDF inlining, a feature under the [Intelligent query processing in SQL databases](../performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE [sssql19](../../includes/sssql19-md.md)] and later versions.
+This article introduces scalar UDF inlining, a feature under the [Intelligent query processing in SQL databases](../performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE [sssql19](../../includes/sssql19-md.md)] and later versions. 
 
 ## T-SQL scalar user-defined functions
 
@@ -41,7 +41,9 @@ By using the UDF inlining feature, the database engine automatically transforms 
 
 ### Automatic inlining of scalar UDFs in Microsoft Fabric Data Warehouse
 
-In Microsoft Fabric Data Warehouse, scalar UDFs (currently in preview) are automatically inlined at compile time when the function body and the calling query meet requirements for inlining. For more information, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) and [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md?view=fabric&preserve-view=true).
+In Microsoft Fabric Data Warehouse, scalar UDF inlining is available as a preview feature. 
+
+In Fabric Data Warehouse, scalar UDFs are automatically inlined at compile time when the function body and the calling query meet requirements for inlining. For more information, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) and [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md?view=fabric&preserve-view=true). For examples of code changes to make a non-inlinable UDF inlinable, see [How to create scalar user-defined functions in Fabric Data Warehouse (preview)](/fabric/data-warehouse/how-to-inline-udf).
 
 ## Examples
 

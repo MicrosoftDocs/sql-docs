@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "command-line [SQL Server]"
   - "utilities [SQL Server], command-line"
   - "command-line [SQL Server], utilities"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # SQL command-line utilities (Database Engine)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Command-line utilities enable you to script [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] operations. The following table contains a list of several command-line utilities that ship with [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)].
 

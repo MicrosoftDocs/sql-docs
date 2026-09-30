@@ -3,7 +3,7 @@ title: "When to Use OLE DB Driver"
 description: "Learn when to use OLE DB Driver for SQL Server and the high level data access concepts that differentiate the different it from other drivers."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: connectivity
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ---
 # When to use OLE DB Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

@@ -45,7 +45,7 @@ drwxr-xr-x 3 root  root  4096 May 14 17:17 ../
 drwxr-xr-x 5 mssql mssql 4096 May 14 17:17 .system/
 drwxr-xr-x 2 mssql mssql 4096 May 14 17:17 data/
 drwxr-xr-x 3 mssql mssql 4096 Sep 16 22:57 log/
--rw-r--r-- 1 root  root    85 May 14 17:17 mssql.conf
+-rw-rw---- 1 mssql mssql   28 Sep 14 17:17 mssql.conf
 drwxrwxr-x 2 mssql mssql 4096 May 14 17:17 secrets/
 drwxr-xr-x 2 mssql mssql 4096 May 14 17:17 security/
 ```

@@ -491,28 +491,7 @@ WHERE c.session_id = @@SPID;
 
 You can monitor resource usage using the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store), just as you would in SQL Server.
 
-You can also monitor usage using [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database).
-
-### sys.dm_db_resource_stats
-
-You can use the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) view in every database. The `sys.dm_db_resource_stats` view shows recent resource use data relative to the service tier. Average percentages for CPU, data IO, log writes, and memory are recorded every 15 seconds and are maintained for one hour.
-
-Because this view provides a more granular look at resource use, use `sys.dm_db_resource_stats` first for any current-state analysis or troubleshooting. For example, this query shows the average and maximum resource use for the current database over the past hour:
-
-```sql
-SELECT
-    AVG(avg_cpu_percent) AS 'Average CPU use in percent',
-    MAX(avg_cpu_percent) AS 'Maximum CPU use in percent',
-    AVG(avg_data_io_percent) AS 'Average data IO in percent',
-    MAX(avg_data_io_percent) AS 'Maximum data IO in percent',
-    AVG(avg_log_write_percent) AS 'Average log write use in percent',
-    MAX(avg_log_write_percent) AS 'Maximum log write use in percent',
-    AVG(avg_memory_usage_percent) AS 'Average memory use in percent',
-    MAX(avg_memory_usage_percent) AS 'Maximum memory use in percent'
-FROM sys.dm_db_resource_stats;
-```
-
-For other queries, see the examples in [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database).
+You can also monitor usage by using [sys.server_resource_stats](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database).
 
 ### sys.server_resource_stats
 

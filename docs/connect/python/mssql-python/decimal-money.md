@@ -3,6 +3,7 @@ title: Handle Decimal and Money Values in mssql-python
 description: Learn how to work with decimal, numeric, and money data types for accurate financial calculations using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

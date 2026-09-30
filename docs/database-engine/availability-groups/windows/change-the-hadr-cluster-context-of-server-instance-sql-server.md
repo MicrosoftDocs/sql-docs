@@ -37,7 +37,7 @@ monikerRange: ">=sql-server-2017"
 
 -   The server instance on which you change the HADR cluster context must be running [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] or above (Enterprise edition or above).  
   
--   The server instance must be enabled for Always On. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+-   The server instance must be enabled for Always On. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 -   To be eligible to be switched from the local cluster context to a remote cluster cluster, a server instance cannot be hosting any availability replicas. The [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md) catalog view should not return any rows.  
   
@@ -45,8 +45,8 @@ monikerRange: ">=sql-server-2017"
   
     |Replica Role|Action|Link|  
     |------------------|------------|----------|  
-    |Primary|Take the availability group offline.|[Take an Availability Group Offline &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)|  
-    |Secondary|Remove the replica from its availability group|[Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
+    |Primary|Take the availability group offline.|[Take an Availability Group Offline &#40;SQL Server&#41;](take-an-availability-group-offline-sql-server.md)|  
+    |Secondary|Remove the replica from its availability group|[Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   Before you can switch from a remote cluster to the local cluster, all synchronous-commit replicas must be SYNCHRONIZED.  
   
@@ -109,7 +109,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
 ##  <a name="FollowUp"></a> Follow Up: After Switching the Cluster Context of an Availability Replica  
  The new HADR cluster context takes effect immediately, without restarting the server instance. The HADR cluster context setting is a persistent instance-level setting that remains unchanged if the server instance restarts.  
   
- Confirm the new HADR cluster context by querying the [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) dynamic management view, as follows:  
+ Confirm the new HADR cluster context by querying the [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-objects/sys-dm-hadr-cluster-transact-sql.md) dynamic management view, as follows:  
   
 ```  
 SELECT cluster_name FROM sys.dm_hadr_cluster  
@@ -125,21 +125,20 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Remove an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
+-   [Remove an Availability Group Listener &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
--   [Take an Availability Group Offline &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)  
+-   [Take an Availability Group Offline &#40;SQL Server&#41;](take-an-availability-group-offline-sql-server.md)  
   
--   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 ## Related content
 
-- [SQL Server 2012 Technical Articles](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)
 - [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)
 - [What is an Always On availability group?](overview-of-always-on-availability-groups-sql-server.md)
 - [Windows Server Failover Clustering with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)

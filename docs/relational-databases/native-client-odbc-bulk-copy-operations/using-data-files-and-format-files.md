@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
 ---
 # Using Data Files and Format Files
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The simplest bulk copy program does the following:  
   

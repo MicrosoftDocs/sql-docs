@@ -3,8 +3,8 @@ title: Migrate Django Apps from Other Databases to SQL Server
 description: Guidance for migrating Django applications from PostgreSQL, MySQL, or SQLite to SQL Server using the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -79,7 +79,7 @@ python manage.py migrate
 | Auto-increment | `SERIAL` / `BIGSERIAL` | `IDENTITY(1,1)` |
 | Boolean type | Native `boolean` | **bit** (`0` or `1`) |
 | Text fields | `text` (unlimited) | **nvarchar(max)** |
-| JSON support | Native `jsonb` | **nvarchar(max)** with JSON functions (SQL Server 2016+) |
+| JSON support | Native `jsonb` | **nvarchar(max)** with JSON functions |
 | Array fields | `ArrayField` | Not supported. Use a related table or JSON. |
 | HStore fields | `HStoreField` | Not supported. Use `JSONField` instead. |
 | Range fields | `IntegerRangeField`, `BigIntegerRangeField`, `DateRangeField`, `DateTimeRangeField` | Not supported. Use two separate fields. |

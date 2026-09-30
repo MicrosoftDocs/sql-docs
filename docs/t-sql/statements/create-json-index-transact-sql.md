@@ -1,22 +1,22 @@
 ---
 title: "CREATE JSON INDEX (Transact-SQL)"
-description: Creates a JSON index on a specified table and column in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+description: Creates a JSON index on a specified table and column.
 author: uc-msft
 ms.author: umajay
 ms.reviewer: randolphwest
-ms.date: 10/27/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
 ms.custom:
   - build-2025
-monikerRange: ">=sql-server-2017"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # CREATE JSON INDEX (Transact-SQL)
 
-[!INCLUDE [sqlserver2025](../../includes/applies-to-version/sqlserver2025.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-Creates a JSON index on a specified table and column in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+Creates a JSON index on a specified table and column.
 
 JSON indexes:
 
@@ -24,9 +24,6 @@ JSON indexes:
 - Can be created on tables in another database by specifying a qualified database name.
 - Require the table to have a clustered primary key.
 - Can't be specified on indexed views.
-
-> [!NOTE]  
-> Creating JSON indexes is currently in preview and only available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

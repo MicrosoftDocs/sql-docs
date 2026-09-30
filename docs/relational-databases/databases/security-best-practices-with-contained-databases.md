@@ -28,7 +28,7 @@ helpviewer_keywords:
 ```  
 USE DB1;  
 GO  
-CREATE USER Carlo WITH PASSWORD = '<strong password>';   
+CREATE USER Carlo WITH PASSWORD = '<password>';
 -- Return the SID of the user  
 SELECT SID FROM sys.database_principals WHERE name = 'Carlo';  
   

@@ -14,7 +14,7 @@ helpviewer_keywords:
 
 # ODBC table-valued parameter API summary
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ODBC supports table-valued parameters (table-valued parameters) through enhancements to several existing API functions. These functions work together to describe table-valued parameter schemas, bind and transmit row sets, fetch metadata, and manage descriptor records.  
 The following sections organize the relevant ODBC functions into logical groups to help you understand how each part of the table-valued parameter  pipeline operates.

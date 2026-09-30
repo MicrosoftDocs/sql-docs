@@ -1,10 +1,11 @@
 ---
-title: "Configure FCI - SQL Server on Linux (RHEL)"
+title: Configure FCI (RHEL)
+titleSuffix: SQL Server on Linux
 description: Learn to configure a failover cluster instance (FCI) on Red Hat Enterprise Linux (RHEL) for SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 07/03/2025
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: install-set-up-deploy
@@ -13,7 +14,7 @@ ms.custom:
   - build-2025
   - sfi-ropc-blocked
 ---
-# Configure failover cluster instance - SQL Server on Linux (RHEL)
+# Configure failover cluster instance on Linux (RHEL)
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
@@ -29,7 +30,7 @@ A [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] two-node shar
 
 This article explains how to create a two-node shared disk failover cluster instance (FCI) for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. The article includes instructions and script examples for Red Hat Enterprise Linux (RHEL). Ubuntu distributions are similar to RHEL so the script examples will normally also work on Ubuntu.
 
-For conceptual information, see [Failover Cluster Instances - SQL Server on Linux](shared-disk-cluster-concepts.md).
+For conceptual information, see [Failover cluster instances on Linux](shared-disk-cluster-concepts.md).
 
 ## Prerequisites
 
@@ -37,7 +38,7 @@ To complete the following end-to-end scenario, you need two machines to deploy t
 
 ## Set up and configure Linux
 
-The first step is to configure the operating system on the cluster nodes. On each node in the cluster, configure a linux distribution. Use the same distribution and version on both nodes. Use either one or the other of the following distributions:
+The first step is to configure the operating system on the cluster nodes. On each node in the cluster, configure a Linux distribution. Use the same distribution and version on both nodes. Use either one or the other of the following distributions:
 
 - RHEL with a valid subscription for the HA add-on
 
@@ -65,7 +66,7 @@ The first step is to configure the operating system on the cluster nodes. On eac
    Connect to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] `master` database with the `sa` account and run the following:
 
    ```sql
-   USE [master];
+   USE master;
    GO
 
    CREATE LOGIN [<loginName>]
@@ -77,7 +78,7 @@ The first step is to configure the operating system on the cluster nodes. On eac
    > [!CAUTION]  
    > [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
 
-   Alternatively, you can set the permissions at a more granular level. The Pacemaker login requires `VIEW SERVER STATE` to query health status with `sp_server_diagnostics`, **setupadmin**, and ALTER ANY LINKED SERVER to update the FCI instance name with the resource name, by running `sp_dropserver` and `sp_addserver`.
+   Alternatively, you can set the permissions at a more granular level. The Pacemaker login requires `VIEW SERVER STATE` to query health status with `sp_server_diagnostics`, **setupadmin**, and `ALTER ANY LINKED SERVER` to update the FCI instance name with the resource name, by running `sp_dropserver` and `sp_addserver`.
 
 1. On the primary node, stop and disable [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
@@ -110,9 +111,9 @@ On each cluster node, configure the hosts file. The hosts file must include the 
 
 You need to provide storage that both nodes can access. You can use iSCSI, NFS, or SMB. Configure storage, present the storage to the cluster nodes, and then move the database files to the new storage. The following articles explain the steps for each storage type:
 
-- [Configure failover cluster instance - iSCSI - SQL Server on Linux](shared-disk-cluster-configure-iscsi.md)
-- [Configure failover cluster instance - NFS - SQL Server on Linux](shared-disk-cluster-configure-network-file-system.md)
-- [Configure SMB storage failover cluster instance - SQL Server on Linux](shared-disk-cluster-configure-server-message-block.md)
+- [Configure failover cluster instance on Linux (iSCSI)](shared-disk-cluster-configure-iscsi.md)
+- [Configure failover cluster instance on Linux (NFS)](shared-disk-cluster-configure-network-file-system.md)
+- [Configure failover cluster instance on Linux (SMB)](shared-disk-cluster-configure-server-message-block.md)
 
 ## Install and configure Pacemaker on each cluster node
 
@@ -122,8 +123,8 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd
    sudo chmod 600 /var/opt/mssql/secrets/passwd
    ```
@@ -135,7 +136,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    sudo firewall-cmd --reload
    ```
 
-   If you're using another firewall that doesn't have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster:
+   If you're using another firewall that doesn't have a built-in high-availability configuration, open the following ports for Pacemaker to communicate with other nodes in the cluster:
 
    - **TCP:** Ports 2224, 3121, 21064
    - **UDP:** Port 5405
@@ -165,6 +166,10 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    ```bash
    sudo yum install mssql-server-ha
    ```
+
+## Configure fencing agent
+
+A STONITH device provides a fencing agent. For production clusters, you must configure a fencing agent. For an example of how to create a STONITH device in Azure, see [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices). Modify the instructions for your environment.
 
 ## Configure the failover cluster instance
 
@@ -255,7 +260,7 @@ This example creates an FCI in the group NewLinFCIGrp. The name of the resource 
 
 1. Issue the statement `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`. It should return the name of the node that the FCI is running on.
 
-1. Manually fail the FCI to the other node(s). See the instructions under [Operate failover cluster instance - SQL Server on Linux](shared-disk-cluster-operate.md).
+1. Manually fail the FCI to the other nodes. See the instructions under [Operate failover cluster instance on Linux](shared-disk-cluster-operate.md).
 
 1. Finally, fail the FCI back to the original node and remove the colocation constraint.
 
@@ -273,4 +278,4 @@ In this tutorial, you completed the following tasks.
 
 ## Related content
 
-- [Operate failover cluster instance - SQL Server on Linux](shared-disk-cluster-operate.md)
+- [Operate failover cluster instance on Linux](shared-disk-cluster-operate.md)

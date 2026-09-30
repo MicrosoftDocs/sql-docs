@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Azure portal query editor (Classic experience)"
+title: "Quickstart: Azure portal query editor (Classic experience) (Preview)"
 titleSuffix: Azure SQL Database
 description: Learn how to connect to the Classic experience of the Azure portal query editor for Azure SQL Database.
 author: WilliamDAssafMSFT
@@ -13,14 +13,14 @@ ms.topic: quickstart
 monikerRange: "=azuresql || =azuresql-db"
 ROBOTS: NOINDEX
 ---
-# Quickstart: Use the Azure portal query editor (Classic experience)
+# Quickstart: Use the Azure portal query editor (Classic experience) (Preview)
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this quickstart, connect to an Azure SQL database in the Azure portal and use the query editor (Classic experience) to run Transact-SQL (T-SQL) queries.
 
 > [!IMPORTANT]
-> For the new Azure portal SQL query editor experience, see [Quickstart: Use the Azure portal query editor to query Azure SQL Database](connect-query-portal.md).
+> The classic Azure portal SQL query editor remains a preview feature. For the new Azure portal SQL query editor experience, see [Azure portal query editor for Azure SQL Database](query-editor.md).
 
 - If you don't already have an Azure SQL Database created, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
 

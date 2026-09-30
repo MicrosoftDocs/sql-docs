@@ -101,8 +101,8 @@ Consider the following best practices:
 
 You can use the following dynamic management views to display the configuration of the buffer pool extension and return information about the data pages in the extension.
 
-- [sys.dm_os_buffer_pool_extension_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
-- [sys.dm_os_buffer_descriptors](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)
+- [sys.dm_os_buffer_pool_extension_configuration](../../relational-databases/system-dynamic-management-objects/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)
+- [sys.dm_os_buffer_descriptors](../../relational-databases/system-dynamic-management-objects/sys-dm-os-buffer-descriptors-transact-sql.md)
 
 Performance counters are available in the `SQL Server`, `Buffer Manager` object to track the data pages in the buffer pool extension file. For more information, see [SQL Server, Buffer Manager object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).
 

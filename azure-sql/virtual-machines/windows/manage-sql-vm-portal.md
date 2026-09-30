@@ -69,6 +69,10 @@ You can modify the edition of SQL Server from the **Configure** page as well, su
 
 Changing the license and edition metadata in the Azure portal is only supported once the version and edition of SQL Server has been modified internally to the VM. To learn more see, change the [Version](change-sql-server-version.md) and [Edition](change-sql-server-edition.md) of SQL Server on Azure VMs.
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../../../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Storage
 
 The **Storage** page of the **SQL virtual machines** resource allows you to analyze the I/O performance of your SQL Server workloads, identify missing best practices, and configure the storage settings for your SQL Server VM:

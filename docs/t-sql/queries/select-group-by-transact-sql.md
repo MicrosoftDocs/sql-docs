@@ -3,11 +3,12 @@ title: GROUP BY (Transact-SQL)
 description: A SELECT statement clause that divides the query result into groups of rows, usually by performing one or more aggregations on each group.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 03/13/2026
+ms.reviewer: jovanpop, wiassaf
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
+ai-usage: ai-assisted
 ms.custom:
   - ignite-2025
 f1_keywords:
@@ -31,20 +32,24 @@ helpviewer_keywords:
   - "summary values [SQL Server]"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # SELECT - GROUP BY clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 A `SELECT` statement clause that divides the query result into groups of rows, usually by performing one or more aggregations on each group. The `SELECT` statement returns one row for each group.
+
+This article provides different syntax, arguments, remarks, permissions, and examples based on the selected product version. Select your desired product version from the version dropdown list.
 
 ## Syntax
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-ISO-compliant syntax for SQL Server and Azure SQL Database:
+:::moniker range="azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || azuresqldb-mi-current || fabric-sqldb"
+
+ISO-compliant syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric:
 
 ```syntaxsql
 GROUP BY {
@@ -70,7 +75,7 @@ GROUP BY {
     | CUBE ( <group_by_expression> [ , ...n ] )
 ```
 
-Non-ISO-compliant syntax for SQL Server and Azure SQL Database (backward compatibility only):
+Non-ISO-compliant syntax for backward compatibility only:
 
 ```syntaxsql
 GROUP BY {
@@ -78,7 +83,9 @@ GROUP BY {
     | column-expression [ , ...n ]  WITH { CUBE | ROLLUP }
        }
 ```
+:::moniker-end
 
+:::moniker range="azure-sqldw-latest"
 Syntax for Azure Synapse Analytics:
 
 ```syntaxsql
@@ -88,15 +95,36 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ , ...n ] )
 } [ , ...n ]
 ```
+:::moniker-end
 
-Syntax for Analytics Platform System (PDW):
+:::moniker range="fabric"
+Syntax for Fabric Data Warehouse and SQL analytics endpoint:
 
 ```syntaxsql
-GROUP BY {
-      column-name [ WITH (DISTRIBUTED_AGG) ]
-    | column-expression
-} [ , ...n ]
+      ALL
+     | {
+           column-expression
+         | ROLLUP ( <group_by_expression> [ , ...n ] )
+         | CUBE ( <group_by_expression> [ , ...n ] )
+         | GROUPING SETS ( <grouping_set> [ , ...n ]  )
+         | () --calculates the grand total
+       } [ , ...n ]
+
+<group_by_expression> ::=
+      column-expression
+    | ( column-expression [ , ...n ] )
+
+<grouping_set> ::=
+      () --calculates the grand total
+    | <grouping_set_item>
+    | ( <grouping_set_item> [ , ...n ] )
+
+<grouping_set_item> ::=
+      <group_by_expression>
+    | ROLLUP ( <group_by_expression> [ , ...n ] )
+    | CUBE ( <group_by_expression> [ , ...n ] )
 ```
+:::moniker-end
 
 ## Arguments
 
@@ -138,7 +166,7 @@ The following options extend the basic `GROUP BY` clause to support hierarchical
 
 - **WITH (DISTRIBUTED_AGG)**
 
-  Hints distributed execution for aggregations when grouping by a single column. Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW) are the only platforms that support this option.
+  Hints distributed execution for aggregations when grouping by a single column. Only Azure Synapse Analytics dedicated SQL pools support this option.
 
 ### GROUP BY *column-expression* [ ,...n ]
 
@@ -188,13 +216,13 @@ The query result has three rows since there are three combinations of values for
 | Canada | British Columbia | 500 |
 | United States | Montana | 100 |
 
-The column expression in `GROUP BY` can't contain:
+The column expression in `GROUP BY` can't contain the following elements:
 
-- A column alias that you define in the `SELECT` list. It can use a column alias for a derived table that's defined in the `FROM` clause.
-- A column of type **text**, **ntext**, or **image**. However, you can use a column of **text**, **ntext**, or **image** as an argument to a function that returns a value of a valid data type. For example, the expression can use `SUBSTRING()` and `CAST()`. This rule also applies to expressions in the `HAVING` clause.
-- **xml** data type methods. It can include a user-defined function that uses **xml** data type methods. It can include a computed column that uses **xml** data type methods.
-- A subquery. The query returns error 144.
-- A column from an indexed view.
+- A `GROUP BY` column expression can't contain a column alias that you define in the `SELECT` list. It can use a column alias for a derived table that's defined in the `FROM` clause.
+- A `GROUP BY` column expression can't contain a column of type **text**, **ntext**, or **image**. However, you can use a column of **text**, **ntext**, or **image** as an argument to a function that returns a value of a valid data type. For example, the expression can use `SUBSTRING()` and `CAST()`. This rule also applies to expressions in the `HAVING` clause.
+- A `GROUP BY` column expression can't contain an **xml** data type method. It can include a user-defined function or a computed column that uses **xml** data type methods.
+- A `GROUP BY` column expression can't contain a subquery; the query returns error 144.
+- A `GROUP BY` column expression can't contain a column from an indexed view.
 
 The following statements are allowed:
 
@@ -229,6 +257,54 @@ SELECT ColumnA + constant + ColumnB
 FROM T
 GROUP BY ColumnA + ColumnB;
 ```
+::: moniker range="=fabric"
+
+### GROUP BY ALL
+
+**Applies to**: Fabric Data Warehouse and SQL analytics endpoint
+
+Groups rows in a query by all non-aggregated expressions in the `SELECT` list, without requiring you to explicitly list them in the `GROUP BY <columns>` clause.
+
+`GROUP BY ALL` simplifies aggregate queries by automatically grouping on every selected column that isn't part of an aggregate function.
+
+This `GROUP BY ALL` syntax applies to Fabric Data Warehouse and the SQL analytics endpoint only. This `GROUP BY ALL` syntax is not currently available in SQL Server, Azure SQL Database, Azure SQL Managed Instance, or SQL database in Fabric. For those platforms, use the [GROUP BY ALL *column-expression* syntax](select-group-by-transact-sql.md?view=azuresqldb-current&preserve-view=true#group-by-all-column-expression--n-).
+
+- `GROUP BY ALL` identifies all expressions in the `SELECT` list.
+- `GROUP BY ALL` excludes expressions wrapped in aggregate functions.
+- `GROUP BY ALL` groups by all remaining expressions.
+- `GROUP BY ALL` does not change query semantics—only syntax. Adding a new non-aggregated column to the `SELECT` list automatically affects the grouping.
+
+Unlike an explicit `GROUP BY <columns>` clause, which raises an error if a selected column isn't included in the grouping keys, `GROUP BY ALL` automatically adds all non-aggregated columns from the `SELECT` list to the grouping set. This approach avoids the `Column is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause` error.
+
+> [!WARNING]
+> Adding many columns to the grouping set can negatively impact query performance.
+>
+> If you need precise control over grouping keys, use an explicit `GROUP BY <columns>` clause and project additional non-aggregated columns by applying a lightweight aggregate function such as [ANY_VALUE](../functions/any-value-transact-sql.md).
+
+The following example demonstrates how to use `GROUP BY ALL` with the same dataset as the `GROUP BY <columns>` examples to make it easier to compare behavior and results.
+
+```sql
+SELECT
+    Region,
+    Territory,
+    SUM(Sales) AS TotalSales
+FROM Sales
+GROUP BY ALL;
+```
+
+`GROUP BY ALL` implicitly groups by `Region` and `Territory` because they're the only non-aggregated expressions in the `SELECT` list.
+
+The query result has three rows since there are three combinations of values for `Region` and `Territory`. The `TotalSales` for Canada and British Columbia is the sum of two rows.
+
+| Region | Territory | TotalSales |
+| --- | --- | --- |
+| Canada | Alberta | 100 |
+| Canada | British Columbia | 500 |
+| United States | Montana | 100 |
+
+This behavior is functionally equivalent to explicitly listing all non-aggregated columns in the `GROUP BY` clause.
+
+::: moniker-end
 
 ### GROUP BY ROLLUP ()
 
@@ -348,17 +424,17 @@ GROUP BY GROUPING SETS(Region, ());
 
 ### GROUP BY ALL column-expression [ ,...n ]
 
-**Applies to**: SQL Server and Azure SQL Database
+**Applies to**: SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric
 
 > [!NOTE]  
 > Use this syntax only for backward compatibility. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
 
+The `GROUP BY ALL` T-SQL syntax is different in Fabric Data Warehouse. For the Fabric Data Warehouse version of this article, see [SELECT - GROUP BY for Fabric Data Warehouse](select-group-by-transact-sql.md?view=fabric&preserve-view=true#group-by-all).
+
 Specifies whether to include all groups in the results, regardless of whether they meet the search criteria in the `WHERE` clause. Groups that don't meet the search criteria have `NULL` for the aggregation.
 
-`GROUP BY ALL`:
-
-- Isn't supported in queries that access remote tables if there's also a `WHERE` clause in the query.
-- Fails on columns that have the FILESTREAM attribute.
+- `GROUP BY ALL {columns}` isn't supported in queries that access remote tables if there's also a `WHERE` clause in the query.
+- `GROUP BY ALL {columns}` fails on columns that have the FILESTREAM attribute.
 
 #### Support for ISO and ANSI SQL-2006 GROUP BY features
 
@@ -368,19 +444,23 @@ The `GROUP BY` clause supports all `GROUP BY` features that are included in the 
 
 ### GROUP BY column-expression [ ,...n ] WITH { CUBE | ROLLUP }
 
-**Applies to**: SQL Server and Azure SQL Database
+**Applies to**: SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric
+
+The legacy `GROUP BY <column-expression> WITH CUBE` and `GROUP BY <column-expression> WITH ROLLUP` syntax is supported for backwards compatibility only.
 
 > [!NOTE]  
 > Use this syntax only for backward compatibility. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
 
 ### WITH (DISTRIBUTED_AGG)
 
-**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
+
+The `DISTRIBUTED_AGG` query hint isn't supported in SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, or Fabric Data Warehouse.
 
 The `DISTRIBUTED_AGG` query hint forces the massively parallel processing (MPP) system to redistribute a table on a specific column before performing an aggregation. You can use the `DISTRIBUTED_AGG` query hint on only one column in the `GROUP BY` clause. After the query finishes, the redistributed table is dropped. The original table isn't changed.
 
 > [!NOTE]  
-> The `DISTRIBUTED_AGG` query hint provides backward compatibility with earlier [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] versions and doesn't improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations.
+> The `DISTRIBUTED_AGG` query hint provides backward compatibility, and doesn't improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations.
 
 ## Remarks
 
@@ -511,7 +591,7 @@ HAVING DATEPART(yyyy, OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy, OrderDate);
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Basic use of the GROUP BY clause
 
@@ -588,7 +668,7 @@ ORDER BY OrderDateKey;
 
 ### I. Use a GROUP BY clause with a HAVING clause
 
-The following example uses the `HAVING` clause to specify the groups generated in the `GROUP BY` clause that should be includes in the result set. Only those groups with order dates in 2004 or later are included in the results.
+The following example uses the `HAVING` clause to specify the groups generated in the `GROUP BY` clause that should be included in the result set. Only those groups with order dates in 2004 or later are included in the results.
 
 ```sql
 -- Uses AdventureWorks

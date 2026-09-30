@@ -1314,7 +1314,7 @@ items:
           href: relational-databases/indexes/index-disk-space-example.md
       - name: Reorganize & rebuild
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
-      - name: Automatic index compaction (preview)
+      - name: Automatic index compaction
         href: relational-databases/indexes/automatic-index-compaction.md
       - name: Specify fill factor
         href: relational-databases/indexes/specify-fill-factor-for-an-index.md
@@ -3183,13 +3183,6 @@ items:
           href: relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md
         - name: Create a Format File
           href: relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md
-      - name: Creating a driver application
-        href: relational-databases/native-client/odbc/creating-a-driver-application.md
-        items:
-        - name: Asynchronous Mode & SQLCancel
-          href: relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
-        - name: Multithreaded Applications
-          href: relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md
     - name: SQL ODBC APIs for Native Clients
       items:
       - name: SQLBindCol
@@ -4802,26 +4795,8 @@ items:
       href: sql-server/install/uninstall-reporting-services.md
   - name: Reference
     items:
-    - name: Server properties
-      items:
-      - name: General Page
-        href: database-engine/configure-windows/server-properties-general-page.md
-      - name: Memory Page
-        href: database-engine/configure-windows/server-properties-memory-page.md
-      - name: Processors Page
-        href: database-engine/configure-windows/server-properties-processors-page.md
-      - name: Security Page
-        href: database-engine/configure-windows/server-properties-security-page.md
-      - name: Connections Page
-        href: database-engine/configure-windows/server-properties-connections-page.md
-      - name: Database Settings Page
-        href: database-engine/configure-windows/server-properties-database-settings-page.md
-      - name: Misc Server Settings Page
-        href: database-engine/configure-windows/server-properties-misc-server-settings-page.md
-      - name: FILESTREAM Page
-        href: database-engine/configure-windows/server-properties-filestream-page.md
-      - name: Advanced Page
-        href: database-engine/configure-windows/server-properties-advanced-page.md
+    - name: Server Properties window >
+      href: /ssms/server-properties/server-properties-window
 - name: Migrate & load data
   items:
   - name: Migration documentation
@@ -6093,6 +6068,8 @@ items:
       href: relational-databases/sql-server-configuration-manager.md
     - name: Database Lifecycle Management
       href: relational-databases/database-lifecycle-management.md
+    - name: Manage SQL license types at scale
+      href: sql-server/manage-license-type-at-scale.md
     - name: Database mail
       items:
       - name: Overview
@@ -7257,15 +7234,16 @@ items:
       href: sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md
   - name: Fabric Databases
     items:
+    - name: Fabric Database Hub
+      href: /fabric/database/hub/
+    - name: Monitor Microsoft SQL in Fabric
+      href: /fabric/database/hub/monitor-sql
     - name: Microsoft Fabric Mirroring
       href: sql-server/fabric-database/fabric-mirrored-databases.md
     - name: SQL database in Microsoft Fabric
       href: sql-server/fabric-database/sql-database-in-fabric.md
   - name: Machine Learning Services >
     href: machine-learning/
-  - name: Analytics Platform System >
-    displayName: APS, PDW, Parallel Data Warehouse
-    href: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
   - name: SQL Server Analysis Services (SSAS) >
     href: /analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) >
@@ -7773,10 +7751,10 @@ items:
 - name: Security
   href: relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
   items:
+  - name: Secure your SQL Server
+    href: relational-databases/security/secure-sql-server.md
   - name: Overview
     href: relational-databases/security/securing-sql-server.md
-  - name: Security baseline
-    href: relational-databases/security/secure-sql-server.md
   - name: Best practices
     href: relational-databases/security/sql-server-security-best-practices.md
   - name: How-to
@@ -9003,7 +8981,7 @@ items:
           href: tools/visual-studio-code-extensions/mssql/mssql-data-api-builder.md
         - name: Query profiler
           href: tools/visual-studio-code-extensions/mssql/mssql-query-profiler.md
-        - name: Format T-SQL (Preview)
+        - name: Format T-SQL
           href: tools/visual-studio-code-extensions/mssql/mssql-sql-formatter.md
         - name: SQL Notebooks
           href: tools/visual-studio-code-extensions/mssql/mssql-sql-notebooks.md
@@ -9212,8 +9190,8 @@ items:
       items:
       - name: Overview
         href: linux/sql-server-linux-develop-overview.md
-      - name: Connectivity libraries
-        href: linux/sql-server-linux-develop-connectivity-libraries.md
+      - name: Microsoft SQL drivers and frameworks
+        href: /sql/connect/sql-connection-libraries
       - name: Use Visual Studio Code
         href: tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md
       - name: Use SSDT
@@ -9313,9 +9291,9 @@ items:
       - name: Red Hat Enterprise Linux (RHEL)
         items:
         - name: Configure (HA add-on)
-          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-configure.md
+          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-configure.md
         - name: Operate (HA add-on)
-          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-red-hat-7-operate.md
+          href: linux/business-continuity/failover-cluster-instance/shared-disk-cluster-operate.md
       - name: SUSE Linux Enterprise Server (SLES)
         items:
         - name: Configure (HA add-on)
@@ -9448,6 +9426,14 @@ items:
       href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
     - name: SQL Server on Azure VMs >
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
+- name: SQL Server on Azure Local
+  items:
+  - name: Overview
+    href: sql-server/azure-local/overview.md
+  - name: Deploy in connected mode
+    href: sql-server/azure-local/deploy.md
+  - name: Deploy with disconnected operations
+    href: sql-server/azure-local/deploy-disconnected.md
 - name: Azure Arc
   items:
   - name: SQL Server enabled by Azure Arc
@@ -9560,7 +9546,7 @@ items:
           href: sql-server/azure-arc/migration-sql-mi-prepare-link.md
         - name: Prepare LRS migration
           href: sql-server/azure-arc/migration-sql-mi-prepare-log-replay-service.md
-        - name: Migrate to SQL managed instance
+        - name: Migrate to SQL Managed Instance
           href: sql-server/azure-arc/migrate-to-azure-sql-managed-instance.md
         - name: Troubleshoot common issues
           href: sql-server/azure-arc/migrate-to-azure-sql-managed-instance-troubleshoot.md
@@ -9570,6 +9556,12 @@ items:
           href: sql-server/azure-arc/migration-sql-vm-prepare.md
         - name: Migrate to SQL Server VM
           href: sql-server/azure-arc/migrate-to-sql-server-on-azure-vms.md
+      - name: Migrate to Azure SQL Database
+        items:
+        - name: Prepare for migration
+          href: sql-server/azure-arc/migration-sql-database-prepare.md
+        - name: Migrate to SQL Database
+          href: sql-server/azure-arc/migrate-to-azure-sql-database.md
     - name: SQL Server enabled by Azure Arc FAQ
       href: sql-server/azure-arc/faq.yml
     - name: Data collection & reporting
@@ -11895,7 +11887,7 @@ items:
       - name: sys.spatial_reference_systems
         href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
     - name: Azure Synapse Analytics
-      href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
+      href: relational-databases/system-catalog-views/azure-synapse-analytics-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
         href: relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md
@@ -12586,8 +12578,8 @@ items:
         href: relational-databases/system-dynamic-management-objects/sys-dm-change-feed-errors.md
       - name: sys.dm_change_feed_log_scan_sessions
         href: relational-databases/system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md
-    - name: Azure Synapse Analytics & Parallel Data Warehouse
-      href: relational-databases/system-dynamic-management-objects/sql-and-parallel-data-warehouse-dynamic-management-views.md
+    - name: Azure Synapse Analytics
+      href: relational-databases/system-dynamic-management-objects/azure-synapse-analytics-dynamic-management-objects.md
       items:
       - name: sys.dm_pdw_component_health_active_alerts
         href: relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md
@@ -15629,10 +15621,14 @@ items:
           href: t-sql/functions/any-value-transact-sql.md
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
+        - name: APPROX_MEDIAN
+          href: t-sql/functions/approx-median-transact-sql.md
         - name: APPROX_PERCENTILE_CONT
           href: t-sql/functions/approx-percentile-cont-transact-sql.md
         - name: APPROX_PERCENTILE_DISC
           href: t-sql/functions/approx-percentile-disc-transact-sql.md
+        - name: APPROX_QUANTILE
+          href: t-sql/functions/approx-quantile-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG
@@ -15647,10 +15643,14 @@ items:
           href: t-sql/functions/grouping-id-transact-sql.md
         - name: MAX
           href: t-sql/functions/max-transact-sql.md
+        - name: MEDIAN
+          href: t-sql/functions/median-transact-sql.md
         - name: MIN
           href: t-sql/functions/min-transact-sql.md
         - name: PRODUCT
           href: t-sql/functions/product-aggregate-transact-sql.md
+        - name: QUANTILE
+          href: t-sql/functions/quantile-transact-sql.md
         - name: STDEV
           href: t-sql/functions/stdev-transact-sql.md
         - name: STDEVP
@@ -16662,7 +16662,7 @@ items:
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Aliasing (Azure Synapse Analytics)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16674,7 +16674,7 @@ items:
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Subqueries (Azure Synapse Analytics)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table value constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16712,11 +16712,15 @@ items:
           href: t-sql/queries/select-order-by-clause-transact-sql.md
         - name: SELECT - OVER clause
           href: t-sql/queries/select-over-clause-transact-sql.md
+        - name: SELECT - QUALIFY clause
+          href: t-sql/queries/select-qualify-clause-transact-sql.md
       - name: FROM plus JOIN, APPLY, PIVOT
         href: t-sql/queries/from-transact-sql.md
         items:
         - name: FROM - Using PIVOT & UNPIVOT
           href: t-sql/queries/from-using-pivot-and-unpivot.md
+        - name: FROM - SELECT
+          href: t-sql/queries/from-select-transact-sql.md
       - name: WHERE
         href: t-sql/queries/where-transact-sql.md
         items:
@@ -17635,6 +17639,8 @@ items:
           href: t-sql/statements/set-statistics-xml-transact-sql.md
         - name: TEXTSIZE
           href: t-sql/statements/set-textsize-transact-sql.md
+        - name: TIME ZONE
+          href: t-sql/statements/set-time-zone-transact-sql.md
         - name: TRANSACTION ISOLATION LEVEL
           href: t-sql/statements/set-transaction-isolation-level-transact-sql.md
         - name: XACT_ABORT

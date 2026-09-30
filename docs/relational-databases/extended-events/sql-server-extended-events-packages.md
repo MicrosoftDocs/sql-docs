@@ -30,7 +30,7 @@ A package is a container for Extended Events objects in the [!INCLUDE [ssdenover
 > [!NOTE]  
 > The `SecAudit` package is used internally by the Audit feature. None of the objects in this package are available through the Extended Events data definition language (DDL).
 
-Packages are identified by a name, a GUID, and the binary module that contains the package. A module can be an executable or a dynamic link library. For more information, see [sys.dm_xe_packages](../system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md).
+Packages are identified by a name, a GUID, and the binary module that contains the package. A module can be an executable or a dynamic link library. For more information, see [sys.dm_xe_packages](../system-dynamic-management-objects/sys-dm-xe-packages-transact-sql.md).
 
 A package can contain any or all of the following objects, which are discussed in greater detail later in this article:
 
@@ -138,7 +138,7 @@ In a package, each Extended Events object has a type. The following types are us
 - `target`
 - `type`
 
-For more information, see [sys.dm_xe_objects](../system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).
+For more information, see [sys.dm_xe_objects](../system-dynamic-management-objects/sys-dm-xe-objects-transact-sql.md).
 
 ### Maps
 

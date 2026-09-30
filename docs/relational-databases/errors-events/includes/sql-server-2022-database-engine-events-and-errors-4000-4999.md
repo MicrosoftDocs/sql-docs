@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 09/11/2025
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -364,7 +364,7 @@ ms.topic: include
 | 4857 | 16 | No | Line %d in format file "%ls": Attribute "%ls" could not be specified for this type. |
 | 4858 | 16 | No | Line %d in format file "%ls": bad value %ls for attribute "%ls". |
 | 4859 | 16 | No | Line %d in format file "%ls": required attribute "%ls" is missing. |
-| 4860 | 16 | No | Cannot bulk load. The file "%ls" does not exist or you don't have file access rights. |
+| 4860 | 16 | No | Cannot bulk load. The file "%ls" does not exist or you don't have file access rights. See [https://go.microsoft.com/fwlink/?LinkId=2374938](https://go.microsoft.com/fwlink/?LinkId=2374938) for more information. |
 | 4861 | 16 | No | Cannot bulk load because the file "%ls" could not be opened. Operating system error code %ls. |
 | 4862 | 16 | No | Cannot bulk load because the file "%ls" is incomplete or could not be read. Operating system error code %ls. |
 | 4863 | 16 | No | Bulk load data conversion error (truncation) for row %d, column %d (%ls). |

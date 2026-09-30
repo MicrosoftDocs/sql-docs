@@ -23,7 +23,7 @@ Monitoring these two factors is the key to understanding the performance of the 
 
 Service Broker provides a set of performance counters that provide information on its activities. Service Broker also logs serious errors to the SQL Server error log and the Windows Application event log. For more information, see the following articles:
 
-- [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
+- [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/service-broker-related-dynamic-management-views-transact-sql.md)
 - [SQL Server, Broker Statistics object](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)
 - [Broker Event Category](../../relational-databases/event-classes/broker-event-category.md)
 

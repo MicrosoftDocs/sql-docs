@@ -62,9 +62,9 @@ For more information about Windows Server or Windows tools, see the Windows docu
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
 - [Activity Monitor](../performance-monitor/activity-monitor.md)
 - [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Graphical Showplan
-- [System Stored procedures](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [System Stored procedures](../system-stored-procedures/system-stored-procedures-transact-sql.md)
 - [Database Console Commands (DBCC)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-- [System dynamic management views](../system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views](../system-dynamic-management-objects/system-dynamic-management-objects.md)
 - [What are the SQL database functions?](../../t-sql/functions/functions.md)
 - [Set trace flags with DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 
@@ -102,7 +102,7 @@ The following outlines the process for capturing event data and putting it to us
 
     For more information on filtering Extended Event traces, see [Quickstart: Extended Events](../extended-events/quick-start-extended-events-in-sql-server.md).
 
-    For more information on filtering SQL Trace, see [Set a Trace Filter (Transact-SQL)](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) and [Filter Events in a Trace (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).
+    For more information on filtering SQL Trace, see [Set a Trace Filter (Transact-SQL)](../sql-trace/set-a-trace-filter-transact-sql.md) and [Filter Events in a Trace (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).
 
 1. Monitor (capture) events.
 

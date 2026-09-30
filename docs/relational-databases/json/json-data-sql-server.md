@@ -4,7 +4,7 @@ description: Combine NoSQL and relational concepts in the same database with JSO
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, umajay, randolphwest
-ms.date: 11/18/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.topic: overview
 ms.custom:
@@ -55,7 +55,7 @@ By using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] built-in 
 
 ## SQL Server 2025 changes
 
-[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] introduces the following JSON enhancements, all currently in preview:
+The following JSON enhancements are generally available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]:
 
 - [Modify method for the **json** type](../../t-sql/data-types/json-data-type.md#modify-method)
 - [CREATE JSON INDEX](../../t-sql/statements/create-json-index-transact-sql.md)
@@ -267,8 +267,6 @@ JSON aggregate functions enable construction of JSON objects or arrays based on 
 - [JSON_OBJECTAGG](../../t-sql/functions/json-objectagg-transact-sql.md) constructs a JSON **object** from an aggregation of SQL data or columns.
 - [JSON_ARRAYAGG](../../t-sql/functions/json-arrayagg-transact-sql.md) constructs a JSON **array** from an aggregation of SQL data or columns.
 
-> [!NOTE]  
-> The `JSON_OBJECTAGG` and `JSON_ARRAYAGG` aggregate functions are generally available for Azure SQL Database, Azure SQL Managed Instance (with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy)), and Fabric Data Warehouse, and in preview for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 
 ## Use cases for JSON data in SQL Server
 

@@ -36,10 +36,10 @@ helpviewer_keywords:
   - "WHERE clause, UPDATE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
   Changes existing data in a table or view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
@@ -117,17 +117,6 @@ ON <join_condition>
 }  
 ```
 
-```syntaxsql
--- Syntax for Parallel Data Warehouse
-
-UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
-SET { column_name = { expression | NULL } } [ ,...n ]  
-[ FROM from_clause ]  
-[ WHERE <search_condition> ]   
-[ OPTION ( LABEL = label_name ) ]  
-[;]  
-```  
-  
 ## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  
@@ -1097,7 +1086,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### AD. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause isn't used to specify the row (or rows) to update.  

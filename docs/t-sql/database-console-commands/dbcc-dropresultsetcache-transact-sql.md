@@ -10,12 +10,12 @@ ms.subservice: data-warehouse
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: "= azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # DBCC DROPRESULTSETCACHE (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Removes all result set cache entries from an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 

@@ -3,7 +3,7 @@ title: "DECLARE CURSOR (Transact-SQL)"
 description: Defines the attributes of a Transact-SQL server cursor, such as its scrolling behavior and the query used to build the result set on which the cursor operates.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/02/2024
+ms.date: 09/04/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -141,6 +141,10 @@ Specifies a `FORWARD_ONLY`, `READ_ONLY` cursor with performance optimizations en
 
 > [!NOTE]  
 > Both `FAST_FORWARD` and `FORWARD_ONLY` can be used in the same `DECLARE CURSOR` statement.
+
+A `FAST_FORWARD` cursor can operate as a `STATIC` cursor or a `DYNAMIC` cursor, depending on the calculated query cost at run time. For this reason, the query optimizer might select a different type each time the query runs. If your application requires that concurrent updates are visible, use a `DYNAMIC` or `KEYSET` cursor. Otherwise, use a `STATIC` cursor.
+
+For more information, see [Understanding SQL Server Fast_Forward Server Cursors](https://techcommunity.microsoft.com/blog/sqlserver/understanding-sql-server-fast-forward-server-cursors/383556).
 
 #### READ_ONLY
 

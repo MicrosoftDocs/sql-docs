@@ -89,7 +89,7 @@ To grant an account or a service SID the `Perform volume maintenance tasks` secu
       ```
 
    > [!NOTE]  
-   > In [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], use the value of `instant_file_initialization_enabled` in the [sys.dm_server_services](../system-dynamic-management-views/sys-dm-server-services-transact-sql.md) dynamic management view to identify if instant file initialization is enabled for your instance.
+   > In [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], use the value of `instant_file_initialization_enabled` in the [sys.dm_server_services](../system-dynamic-management-objects/sys-dm-server-services-transact-sql.md) dynamic management view to identify if instant file initialization is enabled for your instance.
 
 ## Security considerations
 

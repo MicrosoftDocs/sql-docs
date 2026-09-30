@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "ODBC applications, cursors"
 ---
 # Using SQL Server Default Result Sets
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The default ODBC cursor attributes are:  
   

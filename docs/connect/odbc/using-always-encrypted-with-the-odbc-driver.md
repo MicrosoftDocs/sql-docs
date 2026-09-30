@@ -3,8 +3,8 @@ title: Using Always Encrypted
 description: Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 08/08/2022
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -146,7 +146,7 @@ This example inserts a row into the Patients table. Note the following details:
     SQLLEN cbdate;   // size of date structure  
 
     SQLCHAR SSN[12];
-    strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
+    strcpy_s((char*)SSN, _countof(SSN), "987-65-4320");
 
     SQLWCHAR* firstName = L"Catherine";
     SQLWCHAR* lastName = L"Abel";
@@ -191,7 +191,7 @@ The following example demonstrates filtering data based on encrypted values, and
 
 ```cpp
 SQLCHAR SSN[12];
-strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
+strcpy_s((char*)SSN, _countof(SSN), "987-65-4320");
 
 SQLWCHAR* firstName = L"Catherine";
 SQLWCHAR* lastName = L"Abel";
@@ -240,7 +240,7 @@ The following example illustrates retrieving binary encrypted data from encrypte
 
 ```cpp
 SQLCHAR SSN[12];
-strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
+strcpy_s((char*)SSN, _countof(SSN), "987-65-4320");
 
 SQLWCHAR* firstName = L"Catherine";
 SQLWCHAR* lastName = L"Abel";
@@ -346,7 +346,7 @@ Any value that targets an encrypted column needs to be encrypted before being se
 - You use SQLBindParameter to send data targeting encrypted columns. The example below shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal as an argument to SQLBindParameter.
 
 ```cpp
-string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
+string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='987-65-4320'";
 ```
 
 ### Precautions when using SQLSetPos and SQLMoreResults
@@ -656,7 +656,7 @@ For an example of implementing your own keystore provider, see [Custom Keystore 
 
 ### Asynchronous operations
 
-While the ODBC driver will allow the use of [asynchronous operations](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) with Always Encrypted, there's a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
+While the ODBC driver supports [asynchronous operations](develop-cpp-applications.md#choose-between-asynchronous-execution-and-threads) with Always Encrypted, enabling Always Encrypted affects the performance of these operations. The call to `sys.sp_describe_parameter_encryption` to get encryption metadata for the statement is blocking. The driver waits for the server to return the metadata before it returns `SQL_STILL_EXECUTING`.
 
 ### Retrieve data in parts with SQLGetData
 

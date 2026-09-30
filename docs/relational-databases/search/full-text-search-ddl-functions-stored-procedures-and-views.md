@@ -104,14 +104,14 @@ These DMVs provide real-time monitoring and internal status information related 
 
 | Object | Description |
 | --- | --- |
-| [sys.dm_fts_active_catalogs](../system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) | Shows full-text catalogs currently active. |
-| [sys.dm_fts_fdhosts](../system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql.md) | Details host processes supporting full-text indexing. |
-| [sys.dm_fts_index_keywords](../system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) | Lists keywords stored in full-text indexes. |
-| [sys.dm_fts_index_keywords_by_document](../system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) | Keywords mapped by document. |
-| [sys.dm_fts_index_keywords_by_property](../system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md) | Keywords mapped by registered property. |
-| [sys.dm_fts_index_population](../system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md) | Tracks population status of full-text indexes. |
-| [sys.dm_fts_memory_buffers](../system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) | Shows memory buffer usage for full-text indexing. |
-| [sys.dm_fts_memory_pools](../system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md) | Provides memory pool statistics for full-text search. |
-| [sys.dm_fts_outstanding_batches](../system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md) | Reports outstanding index update batches. |
-| [sys.dm_fts_parser](../system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md) | Examines how text is parsed into tokens for full-text indexing. |
-| [sys.dm_fts_population_ranges](../../relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md) | Shows ranges of data being processed during index population. |
+| [sys.dm_fts_active_catalogs](../system-dynamic-management-objects/sys-dm-fts-active-catalogs-transact-sql.md) | Shows full-text catalogs currently active. |
+| [sys.dm_fts_fdhosts](../system-dynamic-management-objects/sys-dm-fts-fdhosts-transact-sql.md) | Details host processes supporting full-text indexing. |
+| [sys.dm_fts_index_keywords](../system-dynamic-management-objects/sys-dm-fts-index-keywords-transact-sql.md) | Lists keywords stored in full-text indexes. |
+| [sys.dm_fts_index_keywords_by_document](../system-dynamic-management-objects/sys-dm-fts-index-keywords-by-document-transact-sql.md) | Keywords mapped by document. |
+| [sys.dm_fts_index_keywords_by_property](../system-dynamic-management-objects/sys-dm-fts-index-keywords-by-property-transact-sql.md) | Keywords mapped by registered property. |
+| [sys.dm_fts_index_population](../system-dynamic-management-objects/sys-dm-fts-index-population-transact-sql.md) | Tracks population status of full-text indexes. |
+| [sys.dm_fts_memory_buffers](../system-dynamic-management-objects/sys-dm-fts-memory-buffers-transact-sql.md) | Shows memory buffer usage for full-text indexing. |
+| [sys.dm_fts_memory_pools](../system-dynamic-management-objects/sys-dm-fts-memory-pools-transact-sql.md) | Provides memory pool statistics for full-text search. |
+| [sys.dm_fts_outstanding_batches](../system-dynamic-management-objects/sys-dm-fts-outstanding-batches-transact-sql.md) | Reports outstanding index update batches. |
+| [sys.dm_fts_parser](../system-dynamic-management-objects/sys-dm-fts-parser-transact-sql.md) | Examines how text is parsed into tokens for full-text indexing. |
+| [sys.dm_fts_population_ranges](../system-dynamic-management-objects/sys-dm-fts-population-ranges-transact-sql.md) | Shows ranges of data being processed during index population. |

@@ -14,7 +14,7 @@ apiname: ["bcp_gettypename", "bcp_gettypenameA", "bcp_gettypenameW"]
 apitype: "DLLExport"
 ---
 # bcp_gettypename
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns the SQL type name for a specified BCP type token.  
   

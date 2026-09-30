@@ -67,7 +67,7 @@ In this lesson, you learn to create the initiator database and all the initiator
   USE InstInitiatorDB;
   GO
 
-  CREATE MASTER KEY ENCRYPTION BY PASSWORD = N'<EnterStrongPassword2Here>';
+  CREATE MASTER KEY ENCRYPTION BY PASSWORD = N'<password>';
   GO
 
   CREATE USER InitiatorUser WITHOUT LOGIN;

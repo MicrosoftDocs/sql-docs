@@ -138,42 +138,42 @@ Extended Events provides several [catalog views](../system-catalog-views/catalog
 
 ## Extended Events dynamic management views
 
-Extended Events provides several [dynamic management views (DMVs)](../system-dynamic-management-views/extended-events-dynamic-management-views.md). DMVs return information about *active* (started) event sessions, such as session and target statistics.
+Extended Events provides several [dynamic management views (DMVs)](../system-dynamic-management-objects/extended-events-dynamic-management-views.md). DMVs return information about *active* (started) event sessions, such as session and target statistics.
 
 # [Azure SQL Database and SQL database in Fabric](#tab/sqldb)
 
 | Name of DMV | Description |
 | --- | --- |
-| [sys.dm_xe_database_session_event_actions](../system-dynamic-management-views/sys-dm-xe-database-session-event-actions-azure-sql-database.md) | Returns information about database-scoped event session actions. |
-| [sys.dm_xe_database_session_events](../system-dynamic-management-views/sys-dm-xe-database-session-events-azure-sql-database.md) | Returns information about database-scoped event session events. |
-| [sys.dm_xe_database_session_object_columns](../system-dynamic-management-views/sys-dm-xe-database-session-object-columns-azure-sql-database.md) | Shows the configuration values for objects that are bound to a database-scoped session. |
-| [sys.dm_xe_database_session_targets](../system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database.md) | Returns information about database-scoped event session targets. |
-| [sys.dm_xe_database_sessions](../system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database.md) | Returns a row for each database-scoped event session running in the current database. |
+| [sys.dm_xe_database_session_event_actions](../system-dynamic-management-objects/sys-dm-xe-database-session-event-actions-azure-sql-database.md) | Returns information about database-scoped event session actions. |
+| [sys.dm_xe_database_session_events](../system-dynamic-management-objects/sys-dm-xe-database-session-events-azure-sql-database.md) | Returns information about database-scoped event session events. |
+| [sys.dm_xe_database_session_object_columns](../system-dynamic-management-objects/sys-dm-xe-database-session-object-columns-azure-sql-database.md) | Shows the configuration values for objects that are bound to a database-scoped session. |
+| [sys.dm_xe_database_session_targets](../system-dynamic-management-objects/sys-dm-xe-database-session-targets-azure-sql-database.md) | Returns information about database-scoped event session targets. |
+| [sys.dm_xe_database_sessions](../system-dynamic-management-objects/sys-dm-xe-database-sessions-azure-sql-database.md) | Returns a row for each database-scoped event session running in the current database. |
 
 # [Azure SQL Managed Instance](#tab/sqlmi)
 
 | Name of DMV | Description |
 | --- | --- |
-| [sys.dm_xe_session_event_actions](../system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql.md) | Returns information about server-scoped event session actions. |
-| [sys.dm_xe_session_events](../system-dynamic-management-views/sys-dm-xe-session-events-transact-sql.md) | Returns information about server-scoped event session events. |
-| [sys.dm_xe_session_object_columns](../system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql.md) | Shows the configuration values for objects that are bound to a server-scoped session. |
-| [sys.dm_xe_session_targets](../system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md) | Returns information about server-scoped event session targets. |
-| [sys.dm_xe_sessions](../system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md) | Returns a row for each server-scoped event session running on the server. |
-| [sys.dm_xe_database_session_event_actions](../system-dynamic-management-views/sys-dm-xe-database-session-event-actions-azure-sql-database.md) | Returns information about database-scoped event session actions. |
-| [sys.dm_xe_database_session_events](../system-dynamic-management-views/sys-dm-xe-database-session-events-azure-sql-database.md) | Returns information about database-scoped event session events. |
-| [sys.dm_xe_database_session_object_columns](../system-dynamic-management-views/sys-dm-xe-database-session-object-columns-azure-sql-database.md) | Shows the configuration values for objects that are bound to a database-scoped session. |
-| [sys.dm_xe_database_session_targets](../system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database.md) | Returns information about database-scoped event session targets. |
-| [sys.dm_xe_database_sessions](../system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database.md) | Returns a row for each database-scoped event session running in the current database. |
+| [sys.dm_xe_session_event_actions](../system-dynamic-management-objects/sys-dm-xe-session-event-actions-transact-sql.md) | Returns information about server-scoped event session actions. |
+| [sys.dm_xe_session_events](../system-dynamic-management-objects/sys-dm-xe-session-events-transact-sql.md) | Returns information about server-scoped event session events. |
+| [sys.dm_xe_session_object_columns](../system-dynamic-management-objects/sys-dm-xe-session-object-columns-transact-sql.md) | Shows the configuration values for objects that are bound to a server-scoped session. |
+| [sys.dm_xe_session_targets](../system-dynamic-management-objects/sys-dm-xe-session-targets-transact-sql.md) | Returns information about server-scoped event session targets. |
+| [sys.dm_xe_sessions](../system-dynamic-management-objects/sys-dm-xe-sessions-transact-sql.md) | Returns a row for each server-scoped event session running on the server. |
+| [sys.dm_xe_database_session_event_actions](../system-dynamic-management-objects/sys-dm-xe-database-session-event-actions-azure-sql-database.md) | Returns information about database-scoped event session actions. |
+| [sys.dm_xe_database_session_events](../system-dynamic-management-objects/sys-dm-xe-database-session-events-azure-sql-database.md) | Returns information about database-scoped event session events. |
+| [sys.dm_xe_database_session_object_columns](../system-dynamic-management-objects/sys-dm-xe-database-session-object-columns-azure-sql-database.md) | Shows the configuration values for objects that are bound to a database-scoped session. |
+| [sys.dm_xe_database_session_targets](../system-dynamic-management-objects/sys-dm-xe-database-session-targets-azure-sql-database.md) | Returns information about database-scoped event session targets. |
+| [sys.dm_xe_database_sessions](../system-dynamic-management-objects/sys-dm-xe-database-sessions-azure-sql-database.md) | Returns a row for each database-scoped event session running in the current database. |
 
 # [SQL Server](#tab/sqlserver)
 
 | Name of DMV | Description |
 | --- | --- |
-| [sys.dm_xe_session_event_actions](../system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql.md) | Returns information about server-scoped event session actions. |
-| [sys.dm_xe_session_events](../system-dynamic-management-views/sys-dm-xe-session-events-transact-sql.md) | Returns information about server-scoped event session events. |
-| [sys.dm_xe_session_object_columns](../system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql.md) | Shows the configuration values for objects that are bound to a server-scoped session. |
-| [sys.dm_xe_session_targets](../system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md) | Returns information about server-scoped event session targets. |
-| [sys.dm_xe_sessions](../system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md) | Returns a row for each server-scoped event session running on the server. |
+| [sys.dm_xe_session_event_actions](../system-dynamic-management-objects/sys-dm-xe-session-event-actions-transact-sql.md) | Returns information about server-scoped event session actions. |
+| [sys.dm_xe_session_events](../system-dynamic-management-objects/sys-dm-xe-session-events-transact-sql.md) | Returns information about server-scoped event session events. |
+| [sys.dm_xe_session_object_columns](../system-dynamic-management-objects/sys-dm-xe-session-object-columns-transact-sql.md) | Shows the configuration values for objects that are bound to a server-scoped session. |
+| [sys.dm_xe_session_targets](../system-dynamic-management-objects/sys-dm-xe-session-targets-transact-sql.md) | Returns information about server-scoped event session targets. |
+| [sys.dm_xe_sessions](../system-dynamic-management-objects/sys-dm-xe-sessions-transact-sql.md) | Returns a row for each server-scoped event session running on the server. |
 
 ---
 

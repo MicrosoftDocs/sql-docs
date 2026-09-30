@@ -3,7 +3,7 @@ title: "Execute Stored Procedure with ODBC CALL and Process Output"
 description: Learn how to process return codes and output parameters in OLE DB Driver for SQL Server, which are received in the final packet after the rowset is released.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC CALL syntax"
 ---
 # Execute Stored Procedure with ODBC CALL and Process Output
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

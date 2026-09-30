@@ -3,7 +3,8 @@ title: Error Handling and SQLSTATE Codes for mssql-python
 description: Reference for mssql-python exception classes, error handling patterns, and SQLSTATE code mappings.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -388,7 +389,8 @@ Use this table to map common symptoms to the exception type you should catch:
 | "Transaction was deadlocked" | `OperationalError` (error 1205) | Lock contention. Implement retry logic. |
 | "String or binary data would be truncated" | `DataError` | Value exceeds column length. Check data or increase column size. |
 | "Conversion failed" | `DataError` | Type mismatch. Use the correct Python type for the column. |
-| "Unknown keyword" | `ConnectionStringParseError` | Typo in connection string keyword. |
+| "Unknown keyword" | `ConnectionStringParseError` | Misspelled keyword, or a keyword that another driver accepts. For more information, see [Keywords from other drivers](connection-strings.md#keywords-from-other-drivers). |
+| "Reserved keyword" | `ConnectionStringParseError` | The driver controls this value. For more information, see [Reserved keywords](connection-strings.md#reserved-keywords). |
 | "callproc is not supported" | `NotSupportedError` | Use `cursor.execute("EXECUTE ...")` instead. |
 
 ## Best practices

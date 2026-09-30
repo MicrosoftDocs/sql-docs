@@ -18,7 +18,7 @@ ms.topic: concept-article
 >   
 >  If you don't have a backup, you can export the data from memory-optimized tables and disk-based tables and reload after you drop and recreate the database.  
   
- A full backup of a database with one or more memory-optimized tables consists of the allocated storage for disk-based tables (if any), the active transaction log, and the data and delta file pairs (also known as checkpoint file pairs) for memory-optimized tables. However, as described in [Durability for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), the storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  
+ A full backup of a database with one or more memory-optimized tables consists of the allocated storage for disk-based tables (if any), the active transaction log, and the data and delta file pairs (also known as checkpoint file pairs) for memory-optimized tables. However, as described in [Durability for Memory-Optimized Tables](durability-for-memory-optimized-tables.md), the storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  
   
 ## Full Database Backup  
  This discussion focuses on database backups for databases with only durable memory-optimized tables, because the backup for disk-based tables is the same. The checkpoint file pairs in the memory-optimized filegroup could be in various states. The table below describes what part of the files is backed up.  
@@ -31,7 +31,7 @@ ms.topic: concept-article
 |MERGE TARGET|File metadata only|  
 |WAITING FOR LOG TRUNCATION|File metadata plus used bytes|  
   
- For descriptions of the states for checkpoint file pairs, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md), and its column state_desc.  
+ For descriptions of the states for checkpoint file pairs, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-db-xtp-checkpoint-files-transact-sql.md), and its column state_desc.  
   
  The size of database backups with one or more memory-optimized tables is typically larger than its size in memory, but smaller than its on-disk storage. The extra size depends on the number of deleted rows, among other factors.  
   
@@ -45,7 +45,7 @@ ms.topic: concept-article
  The second workload scenario is for frequent insert, delete, and update operations. In the worst case, each of the checkpoint file pairs are 50% loaded, after accounting for the deleted rows. The size of the database backup will at least be 2 times the size of data in memory.  
   
 ## Differential Backups of Databases with Memory-Optimized Tables  
- The storage for memory-optimized tables consists of data and delta files as described in [Durability for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md). The differential backup of a database with memory-optimized tables contains the following data:  
+ The storage for memory-optimized tables consists of data and delta files as described in [Durability for Memory-Optimized Tables](durability-for-memory-optimized-tables.md). The differential backup of a database with memory-optimized tables contains the following data:  
   
 -   Differential backup for filegroups storing disk-based tables is not affected by the presence of memory-optimized tables.  
   

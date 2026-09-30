@@ -150,7 +150,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
    1. Create a database [master key](/sql/t-sql/statements/create-master-key-transact-sql) if you haven't created one earlier.
 
        ```sql
-       CREATE MASTER KEY [ENCRYPTION BY PASSWORD = 'somepassword'];
+       CREATE MASTER KEY [ENCRYPTION BY PASSWORD = '<password>'];
        ```
 
    1. Create a database-scoped credential with **IDENTITY = 'Managed Service Identity'**.

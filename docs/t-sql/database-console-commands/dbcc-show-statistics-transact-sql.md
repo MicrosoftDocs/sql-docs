@@ -31,12 +31,12 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # DBCC SHOW_STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `DBCC SHOW_STATISTICS` command displays current query optimization statistics for a table or indexed view. The query optimizer uses statistics to estimate the cardinality or number of rows in the query result, which enables the Query Optimizer to create a high quality query plan. For example, the Query Optimizer could use cardinality estimates to choose the index seek operator instead of the index scan operator in the query plan, improving query performance by avoiding a resource-intensive index scan.
 
@@ -70,7 +70,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 [ ; ]
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]:
 
 ```syntaxsql
 DBCC SHOW_STATISTICS ( table_name , target )
@@ -97,7 +97,7 @@ Name of the index, statistics, or column for which to display statistics informa
 
 If an automatically created statistic doesn't exist for a column target, error message 2767 is returned.
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], *target* can't be a column name.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], *target* can't be a column name.
 
 In [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)], *target* can be either the name of a single-column histogram statistics or a column. If a column name is used for *target*, this command returns distribution information only about the automatically generated histogram statistic. To view the information about a manually created histogram statistic, specify the statistics name as *target*.
 
@@ -204,11 +204,11 @@ In versions before [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Service Pa
 
 In order to view the statistics object in Fabric Data Warehouse or the SQL analytics endpoint, the user must have the `SELECT` permission on the table, or a member of the Viewer Fabric workspace role or higher role membership.
 
-## Permissions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Permissions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 `DBCC SHOW_STATISTICS` requires `SELECT` permission on the table or membership in the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-## Limitations and Restrictions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Limitations and Restrictions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 `DBCC SHOW_STATISTICS` shows statistics stored in the `Shell` database at the Control node level. It doesn't show statistics that are autocreated by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on the Compute nodes.
 
@@ -236,7 +236,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer", Customer_LastName) WITH HISTOGRAM;
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Display the contents of one statistics object
 

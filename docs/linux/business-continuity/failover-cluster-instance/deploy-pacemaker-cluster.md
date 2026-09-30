@@ -1,10 +1,11 @@
 ---
-title: Deploy a Pacemaker Cluster for SQL Server on Linux
+title: Deploy a Pacemaker Cluster
+titleSuffix: SQL Server on Linux
 description: Learn to deploy a Linux Pacemaker cluster for a SQL Server Always On availability group (AG) or failover cluster instance (FCI).
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 01/15/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: install-set-up-deploy
@@ -12,6 +13,7 @@ ms.custom:
   - intro-deployment
   - linux-related-content
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 # Deploy a Pacemaker cluster for SQL Server on Linux
 
@@ -41,57 +43,7 @@ Use the following syntax to install the packages that make up the high availabil
 
 ### [Red Hat Enterprise Linux (RHEL)](#tab/rhel)
 
-1. Register the server using the following syntax. You're prompted for a valid username and password.
-
-   ```bash
-   sudo subscription-manager register
-   ```
-
-1. List the available pools for registration.
-
-   ```bash
-   sudo subscription-manager list --available
-   ```
-
-   For **RHEL 10**, use the following command:
-
-   ```bash
-   sudo subscription-manager repos --list
-   ```
-
-   From the list of available pools, note the pool ID for the high availability subscription.
-
-1. Run the following command to associate RHEL high availability with the subscription. In this example, `<PoolId>` is the pool ID for the high availability subscription from the previous step.
-
-   ```bash
-   sudo subscription-manager attach --pool=<PoolID>
-   ```
-
-1. Enable the repository to use the high availability add-on.
-
-   **RHEL 7**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
-   ```
-
-   **RHEL 8**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
-   ```
-
-   **RHEL 9**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-9-for-x86_64-highavailability-rpms
-   ```
-
-   **RHEL 10**
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-10-for-x86_64-highavailability-rpms
-   ```
+[!INCLUDE [ss-linux-cluster-pacemaker-rhel-ha-subscription](../../includes/cluster-pacemaker-rhel-ha-subscription.md)]
 
 1. Install Pacemaker.
 
@@ -107,14 +59,6 @@ Install the High Availability pattern in YaST, or install it as part of the main
 > On SLES, the HA add-on is initialized when you create the cluster.
 
 ### [Ubuntu](#tab/ubuntu)
-
-**Ubuntu 20.04**
-
-```bash
-sudo apt-get install pacemaker pcs fence-agents resource-agents
-```
-
-**Ubuntu 22.04** and later versions
 
 ```bash
 sudo apt-get install pacemaker pcs fence-agents resource-agents-base resource-agents-common resource-agents-extra
@@ -169,33 +113,13 @@ This section describes how to create and configure the cluster for each Linux di
 
 ### [Red Hat Enterprise Linux (RHEL)](#tab/rhel)
 
-1. Authorize the nodes. In these examples, `<NodeX>` is the name of each node.
-
-   **RHEL 7**
-
-   Replace `<password>` with the password for `hacluster`.
-
-   ```bash
-   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster -p <password>
-   ```
-
-   **RHEL 8** and later versions
-
-   Manually enter the username and password for `hacluster` when prompted.
+1. Authorize the nodes. In these examples, `<NodeX>` is the name of each node. Manually enter the username and password for `hacluster` when prompted.
 
    ```bash
    sudo pcs host auth <Node1> <Node2> <Node3>
    ```
 
 1. Create the cluster. In this example, `PMClusterName` is the name you assign to the Pacemaker cluster.
-
-   **RHEL 7**
-
-   ```bash
-   sudo pcs cluster setup --name <PMClusterName> <Node1> <Node2> <Node3>
-   ```
-
-   **RHEL 8** and later versions
 
    ```bash
    sudo pcs cluster setup <PMClusterName> <Node1> <Node2> <Node3>
@@ -285,16 +209,6 @@ Configuring Ubuntu is similar to RHEL. However, there's one major difference: in
    sudo pcs cluster destroy
    ```
 
-1. Create the cluster. In this example, `PMClusterName` is the name you assign to the Pacemaker cluster, and `Nodelist` is the list of node names separated by a space.
-
-   **Ubuntu 20.04**
-
-   ```bash
-   sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
-   ```
-
-   **Ubuntu 22.04** and later versions
-
 1. Authorize the nodes. In this example, `NodeX` is the name of the node.
 
    ```bash
@@ -306,7 +220,7 @@ Configuring Ubuntu is similar to RHEL. However, there's one major difference: in
    ```bash
    sudo pcs cluster setup <PMClusterName Nodelist>
    ```
-   
+
 1. Enable the cluster to start when the computer starts.
 
    ```bash

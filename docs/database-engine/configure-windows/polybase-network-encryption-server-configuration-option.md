@@ -12,7 +12,7 @@ ms.topic: how-to
 
 # Server configuration: polybase network encryption
 
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
 Display or changes the global configuration settings for PolyBase network encryption. This configuration option controls whether PolyBase encrypts the communication channels between the SQL Server instance and the PolyBase Engine, which runs in the same server.
 

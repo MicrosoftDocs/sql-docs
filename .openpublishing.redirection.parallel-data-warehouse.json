@@ -1,0 +1,14 @@
+{
+  "redirections": [
+    {
+      "source_path": "docs/relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md",
+      "redirect_url": "/sql/relational-databases/system-catalog-views/azure-synapse-analytics-catalog-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/system-dynamic-management-objects/sql-and-parallel-data-warehouse-dynamic-management-views.md",
+      "redirect_url": "/sql/relational-databases/system-dynamic-management-objects/azure-synapse-analytics-dynamic-management-objects",
+      "redirect_document_id": true
+    }
+  ]
+}

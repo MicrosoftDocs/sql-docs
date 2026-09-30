@@ -1,6 +1,6 @@
 ---
-title: "Publishers"
-description: "Publishers"
+title: Publishers
+description: Publishers options in SQL Server replication let you grant servers permission to use this Distributor. See how to add and configure Publishers step by step.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -21,10 +21,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
 ## Options  
  **Publishers**  
- Select the servers that are allowed to use this Distributor. Click the properties button (**...**) next to a Publisher to view and set additional properties.  
+ Select the servers that are allowed to use this distributor. Select the properties button (**...**) next to a Publisher to view and set additional properties.  
   
  **Add**  
- If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.  
+  If the server you want to allow isn't listed, select **Add** to add a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.    
   
 ## Related content
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "valid identifiers [SQL Server]"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # QUOTENAME (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns a Unicode string with the delimiters added to make the input string a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [delimited identifier](../../relational-databases/databases/database-identifiers.md#rules-for-delimited-identifiers).
 
@@ -79,7 +79,7 @@ DECLARE @sql AS NVARCHAR (MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName)
 EXECUTE sp_executesql @sql;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example takes the character string `abc def` and uses the `[` and `]` characters to create a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] delimited identifier.
 

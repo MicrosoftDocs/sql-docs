@@ -3,6 +3,7 @@ title: Handle Strings and Unicode with mssql-python
 description: Learn how to work with string data types, Unicode, and character encoding with the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

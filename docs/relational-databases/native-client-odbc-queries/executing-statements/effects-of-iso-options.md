@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "statements [ODBC], ISO options"
 ---
 # Effects of ISO Options
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The ODBC standard is closely matched to the ISO standard, and ODBC applications expect standard behavior from an ODBC driver. To make its behavior conform more closely with that defined in the ODBC standard, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver always uses any ISO options available in the version of SQL Server with which it connects.  
   

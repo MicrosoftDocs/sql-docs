@@ -3,8 +3,8 @@ title: "sys.sp_addlinkedserver (Transact-SQL)"
 description: sp_addlinkedserver creates a linked server, providing access to distributed, heterogeneous queries against OLE DB data sources.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
-ms.date: 05/01/2026
+ms.reviewer: vanto, wiassaf, randolphwest
+ms.date: 08/26/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -61,7 +61,7 @@ The unique programmatic identifier (PROGID) of the OLE DB provider that correspo
 
 - Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], `MSOLEDBSQL` uses Microsoft OLE DB Driver version 19, which adds support for [TDS 8.0](../security/networking/tds-8.md). However, this driver introduces a breaking change. You must now specify the `encrypt` parameter. Use `encrypt` to define whether or not encryption is mandatory. You must provide a valid CA-signed certificate to encrypt your connection to another SQL Server instance, or assign `encrypt=optional` in the *@provstr* argument. If you can't modify the linked server configuration, enable trace flag 17600 to maintain OLE DB version 18 behavior and defaults.
 
-  For details about encryption properties, review [Major version differences](../../connect/oledb/major-version-differences.md).
+  For details about encryption properties, see [Using connection string keywords with OLE DB Driver for SQL Server](../../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 
 > [!IMPORTANT]  
 > [!INCLUDE [snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
@@ -491,7 +491,7 @@ EXECUTE sp_addlinkedserver
     @provstr = N'Encrypt=No;';
 ```
 
-For more information, see [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL) (recommended)](../../connect/oledb/oledb-driver-for-sql-server.md#1-microsoft-ole-db-driver-for-sql-server-msoledbsql-recommended).
+For more information, see [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md#migrate-to-the-current-driver).
 
 ### K. Create a linked server with managed identity authentication for SQL Server 2025
 

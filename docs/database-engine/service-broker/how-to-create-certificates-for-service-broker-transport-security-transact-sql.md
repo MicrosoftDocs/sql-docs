@@ -31,7 +31,7 @@ GO
 -- Create a certificate owned by dbo.
 CREATE CERTIFICATE TransportSecurity
     AUTHORIZATION [dbo]
-    ENCRYPTION BY PASSWORD = '**(34ader#$lqQEUer13'
+    ENCRYPTION BY PASSWORD = '<password>'
     WITH SUBJECT = 'Instance certificate for transport security';
 GO
 ```

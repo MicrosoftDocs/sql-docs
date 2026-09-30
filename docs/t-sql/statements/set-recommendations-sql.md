@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # SET RECOMMENDATIONS (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa-dedicated-sqlpool-only.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa-dedicated-sqlpool-only.md)]
 
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 

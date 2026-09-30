@@ -3,7 +3,7 @@ title: "Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)"
 description: Learn how to use the IRowsetFastUpload interface to send between 4MB and 4GB of data to a FILESTREAM column in OLE DB Driver for SQL Server with this example.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -12,7 +12,7 @@ ms.custom:
   - ignite-2025
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "statement execution"
 ---
 # Execute a Statement Directly (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To execute a statement directly and one time only  

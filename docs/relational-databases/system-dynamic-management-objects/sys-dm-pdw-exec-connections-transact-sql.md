@@ -10,11 +10,11 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.dm_pdw_exec_connections (Transact-SQL)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns information about the connections established to this instance of [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and the details of each connection.
 
@@ -41,7 +41,7 @@ Requires `VIEW SERVER STATE` permission on the server.
 | `dm_pdw_exec_sessions.session_id` | `dm_pdw_exec_connections.session_id` | One-to-one |
 | `dm_pdw_exec_requests.connection_id` | `dm_pdw_exec_connections.connection_id` | Many to one |
 
-## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following Transact-SQL example is a typical query to gather information about a query's own connection.
 
@@ -58,4 +58,4 @@ WHERE c.session_id = SESSION_ID();
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

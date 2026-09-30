@@ -67,7 +67,7 @@ The following example uses **`sqlcmd`** to connect to SQL Server running in a co
 ::: zone pivot="cs1-bash"
 
 ```bash
-sqlcmd -S 10.3.2.4 -U sa -P '<YourPassword>'
+sqlcmd -S 10.3.2.4 -U sa -P '<password>'
 ```
 
 ::: zone-end
@@ -75,7 +75,7 @@ sqlcmd -S 10.3.2.4 -U sa -P '<YourPassword>'
 ::: zone pivot="cs1-powershell"
 
 ```powershell
-sqlcmd -S 10.3.2.4 -U sa -P "<YourPassword>"
+sqlcmd -S 10.3.2.4 -U sa -P "<password>"
 ```
 
 ::: zone-end
@@ -83,7 +83,7 @@ sqlcmd -S 10.3.2.4 -U sa -P "<YourPassword>"
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sqlcmd -S 10.3.2.4 -U sa -P "<YourPassword>"
+sqlcmd -S 10.3.2.4 -U sa -P "<password>"
 ```
 
 ::: zone-end
@@ -93,7 +93,7 @@ If you mapped a host port that wasn't the default `1433`, add that port to the c
 ::: zone pivot="cs1-bash"
 
 ```bash
-sqlcmd -S 10.3.2.4,1400 -U sa -P '<YourPassword>'
+sqlcmd -S 10.3.2.4,1400 -U sa -P '<password>'
 ```
 
 ::: zone-end
@@ -101,7 +101,7 @@ sqlcmd -S 10.3.2.4,1400 -U sa -P '<YourPassword>'
 ::: zone pivot="cs1-powershell"
 
 ```powershell
-sqlcmd -S 10.3.2.4,1400 -U sa -P "<YourPassword>"
+sqlcmd -S 10.3.2.4,1400 -U sa -P "<password>"
 ```
 
 ::: zone-end
@@ -109,7 +109,7 @@ sqlcmd -S 10.3.2.4,1400 -U sa -P "<YourPassword>"
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sqlcmd -S 10.3.2.4,1400 -U sa -P "<YourPassword>"
+sqlcmd -S 10.3.2.4,1400 -U sa -P "<password>"
 ```
 
 ::: zone-end
@@ -130,7 +130,7 @@ Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the [SQL Se
 1. Once inside the container, connect locally with **`sqlcmd`** by using its full path.
 
    ```bash
-   /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P '<YourPassword>'
+   /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P '<password>'
    ```
 
    > [!NOTE]  
@@ -538,8 +538,8 @@ Now there are two instances of SQL Server running in separate containers. Client
 ::: zone pivot="cs1-bash"
 
 ```bash
-sqlcmd -S 10.3.2.4,1401 -U sa -P '<YourPassword>'
-sqlcmd -S 10.3.2.4,1402 -U sa -P '<YourPassword>'
+sqlcmd -S 10.3.2.4,1401 -U sa -P '<password>'
+sqlcmd -S 10.3.2.4,1402 -U sa -P '<password>'
 ```
 
 ::: zone-end
@@ -547,8 +547,8 @@ sqlcmd -S 10.3.2.4,1402 -U sa -P '<YourPassword>'
 ::: zone pivot="cs1-powershell"
 
 ```powershell
-sqlcmd -S 10.3.2.4,1401 -U sa -P "<YourPassword>"
-sqlcmd -S 10.3.2.4,1402 -U sa -P "<YourPassword>"
+sqlcmd -S 10.3.2.4,1401 -U sa -P "<password>"
+sqlcmd -S 10.3.2.4,1402 -U sa -P "<password>"
 ```
 
 ::: zone-end
@@ -556,8 +556,8 @@ sqlcmd -S 10.3.2.4,1402 -U sa -P "<YourPassword>"
 ::: zone pivot="cs1-cmd"
 
 ```cmd
-sqlcmd -S 10.3.2.4,1401 -U sa -P "<YourPassword>"
-sqlcmd -S 10.3.2.4,1402 -U sa -P "<YourPassword>"
+sqlcmd -S 10.3.2.4,1401 -U sa -P "<password>"
+sqlcmd -S 10.3.2.4,1402 -U sa -P "<password>"
 ```
 
 ::: zone-end

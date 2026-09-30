@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
 Contains one row for each by-name dependency on a user-defined entity in the current database. This includes dependencies between natively compiled, scalar user-defined functions and other [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] modules. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, when a table is referenced in the definition of a view, the view, as the referencing entity, depends on the table, the referenced entity. If the table is dropped, the view is unusable.
 
@@ -34,7 +34,7 @@ You can use this catalog view to report dependency information for the following
 
 - Cross-database and cross-server entities. Entity names are reported; however, entity IDs aren't resolved.
 
-- Column-level dependencies on schema-bound entities. Column-level dependencies for non-schema-bound objects can be returned by using [sys.dm_sql_referenced_entities](../system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).
+- Column-level dependencies on schema-bound entities. Column-level dependencies for non-schema-bound objects can be returned by using [sys.dm_sql_referenced_entities](../system-dynamic-management-objects/sys-dm-sql-referenced-entities-transact-sql.md).
 
 - Server-level DDL triggers when in the context of the `master` database.
 
@@ -61,7 +61,7 @@ You can use this catalog view to report dependency information for the following
 The following table lists the types of entities for which dependency information is created and maintained. Dependency information isn't created or maintained for rules, defaults, temporary tables, temporary stored procedures, or system objects.
 
 > [!NOTE]  
-> Azure Synapse Analytics and Parallel Data Warehouse support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list. Dependency information is created and maintained for tables, views, and filtered statistics only.
+> Azure Synapse Analytics supports tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list. Dependency information is created and maintained for tables, views, and filtered statistics only.
 
 | Entity type | Referencing entity | Referenced entity |
 | --- | --- | --- |

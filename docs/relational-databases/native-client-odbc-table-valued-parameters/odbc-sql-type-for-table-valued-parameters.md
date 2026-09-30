@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "SQL_SS_TABLE"
 ---
 # ODBC SQL Type for Table-Valued Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Support for table-valued parameters is provided by a new ODBC SQL type, SQL_SS_TABLE.  
   

@@ -84,10 +84,10 @@ Creating a domain independent availability group can't currently be achieved com
 
 1. Enable or disable the [Always On availability group feature](enable-and-disable-always-on-availability-groups-sql-server.md) on each instance that will be participating in the availability group. This requires a restart of each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance.
 
-1. Each instance that hosts the primary replica requires a database master key (DMK). If a DMK doesn't exist already, run the following command:
+1. Each instance that hosts the primary replica requires a database master key (DMK). If a DMK doesn't exist already, run the following command. Replace `<password>` with a strong password:
 
    ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    GO
    ```
 
@@ -109,17 +109,17 @@ Creating a domain independent availability group can't currently be achieved com
 
 1. Repeat Steps 4 and 5 to create and back up certificates for each secondary replica, using appropriate names for the certificates, such as `InstanceB_Cert`.
 
-1. On the primary replica, you must create a login for each secondary replica of the availability group. This login is granted permissions to connect to the endpoint used by the domain independent availability group. For example, for a replica named `InstanceB`:
+1. On the primary replica, you must create a login for each secondary replica of the availability group. This login is granted permissions to connect to the endpoint used by the domain independent availability group. Replace `<password>` with a strong password. For example, for a replica named `InstanceB`:
 
    ```sql
-   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = '<password>';
    GO
    ```
 
-1. On each secondary replica, create a login for the primary replica. This login is granted permissions to connect to the endpoint. For example, on a replica named `InstanceB`:
+1. On each secondary replica, create a login for the primary replica. This login is granted permissions to connect to the endpoint. Replace `<password>` with a strong password. For example, on a replica named `InstanceB`:
 
    ```sql
-   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = '<password>';
    GO
    ```
 

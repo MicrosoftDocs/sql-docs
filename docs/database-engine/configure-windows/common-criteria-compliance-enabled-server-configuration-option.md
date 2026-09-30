@@ -43,7 +43,7 @@ Login times that are made available on a per-session basis each time a user succ
 - The last unsuccessful login time
 - The number of attempts between the last successful login and the current login
 
-To view these login statistics, query [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
+To view these login statistics, query [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md).
 
 ### Column `GRANT` shouldn't override table `DENY`
 

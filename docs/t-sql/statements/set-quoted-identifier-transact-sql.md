@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "SET QUOTED_IDENTIFIER statement"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `QUOTED_IDENTIFIER` setting causes [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to follow the ISO rules for quotation mark [delimiting identifiers](../../relational-databases/databases/database-identifiers.md#rules-for-delimited-identifiers) and literal strings. If you use double quotation marks to delimit identifiers, you can use either [!INCLUDE [tsql](../../includes/tsql-md.md)] reserved keywords, or include characters that the [!INCLUDE [tsql](../../includes/tsql-md.md)] syntax rules usually don't allow in identifiers.
 
@@ -42,7 +42,7 @@ Syntax for SQL Server, Azure SQL Database, serverless SQL pool in Azure Synapse 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 SET QUOTED_IDENTIFIER ON

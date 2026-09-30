@@ -26,11 +26,11 @@ helpviewer_keywords:
   - "clauses [SQL Server], WITH common_table_expression"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # WITH common_table_expression (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined within the execution scope of a single `SELECT`, `INSERT`, `UPDATE`, `MERGE`, or `DELETE` statement. This clause can also be used in a `CREATE VIEW` statement as part of its defining `SELECT` statement. A common table expression can include references to itself. This is referred to as a recursive common table expression.
 
@@ -158,9 +158,9 @@ The following guidelines apply to using a recursive common table expression:
 
 - Analytic and aggregate functions in the recursive part of the CTE are applied to the set for the current recursion level and not to the set for the CTE. Functions like `ROW_NUMBER` operate only on the subset of data passed to them by the current recursion level and not the entire set of data passed to the recursive part of the CTE. For more information, see example I. Use analytical functions in a recursive CTE that follows.
 
-## Common table expressions in Azure Synapse Analytics and Analytics Platform System (PDW)
+## Common table expressions in Azure Synapse Analytics
 
-The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] have following features and requirements:
+The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] have the following features and requirements:
 
 - A CTE can be specified in a `SELECT` statement.
 
@@ -187,8 +187,6 @@ The current implementation of CTEs in [!INCLUDE [ssazuresynapse-md](../../includ
 - An `ORDER BY` clause can't be used in the *CTE_query_definition*, except when a `TOP` clause is specified.
 
 - When a CTE is used in a statement that is part of a batch, the statement before it must be followed by a semicolon.
-
-- When used in statements prepared by `sp_prepare`, CTEs behave the same way as other `SELECT` statements in APS PDW. However, if CTEs are used as part of CETAS prepared by `sp_prepare`, the behavior can defer from [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and other APS PDW statements because of the way binding is implemented for `sp_prepare`. If `SELECT` that references CTE is using a wrong column that doesn't exist in CTE, the `sp_prepare` passes without detecting the error, but the error is thrown during `sp_execute` instead.
 
 ## Examples
 
@@ -626,7 +624,7 @@ Lvl  N
 
 `N` returns 1 for each pass of the recursive part of the CTE because only the subset of data for that recursion level is passed to `ROWNUMBER`. For each of the iterations of the recursive part of the query, only one row is passed to `ROWNUMBER`.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### J. Use a common table expression within a CTAS statement
 

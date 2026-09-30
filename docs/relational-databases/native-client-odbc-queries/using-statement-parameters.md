@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ODBC applications, statements"
 ---
 # Using Statement Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   A parameter is a variable in a SQL statement that can enable an ODBC application to:  
   

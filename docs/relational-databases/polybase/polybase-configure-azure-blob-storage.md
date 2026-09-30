@@ -82,7 +82,7 @@ To query the data in your Hadoop data source, you must define an external table 
 1. Create a database master key (DMK) on the database. The DMK is required to encrypt the credential secret.
 
    ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    ```
 
 1. Create a database scoped credential for Azure Blob Storage; `IDENTITY` can be anything as it's not used.
@@ -152,7 +152,7 @@ To query the data in your Hadoop data source, you must define an external table 
 1. Create a database master key (DMK) on the database. The DMK is required to encrypt the credential secret.
 
    ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong password>';
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    ```
 
 1. Create a database scoped credential for Azure Blob Storage using a shared access signature (SAS); `IDENTITY` can be anything as it's not used.

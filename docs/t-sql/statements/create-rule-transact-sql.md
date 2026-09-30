@@ -30,7 +30,7 @@ dev_langs:
   - "TSQL"
 ---
 # CREATE RULE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Creates an object called a rule. When bound to a column or an alias data type, a rule specifies the acceptable values that can be inserted into that column.  
   

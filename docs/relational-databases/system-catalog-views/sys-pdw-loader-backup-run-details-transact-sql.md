@@ -9,17 +9,17 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_loader_backup_run_details (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
-  Contains further detailed information, beyond the information in [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), about ongoing and completed backup and restore operations in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and about ongoing and completed backup, restore, and load operations in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. The information persists across system restarts.  
+  Contains further detailed information, beyond the information in [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](sys-pdw-loader-backup-runs-transact-sql.md), about ongoing and completed backup and restore operations in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and about ongoing and completed backup, restore. The information persists across system restarts.  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Unique identifier for a specific backup or restore run.<br /><br /> run_id and pdw_node_id form the key for this view.||  
-|pdw_node_id|**int**|Unique identifier of an appliance node for which this record holds details.<br /><br /> run_id and pdw_node_id form the key for this view.|See node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|pdw_node_id|**int**|Unique identifier of an appliance node for which this record holds details.<br /><br /> run_id and pdw_node_id form the key for this view.|See node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-pdw-nodes-transact-sql.md).|  
 |status|**nvarchar(16)**|The current status of the run.|'CANCELLED', 'COMPLETED', 'FAILED', 'QUEUED', 'RUNNING'|  
 |start_time|**datetime**|Time at which the operation started on this particular node.||  
 |end_time|**datetime**|Time at which the operation ended on this particular node, if any.||  
@@ -28,4 +28,4 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)

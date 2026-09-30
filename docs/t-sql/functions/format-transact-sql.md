@@ -4,7 +4,7 @@ description: The FORMAT function returns a value formatted with the specified fo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 04/18/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -134,7 +134,7 @@ The following example shows formatting numeric values by specifying a custom for
 DECLARE @d AS DATE = GETDATE();
 
 SELECT FORMAT(@d, 'dd/MM/yyyy', 'en-US') AS 'Date',
-       FORMAT(123456789, '###-##-####') AS 'Custom Number';
+       FORMAT(987654320, '###-##-####') AS 'Custom Number';
 ```
 
 [!INCLUDE [ssResult](../../includes/ssresult-md.md)]
@@ -142,7 +142,7 @@ SELECT FORMAT(@d, 'dd/MM/yyyy', 'en-US') AS 'Date',
 ```output
 Date         Custom Number
 -----------  --------------
-09/08/2024   123-45-6789
+09/08/2024   987-65-4320
 ```
 
 ### C. FORMAT with numeric types

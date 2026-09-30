@@ -42,7 +42,7 @@ The lists are not necessarily complete.
 
 ## Other system objects
 
-- [Extended Events Dynamic Management Views](../system-dynamic-management-views/extended-events-dynamic-management-views.md)
+- [Extended Events Dynamic Management Views](../system-dynamic-management-objects/extended-events-dynamic-management-views.md)
 
 ## Uses of Extended Events by SQL Server itself
 

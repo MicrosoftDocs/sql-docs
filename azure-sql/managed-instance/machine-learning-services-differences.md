@@ -77,6 +77,10 @@ If you receive one of these errors, you can resolve it by scaling your database 
 
 If you encounter out of memory errors in Azure SQL Managed Instance, review [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
 
+## Update policy
+
+Machine Learning Services is available only on SQL managed instances configured with the [**SQL Server 2022** update policy](update-policy.md#sql-server-2022-update-policy). It isn't available with the **SQL Server 2025** or **Always-up-to-date** update policy. The SQL Server 2022 update policy is available until [mainstream support for SQL Server 2022 ends](/lifecycle/products/sql-server-2022). At that time, instances automatically move to the update policy for the latest major SQL Server release, and Machine Learning Services becomes unavailable. To call an externally hosted machine learning model from those instances, consider using [`sp_invoke_external_rest_endpoint`](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql).
+
 ## SQL Managed Instance pools
 
 Machine Learning Services is currently not supported on [Azure SQL Managed Instance pools](instance-pools-overview.md).

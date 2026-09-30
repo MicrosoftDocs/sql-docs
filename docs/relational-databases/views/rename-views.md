@@ -12,11 +12,11 @@ ms.custom:
 helpviewer_keywords:
   - "views [SQL Server], renaming"
   - "renaming views"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Rename Views
 
-[!INCLUDE [SQL Server PDW SQLDB SQLMI FabricSQLDB](../../includes/applies-to-version/sql-pdw-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [SQL Server SQLDB SQLMI FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   You can rename a view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

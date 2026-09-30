@@ -102,7 +102,7 @@ A shared access signature (SAS) provides delegated access to files in a storage 
     ```sql
     -- Create MASTER KEY if it doesn't exist in the database:
     CREATE MASTER KEY 
-    ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>';
+    ENCRYPTION BY PASSWORD = '<password>';
     ```
     
 1. When a SAS token is generated, it includes a question mark (`?`) at the beginning of the token. To use the token, you must remove the question mark (`?`) when creating a credential. For example:

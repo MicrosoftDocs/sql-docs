@@ -4,7 +4,7 @@ description: Learn how parameter types, scale, and precision affect prepared sta
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 12/18/2025
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: best-practice
@@ -96,6 +96,28 @@ pstmt.setBigDecimal(3, salary);
 // Avoid: Using setObject() without explicit types
 pstmt.setObject(1, employeeId); // Type inference might vary
 ```
+
+### Specify string and binary parameter lengths
+
+(Version 13.6+) Use `ISQLServerPreparedStatement.defineParameterType` to specify the maximum expected length of a character or binary parameter. A tighter declaration can reduce SQL Server memory grants compared with the driver's default declarations of `nvarchar(4000)`, `varchar(8000)`, or `varbinary(8000)`.
+
+```java
+ISQLServerPreparedStatement pstmt = (ISQLServerPreparedStatement) connection.prepareStatement(
+    "SELECT * FROM Employees WHERE LastName = ?");
+
+pstmt.defineParameterType(1, java.sql.Types.NVARCHAR, 100);
+pstmt.setString(1, lastName);
+```
+
+Supported SQL types are `VARCHAR`, `CHAR`, `NVARCHAR`, `NCHAR`, `VARBINARY`, and `BINARY`. The maximum length must be greater than zero. Length is measured in bytes for `VARCHAR`, `CHAR`, `VARBINARY`, and `BINARY`, and in characters for `NVARCHAR` and `NCHAR`. The setter used for the parameter must produce a value in the same character or binary family as the type passed to `defineParameterType`.
+
+Declarations greater than 8,000 bytes produce `varchar(max)` or `varbinary(max)`, and declarations greater than 4,000 characters produce `nvarchar(max)`. For Always Encrypted parameters, the driver ignores character and binary length declarations and derives exact type information from the actual value.
+
+You can also supply a length by using the four-argument `setObject(int, Object, int, int)` overload. For supported character and binary types, a positive `scaleOrLength` argument is an advisory hint. The driver uses the hint when the value fits and widens it to the actual value length when necessary. A nonpositive or unusable hint is ignored, and the driver uses its default sizing. If `defineParameterType` and `setObject` both specify a length for the same parameter, the enforced `defineParameterType` value takes precedence.
+
+The same length behavior applies to the named `SQLServerCallableStatement.setObject(String, Object, int, int)` overload and its `forceEncrypt` variant. For other supported values, `scaleOrLength` retains its JDBC meaning: scale for `DECIMAL`, `NUMERIC`, and temporal values; stream length for `InputStream` and `Reader` values; and dimension count for `VECTOR`.
+
+The driver throws an exception if a value exceeds the maximum declared by `defineParameterType` instead of silently truncating it. By contrast, an undersized `setObject` length hint doesn't throw an exception; the driver widens the hint to the actual value length. Choose a `defineParameterType` length that accommodates the largest expected value. A `defineParameterType` declaration persists across `clearParameters()` and `addBatch()` calls, so call it once before a batch loop.
 
 ### Use consistent parameter metadata
 

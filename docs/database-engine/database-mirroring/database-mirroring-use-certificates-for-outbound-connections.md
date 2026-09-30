@@ -127,7 +127,7 @@ helpviewer_keywords:
 ```  
 USE master;  
 --Create the database Master Key, if needed.  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong_Password_#2>';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 GO  
 -- Make a certificate on HOST_B server instance.  
 CREATE CERTIFICATE HOST_B_cert   

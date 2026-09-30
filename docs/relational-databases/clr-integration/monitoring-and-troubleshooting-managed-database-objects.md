@@ -69,18 +69,18 @@ Catalog views return information that is used by the [!INCLUDE [ssNoVersion](../
 
 ## Dynamic management views
 
-Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. For more information, see [System dynamic management views](../system-dynamic-management-views/system-dynamic-management-views.md).
+Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. For more information, see [System dynamic management views](../system-dynamic-management-objects/system-dynamic-management-objects.md).
 
 | DMV | Description |
 | --- | --- |
-| [sys.dm_clr_appdomains](../system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) | Provides information about each application domain in the server. |
-| [sys.dm_clr_loaded_assemblies](../system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md) | Identifies each managed assembly registered on the server. |
-| [sys.dm_clr_properties](../system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md) | Returns information about the hosted CLR. |
-| [sys.dm_clr_tasks](../system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md) | Identifies all the CLR tasks that are currently running. |
-| [sys.dm_exec_cached_plans](../system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) | Returns information about the query execution plans that are cached by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] for faster query execution. |
-| [sys.dm_exec_query_stats](../system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) | Returns aggregate performance statistics for cached query plans. |
-| [sys.dm_exec_requests](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) | Returns information about each request that is executing within [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
-| [sys.dm_os_memory_clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) | Returns all the memory clerks currently active in the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance, including CLR memory clerks. |
+| [sys.dm_clr_appdomains](../system-dynamic-management-objects/sys-dm-clr-appdomains-transact-sql.md) | Provides information about each application domain in the server. |
+| [sys.dm_clr_loaded_assemblies](../system-dynamic-management-objects/sys-dm-clr-loaded-assemblies-transact-sql.md) | Identifies each managed assembly registered on the server. |
+| [sys.dm_clr_properties](../system-dynamic-management-objects/sys-dm-clr-properties-transact-sql.md) | Returns information about the hosted CLR. |
+| [sys.dm_clr_tasks](../system-dynamic-management-objects/sys-dm-clr-tasks-transact-sql.md) | Identifies all the CLR tasks that are currently running. |
+| [sys.dm_exec_cached_plans](../system-dynamic-management-objects/sys-dm-exec-cached-plans-transact-sql.md) | Returns information about the query execution plans that are cached by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] for faster query execution. |
+| [sys.dm_exec_query_stats](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md) | Returns aggregate performance statistics for cached query plans. |
+| [sys.dm_exec_requests](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) | Returns information about each request that is executing within [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [sys.dm_os_memory_clerks](../system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md) | Returns all the memory clerks currently active in the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance, including CLR memory clerks. |
 
 ## Related content
 

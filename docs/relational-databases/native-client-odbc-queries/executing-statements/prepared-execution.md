@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "statements [ODBC], prepared execution"
 ---
 # Prepared Execution
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The ODBC API defines prepared execution as a way to reduce the parsing and compiling overhead associated with repeatedly executing a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The application builds a character string containing a SQL statement and then executes it in two stages. It calls [SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md) once to have the statement parsed and compiled into an execution plan by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. It then calls **SQLExecute** for each execution of the prepared execution plan. This saves the parsing and compiling overhead on each execution. Prepared execution is commonly used by applications to repeatedly execute the same, parameterized SQL statement.  
   

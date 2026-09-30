@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], parameters"
   - "output parameters [SQL Server]"
   - "input parameters [SQL Server]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Specify parameters in a stored procedure
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 By specifying procedure parameters, calling programs are able to pass values into the body of the procedure. Those values can be used for various purposes during procedure execution. Procedure parameters can also return values to the calling program if the parameter is marked as an `OUTPUT` parameter.  
 
@@ -104,7 +104,7 @@ The default value of a parameter is used when:
 > If the default value is a character string that contains embedded blanks or punctuation, or if it starts with a number (for example, `6abc`), it must be enclosed in single, straight quotation marks.  
 
 > [!NOTE]
-> Default parameters are not supported in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)].
+> Default parameters are not supported in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)].
 
 If no value can be specified appropriately as a default for the parameter, specify `NULL` as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
 

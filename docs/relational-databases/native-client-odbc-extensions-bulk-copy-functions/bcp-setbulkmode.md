@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.custom: sfi-ropc-nochange
 ---
 # bcp_setbulkmode
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   bcp_setbulkmode lets you specify the column format in a bulk copy operation, setting all the column attributes in a single function call.  
   

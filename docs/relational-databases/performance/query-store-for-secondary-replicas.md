@@ -4,7 +4,7 @@ description: Query Store can be configured to monitor and tuning workloads on se
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: derekw, randolphwest, wiassaf
-ms.date: 04/23/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -27,7 +27,7 @@ Query Store for readable secondary replicas enables Query Store insights for wor
 
 ## Availability
 
-Query Store for readable secondary replicas is available starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], as well as Azure SQL Database and Azure SQL Managed Instance with the [Always-up-to-date update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy). For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store for readable secondary replicas requires enabling trace flag 12606 to use the feature.
+Query Store for readable secondary replicas is available starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], as well as Azure SQL Database. It's also available in Azure SQL Managed Instance with the [Always-up-to-date update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy) and the [SQL Server 2025 update policy](/azure/azure-sql/managed-instance/update-policy#sql-server-2025-update-policy). For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store for readable secondary replicas requires enabling trace flag 12606 to use the feature.
 
 The following table summarizes the availability and the enabled state of Query store for readable secondaries.
 
@@ -36,7 +36,7 @@ The following table summarizes the availability and the enabled state of Query s
 | [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | Yes<sup>1</sup> | Yes (always enabled) |
 | [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] | Yes | Yes (always enabled) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[AUTD](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#always-up-to-date-update-policy)</sup> | Yes | Yes (always enabled) |
-| [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2025](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2025-update-policy)</sup> | No | No |
+| [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2025](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2025-update-policy)</sup> | Yes | No (can be enabled, per database) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2022](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2022-update-policy)</sup> | No | No |
 | [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] | Yes | No (can be enabled, per database) |
 | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | No<sup>2</sup> | No |
@@ -53,7 +53,7 @@ The following table summarizes the availability and the enabled state of Query s
     - Premium (includes built-in high availability replicas; active geo-replication or failover groups also supported)
     - Business critical (includes built-in high availability replicas; active geo-replication or failover groups also supported)
       
-- For [Azure SQL Managed Instance with the Always-up-to-date policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy), Query Store for readable secondary replicas supports the following service tiers:
+- For Azure SQL Managed Instance, Query Store for readable secondary replicas supports the following service tiers:
     - General purpose with a [failover group](/azure/azure-sql/managed-instance/failover-group-sql-mi) (no built-in high availability replicas; requires a failover group configuration for secondary support)
     - Business critical (includes built-in high availability replicas)
 

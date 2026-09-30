@@ -4,7 +4,7 @@ description: This page contains the support matrix and support life-cycle policy
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 08/12/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: feature-availability
@@ -25,7 +25,8 @@ The following Microsoft JDBC Drivers major versions are supported, until the ind
 
 | Major version | End of mainstream support | Driver name | Minor version | Upgrade by | Applicable JARs |
 | --- | --- | --- | --- | --- | --- |
-| 13 | March 13, 2031 | Microsoft JDBC Driver 13.4 for SQL Server | 13.4 | Current version | `mssql-jdbc-13.4.0.jre11.jar`<br />`mssql-jdbc-13.4.0.jre8.jar` |
+| 13 | March 13, 2031 | Microsoft JDBC Driver 13.6 for SQL Server | 13.6 | Current version | `mssql-jdbc-13.6.0.jre11.jar`<br />`mssql-jdbc-13.6.0.jre8.jar` |
+| | | Microsoft JDBC Driver 13.4 for SQL Server | 13.4 | September 10, 2027 | `mssql-jdbc-13.4.0.jre11.jar`<br />`mssql-jdbc-13.4.0.jre8.jar` |
 | | | Microsoft JDBC Driver 13.2 for SQL Server | 13.2 | March 13, 2027 | `mssql-jdbc-13.2.0.jre11.jar`<br />`mssql-jdbc-13.2.0.jre8.jar` |
 
 JDBC driver versions 12.x and older receive five years of mainstream support from the minor version release date:
@@ -87,6 +88,7 @@ For the best experience, use the latest JDBC driver.
 
 | JDBC driver version | JRE versions | JDBC API version |
 | --- | --- | --- |
+| [13.6](release-notes-for-the-jdbc-driver.md#136) | 1.8, 11, 17, 21, 25, 26 | 4.2, 4.3 (partially) |
 | [13.4](release-notes-for-the-jdbc-driver.md#134) | 1.8, 11, 17, 21, 25 | 4.2, 4.3 (partially) |
 | [13.2](release-notes-for-the-jdbc-driver.md#132) | 1.8, 11, 17, 21, 24 | 4.2, 4.3 (partially) |
 | [12.10](release-notes-for-the-jdbc-driver.md#1210) | 1.8, 11, 17, 21, 23 | 4.2, 4.3 (partially) |

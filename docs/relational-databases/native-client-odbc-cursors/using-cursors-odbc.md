@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC cursors"
 ---
 # Using Cursors (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ODBC supports a cursor model that allows:  
   

@@ -23,16 +23,16 @@ helpviewer_keywords:
   - "clearing procedure cache"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Removes all elements from the plan cache, removes a specific plan from the plan cache by specifying a plan handle or SQL handle, or removes all cache entries associated with a specified resource pool.
 
 > [!NOTE]  
-> `DBCC FREEPROCCACHE` doesn't clear the execution statistics for natively compiled stored procedures. The procedure cache doesn't contain information about natively compiled stored procedures. Any execution statistics collected from procedure executions will appear in the execution statistics DMVs: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).
+> `DBCC FREEPROCCACHE` doesn't clear the execution statistics for natively compiled stored procedures. The procedure cache doesn't contain information about natively compiled stored procedures. Any execution statistics collected from procedure executions will appear in the execution statistics DMVs: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-plan-transact-sql.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -44,7 +44,7 @@ Syntax for SQL Server and Azure SQL Database:
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]
 ```
 
-Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
@@ -58,22 +58,22 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 *plan_handle* uniquely identifies a query plan for a batch that has executed and whose plan resides in the plan cache. *plan_handle* is **varbinary(64)** and can be obtained from the following dynamic management objects:
 
-- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)
-- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-cached-plans-transact-sql.md)
+- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
 
 *sql_handle* is the SQL handle of the batch to be cleared. *sql_handle* is **varbinary(64)** and can be obtained from the following dynamic management objects:
 
-- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
-- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)
-- [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-cursors-transact-sql.md)
+- [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-xml-handles-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-query-memory-grants-transact-sql.md)
 
-*pool_name* is the name of a Resource Governor resource pool. *pool_name* is **sysname** and can be obtained by querying the [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) dynamic management view.  
+*pool_name* is the name of a Resource Governor resource pool. *pool_name* is **sysname** and can be obtained by querying the [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md) dynamic management view.  
 
-To associate a Resource Governor workload group with a resource pool, query the [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view. For information about the workload group for a session, query the [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) dynamic management view.
+To associate a Resource Governor workload group with a resource pool, query the [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view. For information about the workload group for a session, query the [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) dynamic management view.
 
 #### WITH NO_INFOMSGS
 
@@ -133,7 +133,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 ## Permissions
 
-Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Requires **ALTER SERVER STATE** permission on the server.
 
@@ -145,23 +145,23 @@ Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 - Requires membership in the **db_owner** fixed server role.
 
-## Remarks for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Remarks for Azure Synapse Analytics
 
 Multiple `DBCC FREEPROCCACHE` commands can be run concurrently.
 
-In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], clearing the plan cache can cause a temporary decrease in query performance as incoming queries compile a new plan, instead of reusing any previously cached plan.
 
-`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to recompile the parallel query plan that is generated on the Control node.
+`DBCC FREEPROCCACHE (COMPUTE)` only causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to recompile queries when they are run on the Compute nodes. It doesn't cause [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to recompile the parallel query plan that is generated on the Control node.
 
 `DBCC FREEPROCCACHE` can be canceled during execution.
 
-## Limitations and restrictions for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Limitations and restrictions for Azure Synapse Analytics
 
 `DBCC FREEPROCCACHE` can't run within a transaction.
 
 `DBCC FREEPROCCACHE` isn't supported in an EXPLAIN statement.
 
-## Metadata for Azure Synapse Analytics and Analytics Platform System (PDW)
+## Metadata for Azure Synapse Analytics
 
 A new row is added to the `sys.pdw_exec_requests` system view when `DBCC FREEPROCCACHE` is run.
 
@@ -220,7 +220,7 @@ DBCC FREEPROCCACHE ('default');
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### D. DBCC FREEPROCCACHE basic syntax
 

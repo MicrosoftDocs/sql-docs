@@ -3,6 +3,7 @@ title: Implement Pagination with mssql-python
 description: Learn how to implement efficient pagination patterns when querying large datasets using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

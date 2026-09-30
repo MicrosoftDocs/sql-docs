@@ -3,7 +3,7 @@ title: "Create rowset with IOpenRowset (OLE DB driver)"
 description: "Learn how OLE DB Driver for SQL Server supports the IOpenRowset::OpenRowset method to return a rowset and restrictions on its use."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
 ---
 # Creating a Rowset with IOpenRowset
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

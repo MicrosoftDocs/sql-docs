@@ -4,7 +4,7 @@ description: Learn how to configure and use the bulkadmin server role or the ADM
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: matripathy, amitkh, atsingh
-ms.date: 08/11/2026
+ms.date: 09/29/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -15,14 +15,11 @@ ai-usage: ai-assisted
 monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 
-# Configure bulk import operations for SQL Server on Linux (preview)
+# Configure bulk import operations for SQL Server on Linux
 
 [!INCLUDE [sqlserver2022-and-later-linux](../../includes/applies-to-version/sqlserver2022-and-later-linux.md)]
 
-> [!IMPORTANT]  
-> This feature is currently in preview.
-
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 24 (CU24) and [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Cumulative Update 3 (CU3), you can use the **bulkadmin** fixed server role or the `ADMINISTER BULK OPERATIONS` permission to perform bulk data import operations on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on Linux. Previously, only members of the **sysadmin** fixed server role could run [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) on Linux.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 27 (CU27) and [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Cumulative Update 9 (CU9), you can use the **bulkadmin** fixed server role or the `ADMINISTER BULK OPERATIONS` permission to perform bulk data import operations on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running on Linux. Previously, only members of the **sysadmin** fixed server role could run [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) on Linux.
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux enforces additional file system and path validation checks for bulk operations, beyond what Windows requires. An administrator must:
 
@@ -32,13 +29,13 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative U
 
 ## Prerequisites
 
-- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU24 or later version on Linux, or [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU3 or later version on Linux
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 27 or later version on Linux, or [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 9 or later version on Linux
 - Administrative access to the Linux host
 - Administrative access to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance
 
 ## Configure the Linux file system
 
-Before you run bulk import operations, the `mssql` service account must have read access to the data files on the Linux file system.
+Before you run bulk import operations, the `mssql` service account requires read access to the data files on the Linux file system.
 
 1. Create a directory for your bulk data files:
 
@@ -132,7 +129,7 @@ After you configure the Linux file system and allowed paths, set up the [!INCLUD
    GO
 
    CREATE LOGIN BulkLoadUser
-   WITH PASSWORD = '<strong_password>';
+   WITH PASSWORD = '<password>';
    GO
    ```
 
@@ -191,12 +188,11 @@ The same permissions, Linux file system configuration, and path approval steps a
 
 ## Upgrade and downgrade behavior
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU24 and [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU3, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux supports bulk operations using the **bulkadmin** fixed server role or `ADMINISTER BULK OPERATIONS` permission.
-
-If you downgrade to a cumulative update earlier than [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU24 or [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU3:
+If you downgrade to a cumulative update earlier than [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 24 or [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 3:
 
 - Previously granted permissions remain assigned but aren't functional.
-- Bulk operations require **sysadmin** permissions, as in versions before these cumulative updates.
+
+- Bulk operations require **sysadmin** permissions.
 
 ## Related content
 

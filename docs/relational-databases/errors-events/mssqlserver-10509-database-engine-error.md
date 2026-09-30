@@ -36,5 +36,5 @@ Provide a single valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or 
 
 - [sys.sp_create_plan_guide (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-transact-sql.md)
 - [Plan Guides](../performance/plan-guides.md)
-- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)
+- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md)
 - [sys.sp_create_plan_guide_from_handle (Transact-SQL)](../system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)

@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
     -   **Default Full-Text Language**  
   
-         Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+         Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
     -   **Full-Text Upgrade Option**  
   
@@ -55,10 +55,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
          **Reset**  
          Full-text catalogs are reset. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] full-text catalog files are removed, but the metadata for full-text catalogs and full-text indexes is retained. After being upgraded, all full-text indexes are disabled for change tracking and crawls are not started automatically. The catalog will remain empty until you manually issue a full population, after the upgrade completes.  
   
-         For information about choosing a full-text upgrade option, see full-[Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
+         For information about choosing a full-text upgrade option, see full-[Upgrade Full-Text Search](upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  The full-text upgrade option can also be set by using the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** action.  
+        >  The full-text upgrade option can also be set by using the [sp_fulltext_service](../system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** action.  
   
 ##  <a name="metadata"></a> Viewing Additional Full-Text Server Properties  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] functions can be used to obtain the value of various server-level properties of full-text search. This information is useful for administrating and troubleshooting full-text search.  
@@ -77,30 +77,28 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  **To view information about the full-text catalogs with in-progress population activity**  
   
--   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
+-   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-active-catalogs-transact-sql.md)  
   
  **To view current activity of a filter daemon host process**  
   
--   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql.md)  
+-   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-fdhosts-transact-sql.md)  
   
  **To view information about in-progress index populations**  
   
--   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
+-   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-index-population-transact-sql.md)  
   
  **To view memory buffers in a memory pool that are used as part of a crawl or crawl range.**  
   
--   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)  
+-   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-memory-buffers-transact-sql.md)  
   
  **To view the shared memory pools available to the full-text gatherer component for a full-text crawl or a full-text crawl range**  
   
--   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
+-   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-memory-pools-transact-sql.md)  
   
  **To view information about each full-text indexing batch**  
   
--   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)  
+-   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-outstanding-batches-transact-sql.md)  
   
  **To view information about the specific ranges related to an in-progress population**  
   
--   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md)  
-  
-  
+-   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-population-ranges-transact-sql.md)

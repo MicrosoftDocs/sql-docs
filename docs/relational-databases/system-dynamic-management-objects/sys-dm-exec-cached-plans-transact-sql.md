@@ -18,18 +18,18 @@ helpviewer_keywords:
   - "sys.dm_exec_cached_plans dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # sys.dm_exec_cached_plans (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server SQL Database-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Returns a row for each query plan that is cached by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] for faster query execution. You can use this dynamic management view to find cached query plans, cached query text, the amount of memory taken by cached plans, and the reuse count of the cached plans.
 
 In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], dynamic management views can't expose information that would affect database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out. In addition, the values in the columns **memory_object_address** and **pool_id** are filtered; the column value is set to `NULL`.
 
 > [!NOTE]  
-> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_exec_cached_plans`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_exec_cached_plans`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], dynamic manageme
 | `objtype` | **nvarchar(16)** | Type of object. Below are the possible values and their corresponding descriptions.<br /><br />Proc: Stored procedure<br />Prepared: Prepared statement<br />Ad hoc: Ad hoc query. Refers to [!INCLUDE [tsql](../../includes/tsql-md.md)] submitted as language events by using **osql** or **sqlcmd** instead of as remote procedure calls.<br />ReplProc: Replication-filter-procedure<br />Trigger: Trigger<br />View: View<br />Default: Default<br />UsrTab: User table<br />SysTab: System table<br />Check: CHECK constraint<br />Rule: Rule |
 | `plan_handle` | **varbinary(64)** | Identifier for the in-memory plan. This identifier is transient and remains constant only while the plan remains in the cache. This value might be used with the following dynamic management functions:<br /><br />[sys.dm_exec_sql_text](sys-dm-exec-sql-text-transact-sql.md)<br />[sys.dm_exec_query_plan](sys-dm-exec-query-plan-transact-sql.md)<br />[sys.dm_exec_plan_attributes](sys-dm-exec-plan-attributes-transact-sql.md) |
 | `pool_id` | **int** | The ID of the resource pool against which this plan memory usage is accounted for. |
-| `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
+| `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
 
 ## Permissions
 

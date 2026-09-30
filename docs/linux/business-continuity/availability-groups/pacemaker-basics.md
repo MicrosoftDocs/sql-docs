@@ -1,10 +1,11 @@
 ---
-title: Pacemaker for Availability Groups and Failover Cluster Instances on Linux
+title: Pacemaker for Availability Groups and Failover Cluster Instances
+titleSuffix: SQL Server on Linux
 description: Learn about using Pacemaker for high availability options for SQL Server on Linux.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 01/02/2026
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: concept-article
@@ -17,9 +18,9 @@ ms.custom:
 
 Starting with [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)], [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is supported on both Linux and Windows. Like Windows-based [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deployments, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] databases and instances need to be highly available under Linux. This article covers the basic information to understand Pacemaker with Corosync, and how to plan and deploy it for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] configurations.
 
-## HA add-on/extension basics
+## HA add-on and extension basics
 
-All of the currently supported distributions ship a high availability add-on/extension, which is based on the Pacemaker clustering stack. This stack incorporates two key components: Pacemaker and Corosync. All the components of the stack are:
+All currently supported distributions ship a high availability add-on or extension, which is based on the Pacemaker clustering stack. This stack incorporates two key components: Pacemaker and Corosync. All the components of the stack are:
 
 - **Pacemaker.** The core clustering component that coordinates things across the clustered machines.
 - **Corosync.** A framework and set of APIs that provides things like quorum, the ability to restart failed processes, and so on.
@@ -36,14 +37,15 @@ This solution is in some ways similar to, but in many ways different from deploy
 
 On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this article. The clustering layer is open source, so even though it ships with the distributions, it isn't tightly integrated in the same way a WSFC is under Windows. This is why Microsoft provides *mssql-server-ha*, so that [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and the Pacemaker stack can provide close to, but not exactly the same, experience for AGs and FCIs as under Windows.
 
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
+
 For full documentation on Pacemaker, including a more in-depth explanation of what everything is with full reference information, for RHEL and SLES:
 
 - [RHEL](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
 - [SLES](https://documentation.suse.com/sle-ha/15-SP2/html/SLE-HA-all/book-sleha-guide.html)
 - [Ubuntu](https://ubuntu.com/server/docs/explanation/intro-to/high-availability)
 
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
+[!INCLUDE [sles-deprecated](../../includes/sles-deprecated.md)]
 
 For more information about the whole stack, also see the official [Pacemaker documentation page](https://clusterlabs.org/projects/pacemaker/) on the ClusterLabs site.
 
@@ -63,7 +65,7 @@ Pacemaker has standard and clone resources. Clone resources are ones that run si
 
 [!INCLUDE [bias-sensitive-term-t](../../../includes/bias-sensitive-term-t.md)]
 
-When an AG is created, it requires a specialized form of a clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it's configured to work on, and can potentially allow things such as read-only access. Because this is a "live" use of the node, the resources have the concept of two states: *Promoted* (previously *Master*) and *Unpromoted* (previously *Slave*). For more information, see [Multi-state resources: Resources that have multiple modes](https://docs.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-multistateresource-haar).
+A newly created AG requires a specialized form of a clone resource called a *multi-state resource*. While an AG only has one primary replica, the availability group runs across all configured nodes, and can potentially allow things such as read-only access. Because this use of the node is *live*, the resources have the concept of two states: *promoted* and *unpromoted*. For more information, see [Multi-state resources: Resources that have multiple modes](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/configuring_and_managing_high_availability_clusters/index#proc_creating-promotable-clone-resources-creating-multinode-resources).
 
 ### Resource groups/sets
 

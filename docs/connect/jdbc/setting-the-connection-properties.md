@@ -4,7 +4,7 @@ description: The connection string properties for the Microsoft JDBC Driver for 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, machavan, sunilbs
-ms.date: 05/06/2026
+ms.date: 09/10/2026
 ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: connectivity
@@ -36,7 +36,18 @@ You can specify the connection string properties in various ways:
 
 - You can use unknown values for property names. The JDBC driver doesn't validate case sensitivity.
 
-- You can use synonyms. The driver resolves them in order, just as it does with duplicate property names.
+- You can use synonyms. The driver resolves them in order, just as it does with duplicate property names. Starting with version 13.6, the driver also accepts these common cross-driver aliases:
+
+  | Alias | JDBC property |
+  | --- | --- |
+  | `app` | `applicationName` |
+  | `columnEncryption` | `columnEncryptionSetting` |
+  | `connectTimeout` | `loginTimeout` |
+  | `quotedId` | `quotedIdentifier` |
+  | `trusted_connection` | `integratedSecurity` |
+  | `uid` | `user` |
+
+  Alias matching is case-insensitive.
 
 - The [!INCLUDE [jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for `ANSI_DEFAULTS` and `IMPLICIT_TRANSACTIONS`. The [!INCLUDE [jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets `ANSI_DEFAULTS` to `ON` and `IMPLICIT_TRANSACTIONS` to `OFF`.
 
@@ -64,6 +75,8 @@ The following sections describe all the currently available connection string pr
 - **Default**: `null`
 
 (Version 12.4+) The name of the callback-implementing class to use with the access token callback.
+
+(Version 13.6+) The value must be a valid Java binary class name. The driver rejects an invalid value before attempting to load the class.
 
 ### `applicationIntent`
 
@@ -273,7 +286,7 @@ For details, see [Client Certificate Authentication for Loopback Scenarios](clie
 For more information about Always Encrypted, see [Use Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Always Encrypted is available with SQL Server 2016 or later and Azure SQL Database.
+> Always Encrypted is available with SQL Server 2016 and later versions, and Azure SQL Database.
 
 ### `concatNullYieldsNull`
 
@@ -307,6 +320,15 @@ The name of the database to connect to.
 
 If you don't specify a database name, the connection uses the default database.
 
+### `defaultTransactionIsolation`
+
+- **Type**: `String` [`READ_UNCOMMITTED` | `READ_COMMITTED` | `REPEATABLE_READ` | `SERIALIZABLE` | `SNAPSHOT`]
+- **Default**: `null`
+
+(Version 13.6+) The transaction isolation level that the driver applies when it establishes the connection. Values are case-insensitive. If you don't set this property, the server uses its default transaction isolation level.
+
+You can also configure this property by using the `setDefaultTransactionIsolation` method on `SQLServerDataSource`.
+
 ### `datetimeParameterType`
 
 - **Type**: `String` [`datetime` | `datetime2` | `datetimeoffset`]
@@ -314,7 +336,7 @@ If you don't specify a database name, the connection uses the default database.
 
 (Version 12.2+) The SQL data type to use for Java date and timestamp parameters.
 
-When you connect to SQL Server 2016 or later versions and interact with legacy `datetime` values, set this property to `datetime`. This setting mitigates server-side conversion problems between `datetime` and `datetime2` values.
+When you connect to SQL Server 2016 and later versions and interact with legacy `datetime` values, set this property to `datetime`. This setting mitigates server-side conversion problems between `datetime` and `datetime2` values.
 
 For more information, see [Addressing datetime to datetime2 conversion behavior change starting from SQL Server 2016](https://github.com/microsoft/mssql-jdbc/wiki/Addressing-datetime-to-datetime2-conversion-behavior-change-starting-from-SQL-Server-2016).
 
@@ -484,6 +506,8 @@ With `UsePlatformDefault`, the driver traverses all IP addresses in their initia
 
 (Version 6.2+) Each connection to SQL Server can use its own JAAS Login Configuration name to establish a Kerberos connection. You can pass the name of the configuration entry through this property. Use this property when [creating a Kerberos configuration file](using-kerberos-integrated-authentication-to-connect-to-sql-server.md#creating-a-kerberos-configuration-file). By default, the driver looks for the name `SQLJDBCDriver`.
 
+To load the entry from an external JAAS configuration file, set the `java.security.auth.login.config` JVM system property to a local file path or `file:` URI. Starting with version 13.6, the driver rejects nonlocal URLs, such as `http:`, `https:`, `ldap:`, `jar:`, and `rmi:` URLs. To bypass the JVM-wide JAAS configuration and use the driver's default configuration, set `useDefaultJaasConfig=true`.
+
 If the driver doesn't find an external configuration, it sets `useDefaultCcache=true` for IBM JVMs, and `useTicketCache=true` for other JVMs.
 
 ### `keyStoreAuthentication`
@@ -552,6 +576,8 @@ The number of seconds the driver should wait before timing out a failed connecti
 
 If you specify a Virtual Network Name in the `Server` connection property, specify a timeout value of three minutes or more to allow sufficient time for a failover connection to succeed.
 
+For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, `loginTimeout` bounds the driver's connection retries, not just a single attempt. The driver abandons the retry when the elapsed time plus `connectRetryInterval` reaches `loginTimeout`, so size it to hold the retries you want. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database).
+
 For more information about disaster recovery, see [JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md).
 
 ### `maxResultBuffer`
@@ -576,7 +602,7 @@ For more information about disaster recovery, see [JDBC driver support for High 
 - **Type**: `Boolean` [`true` | `false`]
 - **Default**: `false`
 
-Always specify `multiSubnetFailover=true` to connect to the availability group listener of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] availability group or an [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. `multiSubnetFailover=true` configures the driver to provide faster detection of and connection to the active server.
+Always specify `multiSubnetFailover=true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener of a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] availability group, or a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance. The driver attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds. When DNS resolves to one address, the driver does a single connection attempt and doesn't start any parallel connection threads.
 
 Possible values are `true` and `false`.
 
@@ -808,6 +834,8 @@ For more information about using `serverSpn` with Java Kerberos, see [Using Kerb
 
 (Version 8.4+) Specifies the class name for a custom socket factory to use instead of the default socket factory.
 
+(Version 13.6+) The value must be a valid Java binary class name. The driver rejects an invalid value before attempting to load the class.
+
 ### `socketTimeout`
 
 - **Type**: `int`
@@ -849,7 +877,7 @@ Before Microsoft JDBC Driver 6.0 for SQL Server, an application had to set the c
 > [!NOTE]  
 > When you use federated authentication or specify `multisubnetfailover`, the driver disables `transparentNetworkIPResolution` by default. To enable this feature, explicitly set `transparentNetworkIPResolution` to `true`.
 
-When `transparentNetworkIPResolution=true`, the first connection attempt uses 500 ms as the timeout. Any later attempts use the same timeout logic as used by the `multiSubnetFailover` property.
+When `transparentNetworkIPResolution=true`, the first connection attempt uses 500 milliseconds as the timeout. Any later attempts use the same timeout logic as used by the `multiSubnetFailover` property.
 
 ### `trustManagerClass`
 
@@ -857,6 +885,8 @@ When `transparentNetworkIPResolution=true`, the first connection attempt uses 50
 - **Default**: `null`
 
 (Version 6.4+) The fully qualified class name of a custom `javax.net.ssl.TrustManager` implementation.
+
+(Version 13.6+) The value must be a valid Java binary class name. The driver rejects an invalid value before attempting to load the class.
 
 ### `trustManagerConstructorArg`
 

@@ -27,7 +27,7 @@ helpviewer_keywords:
 Memory utilization for the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] is bounded by a pair of configuration settings, `min server memory (MB)` and `max server memory (MB)`. Over time and under normal circumstances, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] will attempt claim memory up to the limit set by `max server memory (MB)`.
 
 > [!NOTE]  
-> [Columnstore indexes: overview](../../relational-databases/indexes/columnstore-indexes-overview.md) and [In-Memory OLTP overview and usage scenarios](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) objects have their own memory clerks, which makes it easier to monitor their buffer pool usage. For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md#types).
+> [Columnstore indexes: overview](../../relational-databases/indexes/columnstore-indexes-overview.md) and [In-Memory OLTP overview and usage scenarios](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) objects have their own memory clerks, which makes it easier to monitor their buffer pool usage. For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-objects/sys-dm-os-memory-clerks-transact-sql.md#types).
 
 In older versions of SQL Server, memory utilization was virtually uncapped, indicating to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that all system memory was available for use. It's recommended in all versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to configure an upper limit for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] memory utilization by configuring the `max server memory (MB)`.
 
@@ -35,7 +35,7 @@ In older versions of SQL Server, memory utilization was virtually uncapped, indi
 - At any time you can reconfigure the bounds of memory (in megabytes) for a SQL Server process used by an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] via the `min server memory (MB)` and `max server memory (MB)` configuration options.
 
 > [!NOTE]  
-> This guide refers to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance on Windows. For information on memory configuration in Linux, see [Performance best practices: Storage, kernel, CPU, and network for SQL Server on Linux](../../linux/configure/performance-best-practices-operating-system.md#virtual-machines-and-dynamic-memory) and the [memory.memorylimitmb setting](../../linux/sql-server-linux-configure-mssql-conf.md#memorylimit).
+> This guide refers to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance on Windows. For information on memory configuration in Linux, see [Performance best practices: Storage, kernel, CPU, and network for SQL Server on Linux](../../linux/configure/performance-best-practices-operating-system.md#virtual-machines-and-dynamic-memory) and the [memory.memorylimitmb setting](../../linux/configure/mssql-conf.md#memorylimit).
 
 ## Recommendations
 
@@ -157,7 +157,7 @@ Using LPIM with an incorrectly configured `max server memory (MB)` setting that 
 
 After considering the previous information, to enable the **Lock pages in memory** option by granting the privilege to the service account for the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Enable the Lock pages in memory Option (Windows)](enable-the-lock-pages-in-memory-option-windows.md#enable-the-lock-pages-in-memory-option-windows).
 
-To determine the service account for the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], refer to the SQL Server Configuration Manager or query the `service_account` from `sys.dm_server_services`. For more information, see [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md).
+To determine the service account for the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], refer to the SQL Server Configuration Manager or query the `service_account` from `sys.dm_server_services`. For more information, see [sys.dm_server_services](../../relational-databases/system-dynamic-management-objects/sys-dm-server-services-transact-sql.md).
 
 ### View *Lock pages in memory* status
 

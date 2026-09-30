@@ -3,7 +3,8 @@ title: "Install the go-mssqldb Driver"
 description: "Install the go-mssqldb driver for Go and verify your development environment for Microsoft SQL platform connectivity."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -121,7 +122,7 @@ go get -u github.com/microsoft/go-mssqldb
 To upgrade to a specific version:
 
 ```bash
-go get github.com/microsoft/go-mssqldb@v1.10.0
+go get github.com/microsoft/go-mssqldb@v1.11.0
 ```
 
 After upgrading, run `go mod tidy` to remove unused indirect dependencies.

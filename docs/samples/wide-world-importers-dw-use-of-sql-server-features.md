@@ -7,11 +7,11 @@ ms.date: 07/01/2020
 ms.service: sql
 ms.subservice: "samples"
 ms.topic: concept-article
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || >=aps-pdw-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
 
-[!INCLUDE [sql-asa-pdw](../includes/applies-to-version/sql-asa-pdw.md)]
+[!INCLUDE [sql-asa](../includes/applies-to-version/sql-asa.md)]
 
 WideWorldImportersDW is designed to showcase many of the key features of SQL Server that are suitable for data warehousing and analytics. The following is a list of SQL Server features and capabilities, and a description of how they are used in WideWorldImportersDW.
 

@@ -28,11 +28,11 @@ WHERE object_id=object_id;
 ## Using Data Management Views and Query Store
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] support collecting execution statistics for natively compiled stored procedures, both on the procedure level and the query level. Collecting execution statistics is not enabled by default due to performance impact.  
 
-Execution statistics are reflected in the system views [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), as well as in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+Execution statistics are reflected in the system views [sys.dm_exec_procedure_stats](../system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md) and [sys.dm_exec_query_stats](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md), as well as in [Query Store](../performance/monitoring-performance-by-using-the-query-store.md).
 
 ## Procedure-Level Execution Statistics
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure-level using [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules on the current instance:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure-level using [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules on the current instance:
 
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
@@ -46,7 +46,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 
 ## Query-Level Execution Statistics
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the query-level using [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  The following statement enables collection of query-level execution statistics for all natively compiled T-SQL modules on the current instance:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the query-level using [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  The following statement enables collection of query-level execution statistics for all natively compiled T-SQL modules on the current instance:
 
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
@@ -60,7 +60,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 
 ## Sample Queries
 
- After you collect statistics, the execution statistics for natively compiled stored procedures can be queried for a procedure with [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md), and for queries with [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).  
+ After you collect statistics, the execution statistics for natively compiled stored procedures can be queried for a procedure with [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md), and for queries with [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md).  
  
   
  The following query returns the procedure names and execution statistics for natively compiled stored procedures in the current database, after statistics collection:  

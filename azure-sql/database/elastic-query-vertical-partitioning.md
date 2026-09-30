@@ -40,10 +40,10 @@ Vertically partitioned databases use different sets of tables on different datab
 
 ## Create database scoped master key and credentials
 
-The credential is used by the elastic query to connect to your remote databases.  
+The credential is used by the elastic query to connect to your remote databases. Replace each `<password>` with a strong password.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'master_key_password';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 CREATE DATABASE SCOPED CREDENTIAL [<credential_name>]  WITH IDENTITY = '<username>',  
 SECRET = '<password>';
 ```

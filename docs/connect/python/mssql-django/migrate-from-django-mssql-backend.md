@@ -3,8 +3,8 @@ title: Migrate from django-mssql-backend to mssql-django
 description: Migrate a Django project from django-mssql-backend to mssql-django with updated ENGINE and package configuration.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,13 +17,13 @@ This article explains how to migrate a Django project from the `django-mssql-bac
 
 ## Overview
 
-The `mssql-django` package is the successor to `django-mssql-backend`. It continues to provide a Django database backend for SQL Server using pyodbc, but with an updated package name, engine identifier, and support for newer Django versions.
+The `mssql-django` package is the successor to `django-mssql-backend`. It provides a Django database backend for SQL Server with an updated package name, engine identifier, and support for newer Django versions. The pyodbc driver path remains the default in `mssql-django` 2.0, and each database alias can opt in to the mssql-python driver. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
 
 | Feature | django-mssql-backend | mssql-django |
 | --- | --- | --- |
 | Package name | `django-mssql-backend` | `mssql-django` |
 | ENGINE | `sql_server.pyodbc` | `mssql` |
-| Django support | 2.2, 3.0, 3.1 | 3.2, 4.0, 4.1, 4.2, 5.0, 5.1, 5.2, 6.0 |
+| Django support | 2.2, 3.0, 3.1 | 5.2, 6.0, 6.1 |
 | Maintained by | Microsoft | Microsoft |
 | PyPI | `pip install django-mssql-backend` | `pip install mssql-django` |
 
@@ -43,7 +43,7 @@ If you use a `requirements.txt` file, replace the package reference:
 django-mssql-backend>=2.8.1
 
 # After
-mssql-django>=1.7
+mssql-django>=2.0
 ```
 
 ## Step 2: Update the DATABASE ENGINE
@@ -83,7 +83,7 @@ DATABASES = {
 ```
 
 > [!NOTE]  
-> `mssql-django` v1.7 defaults to ODBC Driver 18. You can continue to use Driver 17 by specifying it explicitly in the `driver` option.
+> The default pyodbc path uses Microsoft ODBC Driver 18 for SQL Server. You can continue to use Driver 17 on the pyodbc path by specifying it explicitly in the `driver` option. The mssql-python path ignores the `driver` option.
 
 ## Step 3: Update INSTALLED_APPS
 
@@ -126,7 +126,8 @@ python manage.py test
 
 | Area | Change |
 | --- | --- |
-| Default ODBC driver | v1.7 defaults to `ODBC Driver 18 for SQL Server`, which sets `Encrypt=yes` by default (Driver 17 defaulted to `Encrypt=no`). Connections to servers with self-signed or untrusted certificates fail unless you add `TrustServerCertificate=yes` to `extra_params`. Alternatively, specify Driver 17 or install a trusted certificate on the server. |
+| Default database driver | `mssql-django` 2.0 keeps pyodbc as the default database driver. To use the mssql-python path, set `"python_driver": "mssql_python"` in the alias's `OPTIONS` dictionary. |
+| Default ODBC driver on the pyodbc path | The pyodbc path uses `ODBC Driver 18 for SQL Server`, which sets `Encrypt=yes` by default. Connections to servers with self-signed or untrusted certificates fail unless you add `TrustServerCertificate=yes` to `extra_params`. Alternatively, specify Driver 17 on the pyodbc path or install a trusted certificate on the server. |
 | `return_rows_bulk_insert` | Defaults to `False`. Set to `True` to enable returning IDs after `bulk_create`. Must remain `False` for tables with triggers. See [Bulk operations with mssql-django](bulk-operations.md). |
 
 ## Related content

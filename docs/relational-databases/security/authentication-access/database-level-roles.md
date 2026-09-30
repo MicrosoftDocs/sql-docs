@@ -37,15 +37,15 @@ helpviewer_keywords:
   - "fixed database roles [SQL Server]"
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Database-level roles
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 To easily manage the permissions in your databases, [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] provides several roles that are security principals that group other principals. They are like *groups* in the Windows operating system. Database-level roles are database-wide in their permissions scope.
 
-To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBER` options of the [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) statement. [!INCLUDE [ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse Analytics doesn't support the use of `ALTER ROLE`. Use the older [sp_addrolemember](../../system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember](../../system-stored-procedures/sp-droprolemember-transact-sql.md) procedures instead.
+To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBER` options of the [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) statement. Azure Synapse Analytics doesn't support the use of `ALTER ROLE`. Use the older [sp_addrolemember](../../system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember](../../system-stored-procedures/sp-droprolemember-transact-sql.md) procedures instead.
 
 There are two types of database-level roles: *fixed database roles* that are predefined in the database and *user-defined database roles* that you can create.
 
@@ -141,8 +141,8 @@ The following table explains the commands, views, and functions for working with
 | [DROP ROLE](../../../t-sql/statements/drop-role-transact-sql.md) | Command | Removes a role from the database. |
 | [sp_addrole](../../system-stored-procedures/sp-addrole-transact-sql.md) | Command | Creates a new database role in the current database. |
 | [sp_droprole](../../system-stored-procedures/sp-droprole-transact-sql.md) | Command | Removes a database role from the current database. |
-| [sp_addrolemember](../../system-stored-procedures/sp-addrolemember-transact-sql.md) | Command | Adds a database user, database role, Windows login, or Windows group to a database role in the current database. All platforms except [!INCLUDE [ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse should use `ALTER ROLE` instead. |
-| [sp_droprolemember](../../system-stored-procedures/sp-droprolemember-transact-sql.md) | Command | Removes a security account from a SQL Server role in the current database. All platforms except [!INCLUDE [ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse should use `ALTER ROLE` instead. |
+| [sp_addrolemember](../../system-stored-procedures/sp-addrolemember-transact-sql.md) | Command | Adds a database user, database role, Windows login, or Windows group to a database role in the current database. All platforms except Azure Synapse should use `ALTER ROLE` instead. |
+| [sp_droprolemember](../../system-stored-procedures/sp-droprolemember-transact-sql.md) | Command | Removes a security account from a SQL Server role in the current database. All platforms except Azure Synapse should use `ALTER ROLE` instead. |
 | [GRANT](../../../t-sql/statements/grant-transact-sql.md) | Permissions | Adds permission to a role. |
 | [DENY](../../../t-sql/statements/deny-transact-sql.md) | Permissions | Denies a permission to a role. |
 | [REVOKE](../../../t-sql/statements/revoke-transact-sql.md) | Permissions | Removes previously granted or denied permissions. |

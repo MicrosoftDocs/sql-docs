@@ -221,7 +221,7 @@ Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Sets a mini
 - Minimum: 0.
 - Maximum: Number of replicas minus 1.
 
-REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceeds. When the unresponsive database comes back online, it will be in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica does not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas isn't available, then commits on the primary fail. For cluster type, `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceeds. When the unresponsive database comes back online, it will be in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica does not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas isn't available, then commits on the primary fail. For cluster type, `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/business-continuity/availability-groups/high-availability.md).
 
 Not supported for CREATE AVAILABILITY GROUP. Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can use ALTER AVAILABILITY GROUP to set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT on a distributed availability group. See [ALTER AVAILABILITY GROUP (Transact-SQL)](alter-availability-group-transact-sql.md).
 
@@ -262,16 +262,16 @@ The DATABASE clause is optional. If you omit it, the new availability group is e
 After you have created the availability group, connect to each server instance that hosts a secondary replica and then prepare each secondary database and join it to the availability group. For more information, see [Start Data Movement on an Always On Secondary Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 > [!NOTE]  
->  Later, you can add eligible databases on the server instance that hosts the current primary replica to an availability group. You can also remove a database from an availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
+>  Later, you can add eligible databases on the server instance that hosts the current primary replica to an availability group. You can also remove a database from an availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](alter-availability-group-transact-sql.md).  
   
 #### REPLICA ON
 
 Specifies from one to five SQL Server instances to host availability replicas in the new availability group. Each replica is specified by its server instance address followed by a WITH (...) clause. Minimally, you must specify your local server instance, which becomes the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
   
- You need to join every secondary replica to the availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
+ You need to join every secondary replica to the availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](alter-availability-group-transact-sql.md).  
   
 > [!NOTE]  
->  If you specify less than four secondary replicas when you create an availability group, you can specify an additional secondary replica at any time by using the [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement. You can also use this statement to remove any secondary replica from an existing availability group.  
+>  If you specify less than four secondary replicas when you create an availability group, you can specify an additional secondary replica at any time by using the [ALTER AVAILABILITY GROUP](alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement. You can also use this statement to remove any secondary replica from an existing availability group.  
   
 #### server_instance
 
@@ -287,7 +287,7 @@ Is the NetBIOS name of the computer system on which the target instance of [!INC
   
 ##### FCI_network_name
 
-Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster. Use this if the server instance participates as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover partner. Executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) on an FCI server instance returns its entire '*FCI_network_name*[\\*instance_name*]'  string (which is the full replica name).  
+Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster. Use this if the server instance participates as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover partner. Executing SELECT [@@SERVERNAME](../functions/servername-transact-sql.md) on an FCI server instance returns its entire '*FCI_network_name*[\\*instance_name*]'  string (which is the full replica name).  
   
 ##### instance_name
 
@@ -339,7 +339,7 @@ Specifies that the primary replica synchronously commit availability group confi
 - Isn't valid when `CLUSTER_TYPE = WSFC`.
 - The options `failover_mode` and `seeding_mode` aren't supported when `availability_mode` is set to `configuration_only` for a replica. A sample is shown in the [availability group configuration](../../linux/sql-server-linux-availability-group-configure-ha.md) article.
 
-   For more information, see [Configuration only replica](../../linux/sql-server-linux-availability-group-ha.md).
+   For more information, see [Configuration only replica](../../linux/business-continuity/availability-groups/high-availability.md).
   
  The AVAILABILITY_MODE clause is required. For more information, see [Availability Modes &#40;Always On availability groups&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
@@ -413,7 +413,7 @@ For more information, see [Active Secondaries: Readable Secondary Replicas &#40;
 
 Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]  listens. Typically, the default instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on TCP port 1433.
   
-For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
+For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-objects/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
 For more information about calculating the read-only routing URL for a replica, see [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
@@ -482,7 +482,7 @@ For more information about the session-timeout period, see [Overview of Always O
 
 Specifies two availability groups that constitute a *distributed availability group*. Each availability group is part of its own Windows Server Failover Cluster (WSFC). When you create a distributed availability group, the availability group on the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance becomes the primary availability group. The second availability group becomes the secondary availability group.  
   
-You need to join the secondary availability group to the distributed availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
+You need to join the secondary availability group to the distributed availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](alter-availability-group-transact-sql.md).  
   
 ##### _ag_name_
 
@@ -563,7 +563,7 @@ Specifies the DNS host name of the availability group listener. The DNS name of 
 We recommend that you specify a meaningful string. For example, for an availability group named `AG1`, a meaningful DNS host name would be `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both clusters using names with more than 15 characters and an identical 15 character prefix, an error reports that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both clusters using names with more than 15 characters and an identical 15 character prefix, an error reports that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265(WS.10).aspx).  
   
 ##### _listener_option_
  

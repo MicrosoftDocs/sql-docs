@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "statement preparation"
 ---
 # Prepare and Execute a Statement (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To prepare a statement once, and then execute it multiple times  

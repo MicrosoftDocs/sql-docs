@@ -8,11 +8,11 @@ ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: polybase
 ms.topic: concept-article
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
 
-[!INCLUDE [sqlserver2016-asdb-asa-pdw-md](../../includes/applies-to-version/sqlserver2016-asdb-asa-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asa-md](../../includes/applies-to-version/sqlserver2016-asdb-asa-md.md)]
 
 This article is a summary of PolyBase features available for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] products and services.
 
@@ -20,18 +20,18 @@ This article is a summary of PolyBase features available for [!INCLUDE [ssNoVers
 
 This table lists the key features for PolyBase and the products in which they're available.
 
-| **Feature** | **[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]** (Beginning with 2016) | **Azure SQL Database** | **[!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]** | **Parallel Data Warehouse** |
-| --- | --- | --- | --- | --- |
-| Query Hadoop data with [!INCLUDE [tsql](../../includes/tsql-md.md)] | Yes | No | No | Yes |
-| Import data from Hadoop | Yes | No | No | Yes |
-| Export data to Hadoop | Yes | No | No | Yes |
-|Query, import from, export to Azure HDInsight |No|No|No|No
-| Push down query computations to Hadoop | Yes | No | No | Yes |
-| Import data from Azure Blob storage | Yes | Yes <sup>1</sup> | Yes | Yes |
-| Export data to Azure Blob storage | Yes | No | Yes | Yes |
-| Import data from Azure Data Lake Store | No | No | Yes | No |
-| Export data to Azure Data Lake Store | No | No | Yes | No |
-| Run PolyBase queries from Microsoft BI tools | Yes | No | Yes | Yes |
+| **Feature** | **[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]** (Beginning with 2016) | **Azure SQL Database** | **[!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]** |
+| --- | --- | --- | --- |
+| Query Hadoop data with [!INCLUDE [tsql](../../includes/tsql-md.md)] | Yes | No | No |
+| Import data from Hadoop | Yes | No | No |
+| Export data to Hadoop | Yes | No | No |
+| Query, import from, export to Azure HDInsight | No | No | No |
+| Push down query computations to Hadoop | Yes | No | No |
+| Import data from Azure Blob storage | Yes | Yes <sup>1</sup> | Yes |
+| Export data to Azure Blob storage | Yes | No | Yes |
+| Import data from Azure Data Lake Store | No | No | Yes |
+| Export data to Azure Data Lake Store | No | No | Yes |
+| Run PolyBase queries from Microsoft BI tools | Yes | No | Yes |
 
 <sup>1</sup> Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], see [Examples of bulk access to data in Azure Blob Storage](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 

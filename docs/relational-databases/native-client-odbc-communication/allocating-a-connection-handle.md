@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLAllocHandle function"
 ---
 # Allocating a Connection Handle
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Before the application can connect to a data source or driver, it must allocate a connection handle. This is done by calling **SQLAllocHandle** with the *HandleType* parameter set to SQL_HANDLE_DBC and *InputHandle* pointing to an initialized environment handle.  
   

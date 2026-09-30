@@ -10,11 +10,11 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sp_pdw_add_network_credentials (Azure Synapse Analytics)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 `sp_pdw_add_network_credentials` stores network credentials in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and associates them with a server. For example, use this stored procedure to give [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appropriate read/write permissions to perform database backup and restore operations on a target server, or to create a backup of a certificate used for transparent data encryption (TDE).
 
@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_pdw_add_network_credentials
@@ -67,7 +67,7 @@ An error occurs if adding credentials doesn't succeed on the Control node and al
 
 This stored procedure adds network credentials to the `NetworkService` account for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. The `NetworkService` account runs each instance of SMP [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on the Control node and the Compute nodes. For example, when a backup operation runs, the Control node and each Compute node use the `NetworkService` account credentials to gain read and write permission to the target server.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### A. Add credentials for performing a database backup
 

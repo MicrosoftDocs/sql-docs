@@ -3,7 +3,7 @@ title: "Finding More OLE DB Driver for SQL Server Information"
 description: Use these resources for more information about OLE DB Driver for SQL Server and other types of data access programming.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/14/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, additional resources"
 ---
 # Finding More OLE DB Driver for SQL Server Information
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

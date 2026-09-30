@@ -1,9 +1,9 @@
 ---
-title: "SYSDATETIME (Transact-SQL)"
-description: "SYSDATETIME (Transact-SQL)"
+title: SYSDATETIME (Transact-SQL)
+description: SYSDATETIME returns a datetime2(7) value that contains the date and time of the computer running the Database Engine.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -26,110 +26,138 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 dev_langs:
-  - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+  - TSQL
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SYSDATETIME (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
-  Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
-  
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
+
+The `SYSDATETIME` Transact-SQL (T-SQL) function returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running.
+
 > [!NOTE]  
->  SYSDATETIME and SYSUTCDATETIME have more fractional seconds precision than GETDATE and GETUTCDATE. SYSDATETIMEOFFSET includes the system time zone offset. SYSDATETIME, SYSUTCDATETIME, and SYSDATETIMEOFFSET can be assigned to a variable of any of the date and time types.  
-  
-Azure SQL Database (with the exception of Azure SQL Managed Instance) and Azure Synapse Analytics follow UTC. Use [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) in Azure SQL Database or Azure Synapse Analytics if you need to interpret date and time information in a non-UTC time zone.
+> `SYSDATETIME` and `SYSUTCDATETIME` have more fractional seconds precision than `GETDATE` and `GETUTCDATE`. `SYSDATETIMEOFFSET` includes the system time zone offset. `SYSDATETIME`, `SYSUTCDATETIME`, and `SYSDATETIMEOFFSET` can be assigned to a variable of any of the date and time types.
 
- For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+Azure Synapse Analytics follows UTC. Use [AT TIME ZONE](../queries/at-time-zone-transact-sql.md) in Azure Synapse Analytics if you need to interpret date and time information in a non-UTC time zone.
+
+[!INCLUDE [change-time-zone](../includes/change-time-zone.md)]
+
+See [Date and time data types and functions](date-and-time-data-types-and-functions-transact-sql.md) for an overview of all the [!INCLUDE [tsql](../../includes/tsql-md.md)] date and time data types and functions.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-SYSDATETIME ( )  
+SYSDATETIME ( )
 ```
 
-## Return Type  
- **datetime2(7)**  
-  
-## Remarks  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can refer to SYSDATETIME anywhere they can refer to a **datetime2(7)** expression.  
-  
- SYSDATETIME is a nondeterministic function. Views and expressions that reference this function in a column cannot be indexed.  
-  
+## Return types
+
+**datetime2(7)**
+
+## Remarks
+
+[!INCLUDE [tsql](../../includes/tsql-md.md)] statements can refer to `SYSDATETIME` anywhere they can refer to a **datetime2(7)** expression.
+
+`SYSDATETIME` is a nondeterministic function. You can't index views and expressions that reference this function in a column.
+
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.  
-  
-## Examples  
- The following examples use the six [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time or both. The values are returned in series; therefore, their fractional seconds might be different.  
-  
-### A. Getting the current system date and time  
-  
+> [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] gets the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. You can use the GetSystemTimeAdjustment() Windows API to determine the accuracy.
+
+## Examples
+
+The following examples use the six [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time, or both. The values are returned in series; therefore, their fractional seconds might be different.
+
+In these examples, assume that the current date is April 30, 2026.
+
+### A. Get the current system date and time
+
 ```sql
-SELECT SYSDATETIME()  
-    ,SYSDATETIMEOFFSET()  
-    ,SYSUTCDATETIME()  
-    ,CURRENT_TIMESTAMP  
-    ,GETDATE()  
-    ,GETUTCDATE();  
-/* Returned:  
-SYSDATETIME()      2007-04-30 13:10:02.0474381  
-SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00  
-SYSUTCDATETIME()   2007-04-30 20:10:02.0474381  
-CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
-GETDATE()          2007-04-30 13:10:02.047  
-GETUTCDATE()       2007-04-30 20:10:02.047  
-*/
-```    
-  
-### B. Getting the current system date  
-  
+SELECT SYSDATETIME(),
+       SYSDATETIMEOFFSET(),
+       SYSUTCDATETIME(),
+       CURRENT_TIMESTAMP,
+       GETDATE(),
+       GETUTCDATE(),
+       CURRENT_DATE;
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+SYSDATETIME()        2026-09-01 16:15:37.7418724
+SYSDATETIMEOFFSET()  2026-09-01 16:15:37.7418724 -06:00
+SYSUTCDATETIME()     2026-09-01 22:15:37.7418724
+CURRENT_TIMESTAMP    2026-09-01 16:15:37.740
+GETDATE()            2026-09-01 16:15:37.740
+GETUTCDATE()         2026-09-01 22:15:37.740
+CURRENT_DATE         2026-09-01
+```
+
+### B. Get the current system date
+
+The following example shows you how to convert date and time values to the **date** data type.
+
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
-  
-/* All returned 2007-04-30 */  
-```  
-  
-### C. Getting the current system time  
-  
+SELECT CONVERT (DATE, SYSDATETIME()),
+       CONVERT (DATE, SYSDATETIMEOFFSET()),
+       CONVERT (DATE, SYSUTCDATETIME()),
+       CONVERT (DATE, CURRENT_TIMESTAMP),
+       CONVERT (DATE, GETDATE()),
+       CONVERT (DATE, GETUTCDATE()),
+       CURRENT_DATE;
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+SYSDATETIME()        2026-09-01
+SYSDATETIMEOFFSET()  2026-09-01
+SYSUTCDATETIME()     2026-09-01
+CURRENT_TIMESTAMP    2026-09-01
+GETDATE()            2026-09-01
+GETUTCDATE()         2026-09-01
+CURRENT_DATE         2026-09-01
+```
+
+### C. Get the current system time
+
 ```sql
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
-  
-/* Returned  
-SYSDATETIME()      13:18:45.3490361  
-SYSDATETIMEOFFSET()13:18:45.3490361  
-SYSUTCDATETIME()   20:18:45.3490361  
-CURRENT_TIMESTAMP  13:18:45.3470000  
-GETDATE()          13:18:45.3470000  
-GETUTCDATE()       20:18:45.3470000  
-*/  
-```  
-  
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D: Getting the current system date and time  
-  
+SELECT CONVERT (TIME, SYSDATETIME()),
+       CONVERT (TIME, SYSDATETIMEOFFSET()),
+       CONVERT (TIME, SYSUTCDATETIME()),
+       CONVERT (TIME, CURRENT_TIMESTAMP),
+       CONVERT (TIME, GETDATE()),
+       CONVERT (TIME, GETUTCDATE());
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+SYSDATETIME()        16:15:37.7418724
+SYSDATETIMEOFFSET()  16:15:37.7418724
+SYSUTCDATETIME()     22:15:37.7418724
+CURRENT_TIMESTAMP    16:15:37.740
+GETDATE()            16:15:37.740
+GETUTCDATE()         22:15:37.740
+```
+
+## Examples: Azure Synapse Analytics
+
+### D. Get the current system date and time
+
 ```sql
-SELECT SYSDATETIME();  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
---------------------------  
-7/20/2013 2:49:59 PM
-```  
-  
+SELECT SYSDATETIME();
+```
+
+[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+
+```output
+--------------------------
+4/30/2026 1:10:02 PM
+```
+
 ## Related content
 
 - [CAST and CONVERT (Transact-SQL)](cast-and-convert-transact-sql.md)

@@ -4,7 +4,7 @@ description: JSON_ARRAYAGG constructs a JSON array from an aggregation of SQL da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, jovanpop, randolphwest
-ms.date: 10/27/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -17,22 +17,16 @@ helpviewer_keywords:
   - "JSON_ARRAYAGG function"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb || =fabric"
 ---
 # JSON_ARRAYAGG (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
 Constructs a JSON array from an aggregation of SQL data or columns. `JSON_ARRAYAGG` can also be used in a `SELECT` statement with `GROUP BY GROUPING SETS` clause.
 
 > [!NOTE]  
 > To create a JSON object from an aggregate instead, use [JSON_OBJECTAGG](json-objectagg-transact-sql.md).
-
-Both **json** aggregate functions `JSON_OBJECTAGG` and `JSON_ARRAYAGG` are:
-
-- generally available for Azure SQL Database, Azure SQL Managed Instance (with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy)**), SQL database in Microsoft Fabric, and Fabric Data Warehouse.
-
-- in preview for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -8,4 +8,5 @@ ms.topic: include
 ---
 
 > [!IMPORTANT]  
-> SQL Data Sync will be retired on 30 September 2027. Consider migrating to [alternative data replication/synchronization solutions](../database/sql-data-sync-retirement-migration.md).
+> SQL Data Sync retires on September 30, 2027. Consider migrating to [alternative data replication and synchronization solutions](../database/sql-data-sync-retirement-migration.md).
+> As part of the retirement process, you can't create new sync groups in Azure subscriptions that didn't previously use SQL Data Sync. Existing sync groups can continue operating until the retirement date, but you should migrate them to an alternative solution before that date.

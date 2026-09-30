@@ -1,10 +1,11 @@
 ---
-title: Configure Availability Group for SQL Server on Linux
+title: Configure an Availability Group for High Availability
+titleSuffix: SQL Server on Linux
 description: Learn about creating a SQL Server Always On availability group (AG) for high availability on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: amitkh
-ms.date: 01/06/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -106,7 +107,7 @@ In the current implementation of the SQL Server resource agent, the node name mu
 
 This rule is important when you use fully qualified domain names. For example, if you use `node1.contoso.onmicrosoft.com` as the node name during cluster setup, make sure `SERVERPROPERTY('ServerName')` returns `node1.contoso.onmicrosoft.com`, and not just `node1`. To fix this problem, you can:
 
-- Rename your host name to the FQDN and use the `sp_dropserver` and `sp_addserver` stored procedures to ensure the metadata in SQL Server matches the change.  
+- Rename your host name to the FQDN and use the `sp_dropserver` and `sp_addserver` stored procedures to ensure the metadata in SQL Server matches the change.
 - Use the `addr` option in the `pcs cluster auth` command to match the node name to the `SERVERPROPERTY('ServerName')` value and use a static IP as the node address.
 
 <a id="threeSynch"></a>
@@ -246,6 +247,6 @@ If the AG is a cluster resource, there's a known issue in the current release wh
 
 ## Related content
 
-- [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=rhel)
-- [Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=sles)
-- [Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](cluster-pacemaker.md?tabs=ubuntu)
+- [Configure a Red Hat Enterprise Linux Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=rhel)
+- [Configure a SUSE Linux Enterprise Server Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=sles)
+- [Configure an Ubuntu Pacemaker cluster for SQL Server availability groups](cluster-pacemaker.md?tabs=ubuntu)

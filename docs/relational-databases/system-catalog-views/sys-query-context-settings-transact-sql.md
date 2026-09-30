@@ -29,7 +29,7 @@ Contains information about the semantics affecting context settings associated w
 | Column name | Data type | Description |
 | --- | --- | --- |
 | `context_settings_id` | **bigint** | Primary key. This value is exposed in Showplan XML for queries. |
-| `set_options` | **varbinary(8)** | Bit mask reflecting state of several SET options. For more information, see [sys.dm_exec_plan_attributes](../system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md). |
+| `set_options` | **varbinary(8)** | Bit mask reflecting state of several SET options. For more information, see [sys.dm_exec_plan_attributes](../system-dynamic-management-objects/sys-dm-exec-plan-attributes-transact-sql.md). |
 | `language_id` | **smallint** | The ID of the language. For more information, see [sys.syslanguages](../system-compatibility-views/sys-syslanguages-transact-sql.md). |
 | `date_format` | **smallint** | The date format. For more information, see [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md). |
 | `date_first` | **tinyint** | The date first value. For more information, see [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md). |

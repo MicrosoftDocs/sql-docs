@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-201
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
   Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -44,21 +44,6 @@ ALTER DATABASE ENCRYPTION KEY
 ```
   
   
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-ALTER DATABASE ENCRYPTION KEY  
-    {  
-      {  
-        REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
-        [ ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name ]  
-      }  
-      |  
-      ENCRYPTION BY SERVER   CERTIFICATE Encryptor_Name    
-    }  
-[ ; ]  
-```  
- 
 ## Arguments
  REGENERATE WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY }  
  Specifies the encryption algorithm that is used for the encryption key.  

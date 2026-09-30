@@ -132,6 +132,17 @@ sections:
         answer: |
           Review the self-paced [Azure SQL Cryptozoology AI Embeddings](https://devblogs.microsoft.com/azure-sql/azure-sql-cryptozoology-ai-embeddings-lab-now-available/) lab.
 
+  - name: Availability
+    questions:
+      - question: |
+         Is vector search available in all editions and platforms of SQL Server?
+        answer: |
+         Yes, but vector indexes and vector search remain a preview feature in SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy). In order to use vector indexes or vector search feature in SQL Server 2025, you must enable the `PREVIEW_FEATURES` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+         The vector data type and other vector functions are generally available in in SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy).
+
+         The vector data type, vector indexes, and all vector functions are generally available (GA) in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb-md](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
+
 additionalContent: |
   ## Related content
 

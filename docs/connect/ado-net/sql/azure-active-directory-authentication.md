@@ -1,481 +1,349 @@
 ---
-title: Connect to Azure SQL with Microsoft Entra authentication and SqlClient
-description: Describes how to use supported Microsoft Entra authentication modes to connect to Azure SQL data sources with SqlClient
+title: Microsoft Entra Authentication with Microsoft.Data.SqlClient
+description: Choose Microsoft Entra authentication for SqlClient, install the Azure extension, and manage identities, access tokens, and connection pools.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 03/17/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: integration
 dev_langs:
-  - "csharp"
+  - csharp
 ai-usage: ai-assisted
 ---
+# Microsoft Entra authentication with Microsoft.Data.SqlClient
 
-# Connect to Azure SQL with Microsoft Entra authentication and SqlClient
+<a id="connect-to-azure-sql-with-microsoft-entra-authentication-and-sqlclient"></a>
 
 [!INCLUDE [dotnet-all](../../../includes/products/applies-full/dotnet-all.md)]
 
 [!INCLUDE [Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-This article describes how to connect to Azure SQL data sources by using Microsoft Entra authentication from a .NET application with SqlClient.
-
-[!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
+Use Microsoft Entra ID to connect without storing a SQL password in your application. Choose a sign-in method for the host where the application runs, provision that identity in the target database, and keep [Transport Layer Security (TLS) certificate validation](../encryption-and-certificate-validation.md) enabled.
 
 ## Overview
 
-Microsoft Entra authentication uses identities in Microsoft Entra ID to access data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Microsoft Entra credentials in different authentication modes when they're connecting to Azure SQL Database and Azure SQL Managed Instance. To use Microsoft Entra authentication with Azure SQL, you must [configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+The driver-provided `Active Directory ...` authentication modes require both `Microsoft.Data.SqlClient` and `Microsoft.Data.SqlClient.Extensions.Azure`. Install matching versions:
+
+```dotnetcli
+dotnet add package Microsoft.Data.SqlClient --version 7.1.0
+dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.0
+```
+
+The extension registers its providers automatically. Applications that supply their own `AccessToken`, `AccessTokenCallback`, or authentication provider don't need the Azure extension solely for that purpose. Add the identity library your own token code uses.
+
+Before connecting:
+
+1. Configure [Microsoft Entra authentication for Azure SQL](/azure/azure-sql/database/authentication-aad-configure), or follow your target service's equivalent setup.
+1. Grant the application or user identity access to the intended database. Obtaining a token doesn't grant database permissions.
+1. Allow network access to the endpoint, and select the database explicitly.
+1. Choose a supported authentication mode and make its credentials available on the application host.
+
+SQL database in Microsoft Fabric supports [Microsoft Entra authentication only](/fabric/database/sql/authentication). It doesn't support SQL authentication or SQL logins. Use the connection string from the Fabric portal for the intended endpoint.
+
+<a id="setting-azure-active-directory-authentication"></a>
+<a id="setting-microsoft-entra-authentication"></a>
+
+## Choose an authentication mode
+
+Set `Authentication` to one of the connection-string values in this table. The release column helps you migrate from older drivers. Current applications should install the packages described in [Overview](#overview).
+
+| Connection-string value | Use | First supported release |
+| --- | --- | --- |
+| `Active Directory Integrated` | Acquire a token by using Integrated Windows Authentication (IWA) in a configured domain and Microsoft Entra environment. | 1.0 on .NET Framework; 2.0 across supported targets. |
+| `Active Directory Interactive` | User sign-in that supports multifactor authentication (MFA). | 1.0 on .NET Framework; 2.0 across supported targets. |
+| `Active Directory Service Principal` | Application client ID and client secret. | 2.0. |
+| `Active Directory Device Code Flow` | User sign-in through a browser on another device. | 2.1. |
+| `Active Directory Managed Identity` or `Active Directory MSI` | System-assigned or user-assigned managed identity available to the application host. | 2.1. |
+| `Active Directory Default` | Discover an available credential through an Azure Identity credential chain. | 3.0. |
+| `Active Directory Workload Identity` | Federated workload identity with a projected token file. | 5.2. |
+| `Active Directory Password` | Deprecated username/password flow. Don't use for new applications. | 1.0. |
+
+`Authentication=Sql Password` is SQL authentication, not Microsoft Entra authentication. See [SQL Server and Windows authentication](authentication-sql-server.md).
+
+### Open a connection
+
+For a .NET console application, set `SQL_CONNECTION_STRING` to the appropriate template from this article after replacing the placeholders. This example opens the connection and prints the database name:
+
+```csharp
+using Microsoft.Data.SqlClient;
+
+string connectionString = Environment.GetEnvironmentVariable("SQL_CONNECTION_STRING")
+    ?? throw new InvalidOperationException("Set SQL_CONNECTION_STRING before running.");
+
+using var connection = new SqlConnection(connectionString);
+await connection.OpenAsync();
+using var command = new SqlCommand("SELECT DB_NAME();", connection);
+Console.WriteLine(await command.ExecuteScalarAsync());
+```
+
+Each mode has different host prerequisites. A connection string accepted by the parser doesn't prove that the host can obtain a token or that the identity can access the database.
+
+<a id="using-integrated-authentication"></a>
+
+## Use integrated authentication
+
+`Active Directory Integrated` acquires a Microsoft Entra token by using the signed-in domain identity. It requires the appropriate joined or federated identity configuration. It isn't the same as `Integrated Security=true`, which uses Windows authentication directly with SQL Server.
+
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Integrated;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+Don't supply a password or `SqlCredential`. A username hint is optional on modern .NET; .NET Framework doesn't accept a username for this mode. IWA can't satisfy an interactive MFA challenge. Use interactive authentication when the tenant requires user interaction.
+
+<a id="using-interactive-authentication"></a>
+
+## Use interactive authentication
+
+Use `Active Directory Interactive` for a person signing in to a desktop or developer application. The authentication provider prompts the user and supports MFA. An optional `User ID=<user_id>` provides a sign-in hint, not a password.
+
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Interactive;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+Don't provide `Password` or `SqlCredential`. Don't use an interactive mode for an unattended service.
+
+<a id="using-service-principal-authentication"></a>
+
+## Use service principal authentication
+
+The built-in `Active Directory Service Principal` mode uses an application's client ID as `User ID` and its client secret as `Password`. Provision the service principal in the database and grant only the permissions it needs.
+
+Retrieve the secret from protected configuration rather than embedding it in source. This console example reads values injected into the process:
+
+```csharp
+using Microsoft.Data.SqlClient;
+
+static string Required(string name) =>
+    Environment.GetEnvironmentVariable(name)
+    ?? throw new InvalidOperationException($"Set {name} before running.");
+
+var options = new SqlConnectionStringBuilder
+{
+    DataSource = Required("SQL_SERVER"),
+    InitialCatalog = Required("SQL_DATABASE"),
+    Authentication = SqlAuthenticationMethod.ActiveDirectoryServicePrincipal,
+    UserID = Required("AZURE_CLIENT_ID"),
+    Password = Required("AZURE_CLIENT_SECRET"),
+    Encrypt = SqlConnectionEncryptOption.Mandatory,
+    TrustServerCertificate = false,
+    MultiSubnetFailover = true
+};
+
+using var connection = new SqlConnection(options.ConnectionString);
+await connection.OpenAsync();
+using var command = new SqlCommand("SELECT DB_NAME();", connection);
+Console.WriteLine(await command.ExecuteScalarAsync());
+```
+
+Set `SQL_SERVER` to your Transmission Control Protocol (TCP) endpoint, such as `tcp:contoso.database.windows.net,1433`, and `SQL_DATABASE` to the database name. Don't log the environment values or connection string.
+
+For certificate-based application credentials, acquire tokens with `ClientCertificateCredential` through [AccessTokenCallback](#using-accesstokencallback). For federated credentials, use workload identity or a suitable token callback. The connection-string service principal mode itself requires a client secret.
+
+<a id="using-device-code-flow-authentication"></a>
+
+## Use device code flow authentication
+
+Use this mode when the application host doesn't have a browser but a person can sign in on another device. Follow the verification URL and code provided by the authentication flow.
+
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Device Code Flow;Connect Timeout=180;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+`Connect Timeout` bounds authentication; this example allows 180 seconds. Don't supply `User ID`, `Password`, or `SqlCredential`. Device code flow still requires a person and is unsuitable for unattended services.
+
+<a id="using-managed-identity-authentication"></a>
+
+## Use managed identity authentication
+
+For an Azure-hosted application, use a managed identity when the host supports it. The identity belongs to the application host, not automatically to the database server.
+
+- A *system-assigned managed identity* shares the host resource's lifecycle.
+- A *user-assigned managed identity* is a separate resource that you can assign to supported hosts.
+
+For a system-assigned identity, omit `User ID`:
+
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Managed Identity;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+For a user-assigned identity, provide its **client ID**:
+
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Managed Identity;User ID=<client_id>;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+`Active Directory MSI` is a compatibility spelling for the same mode. Don't provide a password or `SqlCredential`. The host must expose the selected managed identity, and that identity must have database access. A developer workstation doesn't gain a managed identity by using this connection string.
+
+When migrating from SqlClient 2.1, replace the user-assigned identity's **object ID** with its **client ID**. SqlClient uses the client ID starting with 3.0.
+
+<a id="using-default-authentication"></a>
+
+## Use default authentication
+
+`Active Directory Default` uses an Azure Identity credential chain to discover an available identity:
+
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Default;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+Candidates depend on the installed Azure Identity version and configuration. They include environment credentials, workload identity, managed identity, and signed-in development tools such as Visual Studio, Azure Command-Line Interface (CLI), Azure PowerShell, and Azure Developer CLI. See [DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential) for the current chain.
+
+SqlClient disables `InteractiveBrowserCredential` in this mode. Choose `Active Directory Interactive` if the application itself needs to prompt for sign-in. A development-tool credential can use a session established by an earlier interactive sign-in.
 
 > [!IMPORTANT]
-> Starting with **Microsoft.Data.SqlClient 7.0**, Azure and Microsoft Entra ID dependencies are no longer included in the core `Microsoft.Data.SqlClient` package. If your library or application supports any Microsoft Entra authentication mode (such as `Active Directory Default`, `Active Directory Managed Identity`, `Active Directory Interactive`, etc.), you must include a dependency on the **Microsoft.Data.SqlClient.Extensions.Azure** NuGet package. For migration steps, see [Migrate to Microsoft.Data.SqlClient 7.0](#migrate-to-microsoftdatasqlclient-70).  
+> `Active Directory Default` can make the first connection slow because `DefaultAzureCredential` tries credential providers in sequence until one supplies a token. Unavailable providers can add discovery, network, or process-startup delays before the working provider is reached. Prefer a specific authentication mode in production, such as `Active Directory Managed Identity`, `Active Directory Workload Identity`, or `Active Directory Service Principal`, to avoid this discovery overhead. Credential and token caching can reduce subsequent acquisition work; don't assume every pooled connection repeats the full chain.
 
-When you set the `Authentication` connection property in the connection string, the client can choose a preferred Microsoft Entra authentication mode according to the value provided:
+With `Active Directory Default`, the selected identity can change when host configuration changes.
 
-- The earliest **Microsoft.Data.SqlClient** version supports `Active Directory Password` [DEPRECATED] for .NET Framework, .NET Core, and .NET Standard. It also supports `Active Directory Integrated` authentication and `Active Directory Interactive` authentication for .NET Framework.
-- Starting with **Microsoft.Data.SqlClient** 2.0.0, support for `Active Directory Integrated` authentication and `Active Directory Interactive` authentication is extended across .NET Framework, .NET Core, and .NET Standard.
+For older deployments, workload identity within this chain and Azure Developer CLI support arrived in SqlClient 5.1.4. That feature differs from the dedicated `Active Directory Workload Identity` mode, which arrived in 5.2. Azure PowerShell support arrived in 5.0.
 
-  A new `Active Directory Service Principal` authentication mode is also added in SqlClient 2.0.0. It makes use of the client ID and secret of a service principal identity to accomplish authentication.
-- More authentication modes are added in **Microsoft.Data.SqlClient** 2.1.0, including `Active Directory Device Code Flow` and `Active Directory Managed Identity` (also known as `Active Directory MSI`). These new modes enable the application to acquire an access token to connect to the server.
-- Starting with **Microsoft.Data.SqlClient** 7.0.0, Microsoft Entra authentication support is provided through the separate `Microsoft.Data.SqlClient.Extensions.Azure` package. The core driver package no longer carries Azure dependencies.  
+<a id="using-workload-identity-authentication"></a>
 
-For information about Microsoft Entra authentication beyond what the following sections describe, see [Use Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
+## Use workload identity authentication
 
-<a name='setting-azure-active-directory-authentication'></a>
+Use `Active Directory Workload Identity` on a host configured for federated workload identity. The identity provider must trust the projected token's issuer and subject.
 
-## Setting Microsoft Entra authentication
+The credential reads:
 
-When the application is connecting to Azure SQL data sources by using Microsoft Entra authentication, it needs to provide a valid authentication mode. The following table lists the supported authentication modes. The application specifies a mode by using the `Authentication` connection property in the connection string.
+- `AZURE_TENANT_ID`: the tenant ID.
+- `AZURE_CLIENT_ID`: the application or user-assigned managed identity client ID.
+- `AZURE_FEDERATED_TOKEN_FILE`: the path to the projected token file.
 
-| Value | Description  | Microsoft.Data.SqlClient version |
-|:--|:--|:--:|
-| Active Directory Integrated | Authenticate with a Microsoft Entra identity by using Integrated Windows Authentication (IWA) | 2.0.0+<sup>1</sup> |
-| Active Directory Interactive | Authenticate with a Microsoft Entra identity by using interactive authentication | 2.0.0+<sup>1</sup> |
-| Active Directory Service Principal | Authenticate with a Microsoft Entra service principal, using its client ID and secret | 2.0.0+ |
-| Active Directory Device Code Flow | Authenticate with a Microsoft Entra identity by using Device Code Flow mode | 2.1.0+ |
-| Active Directory Managed Identity, <br>Active Directory MSI | Authenticate using a Microsoft Entra system-assigned or user-assigned managed identity | 2.1.0+ |
-| Active Directory Default | Authenticate with a Microsoft Entra identity by using password-less and non-interactive mechanisms including managed identities, Visual Studio Code, Visual Studio, Azure CLI, etc. | 3.0.0+ |
-| Active Directory Workload Identity | Authenticate with a Microsoft Entra identity by using a federated User Assigned Managed Identity to connect to SQL Database from Azure client environments that are enabled for Workload Identity. | 5.2.0+ |
-| Active Directory Password [DEPRECATED] | Authenticate with a Microsoft Entra identity's username and password.<br/><br/>Active Directory Password is deprecated. For more information, see [Using password authentication](#using-password-authentication-deprecated). | 1.0+ |
-
-<sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated`, and `Active Directory Interactive` authentication modes are supported only on .NET Framework.
-
-## Using integrated authentication
-
-To use `Active Directory Integrated` authentication mode, you must have an on-premises Active Directory instance that is [joined](/entra/identity/devices/concept-directory-join) to Microsoft Entra ID in the cloud. You can [federate](/azure/active-directory/hybrid/connect/whatis-fed) by using Active Directory Federation Services (AD FS), for example.
-
-When you're signed in to a domain-joined machine, you can access Azure SQL data sources without being prompted for credentials with this mode. You can't specify username and password in the connection string for .NET Framework applications. Username is optional in the connection string for .NET Core and .NET Standard applications. You can't set the `Credential` property of SqlConnection in this mode.
-
-The following code snippet is an example of when `Active Directory Integrated` authentication is in use.
-
-```csharp
-// Use your own server and database.
-string ConnectionString1 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Integrated; Encrypt=True; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
-    conn.Open();
-}
-
-// User ID is optional for .NET Core and .NET Standard.
-string ConnectionString2 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Integrated; Encrypt=True; Database=testdb;"
-  + "User Id=user@domain.com";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
-    conn.Open();
-}
+```text
+Server=tcp:contoso.database.windows.net,1433;Database=<database>;Authentication=Active Directory Workload Identity;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
 ```
 
-## Using interactive authentication
+An optional `User ID=<client_id>` overrides the client ID. The connection string doesn't override the tenant ID or token-file path. Don't put the token file's contents in the connection string or logs.
 
-`Active Directory Interactive` authentication supports multifactor authentication technology to connect to Azure SQL data sources. If you provide this authentication mode in the connection string, an Azure authentication screen appears and asks the user to enter valid credentials. You can't specify the password in the connection string.
+<a id="using-password-authentication-deprecated"></a>
 
-You can't set the `Credential` property of SqlConnection in this mode. With **Microsoft.Data.SqlClient** 2.0.0 and later, username is allowed in the connection string when you're in interactive mode.
-
-The following example shows how to use `Active Directory Interactive` authentication.
-
-```csharp
-// Use your own server, database, and user ID.
-// User ID is optional.
-string ConnectionString1 = @"Server=demo.database.windows.net;"
-   + "Authentication=Active Directory Interactive; Encrypt=True;" 
-   + "Database=testdb; User Id=user@domain.com";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
-    conn.Open();
-}
-
-// User ID is not provided.
-string ConnectionString2 = @"Server=demo.database.windows.net;"
-   + "Authentication=Active Directory Interactive; Encrypt=True;"
-   + "Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
-    conn.Open();
-}
-```
-
-## Using service principal authentication
-
-In `Active Directory Service Principal` authentication mode, the client application can connect to Azure SQL data sources by providing the client ID and secret of a service principal identity. Service principal authentication involves:
-
-1. Setting up an app registration with a secret.
-1. Granting permissions to the app in the Azure SQL Database instance.
-1. Connecting with the correct credential.
-
-The following example shows how to use `Active Directory Service Principal` authentication.
-
-```csharp
-// Use your own server, database, app ID, and secret.
-string ConnectionString = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Service Principal; Encrypt=True;"
-  + "Database=testdb; User Id=AppId; Password=<password>";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
-    conn.Open();
-}
-```
-
-## Using device code flow authentication
-
-With [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) for .NET (MSAL.NET), `Active Directory Device Code Flow` authentication enables the client application to connect to Azure SQL data sources from devices and operating systems that don't have an interactive web browser. Interactive authentication is performed on another device. For more information about device code flow authentication, see [OAuth 2.0 Device Code Flow](/azure/active-directory/develop/v2-oauth2-device-code).
-
-When this mode is in use, you can't set the `Credential` property of `SqlConnection`. Also, the username and password must not be specified in the connection string.
-
-The following code snippet is an example of using `Active Directory Device Code Flow` authentication.
-
-> [!NOTE]
-> The timeout for `Active Directory Device Code Flow` defaults to the connection's `Connect Timeout` setting. Make sure to specify a `Connect Timeout` that provides enough time to go through the device code flow authentication process.
-
-```csharp
-// Use your own server and database and increase Connect Timeout as needed for
-// device code flow.
-string ConnectionString = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Device Code Flow; Encrypt=True;"
-  + "Database=testdb; Connect Timeout=180;";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
-    conn.Open();
-}
-```
-
-## Using managed identity authentication
-
-Authentication with Managed Identities for Azure resources is the recommended authentication method for programmatic access to SQL. A client application can use the system-assigned or user-assigned managed identity of a resource to authenticate to SQL with Microsoft Entra ID, by providing the identity and using it to obtain access tokens. This method eliminates the need to manage credentials and secrets, and can simplify access management.
-
-There are two types of managed identities:
-
-- _System-assigned managed identity_ is created as part of an Azure resource (such as your SQL managed instance or the [logical server](/azure/azure-sql/database/logical-servers)), and shares the lifecycle of that resource. System-assigned identities can only be associated with a single Azure resource.
-- _User-assigned managed identity_ is created as a standalone Azure resource. It can be assigned to one or more instances of an Azure service.
-
-For more information about managed identities, see [About managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
-
-Since **Microsoft.Data.SqlClient** 2.1.0, the driver supports authentication to Azure SQL Database, Azure Synapse Analytics, and Azure SQL Managed Instance by acquiring access tokens via managed identity. To use this authentication, specify either `Active Directory Managed Identity` or `Active Directory MSI` in the connection string, and no password is required. You can't set the `Credential` property of `SqlConnection` in this mode either.
-
-For a user-assigned managed identity, the **client id** of the managed identity must be provided when using Microsoft.Data.SqlClient v3.0 or newer. If using Microsoft.Data.SqlClient v2.1, the **object id** of the managed identity must be provided.
-
-The following example shows how to use `Active Directory Managed Identity` authentication with a system-assigned managed identity.
-
-```csharp
-// For system-assigned managed identity
-// Use your own values for Server and Database.
-string ConnectionString1 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
-  + "Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
-    conn.Open();
-}
-
-string ConnectionString2 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory MSI; Encrypt=True; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
-    conn.Open();
-}
-```
-
-The following example demonstrates `Active Directory Managed Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v3.0 onward**.
-
-```csharp
-// For user-assigned managed identity
-// Use your own values for Server, Database, and User Id.
-
-// With Microsoft.Data.SqlClient v3.0+
-string ConnectionString1 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
-  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
-    conn.Open();
-}
-
-// With Microsoft.Data.SqlClient v3.0+
-string ConnectionString2 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory MSI; Encrypt=True;"
-  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
-    conn.Open();
-}
-```
-
-The following example demonstrates `Active Directory Managed Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v2.1**.
-
-```csharp
-// For user-assigned managed identity
-// Use your own values for Server, Database, and User Id.
-
-// With Microsoft.Data.SqlClient v2.1
-string ConnectionString1 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Managed Identity; Encrypt=True;"
-  + "User Id=ObjectIdOfManagedIdentity; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
-    conn.Open();
-}
-
-// With Microsoft.Data.SqlClient v2.1
-string ConnectionString2 = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory MSI; Encrypt=True;"
-  + "User Id=ObjectIdOfManagedIdentity; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
-    conn.Open();
-}
-```
-
-## Using default authentication
-
-Available starting in version 3.0, this authentication mode widens the possibilities of user authentication. This mode extends sign-in solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI, etc.
-
-With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use a set of credential types to acquire an access token in order. Depending on the version of the Azure Identity library used, the credential set varies. Version specific differences are noted in the list. For Azure Identity version specific behavior, see the [Azure.Identity API docs](/dotnet/api/azure.identity.defaultazurecredential).
-
-> [!IMPORTANT]
-> **Active Directory Default** is a convenient option to simplify connection string differences between different environments. However, it can come with performance impacts because it has to look in multiple places for authentication information. If you see slow connection speeds using **Active Directory Default**, use a different authentication option that specifically targets the authentication method you're using in your environment. "Active Directory Default" isn't recommended for environments that have strict service level response times.
-
-- **EnvironmentCredential**
-  - Enables authentication with Microsoft Entra ID using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
-- **WorkloadIdentityCredential**
-  - Enables Microsoft Entra Workload ID authentication on Kubernetes and other hosts supporting workload identity. For more information, see [Microsoft Entra Workload ID](/azure/aks/workload-identity-overview). Available starting in Azure Identity version 1.10 and Microsoft.Data.SqlClient 5.1.4.
-- **ManagedIdentityCredential**
-  - Attempts authentication with Microsoft Entra ID using a managed identity that is assigned to the deployment environment. **"Client Id" of "User Assigned Managed Identity"** is read from the **"User Id" connection property**.
-- **SharedTokenCacheCredential**
-  - Authenticates using tokens in the local cache shared between Microsoft applications.
-- **VisualStudioCredential**
-  - Enables authentication with Microsoft Entra ID using data from Visual Studio
-- **VisualStudioCodeCredential**
-  - Enables authentication with Microsoft Entra ID using data from Visual Studio Code.
-- **AzurePowerShellCredential**
-  - Enables authentication with Microsoft Entra ID using the Azure PowerShell. Available starting in Azure Identity version 1.6 and Microsoft.Data.SqlClient 5.0.
-- **AzureCliCredential**
-  - Enables authentication with Microsoft Entra ID using the Azure CLI to obtain an access token.
-- **AzureDeveloperCliCredential**
-  - Enables authentication to Microsoft Entra ID using Azure Developer CLI to obtain an access token. Available starting in Azure Identity version 1.10 and Microsoft.Data.SqlClient 5.1.4.
-
-> [!NOTE]
-> _InteractiveBrowserCredential_ is disabled in the driver implementation of **Active Directory Default**, and **Active Directory Interactive** is the only option available to acquire a token using MFA/Interactive authentication.
->
-> Further customization options aren't available at the moment.
-
-The following example shows how to use **Active Directory Default** authentication.
-
-```csharp
-// Use your own server, database
-string ConnectionString = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
-    conn.Open();
-}
-```
-
-## Using workload identity authentication
-
-Available starting in version 5.2, like with managed identities, [workload identity](/azure/aks/workload-identity-overview) authentication mode uses the value of the `User ID` parameter in the connection string for its Client ID if specified. But unlike managed identity, WorkloadIdentityCredentialOptions defaults its value from environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, and AZURE_FEDERATED_TOKEN_FILE. However, only the Client ID can be overridden by the connection string.
-
-The following example demonstrates `Active Directory Workload Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v5.2 onward**.
-
-```csharp
-// Use your own values for Server, Database, and User Id.
-// With Microsoft.Data.SqlClient v5.2+
-string ConnectionString = @"Server=demo.database.windows.net;"
-  + "Authentication=Active Directory Workload Identity; Encrypt=True;"
-  + "User Id=ClientIdOfManagedIdentity; Database=testdb";
-
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
-    conn.Open();
-}
-```
-
-## Using password authentication [Deprecated]
+## Replace deprecated password authentication
 
 [!INCLUDE [entra-password-auth-deprecation](../../../includes/entra-password-auth-deprecation.md)]
 
-`Active Directory Password` authentication mode supports authentication to Azure data sources with Microsoft Entra ID for native or federated Microsoft Entra users. When you're using this mode, user credentials must be provided in the connection string. The following example shows how to use `Active Directory Password` authentication.
+`Active Directory Password` uses the resource owner password credentials flow and can't satisfy MFA requirements. The corresponding `SqlAuthenticationMethod.ActiveDirectoryPassword` enum member is obsolete. Choose interactive authentication for users, or managed identity, workload identity, or an application credential for services.
+
+<a id="customizing-microsoft-entra-authentication"></a>
+
+## Customize Microsoft Entra authentication
+
+Choose the smallest customization that meets your requirements from the following application programming interfaces (APIs):
+
+| Requirement | API |
+| --- | --- |
+| Supply an already acquired token. | `SqlConnection.AccessToken`. |
+| Acquire and renew tokens with an application-selected credential. | `SqlConnection.AccessTokenCallback`. |
+| Customize device-code presentation or interactive sign-in. | `ActiveDirectoryAuthenticationProvider` from the Azure extension. |
+| Implement a driver authentication provider. | Derive from `SqlAuthenticationProvider` and register the provider. |
+
+With a custom `ActiveDirectoryAuthenticationProvider`, you can supply an application client ID, configure device-code or authorization-code callbacks, and set the parent window for interactive sign-in where supported. Use the [provider API reference](/dotnet/api/microsoft.data.sqlclient.activedirectoryauthenticationprovider) for the installed extension package's signatures.
+
+### Supply an access token directly
+
+Set `SqlConnection.AccessToken` before opening the connection. The core driver supports this property without the Azure extension.
+
+The literal token is part of the connection-pool key. A different token creates a different pool. SqlClient doesn't receive an expiration time through this property and can't renew the token for you. Acquire a valid token for new connections and clear affected pools when tokens expire, especially if you set a nonzero `Min Pool Size`.
+
+Don't combine `AccessToken` with `Authentication`, integrated security, `User ID` or `Password`, `SqlCredential`, `AccessTokenCallback`, or `SspiContextProvider`. Never log a token.
+
+<a id="using-accesstokencallback"></a>
+
+## Use AccessTokenCallback
+
+Prefer `AccessTokenCallback` when your application acquires tokens itself and uses connection pooling. The callback returns a token and its expiration time so SqlClient can request renewal for pooled authentication. The API is available starting with SqlClient 5.2.
+
+Reuse the same delegate instance and credential object for connections that should share a pool. The callback delegate is part of the pool key. Creating a fresh closure for each connection can create a separate pool for each one.
+
+> [!IMPORTANT]
+> Return the same security context for the same callback inputs. Don't select a different user from ambient request state inside a shared callback. A pooled connection could otherwise be returned under the wrong identity.
+
+This .NET console example uses the signed-in Azure CLI identity for local development. Install `Microsoft.Data.SqlClient` and `Azure.Identity`, sign in to Azure CLI with an identity that has database access, and set `SQL_SERVER` and `SQL_DATABASE`. The Azure extension isn't required for this example.
 
 ```csharp
-// Use your own server, database, user ID, and password.
-string ConnectionString = @"Server=demo.database.windows.net;"
-   + "Authentication=Active Directory Password; Encrypt=True; Database=testdb;"
-   + "User Id=user@domain.com; Password=<password>";
+using Azure.Core;
+using Azure.Identity;
+using Microsoft.Data.SqlClient;
 
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
-    conn.Open();
+internal static class Program
+{
+    private static readonly TokenCredential Credential = new AzureCliCredential();
+
+    private static readonly Func<SqlAuthenticationParameters, CancellationToken,
+        Task<SqlAuthenticationToken>> TokenCallback = async (parameters, cancellationToken) =>
+    {
+        string scope = parameters.Resource.EndsWith("/.default", StringComparison.Ordinal)
+            ? parameters.Resource
+            : parameters.Resource + "/.default";
+        AccessToken token = await Credential.GetTokenAsync(
+            new TokenRequestContext(new[] { scope }), cancellationToken);
+        return new SqlAuthenticationToken(token.Token, token.ExpiresOn);
+    };
+
+    private static async Task Main()
+    {
+        var options = new SqlConnectionStringBuilder
+        {
+            DataSource = Required("SQL_SERVER"),
+            InitialCatalog = Required("SQL_DATABASE"),
+            Encrypt = SqlConnectionEncryptOption.Mandatory,
+            TrustServerCertificate = false,
+            MultiSubnetFailover = true
+        };
+
+        using var connection = new SqlConnection(options.ConnectionString)
+        {
+            AccessTokenCallback = TokenCallback
+        };
+        await connection.OpenAsync();
+        using var command = new SqlCommand("SELECT DB_NAME();", connection);
+        Console.WriteLine(await command.ExecuteScalarAsync());
+    }
+
+    private static string Required(string name) =>
+        Environment.GetEnvironmentVariable(name)
+        ?? throw new InvalidOperationException($"Set {name} before running.");
 }
 ```
 
-## Customizing Microsoft Entra authentication
+For production, replace `AzureCliCredential` with the intended credential, such as `ManagedIdentityCredential`, `WorkloadIdentityCredential`, or `ClientCertificateCredential`, and configure its prerequisites. Don't change the identity behind a shared callback while its pooled connections remain available.
 
-Besides using the Microsoft Entra authentication built into the driver, **Microsoft.Data.SqlClient** 2.1.0 and later provide applications the option to customize Microsoft Entra authentication. The customization is based on the `ActiveDirectoryAuthenticationProvider` class, which is derived from the [`SqlAuthenticationProvider`](/dotnet/api/microsoft.data.sqlclient.sqlauthenticationprovider) abstract class.
-
-During Microsoft Entra authentication, the client application can define its own `ActiveDirectoryAuthenticationProvider` class by either:
-
-- Using a customized callback method.
-- Passing an application client ID to the MSAL library via SqlClient driver for fetching access tokens.
-
-The following example displays how to use a custom callback when `Active Directory Device Code Flow` authentication is in use.
-
-[!code-csharp [AADAuthenticationCustomDeviceFlowCallback#1](~/../sqlclient/doc/samples/AADAuthenticationCustomDeviceFlowCallback.cs#1)]
-
-With a customized `ActiveDirectoryAuthenticationProvider` class, a user-defined application client ID can be passed to SqlClient when a supported Microsoft Entra authentication mode is in use. Supported Microsoft Entra authentication modes include `Active Directory Integrated`, `Active Directory Interactive`, `Active Directory Service Principal`, `Active Directory Device Code Flow`, and `Active Directory Password` [DEPRECATED].
-
-The application client ID is also configurable via `SqlAuthenticationProviderConfigurationSection` or `SqlClientAuthenticationProviderConfigurationSection`. The configuration property `applicationClientId` applies to .NET Framework 4.6+ and .NET Core 2.1+.
-
-The following code snippet is an example of using a customized `ActiveDirectoryAuthenticationProvider` class with a user-defined application client ID when `Active Directory Interactive` authentication is in use.
-
-[!code-csharp [ApplicationClientIdAzureAuthenticationProvider#1](~/../sqlclient/doc/samples/ApplicationClientIdAzureAuthenticationProvider.cs#1)]
-
-The following example shows how to set an application client ID through a configuration section.
-
-```xml
-<configuration>
-  <configSections>
-    <section name="SqlClientAuthenticationProviders"
-             type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
-  </configSections>
-  <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
-</configuration>
-
-<!--or-->
-
-<configuration>
-  <configSections>
-    <section name="SqlAuthenticationProviders"
-             type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
-  </configSections>
-  <SqlAuthenticationProviders applicationClientId ="<GUID>" />
-</configuration>
-```
-
-## Using AccessTokenCallback
-
-Available in version 5.2 onward, there's a new [AccessTokenCallback](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstokencallback) property on [SqlConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection). Use the `AccessTokenCallback` property to define a custom function that returns an access token given the incoming parameters. Using the callback is better than using the [AccessToken](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) property because it allows the access token to be refreshed within a connection pool. When using the `AccessToken` property, the token can't be updated after opening the connection. There's also no associated expiration date provided through the property. Once the token expires, new connection requests fail with a server authentication error and pools using it must be manually cleared.
-
-> [!IMPORTANT]
-> An `AccessTokenCallback` must return access tokens of the same security context for the same input parameters. If the security context is different, a pooled connection with the wrong security context may be returned for a connection request.
-
-> [!NOTE]
-> `AccessTokenCallback` is part of the key used to identify connection pools. Avoid creating a new function callback for every creation of a SqlConnection since that results in a new pool every time. Reference the same instance of a function for connections you want to be considered for pooling. The connection pool key includes parameters passed to the callback to partition connection pools appropriately.
-
-The following code snippet is an example of using the `AccessTokenCallback` property in **Microsoft.Data.SqlClient v5.2 onward**.
-
-[!code-csharp [AADAuthenticationAccessTokenCallback#1](~/../sqlclient/doc/samples/SqlConnection_AccessTokenCallback.cs#1)]
+Don't combine `AccessTokenCallback` with `Authentication`, integrated security, `AccessToken`, or `SspiContextProvider`. A callback can use `User ID` as an identity selector, but your callback must interpret it consistently. The example doesn't use a selector because it has one fixed credential.
 
 ## Support for a custom SQL authentication provider
 
-Given more flexibility, the client application can also use its own provider for Microsoft Entra authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. It then must register the custom provider, overriding one or more of the existing `Active Directory*` authentication methods.
+Derive from <xref:Microsoft.Data.SqlClient.SqlAuthenticationProvider>, implement its token-acquisition contract, and register it with `SqlAuthenticationProvider.SetProvider` for the authentication method you replace. Register providers during application initialization, before opening connections.
 
-> [!IMPORTANT]
-> An authentication provider must return access tokens of the same security context for the same input parameters. If the security context is different, a pooled connection with the wrong security context may be returned for a connection request.
-
-The following example shows how to use a new authentication provider for `Active Directory Device Code Flow` authentication.
-
-[!code-csharp [CustomDeviceCodeFlowAzureAuthenticationProvider#1](~/../sqlclient/doc/samples/CustomDeviceCodeFlowAzureAuthenticationProvider.cs#1)]
-
-In addition to improving the `Active Directory Interactive` authentication experience, **Microsoft.Data.SqlClient** 2.1.0 and later provide the following APIs for client applications to customize interactive authentication and device code flow authentication.
-
-```csharp
-public class ActiveDirectoryAuthenticationProvider
-{
-    // For .NET Framework targeted applications only
-    // Sets a reference to the current System.Windows.Forms.IWin32Window that triggers
-    // the browser to be shown. 
-    // Used to center the browser pop-up onto this window.
-    public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
-
-    // For .NET Standard targeted applications only
-    // Sets a reference to the ViewController (if using .NET for iOS), Activity
-    // (if using .NET for Android) IWin32Window, or IntPtr (if using .NET Framework). 
-    // Used for invoking the browser for Active Directory Interactive authentication.
-    public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
-
-    // For .NET Framework, .NET Core, and .NET Standard targeted applications
-    // Sets a callback method that's invoked with a custom web UI instance that lets
-    // the user sign in with Azure AD, present consent if needed, and get back the
-    // authorization code. 
-    // Applicable when working with Active Directory Interactive authentication.
-    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken,
-                                       Task<Uri>> acquireAuthorizationCodeAsyncCallback);
-
-    // For .NET Framework, .NET Core, and .NET Standard targeted applications
-    // Clears cached user tokens from the token provider.
-    public static void ClearUserTokenCache();
-}
-```
+The provider must return a valid token and expiration time for the requested resource and authority. The same security-context rule used for callbacks applies to providers. Overriding a provider doesn't remove the target service's identity, tenant, or database-permission requirements.
 
 ## Migrate to Microsoft.Data.SqlClient 7.0
 
-**Microsoft.Data.SqlClient 7.0** is a major release that extracts Azure and Microsoft Entra ID dependencies from the core package into a new extension package. This change was the [most upvoted open issue](https://github.com/dotnet/SqlClient/issues/1108) in the SqlClient repository. The following sections describe what changed and how to update your application.
+Applications upgrading across the package split should review dependencies and authentication configuration.
 
 ### What changed in 7.0
 
-- **Azure dependency extraction** — The core `Microsoft.Data.SqlClient` package no longer depends on `Azure.Core`, `Azure.Identity`, or their transitive dependencies (such as `Microsoft.Identity.Client` and `Microsoft.Web.WebView2`). The `ActiveDirectoryAuthenticationProvider` class and related types moved to the new `Microsoft.Data.SqlClient.Extensions.Azure` package.
-- **New packages** — Two new packages were introduced to support this separation:
-  - `Microsoft.Data.SqlClient.Extensions.Azure` — contains Entra ID authentication support.
-  - `Microsoft.Data.SqlClient.Extensions.Abstractions` — shared types between the core driver and extensions.
-- **`ActiveDirectoryPassword` deprecation** — `SqlAuthenticationMethod.ActiveDirectoryPassword` is now marked `[Obsolete]` and generates a compiler warning. This aligns with [mandatory multifactor authentication](/entra/identity/authentication/concept-mandatory-multifactor-authentication).
-- **Actionable error messages** — If an Entra ID authentication method is used without the `Microsoft.Data.SqlClient.Extensions.Azure` package installed, the driver provides an actionable error message guiding you to install the correct package.
+The core driver no longer brings in Azure and Microsoft Entra authentication dependencies. The built-in `ActiveDirectoryAuthenticationProvider` moves to `Microsoft.Data.SqlClient.Extensions.Azure`, with shared contracts in `Microsoft.Data.SqlClient.Extensions.Abstractions`.
 
 ### Step 1: Install the Azure extension package
 
-If your application uses any Microsoft Entra authentication mode, add the `Microsoft.Data.SqlClient.Extensions.Azure` NuGet package:
-
-```dotnetcli
-dotnet add package Microsoft.Data.SqlClient.Extensions.Azure
-```
-
-Or by using the NuGet Package Manager in Visual Studio, search for **Microsoft.Data.SqlClient.Extensions.Azure** and install it.
-
-> [!NOTE]
-> No code changes are required beyond adding the package reference. The extension package registers its authentication providers automatically.
-
-> [!NOTE]
-> You are not required to include the **Microsoft.Data.SqlClient.Extensions.Azure** package reference if your application implements the Entra ID Authentication modes itself or you connect to Azure SQL using token-based authentication. This package reference is only required for the driver-provided implementation of Entra ID authentication modes.  
+For driver-provided Microsoft Entra modes, install matching core and Azure extension versions as shown in [Overview](#overview). Deploy the extension with the application. No manual provider registration is required for the built-in modes.
 
 ### Step 2: Replace deprecated authentication modes
 
-`Active Directory Password` authentication is deprecated and generates a compiler warning in 7.0. Migrate to a supported alternative:
-
-| Scenario | Recommended authentication mode |
-|:--|:--|
-| Interactive / desktop apps | `Active Directory Interactive` |
-| Service-to-service | `Active Directory Service Principal` |
-| Azure-hosted workloads | `Active Directory Managed Identity` |
-| Developer / CI environments | `Active Directory Default` |
-| Kubernetes / federated workloads | `Active Directory Workload Identity` |
+Replace `Active Directory Password` with a mode that fits your application's user interaction and hosting model. For an unattended deployment, select a specific workload identity rather than relying on a developer's sign-in.
 
 ### Step 3: Review connection strings
 
-All `Authentication` connection string values continue to work the same way. No connection string changes are required for the migration, as long as the `Microsoft.Data.SqlClient.Extensions.Azure` package is installed.
+Keep the existing supported `Authentication` value if it still fits the deployment. Confirm the database name, identity selector, encryption settings, and network access. Don't add `Integrated Security=true` to a Microsoft Entra connection string.
 
 ### Applications that don't use Entra ID authentication
 
-If your application connects using SQL authentication, Windows integrated authentication, or `AccessToken`/`AccessTokenCallback`, no changes are required. You benefit from a lighter core package with fewer dependencies.
+SQL password and Windows integrated authentication don't require the Azure extension. Applications that already acquire their own tokens can continue using `AccessToken` or `AccessTokenCallback` with the core driver and their chosen identity library.
 
 ## Related content
 
-- [Microsoft.Data.SqlClient 7.0 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.0.md)
-- [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals)
-- [Authentication flows](/azure/active-directory/develop/msal-authentication-flows)
+- [Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-overview)
+- [Application and service principal objects](/entra/identity-platform/app-objects-and-service-principals)
+- [SQL Server connection pooling](../sql-server-connection-pooling.md)
+- [Security best practices](application-security-scenarios-sql-server.md)

@@ -1,6 +1,6 @@
 ---
-title: "Enable coordinated backups (Transactional)"
-description: Learn to enable coordinated backups on the distribution database so that the transaction log for the Transactional Replication publication database is not truncated until transactions that have been propagated to the Distributor have been backed up.
+title: Enable Coordinated Backups (Transactional)
+description: Coordinated backups keep the transaction log intact until the Distributor's transactions are saved. See how to enable, verify, and disable them in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -18,15 +18,15 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# Enable Coordinated Backups for Transactional Replication
+# Enable coordinated backups for Transactional Replication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  When enabling a database for transactional replication, you can specify that all transactions must be backed up before being delivered to the distribution database. You can also enable coordinated backup on the distribution database so that the transaction log for the publication database is not truncated until transactions that have been propagated to the Distributor have been backed up. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+  When you enable a database for Transactional Replication, you can specify that all transactions must be backed up before delivering them to the distribution database. You can also enable coordinated backup on the distribution database so that the transaction log for the publication database isn't truncated until transactions that have been propagated to the Distributor are backed up. For more information, see [Strategies for backing up and restoring snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  > [!NOTE] 
  > Using the **sync with backup option** on the distribution database is not compatible when the publisher database is part of an availability group and could lead to the following error: `The process could not execute 'sp_repldone/sp_replcounters' on 'machinename\instance',  Possible inconsistent state in the distribution database, Get help: http://help/MSSQL_REPL20011 (Source: MSSQLServer, Error number: 18846)`
 
   
-### To enable coordinated backups for a database published with transactional replication  
+### To enable coordinated backups for a database published with Transactional Replication  
   
 1.  At the Publisher, use the `SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup')` [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) function to return the **IsSyncWithBackup** property of the publication database. If the function returns **1**, coordinated backups are already enabled for the published database.  
   

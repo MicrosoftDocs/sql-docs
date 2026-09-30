@@ -4,7 +4,7 @@ description: Learn about new features for SQL Server 2022 (16.x), which gives yo
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, randolphwest
-ms.date: 09/08/2025
+ms.date: 09/28/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
@@ -67,8 +67,9 @@ The following sections identify features that are improved or introduced in [!IN
 | New feature or update | Details |
 | --- | --- |
 | Link to Azure SQL Managed Instance | Replicate your data between your SQL Server instance to Azure SQL Managed Instance for disaster recovery and migration. See [Overview of the Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). |
+| [Extend an availability group to Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group) | Starting with SQL Server 2022 Cumulative Update 27 (CU27), extend an Always On availability group containing multiple databases to Azure SQL Managed Instance by replicating all its databases through one Managed Instance link. Every SQL Server replica requires CU27 or later and multiple-database link mode enabled. |
 | Contained availability group | Create an Always On availability group that:<br /><br />- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level.<br />- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md) |
-| Distributed availability group | Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies. |
+| Distributed availability group | Now using multiple TCP connections for better network bandwidth utilization across a remote link with long TCP latencies. |
 | Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset](../relational-databases/system-tables/backupset-transact-sql.md). |
 
 ## Security
@@ -137,7 +138,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | New feature or update | Details |
 | --- | --- |
 | SQL Server Native Client (SNAC) has been removed | [!INCLUDE [snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)] |
-| Hybrid buffer pool with direct write | Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is now available for Window 2022 and Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-persistent-memory.md). |
+| Hybrid buffer pool with direct write | Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is now available for Windows 2022 and Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-persistent-memory.md). |
 | Integrated acceleration & offloading | [!INCLUDE [sql-server-2022](../includes/sssql22-md.md)] uses acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration and offloading](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE [sql-server-2022](../includes/sssql22-md.md)] uses new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. Requires trace flag 15097. See [Set trace flags with DBCC TRACEON](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf15097). |
 

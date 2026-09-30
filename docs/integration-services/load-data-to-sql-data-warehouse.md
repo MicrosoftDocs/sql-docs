@@ -11,7 +11,7 @@ ms.custom:
 ---
 # Load data into a dedicated SQL pool in Azure Synapse Analytics with SQL Server Integration Services (SSIS)
 
-[!INCLUDE [asa](../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../includes/applies-to-version/asa.md)]
 
 [!INCLUDE [synapse-fabric-migration](../includes/synapse-fabric-migration.md)]
 
@@ -228,7 +228,7 @@ To continue the tutorial with this option, you need the following things:
 
    1. Remove the **rowguid** column. The **uniqueidentifier** data type isn't supported in dedicated SQL pool.
 
-   1. Change the data type of the **LineTotal** column to **money**. The **decimal** data type isn't supported in dedicated SQL pool. For info about supported data types, see [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)](../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+   1. Change the data type of the **LineTotal** column to **money**. The **decimal** data type isn't supported in dedicated SQL pool. For info about supported data types, see [CREATE TABLE (Azure Synapse Analytics)](../t-sql/statements/create-table-azure-sql-data-warehouse.md).
 
       :::image type="content" source="media/load-data-to-sql-data-warehouse/destination-query-after-12b.png" alt-text="Screenshot of the Create Table dialog box, with code to create a table named SalesOrderDetail with LineTotal as a money column and no rowguid column.":::
 

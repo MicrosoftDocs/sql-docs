@@ -78,7 +78,7 @@ The following steps export the certificate by using SQL Server Management Studio
 
    :::image type="content" source="./media/tde-certificate-migrate/on-premises-certificate-list.png" alt-text="Screenshot in SSMS that shows a list of TDE certificates." lightbox="./media/tde-certificate-migrate/on-premises-certificate-list.png":::
 
-1. Execute the following script to export the certificate to a pair of files (.cer and .pvk), keeping the public and private key information:
+1. Execute the following script to export the certificate to a pair of files (.cer and .pvk), keeping the public and private key information. Replace `<password>` with a strong password.
 
    ```sql
    USE master
@@ -87,7 +87,7 @@ The following steps export the certificate by using SQL Server Management Studio
    TO FILE = 'c:\full_path\TDE_Cert.cer'
    WITH PRIVATE KEY (
      FILE = 'c:\full_path\TDE_Cert.pvk',
-     ENCRYPTION BY PASSWORD = '<SomeStrongPassword>'
+     ENCRYPTION BY PASSWORD = '<password>'
    )
    ```
 
@@ -96,7 +96,7 @@ The following steps export the certificate by using SQL Server Management Studio
 1. Use the PowerShell console to copy certificate information from a pair of newly created files to a .pfx file by using the Pvk2Pfx tool:
 
    ```cmd
-   .\pvk2pfx -pvk c:/full_path/TDE_Cert.pvk  -pi "<SomeStrongPassword>" -spc c:/full_path/TDE_Cert.cer -pfx c:/full_path/TDE_Cert.pfx
+   .\pvk2pfx -pvk c:/full_path/TDE_Cert.pvk  -pi "<password>" -spc c:/full_path/TDE_Cert.cer -pfx c:/full_path/TDE_Cert.pfx
    ```
 
 ### Export the certificate from a certificate store

@@ -24,10 +24,10 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
   Exports a certificate to a file.
 
@@ -56,17 +56,6 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
 ```  
   
    
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
-      WITH PRIVATE KEY   
-      (   
-        FILE ='path_to_private_key_file',  
-        ENCRYPTION BY PASSWORD ='encryption_password'   
-      )   
-```  
-  
 ## Arguments
  *certname*  
  Is the name of the certificate to back up.

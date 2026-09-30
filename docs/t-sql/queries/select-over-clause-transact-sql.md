@@ -25,11 +25,11 @@ helpviewer_keywords:
   - "OVER clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SELECT - OVER clause (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `OVER` clause determines the partitioning and ordering of a rowset before the associated window function is applied. That is, the `OVER` clause defines a window or user-specified set of rows within a query result set. A window function then computes a value for each row in the window. You can use the `OVER` clause with functions to compute aggregated values such as moving averages, cumulative aggregates, running totals, or top *N* per group results.
 
@@ -89,12 +89,6 @@ ORDER BY order_by_expression
 
 <unsigned value specification> ::=
 {  <unsigned integer literal> }
-```
-
-Syntax only for Analytics Platform System (PDW):
-
-```syntaxsql
-OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ```
 
 ## Arguments
@@ -609,93 +603,6 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 277              3           3,189,418.37         2022        3,189,418.37
 276              4           4,251,368.55         2022        4,251,368.55
 281              4           2,458,535.62         2022        6,709,904.17
-```
-
-## Examples: Analytics Platform System (PDW)
-
-### E. Use the OVER clause with the ROW_NUMBER function
-
-The following example returns the `ROW_NUMBER` for sales representatives based on their assigned sales quota.
-
-```sql
-SELECT ROW_NUMBER() OVER (ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,
-       FirstName,
-       LastName,
-       CONVERT (VARCHAR (13), SUM(SalesAmountQuota), 1) AS SalesQuota
-FROM dbo.DimEmployee AS e
-     INNER JOIN dbo.FactSalesQuota AS sq
-         ON e.EmployeeKey = sq.EmployeeKey
-WHERE e.SalesPersonFlag = 1
-GROUP BY LastName, FirstName;
-```
-
-Here's a partial result set.
-
-```output
-RowNumber  FirstName  LastName            SalesQuota
----------  ---------  ------------------  -------------
-1          Jillian    Carson              12,198,000.00
-2          Linda      Mitchell            11,786,000.00
-3          Michael    Blythe              11,162,000.00
-4          Jae        Pak                 10,514,000.00
-```
-
-### F. Use the OVER clause with aggregate functions
-
-The following examples show using the `OVER` clause with aggregate functions. In this example, using the `OVER` clause is more efficient than using subqueries.
-
-```sql
-SELECT SalesOrderNumber AS OrderNumber,
-       ProductKey,
-       OrderQuantity AS Qty,
-       SUM(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) AS Total,
-       AVG(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) AS AVG,
-       COUNT(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) AS COUNT,
-       MIN(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) AS MIN,
-       MAX(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) AS MAX
-FROM dbo.FactResellerSales
-WHERE SalesOrderNumber IN (N'SO43659', N'SO43664')
-      AND ProductKey LIKE '2%'
-ORDER BY SalesOrderNumber, ProductKey;
-```
-
-[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
-
-```output
-OrderNumber  Product  Qty  Total  Avg  Count  Min  Max
------------  -------  ---  -----  ---  -----  ---  ---
-SO43659      218      6    16     3    5      1    6
-SO43659      220      4    16     3    5      1    6
-SO43659      223      2    16     3    5      1    6
-SO43659      229      3    16     3    5      1    6
-SO43659      235      1    16     3    5      1    6
-SO43664      229      1     2     1    2      1    1
-SO43664      235      1     2     1    2      1    1
-```
-
-The following example shows using the `OVER` clause with an aggregate function in a calculated value. The aggregates are calculated by `SalesOrderNumber` and the percentage of the total sales order is calculated for each line of each `SalesOrderNumber`.
-
-```sql
-SELECT SalesOrderNumber AS OrderNumber,
-       ProductKey AS Product,
-       OrderQuantity AS Qty,
-       SUM(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) AS Total,
-       CAST (1. * OrderQuantity / SUM(OrderQuantity) OVER (PARTITION BY SalesOrderNumber) * 100 AS DECIMAL (5, 2)) AS PctByProduct
-FROM dbo.FactResellerSales
-WHERE SalesOrderNumber IN (N'SO43659', N'SO43664')
-      AND ProductKey LIKE '2%'
-ORDER BY SalesOrderNumber, ProductKey;
-```
-
-The first start of this result set is as follows:
-
-```output
-OrderNumber  Product  Qty  Total  PctByProduct
------------  -------  ---  -----  ------------
-SO43659      218      6    16     37.50
-SO43659      220      4    16     25.00
-SO43659      223      2    16     12.50
-SO43659      229      2    16     18.75
 ```
 
 ## Related content

@@ -49,14 +49,14 @@ Is the 8-byte hexadecimal format of a database page resource.
 ## Remarks  
 `sys.fn_PageResCracker` is used to convert the 8-byte hexadecimal representation of a database page to a rowset that contains the database ID, file ID and page ID of the page.   
 
-You can obtain a valid page resource from the `page_resource` column of the [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) dynamic management view or the [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) system view. If an invalid page resource is used then the return is NULL.  
-The primary use of `sys.fn_PageResCracker` is to facilitate joins between these views and the [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) dynamic management function in order to obtain information about the page, such as the object to which it belongs.
+You can obtain a valid page resource from the `page_resource` column of the [sys.dm_exec_requests &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) dynamic management view or the [sys.sysprocesses &#40;Transact-SQL&#41;](../system-compatibility-views/sys-sysprocesses-transact-sql.md) system view. If an invalid page resource is used then the return is NULL.  
+The primary use of `sys.fn_PageResCracker` is to facilitate joins between these views and the [sys.dm_db_page_info &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-db-page-info-transact-sql.md) dynamic management function in order to obtain information about the page, such as the object to which it belongs.
   
 ## Permissions  
 The user needs `VIEW SERVER STATE` permission on the server.  
   
 ## Examples  
-The `sys.fn_PageResCracker` function can be used in conjunction with [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) to troubleshoot page related waits and blocking in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  The following script is an example of how you can use these functions to gather database page information for all active requests that are currently waiting on some type of page resource. 
+The `sys.fn_PageResCracker` function can be used in conjunction with [sys.dm_db_page_info &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-db-page-info-transact-sql.md) to troubleshoot page related waits and blocking in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  The following script is an example of how you can use these functions to gather database page information for all active requests that are currently waiting on some type of page resource. 
   
 ```sql  
 SELECT page_info.* 

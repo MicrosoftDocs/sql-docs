@@ -3,8 +3,8 @@ title: "Quickstart: Connect Django to SQL Server"
 description: Connect a Django application to SQL Server using mssql-django and run database operations with the Django ORM.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
@@ -17,9 +17,12 @@ In this quickstart, you create a Django project, connect it to a SQL Server data
 
 ## Prerequisites
 
-- Python 3.8 or later. Django 6.0 requires Python 3.12 and later versions.
-- Microsoft ODBC Driver 17 or 18 for SQL Server. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
-- A SQL Server instance or Azure SQL Database with a valid login.
+- Python 3.10 through 3.14. Django 6.0 and later versions require at least Python 3.12.
+- Microsoft ODBC Driver 17 or 18 for SQL Server, for the default `pyodbc` driver. See [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md). If you opt for the `mssql-python` driver instead, you don't need to install a separate ODBC driver. See [Select the database driver for mssql-django](select-database-driver.md).
+
+Keep the server name and authentication credentials for Step 3.
+
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Step 1: Install mssql-django
 

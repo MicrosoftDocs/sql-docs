@@ -8,7 +8,7 @@ metadata:
   author: rwestMSFT
   ms.author: randolphwest
   ms.reviewer: randolphwest, wiassaf
-  ms.date: 03/03/2026
+  ms.date: 09/21/2026
   ms.service: sql
   ms.topic: hub-page
   ms.custom:
@@ -50,6 +50,10 @@ productDirectory:
     - title: Microsoft Fabric
       imageSrc: media/index/fabric-databases-icon.svg
       links:
+        - url: /fabric/database/hub/
+          text: Fabric Database Hub
+        - url: /fabric/database/hub/monitor-sql
+          text: Monitor Microsoft SQL in Fabric
         - url: /fabric/database/sql/overview
           text: SQL database in Fabric
         - url: /fabric/mirroring/overview
@@ -154,10 +158,10 @@ additionalContent:
               url: /powershell/sql-server/sql-server-powershell
             - text: Database samples
               url: samples/sql-samples-where-are.md
-            - text: Azure SQL connectivity libraries
-              url: /azure/sql-database/sql-database-connect-query#libraries
-            - text: SQL Server Drivers
-              url: connect/index.yml              
+            - text: Microsoft SQL drivers and frameworks
+              url: connect/sql-connection-libraries.md
+            - text: Driver downloads and quickstarts
+              url: connect/index.yml
         - title: Deploy
           links: 
             - text: Get a free Azure account

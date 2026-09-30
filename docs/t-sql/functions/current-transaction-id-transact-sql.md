@@ -40,7 +40,7 @@ CURRENT_TRANSACTION_ID( )
 **bigint**
   
 ## Return Value  
-The transaction ID of the current transaction in the current session, taken from [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+The transaction ID of the current transaction in the current session, taken from [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-objects/sys-dm-tran-current-transaction-transact-sql.md).
   
 ## Permissions  
 Any user can return the transaction ID of the current session.

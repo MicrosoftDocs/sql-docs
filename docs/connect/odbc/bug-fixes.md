@@ -3,8 +3,8 @@ title: List of Bugs Fixed
 description: This page contains a listing of bugs fixed in each release of the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 04/30/2026
+ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -14,6 +14,23 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release of the [!INCLUDE [msCoName](../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], starting with the most recent versions.
+
+### Bug fixes in the Microsoft ODBC Driver 18.7.1.1 for SQL Server
+
+- Fix reliability of XA distributed transactions during SQL Server connectivity failures.
+- Fix vector connection attribute handling.
+- Fix heap corruption in the SQL Server Network Interface (SNI) packet pool.
+- Fix an out-of-bounds read when parsing malformed `LOGINACK` tokens.
+- Fix length validation when parsing malformed `ENVCHANGE` tokens.
+- Fix warning generation when connection timeout values are outside the supported range.
+- Fix memory management when Multiple Active Result Sets (MARS) connections break abruptly.
+- Fix redundant logging during Azure Key Vault token acquisition for Always Encrypted.
+- Fix handling of OpenSSL errors left on the calling thread's error queue.
+- Fix asynchronous timeout handling for partially length-prefixed data with zero-length chunks.
+- Fix byte count reporting for overlapped named pipe writes in Tabular Data Stream (TDS) packet tracing.
+- Fix asynchronous timeout handling for `DATACLASSIFICATION` tokens.
+- Fix heap corruption on Linux ARM64 and macOS ARM64.
+- Fix the contact email address in Linux packages.
 
 ### Bug fixes in the Microsoft ODBC Driver 17.11.1.1 for SQL Server
 

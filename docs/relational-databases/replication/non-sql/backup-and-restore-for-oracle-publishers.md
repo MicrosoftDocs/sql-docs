@@ -1,6 +1,6 @@
 ---
-title: "Backup and Restore for Oracle Publishers"
-description: "Backup and Restore for Oracle Publishers"
+title: Backup and Restore for Oracle Publishers
+description: Backup and restore Oracle publishers in SQL Server replication with confidence. Follow these guidelines to keep publications, distributors, and subscribers in sync.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -15,30 +15,30 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], backup and restore"
   - "restoring [SQL Server replication], Oracle publishing"
 ---
-# Backup and Restore for Oracle Publishers
+# Backup and restore for Oracle publishers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Follow these guidelines when backing up and restoring:  
   
--   Ensure the Log Reader Agent does not run and that other database activity on the published tables does not occur while the Publisher is being backed up.  
+-   Ensure the Log Reader Agent isn't running and that no other database activity occurs on the published tables while you're backing up the Publisher.  
   
--   Backup up the Publisher and Distributor at the same time.  
+-   Back up the Publisher and Distributor at the same time.  
   
--   If the Publisher or Distributor must be restored, reinitialize all subscriptions.  
+-   Reinitialize all subscriptions if you must restore the Publisher or Distributor.  
   
--   To restore a Subscriber from a backup (without having to reinitialize subscriptions), the transactions delivered to the distribution database after the last subscription database backup was completed must still be available. The length of time transactions are available depends on distribution retention settings. For information on these settings, see [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
+-   To restore a Subscriber from a backup without reinitializing subscriptions, the transactions delivered to the distribution database after the last subscription database backup was completed must still be available. The length of time transactions are available depends on distribution retention settings. For information about these settings, see [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   If the Publisher or Distributor becomes out of sync as the result of a database restore, the replication agents log error messages. At this point, you must drop and recreate all relevant publications and subscriptions:  
+-   If a database restore causes the Publisher or Distributor to become out of sync, the replication agents log error messages. You must drop and recreate all relevant publications and subscriptions:  
   
     1.  Script the definition of the publications and subscriptions. For more information, see [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-         If the definition of the publications has changed between the versions of the Publisher and Distributor states, you will need to modify the scripts.  
+         If the definition of the publications changed between the versions of the Publisher and Distributor states, modify the scripts.  
   
     2.  Drop the publications and subscriptions.  
   
     3.  Run the scripts created in step 1.  
   
-     If the Publisher must be dropped and reconfigured, drop the **MSSQLSERVERDISTRIBUTOR** public synonym and the configured Oracle replication user with the **CASCADE** option to remove all replication objects from the Oracle Publisher.  
+     If you must drop and reconfigure the Publisher, drop the **MSSQLSERVERDISTRIBUTOR** public synonym and the configured Oracle replication user by using the **CASCADE** option to remove all replication objects from the Oracle Publisher.  
   
 ## Related content
 

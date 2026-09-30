@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 07/16/2026
+ms.date: 09/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -267,7 +267,21 @@ ms.topic: include
 | 19534 | 16 | No | The attempt to remove IP address from the listener failed. If this is a WSFC availability group, the WSFC service may not be running or may be inaccessible in its current state, or the values provided for the network name and IP address may be incorrect. |
 | 19535 | 16 | No | The attempt to remove IP resource '%.\*ls' from the listener failed since cluster resource is not offline. Cluster resource state is %d. |
 | 19536 | 10 | No | The default startup routine of database '%.\*ls' that belongs to an availability group (Group ID: %d) cannot be skipped because SQL Server did not initialize the Availability Replica Manager. This is an informational message only. No user action is required. |
+| 19539 | 16 | No | Unexpected error %d severity %d, state %d occurred while creating distributed availability group '%.\*ls' with SQL Managed Instance. Drop the distributed availability group and try again. |
+| 19540 | 16 | No | Unexpected error occurred while handling distributed availability group. |
+| 19541 | 16 | No | Cannot create distributed availability group '%.\*ls' with SQL Managed Instance on top of availability group '%.\*ls'. An availability replica of the specified availability group with same endpoint URL already exists. Verify that the specified endpoint URL is correct and unique, then retry the operation. |
+| 19542 | 16 | No | Unexpected error %d severity %d, state %d occurred while adding database '%.\*ls' to availability group '%.\*ls' participating in distributed availability group '%.\*ls' with SQL Managed Instance. Please remove the database from the availability group and try again. |
+| 19543 | 16 | No | Unexpected error %d severity %d, state %d occurred while removing database '%.\*ls' from availability group '%.\*ls' participating in distributed availability group '%.\*ls' with SQL Managed Instance. Please try again. |
 | 19544 | 16 | No | Attempting to create an availability group with cluster_type set to NONE or EXTERNAL, with a name that is longer than 64 characters, is not supported. Please change the name of availability group '%.\*ls' to be 64 characters or less and try again. |
+| 19545 | 16 | No | 'ALTER AVAILABILITY GROUP' command failed for internal distributed availability group '%.\*ls'. Altering internal distributed availability groups is not supported. |
+| 19546 | 16 | No | 'ALTER DATABASE SET HADR' command failed for database '%.\*ls'. This command is not supported for databases participating in distributed availability group with SQL Managed Instance. |
+| 19547 | 16 | No | The integrity check for distributed availability group '%.\*ls' with SQL Managed Instance failed with error cause: '%S_MSG'. Corrective action: '%S_MSG'. |
+| 19548 | 16 | No | The integrity check for distributed availability group '%.\*ls' with SQL Managed Instance failed with error cause: 'An availability database '%.\*ls' not participating in any internal distributed availability group.'. Corrective action: 'Remove the availability database from the availability group and add it back again.'. |
+| 19549 | 16 | No | Provided distributed availability group name '%.\*ls' is invalid. Please provide a name of a distributed availability group with SQL Managed Instance. |
+| 19550 | 16 | No | Distributed availability group with managed instance does not support having multiple databases. |
+| 19561 | 16 | No | As a result of executing sys.sp_mi_dag_repair, database '%.\*ls' was removed from availability group '%.\*ls'. |
+| 19562 | 16 | No | As a result of executing sys.sp_mi_dag_repair, internal availability group '%.\*ls' was removed from availability group '%.\*ls'. |
+| 19563 | 16 | No | Can not execute sp_mi_dag_repair on availability group '%.\*ls' as the local availability replica is not in the primary role. |
 | 19601 | 16 | No | System error. |
 | 19602 | 16 | No | System error. |
 | 19603 | 16 | No | System error. |

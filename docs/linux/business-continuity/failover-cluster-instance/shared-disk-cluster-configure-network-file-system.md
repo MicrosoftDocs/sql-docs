@@ -1,10 +1,11 @@
 ---
-title: Configure NFS Storage FCI - SQL Server on Linux
+title: Configure NFS Storage for an FCI
+titleSuffix: SQL Server on Linux
 description: Learn to configure a failover cluster instance (FCI) using NFS storage for SQL Server on Linux.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 07/03/2025
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -12,7 +13,7 @@ ms.custom:
   - linux-related-content
   - sfi-image-nochange
 ---
-# Configure failover cluster instance - NFS - SQL Server on Linux
+# Configure failover cluster instance on Linux (NFS)
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
@@ -104,7 +105,7 @@ Ensure that your security standards are enforced for accessing. When configuring
    - Delete the files from the existing [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] data directory.
 
      ```bash
-     rm - f /var/opt/mssql/data/*
+     rm -f /var/opt/mssql/data/*
      ```
 
    - Verify that the files have been deleted.
@@ -149,7 +150,7 @@ Ensure that your security standards are enforced for accessing. When configuring
    - Copy the files from the temporary directory /var/opt/mssql/data.
 
      ```bash
-     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
+     cp /var/opt/mssql/tmp/* /var/opt/mssql/data
      ```
 
    - Verify the files are there.
@@ -250,4 +251,4 @@ Ensure that your security standards are enforced for accessing. When configuring
 
 ## Related content
 
-- [Configure failover cluster instance - SQL Server on Linux (RHEL)](shared-disk-cluster-configure.md)
+- [Configure failover cluster instance on Linux (RHEL)](shared-disk-cluster-configure.md)

@@ -755,7 +755,7 @@ Perform these steps on **all nodes** in this section.
 
 The following commands are used to install SQL Server:
 
-1. Download the Microsoft SQL Server 2019 SLES repository configuration file:
+1. Download the Microsoft SQL Server 2022 SLES repository configuration file:
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo
@@ -866,20 +866,20 @@ sudo systemctl restart mssql-server
    > [!IMPORTANT]  
    > If you're connecting remotely to your SQL Server instance, you'll need to have port 1433 open on your firewall. You'll also need to allow inbound connections to port 1433 in your NSG for each VM. For more information, see [Create a security rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) for creating an inbound security rule.
 
-   - Replace the `<MasterKeyPassword>` with your own password.
+   - Replace `<password>` with a strong password.
 
    ```sql
    ALTER EVENT SESSION AlwaysOn_health ON SERVER
        WITH (STARTUP_STATE = ON);
    GO
 
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<MasterKeyPassword>';
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    GO
    ```
 
 1. Connect to the primary replica using SSMS or **sqlcmd**. The below commands create a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk` on your primary SQL Server replica:
 
-   - Replace the `<PrivateKeyPassword>` with your own password.
+   - Replace `<password>` with a strong password.
 
    ```sql
    CREATE CERTIFICATE dbm_certificate
@@ -889,7 +889,7 @@ sudo systemctl restart mssql-server
    BACKUP CERTIFICATE dbm_certificate TO FILE = '/var/opt/mssql/data/dbm_certificate.cer'
    WITH PRIVATE KEY (
            FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
-           ENCRYPTION BY PASSWORD = '<PrivateKeyPassword>'
+           ENCRYPTION BY PASSWORD = '<password>'
            );
    GO
    ```
@@ -938,7 +938,7 @@ Exit the **sqlcmd** session by running the `exit` command, and return back to yo
        FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
        WITH PRIVATE KEY (
        FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
-       DECRYPTION BY PASSWORD = '<PrivateKeyPassword>'
+       DECRYPTION BY PASSWORD = '<password>'
    );
    GO
    ```
@@ -1008,7 +1008,7 @@ GO
 
 On all SQL Server instances, create a SQL Server login for Pacemaker. The following Transact-SQL creates a login.
 
-- Replace `<password>` with your own complex password.
+- Replace `<password>` with a strong password.
 
 ```sql
 USE [master]
@@ -1220,7 +1220,7 @@ sudo systemctl enable pacemaker
            op monitor timeout=60s interval=12s role=Slave \
            op notify timeout=60s interval=0
    primitive rsc_st_azure stonith:fence_azure_arm \
-           params subscriptionId=xxxxxxx resourceGroup=amvindomain tenantId=xxxxxxx login=xxxxxxx passwd="******" cmk_monitor_retries=4 pcmk_action_limit=3 power_timeout=240 pcmk_reboot_timeout=900 pcmk_host_map="sles1:sles1;les2:sles2;sles3:sles3" \
+           params subscriptionId=xxxxxxx resourceGroup=amvindomain tenantId=xxxxxxx login=xxxxxxx passwd="******" pcmk_monitor_retries=4 pcmk_action_limit=3 power_timeout=240 pcmk_reboot_timeout=900 pcmk_host_map="sles1:sles1;sles2:sles2;sles3:sles3" \
            op monitor interval=3600 timeout=120
    ms ms-ag_cluster ag_cluster \
            meta master-max=1 master-node-max=1 clone-max=3 clone-node-max=1 notify=true

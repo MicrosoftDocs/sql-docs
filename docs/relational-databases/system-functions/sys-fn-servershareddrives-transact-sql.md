@@ -24,7 +24,7 @@ dev_langs:
   Returns the names of shared drives used by the clustered server.  
   
 > [!IMPORTANT]  
->  This  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system function is included for backward compatibility. We recommend that you use [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) instead.  
+>  This  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system function is included for backward compatibility. We recommend that you use [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-io-cluster-valid-path-names-transact-sql.md) instead.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -212,7 +212,7 @@ Many factors affect performance, including database design, hardware, and worklo
 Then, explore some of the available tools for troubleshooting performance problems.
 
 - [Monitor performance by using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [System dynamic management views](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [System dynamic management views](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md)
 - [Performance Dashboard in SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## Common issues

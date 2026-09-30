@@ -3,7 +3,8 @@ title: Use mssql-python with Polars
 description: Learn how to integrate the mssql-python driver with Polars DataFrames for high-performance data analysis with Microsoft SQL and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -74,19 +75,19 @@ print(df)
 
 ### Stream large datasets with Arrow batches
 
-For datasets that don't fit in memory, use `arrow_reader()` to process data in streaming batches. Each batch is a `pyarrow.RecordBatch` that Polars can consume independently, so memory usage stays proportional to `batch_size` rather than the full result set.
+For datasets that don't fit in memory, use `arrow_reader()` to process data in streaming batches. Each batch is a `pyarrow.RecordBatch` that Polars can consume independently, so memory usage stays proportional to `batch_size` rather than the full result set. Use the reader as a context manager so that it releases the server-side cursor even if an exception interrupts the loop:
 
 ```python
 def process_large_query(cursor, query: str, params: dict = None, batch_size: int = 50000) -> pl.DataFrame:
     """Process large query results as streaming Arrow batches."""
     cursor.execute(query, params or {})
-    reader = cursor.arrow_reader(batch_size=batch_size)
 
     results = []
-    for batch in reader:
-        chunk_df = pl.from_arrow(batch)
-        # Process each chunk
-        results.append(chunk_df)
+    with cursor.arrow_reader(batch_size=batch_size) as reader:
+        for batch in reader:
+            chunk_df = pl.from_arrow(batch)
+            # Process each chunk
+            results.append(chunk_df)
 
     return pl.concat(results) if results else pl.DataFrame()
 
@@ -198,6 +199,35 @@ df = pl.DataFrame({
 rows = polars_to_sql_bulk(conn, df, "##PolarsBulk")
 print(f"Bulk inserted {rows} rows")
 ```
+
+### Bulk insert from Arrow memory
+
+The `cursor.bulkcopy_arrow()` method loads Arrow data without converting it to Python tuples first. Polars stores its data in Arrow format and exports it through the Arrow C data interface, so you can pass the DataFrame itself:
+
+```python
+def polars_to_sql_arrow(conn, df: pl.DataFrame, table: str) -> int:
+    """Bulk insert a Polars DataFrame through the Arrow path."""
+    cursor = conn.cursor()
+    result = cursor.bulkcopy_arrow(table, df)
+    return result["rows_copied"]
+
+# bulkcopy_arrow() opens its own connection, so commit the table creation first.
+conn.autocommit = True
+cursor = conn.cursor()
+cursor.execute("CREATE TABLE ##PolarsArrow (Name NVARCHAR(50), Price FLOAT, CategoryID INT)")
+
+df = pl.DataFrame({
+    "Name": ["Product A", "Product B", "Product C"],
+    "Price": [29.99, 49.99, 19.99],
+    "CategoryID": [1, 2, 1]
+})
+rows = polars_to_sql_arrow(conn, df, "##PolarsArrow")
+print(f"Bulk inserted {rows} rows")
+```
+
+`df.to_arrow()` also works, but Polars re-encodes string columns from `string_view` to `large_string` during that conversion, which copies all of the string data.
+
+Each Arrow column type must be compatible with its destination SQL column type. For **money**, **decimal**, and **numeric** columns, use a `decimal128` column rather than a floating-point column. For more information, see [Apache Arrow integration](arrow-integration.md).
 
 ## Data analysis patterns
 

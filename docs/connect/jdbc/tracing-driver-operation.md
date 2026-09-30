@@ -4,7 +4,7 @@ description: Learn how to use tracing to log details and resolve issues and prob
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 01/31/2024
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -15,8 +15,8 @@ ms.topic: concept-article
 
 The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of tracing (or logging) to help resolve issues and problems with the JDBC driver when it's used in your application. To enable the use of tracing, the JDBC driver uses the logging APIs in java.util.logging, which provides a set of classes for creating Logger and LogRecord objects.
 
-> [!NOTE]
-> For the native component (sqljdbc_xa.dll) that is included with the JDBC driver, tracing is enabled by the Built-In Diagnostics (BID) framework. For information about BID, see [Data Access Tracing in SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).
+Starting with version 13.6, the driver avoids argument allocation and method-call overhead for public method entry and exit logging when the `FINER` level isn't enabled. This optimization is automatic and doesn't change logging output when `FINER` is enabled.
+
 
 When you develop your application, you can make calls to Logger objects, which in turn create LogRecord objects, which are then passed to Handler objects for processing. Logger and Handler objects both use logging levels, and optionally logging filters, to regulate which LogRecords are processed. When the logging operations are complete, the Handler objects can optionally use Formatter objects to publish the log information.
 
@@ -168,6 +168,8 @@ Two performance loggers are available:
 | `com.microsoft.sqlserver.jdbc.PerformanceMetrics.Statement` | Tracks statement request build, first server response, prepare, prepexec, and execute timing. |
 
 Set these loggers to `FINE` level to enable metric output. You can also register a programmatic callback for in-process metric collection instead of (or in addition to) log output.
+
+Starting with version 13.6, callbacks support opt-in nanosecond timing, SQL text and statement-type context, and the connection's application name.
 
 For configuration details, tracked activities, and code examples, see [Performance Logger and callback](performance-logger-callback.md).
 

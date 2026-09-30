@@ -3,6 +3,7 @@ title: Use JSON Data with mssql-python
 description: Learn how to work with JSON data in Microsoft SQL using the mssql-python driver, including JSON functions, path expressions, and storage patterns.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/16/2026
 ms.service: sql
 ms.subservice: connectivity

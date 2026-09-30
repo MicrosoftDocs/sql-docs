@@ -3,7 +3,8 @@ title: "What's new in go-mssqldb"
 description: "Version history and release highlights for the go-mssqldb driver across the Microsoft SQL platform."
 author: dlevy-msft
 ms.author: dlevy
-ms.date: 06/23/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -15,6 +16,20 @@ This article lists significant changes in each release of the `go-mssqldb` drive
 
 > [!NOTE]
 > Some version numbers aren't sequential. For example, versions v1.2.0 through v1.4.0 were never published. The version jumps reflect the actual release history of the Microsoft fork.
+
+## v1.11.0 (August 2026)
+
+- Added ADO.NET connection string synonyms. ADO-format connection strings now accept alternate keyword spellings such as `Data Source`, `Initial Catalog`, `Connect Timeout`, and `UID`. For more information, see [go-mssqldb connection strings](connection-strings.md).
+- Fixed panics triggered by malformed server responses when parsing an NTLM challenge, a PRELOGIN option offset or length, and a SQL Server Browser dedicated administrator connection (DAC) response.
+- Capped the initial buffer allocation for partially length-prefixed (PLP) values.
+- Quoted the table name and `ORDER` columns in bulk copy operations.
+- Closed the TCP connection on every `connect()` error path.
+- Returned `float64` for **real** columns.
+- Recognized `REVERT` as a built-in command when detecting stored procedure calls.
+- Clarified NTLM URL encoding for URL data source names.
+- Stripped the port from Azure Key Vault URLs used for the endpoint and `AllowedLocations`.
+- Replaced the deprecated `reflect.SliceHeader` with `unsafe.Slice`.
+- Improved character set decoding performance with a fast path for ASCII-only data.
 
 ## v1.10.0 (April 2026)
 

@@ -4,7 +4,7 @@ description: JSON_ARRAY constructs JSON array text from zero or more expressions
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: umajay, randolphwest
-ms.date: 10/27/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "JSON, validating"
 dev_langs:
   - TSQL
-monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current ||=fabric-sqldb || =fabric"
 ---
 # JSON_ARRAY (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
 Constructs JSON array text from zero or more expressions.
 

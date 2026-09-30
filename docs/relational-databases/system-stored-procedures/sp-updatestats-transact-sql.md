@@ -52,7 +52,7 @@ Specifies that `sp_updatestats` uses the `RESAMPLE` option of the [UPDATE STATIS
 
 `sp_updatestats` updates statistics on disabled nonclustered indexes and doesn't update statistics on disabled clustered indexes.
 
-For disk-based tables, `sp_updatestats` updates statistics based on the `modification_counter` information in the [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) catalog view, updating statistics where at least one row is modified.
+For disk-based tables, `sp_updatestats` updates statistics based on the `modification_counter` information in the [sys.dm_db_stats_properties](../system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) catalog view, updating statistics where at least one row is modified.
 
 For memory-optimized tables, `sp_updatestats` updates all statistics unconditionally. However, if [Memory-optimized TempDB metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) is enabled, `sp_updatestats` fails with error 41317 because a single transaction isn't allowed to access memory-optimized tables in more than one database. For more information, see [Limitations of Memory-optimized TempDB metadata](../databases/tempdb-database.md#limitations-of-memory-optimized-tempdb-metadata).
 
@@ -60,7 +60,7 @@ For memory-optimized tables, `sp_updatestats` updates all statistics uncondition
 
 `sp_updatestats` preserves the latest `NORECOMPUTE` option for specific statistics. For more information about disabling and re-enabling statistics updates, see [Statistics](../statistics/statistics.md).
 
-When restoring a database to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] from a previous version, you should execute `sp_updatestats` on the database. This is related to setting proper metadata for the [statistics auto drop feature](../statistics/statistics.md#auto_drop-option) introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, automatically created statistics always behave as though the [AUTO_DROP](../../relational-databases/statistics/statistics.md#auto_drop-option) has been set.
+When restoring a database to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] from a previous version, you should execute `sp_updatestats` on the database. This is related to setting proper metadata for the [statistics auto drop feature](../statistics/statistics.md#auto_drop-option) introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, automatically created statistics always behave as though the [AUTO_DROP](../statistics/statistics.md#auto_drop-option) has been set.
 
 ## Permissions
 

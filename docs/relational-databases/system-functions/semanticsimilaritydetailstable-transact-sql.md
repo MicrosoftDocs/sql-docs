@@ -68,14 +68,14 @@ SEMANTICSIMILARITYDETAILSTABLE
 |**score**|**REAL**|A relative value for this key phrase in its relationship to all the other key phrases that are similar between the 2 documents.<br /><br /> The value is a fractional decimal value in the range of [0.0, 1.0] where a higher score represents a higher weighting and 1.0 is the perfect score.|  
   
 ## General Remarks  
- For more information, see [Find Similar and Related Documents with Semantic Search](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ For more information, see [Find Similar and Related Documents with Semantic Search](../search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## Metadata  
  For information and status about semantic similarity extraction and population, query the following dynamic management views:  
   
--   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
--   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
+-   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../system-dynamic-management-objects/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
 ## Security  
   
@@ -95,6 +95,4 @@ FROMSEMANTICSIMILARITYDETAILSTABLE
     ) AS KEY_TBL  
 ORDER BY KEY_TBL.score DESC;  
   
-```  
-  
-  
+```

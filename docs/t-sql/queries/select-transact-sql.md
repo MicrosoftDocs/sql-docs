@@ -3,8 +3,8 @@ title: "SELECT (Transact-SQL)"
 description: The SELECT statement retrieves rows from the database and enables the selection of rows or columns from tables in the SQL Server Database Engine.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 02/02/2026
+ms.reviewer: jovanpop, randolphwest, wiassaf
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SELECT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Use the `SELECT` statement to retrieve rows from the database. `SELECT` lets you choose one or many rows or columns from one or many tables in the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)].
 
@@ -42,6 +42,7 @@ Because the full syntax `SELECT` statement is complex, detailed syntax elements 
 - [WHERE clause](where-transact-sql.md)
 - [GROUP BY clause](select-group-by-transact-sql.md)
 - [HAVING clause](select-having-transact-sql.md)
+- [QUALIFY clause](select-qualify-clause-transact-sql.md?view=fabric&preserve-view=true) (in Fabric Data Warehouse *only*)
 - [WINDOW clause](select-window-transact-sql.md)
 - [ORDER BY clause](select-order-by-clause-transact-sql.md)
 
@@ -76,7 +77,7 @@ SELECT [ ALL | DISTINCT ]
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric:
+Syntax for Azure Synapse Analytics and Microsoft Fabric:
 
 ```syntaxsql
 [ WITH <common_table_expression> [ , ...n ] ]
@@ -91,6 +92,7 @@ SELECT <select_criteria>
     [ WHERE <search_condition> ]
     [ GROUP BY <group_by_clause> ]
     [ HAVING <search_condition> ]
+    [ QUALIFY <filter_condition> ]
     [ ORDER BY <order_by_expression> ]
     [ OPTION ( <query_option> [ , ...n ] ) ]
 ```
@@ -116,6 +118,7 @@ The following steps show the logical processing order, or binding order, for a `
 1. `GROUP BY`
 1. `WITH CUBE` or `WITH ROLLUP`
 1. `HAVING`
+1. `QUALIFY` (in Fabric Data Warehouse *only*)
 1. `SELECT`
 1. `DISTINCT`
 1. `ORDER BY`

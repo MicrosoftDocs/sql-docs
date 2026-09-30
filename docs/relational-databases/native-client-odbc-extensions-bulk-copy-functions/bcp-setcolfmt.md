@@ -14,7 +14,7 @@ apiname: "bcp_setcolfmt"
 apitype: "DLLExport"
 ---
 # bcp_setcolfmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The **bcp_setcolfmt** function supersedes the [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). In specifying the column collation, the **bcp_setcolfmt** function must be used. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) can be used to specify more than one column format.  
   

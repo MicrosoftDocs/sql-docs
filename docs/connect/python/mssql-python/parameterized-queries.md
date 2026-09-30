@@ -3,6 +3,7 @@ title: Build Parameterized Queries with mssql-python
 description: Learn how to build safe parameterized queries to prevent SQL injection and improve performance with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/01/2026
 ms.service: sql
 ms.subservice: connectivity

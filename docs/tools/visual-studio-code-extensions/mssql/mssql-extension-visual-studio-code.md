@@ -68,7 +68,7 @@ The following table provides an overview of the features available in the MSSQL 
 | [Schema designer with GitHub Copilot](mssql-schema-designer-copilot.md) | GA | Natural language schema design with visual change tracking and ORM script generation |
 | [Data API builder](mssql-data-api-builder.md) | GA | Create REST, GraphQL, and MCP endpoints for SQL databases |
 | [SQL notebooks](mssql-sql-notebooks.md) | GA | Jupyter-based SQL notebooks with rich results and multi-kernel support |
-| [SQL Formatter](mssql-sql-formatter.md) | Preview | Format T-SQL on demand or on save with configurable formatting options |
+| [SQL Formatter](mssql-sql-formatter.md) | GA | Format T-SQL on demand or on save with configurable formatting options |
 | [Azure integration](mssql-azure-integration.md) | GA | Provision Azure SQL databases directly from Visual Studio Code, starting with the free tier |
 | [Shortcuts configuration](#shortcuts-configuration) | GA | Manage keyboard shortcuts for frequently used queries and other editor commands |
 

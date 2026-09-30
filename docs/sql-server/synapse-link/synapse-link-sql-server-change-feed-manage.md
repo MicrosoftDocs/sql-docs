@@ -52,7 +52,7 @@ EXECUTE sys.sp_help_change_feed
 
 ### Review change feed errors
 
-To review errors in the [Azure Synapse Link change feed](synapse-link-sql-server-change-feed.md), use the dynamic management view [sys.dm_change_feed_errors](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md). This DMV will show errors from last 32 sessions. One session might include multiple errors, for example, retry attempts on landing zone failures. This DMV will also show errors faced during snapshot and incremental change publish process.
+To review errors in the [Azure Synapse Link change feed](synapse-link-sql-server-change-feed.md), use the dynamic management view [sys.dm_change_feed_errors](../../relational-databases/system-dynamic-management-objects/sys-dm-change-feed-errors.md). This DMV will show errors from last 32 sessions. One session might include multiple errors, for example, retry attempts on landing zone failures. This DMV will also show errors faced during snapshot and incremental change publish process.
 
 ```sql
 SELECT * FROM sys.dm_change_feed_errors;
@@ -60,7 +60,7 @@ SELECT * FROM sys.dm_change_feed_errors;
 
 ### View current activity
 
-To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md), which returns activity for the Azure Synapse Link fo SQL change feed.
+To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-change-feed-log-scan-sessions.md), which returns activity for the Azure Synapse Link fo SQL change feed.
 
 ```sql
 SELECT * FROM sys.dm_change_feed_log_scan_sessions;

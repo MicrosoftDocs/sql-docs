@@ -3,7 +3,8 @@ title: Choose a Data Loading and Movement Pattern with mssql-python
 description: Learn when to use single inserts, batched writes, bulk copy, or MERGE for loading data into Microsoft SQL with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/16/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -23,8 +24,9 @@ The `mssql-python` driver provides multiple paths for writing data into Microsof
 | Insert a small-to-moderate batch from application code | [Batched inserts](#batched-inserts) | Reduces round trips compared to single inserts. |
 | Load hundreds of rows or more from any source | [Bulk copy](#bulk-copy) | TDS bulk insert is the most efficient path for large volumes. |
 | Insert or update rows based on a key | [Upsert with MERGE](#upsert-with-merge) | `MERGE` handles INSERT, UPDATE, and DELETE in one statement. |
-| Load a DataFrame into a table | [Load DataFrames](#load-dataframes) | Extract rows from pandas or Polars and feed to `bulkcopy()`. |
-| Stage data through Parquet files | [Parquet staging](#parquet-staging) | Useful for cross-system ETL where an intermediate file format is needed. |
+| Load a DataFrame into a table | [Load DataFrames](#load-dataframes) | `bulkcopy_arrow()` reads the DataFrame's Arrow data without building a Python object for every value. |
+| Load Apache Arrow data into a table | [Load Arrow data](#load-arrow-data) | `bulkcopy_arrow()` reads Arrow memory directly, without building Python tuples. |
+| Stage data through Parquet files | [Parquet staging](#parquet-staging) | Useful for cross-system ETL where an intermediate file format is needed. Parquet is already Arrow data, so it loads without row conversion. |
 
 ## Load CSV data with bulk copy
 
@@ -126,6 +128,7 @@ conn.commit()
 ### Performance tips for bulk copy
 
 - **Use generators** for large datasets to keep memory usage constant.
+- **Use `bulkcopy_arrow()`** when the source is columnar, such as a DataFrame or a Parquet file. It skips the conversion to Python row tuples.
 - **Set `batch_size`** to control how many rows are sent per TDS batch. Start with 5,000 and adjust based on row width.
 - **Use table locks** for exclusive loads: `cursor.bulkcopy("dbo.ProductImport", rows, table_lock=True)`.
 - **Disable indexes** before loading, then rebuild after. This sequence avoids index maintenance overhead during the load.
@@ -257,60 +260,101 @@ conn.commit()
 
 ## Load DataFrames
 
-Extract rows from a pandas or Polars DataFrame and load them by using `bulkcopy()`:
+A DataFrame is columnar, so load it with `bulkcopy_arrow()` rather than flattening it into row tuples for `bulkcopy()`.
+
+Match the Arrow types to the destination columns before you load. `pyarrow` infers `float64` for a numeric column, which the driver can't map to **money**, **decimal**, or **numeric**.
 
 ### pandas
 
-Convert a pandas DataFrame to tuples and pass to `bulkcopy()`:
-
 ```python
 import pandas as pd
+import pyarrow as pa
 
 df = pd.read_csv("products.csv")
 
-# Convert DataFrame rows to tuples
-rows = list(df[["Name", "ProductNumber", "ListPrice"]].itertuples(index=False, name=None))
+target = pa.schema([
+    pa.field("Name", pa.string()),
+    pa.field("ProductNumber", pa.string()),
+    pa.field("ListPrice", pa.decimal128(19, 4)),   # MONEY
+])
 
-cursor.bulkcopy("dbo.ProductImport", rows, batch_size=5000)
+table = pa.Table.from_pandas(
+    df[["Name", "ProductNumber", "ListPrice"]], preserve_index=False
+).cast(target)
+
+cursor.bulkcopy_arrow("dbo.ProductImport", table)
 conn.commit()
 ```
 
+Use `Table.cast()` rather than passing the schema to `Table.from_pandas()`, which can't convert a float column to `decimal128` directly.
+
 ### Polars
 
-Convert a Polars DataFrame to tuples using the `.rows()` method:
+Polars implements the Arrow C data interface, so you can pass the DataFrame itself. Cast the columns first for the same reason:
 
 ```python
 import polars as pl
 
 df = pl.read_csv("products.csv")
 
-# Convert Polars DataFrame to list of tuples
-rows = df.select(["Name", "ProductNumber", "ListPrice"]).rows()
-
-cursor.bulkcopy("dbo.ProductImport", rows, batch_size=5000)
+cursor.bulkcopy_arrow(
+    "dbo.ProductImport",
+    df.select([
+        "Name",
+        "ProductNumber",
+        pl.col("ListPrice").cast(pl.Decimal(19, 4)),   # MONEY
+    ]),
+)
 conn.commit()
 ```
 
+You can also set the types when you read the file, with `pl.read_csv("products.csv", schema_overrides={"ListPrice": pl.Decimal(19, 4)})`.
+
+Passing the DataFrame directly hands its buffers to the driver without a copy. `df.to_arrow()` also works, but Polars re-encodes string columns during that conversion, which copies all of the string data.
+
+`bulkcopy_arrow()` accepts a `pyarrow.Table`, a `RecordBatch`, a `RecordBatchReader`, or any object that implements the Arrow C data interface through `__arrow_c_stream__` or `__arrow_c_array__`. Passing any of these to `bulkcopy()` raises `TypeError`.
+
 For complete DataFrame loading patterns, see [pandas integration](pandas-integration.md) and [Polars integration](polars-integration.md).
+
+## Load Arrow data
+
+When the source is already in Apache Arrow format, `cursor.bulkcopy_arrow()` loads it without building Python tuples first.
+
+```python
+from decimal import Decimal
+
+import pyarrow as pa
+
+# bulkcopy_arrow() opens its own connection, so commit the table creation first.
+conn.autocommit = True
+cursor = conn.cursor()
+
+table = pa.table({
+    "Name": pa.array(["Widget", "Gadget"], type=pa.string()),
+    "ProductNumber": pa.array(["WI-1000", "GA-2000"], type=pa.string()),
+    "ListPrice": pa.array([Decimal("29.99"), Decimal("49.99")], type=pa.decimal128(10, 2)),
+})
+
+result = cursor.bulkcopy_arrow("dbo.ProductImport", table, batch_size=5000)
+print(f"Copied {result['rows_copied']} rows")
+```
+
+The method also accepts a `pyarrow.RecordBatch` or a `pyarrow.RecordBatchReader`, so you can stream a result set from `cursor.arrow_reader()` straight into another table.
+
+Each Arrow column type must be compatible with its destination SQL column type, and the writer doesn't convert between type families. For more information, see [Apache Arrow integration](arrow-integration.md).
 
 ## Parquet staging
 
-Use Parquet as an intermediate format when migrating data between systems or when your ETL pipeline already produces Parquet files:
+Use Parquet as an intermediate format when migrating data between systems or when your ETL pipeline already produces Parquet files. A Parquet file reads into Arrow data, so pass it straight to `bulkcopy_arrow()`:
 
 ```python
 import pyarrow.parquet as pq
 
-# Read Parquet file
-table = pq.read_table("products.parquet")
-
-# Convert to rows for bulkcopy
-rows = [tuple(row) for row in zip(*[col.to_pylist() for col in table.columns])]
-
-cursor.bulkcopy("dbo.ProductImport", rows, batch_size=5000)
+cursor.bulkcopy_arrow("dbo.ProductImport", pq.read_table("products.parquet"))
 conn.commit()
 ```
 
-For large Parquet files, read in row groups to keep memory usage constant:
+For large Parquet files, iterate row groups to keep memory usage constant. Each batch is a `RecordBatch`, which `bulkcopy_arrow()` accepts directly:
 
 ```python
 import pyarrow.parquet as pq
@@ -318,9 +362,23 @@ import pyarrow.parquet as pq
 parquet_file = pq.ParquetFile("products.parquet")
 
 for batch in parquet_file.iter_batches(batch_size=10000):
-    rows = [tuple(row) for row in zip(*[col.to_pylist() for col in batch.columns])]
-    cursor.bulkcopy("dbo.ProductImport", rows, batch_size=10000)
+    cursor.bulkcopy_arrow("dbo.ProductImport", batch)
 
+conn.commit()
+```
+
+To stream the whole file in a single call, wrap the batches in a `RecordBatchReader`:
+
+```python
+import pyarrow as pa
+import pyarrow.parquet as pq
+
+parquet_file = pq.ParquetFile("products.parquet")
+reader = pa.RecordBatchReader.from_batches(
+    parquet_file.schema_arrow, parquet_file.iter_batches(batch_size=10000)
+)
+
+cursor.bulkcopy_arrow("dbo.ProductImport", reader)
 conn.commit()
 ```
 

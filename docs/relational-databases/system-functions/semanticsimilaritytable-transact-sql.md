@@ -90,8 +90,8 @@ You can't query across columns for similar documents. The `SEMANTICSIMILARITYTAB
 
 For information and status about semantic similarity extraction and population, query the following dynamic management views:
 
-- [sys.dm_db_fts_index_physical_stats](../system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)
-- [sys.dm_fts_semantic_similarity_population](../system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)
+- [sys.dm_db_fts_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-fts-index-physical-stats-transact-sql.md)
+- [sys.dm_fts_semantic_similarity_population](../system-dynamic-management-objects/sys-dm-fts-semantic-similarity-population-transact-sql.md)
 
 ## Permissions
 

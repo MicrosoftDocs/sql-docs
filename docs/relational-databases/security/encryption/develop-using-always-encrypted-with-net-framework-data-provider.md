@@ -4,7 +4,7 @@ description: Learn how to develop .NET applications using the Always Encrypted f
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: "02/15/2023"
+ms.date: "09/15/2026"
 ms.service: sql
 ms.subservice: security
 ms.topic: concept-article
@@ -135,7 +135,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
       paramSSN.ParameterName = @"@SSN";
       paramSSN.DbType = DbType.AnsiStringFixedLength;
       paramSSN.Direction = ParameterDirection.Input;
-      paramSSN.Value = "795-73-9838";
+      paramSSN.Value = "987-65-4320";
       paramSSN.Size = 11;
       cmd.Parameters.Add(paramSSN);
 
@@ -189,7 +189,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
  paramSSN.ParameterName = @"@SSN";
  paramSSN.DbType = DbType.AnsiStringFixedLength;
  paramSSN.Direction = ParameterDirection.Input;
- paramSSN.Value = "795-73-9838";
+ paramSSN.Value = "987-65-4320";
  paramSSN.Size = 11;
  cmd.Parameters.Add(paramSSN);
  using (SqlDataReader reader = cmd.ExecuteReader())
@@ -266,7 +266,7 @@ To prevent such errors, make sure:
 ```csharp
 using (SqlCommand cmd = connection.CreateCommand())
 {
-   cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
+   cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='987-65-4320'";
 cmd.ExecuteNonQuery();
 }
 ```

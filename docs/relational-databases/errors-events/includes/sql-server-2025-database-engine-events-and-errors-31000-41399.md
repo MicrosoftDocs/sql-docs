@@ -2,10 +2,10 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: maghan
-ms.date: 06/11/2026
+ms.date: 09/15/2026
 ms.topic: include
 ---
-> [!NOTE]
+> [!NOTE]  
 > This article contains the term *whitelist*, a term Microsoft considers insensitive in this context. The term appears in this article because it currently appears in the software. When the term is removed from the software, we will remove it from the article.
 
 | Error | Severity | Event logged | Description |

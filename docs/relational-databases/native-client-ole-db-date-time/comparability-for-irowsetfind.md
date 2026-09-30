@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "IRowsetFind comparability [ODBC]"
 ---
 # SQL Server Native Client Comparability for IRowsetFind
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   For date/time types only, IRowsetFind supports the following comparisons:  
   

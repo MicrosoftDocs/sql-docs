@@ -1,6 +1,6 @@
 ---
-title: "Optimize performance with conditional delete tracking (Merge)"
-description: Learn how to optimize Merge Replication performance by using conditional delete tracking for SQL Server.
+title: Optimize Performance with Conditional Delete Tracking (Merge)
+description: Conditional delete tracking gives SQL Server administrators control over which merge replication deletes propagate. Explore scenarios and configure the option.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -14,13 +14,13 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], conditional delete tracking"
   - "articles [SQL Server replication], conditional delete tracking"
 ---
-# Optimize Merge Replication Performance with Conditional Delete Tracking
+# Optimize merge replication performance with conditional delete tracking
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
- With merge replication you can specify that deletes for one or more articles should not be tracked by replication triggers and system tables. If you specify this option for an article, deletes are not tracked or replicated from the Publisher or any Subscribers. This option is available to support a number of application scenarios and to provide a performance optimization for cases in which the replication of deletes is not necessary or desirable. Performance is enhanced in three ways: metadata for deletes is not stored; deletes are not enumerated during synchronization; deletes are not replicated to and applied at the Subscriber.  
+ By using merge replication, you can specify that replication triggers and system tables don't track deletes for one or more articles. If you select this option for an article, deletes aren't tracked or replicated from the Publisher or any Subscribers. This option supports a number of application scenarios and provides a performance optimization for cases where replicating deletes isn't necessary or desirable. Performance is enhanced in three ways: the system doesn't store metadata for deletes; it doesn't enumerate deletes during synchronization; and it doesn't replicate deletes to, or applies them at, the Subscriber.
   
 > [!NOTE]  
 >  To use download-only articles, the compatibility level of the publication must be at least 90RTM.  

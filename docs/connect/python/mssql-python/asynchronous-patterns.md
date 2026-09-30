@@ -3,7 +3,8 @@ title: Async Patterns with mssql-python
 description: Learn how to use the mssql-python driver with Python's asyncio for asynchronous database operations.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -685,6 +686,6 @@ async def resilient_query(pool: AsyncDatabasePool, query: str,
 ## Related content
 
 - [Connection pooling with mssql-python](connection-pooling.md)
-- [Use mssql-python with FastAPI](fast-api-integration.md)
+- [Use mssql-python with FastAPI](fastapi-integration.md)
 - [Performance tuning for mssql-python applications](performance-tuning.md)
 - [Error handling and SQLSTATE codes for mssql-python](error-handling.md)

@@ -1,10 +1,9 @@
 ---
-title: "SYSUTCDATETIME (Transact-SQL)"
+title: SYSUTCDATETIME (Transact-SQL)
 description: SYSUTCDATETIME returns a datetime2 value that contains the current date and time of the system.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/20/2025
+ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -23,13 +22,13 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SYSUTCDATETIME (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-Returns a **datetime2** value that contains the date and time of the computer on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time). The fractional second precision specification has a range from 1 to 7 digits. The default precision is 7 digits.
+The `SYSUTCDATETIME` Transact-SQL (T-SQL) function returns a **datetime2** value that contains the date and time of the computer on which the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time). The fractional second precision specification has a range from 1 to 7 digits. The default precision is 7 digits.
 
 Consider:
 
@@ -71,23 +70,25 @@ The following examples use the six [!INCLUDE [ssNoVersion](../../includes/ssnove
 The following example shows the different formats that are returned by the date and time functions.
 
 ```sql
-SELECT SYSDATETIME() AS [SYSDATETIME()],
-       SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()],
-       SYSUTCDATETIME() AS [SYSUTCDATETIME()],
-       CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP],
-       GETDATE() AS [GETDATE()],
-       GETUTCDATE() AS [GETUTCDATE()];
+SELECT SYSDATETIME(),
+       SYSDATETIMEOFFSET(),
+       SYSUTCDATETIME(),
+       CURRENT_TIMESTAMP,
+       GETDATE(),
+       GETUTCDATE(),
+       CURRENT_DATE;
 ```
 
-[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
-SYSDATETIME()       2025-10-20 13:10:02.0474381
-SYSDATETIMEOFFSET() 2025-10-20 13:10:02.0474381 -07:00
-SYSUTCDATETIME()    2025-10-20 20:10:02.0474381
-CURRENT_TIMESTAMP   2025-10-20 13:10:02.047
-GETDATE()           2025-10-20 13:10:02.047
-GETUTCDATE()        2025-10-20 20:10:02.047
+SYSDATETIME()        2026-09-01 16:15:37.7418724
+SYSDATETIMEOFFSET()  2026-09-01 16:15:37.7418724 -06:00
+SYSUTCDATETIME()     2026-09-01 22:15:37.7418724
+CURRENT_TIMESTAMP    2026-09-01 16:15:37.740
+GETDATE()            2026-09-01 16:15:37.740
+GETUTCDATE()         2026-09-01 22:15:37.740
+CURRENT_DATE         2026-09-01
 ```
 
 ### B. Convert date and time to date
@@ -100,18 +101,20 @@ SELECT CONVERT (DATE, SYSDATETIME()),
        CONVERT (DATE, SYSUTCDATETIME()),
        CONVERT (DATE, CURRENT_TIMESTAMP),
        CONVERT (DATE, GETDATE()),
-       CONVERT (DATE, GETUTCDATE());
+       CONVERT (DATE, GETUTCDATE()),
+       CURRENT_DATE;
 ```
 
-[!INCLUDE [ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
-2025-10-20
-2025-10-20
-2025-10-20
-2025-10-20
-2025-10-20
-2025-10-20
+SYSDATETIME()        2026-09-01
+SYSDATETIMEOFFSET()  2026-09-01
+SYSUTCDATETIME()     2026-09-01
+CURRENT_TIMESTAMP    2026-09-01
+GETDATE()            2026-09-01
+GETUTCDATE()         2026-09-01
+CURRENT_DATE         2026-09-01
 ```
 
 ### C. Convert date and time values to time
@@ -119,18 +122,23 @@ SELECT CONVERT (DATE, SYSDATETIME()),
 The following example shows you how to convert date and time values to the **time** data type.
 
 ```sql
-DECLARE @DATETIME AS DATETIME = GetDate();
-DECLARE @TIME AS TIME;
-SELECT @TIME = CONVERT (TIME, @DATETIME);
-SELECT @TIME AS 'Time',
-       @DATETIME AS 'Date Time';
+SELECT CONVERT (TIME, SYSDATETIME()),
+       CONVERT (TIME, SYSDATETIMEOFFSET()),
+       CONVERT (TIME, SYSUTCDATETIME()),
+       CONVERT (TIME, CURRENT_TIMESTAMP),
+       CONVERT (TIME, GETDATE()),
+       CONVERT (TIME, GETUTCDATE());
 ```
 
 [!INCLUDE [ssResult](../../includes/ssresult-md.md)]
 
 ```output
-Time             Date Time
-13:49:33.6330000 2025-10-20 13:49:33.633
+SYSDATETIME()        16:15:37.7418724
+SYSDATETIMEOFFSET()  16:15:37.7418724
+SYSUTCDATETIME()     22:15:37.7418724
+CURRENT_TIMESTAMP    16:15:37.740
+GETDATE()            16:15:37.740
+GETUTCDATE()         22:15:37.740
 ```
 
 ## Related content

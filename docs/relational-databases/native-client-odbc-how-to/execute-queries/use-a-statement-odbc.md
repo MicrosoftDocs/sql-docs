@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "statements [ODBC]"
 ---
 # Use a Statement (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To use a statement  

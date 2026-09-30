@@ -3,8 +3,8 @@ title: "MSOLEDBSQL Major Version Differences"
 description: Learn about breaking changes between OLE DB Driver 19 and version 18, including encryption defaults, property type changes, and migration steps.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 01/30/2026
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
+ms.date: 08/26/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: "reference"
@@ -19,11 +19,11 @@ helpviewer_keywords:
 This article describes breaking changes between Microsoft OLE DB Driver 19 for SQL Server and earlier versions.
 
 > [!TIP]  
-> **MSOLEDBSQL19** (Microsoft OLE DB Driver 19 for SQL Server) is the current recommended OLE DB driver. It supports TDS 8.0 and modern security features. Version 19.2.0+ also supports TLS 1.3. Use `Provider=MSOLEDBSQL19` in your connection strings.
+> **MSOLEDBSQL19** (Microsoft OLE DB Driver 19 for SQL Server) is the current recommended OLE DB driver. It supports TDS 8.0 and modern security features. Version 19.2.0 and later versions also support TLS 1.3. Use `Provider=MSOLEDBSQL19` in your connection strings.
 
 ## Summary of changes
 
-| Area | Version 18 and earlier | Version 19+ |
+| Area | Version 18 and earlier versions | Version 19 and later versions |
 | --- | --- | --- |
 | Default encryption (`Encrypt`) setting | `no` (no encryption or the server can require encryption) | `Mandatory` (encryption required) |
 | `Encrypt` property type | `VT_BOOL` | `VT_BSTR` |
@@ -52,7 +52,7 @@ The driver property `SSPROP_INIT_ENCRYPT` changes from `VT_BOOL` to `VT_BSTR`.
 | --- | --- | --- |
 | `Optional` | `no`, `false` | Unencrypted unless server requires it |
 | `Mandatory` (default) | `yes`, `true` | Encrypted connection required |
-| `Strict` | *(no equivalent)* | TDS 8.0 encryption; requires SQL Server 2022+ |
+| `Strict` | *(no equivalent)* | TDS 8.0 encryption; requires SQL Server 2022 and later versions |
 
 > [!TIP]  
 > Starting with version 19.2.0, TDS 8.0 connections can use TLS 1.3 when connecting to SQL Server 2022 or later. The `ServerCertificate` property was also added in this version. For more information, see [TLS 1.3 support](../../relational-databases/security/networking/tls-1-3.md).
@@ -63,8 +63,8 @@ For backward compatibility, version 19 accepts all version 18 values (`yes`/`no`
 
 | Version | Default | Result |
 | --- | --- | --- |
-| 18 and earlier | `no` | Connections unencrypted by default |
-| 19+ | `Mandatory` | Connections encrypted by default |
+| 18 and earlier versions | `no` | Connections unencrypted by default |
+| 19 and later versions | `Mandatory` | Connections encrypted by default |
 
 To restore version 18 behavior, add one of these options to your connection string:
 
@@ -73,7 +73,7 @@ To restore version 18 behavior, add one of these options to your connection stri
 
 ### Certificate validation behavior
 
-| Scenario | Version 18 | Version 19+ |
+| Scenario | Version 18 | Version 19 and later versions |
 | --- | --- | --- |
 | Client sets `Encrypt=no`, server doesn't force encryption | No validation | No validation |
 | Client sets `Encrypt=no`, server forces encryption | `Trust Server Certificate` **ignored** | `Trust Server Certificate` **evaluated** |
@@ -153,7 +153,7 @@ Provider=MSOLEDBSQL19;Server=myserver;Database=mydb;Encrypt=Strict;ServerCertifi
 
 Version 19 introduces properties for enhanced certificate validation with `Strict` encryption mode.
 
-### HostNameInCertificate (v19.0.0+)
+### HostNameInCertificate (v19.0.0 and later versions)
 
 Specifies the host name to validate against the server's TLS/SSL certificate. Use this property when the server name in the connection string differs from the certificate's Common Name (CN) or Subject Alternative Name (SAN).
 
@@ -166,7 +166,7 @@ Specifies the host name to validate against the server's TLS/SSL certificate. Us
 > [!NOTE]  
 > This property is ignored when `Trust Server Certificate` is enabled. When `Encrypt=Strict`, the certificate is always validated.
 
-### ServerCertificate (v19.2.0+)
+### ServerCertificate (v19.2.0 and later versions)
 
 Specifies the path to a certificate file (PEM, DER, or CER format) for exact certificate matching. The driver compares this certificate against the server's certificate during the TLS handshake.
 

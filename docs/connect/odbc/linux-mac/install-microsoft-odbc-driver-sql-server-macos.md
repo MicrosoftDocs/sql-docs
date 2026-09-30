@@ -4,10 +4,11 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on ma
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, sunilbs, mcimfl
-ms.date: 03/25/2026
+ms.date: 09/19/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: install-set-up-deploy
+ai-usage: ai-assisted
 ms.custom:
   - intro-installation
   - linux-related-content
@@ -34,9 +35,12 @@ To install Microsoft ODBC driver 18 for SQL Server on macOS, run the following c
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew trust microsoft/mssql-release
 brew update
 HOMEBREW_ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
 ```
+
+Homebrew 6.0 and later versions refuse to load formulas from a third-party tap until you trust it. Without the `brew trust` command, the install fails with `Refusing to load formula microsoft/mssql-release/msodbcsql18 from untrusted tap`. On earlier Homebrew versions, the command isn't needed and is safe to omit.
 
 ## Previous versions
 
@@ -113,9 +117,11 @@ For other cases where you're unable to make a connection to SQL Server using the
 
 If brew is having trouble finding the formulas, make sure you didn't skip the install step: `brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release`
 
+If the tap succeeded but the install fails with `Refusing to load formula ... from untrusted tap`, trust the tap with `brew trust microsoft/mssql-release`, then run the install command again.
+
 ## Related content
 
-- [C / C++ ODBC example application accesses a SQL database](../cpp-code-example-app-connect-access-sql-db.md)
+- [Connect and query with C++ and ODBC](../cpp-code-example-app-connect-access-sql-db.md)
 - [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md)
 - [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
 - [System Requirements (Linux and macOS)](system-requirements.md)

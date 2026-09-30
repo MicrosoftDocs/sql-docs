@@ -18,16 +18,16 @@ helpviewer_keywords:
   - "starting time"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_info (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a miscellaneous set of useful information about the computer, and about the resources available to and consumed by [!INCLUDE [ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]  
-> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_os_sys_info`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> To call this from [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_os_sys_info`. [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 | Column name | Data type | Description and version-specific notes |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ Returns a miscellaneous set of useful information about the computer, and about 
 | `process_physical_affinity` | **nvarchar(3072)** | **Applies to:** Starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)].<br /><br />[!INCLUDE [ssinternalonly-md](../../includes/ssinternalonly-md.md)] |
 | `sql_memory_model` | **int** | **Applies to:** [!INCLUDE [sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1, and later versions.<br /><br />Specifies the memory model used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to allocate memory. Not nullable.<br /><br />`1` = Conventional memory model<br />`2` = Lock pages in memory<br />`3` = Large pages in memory |
 | `sql_memory_model_desc` | **nvarchar(60)** | **Applies to:** [!INCLUDE [sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1, and later versions.<br /><br />Specifies the memory model used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to allocate memory. Not nullable.<br /><br />`CONVENTIONAL` = [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is using Conventional Memory model to allocate memory. This is default [!INCLUDE [ssde-md](../../includes/ssde-md.md)] memory model when [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account doesn't have Lock Pages in Memory privileges during startup.<br />`LOCK_PAGES` = [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is using Lock Pages in Memory to allocate memory. This is the default [!INCLUDE [ssde-md](../../includes/ssde-md.md)] memory manager when the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account has the "Lock pages in memory" privilege during [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] startup.<br />`LARGE_PAGES` = [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is using Large Pages in Memory to allocate memory. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses the Large Pages allocator to allocate memory only with Enterprise edition when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] service account has the "Lock pages in memory" privilege during server startup, and when trace flag 834 is turned on. |
-| `pdw_node_id` | **int** | **Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]<br /><br />The identifier for the node that this distribution is on. |
+| `pdw_node_id` | **int** | **Applies to:** [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br />The identifier for the node that this distribution is on. |
 | `socket_count` | **int** | **Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and later versions.<br /><br />Specifies the number of processor sockets available on the system. |
 | `cores_per_socket` | **int** | **Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and later versions.<br /><br />Specifies the number of processors per socket available on the system. |
 | `numa_node_count` | **int** | **Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and later versions.<br /><br />Specifies the number of NUMA nodes available on the system. This column includes physical NUMA nodes and soft NUMA nodes. |

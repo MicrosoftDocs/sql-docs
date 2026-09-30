@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "catalog views [SQL Server], about catalog views"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # System catalog views (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Catalog views return information that is used by the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. We recommend that you use catalog views because they are the most general interface to the catalog metadata, and provide the most efficient way to obtain, transform, and present customized forms of this information. All user-available catalog metadata is exposed through catalog views.
 
@@ -101,7 +101,7 @@ The catalog views in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 
         [Spatial Data Catalog Views](spatial-data-catalog-views.md)
 
-        [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 
         [Stretch Database Catalog Views - sys.remote_data_archive_databases](/previous-versions/sql/relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases)
 

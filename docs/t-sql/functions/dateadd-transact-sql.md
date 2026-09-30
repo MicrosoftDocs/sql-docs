@@ -25,11 +25,11 @@ helpviewer_keywords:
   - "DATEADD function [SQL Server]"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # DATEADD (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 ::: moniker range="<=sql-server-ver16 || <=sql-server-linux-ver16"
 
@@ -37,7 +37,7 @@ This function adds a *number* (a signed integer) to a *datepart* of an input *da
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
 This function adds a *number* (a signed **bigint**) to a *datepart* of an input *date*, and returns a modified date/time value. For example, you can use this function to find the date that is 7,000 minutes from today: *number* = 7000, *datepart* = minute, *date* = today.
 
@@ -63,7 +63,7 @@ The part of *date* to which `DATEADD` adds an **int** *number*.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
 The part of *date* to which `DATEADD` adds a **bigint** *number*.
 
@@ -95,7 +95,7 @@ An expression that can resolve to an [int](../data-types/int-bigint-smallint-and
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
 An expression that can resolve to a [bigint](../data-types/int-bigint-smallint-and-tinyint-transact-sql.md) that `DATEADD` adds to a *datepart* of *date*. `DATEADD` accepts user-defined variable values for *number*. `DATEADD` truncates a specified *number* value that has a decimal fraction. It doesn't round the *number* value in this situation.
 
@@ -159,7 +159,7 @@ Arithmetic overflow error converting expression to data type int.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || =azuresqldb-current || =azure-sqldw-latest || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
 The *number* argument can't exceed the range of **bigint**. In the following statements, the argument for *number* exceeds the range of **bigint** by 1.
 

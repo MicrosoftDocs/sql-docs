@@ -90,7 +90,7 @@ To migrate using DMS from the **Azure portal**, follow these steps:
    1. Ensure all database backups have the status Restored in the monitoring details page.
    1. Select Complete cutover in the monitoring details page.
 
-For detailed instructions, see [Tutorial: Migrate SQL Server to Azure SQL Managed Instance with DMS](database-migration-service.md).
+For detailed instructions, see [Tutorial: Migrate SQL Server to Azure SQL Managed Instance with DMS](/sql/sql-server/azure-arc/migrate-to-azure-sql-managed-instance).
 
 ### Managed Instance link
 
@@ -169,7 +169,7 @@ To migrate using backup and restore, follow these steps:
 To learn more about this migration option, see [Quickstart: Restore a database to Azure SQL Managed Instance with SSMS](/azure/azure-sql/managed-instance/restore-sample-database-quickstart).
 
 > [!NOTE]  
-> A database restore operation is asynchronous and can be retried. You might get an error in SSMS if the connection breaks, or a timeout expires. SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) views.
+> A database restore operation is asynchronous and can be retried. You might get an error in SSMS if the connection breaks, or a timeout expires. SQL Managed Instance keeps trying to restore the database in the background, and you can track the progress of the restore by using the [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql) and [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-objects/sys-dm-operation-status-azure-sql-database) views.
 
 ## Common migration blockers
 
@@ -228,10 +228,10 @@ Some SQL Server features are only available when you change the [database compat
 
 ## Related content
 
-- [Compare SQL data migration tools](/sql/sql-server/migrate/dma-azure-migrate-compare-migration-tools)
+- [Compare SQL data migration tools](/sql/sql-server/migrate/compare-sql-migration-tools)
 - [Services and tools available for data migration scenarios](/azure/dms/dms-tools-matrix)
 - [Service Tiers in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview#service-tiers)
 - [T-SQL differences between SQL Server and Azure SQL Managed Instance](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server)
-- [Tutorial: Migrate SQL Server to Azure SQL Managed Instance with DMS](database-migration-service.md)
+- [Tutorial: Migrate SQL Server to Azure SQL Managed Instance with DMS](/sql/sql-server/azure-arc/migrate-to-azure-sql-managed-instance)
 - [Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-scale)
 - [Best practices for costing and sizing workloads migrate to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-costs)

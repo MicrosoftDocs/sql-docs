@@ -12,11 +12,11 @@ ms.custom:
 helpviewer_keywords:
   - "columns [SQL Server], change order in a table"
   - "column order, change"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Change Column Order in a Table
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-pdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
 
 You can change the order of columns in **Table Designer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). By default, a safety mechanism of SSMS blocks changing the column order. Though it isn't recommended, you can change the column order in a table by re-creating the table. 
 

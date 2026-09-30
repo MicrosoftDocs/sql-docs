@@ -74,7 +74,7 @@ Registers the classification function specified by *schema_name.function_name*. 
 
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.
 
-Sets the maximum queued I/O operations per disk volume. These I/O operations can be reads or writes of any size. The maximum value for `MAX_OUTSTANDING_IO_PER_VOLUME` is 100. The value isn't a percentage. This setting is designed to tune IO resource governance to the IO characteristics of a disk volume. It provides a system-level safety check that allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to meet the `MIN_IOPS_PER_VOLUME` setting specified for resource pools even if other pools have the `MAX_IOPS_PER_VOLUME` setting set to unlimited. For more information, see [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).
+Sets the maximum queued I/O operations per disk volume. These I/O operations can be reads or writes of any size. The maximum value for `MAX_OUTSTANDING_IO_PER_VOLUME` is 100. The value isn't a percentage. This setting is designed to tune IO resource governance to the IO characteristics of a disk volume. It provides a system-level safety check that allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to meet the `MIN_IOPS_PER_VOLUME` setting specified for resource pools even if other pools have the `MAX_IOPS_PER_VOLUME` setting set to unlimited. For more information, see [CREATE RESOURCE POOL](create-resource-pool-transact-sql.md).
 
 #### DISABLE
 
@@ -89,13 +89,13 @@ Disables resource governor. Disabling resource governor has the following result
 
 #### RESET STATISTICS
 
-Resets statistics on all workload groups and resource pools exposed in [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) and [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).
+Resets statistics on all workload groups and resource pools exposed in [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) and [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-objects/sys-dm-resource-governor-resource-pools-transact-sql.md).
 
 ## Remarks
 
 `ALTER RESOURCE GOVERNOR` can't be used inside a user transaction.
 
-The `RECONFIGURE` parameter is part of the resource governor syntax. It shouldn't be confused with [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), which is a separate DDL statement.
+The `RECONFIGURE` parameter is part of the resource governor syntax. It shouldn't be confused with [RECONFIGURE](../language-elements/reconfigure-transact-sql.md), which is a separate DDL statement.
 
 For more information, see [Resource governor](../../relational-databases/resource-governor/resource-governor.md).
 

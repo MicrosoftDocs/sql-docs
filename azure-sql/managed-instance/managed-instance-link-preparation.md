@@ -5,7 +5,7 @@ description: Learn how to prepare your environment to create a link between SQL 
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 03/06/2026
+ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
@@ -90,14 +90,14 @@ SELECT @@VERSION as 'SQL Server version';
 
 The link uses certificates to encrypt authentication and communication between SQL Server and SQL Managed Instance. The database master key protects the certificates used by the link. If you already have a database master key, you can skip this step. 
 
-Create database master key in the `master` database. Insert your password in place of `<strong_password>` in the following script, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
+Create database master key in the `master` database. Replace `<password>` with a strong password, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server
 -- Create a master key
 USE master;
 GO
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<strong_password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 ```
 
 To make sure that you have the database master key, use the following T-SQL script on SQL Server:
@@ -111,7 +111,9 @@ SELECT * FROM sys.symmetric_keys WHERE name LIKE '%DatabaseMasterKey%';
 
 ### Enable availability groups
 
-The link feature relies on the Always On availability groups feature, which is disabled by default. For more information, see [Enable the Always On availability groups feature](/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server).
+The link feature relies on the Always On availability groups feature, which is disabled by default when you first install SQL Server. For more information, see [Enable the Always On availability groups feature](/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server).
+
+If you already have an Always On availability group with multiple databases, follow [Extend an Always On availability group to Azure SQL Managed Instance (preview)](managed-instance-link-extend-availability-group.md). This scenario requires specific cumulative updates and a separate opt-in on every SQL Server replica. Enabling Always On availability groups alone doesn't enable multiple-database link mode. Review the [supportability requirements](managed-instance-link-extend-availability-group.md#supportability) and [stored-procedure opt-in](managed-instance-link-extend-availability-group.md#enable-multiple-database-link-mode) before creating the link.
 
 > [!NOTE]  
 > For SQL Server on Linux, see [Enable Always On availability groups](/sql/linux/sql-server-linux-create-availability-group#enable-the-availability-groups-feature).
@@ -216,6 +218,8 @@ Your SQL Server version should be one of the supported versions applied with the
 
 [!INCLUDE [prepare-database-for-migration](../includes/sql-managed-instance/prepare-database-for-migration.md)]
  
+Before creating links, review [Prevent premature log truncation with trace flag 12381](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381), especially for large databases or many databases in multiple-database link mode. On supported builds, enable the flag before seeding, monitor SQL Server log growth and free disk space, and disable it when seeding finishes for all links being created.
+
 ## Configure network connectivity
 
 For the link to work, you must have network connectivity between SQL Server and SQL Managed Instance. The network option that you choose depends on whether or not your SQL Server instance is on an Azure network.

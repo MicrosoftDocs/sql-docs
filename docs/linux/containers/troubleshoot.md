@@ -321,7 +321,7 @@ If you can't connect to the SQL Server instance running in your container, try t
   ::: zone pivot="cs1-bash"
 
   ```bash
-  sqlcmd -S 10.3.2.4,1401 -U sa -P '<YourPassword>'
+  sqlcmd -S 10.3.2.4,1401 -U sa -P '<password>'
   ```
 
   ::: zone-end
@@ -329,7 +329,7 @@ If you can't connect to the SQL Server instance running in your container, try t
   ::: zone pivot="cs1-powershell"
 
   ```powershell
-  sqlcmd -S 10.3.2.4,1401 -U sa -P "<YourPassword>"
+  sqlcmd -S 10.3.2.4,1401 -U sa -P "<password>"
   ```
 
   ::: zone-end
@@ -337,7 +337,7 @@ If you can't connect to the SQL Server instance running in your container, try t
   ::: zone pivot="cs1-cmd"
 
   ```cmd
-  sqlcmd -S 10.3.2.4,1401 -U sa -P "<YourPassword>"
+  sqlcmd -S 10.3.2.4,1401 -U sa -P "<password>"
   ```
 
   ::: zone-end

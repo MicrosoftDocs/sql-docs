@@ -4,7 +4,7 @@ description: sys.json_indexes contains a row per json index.
 author: uc-msft
 ms.author: umajay
 ms.reviewer: randolphwest
-ms.date: 10/27/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "sys.json_indexes catalog view"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # sys.json_indexes (Transact-SQL)
 
-[!INCLUDE [SQL Server 2025](../../includes/applies-to-version/sqlserver2025.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
 Contains a row per json index.
 

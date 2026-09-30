@@ -61,7 +61,7 @@ To enable or disable optimized locking for a [!INCLUDE [SQL Server](../../includ
 
 Optimized locking builds on other database features:
 
-- You must enable [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) on a database before you can enable optimized locking. Conversely, to disable ADR, you must disable optimized locking first if it's enabled.
+- You must enable [accelerated database recovery (ADR)](../accelerated-database-recovery-concepts.md) on a database before you can enable optimized locking. Conversely, to disable ADR, you must disable optimized locking first if it's enabled.
 - For the most benefit from optimized locking, [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-) should be enabled for the database. The [LAQ](#lock-after-qualification-laq) component of optimized locking is in effect only if RCSI is enabled.
 
 ADR is always enabled in [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]. RCSI is enabled by default in [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
@@ -157,7 +157,7 @@ If optimized locking isn't enabled, the same request holds four locks - one `IX`
 
 :::image type="content" source="media/optimized-locking/sys-dm-tran-locks-without-optimized-locking.png" alt-text="Screenshot of the result set of a query on sys.dm_tran_locks for a single session shows three locks when optimized locking isn't enabled." lightbox="media/optimized-locking/sys-dm-tran-locks-without-optimized-locking.png":::
 
-The [sys.dm_tran_locks](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) dynamic management view (DMV) is useful in examining or troubleshooting locking issues. Here it is used to observe optimized locking in action.
+The [sys.dm_tran_locks](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md) dynamic management view (DMV) is useful in examining or troubleshooting locking issues. Here it is used to observe optimized locking in action.
 
 ## Lock after qualification (LAQ)
 
@@ -346,14 +346,14 @@ After both transactions commit, table `t4` contains the following rows:
 The following improvements help you monitor and troubleshoot blocking and deadlocks when optimized locking is enabled:
 
 - Wait types for optimized locking
-  - `XACT` wait types for the `S` lock on the TID, and resource descriptions in [sys.dm_os_wait_stats](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#lck_m_s_xact):
+  - `XACT` wait types for the `S` lock on the TID, and resource descriptions in [sys.dm_os_wait_stats](../system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md#lck_m_s_xact):
     - `LCK_M_S_XACT_READ` - Occurs when a task is waiting for a shared lock on an `XACT` `wait_resource` type, with an intent to read.
     - `LCK_M_S_XACT_MODIFY` - Occurs when a task is waiting for a shared lock on an `XACT` `wait_resource` type, with an intent to modify.
     - `LCK_M_S_XACT` - Occurs when a task is waiting for a shared lock on an `XACT` `wait_resource` type, where the intent can't be inferred. This scenario isn't common.
 - Locking resources visibility
-  - `XACT` locking resources. For more information, see `resource_description` in [sys.dm_tran_locks](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
+  - `XACT` locking resources. For more information, see `resource_description` in [sys.dm_tran_locks](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md).
 - Wait resource visibility
-  - `XACT` wait resources. For more information, see `wait_resource` in [sys.dm_exec_requests](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
+  - `XACT` wait resources. For more information, see `wait_resource` in [sys.dm_exec_requests](../system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md).
 - Deadlock graph
   - Under each resource in the deadlock report `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. For more information and an example, see [Optimized locking and deadlocks](../sql-server-deadlocks-guide.md#optimized-locking-and-deadlocks).
 - Extended events

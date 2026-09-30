@@ -3,8 +3,8 @@ title: "Using Integrated Authentication"
 description: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 09/01/2020
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
+ms.date: 08/26/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
@@ -30,7 +30,7 @@ Driver='ODBC Driver 18 for SQL Server';Server=your_server;Encrypt=yes;Trusted_Co
   
 When connecting with a DSN, you can also add **Trusted_Connection=yes** to the DSN entry in `odbc.ini`.
   
-The `-E` option of `sqlcmd` and the `-T` option of `bcp` can also be used to specify integrated authentication; see [Connecting with **sqlcmd**](connecting-with-sqlcmd.md) and [Connecting with **bcp**](../../../tools/bcp-utility.md) for more information.
+To specify integrated authentication, use the `-E` option of **sqlcmd** or the `-T` option of **bcp**. For more information, see [sqlcmd utility](../../../tools/sqlcmd/sqlcmd-utility.md) and [bcp utility](../../../tools/bcp/bcp-utility.md).
 
 Ensure that the client principal which is going to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is already authenticated with the Kerberos KDC.
   

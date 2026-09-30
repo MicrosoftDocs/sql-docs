@@ -3,8 +3,8 @@ title: Time Zone Support in mssql-django
 description: Configure time zone-aware datetime fields in Django applications using the mssql-django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -25,7 +25,7 @@ Django's `USE_TZ` setting in `settings.py` controls whether datetime fields are 
 | `USE_TZ=True` | **datetimeoffset** | Stores time zone-aware datetimes with UTC offset. |
 
 > [!NOTE]
-> Django defaults to `USE_TZ=False` across all versions, including Django 5.x and 6.0. If your project needs time zone support, you must explicitly set `USE_TZ=True` in your `settings.py`. See [Time zone support in Django](https://docs.djangoproject.com/en/6.0/topics/i18n/timezones/) for more information. Note that **datetimeoffset** typically uses more storage than **datetime2** for the same timestamp precision, so on large tables you should validate storage and query plans after migration.
+> Django 5.2, 6.0, and 6.1 default `USE_TZ` to `True`, so time zone support is on unless your `settings.py` sets it to `False`. See [Time zone support in Django](https://docs.djangoproject.com/en/6.0/topics/i18n/timezones/) for more information. Note that **datetimeoffset** typically uses more storage than **datetime2** for the same timestamp precision, so on large tables you should validate storage and query plans after migration.
 
 ## Enable time zone support
 
@@ -38,7 +38,7 @@ TIME_ZONE = "UTC"
 
 When `USE_TZ` is enabled, Django stores all datetimes in UTC and converts them to the local time zone for display.
 
-Starting with `mssql-django` 1.7.2, the backend also aligns Django `Now()` behavior with time zone-aware SQL generation when `USE_TZ=True`.
+Starting with `mssql-django` 2.0, the backend uses the standard library `zoneinfo` module with the `tzdata` package instead of `pytz`. The `tzdata` package supplies the IANA time zone database on systems that don't provide one, such as Windows and minimal container images. This change fixes incorrect offsets for zones with negative daylight saving offsets.
 
 ## Migrate existing datetime columns
 
@@ -83,11 +83,11 @@ Use Windows time zone names when converting with `AT TIME ZONE`. Common examples
 
 | Region | SQL Server time zone name | DST transition dates (2026) |
 |--------|-------------------------|---------------------------|
-| US Eastern | `Eastern Standard Time` | Mar 8 – Nov 1 |
-| US Central | `Central Standard Time` | Mar 8 – Nov 1 |
-| US Pacific | `Pacific Standard Time` | Mar 8 – Nov 1 |
+| US Eastern | `Eastern Standard Time` | Mar 8 through Nov 1 |
+| US Central | `Central Standard Time` | Mar 8 through Nov 1 |
+| US Pacific | `Pacific Standard Time` | Mar 8 through Nov 1 |
 | UTC | `UTC` | None (no DST) |
-| Europe/London | `GMT Standard Time` | Mar 29 – Oct 25 |
+| Europe/London | `GMT Standard Time` | Mar 29 through Oct 25 |
 
 For a complete list, query SQL Server:
 

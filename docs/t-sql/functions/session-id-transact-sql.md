@@ -9,19 +9,19 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # SESSION_ID (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
-  Returns the ID of the current [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] session.  
+  Returns the ID of the current [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] session.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```syntaxsql  
--- Azure Synapse Analytics and Parallel Data Warehouse  
+-- Azure Synapse Analytics
 SESSION_ID ( )  
 ```  
   
@@ -33,7 +33,7 @@ SESSION_ID ( )
   
  The session ID begins with the alphabetical characters 'SID'. These are case-sensitive and must be capitalized when session ID is used in [!INCLUDE[DWsql](../../includes/dwsql-md.md)] commands.  
   
- You can query the view [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) to retrieve the same information as this function.  
+ You can query the view [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-sessions-transact-sql.md) to retrieve the same information as this function.  
   
 ## Examples  
  The following example returns the current session ID.  

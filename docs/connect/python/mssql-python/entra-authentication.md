@@ -3,7 +3,8 @@ title: Microsoft Entra Authentication with mssql-python
 description: Learn how to connect to Azure SQL using Microsoft Entra ID authentication with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/13/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -213,11 +214,70 @@ conn = mssql_python.connect(
 )
 ```
 
-This mode uses the current Windows user's Kerberos credentials. On Linux and macOS, you must configure Kerberos manually (`krb5.conf` and a valid keytab or ticket). See [Use Active Directory authentication with SQL Server on Linux](../../../linux/sql-server-linux-active-directory-authentication.md) for client-side Kerberos setup.
+This mode uses the current Windows user's Kerberos credentials. On Linux and macOS, you must configure Kerberos manually (`krb5.conf` and a valid keytab or ticket). See [Active Directory authentication for SQL Server on Linux](../../../linux/security/authentication/active-directory-overview.md) for client-side Kerberos setup.
+
+## Credential objects with token_provider
+
+Pass a credential object directly with the `token_provider` parameter. The driver calls the object's `get_token()` method when it needs a token, so you don't pack the token into a connection attribute yourself.
+
+Any object with a `get_token(scope)` method that returns an object with a `.token` attribute satisfies the contract. Every credential in the [azure-identity](/python/api/overview/azure/identity-readme) package qualifies, including `DefaultAzureCredential`, `AzureCliCredential`, `ManagedIdentityCredential`, and `ClientSecretCredential`.
+
+```python
+import mssql_python
+from azure.identity import DefaultAzureCredential
+
+conn = mssql_python.connect(
+    "Server=<server>.database.windows.net;"
+    "Database=<database>;"
+    "Encrypt=yes",
+    token_provider=DefaultAzureCredential(),
+)
+```
+
+The driver requests the `https://database.windows.net/.default` scope. This parameter supports the Azure commercial cloud scope only. For sovereign clouds, use [Access token authentication](#access-token-authentication) and request the scope your cloud requires.
+
+Bulk copy operations acquire a fresh token from the provider for each operation, because they open their own connection.
+
+You can also supply your own object, which is useful when the token comes from somewhere other than `azure-identity`, such as a notebook environment that exposes its own token helper:
+
+```python
+from types import SimpleNamespace
+
+class NotebookTokenProvider:
+    def get_token(self, scope):
+        # Return any object with a .token attribute holding the raw JWT string.
+        return SimpleNamespace(token=get_platform_token(scope))
+
+conn = mssql_python.connect(connection_string, token_provider=NotebookTokenProvider())
+```
+
+The driver exports a `TokenProvider` protocol type for static type checking:
+
+```python
+from mssql_python import TokenProvider
+
+def open_connection(credential: TokenProvider):
+    return mssql_python.connect(connection_string, token_provider=credential)
+```
+
+The `token_provider` parameter is the only token source for a connection that uses it. The driver raises `InterfaceError` if you combine it with either of the following:
+
+- The `Authentication` keyword in the connection string.
+
+- A token passed through `attrs_before` with `SQL_COPT_SS_ACCESS_TOKEN`.
+
+Passing an object without a `get_token()` method also raises `InterfaceError`.
+
+If the connection string carries `UID` or `PWD`, the driver ignores them and issues a `UserWarning` that names the ignored keywords. Remove them from the connection string to silence the warning.
+
+> [!NOTE]
+> Connections that authenticate with a credential object are pooled per identity. For more information, see [Connection pooling](connection-pooling.md).
 
 ## Access token authentication
 
-You might acquire tokens externally, for example, through a custom token provider or shared token cache. In these cases, use `SQL_COPT_SS_ACCESS_TOKEN` with the `attrs_before` parameter to pass the token directly. This approach bypasses the driver's built-in token acquisition flow.
+You might acquire tokens externally, for example, through a shared token cache or a sovereign cloud endpoint. In these cases, use `SQL_COPT_SS_ACCESS_TOKEN` with the `attrs_before` parameter to pass the token directly. This approach bypasses the driver's built-in token acquisition flow.
+
+Prefer the `token_provider` parameter described in the previous section when your credential comes from `azure-identity`. It handles the token encoding for you and refreshes tokens for pooled connections.
 
 ```python
 import mssql_python

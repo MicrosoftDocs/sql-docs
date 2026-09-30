@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   When used with [!INCLUDE [ssversion2005-md](../../../includes/ssversion2005-md.md)], the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
   

@@ -4,7 +4,7 @@ description: JSON_QUERY extracts an object or an array from a JSON string.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, umajay, randolphwest
-ms.date: 10/27/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -59,10 +59,7 @@ If the format of *path* isn't valid, `JSON_QUERY` returns an error.
 
 #### *WITH ARRAY WRAPPER*
 
-> [!NOTE]  
-> `WITH ARRAY WRAPPER` is currently in preview and only available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
-
-The ANSI SQL `JSON_QUERY` function is currently used to return a JSON object or array in a specified path. With the support for [array wildcards](../../relational-databases/json/json-path-expressions-sql-server.md#array-wildcard-and-range-support) in SQL/JSON path expression introduced in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], `JSON_QUERY` can be used to return specified properties of elements in a JSON array where each element is a JSON object. Since wildcard searches can return multiple values, specify the `WITH ARRAY WRAPPER` clause in a JSON query expression along with a SQL/JSON path expression with wildcard or range or list to return the values as a JSON array. `WITH ARRAY WRAPPER` clause is supported only if the input is a **json** type.
+The ANSI SQL `JSON_QUERY` function returns a JSON object or array at a specified path. With [array wildcard](../../relational-databases/json/json-path-expressions-sql-server.md#array-wildcard-and-range-support) support in SQL/JSON path expressions, `JSON_QUERY` can return specified properties of elements in a JSON array where each element is a JSON object. Because wildcard searches can return multiple values, specify the `WITH ARRAY WRAPPER` clause with a SQL/JSON path expression that contains a wildcard, range, or list to return the values as a JSON array. The `WITH ARRAY WRAPPER` clause is supported only if the input is a **json** type.
 
 Consider the following JSON document:
 

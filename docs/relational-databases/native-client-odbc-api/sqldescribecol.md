@@ -12,7 +12,7 @@ helpviewer_keywords:
 apitype: "DLLExport"
 ---
 # SQLDescribeCol
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   For executed statements, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not need to query the server to describe columns in a result set. In this case, **SQLDescribeCol** does not cause a server roundtrip. Like [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) and [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), calling **SQLDescribeCol** on prepared but not executed statements generates a server roundtrip.  
   

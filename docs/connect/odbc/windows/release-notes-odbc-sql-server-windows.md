@@ -3,8 +3,8 @@ title: Release Notes for ODBC Driver for SQL Server on Windows
 description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 04/30/2026
+ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -13,25 +13,26 @@ ms.topic: release-notes
 
 This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
 
-## 18.6
+## 18.7
 
-Version number: 18.6.2.1  
-Released: March 31, 2026
+Version number: 18.7.1.1  
+Released: September 7, 2026
 
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2358430)**  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2358335)**  
-:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2358431)**
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2378279)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2378646)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2378647)**
 
-If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
-For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x41f)  
-For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x41f)  
-For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x41f)  
+To download the installer in a language other than the one detected for you, use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x41f)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2378646&clcid=0x41f)  
+For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2378647&clcid=0x41f)  
 
 | Feature added | Details |
 | :------- | :------ |
-| Vector parameters. | Improve handling of output and input/output vector parameters when using prepared statements. |
-| Server redirections. | Support Microsoft Fabric redirection scenarios allowing up to 10 server redirections per connection attempt. |
-| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| Vector data type | Added support for the `float16` vector data type. |
+| Connection string keywords | Added `MultipleActiveResultSets`, `FailoverPartner`, `WorkstationID`, and `ConnectTimeout` connection string keywords. |
+| Enhanced routing | Added load-balanced routing for Azure SQL Database Hyperscale named-replica reader endpoints. |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## 17.11
 
@@ -51,6 +52,26 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Bug fixes | [Bug fixes](../bug-fixes.md). |
 
 ## Previous Releases
+
+## 18.6
+
+Version number: 18.6.2.1  
+Released: March 31, 2026
+
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2358430)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2358335)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download ARM64 installer](https://go.microsoft.com/fwlink/?linkid=2358431)**
+
+To download the installer in a language other than the one detected for you, use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2358430&clcid=0x41f)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2358335&clcid=0x41f)  
+For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2358431&clcid=0x41f)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Vector parameters. | Improved handling of output and input/output vector parameters when using prepared statements. |
+| Server redirections. | Supports Microsoft Fabric redirection scenarios that allow up to 10 server redirections per connection attempt. |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.6.1
 

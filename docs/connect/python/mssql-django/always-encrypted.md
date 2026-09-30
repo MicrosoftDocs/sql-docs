@@ -3,8 +3,8 @@ title: Always Encrypted with mssql-django
 description: Configure column-level encryption with Always Encrypted for Django applications using the mssql-django backend.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,9 +17,14 @@ This article explains how to use SQL Server Always Encrypted with Django applica
 
 ## Prerequisites
 
-- Microsoft ODBC Driver 17 or 18 for SQL Server
-- SQL Server 2016 or later, or Azure SQL Database
+- Microsoft ODBC Driver 18 for SQL Server
+- SQL Server 2017 or later versions, or Azure SQL Database
 - Column encryption configured on the SQL Server side (column master key and column encryption key)
+
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
+
+> [!IMPORTANT]  
+> Always Encrypted requires the `pyodbc` path, which is the default. The `mssql_python` driver rejects `ColumnEncryption` in `extra_params`, so aliases that set `"python_driver": "mssql_python"` can't use Always Encrypted. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
 
 ## How it works
 

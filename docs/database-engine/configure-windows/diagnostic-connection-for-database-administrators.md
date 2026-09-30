@@ -91,7 +91,7 @@ Because the DAC exists solely for diagnosing server problems in rare circumstanc
 
 Although you can theoretically run any [!INCLUDE [tsql](../../includes/tsql-md.md)] statement that doesn't have to execute in parallel on the DAC, we strongly recommend that you restrict usage to the following diagnostic and troubleshooting commands:
 
-- Querying dynamic management views for basic diagnostics such as [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) for the locking status, [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) to check the health of caches, and [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) for active sessions and requests. Avoid dynamic management views that are resource intensive (for example, [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) scans the full version store and can cause extensive I/O) or that use complex joins. For information about performance implications, see the documentation for the specific [dynamic management view](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+- Querying dynamic management views for basic diagnostics such as [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md) for the locking status, [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-objects/sys-dm-os-memory-cache-counters-transact-sql.md) to check the health of caches, and [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) for active sessions and requests. Avoid dynamic management views that are resource intensive (for example, [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-objects/sys-dm-tran-version-store-transact-sql.md) scans the full version store and can cause extensive I/O) or that use complex joins. For information about performance implications, see the documentation for the specific [dynamic management view](../../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md).
 
 - Querying catalog views.
 
@@ -118,7 +118,7 @@ The DAC doesn't work over a private endpoint for Azure SQL Managed Instance. On 
 In this example, an administrator notices that server `contoso-server` isn't responding and wants to diagnose the problem. To do this, the user activates the `sqlcmd` command prompt utility and connects to server `contoso-server` using `-A` to indicate the DAC.
 
 ```powershell
-sqlcmd -S contoso-server -U sa -P <StrongPassword> -A
+sqlcmd -S contoso-server -U sa -P <password> -A
 ```
 
 The administrator can now execute queries to diagnose the problem and possibly terminate the unresponsive sessions.

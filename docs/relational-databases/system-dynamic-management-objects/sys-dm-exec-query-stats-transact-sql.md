@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_exec_query_stats dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
 
@@ -28,7 +28,7 @@ Returns aggregate performance statistics for cached query plans in [!INCLUDE [ss
 
 The results of `sys.dm_exec_query_stats` can vary with each execution as the data only reflects finished queries, and not ones still in-flight.
 
-To call this DMV from a dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_exec_query_stats`. For serverless SQL pool, use `sys.dm_exec_query_stats`.
+To call this DMV from a dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_exec_query_stats`. For serverless SQL pool, use `sys.dm_exec_query_stats`.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ To call this DMV from a dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../.
 | `last_spills` | **bigint** | The number of pages spilled the last time the query was executed.<br /><br />**Applies to**: Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU3 |
 | `min_spills` | **bigint** | The minimum number of pages that this query has ever spilled during a single execution.<br /><br />**Applies to**: Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU3 |
 | `max_spills` | **bigint** | The maximum number of pages that this query has ever spilled during a single execution.<br /><br />**Applies to**: Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU3 |
-| `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
+| `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] |
 | `total_page_server_reads` | **bigint** | Total number of remote page server reads performed by executions of this plan since it was compiled.<br /><br />**Applies to:** Azure SQL Database Hyperscale |
 | `last_page_server_reads` | **bigint** | Number of remote page server reads performed the last time the plan was executed.<br /><br />**Applies To:** Azure SQL Database Hyperscale |
 | `min_page_server_reads` | **bigint** | Minimum number of remote page server reads that this plan has ever performed during a single execution.<br /><br />**Applies To:** Azure SQL Database Hyperscale |

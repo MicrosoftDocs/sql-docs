@@ -45,7 +45,7 @@ Returns the stored workload group configuration. Each row represents a workload 
 
 ## Remarks
 
-The catalog view displays the stored metadata. To see the currently effective configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).
+The catalog view displays the stored metadata. To see the currently effective configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_workload_groups (Transact-SQL)](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md).
 
 The stored and effective configurations can be different if the resource governor configuration has been changed but the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement has not been executed.
 

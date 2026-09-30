@@ -57,14 +57,14 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 You can use the Azure portal, Azure PowerShell, or the Azure CLI to change all or some configuration settings on a specific Azure Arc-enabled server to the desired state.
 
-To modify the SQL Server configuration for a larger scope (such as a resource group, a subscription, or multiple subscriptions) with a single command, use the [`modify-license-type.ps1`](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type) PowerShell script. It's published as an open-source SQL Server sample and includes step-by-step instructions.
+To review proposed license type changes or apply them across SQL Server enabled by Azure Arc and Azure SQL resources, use [`manage-payg-transition.ps1`](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/manage-payg-transition.ps1). For prerequisites, scope options, dry runs, and validation, see [Manage SQL license types at scale](../manage-license-type-at-scale.md).
 
 We recommend that you run the script from Azure Cloud Shell because:
 
 - It has the required Azure PowerShell modules preinstalled.
 - It automatically authenticates you.
 
-For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
+For details, see [Run `manage-payg-transition.ps1` using Cloud Shell](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/README.md#running-the-script-using-cloud-shell).
 
 ### [Azure portal](#tab/azure)
 
@@ -99,8 +99,6 @@ Select the **Use physical core license** checkbox if you're configuring a virtua
 
 > [!IMPORTANT]  
 > If you configure the physical core license with a pay-as-you-go billing plan, set the **License type** value to **Pay-as-you-go**. This selection doesn't trigger extra charges at the VM level, but it does ensure uninterrupted licensing and billing if the physical core license is deactivated or deleted.
-
-
 
 <a id="subscribe-esu"></a>
 

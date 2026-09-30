@@ -412,7 +412,7 @@ Encryption at rest is the cryptographic protection of data when it is persisted 
 
 - Use customer-managed keys in Azure Key Vault if you need increased transparency and granular control over the TDE protection. Azure Key Vault allows the ability to revoke permissions at any time to render the database inaccessible. You can centrally manage TDE protectors along with other keys, or rotate the TDE protector at your own schedule using Azure Key Vault.
 
-- If you're using customer-managed keys in Azure Key Vault, follow the articles, [Guidelines for configuring TDE with Azure Key Vault](transparent-data-encryption-byok-overview.md#recommendations-for-configuring-customer-managed-tde) and [How to configure Geo-DR with Azure Key Vault](transparent-data-encryption-byok-overview.md#geo-dr-and-customer-managed-tde).
+- If you're using customer-managed keys in Azure Key Vault, follow the articles, [Guidelines for configuring TDE with Azure Key Vault](transparent-data-encryption-byok-overview.md#recommendations-for-configuring-customer-managed-tde) and [How to configure Geo-DR with Azure Key Vault](transparent-data-encryption-byok-overview.md#geo-disaster-recovery-with-customer-managed-tde).
 
 > [!NOTE]  
 > Some items considered customer content, such as table names, object names, and index names, might be transmitted in log files for support and troubleshooting by Microsoft.

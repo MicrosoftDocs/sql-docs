@@ -334,7 +334,7 @@ There are different scripts for Microsoft Entra authentication and SQL authentic
 > [!IMPORTANT]
 > Always use provided scripts to grant access to a watcher. Granting access in a different way can block data collection. For more information, see [Watcher authorization](database-watcher-overview.md#watcher-authorization).
 
-Before executing a script, replace all instances of placeholders that might be present in the script, such as `login-name-placeholder` and `password-placeholder` with the actual values.
+Before executing a script, replace all instances of placeholders that might be present in the script, such as `login-name-placeholder` and `<password>`, with the actual values. Replace `<password>` with a strong password.
 
 #### Grant access to Microsoft Entra authenticated watchers
 
@@ -399,7 +399,7 @@ This script creates a SQL authentication login on a logical server in Azure SQL 
 The script must be executed in the `master` database on the logical server, using a login that is a logical server administrator.
 
 ```sql
-CREATE LOGIN [login-name-placeholder] WITH PASSWORD = 'password-placeholder';
+CREATE LOGIN [login-name-placeholder] WITH PASSWORD = '<password>';
 
 ALTER SERVER ROLE ##MS_ServerPerformanceStateReader## ADD MEMBER [login-name-placeholder];
 ALTER SERVER ROLE ##MS_DefinitionReader## ADD MEMBER [login-name-placeholder];
@@ -415,7 +415,7 @@ The script must be executed in the `master` database on the instance, using a lo
 ```sql
 USE master;
 
-CREATE LOGIN [login-name-placeholder] WITH PASSWORD = 'password-placeholder';
+CREATE LOGIN [login-name-placeholder] WITH PASSWORD = '<password>';
 
 GRANT CONNECT SQL, CONNECT ANY DATABASE, VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW SERVER PERFORMANCE STATE TO [login-name-placeholder];
 

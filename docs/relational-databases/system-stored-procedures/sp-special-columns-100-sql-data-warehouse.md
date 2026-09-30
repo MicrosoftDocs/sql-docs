@@ -9,11 +9,11 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sp_special_columns_100 (Azure Synapse Analytics)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns the optimal set of columns that uniquely identify a row in the table. Also returns columns automatically updated when any value in the row is updated by a transaction.
 
@@ -21,7 +21,7 @@ Returns the optimal set of columns that uniquely identify a row in the table. Al
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_special_columns_100
@@ -105,7 +105,7 @@ None.
 
 Requires `SELECT` permission on the schema.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example returns information about the column that uniquely identifies rows in the `FactFinance` table in the `AdventureWorks` database.
 

@@ -3,7 +3,8 @@ title: Index Architecture and Design Guide
 description: Learn about designing efficient indexes in SQL Server and Azure SQL to achieve good database and application performance. Read about index architecture and best practices.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/01/2025
+ms.reviewer: dfurman, derekw
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: concept-article
@@ -626,31 +627,27 @@ Moving the data conversion from the left side to the right side of a comparison 
 
 ## Columnstore index architecture
 
-A *columnstore index* is a technology for storing, retrieving, and managing data by using a columnar data format, called columnstore. For more information, see [Columnstore indexes: overview](indexes/columnstore-indexes-overview.md).
+A *columnstore index* uses a columnar data format called *columnstore* to store, retrieve, and manage data. This section describes the storage formats and internal structures used by columnstore indexes.
 
-For version information and to find out what's new, visit [What's new in columnstore indexes](indexes/columnstore-indexes-what-s-new.md).
-
-Knowing these basics makes it easier to understand other columnstore articles that explain how to use this technology effectively.
+For an overview of columnstore concepts and use cases, see [Columnstore indexes: overview](indexes/columnstore-indexes-overview.md). For version information and new features, see [What's new in columnstore indexes](indexes/columnstore-indexes-what-s-new.md).
 
 ### Data storage uses columnstore and rowstore
 
-When discussing columnstore indexes, we use the terms *rowstore* and *columnstore* to emphasize the format for the data storage. Columnstore indexes use both types of storage.
+Columnstore indexes use both **columnstore** and **rowstore** storage. Most data is stored in columnstore format, where data is compressed and uncompressed as columns. There's no need to uncompress other values in each row that aren't requested by the query. This design makes it fast to scan an entire column of a large table.
+
+Writing to the highly compressed columnstore is expensive, so rows that arrive in batches too small to compress efficiently are staged first in a B-tree structure called the **deltastore**. The deltastore is made up of one or more **delta rowgroups**, which accumulate rows until there are enough to compress into the columnstore.
 
 :::image type="content" source="media/sql-server-index-design-guide/physical-storage.png" alt-text="Diagram of a clustered columnstore index.":::
 
-- A **columnstore** is data that is logically organized as a table with rows and columns, and physically stored in a column-wise data format.
-
-  A columnstore index physically stores most of the data in columnstore format. In columnstore format, the data is compressed and uncompressed as columns. There's no need to uncompress other values in each row that aren't requested by the query. This makes it fast to scan an entire column of a large table.
-
-- A **rowstore** is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data such as a clustered B+ tree index or a heap.
-
-  A columnstore index also physically stores some rows in a rowstore format called a **deltastore**. The deltastore, also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B+ tree index, which is a rowstore.
+For more information, including definitions and storage behavior, see [Columnstore indexes: overview](indexes/columnstore-indexes-overview.md#key-terms-and-concepts).
 
 ### Operations are performed on rowgroups and column segments
 
-The columnstore index groups rows into manageable units. Each of these units is called a **rowgroup**. For best performance, the number of rows in a rowgroup is large enough to improve the compression ratio and small enough to benefit from in memory operations.
+The columnstore index groups rows into manageable units called **rowgroups**. Each rowgroup contains one **column segment** for every column in the table.
 
-For example, the columnstore index performs these operations on rowgroups:
+:::image type="content" source="media/sql-server-index-design-guide/column-segment.png" alt-text="Diagram of a clustered columnstore column segment.":::
+
+The [!INCLUDE [ssde-md](../includes/ssde-md.md)] performs these operations on rowgroups:
 
 - Compresses rowgroups into the columnstore. Compression is performed on each column segment within a rowgroup.
 
@@ -659,21 +656,6 @@ For example, the columnstore index performs these operations on rowgroups:
 - Recreates all rowgroups during an `ALTER INDEX ... REBUILD` operation.
 
 - Reports on rowgroup health and fragmentation in the dynamic management views (DMVs).
-
-The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B+ tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time a process called the **tuple-mover** automatically compresses a closed rowgroup into the columnstore.
-
-For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats](system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
-
-> [!TIP]  
-> Having too many small rowgroups decreases the columnstore index quality. A reorganize operation merges smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality is improved.
-
-In [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)] and later versions, the tuple-mover is helped by a background merge task that automatically compresses smaller open delta rowgroups that have existed for some time as determined by an internal threshold, or merges compressed rowgroups from which a large number of rows has been deleted.
-
-Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
-
-:::image type="content" source="media/sql-server-index-design-guide/column-segment.png" alt-text="Diagram of a clustered columnstore column segment.":::
-
-When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup.
 
 ### Small loads and inserts go to the deltastore
 
@@ -714,13 +696,11 @@ Each partition can have more than one delta rowgroups. When the columnstore inde
 
 ### Combine columnstore and rowstore indexes on the same table
 
-A nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows.
+A rowstore table can have one *nonclustered columnstore index*. By default, the index contains all rows for the columns included in the index definition. You can use a supported filter predicate to include only a subset of the rows. The index requires additional storage and adds maintenance overhead for data modifications, although columnstore compression typically makes it smaller than the same data stored in rowstore format. Changes to the rowstore table are automatically reflected in the columnstore index. This configuration allows analytical queries to use the columnstore index while OLTP workloads access the underlying rowstore table.
 
-You can create an updatable *nonclustered columnstore index on a rowstore table*. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index compresses to a much smaller size than the rowstore table requires. By doing this, you can run analytics on the columnstore index and OLTP workloads on the rowstore index at the same time. The columnstore is updated when data changes in the rowstore table, so both indexes are working against the same data.
+You can have *one or more nonclustered rowstore indexes on a clustered columnstore table*. By doing this, you can perform efficient index seeks on the table's data. You can also enforce uniqueness on a clustered columnstore table by creating a nonclustered `UNIQUE` constraint.
 
-A rowstore table can have one nonclustered columnstore index. For more information, see [Columnstore indexes - design guidance](indexes/columnstore-indexes-design-guidance.md).
-
-You can have *one or more nonclustered rowstore indexes on a clustered columnstore table*. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce uniqueness by using a `UNIQUE` constraint on the rowstore table. When a nonunique value fails to insert into the rowstore table, the [!INCLUDE [ssde-md](../includes/ssde-md.md)] doesn't insert the value into the columnstore either.
+For more information, see [Columnstore indexes - design guidance](indexes/columnstore-indexes-design-guidance.md).
 
 ### Nonclustered columnstore performance considerations
 

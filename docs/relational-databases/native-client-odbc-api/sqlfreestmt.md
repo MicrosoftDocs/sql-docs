@@ -14,7 +14,7 @@ apitype: DLLExport
 ---
 # SQLFreeStmt
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Generally, `SQLFreeStmt` isn't recommended in ODBC 3.0 and later. However if the application needs to reuse the statement you should still use `SQLFreeStmt` (with the `SQL_RESET_PARAMS` and `SQL_UNBIND` options).
 

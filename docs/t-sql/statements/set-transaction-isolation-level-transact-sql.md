@@ -26,11 +26,11 @@ helpviewer_keywords:
   - "transactions [SQL Server], isolation levels"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Controls the locking and row versioning behavior of [!INCLUDE [tsql](../../includes/tsql-md.md)] statements issued by a connection to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -50,7 +50,7 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED

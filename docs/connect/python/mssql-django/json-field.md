@@ -3,8 +3,8 @@ title: JSONField with SQL Server
 description: Use Django JSONField with SQL Server through the mssql-django backend, including supported lookups and limitations.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 06/22/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,8 +17,10 @@ This article explains how Django's `JSONField` works with SQL Server through the
 
 ## Prerequisites
 
-- SQL Server 2016 or later (JSON functions are required)
+- SQL Server 2017 or later versions, Azure SQL Database, or SQL database in Fabric
 - `mssql-django` 1.2 or later
+
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## How JSONField maps to SQL Server
 

@@ -3,6 +3,7 @@ title: Schema Discovery with mssql-python
 description: Learn how to retrieve database metadata including tables, columns, procedures, keys, and indexes using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 07/01/2026
 ms.service: sql
 ms.subservice: connectivity

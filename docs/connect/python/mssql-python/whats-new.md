@@ -3,7 +3,8 @@ title: What's New in mssql-python Driver
 description: Learn about new features and changes in each version of the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 08/21/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -15,6 +16,115 @@ ai-usage: ai-assisted
 This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
 
 For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.15.0
+
+**Release date**: September 2026
+
+### Enhancements
+
+#### `setinputsizes()` parameter handling runs in native code
+
+Parameter handling for `setinputsizes()` now runs through the native C++ execution pipeline instead of per-parameter Python calls. Wide, batched, and frequently executed parameterized statements spend less time in Python-side parameter processing. No application change is needed.
+
+For more information, see [Data type mappings](data-type-mappings.md#use-setinputsizes).
+
+#### `Binary()` accepts `memoryview` objects
+
+`Binary()` now accepts a `memoryview` as a binary input, so you can pass a zero-copy view of a buffer without converting it to `bytes` first.
+
+For more information, see [Binary data](binary-data.md).
+
+#### SQL Server type constants are available from the `mssql_python` module
+
+The SQL Server type constants are now exposed directly from the `mssql_python` module, which makes them easier to find when you declare parameter types or read type metadata.
+
+For more information, see [Data type mappings](data-type-mappings.md).
+
+### Bug fixes
+
+#### Concurrent logging could hang the process
+
+The native logging paths acquired the GIL and internal mutexes in an inconsistent order, so a multithreaded application with driver logging enabled could deadlock. The lock ordering is corrected.
+
+#### Windows ARM64 wheels didn't include an ARM64 native core
+
+The Windows ARM64 wheel didn't vendor a matching ARM64 `mssql_py_core` binary, which affected bulk copy on that platform. The wheel now ships the ARM64 build.
+
+For more information, see [Bulk copy](bulk-copy.md).
+
+#### Bundled Windows DLLs relied on the process search path
+
+The driver and authentication DLLs that ship in the package are now loaded from package-local directories. Native dependencies resolve without depending on process-wide search-path configuration, which was unreliable in some deployment environments.
+
+#### `Decimal` parameters were bound differently depending on their value
+
+A `Decimal` parameter is now bound as `SQL_NUMERIC` regardless of its runtime value, so decimal parameter typing stays the same across values and execution paths.
+
+For more information, see [Decimal and money data](decimal-money.md).
+
+#### Parameter binding used obsolete ODBC 2.x type identifiers
+
+Typed parameters now use ODBC 3.x type identifiers in place of their ODBC 2.x equivalents, which avoids mismatches against current driver configurations.
+
+#### `Connection.getinfo(SQL_DATABASE_NAME)` returned an undecoded value
+
+The value returned for `SQL_DATABASE_NAME` is now decoded, so the database name comes back as Python text.
+
+For more information, see [Connection management](connection-management.md).
+
+#### Cursor cleanup crashed at interpreter shutdown
+
+A connection holding cursors in mixed lifecycle states cleaned them up in an order that could crash the process when some of that cleanup ran during interpreter shutdown. Shutdown now completes normally.
+
+For more information, see [Cursor management](cursor-management.md).
+
+## mssql-python 1.14.0
+
+**Release date**: August 2026
+
+### Enhancements
+
+#### Parameter detection and binding run in native code
+
+Parameter type detection and binding now run in a single native pipeline instead of per-parameter Python calls. This change fixes a significant performance bottleneck, with higher end-to-end throughput improvements in larger operations like bulk inserts. No application change is needed.
+
+### Bug fixes
+
+#### The `timeout` argument to `connect()` set the query timeout instead of the authentication timeout
+
+The `timeout` argument now sets `SQL_ATTR_LOGIN_TIMEOUT` and bounds the authentication attempt, which is what the argument name and the documentation describe. In earlier versions it became the per-statement query timeout, so `connect(timeout=30)` didn't limit how long a connection attempt could run, and it aborted queries after 30 seconds. The per-statement query timeout remains available as the `Connection.timeout` property.
+
+> [!IMPORTANT]
+> If you passed `timeout` to `connect()` to abort long-running queries, that behavior no longer happens. Set `Connection.timeout` instead. The same applies if you relied on `connect(timeout=)` to widen the connect timeout that `bulkcopy()` uses for its internal connection: set `Connection.timeout` before you create the cursor.
+
+For more information, see [Connection timeout](connection-management.md#connection-timeout).
+
+#### `bulkcopy()` rejected `timeout=0`
+
+A `timeout` of `0` raised a validation error, even though `0` means no timeout in the underlying bulk copy API. The method now accepts `0` and disables the operation timeout. Negative, non-integer, and boolean values are still rejected.
+
+For more information, see [Bulk copy](bulk-copy.md).
+
+#### Cleanup replaced the original Arrow fetch exception
+
+When a fetch from an Arrow reader failed, the driver's cleanup path raised a second error that replaced the original one, so callers saw a cleanup failure instead of the reason the fetch failed. Cleanup now checks cursor state first and preserves the original exception.
+
+#### `executemany()` decimal conversion errors included parameter values
+
+A **decimal** conversion failure in `executemany()` reported the offending value through the chained exception, which could place customer data in application logs and monitoring systems. The error now reports the row index, the column index, and the value type only.
+
+For more information, see [Error handling](error-handling.md).
+
+#### Bulk copy rejected Arrow View types
+
+`bulkcopy_arrow()` couldn't consume variable-length Arrow View arrays, so Polars `string_view` columns had to be converted with `DataFrame.to_arrow()` first. String View values and NULLs now pass through the Arrow C Data Interface directly.
+
+For more information, see [Polars integration](polars-integration.md).
+
+#### Windows extension loading used the host CPU architecture
+
+On Windows, the driver picked its native extension based on the host CPU rather than the running interpreter, so x64 Python on an ARM64 host loaded through a fallback path and wrote notices to stdout. The loader now derives the architecture from the interpreter and reports fallbacks as warnings.
 
 ## mssql-python 1.13.0
 

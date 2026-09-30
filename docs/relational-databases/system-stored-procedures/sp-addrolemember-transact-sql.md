@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "sp_addrolemember"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.sp_addrolemember (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Adds a database user, database role, Windows login, or Windows group to a database role in the current database.
 
@@ -100,31 +100,6 @@ The following example adds the database user `Mary5` to the `Production` databas
 
 ```sql
 EXECUTE sp_addrolemember 'Production', 'Mary5';
-```
-
-## Examples: Analytics Platform System (PDW)
-
-### C. Add a Windows login
-
-The following example adds the login `LoginMary` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database as user `UserMary`. The user `UserMary` is then added to the `Production` role.
-
-> [!NOTE]  
-> Because the login `LoginMary` is known as the database user `UserMary` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, the user name `UserMary` must be specified. The statement will fail unless a `Mary5` login exists. Logins and users usually have the same name. This example uses different names to differentiate the actions affecting the login vs. the user.
-
-```sql
--- Uses AdventureWorks2022
-CREATE USER UserMary FOR LOGIN LoginMary;
-GO
-
-EXECUTE sp_addrolemember 'Production', 'UserMary';
-```
-
-### D. Add a database user
-
-The following example adds the database user `UserMary` to the `Production` database role in the current database.
-
-```sql
-EXECUTE sp_addrolemember 'Production', 'UserMary';
 ```
 
 ## Related content

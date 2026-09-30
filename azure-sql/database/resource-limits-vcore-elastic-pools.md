@@ -716,7 +716,7 @@ Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series 
 
 The following table covers these SLOs: `HS_PRMS_64`, `HS_PRMS_80`, `HS_PRMS_128`, `HS_PRMS_160`, `HS_PRMS_192`:
 
-| vCores | 64 | 80 | 128 | 160<sup>7</sup> | 192<sup>7</sup> |
+| vCores | 64 | 80 | 128 | 160 | 192 |
 |:-|-:|-:|-:|-:|-:|
 | Hardware | Premium-series | Premium-series | Premium-series | Premium-series | Premium-series | 
 | Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 
@@ -751,7 +751,6 @@ The following table covers these SLOs: `HS_PRMS_64`, `HS_PRMS_80`, `HS_PRMS_128`
 
 <sup>6</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-<sup>7</sup> Currently, the 160 and 192 vCore options are a preview feature.
 
 ## Hyperscale - premium-series memory optimized
 

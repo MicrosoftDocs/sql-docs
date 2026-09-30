@@ -1,9 +1,11 @@
 ---
-title: Configure iSCSI FCI Storage - SQL Server on Linux
+title: Configure iSCSI Storage for an FCI
+titleSuffix: SQL Server on Linux
 description: Learn to configure a failover cluster instance (FCI) using iSCSI for SQL Server on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/07/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: how-to
@@ -12,7 +14,7 @@ ms.custom:
   - build-2025
   - sfi-image-nochange
 ---
-# Configure failover cluster instance - iSCSI - SQL Server on Linux
+# Configure failover cluster instance on Linux (iSCSI)
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
@@ -42,8 +44,7 @@ For more information on iSCSI initiator for the supported distributions, see the
 - [SUSE](https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-iscsi.html)
 - [Ubuntu](https://ubuntu.com/server/docs/iscsi-initiator-or-client)
 
-> [!NOTE]  
-> Starting in [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
+[!INCLUDE [sles-deprecated](../../includes/sles-deprecated.md)]
 
 1. Choose one of the servers that will participate in the FCI configuration. It doesn't matter which one. iSCSI should be on a dedicated network, so configure iSCSI to recognize and use that network. Run `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` where `<iSCSIIfaceName>` is the unique or friendly name for the network. The following example uses `iSCSINIC`:
 
@@ -214,7 +215,7 @@ For more information on iSCSI initiator for the supported distributions, see the
    1. Delete the files from the existing SQL Server data directory. You don't receive any acknowledgment if successful.
 
       ```bash
-      rm - f /var/opt/mssql/data/*
+      rm -f /var/opt/mssql/data/*
       ```
 
    1. Verify that the files have been deleted. The following image shows an example of the entire sequence from c through h.
@@ -352,8 +353,12 @@ For more information on iSCSI initiator for the supported distributions, see the
       GO
 
       CREATE DATABASE TestDB
-          ON (NAME = TestDB_Data, FILENAME = '/var/opt/mssql/userdata/TestDB_Data.mdf')
-          LOG ON (NAME = TestDB_Log, FILENAME = '/var/opt/mssql/userdata/TestDB_Log.ldf');
+      ON (NAME = TestDB_Data,
+          FILENAME = '/var/opt/mssql/userdata/TestDB_Data.mdf'
+      )
+      LOG ON (NAME = TestDB_Log,
+         FILENAME = '/var/opt/mssql/userdata/TestDB_Log.ldf'
+      );
       GO
 
       USE TestDB;
@@ -363,7 +368,7 @@ For more information on iSCSI initiator for the supported distributions, see the
       Run the following command in the shell to see the new database files.
 
       ```bash
-      sudo ls /var/opt/mssal/userdata
+      sudo ls /var/opt/mssql/userdata
       ```
 
       Here's the expected output.
@@ -381,7 +386,7 @@ For more information on iSCSI initiator for the supported distributions, see the
       ```
 
       ```bash
-      sudo ls /var/opt/mssal/userdata
+      sudo ls /var/opt/mssql/userdata
       ```
 
       Here's the expected output.
@@ -462,6 +467,6 @@ You're now ready to configure the FCI.
 
 ## Related content
 
-- [Configure failover cluster instance - SQL Server on Linux (RHEL)](shared-disk-cluster-configure.md)
-- [Operate RHEL failover cluster instance (FCI) for SQL Server](shared-disk-cluster-red-hat-7-operate.md)
+- [Configure failover cluster instance on Linux (RHEL)](shared-disk-cluster-configure.md)
+- [Operate failover cluster instance on Linux](shared-disk-cluster-operate.md)
 - [Configure SLES shared disk cluster for SQL Server](shared-disk-cluster-sles-configure.md)

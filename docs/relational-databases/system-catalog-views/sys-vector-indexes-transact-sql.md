@@ -4,7 +4,7 @@ description: "sys.vector_indexes contains a row per vector index."
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest, markingmyname
-ms.date: 08/11/2025
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "sys.vector_indexes catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.vector_indexes (Transact-SQL)
 
-[!INCLUDE [SQL Server 2025](../../includes/applies-to-version/sqlserver2025.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
 Contains a row per vector index.
 
@@ -35,6 +35,11 @@ Contains a row per vector index.
 ## Permissions
 
 [!INCLUDE [ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).
+
+## Remarks
+
+- [Vector indexes](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true) are generally available in Azure SQL Database, SQL database in Fabric, and Azure SQL Managed Instance in the **Always up to date** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
+- [Vector indexes](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true) are preview features in SQL Server 2025 and Azure SQL Managed Instance in the **SQL Server 2025** [update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true).
 
 ## Examples
 
@@ -55,8 +60,5 @@ WHERE
 
 ## Related content
 
-- [Object catalog views (Transact-SQL)](object-catalog-views-transact-sql.md)
-- [System catalog views (Transact-SQL)](catalog-views-transact-sql.md)
-- [sys.indexes (Transact-SQL)](sys-indexes-transact-sql.md)
-- [CREATE VECTOR INDEX (Transact-SQL) (Preview)](../../t-sql/statements/create-vector-index-transact-sql.md)
+- [CREATE VECTOR INDEX (Transact-SQL)](../../t-sql/statements/create-vector-index-transact-sql.md)
 - [sys.dm_db_vector_indexes (Transact-SQL)](../system-dynamic-management-objects/sys-dm-db-vector-indexes-transact-sql.md)

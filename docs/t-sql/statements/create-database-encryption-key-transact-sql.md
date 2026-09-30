@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "database encryption key, create"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates an encryption key for transparently encrypting a database. For more information about transparent data encryption (TDE), see [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -51,15 +51,6 @@ CREATE DATABASE ENCRYPTION KEY
 ```  
   
   
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-
-CREATE DATABASE ENCRYPTION KEY  
-       WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
-   ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
-[ ; ]  
-```  
-
 ## Arguments
 
 WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
@@ -113,7 +104,7 @@ GO
 
 To restore a TDE-encrypted database to a different SQL Server instance, you must first import the certificate that protects the database encryption key. Back up the certificate and its private key from the source server, then create the certificate on the target instance before you restore the database.
 
-On the source server, back up the certificate:
+On the source server, back up the certificate. Replace `<password>` with a strong password:
 
 ```sql
 -- On the SOURCE server
@@ -123,12 +114,12 @@ BACKUP CERTIFICATE MyServerCert
 TO FILE = 'C:\Backup\MyServerCert.cer'
 WITH PRIVATE KEY (
     FILE = 'C:\Backup\MyServerCert.pvk',
-    ENCRYPTION BY PASSWORD = '<strong_password>'
+    ENCRYPTION BY PASSWORD = '<password>'
 );
 GO
 ```
 
-On the target server, create the certificate from the backup files, then restore the database:
+On the target server, create the certificate from the backup files, then restore the database. Use the same password that you used to back up the certificate:
 
 ```sql
 -- On the TARGET server
@@ -138,7 +129,7 @@ CREATE CERTIFICATE MyServerCert
 FROM FILE = 'C:\Backup\MyServerCert.cer'
 WITH PRIVATE KEY (
     FILE = 'C:\Backup\MyServerCert.pvk',
-    DECRYPTION BY PASSWORD = '<strong_password>'
+    DECRYPTION BY PASSWORD = '<password>'
 );
 GO
 

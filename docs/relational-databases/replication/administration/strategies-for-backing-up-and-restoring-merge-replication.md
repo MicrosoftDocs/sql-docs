@@ -1,6 +1,6 @@
 ---
-title: "Strategies for backup & restore (Merge)"
-description: Strategies for backing up and restoring data used in Merge Replication.
+title: Strategies for Backup and Restore (Merge)
+description: Merge replication backup and restore strategies protect your publication, distribution, and subscription databases. Learn how to restore and resync SQL Server data.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -67,7 +67,7 @@ helpviewer_keywords:
  To create and apply a snapshot, see [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) and [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Backing Up and Restoring the Distribution Database  
- With merge replication, the distribution database should be backed up regularly, and can be restored without any special considerations as long as the backup used is no older than the shortest retention period of all publications that use the Distributor. For example, if there are three publications with retention periods of 10, 20, and 30 days, respectively, the backup used to restore the database should not be more than 10 days old. The distribution database has a limited role in merge replication: it does not store any data used in change tracking and it does not provide temporary storage of merge replication changes to be forwarded to subscription databases (as it does in transactional replication).  
+ With merge replication, the distribution database should be backed up regularly, and can be restored without any special considerations as long as the backup used is no older than the shortest retention period of all publications that use the Distributor. For example, if there are three publications with retention periods of 10, 20, and 30 days, respectively, the backup used to restore the database should not be more than 10 days old. The distribution database has a limited role in merge replication: it does not store any data used in change tracking and it does not provide temporary storage of merge replication changes to be forwarded to subscription databases (as it does in Transactional Replication).  
   
 ## Backing Up and Restoring a Subscription Database  
  To ensure successful recovery of a subscription database, Subscribers should synchronize with the Publisher before the subscription database is backed up; they should also synchronize after the subscription database is restored:  

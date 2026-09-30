@@ -3,7 +3,7 @@ title: "ISSDataClassification"
 description: "ISSDataClassification interface"
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "09/30/2020"
 ms.service: sql
 ms.subservice: connectivity
@@ -16,7 +16,7 @@ apiname: "ISSDataClassification"
 apitype: "COM"
 ---
 # ISSDataClassification
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asa-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

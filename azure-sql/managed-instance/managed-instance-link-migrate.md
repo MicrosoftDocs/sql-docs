@@ -5,7 +5,7 @@ description: Learn how to use the Managed Instance link to migrate your SQL Serv
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
-ms.date: 06/25/2026
+ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you to migrate your SQL Server database to Azure SQL Managed Instance by using the [Managed Instance link](managed-instance-link-feature-overview.md).
+This article teaches you to migrate your SQL Server database to Azure SQL Managed Instance by using the [Managed Instance link](managed-instance-link-feature-overview.md) in single-database link mode.
 
 For a detailed migration guide, review [Migrate to Azure SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md). To compare migration tools, review [Compare LRS with Managed Instance link](log-replay-service-compare-mi-link.md).
 
@@ -30,7 +30,7 @@ The Managed Instance link enables migration from SQL Server hosted anywhere, to 
 
 Migrating with the link gives you:
 
-- The ability to test read only workloads on SQL Managed Instance before you finalize the migration to Azure.
+- The ability to test your workloads with a read-only database replica on SQL Managed Instance before you finalize the migration to Azure.
 - The ability to keep the link and migration running for as long as you need, weeks and even months at a time.
 - Near real-time replication of data that provides the fastest available data replication to Azure.
 - The most minimum downtime migration compared to all other solutions available today.
@@ -40,7 +40,7 @@ Migrating with the link gives you:
 - The only true online migration to the Business Critical service tier.
 
 > [!NOTE]  
-> While you can only migrate one database per link, you can establish multiple links from the same SQL Server instance to the same SQL Managed Instance.
+> In single-database link mode, you can migrate one database per link and establish multiple links from the same SQL Server instance to SQL Managed Instance. To replicate an existing Always On availability group with multiple databases through one link, use [multiple-database link mode (preview)](managed-instance-link-extend-availability-group.md). Review the AG extension requirements before configuring the link.
 
 ## Cutover behavior
 

@@ -5,7 +5,7 @@ description: Learn which configuration settings you can modify after you create 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: strrodic
-ms.date: 06/30/2026
+ms.date: 09/14/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -60,7 +60,7 @@ Settings you provide (or accept defaults for) when you create the database, plus
 | **Compute tier** | Database (or elastic pool) | Provisioned, Serverless. | **Yes**.<br /><br />You can switch between Provisioned and Serverless. Serverless is available only on General Purpose and Hyperscale. It isn't available on Business Critical. See [Serverless compute tier](serverless-tier-overview.md). |
 | **Compute hardware** | Database (or elastic pool) | Standard-series (Gen5), Premium-series, Premium-series memory optimized, DC-series | **Yes**.<br /><br />Availability depends on the service tier and compute tier. See [Hardware configuration](service-tiers-sql-database-vcore.md#hardware-configuration). |
 | **vCores (Provisioned, or min/max for Serverless)** | Database (or elastic pool) | From 0.5 vCores (serverless) up to 128+ vCores, depending on service tier, compute tier, and hardware | **Yes**.<br /><br />You can scale up or down within applicable limits. See [single database limits](resource-limits-vcore-single-databases.md), [elastic pool limits](resource-limits-vcore-elastic-pools.md), and [Hyperscale limits](service-tier-hyperscale.md). |
-| **Auto-pause delay (Serverless)** | Database | Configurable delay, Disabled | **Yes**.<br /><br />Available for General Purpose serverless only. Hyperscale serverless doesn't support auto-pause. See [Auto-pause and auto-resume](serverless-tier-overview.md#auto-pause-and-auto-resume). |
+| **Auto-pause delay (Serverless)** | Database | Configurable delay, Disabled | **Yes**.<br /><br />Available for General Purpose serverless.<br /><br />Currently, [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) are a preview feature of Azure SQL Database Hyperscale. |
 | **Reserved storage size** | Database (or elastic pool) | Varies by service tier and hardware. | **Yes**.<br /><br />You can scale reserved storage up or down, but never below the storage space already in use. See [Resource limits for single databases](resource-limits-vcore-single-databases.md), [Resource limits for elastic pools](resource-limits-vcore-elastic-pools.md), and [Hyperscale resource limits](service-tier-hyperscale.md). |
 
 ## Networking

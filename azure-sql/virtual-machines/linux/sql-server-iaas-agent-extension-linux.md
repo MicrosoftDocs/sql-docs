@@ -4,13 +4,14 @@ description: This article describes how the SQL Server IaaS Agent extension help
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 01/27/2026
+ms.date: 09/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management
 ms.topic: concept-article
 ms.custom:
   - linux-related-content
 tags: azure-resource-manager
+ai-usage: ai-assisted
 ---
 # SQL Server IaaS Agent extension for Linux
 
@@ -54,9 +55,15 @@ az sql vm list --query "[?sqlServerLicenseType=='AHUB']"
 
 There's no extra cost for using the extension.
 
+## Manage license types at scale
+
+[!INCLUDE [manage-sql-license-types-at-scale](../../../docs/includes/manage-sql-license-types-at-scale.md)]
+
 ## Installation
 
-[Register](sql-iaas-agent-extension-register-vm-linux.md) your SQL Server VM with the SQL Server IaaS Agent extension to create the **SQL virtual machine** *resource* within your subscription. This resource is *separate* from the virtual machine resource. When you unregister your SQL Server VM from the extension, you remove the **SQL virtual machine** *resource* from your subscription but don't delete the actual virtual machine.
+When you deploy SQL Server on Linux VMs by using the [Azure portal deployment experience (preview)](sql-server-on-linux-vm-what-is-iaas-overview.md#azure-portal-deployment), Azure automatically registers them with the extension. If you install SQL Server yourself, [register](sql-iaas-agent-extension-register-vm-linux.md) your SQL Server VM with the extension manually.
+
+Registration creates the **SQL virtual machine** *resource* within your subscription. This resource is *separate* from the virtual machine resource. When you unregister your SQL Server VM from the extension, you remove the **SQL virtual machine** *resource* from your subscription but don't delete the actual virtual machine.
 
 The SQL Server IaaS Agent extension for Linux is currently available with limited functionality.
 
@@ -74,7 +81,7 @@ Go to your **Virtual machine** resource in the Azure portal (not the *SQL virtua
 
 ### Azure PowerShell
 
-You can also use the **Get-AzVMSqlServerExtension** Azure PowerShell cmdlet:
+You can also use the [Get-AzVMSqlServerExtension](/powershell/module/az.compute/get-azvmsqlserverextension) Azure PowerShell cmdlet:
 
 ```powershell-interactive
   Get-AzVMSqlServerExtension -VMName "vmname" -ResourceGroupName "resourcegroupname"

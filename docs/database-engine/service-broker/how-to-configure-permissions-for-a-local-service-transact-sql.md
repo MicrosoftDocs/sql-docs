@@ -53,6 +53,5 @@ GO
 - [How to: Configure target services for full dialog security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
 - [How to: Configure initiating services for full dialog security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
 - [How to: Configure initiating services for anonymous dialog security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
-- [Grant T-SQL permissions for Parallel Data Warehouse](../../analytics-platform-system/grant-permissions.md)
 - [GRANT Service Broker Permissions (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)
 - [Identity and access control (Service Broker)](identity-and-access-control.md)

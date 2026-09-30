@@ -4,7 +4,7 @@ description: Learn about Memory grant feedback, part of the Intelligent Query Pr
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: derekw, randolphwest
-ms.date: 12/08/2025
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: configuration
 ms.topic: concept-article
@@ -188,11 +188,7 @@ This feature was introduced in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)
 
 - Percentile memory grant feedback is enabled by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect if Query Store isn't enabled or when Query Store isn't in a "read write" state.
 
-- Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)], but has no effect when Query Store isn't enabled or when Query Store isn't in a "read write" state.
-
-- Percentile and persistence for memory grant feedback is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and enabled by default on all databases, both existing and new.
-
-- Percentile and persistence for memory grant feedback isn't currently available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)].
+- The percentile and persistence modes for memory grant feedback are enabled by default in [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], Azure SQL Managed Instance with the [Always-up-to-date update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy), Azure SQL Managed Instance with the [SQL Server 2022 update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2022-update-policy), and Azure SQL Managed Instance with the [SQL Server 2025 update policy](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2025-update-policy). This option requires that the Query Store is enabled and operating in a "read write" state.
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 

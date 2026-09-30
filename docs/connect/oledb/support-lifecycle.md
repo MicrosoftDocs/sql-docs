@@ -3,7 +3,7 @@ title: Support lifecycle
 description: Product support lifecycle information for the Microsoft OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: 05/09/2025
 ms.service: sql
 ms.subservice: connectivity

@@ -36,7 +36,7 @@ Why use user-defined functions (UDFs)?
 - **Reduce network traffic.** An operation that filters data based on some complex constraint that can't be expressed in a single scalar expression can be expressed as a function. The function can then be invoked in the WHERE clause to reduce the number of rows sent to the client.
 
 > [!IMPORTANT]  
-> [!INCLUDE [tsql](../../includes/tsql-md.md)] UDFs in queries can only be executed on a single thread (serial execution plan). Therefore using UDFs inhibits parallel query processing. For more information about parallel query processing, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
+> [!INCLUDE [tsql](../../includes/tsql-md.md)] UDFs in queries can only be executed on a single thread (serial execution plan). Therefore using UDFs inhibits parallel query processing. For more information about parallel query processing, see the [Query Processing Architecture Guide](../query-processing-architecture-guide.md#parallel-query-processing).
 
 <a id="FunctionTypes"></a>
 
@@ -54,7 +54,7 @@ User-defined table-valued functions (TVFs) return a **table** data type. For an 
 
 ### System functions
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform various operations. They can't be modified. For more information, see [What are the SQL database functions?](../../t-sql/functions/functions.md), [System Functions by category for Transact-SQL](../system-functions/system-functions-category-transact-sql.md), and [System dynamic management views](../system-dynamic-management-views/system-dynamic-management-views.md).
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform various operations. They can't be modified. For more information, see [What are the SQL database functions?](../../t-sql/functions/functions.md), [System Functions by category for Transact-SQL](../system-functions/system-functions-category-transact-sql.md), and [System dynamic management views](../system-dynamic-management-objects/system-dynamic-management-objects.md).
 
 ## Guidelines
 

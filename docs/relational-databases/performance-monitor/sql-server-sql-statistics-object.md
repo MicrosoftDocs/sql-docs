@@ -48,7 +48,7 @@ The following table lists the [!INCLUDE [ssNoVersion](../../includes/ssnoversion
 
 ## Examples
 
-To explore the query performance counters in this object, run the following Transact-SQL (T-SQL) query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+To explore the query performance counters in this object, run the following Transact-SQL (T-SQL) query on the [sys.dm_os_performance_counters](../system-dynamic-management-objects/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
 
 ```sql
 SELECT *

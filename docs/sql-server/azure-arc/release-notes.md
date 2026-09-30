@@ -4,7 +4,7 @@ description: Latest release notes for SQL Server enabled by Azure Arc
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: randolphwest, mathoma
-ms.date: 08/21/2026
+ms.date: 09/15/2026
 ms.topic: release-notes
 ms.custom:
   - ignite-2025
@@ -42,6 +42,7 @@ The following table lists the features of SQL Server enabled by Azure Arc that a
 | --- | --- |
 | [Automated backups](backup-local.md) | Automatically perform backups to local storage or network shares. |
 | [Azure Extension for SQL Server on Linux](connect.md?tabs=linux) | Connect SQL Server on Linux to Azure Arc. |
+| [Database migration (Azure SQL Database)](migrate-to-azure-sql-database.md) | Migrate your SQL Server databases to Azure SQL Database directly from the Azure portal. |
 | [Microsoft Purview: data owner policies](/purview/legacy/how-to-policies-data-owner-authoring-generic) | Manage access to user data in sources that have been registered for Data Policy Enforcement in Microsoft Purview for your SQL Server instances and databases. |
 | [Monitoring](sql-monitoring.md) | Monitor SQL Server performance and activity with built-in dashboards in the Azure portal. |
 | [Restore to a point in time](point-in-time-restore.md) | Restore a database to a specific point in time. |
@@ -70,7 +71,7 @@ This section lists the release notes by date, starting with the most recent rele
 
 | Date of release | Extension version |
 | --- | --- |
-| [August 2026](#august-2026) | `1.1.3518.465`<br />`1.1.3500.453` |
+| [August 2026](#august-2026) | `1.1.3518.465`<br />`1.1.3500.453` (no longer available) |
 | [July 2026](#july-2026) | `1.1.3494.451` (no longer available) |
 | [June 2026](#june-2026) | `1.1.3464.439` (no longer available),<br />`1.1.3453.436` (no longer available) |
 | [May 2026](#may-2026) | `1.1.3428.422` (no longer available) |
@@ -103,7 +104,7 @@ As of August 2026, this version is the auto-upgrade target and is widely deploye
 
 - [Least privilege](configure-least-privilege.md) is enabled by default. The extension creates the `NT SERVICE\SqlServerExtension` login and grants it the minimum permissions required for each enabled feature.
 
-**Extension version**: `1.1.3500.453`
+**Extension version**: `1.1.3500.453` (no longer available)
 
 - Fixes an authentication token access bug.
 

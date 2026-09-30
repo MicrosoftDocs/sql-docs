@@ -27,7 +27,7 @@ When you select **OK** after adding, deleting, or moving a workload group or res
 
 If the create or reconfigure operation for the resource pool or workload group fails, a summary error message appears below the title of the property page. To see a detailed error message, select the down arrow on the error message.
 
-You can determine whether there is a pending configuration change by checking the value of the `is_configuration_pending` column in the [sys.dm_resource_governor_configuration](../system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view.
+You can determine whether there is a pending configuration change by checking the value of the `is_configuration_pending` column in the [sys.dm_resource_governor_configuration](../system-dynamic-management-objects/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view.
 
 <a id="Permissions"></a>
 
@@ -88,7 +88,7 @@ For more information, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-
 ## View resource governor properties using Transact-SQL
 
 1. To view the persisted resource governor configuration, use [resource governor catalog views](../system-catalog-views/resource-governor-catalog-views-transact-sql.md). If the persisted resource governor configuration is modified, it doesn't become effective until the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement is executed.
-1. To view the currently effective runtime resource governor configuration and statistics, use [resource governor dynamic management views](../system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+1. To view the currently effective runtime resource governor configuration and statistics, use [resource governor dynamic management views](../system-dynamic-management-objects/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## Related tasks
 

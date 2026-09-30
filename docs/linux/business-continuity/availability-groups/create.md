@@ -1,15 +1,18 @@
 ---
-title: Create and Configure an Availability Group for SQL Server on Linux
+title: Create and Configure an Availability Group
+titleSuffix: SQL Server on Linux
 description: This tutorial shows how to create and configure availability groups for SQL Server on Linux, as well as create availability group endpoints and certificates.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/11/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: install-set-up-deploy
 ms.custom:
   - linux-related-content
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Create and configure an availability group for SQL Server on Linux
@@ -608,7 +611,7 @@ After you create an AG in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversi
 The AG resource you create is a type of resource called a *clone*. The AG resource has copies on each node, and one controlling resource called the *promoted* resource. The *promoted* resource corresponds to the server that hosts the primary replica. The other resources host secondary replicas (regular or configuration-only), and they can be promoted in a failover.
 
 > [!NOTE]  
-> In [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] with Cumulative Update (CU) 3 and later versions, Pacemaker HA agent v2 (Preview) is available for Red Hat Enterprise Linux (RHEL) and Ubuntu through the `mssql-server-ha` package. You can evaluate Pacemaker HA agent v2 in nonproduction deployments. The existing Pacemaker HA agent (v1) is still fully supported for production deployments. For more information, see [Pacemaker HA agent v2 (Preview)](#pacemaker-ha-agent-v2-preview).
+> In [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] with Cumulative Update (CU) 3 and later versions, Pacemaker HA agent v2 (preview) is available for Red Hat Enterprise Linux (RHEL) and Ubuntu through the `mssql-server-ha` package. You can evaluate Pacemaker HA agent v2 in nonproduction deployments. The existing Pacemaker HA agent (v1) remains fully supported for production deployments. For more information, see [Pacemaker HA agent v2 (preview)](#pacemaker-ha-agent-v2-preview).
 
 ### [Red Hat Enterprise Linux (RHEL) and Ubuntu](#tab/ru)
 
@@ -646,7 +649,9 @@ The AG resource you create is a type of resource called a *clone*. The AG resour
 
    In this example, `NameForIPResource` is the name for the IP resource, and `NameForAGResource` is the name for the AG resource.
 
-#### Pacemaker HA agent v2 (Preview)
+#### Pacemaker HA agent v2 (preview)
+
+[!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
 Pacemaker HA agent v2 uses a service-based architecture. The agent runs as a dedicated system service named `mssql-pcsag`, which is responsible for handling SQL Server-specific high availability operations and communication with Pacemaker.
 
@@ -669,33 +674,27 @@ Although Pacemaker and `mssql-pcsag` are separate components, they operate toget
 > [!NOTE]  
 > Restarting the `mssql-pcsag` service doesn't restart SQL Server. Similarly, restarting SQL Server doesn't automatically restart the Pacemaker HA agent. Verify that both services are running during troubleshooting.
 
-Pacemaker HA agent v2 introduces reliability and performance improvements over the previous agent, including:
+Pacemaker HA agent v2 also supports flexible automatic failover policies, including configuration of [failure-condition level](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#failure-condition-level) and [health-check timeout](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#HCtimeout).
 
-- Improved failover performance to reduce both planned and unplanned failover times.
-
-- Support for flexible automatic failover policies, including configuration of [failure-condition level](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#failure-condition-level) and [health-check timeout](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#HCtimeout).
-
-  Example: The following Transact-SQL statement changes the failure-condition level of an existing availability group named AG1 to level 2:
+- **Example**: The following Transact-SQL statement changes the failure-condition level of an existing availability group named AG1 to level 2:
 
   ```sql
   ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 2);
   ```
 
-  Example: The following Transact-SQL statement changes the health-check timeout threshold of an existing availability group named AG1 to 60,000 milliseconds (60 seconds).
+- **Example**: The following Transact-SQL statement changes the health-check timeout threshold of an existing availability group named AG1 to 60,000 milliseconds (60 seconds).
 
   ```sql
   ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);
   ```
 
-  Example: After applying the configuration, use the following Transact-SQL statement to verify the configured failure-condition level and health-check timeout for availability groups.
+- **Example**: After applying the configuration, use the following Transact-SQL statement to verify the configured failure-condition level and health-check timeout for availability groups.
 
   ```sql
   SELECT failure_condition_level,
          health_check_timeout
   FROM sys.availability_groups;
   ```
-
-- Support for TLS 1.3 for communication between the Pacemaker cluster and SQL Server.
 
 1. Create the AG resource in Pacemaker by using Pacemaker HA agent v2: (`ocf:mssql:agv2`)
 

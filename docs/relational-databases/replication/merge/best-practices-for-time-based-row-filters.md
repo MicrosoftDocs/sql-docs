@@ -1,6 +1,6 @@
 ---
-title: "Best Practices for Time-Based Row Filters"
-description: "Best Practices for Time-Based Row Filters"
+title: Best Practices for Time-Based Row Filters
+description: Time-based row filters in Merge Replication often miss rows because GETDATE() filters only process changed data. Learn a reliable bit-column approach to fix it.
 author: "MashaMSFT"
 ms.author: "mathoma"
 ms.date: 09/25/2024
@@ -12,17 +12,17 @@ ms.custom:
 helpviewer_keywords:
   - "best practices"
 ---
-# Best Practices for Time-Based Row Filters
+# Best practices for time-based row filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Users of applications often require a time-based subset of data from a table. For instance, a salesperson might require data for orders in the last week, or an event planner might require data for events in the upcoming week. In many cases, applications use queries containing the **GETDATE()** function to accomplish this. Consider the following row filter statement:  
+  Users of applications often need a time-based subset of data from a table. For example, a salesperson might need data for orders in the last week, or an event planner might need data for events in the upcoming week. In many cases, applications use queries containing the **GETDATE()** function to accomplish this task. Consider the following row filter statement:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- With a filter of this type, it is usually assumed that two things always occur when the Merge Agent runs: rows that satisfy this filter are replicated to Subscribers; and rows that no longer satisfy this filter are cleaned up at Subscribers. (For more information about filtering with **HOST_NAME()**, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) However, merge replication only replicates and cleans up data that has changed since the last synchronization, regardless of how you define a row filter for that data.  
+ When you use a filter of this type, assume that two things always occur when the Merge Agent runs: the process replicates rows that satisfy this filter to Subscribers, and it cleans up rows that no longer satisfy this filter at Subscribers. (For more information about filtering with **HOST_NAME()**, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) However, Merge Replication only replicates and cleans up data that changed since the last synchronization, regardless of how you define a row filter for that data.  
   
- For merge replication to process a row, the data in the row must satisfy the row filter, and it must have changed since the last synchronization. In the case of the **SalesOrderHeader** table, **OrderDate** is entered when a row is inserted. Rows are replicated to the Subscriber as expected because the insert is a data change. However, if there are rows at the Subscriber that no longer satisfy the filter (they are for orders older than seven days), they are not removed from the Subscriber unless they were updated for some other reason.  
+ For Merge Replication to process a row, the data in the row must satisfy the row filter, and it must have changed since the last synchronization. In the case of the **SalesOrderHeader** table, you enter **OrderDate** when you insert a row. The process replicates rows to the Subscriber as expected because the insert is a data change. However, if there are rows at the Subscriber that no longer satisfy the filter (they're for orders older than seven days), the process doesn't remove them from the Subscriber unless you update them for some other reason.  
   
  The case of the event planner further highlights the issue with this type of filtering. Consider the following filter for an **Events** table:  
   
@@ -30,20 +30,20 @@ WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)
 WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)  
 ```  
   
- For a table that contains events, inserts might be made well ahead of the event date. If the insert for an event in the coming week was made a month ago and the row was not updated for another reason, the row is not replicated to the Subscriber even if it satisfies the row filter.  
+ For a table that contains events, you might make inserts well ahead of the event date. If you made the insert for an event in the coming week a month ago and didn't update the row for another reason, the process doesn't replicate the row to the Subscriber even if it satisfies the row filter.  
   
- In addition, depending on how the publication is configured, merge replication evaluates filters at different times:  
+ In addition, depending on how you configure the publication, Merge Replication evaluates filters at different times:  
   
--   If a publication uses precomputed partitions (the default), filters are evaluated when a row is inserted or updated.  
+-   If a publication uses precomputed partitions (the default), the process evaluates filters when you insert or update a row.  
   
--   If the publication does not use precomputed partitions, filters are evaluated when the Merge Agent runs.  
+-   If the publication doesn't use precomputed partitions, the process evaluates filters when the Merge Agent runs.  
   
- For more information about precomputed partitions, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). The time at which the filter is evaluated affects what data satisfies the filter. For example, if a publication uses precomputed partitions, and you synchronize data every two days, the subset of data for the salesperson could include rows up to two days older than expected.  
+ For more information about precomputed partitions, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). The time at which the process evaluates the filter affects what data satisfies the filter. For example, if a publication uses precomputed partitions, and you synchronize data every two days, the subset of data for the salesperson could include rows up to two days older than expected.  
   
-## Recommendations for Using Time-Based Row Filters  
+## Recommendations for using time-based row filters  
  The following method provides a robust and straightforward approach to filtering based on time:  
   
--   Add a column to the table of data type **bit**. This column is used to indicate whether a row should be replicated.  
+-   Add a column to the table with the data type **bit**. Use this column to indicate whether a row should be replicated.  
   
 -   Use a row filter that references the new column rather than a time-based column.  
   
@@ -82,7 +82,7 @@ GO
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   
- The events for the next week are now flagged as being ready to replicate. The next time the Merge Agent runs for the subscription that event coordinator 112 uses, rows 2, 3, and 4 will be downloaded to the Subscriber and row 1 will be removed from the Subscriber.  
+ The events for the next week are now flagged as being ready to replicate. The next time the Merge Agent runs for the subscription that event coordinator 112 uses, rows 2, 3, and 4 are downloaded to the Subscriber and row 1 is removed from the Subscriber.  
   
 ## Related content
 

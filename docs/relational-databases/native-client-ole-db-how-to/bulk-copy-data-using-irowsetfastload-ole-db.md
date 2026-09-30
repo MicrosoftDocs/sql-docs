@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB) in  SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows the use of IRowsetFastLoad for bulk copying of records into a table.  
   

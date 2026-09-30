@@ -36,6 +36,8 @@
         href: maintenance-window-azure-sql.md
     - name: Security
       items:
+      - name: Secure your Azure SQL Database
+        href: database/secure-database.md
       - name: Security overview
         displayName: compliance, fedramp, soc, fact, fisc, hitrust, pci, iso
         href: database/security-overview.md
@@ -44,8 +46,6 @@
       - name: Security controls by Azure Policy
         displayName: regulatory, compliance, standards, domains
         href: ./database/security-controls-policy.md
-      - name: Security baseline
-        href: /security/benchmark/azure/baselines/azure-sql-security-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: Microsoft Defender for SQL
@@ -100,6 +100,10 @@
         href: database/monitor-tune-overview.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
+      - name: Fabric Database Hub
+        href: /fabric/database/hub/
+      - name: Monitor Microsoft SQL in Fabric
+        href: /fabric/database/hub/monitor-sql
       - name: Database watcher (preview)
         items:
         - name: Database watcher overview
@@ -734,6 +738,8 @@
         href: database/identify-query-performance-issues.md
       - name: Use DMVs to monitor performance
         href: database/monitoring-with-dmvs.md
+      - name: Enable performance monitoring (preview)
+        href: database/enable-performance-monitoring-sql-database.md
       - name: Azure Monitor metrics and alerts for SQL Database
         href: database/monitoring-metrics-alerts.md
     - name: Hyperscale databases
@@ -1473,6 +1479,8 @@
         href: managed-instance/managed-instance-link-configure-how-to-ssms.md
       - name: Configure link with scripts
         href: managed-instance/managed-instance-link-configure-how-to-scripts.md
+      - name: Extend an Always On availability group (preview)
+        href: managed-instance/managed-instance-link-extend-availability-group.md
       - name: Fail over a link
         href: managed-instance/managed-instance-link-failover-how-to.md
       - name: Migrate with the link
@@ -1667,7 +1675,7 @@
           href: virtual-machines/windows/storage-configuration-premium-ssd-v2.md
         - name: Azure Elastic SAN Storage
           href: virtual-machines/windows/storage-configuration-azure-elastic-san.md
-        - name: Place tempdb to ephemeral disk
+        - name: Place tempdb on ephemeral storage
           href: virtual-machines/windows/tempdb-ephemeral-storage.md
       - name: Optimize performance
         items:
@@ -1675,6 +1683,8 @@
           href: virtual-machines/windows/sql-assessment-for-sql-vm.md
         - name: Analyze I/O performance
           href: virtual-machines/windows/storage-performance-analysis.md
+        - name: Enable performance monitoring (preview)
+          href: virtual-machines/windows/enable-performance-monitoring-sql-vm.md
         - name: VM vCore customization
           href: virtual-machines/windows/vm-vcore-customization-for-sql.md
       - name: Security
@@ -1796,7 +1806,7 @@
         href: /cli/azure/azure-cli-reference-for-sql
       - name: T-SQL
         href: /sql/t-sql/language-reference
-      - name: SQL Server Drivers
+      - name: Microsoft SQL drivers and frameworks
         href: /sql/connect/sql-connection-libraries
       - name: REST
         href: /rest/api/
@@ -1977,6 +1987,8 @@
       href: database/monitoring-sql-database-azure-monitor-reference.md
     - name: Azure SQL Managed Instance
       href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
+    - name: Performance monitoring telemetry (preview)
+      href: database/query-performance-monitoring-telemetry.md
   - name: Tools
     items:
     - name: SQL Server tools overview
@@ -2014,9 +2026,9 @@
     - name: Resource Manager templates for SQL
       displayName: ARM
       href: /azure/templates/microsoft.sql/allversions
-  - name: SQL Server drivers
+  - name: Microsoft SQL drivers and frameworks
     items:
-    - name: Connection drivers
+    - name: Overview
       href: /sql/connect/sql-connection-libraries
     - name: ADO.NET
       href: /sql/connect/ado-net/microsoft-ado-net-sql-server?view=sql-server-ver15&preserve-view=true

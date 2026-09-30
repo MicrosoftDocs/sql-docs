@@ -23,11 +23,11 @@ helpviewer_keywords:
   - "trailing blanks"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SET ANSI_PADDING (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Controls the way the column stores values shorter than the defined size of the column, and the way the column stores values that have trailing blanks in **char**, **varchar**, **binary**, and **varbinary** data.
 - `SET ANSI_PADDING ON` - preserves the trailing blanks in the string values when they are inserted into a column. This is ANSI-compliant behavior.
@@ -46,7 +46,7 @@ Syntax for [!INCLUDE [ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!I
 SET ANSI_PADDING { ON | OFF }
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)].
+Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)].
 
 ```syntaxsql
 SET ANSI_PADDING ON

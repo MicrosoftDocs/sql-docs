@@ -3,14 +3,14 @@ title: "Integrated Kerberos authentication (OLE DB driver)"
 description: Learn how to get mutual Kerberos authentication by using OLE DB in OLE DB Driver for SQL Server with this example.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "02/18/2022"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Integrated Kerberos Authentication (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

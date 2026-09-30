@@ -11,7 +11,7 @@ ms.subservice: security
 ms.topic: how-to
 ms.custom:
   - azure-synapse
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=azuresql-vm"
 ---
 # Create Microsoft Entra guest users and set them as a Microsoft Entra admin
 

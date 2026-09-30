@@ -4,7 +4,7 @@ description: Learn how to use the performance logging framework and callback inf
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 03/13/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -69,6 +69,45 @@ SQLServerDriver.registerPerformanceLogCallback(new PerformanceLogCallback() {
     }
 });
 ```
+
+### Use nanosecond timing and statement context
+
+Starting with version 13.6, a callback can opt in to nanosecond timing by overriding `useNanoseconds()`. The callback can also call `getCurrentUserSql()` and `getCurrentStatementType()` to correlate a statement-level event with the SQL text submitted by the application and the type of statement that executed. `getCurrentStatementType()` returns `STATEMENT`, `PREPARED_STATEMENT`, or `CALLABLE_STATEMENT`. Use `getCurrentApplicationName()` to identify the connection or pool that produced an event from its `applicationName` connection property. If `applicationName` isn't set, the method returns the driver's default application name.
+
+```java
+SQLServerDriver.registerPerformanceLogCallback(new PerformanceLogCallback() {
+    @Override
+    public boolean useNanoseconds() {
+        return true;
+    }
+
+    @Override
+    public void publish(PerformanceActivity activity, int connectionId,
+            long durationNs, Exception exception) {
+        // Connection-level metrics don't have SQL statement context.
+        System.out.printf("Application: %s, Activity: %s, Connection: %d, Duration: %d ns%n",
+            getCurrentApplicationName(), activity, connectionId, durationNs);
+    }
+
+    @Override
+    public void publish(PerformanceActivity activity, int connectionId,
+            int statementId, long durationNs, Exception exception) {
+        String applicationName = getCurrentApplicationName();
+        String userSql = getCurrentUserSql();
+        StatementType statementType = getCurrentStatementType();
+
+        System.out.printf("Application: %s, Type: %s, Activity: %s, SQL: %s, Duration: %d ns%n",
+            applicationName, statementType, activity, userSql, durationNs);
+    }
+});
+```
+
+Nanosecond timing is opt-in. Callbacks that don't override `useNanoseconds()` continue to receive durations in milliseconds. When a registered callback opts in, the dedicated performance logger output also uses nanoseconds and labels durations with `ns`; otherwise, it uses milliseconds and `ms`. Calling `System.nanoTime()` can have more overhead than `System.currentTimeMillis()` on some platforms.
+
+Callback context is available only during the corresponding `publish()` invocation. `getCurrentApplicationName()` is available for connection-level and statement-level events and returns `null` outside `publish()`. It can also return `null` when connection properties haven't been parsed, such as when a connection fails before the application name is resolved. The SQL context methods return `null` for connection-level events, statement subactivity metrics that don't have SQL context, and calls made outside `publish()`.
+
+> [!CAUTION]
+> SQL text can contain sensitive data in literals or comments. Sanitize it and apply your organization's data-handling requirements before writing it to logs or telemetry.
 
 ### Option 2: Configure Java logging
 

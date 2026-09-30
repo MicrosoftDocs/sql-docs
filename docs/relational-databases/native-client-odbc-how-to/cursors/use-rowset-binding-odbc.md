@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "rowset binding [ODBC]"
 ---
 # Use Rowset Binding (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To use column-wise binding  

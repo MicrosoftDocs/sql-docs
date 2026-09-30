@@ -54,7 +54,7 @@ XML indexes fall into the following categories:
 The first index on the **xml** type column must be the primary XML index. Using the primary XML index, the following types of secondary indexes are supported: PATH, VALUE, and PROPERTY. Depending on the type of queries, these secondary indexes might help improve query performance.
 
 > [!NOTE]
-> You cannot create or modify an XML index unless the database options are set correctly for working with the **xml** data type. For more information, see [Use Full-Text Search with XML Columns](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).
+> You cannot create or modify an XML index unless the database options are set correctly for working with the **xml** data type. For more information, see [Use Full-Text Search with XML Columns](use-full-text-search-with-xml-columns.md).
 
 XML instances are stored in **xml** type columns as large binary objects (BLOBs). These XML instances can be large, and the stored binary representation of **xml** data type instances can be up to 2 GB. Without an index, these binary large objects are shredded at run time to evaluate a query. This shredding can be time-consuming. For example, consider the following query:
 
@@ -238,7 +238,7 @@ XML index entries appear in the catalog view `sys.indexes` with the index `type`
 
 XML indexes are also recorded in the catalog view `sys.xml_indexes`. This contains all the columns of `sys.indexes` and some specific ones that are useful for XML indexes. The value `NULL` in the column `secondary_type` indicates a primary XML index; the values `P`, `R` and `V` stand for PATH, PROPERTY, and VALUE secondary XML indexes, respectively.
 
-The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of data pages occupied, average row size in bytes, and number of records, for all index types. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.
+The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](../system-dynamic-management-objects/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of data pages occupied, average row size in bytes, and number of records, for all index types. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.
 
 ## Related content
 

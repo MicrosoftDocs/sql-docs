@@ -71,7 +71,7 @@ Your system must have the following installed:
 
 - A supported internet browser
 
-- The [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page
+- The [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database, which you can download from the [Azure Data SQL Samples Repository](https://github.com/microsoft/sql-server-samples) GitHub repository
 
 ## Related content
 

@@ -3,7 +3,8 @@ title: Choose a Data Access and Analytics Pattern with mssql-python
 description: Learn when to use cursor fetch, Arrow, pandas, Polars, or DuckDB for reading and analyzing data from Microsoft SQL with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 07/17/2026
+ms.reviewer: vanto, randolphwest
+ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -313,6 +314,6 @@ if writer:
 - [Use mssql-python with Apache Arrow](arrow-integration.md)
 - [Use mssql-python with pandas](pandas-integration.md)
 - [Use mssql-python with Polars](polars-integration.md)
-- [Use mssql-python with DuckDB](duck-db-integration.md)
+- [Use mssql-python with DuckDB](duckdb-integration.md)
 - [Performance tuning for mssql-python applications](performance-tuning.md)
 - [Choose a data loading and movement pattern with mssql-python](data-loading-movement-patterns.md)

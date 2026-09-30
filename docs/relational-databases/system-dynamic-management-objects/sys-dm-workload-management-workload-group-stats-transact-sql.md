@@ -12,7 +12,7 @@ dev_langs:
 monikerRange: "=azure-sqldw-latest"
 ---
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns workload group statistics and the effective values of the workload group in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
@@ -35,4 +35,4 @@ Returns workload group statistics and the effective values of the workload group
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

@@ -4,7 +4,7 @@ description: Task hub for connecting Java applications to SQL Server, Azure SQL,
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, vanto, davidengel, machavan, sunilbs
-ms.date: 07/14/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -19,8 +19,9 @@ The Microsoft Java Database Connectivity (JDBC) Driver for SQL Server is a Type 
 
 ## Choose your starting point
 
-- To set up a Java development environment and run your first query, start with [Step 1: Configure development environment](step-1-configure-development-environment-for-java-development.md), [Step 2: Create a SQL database](step-2-create-a-sql-database-for-java-development.md), and [Step 3: Proof of concept connecting to SQL using Java](step-3-proof-of-concept-connecting-to-sql-using-java.md).
-- To connect to Azure SQL with passwordless authentication, start with [Connect using Microsoft Entra authentication](connecting-using-azure-active-directory-authentication.md) and [Building the connection URL](building-the-connection-url.md).
+- To add the driver and run your first parameterized query, start with the [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md).
+- To choose a hosted database or SQL Server container, see [Choose your database](getting-started-with-the-jdbc-driver.md#choose-your-database).
+- To connect to Azure SQL or SQL database in Fabric without storing a password in your application, follow the quickstart's [Microsoft Entra configuration](getting-started-with-the-jdbc-driver.md#azure-sql-or-fabric-with-microsoft-entra-authentication). For other authentication modes, see [Connect using Microsoft Entra authentication](connecting-using-azure-active-directory-authentication.md).
 - To add the driver to a Maven, Gradle, or other build, go to [Download Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md).
 - To make an existing app resilient to transient failures, go to [Connection resiliency](connection-resiliency.md) and [Configurable retry logic](configurable-retry-logic.md).
 - To diagnose a connection or query problem, go to [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md) and [Troubleshooting connectivity](troubleshooting-connectivity.md).
@@ -52,10 +53,10 @@ props.setProperty("databaseName", databaseName);
 props.setProperty("encrypt", "true");
 props.setProperty("trustServerCertificate", "false");
 props.setProperty("authentication", "ActiveDirectoryManagedIdentity");
-props.setProperty("loginTimeout", "120");         // 90 is the minimum floor for this retry profile; 120 leaves practical failover margin
+props.setProperty("loginTimeout", "120");         // bounds the whole retry sequence, not just one attempt
 props.setProperty("connectRetryCount", "5");     // retry transient connection failures up to 5 times (default 1)
 props.setProperty("connectRetryInterval", "15"); // 15 seconds between connection retries (default 10)
-props.setProperty("multiSubnetFailover", "true"); // recommended for any Azure SQL HA listener
+props.setProperty("multiSubnetFailover", "true"); // parallel dials to all resolved IPs; safe on single-IP targets
 // props.setProperty("applicationIntent", "ReadOnly"); // uncomment to route to a readable secondary
 // Retry deadlocks and lock timeouts, plus Azure SQL throttling and mid-query failover.
 props.setProperty("retryExec", "1205,1222:3,5+5;40501,40613,40197,10928,10929,49918:4,5*2");
@@ -71,9 +72,11 @@ try (Connection conn = DriverManager.getConnection(url, props);
 
 This snippet is tuned for Azure SQL Database failover groups and Azure SQL Managed Instance.
 
-Set `multiSubnetFailover=true` only when you connect to a failover-group listener, availability group listener, or failover cluster instance endpoint. Using this property against endpoints that aren't high availability (HA) listeners can hurt performance and isn't supported. For more information, see [JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md).
+Set `multiSubnetFailover=true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, a failover-group listener, an availability group listener, or a failover cluster instance endpoint. The driver attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds. When DNS resolves to one address, the driver does a single connection attempt and doesn't start any parallel connection threads. For more information, see [JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md).
 
-The snippet doesn't set `retryConn` because the driver already retries the most common Azure SQL transient connection errors (including 4060, 40197, 40501, 40613, 49918, 49919, 49920, 10928, and 10929) out of the box, gated by `connectRetryCount` and `connectRetryInterval`. For the full list, see [Built-in transient connection error list](configurable-retry-logic.md#built-in-transient-connection-error-list). Add `retryConn` with `+<errorNumber>` only when you need to extend the list with an error that isn't already covered, or set it to `<errorNumber>` (no leading `+`) to replace it. If you place the same value in a JDBC URL, wrap it as `retryConn={+<errorNumber>}` or `retryConn={<errorNumber>}`.
+The snippet doesn't set `retryConn` because the driver already retries the most common Azure SQL transient connection errors (including 4060, 40197, 40501, 40613, 49918, 49919, 49920, 10928, and 10929) out of the box, gated by `connectRetryCount` and `connectRetryInterval`. For the full list, see [Built-in transient connection error list](configurable-retry-logic.md#built-in-transient-connection-error-list). Add `retryConn` with `+<errorNumber>` only when you need to extend the list with an error that isn't already covered, or set it to `<errorNumber>` (no leading `+`) to replace it. Replacing the list drops the built-in errors, so list any you still need. If you place the same value in a JDBC URL, wrap it as `retryConn={+<errorNumber>}` or `retryConn={<errorNumber>}`.
+
+The `loginTimeout`, `connectRetryCount`, and `connectRetryInterval` values shown here work together as one retry budget. That budget also carries an application through a resume on [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview). The first connection attempt to an auto-paused database fails with error 40613 while the database resumes, and the driver retries that error only while `loginTimeout` has room left. For more information, see [Connect to an auto-paused serverless database](connection-resiliency.md#connect-to-an-auto-paused-serverless-database).
 
 The `retryExec` property has two parts, written as `rule1;rule2` when you set it programmatically. If you place the same value in a JDBC URL, wrap each rule in braces as `{rule1};{rule2}`:
 
@@ -115,7 +118,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [System requirements](system-requirements-for-the-jdbc-driver.md) | Supported Java, operating system, and SQL Server versions. |
 | [Support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md) | Detailed compatibility matrix for JDBC driver releases. |
 | [Download Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) | Download links, Maven coordinates, and release artifacts. |
-| [Getting started with the JDBC driver](getting-started-with-the-jdbc-driver.md) | Install the driver, configure your environment, and run your first query. |
+| [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md) | Build a complete application, configure authentication, and verify a parameterized query result. |
 | [Overview of the JDBC driver](overview-of-the-jdbc-driver.md) | Architecture, supported features, and JDBC specification compliance. |
 
 ## Configure and connect
@@ -240,10 +243,14 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [Sample JDBC driver applications](sample-jdbc-driver-applications.md) | End-to-end code samples. |
 | [FAQ](frequently-asked-questions-faq-for-jdbc-driver.yml) | Frequently asked questions. |
 
+## Request a feature
+
+To request a feature, open an issue in the [Microsoft JDBC Driver for SQL Server GitHub repository](https://github.com/microsoft/mssql-jdbc/issues/new/choose).
+
 ## Related content
 
 - [Microsoft JDBC Driver for SQL Server on GitHub](https://github.com/microsoft/mssql-jdbc)
 - [Microsoft JDBC Driver for SQL Server on Maven Central](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc)
 - [Release notes for the Microsoft JDBC Driver for SQL Server](release-notes-for-the-jdbc-driver.md)
 - [Finding additional JDBC driver information](finding-additional-jdbc-driver-information.md)
-- [Connection modules for Microsoft SQL Database](../sql-connection-libraries.md)
+- [Microsoft SQL drivers and frameworks](../sql-connection-libraries.md)

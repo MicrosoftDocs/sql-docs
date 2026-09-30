@@ -3,6 +3,7 @@ title: Use Spatial Data with mssql-python
 description: Learn how to work with Microsoft SQL geography and geometry data types using the mssql-python driver for location-based applications.
 author: dlevy-msft-sql
 ms.author: dlevy
+ms.reviewer: vanto, randolphwest
 ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: connectivity

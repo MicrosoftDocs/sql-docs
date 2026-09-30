@@ -3,8 +3,8 @@ title: mssql-django Support and Lifecycle
 description: Learn about the support lifecycle, version compatibility, and how to report issues for the mssql-django package.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
-ms.date: 07/24/2026
+ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -21,7 +21,10 @@ Always use the latest release to gain new features, performance improvements, an
 
 ### Current version
 
-Version 1.7.4 is the current general availability (GA) release.
+Version 2.0 is the current general availability (GA) release.
+
+> [!IMPORTANT]
+> Version 2.0 requires `mssql-python` 1.15.0 or later, even when a database alias uses `pyodbc`. The package installs only on platforms that have a compatible `mssql-python` distribution. Projects on other platforms stay on version 1.8.0.
 
 ### Support status definitions
 
@@ -36,7 +39,9 @@ Use these status values in the version table:
 
 | Version | Release date | Status | Django versions | Key features |
 | --- | --- | --- | --- | --- |
-| 1.7.4 | July 2026 | **Current** | 3.2 - 6.0 | `GROUP BY` fixes for escaped `%%` literals with real params and for `IntegerChoices` params in raw queries |
+| 2.0 | September 2026 | **Current** | 5.2 - 6.1 | Opt-in `mssql-python` driver, Python 3.10 - 3.14, `zoneinfo` replaces `pytz`, MARS and `inspectdb` fixes |
+| 1.8.0 | August 2026 | Previous | 3.2 - 6.1 | Django 6.1 support, `quote_name` query compiler change, foreign key introspection returns the ON DELETE rule |
+| 1.7.4 | July 2026 | Previous | 3.2 - 6.0 | `GROUP BY` fixes for escaped `%%` literals with real params and for `IntegerChoices` params in raw queries |
 | 1.7.3 | June 2026 | Previous | 3.2 - 6.0 | `FA001` fix for `Authentication=` modes other than `ActiveDirectoryMsi`, subclassed `DatabaseWrapper` `KeyError` fix (regression from 1.7.1) |
 | 1.7.2 | May 2026 | Previous | 3.2 - 6.0 | **datetimeoffset** time zone fix, `Now()` time zone fix, `.explain()` compatibility fix |
 | 1.7.1 | April 2026 | Previous | 3.2 - 6.0 | SQL database in Fabric fix, descending index AlterField fix |
@@ -57,66 +62,72 @@ For detailed release notes, see [What's new in mssql-django](whats-new.md).
 
 ## Django and Python version compatibility
 
-Each Django release supports specific Python versions. When choosing your versions, ensure compatibility between Django, Python, and `mssql-django`:
+Each Django release supports specific Python versions. `mssql-django` 2.0 tests the following combinations:
 
 | Django version | Python versions |
 | --- | --- |
+| 6.1 | 3.12, 3.13, 3.14 |
 | 6.0 | 3.12, 3.13, 3.14 |
 | 5.2 | 3.10, 3.11, 3.12, 3.13 |
-| 5.1 | 3.10, 3.11, 3.12, 3.13 |
-| 5.0 | 3.10, 3.11, 3.12 |
-| 4.2 | 3.8, 3.9, 3.10, 3.11, 3.12 |
-| 4.1 | 3.8, 3.9, 3.10, 3.11 |
-| 4.0 | 3.8, 3.9, 3.10 |
-| 3.2 | 3.8, 3.9, 3.10 |
+
+Django 3.2 through 5.1 and Python 3.8 and 3.9 reached end of support and aren't tested. Projects on those versions stay on `mssql-django` 1.8.0.
 
 > [!IMPORTANT]  
 > Always use a supported Python version. Older Python versions don't receive security updates.
 
-## SQL Server version compatibility
+## SQL Server and Azure SQL compatibility
 
-The `mssql-django` backend works with all supported versions of SQL Server.
+`mssql-django` 2.0 supports every supported version of Microsoft SQL. A newer SQL Server major version that the backend doesn't recognize connects by using the latest capability set the backend knows about, rather than failing version validation. 
 
-### Azure SQL services
-
-| Service | Support status |
+| Product or service | Support status |
 | --- | --- |
+| SQL Server | Fully supported |
+| SQL Server on Azure Virtual Machines | Fully supported |
 | Azure SQL Database | Fully supported |
 | Azure SQL Managed Instance | Fully supported |
-
-### Microsoft Fabric
-
-| Endpoint | Support status |
-| --- | --- |
 | SQL database in Fabric | Fully supported |
+| Microsoft Fabric Warehouse | Connections only. On the `pyodbc` path, set `MARS_Connection=no` in `extra_params`. Django migrations and other SQL Server features aren't supported. |
+| Azure Synapse Analytics | Connections only. Django migrations and other SQL Server features aren't supported. |
 
-## ODBC driver compatibility
+## Database driver compatibility
 
-The `mssql-django` backend requires an external ODBC driver, unlike the `mssql-python` driver which uses Direct Database Connectivity (DDBC).
+`mssql-django` 2.0 connects through either of two Python database drivers, selected for each database alias. For more information, see [Select the database driver for mssql-django](select-database-driver.md).
 
-As of `mssql-django` 1.7, the backend defaults to ODBC Driver 18 for SQL Server and automatically falls back to ODBC Driver 17 if version 18 isn't installed. You can override this by specifying the `driver` option in your database configuration.
+| Python driver | Support status | Connectivity |
+| --- | --- | --- |
+| `pyodbc` | Fully supported (default) | Microsoft ODBC Driver 17 or 18 for SQL Server, installed separately |
+| `mssql-python` | Fully supported (opt in with the `python_driver` option) | Built in, with no separate install |
+
+### ODBC driver compatibility
+
+On the `pyodbc` path, the backend defaults to ODBC Driver 18 for SQL Server and automatically falls back to ODBC Driver 17 if version 18 isn't installed. Override the default with the `driver` option in your database configuration. An explicit value doesn't fall back.
 
 | ODBC driver | Support status |
 | --- | --- |
 | Microsoft ODBC Driver 18 for SQL Server | Fully supported (default) |
 | Microsoft ODBC Driver 17 for SQL Server | Fully supported (fallback) |
-| FreeTDS ODBC driver | Supported |
+| FreeTDS ODBC driver | Supported on the `pyodbc` path |
+
+The `mssql-python` path ignores the `driver` option.
 
 For installation instructions, see [Download ODBC Driver for SQL Server](../../odbc/download-odbc-driver-for-sql-server.md).
 
 ## Operating system compatibility
 
-The `mssql-django` backend runs anywhere Python and the ODBC driver are supported. The ODBC driver installation steps vary by operating system. See [Install mssql-django](installation.md) for platform-specific setup.
+`mssql-django` 2.0 requires `mssql-python`, so the package installs only where a compatible `mssql-python` distribution exists. That requirement applies even when every database alias uses `pyodbc`.
 
 | Operating system | Architecture | Support status |
 | --- | --- | --- |
-| Windows 11 | x64, ARM64 | Supported |
-| Windows Server 2019, 2022, 2025 | x64 | Supported |
-| Ubuntu 22.04, 24.04 | x64, ARM64 | Supported |
-| Debian 11, 12 | x64, ARM64 | Supported |
-| Red Hat Enterprise Linux 8, 9 | x64, ARM64 | Supported |
-| macOS 14, 15 | Intel, Apple Silicon (ARM64) | Supported |
-| Alpine Linux | x64 | Supported (requires glibc compatibility layer or FreeTDS) |
+| Windows 11, Windows Server 2019, 2022, and 2025 | x64 | Supported |
+| Windows 11, Windows Server 2022 and 2025 | ARM64 | Supported with Python 3.11 and later versions |
+| macOS 15 and later versions | Intel, Apple silicon | Supported |
+| Linux with glibc 2.28 or later, such as Ubuntu 22.04 and 24.04, Debian 11 and 12, and Red Hat Enterprise Linux 8 and 9 | x64, ARM64 | Supported |
+| Linux with musl 1.2 or later, such as Alpine Linux | x64, ARM64 | Supported |
+| SUSE Linux Enterprise Server | ARM64 | Not supported |
+
+Projects on an unsupported platform stay on `mssql-django` 1.8.0, which doesn't require `mssql-python`.
+
+On the `pyodbc` path, install the Microsoft ODBC Driver for SQL Server separately. The installation steps vary by operating system. See [Install mssql-django](installation.md) for platform-specific setup.
 
 ## Feature compatibility
 
@@ -128,7 +139,7 @@ The following tables list Django and SQL Server features and their support statu
 | --- | --- |
 | Migrations | Yes |
 | `QuerySet` API | Yes |
-| `JSONField` | Yes (SQL Server 2016+) |
+| `JSONField` | Yes |
 | `bulk_create` / `bulk_update` | Yes |
 | Database transactions | Yes |
 | `inspectdb` with `--schema` | Yes |
@@ -150,7 +161,7 @@ The following tables list Django and SQL Server features and their support statu
 | Encrypted connections (TLS) | Yes |
 | Always Encrypted | Yes |
 | Microsoft Entra authentication | Yes |
-| Multiple Active Result Sets (MARS) | Yes (via `pyodbc`) |
+| Multiple Active Result Sets (MARS) | Yes on the `pyodbc` path. The backend enables MARS when the alias uses a Microsoft ODBC driver on Windows. The `mssql-python` path never enables MARS and rejects the `MARS_Connection` keyword. |
 | Stored procedures | Yes (via `cursor.execute`) |
 | `SNAPSHOT` isolation | Yes (requires database-level config) |
 | Read-only routing | Yes |
@@ -161,14 +172,16 @@ The `mssql-django` package automatically installs the following dependencies:
 
 | Dependency | Purpose | Required version |
 | --- | --- | --- |
-| Django | Web framework | >= 3.2 |
-| `pyodbc` | ODBC database driver for Python | >= 3.0 |
-| `pytz` | Time zone support (used by the backend for `datetime` conversion, regardless of `USE_TZ`) | Any |
+| Django | Web framework | `>=5.2,<6.2` |
+| `pyodbc` | Default ODBC database driver for Python | `>=3.0` |
+| `mssql-python` | Python database driver. Installed unconditionally, and used only when an alias opts in. | `>=1.15.0` |
+| `tzdata` | IANA time zone database for the standard library `zoneinfo` module, used where the operating system doesn't supply one | Any |
 
-The `mssql-django` backend also requires the Microsoft ODBC Driver for SQL Server to be installed on the host system. For more information, see [Install mssql-django](installation.md).
+The `pyodbc` path also requires the Microsoft ODBC Driver for SQL Server on the host system. The `mssql-python` path has no separate ODBC driver install. For more information, see [Install mssql-django](installation.md).
 
 ## Policy for versioning and breaking changes
 
+- **Major versions** (2.0): Can change the supported Python, Django, SQL Server, and platform matrix, and can add or remove dependencies. Breaking changes appear only in a major version.
 - **Minor versions** (1.6, 1.7): Include new Django version support, new features, and bug fixes. Maintain backward compatibility.
 - **Patch versions** (1.7.1, 1.7.2, 1.7.3, 1.7.4): Include bug fixes only.
 
@@ -211,7 +224,7 @@ Report bugs and request features on GitHub:
 - [Open an issue](https://github.com/microsoft/mssql-django/issues/new)
 - [View known issues](https://github.com/microsoft/mssql-django/issues?q=is%3Aissue+is%3Aopen)
 
-When reporting an issue, include your Django version, Python version, SQL Server version, ODBC driver version, and a minimal reproduction of the problem.
+When you report an issue, include your Django version, Python version, SQL Server version, the Python database driver and its version, and a minimal reproduction of the problem.
 
 ### Contribute
 
@@ -227,6 +240,7 @@ Community contributions are welcome. For more information about the Contributor 
 
 - [What's new in mssql-django](whats-new.md)
 - [Install mssql-django](installation.md)
+- [Select the database driver for mssql-django](select-database-driver.md)
 - [Limitations and unsupported features in mssql-django](limitations.md)
 - [mssql-django configuration reference](configuration-reference.md)
 - [mssql-django on GitHub](https://github.com/microsoft/mssql-django)

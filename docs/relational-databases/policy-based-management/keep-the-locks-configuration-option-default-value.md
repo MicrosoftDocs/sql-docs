@@ -30,9 +30,9 @@ EXEC sp_configure 'locks', 0;
 
 [Configure the locks (server configuration option)](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)
 
-[sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)
+[sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-objects/sys-dm-tran-locks-transact-sql.md)
 
-[sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)
+[sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-objects/sys-dm-os-wait-stats-transact-sql.md)
 
 [Microsoft Knowledge Base article 271509](/troubleshoot/sql/performance/understand-resolve-blocking)
 

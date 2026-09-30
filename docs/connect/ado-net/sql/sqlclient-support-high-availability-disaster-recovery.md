@@ -1,101 +1,133 @@
 ---
-title: "SqlClient support for high availability, disaster recovery"
-description: "Describes SqlClient support for high-availability, disaster recovery (Always On) availability groups."
+title: High Availability and Disaster Recovery with Microsoft.Data.SqlClient
+description: Configure MultiSubnetFailover, application intent, and read-only routing, and understand reconnect behavior and platform limits in SqlClient.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 08/11/2026
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
 ai-usage: ai-assisted
 ms.custom: sfi-ropc-nochange
 ---
-# SqlClient support for high availability, disaster recovery
+# High availability and disaster recovery with SqlClient
 
-[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
+<a id="sqlclient-support-for-high-availability-disaster-recovery"></a>
 
-This article discusses Microsoft SqlClient Data Provider for SQL Server support for high availability and disaster recovery, including Always On Availability Groups. For more information, see [Always On availability groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
-You can now specify the availability group listener of a high availability and disaster recovery (HADR) availability group (AG) or failover cluster instance (FCI) in the connection property. If a SqlClient application connects to an Always On database that fails over, the original connection breaks and the application must open a new connection to continue work after the failover.  
-  
-If you don't connect to an availability group listener or FCI, and if multiple IP addresses are associated with a hostname, SqlClient iterates sequentially through all IP addresses associated with the DNS entry. This process can be time consuming if the first IP address returned by the DNS server isn't bound to any network interface card (NIC). When connecting to an AG listener or FCI, SqlClient attempts to establish connections to all IP addresses in parallel. If a connection attempt succeeds, the driver discards any pending connection attempts.  
-  
-> [!NOTE]
->  Increasing connection timeout and implementing connection retry logic will increase the probability that an application will connect to an availability group. Also, because a connection can fail because of a failover, you should implement connection retry logic, retrying a failed connection until it reconnects.  
-  
-The following connection properties are supported in the Microsoft SqlClient Data Provider for SQL Server:  
-  
-- `ApplicationIntent`  
-  
-- `MultiSubnetFailover`  
-  
-You can programmatically modify these connection string keywords with:  
-  
-- <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
-  
-- <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
-  
-## Connecting With MultiSubnetFailover  
-Always specify `MultiSubnetFailover=True` when connecting to a Microsoft SQL family TCP endpoint. This setting applies to availability group listeners, failover cluster instances, and multi-IP endpoints such as Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. The property is also safe on single-IP targets. `MultiSubnetFailover` enables faster failover for all Availability Groups and Failover Cluster Instances and significantly reduces failover time for single- and multi-subnet Always On topologies. During a multi-subnet failover, the client attempts connections in parallel. During a subnet failover, it aggressively retries the TCP connection. `MultiSubnetFailover` isn't supported when you connect to a named instance or over a protocol other than TCP.  
-  
-The `MultiSubnetFailover` connection property indicates that SqlClient should try to connect to the database on the primary SQL Server instance by connecting to all the IP addresses in parallel. When you specify `MultiSubnetFailover=True` for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This setting enables faster reconnection after failover of either an Always On Availability Group or an Always On Failover Cluster Instance. It applies to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
-  
-For more information about connection string keywords in SqlClient, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>. For guidance on the related Transparent Network IP Resolution (TNIR) setting on .NET Framework, and to troubleshoot slow connections caused by multi-IP DNS names, see [Disabling Transparent Network IP Resolution](../appcontext-switches.md#disabling-transparent-network-ip-resolution) and [Long connect delays with pre-login handshake timeout](../sqlclient-troubleshooting-guide.md#long-connect-delays-with-pre-login-handshake-timeout).  
-  
-Use the following guidelines when configuring `MultiSubnetFailover`:  
-  
-- Use the `MultiSubnetFailover` connection property when connecting to a single subnet or multi-subnet; it will improve performance for both.  
-  
-- To connect to an availability group, specify the availability group listener of the availability group as the server in your connection string.  
-  
-- Connecting to a SQL Server instance configured with more than 64 IP addresses will cause a connection failure.  
-  
-- Behavior of an application that uses the `MultiSubnetFailover` connection property is not affected based on the type of authentication: SQL Server Authentication, Kerberos Authentication, or Windows Authentication.  
-  
-- Increase the value of `Connect Timeout` to accommodate for failover time and reduce application connection retry attempts.  
-  
-- Distributed transactions are not supported.  
-  
- If read-only routing is not in effect, connecting to a secondary replica location will fail in the following situations:  
-  
-- If the secondary replica location is not configured to accept connections.  
-  
-- If an application uses `ApplicationIntent=ReadWrite` (discussed below) and the secondary replica location is configured for read-only access.  
-  
-<xref:Microsoft.Data.SqlClient.SqlDependency> is not supported on read-only secondary replicas.  
-  
-A connection will fail if a primary replica is configured to reject read-only workloads and the connection string contains `ApplicationIntent=ReadOnly`.  
-  
-## Upgrading to use multi-subnet clusters from database mirroring  
-A connection error (<xref:System.ArgumentException>) will occur if the `MultiSubnetFailover` and `Failover Partner` connection keywords are present in the connection string, or if `MultiSubnetFailover=True` and a protocol other than TCP is used. An error (<xref:Microsoft.Data.SqlClient.SqlException>) will also occur if `MultiSubnetFailover` is used and the SQL Server returns a failover partner response indicating it is part of a database mirroring pair.  
-  
-If you upgrade a SqlClient application that currently uses database mirroring to a multi-subnet scenario, you should remove the `Failover Partner` connection property and replace it with `MultiSubnetFailover` set to `True` and replace the server name in the connection string with an availability group listener. If a connection string uses `Failover Partner` and `MultiSubnetFailover=True`, the driver will generate an error. However, if a connection string uses `Failover Partner` and `MultiSubnetFailover=False` (or `ApplicationIntent=ReadWrite`), the application will use database mirroring.  
-  
-The driver will return an error if database mirroring is used on the primary database in the AG, and if `MultiSubnetFailover=True` is used in the connection string that connects to a primary database instead of to an availability group listener.  
-  
-## Specifying application intent  
-When `ApplicationIntent=ReadOnly`, the client requests a read workload when connecting to an Always On enabled database. The server will enforce the intent at connection time and during a USE database statement but only to an Always On enabled database.  
-  
-The `ApplicationIntent` keyword does not work with legacy, read-only databases.  
-  
-A database can allow or disallow read workloads on the targeted Always On database. (This is done with the `ALLOW_CONNECTIONS` clause of the `PRIMARY_ROLE` and `SECONDARY_ROLE` Transact-SQL statements.)  
-  
-The `ApplicationIntent` keyword is used to enable read-only routing.  
-  
-## Read-only routing  
-Read-only routing is a feature that can ensure the availability of a read only replica of a database. To enable read-only routing:  
-  
-- You must connect to an Always On Availability Group availability group listener.  
-  
-- The `ApplicationIntent` connection string keyword must be set to `ReadOnly`.  
-  
-- The Availability Group must be configured by the database administrator to enable read-only routing.  
-  
-It is possible that multiple connections using read-only routing will not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an availability group listener to the `Data Source` connection string keyword. Instead, specify the name of the read-only instance.  
-  
-Read-only routing may take longer than connecting to the primary because read only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
-  
+[!INCLUDE [Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
+
+Connect to a stable service endpoint rather than a particular replica when your application must survive server failover. Microsoft.Data.SqlClient can accelerate connection attempts and request read-only routing, but it doesn't make an in-flight transaction survive a broken connection.
+
+| SQL Server deployment | Endpoint to use |
+| --- | --- |
+| Always On availability group (AG). | The AG *listener*, a network name that directs connections to the appropriate replica. |
+| Failover cluster instance (FCI). | The virtual server name of the clustered SQL Server instance. |
+| Legacy database mirroring. | The principal and `Failover Partner`, with the mirrored database specified. |
+
+For the server architecture, see [Always On availability groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
+
+<a id="connecting-with-multisubnetfailover"></a>
+
+## Connect with MultiSubnetFailover
+
+Set `MultiSubnetFailover=true` for supported Microsoft SQL family Transmission Control Protocol (TCP) endpoints, including AG listeners, FCIs, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Use a hostname and port, not named-instance discovery.
+
+```text
+Server=tcp:<listener>,1433;Database=<database>;Integrated Security=true;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;
+```
+
+Replace the authentication settings for your environment. The certificate must validate for the name used by the client; see [Encryption and certificate validation](../encryption-and-certificate-validation.md).
+
+When the Domain Name System (DNS) returns several Internet Protocol (IP) addresses, `MultiSubnetFailover=true` attempts connections in parallel and uses the first successful connection. This feature reduces delays when some addresses aren't reachable or no longer serve the database. It also accelerates TCP retries. For a single-IP endpoint, only one address is attempted.
+
+The setting doesn't shorten the server's failover or database recovery time. Allow an appropriate `Connect Timeout` and a bounded application retry policy for the availability requirements of your service.
+
+### Connection option compatibility
+
+| Option | Default | Behavior and limitations |
+| --- | --- | --- |
+| `MultiSubnetFailover` | `false`, unless a process-wide override is enabled. | Parallel TCP attempts. Not supported with named-instance discovery, non-TCP protocols, database mirroring, or more than 64 server IP addresses. |
+| `TransparentNetworkIPResolution` | `true` on .NET Framework, subject to automatic endpoint and authentication handling. | Tries an initial address before parallel attempts to alternatives. .NET Framework only; obsolete. Modern .NET rejects the keyword. `MultiSubnetFailover=true` takes precedence. |
+| `Failover Partner` | Empty. | Legacy database mirroring only. Requires `Initial Catalog` or `Database`. Incompatible with `MultiSubnetFailover=true` and `ApplicationIntent=ReadOnly`. |
+| `ApplicationIntent` | `ReadWrite`. | Sends workload intent to the server. Read-only routing requires server configuration and doesn't apply to arbitrary read-only databases. |
+
+The default for `MultiSubnetFailover` is still `false` in the connection string. A process-wide AppContext switch can enable it for all connections. Prefer explicit connection configuration when an application also uses incompatible targets, such as LocalDB or database mirroring. See [AppContext switches](../appcontext-switches.md).
+
+Transparent Network IP Resolution (TNIR) is obsolete starting with SqlClient 7.1. Don't copy the TNIR keyword into modern .NET connection strings. On .NET Framework, explicit TNIR configuration can override the driver's automatic handling for some endpoints and authentication modes. Don't assume every connection without `MultiSubnetFailover` always tries addresses strictly sequentially.
+
+## Reconnect after a failure
+
+A failover can break an existing connection. Dispose of the failed connection and open a new one against the service endpoint. Connection recovery and retry features have limits; they don't replay an interrupted business operation automatically.
+
+1. Distinguish a transient connectivity error from an invalid credential, denied permission, or certificate failure.
+1. Retry connection establishment with bounded delays and an overall time limit.
+1. Retry a failed operation only when you can establish whether it committed, or when the operation is designed to be idempotent.
+1. Recreate transaction and session state that belonged to a lost session.
+
+A lost response after a commit can leave the client uncertain whether a write succeeded. Retrying that write without duplicate protection can apply it twice. See [Configurable retry logic](../configurable-retry-logic.md) and [SQL Server connection pooling](../sql-server-connection-pooling.md).
+
+<a id="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>
+
+## Upgrade to multi-subnet clusters from database mirroring
+
+Database mirroring is deprecated. `Failover Partner` belongs to database mirroring; it isn't an AG secondary address or an Azure failover-group setting.
+
+When migrating a mirrored database to an AG:
+
+1. Configure and verify the AG listener and database on the server.
+1. Replace the old server name with the listener.
+1. Remove `Failover Partner`.
+1. Set `MultiSubnetFailover=true` and specify the AG database.
+1. Exercise failover and retry behavior before deploying the change.
+
+SqlClient rejects `Failover Partner` combined with `MultiSubnetFailover=true`. Merely setting `MultiSubnetFailover=false` doesn't configure mirroring; a valid mirrored pair and database are still required. A server-provided mirroring partner is also incompatible with multi-subnet failover.
+
+<a id="specifying-application-intent"></a>
+
+## Specify application intent
+
+Set `ApplicationIntent=ReadOnly` to request a read workload on an AG database:
+
+```text
+Server=tcp:<listener>,1433;Database=<database>;Integrated Security=true;Encrypt=true;TrustServerCertificate=false;MultiSubnetFailover=true;ApplicationIntent=ReadOnly;
+```
+
+The AG's primary and secondary connection policies determine whether the requested workload is accepted. A primary configured to reject read-only workloads can reject this connection. A secondary configured for read-only access rejects a read-write connection.
+
+`ApplicationIntent` doesn't turn a database read-only, replace permissions, or route ordinary read-only databases. Grant read-only permissions when the application must be unable to write.
+
+## Read-only routing
+
+For AG read-only routing, configure all of the following settings:
+
+- Connect to the AG listener.
+- Set `Database` to a database in the AG.
+- Set `ApplicationIntent=ReadOnly`.
+- Configure a readable secondary and its read-only routing URL.
+- Configure the primary replica's read-only routing list.
+
+The client first contacts the primary through the listener, then connects to the routed target. Allow network access and valid certificate names for both connection stages. Routing can add connection time.
+
+Separate opens can reach different readable replicas as routing configuration and availability change. A pooled open can reuse an existing connection instead of performing routing again. Connecting directly to a secondary chooses that instance, but bypasses listener-based routing and its failover behavior.
+
+<xref:Microsoft.Data.SqlClient.SqlDependency> isn't supported on read-only secondary replicas. Review the SQL Server version and deployment requirements separately for features such as distributed transactions; `MultiSubnetFailover` alone doesn't establish their support.
+
+## Azure SQL and Microsoft Fabric
+
+For Azure SQL, use the service's configured endpoint, including its failover-group listener when applicable. Don't use `Failover Partner` for an Azure SQL failover group. Service-managed failover differs from configuring a SQL Server AG yourself.
+
+For SQL database in Microsoft Fabric:
+
+- Use its database connection string with Microsoft Entra authentication and `MultiSubnetFailover=true`.
+- Use the separate SQL analytics endpoint for its read-only analytics workload. Don't assume `ApplicationIntent=ReadOnly` redirects the writable database endpoint.
+- Don't configure `Failover Partner` or SQL Server AG routing for the database service.
+- Account for the current `Default` connection policy: allow outbound TCP port 1433 to gateways and ports 11000 through 11999 to the regional Azure SQL addresses.
+
+Fabric provides automatic zone redundancy. Active geo-replication, failover groups, and geo-restore aren't currently supported for SQL database in Fabric. Microsoft Distributed Transaction Coordinator, the elastic database client library, and elastic query also aren't supported. See [Connect to a SQL database in Fabric](/fabric/database/sql/connect) and [Fabric SQL database limitations](/fabric/database/sql/limitations).
+
 ## Related content
 
 - [SQL Server features and ADO.NET](sql-server-features-adonet.md)
+- [Connection options](../connection-options.md)
+- [Troubleshoot SqlClient](../sqlclient-troubleshooting-guide.md)

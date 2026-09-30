@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "deleting data"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # DELETE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
   Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -93,16 +93,6 @@ ON <join_condition>
 }  
 ```
 
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-  
-DELETE 
-    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
-    [ WHERE <search_condition> ]   
-    [ OPTION ( <query_options> [ ,...n ]  ) ]  
-[; ]  
-```  
-  
 ## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the DELETE statement. The result set is derived from a SELECT statement.  
@@ -452,7 +442,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### K. Delete all rows from a table  
  The following example deletes all rows from the `Table1` table because a WHERE clause is not used to limit the number of rows deleted.  

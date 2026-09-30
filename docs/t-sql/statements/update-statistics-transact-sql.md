@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "statistical information [SQL Server], updating"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # UPDATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Updates query optimization [statistics](../../relational-databases/statistics/statistics.md) on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.
 
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_constant ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 UPDATE STATISTICS [ schema_name . ] table_name
@@ -156,7 +156,7 @@ In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], `RESAMPLE` isn't supporte
 
 When `ON`, the statistics will retain the set sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When `OFF`, statistics sampling percentage will get reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is `OFF`.
 
-[DBCC SHOW_STATISTICS](../database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
+[DBCC SHOW_STATISTICS](../database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
 
 If `AUTO_UPDATE_STATISTICS` is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not. `RESAMPLE` behavior isn't affected by this option.
 
@@ -271,9 +271,11 @@ Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tiger
 
 To determine when statistics were last updated, use the [STATS_DATE](../functions/stats-date-transact-sql.md) function.
 
-### PDW / Azure Synapse Analytics
+<a id="pdw--azure-synapse-analytics"></a>
 
-The following syntax isn't supported by [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
+### Azure Synapse Analytics
+
+The following syntax isn't supported by [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 UPDATE STATISTICS t1 (a, b);
@@ -355,7 +357,7 @@ UPDATE STATISTICS Production.Product (Products)
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Update statistics on a table
 

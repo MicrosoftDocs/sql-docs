@@ -261,7 +261,7 @@ If you want to use your contained AG as the forwarder in a [distributed availabi
 
 Two system views include additions related to contained availability groups:
 
-- The [sys.dm_exec_sessions](../../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) dynamic management view includes a `contained_availability_group_id` column.
+- The [sys.dm_exec_sessions](../../../relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) dynamic management view includes a `contained_availability_group_id` column.
 - The [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view includes the `is_contained` column.
 
 ## Related content

@@ -3,7 +3,7 @@ title: "Accessing Diagnostic Information in the Extended Events Log"
 description: "Tracing OLE DB Driver for SQL Server and accessing diagnostic information in the extended events log"
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: connectivity
@@ -11,7 +11,7 @@ ms.topic: "reference"
 ---
 # Accessing Diagnostic Information in the Extended Events Log
 
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

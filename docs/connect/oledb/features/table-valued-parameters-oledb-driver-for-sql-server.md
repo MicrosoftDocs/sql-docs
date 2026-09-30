@@ -3,7 +3,7 @@ title: "Table-Valued Parameters (OLE DB Driver for SQL Server)"
 description: OLE DB Driver for SQL Server supports table-valued parameters, which provide an efficient way to pass multiple rows of data to the server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
 ms.date: "06/12/2018"
 ms.service: sql
 ms.subservice: connectivity
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB Driver for SQL Server)"
 ---
 # Table-Valued Parameters (OLE DB Driver for SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

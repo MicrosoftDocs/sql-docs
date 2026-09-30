@@ -467,7 +467,6 @@
         "integration-services/**/*.md": "None"
       },
       "feedback_product_url": {},
-      
       "titleSuffix": {
         "ado/**/*.md": "ActiveX Data Objects (ADO)",
         "analysis-services/**/*.md": "",
@@ -615,8 +614,7 @@
         "machine-learning/**/*.md": "vanto",
         "machine-learning/**/*.yml": "vanto"
       },
-      "ms.reviewer": {
-      },
+      "ms.reviewer": {},
       "ms.date": {
         "azdata/**/*.md": "02/13/2026"
       },
@@ -668,9 +666,6 @@
         "t-sql/**/*.md": "1825-days"
       },
       "exclude_monikers": {
-        "ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md": [
-          "sql-server-ver16"
-        ],
         "odbc/microsoft/**/*.md": [
           "sql-server-ver16"
         ],
@@ -680,23 +675,77 @@
         "relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md": [
           "sql-server-ver16"
         ],
-        "ssma/access/legal-notice-ssma-for-access.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/db2/legal-notice-db2tosql.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/mysql/legal-notice-mysqltosql.md": [
-          "sql-server-ver16"
-        ],
         "ssma/sql-server-migration-assistant.md": [
-          "sql-server-ver16"
-        ],
-        "ssma/sybase/legal-notice-ssma-for-sybase.md": [
           "sql-server-ver16"
         ],
         "ado/**/*.md": [
           "sql-server-ver15"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-diag-processing-stats-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-node-status-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-event-logs-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-performance-counters-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-file-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "t-sql/language-elements/create-diagnostics-session-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md": [
+          "aps-pdw-2016-au7"
         ]
       }
     },
@@ -723,9 +772,9 @@
       },
       "sensitive-language-ma": {
         "exclude": [
-          "linux/sql-server-linux-availability-group-cluster-sles.md",
-          "linux/sql-server-linux-create-availability-group.md",
-          "linux/sql-server-linux-pacemaker-basics.md",
+          "linux/business-continuity/availability-groups/cluster-pacemaker.md",
+          "linux/business-continuity/availability-groups/create.md",
+          "linux/business-continuity/availability-groups/pacemaker-basics.md",
           "relational-databases/errors-events/**/*.md",
           "relational-databases/maintenance-plans/**/*.md",
           "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",
@@ -752,7 +801,6 @@
       },
       "sensitive-language-wl": {
         "exclude": [
-          "big-data-cluster/reference-config-spark-hadoop.md",
           "relational-databases/errors-events/**/*.md"
         ]
       },

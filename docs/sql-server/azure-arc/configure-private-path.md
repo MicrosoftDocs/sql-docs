@@ -3,7 +3,7 @@ title: Connect with Private Path
 description: This article describes how to connect SQL Server enabled by Azure Arc to Azure with a private path.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 07/03/2025
+ms.date: 09/30/2026
 ms.topic: how-to #Don't change
 # customer intent: As a data engineer, I want to use a private path to connect to Azure Arc so I can avoid internet traffic.
 ---
@@ -13,9 +13,6 @@ ms.topic: how-to #Don't change
 This article describes how to configure communication for a SQL Server enabled by Azure Arc instance so that it connects to Azure without going over internet paths.
 
 This design deploys forward proxy servers in Azure to allow SQL Server to communicate over a site-to-site VPN or ExpressRouteConnection with private IP addresses. The proxies communicate with Arc URLs over the Azure backbone network.
-
-> [!IMPORTANT]  
-> This implementation uses [Azure Firewall Explicit proxy](/azure/firewall/explicit-proxy) - which is currently available in preview.
 
 The following diagram represents this pattern.
 

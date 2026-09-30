@@ -16,7 +16,7 @@ ms.custom:
 
 This article shows how to use the [bcp utility](../../tools/bcp/bcp-utility.md) to bulk copy data between an instance of SQL Server on Linux and a data file in a user-specified format.
 
-You can use **`bcp`** to import large numbers of rows into SQL Server tables or to export data from SQL Server tables into data files. Except when used with the queryout option, **`bcp`** requires no knowledge of Transact-SQL. The **`bcp`** command-line utility works with Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database and Azure Synapse Analytics.
+You can use **`bcp`** to import large numbers of rows into SQL Server tables or to export data from SQL Server tables into data files. Except when used with the queryout option, **`bcp`** requires no knowledge of Transact-SQL. The **`bcp`** command-line utility works with SQL Server running on-premises or in the cloud on Linux, Windows, or Docker, and with Azure SQL Database and Azure Synapse Analytics.
 
 This article shows you how to:
 
@@ -41,7 +41,7 @@ Start by creating a sample database with a simple table that is used in the rest
 
 1. On your Linux box, open a command terminal.
 
-1. Copy and paste the following commands into the terminal window. These commands use the **`sqlcmd`** command-line utility to create a sample database (`BcpSampleDB`) and a table (`TestEmployees`) on the local SQL Server instance (`localhost`). Remember to replace the `username` and `<password>` as necessary before running the commands.
+1. Copy and paste the following commands into the terminal window. These commands use the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md) to create a sample database (`BcpSampleDB`) and a table (`TestEmployees`) on the local SQL Server instance (`localhost`). Remember to replace `sa` and `<password>` as necessary before running the commands.
 
 [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
@@ -59,7 +59,7 @@ sqlcmd -S localhost -U sa -P <password> -d BcpSampleDB -Q "CREATE TABLE TestEmpl
 
 ### Create the source data file
 
-Copy and paste the following command into your terminal window. We use the built-in `cat` command to create a sample text data file with three records save the file in your home directory as `~/test_data.txt`. The fields in the records are delimited by a comma.
+Copy and paste the following command into your terminal window. The built-in `cat` command creates a sample text data file with three records and saves the file in your home directory as `~/test_data.txt`. The fields in the records are delimited by a comma.
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -85,10 +85,10 @@ This should display the following in your terminal window:
 
 ### Import data from the source data file
 
-Copy and paste the following commands into the terminal window. This command uses **`bcp`** to connect to the local SQL Server instance (`localhost`) and import the data from the data file (`~/test_data.txt`) into the table (`TestEmployees`) in the database (`BcpSampleDB`). Remember to replace the username and `<password>` as necessary before running the commands.
+Copy and paste the following command into the terminal window. This command uses **`bcp`** to connect to the local SQL Server instance (`localhost`) and import the data from the data file (`~/test_data.txt`) into the table (`TestEmployees`) in the database (`BcpSampleDB`). Remember to replace `sa` and `<password>` as necessary before running the command.
 
 ```bash
-bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <password> -d BcpSampleDB -c -t  ','
+bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <password> -d BcpSampleDB -c -t ','
 ```
 
 Here's a brief overview of the command-line parameters we used with **`bcp`** in this example:
@@ -98,12 +98,12 @@ Here's a brief overview of the command-line parameters we used with **`bcp`** in
 - `-P`: specifies the password for the login ID
 - `-d`: specifies the database to connect to
 - `-c`: performs operations using a character data type
-- `-t`: specifies the field terminator. We are using `comma` as the field terminator for the records in our data file
+- `-t`: specifies the field terminator. This example uses a comma as the field terminator for the records in the data file
 
 > [!NOTE]  
 > We aren't specifying a custom row terminator in this example. Rows in the text data file were correctly terminated with `newline` when we used the `cat` command to create the data file earlier.
 
-You can verify that the data was successfully imported by running the following command in your terminal window. Remember to replace the `username` and `<password>` as necessary before running the command.
+You can verify that the data was successfully imported by running the following command in your terminal window. Remember to replace `sa` and `<password>` as necessary before running the command.
 
 ```bash
 sqlcmd -S localhost -d BcpSampleDB -U sa -P <password> -I -Q "SELECT * FROM TestEmployees;"
@@ -123,7 +123,7 @@ Id          Name                Location
 
 In this tutorial, you use **`bcp`** to export data from the sample table we created earlier to a new data file.
 
-Copy and paste the following commands into the terminal window. These commands use the **`bcp`** command-line utility to export data from the table `TestEmployees` in the database `BcpSampleDB` to a new data file called `~/test_export.txt`. Remember to replace the username and `<password>` as necessary before running the command.
+Copy and paste the following command into the terminal window. This command uses the **`bcp`** command-line utility to export data from the table `TestEmployees` in the database `BcpSampleDB` to a new data file called `~/test_export.txt`. Remember to replace `sa` and `<password>` as necessary before running the command.
 
 ```bash
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <password> -d BcpSampleDB -c -t ','

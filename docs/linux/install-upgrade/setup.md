@@ -109,12 +109,12 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ::: moniker range="<=sql-server-linux-ver16 || <=sql-server-ver16"
 
-When you install or upgrade [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you get the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information on repositories and how to configure them, see [Configure repositories for installing and upgrading SQL Server on Linux](change-repo.md).
+When you install or upgrade [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you get the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] from your configured Microsoft repository. The quickstarts use the Cumulative Update (CU) repository for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information on repositories and how to configure them, see [Configure repositories for installing and upgrading SQL Server on Linux](change-repo.md).
 
 ::: moniker-end
 ::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-When you install or upgrade [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you get the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information on repositories and how to configure them, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](change-repo-2025.md).
+When you install or upgrade [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you get the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] from your configured Microsoft repository. The quickstarts use the Cumulative Update (CU) repository for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information on repositories and how to configure them, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](change-repo-2025.md).
 
 ::: moniker-end
 
@@ -233,7 +233,7 @@ For a more detailed sample script, see the following examples:
 
 ## Offline install
 
-If your Linux machine can't access the online repositories used in the [quick starts](#platforms), you can download the package files directly. These packages are located at <https://packages.microsoft.com>.
+If your Linux machine can't access the online repositories used in the [quickstarts](#platforms), you can download the package files directly. These packages are located at <https://packages.microsoft.com>.
 
 > [!TIP]  
 > If you followed a quickstart guide to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you don't need to download or manually install the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] packages. This section is only for the offline scenario.
@@ -289,4 +289,4 @@ After installation, you can also install or enable optional [!INCLUDE [ssnoversi
 
 ## Related content
 
-- [SQL Server on Linux Frequently Asked Questions (FAQ)](../sql-server-linux-faq.yml)
+- [SQL Server on Linux FAQ](../sql-server-linux-faq.yml)

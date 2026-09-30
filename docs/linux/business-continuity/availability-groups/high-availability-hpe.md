@@ -29,7 +29,7 @@ This tutorial consists of the following tasks:
 > - Install SQL Server on all three VMs that you plan to include in the availability group.
 > - Install HPE Serviceguard on the VMs.
 > - Create the HPE Serviceguard cluster.
-> - Create the load balancer in the Azure portal.
+> - For Azure deployments, create the load balancer in the Azure portal.
 > - Create the availability group and add a sample database to the availability group.
 > - Deploy the SQL Server workload on the availability group through Serviceguard cluster manager.
 > - Perform an automatic failover and join the node back to cluster.
@@ -42,7 +42,7 @@ This tutorial consists of the following tasks:
 
   The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
 
-- SQL Server database files on logical volume mount (LVM) for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1E75E8C6-C674-48D1-B30D-DED738431FDD.html).
+- SQL Server database files on Logical Volume Manager (LVM) volumes for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1E75E8C6-C674-48D1-B30D-DED738431FDD.html).
 
 - Ensure that you have the OpenJDK Java runtime installed on the VMs. The IBM Java SDK isn't supported.
 
@@ -128,8 +128,8 @@ To create the availability group, follow these steps:
 Enable availability groups on all the nodes that host a SQL Server instance. Then restart mssql-server. Run the following script on all three nodes:
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf
-set hadr.hadrenabled 1 sudo systemctl restart mssql-server
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
+sudo systemctl restart mssql-server
 ```
 
 ### Enable an `AlwaysOn_health` event session (optional)
@@ -144,7 +144,7 @@ GO
 
 ### Create a certificate on the primary VM
 
-The following Transact-SQL script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server instance and run the following Transact-SQL script:
+The following Transact-SQL (T-SQL) script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server instance and run the following T-SQL script:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master-key-password>';
@@ -159,7 +159,7 @@ WITH PRIVATE KEY (
 );
 ```
 
-At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that host availability replicas. To access these files, use the `mssql` user, or give permission to the `mssql` user.
+At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `/var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that host availability replicas. To access these files, use the `mssql` user, or give permission to the `mssql` user.
 
 For example, on the source server, the following command copies the files to the target machine. Replace the `node2` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the following commands on that node.
 
@@ -177,7 +177,7 @@ chown mssql:mssql dbm_certificate.*
 
 ### Create the certificate on secondary servers
 
-The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. Update the script with strong passwords. The decryption password is the same password that you used to create the `.pvk` file in an earlier step. To create the certificate, run the following script on all secondary servers except the configuration-only replica:
+The following T-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. Update the script with strong passwords. The decryption password is the same password that you used to create the `.pvk` file in an earlier step. To create the certificate, run the following script on all secondary servers and on the configuration-only replica:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master-key-password>';
@@ -247,7 +247,7 @@ FOR REPLICA ON
     ),
     
     N'<node2>' WITH (
-        ENDPOINT_URL = N'tcp://<node2>:\<5022>',
+        ENDPOINT_URL = N'tcp://<node2>:<5022>',
         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
         FAILOVER_MODE = EXTERNAL,
         SEEDING_MODE = AUTOMATIC
@@ -301,20 +301,6 @@ Connect to the primary replica and run the following T-SQL commands to:
    TO DISK = N'/var/opt/mssql/data/db1.bak';
    ```
 
-1. Set the database to the full recovery model.
-
-   ```sql
-   ALTER DATABASE [db1]
-   SET RECOVERY FULL;
-   ```
-
-1. Back up the database to disk.
-
-   ```sql
-   BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
-   ```
-
 1. Add the database `db1` to the availability group.
 
    ```sql
@@ -324,13 +310,7 @@ Connect to the primary replica and run the following T-SQL commands to:
 
 After you complete the previous steps, you see an `ag1` availability group. The three VMs are added as replicas with one primary replica, one secondary replica, and one configuration-only replica. `ag1` contains one database.
 
-## Deploy the SQL Server availability group workload (HPE Cluster Manager)
-
-In HPE Serviceguard, deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
-
-Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-BD13B685-12ED-4BA0-83CD-181B312F6138.html). Refer to the section **Protecting Microsoft SQL Server on Linux for Always On Availability Groups**.
-
-### Create the load balancer in the Azure portal
+## Create the load balancer in the Azure portal for Azure deployments
 
 For deployments in Azure Cloud, HPE Serviceguard for Linux requires a load balancer to enable client connections with the primary replica, to substitute traditional IP addresses.
 
@@ -364,7 +344,7 @@ The backend pool is the addresses of the two instances on which the Serviceguard
 1. Select the virtual machine in the environment, and associate the appropriate IP address to each selection.
 1. Select **Add**.
 
-#### Create a probe
+### Create a probe
 
 The probe defines how Azure verifies which of the Serviceguard cluster node is primary replica. Azure probes the service based on the IP address on a port that you define when you create the probe.
 
@@ -419,6 +399,12 @@ The load balancing rules configure how the load balancer routes traffic to the S
 Take note of the load balancer's frontend IP address **LbReadWriteIP**, which you need to [deploy the AG in the Serviceguard cluster](#deploy-the-sql-server-availability-group-workload-hpe-cluster-manager).
 
 At this point, the resource group has a load balancer that connects to all Serviceguard nodes. The load balancer also contains an IP address for the clients to connect to the primary replica instance in the cluster, so that any machine that is a primary replica can respond to requests for the availability group.
+
+## Deploy the SQL Server availability group workload (HPE Cluster Manager)
+
+In HPE Serviceguard, deploy the SQL Server workload on availability group through the Serviceguard manager graphical user interface.
+
+Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-BD13B685-12ED-4BA0-83CD-181B312F6138.html). Refer to the section **Protecting Microsoft SQL Server on Linux for Always On Availability Groups**.
 
 ## Perform automatic failover and join the node back to cluster
 

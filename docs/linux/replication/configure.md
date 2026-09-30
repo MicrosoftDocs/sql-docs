@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
 
 For detailed information about replication, see [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).
 
-Configure replication on Linux with either SQL Server Management Studio (SSMS) or Transact-SQL stored procedures.
+Configure replication on Linux with either SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL) stored procedures.
 
 - To use SSMS, follow the instructions in this article.
 
@@ -31,7 +31,7 @@ Configure replication on Linux with either SQL Server Management Studio (SSMS) o
 
 ## Prerequisites
 
-Before configuring publishers, distributors, and subscribers, you need to complete a couple configuration steps for the SQL Server instance.
+Before configuring publishers, distributors, and subscribers, complete the following configuration steps for the SQL Server instance.
 
 1. Enable SQL Server Agent to use replication agents. On all Linux servers, run the following commands in the terminal.
 
@@ -50,9 +50,9 @@ Before configuring publishers, distributors, and subscribers, you need to comple
    GO
    ```
 
-1. Create a snapshot folder. The SQL Server agents require a snapshot folder to read/write to. Create the snapshot folder on the distributor.
+1. Create a snapshot folder. The SQL Server agents require a snapshot folder to read from and write to. Create the snapshot folder on the distributor.
 
-   To create the snapshot folder, and grant access to `mssql` user, run the following command:
+   To create the snapshot folder and grant access to the `mssql` user, run the following commands:
 
    ```bash
    sudo mkdir /var/opt/mssql/data/ReplData/
@@ -66,23 +66,23 @@ Before configuring publishers, distributors, and subscribers, you need to comple
 
 To configure the distributor:
 
-1. On SSMS connect to your instance of SQL Server in Object Explorer.
+1. In SSMS, connect to your instance of SQL Server in Object Explorer.
 
 1. Right-click **Replication**, and select **Configure Distribution...**.
 
-1. Follow the instructions on the **Configure Distribution Wizard**.
+1. Follow the instructions in the **Configure Distribution Wizard**.
 
 ### Create publication and articles
 
 To create a publication and articles:
 
-1. In Object Explorer, select **Replication** > **Local Publications**> **New Publication...**.
+1. In Object Explorer, select **Replication** > **Local Publications** > **New Publication...**.
 
-1. Follow the instruction on the **New Publication Wizard** to configure the type of replication, and the articles that belong to the publication.
+1. Follow the instructions in the **New Publication Wizard** to configure the type of replication, and the articles that belong to the publication.
 
 ### Configure the subscription
 
-To configure the subscription in Object Explorer, select **Replication** > **Local Subscriptions**> **New subscriptions...**.
+To configure the subscription in Object Explorer, select **Replication** > **Local Subscriptions** > **New subscriptions...**.
 
 ### Monitor replication jobs
 

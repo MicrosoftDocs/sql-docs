@@ -10,7 +10,7 @@ ms.custom:
 ---
 ## Add a database to the availability group
 
-Ensure that the database you add to the availability group is in the full recovery model and has a valid log backup. If your database is a test database or a newly created database, take a database backup. On the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], run the following [!INCLUDE [tsql-md](../../includes/tsql-md.md)] (T-SQL) script to create and back up a database called `db1`:
+Ensure that the database you add to the availability group is in the full recovery model and has a valid log backup. If your database is a test database or a newly created database, take a database backup. On the primary [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], run the following [!INCLUDE [tsql-md](../../includes/tsql-md.md)] (Transact-SQL (T-SQL)) script to create and back up a database called `db1`:
 
 ```sql
 CREATE DATABASE [db1];

@@ -19,13 +19,13 @@ ms.custom:
 SQL Server's backup and restore feature is the recommended way to migrate a database from [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. In this tutorial, you walk through the steps required to move a database to Linux with backup and restore techniques.
 
 > [!div class="checklist"]
-> - Create a backup file on Windows with SSMS
+> - Create a backup file on Windows with [SQL Server Management Studio (SSMS)](/ssms/install/install)
 > - Install a Bash shell on Windows
 > - Move the backup file to Linux from the Bash shell
-> - Restore the backup file on Linux with Transact-SQL
+> - Restore the backup file on Linux with Transact-SQL (T-SQL)
 > - Run a query to verify the migration
 
-You can also create a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Always On Availability Group to migrate a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database from Windows to Linux. See [sql-server-linux-availability-group-cross-platform](../business-continuity/availability-groups/cross-platform.md).
+You can also create a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Always On Availability Group to migrate a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database from Windows to Linux. See [Configure SQL Server Always On availability group on Windows and Linux (cross-platform)](../business-continuity/availability-groups/cross-platform.md).
 
 ## Prerequisites
 
@@ -56,11 +56,11 @@ There are several ways to create a backup file of a database on Windows. The fol
 
    :::image type="content" source="media/restore-database/ssms-create-backup.png" alt-text="Screenshot of using SSMS to create a backup file.":::
 
-1. In the **Backup Up Database** dialog, verify that **Backup type** option is **Full**, and the **Back up to** option is **Disk**. Note name and location of the file. For example, a database named `YourDB` on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] has a default backup path of `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
+1. In the **Back Up Database** dialog, verify that the **Backup type** option is **Full**, and the **Back up to** option is **Disk**. Note the name and location of the file. For example, a database named `YourDB` on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] has a default backup path of `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
 
 1. Select **OK** to back up your database.
 
-Another option is to run a Transact-SQL query to create the backup file. The following Transact-SQL command performs the same actions as the previous steps for a database called `YourDB`:
+Another option is to run a T-SQL query to create the backup file. The following T-SQL command performs the same actions as the previous steps for a database called `YourDB`:
 
 ```sql
 BACKUP DATABASE [YourDB]
@@ -78,13 +78,13 @@ To restore the database, you must first transfer the backup file from the Window
    - The [Windows Subsystem for Linux](/windows/wsl/about)
    - The [Git Bash shell](https://git-scm.com/install/windows)
 
-1. Open a bash session on Windows.
+1. Open a Bash session on Windows.
 
 <a id="scp"></a>
 
 ## Copy the backup file to Linux
 
-1. In your bash session, navigate to the directory containing your backup file. For example:
+1. In your Bash session, navigate to the directory containing your backup file. For example:
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\'
@@ -99,7 +99,7 @@ To restore the database, you must first transfer the backup file from the Window
    Here's the expected output:
 
    ```output
-   The authenticity of host 192.168.2.9(192.168.2.9)' can't be established.
+   The authenticity of host '192.168.2.9 (192.168.2.9)' can't be established.
    ECDSA key fingerprint is SHA256: aB1cD2eF-3gH4iJ5kL6-mN7oP8qR=
    Are you sure you want to continue connecting (yes/no)? yes
    Warning: Permanently added '192.168.2.9' (ECDSA) to the list of known hosts.
@@ -114,7 +114,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 At this point, the backup file is on your Linux server in your user's home directory. Before restoring the database to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you must place the backup in a subdirectory of `/var/opt/mssql`, as this directory is owned by the user `mssql` and group `mssql`. If you're looking to change the default backup location, see the [Configure with mssql-conf](../configure/mssql-conf.md#backupdir) article.
 
-1. In the same Windows bash session, connect remotely to your target Linux machine with **ssh**. The following example connects to the Linux machine `192.168.2.9` as user `user1`.
+1. In the same Windows Bash session, connect remotely to your target Linux machine with **ssh**. The following example connects to the Linux machine `192.168.2.9` as user `user1`.
 
    ```bash
    ssh user1@192.168.2.9
@@ -122,7 +122,7 @@ At this point, the backup file is on your Linux server in your user's home direc
 
    You're now running commands on the remote Linux server.
 
-1. Enter super user mode.
+1. Enter superuser mode.
 
    ```bash
    sudo su
@@ -140,7 +140,7 @@ At this point, the backup file is on your Linux server in your user's home direc
    mv /home/user1/YourDB.bak /var/opt/mssql/backup/
    ```
 
-1. Exit super user mode.
+1. Exit superuser mode.
 
    ```bash
    exit
@@ -148,7 +148,7 @@ At this point, the backup file is on your Linux server in your user's home direc
 
 ## Restore your database on Linux
 
-To restore the database backup, you can use the `RESTORE DATABASE` Transact-SQL (TQL) command.
+To restore the database backup, you can use the `RESTORE DATABASE` T-SQL command.
 
 The following steps use the **`sqlcmd`** tool. If you haven't installed [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] tools, see [Install the sqlcmd and bcp SQL Server command-line tools on Linux](../install-upgrade/setup-tools.md).
 
@@ -167,7 +167,7 @@ The following steps use the **`sqlcmd`** tool. If you haven't installed [!INCLUD
    GO
    ```
 
-   You should get a message the database is successfully restored.
+   You should get a message that the database is successfully restored.
 
    `RESTORE DATABASE` might return an error like the following example:
 
@@ -186,7 +186,7 @@ The following steps use the **`sqlcmd`** tool. If you haven't installed [!INCLUD
    GO
    ```
 
-   You should get a list like the following example (listing only the two first columns):
+   You should get a list like the following example (listing only the first two columns):
 
    ```output
    LogicalName         PhysicalName                                                                 ..............
@@ -194,7 +194,7 @@ The following steps use the **`sqlcmd`** tool. If you haven't installed [!INCLUD
    YourDB              Z:\Microsoft SQL Server\MSSQL15.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
    YourDB_Product      Z:\Microsoft SQL Server\MSSQL15.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
    YourDB_Customer     Z:\Microsoft SQL Server\MSSQL15.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
-   YourDB_log          Z:\Microsoft SQL Server\MSSQL15.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   YourDB_Log          Z:\Microsoft SQL Server\MSSQL15.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
    ```
 
    You can use this list to create `MOVE` clauses for the extra files. In this example, the `RESTORE DATABASE` is:
@@ -235,14 +235,14 @@ The following steps use the **`sqlcmd`** tool. If you haven't installed [!INCLUD
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server. You learned how to:
 
 > [!div class="checklist"]
-> - Use SSMS and Transact-SQL to create a backup file on Windows
+> - Use SSMS and T-SQL to create a backup file on Windows
 > - Install a Bash shell on Windows
 > - Use **scp** to move backup files from Windows to Linux
 > - Use **ssh** to remotely connect to your Linux machine
 > - Relocate the backup file to prepare for restore
-> - Use **`sqlcmd`** to run Transact-SQL commands
+> - Use **`sqlcmd`** to run T-SQL commands
 > - Restore the database backup with the `RESTORE DATABASE` command
-> - Run the query to verify the migration
+> - Run a query to verify the migration
 
 Next, explore other migration scenarios for SQL Server on Linux.
 

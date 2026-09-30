@@ -72,10 +72,10 @@ For more information on iSCSI initiator for the supported distributions, see the
 1. Find the iSCSI target.
 
    ```bash
-   sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
+   sudo iscsiadm -m discovery -t sendtargets -I <iSCSIIfaceName> -p <TargetIPAddress>:<TargetPort>
    ```
 
-   `<iSCSINetName>` is the unique/friendly name for the network, `<TargetIPAddress>` is the IP address of the iSCSI target, and `<TargetPort>` is the port of the iSCSI target.
+   `<iSCSIIfaceName>` is the unique/friendly name for the network, `<TargetIPAddress>` is the IP address of the iSCSI target, and `<TargetPort>` is the port of the iSCSI target.
 
    Here's the expected output.
 
@@ -89,7 +89,7 @@ For more information on iSCSI initiator for the supported distributions, see the
 1. Sign in to the target.
 
    ```bash
-   sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
+   sudo iscsiadm -m node -I <iSCSIIfaceName> -p <TargetIPAddress> -l
    ```
 
    `<iSCSIIfaceName>` is the unique/friendly name for the network and `<TargetIPAddress>` is the IP address of the iSCSI target.
@@ -97,8 +97,8 @@ For more information on iSCSI initiator for the supported distributions, see the
    Here's the expected output.
 
    ```output
-   Logging in to [iface: iSCSINIC, target: ian.1991-05.com.contoso:dcl-linuxnodesl-tar get, portal: 10.181.182.1,3260] (multiple)
-   Login to [iface: iSCSINIC, target: ian.1991-05.com.contoso:dcl-linuxnodesl-tar get, portal: 10.181.182.1,3260] successful.
+   Logging in to [iface: iSCSINIC, target: iqn.1991-05.com.contoso:dcl-linuxnodes1-target, portal: 10.181.182.1,3260] (multiple)
+   Login to [iface: iSCSINIC, target: iqn.1991-05.com.contoso:dcl-linuxnodes1-target, portal: 10.181.182.1,3260] successful.
    ```
 
 1. Check to see that there's a connection to the iSCSI target.
@@ -132,7 +132,7 @@ For more information on iSCSI initiator for the supported distributions, see the
 1. Create a volume group on the iSCSI disk. Disks assigned to a single volume group are seen as a pool or collection.
 
    ```bash
-   sudo vgcreate <VolumeGroupName> /dev/devicename
+   sudo vgcreate <VolumeGroupName> /dev/<devicename>
    ```
 
    `<VolumeGroupName>` is the name of the volume group and `<devicename>` is the name of the device from Step 6.
@@ -140,7 +140,7 @@ For more information on iSCSI initiator for the supported distributions, see the
 1. Create and verify the logical volume for the disk.
 
    ```bash
-   sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
+   sudo lvcreate -L<size> -n <LogicalVolumeName> <VolumeGroupName>
    ```
 
    `<size>` is the size of the volume to create, and can be specified with G (gigabytes), T (terabytes), etc., `<LogicalVolumeName>` is the name of the logical volume, and `<VolumeGroupName>` is the name of the volume group from the previous step.
@@ -152,6 +152,10 @@ For more information on iSCSI initiator for the supported distributions, see the
    ```
 
    The following example creates a 25-GB volume.
+
+   ```bash
+   sudo lvcreate -L25G -n FCIDataLV1 FCIDataVG1
+   ```
 
 1. Execute `sudo lvs` to see the LVM that was created.
 
@@ -258,7 +262,7 @@ For more information on iSCSI initiator for the supported distributions, see the
       su mssql
       ```
 
-   1. Copy the files from the temporary directory `/var/opt/mssql/data`. You don't receive any acknowledgment if successful.
+   1. Copy the files from the temporary directory `/var/opt/mssql/TempDir`. You don't receive any acknowledgment if successful.
 
       ```bash
       cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
@@ -335,18 +339,18 @@ For more information on iSCSI initiator for the supported distributions, see the
    1. Change the group of the folder created to `mssql`. You don't receive any acknowledgment if successful.
 
       ```bash
-      chown mssql <FolderName>
+      chgrp mssql <FolderName>
       ```
 
       `<FolderName>` is the name of the folder that was created. An example is shown here.
 
       ```bash
-      chown mssql /var/opt/mssql/userdata
+      chgrp mssql /var/opt/mssql/userdata
       ```
 
    1. Type `exit` to no longer be the superuser.
 
-   1. To test, create a database in that folder. The following script creates a database, switches context to it, verifies the files exist at the OS level, and then deletes the temporary location. You can use SSMS or **`sqlcmd`** to run this script.
+   1. To test, create a database in that folder. The following procedure creates a database, switches context to it, verifies the files exist at the OS level, and then deletes the test database. You can use SSMS or **`sqlcmd`** to run these commands.
 
       ```sql
       DROP DATABASE TestDB;
@@ -425,7 +429,7 @@ For more information on iSCSI initiator for the supported distributions, see the
    volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
    ```
 
-   `<ListOfVGsNotUsedByPacemaker>` is the list of volume groups from the output of Step 20 that aren't used by the FCI. Put each one in quotes and separate by a comma. An example is shown here.
+   `<ListOfVGsNotUsedByPacemaker>` is the list of volume groups from the output of Step 15 that aren't used by the FCI. Put each one in quotes and separate by a comma. An example is shown here.
 
    :::image type="content" source="media/shared-disk-cluster-configure-iscsi/55-listofvgs.png" alt-text="Screenshot showing an example of a volume_list value." lightbox="media/shared-disk-cluster-configure-iscsi/55-listofvgs.png":::
 

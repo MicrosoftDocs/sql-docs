@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Configure Replication (T-SQL)"
+title: "Tutorial: Configure Replication (Transact-SQL)"
 titleSuffix: SQL Server on Linux
 description: Configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL (T-SQL).
 author: rwestMSFT
@@ -12,7 +12,7 @@ ms.custom:
   - linux-related-content
 monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
-# Configure replication with T-SQL
+# Configure replication with Transact-SQL
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
@@ -24,11 +24,11 @@ In this tutorial, configure SQL Server snapshot replication on Linux with two in
 > - Configure snapshot folder for SQL Server agents access
 > - Configure the distributor
 > - Configure the publisher
-> - Configure publication and articles
-> - Configure subscriber  
+> - Configure the publication and articles
+> - Configure the subscriber  
 > - Run the replication jobs
 
-All replication configurations can be configured with [replication stored procedures](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+You can configure all replication components with [replication stored procedures](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ To complete this tutorial, you need:
    GO
    ```
 
-1. Create the snapshot folder for SQL Server Agents to read/write to on the distributor, create the snapshot folder and grant access to the `mssql` user:
+1. On the distributor, create the snapshot folder for SQL Server agents to read from and write to, and grant access to the `mssql` user:
 
    ```bash
    sudo mkdir /var/opt/mssql/data/ReplData/
@@ -89,14 +89,14 @@ To complete this tutorial, you need:
    sudo chgrp mssql /var/opt/mssql/data/ReplData/
    ```
 
-1. Configure distributor. In this example, the publisher is also the distributor. Run the following commands on the publisher to configure the instance for distribution as well.
+1. Configure the distributor. In this example, the publisher is also the distributor. Run the following commands on the publisher to configure the instance for distribution as well.
 
    ```sql
    DECLARE @distributor AS SYSNAME;
    DECLARE @distributorlogin AS SYSNAME;
    DECLARE @distributorpassword AS SYSNAME;
 
-   -- Specify the distributor name. Use 'hostname' command on in terminal to find the hostname
+   -- Specify the distributor name. Use the 'hostname' command in the terminal to find the hostname.
    SET @distributor = N'<distributor instance name>'; -- In this example, it will be the name of the publisher
    SET @distributorlogin = N'<distributor login>';
    SET @distributorpassword = N'<distributor password>';
@@ -107,8 +107,8 @@ To complete this tutorial, you need:
    EXECUTE sp_adddistributor
        @distributor = @distributor; -- this should be the hostname
 
-   -- Log into distributor and create Distribution Database.
-   -- In this example, our publisher and distributor is on the same host
+   -- Log into the distributor and create the distribution database.
+   -- In this example, the publisher and distributor are on the same host.
    EXECUTE sp_adddistributiondb
        @database = N'distribution',
        @log_file_size = 2,
@@ -119,14 +119,12 @@ To complete this tutorial, you need:
        @password = @distributorpassword;
    GO
 
-   DECLARE @snapshotdirectory AS NVARCHAR (500);
-
-   SET @snapshotdirectory = N'/var/opt/mssql/data/ReplData/';
-
-   -- Log into distributor and create Distribution Database.
-   -- In this example, our publisher and distributor is on the same host
+   -- Log into the distributor and configure the snapshot directory.
+   -- In this example, the publisher and distributor are on the same host.
    USE [distribution];
    GO
+
+   DECLARE @snapshotdirectory AS NVARCHAR (500) = N'/var/opt/mssql/data/ReplData/';
 
    IF (NOT EXISTS (SELECT * FROM sysobjects
        WHERE name = 'UIProperties' AND type = 'U'))
@@ -140,14 +138,14 @@ To complete this tutorial, you need:
    GO
    ```
 
-1. Configure publisher. Run the following T-SQL commands on the publisher.
+1. Configure the publisher. Run the following T-SQL commands on the publisher.
 
    ```sql
    DECLARE @publisher AS SYSNAME;
    DECLARE @distributorlogin AS SYSNAME;
    DECLARE @distributorpassword AS SYSNAME;
 
-   -- Specify the distributor name. Use 'hostname' command on in terminal to find the hostname
+   -- Specify the publisher name. Use the 'hostname' command in the terminal to find the hostname.
    SET @publisher = N'<instance name>';
    SET @distributorlogin = N'<distributor login>';
    SET @distributorpassword = N'<distributor password>';
@@ -167,19 +165,17 @@ To complete this tutorial, you need:
    GO
    ```
 
-1. Configure publication job. Run the following T-SQL commands on the publisher.
+1. Configure the publication and snapshot agent job. Run the following T-SQL commands on the publisher.
 
    ```sql
-   DECLARE @replicationdb AS SYSNAME;
+   USE [Sales];
+   GO
+
    DECLARE @publisherlogin AS SYSNAME;
    DECLARE @publisherpassword AS SYSNAME;
 
-   SET @replicationdb = N'Sales';
-   SET @publisherlogin = N'<Publisher login>';
-   SET @publisherpassword = N'<Publisher Password>';
-
-   USE [Sales];
-   GO
+   SET @publisherlogin = N'<publisher login>';
+   SET @publisherpassword = N'<publisher password>';
 
    EXECUTE sp_replicationdboption
        @dbname = N'Sales',
@@ -213,7 +209,7 @@ To complete this tutorial, you need:
        @publisher_password = @publisherpassword;
    ```
 
-1. Create articles from the Sales table.
+1. Create the `Customer` article from the `Customer` table.
 
    Run the following T-SQL commands on the publisher.
 
@@ -223,35 +219,35 @@ To complete this tutorial, you need:
 
    EXECUTE sp_addarticle
        @publication = N'SnapshotRepl',
-       @article = N'customer',
+       @article = N'Customer',
        @source_owner = N'dbo',
-       @source_object = N'customer',
+       @source_object = N'Customer',
        @type = N'logbased',
        @description = NULL,
        @creation_script = NULL,
        @pre_creation_cmd = N'drop',
        @schema_option = 0x000000000803509D,
-       @identityrangemanagementoption = N'manual',
-       @destination_table = N'customer',
+       @destination_table = N'Customer',
        @destination_owner = N'dbo',
+       @identityrangemanagementoption = N'manual',
        @vertical_partition = N'false';
    ```
 
-1. Configure Subscription. Run the following T-SQL commands on the publisher.
+1. Configure the subscription. Run the following T-SQL commands on the publisher.
 
    ```sql
+   USE [Sales];
+   GO
+
    DECLARE @subscriber AS SYSNAME;
    DECLARE @subscriber_db AS SYSNAME;
    DECLARE @subscriberLogin AS SYSNAME;
    DECLARE @subscriberPassword AS SYSNAME;
 
-   SET @subscriber = N'<Instance Name>'; -- for example, MSSQLSERVER
+   SET @subscriber = N'<instance name>'; -- for example, MSSQLSERVER
    SET @subscriber_db = N'Sales';
-   SET @subscriberLogin = N'<Subscriber Login>';
-   SET @subscriberPassword = N'<Subscriber Password>';
-
-   USE [Sales];
-   GO
+   SET @subscriberLogin = N'<subscriber login>';
+   SET @subscriberPassword = N'<subscriber password>';
 
    EXECUTE sp_addsubscription
        @publication = N'SnapshotRepl',
@@ -292,29 +288,29 @@ To complete this tutorial, you need:
    ORDER BY date_modified DESC;
    ```
 
-   Run the Snapshot replication job to generate the snapshot:
+   Start the snapshot agent job to generate the snapshot:
 
    ```sql
    USE msdb;
    GO
 
-   --generate snapshot of publications, for example
+   -- Generate the publication snapshot, for example.
    EXECUTE dbo.sp_start_job N'PUBLISHER-PUBLICATION-SnapshotRepl-1';
    GO
    ```
 
-   Run the snapshot replication job to start the job:
+   Start the distribution agent job to distribute the publication to the subscriber:
 
    ```sql
    USE msdb;
    GO
 
-   --distribute the publication to subscriber, for example
+   -- Distribute the publication to the subscriber.
    EXECUTE dbo.sp_start_job N'DISTRIBUTOR-PUBLICATION-SnapshotRepl-SUBSCRIBER';
    GO
    ```
 
-1. Connect subscriber and query replicated data.
+1. Connect to the subscriber and query the replicated data.
 
    On the subscriber, check that the replication is working by running the following query:
 
@@ -331,8 +327,8 @@ In this tutorial, you configured SQL Server snapshot replication on Linux with t
 > - Configure snapshot folder for SQL Server agents access
 > - Configure the distributor
 > - Configure the publisher
-> - Configure publication and articles
-> - Configure subscriber  
+> - Configure the publication and articles
+> - Configure the subscriber  
 > - Run the replication jobs
 
 ## Related content

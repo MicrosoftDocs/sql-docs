@@ -246,7 +246,7 @@ For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.co
 
 ## Deploy Azure Kubernetes Service
 
-Follow this [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster by using the Azure Kubernetes Service. After you create the cluster, connect to it by following the steps in the [Connect to the cluster](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
+Follow the [quickstart tutorial](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) to set up a two-node Kubernetes cluster by using the Azure Kubernetes Service. After you create the cluster, connect to it by following the steps in the [Connect to the cluster](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) section.
 
 You should now have a two-node Kubernetes cluster. Run the following command from your client machine.
 
@@ -594,7 +594,7 @@ DxEnterprise is high availability clustering software from DH2i that supports AG
 These steps create an AG and add databases to the group to support high availability.
 
 > [!NOTE]  
-> You can deploy a [basic Always On availability group](../../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Standard edition, but basic AGs support only two replicas plus one configuration-only replica required for successful automatic failover. For more information about failover with a configuration-only replica, see [Configuration-only replica and quorum](../availability-groups/overview.md#configuration-only-replica-and-quorum). To add a configuration-only replica for containers, see the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group) and pass the availability mode in the `dxcli add-ags-node` command as `configuration_only`.
+> You can deploy a [basic availability group](../../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Standard edition, but basic AGs support only two replicas plus one configuration-only replica required for successful automatic failover. For more information about failover with a configuration-only replica, see [Configuration-only replica and quorum](../availability-groups/overview.md#configuration-only-replica-and-quorum). To add a configuration-only replica for containers, see the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group) and pass the availability mode in the `dxcli add-ags-node` command as `configuration_only`.
 
 ---
 

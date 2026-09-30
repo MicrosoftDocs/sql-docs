@@ -13,7 +13,7 @@ ms.custom:
   - linux-related-content
   - sfi-ropc-blocked
 ---
-# Quickstart: Deploy a SQL Server container cluster on Azure or Red Hat OpenShift
+# Quickstart: Deploy a SQL Server container cluster on Azure Kubernetes Service or Azure Red Hat OpenShift
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
@@ -91,7 +91,7 @@ The system administrator (`sa`) account must be secured with a strong password. 
 
 ### [Kubernetes](#tab/kubectl)
 
-For a database in a Kubernetes cluster, you must use persisted storage. You can configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) and [persistent volume claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) in the Kubernetes cluster using the following steps:
+For a database in a Kubernetes cluster, you must use persistent storage. You can configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) and [persistent volume claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) in the Kubernetes cluster using the following steps:
 
 1. Create a manifest to define the storage class and the persistent volume claim. The manifest specifies the storage provisioner, parameters, and [reclaim policy](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). The Kubernetes cluster uses this manifest to create the persistent storage.
 
@@ -156,9 +156,9 @@ For a database in a Kubernetes cluster, you must use persisted storage. You can 
    StorageClass:  azure-disk
    Status:        Bound
    Volume:        pvc-d169b88e-f26d-11e7-bc3e-0a58ac1f09a4
-   Labels:        ‹none>
-   Annotations:   kubectl.kubernetes.io/last-applied-configuration-{"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{"volume.beta.   kubernetes.io/storage-class":"azure-disk"},"name":"mssq1-data...
-                  pv.kubernetes.io/bind-completed-yes
+   Labels:        <none>
+   Annotations:   kubectl.kubernetes.io/last-applied-configuration={"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{"volume.beta.kubernetes.io/storage-class":"azure-disk"},"name":"mssql-data...
+                  pv.kubernetes.io/bind-completed=yes
                   pv.kubernetes.io/bound-by-controller=yes
                   volume.beta.kubernetes.io/storage-class=azure-disk
                   volume.beta.kubernetes.io/storage-provisioner=kubernetes.io/azure-disk
@@ -179,7 +179,7 @@ For a database in a Kubernetes cluster, you must use persisted storage. You can 
 
 ### [OpenShift](#tab/oc)
 
-For a database in an OpenShift cluster, you must use persisted storage. You can configure a [persistent volume](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html) and [persistent volume claim](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html#creating-the-persistent-volume-claim) in the OpenShift cluster using the following steps:
+For a database in an OpenShift cluster, you must use persistent storage. You can configure a [persistent volume](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html) and [persistent volume claim](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html#creating-the-persistent-volume-claim) in the OpenShift cluster using the following steps:
 
 1. Create a manifest to define the storage class and the persistent volume claim. The manifest specifies the storage provisioner, parameters, and reclaim policy. The OpenShift cluster uses this manifest to create the persistent storage.
 
@@ -232,9 +232,9 @@ For a database in an OpenShift cluster, you must use persisted storage. You can 
    StorageClass:  azure-disk
    Status:        Bound
    Volume:        pvc-d169b88e-f26d-11e7-bc3e-0a58ac1f09a4
-   Labels:        ‹none>
-   Annotations:   oc.kubernetes.io/last-applied-configuration-{"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{"volume.beta.   kubernetes.io/storage-class":"azure-disk"},"name":"mssq1-data...
-                  pv.kubernetes.io/bind-completed-yes
+   Labels:        <none>
+   Annotations:   oc.kubernetes.io/last-applied-configuration={"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{"volume.beta.kubernetes.io/storage-class":"azure-disk"},"name":"mssql-data...
+                  pv.kubernetes.io/bind-completed=yes
                   pv.kubernetes.io/bound-by-controller=yes
                   volume.beta.kubernetes.io/storage-class=azure-disk
                   volume.beta.kubernetes.io/storage-provisioner=kubernetes.io/azure-disk
@@ -261,9 +261,9 @@ For a database in an OpenShift cluster, you must use persisted storage. You can 
 
 The container hosting the SQL Server instance is described as a Kubernetes *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) Docker image.
+You create a manifest to describe the container, based on the [SQL Server container image](https://mcr.microsoft.com/product/mssql/server/about).
 
-- The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster.
+- The manifest references the `mssql-data` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster.
 - The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
 - The manifest describes resource *requests* and *limits*. These are based on the minimum [system requirements](setup.md#system).
 
@@ -371,8 +371,6 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
    service "mssql-deployment" created
    ```
 
-   The deployment and service are created. The SQL Server instance is in a container, connected to persistent storage.
-
    To view the status of the pod, type `kubectl get pod`.
 
    ```output
@@ -380,7 +378,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
    mssql-deployment-3813464711-h312s   1/1      Running   0          17m
    ```
 
-   The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) image from the Microsoft Artifact Registry. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
+  The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [SQL Server container image](https://mcr.microsoft.com/product/mssql/server/about) from the Microsoft Container Registry. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
 
 1. Verify the services are running. Run the following command:
 
@@ -405,7 +403,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
 1. You can also verify the container is running as non-root by running the following command, where `<nameOfSqlPod>` is the name of your SQL Server pod:
 
    ```console
-   kubectl.exe exec <nameOfSqlPod> -it -- /bin/bash
+   kubectl exec <nameOfSqlPod> -it -- /bin/bash
    ```
 
    You can see the username as `mssql` if you run `whoami`. `mssql` is a non-root user.
@@ -418,9 +416,9 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
 
 The container hosting the SQL Server instance is described as an OpenShift *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) Docker image.
+You create a manifest to describe the container, based on the [SQL Server container image](https://mcr.microsoft.com/product/mssql/server/about).
 
-- The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the OpenShift cluster.
+- The manifest references the `mssql-data` persistent volume claim, and the `mssql` secret that you already applied to the OpenShift cluster.
 - The manifest also describes a [service](https://docs.redhat.com/documentation/openshift_container_platform/4.12/html/networking/understanding-networking). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
 - The manifest describes resource *requests* and *limits*. These are based on the minimum [system requirements](setup.md#system).
 
@@ -532,8 +530,6 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
    service "mssql-deployment" created
    ```
 
-   The deployment and service are created. The SQL Server instance is in a container, connected to persistent storage.
-
    To view the status of the pod, type `oc get pod`.
 
    ```output
@@ -541,7 +537,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
    mssql-deployment-3813464711-h312s   1/1      Running   0          17m
    ```
 
-   The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://mcr.microsoft.com/product/mssql/server/about) image from the Microsoft Artifact Registry. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
+  The pod has a status of `Running`. This status indicates that the container is ready. After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [SQL Server container image](https://mcr.microsoft.com/product/mssql/server/about) from the Microsoft Container Registry. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it.
 
 1. Verify the services are running. Run the following command:
 
@@ -561,7 +557,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
 1. You can also verify the container is running as non-root by running the following command, where `<nameOfSqlPod>` is the name of your SQL Server pod:
 
    ```console
-   oc.exe exec <nameOfSqlPod> -it -- /bin/bash
+   oc exec <nameOfSqlPod> -it -- /bin/bash
    ```
 
    You're able to see the username as `mssql` if you run `whoami`. `mssql` is a non-root user.
@@ -574,7 +570,7 @@ You create a manifest to describe the container, based on the SQL Server [mssql-
 
 ## Connect to the SQL Server instance
 
-You can connect with an application from outside the Azure virtual network, using the `sa` account and the external IP address for the service. Use the password that you configured as the OpenShift secret.
+You can connect with an application from outside the Azure virtual network, using the `sa` account and the external IP address for the service. Use the password that you configured in the `mssql` secret.
 
 You can use the following applications to connect to the SQL Server instance.
 
@@ -612,10 +608,10 @@ To verify failure and recovery, you can delete the pod with the following steps:
 1. Delete the pod.
 
    ```console
-   kubectl delete pod mssql-deployment-0
+   kubectl delete pod <nameOfSqlPod>
    ```
 
-   `mssql-deployment-0` is the value returned from the previous step for the pod name.
+   Replace `<nameOfSqlPod>` with the value returned from the previous step.
 
 Kubernetes automatically recreates the pod to recover a SQL Server instance, and connects to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same.
 
@@ -634,10 +630,10 @@ To verify failure and recovery, you can delete the pod with the following steps:
 1. Delete the pod.
 
    ```console
-   oc delete pod mssql-deployment-0
+   oc delete pod <nameOfSqlPod>
    ```
 
-   `mssql-deployment-0` is the value returned from the previous step for the pod name.
+   Replace `<nameOfSqlPod>` with the value returned from the previous step.
 
 OpenShift automatically recreates the pod to recover a SQL Server instance, and connects to the persistent storage. Use `oc get pods` to verify that a new pod is deployed. Use `oc get services` to verify that the IP address for the new container is the same.
 

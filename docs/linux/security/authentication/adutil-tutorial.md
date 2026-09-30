@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || =sqlallproducts-a
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This tutorial explains how to configure Windows Active Directory authentication for SQL Server on Linux using **[adutil](adutil-introduction.md)**. For another method of configuring Active Directory authentication using **ktpass**, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md).
+This tutorial explains how to configure Active Directory authentication for SQL Server on Linux using **[adutil](adutil-introduction.md)**. For another method of configuring Active Directory authentication using **ktpass**, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md).
 
 This tutorial consists of the following tasks:
 
@@ -35,7 +35,6 @@ This tutorial consists of the following tasks:
 Before configuring Active Directory authentication, you need:
 
 - A Windows Domain Controller running Active Directory Domain Services in your network.
-- The **`adutil`** tool installed on a domain-joined host machine.
 
 ## Domain machine preparation
 
@@ -43,7 +42,7 @@ Make sure there's a forwarding host (A) entry added in Active Directory for the 
 
 :::image type="content" source="media/adutil-tutorial/host-a-record.png" alt-text="Screenshot of add host record.":::
 
-For this tutorial, you use an environment in Azure with three virtual machines. One virtual machine (VM) is a Windows Server computer named `adVM.contoso.com`, running as a Domain Controller (DC) with the domain name `contoso.com`. The second VM is a client machine running Windows 10 named `winbox`, which has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `sql1`, which hosts SQL Server.
+For this tutorial, you use an environment in Azure with three virtual machines. One virtual machine (VM) is a Windows Server computer named `adVM.contoso.com`, running as a Domain Controller (DC) with the domain name `contoso.com`. The second VM is a client machine running Windows 10 named `winbox`, which has [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms) (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `sql1`, which hosts SQL Server.
 
 ## Join the Linux host machine to your Active Directory domain
 
@@ -135,7 +134,7 @@ Once you [create the user and SPNs](#adutil-spn), you can create the keytab usin
    /opt/mssql/bin/mssql-conf setup-ad-keytab /var/opt/mssql/secrets/mssql.keytab sqluser
    ```
 
-   When prompted to restart the SQL Server service to adopt the new Active Directory configuration, you can do in the next section.
+   When prompted to restart the SQL Server service to adopt the new Active Directory configuration, you can restart it in the [Restart SQL Server](#restart-sql-server) section.
 
 1. Confirm the keytab is created with the right entries:
 
@@ -188,9 +187,9 @@ Once you [create the user and SPNs](#adutil-spn), you can create the keytab usin
 
 ## Create the SQL Server service keytab file manually
 
-If you installed **`adutil`** and integrated it with **`mssql-conf`**, you can skip ahead to [Create the SQL Server service keytab file using mssql-conf](#create-the-sql-server-service-keytab-file-using-mssql-conf).
+If you installed **`adutil`** and integrated it with **`mssql-conf`**, you can skip this section.
 
-1. Create the keytab file that contains entries for each of the four SPNs created previously, and one for the user.
+1. Create the keytab file that contains entries for each of the four SPNs created previously.
 
    ```bash
    adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H sql1.contoso.com --password '<password>' -s MSSQLSvc
@@ -228,9 +227,9 @@ If you installed **`adutil`** and integrated it with **`mssql-conf`**, you can s
    - `-k`: Path where you would like to create the `mssql.keytab` file.
    - `-p`: Principal to add to the keytab.
 
-   The `adutil keytab [ create | autocreate ]` doesn't overwrite the previous files; it just appends to the file if already present.
+   The `adutil keytab [ create | createauto ]` command doesn't overwrite the previous file. It appends to the file if it's already present.
 
-1. Make sure that the `mssql` user owns the created keytab, and that only the `mssql` user has read/write access to the file. You can run the `chown` and `chmod` commands as follows:
+1. Make sure that the `mssql` user owns the created keytab, and set its permissions to read-only for the owner and group. You can run the `chown` and `chmod` commands as follows:
 
    ```bash
    chown mssql /var/opt/mssql/secrets/mssql.keytab
@@ -268,7 +267,7 @@ FROM sys.server_principals;
 
 ## Connect to SQL Server using Active Directory authentication
 
-Use your Windows credentials to connect to the SQL Server instance using [SQL Server Management Studio (SSMS)](/ssms/sql-server-management-studio-ssms).
+Use your Windows credentials to connect to the SQL Server instance using SQL Server Management Studio.
 
 You can also use a tool like the [sqlcmd utility](../../../tools/sqlcmd/sqlcmd-utility.md) to connect to the SQL Server instance using Windows Authentication.
 

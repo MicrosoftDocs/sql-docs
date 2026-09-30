@@ -15,21 +15,21 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. For more information about installing SSIS, see [Install SQL Server Integration Services (SSIS) on Linux](../install-upgrade/setup-ssis.md).
+You run the `ssis-conf` configuration script when you [install SQL Server Integration Services (SSIS) on Linux](../install-upgrade/setup-ssis.md) for Red Hat Enterprise Linux and Ubuntu.
 
 You can also use the `ssis-conf` utility to configure the following properties:
 
 | Command | Description |
 | --- | --- |
 | `set-edition` | Set the edition of SQL Server. |
-| `telemetry` | Enable or disable SQL Server Integration Services telemetry service. |
+| `telemetry` | Enable or disable the SQL Server Integration Services telemetry service. |
 | `setup` | Initialize and set up Microsoft SQL Server Integration Services. |
 
 ## Run ssis-conf
 
 The examples in this article run `ssis-conf` by specifying the full path: `/opt/ssis/bin/ssis-conf`. If you navigate to that location before you run `ssis-conf`, you can run the utility in the context of the current directory: `./ssis-conf`.
 
-Run the commands in this article with `root` (super user) privileges. For example, run `sudo /opt/ssis/bin/ssis-conf setup` and not `/opt/ssis/bin/ssis-conf setup`.
+Run the commands in this article with `root` (superuser) privileges. For example, run `sudo /opt/ssis/bin/ssis-conf setup` and not `/opt/ssis/bin/ssis-conf setup`.
 
 To run these commands with prompts in your preferred language, specify a locale. For example, to receive prompts in Chinese, run the following command:
 

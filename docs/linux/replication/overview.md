@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)] ([CU18](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate18)) and later support SQL Server Replication for instances of SQL Server on Linux.
+[!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)] ([CU18](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate18)) and later support SQL Server replication for instances of SQL Server on Linux.
 
 Configure replication on Linux with SQL Server Management Studio (SSMS) [replication stored procedures](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
@@ -26,14 +26,14 @@ An instance of SQL Server can participate in any replication role:
 - Distributor
 - Subscriber
 
-A replication schema can mix and match operating system platforms. For example, a replication schema might include an instance of SQL Server on Linux for publisher and distributor, and the subscribers include instances of SQL Server on Windows as well as Linux.
+A replication schema can mix and match operating system platforms. For example, a replication schema might include an instance of SQL Server on Linux as Publisher and Distributor, with Subscribers that include instances of SQL Server on Windows and Linux.
 
-SQL Server instances on Linux can participate in any type of replication.
+SQL Server instances on Linux can participate in the following types of replication:
 
 - Transactional
 - Snapshot
 
-For detailed information about replication, see [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).
+For detailed information about replication, see [SQL Server replication](../../relational-databases/replication/sql-server-replication.md).
 
 ## Supported features
 
@@ -41,7 +41,7 @@ The following replication features are supported:
 
 - Snapshot replication
 - Transactional replication
-- Replication with non-default ports <!--Add link to explanation-->
+- Replication with non-default ports
 - Replication with Active Directory authentication
 - Replication configurations across Windows and Linux
 - Immediate updates for transactional replication
@@ -56,5 +56,5 @@ The following features aren't supported:
 
 ## Related content
 
-- [Configure replication with T-SQL](tutorial-tsql.md)
+- [Configure replication with Transact-SQL](tutorial-tsql.md)
 - [Configure SQL Server replication on Linux](configure.md)

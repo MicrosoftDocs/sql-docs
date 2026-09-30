@@ -27,7 +27,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to start, stop, or restart the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../includes/ssde-md.md)] and SQL Server Agent on Linux by using the command line, or Transact-SQL.
+This article describes how to start, stop, or restart the [!INCLUDE [ssde-md](../includes/ssde-md.md)] and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent on Linux by using the command line.
 
 For [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Windows, see [Start, stop, pause, resume, and restart SQL Server services](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).
 
@@ -55,13 +55,13 @@ When running on a cluster, use the appropriate cluster management tool to manage
 
 By default, only members of the local administrator group can start, stop, or restart a service.
 
-Stopping the [!INCLUDE [ssDE](../includes/ssde-md.md)] by using the Transact-SQL `SHUTDOWN` command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and isn't transferable.
+Stopping the [!INCLUDE [ssDE](../includes/ssde-md.md)] by using the Transact-SQL (T-SQL) `SHUTDOWN` command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and isn't transferable.
 
 <a id="CommandLine"></a>
 
 ## Use command-line tools
 
-The following steps show how to start, stop, restart, and check the status of the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] service on Linux. To manage a SQL Server container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
+The following steps show how to start, stop, restart, and check the status of the [!INCLUDE [ssDE](../includes/ssde-md.md)] service on Linux. To troubleshoot a SQL Server container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
 
 Check the status of the [!INCLUDE [ssDE](../includes/ssde-md.md)] service using this command:
 
@@ -87,7 +87,7 @@ The [!INCLUDE [ssDE](../includes/ssde-md.md)] can be stopped by using the `SHUTD
 
 ### Stop the Database Engine with Transact-SQL
 
-- To wait for currently running Transact-SQL statements and stored procedures to finish, and then stop the [!INCLUDE [ssDE](../includes/ssde-md.md)], execute the following statement.
+- To wait for currently running T-SQL statements and stored procedures to finish, and then stop the [!INCLUDE [ssDE](../includes/ssde-md.md)], execute the following statement.
 
   ```sql
   SHUTDOWN;

@@ -30,7 +30,7 @@ This enforcement ensures that logins that use SQL Server authentication are secu
 
 ## Custom policy settings
 
-Set the following configuration parameters in the `mssql.conf` file to enforce a custom password policy:
+Set the following configuration parameters in the [mssql.conf file](../../configure/mssql-conf.md#mssql-conf-format) to enforce a custom password policy:
 
 | Configuration option | Description |
 | --- | --- |
@@ -40,12 +40,12 @@ Set the following configuration parameters in the `mssql.conf` file to enforce a
 | `passwordpolicy.passwordmaximumage` | Sets the maximum duration a password can be used before it must be changed. |
 
 > [!NOTE]  
-> You can currently set the `passwordminimumlength` to fewer than eight characters. [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
+> You can set the `passwordminimumlength` to fewer than eight characters. [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
 
 Configure the policy in one of two ways:
 
-- [Set the policy with adutil](#adutil), which fetches values from Active Directory.
-- [Set the policy manually with mssql-conf](#manual).
+- [Set the policy](#adutil) with [adutil](adutil-introduction.md), which fetches values from Active Directory.
+- [Set the policy manually](#manual) with the [mssql-conf tool](../../configure/mssql-conf.md).
 
 <a id="adutil"></a>
 
@@ -90,7 +90,7 @@ Use [adutil](adutil-introduction.md) to fetch the password policy from the AD se
 
    Optionally, you can add the `--path` option to the previous command. You might use this option if you have the **`mssql-conf`** tool in a different location from the default path. The default path is `/opt/mssql/bin/mssql-conf`.
 
-1. Restart SQL Server service:
+1. Restart the SQL Server service:
 
    ```bash
    sudo systemctl restart mssql-server

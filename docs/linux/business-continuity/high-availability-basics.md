@@ -28,7 +28,7 @@ Besides backup and restore, the same three availability features are available o
 - [Failover cluster instances on Linux](failover-cluster-instance/shared-disk-cluster-concepts.md)
 - [Get started with log shipping on Linux](use-log-shipping.md)
 
-On Windows, FCIs always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. A WSFC doesn't exist in Linux. Clustering implementation in Linux is discussed in [Pacemaker for availability groups and failover cluster instances on Linux](availability-groups/pacemaker-basics.md).
+On Windows, failover cluster instances (FCIs) always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an availability group (AG) usually requires an underlying WSFC, with the exception being the None variant in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. A WSFC doesn't exist in Linux. Clustering implementation in Linux is discussed in [Pacemaker for availability groups and failover cluster instances on Linux](availability-groups/pacemaker-basics.md).
 
 ## A quick Linux primer
 
@@ -110,7 +110,7 @@ Similar to Windows, Linux distributions have a built-in firewall. If your organi
 | `2049` | TCP, UDP | NFS (if used) |
 | `2224` | TCP | Pacemaker - used by `pcsd` |
 | `3121` | TCP | Pacemaker - Required if there are Pacemaker Remote nodes |
-| `3260` | TCP | iSCSI Initiator (if used) - Can be altered in `/etc/iscsi/iscsid.config` (RHEL), but should match port of iSCSI Target |
+| `3260` | TCP | iSCSI Initiator (if used) - Can be altered in `/etc/iscsi/iscsid.conf` (RHEL), but should match port of iSCSI Target |
 | `5022` | TCP | [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] - default port used for an AG endpoint; can be changed when creating the endpoint |
 | `5403` | TCP | Pacemaker |
 | `5404` | UDP | Pacemaker - Required by Corosync if using multicast UDP |

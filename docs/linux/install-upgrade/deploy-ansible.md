@@ -67,9 +67,9 @@ ansible [core 2.12.2]
   libyaml = true
 ```
 
-## Edit `hosts` file on controller node
+## Edit the `hosts` file on the controller node
 
-Ansible creates a `hosts` file is in the `/etc/ansible` directory. Edit this file using your favorite editor to add the managed node details, either as a group entry, or as ungrouped entries. For information on how to create your own inventory, see [How to build your inventory](https://docs.ansible.com/projects/ansible/latest/user_guide/intro_inventory.html).
+Ansible creates a `hosts` file in the `/etc/ansible` directory. Edit this file using your favorite editor to add the managed node details, either as a group entry, or as ungrouped entries. For information on how to create your own inventory, see [How to build your inventory](https://docs.ansible.com/projects/ansible/latest/user_guide/intro_inventory.html).
 
 In this example using the `hosts` file, the IP address for the first managed node is 10.0.0.12, and the IP address for the second managed node is 10.0.0.14.
 
@@ -100,7 +100,7 @@ Use the `ssh-keygen` command to generate SSH keys. When you run the command, you
 
 ### Copy the public key to the managed nodes
 
-1. On each managed node, you must copy the public key from the controller node you just created, using the `ssh-copy-id` command. If you want to specify the target directory on the managed node, you can use the `-i` parameter.
+1. From the controller node, copy the public key to each managed node using the `ssh-copy-id` command. If you want to specify the target directory on the managed node, you can use the `-i` parameter.
 
 1. In the following command, the `user` account can be the same account you configured for each managed node when creating the VM. You can also use the `root` account, but this isn't recommended in a production environment.
 
@@ -154,7 +154,7 @@ The following example shows a playbook file, with role variables defined to conf
     mssql_install_powershell: true
     mssql_tune_for_fua_storage: true
   roles:
-    - microsoft.sql.server​
+    - microsoft.sql.server
 ```
 
 ## Deploy SQL Server on the managed nodes

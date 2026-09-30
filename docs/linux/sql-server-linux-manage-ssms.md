@@ -20,7 +20,7 @@ This article introduces [SQL Server Management Studio (SSMS)](/ssms/sql-server-m
 > [!TIP]  
 > [!INCLUDE [connect-instance-client](../includes/connect-instance-client.md)]
 
-SQL Server Management Studio (SSMS) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. It can connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on any platform both on-premises, in Docker containers, and in the cloud. It also connects to Azure SQL Database and Azure Synapse Analytics. SSMS combines a broad group of graphical tools with many rich script editors to provide access to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to developers and administrators of all skill levels.
+SQL Server Management Studio (SSMS) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. It can connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on any platform on-premises, in Docker containers, and in the cloud. It also connects to Azure SQL Database and Azure Synapse Analytics. SSMS combines a broad group of graphical tools with many rich script editors to provide access to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to developers and administrators of all skill levels.
 
 SSMS offers a broad set of development and management capabilities for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], including tools to:
 
@@ -32,9 +32,9 @@ SSMS offers a broad set of development and management capabilities for [!INCLUDE
 - View and edit data in databases
 - Visually design T-SQL queries and database objects such as views, tables, and stored procedures
 
-For more information, see [What is SQL Server Management Studio (SSMS)?](/ssms/sql-server-management-studio-ssms)
+For more information, see [What is SQL Server Management Studio (SSMS)?](/ssms/sql-server-management-studio-ssms).
 
-## Install the newest version of SQL Server Management Studio (SSMS)
+## Install the latest version of SQL Server Management Studio (SSMS)
 
 When working with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you should always use the most recent version of SSMS. The latest version of SSMS is continually updated and optimized and currently works with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Install the latest version of [SQL Server Management Studio (SSMS)](/ssms/install/install). SSMS prompts you when there's a new update available.
 
@@ -53,17 +53,17 @@ Use the following basic steps to get connected:
 
    | Setting | Description |
    | --- | --- |
-   | **Server type** | The default is database engine; don't change this value. |
+   | **Server type** | The default is **Database Engine**; don't change this value. |
    | **Server name** <sup>1</sup> | Enter the name of the target Linux machine running [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], or its IP address and port in the format `IP,port`. |
    | **Authentication** | For [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, use the authentication method that is set up for your environment. **SQL Server Authentication** is set up by default. |
-   | **Login** <sup>2</sup> | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
+   | **Login** <sup>2</sup> | Enter the name of a user with access to a database on the server (for example, the default `sa` account created during setup). |
    | **Password** <sup>2</sup> | Enter the password for the specified user (for the `sa` account, you created the password during setup). |
 
    <sup>1</sup> For more information about connection options for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Connect to the Database Engine](../sql-server/connect-to-database-engine.md).
 
-   <sup>2</sup> **Login** and **Password** only available with **SQL Server Authentication**
+   <sup>2</sup> **Login** and **Password** are only available with **SQL Server Authentication**.
 
-   :::image type="content" source="media/sql-server-linux-manage-ssms/connect.png" alt-text="Screenshot of SQL Server Management Studio: Connect to SQL Database server.":::
+   :::image type="content" source="media/sql-server-linux-manage-ssms/connect.png" alt-text="Screenshot of the Connect to Server dialog in SQL Server Management Studio.":::
 
 1. Select **Connect**.
 
@@ -74,24 +74,24 @@ Use the following basic steps to get connected:
 
 ## Run Transact-SQL queries
 
-After you connect to your server, you can connect to a database and run Transact-SQL (T-SQL) queries. T-SQL queries can be used for almost any database task.
+After you connect to your server, you can connect to a database and run T-SQL queries. T-SQL queries can be used for almost any database task.
 
 1. In **Object Explorer**, navigate to the target database on the server. For example, expand **System Databases** to work with the `master` database.
 
 1. Right-click the database and then select **New Query**.
 
-1. In the query window, write a T-SQL query to select return the names of all databases on your server.
+1. In the query window, write a T-SQL query to return the names of all databases on your server.
 
    ```sql
    SELECT [name]
    FROM sys.databases;
    ```
 
-   If you're new to writing queries, see [Tutorial: Write Transact-SQL statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+   If you're new to writing queries, see [Tutorial: Write T-SQL statements](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 1. Select the **Execute** button to run the query and see the results.
 
-   :::image type="content" source="media/sql-server-linux-manage-ssms/execute-query.png" alt-text="Screenshot of Success. Connect to SQL Database server: SQL Server Management Studio.":::
+   :::image type="content" source="media/sql-server-linux-manage-ssms/execute-query.png" alt-text="Screenshot of the Execute button in the SQL Server Management Studio query editor.":::
 
 Although it's possible to do almost any management task with T-SQL queries, SSMS is a graphical tool that makes it easier to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following sections provide some examples of using the graphical user interface.
 
@@ -101,16 +101,16 @@ While connected to the `master` database, you can create databases on the server
 
 ### Create a new database
 
-1. Start SSMS and connect to your server in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance on Linux.
+1. Start SSMS and connect to your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance on Linux.
 1. In Object Explorer, right-click on the **Databases** folder, and then select **New Database...**.
 1. In the **New Database** dialog, enter a name for your new database, and then select **OK**.
 
-The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md).
+The new database is successfully created on your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md).
 
 ### Drop a database
 
-1. Start SSMS and connect to your server in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux.
-1. In Object Explorer, expand the **Databases** folder to see a list of all the database on the server.
+1. Start SSMS and connect to your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance on Linux.
+1. In Object Explorer, expand the **Databases** folder to see a list of all the databases on the server.
 1. In Object Explorer, right-click on the database you wish to drop, and then select **Delete**.
 1. In the **Delete Object** dialog, select the **Close existing connections** checkbox, and then select **OK**.
 
@@ -120,7 +120,7 @@ The database is successfully dropped from your server. If you prefer to drop a d
 
 The [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md) tool is built into SQL Server Management Studio (SSMS) and displays information about [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] processes and how these processes affect the current instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
-1. Start SSMS and connect to your server in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux.
+1. Start SSMS and connect to your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance on Linux.
 1. In Object Explorer, right-click the *server* node, and then select **Activity Monitor**.
 
 Activity Monitor shows expandable and collapsible panes with the following information:

@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-This article describes the characteristics of availability groups (AGs) under Linux-based [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] installations. It also covers differences between Linux- and Windows Server failover cluster (WSFC)-based AGs. See [What is an Always On availability group?](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
+This article describes the characteristics of availability groups (AGs) under Linux-based [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] installations. It also covers differences between Linux- and Windows Server Failover Clustering (WSFC)-based AGs. See [What is an Always On availability group?](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
 
 > [!NOTE]  
 > In availability groups that don't use Windows Server Failover Clustering (WSFC), such as [read-scale availability groups](../../../database-engine/availability-groups/windows/read-scale-availability-groups.md), or availability groups on Linux, columns in the [availability groups DMVs](../../../relational-databases/system-dynamic-management-objects/always-on-availability-groups-dynamic-management-views-functions.md) related to the cluster might display data about an internal default cluster. These columns are for internal use only and can be disregarded.
@@ -24,10 +24,10 @@ This article describes the characteristics of availability groups (AGs) under Li
 From a high-level standpoint, availability groups under [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
 
 - Microsoft Distributed Transaction Coordinator (DTC) is supported under Linux starting with SQL Server 2017 CU 16. However, DTC isn't yet supported on Availability Groups on Linux. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Windows.
-- Linux-based deployments that require high availability use Pacemaker for clustering instead of a WSFC.
+- Linux-based deployments that require high availability use [Pacemaker](cluster-pacemaker.md) for clustering instead of a WSFC.
 - Unlike most configurations for AGs on Windows except for the Workgroup Cluster scenario, Pacemaker never requires Active Directory Domain Services (AD DS).
 - How to fail an AG from one node to another is different between Linux and Windows.
-- Certain settings such as `required_synchronized_secondaries_to_commit` can only be changed via Pacemaker on Linux, whereas a WSFC-based install uses Transact-SQL.
+- Certain settings such as `required_synchronized_secondaries_to_commit` can only be changed via Pacemaker on Linux, whereas a WSFC-based install uses Transact-SQL (T-SQL).
 
 ## Number of replicas and cluster nodes
 
@@ -41,7 +41,7 @@ Readable secondary replicas are only supported with [!INCLUDE [ssenterprise-md](
 
 ## Cluster type and failover mode
 
-New to [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] is the introduction of a cluster type for AGs. For Linux, there are two valid values: *External* and *None*. A cluster type of External means that Pacemaker is used underneath the AG. Using External for cluster type requires that the failover mode is set to External as well (also new in [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)]). Automatic failover is supported, but unlike a WSFC, failover mode is set to External, not automatic, when Pacemaker is used. Unlike a WSFC, the Pacemaker portion of the AG is created after the AG is configured.
+[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] introduced a cluster type for AGs. For Linux, there are two valid values: *External* and *None*. A cluster type of External means that Pacemaker is used underneath the AG. Using External for cluster type requires that the failover mode is set to External as well (also new in [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)]). Automatic failover is supported, but unlike a WSFC, failover mode is set to External, not automatic, when Pacemaker is used. Unlike a WSFC, the Pacemaker portion of the AG is created after the AG is configured.
 
 A cluster type of None means that there's no requirement for, nor does the AG use, Pacemaker. Even on servers that have Pacemaker configured, if an AG is configured with a cluster type of None, Pacemaker doesn't see or manage that AG. A cluster type of None only supports manual failover from a primary to a secondary replica. An AG created with None is primarily targeted for upgrades and read-scale out. While it can work in scenarios like disaster recovery or local availability where no automatic failover is necessary, it isn't recommended. The listener story is also more complex without Pacemaker.
 
@@ -49,9 +49,9 @@ Cluster type is stored in the [!INCLUDE [ssnoversion-md](../../../includes/ssnov
 
 ## required_synchronized_secondaries_to_commit
 
-New to [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] is a setting that is used by AGs called `required_synchronized_secondaries_to_commit`. This tells the AG the number of secondary replicas that must be in lockstep with the primary. This enables things like automatic failover (only when integrated with Pacemaker with a cluster type of External), and controls the behavior of things like the availability of the primary if the right number of secondary replicas is either online or offline. To understand more about how this works, see [High availability and data protection for availability group configurations](high-availability.md). The `required_synchronized_secondaries_to_commit` value is set by default and maintained by Pacemaker/ [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. You can manually override this value.
+[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] introduced a setting that is used by AGs called `required_synchronized_secondaries_to_commit`. This tells the AG the number of secondary replicas that must be in lockstep with the primary. This enables things like automatic failover (only when integrated with Pacemaker with a cluster type of External), and controls the behavior of things like the availability of the primary if the right number of secondary replicas is either online or offline. To understand more about how this works, see [High availability and data protection for availability group configurations](high-availability.md). The `required_synchronized_secondaries_to_commit` value is set by default and maintained by Pacemaker/[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. You can manually override this value.
 
-The combination of `required_synchronized_secondaries_to_commit` and the new sequence number (which is stored in `sys.availability_groups`) informs Pacemaker and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] that, for example, automatic failover can happen. In that case, a secondary replica would have the same sequence number as the primary, meaning it's up to date with all the latest configuration information.
+The combination of `required_synchronized_secondaries_to_commit` and the sequence number (which is stored in `sys.availability_groups`) informs Pacemaker and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] that, for example, automatic failover can happen. In that case, a secondary replica would have the same sequence number as the primary, meaning it's up to date with all the latest configuration information.
 
 There are three values that can be set for `required_synchronized_secondaries_to_commit`: 0, 1, or 2. They control the behavior of what happens when a replica becomes unavailable. The numbers correspond to the number of secondary replicas that must be synchronized with the primary. The behavior is as follows under Linux:
 
@@ -136,7 +136,7 @@ The listener under Linux is configured differently, but its functionality is the
 
 If Pacemaker is used, and an IP address resource is created that is associated with the listener, there's a brief outage as the IP address stops on the one server and starts on the other, whether it's automatic or manual failover. While this provides abstraction through the combination of a single name and IP address, it doesn't mask the outage. An application must be able to handle the disconnect by having some sort of functionality to detect this and reconnect.
 
-However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When you configure an AG, a listener still needs to be configured in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. This can be seen in the wizard and the Transact-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
+However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When you configure an AG, a listener still needs to be configured in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. This can be seen in the wizard and the T-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
 
 - For an AG with a cluster type of External, the IP address associated with the listener created in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] should be the IP address of the resource created in Pacemaker.
 - For an AG created with a cluster type of None, use the IP address associated with the primary replica.
@@ -147,7 +147,7 @@ The instance associated with the provided IP address then becomes the coordinato
 
 An AG that has a cluster type of External or one that is WSFC can't have its replicas cross platforms. This is true whether the AG is [!INCLUDE [ssstandard-md](../../../includes/ssstandard-md.md)] or [!INCLUDE [ssenterprise-md](../../../includes/ssenterprise-md.md)]. That means in a traditional AG configuration with an underlying cluster, one replica can't be on a WSFC and the other on Linux with Pacemaker.
 
-An AG with a cluster type of `NONE` can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown in the following diagram where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
+An AG with a cluster type of `None` can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown in the following diagram where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
 
 :::image type="content" source="media/overview/cross-platform-availability-group-diagram.png" alt-text="Diagram of a cross-platform availability group with cluster type None, showing a Windows Server primary replica replicating to a Linux secondary replica.":::
 

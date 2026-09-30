@@ -19,11 +19,11 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017"
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-This article talks about common errors seen when deploying and using SQL Server Docker containers, and provide troubleshooting techniques to help resolve the issue.
+This article describes common errors that occur when you deploy and use SQL Server Docker containers and provides troubleshooting techniques to help resolve them.
 
 ## Docker command errors
 
-If you get errors for any `docker` commands, make sure that the docker service is running, and try to run with elevated permissions.
+If you get errors for any `docker` commands, make sure that the Docker service is running, and try to run with elevated permissions.
 
 For example, on Linux, you might get the following error when running `docker` commands:
 
@@ -31,14 +31,14 @@ For example, on Linux, you might get the following error when running `docker` c
 Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 ```
 
-If you get this error on Linux, try running the same commands prefaced with `sudo`. If that fails, verify the docker service is running, and start it if necessary.
+If you get this error on Linux, try running the same commands prefaced with `sudo`. If that fails, verify the Docker service is running, and start it if necessary.
 
 ```bash
 sudo systemctl status docker
 sudo systemctl start docker
 ```
 
-On Windows, verify that you're launching PowerShell or your command-prompt as an Administrator.
+On Windows, verify that you're launching PowerShell or your command prompt as an Administrator.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -55,7 +55,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-bash"
 
   ```bash
-  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
+  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
   ```
 
   ::: zone-end
@@ -63,7 +63,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-powershell"
 
   ```powershell
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
   ```
 
   ::: zone-end
@@ -71,7 +71,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-cmd"
 
   ```cmd
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
   ```
 
   ::: zone-end
@@ -84,7 +84,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-bash"
 
   ```bash
-  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
+  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest
   ```
 
   ::: zone-end
@@ -92,7 +92,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-powershell"
 
   ```powershell
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest
   ```
 
   ::: zone-end
@@ -100,7 +100,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-cmd"
 
   ```cmd
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest
   ```
 
   ::: zone-end
@@ -113,7 +113,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-bash"
 
   ```bash
-  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest`.
+  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest
   ```
 
   ::: zone-end
@@ -121,7 +121,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-powershell"
 
   ```powershell
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest
   ```
 
   ::: zone-end
@@ -129,7 +129,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-cmd"
 
   ```cmd
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest
   ```
 
   ::: zone-end
@@ -142,7 +142,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-bash"
 
   ```bash
-  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2025-latest`.
+  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<password>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2025-latest
   ```
 
   ::: zone-end
@@ -150,7 +150,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-powershell"
 
   ```powershell
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2025-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2025-latest
   ```
 
   ::: zone-end
@@ -158,7 +158,7 @@ If the SQL Server container fails to run, try the following tests:
   ::: zone pivot="cs1-cmd"
 
   ```cmd
-  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2025-latest`.
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2025-latest
   ```
 
   ::: zone-end
@@ -168,13 +168,13 @@ If the SQL Server container fails to run, try the following tests:
   > [!CAUTION]  
   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
 
-- If you get an error such as `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied` when trying to start a container, then add your user to the docker group in Ubuntu. Then logout and login again as this change will affect new sessions.
+- If you get an error such as `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied` when trying to start a container, then add your user to the docker group in Ubuntu. Then sign out and sign back in because this change affects new sessions.
 
   ```bash
    usermod -aG docker $USER
   ```
 
-- Check to see if there are any error messages from container.
+- Check for error messages from the container.
 
   ```bash
   docker logs e69e056c702d
@@ -316,7 +316,7 @@ If you can't connect to the SQL Server instance running in your container, try t
 
 - Make sure that your SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output. If not, use `docker start <Container ID>` to start it.
 
-- If you mapped to a non-default host port (not 1433), make sure you're specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects sqlcmd to a container listening on port 1401:
+- If you mapped to a non-default host port (not 1433), make sure you're specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects [sqlcmd](../../tools/sqlcmd/sqlcmd-use-utility.md) to a container listening on port 1401:
 
   ::: zone pivot="cs1-bash"
 
@@ -358,14 +358,14 @@ If you're using Docker with SQL Server Availability Groups, there are two additi
 
 ## SQL Server setup and error logs
 
-You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container isn't running, first start the container. Then use an interactive command-prompt to inspect the logs. You can get the container ID by running the command `docker ps`.
+You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container isn't running, first start the container. Then use an interactive command prompt to inspect the logs. You can get the container ID by running the command `docker ps`.
 
 ```bash
-docker start <ContainerID>
-docker exec -it <ContainerID> "bash"
+docker start <Container ID>
+docker exec -it <Container ID> "bash"
 ```
 
-From the bash session inside your container, run the following commands:
+From the Bash session inside your container, run the following commands:
 
 ```bash
 cd /var/opt/mssql/log
@@ -380,19 +380,19 @@ cat errorlog
 
 If you have a running container, you can execute commands within the container from a host terminal.
 
-To get the container ID run:
+To get the container ID, run:
 
 ```bash
 docker ps -a
 ```
 
-To start a bash terminal in the container run:
+To start a Bash terminal in the container, run:
 
 ```bash
 docker exec -it <Container ID> /bin/bash
 ```
 
-Now you can run commands as though you're running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
+Now you can run commands as though you're running them at the terminal inside the container. When finished, type `exit`. This exits the interactive command session, but your container continues to run.
 
 ## Related content
 

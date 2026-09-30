@@ -17,10 +17,10 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
+The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools18** package contains:
 
-- **`sqlcmd`**: Command-line query utility.
-- **`bcp`**: Bulk import-export utility.
+- [sqlcmd](../../tools/sqlcmd/sqlcmd-use-utility.md): Command-line query utility.
+- [bcp](../../tools/bcp/bcp-utility.md): Bulk import-export utility.
 
 Install the tools for your platform:
 
@@ -96,7 +96,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 1. **Move the downloaded packages to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 
-1. **Install the and packages**: Install the **mssql-tools18** and **msodbc18** packages. If you get any dependency errors, ignore them until the next step. Replace `<version>` with the correct version:
+1. **Install the packages**: Install the **mssql-tools18** and **msodbcsql18** packages. If you get any dependency errors, ignore them until the next step. Replace `<version>` with the correct version:
 
    ```bash
    sudo yum localinstall msodbcsql18-<version>.rpm
@@ -110,7 +110,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
    ```bash
    rpm -qpR msodbcsql18-<version>.rpm
    rpm -qpR mssql-tools18-<version>.rpm
-    ```
+   ```
 
 ### [SUSE Linux Enterprise Server](#tab/sles-install)
 
@@ -123,7 +123,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 1. **Move the downloaded packages to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 
-1. **Install the and packages**: Install the **mssql-tools18** and **msodbc18** packages. If you get any dependency errors, ignore them until the next step. Replace `<version>` with the correct version:
+1. **Install the packages**: Install the **mssql-tools18** and **msodbcsql18** packages. If you get any dependency errors, ignore them until the next step. Replace `<version>` with the correct version:
 
    ```bash
    sudo zypper install msodbcsql18-<version>.rpm
@@ -137,7 +137,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
    ```bash
    rpm -qpR msodbcsql18-<version>.rpm
    rpm -qpR mssql-tools18-<version>.rpm
-    ```
+   ```
 
 ### [Ubuntu](#tab/ubuntu-install)
 
@@ -147,7 +147,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 1. **Move the downloaded packages to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 
-1. **Install the and packages**: Install the **mssql-tools18** and **msodbc18** packages. If you get any dependency errors, ignore them until the next step. Replace `<version>` with the correct version:
+1. **Install the packages**: Install the **mssql-tools18** and **msodbcsql18** packages. If you get any dependency errors, ignore them until the next step. Replace `<version>` with the correct version:
 
    ```bash
    sudo dpkg -i msodbcsql18_<version>.deb

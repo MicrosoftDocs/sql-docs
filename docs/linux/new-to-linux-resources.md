@@ -39,7 +39,7 @@ This module helps you answer the following questions:
 
 - How to navigate between different files
 - How to identify a file from a directory
-- Identify different directories
+- How to identify different directories
 
 ## Install new software
 
@@ -55,12 +55,12 @@ After you're familiar with recognizing different users and groups in Linux, lear
 
 ## Commands for system administration
 
-Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) that system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`.
+Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) that system administrators rely on to control their Linux operating systems. These commands include `df`, `du`, `top`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`.
 
 ## Related content
 
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
 - [Release notes for SQL Server on Linux](sql-server-linux-release-notes.md)
-- [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.yml)
+- [SQL Server on Linux frequently asked questions (FAQ)](sql-server-linux-faq.yml)
 - [SQL Server help and feedback](../sql-server/sql-server-get-help.md)
 - [Other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/)

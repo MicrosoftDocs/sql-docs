@@ -59,6 +59,9 @@ For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], use a RAID co
 mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
 
 mkfs.xfs /dev/md3 -f -L log
+```
+
+```output
 meta-data=/dev/md3               isize=512    agcount=32, agsize=18287648 blks
          =                       sectsz=4096  attr=2, projid32bit=1
          =                       crc=1        finobt=1, sparse=1, rmapbt=0
@@ -131,7 +134,7 @@ In the preceding example, UUID represents the device that you can find using the
 
 ## Kernel and CPU settings for high performance
 
-The following section describes the recommended Linux OS settings related to high performance and throughput for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] installation. See your Linux distribution's documentation for the process to configure these settings. You can use [TuneD](https://tuned-project.org) as described, to configure many CPUs and kernel configurations, described in the next section.
+The following section describes the recommended Linux OS settings related to high performance and throughput for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] installation. See your Linux distribution's documentation for the process to configure these settings. You can use [TuneD](https://tuned-project.org), as described in the next section, to configure many CPU and kernel settings.
 
 ### Use *TuneD* to configure kernel settings
 
@@ -274,13 +277,13 @@ tuned-adm off
 tuned-adm profile mssql
 ```
 
-Using the `mssql` TuneD profile configures the `transparent_hugepage` option.
+Using the `mssql` TuneD profile configures the `vm.transparent_hugepages` option.
 
 ### Network setting recommendations
 
 Along with storage and CPU recommendations, consider the following network-specific recommendations. Different NICs offer different settings. Refer to NIC vendors for guidance for each of these options. Test and configure these settings on development environments before applying them to production environments. The following options are explained with examples, and the commands used are specific to NIC type and vendor.
 
-1. **Configuring network port buffer size**. In the example, the NIC is named `eth0`, which is an Intel-based NIC. For Intel based NIC, the recommended buffer size is 4 KB (4096). Verify the preset maximums and then configure it using the following example:
+1. **Configuring network port buffer size**. In the example, the NIC is named `eth0`, which is an Intel-based NIC. For an Intel-based NIC, the recommended buffer size is 4 KB (4096). Verify the preset maximums and then configure it using the following example:
 
    Check the preset maximums with the following command. Replace `eth0` with your NIC name:
 
@@ -300,10 +303,10 @@ Along with storage and CPU recommendations, consider the following network-speci
    ethtool -g eth0
    ```
 
-1. **Enable jumbo frames**. Before enabling jumbo frames, verify that all the network switches, routers, and anything else essential in the network packet path between the clients and the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] support jumbo frames. Only then can enabling jumbo frames improve performance. After you enable jumbo frames, connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and change the network packet size to 8060 using `sp_configure`, as shown in the following example:
+1. **Enable jumbo frames**. Before enabling jumbo frames, verify that all the network switches, routers, and anything else essential in the network packet path between the clients and the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] support jumbo frames. Only then can enabling jumbo frames improve performance. After you enable jumbo frames, connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and change the network packet size to 8060 using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), as shown in the following example:
 
    ```bash
-   # command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+   # command to set jumbo frame to 9014 for an Intel NIC named eth0 is
    ifconfig eth0 mtu 9014
    # verify the setting using the command:
    ip addr | grep 9014
@@ -348,7 +351,7 @@ Along with storage and CPU recommendations, consider the following network-speci
    ethtool -c eth0
    ```
 
-   Set the `rx-usecs` and `irq` parameters. `rx-usecs` specifies how many microseconds after at least one packet is received before generating an interrupt. The `irq` parameter specifies the corresponding delays in updating the status when the interrupt is disabled. For Intel-based NICs, you can use the following settings:
+   Set the `rx-usecs` and `tx-frames-irq` parameters. `rx-usecs` specifies how many microseconds after at least one packet is received before generating an interrupt. The `tx-frames-irq` parameter specifies the corresponding delays in updating the status when the interrupt is disabled. For Intel-based NICs, you can use the following settings:
 
    ```bash
    ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
@@ -360,7 +363,7 @@ Along with storage and CPU recommendations, consider the following network-speci
    ethtool -c eth0
    ```
 
-1. **Enable receive-side scaling (RSS)** and by default, combine the RX and TX side of RSS queues. There are specific scenarios, when working with Microsoft Support, where disabling RSS improves the performance as well. Test this setting in test environments before applying it on production environments. The following example is for Intel NICs.
+1. **Enable receive-side scaling (RSS)**, and by default, combine the RX and TX sides of RSS queues. There are specific scenarios, when working with Microsoft Support, where disabling RSS improves the performance as well. Test this setting in test environments before applying it on production environments. The following example is for Intel NICs.
 
    Get the preset maximum values:
 
@@ -380,9 +383,9 @@ Along with storage and CPU recommendations, consider the following network-speci
    ethtool -l eth0
    ```
 
-1. **Configure NIC port IRQ affinity**. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and `irqbalance` setting. You can optimize the NIC port IRQ affinities settings by using your knowledge of server topology, disabling the `irqbalance`, and using the NIC vendor-specific settings.
+1. **Configure NIC port IRQ affinity**. To achieve expected performance by tweaking the IRQ affinity, consider a few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and `irqbalance` setting. You can optimize the NIC port IRQ affinities settings by using your knowledge of server topology, disabling the `irqbalance`, and using the NIC vendor-specific settings.
 
-   The following example of Mellanox specific network infrastructure helps to explain the configuration. For more information, and to download the Mellanox **mlnx** tools, see [​​Performance Tuning tools for Mellanox Network Adapters](https://enterprise-support.nvidia.com/s/article/MLNX2-117-2523kn). The commands change based on the environment. Contact the NIC vendor for further guidance.
+   The following example of Mellanox specific network infrastructure helps to explain the configuration. For more information, and to download the Mellanox **mlnx** tools, see [Performance Tuning tools for Mellanox Network Adapters](https://enterprise-support.nvidia.com/s/article/MLNX2-117-2523kn). The commands change based on the environment. Contact the NIC vendor for further guidance.
 
    Disable `irqbalance`, or get a snapshot of the IRQ settings and force the daemon to exit:
 

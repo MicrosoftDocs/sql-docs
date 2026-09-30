@@ -29,7 +29,7 @@ For all other deployment scenarios, you should configure Microsoft Entra ID auth
 
 - A Microsoft Entra application is registered.
 
-  Follow the directions in [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md), and upload the certificate to the created registered application, that you create in the first step of the tutorial.
+  Follow the directions in [Tutorial: Set up Microsoft Entra authentication for SQL Server with app registration](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to register the application.
 
 - A supported [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux container image.
 
@@ -125,13 +125,13 @@ In this example, you can create a self-signed certificate using OpenSSL.
      -e MSSQL_AAD_PRIMARY_TENANT='<tenant-id>' \
      -e MSSQL_AAD_CERTIFICATE_FILE_PATH='/var/opt/mssql/mssql-entra-id.pfx' \
      -p 1433:1433 \
-     -v /tmp/sqlcontainer/mssql-entra-id.pfx:/var/opt/mssql/mssql-entra-id.pfx:ro \
+    -v "$PWD/mssql-entra-id.pfx:/var/opt/mssql/mssql-entra-id.pfx:ro" \
      -d mcr.microsoft.com/mssql/server:2025-latest
    ```
 
 1. Verify inside the container:
 
-   ```sql
+   ```bash
    docker exec -it <container-id> bash
    cat /var/opt/mssql/log/errorlog | grep Entra
    ```
@@ -142,7 +142,7 @@ In this example, you can create a self-signed certificate using OpenSSL.
    Microsoft Entra ID authentication is enabled. This is an informational message only; no user action is required.
    ```
 
-Continue to the step to [create the Microsoft Entra](#create-microsoft-entra-logins) logins.
+Continue to [Create Microsoft Entra logins](#create-microsoft-entra-logins).
 
 ## Configure SQL Server containers on Kubernetes
 
@@ -176,9 +176,9 @@ The following diagram describes the steps for this deployment.
    kubectl apply -f mssql-entra-cert.yaml
    ```
 
-### Step 2: Create the SA password secret
+### Step 2: Create the `sa` password Secret
 
-The following command creates the `sa` account password that you use to sign into your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deployment. Replace `<password>` with a strong password.
+The following command creates a Secret that stores the `sa` account password that you use to sign in to your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deployment. Replace `<password>` with a strong password.
 
 > [!NOTE]  
 > [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
@@ -190,7 +190,7 @@ kubectl create secret generic mssql \
 
 ### Step 3: Create the ConfigMap for `mssql.conf`
 
-In this step, replace `aadclientid` with the client ID, and `aadprimarytenant` with the tenant ID of the registered application in Microsoft Entra ID. You can get these details from the Azure portal.
+In this step, replace `<client-id>` with the client ID, and `<tenant-id>` with the tenant ID of the registered application in Microsoft Entra ID. You can get these details from the Azure portal.
 
 :::image type="content" source="media/container-kubernetes-microsoft-entra-deployment/azure-portal-keys.png" alt-text="Screenshot showing the keys in the Azure portal.":::
 
@@ -226,7 +226,7 @@ In this step, replace `aadclientid` with the client ID, and `aadprimarytenant` w
 
 ### Step 4: Deploy SQL Server
 
-In this step, you deploy [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] and enable Microsoft Entra ID authentication. You must mount the ConfigMap and Secret into the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container, and use a supported [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux image (for example, `mcr.microsoft.com/mssql/server:2025-latest`).
+In this step, you deploy [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] and enable Microsoft Entra ID authentication. You must mount the ConfigMap and Secrets into the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container, and use a supported [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Linux image (for example, `mcr.microsoft.com/mssql/server:2025-latest`).
 
 Make sure that the certificate file path in `mssql.conf` matches the mounted path, and the container runs with the required filesystem permissions.
 
@@ -327,7 +327,7 @@ In this step, you create a load balancer service to connect to [!INCLUDE [ssnove
    kubectl apply -f mssql-service.yaml
    ```
 
-Continue to the step to [create the Microsoft Entra](#create-microsoft-entra-logins) logins.
+Continue to [Create Microsoft Entra logins](#create-microsoft-entra-logins).
 
 ## Create Microsoft Entra logins
 
@@ -343,7 +343,7 @@ Continue to the step to [create the Microsoft Entra](#create-microsoft-entra-log
        FROM EXTERNAL PROVIDER;
    ```
 
-1. Optionally, add the Microsoft Entra account to the **sysadmin** fixed server role, so that you can disable the `sa` account. For more information, see [Disable the SA account as a best practice](#disable-the-sa-account-as-a-best-practice) in the next section.
+1. Optionally, add the Microsoft Entra account to the **sysadmin** fixed server role, so that you can disable the `sa` account. For more information, see [Disable the `sa` account as a best practice](#disable-the-sa-account-as-a-best-practice).
 
    ```sql
    EXECUTE sp_addsrvrolemember
@@ -353,10 +353,7 @@ Continue to the step to [create the Microsoft Entra](#create-microsoft-entra-log
 
 You can now authenticate using Microsoft Entra ID with password, integrated authentication, or multifactor authentication (MFA).
 
-### Disable the SA account as a best practice
-
-> [!IMPORTANT]  
-> You need these credentials for later steps. Be sure to write down the user ID and password that you enter here.
+### Disable the `sa` account as a best practice
 
 [!INCLUDE [connect-with-sa](../../includes/connect-with-sa.md)]
 

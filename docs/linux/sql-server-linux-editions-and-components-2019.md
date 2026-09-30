@@ -53,7 +53,7 @@ For a list of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] feature
 
 ## Use SQL Server with client/server applications
 
-You can install just the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] client components on a computer running client/server applications that connect directly to an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] applications.
+You can install just the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] client components on a computer running client/server applications that connect directly to an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Installing client components is also a good option if you administer an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] applications.
 
 ## SQL Server components
 
@@ -61,20 +61,19 @@ You can install just the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.m
 
 | Server components | Description |
 | --- | --- |
-| SQL Server Database Engine | [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE [ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, Full-Text Search, tools for managing relational and XML data, and in database analytics integration. |
+| SQL Server Database Engine | [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] is the core service for storing, processing, and securing data. It includes replication, Full-Text Search, tools for managing relational and XML data, and in-database analytics integration. |
 
 ### Developer, Enterprise Core, and Evaluation editions
 
 For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the following tables.
 
-The Developer edition continues to support only one client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
+The Developer edition supports only one client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
 
 ## Scale limits
 
 | Feature | Enterprise | Standard | Web | Express |
 | --- | :---: | :---: | :---: | :---: |
-| Maximum compute capacity used by a single instance - SQL Server Database Engine <sup>1</sup> | Operating system maximum | Limited to lesser of 4 sockets or 24 cores | Limited to lesser of 4 sockets or 16 cores | Limited to lesser of 1 socket or 4 cores |
-| Maximum compute capacity used by a single instance - Analysis Services or Reporting Services | Operating system maximum | Limited to lesser of 4 sockets or 24 cores | Limited to lesser of 4 sockets or 16 cores | Limited to lesser of 1 socket or 4 cores |
+| Maximum compute capacity used by a single instance - SQL Server Database Engine <sup>1</sup> | Operating system maximum | Limited to the lesser of 4 sockets or 24 cores | Limited to the lesser of 4 sockets or 16 cores | Limited to the lesser of 1 socket or 4 cores |
 | Maximum memory for buffer pool per instance of SQL Server Database Engine | Operating system maximum | 128&nbsp;GB | 64&nbsp;GB | 1,410&nbsp;MB |
 | Maximum capacity for the [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of SQL Server Database Engine | 32 * (max server memory configuration) | 4 * (max server memory configuration) | N/A | N/A |
 | Maximum memory for columnstore segment cache per instance of SQL Server Database Engine | Unlimited memory | 32&nbsp;GB | 16&nbsp;GB | 352&nbsp;MB |
@@ -109,7 +108,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 
 <sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition, there's support for two nodes.
 
-<sup>2</sup> On Enterprise edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas.
+<sup>2</sup> Enterprise edition supports up to 8 secondary replicas, including 2 synchronous secondary replicas.
 
 <sup>3</sup> Standard edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Always On availability groups for a single database](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
@@ -140,7 +139,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Automatic tuning | Yes | No | No | No |
 | Batch mode adaptive joins | Yes | No | No | No |
 | Batch mode memory grant feedback | Yes | No | No | No |
-| Interleaved execution for multi-statement table valued functions | Yes | Yes | Yes | Yes |
+| Interleaved execution for multi-statement table-valued functions | Yes | Yes | Yes | Yes |
 
 ## Security
 
@@ -201,7 +200,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 
 ## Integration Services
 
-For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+For information about the Integration Services (SSIS) features supported by the editions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ## Spatial and location services
 
@@ -214,14 +213,14 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 ## Unsupported features and services
 
-The following features and services aren't available for [!INCLUDE [sssql19](../includes/sssql19-md.md)] on Linux. The support of these features will be increasingly enabled over time.
+The following features and services aren't available for [!INCLUDE [sssql19](../includes/sssql19-md.md)] on Linux.
 
 | Area | Unsupported feature or service | Comments |
 | --- | --- | --- |
 | **Database engine** | Merge replication | |
 | | Stretch DB | This feature is [deprecated](/previous-versions/sql/sql-server/stretch-database/stretch-database) in [!INCLUDE [sssql22](../includes/sssql22-md.md)], and isn't supported. |
 | | Distributed query with third-party connections | |
-| | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] using Transact-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
+| | Linked servers to data sources other than [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] | [Install PolyBase on Linux](../relational-databases/polybase/polybase-linux-setup.md) to query other data sources from [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] using T-SQL syntax. For scenarios where PolyBase isn't helpful, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | System extended stored procedures (`xp_cmdshell`, etc.) | This feature is [deprecated](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md). If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | FileTable, FILESTREAM | If you have specific requirements, submit feedback to the [Microsoft Azure forum](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0). |
 | | CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set | |
@@ -233,10 +232,10 @@ The following features and services aren't available for [!INCLUDE [sssql19](../
 | **High Availability** | Database mirroring | This feature is [deprecated](../database-engine/database-mirroring/database-mirroring-sql-server.md). Use Always On availability groups instead. |
 | **Security** | Extensible Key Management (EKM) | |
 | | Windows integrated authentication for linked servers | |
-| | Windows integrated authentication for availability group (AG) endpoints | Create and use certificate based endpoint authentication for availability groups. For more information, see [Configure SQL Server availability group for high availability on Linux](business-continuity/availability-groups/configure.md). |
+| | Windows integrated authentication for availability group (AG) endpoints | Create and use certificate-based endpoint authentication for availability groups. For more information, see [Configure SQL Server availability group for high availability on Linux](business-continuity/availability-groups/configure.md). |
 | | SQL Server on Linux deployments aren't FIPS compliant | |
 | **Services** | SQL Server Browser | The SQL Server Browser service isn't required on Linux because only a single default instance is supported per host. Unlike on Windows, there are no named instances to resolve, and the port is explicitly configured during setup. |
-| | SQL Server R services | SQL Server R is supported within [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], but [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] R services as a separate package isn't supported.<br /><br />You can install Machine Learning Services on Linux for [SQL Server 2019](install-upgrade/setup-machine-learning.md) and [SQL Server 2022](install-upgrade/setup-machine-learning-sql-2022.md). |
+| | SQL Server R Services | SQL Server R is supported within [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], but [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] R Services as a separate package isn't supported.<br /><br />You can install Machine Learning Services on Linux for [SQL Server 2019](install-upgrade/setup-machine-learning.md) and [SQL Server 2022](install-upgrade/setup-machine-learning-sql-2022.md). |
 | | Analysis Services | |
 | | Reporting Services | [Configure Power BI Report Server catalog databases for SQL Server on Linux](configure/power-bi-report-server-catalog.md). Run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Reporting Services (SSRS) on Windows, and host the catalog databases for SSRS on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux deployments. |
 | | Data Quality Services | Deprecated feature. |
@@ -247,5 +246,5 @@ The following features and services aren't available for [!INCLUDE [sssql19](../
 ## Related content
 
 - [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md)
-- [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
+- [Installation guidance for SQL Server on Linux](install-upgrade/setup.md)
 - [SQL Server technical documentation](../sql-server/index.yml)

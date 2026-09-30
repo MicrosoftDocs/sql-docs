@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2017"
 This article explains the steps to create an Always On availability group (AG) with one replica on a Windows server and the other replica on a Linux server.
 
 > [!IMPORTANT]  
-> [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cross-platform availability groups, which include heterogeneous replicas with complete high-availability and disaster recovery support, is available with DH2i DxEnterprise. For more information, see [SQL Server Availability Groups with Mixed Operating Systems](https://support.dh2i.com/docs/guides/dxenterprise/sql_server/mssql-ag-mixed-os-qsg).
+> [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] cross-platform availability groups, which include heterogeneous replicas with complete high-availability and disaster recovery support, are available with DH2i DxEnterprise. For more information, see [SQL Server Availability Groups with Mixed Operating Systems](https://support.dh2i.com/docs/guides/dxenterprise/sql_server/mssql-ag-mixed-os-qsg).
 >
 > View the following video to find out about cross-platform availability groups with DH2i.
 >
@@ -33,7 +33,7 @@ Before proceeding, you should be familiar with installation and configuration fo
 
 ## Scenario
 
-In this scenario, two servers are on different operating systems. A Windows Server 2022 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` host the secondary replica.
+In this scenario, two servers are on different operating systems. A Windows Server 2022 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` hosts the secondary replica.
 
 ## Configure the AG
 
@@ -60,7 +60,7 @@ For the scripts in this article, angle brackets `<` and `>` identify values that
 
    For instructions, see [Change server authentication mode](../../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms).
 
-1. Install [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] on Linux. For instructions, see [Installation guidance for SQL Server on Linux](../../install-upgrade/setup.md). Enable `hadr` with **`mssql-conf`**.
+1. Install [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] on Linux. For instructions, see [Installation guidance for SQL Server on Linux](../../install-upgrade/setup.md). Enable `hadr` with [mssql-conf](../../configure/mssql-conf.md).
 
    To enable `hadr` via **`mssql-conf`** from a shell prompt, issue the following command:
 
@@ -194,7 +194,7 @@ For the scripts in this article, angle brackets `<` and `>` identify values that
    >
    > For more information about automatic seeding, see [Automatic Seeding - Disk Layout](../../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout).
 
-   Before you run the script, update the values for your AGs.
+   Before you run the script, update the values for your AG.
 
    - Replace `<WinSQLInstance>` with the server name of the primary replica SQL Server instance.
 
@@ -218,7 +218,7 @@ For the scripts in this article, angle brackets `<` and `>` identify values that
        AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
        SEEDING_MODE = AUTOMATIC,
        FAILOVER_MODE = MANUAL,
-       SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL);
+       SECONDARY_ROLE(ALLOW_CONNECTIONS = ALL)
    );
    ```
 
@@ -256,10 +256,10 @@ For the scripts in this article, angle brackets `<` and `>` identify values that
 
 1. If you aren't using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](../../migrate/restore-database.md). Restore the database `WITH NORECOVERY` on the secondary replica.
 
-1. Add the database to the AG. Update the example script. Replace `TestDB` with the name of your database. On the primary replica, run the T-SQL query to add the database to the AG.
+1. Add the database to the AG. Update the example script. Replace `TestDB` with the name of your database. On the primary replica, run the Transact-SQL query to add the database to the AG.
 
    ```sql
-   ALTER AG [ag1] ADD DATABASE TestDB;
+   ALTER AVAILABILITY GROUP [ag1] ADD DATABASE TestDB;
    GO
    ```
 

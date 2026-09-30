@@ -29,22 +29,22 @@ Always validate your chosen platform and configuration in a controlled test envi
 
 ## Apply SQL Server security guidance
 
-[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux offers a robust security framework combining multiple layers of protection.
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux provides multiple layers of security.
 
 - Create accounts and database users under the principle of least privilege.
 
-- Use advanced features like row-level security and dynamic data masking for granular access control.
+- Use features such as row-level security and dynamic data masking for granular access control.
 
 - File system security is enforced through strict ownership and permissions under `/var/opt/mssql`, ensuring only the `mssql` user and group have appropriate access.
 
-- For enterprise integration, Active Directory authentication enables Kerberos-based single sign-on (SSO), centralized password policies, and group-based access management.
+- [Active Directory authentication](authentication/active-directory-overview.md) enables Kerberos-based single sign-on (SSO), centralized password policies, and group-based access management.
 
 - Encrypted connections safeguard data in transit using TLS, with options for server or client-initiated encryption, and support for certificates that meet industry standards.
 
-Together, these capabilities deliver a comprehensive approach to securing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] deployments on Linux. Review and implement recommendations from these key resources:
+Review and implement recommendations from these key resources:
 
 - [Walkthrough for the security features of SQL Server on Linux](get-started.md)
-- [SQL Server on Linux - Security and permissions guide](permissions-guide.md)
+- [Security and permissions guide for SQL Server on Linux](permissions-guide.md)
 - [Active Directory authentication for SQL Server on Linux](authentication/active-directory-overview.md)
 - [Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux](authentication/adutil-tutorial.md)
 - [Encrypt connections to SQL Server on Linux](encrypted-connections.md)
@@ -60,11 +60,11 @@ Together, these capabilities deliver a comprehensive approach to securing [!INCL
 - Regularly update the Linux operating system and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 - Dedicate production servers exclusively to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] workloads.
 - Apply the [principle of least privilege](https://techcommunity.microsoft.com/blog/azuresqlblog/security-the-principle-of-least-privilege-polp/2067390) for accounts and services.
-- [Disable the SA account as a best practice](#disable-the-sa-account-as-a-best-practice).
+- [Disable the `sa` account as a best practice](#disable-the-sa-account-as-a-best-practice).
 
-For common security best practices on Windows and Linux, refer to [SQL Server security best practices](../../relational-databases/security/sql-server-security-best-practices.md)
+For common security best practices on Windows and Linux, refer to [SQL Server security best practices](../../relational-databases/security/sql-server-security-best-practices.md).
 
-## Disable the SA account as a best practice
+## Disable the `sa` account as a best practice
 
 [!INCLUDE [connect-with-sa](../includes/connect-with-sa.md)]
 
@@ -80,9 +80,9 @@ For common security best practices on Windows and Linux, refer to [SQL Server se
 
   - With the `CHECK_POLICY` option enabled, only the default policy provided by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is enforced, and doesn't apply the Windows password policies defined in the Active Directory group policies.
 
-  - Password expiration is hard-coded to 90 days if you use [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] authentication. To work around this issue, consider changing the [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md).
+  - Password expiration is hard-coded to 90 days if you use [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] authentication. To work around this issue, consider using [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md).
 
-- Extensible Key Management (EKM) is only supported through Azure Key Vault (AKV) in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU12 onward, and isn't available in earlier versions. Third party EKM providers aren't supported for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux operating systems.
+- Extensible Key Management (EKM) is only supported through Azure Key Vault (AKV) in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU12 onward, and isn't available in earlier versions. Third-party EKM providers aren't supported for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux operating systems.
 
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] authentication mode can't be disabled.
 

@@ -23,7 +23,7 @@ The **`mssql-conf`** tool configures [!INCLUDE [ssnoversion-md](../includes/ssno
 
 ## Transact-SQL
 
-Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] provides [System dynamic management views](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md) that query the status and configuration of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. There are also [Transact-SQL commands](../t-sql/language-reference.md) for database management tasks. You can run these commands in any client tool that supports connecting to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and running Transact-SQL queries, for example [sqlcmd](install-upgrade/setup-tools.md) or [Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md).
+Almost everything you can do in a client tool can also be accomplished with Transact-SQL (T-SQL) statements. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] provides [System dynamic management views](../relational-databases/system-dynamic-management-objects/system-dynamic-management-objects.md) that query the status and configuration of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. There are also [T-SQL commands](../t-sql/language-reference.md) for database management tasks. You can run these commands in any client tool that supports connecting to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and running T-SQL queries, for example [sqlcmd](../tools/sqlcmd/sqlcmd-use-utility.md) or [Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md).
 
 ## MSSQL extension for Visual Studio Code
 
@@ -35,7 +35,7 @@ The Named Pipes protocol isn't supported for [!INCLUDE [ssnoversion-md](../inclu
 
 ## SQL Server Management Studio on Windows
 
-SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. Although it currently runs only on Windows, you can use it to remotely connect to your Linux [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances. For more information on using SSMS to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
+SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. SSMS runs only on Windows, but you can use it to remotely connect to your Linux [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances. For more information on using SSMS to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
 ## PowerShell
 

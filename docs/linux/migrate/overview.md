@@ -38,11 +38,11 @@ It's also possible to export your database to a BACPAC file (a compressed file t
 
 ## Migrate from other database servers
 
-You can migrate databases on other database systems to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Management Assistant (SSMA) to automate the migration to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. For more information, see [Automate database migration to Linux with the SQL Server Migration Assistant (SSMA)](sql-server-migration-assistant.md).
+You can migrate databases on other database systems to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Migration Assistant (SSMA) to automate the migration to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux. For more information, see [Automate database migration to Linux with the SQL Server Migration Assistant (SSMA)](sql-server-migration-assistant.md).
 
 ## Migrate structured data
 
-There are also techniques for importing raw data. You might have structured data files that were exported from other databases or data sources. In this case, you can use the bcp tool to bulk insert the data. Or you can run SQL Server Integration Services (SSIS) on Windows to import the data into a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database on Linux. SSIS enables you to run more complex transformations on the data during the import.
+There are also techniques for importing raw data. You might have structured data files that were exported from other databases or data sources. In this case, you can use the **`bcp`** utility to bulk insert the data. Or you can run [SQL Server Integration Services (SSIS) on Windows to import the data into a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] database on Linux. SSIS enables you to run more complex transformations on the data during the import.
 
 ## Related content
 

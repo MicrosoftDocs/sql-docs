@@ -38,7 +38,7 @@ The following table lists the most common issues with [!INCLUDE [ssnoversion-md]
 
 - Certain algorithms (cipher suites) for Transport Layer Security (TLS) don't work properly with [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux. This behavior causes connection failures when you try to connect to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], and problems establishing connections between replicas in high availability groups.
 
-  To resolve this issue, modify the `mssql.conf` configuration script for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux to disable problematic cipher suites:
+   To resolve this issue, modify the `mssql.conf` configuration file for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux to disable problematic cipher suites:
 
   1. Add the following section to `/var/opt/mssql/mssql.conf`. The exclamation symbol (`!`) negates the expression. This negation tells OpenSSL not to use the cipher suite that follows.
 
@@ -79,9 +79,9 @@ Features that involve outbound TCP connections from the `sqlservr` process, such
 
 The exact error depends on the feature. For linked servers, you see a login timeout error. For availability groups, the `ALTER AVAILABILITY GROUP JOIN` DDL on the secondary fails after five minutes with a `download configuration timeout` error.
 
-To work around this issue, do one of the following options:
+To work around this issue, use one of the following options:
 
-- Use IPs instead of host names to specify the target of the TCP connection.
+- Use IP addresses instead of host names to specify the target of the TCP connection.
 
 - Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot command line. The method depends on the Linux distribution and the bootloader, such as **grub**. If you want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (for example, `/etc/sysctl.conf`). Although this setting prevents the system's network adapter from getting an IPv6 address, it allows the `sqlservr` features to work.
 
@@ -130,7 +130,7 @@ To control IPv6 DNS resolution behavior on SQL Server 2022 CU 19 and later versi
 
 ## Full-Text Search
 
-Not all filters are available with this release, including filters for Microsoft Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](install-upgrade/setup-full-text-search.md#filters).
+Not all filters are available on Linux, including filters for Microsoft Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](install-upgrade/setup-full-text-search.md#filters).
 
 ## SQL Server Integration Services (SSIS)
 
@@ -138,7 +138,7 @@ The `mssql-server-is` package isn't supported on SUSE Linux Enterprise Server (S
 
 [!INCLUDE [ssISnoversion](../includes/ssisnoversion-md.md)] packages can use ODBC connections on Linux. This functionality works with the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and MySQL ODBC drivers, and should also work with any Unicode ODBC driver that observes the ODBC specification. At design time, provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://techcommunity.microsoft.com/category/sql-server/blog/ssis).
 
-This release doesn't support the following features when you run SSIS packages on Linux:
+SSIS on Linux doesn't support the following features:
 
 - [!INCLUDE [ssISnoversion](../includes/ssisnoversion-md.md)] Catalog database
 - Scheduled package execution by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent
@@ -182,11 +182,11 @@ When you run [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 16 and earlie
 
 For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages for RHEL 9 and Ubuntu 22.04, consider these `cgroup-v1` prerequisites before you install Machine Learning Services.
 
-#### [RHEL 9](#tab/rhel9)
+### [RHEL 9](#tab/rhel9)
 
 1. As a prerequisite, enable `cgroup-v1` as documented in [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/managing_monitoring_and_updating_the_kernel/index#assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel) from Red Hat.
 
-1. Then follow instructions to [install SQL Machine Learning Services](install-upgrade/setup-machine-learning-sql-2022.md#install-runtimes-and-packages) as documented.
+1. Then follow the instructions to [install SQL Server Machine Learning Services](install-upgrade/setup-machine-learning-sql-2022.md#install-runtimes-and-packages).
 
 1. Disable network namespace isolation.
 
@@ -194,13 +194,13 @@ For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages for RHEL 9 and U
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-1. Restart `mssql-launchpadd` service for these changes to take effect.
+1. Restart the `mssql-launchpadd` service for these changes to take effect.
 
    ```bash
    sudo systemctl restart mssql-launchpadd
    ```
 
-#### [Ubuntu 22.04](#tab/ubuntu22)
+### [Ubuntu 22.04](#tab/ubuntu22)
 
 For Ubuntu 22.04, contact Canonical directly for the exact steps. Based on the available information, here's a summary of the required steps. Don't use these steps for a production workload.
 
@@ -251,7 +251,7 @@ For Ubuntu 22.04, contact Canonical directly for the exact steps. Based on the a
    cgroup on /sys/fs/cgroup/misc type cgroup (rw,nosuid,nodev,noexec,relatime,misc)
    ```
 
-   After you enable `cgroup-v1` for Ubuntu 22.04, follow the steps in [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](install-upgrade/setup-machine-learning-sql-2022.md#install-runtimes-and-packages) to install and enable SQL Machine Learning Service for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages on Ubuntu 22.04.
+   After you enable `cgroup-v1` for Ubuntu 22.04, follow the steps in [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](install-upgrade/setup-machine-learning-sql-2022.md#install-runtimes-and-packages) to install and enable SQL Server Machine Learning Services for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] packages on Ubuntu 22.04.
 
 ---
 
@@ -273,7 +273,7 @@ If you want to use a Linux host operating system, you can work around the issue 
 
 ### Local ONNX models not supported on Linux operating systems
 
-[CREATE EXTERNAL MODEL](../t-sql/statements/create-external-model-transact-sql.md) local ONNX models hosted directly on the SQL Server aren't currently available for Linux on [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
+Local ONNX models created with [CREATE EXTERNAL MODEL](../t-sql/statements/create-external-model-transact-sql.md) and hosted directly on [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] aren't available on Linux for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 
 ## Related content
 

@@ -58,11 +58,11 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 ::: moniker-end
 
 > [!TIP]  
-> This tutorial requires user input and an internet connection. If you're interested in the [unattended](setup.md#unattended) or [offline](setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](setup.md). If you choose to have a preinstalled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] VM on RHEL ready to run your production-based workload, follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+> This quickstart requires user input and an internet connection. If you're interested in the [unattended](setup.md#unattended) or [offline](setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](setup.md). If you choose to have a preinstalled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] VM on RHEL ready to run your production-based workload, follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
 
 ## Prerequisites
 
-You need a machine running RHEL 8.x with **at least 2 GB** of memory.
+You need a machine running a supported version of RHEL with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
@@ -106,7 +106,7 @@ For more information, see the following blog on installing `python2` and configu
 
 To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Red Hat repository configuration file:
+1. Download the [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] RHEL repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
@@ -164,7 +164,7 @@ For more information, see the following blog on installing `python2` and configu
 
 To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Red Hat repository configuration file:
+1. Download the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] RHEL repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
@@ -207,13 +207,13 @@ At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is 
 <!--SQL Server 2022 on Linux-->
 ::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
 
-### [Red Hat 8](#tab/rhel8)
+### [RHEL 8](#tab/rhel8)
 
 The following commands for installing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] point to the RHEL 8 repository.
 
 To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Red Hat 8 repository configuration file:
+1. Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] RHEL 8 repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
@@ -252,7 +252,7 @@ To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RH
 
 At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
 
-### [Red Hat 9](#tab/rhel9)
+### [RHEL 9](#tab/rhel9)
 
 Starting with RHEL 9, you can run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confined application with SELinux enabled. For more information about confined and unconfined applications with SELinux, see [Getting started with SELinux](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux).
 
@@ -262,7 +262,7 @@ To run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confin
 
 - Install the `mssql-server` package using the steps mentioned later in this section.
 
-- Install the new `mssql-server-selinux` package.
+- Install the `mssql-server-selinux` package.
 
   ```bash
   sudo yum install -y mssql-server-selinux
@@ -273,7 +273,7 @@ To run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confin
 
 To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL 9, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Red Hat 9 repository configuration file:
+1. Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] RHEL 9 repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo
@@ -324,11 +324,11 @@ At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is 
 <!--SQL Server 2025 on Linux-->
 ::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-### [Red Hat 9](#tab/2025rhel9)
+### [RHEL 9](#tab/2025rhel9)
 
 To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL 9, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Red Hat 9 repository configuration file:
+1. Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] RHEL 9 repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2025.repo
@@ -373,11 +373,11 @@ To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RH
 
 At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
 
-### [Red Hat 10](#tab/2025rhel10)
+### [RHEL 10](#tab/2025rhel10)
 
 To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL 10, run the following commands in a terminal to install the `mssql-server` package:
 
-1. Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Red Hat 10 repository configuration file:
+1. Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] RHEL 10 repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/10/mssql-server-2025.repo
@@ -426,7 +426,7 @@ At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is 
 
 ::: moniker-end
 
-## Disable the SA account as a best practice
+## Disable the `sa` account as a best practice
 
 [!INCLUDE [connect-with-sa](../includes/connect-with-sa.md)]
 

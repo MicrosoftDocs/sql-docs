@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-This sample bash script installs [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Ubuntu without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample bash script installs [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Ubuntu without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performing post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]  
 > If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Ubuntu](quickstart-install-ubuntu.md). For other setup information, see [Installation guidance for SQL Server on Linux](setup.md).
@@ -32,9 +32,9 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../../includes/ssnov
 
 This example installs [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Ubuntu Server 20.04. If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or Ubuntu Server, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file and then to customize it. You must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file, and then customize it. You must replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
-The script might fail if SQL Server is slow to start. That's because the script exits with a non-zero status. Removing the `-e` switch on the first line might resolve this issue.
+The script retries the connection five times while SQL Server starts. If all attempts fail, the script exits with a nonzero status.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -50,21 +50,21 @@ The script might fail if SQL Server is slow to start. That's because the script 
 MSSQL_SA_PASSWORD='<password>'
 
 # Product ID of the version of SQL Server you're installing
-# Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
-# Defaults to developer
+# Must be evaluation, developer, express, web, standard, enterprise, or your 25-digit product key
+# Defaults to evaluation
 MSSQL_PID='evaluation'
 
 # Enable SQL Server Agent (recommended)
 SQL_ENABLE_AGENT='y'
 
-# Install SQL Server Full Text Search (optional)
+# Install SQL Server Full-Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
 
 # Create an additional user with sysadmin privileges (optional)
 # SQL_INSTALL_USER='<Username>'
 # SQL_INSTALL_USER_PASSWORD='<password>'
 
-if [ -z $MSSQL_SA_PASSWORD ]
+if [ -z "$MSSQL_SA_PASSWORD" ]
 then
   echo Environment variable MSSQL_SA_PASSWORD must be set for unattended install
   exit 1
@@ -84,8 +84,8 @@ echo Installing SQL Server...
 sudo apt-get install -y mssql-server
 
 echo Running mssql-conf setup...
-sudo MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
-     MSSQL_PID=$MSSQL_PID \
+sudo MSSQL_SA_PASSWORD="$MSSQL_SA_PASSWORD" \
+  MSSQL_PID="$MSSQL_PID" \
      /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
@@ -98,14 +98,14 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
 # Optional Enable SQL Server Agent:
-if [ ! -z $SQL_ENABLE_AGENT ]
+if [ -n "$SQL_ENABLE_AGENT" ]
 then
   echo Enabling SQL Server Agent...
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 fi
 
-# Optional SQL Server Full Text Search installation:
-if [ ! -z $SQL_INSTALL_FULLTEXT ]
+# Optional SQL Server Full-Text Search installation:
+if [ -n "$SQL_INSTALL_FULLTEXT" ]
 then
     echo Installing SQL Server Full-Text Search...
     sudo apt-get install -y mssql-server-fts
@@ -128,34 +128,38 @@ sudo systemctl restart mssql-server
 # Connect to server and get the version:
 counter=1
 errstatus=1
-while [ $counter -le 5 ] && [ $errstatus = 1 ]
+while [ "$counter" -le 5 ] && [ "$errstatus" -ne 0 ]
 do
   echo Waiting for SQL Server to start...
   sleep 3s
-  /opt/mssql-tools/bin/sqlcmd \
-    -S localhost \
-    -U sa \
-    -P $MSSQL_SA_PASSWORD \
-    -Q "SELECT @@VERSION" 2>/dev/null
-  errstatus=$?
-  ((counter++))
+  if /opt/mssql-tools/bin/sqlcmd \
+      -S localhost \
+      -U sa \
+      -P "$MSSQL_SA_PASSWORD" \
+      -Q "SELECT @@VERSION" 2>/dev/null
+  then
+    errstatus=0
+  else
+    errstatus=$?
+  fi
+  ((counter += 1))
 done
 
 # Display error if connection failed:
-if [ $errstatus = 1 ]
+if [ "$errstatus" -ne 0 ]
 then
   echo Cannot connect to SQL Server, installation aborted
-  exit $errstatus
+  exit "$errstatus"
 fi
 
 # Optional new user creation:
-if [ ! -z $SQL_INSTALL_USER ] && [ ! -z $SQL_INSTALL_USER_PASSWORD ]
+if [ -n "$SQL_INSTALL_USER" ] && [ -n "$SQL_INSTALL_USER_PASSWORD" ]
 then
-  echo Creating user $SQL_INSTALL_USER
+  echo Creating user "$SQL_INSTALL_USER"
   /opt/mssql-tools/bin/sqlcmd \
     -S localhost \
     -U sa \
-    -P $MSSQL_SA_PASSWORD \
+    -P "$MSSQL_SA_PASSWORD" \
     -Q "CREATE LOGIN [$SQL_INSTALL_USER] WITH PASSWORD=N'$SQL_INSTALL_USER_PASSWORD', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=ON, CHECK_POLICY=ON; ALTER SERVER ROLE [sysadmin] ADD MEMBER [$SQL_INSTALL_USER]"
 fi
 
@@ -200,17 +204,17 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
+1. Enable SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set. The variable is set by default.
 
-1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
+1. Optionally install SQL Server Full-Text Search if the variable `SQL_INSTALL_FULLTEXT` is set.
 
 1. Unblock port 1433 for TCP on the system firewall, necessary to connect to SQL Server from another system.
 
 1. Optionally set trace flags for deadlock tracing (requires uncommenting the lines).
 
-1. SQL Server is now installed, to make it operational, restart the process.
+1. Restart SQL Server.
 
-1. Verify that SQL Server is installed correctly, while hiding any error messages.
+1. Verify that SQL Server is installed correctly while hiding connection error messages during retries.
 
 1. Create a new server administrator user if `SQL_INSTALL_USER` and `SQL_INSTALL_USER_PASSWORD` are both set.
 

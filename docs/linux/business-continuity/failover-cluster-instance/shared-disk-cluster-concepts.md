@@ -23,7 +23,7 @@ To create a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI
 
 ## The clustering layer
 
-- In Red Hat Enterprise Linux (RHEL), the clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index).
+- In Red Hat Enterprise Linux (RHEL), the clustering layer is based on the RHEL [HA add-on](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index).
 
   > [!NOTE]  
   > Access to Red Hat HA add-on and documentation requires a subscription.
@@ -38,17 +38,17 @@ As the following diagram shows, storage is presented to two servers. Clustering 
 
 :::image type="content" source="media/shared-disk-cluster-concepts/linux-cluster.png" alt-text="Diagram of a shared disk SQL Server failover cluster on Linux.":::
 
-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] integration with Pacemaker on Linux isn't as coupled as with WSFC on Windows. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] has no knowledge about the presence of the cluster. All orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, which has no equivalent in Pacemaker. It's expected that `@@SERVERNAME` and `sys.servers` return the node name, while the cluster DMVs `sys.dm_os_cluster_nodes` and `sys.dm_os_cluster_properties` return no records. To use a connection string that points to a string server name and not use the IP, they have to register in their DNS server the IP used to create the virtual IP resource (as explained in the following sections) with the chosen server name.
+[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] integration with Pacemaker on Linux isn't as coupled as with Windows Server Failover Clustering (WSFC) on Windows. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] has no knowledge about the presence of the cluster. All orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, which has no equivalent in Pacemaker. It's expected that `@@SERVERNAME` and `sys.servers` return the node name, while the cluster DMVs `sys.dm_os_cluster_nodes` and `sys.dm_os_cluster_properties` return no records. To use a connection string that points to a server name and not use the IP, they have to register in their DNS server the IP used to create the virtual IP resource (as explained in the following sections) with the chosen server name.
 
 [!INCLUDE [ss-linux-cluster-pacemaker-ha-agent-v2](../../includes/cluster-pacemaker-ha-agent-v2.md)]
 
 ## Number of instances and nodes
 
-One key difference with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux is that there can only be one install of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] per Linux server. That installation is called an instance. Unlike Windows Server, which supports up to 25 FCIs per Windows Server failover cluster (WSFC), a Linux-based FCI will only have a single instance. This single instance is also a default instance; there's no concept of a named instance on Linux.
+One key difference with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux is that there can only be one install of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] per Linux server. That installation is called an instance. Unlike Windows Server, which supports up to 25 FCIs per WSFC, a Linux-based FCI will only have a single instance. This single instance is also a default instance; there's no concept of a named instance on Linux.
 
 A Pacemaker cluster can only have up to 16 nodes when Corosync is involved, so a single FCI can span up to 16 servers. An FCI implemented with Standard Edition of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] supports up to two nodes of a cluster even if the Pacemaker cluster has the maximum 16 nodes.
 
-In a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance is active on either one node or the other.
+In a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] FCI, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance is active on only one node at a time.
 
 ## IP address and name
 
@@ -70,7 +70,7 @@ Under Windows Server, there are slightly different options. One option not curre
 In a configuration that spans multiple locations, what is stored at one data center must be synchronized with the other. In the event of a failover, the FCI is able to come online and the storage is seen to be the same. Achieving this requires some external method for storage replication, whether it's done via the underlying storage hardware or some software-based utility.
 
 > [!NOTE]  
-> For [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], Linux-based deployments using disks presented directly to a server such must be formatted with **XFS** or **ext4**. Other file systems are currently not supported. Any changes will be reflected here.
+> For [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], Linux-based deployments using disks presented directly to a server must be formatted with **XFS** or **ext4**. Other file systems are currently not supported.
 
 The process for presenting shared storage is the same for the different supported methods:
 
@@ -81,7 +81,7 @@ The process for presenting shared storage is the same for the different supporte
 
 One major difference with [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux is that while you can configure the default user data and log file location, the system databases must always exist at `/var/opt/mssql/data`. On Windows Server, you have the ability to move the system databases including `tempdb`. This fact plays into how shared storage is configured for an FCI.
 
-The default paths for non-system databases can be changed using the `mssql-conf` utility. For information on how to change the defaults, [Change the default data or log directory location](../../configure/mssql-conf.md#datadir). You can also store [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] data and transaction in other locations as long as they have the proper security even if it isn't a default location; the location would need to be stated.
+The default paths for non-system databases can be changed using the `mssql-conf` utility. For information on how to change the defaults, see [Change the default data or log directory location](../../configure/mssql-conf.md#datadir). You can also store [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] data and transaction logs in other locations as long as they have the proper security even if it isn't a default location; the location would need to be stated.
 
 ## Related content
 

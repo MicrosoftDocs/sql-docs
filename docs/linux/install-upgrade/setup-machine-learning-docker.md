@@ -24,32 +24,32 @@ This article explains how to install [SQL Server Machine Learning Services](../.
 
 - Git command-line interface.
 
-- Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Get Docker](https://docs.docker.com/get-started/get-docker). SQL Server in containers aren't supported on Windows or macOS for production use.
+- Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Get Docker](https://docs.docker.com/get-started/get-docker). SQL Server containers aren't supported on Windows or macOS for production use.
 
 - See also the [system requirements for SQL Server on Linux](setup.md#system).
 
 ## Clone the mssql-docker repository
 
-The following command clones the `mssql-docker` git repository to a local directory.
+The following command clones the `mssql-docker` Git repository to a local directory.
 
-1. Open a Bash terminal on Linux or Mac.
+1. Open a Bash terminal on Linux or macOS.
 
-1. Create a directory to hold a local copy of the mssql-docker repository.
+1. Change to the directory where you want to create the local `mssql-docker` repository.
 
-1. Run the git clone command to clone the mssql-docker repository:
+1. Run the Git clone command to clone the `mssql-docker` repository:
 
    ```bash
    git clone https://github.com/microsoft/mssql-docker mssql-docker
    ```
 
-## Build a SQL Server Linux container image
+## Build and run a SQL Server Linux container image
 
-Complete the following steps to build the docker image:
+Complete the following steps to build and run the Docker image:
 
 1. Change the directory to the mssql-mlservices directory:
 
    ```bash
-   /mssql-docker/linux/preview/examples/mssql-mlservices
+   cd mssql-docker/linux/preview/examples/mssql-mlservices
    ```
 
 1. In the same directory, run the following command:
@@ -58,7 +58,10 @@ Complete the following steps to build the docker image:
    docker build -t mssql-server-mlservices .
    ```
 
-1. Run the command:
+   > [!NOTE]  
+   > To build the Docker image, you must install packages that are several GB in size. The script might take some time to finish running, depending on network bandwidth.
+
+1. Run the container:
 
    > [!IMPORTANT]  
    > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -70,14 +73,11 @@ Complete the following steps to build the docker image:
    > [!NOTE]  
    > Any of the [supported values](../configure/environment-variables.md#sql-server-editions) can be used for `MSSQL_PID`. If you use a paid edition, ensure that you have purchased a license. Replace `<password>` with your actual password. Volume mounting using `-v` is optional. Replace `<directory on the host OS>` with an actual directory where you want to mount the database data and log files.
 
-1. Confirm by running the following command:
+## Verify the SQL Server Linux container
 
    ```bash
    docker ps -a
    ```
-
-   > [!NOTE]  
-   > To build the Docker image, you must install packages that are several GBs in size. The script might take some time to finish running, depending on network bandwidth.
 
 ## Run the SQL Server Linux container image
 
@@ -110,7 +110,7 @@ Complete the following steps to build the docker image:
 
 ## Enable Machine Learning Services
 
-To enable Machine Learning Services, connect to your SQL Server instance and run the following T-SQL statement:
+To enable Machine Learning Services, connect to your SQL Server instance and run the following Transact-SQL statement:
 
 ```sql
 EXECUTE sp_configure 'external scripts enabled', 1;

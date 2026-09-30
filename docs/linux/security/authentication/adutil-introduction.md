@@ -20,11 +20,11 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || =sqlallproducts-a
 The **`adutil`** tool is a command-line interface (CLI) utility for configuring and managing Windows Active Directory domains for SQL Server on Linux and containers. It eliminates the need to switch between Windows and Linux machines to manage Active Directory.
 
 > [!NOTE]  
-> Support for **`adutil`** is limited to SQL Server use cases only. You can also use other utilities like **ktpass** to enable Active Directory authentication, as explained in [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md).
+> Support for **`adutil`** is limited to SQL Server use cases only. You can also use other utilities like **`ktpass`** to enable Active Directory authentication, as explained in [Tutorial: Use Active Directory authentication with SQL Server on Linux](active-directory-tutorial.md).
 
-Before you get started, make sure you download **`adutil`** to a host that is already joined to an Active Directory domain.
+Before you get started, make sure you install **`adutil`** on a host that is already joined to an Active Directory domain.
 
-The **`adutil`** tool is designed as a series of commands and subcommands, with extra flags that you specify as further input. Each top-level command represents a category of administrative functions. Within that category, each subcommand is an operation. This article shows you how to download and get started with **`adutil`**.
+The **`adutil`** tool is designed as a series of commands and subcommands, with extra flags that you specify as further input. Each top-level command represents a category of administrative functions. Within that category, each subcommand is an operation. This article shows you how to install and get started with **`adutil`**.
 
 ## Configure `adutil` for LDAP over Secure Sockets Layer (SSL)
 
@@ -164,9 +164,9 @@ If you don't accept the end user license agreement (EULA) during installation, w
 
 ## Use `adutil` to manage Windows Active Directory
 
-Make sure that you download **adutil** to a host that is already joined to an Active Directory domain. You also need to obtain or renew the Kerberos TGT (ticket-granting ticket), using the **kinit** command and a privileged domain account. The account you use must have permission to create accounts and Service Principal Names (SPNs) on the domain.
+Make sure that you install **`adutil`** on a host that is already joined to an Active Directory domain. You also need to obtain or renew the Kerberos ticket-granting ticket (TGT), using the **`kinit`** command and a privileged domain account. The account you use must have permission to create accounts and Service Principal Names (SPNs) on the domain.
 
-Here are some examples of actions that you can perform using **adutil**. To see a list of top-level commands, type `adutil --help`. This command shows you the top-level commands that you can use to manage and interact with Active Directory.
+Here are some examples of actions that you can perform using **`adutil`**. To see a list of top-level commands, type `adutil --help`. This command shows you the top-level commands that you can use to manage and interact with Active Directory.
 
 ```bash
 adutil --help

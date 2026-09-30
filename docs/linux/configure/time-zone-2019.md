@@ -1,6 +1,6 @@
 ---
 title: Configure the Time Zone for SQL Server 2019 on Linux
-description: In this article, learn how to configure the time zone on for SQL Server 2019 on Linux.
+description: In this article, learn how to configure the time zone for SQL Server 2019 on Linux.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ericjulien, amitkh, atsingh
@@ -20,20 +20,20 @@ This article describes how to configure the time zone for [!INCLUDE [sssql19-md]
 
 ## Overview
 
-[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux uses Windows time zones internally. All Transact-SQL (T-SQL) commands use Windows time zones, for example the [CURRENT_TIMEZONE_ID](../../t-sql/functions/current-timezone-id-transact-sql.md) function and [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) query operator.
+[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux uses Windows time zones internally. All Transact-SQL commands use Windows time zones, for example the [CURRENT_TIMEZONE_ID](../../t-sql/functions/current-timezone-id-transact-sql.md) function and [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) query operator.
 
 1. [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux first determines which time zone to use, using the first valid result from the following sequence:
 
    - the `TZ` environment variable, if set;
    - the `/etc/localtime` symbolic link, if it exists;
-   - the value `/etc/timezone`, if the file exists;
-   - the `ZONE=` attribute from `/etc/sysconfig/clock`, if they exist.
+   - the value in `/etc/timezone`, if the file exists;
+   - the `ZONE=` attribute from `/etc/sysconfig/clock`, if it exists.
 
 1. The resulting Linux time zone is then mapped to a corresponding Windows time zone via a fixed [Time zone mapping](#time-zone-mapping) table.
 
 ## Time zone mapping
 
-The Windows time zone is derived from the Linux `tz` timezone using the following mapping.
+The Windows time zone is derived from the Linux `tz` time zone using the following mapping.
 
 Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. For instance, if `TZ` is set to `America/Knox_IN` and the `/usr/share/zoneinfo/America/Knox_IN` entry is a symbolic link to `/usr/share/zoneinfo/America/Indiana/Knox`, the Windows time zone is resolved to `Central Standard Time` via the `America/Indiana/Knox` mapping entry.
 
@@ -769,7 +769,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Karachi | Pakistan Standard Time |
 | Asia/Katmandu | Nepal Standard Time |
 | Asia/Khandyga | Yakutsk Standard Time |
-| Asia/Kolkatav | India Standard Time |
+| Asia/Kolkata | India Standard Time |
 | Asia/Krasnoyarsk | North Asia Standard Time |
 | Asia/Kuala_Lumpur | Singapore Standard Time |
 | Asia/Kuching | Singapore Standard Time |

@@ -17,12 +17,12 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-This sample bash script installs [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample bash script installs [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../../includes/ssde-md.md)], the SQL Server command-line tools, and SQL Server Agent, and performing post-installation steps. You can optionally install full-text search and create an administrative user.
 
 > [!NOTE]  
 > Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
 
-If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](setup.md).
+If you don't need an unattended installation script, follow the [quickstart for SLES](quickstart-install-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](setup.md).
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ If you don't need an unattended installation script, the fastest way to install 
 
 ## Sample script
 
-This example installs [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on SLES v15 SP6. If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or SLES, change the Microsoft repository paths accordingly.
+This example installs [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on SLES v15 SP6. If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or SLES, change the Microsoft repository paths accordingly.
 
 Save the sample script to a file and then customize it. Replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
@@ -53,21 +53,21 @@ Save the sample script to a file and then customize it. Replace the variable val
 MSSQL_SA_PASSWORD='<password>'
 
 # Product ID of the version of SQL Server you're installing
-# Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
+# Must be evaluation, developer, express, web, standard, enterprise, or your 25-digit product key
 # Defaults to developer
 MSSQL_PID='evaluation'
 
 # Enable SQL Server Agent (recommended)
 SQL_ENABLE_AGENT='y'
 
-# Install SQL Server Full Text Search (optional)
+# Install SQL Server Full-Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
 
 # Create an additional user with sysadmin privileges (optional)
 # SQL_INSTALL_USER='<Username>'
 # SQL_INSTALL_USER_PASSWORD='<password>'
 
-if [ -z $MSSQL_SA_PASSWORD ]
+if [ -z "$MSSQL_SA_PASSWORD" ]
 then
   echo Environment variable MSSQL_SA_PASSWORD must be set for unattended install
   exit 1
@@ -78,7 +78,7 @@ sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-serv
 sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo
 sudo zypper --gpg-auto-import-keys refresh
 
-#Add the SLES v15 SP6 SDK to obtain libsss_nss_idmap0
+# Add the SLES v15 SP6 SDK to obtain libsss_nss_idmap0
 sudo SUSEConnect -p sle-sdk/15.3/x86_64
 
 echo Installing SQL Server...
@@ -98,17 +98,17 @@ echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
-# Optional Enable SQL Server Agent:
-if [ ! -z $SQL_ENABLE_AGENT ]
+# Optionally enable SQL Server Agent:
+if [ -n "$SQL_ENABLE_AGENT" ]
 then
   echo Enable SQL Server Agent...
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 fi
 
-# Optional SQL Server Full Text Search installation:
-if [ ! -z $SQL_INSTALL_FULLTEXT ]
+# Optional SQL Server Full-Text Search installation:
+if [ -n "$SQL_INSTALL_FULLTEXT" ]
 then
-    echo Installing SQL Server Full-Text Search...
+  echo Installing SQL Server full-text search...
     sudo zypper install -y mssql-server-fts
 fi
 
@@ -151,7 +151,7 @@ then
 fi
 
 # Optional new user creation:
-if [ ! -z $SQL_INSTALL_USER ] && [ ! -z $SQL_INSTALL_USER_PASSWORD ]
+if [ -n "$SQL_INSTALL_USER" ] && [ -n "$SQL_INSTALL_USER_PASSWORD" ]
 then
   echo Creating user $SQL_INSTALL_USER
   /opt/mssql-tools/bin/sqlcmd \
@@ -190,11 +190,9 @@ The bash script starts by setting a few variables. These variables can be either
 
 The sample script performs the following steps:
 
-1. Import the public Microsoft GPG keys.
-
 1. Register the Microsoft repositories for SQL Server and the command-line tools.
 
-1. Update the local repositories.
+1. Update the local repositories and import the public Microsoft GPG keys.
 
 1. Install SQL Server.
 
@@ -204,15 +202,15 @@ The sample script performs the following steps:
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
+1. Enable SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set. The sample sets it by default.
 
-1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
+1. Optionally install SQL Server Full-Text Search if the variable `SQL_INSTALL_FULLTEXT` is set.
 
 1. Unblock port 1433 for TCP on the system firewall, necessary to connect to SQL Server from another system.
 
 1. Optionally set trace flags for deadlock tracing (requires uncommenting the lines).
 
-1. SQL Server is now installed. To make it operational, restart the process.
+1. Restart SQL Server after making configuration changes.
 
 1. Verify that SQL Server is installed correctly, while hiding any error messages.
 

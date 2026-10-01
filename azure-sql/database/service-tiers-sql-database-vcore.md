@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman, srinia
-ms.date: 09/01/2026
+ms.date: 10/01/2026
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: concept-article
@@ -231,6 +231,9 @@ For more information, see the [Hyperscale premium series blog announcement](http
 For regions available, see [Hyperscale premium-series availability](region-availability.md#hyperscale-premium-series-availability).
 
 ### DC-series
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
 - DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) workloads that require stronger security protection of hardware enclaves, compared to Virtualization-based Security (VBS) enclaves.

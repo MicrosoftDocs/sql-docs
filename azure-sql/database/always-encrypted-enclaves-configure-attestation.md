@@ -4,7 +4,7 @@ description: Configure Azure Attestation for Always Encrypted with secure enclav
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
-ms.date: 06/10/2025
+ms.date: 09/02/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -26,6 +26,9 @@ keywords:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 [Microsoft Azure Attestation](/azure/attestation/overview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel Software Guard Extensions (Intel SGX) enclaves.
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 To use Azure Attestation for attesting Intel SGX enclaves used for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database, you need to:
 

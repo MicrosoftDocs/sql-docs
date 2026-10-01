@@ -124,7 +124,7 @@ The following limitations apply to queries on encrypted columns:
   - [FILESTREAM](../../../t-sql/statements/create-table-transact-sql.md#filestream) columns.
   - Columns with the [IDENTITY](../../../t-sql/statements/create-table-transact-sql.md#identity) property.
   - Columns with [ROWGUIDCOL](../../../t-sql/statements/create-table-transact-sql.md#rowguidcol) property.
-  - String (**varchar**, **char**, and other) columns with collations other than [binary-code point (`_BIN2`) collations](../../collations/collation-and-unicode-support.md). Collation must not differ from the database's default collation.
+  - String (**varchar**, **char**, and other) columns with collations other than [binary-code point (`_BIN2`) collations](../../collations/collation-and-unicode-support.md). The column collation must be the `_BIN2` variant of the database's default collation family.
   - Columns that are keys for clustered and nonclustered indices when using randomized encryption (indices on columns using deterministic encryption are supported).
   - Columns included in full-text indexes (Always Encrypted doesn't support [Full-Text Search](../../search/full-text-search.md)).
   - [Specify computed columns in a table](../../tables/specify-computed-columns-in-a-table.md).

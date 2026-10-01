@@ -4,7 +4,7 @@ description: "Configure column encryption using Always Encrypted with secure enc
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: "06/17/2026"
+ms.date: "09/02/2026"
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -131,6 +131,9 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## Encrypt columns by using SGX enclaves
 
 The below example demonstrates setting the target encryption configuration for a couple of columns. If either column isn't already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type. To trigger in-place cryptographic operations using an enclave, the EnclaveAttestationProtocol and the EnclaveAttestationUrl parameters are required.
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](always-encrypted-enclaves-migration.md).
 
 ```PowerShell
 # Import modules

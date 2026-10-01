@@ -19,6 +19,16 @@ ms.custom:
 
 [!INCLUDE [sqldb-sqlmi](./includes/appliesto-sqldb-sqlmi.md)]
 
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
+
 Database watcher is a managed monitoring solution for database services in the Azure SQL family. It supports [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/) and [Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/).
 
 Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Monitoring data from the databases, elastic pools, and SQL managed instances you select is [collected](database-watcher-data.md#data-collection) into a central data store in your Azure subscription. [Dashboards](#dashboards) in Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each database, elastic pool, and SQL managed instance. [Alerts](database-watcher-alerts.md) send you notifications when database conditions across your Azure SQL estate might require attention.

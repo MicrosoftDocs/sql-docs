@@ -5,7 +5,7 @@ description: An overview of monitoring and performance tuning capabilities and m
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 08/16/2024
+ms.date: 09/30/2026
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: concept-article
@@ -18,15 +18,26 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 To monitor the performance of a database in Azure SQL Database and Azure SQL Managed Instance, start by monitoring the CPU and IO resources used by your workload relative to the level of database performance you chose in selecting a particular service tier and performance level. To accomplish this, Azure SQL Database and Azure SQL Managed Instance emit resource metrics that can be viewed in the Azure portal or by using [SQL Server Management Studio (SSMS)](/sql/ssms/sql-server-management-studio-ssms), based on [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
-The following table presents a summary of monitoring capabilities in Azure SQL Database and Azure SQL Managed Studio.
+The following table presents a summary of monitoring capabilities:
 
-| Monitoring solution | SQL Database | SQL Managed Instance | Estate monitoring | Low latency | Comprehensive data |
+| Monitoring solution | Azure SQL Database | Azure SQL Managed Instance | Estate monitoring | Low latency | Comprehensive data |
 |:--|:--|:--|:--|:--|:--|
 | [Metrics and alerts](monitoring-metrics-alerts.md) | **Yes** | **Yes** | **Yes** | **Yes** | No |
 | [Query Performance Insight](#query-performance-insight-in-azure-sql-database) | **Yes** | No | **Yes** | No | No |
 | [Monitor using DMVs](monitoring-with-dmvs.md) | **Yes** | **Yes** | No | **Yes** | **Yes** |
 | [Monitor using Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)  | **Yes** | **Yes** | No | **Yes** | No |
 | [Database watcher (preview)](../database-watcher-overview.md) | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |
+| [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub) | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |
+
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
 
 ## Database watcher (preview)
 

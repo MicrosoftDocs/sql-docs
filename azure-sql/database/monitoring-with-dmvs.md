@@ -5,7 +5,7 @@ description: Learn how to detect and diagnose common performance problems by usi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman, mathoma, randolphwest
-ms.date: 10/09/2025
+ms.date: 09/30/2026
 ms.service: azure-sql-database
 ms.subservice: monitoring
 ms.topic: how-to
@@ -27,8 +27,15 @@ You can query dynamic management views (DMVs) via Transact-SQL (T-SQL) to monito
 
 For graphical query resource monitoring, use the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-current&preserve-view=true).
 
-> [!TIP]  
-> Consider [Automatic database tuning](automatic-tuning-overview.md) to automatically improve query performance.
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
 
 ## Monitor resource use
 
@@ -318,6 +325,9 @@ ORDER BY size_mb DESC;
 ## Identify CPU performance issues
 
 This section helps you identify individual queries that are top CPU consumers.
+
+> [!TIP]  
+> Consider [Automatic database tuning](automatic-tuning-overview.md) to automatically improve query performance.
 
 If CPU consumption is above 80% for extended periods of time, consider the following troubleshooting steps whether [the CPU issue is occurring now](#the-cpu-issue-is-occurring-now) or has [occurred in the past](#the-cpu-issue-occurred-in-the-past). You can also follow the steps in this section to proactively identify top CPU consuming queries and tune them. In some cases, reducing CPU consumption might let you scale down your databases and elastic pools and save costs.
 

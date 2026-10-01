@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 09/23/2026
+ms.date: 10/01/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -87,6 +87,12 @@ The following table lists features of Azure SQL Database that became generally a
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### October 2026
+
+| Changes | Details |
+| --- | --- |
+| **Fsv2 hardware retired** | Fsv2 hardware is now retired. For more information, see [Retirement Notice: Azure SQL Database FSV2-series offer](https://azure.microsoft.com/updates?id=485030). |
 
 ### September 2026
 

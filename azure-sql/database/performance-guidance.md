@@ -29,8 +29,15 @@ Once you have identified a performance issue that you're facing with Azure SQL D
 
 This article assumes that you have already worked through the [database advisor recommendations](database-advisor-implement-performance-recommendations.md) and [automatic tuning recommendations](automatic-tuning-overview.md), if applicable. It also assumes that you have reviewed the [overview of monitoring and tuning](monitor-tune-overview.md), [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-current&preserve-view=true), and related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
 
-> [!NOTE]
-> For similar guidance in Azure SQL Managed Instance, see [Tune applications and databases for performance in Azure SQL Managed Instance](../managed-instance/performance-guidance.md?view=azuresql-mi&preserve-view=true).
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
 
 ## Tune your application
 
@@ -267,9 +274,7 @@ Connection pooling can improve throughput, reduce latency, and enhance the overa
   - **Implement proactive, asynchronous token renewal:** The first connection `Open()` to get a new token may require a short delay to obtain a new Entra ID token. For many applications, this delay is negligible and no reconfiguration is necessary. If you choose to have your application manage tokens, obtain new access tokens *before* expiration and ensure they are cached. This can minimize the delay of token acquisition during physical connection creation. Performing token renewal proactively moves the short delay to a non-user process. 
   - **Adjust token lifetimes:** [Configure token expiration policies in Microsoft Entra ID](/entra/identity/conditional-access/howto-conditional-access-session-lifetime) to be at least the expected lifetime of logical connections in your application. While not necessary, adjusting token expiration helps balances security with the performance overhead of re-creating physical connections.
 
-- [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) connection performance and resource usage to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Use [Microsoft Entra ID logs](/entra/identity/monitoring-health/concept-sign-ins) to track token expiration errors and ensure token lifetimes are appropriately configured. Consider using [Database Watcher](../database-watcher-overview.md) or [Azure Monitor](monitoring-metrics-alerts.md) where applicable.
-
-
+- [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) connection performance and resource usage to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Use [Microsoft Entra ID logs](/entra/identity/monitoring-health/concept-sign-ins) to track token expiration errors and ensure token lifetimes are appropriately configured. Consider using the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub). The Database Hub automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments, and is completely free. For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
 
 ## Best practices for very large database architectures in Azure SQL Database
 
@@ -320,7 +325,6 @@ To keep up to date with the latest features and updates to Azure SQL Database, s
 - [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md)
 - [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md)
 - [Monitoring performance using dynamic management views](monitoring-with-dmvs.md)
-- [Database watcher](../database-watcher-overview.md)
 - [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
 - [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
 - Video: [Data Loading Best Practices on Azure SQL Database](/shows/data-exposed/data-loading-best-practices-on-azure-sql-database?WT.mc_id=dataexposed-c9-niner)

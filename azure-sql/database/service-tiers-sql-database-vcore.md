@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman, srinia
-ms.date: 07/10/2026
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: concept-article
@@ -202,15 +202,12 @@ The following table compares compute resources in different hardware configurati
 |:---------|:---------|:---------|
 |Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake)\*, AMD EPYC&trade; 7763v (Milan)\*, AMD EPYC 9004 (Genoa)\*, Intel&reg; Xeon&reg; Platinum 8573C (Emerald Rapids)\* processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake)\*, AMD EPYC&trade; 7763v (Milan)\*, AMD EPYC 9004 (Genoa)\*, Intel&reg; Xeon&reg; Platinum 8573C (Emerald Rapids)\* processors<br>- Autoscale up to 80 vCores (hyper-threaded)<br>- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore.  For example, at a given point in time a workload might use and be billed for 240-GB memory and only 10 vCores.|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Autoscale up to 24 GB per vCore<br>- Autoscale up to 240 GB max|
 |DC-series     | - Intel&reg; Xeon&reg; E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
-|Fsv2-series\*\*     |- Intel&reg; 8168 (Skylake) processors<br>- Featuring a sustained all core turbo clock speed of 3.4 GHz and a maximum single core turbo clock speed of 3.7 GHz.<br>- Provision up to 72 vCores (hyper-threaded)|- 1.9 GB per vCore<br>- Provision up to 136 GB|
 
 \* For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel&reg; Broadwell, Skylake, Ice Lake, Cascade Lake, Emerald Rapid or AMD Milan, Genoa). In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using:
   - Intel&reg; SP-8160 (Skylake) processors appears as Gen6
   - Intel&reg; 8272CL (Cascade Lake) appears as Gen7
   - Intel&reg; Xeon&reg; Platinum 8370C (Ice Lake) or AMD EPYC&trade; 7763v (Milan) appear as Gen8
   - AMD EPYC&trade; 9004 (Genoa) appear as Gen9 or Intel&reg; Xeon&reg; Platinum 8573C (Emerald Rapids) appear as Gen10
-
-\*\* Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
 
 For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 
@@ -282,12 +279,7 @@ For information on current generation hardware availability, see [Feature Availa
 
 #### Fsv2-series
 
-Fsv2-series hardware is no longer available to be created and will be retired October 1, 2026.
-
-To minimize service disruption and maintain price-performance, transition to Hyperscale premium-series or Standard-series (Gen5) hardware. For more information, see [Retirement Notice: Azure SQL Database FSV2-series offer](https://azure.microsoft.com/updates?id=485030). For most databases and workloads, Hyperscale premium-series or Standard-series (Gen5) hardware provide similar or better price performance than Fsv2. To make sure, please validate this with your specific database and workloads.
-
-- Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits might perform better on standard-series (Gen5).
-- Fsv2-series is only supported in the General Purpose tier.
+Fsv2-series hardware was retired on October 1, 2026.
 
 #### Gen4
 

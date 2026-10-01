@@ -29,8 +29,15 @@ Once you have identified a performance issue that you're facing with Azure SQL M
 
 This article assumes that you have reviewed the [overview of monitoring and tuning](../database/monitor-tune-overview.md) and [Monitor performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=azuresqldb-mi-current&preserve-view=true). Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your SQL managed instance.
 
-> [!NOTE]
-> For similar guidance in Azure SQL Database, see [Tune applications and databases for performance in Azure SQL Database](../database/performance-guidance.md?view=azuresql-db&preserve-view=true).
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
 
 ## Tune your application
 

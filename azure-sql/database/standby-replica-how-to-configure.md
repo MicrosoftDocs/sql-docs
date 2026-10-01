@@ -4,7 +4,7 @@ description: Learn how to save on licensing costs by using a standby Azure SQL D
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/21/2024
+ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: how-to
@@ -67,7 +67,7 @@ The following table lists the supported and unsupported deployment models:
 
 | Deployment model | Compute tier | Service tier | Standby replica supported | Hardware |
 | -- | -- | -- | -- | -- |
-| Single database | Provisioned | General Purpose | Yes | Standard-series (Gen5), FSv2-Series, DC-Series |
+| Single database | Provisioned | General Purpose | Yes | Standard-series (Gen5), DC-Series |
 | Single database | Provisioned | Business Critical | Yes | Standard-series (Gen5), DC-Series |
 | Single database | Provisioned | Hyperscale | N/A | N/A |
 | Single database | Serverless | All | No | N/A |

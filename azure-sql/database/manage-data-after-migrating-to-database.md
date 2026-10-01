@@ -249,18 +249,21 @@ You might receive banner notifications in your Azure SQL server of cost recommen
 
 You can monitor performance and resource utilization in SQL Database by using the following methods:
 
+#### Database Hub in Microsoft Fabric
+
+Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+ - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+ - automatically provides prebuilt, configurable, shareable dashboards.
+ - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+ - **is completely free**. 
+
+For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
+
 #### Database watcher
 
-Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Dashboards in the Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each monitored resource. Data is collected into a central data store in your Azure subscription. You can query, analyze, export, visualize collected data, and integrate it with downstream systems.
+Database watcher (preview) collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Dashboards in the Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each monitored resource. Data is collected into a central data store in your Azure subscription. You can query, analyze, export, visualize collected data, and integrate it with downstream systems.
 
-For more information about database watcher, see the following articles:
-
-- [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md)
-- [Quickstart: Create a watcher to monitor Azure SQL (preview)](../database-watcher-quickstart.md)
-- [Create and configure a watcher (preview)](../database-watcher-manage.md)
-- [Database watcher data collection and datasets (preview)](../database-watcher-data.md)
-- [Analyze database watcher monitoring data (preview)](../database-watcher-analyze.md)
-- [Database watcher FAQ](../database-watcher-faq.yml)
+For more information about database watcher, see [Monitor Azure SQL workloads with database watcher (preview)](../database-watcher-overview.md).
 
 #### Azure portal
 

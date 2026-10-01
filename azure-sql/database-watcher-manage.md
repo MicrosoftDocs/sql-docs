@@ -21,6 +21,16 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 This article contains detailed steps to create, configure, and start a watcher in the Azure portal for Azure SQL Database and Azure SQL Managed Instance.
 
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
+
 Database watcher does not require you to deploy and maintain any monitoring agents or other monitoring infrastructure. You can enable in-depth database monitoring of your Azure SQL resources in minutes.
 
 For a simplified step-by-step example to create and configure a watcher, see [Quickstart: Create a watcher to monitor Azure SQL](database-watcher-quickstart.md).

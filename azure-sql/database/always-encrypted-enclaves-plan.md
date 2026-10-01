@@ -4,7 +4,7 @@ description: Plan the deployment of Always Encrypted with secure enclaves in Azu
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
-ms.date: 06/10/2025
+ms.date: 09/02/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
@@ -18,6 +18,9 @@ ms.custom:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In Azure SQL Database, Always Encrypted with secure enclaves can use either Intel Software Guard Extensions (Intel SGX) enclaves or Virtualization-based Security (VBS) enclaves.
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 ## Intel SGX enclaves
 

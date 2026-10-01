@@ -4,7 +4,7 @@ description: A collection of tutorials on how to create a basic environment for 
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, mathoma
-ms.date: 06/10/2025
+ms.date: 09/02/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: tutorial
@@ -26,6 +26,9 @@ These tutorials teach you how to get started with [Always Encrypted with secure 
 - [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server with attestation using HGS](/sql/relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves-hgs)
 
 ## Always Encrypted with secure enclaves in Azure SQL Database
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 - [Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database](always-encrypted-enclaves-getting-started-sgx.md)
 - [Tutorial: Getting started using Always Encrypted with VBS enclaves in Azure SQL Database](always-encrypted-enclaves-getting-started-vbs.md)

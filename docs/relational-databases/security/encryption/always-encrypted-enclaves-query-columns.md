@@ -4,7 +4,7 @@ description: "Run Data Definition Language (DDL) statements to configure encrypt
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto, randolphwest
-ms.date: 09/15/2026
+ms.date: 10/01/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -17,6 +17,9 @@ ms.custom:
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) allows some Transact-SQL (T-SQL) statements to perform confidential computations on encrypted database columns in a server-side secure enclave.
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](always-encrypted-enclaves-migration.md).
 
 ## Statements using secure enclaves
 

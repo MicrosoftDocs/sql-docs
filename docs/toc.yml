@@ -7859,6 +7859,8 @@ items:
         items:
         - name: Configure Always Encrypted with secure enclaves
           href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+        - name: Migrate from Intel SGX enclaves
+          href: relational-databases/security/encryption/always-encrypted-enclaves-migration.md
         - name: Set up your environment to support enclaves and attestation
           items:
           - name: Set up SQL Server

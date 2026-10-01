@@ -4,7 +4,7 @@ description: Learn how to develop ODBC applications using Always Encrypted and t
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, sunilbs, mcimfl
-ms.date: 09/17/2026
+ms.date: 10/01/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -57,6 +57,9 @@ Enabling Always Encrypted isn't sufficient for encryption or decryption to succe
 
 > [!NOTE]
 > On Linux and macOS, OpenSSL version 1.0.1 or later is required to use Always Encrypted with secure enclaves.
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 Beginning with version 17.4, the driver supports Always Encrypted with secure enclaves. To enable the use of the enclave when connecting to a database, set the `ColumnEncryption` DSN key, connection string keyword, or connection attribute to the following value: `<attestation protocol>,<attestation URL>`, where:
 

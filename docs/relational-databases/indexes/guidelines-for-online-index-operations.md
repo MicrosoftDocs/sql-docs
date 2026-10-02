@@ -114,6 +114,8 @@ To use the `RESUMABLE` option, you must also use the `ONLINE` option. When you p
 
 - Disabled indexes aren't supported.
 
+- Filtered indexes aren't supported.
+
 > [!TIP]  
 > Resumable index operations don't require a large transaction, allowing frequent log truncation during this operation and avoiding large log growth. The data required to resume and complete an index operation is stored in the data files of a database.
 

@@ -76,6 +76,100 @@ Access to this diagnostic view depends on the server's permissions. A successful
 
 For applications that must control security-context negotiation, <xref:Microsoft.Data.SqlClient.SqlConnection.SspiContextProvider> supports a custom SSPI implementation. This is an advanced extensibility point for scenarios such as custom Kerberos or explicit NTLM credentials. It isn't a connection-string authentication mode and can't be combined with `AccessToken` or `AccessTokenCallback`.
 
+## Custom Security Support Provider Interface (SSPI) context providers
+
+The <xref:Microsoft.Data.SqlClient.SspiContextProvider> abstract class is the base for all SSPI context providers. To create a custom provider, derive from `SspiContextProvider` and override the `GenerateContext` method. Assign an instance of your provider to the <xref:Microsoft.Data.SqlClient.SqlConnection.SspiContextProvider> property on a `SqlConnection` before opening the connection.
+
+The `GenerateContext` method is called during the SSPI authentication handshake. It receives the incoming authentication blob from the server, a buffer writer for the outgoing response blob, and an <xref:Microsoft.Data.SqlClient.SspiAuthenticationParameters> object containing connection metadata such as:
+
+- `Resource` - The server's Service Principal Name (SPN).
+- `ServerName` - The data source name.
+- `DatabaseName` - The target database, if specified.
+- `UserId` - The user ID, if specified in the connection string.
+- `Password` - The password, if specified in the connection string.
+
+Important considerations:
+
+- Set the `SspiContextProvider` property before opening the connection. Attempting to set it on an open or connecting connection throws an `InvalidOperationException`.
+- The `SspiContextProvider` instance is part of the key used to identify connection pools. Avoid creating a new `SspiContextProvider` instance for every `SqlConnection` since each new provider creates a new pool. Reference the same instance of a provider for connections you want to be considered for pooling.
+- A custom `SspiContextProvider` must authenticate with the same security context for the same input parameters. If the security context is different, a pooled connection with the wrong security context might be returned for a connection request.
+- `SspiContextProvider` is mutually exclusive with token-based authentication. Setting it alongside `AccessToken` or `AccessTokenCallback` throws an `InvalidOperationException`, regardless of which property you set first.
+
+### Example
+
+`NegotiateAuthentication` requires .NET 7 or later, so this example doesn't compile on .NET Framework. For a .NET Framework provider, implement `GenerateContext` against a platform SSPI API instead.
+
+The following example shows a custom SSPI context provider that uses <xref:System.Net.Security.NegotiateAuthentication> to perform the authentication:
+
+```csharp
+using System;
+using System.Buffers;
+using System.Net.Security;
+using Microsoft.Data.SqlClient;
+
+class CustomSspiContextProvider : SspiContextProvider
+{
+    private NegotiateAuthentication? _auth;
+
+    protected override bool GenerateContext(
+        ReadOnlySpan<byte> incomingBlob,
+        IBufferWriter<byte> outgoingBlobWriter,
+        SspiAuthenticationParameters authParams)
+    {
+        _auth ??= new NegotiateAuthentication(
+            new NegotiateAuthenticationClientOptions
+            {
+                Package = "Negotiate",
+                TargetName = authParams.Resource,
+            });
+
+        byte[]? blob = _auth.GetOutgoingBlob(
+            incomingBlob, out NegotiateAuthenticationStatusCode statusCode);
+
+        if (statusCode is not NegotiateAuthenticationStatusCode.Completed
+            and not NegotiateAuthenticationStatusCode.ContinueNeeded)
+        {
+            return false;
+        }
+
+        if (blob is not null)
+        {
+            outgoingBlobWriter.Write(blob);
+        }
+
+        return true;
+    }
+}
+```
+
+Assign the provider to a connection before opening it:
+
+```csharp
+using var connection = new SqlConnection(
+    "Server=myServer;Database=myDatabase;Integrated Security=true;Encrypt=True;");
+connection.SspiContextProvider = new CustomSspiContextProvider();
+connection.Open();
+```
+
+### Security considerations
+
+Keep the following security considerations in mind when you implement a custom SSPI context provider:
+
+- **Validate all inputs**.
+  Always validate incoming blobs and authentication parameters before processing them. Malformed or unexpected data should be rejected by returning `false` from `GenerateContext`.
+- **Protect credentials**.
+  The `SspiAuthenticationParameters` object might contain sensitive values such as `UserId` and `Password`. Don't log, persist, or transmit these values in an unsecured manner.
+- **Use established authentication libraries**.
+  Whenever possible, delegate authentication logic to well-tested libraries such as <xref:System.Net.Security.NegotiateAuthentication> rather than implementing cryptographic protocols yourself.
+- **Dispose of resources**.
+  If your provider allocates unmanaged resources or authentication contexts, implement <xref:System.IDisposable>, and ensure proper cleanup. SqlClient doesn't dispose the `SspiContextProvider` instance. Dispose the provider when your application no longer needs it.
+- **Restrict the authentication package**.
+  Only use authentication packages appropriate for your environment (for example, `Negotiate` or `Kerberos`). Only pass trusted input and configuration to the authentication package.
+- **Test thoroughly**.
+  Verify your provider works correctly under all expected conditions, including token renewal, connection pooling, and failover scenarios.
+
+Microsoft doesn't validate or audit custom `SspiContextProvider` implementations, nor does it guarantee the security of connections authenticated through a custom provider. Any vulnerabilities introduced by a custom implementation are your responsibility.
+
 ## Login types
 
 A *login* grants an identity access to the server. A *database user* represents an identity inside a database. Map the intended login or group to a database user, then grant only the required permissions through database roles.

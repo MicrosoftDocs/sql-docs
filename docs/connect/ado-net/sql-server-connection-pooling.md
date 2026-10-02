@@ -29,6 +29,16 @@ await command.ExecuteNonQueryAsync(cancellationToken);
 
 Open late, dispose early, and let the pool manage physical connections. Don't keep one `SqlConnection` open globally.
 
+## Choose a connection pool implementation
+
+SqlClient includes two connection pool implementations. The V1 pool is the default. Starting in Microsoft.Data.SqlClient 7.1, you can opt in to the channel-based V2 pool by setting the `Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2` AppContext switch to `true` at application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2", true);
+```
+
+Connection string pooling controls apply to both implementations. For more information about the switch and its default, see [Enable the V2 connection pool](appcontext-switches.md#enable-the-v2-connection-pool).
+
 ## Understand pool keys
 
 A connection can be reused only from its matching pool. The pool key includes more than the destination server.
@@ -66,7 +76,7 @@ Microsoft.Data.SqlClient 7.0 adds <xref:Microsoft.Data.SqlClient.SqlConnection.S
 
 ## Size each pool
 
-These connection string options control one pool:
+These connection string options control one pool. For the complete keyword reference, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
 | Keyword | Default | Effect |
 | --- | --- | --- |
@@ -75,6 +85,7 @@ These connection string options control one pool:
 | `Max Pool Size` | `100` | Sets the maximum number of physical connections in the pool. |
 | `Connect Timeout` | 15 seconds | Sets how long `Open` waits when no usable connection is available. |
 | `Load Balance Timeout` | `0` seconds | Discards a connection when it returns to the pool if its age exceeds the configured value. `Connection Lifetime` is an alias. |
+| `Connection Idle Timeout` | `300` | Starting in version 7.1.0, makes an idle connection eligible for eviction after this number of seconds. A value of 0 disables idle expiration. Enforcement requires the `UseLegacyIdleTimeoutBehavior` AppContext switch to be `false`. |
 
 The pool creates connections as demand grows until it reaches `Max Pool Size`. When all connections are in use, later opens wait for a connection to return. If the wait exceeds `Connect Timeout`, the open fails.
 
@@ -88,6 +99,36 @@ Don't raise `Max Pool Size` before checking:
 A positive `Min Pool Size` keeps connections open during idle periods. Use it only when measurements justify warm connections. It usually works against scale-to-zero, serverless auto-pause, and burstable cloud designs.
 
 With the default `Load Balance Timeout=0`, periodic cleanup normally removes unused connections above `Min Pool Size` after about four to eight minutes, or the pool removes them when it detects that the server connection is broken. Treat that interval as implementation behavior, not a per-connection idle guarantee. The pool doesn't send a validation query before every checkout because that round trip removes much of the pooling benefit.
+
+### Limit connection idle time
+
+Starting in Microsoft.Data.SqlClient 7.1.0, use `Connection Idle Timeout` to configure idle-expiration checks and background cleanup for pooled connections. The default is 300 seconds. A value of 0 disables idle expiration. Negative values throw an <xref:System.ArgumentException>.
+
+```text
+Connection Idle Timeout=120
+```
+
+You can also set `SqlConnectionStringBuilder.IdleTimeout` when you build the connection string:
+
+```csharp
+var builder = new SqlConnectionStringBuilder(connectionString)
+{
+    IdleTimeout = 120
+};
+```
+
+Idle-timeout enforcement is opt-in. Set the following AppContext switch to `false` at application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyIdleTimeoutBehavior", false);
+```
+
+The switch and connection string setting affect each pool implementation differently:
+
+- **V1 pool.** When the switch is `true`, V1 uses its historical randomized two-to-four-minute cleanup cadence and evicts idle connections regardless of `Connection Idle Timeout`. When the switch is `false` and `Connection Idle Timeout` is nonzero, V1 uses half the configured timeout as its cleanup cadence and evicts idle connections after one or two cleanup cycles. When the switch is `false` and `Connection Idle Timeout=0`, V1 disables idle eviction but continues minimum-pool-size maintenance at the historical randomized two-to-four-minute interval.
+- **V2 pool.** When the switch is `true`, V2 doesn't perform per-connection idle-age checks, but a nonzero `Connection Idle Timeout` enables and configures background pruning. When the switch is `false` and `Connection Idle Timeout` is nonzero, V2 performs per-connection idle-age checks and configures background pruning from the timeout. When the switch is `false` and `Connection Idle Timeout=0`, V2 doesn't perform per-connection idle-age checks or background pruning. V2 doesn't perform background pruning when `Min Pool Size` is greater than or equal to `Max Pool Size`.
+
+Both pool implementations also remove a connection if the pooler detects that the connection to the server was severed.
 
 ## Handle authentication blocking periods
 

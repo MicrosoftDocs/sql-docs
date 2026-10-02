@@ -4,7 +4,7 @@ description: Review supported Microsoft.Data.SqlClient releases, support dates, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
-ms.date: 09/16/2026
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -18,7 +18,7 @@ Microsoft.Data.SqlClient ships independently of .NET. A supported application us
 ## Support levels
 
 - Long-Term Support (LTS) releases receive support for three years after their initial release.
-- Standard-Term Support (STS) end dates are listed for each release line.
+- Standard-Term Support (STS) releases receive support for three months after a subsequent STS or LTS release.
 - Preview releases aren't supported for production use.
 - Only supported release lines receive servicing fixes.
 
@@ -26,7 +26,8 @@ Microsoft.Data.SqlClient ships independently of .NET. A supported application us
 
 | Version | Initial release | Latest patch | Patch release | Support level | End of support |
 | --- | --- | --- | --- | --- | --- |
-| 7.0 | March 17, 2026 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | September 10, 2026 | STS | To be determined by the next release |
+| 7.1 | September 17, 2026 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0) | September 17, 2026 | STS | To be determined by the next release |
+| 7.0 | March 17, 2026 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | September 10, 2026 | STS | December 17, 2026 |
 | 6.1 | August 14, 2025 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | September 10, 2026 | LTS | August 14, 2028 |
 
 Use the latest patch in the selected release line. Patch releases contain fixes and don't intentionally add breaking features.
@@ -52,7 +53,7 @@ Upgrade applications on an out-of-support line. Review [What's new in Microsoft.
 
 ## Target frameworks
 
-Microsoft.Data.SqlClient 7.0 supports applications that target:
+Microsoft.Data.SqlClient 7.1 supports applications that target:
 
 | Application target | Operating systems |
 | --- | --- |
@@ -65,17 +66,17 @@ The package includes a .NET Standard 2.0 compatibility asset for libraries. Exec
 
 This matrix lists actively supported driver lines and database products. `Yes` means that the driver supports connecting to the database product. Individual features can require a newer driver, database engine, service tier, or protocol version.
 
-| Database product | 7.0 | 6.1 |
-| --- | --- | --- |
-| [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | Yes | Yes |
-| [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | Yes | Yes |
-| [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) | Yes | Yes |
-| [SQL database in Microsoft Fabric](/fabric/database/sql/connect) | Yes | Yes |
-| [Warehouse in Microsoft Fabric](/fabric/data-warehouse/connectivity) | Yes | Yes |
-| [SQL Server 2025](../../sql-server/what-s-new-in-sql-server-2025.md) | Yes | Yes |
-| [SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md) | Yes | Yes |
-| [SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md) | Yes | Yes |
-| [SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md) | Yes | Yes |
+| Database product | 7.1 | 7.0 | 6.1 |
+| --- | --- | --- | --- |
+| [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) | Yes | Yes | Yes |
+| [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) | Yes | Yes | Yes |
+| [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) | Yes | Yes | Yes |
+| [SQL database in Microsoft Fabric](/fabric/database/sql/connect) | Yes | Yes | Yes |
+| [Warehouse in Microsoft Fabric](/fabric/data-warehouse/connectivity) | Yes | Yes | Yes |
+| [SQL Server 2025](../../sql-server/what-s-new-in-sql-server-2025.md) | Yes | Yes | Yes |
+| [SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md) | Yes | Yes | Yes |
+| [SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md) | Yes | Yes | Yes |
+| [SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md) | Yes | Yes | Yes |
 
 SQL database and Warehouse in Microsoft Fabric use TDS endpoints and require Microsoft Entra authentication. Warehouse doesn't support Multiple Active Result Sets (MARS). Review the linked Fabric connectivity articles for current service-specific authentication requirements and limitations.
 
@@ -85,7 +86,7 @@ SQL database and Warehouse in Microsoft Fabric use TDS endpoints and require Mic
 
 | Version | Initial release | Latest patch | Patch release | Support level | End of support |
 | --- | --- | --- | --- | --- | --- |
-| 7.x | March 17, 2026 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/7.0.3) | September 10, 2026 | STS | To be determined by the next release |
+| 7.x | March 17, 2026 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/7.1.0) | September 17, 2026 | STS | To be determined by the next release |
 | 6.x | August 14, 2025 | [6.1.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/6.1.2) | August 19, 2025 | LTS | August 14, 2028 |
 | 5.x | February 2, 2024 | [5.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/5.1.0) | February 2, 2024 | LTS | February 3, 2027 |
 
@@ -103,8 +104,8 @@ The extension packages introduced with Microsoft.Data.SqlClient 7.0 initially us
 
 | Package | Latest aligned version | Initial release | Support level | End of support |
 | --- | --- | --- | --- | --- |
-| `Microsoft.Data.SqlClient.Extensions.Abstractions` | 7.0.3 | March 17, 2026 | LTS | March 17, 2029 |
-| `Microsoft.Data.SqlClient.Extensions.Azure` | 7.0.3 | March 17, 2026 | LTS | March 17, 2029 |
+| `Microsoft.Data.SqlClient.Extensions.Abstractions` | 7.1.0 | March 17, 2026 | LTS | March 17, 2029 |
+| `Microsoft.Data.SqlClient.Extensions.Azure` | 7.1.0 | March 17, 2026 | LTS | March 17, 2029 |
 
 ## Supported operating systems
 

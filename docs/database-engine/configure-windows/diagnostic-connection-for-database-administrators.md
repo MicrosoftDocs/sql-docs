@@ -122,7 +122,7 @@ In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], enter the
 
 Connections to the `master` database aren't supported. 
 
-To check if you are using a DAC connection, execute the following T-SQL query:
+To check if you're using a DAC connection, run the following T-SQL query:
 
 ```sql
 SELECT wg.name AS workload_group_name

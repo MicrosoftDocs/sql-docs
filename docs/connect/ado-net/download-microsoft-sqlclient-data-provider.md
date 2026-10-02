@@ -4,7 +4,7 @@ description: Install Microsoft.Data.SqlClient, choose a supported release, add o
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
-ms.date: 09/15/2026
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -19,12 +19,13 @@ Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azu
 
 ## Choose a release
 
-Use a supported General Availability (GA) release for production applications.
+Use a supported General Availability (GA) release for production applications. The latest GA release is [Microsoft.Data.SqlClient 7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0).
 
-| Release line | Support level | Choose it when |
-| --- | --- | --- |
-| 7.0 | Standard Term Support (STS) | You need current driver features and can update on the regular release cadence. |
-| 6.1 | Long Term Support (LTS) | You prefer a longer support period and don't need features introduced in 7.0. |
+| Release line | Latest version | Support level | Choose it when |
+| --- | --- | --- | --- |
+| 7.1 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0) | Standard Term Support (STS) | You need current driver features and can update on the regular release cadence. |
+| 7.0 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | Standard Term Support (STS) | You need servicing fixes while you prepare to upgrade before support ends on December 17, 2026. |
+| 6.1 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | Long Term Support (LTS) | You prefer a longer support period and don't need features introduced in 7.x. |
 
 For current patch versions, support dates, target frameworks, and database compatibility, see [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md).
 
@@ -109,7 +110,7 @@ Starting with version 7.0.2, the assembly versions of `Microsoft.Data.SqlClient.
 
 ## Understand target frameworks
 
-Microsoft.Data.SqlClient 7.0 supports applications on:
+Microsoft.Data.SqlClient 7.1 supports applications on:
 
 - .NET Framework 4.6.2 or later on Windows.
 - .NET 8 or later on supported Windows, Linux, and macOS versions.

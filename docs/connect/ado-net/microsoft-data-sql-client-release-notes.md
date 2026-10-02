@@ -4,7 +4,7 @@ description: Find Microsoft.Data.SqlClient release notes, current stable and pre
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
-ms.date: 09/16/2026
+ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -19,36 +19,64 @@ Microsoft.Data.SqlClient ships independently of .NET. This article summarizes th
 
 | Release line | Latest version | Release date | Support |
 | --- | --- | --- | --- |
+| 7.1 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0) | September 2026 | Standard Term Support (STS) |
 | 7.0 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | September 2026 | Standard Term Support (STS) |
 | 6.1 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | September 2026 | Long Term Support (LTS) |
-| 7.1 preview | [7.1.0-preview3.26238.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0-preview3.26238.4) | August 2026 | Preview |
 
 Don't use preview releases in production. Preview APIs and behavior can change before General Availability (GA).
 
 Release tables and general availability summaries use the NuGet publication month. The lifecycle article lists official release dates, which can differ. For support windows, see [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md).
 
-## 7.1 preview
+## 7.1 STS
 
-The 7.1 preview line extends batching, schema discovery, connection pooling, and Always Encrypted APIs. Changes through 7.1.0-preview3 include:
+Version 7.1 reached general availability in September 2026. It's the current STS line.
+
+### Features and changes
 
 - `SqlBatch` support on .NET Framework.
 - Asynchronous `SqlConnection.GetSchemaAsync` overloads.
+- Application identity reporting through `SqlConnection.RegisteredApplication` and version 2 of the TDS USERAGENT payload. Set the property before opening the connection. The value isn't part of the connection pool key, so a reused physical connection reports the application that originally created it. Application identity is client-supplied telemetry, not a basis for authorization or other security decisions.
 - Connection string aliases such as `ColumnEncryption`, `ConnectTimeout`, `FailoverPartner`, `PacketSize`, and `WorkstationId`.
 - SQL Graph pseudo-column mappings for `$node_id`, `$edge_id`, `$from_id`, and `$to_id` in `SqlBulkCopy`.
-- Opt-in connection idle timeout enforcement.
-- An opt-in connection timeout mode that includes time spent waiting for a pooled connection.
-- Further development of the experimental channel-based connection pool.
+- The SQL Server `json` type in the `DataTypes` collection returned by `SqlConnection.GetSchema`, including on Azure SQL.
+- Opt-in `Connection Idle Timeout` enforcement through `Switch.Microsoft.Data.SqlClient.UseLegacyIdleTimeoutBehavior=false`. The default idle timeout is 300 seconds; `0` disables idle expiration. Default pooling behavior is unchanged.
+- An opt-in connection timeout mode that includes time spent waiting for a pooled connection through `Switch.Microsoft.Data.SqlClient.UseOverallConnectTimeoutForPoolWait=true`. The switch defaults to `false`.
+- Expanded transaction support, broken-connection recovery, pool warmup, idle pruning, leaked-connection reclamation, and diagnostics in connection pool V2. The pool remains in evaluation and requires `Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2`.
 - Asynchronous methods on Always Encrypted key store providers. The driver doesn't yet call these methods during command execution, so they don't make existing Always Encrypted operations asynchronous.
+- Updated native SNI packages to 7.1.0. Supported application targets remain .NET Framework 4.6.2 and later versions and .NET 8 and later versions.
 
-`SqlBatchCommand.CommandBehavior` is honored starting in this line. Earlier versions ignored the property. The obsolete `Type System Version=SQL Server 2000` connection option now throws an `ArgumentException`.
+### Compatibility changes
 
-Preview3 also changes certificate and enclave validation. `ServerCertificate` always compares the configured certificate file with the certificate presented by the server. An invalid or unreadable file now fails the connection instead of falling back to host-name validation. Virtual Secure Mode (VSM) and Host Guardian Service (HGS) enclave attestation now verifies that the enclave public key is bound to the signed attestation report. Retest these paths when you move from an earlier preview.
+- `SqlConnectionStringBuilder.TransparentNetworkIPResolution` is obsolete on .NET Framework. Use `MultiSubnetFailover` instead. This change adds a compile-time warning; it doesn't change runtime behavior or either option's default.
+- `SqlBatchCommand.CommandBehavior` and the `CommandBehavior` passed to `SqlBatch.ExecuteReader` are honored. Earlier versions ignored these settings.
+- The obsolete `Type System Version=SQL Server 2000` connection option now throws `ArgumentException` when you open the connection. Use a supported value such as `Latest`.
 
-Read the release notes for [preview1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview1.md), [preview2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview2.md), and [preview3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview3.md) before testing this line.
+Version 7.1 also includes the certificate and enclave validation fixes serviced in 6.1.7 and 7.0.3. When you enable certificate validation on managed SNI, `ServerCertificate` compares the configured certificate file with the certificate presented by the server. An invalid or unreadable file fails the connection instead of bypassing the configured certificate check. Virtual Secure Mode (VSM) and Host Guardian Service (HGS) enclave attestation verifies that the enclave public key is bound to the signed attestation report. Retest these paths when you upgrade from an earlier release without these fixes.
+
+### Key fixes
+
+- Fixed pooled connections remaining broken after a `TransactionScope` rollback, which could cause a later `BeginTransaction()` call to fail.
+- Fixed IPv6 literal server names over Named Pipes in managed SNI.
+- Fixed large `decimal` parameter overflows with explicit precision and scale, `DateOnly` parameters and table-valued parameters using `sql_variant`, and streamed column data being skipped after `IsDBNull()`.
+- Fixed connection pool counters, unnecessary pool-maintenance timer activity, and connection pool V2 open/close throughput regressions.
+- Fixed configurable retry logic registering a permanent, process-wide assembly-resolution handler on modern .NET. Custom retry assemblies must be in the application base directory; dependencies loaded after provider construction must resolve through normal application dependency resolution or an application-supplied handler.
+
+### Releases
+
+| Version | Released | Customer-relevant changes |
+| --- | --- | --- |
+| [7.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0.md) | September 2026 | General availability release, including the cumulative changes from the 7.1 preview cycle. |
+
+> [!IMPORTANT]
+> Upgrade directly referenced companion packages to 7.1.0 alongside the core driver, including `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. Aligned assemblies retain `AssemblyVersion 7.0.0.0`, so updating from 7.0.2 or 7.0.3 doesn't require new .NET Framework binding redirects. When you update from 7.0.0 or 7.0.1, review the one-time assembly version changes described in the [7.0.2 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md).
+
+The [Azure Key Vault Provider 7.1.0 release](https://github.com/dotnet/SqlClient/blob/main/release-notes/add-ons/AzureKeyVaultProvider/7.1/7.1.0.md) implements the asynchronous key store provider methods and fixes cache growth and duplicate key clients under concurrency. These asynchronous methods benefit direct provider calls; the driver's command execution paths still use synchronous key operations. The [Azure extension](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Azure/7.1/7.1.0.md) and [extension abstractions](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Abstractions/7.1/7.1.0.md) releases align versions without public API changes.
+
+For preview history, see the release notes for [preview1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview1.md), [preview2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview2.md), and [preview3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview3.md).
 
 ## 7.0 STS
 
-Version 7.0 reached general availability in March 2026. It's the current STS line.
+Version 7.0 reached general availability in March 2026. It remains supported until December 17, 2026, three months after the 7.1 release.
 
 ### Features and changes
 
@@ -70,7 +98,7 @@ Packet multiplexing for asynchronous reads remains preview functionality and is 
 | [7.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.0.md) | March 2026 | General availability release. |
 | [7.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.1.md) | April 2026 | Fixed `SqlBulkCopy` metadata queries for SQL Server 2016 and Azure Synapse Analytics dedicated SQL pools, corrected vector field metadata, added the missing .NET Framework `System.Data.Common` dependency, and added type forwarding for authentication abstractions. |
 | [7.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md) | June 2026 | Aligned the core driver and companion packages, hardened TDS token parsing, corrected Always Encrypted signature-verification cache handling, and fixed errors in cancellation and null-buffer `GetBytes` and `GetChars` calls. |
-| [7.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.3.md) | September 2026 | Updated SNI to 6.0.3. Fixed a `SqlBulkCopy` regression for logins that can't read `sys.all_columns`, a memory allocation regression when tracing is disabled, `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, and configurable retry registering a process-wide assembly resolution handler. |
+| [7.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.3.md) | September 2026 | Updated SNI to 6.0.3. Fixed `SqlBulkCopy` metadata access, tracing allocations, `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` TNIR defaults on .NET Framework, authentication state preservation, and configurable retry assembly resolution. Conflicting SSPI and token authentication settings now throw `InvalidOperationException`. The aligned Azure extension fixes Entra authority parsing for Dataverse and Dynamics 365 connections. |
 
 > [!IMPORTANT]
 > Starting with 7.0.2, align direct references to `Microsoft.Data.SqlClient`, `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. On .NET Framework, the assembly versions of `Extensions.Azure`, `Extensions.Abstractions`, and `Internal.Logging` changed from `1.0.0.0` to `7.0.0.0`. Rebuild the application or add binding redirects when you update these packages.
@@ -101,7 +129,7 @@ Don't deploy version 6.1.0. Version 6.1.1 reverted the affected packet detection
 | [6.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.4.md) | January 2026 | Added `EnableMultiSubnetFailoverByDefault`. Fixed `SqlDataAdapter` batching failures and negative active-connection counts in pool metrics. |
 | [6.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.5.md) | April 2026 | Removed unnecessary Service Principal Name (SPN) and Domain Name System (DNS) work for non-integrated authentication, made `ExecuteScalar` propagate server errors returned after data, and corrected vector metadata types. |
 | [6.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.6.md) | June 2026 | Added opt-in Windows Web Account Manager (WAM) broker support, hardened TDS token parsing, corrected cached column master key signature failures, and fixed `GetChars` argument validation. |
-| [6.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.7.md) | September 2026 | Updated SNI to 6.0.3. Fixed `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` connection retry behavior, and configurable retry registering a process-wide assembly resolution handler. |
+| [6.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.7.md) | September 2026 | Updated SNI to 6.0.3. Fixed `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` TNIR defaults on .NET Framework, token authentication state in connection pool keys, callback-based prelogin certificate validation, and configurable retry assembly resolution. |
 
 ## Previous release lines
 

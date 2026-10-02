@@ -85,7 +85,7 @@ echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
-# optional: kerberos library for debian-slim distributions
+# required on debian-slim: the driver links libgssapi_krb5.so.2, but the package does not depend on it
 sudo apt-get install -y libgssapi-krb5-2
 ```
 
@@ -275,7 +275,7 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
-# optional: kerberos library for debian-slim distributions
+# required on debian-slim: the driver links libgssapi_krb5.so.2, but the package does not depend on it
 sudo apt-get install -y libgssapi-krb5-2
 ```
 

@@ -4,7 +4,7 @@ description: Learn about the AppContext switches available in SqlClient and how 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
-ms.date: 09/03/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -61,18 +61,6 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseCompatibilityProcessSni
 ```
 
 By default, both switches are `true`, which preserves the existing (compatible) behavior.
-
-## Enable User Agent feature extension
-
-[!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
-
-(Available starting with version 7.0)
-
-When the AppContext switch `Switch.Microsoft.Data.SqlClient.EnableUserAgent` is enabled, the driver sends user agent details to the server as part of the connection. This information assists with troubleshooting and quantifying driver usage by version and operating system. This switch is disabled by default. To enable it, set the AppContext switch to `true` at application startup:
-
-```csharp
-AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableUserAgent", true);
-```
 
 ## Enable decimal truncation behavior
 
@@ -159,11 +147,13 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConn
 
 For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring).
 
-## Enable a minimum timeout during login
+## Disable the minimum timeout during login
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-To prevent a login attempt from waiting indefinitely, you can set the AppContext switch `Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin` to `true` at application startup:
+By default, SqlClient enforces a one-second minimum when calculating the time available for a login attempt. This behavior prevents a login attempt from waiting indefinitely when the calculated timeout rounds down to zero.
+
+To restore the legacy behavior, set the AppContext switch `Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin` to `false` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin", false);
@@ -217,37 +207,50 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailov
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting in version 7.1.0-preview2, the `Connection Idle Timeout` connection string keyword configures the idle duration, in seconds, after which a pooled connection becomes eligible for eviction (default 300; a value of 0 disables idle expiration). An eligible connection is discarded on a later retrieval or maintenance pass, so the exact timing can vary by pool implementation and maintenance cadence. The keyword is only enforced when the legacy idle-timeout behavior is disabled. With the switch at its default value of `true`, the pool preserves the historical behavior and the keyword has no effect.
+Starting in version 7.1.0, the `Connection Idle Timeout` connection string keyword and `SqlConnectionStringBuilder.IdleTimeout` property configure idle-expiration checks and background cleanup for pooled connections. The default is 300 seconds. Negative values throw an <xref:System.ArgumentException>.
+
+The switch and connection string setting affect each pool implementation differently:
+
+- **V1 pool.** When the switch is `true`, V1 uses its historical randomized two-to-four-minute cleanup cadence and evicts idle connections regardless of `Connection Idle Timeout`. When the switch is `false` and `Connection Idle Timeout` is nonzero, V1 uses half the configured timeout as its cleanup cadence and evicts idle connections after one or two cleanup cycles. When the switch is `false` and `Connection Idle Timeout=0`, V1 disables idle eviction but continues minimum-pool-size maintenance at the historical randomized two-to-four-minute interval.
+- **V2 pool.** When the switch is `true`, V2 doesn't perform per-connection idle-age checks, but a nonzero `Connection Idle Timeout` enables and configures background pruning. When the switch is `false` and `Connection Idle Timeout` is nonzero, V2 performs per-connection idle-age checks and configures background pruning from the timeout. When the switch is `false` and `Connection Idle Timeout=0`, V2 doesn't perform per-connection idle-age checks or background pruning. V2 doesn't perform background pruning when `Min Pool Size` is greater than or equal to `Max Pool Size`.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyIdleTimeoutBehavior", false);
 ```
 
+For configuration examples, see [Limit connection idle time](sql-server-connection-pooling.md#limit-connection-idle-time).
+
 ## Enable the V2 connection pool
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting in version 6.1, SqlClient includes an alternative, experimental connection pool implementation (V2). The V1 pool remains the default (the switch defaults to `false`). To opt in to the V2 pool, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2` when the application starts.
+Starting in version 7.1, SqlClient includes an alternative connection pool implementation (V2). The V1 pool remains the default, and the switch defaults to `false`.
+
+To opt in to V2, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2` when the application starts:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2", true);
 ```
 
-## Count pool waits against the connect timeout
+The connection string pooling controls apply to both implementations. For more information, see [SQL Server connection pooling](sql-server-connection-pooling.md).
+
+## Use one connect timeout for pool waits and network connections
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting in version 7.1.0-preview2, time spent waiting for a connection from the pool can count against the caller's `Connect Timeout` budget, so pool waits and the network connection attempt share one overall timeout. When the switch is set to its default value of `false`, pool operations receive a full `Connect Timeout` and the network connection attempt receives a further full budget.
+Starting in version 7.1.0, time spent waiting for a connection from the pool can count against the caller's `Connect Timeout` budget, so the pool wait and network connection attempt share one overall timeout. Enable `Switch.Microsoft.Data.SqlClient.UseOverallConnectTimeoutForPoolWait` to use the overall timeout with either connection pool implementation:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOverallConnectTimeoutForPoolWait", true);
 ```
 
+The switch defaults to `false`. This default preserves the legacy connect-timeout behavior, where the pool operation receives a full `Connect Timeout` and the network connection attempt receives another full timeout. As a result, `Open` or `OpenAsync` can take longer than the configured `Connect Timeout`.
+
 ## Revert to legacy failover alternation on login errors
 
 [!INCLUDE [dotnet-all](../../includes/products/applies-plain/dotnet-all.md)]
 
-Starting in version 7.1.0-preview2, when connecting with failover configured, SqlClient no longer alternates to the failover partner for SQL errors returned during the login phase. To revert to the legacy alternation behavior, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors` at application startup. The switch defaults to `false`.
+Starting in version 7.1.0, when connecting with failover configured, SqlClient no longer alternates to the failover partner for SQL errors returned during the login phase. To revert to the legacy alternation behavior, enable the AppContext switch `Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors` at application startup. The switch defaults to `false`.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseLegacyFailoverAlternationOnLoginSqlErrors", true);

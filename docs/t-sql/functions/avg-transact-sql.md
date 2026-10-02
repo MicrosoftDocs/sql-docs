@@ -35,7 +35,7 @@ This function returns the average of the values in a group. It ignores null valu
 
 ```syntaxsql
 AVG ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
+   [ OVER ( [ partition_by_clause ] [ order_by_clause ] [ row_or_range_clause ] ) ]
 ```
 
 ## Arguments
@@ -52,9 +52,15 @@ Specifies that AVG operates only on one unique instance of each value, regardles
 
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries aren't permitted.
 
-#### OVER ( [ *partition_by_clause* ] _order\_by\_clause_)
+#### OVER ( [ *partition_by_clause* ] [ *order_by_clause* ] [ *row_or_range_clause* ])
 
-*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order in which the operation is performed. The *order_by_clause* is required. For more information, see [OVER Clause (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
+*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. 
+
+*order_by_clause* determines the logical order in which the operation is performed.
+
+*row_or_range_clause* defines the window frame in which the function is applied. It requires *order_by_clause* to be specified. If *order_by_clause* is specified and *row_or_range_clause* isn't, *row_or_range_clause* assumes its default value `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. 
+
+For more information, see [OVER Clause (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
 
 ## Return types
 

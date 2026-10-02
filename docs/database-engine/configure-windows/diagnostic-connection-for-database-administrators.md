@@ -45,7 +45,7 @@ To establish a DAC from [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofu
 
 - From the main menu, use **Tools**, **Options**, **Languages**, **Transact-SQL**, **IntelliSense** to disable the IntelliSense feature in this instance of [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-  - If IntelliSense is enabled, [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] attempts to open a second connection for each query editor window. Because only one DAC connection is available, this attempt fails, and the query window becomes disconnected.
+  If IntelliSense is enabled, [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] attempts to open a second connection for each query editor window. Because only one DAC connection is available, this attempt fails, and the query window becomes disconnected.
   
   You can reenable IntelliSense when you no longer require a DAC connection.
 
@@ -53,7 +53,7 @@ To establish a DAC from [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofu
 
 - From the connection dialog box in the Server Name field, enter `admin:<server_name>` if using the default instance or `admin:<server_name>\<instance_name>` if using a named instance.
 
-  - If connecting to a database in Azure SQL Database, ensure you specify the name of the target database in the **Database Name** field. DAC connections to the `master` database in Azure SQL Database aren't supported.
+  If connecting to a database in Azure SQL Database, ensure you specify the name of the target database in the **Database Name** field. DAC connections to the `master` database in Azure SQL Database aren't supported.
 
 ## DAC port
 
@@ -114,11 +114,25 @@ Although you can theoretically run any [!INCLUDE [tsql](../../includes/tsql-md.m
 
   - If there are no tasks in the `sys.dm_os_tasks` associated with this session, but the session remains in `sys.dm_exec_sessions` after executing the `KILL` command, it means that you don't have a worker available. Select one of the currently running tasks (a task listed in the `sys.dm_os_tasks` view with a `sessions_id <> NULL`), and kill the session associated with it to free up the worker. It might not be enough to kill a single session: you might have to kill multiple ones.
 
-### Limitation in Azure SQL Database
+### Behavior in Azure SQL Database
 
-When connecting to the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] with the DAC, you must also specify the user database name. Connections to the `master` database aren't supported. 
+When connecting to the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] with the DAC, you must also specify the user database name.
 
 In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], enter the name of the database in the **Database Name** field. In the `sqlcmd` utility, use the `-d` option.
+
+Connections to the `master` database aren't supported. 
+
+To check if you are using a DAC connection, execute the following T-SQL query:
+
+```sql
+SELECT wg.name AS workload_group_name
+FROM sys.dm_exec_sessions AS s
+INNER JOIN sys.dm_resource_governor_workload_groups AS wg
+ON s.group_id = wg.group_id
+WHERE s.session_id = @@SPID;
+```
+
+You are connected via DAC if the workload group name is `DACGroup`.
 
 ### Limitation in Azure SQL Managed Instance
 

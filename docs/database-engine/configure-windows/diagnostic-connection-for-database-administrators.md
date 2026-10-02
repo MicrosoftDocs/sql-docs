@@ -49,11 +49,11 @@ To establish a DAC from [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofu
   
   You can reenable IntelliSense when you no longer require a DAC connection.
 
-- From the menu, select **File > New > Database Engine Query**.
+- From the menu, select **File** > **New** > **Database Engine Query**.
 
 - From the connection dialog box in the Server Name field, enter `admin:<server_name>` if using the default instance or `admin:<server_name>\<instance_name>` if using a named instance.
 
-  - If connecting to a database in Azure SQL Database, make sure to specify the name of the target database in the **Database Name** field. DAC connections to the `master` database in Azure SQL Database aren't supported.
+  - If connecting to a database in Azure SQL Database, ensure you specify the name of the target database in the **Database Name** field. DAC connections to the `master` database in Azure SQL Database aren't supported.
 
 ## DAC port
 

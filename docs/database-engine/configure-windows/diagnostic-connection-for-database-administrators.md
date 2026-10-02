@@ -43,7 +43,7 @@ To establish a DAC from [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofu
 
 - Start a new instance of [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
-- From the main menu, use **Tools**, **Options**, **Languages**, **Transact-SQL**, **IntelliSense** to disable the IntelliSense feature in this instance of [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+- From the main menu, use **Tools** > **Options** > **Languages** > **Transact-SQL** > **IntelliSense** to disable the IntelliSense feature in this instance of [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
   If IntelliSense is enabled, [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] attempts to open a second connection for each query editor window. Because only one DAC connection is available, this attempt fails, and the query window becomes disconnected.
   
@@ -132,7 +132,7 @@ ON s.group_id = wg.group_id
 WHERE s.session_id = @@SPID;
 ```
 
-You are connected via DAC if the workload group name is `DACGroup`.
+You are connected with the DAC if the workload group name is `DACGroup`.
 
 ### Limitation in Azure SQL Managed Instance
 

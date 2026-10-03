@@ -91,7 +91,7 @@ When the primary server is unreachable, the driver attempts to connect to the fa
 | `encrypt` | See [Common parameters](#common-parameters) | `strict` (TDS 8.0), `true`/`mandatory`, `false`/`optional`, `disable`. |
 | `TrustServerCertificate` | Depends on `encrypt` | Skip certificate validation when `true`. The default is `false` when `encrypt` is specified and `true` when `encrypt` is omitted. Ignored when `encrypt=strict`. |
 | `certificate` | None | Path to a PEM or DER certificate file for certificate chain validation. |
-| `serverCertificate` | None | Path to a PEM or DER certificate file for byte-level comparison (v1.5.0 and later). |
+| `serverCertificate` | None | Path to a PEM or DER certificate file for byte-level comparison (v1.9.6 and later). |
 | `hostnameincertificate` | None | Override the host name used during TLS certificate validation. |
 | `tlsmin` | None | Minimum TLS version: `1.0`, `1.1`, `1.2`, `1.3`. |
 

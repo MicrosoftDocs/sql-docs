@@ -27,9 +27,11 @@ The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module in
 
 After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs.
 
-[!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is [supported](sql-server-linux-release-notes-2025.md#supported-platforms) on Red Hat Enterprise Linux (RHEL) and Ubuntu.
+- [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is supported on Red Hat Enterprise Linux (RHEL) and Ubuntu.
 
-[!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions are [also supported](sql-server-linux-release-notes-2022.md#supported-platforms) on SUSE Linux Enterprise Server (SLES).
+- [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions are supported on Red Hat Enterprise Linux (RHEL), Ubuntu, and SUSE Linux Enterprise Server (SLES).
+
+For more information, see [Supported platforms](sql-server-linux-release-notes.md#supported-platforms).
 
 ## Get around directories
 
@@ -60,7 +62,7 @@ Introduce yourself to the [frequently used commands](https://www.linux.org/threa
 ## Related content
 
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
-- [Release notes for SQL Server on Linux](sql-server-linux-release-notes.md)
+- [Release information for SQL Server on Linux](sql-server-linux-release-notes.md)
 - [SQL Server on Linux frequently asked questions (FAQ)](sql-server-linux-faq.yml)
 - [SQL Server help and feedback](../sql-server/sql-server-get-help.md)
 - [Other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/)

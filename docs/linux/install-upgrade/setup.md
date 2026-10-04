@@ -238,7 +238,7 @@ If your Linux machine can't access the online repositories used in the [quicksta
 > [!TIP]  
 > If you followed a quickstart guide to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you don't need to download or manually install the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] packages. This section is only for the offline scenario.
 
-1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md).
+1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 

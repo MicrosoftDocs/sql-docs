@@ -19,7 +19,7 @@ ms.custom:
 
 This article describes the major features and services available for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] running on Linux.
 
-In addition to these capabilities in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2019 build versions](/troubleshoot/sql/releases/sqlserver-2019/build-versions). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md).
+In addition to these capabilities in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2019 build versions](/troubleshoot/sql/releases/sqlserver-2019/build-versions). For package downloads and known issues, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
 ## Red Hat Enterprise Linux 8 support
 

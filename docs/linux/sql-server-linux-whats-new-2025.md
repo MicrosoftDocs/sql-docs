@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [sqlserver2025-linux](../includes/applies-to-version/sqlserver2025-linux.md)]
 
-This article describes the major features and services available for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2025.md).
+This article describes the major features and services available for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] running on Linux. For package downloads and known issues, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
 ## Updates
 

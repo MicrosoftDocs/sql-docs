@@ -1,6 +1,6 @@
 ---
-title: Release Notes for SQL Server on Linux
-description: This article contains the release notes for all supported versions of SQL Server running on Linux.
+title: Release Information for SQL Server on Linux
+description: This article contains the release information for all supported versions of SQL Server running on Linux.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
@@ -13,9 +13,17 @@ ms.custom:
   - ignite-2025
 ---
 
-# Release notes for SQL Server on Linux
+# Release information for SQL Server on Linux
 
-The following release notes apply to supported versions of SQL Server running on Linux. This article is separated into tabs for each release. For detailed supportability and known issues, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md). Each release links to a support article describing the changes, in addition to the Linux package downloads.
+The following release information applies to supported versions of SQL Server running on Linux. This article is separated into tabs for each release.
+
+<a id="release-notes"></a>
+<a id="release-history"></a>
+<a id="latest-releases"></a>
+
+For the latest builds and updates available for supported versions of SQL Server running on Linux, see [KB 5122767](https://support.microsoft.com/help/5122767).
+
+For detailed supportability and known issues, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md).
 
 [!INCLUDE [support-policy](includes/support-policy.md)]
 
@@ -83,41 +91,6 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 ---
 
-## Latest releases
-
-The following table shows the most recent release for each supported version of SQL Server on Linux.
-
-| Version | Release | Date | Build | KB article |
-| --- | --- | --- | --- | --- |
-| SQL Server 2025 | CU 9 | 2026-09-15 | 17.0.5005.3 | [KB5122048](https://support.microsoft.com/help/5122048) |
-| SQL Server 2022 | CU 27 | 2026-09-15 | 16.0.4295.3 | [KB5104824](https://support.microsoft.com/help/5104824) |
-| SQL Server 2019 | CU 32 GDR | 2026-09-08 | 15.0.4490.9 | [KB5122772](https://support.microsoft.com/help/5122772) |
-| SQL Server 2017 | CU 31 GDR | 2026-09-08 | 14.0.3550.4 | [KB5122774](https://support.microsoft.com/help/5122774) |
-
-## Release notes
-
-### [SQL Server 2025](#tab/sql2025)
-
-There are no additional release notes for the latest release of SQL Server 2025.
-
-### [SQL Server 2022](#tab/sql2022)
-
-There are no additional release notes for the latest release of SQL Server 2022.
-
-### [SQL Server 2019](#tab/sql2019)
-
-> [!IMPORTANT]  
-> This is the final cumulative update for [!INCLUDE [ssSQL19](../includes/sssql19-md.md)].
-
-### [SQL Server 2017](#tab/sql2017)
-
-The latest GDR release includes the Azure Connect Pack for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)].
-
-> [!IMPORTANT]  
-> This is the final cumulative update for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)].
-
----
-
 <a id="cuinstall"></a>
 
 ## How to install updates
@@ -173,10 +146,6 @@ If you update existing SQL Server packages, run the appropriate update command f
 - [Install SQL Server Agent on Linux](install-upgrade/setup-sql-agent.md)
 
 ---
-
-## Release history
-
-For the full release history, see [Latest updates and version history for SQL Server on Linux](/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux).
 
 ## Known issues
 

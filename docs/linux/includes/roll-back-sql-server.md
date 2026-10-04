@@ -10,12 +10,7 @@ ms.custom:
 ---
 To roll back or downgrade [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to a previous release, use the following steps:
 
-1. Find the version number for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] package you want to downgrade to. For a list of package numbers, see the release notes:
-
-   - [Release notes for SQL Server 2025 on Linux](../sql-server-linux-release-notes-2025.md)
-   - [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md)
-   - [Release notes for SQL Server 2019 on Linux](../sql-server-linux-release-notes-2019.md)
-   - [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md)
+1. Find the version number for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] package you want to downgrade to. For a list of package numbers, see [KB 5122767](https://support.microsoft.com/help/5122767).
 
 1. Downgrade to a previous version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. In the following commands, replace `<version_number>` with the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] version number you found in step 1.
 

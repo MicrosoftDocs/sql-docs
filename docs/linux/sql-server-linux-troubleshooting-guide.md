@@ -14,14 +14,13 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to troubleshoot [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Linux container. When troubleshooting [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations:
+This article describes how to troubleshoot [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Linux container.
 
-- [Release notes for SQL Server 2025 on Linux](sql-server-linux-release-notes-2025.md)
-- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)
-- [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md)
-- [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md)
+When troubleshooting [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux, see:
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
+- [Release information](sql-server-linux-release-notes.md)
+- [Known issues](sql-server-linux-known-issues.md)
+- [Frequently asked questions](sql-server-linux-faq.yml)
 
 <a id="connection"></a>
 

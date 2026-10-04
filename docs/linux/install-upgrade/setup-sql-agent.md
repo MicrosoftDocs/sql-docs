@@ -84,7 +84,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-If you need an offline installation, locate the SQL Server Agent package download in the [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the SQL Server Agent package download in the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ### [Ubuntu](#tab/ubuntu)
 
@@ -104,7 +104,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-If you need an offline installation, locate the SQL Server Agent package download in the [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the SQL Server Agent package download in the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ### [SUSE Linux Enterprise Server (SLES)](#tab/sles)
 
@@ -128,7 +128,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-If you need an offline installation, locate the SQL Server Agent package download in the [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the SQL Server Agent package download in the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ---
 

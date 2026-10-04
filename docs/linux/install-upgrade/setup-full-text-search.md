@@ -46,7 +46,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-Text Search package download in the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the Full-Text Search package download in the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ## [SUSE Linux Enterprise Server](#tab/sles)
 
@@ -66,7 +66,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-Text Search package download in the [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the Full-Text Search package download in the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ## [Ubuntu](#tab/ubuntu)
 
@@ -84,7 +84,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-Text Search package download in the [Release notes for SQL Server 2025 on Linux](../sql-server-linux-release-notes-2025.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
+If you need an offline installation, locate the Full-Text Search package download in the [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](setup.md#offline).
 
 ---
 

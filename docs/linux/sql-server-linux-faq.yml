@@ -90,7 +90,7 @@ sections:
 
              1. **Can I download the installation packages to install SQL Server offline?**
 
-                Yes. For more information, see the package download links in the [Release notes](sql-server-linux-release-notes-2022.md). Also, review the [instructions for offline installations](install-upgrade/setup.md#offline).
+                Yes. For more information, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md). Also, review the [instructions for offline installations](install-upgrade/setup.md#offline).
 
              1. **Can I perform an unattended installation of SQL Server on Linux?**
 

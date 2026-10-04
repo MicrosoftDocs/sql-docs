@@ -22,7 +22,7 @@ monikerRange: "<=sql-server-linux-ver16 || <=sql-server-ver16"
 
 In this quickstart, you install [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] on SUSE Linux Enterprise Server (SLES) v12. Then you can connect with **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 <!--SQL Server 2019+ on Linux-->
@@ -30,7 +30,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 In this quickstart, you install [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on SUSE Linux Enterprise Server (SLES) 15. Then you can connect with **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2019 on Linux](../sql-server-linux-release-notes-2019.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -38,7 +38,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 In this quickstart, you install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) 15. Then you can connect with **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 

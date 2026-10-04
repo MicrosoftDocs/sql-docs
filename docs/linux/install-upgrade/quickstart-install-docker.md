@@ -29,7 +29,7 @@ In this quickstart, you use Docker to pull and run the [!INCLUDE [sssql17-md](..
 > [!NOTE]  
 > [!INCLUDE [container-emulation](../includes/container-emulation.md)]
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 > [!WARNING]  
 > When you stop and remove a container, you permanently delete your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data in the container. For more information on preserving your data, [create and copy a backup file out of the container](../migrate/tutorial-restore-backup-sql-server-container.md) or use a [container data persistence technique](../containers/configure.md#persist).
@@ -50,7 +50,7 @@ In this quickstart, you use Docker to pull and run the [!INCLUDE [sssql19-md](..
 > [!NOTE]  
 > [!INCLUDE [container-emulation](../includes/container-emulation.md)]
 
-For more information on supported platforms, see [Release notes for SQL Server 2019 on Linux](../sql-server-linux-release-notes-2019.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 > [!WARNING]  
 > When you stop and remove a container, you permanently delete your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data in the container. For more information on preserving your data, [create and copy a backup file out of the container](../migrate/tutorial-restore-backup-sql-server-container.md) or use a [container data persistence technique](../containers/configure.md#persist).
@@ -71,7 +71,7 @@ In this quickstart, you use Docker to pull and run the [!INCLUDE [sssql22-md](..
 > [!NOTE]  
 > [!INCLUDE [container-emulation](../includes/container-emulation.md)]
 
-For more information on supported platforms, see [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 > [!WARNING]  
 > When you stop and remove a container, you permanently delete your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data in the container. For more information on preserving your data, [create and copy a backup file out of the container](../migrate/tutorial-restore-backup-sql-server-container.md) or use a [container data persistence technique](../containers/configure.md#persist).
@@ -92,7 +92,7 @@ In this quickstart, you use Docker to pull and run the [!INCLUDE [sssql25-md](..
 > [!NOTE]  
 > [!INCLUDE [container-emulation](../includes/container-emulation.md)]
 
-For more information on supported platforms, see [Release notes for SQL Server 2025 on Linux](../sql-server-linux-release-notes-2025.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 > [!WARNING]  
 > When you stop and remove a container, you permanently delete your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data in the container. For more information on preserving your data, [create and copy a backup file out of the container](../migrate/tutorial-restore-backup-sql-server-container.md) or use a [container data persistence technique](../containers/configure.md#persist).

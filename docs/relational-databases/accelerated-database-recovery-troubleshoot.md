@@ -4,7 +4,7 @@ description: "Monitor and troubleshoot accelerated database recovery and persist
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw, dfurman, randolphwest
-ms.date: 04/18/2025
+ms.date: 08/20/2026
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: troubleshooting-general
@@ -295,6 +295,10 @@ Beginning with [!INCLUDE [sql-server-2022](../includes/sssql22-md.md)], notable 
 ## Known issues
 
 - In [!INCLUDE [sql-server-2025](../includes/sssql25-md.md)], when ADR in `tempdb` is enabled and temporary tables are created and dropped (or truncated) at a high rate, workload throughput might be substantially reduced because of latch contention on the `sys.sysseobjvalues` system table. This issue is under investigation. A fix is planned for a later release.
+
+## Supported platforms
+
+Accelerated database recovery isn't available in SQL Server 2017 or earlier versions, or in Fabric Data Warehouse.
 
 ## Related content
 

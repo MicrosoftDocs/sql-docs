@@ -37,7 +37,11 @@ monikerRange: ">=sql-server-2017"
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
-  
+
+## Supported platforms
+
+OLE Automation objects aren't available in Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, or Fabric Data Warehouse.
+
 ## Related content
 
 - [Server configuration: Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)

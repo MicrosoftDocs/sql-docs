@@ -3,7 +3,7 @@ title: "Modify Statistics"
 description: Learn how to modify existing statistics in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: how-to
@@ -12,10 +12,10 @@ ms.custom:
 helpviewer_keywords:
   - "statistics [SQL Server], modifying"
   - "modifying statistics"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Modify Statistics
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
   You can modify existing statistics in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 <a id="BeforeYouBegin"></a>
@@ -54,5 +54,13 @@ Requires that:
  This task cannot be performed using Transact-SQL statements. To modify statistics using Transact-SQL, you must first delete the existing statistic and then re-create it with new attributes.  
   
  For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md) and [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
-  
+
+## Remarks
+
+In Fabric Data Warehouse and the SQL analytics endpoint, you can only manually modify single-column histogram statistics. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
+
+## Related content 
+
+- [Statistics](statistics.md)
+- [Update statistics](update-statistics.md)
   

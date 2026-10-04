@@ -4,7 +4,7 @@ description: Learn how a stored procedure in SQL Server is a group of one or mor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 11/20/2025
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: concept-article
@@ -13,11 +13,11 @@ ms.custom:
 helpviewer_keywords:
   - "storing programs as stored procedures"
   - "stored procedures [SQL Server], about stored procedures"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Stored procedures (Database Engine)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 A stored procedure in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE [tsql](../../includes/tsql-md.md)] statements, or a reference to a [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:
 
@@ -83,6 +83,10 @@ Extended procedures enable creating external routines in a programming language 
 
 > [!NOTE]  
 > Extended stored procedures will be removed in a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Don't use this feature in new development work, and modify applications that currently use this feature as soon as possible. Create CLR procedures instead. This method provides a more robust and secure alternative to writing extended procedures.
+
+## Platform support
+
+Fabric Data Warehouse supports Transact-SQL stored procedures, but not CLR stored procedures. The `EXECUTE AS` and `FOR REPLICATION` procedure options aren't supported in Fabric Data Warehouse. For more information, see [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md).
 
 ## Related tasks
 

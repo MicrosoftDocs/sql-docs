@@ -3,7 +3,7 @@ title: "Delete Statistics"
 description: Learn how to delete, or drop, statistics from tables and views in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: how-to
@@ -12,10 +12,10 @@ ms.custom:
 helpviewer_keywords:
   - "statistics [SQL Server], deleting"
   - "deleting statistics"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Delete Statistics
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
   You can delete (drop) statistics from tables and views in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  
 
 <a id="BeforeYouBegin"></a>
@@ -25,6 +25,8 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 -   Be careful when you drop statistics. Doing so may affect the execution plan chosen by the query optimizer.  
   
 -   Statistics on indexes cannot be dropped by using DROP STATISTICS. Statistics remain as long as the index exists.  
+
+-   In Fabric Data Warehouse and the SQL analytics endpoint, `DROP STATISTICS` supports one single-column histogram statistics object per statement. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
   
   
 <a id="Security"></a>

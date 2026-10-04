@@ -16,9 +16,9 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
-This article lists the [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dynamic management objects.
+[!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 
-All [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dynamic management objects begin with `sys.dm_pdw`.
+This article lists the [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] dynamic management objects.
 
 > [!NOTE]  
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]

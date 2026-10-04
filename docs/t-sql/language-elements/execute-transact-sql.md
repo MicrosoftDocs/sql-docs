@@ -199,7 +199,7 @@ Syntax for In-Memory OLTP.
 }
 ```
 
-Syntax for Azure SQL Database.
+Syntax for Azure SQL Database and SQL database in Fabric.
 
 ```syntaxsql
 -- Execute a stored procedure or function
@@ -263,7 +263,7 @@ Syntax for Azure Synapse Analytics.
 [ ; ]
 ```
 
-Syntax for Microsoft Fabric.
+Syntax for Microsoft Fabric Data Warehouse.
 
 ```syntaxsql
 -- Execute a stored procedure

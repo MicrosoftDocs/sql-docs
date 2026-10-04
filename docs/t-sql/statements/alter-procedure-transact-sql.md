@@ -3,7 +3,7 @@ title: "ALTER PROCEDURE (Transact-SQL)"
 description: ALTER PROCEDURE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: "05/01/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -31,9 +31,11 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL Syntax Conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
+**Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric**
+
 ```syntaxsql  
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
     [ { @parameter_name [ type_schema_name. ] data_type }   
@@ -49,7 +51,9 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ RECOMPILE ]  
     [ EXECUTE AS Clause ]  
 ```  
-  
+
+**Syntax for SQL Server CLR Stored Procedure**
+
 ```syntaxsql  
 -- Syntax for SQL Server CLR Stored Procedure  
   
@@ -61,18 +65,34 @@ ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]
 AS { EXTERNAL NAME assembly_name.class_name.method_name }  
 [;]  
 ```  
-  
+
+**Syntax for Azure Synapse Analytics and Parallel Data Warehouse**
+
 ```syntaxsql  
--- Syntax for Azure Synapse Analytics and Microsoft Fabric
+-- Syntax for Azure Synapse Analytics
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
     [ { @parameterdata_type } [= ] ] [ ,...n ]  
 AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }  
 [;]  
-```  
+```
+
+**Syntax for Microsoft Fabric Data Warehouse**
+
+```syntaxsql  
+-- Syntax for Microsoft Fabric Data Warehouse
   
+ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
+    [ { @parameter data_type } [ OUT | OUTPUT ]  [ = default ] ] [ ,...n ]
+AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }  
+<procedure_option> ::=
+    [ ENCRYPTION ]
+    [ RECOMPILE ]
+[;]  
+```  
 
 ## Arguments
+
  *schema_name*  
  The name of the schema to which the procedure belongs.  
   

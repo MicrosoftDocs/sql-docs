@@ -174,7 +174,7 @@ name                                      create_date               name        
 --------------------------------------------------------------------------------------------------------------------
 master                    was created on  2003-04-08 09:13:36.390   master                  is currently  ONLINE
 tempdb                    was created on  2014-01-10 17:24:24.023   tempdb                  is currently  ONLINE
-AdventureWorksPDW2012     was created on  2014-05-07 09:05:07.083   AdventureWorksPDW2012   is currently  ONLINE
+AdventureWorks2012     was created on  2014-05-07 09:05:07.083      AdventureWorks2012      is currently  ONLINE
 ```
 
 ### E. Use CHAR to return single-byte characters

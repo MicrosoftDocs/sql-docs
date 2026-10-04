@@ -4,7 +4,7 @@ description: Learn how to grant permissions on a stored procedure in SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 08/07/2025
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: how-to
@@ -13,11 +13,11 @@ ms.custom:
   - "ignite-2025"
 helpviewer_keywords:
   - "stored procedures [SQL Server], permissions"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Grant Permissions on a Stored Procedure
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This article describes how to grant permissions on a stored procedure by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. Permissions can be granted to an existing user, database role, or application role in the database.
 

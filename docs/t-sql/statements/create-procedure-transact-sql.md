@@ -4,7 +4,7 @@ description: "CREATE PROCEDURE creates a Transact-SQL or common language runtime
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/26/2025
+ms.date: 08/20/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
+`CREATE PROCEDURE` creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure. Stored procedures are similar to procedures in other programming languages in that they can:
 
 - Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.
 - Contain programming statements that perform operations in the database, including calling other procedures.
@@ -69,7 +69,7 @@ Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to 
 
 ## Syntax
 
-Transact-SQL syntax for stored procedures in SQL Server, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]:
+Transact-SQL syntax for stored procedures in SQL Server, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [_asmi](../../includes/ssazuremi-md.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]:
 
 ```syntaxsql
 CREATE [ OR ALTER ] { PROC | PROCEDURE }
@@ -141,11 +141,15 @@ Transact-SQL syntax for stored procedures in [!INCLUDE [fabric](../../includes/f
 
 ```syntaxsql
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [ schema_name.] procedure_name
-    [ { @parameter data_type } [ OUT | OUTPUT ] ] [ ,...n ]
+    [ { @parameter data_type } [ OUT | OUTPUT ]  [ = default ] ] [ ,...n ]
+[ WITH <procedure_option> [ ,...n ] ]
 AS
 {
   [ BEGIN ] sql_statement [;][ ,...n ] [ END ]
 }
+<procedure_option> ::=
+    [ ENCRYPTION ]
+    [ RECOMPILE ]
 [;]
 ```
 
@@ -234,7 +238,7 @@ To instruct the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to discard query pla
 
 #### ENCRYPTION
 
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [!INCLUDE [fabric-dw-full](../../includes/fabric-dw-full.md)]
 
 Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation isn't directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users who have no access to system tables or database files can't retrieve the obfuscated text. However, the text is available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 

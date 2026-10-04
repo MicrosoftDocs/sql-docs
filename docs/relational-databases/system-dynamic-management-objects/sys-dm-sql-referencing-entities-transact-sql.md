@@ -3,7 +3,7 @@ title: "sys.dm_sql_referencing_entities (Transact-SQL)"
 description: sys.dm_sql_referencing_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
+ms.date: "08/21/2026"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -90,6 +90,9 @@ sys.dm_sql_referencing_entities (
  Returns an error when the specified referenced entity is a numbered stored procedure.  
   
 ## Remarks  
+
+ The `sys.dm_sql_referencing_entities` dynamic management view isn't supported in Fabric Data Warehouse.
+
  The following table lists the types of entities for which dependency information is created and maintained. Dependency information is not created or maintained for rules, defaults, temporary tables, temporary stored procedures, or system objects.  
   
 |Entity type|Referencing entity|Referenced entity|  

@@ -3,7 +3,7 @@ title: "Recompile a Stored Procedure"
 description: Learn details about how to recompile a stored procedure by using Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "12/01/2022"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: how-to
@@ -14,16 +14,17 @@ helpviewer_keywords:
   - "WITH RECOMPILE clause"
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Recompile a Stored Procedure
-[!INCLUDE [SQL Server Azure SQL Database fabric](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricdw-fabricsqldb.md)]
 
 This article describes how to recompile a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: `WITH RECOMPILE` option in the procedure definition or when the procedure is called, the RECOMPILE query hint on individual statements, or by using the `sp_recompile` system stored procedure. 
 
 <a id="BeforeYouBegin"></a>
 
-##  <a name="Recommendations"></a> Recommendations
+## Recommendations
   
 -   When a procedure is compiled for the first time or recompiled, the procedure's query plan is optimized for the current state of the database and its objects. If a database undergoes significant changes to its data or structure, recompiling a procedure updates and optimizes the procedure's query plan for those changes. This can improve the procedure's processing performance.  
   
@@ -106,6 +107,10 @@ EXEC sp_recompile N'dbo.uspProductByVendor';
 GO
 ```  
   
+## Platform support
+
+In Fabric Data Warehouse, use `EXECUTE ... WITH RECOMPILE` to recompile a stored procedure. The `RECOMPILE` query hint and `sp_recompile` aren't supported in Fabric Data Warehouse.
+
 ## Related content
 
 - [Create a stored procedure](create-a-stored-procedure.md)

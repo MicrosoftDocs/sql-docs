@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sys.dm_db_tuning_recommendations (Transact-SQL)
 
-[!INCLUDE [sqlserver2017-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
 Returns detailed information about automatic tuning recommendations. For more information, see [Automatic tuning](../automatic-tuning/automatic-tuning.md).
 

@@ -121,7 +121,7 @@ CREATE STATISTICS statistics_name
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<
 ```
 
-Syntax for Microsoft Fabric.
+Syntax for Microsoft Fabric Data Warehouse.
 
 ```syntaxsql
 CREATE STATISTICS statistics_name

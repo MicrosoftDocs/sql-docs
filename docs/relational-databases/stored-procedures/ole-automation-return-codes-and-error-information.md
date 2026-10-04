@@ -28,6 +28,10 @@ You can use `CONVERT(binary(4), @hresult)` to convert an **int** HRESULT to a **
 
 For examples of supported conversion, see [H. Using CONVERT with binary and character data](../../t-sql/functions/cast-and-convert-transact-sql.md#h-use-convert-with-binary-and-character-data).
 
+## Supported platforms
+
+OLE Automation objects aren't available in Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, or Fabric Data Warehouse.
+
 ## Related content
 
 - [sp_OAGetErrorInfo (Transact-SQL)](../system-stored-procedures/sp-oageterrorinfo-transact-sql.md)

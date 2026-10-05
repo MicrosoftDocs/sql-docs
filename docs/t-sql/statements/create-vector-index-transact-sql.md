@@ -241,13 +241,13 @@ Earlier vector index versions have the following limitations. To check your inde
 
 - **Manual TOP_N tuning**: You must manually adjust the `TOP_N` parameter in `VECTOR_SEARCH` to compensate for post-filtering. You often need oversized values to get the desired number of results.
 
+- The table must have a primary key clustered index on an **int** column.
+
 ### Current limitations (applies to the latest version too)
 
 The current preview has the following limitations:
 
 - You can't partition vector indexes.
-
-- The table must have a primary key clustered index on an **int** column.
 
 - Vector indexes aren't replicated to subscribers.
 

@@ -5,7 +5,7 @@ description: Learn how to enable, verify, and disable performance monitoring for
 author: lcwright
 ms.author: lancewright
 ms.reviewer: wiassaf
-ms.date: 09/28/2026
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: monitoring
 ms.topic: how-to
@@ -41,7 +41,7 @@ During the preview, performance monitoring supports the following Azure SQL Data
 | Configuration | Supported |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | Single databases in the [DTU-based purchasing model](service-tiers-dtu.md)              | Yes       |
-| Single databases in the [vCore-based purchasing model](service-tiers-sql-database-vcore.md), including the General Purpose, Business Critical, and [Hyperscale](service-tier-hyperscale.md) service tiers            | Yes       |
+| Single databases in the [vCore-based purchasing model](service-tiers-sql-database-vcore.md), including the General Purpose, Business Critical, and [Hyperscale](service-tier-hyperscale.md) service tiers with 2 or more vCores            | Yes       |
 | Single databases in the [serverless compute tier](serverless-tier-overview.md)          | Yes       |
 | Databases in an [elastic pool](elastic-pool-overview.md)    | No        |
 | Secondary replicas, including [geo-replicas](active-geo-replication-overview.md), [named replicas](service-tier-hyperscale-replicas.md#named-replica), and [read scale-out](read-scale-out.md) replicas | No        |
@@ -49,7 +49,7 @@ During the preview, performance monitoring supports the following Azure SQL Data
 <!-- The following sentences repeat and rephrase the content in the preceding table for maximum context clarity. Keep this prose summary synchronized with the preceding table. -->
 
 - Performance monitoring supports single databases in the [DTU-based purchasing model](service-tiers-dtu.md).
-- Performance monitoring supports single databases in the [vCore-based purchasing model](service-tiers-sql-database-vcore.md), including the General Purpose, Business Critical, and [Hyperscale](service-tier-hyperscale.md) service tiers.
+- Performance monitoring supports single databases in the [vCore-based purchasing model](service-tiers-sql-database-vcore.md), including the General Purpose, Business Critical, and [Hyperscale](service-tier-hyperscale.md) service tiers with 2 or more vCores.
 - Performance monitoring supports single databases in the [serverless compute tier](serverless-tier-overview.md).
 - Performance monitoring doesn't support databases in an [elastic pool](elastic-pool-overview.md).
 - Performance monitoring doesn't support secondary replicas, including [geo-replicas](active-geo-replication-overview.md), [named replicas](service-tier-hyperscale-replicas.md#named-replica), and [read scale-out](read-scale-out.md) replicas.
@@ -157,18 +157,18 @@ Enabling performance monitoring starts data collection. To view or query the col
 ### Access prerequisites
 
 - Your account must be a member of the [Reader](/azure/role-based-access-control/built-in-roles/general#reader) role, or a role with higher privileges, on the subscription that contains the databases you want to query.
-- The `Microsoft.AzureArcData` resource provider must be [registered](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider) on each subscription that contains databases you want to query. The resource provider is required only to query the collected data. It isn't required for data collection.
+- The `Microsoft.Sql` resource provider must be [registered](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider) on each subscription that contains databases you want to query. The resource provider is required only to query the collected data. It isn't required for data collection.
 
   To register the resource provider, run the following Azure CLI command:
 
   ```azurecli
-  az provider register --namespace Microsoft.AzureArcData
+  az provider register --namespace Microsoft.Sql
   ```
 
   To check the registration state, run the following command:
 
   ```azurecli
-  az provider show --namespace Microsoft.AzureArcData --query "registrationState" --output tsv
+  az provider show --namespace Microsoft.Sql --query "registrationState" --output tsv
   ```
 
   Registration is complete when the command returns `Registered`.
@@ -201,7 +201,7 @@ To connect to the telemetry endpoint:
 
 ## Collected datasets
 
-Performance monitoring collects data for Azure SQL Database in the following tables in the `ArcSqlTelemetry` database. For the columns in each table, see [Performance monitoring data schema](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry#schema).
+Performance monitoring collects data for Azure SQL Database in the following tables in the `ArcSqlTelemetry` database. For the columns in each table, see [Performance monitoring data schema](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry).
 
 | Table      | Data collected                |
 | -------------------------------------- | ----------------------------- |

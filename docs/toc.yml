@@ -9078,7 +9078,7 @@ items:
         href: linux/sql-server-linux-editions-and-components-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-editions-and-components-2017.md
-    - name: Release notes
+    - name: Release information
       href: linux/sql-server-linux-release-notes.md
     - name: Known issues
       href: linux/sql-server-linux-known-issues.md

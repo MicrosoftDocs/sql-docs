@@ -3,7 +3,7 @@ title: "sys.query_store_wait_stats (Transact-SQL)"
 description: sys.query_store_wait_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/26/2026
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 
-[!INCLUDE[sqlserver2017-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-fabricsqldb.md)]
+[!INCLUDE[sqlserver2017-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
   Contains information about the wait information for the query.
 
@@ -83,6 +83,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### Permissions for SQL Server 2022 and later
 
 Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
+
+## Supported platforms
+
+The `sys.query_store_wait_stats` catalog view isn't available in SQL Server 2016 or in Fabric Data Warehouse.
 
 ## Related content
 

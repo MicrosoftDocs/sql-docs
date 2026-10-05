@@ -27,7 +27,7 @@ landingContent:
           - text: Editions and components
             url: sql-server-linux-editions-and-components-2019.md
           - text: Supported platforms
-            url: sql-server-linux-release-notes-2019.md
+            url: sql-server-linux-release-notes.md
           - text: Frequently asked questions
             url: sql-server-linux-faq.yml
 

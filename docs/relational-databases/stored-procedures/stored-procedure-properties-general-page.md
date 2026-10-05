@@ -3,7 +3,7 @@ title: "Stored Procedure Properties (General Page)"
 description: Learn how to use the Stored Properties (General Page) to view read-only information about a stored procedure.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/16/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: concept-article
@@ -12,10 +12,11 @@ ms.custom:
 f1_keywords:
   - "sql13.swb.spassistededitor.storedprocedure.f1"
   - "sql13.swb.spproperties.general.f1"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Stored Procedure Properties (General Page)
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
   Displays information about a stored procedure. All information is read-only.  
   
 ## Options  

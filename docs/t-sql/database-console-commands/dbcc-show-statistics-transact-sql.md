@@ -240,13 +240,13 @@ GO
 
 ### C. Display the contents of one statistics object
 
-The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the [!INCLUDE [ssawpdw-md](../../includes/ssawpdw-md.md)] sample database.
+The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the AdventureWorks2012 sample database.
 
 ```sql
--- Uses AdventureWorksPDW
+-- Uses AdventureWorks2012
 --First, create a statistics object
 CREATE STATISTICS Customer_LastName
-ON AdventureWorksPDW2012.dbo.DimCustomer (LastName);
+ON AdventureWorks2012.dbo.DimCustomer (LastName);
 GO
 DBCC SHOW_STATISTICS ("dbo.DimCustomer", Customer_LastName);
 GO

@@ -4,7 +4,7 @@ description: Learn how to update query optimization statistics on a table or ind
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw, randolphwest
-ms.date: 04/01/2024
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: how-to
@@ -13,12 +13,12 @@ ms.custom:
 helpviewer_keywords:
   - "updating statistics"
   - "statistics [SQL Server], updating"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # Update statistics
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 You can update query optimization statistics on a table or indexed view in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure `sp_updatestats` to update statistics more frequently than the default updates.
 
@@ -98,6 +98,10 @@ For more information, see [UPDATE STATISTICS](../../t-sql/statements/update-stat
 ### Automatic index and statistics management
 
 Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, among other parameters, and update statistics with a linear threshold.
+
+## Platform support
+
+In Fabric Data Warehouse and the SQL analytics endpoint, you can manually update only single-column histogram statistics by using `UPDATE STATISTICS`. The `sp_updatestats` stored procedure isn't supported in Fabric Data Warehouse or the SQL analytics endpoint. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
 
 ## Related content
 

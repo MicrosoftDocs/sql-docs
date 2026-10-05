@@ -4,7 +4,7 @@ description: Learn how to create query optimization statistics on columns of a t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw, randolphwest
-ms.date: 07/22/2022
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: how-to
@@ -18,11 +18,11 @@ f1_keywords:
 helpviewer_keywords:
   - "creating statistics"
   - "statistics [SQL Server], creating"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Create statistics
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 You can create query optimization statistics on one or more columns of a table or indexed view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics.
 
@@ -31,6 +31,8 @@ You can create query optimization statistics on one or more columns of a table o
 Before creating statistics with the CREATE STATISTICS statement, verify that the AUTO_CREATE_STATISTICS option is set at the database level. This will ensure that the query optimizer continues to routinely create single-column statistics for query predicate columns.
 
 You can list up to 32 columns per statistics object.
+
+In Fabric Data Warehouse and the SQL analytics endpoint, you can only manually create single-column histogram statistics. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
 
 You can't drop, rename, or alter the definition of a table column that is defined in a filtered statistic predicate.
 

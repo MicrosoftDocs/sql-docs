@@ -3,7 +3,7 @@ title: "View Statistics Properties"
 description: Learn how to display current query optimization statistics for a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: how-to
@@ -14,10 +14,10 @@ f1_keywords:
 helpviewer_keywords:
   - "viewing statistics properties"
   - "statistics [SQL Server], viewing properties"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # View Statistics Properties
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
   You can display current query optimization statistics for a table or indexed view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Statistics objects include a header with metadata about the statistics, a histogram with the distribution of values in the first key column of the statistics object, and a density vector to measure cross-column correlation. For more information about histograms and density vectors, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
 <a id="BeforeYouBegin"></a>
@@ -27,6 +27,8 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ## Permissions
 
 In order to view the statistics object, the user must own the table or the user must be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
+
+In Fabric Data Warehouse and the SQL analytics endpoint, you must have `SELECT` permission on the table or be a member of the Viewer workspace role or a higher role.
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -165,5 +167,9 @@ In order to view the statistics object, the user must own the table or the user 
     ```  
   
  For more information, see [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).  
+
+## Platform support
+
+In Fabric Data Warehouse and the SQL analytics endpoint, `DBCC SHOW_STATISTICS` displays only histogram-based single-column statistics. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
   
   

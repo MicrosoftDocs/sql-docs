@@ -40,7 +40,11 @@ monikerRange: ">=sql-server-2017"
  The scope of an OLE Automation object is a batch. All references to the object must be contained in a single batch, stored procedure, or trigger.  
   
  When it references objects, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE Automation objects support traversing the referenced object to other objects that it contains. For example, when using the SQL-DMO **SQLServer** object, references can be made to databases and tables contained on that server.  
-  
+
+## Supported platforms
+
+OLE Automation objects aren't available in Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, or Fabric Data Warehouse.
+
 ## Related content
 
 - [Object hierarchy syntax (Transact-SQL)](../system-stored-procedures/object-hierarchy-syntax-transact-sql.md)

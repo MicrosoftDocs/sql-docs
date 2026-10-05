@@ -4,7 +4,7 @@ description: PERCENTILE_DISC computes a specific percentile for sorted values in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: jovanpop, wiassaf
-ms.date: 09/16/2026
+ms.date: 10/05/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -35,10 +35,11 @@ The `PERCENTILE_DISC` function computes a specific percentile for sorted values 
 Aggregation function syntax:
 
 ```syntaxsql
-PERCENTILE_DISC ( numeric_literal )
-    WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] 
-    [ OVER ( [ <partition_by_clause> ] ) ]
-    )
+PERCENTILE_DISC ( numeric_literal ) 
+   WITHIN GROUP 
+      ( 
+      ORDER BY order_by_expression [ ASC | DESC ] 
+      )
 ```
 
 :::moniker-end

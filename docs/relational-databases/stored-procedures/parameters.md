@@ -3,7 +3,7 @@ title: "Parameters"
 description: Learn how to use parameters to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/16/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: concept-article
@@ -12,10 +12,12 @@ ms.custom:
 helpviewer_keywords:
   - "stored procedures [SQL Server], parameters"
   - "user-defined functions [SQL Server], parameters"
-monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Parameters
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
+
 Parameters are used to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function: 
 
 *  Input parameters allow the caller to pass a data value to the stored procedure or function.

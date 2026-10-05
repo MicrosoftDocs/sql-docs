@@ -23,7 +23,7 @@ Although you can [install the Database Engine and Language Extensions concurrent
 
 ## Prerequisites
 
-- Your Linux distribution must be [supported by SQL Server](../sql-server-linux-release-notes-2019.md#supported-platforms). Containers are covered separately in a later bullet. Supported distributions include:
+- Your Linux distribution must be [supported by SQL Server](../sql-server-linux-release-notes.md#supported-platforms). Containers are covered separately in a later bullet. Supported distributions include:
 
   - [Red Hat Enterprise Linux](quickstart-install-red-hat.md) (RHEL)
   - [SUSE Linux Enterprise Server](quickstart-install-suse.md) (SLES)

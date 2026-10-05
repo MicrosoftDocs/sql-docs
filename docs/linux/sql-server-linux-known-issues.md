@@ -277,6 +277,6 @@ Local ONNX models created with [CREATE EXTERNAL MODEL](../t-sql/statements/creat
 
 ## Related content
 
-- [Release notes for SQL Server on Linux](sql-server-linux-release-notes.md)
-- [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
+- [Release information for SQL Server on Linux](sql-server-linux-release-notes.md)
+- [Editions and supported features of SQL Server 2025 on Linux](sql-server-linux-editions-and-components-2025.md)
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)

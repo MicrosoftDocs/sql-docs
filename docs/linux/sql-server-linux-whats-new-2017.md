@@ -19,7 +19,7 @@ ms.custom:
 
 This article describes the major features and services available for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] running on Linux.
 
-In addition to the capabilities described in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2017 build versions](/troubleshoot/sql/releases/sqlserver-2017/build-versions). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2017.md).
+In addition to the capabilities described in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2017 build versions](/troubleshoot/sql/releases/sqlserver-2017/build-versions). For package downloads and known issues, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
 ## Red Hat Enterprise Linux 8 support
 

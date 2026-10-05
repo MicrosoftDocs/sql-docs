@@ -3,7 +3,7 @@ title: "sys.dm_sql_referenced_entities (Transact-SQL)"
 description: sys.dm_sql_referenced_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/01/2019"
+ms.date: "08/21/2026"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -107,6 +107,9 @@ sys.dm_sql_referenced_entities (
  Returns error 2020 when column dependencies cannot be resolved. This error does not prevent the query from returning object-level dependencies.  
   
 ## Remarks  
+
+ The `sys.dm_sql_referenced_entities` dynamic management view isn't supported in Fabric Data Warehouse.
+
  This function can be executed in the context of the any database to return the entities that reference a server-level DDL trigger.  
   
  The following table lists the types of entities for which dependency information is created and maintained. Dependency information is not created or maintained for rules, defaults, temporary tables, temporary stored procedures, or system objects.  

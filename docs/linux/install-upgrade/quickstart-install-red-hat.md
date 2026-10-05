@@ -22,7 +22,7 @@ ms.custom:
 
 In this quickstart, you install [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](../sql-server-linux-release-notes-2017.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -30,7 +30,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 
 In this quickstart, you install [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2019 on Linux](../sql-server-linux-release-notes-2019.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
@@ -40,7 +40,7 @@ In this quickstart, you install [!INCLUDE [sssql22-md](../../includes/sssql22-md
 
 If you want to automate your installation using Ansible, see [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](deploy-ansible.md).
 
-For more information on supported platforms, see [Release notes for SQL Server 2022 on Linux](../sql-server-linux-release-notes-2022.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 <!--SQL Server 2025 on Linux-->
@@ -53,7 +53,7 @@ In this quickstart, you install [!INCLUDE [sssql25-md](../../includes/sssql25-md
 
 If you want to automate your installation using Ansible, see [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](deploy-ansible.md).
 
-For more information on supported platforms, see [Release notes for SQL Server 2025 on Linux](../sql-server-linux-release-notes-2025.md).
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ::: moniker-end
 

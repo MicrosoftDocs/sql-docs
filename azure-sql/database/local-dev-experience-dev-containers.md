@@ -107,7 +107,7 @@ The dev container includes these tools. You don't need to install anything else.
 
 On an Arm64 host, such as a Mac with Apple Silicon, the application container runs natively. Every tool in it, including the .NET SDK, SqlPackage, `sqlcmd`, the Azure CLI, and the Azure Developer CLI, has an Arm64 build.
 
-SQL Server runs on x64 only. The database container is therefore pinned to `linux/amd64` and runs under emulation, such as Rosetta in Docker Desktop. Microsoft doesn't test or support SQL Server under emulation. For more information, see [SQL Server 2025 on Linux release notes](/sql/linux/sql-server-linux-release-notes).
+SQL Server runs on x64 only. The database container is therefore pinned to `linux/amd64` and runs under emulation, such as Rosetta in Docker Desktop. Microsoft doesn't test or support SQL Server under emulation. For more information, see [Release information for SQL Server on Linux](/sql/linux/sql-server-linux-release-notes).
 
 SQL Server sometimes fails while it starts in the database container. When it does, the container build stops, because the database service never becomes healthy. Run **Dev Containers: Rebuild Container** to try again. This behavior isn't limited to emulation.
 

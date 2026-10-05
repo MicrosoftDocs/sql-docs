@@ -44,7 +44,7 @@ This tutorial consists of the following steps:
 In this tutorial, you create a three node Linux-based cluster running the availability group. Follow the documentation for [SQL Server installation on Linux](/sql/linux/sql-server-linux-overview#install) based on the choice of your Linux platform. We also recommend you install the [SQL Server tools](/sql/linux/sql-server-linux-setup-tools) for this tutorial.
 
 > [!NOTE]
-> Ensure that the Linux OS that you choose is a common distribution that is supported by both [DH2i DxEnterprise, Minimal System Requirements](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide) and [Microsoft SQL Server](/sql/linux/sql-server-linux-release-notes-2019#supported-platforms).
+> Ensure that the Linux OS that you choose is a common distribution that is supported by both [DH2i DxEnterprise, Minimal System Requirements](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide) and [Microsoft SQL Server](/sql/linux/sql-server-linux-release-notes#supported-platforms).
 >
 > This tutorial uses Ubuntu 18.04, which is supported by both DH2i DxEnterprise and Microsoft SQL Server.
 
@@ -119,4 +119,4 @@ For more information on more operations within DxEnterprise, See [DxEnterprise A
 - Learn more about [Availability Groups on Linux](/sql/linux/sql-server-linux-availability-group-overview)
 - [Quickstart: Create Linux virtual machine in Azure portal](/azure/virtual-machines/linux/quick-create-portal)
 - [Quickstart: Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
-- [Supported platforms for SQL Server 2019 on Linux](/sql/linux/sql-server-linux-release-notes-2019#supported-platforms)
+- [Supported platforms for SQL Server 2019 on Linux](/sql/linux/sql-server-linux-release-notes#supported-platforms)

@@ -11,7 +11,7 @@ ms.custom:
 
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] is a scalable data warehouse appliance that delivers performance and scalability through massively parallel processing. [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses SQL Server databases for distributed processing and data storage.  
+  [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] uses SQL Server databases for distributed processing and data storage.  
   
  The appliance partitions large database tables across multiple physical nodes, with each node running its own instance of SQL Server. When a report connects to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] to retrieve report data, it connects to the control node, which manages query processing, in the [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance. After the connection is made, there are no differences between working with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is and is not within a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] environment.  
   
@@ -64,7 +64,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Text](#QueryText)  
   
- You use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)] with SQL Server. The two dialects of the SQL language are very similar. Queries written for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source connection type can typically be used for the [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] data source connection type.  
+ You use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] with [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)] with SQL Server. The two dialects of the SQL language are very similar. Queries written for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source connection type can typically be used for the Analytics Platform System (PDW) data source connection type.  
   
  A query that retrieves report data from a large database, including a data warehouse such as [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], might generate a result set that has a very large number of rows unless you aggregate and summarize data to reduce the number of rows that the query returns. You can write queries that include aggregates and grouping by using either the graphical or text-based query designer.  
   

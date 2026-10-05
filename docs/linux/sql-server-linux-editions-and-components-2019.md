@@ -39,7 +39,7 @@ For editions and supported features of [!INCLUDE [ssnoversion-md](../includes/ss
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
-For the latest release notes and what's new information, see [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md).
+For more information, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
 For a list of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] features not available on Linux, see [Unsupported features and services](#unsupported-features-and-services).
 

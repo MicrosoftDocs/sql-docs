@@ -4,7 +4,7 @@ description: "Find out about the dedicated administrator connection (DAC). View 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, derekw
-ms.date: 01/15/2026
+ms.date: 10/02/2026
 ms.service: sql
 ms.subservice: configuration
 ms.topic: concept-article
@@ -18,11 +18,12 @@ helpviewer_keywords:
   - "connections [SQL Server], dedicated administrator"
   - "ports [SQL Server]"
   - "dedicated administrator connections [SQL Server]"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-ver15 || =azuresqldb-mi-current || =azuresqldb-current"
 ---
+
 # Diagnostic connection for database administrators
 
-[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides a special diagnostic connection for administrators when standard connections to the server aren't possible. This diagnostic connection allows an administrator to access [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to execute diagnostic queries and troubleshoot problems even when [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] isn't responding to standard connection requests.
 
@@ -40,11 +41,19 @@ The DAC is available and supported through the `sqlcmd` command-prompt utility u
 
 To establish a DAC from [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
 
-- Disconnect all connections to the related SQL Server instance, including the Object Explorer and all open query windows.
+- Start a new instance of [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
-- From the menu, select **File > New > Database Engine Query**
+- From the main menu, use **Tools** > **Options** > **Languages** > **Transact-SQL** > **IntelliSense** to disable the IntelliSense feature in this instance of [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+
+  If IntelliSense is enabled, [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] attempts to open a second connection for each query editor window. Because only one DAC connection is available, this attempt fails, and the query window becomes disconnected.
+  
+  You can reenable IntelliSense when you no longer require a DAC connection.
+
+- From the menu, select **File** > **New** > **Database Engine Query**.
 
 - From the connection dialog box in the Server Name field, enter `admin:<server_name>` if using the default instance or `admin:<server_name>\<instance_name>` if using a named instance.
+
+  If connecting to a database in Azure SQL Database, ensure you specify the name of the target database in the **Database Name** field. DAC connections to the `master` database in Azure SQL Database aren't supported.
 
 ## DAC port
 
@@ -105,9 +114,25 @@ Although you can theoretically run any [!INCLUDE [tsql](../../includes/tsql-md.m
 
   - If there are no tasks in the `sys.dm_os_tasks` associated with this session, but the session remains in `sys.dm_exec_sessions` after executing the `KILL` command, it means that you don't have a worker available. Select one of the currently running tasks (a task listed in the `sys.dm_os_tasks` view with a `sessions_id <> NULL`), and kill the session associated with it to free up the worker. It might not be enough to kill a single session: you might have to kill multiple ones.
 
-### Limitation in Azure SQL Database
+### Behavior in Azure SQL Database
 
-The DAC in Azure SQL Database is usually occupied by a backend process and is not user-accessible.
+When connecting to the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] with the DAC, you must also specify the user database name.
+
+In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], enter the name of the database in the **Database Name** field. In the `sqlcmd` utility, use the `-d` option.
+
+Connections to the `master` database aren't supported. 
+
+To check if you're using a DAC connection, run the following T-SQL query:
+
+```sql
+SELECT wg.name AS workload_group_name
+FROM sys.dm_exec_sessions AS s
+INNER JOIN sys.dm_resource_governor_workload_groups AS wg
+ON s.group_id = wg.group_id
+WHERE s.session_id = @@SPID;
+```
+
+You are connected with the DAC if the workload group name is `DACGroup`.
 
 ### Limitation in Azure SQL Managed Instance
 

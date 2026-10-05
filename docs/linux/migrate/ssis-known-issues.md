@@ -149,7 +149,7 @@ The SSIS log providers for Text files, for XML files, and for SQL Server Profile
 
 ## Python 3 support
 
-Python 3 is supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 21 and later versions. For more information, see [Release notes for SQL Server on Linux](../sql-server-linux-release-notes.md).
+Python 3 is supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Cumulative Update 21 and later versions. For more information, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 | Distribution | Package name | Package version |
 | --- | --- | --- |

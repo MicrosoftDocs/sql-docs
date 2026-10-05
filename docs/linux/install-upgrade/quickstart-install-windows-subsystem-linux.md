@@ -20,7 +20,7 @@ Use the Windows Subsystem for Linux (WSL) to run a Linux environment directly on
 
 ## SQL Server on WSL is for development use only
 
-SQL Server on WSL 2 is intended for development purposes only, and is **not** supported for production workloads. Run SQL Server in WSL environments on one of the [supported platforms](../sql-server-linux-release-notes-2022.md#supported-platforms), for the version of SQL Server you intend to run.
+SQL Server on WSL 2 is intended for development purposes only, and is **not** supported for production workloads. Run SQL Server in WSL environments on one of the [supported platforms](../sql-server-linux-release-notes.md#supported-platforms), for the version of SQL Server you intend to run.
 
 For any support related issues, you can [obtain support from Microsoft](/troubleshoot/sql/database-engine/install/windows/support-policy-sql-server#obtain-support-from-microsoft).
 

@@ -132,14 +132,14 @@ EXECUTE sp_tables;
 
 ### D. Return information about the tables in a specified schema
 
-The following example returns information about the dimension tables in the `AdventureWorksPDW2012` database.
+The following example returns information about the dimension tables in the `AdventureWorks2012` database.
 
 ```sql
 -- Uses AdventureWorks
 EXECUTE sp_tables
     @table_name = 'Dim%',
     @table_owner = 'dbo',
-    @table_qualifier = 'AdventureWorksPDW2012';
+    @table_qualifier = 'AdventureWorks2012';
 ```
 
 ## Related content

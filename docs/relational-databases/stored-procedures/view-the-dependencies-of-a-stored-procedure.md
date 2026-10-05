@@ -3,7 +3,7 @@ title: "View the Dependencies of a Stored Procedure"
 description: Learn how to view stored procedure dependencies in the SQL Database Engine by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures
 ms.topic: how-to
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], dependencies"
   - "displaying stored procedure dependencies"
   - "viewing stored procedure dependencies"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # View the Dependencies of a Stored Procedure
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
   This topic describes how to view stored procedure dependencies in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -84,7 +84,6 @@ System Function: **sys.dm_sql_referencing_entities**
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
     GO  
     CREATE PROCEDURE Purchasing.uspVendorAllInfo  
-    WITH EXECUTE AS CALLER  
     AS  
         SET NOCOUNT ON;  
         SELECT v.Name AS Vendor, p.Name AS 'Product name',   
@@ -128,7 +127,6 @@ System Function: **sys.dm_sql_referencing_entities**
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
     GO  
     CREATE PROCEDURE Purchasing.uspVendorAllInfo  
-    WITH EXECUTE AS CALLER  
     AS  
         SET NOCOUNT ON;  
         SELECT v.Name AS Vendor, p.Name AS 'Product name',   
@@ -174,7 +172,6 @@ System Function: **sys.dm_sql_referencing_entities**
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
     GO  
     CREATE PROCEDURE Purchasing.uspVendorAllInfo  
-    WITH EXECUTE AS CALLER  
     AS  
         SET NOCOUNT ON;  
         SELECT v.Name AS Vendor, p.Name AS 'Product name',   
@@ -225,7 +222,6 @@ System Function: **sys.dm_sql_referencing_entities**
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
     GO  
     CREATE PROCEDURE Purchasing.uspVendorAllInfo  
-    WITH EXECUTE AS CALLER  
     AS  
         SET NOCOUNT ON;  
         SELECT v.Name AS Vendor, p.Name AS 'Product name',   
@@ -258,6 +254,13 @@ System Function: **sys.dm_sql_referencing_entities**
     WHERE referencing_id = OBJECT_ID(N'Purchasing.uspVendorAllInfo');  
     GO  
     ```  
+
+<a name="Restrictions"></a>
+<a name="limitations-and-restrictions"></a>
+
+### Remarks
+
+In Fabric Data Warehouse, use `sys.sql_expression_dependencies` to view stored procedure dependencies. The `sys.dm_sql_referencing_entities` and `sys.dm_sql_referenced_entities` dynamic management functions aren't supported in Fabric Data Warehouse.
   
 ## Related content
 

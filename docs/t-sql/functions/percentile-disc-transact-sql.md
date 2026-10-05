@@ -35,10 +35,7 @@ The `PERCENTILE_DISC` function computes a specific percentile for sorted values 
 Aggregation function syntax:
 
 ```syntaxsql
-PERCENTILE_DISC ( numeric_literal )
-    WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] 
-    [ OVER ( [ <partition_by_clause> ] ) ]
-    )
+PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )
 ```
 
 :::moniker-end

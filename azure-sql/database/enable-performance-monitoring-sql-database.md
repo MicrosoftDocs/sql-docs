@@ -181,7 +181,7 @@ You can also create a [Real-Time Dashboard](/fabric/real-time-intelligence/dashb
 
 ### Query performance data with Azure Data Explorer
 
-You can connect directly to the telemetry endpoint and query the performance data by using [KQL](/kusto/query/). Use this option for ad hoc analysis, to build your own queries, or to integrate the data with other tools. For the schema, rules for correct results, and ready-to-run queries, see [Query performance monitoring telemetry](query-performance-monitoring-telemetry.md).
+You can connect directly to the telemetry endpoint and query the performance data by using [KQL](/kusto/query/). Use this option for ad hoc analysis, to build your own queries, or to integrate the data with other tools. For the schema, rules for correct results, and ready-to-run queries, see [Query performance monitoring telemetry](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry).
 
 > [!NOTE]
 > Use the [Azure Data Explorer web UI](/azure/data-explorer/web-ui-query-overview). The Kusto.Explorer desktop client isn't currently supported.
@@ -201,7 +201,7 @@ To connect to the telemetry endpoint:
 
 ## Collected datasets
 
-Performance monitoring collects data for Azure SQL Database in the following tables in the `ArcSqlTelemetry` database. For the columns in each table, see [Performance monitoring data schema](query-performance-monitoring-telemetry.md#schema).
+Performance monitoring collects data for Azure SQL Database in the following tables in the `ArcSqlTelemetry` database. For the columns in each table, see [Performance monitoring data schema](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry#schema).
 
 | Table      | Data collected                |
 | -------------------------------------- | ----------------------------- |
@@ -243,7 +243,7 @@ The `MS_EnablePerformanceMonitoringPreview` database-scoped extended property do
 
 ## Related content
 
-- [Query performance monitoring telemetry (preview)](query-performance-monitoring-telemetry.md)
+- [Query performance monitoring telemetry (preview)](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry)
 - [Enable performance monitoring for SQL Server on Azure VMs (preview)](../virtual-machines/windows/enable-performance-monitoring-sql-vm.md)
 - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md)
 - [Monitor Azure SQL Database performance using dynamic management views](monitoring-with-dmvs.md)

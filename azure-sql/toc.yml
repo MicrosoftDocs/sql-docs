@@ -1988,7 +1988,7 @@
     - name: Azure SQL Managed Instance
       href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
     - name: Performance monitoring telemetry (preview)
-      href: database/query-performance-monitoring-telemetry.md
+      href: /fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry
   - name: Tools
     items:
     - name: SQL Server tools overview

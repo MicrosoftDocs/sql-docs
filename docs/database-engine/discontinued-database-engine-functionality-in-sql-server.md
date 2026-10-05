@@ -63,6 +63,8 @@ This article describes the [!INCLUDE [ssDE](../includes/ssde-md.md)] features th
 
   - Use the `##MS_DatabaseConnector##` server role with existing logins, to connect to a database without the need to create a user in that database.
 
+  - Purview access policies for Azure SQL Database, Azure SQL Managed Instance, and Azure Arc-enabled SQL Server 2022 retire on October 30, 2027. For more information, see [Retirement of Microsoft Purview access policies for SQL](../relational-databases/security/purview-access-policies-retirement.md).
+
 ## Discontinued features in SQL Server 2022 (16.x)
 
 - The following Machine Learning Services packages are no longer included with installation of [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Instead, you can install any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)

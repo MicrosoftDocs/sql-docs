@@ -158,8 +158,10 @@ WHERE s.session_id <> @@SPID
 
 ## Limitations
 
+- In the current preview of serverless auto-pause and auto-resume for Azure SQL Database Hyperscale, the minimum auto-pause delay is 60 minutes.
+- In the current preview of serverless auto-pause and auto-resume for Azure SQL Database Hyperscale, new Hyperscale serverless databases created through Azure CLI, Azure PowerShell, or REST API receive a default auto-pause delay of 60 minutes if you don't explicitly specify `--auto-pause-delay` (or the equivalent parameter). To disable auto-pause, specify `--auto-pause-delay -1` when creating or updating a database. This behavior mirrors the existing behavior for General Purpose serverless.
 - In the current preview of serverless auto-pause and auto-resume for Azure SQL Database Hyperscale, named replicas aren't supported with auto-pause and auto-resume.
-- In the current preview of serverless auto-pause and auto-resume for Azure SQL Database Hyperscale, the minimum auto-pause delay is 60 minutes. General purpose serverless databases with auto-pause less than 60 minutes that are upgraded to Hyperscale serverless will have auto-pause disabled after upgrade. Autopause must be manually re-enabled after upgrade to Azure SQL Database Hyperscale.
+- General Purpose serverless databases with an auto-pause delay of less than 60 minutes will fail to upgrade to Hyperscale serverless unless an auto-pause delay of at least 60 minutes (or `-1` to disable auto-pause) is specified.
 
 ## Related content
 

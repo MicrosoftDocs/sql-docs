@@ -8127,6 +8127,8 @@ items:
         href: sql-server/azure-arc/microsoft-entra-authentication-with-managed-identity.md
   - name: Reference
     items:
+    - name: Microsoft Purview access policies retirement
+      href: relational-databases/security/purview-access-policies-retirement.md
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
     - name: Resumable add table constraints

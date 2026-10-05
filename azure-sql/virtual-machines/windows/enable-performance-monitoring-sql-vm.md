@@ -262,7 +262,7 @@ You can also create a [Real-Time Dashboard](/fabric/real-time-intelligence/dashb
 
 ### Query performance data with Azure Data Explorer
 
-You can connect directly to the telemetry endpoint and query the performance data by using [KQL](/kusto/query/). Use this option for ad hoc analysis, to build your own queries, or to integrate the data with other tools. For the schema, rules for correct results, and ready-to-run queries, see [Query performance monitoring telemetry](../../database/query-performance-monitoring-telemetry.md).
+You can connect directly to the telemetry endpoint and query the performance data by using [KQL](/kusto/query/). Use this option for ad hoc analysis, to build your own queries, or to integrate the data with other tools. For the schema, rules for correct results, and ready-to-run queries, see [Query performance monitoring telemetry](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry).
 
 > [!NOTE]
 > Use the [Azure Data Explorer web UI](/azure/data-explorer/web-ui-query-overview). The Kusto.Explorer desktop client isn't currently supported.
@@ -282,7 +282,7 @@ To connect to the telemetry endpoint:
 
 ## Collected datasets
 
-Performance monitoring collects the following datasets for SQL Server on Azure VMs. Each dataset is stored in a table in the `ArcSqlTelemetry` database on the [telemetry endpoint](#query-performance-data-with-azure-data-explorer). For the columns in each table, see [Performance monitoring data schema](../../database/query-performance-monitoring-telemetry.md#schema).
+Performance monitoring collects the following datasets for SQL Server on Azure VMs. Each dataset is stored in a table in the `ArcSqlTelemetry` database on the [telemetry endpoint](#query-performance-data-with-azure-data-explorer). For the columns in each table, see [Performance monitoring data schema](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry#schema).
 
 | Table                                  | Data collected                           |
 | -------------------------------------- | ---------------------------------------- |
@@ -346,7 +346,7 @@ The `DatabaseWatcheronAzureVM` SQL IaaS Agent extension feature flag doesn't ena
 
 ## Related content
 
-- [Query performance monitoring telemetry (preview)](../../database/query-performance-monitoring-telemetry.md)
+- [Query performance monitoring telemetry (preview)](/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry)
 - [Enable performance monitoring for Azure SQL Database (preview)](../../database/enable-performance-monitoring-sql-database.md)
 - [Automate management with the SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md)
 - [Unified inventory for SQL Server on Azure VMs](unified-inventory-sql-vm.md)

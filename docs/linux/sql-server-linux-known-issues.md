@@ -55,8 +55,6 @@ The following table lists the most common issues with [!INCLUDE [ssnoversion-md]
 
 - You can't restore [!INCLUDE [ssSQL14](../includes/sssql14-md.md)] databases on Windows that use [!INCLUDE [inmemory-md](../includes/inmemory-md.md)] to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux. If your [!INCLUDE [ssSQL14](../includes/sssql14-md.md)] database uses [!INCLUDE [inmemory-md](../includes/inmemory-md.md)], first upgrade the databases to a newer version of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Windows. Then, move it to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] on Linux, with backup/restore, or detach/attach.
 
-- Linux doesn't currently support the `ADMINISTER BULK OPERATIONS` user permission.
-
 - You can't restore Transparent Data Encryption (TDE)-compressed backups made with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later versions to previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
 
   You can still use [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later versions to restore TDE-compressed backups made with previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)].

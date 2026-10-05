@@ -20,7 +20,7 @@ The following diagram represents this pattern.
 
 For the forward proxy, choose either:
 
-- Azure Firewall Explicit proxy (preview) feature, which is a Platform as a Service (PaaS) network security Service.
+- [Azure Firewall Explicit proxy](https://learn.microsoft.com/en-us/azure/firewall/explicit-proxy?tabs=portal) feature, which is a Platform as a Service (PaaS) network security Service.
 
   Or
 

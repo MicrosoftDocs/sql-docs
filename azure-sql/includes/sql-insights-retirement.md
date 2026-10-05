@@ -2,12 +2,12 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman
-ms.date: 09/18/2024
+ms.date: 10/02/2026
 ms.service: sql
 ms.topic: include
 ---
 > [!IMPORTANT]
-> SQL Insights (preview) retired on December 31, 2024. 
+> SQL Insights (preview) retired on December 31, 2024.
 >
 > Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
 > - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.

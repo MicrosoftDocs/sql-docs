@@ -934,6 +934,11 @@
       "source_path_from_root": "/azure-sql/copilot/query-editor-natural-language-to-sql-copilot.md",
       "redirect_url": "/azure/azure-sql/copilot/copilot-azure-sql-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/query-performance-monitoring-telemetry.md",
+      "redirect_url": "/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry",
+      "redirect_document_id": false
     }
   ]
 }

@@ -3,7 +3,7 @@ title: "sys.query_store_plan_forcing_locations (Transact-SQL)"
 description: "The sys.query_store_plan_forcing_locations system view contains information about where Query Store plans have been forced on secondary replicas."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/26/2026
+ms.date: 10/05/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -33,6 +33,9 @@ Query Store for secondary replicas is supported starting in [!INCLUDE [sssql25-m
 |`query_id` |**bigint**|References `query_id` in [sys.query_store_query](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md) | 
 |`plan_id` |**bigint**|References `plan_id` in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) |
 |`replica_group_id` |**bigint** | From the parameter `force_plan_scope` in [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md). References `replica_group_id` in [sys.query_store_replicas](sys-query-store-replicas.md) |
+|`timestamp` |**datetime** | UTC date and time when the plan forcing operation was applied. |
+| `plan_forcing_type` | **int** | Type of plan forcing.<br /><br />`0` = `NONE`<br />`1` = `MANUAL`<br />`2` = `AUTO` |
+| `plan_forcing_type_desc` | **nvarchar(60)** | Text description of `plan_forcing_type`.<br /><br />`NONE`: No plan forcing<br />`MANUAL`: Plan forced by a user<br />`AUTO`: Plan forced by automatic tuning |
 
 ## Permissions
 
@@ -47,13 +50,14 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 Use `sys.query_store_plan_forcing_locations`, joined with [sys.query_store_replicas](sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-secondary-replicas.md).
 
 ```sql
-SELECT query_plan 
+SELECT qsp.query_plan
 FROM sys.query_store_plan AS qsp
-    INNER JOIN sys.query_store_plan_forcing_locations AS pfl 
-        ON pfl.query_id = qsp.query_id 
-    INNER JOIN sys.query_store_replicas AS qsr
-        ON qsr.replica_group_id = qsp.replica_group_id
-WHERE qsr.replica_name = 'yourSecondaryReplicaName';
+INNER JOIN sys.query_store_plan_forcing_locations AS pfl
+    ON pfl.query_id = qsp.query_id
+    AND pfl.plan_id = qsp.plan_id
+INNER JOIN sys.query_store_replicas AS qsr
+    ON qsr.replica_group_id = pfl.replica_group_id
+WHERE qsr.replica_name = N'yourSecondaryReplicaName';
 ```
 
 ## Related content

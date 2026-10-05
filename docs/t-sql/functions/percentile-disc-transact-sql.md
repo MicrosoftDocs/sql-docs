@@ -36,16 +36,14 @@ Aggregation function syntax:
 
 ```syntaxsql
 PERCENTILE_DISC ( numeric_literal ) 
-   WITHIN GROUP 
-      ( ORDER BY order_by_expression [ ASC | DESC ] )
+   WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )
 ```
 
 Analytic function syntax:
 :::moniker-end
 ```syntaxsql
 PERCENTILE_DISC ( numeric_literal )
-   WITHIN GROUP
-      ( ORDER BY order_by_expression [ ASC | DESC ] )
+   WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )
    OVER ( [ <partition_by_clause> ] )
 ```
 

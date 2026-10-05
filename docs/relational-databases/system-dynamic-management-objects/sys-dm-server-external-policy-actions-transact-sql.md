@@ -4,7 +4,7 @@ description: Reference documentation to explain sys.dm_server_external_policy_ac
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: randolphwest
-ms.date: 03/09/2023
+ms.date: 09/23/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,6 +23,9 @@ dev_langs:
 # sys.dm_server_external_policy_actions (Transact-SQL)
 
 [!INCLUDE [sqlserver2022-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-fabricsqldb.md)]
+
+> [!IMPORTANT]  
+> Microsoft Purview access policies for Azure SQL Database, Azure SQL Managed Instance, and Azure Arc-enabled SQL Server 2022 retire on October 30, 2027. Migrate the access these policies grant to SQL native roles and permissions. For more information, see [Retirement of Microsoft Purview access policies for SQL](../security/purview-access-policies-retirement.md). This retirement doesn't affect SQL database in Microsoft Fabric.
 
 List all available data actions, independently of them being used or not.
 

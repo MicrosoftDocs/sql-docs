@@ -3,7 +3,7 @@ title: Connect with Private Path
 description: This article describes how to connect SQL Server enabled by Azure Arc to Azure with a private path.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 09/30/2026
+ms.date: 10/06/2026
 ms.topic: how-to #Don't change
 # customer intent: As a data engineer, I want to use a private path to connect to Azure Arc so I can avoid internet traffic.
 ---
@@ -20,13 +20,13 @@ The following diagram represents this pattern.
 
 For the forward proxy, choose either:
 
-- [Azure Firewall Explicit proxy](https://learn.microsoft.com/en-us/azure/firewall/explicit-proxy?tabs=portal) feature, which is a Platform as a Service (PaaS) network security Service.
+- [Azure Firewall explicit proxy](/azure/firewall/explicit-proxy) feature, which is a platform as a service (PaaS) network security service.
 
   Or
 
 - A third-party proxy Network Virtual Appliance (NVA).
 
-  The diagram shows Azure Firewall Explicit proxy.
+  The diagram shows Azure Firewall explicit proxy.
 
 ## Use case
 
@@ -64,7 +64,7 @@ Create a site-to-site VPN from your SQL Server location to Azure.
 ## Create firewall and configure the proxy
 
 1. Create an Azure Firewall along with Firewall Manager.
-1. Configure Azure Firewall Explicit proxy (preview) setting to act as forward proxy.
+1. Configure the Azure Firewall explicit proxy setting to act as a forward proxy.
 1. Create a rule to allow the SQL Server IP (`10.2.1.4`).
 
 The Azure Connected Machine agent uses that rule to access `https` outbound through the firewall.
@@ -125,11 +125,10 @@ To delete the resources from Azure portal:
 1. Select **Delete resource group**.
 1. Confirm the resource group name at **Type the resource group name**, and select Delete.
 
-
 ## Related content
 
 - [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints)
-- [Azure Firewall Explicit proxy (preview)](/azure/firewall/explicit-proxy)
+- [Azure Firewall explicit proxy](/azure/firewall/explicit-proxy)
 - [Monitor Azure Firewall](/azure/firewall/monitor-firewall#azure-monitor-resource-logs)
 - [Tutorial: Create and manage a VPN gateway using the Azure portal](/azure/vpn-gateway/tutorial-create-gateway-portal)
 - [Tutorial: Create a site-to-site VPN connection in the Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal)

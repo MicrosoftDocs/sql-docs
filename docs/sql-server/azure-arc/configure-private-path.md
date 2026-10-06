@@ -59,7 +59,7 @@ Create a site-to-site VPN from your SQL Server location to Azure.
 
 1. Follow the steps at [Tutorial: Create and manage a VPN gateway using the Azure portal](/azure/vpn-gateway/tutorial-create-gateway-portal) to create VPN Gateway.
 
-1. Create a Local Network Gateway before creating a Site 2 Site VPN. Follow the steps at [Tutorial: Create a site-to-site VPN connection in the Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal).
+1. Create a local network gateway before you create the site-to-site VPN. Follow the steps in [Tutorial: Create a site-to-site VPN connection in the Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal).
 
 ## Create firewall and configure the proxy
 
@@ -75,7 +75,7 @@ From Azure portal, generate an onboarding script. As explained here, [Connect yo
 
 Run the script to install the Azure Connected Machine agent with the correct configurations. You can configure the proxy settings when you generate your script.
 
-In this article, we update the private path proxy settings after we install the Arc Connected Machine agent extension.
+In this article, you update the private path proxy settings after you install the Azure Connected Machine agent.
 
 ## Configure Azure Connected Machine agent
 
@@ -98,7 +98,7 @@ To configure Azure Connected Machine agent, use [azcmagent CLI](/azure/azure-arc
 1. Verify agent is connected.
 
    ```console
-   azcmagent show | find | "Agent Status"
+   azcmagent show | find "Agent Status"
    ```
 
    The console returns the agent status. If the agent is configured the console returns:
@@ -123,7 +123,7 @@ To delete the resources from Azure portal:
 
 1. Enter the name of your resource group in the search box select it from the search results.
 1. Select **Delete resource group**.
-1. Confirm the resource group name at **Type the resource group name**, and select Delete.
+1. Confirm the resource group name at **Type the resource group name**, and select **Delete**.
 
 ## Related content
 

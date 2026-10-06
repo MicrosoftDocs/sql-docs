@@ -385,7 +385,7 @@ When shrink finishes for all data files successfully, rerun the [space usage que
 
 #### Shrink is slow when the database has LOB data or columnstore indexes
 
-When the database has a large amount of LOB data (using data types such as **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **json**), shrink operations are much slower because moving each LOB page within a data file requires a full table or index scan.
+When the database has a large amount of LOB data (using data types such as **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **json**), shrink operations are much slower because moving each LOB page within a data file requires a full table or index scan. The same issue might occur when the database has large columnstore indexes because data in columnstore indexes is stored on LOB pages.
 
 To find the amount of LOB data in the database relative to all data in the database, connect to the database and execute the following T-SQL query:
 

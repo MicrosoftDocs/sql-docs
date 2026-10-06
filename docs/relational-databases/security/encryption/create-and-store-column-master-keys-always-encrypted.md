@@ -4,7 +4,8 @@ description: Learn how to select a key store and create column master keys for S
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: "10/31/2019"
+ms.date: 09/21/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -17,25 +18,25 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 This article provides details for selecting a key store and creating column master keys for Always Encrypted. For a detailed overview, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
-## Selecting a Key Store for your Column Master Key
+## Selecting a key store for your column master key
 
 Always Encrypted supports multiple key stores for storing Always Encrypted column master keys. Supported key stores vary depending on which driver and version you're using.
 
 There are two high-level categories of key stores to consider - *Local Key Stores*, and *Centralized Key Stores*.
 
-###  Local or Centralized Key Store?
+### Local or centralized key store?
 
 * **Local Key Stores** - can only be used by applications on computers that contain the local key store. In other words, you need to replicate the key store and key to each computer running your application. An example of a local key store is Windows Certificate Store. When using a local key store, you need to make sure that the key store exists on each machine hosting your application, and that the computer contains the column master keys your application needs to access data protected using Always Encrypted. When you provision a column master key for the first time, or when you change (rotate) the key, you need to make sure the key gets deployed to all machines hosting your application(s).
 
 * **Centralized Key Stores** - serve applications on multiple computers. An example of a centralized key store is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). A centralized key store usually makes key management easier because you don't need to maintain multiple copies of your column master keys on multiple machines. Ensure that your applications are configured to connect to the centralized key store.
 
-### Which Key Stores are Supported in Always Encrypted Enabled Client Drivers?
+### Which key stores do Always Encrypted enabled client drivers support?
 
 Always Encrypted enabled client drivers are SQL Server client drivers that have built-in support for incorporating Always Encrypted into your client applications. Always Encrypted enabled drivers include a few built-in providers for popular key stores. Some drivers also let you implement and register a custom column master key store provider, so that you can use any key store, even if there's no built-in provider for it. When deciding between a built-in provider and a custom provider consider that using a built-in provider typically means fewer changes to your applications (in some cases, only changing a database connection string is required).
 
 The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers - [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
-### Which Key Stores are Supported in SQL Tools?
+### Which key stores do SQL tools support?
 SQL Server Management Studio, the [MSSQL extension for Visual Studio Code](../../../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md), and the SqlServer PowerShell module support column master keys stored in:
 
 - Key vaults and [managed HSMs](/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
@@ -45,7 +46,7 @@ SQL Server Management Studio, the [MSSQL extension for Visual Studio Code](../..
 - Windows Certificate Store.
 - Key stores, such as hardware security module, that provide Cryptography Next Generation (CNG) API or Cryptography API (CAPI).
 
-## Creating Column Master Keys in Windows Certificate Store    
+## Creating column master keys in Windows Certificate Store    
 
 A column master key can be a certificate stored in Windows Certificate Store. An Always Encrypted-enabled driver doesn't verify an expiration date or a certificate authority chain. A certificate is simply used as a key pair consisting of a public and private key.
 
@@ -77,7 +78,7 @@ For details, see [Provision Always Encrypted keys using SQL Server Management St
 For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in the Windows Certificate Store, see [Always Encrypted Wizard tutorial (Windows Certificate Store)](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
-### Making Certificates Available to Applications and Users
+### Make certificates available to applications and users
 
 If your column master key is a certificate stored in the *local machine* certificate store location, you need to export the certificate with the private key and import it to all machines that host applications that are expected to encrypt or decrypt data stored in encrypted columns, or tools for configuring Always Encrypted and for managing the Always Encrypted keys. Also, each user must be granted a read permission for the certificate stored in the local machine certificate store location to be able to use the certificate as a column master key.
 
@@ -100,11 +101,11 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 8.  From the **Certificates** snap-in, locate the certificate in the **Certificates > Personal** folder, right-click the Certificate, point to **All Tasks**, and then click **Manage Private Keys**.
 9.  In the **Security** dialog box, add read permission for a user account if needed.
 
-## Creating Column Master Keys in Azure Key Vault
+## Creating column master keys in Azure Key Vault
 
 Azure Key Vault helps safeguard cryptographic keys and secrets, and it is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](/azure/key-vault/general/overview), you need an [Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) and an Azure Key Vault. A key can be stored in a key vault or in a [managed HSM](/azure/key-vault/managed-hsm/overview). To be a valid column master key, the key managed in Azure Key Vault must be an RSA key.
 
-### Using Azure CLI, Portal or PowerShell
+### Using the Azure CLI, the Azure portal, or PowerShell
 
 For information on how to create a key in a key vault, see:
 - [Quickstart: Set and retrieve a key from Azure Key Vault using Azure CLI](/azure/key-vault/keys/quick-create-cli)
@@ -119,13 +120,13 @@ For information on how to create a key in a managed HSM, see:
 For details on how to create a column master key in a key vault or a managed HSM in Azure Key Vault using SSMS, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in a key vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
-### Making Azure Key Vault Keys Available to Applications and Users
+### Make Azure Key Vault keys available to applications and users
 
 To access an encrypted column, your application needs to be able to access Azure Key Vault and it also needs specific permissions on the column master key to decrypt the column encryption key protecting the column.
 
 To manage keys for Always Encrypted, you need permissions to list and create column master keys in Azure Key Vault, and to perform cryptographic operations using the keys.
 
-#### Key Vaults
+#### Key vaults
 
 If you store your column master keys in a key vault and you are using role permissions for authorization:
 
@@ -179,7 +180,7 @@ For more information about access control for managed HSMs, see:
 - [Managed HSM access control](/azure/key-vault/managed-hsm/access-control)
 - [Managed HSM local RBAC built-in roles](/azure/key-vault/managed-hsm/built-in-roles#permitted-operations).
 
-## Creating Column Master Keys in Hardware Security Modules using CNG
+## Creating column master keys in hardware security modules using CNG
 
 A column master key for Always Encrypted can be stored in a key store implementing the Cryptography Next Generation (CNG) API. Typically, this type of store is a hardware security module (HSM). An HSM is a physical device that safeguards and manages digital keys and provides crypto-processing. HSMs traditionally come in the form of a plug-in card or an external device that attaches directly to a computer (local HSMs) or a network server.
 
@@ -187,14 +188,15 @@ To make an HSM available to applications on a given machine, a Key Storage Provi
 
 Windows includes Microsoft Software Key Storage Provider - a software-based KSP, which you can use for testing purposes. See [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers).
 
-### Creating Column Master Keys in a Key Store using CNG/KSP
+### Creating column master keys in a key store using CNG or KSP
 
 A column master key should be an asymmetric key (a public/private key pair), using the RSA algorithm. The recommended key length is 2048 or greater.
 
-#### Using HSM-specific Tools
+#### Using HSM-specific tools with CNG
+
 Consult the documentation for your HSM.
 
-#### Using PowerShell
+#### Using PowerShell with CNG
 
 You can use .NET APIs to create a key in a key store using CNG in PowerShell.
 
@@ -218,11 +220,11 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 See [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
-### Making CNG Keys Available to Applications and Users
+### Make CNG keys available to applications and users
 
 Consult your HSM and KSP documentation for how to configure the KSP on a machine and how to grant applications and users access to the HSM.
 
-## Creating Column Master Keys in Hardware Security Modules using CAPI
+## Creating column master keys in hardware security modules using CAPI
 
 A column master key for Always Encrypted can be stored in a key store that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM) - a physical device that safeguards and manages digital keys and provides crypto-processing. HSMs traditionally come in the form of a plug-in card or an external device that attaches directly to a computer (local HSMs) or a network server.
 
@@ -235,19 +237,22 @@ A CSP must support the RSA algorithm to be used with Always Encrypted.
 
 Windows includes the following software-based (not backed by an HSM) CSPs that support RSA and can use for testing purposes: Microsoft Enhanced RSA and AES Cryptographic Provider.
 
-### Creating Column Master Keys in a Key Store using CAPI/CSP
+### Creating column master keys in a key store using CAPI or CSP
 
 A column master key should be an asymmetric key (a public/private key pair), using the RSA algorithm. The recommended key length is 2048 or greater.
 
-#### Using HSM-specific Tools
+#### Using HSM-specific tools with CAPI
+
 Consult the documentation for your HSM.
 
 #### Using SQL Server Management Studio (SSMS)
+
 See [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
-### Making CNG Keys Available to Applications and Users
+### Make CAPI keys available to applications and users
+
 Consult the documentation for your HSM and CSP for how to configure the CSP on a machine, and how to grant applications and users access to the HSM.
- 
+
 ## Related content
 
 - [Always Encrypted](always-encrypted-database-engine.md)

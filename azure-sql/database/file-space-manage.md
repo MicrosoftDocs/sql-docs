@@ -399,11 +399,11 @@ If the amount of LOB data is significant, consider the following workarounds tha
 
 - Reorganize indexes that have LOB columns with LOB compaction enabled. For more information, see [Reorganize indexes before shrink](#reorganize-indexes-before-shrink).
 
-- Rebuild indexes that have LOB columns, moving them to a *different* filegroup or partition scheme using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
+- Rebuild indexes that have LOB columns, moving them to a *different* filegroup or partition scheme by using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
 
     If a table isn't partitioned, you can move its indexes to a partition scheme by using a partition function that has no boundary values and returns a single partition.
 
-The workarounds are particularly effective after a large amount of LOB data has been deleted.
+The workarounds are particularly effective after a large amount of LOB data is deleted.
 
 ## Transient errors during shrink
 

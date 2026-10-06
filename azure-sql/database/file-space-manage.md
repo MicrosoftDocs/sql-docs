@@ -4,7 +4,7 @@ description: This page describes how to manage file space with single and pooled
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, dfurman, randolphwest
-ms.date: 07/24/2026
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: how-to
@@ -300,7 +300,7 @@ Reorganizing indexes before shrinking can make the shrink operation significantl
 
 1. If the database contains:
 
-   - Large object (LOB) data types such as **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, or similar data types stored in the `LOB_DATA` allocation unit.
+   - Large object (LOB) data types such as **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **json** or similar data types stored in the `LOB_DATA` allocation unit.
    - [Large rows](/sql/relational-databases/pages-and-extents-architecture-guide#large-row-support) stored in a `ROW_OVERFLOW_DATA` allocation unit.
    - Columnstore indexes.
 
@@ -380,6 +380,27 @@ WHERE r.command IN ('DbccSpaceReclaim', 'DbccFilesCompact', 'DbccLOBCompact', 'D
 > Shrink progress might be nonlinear, and the value in the `percent_complete` column might remain unchanged for long periods, even though shrink is still in progress. An increase in the `cpu_time`, `reads`, or `writes` values for the same `session_id` between two executions of the query means that shrink continues making progress.
 
 When shrink finishes for all data files successfully, rerun the [space usage query](#capture-space-usage-baseline) (or check in the Azure portal) to see the resulting reduction in allocated storage size. If there's still a large difference between used space and allocated space, [rebuild](#example-index-rebuild-command) or [reorganize](#reorganize-indexes-before-shrink) indexes. An index rebuild might temporarily increase the allocated space. However, shrinking data files again after rebuilding indexes often results in a deeper reduction in the allocated space.
+
+### Known issues
+
+#### Shrink is slow when the database has LOB data or columnstore indexes
+
+When the database has a large amount of LOB data (using data types such as **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **json**), shrink operations are much slower because moving each LOB page within a data file requires a full table or index scan.
+
+To find the amount of LOB data in the database relative to all data in the database, connect to the database and execute the following T-SQL query:
+
+```sql
+SELECT CAST(SUM(data_pages) * 8.0 / 1024 / 1024 AS decimal(18, 2)) AS total_data_gb,
+       CAST(SUM(IIF(type_desc IN ('ROW_OVERFLOW_DATA', 'LOB_DATA'), data_pages, 0)) * 8.0 / 1024 / 1024 AS decimal(18, 2)) AS lob_data_gb
+FROM sys.allocation_units;
+```
+
+If the amount of LOB data is significant, consider the following workarounds that remove empty space from LOB pages and make shrink faster:
+
+- Reorganize indexes that have LOB columns to compact LOB data. For more information, see [Reorganize indexes before shrink](#reorganize-indexes-before-shrink).
+- Rebuild indexes that have LOB columns on a *different* filegroup or partition scheme using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
+
+The workarounds are particularly effective after a large amount of LOB data has been deleted.
 
 ## Transient errors during shrink
 

@@ -395,7 +395,7 @@ SELECT CAST(SUM(data_pages) * 8.0 / 1024 / 1024 AS decimal(18, 2)) AS total_data
 FROM sys.allocation_units;
 ```
 
-If the amount of LOB data is significant, consider the following workarounds that remove empty space from LOB pages and make shrink faster:
+If the amount of LOB data is significant, consider performing the following maintenance operations before starting shrink. These operations remove empty space from LOB pages and make shrink faster:
 
 - Reorganize indexes that have LOB columns with LOB compaction enabled. For more information, see [Reorganize indexes before shrink](#reorganize-indexes-before-shrink).
 
@@ -403,7 +403,7 @@ If the amount of LOB data is significant, consider the following workarounds tha
 
     If a table isn't partitioned, you can move its indexes to a partition scheme by using a partition function that has no boundary values and returns a single partition.
 
-The workarounds are particularly effective after a large amount of LOB data is deleted.
+Performing this maintenance prior to starting shrink is recommended after a large amount of LOB data is deleted.
 
 ## Transient errors during shrink
 

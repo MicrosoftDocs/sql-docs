@@ -312,7 +312,7 @@ The following example shows a command to reorganize an index and perform LOB com
 
 ```sql
 ALTER INDEX [index_name] ON [schema_name].[table_name]
-REORGANIZE WITH(LOB_COMPACTION = ON);
+REORGANIZE WITH (LOB_COMPACTION = ON);
 ```
 
 ### Shrink multiple data files in parallel
@@ -397,8 +397,11 @@ FROM sys.allocation_units;
 
 If the amount of LOB data is significant, consider the following workarounds that remove empty space from LOB pages and make shrink faster:
 
-- Reorganize indexes that have LOB columns to compact LOB data. For more information, see [Reorganize indexes before shrink](#reorganize-indexes-before-shrink).
-- Rebuild indexes that have LOB columns on a *different* filegroup or partition scheme using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
+- Reorganize indexes that have LOB columns with LOB compaction enabled. For more information, see [Reorganize indexes before shrink](#reorganize-indexes-before-shrink).
+
+- Rebuild indexes that have LOB columns, moving them to a *different* filegroup or partition scheme using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
+
+    If a table isn't partitioned, you can move its indexes to a partition scheme by using a partition function that has no boundary values and returns a single partition.
 
 The workarounds are particularly effective after a large amount of LOB data has been deleted.
 

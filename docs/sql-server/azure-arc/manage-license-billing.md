@@ -307,7 +307,14 @@ For an availability group replica to qualify for passive disaster recovery licen
 
 - No instances of the SQL Server service — whether as standalone or as an active node of an FCI — can be in a running state on the node, unless those instances qualify as free passive replicas of availability groups (AGs).
 
-- No instances of [associated services](#manage-ssxs) can be running in the same OSE. For example, if SQL Server Integration Services is running on the machine, even if all engine instances are passive, the Integration Services instance will be billed.
+### Associated SQL Server services on HADR servers
+
+SQL Server associated services, such as SQL Server Integration Services (SSIS), are evaluated separately from the SQL Server Database Engine for licensing and billing purposes. Configuring a Database Engine instance as an HADR or passive instance doesn't automatically establish the same passive status for other SQL Server associated services installed on the server.
+
+For regular pay-as-you-go usage, associated service running state is considered when determining usage. For Extended Security Updates (ESU), running state is not considered. An installed associated service can result in ESU billing even when the associated service isn't running.
+
+When multiple SQL Server versions are installed on the same server, eligibility should not be inferred solely from the Database Engine version. Associated services can have a different version and are evaluated according to the applicable eligibility requirements.
+
 
 ### Limitations
 

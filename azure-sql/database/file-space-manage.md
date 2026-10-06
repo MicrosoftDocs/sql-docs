@@ -398,9 +398,9 @@ FROM sys.allocation_units;
 If the amount of LOB data is significant, consider the following workarounds that remove empty space from LOB pages and make shrink faster:
 
 - Reorganize indexes that have LOB columns to compact LOB data. For more information, see [Reorganize indexes before shrink](#reorganize-indexes-before-shrink).
-- Rebuild indexes that have LOB columns on a *different* filegroup or partition scheme using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
+- Rebuild indexes that have LOB columns on a *different* filegroup or partition scheme by using a `CREATE INDEX ... WITH (DROP_EXISTING = ON) ON <filegroup_or_partition_scheme>` statement. For more information, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql).
 
-The workarounds are particularly effective after a large amount of LOB data has been deleted.
+The workarounds are particularly effective after a large amount of LOB data is deleted.
 
 ## Transient errors during shrink
 

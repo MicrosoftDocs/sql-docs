@@ -144,7 +144,11 @@ Run the following **`mssql-conf`** commands to set each policy property.
 
 ## Limitations
 
-Before [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 23 and [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] CU 3, the `passwordminimumlength` parameter can't be set to more than 14 characters.
+Custom password policies are supported as follows:
+
+- In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 23, the `passwordminimumlength` parameter supports values up to 14 characters.  
+
+- In [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] CU 3 and later versions, the `passwordminimumlength` parameter supports values with more than 14 characters.
 
 Changes to the group password policy in Active Directory don't automatically propagate. Run `adutil updatepasswordpolicy` to refresh `mssql.conf` after each change, or set the values manually by using **`mssql-conf`** if the Linux host isn't joined to the domain.
 

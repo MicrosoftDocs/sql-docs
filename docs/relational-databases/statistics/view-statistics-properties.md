@@ -81,7 +81,7 @@ In Fabric Data Warehouse and the SQL analytics endpoint, you must have `SELECT` 
      Average number of bytes per value for all of the key columns in the statistics object.  
   
      **String Index**  
-     Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the LIKE operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it is of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext**.  
+     Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the LIKE operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it is of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext**, with the exception of **char** and **varchar** columns using a UTF-8 collation.
   
      **Filter Expression**  
      Predicate for the subset of table rows included in the statistics object. NULL = non-filtered statistics.  

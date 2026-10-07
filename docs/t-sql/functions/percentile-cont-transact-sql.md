@@ -38,15 +38,11 @@ PERCENTILE_CONT ( numeric_literal )
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )
 ```
 
-:::moniker-end
-
 Analytic function syntax:
-
+:::moniker-end
 ```syntaxsql
 PERCENTILE_CONT ( numeric_literal )
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] 
-    [ OVER ( [ <partition_by_clause> ] ) ]
-    )
     OVER ( [ <partition_by_clause> ] )
 ```
 

@@ -4,7 +4,7 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest, hudequei
-ms.date: 07/29/2026
+ms.date: 10/07/2026
 ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: how-to
@@ -13,7 +13,9 @@ ms.custom:
   - devx-track-azurepowershell
   - devx-track-azurecli
 ---
+
 # Copy a transactionally consistent copy of a database in Azure SQL Database
+
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Azure SQL Database provides several methods for creating a copy of an existing [database](single-database-overview.md) on either the same Azure SQL Database logical server or a different logical server. You can copy a database by using Azure portal, PowerShell, Azure CLI, or Transact-SQL.
@@ -31,11 +33,11 @@ After the copy is complete, the new database is a fully functional and independe
 
 ## Database copy for Hyperscale databases
 
-For databases in the [Hyperscale service tier](service-tier-hyperscale.md), the target database determines whether the copy is a fast copy or a size-of-data copy: 
+For databases in the [Hyperscale service tier](service-tier-hyperscale.md), the target database determines whether the copy is a fast copy or a slower size-of-data copy: 
 
-- **Fast copy**: When the copy is done in the same region as the source, the copy is created from the snapshots of blobs, this copy is a fast operation regardless of the database size.
+- **Fast copy**: When the copy is done in the same region as the source, the copy is created from the snapshots of blobs, this copy is a fast operation.
 
-- **Size-of-data copy**: When the target database is in a different region than the source, or if the database backup storage redundancy (Local, Zonal, Geo) from the target differs from the source database, the copy operation is a size-of-data operation. Copy time isn't directly proportional to size, as page server blobs are copied in parallel.
+- **Size-of-data copy**: When the target database is in a different region than the source, or if the database backup storage redundancy (Local, Zonal, Geo) of the target database differs from the source database, the copy operation is a slower size-of-data operation. Copy time isn't directly proportional to size because page server data is copied in parallel.
 
 ## Logins in the database copy
 

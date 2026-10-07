@@ -3,7 +3,7 @@ title: "sys.query_store_plan_forcing_locations (Transact-SQL)"
 description: "The sys.query_store_plan_forcing_locations system view contains information about where Query Store plans have been forced on secondary replicas."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/05/2026
+ms.date: 10/06/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,9 +23,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-current
 
 [!INCLUDE [sqlserver2025-asdb](../../includes/applies-to-version/sqlserver2025-asdb.md)]
 
-Contains information about Query Store plans that have been forced on secondary replicas using [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md), when Query Store for secondary replicas is enabled. You can use this information to determine what queries have plans forced on different replica sets.
-
-Query Store for secondary replicas is supported starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, and in Azure SQL Database. For complete platform support, see [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md).
+Contains information about Query Store plans that are forced by using [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md). Use this information to determine which queries have plans forced on a database's read/write replica (primary) and one or more read-only replicas.
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
@@ -47,25 +45,33 @@ Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Example
 
-Use `sys.query_store_plan_forcing_locations`, joined with [sys.query_store_replicas](sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-secondary-replicas.md).
+Use `sys.query_store_plan_forcing_locations`, joined with [sys.query_store_replicas](sys-query-store-replicas.md), to retrieve the top 20 Query Store plans that have been forced.
 
 ```sql
-SELECT qsp.query_plan
-FROM sys.query_store_plan AS qsp
-INNER JOIN sys.query_store_plan_forcing_locations AS pfl
-    ON pfl.query_id = qsp.query_id
-    AND pfl.plan_id = qsp.plan_id
+SELECT TOP (20)
+    pfl.query_id,
+    pfl.plan_id,
+    CASE qsr.replica_group_id
+        WHEN 1 THEN 'PRIMARY'
+        WHEN 2 THEN 'SECONDARY'
+        WHEN 3 THEN 'GEO SECONDARY'
+        WHEN 4 THEN 'GEO HA SECONDARY'
+        ELSE CONCAT('REPLICA_', qsr.replica_group_id)
+    END AS replica_type,
+    pfl.[timestamp],
+    pfl.plan_forcing_type_desc
+FROM sys.query_store_plan_forcing_locations AS pfl
 INNER JOIN sys.query_store_replicas AS qsr
     ON qsr.replica_group_id = pfl.replica_group_id
-WHERE qsr.replica_name = N'yourSecondaryReplicaName';
+ORDER BY pfl.[timestamp] DESC;
 ```
 
 ## Related content
 
 - [sys.query_store_replicas (Transact-SQL)](sys-query-store-replicas.md)
 - [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [Query Store for readable secondary replicas](../performance/query-store-for-secondary-replicas.md).
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
 - [sys.query_store_plan (Transact-SQL)](sys-query-store-plan-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](sys-query-store-query-transact-sql.md)
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-- [Best practices for monitoring workloads with Query Store](../performance/best-practice-with-the-query-store.md)

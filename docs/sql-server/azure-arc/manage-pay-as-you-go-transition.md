@@ -133,7 +133,7 @@ If connectivity is restored within 30 days, pay-as-you-go billing resumes based 
 
 ## Recurring billing consent
 
-An explicit consent is required to select the pay-as-you-go billing for SQL Server in the CSP-managed Azure subscriptions.
+An explicit consent is required to select the pay-as-you-go billing for SQL Server in the CSP-managed Azure subscriptions. Users are prompted to provide this consent when enabling pay-as-you-go billing.
 
 Consent is recorded by adding a `ConsentToRecurringPAYG` property to the Azure extension for SQL Server resource. It consists of the two values:
 

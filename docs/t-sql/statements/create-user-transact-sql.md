@@ -590,6 +590,9 @@ EXEC (@cmd);
 
 The following example creates a database user for the Microsoft Entra service principal, named `HRApp`. Replace `<unique identifier sid>` with the SID of the new user to the client ID of the service principal in Microsoft Entra.
 
+> [!NOTE]  
+> Use the **client ID**, not the **object ID**, when specifying a Microsoft Entra service principal, User-Assigned Managed Identity (UAMI), or System-Assigned Managed Identity (SAMI).
+
 ```sql
 DECLARE @principal_name SYSNAME = 'HRApp';
 DECLARE @clientId UNIQUEIDENTIFIER = '<unique identifier sid>'; -- principal's client ID in Microsoft Entra

@@ -5,7 +5,7 @@ author: markingmyname
 ms.author: maghan
 ms.topic: concept-article 
 ai-usage: ai-assisted
-ms.date: 04/01/2026
+ms.date: 10/07/2026
 ms.custom: sfi-image-nochange
 
 # ms.service: sql defined in docfx.json
@@ -202,6 +202,8 @@ The different features and services have specific security configuration aspects
 ### Audit activity
 
 You can access the activity logs from the service menu for the SQL Server enabled by Azure Arc resource in Azure portal. The activity log captures auditing information and change history for Arc-enabled SQL Server resources in Azure Resource Manager. For details, review [Use activity logs with SQL Server enabled by Azure Arc](activity-logs.md).
+
+In addition, the Azure Extension for SQL Server writes audit events to the Windows Application event log when [just-in-time SQL permissions](configure-windows-accounts-agent.md#audit-events-for-just-in-time-permission-changes) are enabled or disabled. These events provide a local, on-server audit trail for privilege elevation and revocation.
 
 ### Best practices assessment
 

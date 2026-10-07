@@ -4,7 +4,7 @@ description: Get acquainted with permissions required to start and run Azure Ext
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: safeitle, randolphwest
-ms.date: 04/28/2026
+ms.date: 10/07/2026
 ms.topic: reference
 ---
 
@@ -289,6 +289,40 @@ Just-in-time permissions are assigned to the service account:
 Currently, the following feature uses just-in-time permissions:
 
 - [Database migration](#database-migration) when using the Managed Instance link migration option.
+
+### Audit events for just-in-time permission changes
+
+When just-in-time SQL permissions are successfully enabled or disabled, the Azure Extension for SQL Server writes an informational entry to the Windows Application event log. These events provide an auditable record of privilege elevation and revocation.
+
+| Event ID | Description |
+| --- | --- |
+| `65400` | Just-in-time SQL permissions were successfully enabled for a SQL Server instance. |
+| `65401` | Just-in-time SQL permissions were successfully disabled for a SQL Server instance. |
+
+Both events are written to the **Application** log with an entry type of **Information**. The event source is `SqlServerExtension`.
+
+#### Event message format
+
+**Event 65400 (enabled)**:
+
+```output
+Just-in-time SQL permissions enabled. CorrelationId: <correlation-id>. Instance: <instance-name>. Privileges: <privilege-list>
+```
+
+Where `<privilege-list>` is a comma-separated list of the privileges that were enabled, in the format `PrivilegeName:ObjectName` (or `PrivilegeName:N/A` when no specific object is targeted). If no privileges were requested, the list shows `(none)`.
+
+**Event 65401 (disabled)**:
+
+```output
+Just-in-time SQL permissions disabled. CorrelationId: <correlation-id>. Instance: <instance-name>.
+```
+
+#### How to view the events
+
+To view these events, open **Windows Event Viewer** and navigate to **Windows Logs** > **Application**. Filter by Event source 'SqlServerExtension' and Event ID `65400` or `65401`.
+
+> [!NOTE]  
+> These events are only raised on confirmed success. If the enable or disable operation fails, no event is written. Failures in event logging itself are caught and logged as warnings in the extension log file, but don't affect the underlying operation.
 
 ## Additional permissions
 

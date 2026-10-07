@@ -4,7 +4,7 @@ description: The SET TIME ZONE statements set a time zone value in Azure SQL Dat
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 09/20/2026
+ms.date: 10/06/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -37,13 +37,13 @@ The `SET TIME ZONE` Transact-SQL (T-SQL) statement is used to set a time zone va
 ## Syntax
 
 ```syntaxsql
-SET TIME ZONE { 'time_zone_value' | 'LOCAL' }
+SET TIME ZONE { 'time_zone_value' | LOCAL }
 [ ; ]
 ```
 
 ## Arguments
 
-#### { '*time_zone_value*' | 'LOCAL' }
+#### { '*time_zone_value*' | LOCAL }
 
 Specifies the time zone value. *time_zone_value* is **nvarchar(128)**, with a default of `LOCAL`.
 
@@ -104,14 +104,16 @@ The following example sets the database scoped time zone to New Zealand Standard
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TIME_ZONE = 'New Zealand Standard Time';
-GO
 
 SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
        CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
        SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
        SYSDATETIME() AS CurrentLocalDateTime2,
-       GETDATE() AS CurrentLocalDateTime3,
-       CURRENT_TIMESTAMP AS CurrentLocalDateTime4;
+       GETDATE() AS CurrentLocalDateTime,
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime2,
+       s.time_zone AS session_time_zone
+FROM sys.dm_exec_sessions AS s
+WHERE s.session_id = @@SPID;
 ```
 
 ### C. Reset the database-scoped time zone to the default
@@ -120,14 +122,16 @@ The following example sets the database scoped time zone back to `LOCAL`, then r
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TIME_ZONE = LOCAL;
-GO
 
 SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
        CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
        SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
        SYSDATETIME() AS CurrentLocalDateTime2,
        GETDATE() AS CurrentLocalDateTime,
-       CURRENT_TIMESTAMP AS CurrentLocalDateTime2;
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime2,
+       s.time_zone AS session_time_zone
+FROM sys.dm_exec_sessions AS s
+WHERE s.session_id = @@SPID;
 ```
 
 ### D. Set the time zone at the session level
@@ -136,25 +140,6 @@ The following example sets the session time zone to Pacific Standard Time and th
 
 ```sql
 SET TIME ZONE 'Pacific Standard Time';
-
-SELECT CURRENT_TIMEZONE() AS CurrentTimeZone, CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
-       SYSDATETIMEOFFSET() AS CurrentDateTimeOffset, SYSDATETIME() AS CurrentLocalDateTime2,
-       GETDATE() AS CurrentLocalDateTime3, CURRENT_TIMESTAMP AS CurrentLocalDateTime4;
-GO
-
-SET TIME ZONE 'India Standard Time';
-
-SELECT CURRENT_TIMEZONE() AS CurrentTimeZone, CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
-       SYSDATETIMEOFFSET() AS CurrentDateTimeOffset, SYSDATETIME() AS CurrentLocalDateTime2,
-       GETDATE() AS CurrentLocalDateTime3, CURRENT_TIMESTAMP AS CurrentLocalDateTime4;
-```
-
-### E. Reset the session time zone to the default
-
-The following example resets the session to the instance or platform default time zone.
-
-```sql
-SET TIME ZONE local;
 GO
 
 SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
@@ -162,7 +147,44 @@ SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
        SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
        SYSDATETIME() AS CurrentLocalDateTime2,
        GETDATE() AS CurrentLocalDateTime3,
-       CURRENT_TIMESTAMP AS CurrentLocalDateTime4;
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime4,
+       s.time_zone AS session_time_zone
+FROM sys.dm_exec_sessions AS s
+WHERE s.session_id = @@SPID;
+GO
+
+SET TIME ZONE 'India Standard Time';
+GO
+
+SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
+       CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
+       SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
+       SYSDATETIME() AS CurrentLocalDateTime2,
+       GETDATE() AS CurrentLocalDateTime3,
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime4,
+       s.time_zone AS session_time_zone
+FROM sys.dm_exec_sessions AS s
+WHERE s.session_id = @@SPID;
+GO
+```
+
+### E. Reset the session time zone to the default
+
+The following example resets the session to the instance or platform default time zone.
+
+```sql
+SET TIME ZONE LOCAL;
+GO
+
+SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
+       CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
+       SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
+       SYSDATETIME() AS CurrentLocalDateTime2,
+       GETDATE() AS CurrentLocalDateTime3,
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime4,
+       s.time_zone AS session_time_zone
+FROM sys.dm_exec_sessions AS s
+WHERE s.session_id = @@SPID;
 ```
 
 ### F. System views always return the instance time zone
@@ -170,14 +192,20 @@ SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
 System views that include time values always return the instance time zone, regardless of the session or database time zone.
 
 ```sql
-SELECT *
-FROM sys.dm_exec_sessions;
+SET TIME ZONE 'India Standard Time';
+GO
 
-SELECT *
+SELECT CURRENT_TIMEZONE_ID() as current_time_zone_id, *
+FROM sys.dm_exec_sessions
+WHERE session_id = @@SPID;
+
+SELECT CURRENT_TIMEZONE_ID() as current_time_zone_id, *
 FROM sys.dm_exec_query_stats;
 
-SELECT *
+SELECT CURRENT_TIMEZONE_ID() as current_time_zone_id, *
 FROM sys.objects;
+
+SET TIME ZONE LOCAL;
 ```
 
 ## Related content

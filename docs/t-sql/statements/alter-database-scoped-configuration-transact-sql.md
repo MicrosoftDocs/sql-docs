@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw, bobward, jovanpop, mariyaali, randolphwest
-ms.date: 09/20/2026
+ms.date: 10/06/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -61,6 +61,7 @@ The following settings are supported in [!INCLUDE [ssazure-sqldb](../../includes
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
 - Enable or disable uploading ledger digests to Azure Blob Storage.
 - Set the default [full-text index](../../relational-databases/search/full-text-search.md) version (`1` or `2`).
+- Set the default time zone for the database.
 - In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], sets the compatibility level of a user database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -176,7 +177,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | READABLE_SECONDARY_TEMPORARY_STATS_AUTO_CREATE = { ON | OFF | PRIMARY }
     | READABLE_SECONDARY_TEMPORARY_STATS_AUTO_UPDATE = { ON | OFF | PRIMARY }
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
-    | TIME_ZONE = { 'time_zone_value' | 'LOCAL' }
+    | TIME_ZONE = { 'time_zone_value' | LOCAL }
     | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
@@ -621,7 +622,7 @@ For database compatibility level 140 or lower versions, this database scoped con
 
 <a id="local-time-zone"></a>
 
-#### TIME_ZONE = { '*time_zone_value*' | 'LOCAL' }
+#### TIME_ZONE = { '*time_zone_value*' | LOCAL }
 
 **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
@@ -962,6 +963,38 @@ WHERE [name] = 'ALLOW_STALE_VECTOR_INDEX';
 When `ALLOW_STALE_VECTOR_INDEX = ON`, the earlier vector index isn't updated when you insert or update new data in the table. To refresh the vector index, you must drop and recreate it. The latest vector index version supports DML operations and automatic index maintenance without this configuration.
 
 This configuration option isn't currently available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+
+### P. Set the time zone at the database level
+
+The following example sets the database scoped time zone to New Zealand Standard Time, then reviews the affected functions.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET TIME_ZONE = 'New Zealand Standard Time';
+GO
+
+SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
+       CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
+       SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
+       SYSDATETIME() AS CurrentLocalDateTime2,
+       GETDATE() AS CurrentLocalDateTime3,
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime4;
+```
+
+### Q. Reset the database-scoped time zone to the default
+
+The following example sets the database scoped time zone back to `LOCAL`, then reviews the affected functions.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET TIME_ZONE = LOCAL;
+GO
+
+SELECT CURRENT_TIMEZONE() AS CurrentTimeZone,
+       CURRENT_TIMEZONE_ID() AS CurrentTimeZoneId,
+       SYSDATETIMEOFFSET() AS CurrentDateTimeOffset,
+       SYSDATETIME() AS CurrentLocalDateTime2,
+       GETDATE() AS CurrentLocalDateTime,
+       CURRENT_TIMESTAMP AS CurrentLocalDateTime2;
+```
 
 ## Related content
 

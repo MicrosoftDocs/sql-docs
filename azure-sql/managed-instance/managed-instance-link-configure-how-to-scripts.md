@@ -5,7 +5,7 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: djordje-jeremic
 ms.author: djjeremi
 ms.reviewer: mathoma, djjeremi
-ms.date: 09/28/2026
+ms.date: 10/07/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurepowershell, devx-track-azurecli, ignite-2023, build-2024
@@ -783,7 +783,21 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 $SourceIP = "TCP://" + $SQLServerIP + ":"+$EndpointPort
 
 # Create the link on SQL Managed Instance and join the distributed availability group on SQL Server.
-New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName -PartnerAvailabilityGroupName $AGNameOnSQLServer -InstanceAvailabilityGroupName $AGNameOnSQLMI -Database @($DatabaseName) -PartnerEndpoint $SourceIP -InstanceLinkRole "Secondary" -FailoverMode "Manual" -SeedingMode "Automatic" -LinkMode "SingleDatabase"
+$AzSqlInstanceLinkParameters = @{
+    ResourceGroupName             = $ResourceGroup
+    InstanceName                  = $ManagedInstanceName
+    Name                          = $DAGName
+    PartnerAvailabilityGroupName  = $AGNameOnSQLServer
+    InstanceAvailabilityGroupName = $AGNameOnSQLMI
+    Database                      = @($DatabaseName)
+    PartnerEndpoint               = $SourceIP
+    InstanceLinkRole              = 'Secondary'
+    FailoverMode                  = 'Manual'
+    SeedingMode                   = 'Automatic'
+    LinkMode                      = 'SingleDatabase'
+}
+
+New-AzSqlInstanceLink @AzSqlInstanceLinkParameters
 ```
 
 
@@ -846,7 +860,21 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 $DestinationIP = "TCP://" + $SQLServerIP + ":"+$EndpointPort
 
 # Create the link on SQL Managed Instance and join the distributed availability group on SQL Server.
-New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName -PartnerAvailabilityGroupName $AGNameOnSQLServer -InstanceAvailabilityGroupName $AGNameOnSQLMI -Database @($DatabaseName) -PartnerEndpoint $DestinationIP -InstanceLinkRole "Primary" -FailoverMode "Manual" -SeedingMode "Automatic" -LinkMode "SingleDatabase"
+$AzSqlInstanceLinkParameters = @{
+    ResourceGroupName             = $ResourceGroup
+    InstanceName                  = $ManagedInstanceName
+    Name                          = $DAGName
+    PartnerAvailabilityGroupName  = $AGNameOnSQLServer
+    InstanceAvailabilityGroupName = $AGNameOnSQLMI
+    Database                      = @($DatabaseName)
+    PartnerEndpoint               = $DestinationIP
+    InstanceLinkRole              = 'Primary'
+    FailoverMode                  = 'Manual'
+    SeedingMode                   = 'Automatic'
+    LinkMode                      = 'SingleDatabase'
+}
+
+New-AzSqlInstanceLink @AzSqlInstanceLinkParameters
 ```
 
 ---

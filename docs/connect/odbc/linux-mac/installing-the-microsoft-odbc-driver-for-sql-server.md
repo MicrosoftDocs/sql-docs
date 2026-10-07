@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/19/2026
+ms.date: 10/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -85,7 +85,7 @@ echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
-# optional: kerberos library for debian-slim distributions
+# required: the driver links libgssapi_krb5.so.2 but the package doesn't declare it
 sudo apt-get install -y libgssapi-krb5-2
 ```
 
@@ -275,7 +275,7 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
-# optional: kerberos library for debian-slim distributions
+# required: the driver links libgssapi_krb5.so.2 but the package doesn't declare it
 sudo apt-get install -y libgssapi-krb5-2
 ```
 

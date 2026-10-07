@@ -1,11 +1,11 @@
 ---
 title: Security Overview
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
-description: Learn about security in Azure SQL Database and Azure SQL Managed Instance and Azure Synapse Analytics, including how it differs from SQL Server.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn about security in Azure SQL Database and Azure SQL Managed Instance, including how it differs from SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jaszymas, vanto, emlisa, mathoma, maghan
-ms.date: 01/23/2026
+ms.reviewer: jaszymas, vanto, emlisa
+ms.date: 10/06/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
@@ -16,19 +16,19 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 # An overview of Azure SQL Database and SQL Managed Instance security capabilities
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-This article outlines the basics of securing the data tier of an application that uses [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). The security strategy described in this article follows the layered defense-in-depth approach as shown in the following diagram, and moves from the outside in:
+This article outlines the basics of securing the data tier of an application that uses [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md). The security strategy described in this article follows the layered defense-in-depth approach as shown in the following diagram, and moves from the outside in:
 
 :::image type="content" source="media/security-overview/sql-security-layer.png" alt-text="Diagram of layered defense-in-depth. Customer data is encased in layers of network security, access management, and threat and information protections." lightbox="media/security-overview/sql-security-layer.png":::
 
 ## Network security
 
-Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until you explicitly grant access based on IP address or Azure Virtual network traffic origin.
+Azure SQL Database and Azure SQL Managed Instance provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until you explicitly grant access based on IP address or Azure Virtual network traffic origin.
 
 ### IP firewall rules
 
-IP firewall rules grant access to databases based on the originating IP address of each request. For more information, see [Overview of Azure SQL Database and Azure Synapse Analytics firewall rules](firewall-configure.md).
+IP firewall rules grant access to databases based on the originating IP address of each request. For more information, see [Azure SQL Database firewall rules](firewall-configure.md).
 
 ### Virtual network firewall rules
 
@@ -56,7 +56,7 @@ Authentication is the process of proving the user is who they claim to be. Azure
 
 - **Microsoft Entra authentication**:
 
-    Microsoft Entra authentication is a mechanism to connect to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) by using identities in Microsoft Entra ID. Microsoft Entra authentication allows administrators to centrally manage the identities and permissions of database users along with other Azure services in one central location. This feature can help eliminate the use of secrets and passwords.
+    Microsoft Entra authentication is a mechanism to connect to [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) by using identities in Microsoft Entra ID. Microsoft Entra authentication allows administrators to centrally manage the identities and permissions of database users along with other Azure services in one central location. This feature can help eliminate the use of secrets and passwords.
 
      To use Microsoft Entra authentication with SQL Database, create a server admin called the **Microsoft Entra administrator**. For more information, see [Connecting to SQL Database with Microsoft Entra authentication](authentication-aad-overview.md). Microsoft Entra authentication supports both managed and federated accounts. The federated accounts support Windows users and groups for a customer domain federated with Microsoft Entra ID.
 
@@ -108,9 +108,9 @@ Advanced Threat Protection analyzes your logs to detect unusual behavior and pot
 
 ### Transport Layer Security (encryption-in-transit)
 
-SQL Database, SQL Managed Instance, and Azure Synapse Analytics secure customer data by encrypting data in motion with [Transport Layer Security (TLS)](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server). These services always enforce TLS encrypted connections to ensure all data is encrypted in transit between the client and server.
+SQL Database and SQL Managed Instance secure customer data by encrypting data in motion with [Transport Layer Security (TLS)](/troubleshoot/sql/database-engine/connect/tls-1-2-support-microsoft-sql-server). These services always enforce TLS encrypted connections to ensure all data is encrypted in transit between the client and server.
 
-Specifically, SQL Database, SQL Managed Instance, and Azure Synapse Analytics set the configuration flag `ForceEncryption` to `Yes`. Clients and drivers must support encrypted connections to connect to these services. The lowest version of the TDS protocol that can connect is TDS 7.1.
+Specifically, SQL Database and SQL Managed Instance set the configuration flag `ForceEncryption` to `Yes`. Clients and drivers must support encrypted connections to connect to these services. The lowest version of the TDS protocol that can connect is TDS 7.1.
 
 As a best practice, if you have [TDS 8.0](/sql/relational-databases/security/networking/tds-8)-capable SQL drivers, use [Strict connection encryption](/sql/relational-databases/security/networking/tds-8#strict-connection-encryption). 
 
@@ -127,7 +127,7 @@ For example, when using the ADO.NET driver to connect to your managed instance `
 
 ### Transparent data encryption (encryption-at-rest) with service-managed keys
 
-[Transparent data encryption (TDE) for SQL Database, SQL Managed Instance, and Azure Synapse Analytics](transparent-data-encryption-tde-overview.md) adds a layer of security to help protect data at rest from unauthorized or offline access to raw files or backups. Common scenarios include data center theft or unsecured disposal of hardware or media such as disk drives and backup tapes. TDE encrypts the entire database by using an AES encryption algorithm, which doesn't require application developers to make any changes to existing applications.
+[Transparent data encryption (TDE) for SQL Database and SQL Managed Instance](transparent-data-encryption-tde-overview.md) adds a layer of security to help protect data at rest from unauthorized or offline access to raw files or backups. Common scenarios include data center theft or unsecured disposal of hardware or media such as disk drives and backup tapes. TDE encrypts the entire database by using an AES encryption algorithm, which doesn't require application developers to make any changes to existing applications.
 
 In Azure, all newly created databases are encrypted by default and the database encryption key is protected by a built-in server certificate. The service manages certificate maintenance and rotation and requires no input from the user. If you prefer to take control of the encryption keys, you can manage the keys in [Azure Key Vault](/azure/key-vault/general/security-features).
 
@@ -171,7 +171,11 @@ For more information, see [Get started with data discovery and classification](d
 
 ### Compliance
 
-In addition to the features and functionality that help your application meet various security requirements, Azure SQL Database also participates in regular audits. It has been certified against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://www.microsoft.com/trust-center/compliance/compliance-overview) where you can find the most current list of SQL Database compliance certifications.
+In addition to the features and functionality that help your application meet various security requirements, Azure SQL Database also participates in regular audits. It is certified against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://www.microsoft.com/trust-center/compliance/compliance-overview) where you can find the most current list of SQL Database compliance certifications.
+
+## Security in Azure Synapse Analytics
+
+For information on security in Azure Synapse Analytics, see [Secure a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-manage-security) or [Aure Synapse Analytics connectivity settings](/azure/synapse-analytics/security/connectivity-settings).
 
 ## Related content
 

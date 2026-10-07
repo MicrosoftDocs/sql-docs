@@ -1,25 +1,25 @@
 ---
 title: Audit to Storage Account Behind VNet and Firewall
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: Configure auditing to write database events on a storage account behind virtual network and firewall
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/30/2026
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - azure-synapse
   - subject-rbac-steps
   - devx-track-arm-template
   - devx-track-azurepowershell
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # Write audit to a storage account behind VNet and firewall
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Auditing for [Azure SQL Database](sql-database-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) supports writing database events to an [Azure Storage account](/azure/storage/common/storage-account-overview) behind a virtual network and firewall.
+Auditing for [Azure SQL Database](sql-database-paas-overview.md) supports writing database events to an [Azure Storage account](/azure/storage/common/storage-account-overview) behind a virtual network and firewall.
 
 This article explains two ways to configure Azure SQL Database and Azure storage account for this option. The first uses the Azure portal, the second uses REST.
 
@@ -170,6 +170,11 @@ You can configure auditing to write database events on a storage account behind 
 
 > [!NOTE]
 > The linked sample is on an external public repository and is provided 'as is', without warranty, and aren't supported under any Microsoft support program/service.
+
+## Auditing in Azure Synapse Analytics
+
+For information about writing audit logs to a storage account behind a virtual network and firewall in Azure Synapse Analytics, see [Write audit logs to a storage account behind a virtual network and firewall](/azure/synapse-analytics/sql/audit-write-storage-account-behind-vnet-firewall).
+
 
 ## Related content
 

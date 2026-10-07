@@ -1,20 +1,21 @@
 ---
 title: Use Auditing to Analyze Audit Logs and Reports
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: Use Auditing to analyze logs in Log Analytics, Event Hubs, or through an Azure storage account.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, vanto
-ms.date: 09/17/2026
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # Use Auditing to analyze audit logs and reports
 
-[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides an overview of analyzing audit logs using Auditing for [Azure SQL Database](sql-database-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). You can use Auditing to analyze audit logs stored in:
+This article provides an overview of analyzing audit logs by using Auditing for [Azure SQL Database](sql-database-paas-overview.md). You can use Auditing to analyze audit logs stored in:
 
 - Log Analytics
 - Event Hubs
@@ -91,8 +92,12 @@ If you chose to write audit logs to an Azure storage account, there are several 
 - After downloading several files or a subfolder that contains log files, you can merge them locally as described in the SSMS Merge Audit Files instructions described previously.
 - View blob auditing logs programmatically: [Query Extended Events Files](https://sqlscope.wordpress.com/2014/11/15/reading-extended-event-files-using-client-side-tools-only/) by using PowerShell.
 
+## Auditing in Azure Synapse Analytics
+
+For information about analyzing audit logs in Azure Synapse Analytics, see [Analyze audit logs and reports](/azure/synapse-analytics/sql/auditing-analyze-audit-logs).
+
 ## Related content
 
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

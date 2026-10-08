@@ -34,7 +34,7 @@ For more information, see [the Supported platforms section in the installation g
 - [Install SQL Server on Linux](setup.md) and verify the installation.
 
 - Check the SQL Server Linux repositories for the Python and R extensions.
-  If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility** package install commands using the same repo registration.
+  If you already configured source repositories for the database engine install, you can run the `mssql-server-extensibility` package install commands using the same repo registration.
 
 - You should have a tool for running Transact-SQL (T-SQL) commands.
 

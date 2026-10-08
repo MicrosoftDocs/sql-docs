@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/07/2026
+ms.date: 10/08/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
@@ -22,40 +22,35 @@ ms.custom:
 
 In this quickstart, you install [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
-
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
 
 In this quickstart, you install [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
 
-For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
-
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
 ::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
 
-In this quickstart, you install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x or 9.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
-
-If you want to automate your installation using Ansible, see [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](deploy-ansible.md).
-
-For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
+In this quickstart, you install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Red Hat Enterprise Linux (RHEL) 9.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2025 on Linux-->
 ::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-In this quickstart, you install [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] on Red Hat Enterprise Linux (RHEL) 9.x or 10.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
+In this quickstart, you install [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] on Red Hat Enterprise Linux (RHEL) 10.x. Then you connect by using **`sqlcmd`** to create your first database and run queries.
 
 > [!NOTE]  
-> Red Hat 9 includes support for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and TLS 1.3, which is enabled by default. Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 1, Red Hat 10 is supported.
+> [!INCLUDE [rhel-9](../includes/rhel-9.md)] [!INCLUDE [rhel-10](../includes/rhel-10.md)] TLS 1.3 is enabled by default on [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+
+::: moniker-end
+::: moniker range=">=sql-server-linux-ver16 || >=sql-server-ver16"
 
 If you want to automate your installation using Ansible, see [Quickstart: Deploy SQL Server on Linux using an Ansible playbook](deploy-ansible.md).
 
-For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
-
 ::: moniker-end
+
+For more information on supported platforms, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 > [!TIP]  
 > This quickstart requires user input and an internet connection. If you're interested in the [unattended](setup.md#unattended) or [offline](setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](setup.md). If you choose to have a preinstalled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] VM on RHEL ready to run your production-based workload, follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
@@ -88,8 +83,7 @@ To ensure you configure your [!INCLUDE [ssnoversion-md](../../includes/ssnoversi
 
 ## Install SQL Server
 
-<!--SQL Server 2017 on Linux-->
-::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
+::: moniker range="<=sql-server-linux-ver15 || <=sql-server-ver15"
 
 The following commands for installing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] point to the RHEL 8 repository. RHEL 8 doesn't come with `python2` preinstalled, but [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires it. Before you begin the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] install steps, run the command and verify that `python2` is selected as the interpreter:
 
@@ -104,155 +98,8 @@ sudo alternatives --config python
 
 For more information, see the following blog on installing `python2` and configuring it as the default interpreter: <https://www.redhat.com/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta>.
 
-To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
-
-1. Download the [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] RHEL repository configuration file:
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
-   ```
-
-   > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2019](quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install), [SQL Server 2022](quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true#install), or [SQL Server 2025](quickstart-install-red-hat.md?view=sql-server-linux-ver17&preserve-view=true#install) versions of this article.
-
-1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
-
-   ```bash
-   sudo yum install -y mssql-server
-   ```
-
-1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-   > [!CAUTION]  
-   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
-1. When the configuration is done, verify that the service is running:
-
-   ```bash
-   systemctl status mssql-server
-   ```
-
-1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
-At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
-
 ::: moniker-end
-<!--SQL Server 2019 on Linux-->
-::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
-
-The following commands for installing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] point to the RHEL 8 repository. RHEL 8 doesn't come with `python2` preinstalled, but [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires it. Before you begin the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] install steps, run the command and verify that `python2` is selected as the interpreter:
-
-```bash
-sudo alternatives --config python
-# If not configured, install python2 and openssl10 using the following commands:
-sudo yum install python2
-sudo yum install compat-openssl10
-# Configure python2 as the default interpreter using this command:
-sudo alternatives --config python
-```
-
-For more information, see the following blog on installing `python2` and configuring it as the default interpreter: <https://www.redhat.com/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta>.
-
-To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
-
-1. Download the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] RHEL repository configuration file:
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
-   ```
-
-   > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2017](quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install), [SQL Server 2022](quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true#install), or [SQL Server 2025](quickstart-install-red-hat.md?view=sql-server-linux-ver17&preserve-view=true#install) versions of this article.
-
-1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
-
-   ```bash
-   sudo yum install -y mssql-server
-   ```
-
-1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-   > [!CAUTION]  
-   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
-1. When the configuration is done, verify that the service is running:
-
-   ```bash
-   systemctl status mssql-server
-   ```
-
-1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
-At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
-
-::: moniker-end
-<!--SQL Server 2022 on Linux-->
-::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
-
-### [RHEL 8](#tab/rhel8)
-
-The following commands for installing [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] point to the RHEL 8 repository.
-
-To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
-
-1. Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] RHEL 8 repository configuration file:
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
-   ```
-
-   > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2017](quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install) or [SQL Server 2019](quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install) versions of this article.
-
-1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
-
-   ```bash
-   sudo yum install -y mssql-server
-   ```
-
-1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-   > [!CAUTION]  
-   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
-1. When the configuration is done, verify that the service is running:
-
-   ```bash
-   systemctl status mssql-server
-   ```
-
-1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
-At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
-
-### [RHEL 9](#tab/rhel9)
+::: moniker range=">=sql-server-linux-ver16 || >=sql-server-ver16"
 
 Starting with RHEL 9, you can run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confined application with SELinux enabled. For more information about confined and unconfined applications with SELinux, see [Getting started with SELinux](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux).
 
@@ -271,160 +118,85 @@ To run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confin
 > [!NOTE]  
 > You can still install and run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as an unconfined application like in previous versions of RHEL.
 
-To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL 9, run the following commands in a terminal to install the `mssql-server` package:
+::: moniker-end
 
-1. Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] RHEL 9 repository configuration file:
+To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL, run the following commands in a terminal to install the `mssql-server` package:
 
-   ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo
-   ```
+<!--SQL Server 2017 on Linux-->
+::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
-   > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2017](quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install) or [SQL Server 2019](quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install) versions of this article.
+Download the [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] RHEL repository configuration file:
 
-1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
+```bash
+sudo curl -fsSL -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
+```
 
-   ```bash
-   sudo yum install -y mssql-server
-   ```
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
 
-   Optionally, if you want to run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
+Download the [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] RHEL repository configuration file:
 
-   ```bash
-   sudo yum install -y mssql-server-selinux
-   ```
+```bash
+sudo curl -fsSL -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+```
 
-1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
+::: moniker-end
+<!--SQL Server 2022 on Linux-->
+::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
 
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
+Download the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] RHEL 9 repository configuration file:
 
-   > [!CAUTION]  
-   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
-1. When the configuration is done, verify that the service is running:
-
-   ```bash
-   systemctl status mssql-server
-   ```
-
-1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
-At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
-
----
+```bash
+sudo curl -fsSL -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo
+```
 
 ::: moniker-end
 <!--SQL Server 2025 on Linux-->
 ::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-### [RHEL 9](#tab/2025rhel9)
+**Applies to**: [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 1 and later versions.
 
-To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL 9, run the following commands in a terminal to install the `mssql-server` package:
+Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] RHEL 10 repository configuration file:
 
-1. Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] RHEL 9 repository configuration file:
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2025.repo
-   ```
-
-   > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2017](quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install), [SQL Server 2019](quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install), or [SQL Server 2022](quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true#install) versions of this article.
-
-1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
-
-   ```bash
-   sudo yum install -y mssql-server
-   ```
-
-   Optionally, if you want to run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
-
-   ```bash
-   sudo yum install -y mssql-server-selinux
-   ```
-
-1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-   > [!CAUTION]  
-   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
-1. When the configuration is done, verify that the service is running:
-
-   ```bash
-   systemctl status mssql-server
-   ```
-
-1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
-At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
-
-### [RHEL 10](#tab/2025rhel10)
-
-To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on RHEL 10, run the following commands in a terminal to install the `mssql-server` package:
-
-1. Download the [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] RHEL 10 repository configuration file:
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/10/mssql-server-2025.repo
-   ```
-
-   > [!TIP]  
-   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2017](quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install), [SQL Server 2019](quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install), or [SQL Server 2022](quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true#install) versions of this article.
-
-1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
-
-   ```bash
-   sudo yum install -y mssql-server
-   ```
-
-   Optionally, if you want to run [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
-
-   ```bash
-   sudo yum install -y mssql-server-selinux
-   ```
-
-1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-   > [!CAUTION]  
-   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
-
-1. When the configuration is done, verify that the service is running:
-
-   ```bash
-   systemctl status mssql-server
-   ```
-
-1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
-At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
-
----
+```bash
+curl -fsSL https://packages.microsoft.com/config/rhel/10/mssql-server-2025.repo | sudo tee /etc/yum.repos.d/mssql-server-2025.repo
+```
 
 ::: moniker-end
+
+> [!TIP]  
+> To install a different version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see the [SQL Server 2017](quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true#install), [SQL Server 2019](quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true#install), [SQL Server 2022](quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true#install), or [SQL Server 2025](quickstart-install-red-hat.md?view=sql-server-linux-ver17&preserve-view=true#install) versions of this article.
+
+1. Run the following command to install [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
+
+   ```bash
+   sudo yum install -y mssql-server
+   ```
+
+1. After the package installation finishes, run `mssql-conf setup` by using its full path. Follow the prompts to set the `sa` password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   > [!CAUTION]  
+   > [!INCLUDE [password-complexity](../includes/password-complexity.md)]
+
+1. When the configuration is done, verify that the service is running:
+
+   ```bash
+   systemctl status mssql-server --no-pager
+   ```
+
+1. To allow remote connections, open the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port on the RHEL firewall. The default [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] port is TCP 1433. If you're using **FirewallD** for your firewall, use the following commands:
+
+   ```bash
+   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+   sudo firewall-cmd --reload
+   ```
+
+At this point, [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use.
 
 ## Disable the `sa` account as a best practice
 

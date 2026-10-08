@@ -90,7 +90,7 @@ To work around this issue, use one of the following options:
 Although TLS 1.3 is supported on [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] for Windows, you must use TLS 1.2 on Linux.
 
 > [!NOTE]  
-> TLS 1.3 is supported for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] on Ubuntu 22.04, Ubuntu 24.04, RHEL 9, and RHEL 10. TLS 1.3 is enabled by default.
+> TLS 1.3 is supported and enabled by default for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] on Linux.
 
 ### Network File System (NFS)
 

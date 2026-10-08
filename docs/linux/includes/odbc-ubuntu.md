@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/07/2026
+ms.date: 10/08/2026
 ms.service: sql
 ms.topic: include
 ms.custom:
@@ -11,118 +11,75 @@ ms.custom:
 
 Use the following steps to install the **mssql-tools18** on Ubuntu.
 
-- Ubuntu 24.04 is supported starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU 1.
-- Ubuntu 22.04 is supported starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 10.
-- Ubuntu 20.04 is supported starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 10.
-- Ubuntu 18.04 is supported starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 3.
+- [!INCLUDE [ubuntu-2404](ubuntu-2404.md)]
+- [!INCLUDE [ubuntu-2204](ubuntu-2204.md)]
+- [!INCLUDE [ubuntu-2004](ubuntu-2004.md)]
+- [!INCLUDE [ubuntu-1804](ubuntu-1804.md)]
 
-### [Ubuntu 18.04](#tab/odbc-ubuntu-1804)
+<!--SQL Server 2017 on Linux-->
+::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
-1. Enter superuser mode.
+Import the public repository GPG keys.
 
-   ```bash
-   sudo su
-   ```
+```bash
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+```
 
-1. Import the public repository GPG keys.
+Register the Microsoft Ubuntu repository.
 
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
-   ```
+```bash
+curl -fsSL https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+```
 
-1. Register the Microsoft Ubuntu repository.
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range="=sql-server-linux-ver15 || =sql-server-ver15"
 
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
-   ```
+Import the public repository GPG keys.
 
-1. Exit superuser mode.
+```bash
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+```
 
-   ```bash
-   exit
-   ```
+Register the Microsoft Ubuntu repository.
 
-### [Ubuntu 20.04](#tab/odbc-ubuntu-2004)
+```bash
+curl -fsSL https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+```
 
-1. Enter superuser mode.
+::: moniker-end
+<!--SQL Server 2022 on Linux-->
+::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
 
-   ```bash
-   sudo su
-   ```
+Import the public repository GPG keys.
 
-1. Import the public repository GPG keys.
+```bash
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+```
 
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
-   ```
+Register the Microsoft Ubuntu repository.
 
-1. Register the Microsoft Ubuntu repository.
+```bash
+curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+```
 
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
-   ```
+::: moniker-end
+<!--SQL Server 2025 on Linux-->
+::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-1. Exit superuser mode.
+Download the public key, convert it from ASCII to GPG format, and write it to the required location.
 
-   ```bash
-   exit
-   ```
+```bash
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --batch --yes --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+```
 
-### [Ubuntu 22.04](#tab/odbc-ubuntu-2204)
+Register the Microsoft Ubuntu repository.
 
-1. Enter superuser mode.
+```bash
+curl -fsSL https://packages.microsoft.com/config/ubuntu/24.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+```
 
-   ```bash
-   sudo su
-   ```
-
-1. Import the public repository GPG keys.
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
-   ```
-
-1. Register the Microsoft Ubuntu repository.
-
-   ```bash
-   curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
-   ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
-
-### [Ubuntu 24.04](#tab/odbc-ubuntu-2404)
-
-Use the following steps to install the **mssql-tools18** for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] on Ubuntu 24.04.
-
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
-1. Register the Microsoft repository for Ubuntu 24.04.
-
-   ```bash
-   curl -sSL -O https://packages.microsoft.com/config/ubuntu/24.04/packages-microsoft-prod.deb
-   ```
-
-1. Install the repository package:
-
-   ```bash
-   sudo dpkg -i packages-microsoft-prod.deb
-   ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
-
----
+::: moniker-end
 
 1. Update the sources list and run the installation command with the unixODBC developer package.
 
@@ -131,7 +88,7 @@ Use the following steps to install the **mssql-tools18** for [!INCLUDE [sssql25-
    sudo apt-get install mssql-tools18 unixodbc-dev
    ```
 
-   To update to the latest version of **mssql-tools**, run the following commands:
+   To update to the latest version of **mssql-tools18**, run the following commands:
 
    ```bash
    sudo apt-get update

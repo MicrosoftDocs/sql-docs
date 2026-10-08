@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/07/2026
+ms.date: 10/08/2026
 ms.service: sql
 ms.topic: include
 ms.custom:
@@ -11,31 +11,40 @@ ms.custom:
 
 Use the following steps to install the **mssql-tools18** on Red Hat Enterprise Linux.
 
-1. Download the Microsoft Red Hat repository configuration file.
+- [!INCLUDE [rhel-10](rhel-10.md)]
+- [!INCLUDE [rhel-9](rhel-9.md)]
+- [!INCLUDE [rhel-8](rhel-8.md)]
 
-   - For Red Hat 10, use the following command to download the Microsoft Red Hat repository configuration file from the RHEL 9 repo. The same versions of tools also work for RHEL 10.
+<!--SQL Server 2017 and 2019 on Linux-->
+::: moniker range="<=sql-server-linux-ver15 || <=sql-server-ver15"
 
-     ```bash
-     curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
-     ```
+Download the Microsoft Red Hat repository configuration file.
 
-   - For Red Hat 9, use the following command:
+```bash
+curl -fsSL https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
+```
 
-     ```bash
-     curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
-     ```
+::: moniker-end
+<!--SQL Server 2022 on Linux-->
+::: moniker range="=sql-server-linux-ver16 || =sql-server-ver16"
 
-   - For Red Hat 8, use the following command:
+Download the Microsoft Red Hat repository configuration file.
 
-     ```bash
-     curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
-     ```
+```bash
+curl -fsSL https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
+```
 
-   - For Red Hat 7, use the following command:
+::: moniker-end
+<!--SQL Server 2025 on Linux-->
+::: moniker range=">=sql-server-linux-ver17 || >=sql-server-ver17"
 
-     ```bash
-     curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
-     ```
+Download the Microsoft Red Hat repository configuration file from the RHEL 9 repo. The same versions of tools also work for RHEL 10.
+
+```bash
+curl -fsSL https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
+```
+
+::: moniker-end
 
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
@@ -49,7 +58,7 @@ Use the following steps to install the **mssql-tools18** on Red Hat Enterprise L
    sudo yum install -y mssql-tools18 unixODBC-devel
    ```
 
-   To update to the latest version of **mssql-tools**, run the following commands:
+   To update to the latest version of **mssql-tools18**, run the following commands:
 
    ```bash
    sudo yum check-update

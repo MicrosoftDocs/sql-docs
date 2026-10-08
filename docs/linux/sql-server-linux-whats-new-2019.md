@@ -21,19 +21,18 @@ This article describes the major features and services available for [!INCLUDE [
 
 In addition to these capabilities in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2019 build versions](/troubleshoot/sql/releases/sqlserver-2019/build-versions). For package downloads and known issues, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
-## Red Hat Enterprise Linux 8 support
+## Red Hat Enterprise Linux 8 (RHEL) support
 
-Red Hat Enterprise Linux (RHEL) 8 is supported in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 1 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true).
+[!INCLUDE [rhel-8](includes/rhel-8.md)] For more information, see [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-ver15&preserve-view=true).
 
-## SUSE Linux Enterprise Server 15 support
+## SUSE Linux Enterprise Server (SLES) 15 support
 
-SUSE Linux Enterprise Server (SLES) 15 is supported in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 14 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](install-upgrade/quickstart-install-suse.md?view=sql-server-linux-ver15&preserve-view=true).
+[!INCLUDE [sles-15](includes/sles-15.md)] For more information, see [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](install-upgrade/quickstart-install-suse.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ## Ubuntu 18.04 and 20.04 support
 
-Ubuntu 18.04 is supported in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 3 and later versions.
-
-Ubuntu 20.04 is supported in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 10 and later versions.
+- [!INCLUDE [ubuntu-2004](includes/ubuntu-2004.md)]
+- [!INCLUDE [ubuntu-1804](includes/ubuntu-1804.md)]
 
 For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true).
 

@@ -65,7 +65,7 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 ### [SQL Server 2022](#tab/sql2022)
 
-- The **mssql-server-is** package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
+- The `mssql-server-is` package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
 - Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
 
@@ -73,7 +73,7 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 ### [SQL Server 2019](#tab/sql2019)
 
-- The **mssql-server-is** package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
+- The `mssql-server-is` package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
 - Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
 
@@ -83,7 +83,7 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 - As of SQL Server 2017 CU 4, SQL Server Agent is no longer installed as a separate package. It's installed with the Database Engine package and must be enabled for use.
 
-- The **mssql-server-is** package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
+- The `mssql-server-is` package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](sql-server-linux-known-issues.md#sql-server-integration-services-ssis).
 
 - Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
 

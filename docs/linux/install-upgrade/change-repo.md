@@ -3,7 +3,7 @@ title: Configure Repositories for Installing and Upgrading SQL Server 2022 on Li
 description: Check and configure source repositories for SQL Server 2017, 2019, and 2022 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/04/2025
+ms.date: 10/08/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: upgrade-and-migration-article
@@ -16,21 +16,21 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017"
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to configure the correct repository for installing and upgrading [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu.
+This article describes how to configure the correct repository for installing and upgrading [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu.
 
 For instructions on how to configure repositories for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, see [Configure repositories for installing and upgrading SQL Server 2025 on Linux](change-repo-2025.md?view=sql-server-ver17&preserve-view=true).
 
 ## Repositories
 
-When you install SQL Server on Linux, you must configure a Microsoft repository. This repository is used to acquire the database engine package, **mssql-server**, and related SQL Server packages. There are currently three main repositories:
+When you install SQL Server on Linux, you must configure a Microsoft repository. This repository is used to acquire the database engine package, `mssql-server`, and related SQL Server packages. There are currently three main repositories:
 
 | Repository | Name | Description |
 | --- | --- | --- |
 | **2022** | `mssql-server-2022` | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] repository. |
-| **2019** | `mssql-server-2019` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Cumulative Update (CU) repository. |
-| **2017** | `mssql-server-2017` | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Cumulative Update (CU) repository. |
+| **2019 CU** | `mssql-server-2019` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] Cumulative Update (CU) repository. |
+| **2017 CU** | `mssql-server-2017` | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Cumulative Update (CU) repository. |
 
-The Cumulative Update (CU) repository contains packages for the base SQL Server release, and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. They're released on a regular cadence. General distribution release (GDR) updates are released in the same CU repository.
+The repository contains packages for the base SQL Server release, and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. They're released on a regular cadence. General distribution release (GDR) updates are released in the same repository.
 
 Each release contains the full SQL Server package and all previous updates for that repository. You can also [downgrade](setup.md#rollback) to any release within your major version (for example, 2022).
 
@@ -38,7 +38,7 @@ Each release contains the full SQL Server package and all previous updates for t
 
 Use the steps in the following sections to configure repositories on your Linux distribution.
 
-## Check for previously configured repositories
+## Check for configured repositories
 
 First verify whether you have already registered a SQL Server repository.
 
@@ -58,11 +58,11 @@ First verify whether you have already registered a SQL Server repository.
    sudo cat /etc/yum.repos.d/mssql-server.repo
    ```
 
-1. The **name** property is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
+1. The repository name in the `baseurl` property, such as `mssql-server-2022`, is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
 ### [SLES](#tab/sles)
 
-1. Use `zypper info` to get information about any previously configured repository.
+1. Use `zypper info` to get information about the configured repository.
 
    ```bash
    sudo zypper info mssql-server
@@ -72,13 +72,19 @@ First verify whether you have already registered a SQL Server repository.
 
 ### [Ubuntu](#tab/ubuntu)
 
-1. View the contents of the `/etc/apt/sources.list` file.
+1. Find the files in the `/etc/apt/sources.list.d` directory that configure a SQL Server repository using the following command:
 
    ```bash
-   sudo cat /etc/apt/sources.list
+   grep -rl mssql-server /etc/apt/sources.list.d
    ```
 
-1. Examine the package URL for mssql-server. You can identify it with the table in the [Repositories](#repositories) section of this article.
+1. Display the contents of each file using `cat`.
+
+   ```bash
+   cat /etc/apt/sources.list.d/mssql-server.list
+   ```
+
+1. The repository name in the package URL, such as `mssql-server-2022`, is the configured repository. You can identify it with the table in the [Repositories](#repositories) section of this article.
 
 ---
 
@@ -96,7 +102,7 @@ This command assumes that the file identified in the previous section was named 
 
 ### [SLES](#tab/sles)
 
-Use one of the following commands based on the type of previously configured repository.
+Use one of the following commands based on the type of configured repository.
 
 | Repository | Command to remove |
 | --- | --- |
@@ -106,15 +112,11 @@ Use one of the following commands based on the type of previously configured rep
 
 ### [Ubuntu](#tab/ubuntu)
 
-Use one of the following commands based on the type of previously configured repository.
+```bash
+sudo rm /etc/apt/sources.list.d/mssql-server.list
+```
 
-| Repository | Command to remove |
-| --- | --- |
-| **2022** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019 focal main'` |
-| **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017 bionic main'` |
-
-These commands point to the latest repository for a specific distribution. If you use an earlier distribution where that version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is still supported, change the path accordingly, and use the correct [distribution code name](https://releases.ubuntu.com/).
+This command assumes that the file identified in the previous section was named `mssql-server.list`.
 
 ---
 
@@ -124,18 +126,18 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 ### [RHEL](#tab/rhel)
 
-- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 10, RHEL 9 is supported.
-- Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CU 20, RHEL 8 is supported.
+- [!INCLUDE [rhel-9](../includes/rhel-9.md)]
+- [!INCLUDE [rhel-8](../includes/rhel-8.md)]
 
 The following commands for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] point to the RHEL 8 repository. RHEL 8 doesn't come preinstalled with `python2`, which [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires. For more information, see [Installing Microsoft SQL Server on Red Hat Enterprise Linux 8 Beta](https://www.redhat.com/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta).
 
 Depending on the version of RHEL you use, ensure the paths match `/rhel/8`, `/rhel/9`, or `/rhel/10`. Our packages are agnostic to RHEL minor versions. This means that if you use RHEL 8.7, you need to use the path `/rhel/8` to configure your repository.
 
 | Repository | Version | Release | Command |
-| --- | --- | --- |
-| **2022** | 2022 | RHEL 9 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo` |
-| **2019 CU** | 2019 | RHEL 8 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
-| **2017 CU** | 2017 | RHEL 8 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
+| --- | --- | --- | --- |
+| **2022** | 2022 | RHEL 9 | `sudo curl -fsSL -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo` |
+| **2019 CU** | 2019 | RHEL 8 | `sudo curl -fsSL -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2017 CU** | 2017 | RHEL 8 | `sudo curl -fsSL -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
 
 ### [SLES](#tab/sles)
 
@@ -151,25 +153,25 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 Configure the new repository to use for SQL Server installations and upgrades.
 
-- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 10, Ubuntu 22.04 is supported.
-- Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 10, Ubuntu 20.04 is supported.
-- Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 3 and [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CU 20, Ubuntu 18.04 is supported.
+- [!INCLUDE [ubuntu-2204](../includes/ubuntu-2204.md)]
+- [!INCLUDE [ubuntu-2004](../includes/ubuntu-2004.md)]
+- [!INCLUDE [ubuntu-1804](../includes/ubuntu-1804.md)]
 
-The following commands point to the latest repository for a specific distribution. If you use an earlier distribution where that version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is still supported, change the path accordingly, and use the correct [distribution code name](https://releases.ubuntu.com/).
+The following commands point to the latest repository for a specific distribution. If you use an earlier distribution where that version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is still supported, change the path accordingly.
 
 1. Import the public repository GPG keys.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
-1. Use one of the following commands to configure the repository of your choice.
+1. Use one of the following commands to download and register the repository of your choice.
 
-   | Repository | Version | Command |
-   | --- | --- | --- |
-   | **2022** | 2022 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list)"` |
-   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"` |
-   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
+   | Repository | Version | Release | Command |
+   | --- | --- | --- | --- |
+   | **2022** | 2022 | Ubuntu 22.04 | `sudo curl -fsSL -o /etc/apt/sources.list.d/mssql-server.list https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list` |
+   | **2019 CU** | 2019 | Ubuntu 20.04 | `sudo curl -fsSL -o /etc/apt/sources.list.d/mssql-server.list https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list` |
+   | **2017 CU** | 2017 | Ubuntu 18.04 | `sudo curl -fsSL -o /etc/apt/sources.list.d/mssql-server.list https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list` |
 
 1. Run `apt-get update`.
 

@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
-Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) on Linux. For more information about the features that are supported in Integration Services for Linux, see [Feature support and considerations for SQL Server Integration Services (SSIS) on Linux](../migrate/ssis-known-issues.md).
+Follow the steps in this article to install SQL Server Integration Services (`mssql-server-is`) on Linux. For more information about the features that are supported in Integration Services for Linux, see [Feature support and considerations for SQL Server Integration Services (SSIS) on Linux](../migrate/ssis-known-issues.md).
 
 You can install SQL Server Integration Services (SSIS) on Red Hat Enterprise Linux (RHEL) and Ubuntu. SUSE Linux Enterprise Server (SLES) isn't supported. Installing SSIS on containers is also not supported.
 
@@ -27,7 +27,7 @@ You can install SQL Server Integration Services (SSIS) on Red Hat Enterprise Lin
 
 ## Install SSIS on RHEL
 
-To install the **mssql-server-is** package on RHEL, follow these steps:
+To install the `mssql-server-is` package on RHEL, follow these steps:
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
@@ -118,7 +118,7 @@ To install the **mssql-server-is** package on RHEL, follow these steps:
 
 ### Update SSIS
 
-If you already have **mssql-server-is** installed, update to the latest version by using the following command:
+If you already have `mssql-server-is` installed, update to the latest version by using the following command:
 
 ```bash
 sudo yum update mssql-server-is
@@ -126,7 +126,7 @@ sudo yum update mssql-server-is
 
 ### Remove SSIS
 
-To remove **mssql-server-is**, run the following command:
+To remove `mssql-server-is`, run the following command:
 
 ```bash
 sudo yum remove mssql-server-is
@@ -138,7 +138,7 @@ sudo yum remove mssql-server-is
 
 ## Install SSIS on SLES
 
-The SQL Server Integration Services package (**mssql-server-is**) isn't supported on SUSE Linux Enterprise Server.
+The SQL Server Integration Services package (`mssql-server-is`) isn't supported on SUSE Linux Enterprise Server.
 
 # [Ubuntu](#tab/ubuntu)
 
@@ -146,7 +146,7 @@ The SQL Server Integration Services package (**mssql-server-is**) isn't supporte
 
 ## Install SSIS on Ubuntu
 
-To install the **mssql-server-is** package on Ubuntu, follow these steps:
+To install the `mssql-server-is` package on Ubuntu, follow these steps:
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
@@ -258,7 +258,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 
 ### Update SSIS
 
-If you already have **mssql-server-is** installed, update to the latest version with the following command:
+If you already have `mssql-server-is` installed, update to the latest version with the following command:
 
 ```bash
 sudo apt-get install mssql-server-is
@@ -266,7 +266,7 @@ sudo apt-get install mssql-server-is
 
 ### Remove SSIS
 
-To remove **mssql-server-is**, run the following command:
+To remove `mssql-server-is`, run the following command:
 
 ```bash
 sudo apt-get remove mssql-server-is

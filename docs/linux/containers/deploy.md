@@ -249,13 +249,12 @@ Packages
 
 ## Run a specific SQL Server container image
 
-> [!NOTE]  
->
-> - Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU3, Ubuntu 18.04 is supported.
-> - Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU10, Ubuntu 20.04 is supported.
-> - You can retrieve a list of all available tags for mssql/server at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
+There are scenarios where you might not want to use the latest SQL Server container image.
 
-There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
+> [!NOTE]  
+> You can retrieve a list of all available tags for `mssql/server` at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
+
+To run a specific SQL Server container image, use the following steps:
 
 1. Identify the Docker `tag` for the release you want to use. To view the available tags, see the [Microsoft Container Registry](https://mcr.microsoft.com/product/mssql/server/tags).
 

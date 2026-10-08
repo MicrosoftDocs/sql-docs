@@ -27,9 +27,10 @@ The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module in
 
 After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs.
 
-- [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is supported on Red Hat Enterprise Linux (RHEL) and Ubuntu.
-
-- [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions are supported on Red Hat Enterprise Linux (RHEL), Ubuntu, and SUSE Linux Enterprise Server (SLES).
+| [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] version | Distributions supported |
+| --- | --- |
+| [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] | Red Hat Enterprise Linux (RHEL) and Ubuntu |
+| [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions | Red Hat Enterprise Linux (RHEL), Ubuntu, and SUSE Linux Enterprise Server (SLES) |
 
 For more information, see [Supported platforms](sql-server-linux-release-notes.md#supported-platforms).
 

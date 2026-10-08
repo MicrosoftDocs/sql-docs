@@ -1,18 +1,19 @@
 ---
 title: Auditing Microsoft Support Operations
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: How to use Auditing to audit Microsoft support operations.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, vanto
-ms.date: 11/24/2025
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # Auditing Microsoft support operations
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Auditing of Microsoft support operations for your [logical server](logical-servers.md) in Azure SQL Database allows you to audit Microsoft support engineers' operations when they need to access your server during a support request. The use of this capability, along with your auditing, enables more transparency into your workforce and allows for anomaly detection, trend visualization, and data loss prevention.
 
@@ -45,9 +46,13 @@ You have the option of choosing a different storage destination for this auditin
 > - Applying strong Azure role-based access control (RBAC) and network controls
 > - Monitoring and auditing storage access regularly
 
+## Auditing in Azure Synapse Analytics
+
+For information about auditing Microsoft support operations in Azure Synapse Analytics, see [Auditing Microsoft support operations](/azure/synapse-analytics/sql/auditing-microsoft-support-operations).
+
 ## Related content
 
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

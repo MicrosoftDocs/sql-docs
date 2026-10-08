@@ -1,11 +1,11 @@
 ---
 title: Remove TDE protector (PowerShell & Azure CLI)
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
-description: Learn how to respond to a potentially compromised TDE protector for Azure SQL Database or Azure Synapse Analytics using TDE with Bring Your Own Key (BYOK) support.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn how to respond to a compromised TDE protector in Azure SQL Database or Azure SQL Managed Instance by using customer-managed keys.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/22/2026
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -17,9 +17,9 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Remove a Transparent Data Encryption (TDE) protector using PowerShell
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-This article describes how to respond to a potentially compromised TDE protect for Azure SQL Database or Azure Synapse Analytics that is using TDE with customer-managed keys in Azure Key Vault - Bring Your Own Key (BYOK) support. To learn more about BYOK support for TDE, see the [overview page](transparent-data-encryption-byok-overview.md).
+This article describes how to respond to a potentially compromised TDE protector for Azure SQL Database or Azure SQL Managed Instance that uses TDE with customer-managed keys in Azure Key Vault - Bring Your Own Key (BYOK) support. To learn more about BYOK support for TDE, see the [overview page](transparent-data-encryption-byok-overview.md).
 
 > [!CAUTION]
 > The procedures outlined in this article should only be done in extreme cases or in test environments. Review the steps carefully, as deleting actively used TDE protectors from Azure Key Vault will result in **database becoming unavailable**.
@@ -30,14 +30,11 @@ Keep in mind that once the TDE protector is deleted in Azure Key Vault, in up to
 
 This how-to guide goes over the approach to render databases **inaccessible** after a compromised incident response.
 
-> [!NOTE]
-> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
-
 ## Prerequisites
 
 - You must have an Azure subscription and be an administrator on that subscription.
 - You must have Azure PowerShell installed and running.
-- This how-to guide assumes that you are already using a key from Azure Key Vault as the TDE protector for an Azure SQL Database or Azure Synapse. See [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-overview.md) to learn more.
+- This article assumes that you're already using a key from Azure Key Vault as the TDE protector for Azure SQL Database or Azure SQL Managed Instance. See [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-overview.md) to learn more.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -181,6 +178,10 @@ For command reference, see [Azure CLI keyvault](/cli/azure/keyvault/key).
 1. Remove the potentially compromised key from Azure Key Vault.
 
 [!INCLUDE [sql-database-akv-permission-delay](../includes/sql-database-akv-permission-delay.md)]
+
+## TDE in Azure Synapse Analytics
+
+For information about removing a TDE protector in Azure Synapse Analytics, see [Remove a TDE protector](/azure/synapse-analytics/sql/transparent-data-encryption-byok-remove-tde-protector).
 
 ## Related content
 

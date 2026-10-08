@@ -4,7 +4,8 @@ description: Learn about how you can use elastic jobs to run Transact-SQL (T-SQL
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia, mathoma, randolphwest
-ms.date: 02/26/2026
+ms.date: 09/10/2026
+ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: elastic-jobs
 ms.topic: concept-article
@@ -237,6 +238,38 @@ For a tutorial to configure a new service-managed private endpoint for elastic j
 - The connection from the elastic job agent to the jobs database doesn't use private endpoint. The job agent itself uses internal certificate-based authentication to connect to its jobs database. 
    -  If you add the jobs database as a target group member, it behaves as a regular target. You need to set up with private endpoint as needed.
 
+## Network security perimeter (preview)
+
+A [network security perimeter](network-security-perimeter.md) (preview) controls inbound and outbound network traffic for a logical server. An elastic job agent connects outbound to each target server to run job steps, so a perimeter evaluates those connections.
+
+### Supported configurations
+
+Elastic jobs work in both transition and enforced mode, and with a target server that's in the same perimeter as the job agent, in a linked perimeter, or in no perimeter at all. In every case, the job agent's perimeter must allow outbound access to the target server.
+
+Both authentication methods are supported. SQL authentication works in all these configurations. A user-assigned managed identity works when the job agent and the target are in the same perimeter or in linked perimeters, and you grant the identity the permissions it needs on the target database.
+
+### Configure access rules for elastic jobs
+
+1. [Associate the logical server that hosts the job agent with the perimeter](network-security-perimeter.md#get-started).
+1. On that server's profile, add an outbound access rule for each target server. Set **Destination type** to **FQDN** and use the target server's fully qualified domain name.
+1. If a target server is in the same perimeter or a linked perimeter and you use SQL authentication, add an inbound access rule on the target server's profile that allows the job agent's server.
+1. If you use a user-assigned managed identity, assign it to the job agent and grant it permissions on the target database.
+1. Target servers that aren't associated with a perimeter need no extra configuration.
+
+### Limitations and behavior differences
+
+- The perimeter is checked at run time, when the job agent connects to a target. A job can be created successfully and then fail during execution because a rule is missing or was changed later.
+- Changing perimeter rules or associations doesn't interrupt connections that are already in flight. The change applies to later job executions.
+- Transition and enforced mode behave the same way except that enforced mode actually blocks a noncompliant connection, whereas transition mode logs it and allows it.
+- A target server in a different perimeter that isn't linked to the job agent's perimeter isn't a supported configuration.
+
+### Errors when a perimeter blocks a job
+
+The exact error strings vary by client and driver. Two failures are common:
+
+- A message saying the connection was blocked by the network security perimeter means the outbound rule from the job agent's server to the target server is missing or wrong. Update the outbound rules.
+- A login failure for a user or managed identity means the perimeter allowed the connection but the database-level permissions are missing. Grant the SQL user or the managed identity the permissions it needs on the target database.
+
 ## Elastic job database permissions
 
 During job agent creation, a schema, tables, and a role called *jobs_reader* are created in the *job database*. The role is created with the following permission and is designed to give administrators finer access control for job monitoring. Administrators can provide users the ability to monitor job execution by adding them to the `jobs_reader` role in the *job database*.
@@ -358,3 +391,4 @@ These are the current limitations to the elastic jobs service. The product team 
 - [Automate management tasks in Azure SQL](job-automation-overview.md)
 - [Create and manage elastic jobs by using PowerShell](elastic-jobs-powershell-create.md)
 - [Create and manage elastic jobs by using T-SQL](elastic-jobs-tsql-create-manage.md)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)

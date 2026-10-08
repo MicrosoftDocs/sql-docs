@@ -1,24 +1,23 @@
 ---
 title: Auditing
-titleSuffix: Azure SQL Database and Azure Synapse Analytics
-description: SQL Auditing for Azure SQL Database and Azure Synapse Analytics tracks database events and writes them to an audit log in your Azure storage account, Log Analytics workspace, or Event Hubs.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: peskount, srsaluru, vanto, mathoma
-ms.date: 09/17/2026
+titleSuffix: Azure SQL Database
+description: SQL Auditing for Azure SQL Database tracks database events and writes them to an audit log in your Azure storage account, Log Analytics workspace, or Event Hubs.
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
 monikerRange: "=azuresql || =azuresql-db "
 ms.custom:
-  - azure-synapse
   - sqldbrb=1
 ---
-# Auditing for Azure SQL Database and Azure Synapse Analytics
+# Auditing for Azure SQL Database
 
-[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Auditing for [Azure SQL Database](sql-database-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) tracks database events and writes them to an audit log in your Azure storage account, Log Analytics workspace, or Event Hubs.
+Auditing for [Azure SQL Database](sql-database-paas-overview.md) tracks database events and writes them to an audit log in your Azure storage account, Log Analytics workspace, or Event Hubs.
 
 Auditing also:
 
@@ -38,7 +37,7 @@ You can use SQL Database auditing to:
 - **Analyze** reports. You can find suspicious events, unusual activity, and trends.
 
 > [!IMPORTANT]  
-> Auditing for Azure SQL Database, Azure Synapse Analytics SQL pools, and Azure SQL Managed Instance is optimized for availability and performance of the database or instance being audited. During periods of very high activity or high network load, the auditing feature might allow transactions to proceed without recording all of the events marked for auditing.
+> Auditing for Azure SQL Database and Azure SQL Managed Instance is optimized for availability and performance of the database or instance being audited. During periods of very high activity or high network load, the auditing feature might allow transactions to proceed without recording all of the events marked for auditing.
 
 ## Enhancements to performance, availability, and reliability in server auditing for Azure SQL Database (July 2025 GA)
 
@@ -84,18 +83,12 @@ To reduce the risk of exposing sensitive information, follow these best practice
 
 ## Auditing limitations
 
-- Enabling auditing on a paused **Azure Synapse SQL pool** isn't supported. To enable auditing, resume the **Synapse SQL pool**.
-- Enabling auditing by using User Assigned Managed Identity (UAMI) isn't supported on **Azure Synapse**.
-- Currently, managed identities aren't supported for Azure Synapse, unless the storage account is behind a virtual network or firewall.
-
-- For Azure Synapse Analytics, auditing to a storage account behind a virtual network (VNet) requires the server's **system-assigned managed identity** with the **Storage Blob Data Contributor** role. User-assigned managed identities (UAMI) aren't supported for Synapse auditing. If you need to audit to a storage account that uses Microsoft Entra-only authentication, configure the system-assigned managed identity on the server and grant it the Storage Blob Data Contributor role on the target storage account. For more information, see [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md).
 - Due to performance constraints, we don't audit the `tempdb` and **temporary tables**. While the batch completed action group captures statements against temporary tables, it might not correctly populate the object names. However, the source table is always audited, ensuring that all inserts from the source table to temporary tables are recorded.
-- Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
 - When you configure auditing for a [logical server in Azure](logical-servers.md) or Azure SQL Database with the log destination as a storage account, the authentication mode must match the configuration for that storage account. If using storage access keys as the authentication type, the target storage account must be enabled with access to the storage account keys. If the storage account is configured to only use authentication with Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), auditing can be configured to use managed identities for authentication.
 
 - Auditing isn't supported on databases with names that contain the `?` character. This applies to both **server-level** and **database-level** auditing, as databases with `?` in their names are *no longer supported on Azure*.
 
-- **Azure SQL Database and Azure Synapse** audit logs capture up to **4,000 characters** in the `statement` and `data_sensitivity_information` fields. If the output from an auditable action exceeds this limit, any content beyond the first 4,000 characters is **truncated** and **excluded from the audit record**.
+- Azure SQL Database audit logs capture up to 4,000 characters in the `statement` and `data_sensitivity_information` fields. If the output from an auditable action exceeds this limit, any content beyond the first 4,000 characters is **truncated** and **excluded from the audit record**.
 
 ## Remarks
 
@@ -114,10 +107,14 @@ To reduce the risk of exposing sensitive information, follow these best practice
 - After you've configured your auditing settings, you can turn on the new threat detection feature and configure emails to receive security alerts. When you use threat detection, you receive proactive alerts on anomalous database activities that can indicate potential security threats. For more information, see [SQL Advanced Threat Protection](threat-detection-overview.md).
 - After a database with auditing enabled is copied to another [logical server](logical-servers.md), you might receive an email notifying you that the audit failed. This is a known issue and auditing should work as expected on the newly copied database.
 
+## Auditing in Azure Synapse Analytics
+
+For information about auditing in Azure Synapse Analytics, see [Auditing overview](/azure/synapse-analytics/sql/auditing-overview).
+
 ## Related content
 
 - [What's New in Azure SQL Auditing](/shows/data-exposed/server-audit-redesign-for-azure-sql-database-data-exposed)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)
-- [Set up Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-setup.md)
+- [Set up auditing for Azure SQL Database](auditing-setup.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

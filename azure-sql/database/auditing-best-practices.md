@@ -1,18 +1,19 @@
 ---
 title: Auditing Best Practices for Production Environments
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
-description: This article goes over best practices when using Auditing in production environments for Azure SQL Database and Azure Synapse Analytics.
+titleSuffix: Azure SQL Database
+description: Learn best practices for using Azure SQL Database auditing in production environments, including geo-replication and storage key regeneration.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma
-ms.date: 06/10/2025
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: best-practice
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # Auditing best practices for production environments
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Here are some recommendations for using Azure SQL Auditing in production environments.
 
@@ -47,9 +48,13 @@ In production, you're likely to refresh your storage keys periodically. When wri
 
 When you configure auditing with a storage account as the target, which is encrypted using a key vault behind a firewall, you must set up an **access policy** for the key vault. Navigate to the Azure Key Vault access policy, add a new policy with the necessary key permissions, enable the **unwrap key** option, and select the appropriate principal (such as the storage account) to grant access.
 
+## Auditing in Azure Synapse Analytics
+
+For information about auditing best practices in Azure Synapse Analytics, see [Auditing best practices](/azure/synapse-analytics/sql/auditing-best-practices).
+
 ## Related content
 
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

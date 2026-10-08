@@ -4,7 +4,7 @@ description: "Known issues and errors with change data capture (CDC) in SQL Serv
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: roblescarlos, bspendolini, randolphwest
-ms.date: 10/07/2025
+ms.date: 10/08/2026
 ms.service: sql
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -173,6 +173,18 @@ These are the different troubleshooting categories included in this section:
 
 > [!NOTE]
 > Objects found in the [sys.objects](../system-catalog-views/sys-objects-transact-sql.md) system catalog view with `is_ms_shipped=1 and schema_name='cdc'` should not be altered or dropped.
+
+#### Error 515 - Cannot insert the value NULL into column
+
+**Cause**: This error usually means someone manually modified the CDC metadata by setting the `start_lsn` value in `cdc.change_tables` to `NULL`. The error message is similar to the following example:
+
+```output
+Cannot insert the value NULL into column 'start_lsn', table '<database_name>.cdc.lsn_time_mapping'; column does not allow nulls. INSERT fails.
+```
+
+CDC relies on system-maintained metadata. If you update the CDC metadata tables manually, the CDC configuration can become inconsistent. Don't modify CDC metadata tables or system objects.
+
+**Recommendation**: To fix this problem, [disable and re-enable CDC](enable-and-disable-change-data-capture-sql-server.md) for the table whose CDC configuration you modified, or for your database. When you enable change data capture for a database, it creates the `cdc` schema, `cdc` user, metadata tables, and other system objects for the database.
 
 #### Error 1202 - Database principal doesn't exist, or user isn't a member
 

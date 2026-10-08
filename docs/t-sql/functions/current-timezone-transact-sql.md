@@ -28,7 +28,7 @@ dev_langs:
 ---
 # CURRENT_TIMEZONE (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
 The `CURRENT_TIMEZONE` Transact-SQL (T-SQL) function returns the name of the time zone observed by a server or an instance. For SQL Managed Instance, the function returns the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
 

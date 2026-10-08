@@ -245,7 +245,7 @@ Configuring Ubuntu is similar to RHEL. However, there's one major difference: in
 
 Use the following commands to install the SQL Server HA package if it isn't installed already. If you install the HA package after installing [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], you must restart [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for the change to take effect. These instructions assume that the repositories for the Microsoft packages are already set up, since [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] should be installed at this point.
 
-- The other optional packages for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Full-Text Search (**mssql-server-fts**) and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Integration Services (**mssql-server-is**), aren't required for high availability, either for an FCI or an AG.
+- The other optional packages for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] on Linux, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Full-Text Search (`mssql-server-fts`) and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Integration Services (`mssql-server-is`), aren't required for high availability, either for an FCI or an AG.
 
 ### [Red Hat Enterprise Linux (RHEL)](#tab/rhel)
 

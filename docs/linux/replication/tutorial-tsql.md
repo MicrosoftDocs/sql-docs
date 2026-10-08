@@ -40,7 +40,7 @@ To complete this tutorial, you need:
   See [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](../sql-server-linux-manage-ssms.md).
 
   > [!NOTE]  
-  > SQL Server Replication is supported on Linux in [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)] ([CU 18](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate18)) and later versions.
+  > SQL Server Replication is supported on Linux in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CU 18 and later versions. For more information, see [Release information for SQL Server on Linux](../sql-server-linux-release-notes.md).
 
 ## Detailed steps
 

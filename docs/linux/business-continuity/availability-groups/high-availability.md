@@ -96,7 +96,7 @@ An availability group with two (or more) synchronous replicas and a configuratio
 In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration-only replica. The secondary replica also receives user data. The configuration-only replica doesn't receive user data. The secondary replica is in synchronous availability mode. The configuration-only replica doesn't contain the databases in the availability group, only metadata about the availability group. Configuration data on the configuration-only replica is committed synchronously.
 
 > [!NOTE]  
-> An availability group with configuration-only replica is supported in [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1. All instances of SQL Server in the availability group must be [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1 or later versions.
+> Every SQL Server instance in an availability group with a configuration-only replica must run [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] CU 1 or later versions.
 
 The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior.
 

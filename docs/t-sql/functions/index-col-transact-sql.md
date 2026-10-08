@@ -22,7 +22,7 @@ dev_langs:
   - "TSQL"
 ---
 # INDEX_COL (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
   Returns the indexed column name. Returns NULL for XML indexes.  
   

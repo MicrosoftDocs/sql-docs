@@ -23,11 +23,11 @@ In addition to the capabilities described in this article, cumulative updates (C
 
 ## Red Hat Enterprise Linux 8 support
 
-Red Hat Enterprise Linux (RHEL) 8 is supported in [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 20 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Red Hat](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true).
+[!INCLUDE [rhel-8](includes/rhel-8.md)] For more information, see [Quickstart: Install SQL Server and create a database on Red Hat](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true).
 
 ## Ubuntu 18.04 support
 
-Ubuntu 18.04 is supported in [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 20 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-2017&preserve-view=true).
+[!INCLUDE [ubuntu-1804](includes/ubuntu-1804.md)] For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-2017&preserve-view=true).
 
 ## SQL Server Database Engine
 

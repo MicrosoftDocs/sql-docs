@@ -30,15 +30,15 @@ For more information, see [Set custom password policy for SQL logins in SQL Serv
 
 ## Red Hat Enterprise Linux 9 support
 
-Red Hat Enterprise Linux (RHEL) 9 is supported in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 10 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true).
+[!INCLUDE [rhel-9](includes/rhel-9.md)] For more information, see [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-ver16&preserve-view=true).
 
 ## SUSE Linux Enterprise Server 15 SP4 support
 
-SUSE Linux Enterprise Server (SLES) 15 is supported in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 4 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](install-upgrade/quickstart-install-suse.md?view=sql-server-linux-ver16&preserve-view=true).
+[!INCLUDE [sles-15](includes/sles-15.md)] For more information, see [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](install-upgrade/quickstart-install-suse.md?view=sql-server-linux-ver16&preserve-view=true).
 
 ## Ubuntu 22.04 support
 
-Ubuntu 22.04 is supported in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CU 10 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-ver16&preserve-view=true).
+[!INCLUDE [ubuntu-2204](includes/ubuntu-2204.md)] For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-ver16&preserve-view=true).
 
 ## Updates
 

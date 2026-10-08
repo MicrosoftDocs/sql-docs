@@ -117,9 +117,9 @@ This message is shown once a day. To disable it please create the
 
 ### Install SQL Server
 
-After you sign in to the Ubuntu 22.04 Bash shell, follow the steps outlined in [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true&tabs=ubuntu2204#install-sql-server) to install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+After you sign in to the Ubuntu 22.04 Bash shell, follow the steps outlined in [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true#install-sql-server) to install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
-You should also [install the SQL Server command-line tools](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true&tabs=ubuntu2204#install-the-sql-server-command-line-tools).
+You should also [install the SQL Server command-line tools](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true#install-the-sql-server-command-line-tools).
 
 ### Get IP address
 

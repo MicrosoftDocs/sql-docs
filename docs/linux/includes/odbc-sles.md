@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/07/2026
+ms.date: 10/08/2026
 ms.service: sql
 ms.topic: include
 ms.custom:
@@ -14,42 +14,46 @@ Use the following steps to install **mssql-tools18** on SUSE Linux Enterprise Se
 > [!NOTE]  
 > Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], SUSE Linux Enterprise Server (SLES) isn't supported.
 
-1. Import the Microsoft package signing key.
+Import the Microsoft package signing key.
 
-   ```bash
-   curl -O https://packages.microsoft.com/keys/microsoft.asc
-   sudo rpm --import microsoft.asc
-   ```
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+```
 
-1. Add the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] repository to Zypper.
+<!--SQL Server 2017 on Linux-->
+::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
-   - For SLES 15, use the following command:
+Add the Microsoft repository to Zypper.
 
-     ```bash
-     sudo zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
-     ```
+```bash
+sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+```
 
-   - For SLES 12, use the following command:
+Install **mssql-tools18** with the unixODBC developer package.
 
-     ```bash
-     sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
-     ```
+```bash
+sudo zypper install -y mssql-tools18 unixODBC-devel
+```
 
-1. Install **mssql-tools18** with the unixODBC developer package.
+::: moniker-end
+<!--SQL Server 2019 and later versions on Linux-->
+::: moniker range=">=sql-server-linux-ver15 || >=sql-server-ver15"
 
-   - For SLES 15, use the following command:
+Add the Microsoft repository to Zypper.
 
-   ```bash
-   sudo zypper install -y mssql-tools18 unixODBC-devel glibc-locale-base
-   ```
+```bash
+sudo zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+```
 
-   - For SLES 12, use the following command:
+Install **mssql-tools18** with the unixODBC developer package.
 
-   ```bash
-   sudo zypper install -y mssql-tools18 unixODBC-devel
-   ```
+```bash
+sudo zypper install -y mssql-tools18 unixODBC-devel glibc-locale-base
+```
 
-   To update to the latest version of **mssql-tools18**, run the following commands:
+::: moniker-end
+
+1. To update to the latest version of **mssql-tools18**, run the following commands:
 
    ```bash
    sudo zypper refresh

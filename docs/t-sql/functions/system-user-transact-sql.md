@@ -22,10 +22,10 @@ helpviewer_keywords:
   - "users [SQL Server], names"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # SYSTEM_USER (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   

@@ -103,7 +103,7 @@ The following table shows the permissions assigned to the server-level roles. It
 | `##MS_ServerSecurityStateReader##` | - `VIEW SERVER SECURITY STATE` | - `VIEW DATABASE SECURITY STATE` |
 | `##MS_DefinitionReader##` | - `VIEW ANY DATABASE`<br />- `VIEW ANY DEFINITION`<br />- `VIEW ANY PERFORMANCE DEFINITION`<br />- `VIEW ANY SECURITY DEFINITION` | - `VIEW DEFINITION`<br />- `VIEW PERFORMANCE DEFINITION`<br />- `VIEW SECURITY DEFINITION` |
 | `##MS_PerformanceDefinitionReader##` | - `VIEW ANY PERFORMANCE DEFINITION` | - `VIEW PERFORMANCE DEFINITION` |
-| `##MS_SecurityDefinitionReader##` | - `VIEW ANY SECURITY DEFINITION` | - `VIEW SECURITY DEFINITION` |
+| `##MS_SecurityDefinitionReader##` | - `VIEW ANY SECURITY DEFINITION` | - `VIEW SECURITY DEFINITION` | - `VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION` | 
 
 ### Permissions of server roles for SQL Server 2019 and earlier
 

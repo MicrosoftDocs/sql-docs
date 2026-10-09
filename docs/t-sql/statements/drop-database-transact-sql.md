@@ -41,7 +41,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 [ ; ]
 ```
 
-Azure SQL Database, Azure SQL Managed Instance syntax.
+Azure SQL Database and Azure SQL Managed Instance syntax.
 
 ```syntaxsql
 DROP DATABASE [ IF EXISTS ] { database_name } 
@@ -134,7 +134,7 @@ The `DROP DATABASE` statement must be the only statement in a SQL batch and you 
 
 ### SQL Server, Azure SQL Managed Instance
 
-Requires the `CONTROL` permission on the database, or `ALTER ANY DATABASE` permission, or membership in the `dbcreator` fixed server role, or membership in the `db_owner` fixed database role.
+Requires the `CONTROL` permission on the database, or `ALTER ANY DATABASE` permission, or membership in the `dbcreator` fixed server role, or membership in the `db_owner` fixed database role for the database being dropped.
 
 ### Azure SQL Database
 

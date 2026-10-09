@@ -144,7 +144,7 @@ LTR restore doesn't require a managed identity.
 1. If the target server is in a perimeter and the source server isn't in the same perimeter, add an inbound rule on the target profile that allows one of these sources:
    - The subscription ID of the source server.
    - The `SqlManagement` [service tag](/azure/private-link/configure-network-security-perimeter-service-tag).
-   - The IP address range of the Azure SQL control ring that hosts the source server. The inbound check uses the control ring's address, not the source server's own address.
+   - The IP address ranges listed for `SqlManagement` in [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519). The restore request comes from the Azure SQL management infrastructure, not from the source server. Microsoft doesn't publish these ranges by region, so allow all of them.
 1. With the servers still in transition mode, run a restore and check the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) for unexpected denials.
 1. Switch to enforced mode only after the restore succeeds.
 

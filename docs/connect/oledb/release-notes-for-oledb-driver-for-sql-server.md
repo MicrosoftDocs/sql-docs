@@ -4,7 +4,7 @@ description: This release notes article describes the changes in each release of
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
-ms.date: 05/26/2026
+ms.date: 10/09/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -23,6 +23,41 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 19.4.3
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download x64/Arm64 installer](https://go.microsoft.com/fwlink/?linkid=2382896)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2383708)**  
+
+Released: October 9, 2026
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.
+
+For the x64/Arm64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x41f)
+
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x41f)
+
+### Features added
+
+| Feature added | Details |
+| --- | --- |
+| Added USERAGENT feature extension | The driver sends its name, version, architecture, and operating system details to the server in the `LOGIN7 USERAGENT` TDS feature extension. |
+| Added canonical connection string aliases | Added the `ConnectTimeout`, `MultipleActiveResultSets`, and `WorkstationID` keywords as aliases for the `Timeout`, `MarsConn`, and `WSID` keywords. The existing keywords continue to work. |
+| Added redirect context to connection failure messages | When the server routes a connection to another server and the connection to that server fails, the driver adds an error that names both the target server and the server that redirected the connection. |
+| Added support for enhanced routing | Supports enhanced routing for Azure SQL Database Hyperscale named-replica reader endpoints. The driver connects to the server and the database that the server's routing information specifies. |
+| Updated authentication library | Updated Microsoft SQL Driver Authentication library (mssql-auth.dll) to version 1.1.4. This update fixes a crash when an application unloads and reloads the library after authentication starts. |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| --- | --- |
+| Fixed LOB parameter leak in linked server `EXEC AT`. | Fixed large object (LOB) parameters not being released when a linked server `EXEC ('<statement>', @parameter) AT [<linked server>]` call passes a LOB parameter that has no matching `?` placeholder in the statement. |
+| Fixed implicit connections logging in to the initial database instead of the current database. | Additional connections that the driver opens, such as implicit connections that run a command while a rowset is open, now log in to the current database instead of the database specified in the connection string. Previously, unqualified object names on these connections could resolve against the wrong database after a `USE` statement. |
+| Fixed a crash on DLL unload when using Microsoft Entra authentication. | Fixed an intermittent access violation when the driver is unloaded after a connection that uses Microsoft Entra authentication, for example when Excel closes a workbook. |
+| Fixed a crash in STA hosts such as Excel when using Microsoft Entra integrated authentication. | Fixed a crash when a single-threaded apartment (STA) host such as Excel opens a connection with `Authentication=ActiveDirectoryIntegrated` after the authentication library (mssql-auth.dll) was unloaded. The driver now keeps the library loaded after it first initializes. |
+| Fixed security issues in the processing of server responses. | Improved the validation of data that the driver receives from the server. |
+
+## Previous releases
 
 ## 19.4.2
 
@@ -51,8 +86,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | --- | --- |
 | Fixed intermittent crash with Strict encryption and TLS 1.3. | Fixed an intermittent crash when connecting with Strict encryption and TLS 1.3. |
 | Fixed accessibility defects. | Fixed accessibility issues in the Universal Data Link (UDL) dialog. |
-
-## Previous releases
 
 ## 19.4.1
 
@@ -323,6 +356,28 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). |
 | Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation in OLE DB](features/encryption-and-certificate-validation.md). |
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user can now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
+
+## 18.7.6
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2383709)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2383618)**  
+
+Released: October 9, 2026
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.
+
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2383709&clcid=0x41f)
+
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2383618&clcid=0x41f)
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| --- | --- |
+| Fixed LOB parameter leak in linked server `EXEC AT`. | Fixed large object (LOB) parameters not being released when a linked server `EXEC ('<statement>', @parameter) AT [<linked server>]` call passes a LOB parameter that has no matching `?` placeholder in the statement. |
+| Fixed a crash on DLL unload after the login dialog was shown. | Fixed an access violation when the driver is unloaded after the login dialog was displayed. |
+| Fixed accessibility defects. | Fixed accessibility issues in the Universal Data Link (UDL) dialog. |
+| Fixed security issues in the processing of server responses. | Improved the validation of data that the driver receives from the server. |
 
 ## 18.7.5
 

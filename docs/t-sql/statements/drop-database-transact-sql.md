@@ -4,7 +4,7 @@ description: DROP DATABASE removes one or more user databases or database snapsh
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/12/2024
+ms.date: 10/09/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -41,7 +41,14 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 [ ; ]
 ```
 
-Azure SQL Database and Azure Synapse Analytics syntax.
+Azure SQL Database and Azure SQL Managed Instance syntax.
+
+```syntaxsql
+DROP DATABASE [ IF EXISTS ] { database_name } 
+[ ; ]
+```
+
+Azure Synapse Analytics syntax.
 
 ```syntaxsql
 DROP DATABASE database_name
@@ -52,7 +59,7 @@ DROP DATABASE database_name
 
 #### IF EXISTS
 
-**Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions
+**Applies to**: [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]
 
 Conditionally drops the database only if it already exists.
 
@@ -113,9 +120,7 @@ Dropping a database enable for Stretch Database doesn't remove the remote data. 
 > [!IMPORTANT]  
 > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
-### Azure SQL Database
-
-You must be connected to the `master` database to drop a database.
+### Azure SQL Database, Azure SQL Managed Instance
 
 The `DROP DATABASE` statement must be the only statement in a SQL batch and you can drop only one database at a time.
 
@@ -127,13 +132,13 @@ The `DROP DATABASE` statement must be the only statement in a SQL batch and you 
 
 ## Permissions
 
-### SQL Server
+### SQL Server, Azure SQL Managed Instance
 
-Requires the `CONTROL` permission on the database, or `ALTER ANY DATABASE` permission, or membership in the **db_owner** fixed database role.
+Requires the `CONTROL` permission on the database, or `ALTER ANY DATABASE` permission, or membership in the `dbcreator` fixed server role, or membership in the `db_owner` fixed database role for the database being dropped.
 
 ### Azure SQL Database
 
-Only the server-level principal login (created by the provisioning process) or members of the **dbmanager** database role can drop a database.
+Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can drop a database.
 
 ## Examples
 

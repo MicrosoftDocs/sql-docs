@@ -6,6 +6,8 @@
     href: quickstart-cpp.md
   - name: Download
     href: download-oledb-driver-for-sql-server.md
+  - name: Release notes
+    href: release-notes-for-oledb-driver-for-sql-server.md
   - name: System requirements
     href: system-requirements-for-oledb-driver-for-sql-server.md
   - name: When to use OLE DB Driver
@@ -312,8 +314,6 @@
     href: features/accessing-diagnostic-information-in-the-extended-events-log.md
   - name: Known issues
     href: oledb-driver-for-sql-server-known-issues.md
-  - name: Release notes
-    href: release-notes-for-oledb-driver-for-sql-server.md
   - name: Registry settings
     href: features/registry-settings.md
   - name: Metadata discovery

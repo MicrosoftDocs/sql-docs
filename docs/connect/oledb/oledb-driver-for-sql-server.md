@@ -154,6 +154,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | [Connect and query with C++](quickstart-cpp.md) | Install the driver, connect to Azure SQL Database, SQL database in Fabric, or SQL Server, execute a parameterized query, and verify the result. |
 | [When to use OLE DB Driver](when-to-use-oledb-driver-for-sql-server.md) | When to choose OLE DB Driver for SQL Server over the other SQL Server drivers. |
 | [Download](download-oledb-driver-for-sql-server.md) | Installer downloads for every supported driver version. |
+| [Release notes](release-notes-for-oledb-driver-for-sql-server.md) | What changed in each driver release, newest first. |
 | [System requirements](system-requirements-for-oledb-driver-for-sql-server.md) | Supported operating systems, SQL Server versions, and prerequisites to install first. |
 | [Building applications](applications/building-applications-with-oledb-driver-for-sql-server.md) | Header and library files, installation layout, and what changes when you upgrade from MDAC. |
 | [Creating an application](ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) | The call sequence an application follows, from connecting to executing a command to reading results. |
@@ -270,7 +271,6 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | [Retrieving error information](ole-db-errors/retrieving-error-information.md) | Walk the error interfaces to read message text, SQLSTATE, and the native error number. |
 | [Accessing diagnostic information in the extended events log](features/accessing-diagnostic-information-in-the-extended-events-log.md) | Turn on driver tracing and read the resulting extended events log. |
 | [Known issues](oledb-driver-for-sql-server-known-issues.md) | Open issues in the current driver, with workarounds where one exists. |
-| [Release notes](release-notes-for-oledb-driver-for-sql-server.md) | What changed in each driver release, newest first. |
 
 ## Migrate to the current driver
 

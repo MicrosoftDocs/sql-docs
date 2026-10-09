@@ -81,8 +81,7 @@ The following table shows fixed server-level roles introduced in [!INCLUDE [sssq
 | `##MS_ServerSecurityStateReader##` | Members of the `##MS_ServerSecurityStateReader##` fixed server role can read all dynamic management views (DMVs) and functions that are covered by `VIEW SERVER SECURITY STATE`. Members also hold `VIEW DATABASE SECURITY STATE` permission on any database where they have a user account. This role is a small subset of `##MS_ServerStateReader##`, which helps to comply with the *Principle of least Privilege*. |
 | `##MS_DefinitionReader##` | Members of the `##MS_DefinitionReader##` fixed server role can read all catalog views that are covered by `VIEW ANY DEFINITION`. Members also hold `VIEW DEFINITION` permission on any database where they have a user account. |
 | `##MS_PerformanceDefinitionReader##` | Members of the `##MS_PerformanceDefinitionReader##` fixed server role can read all catalog views that are covered by `VIEW ANY PERFORMANCE DEFINITION`. Members also hold `VIEW PERFORMANCE DEFINITION` permission on any database where they have a user account. This role is a subset of `##MS_DefinitionReader##`. |
-| `##MS_SecurityDefinitionReader##` | Members of the `##MS_SecurityDefinitionReader##` fixed server role can read all catalog views that are covered by `VIEW ANY SECURITY DEFINITION`. Members also hold `VIEW SECURITY DEFINITION` permission on any database where they have a user account. This role is a small subset of `##MS_DefinitionReader##`, which helps to comply with the *Principle of least Privilege*. 
-In addition, this role grants the server-level VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION permission. Assign this role only to trusted administrators and security personnel who require this level of access, and follow the principle of least privilege when granting membership. |
+| `##MS_SecurityDefinitionReader##` | Members of the `##MS_SecurityDefinitionReader##` fixed server role can read all catalog views that are covered by `VIEW ANY SECURITY DEFINITION`. Members also hold `VIEW SECURITY DEFINITION` permission on any database where they have a user account. This role is a small subset of `##MS_DefinitionReader##`, which helps to comply with the *Principle of least Privilege*. In addition, this role grants the server-level `VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION` permission. Assign this role only to trusted administrators and security personnel who require this level of access, and follow the principle of least privilege when granting membership. |
 
 ## Permissions of fixed server roles
 
@@ -103,7 +102,7 @@ The following table shows the permissions assigned to the server-level roles. It
 | `##MS_ServerSecurityStateReader##` | - `VIEW SERVER SECURITY STATE` | - `VIEW DATABASE SECURITY STATE` |
 | `##MS_DefinitionReader##` | - `VIEW ANY DATABASE`<br />- `VIEW ANY DEFINITION`<br />- `VIEW ANY PERFORMANCE DEFINITION`<br />- `VIEW ANY SECURITY DEFINITION` | - `VIEW DEFINITION`<br />- `VIEW PERFORMANCE DEFINITION`<br />- `VIEW SECURITY DEFINITION` |
 | `##MS_PerformanceDefinitionReader##` | - `VIEW ANY PERFORMANCE DEFINITION` | - `VIEW PERFORMANCE DEFINITION` |
-| `##MS_SecurityDefinitionReader##` | - `VIEW ANY SECURITY DEFINITION` | - `VIEW SECURITY DEFINITION` | - `VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION` | 
+| `##MS_SecurityDefinitionReader##` | - `VIEW ANY SECURITY DEFINITION` <br />- `VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION` | - `VIEW SECURITY DEFINITION` | 
 
 ### Permissions of server roles for SQL Server 2019 and earlier
 

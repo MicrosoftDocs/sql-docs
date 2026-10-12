@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Overview of cross-tenant customer-managed keys (CMK) support using transparent data encryption (TDE)
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 06/25/2025
 ms.service: azure-sql-database
 ms.subservice: security

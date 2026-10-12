@@ -1,11 +1,11 @@
 ---
 title: Microsoft Entra server principals
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Using Microsoft Entra server principals (logins) in Azure SQL
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: vanto, mathoma
-ms.date: 05/15/2026
+ms.reviewer: vanto
+ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
@@ -14,17 +14,17 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 # Microsoft Entra server principals
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 You can now create and utilize server principals from Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)), which are logins in the virtual `master` database of Azure SQL Database and Azure SQL Managed Instance.
 
 > [!NOTE]
-> Microsoft Entra server principals (logins) are generally available for Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2022 and later. Microsoft Entra server principals are currently in public preview for Azure Synapse Analytics.
+> Microsoft Entra server principals (logins) are generally available for Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2022 and later versions.
 
 There are several benefits of using Microsoft Entra server principals with your Azure SQL resource:
 
 - Support [Azure SQL Database server roles for permission management](security-server-roles.md).
-- Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.
+- Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles), such as the `loginmanager` and `dbmanager` roles.
 - Functional parity between SQL logins and Microsoft Entra logins.
 - Increase functional improvement support, such as utilizing [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md). Microsoft Entra-only authentication allows SQL authentication to be disabled, which includes the SQL server admin, SQL logins and users.
 - Allows Microsoft Entra principals to support geo-replicas. Microsoft Entra principals can connect to the geo-replica of a user database, with *read-only* and *deny* permissions to the primary server.
@@ -111,7 +111,7 @@ When a login is disabled, connections are no longer allowed using that server pr
 
 ## Roles for Microsoft Entra principals
 
-[Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to *users* in the virtual `master` database for Microsoft Entra principals, including **dbmanager** and **loginmanager**. 
+Assign [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles) to *users* in the virtual `master` database for Microsoft Entra principals, including **dbmanager** and **loginmanager**.  
 
 [Azure SQL Database server roles](security-server-roles.md) can be assigned to *logins* in the virtual `master` database.
 
@@ -125,7 +125,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   - `EXECUTE AS USER [bob@contoso.com]`
   - `ALTER AUTHORIZATION ON securable::name TO [bob@contoso.com]`
-- Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database and Azure Synapse Analytics. It [is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql&preserve-view=true#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
+- Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database. [Impersonation of Microsoft Entra server principals (logins) is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql&preserve-view=true#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
   - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
   - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
   - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all Microsoft SQL products.
@@ -135,7 +135,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 - When you alter permissions for a Microsoft Entra login, by default the changes only take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. To force permissions changes to take immediate effect, you can manually clear the authentication and TokenAndPermUserStore, as described earlier in [disable or enable a login using ALTER LOGIN](#disable-or-enable-a-login-using-alter-login). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
 - In SQL Server Management Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates the T-SQL for a contained database Microsoft Entra user.
 - An error might occur if you're trying to create a login or user from a service principal with a nonunique display name. For more information about mitigating this error, see [Microsoft Entra logins and users with nonunique display names](authentication-microsoft-entra-create-users-with-nonunique-names.md).
-- In Azure SQL Database and Azure Synapse Analytics, database users created using Microsoft Entra logins can experience delays when being granted roles and permissions. If you encounter this, use the following commands to address the issue:
+- In Azure SQL Database, database users created using Microsoft Entra logins can experience delays when being granted roles and permissions. If you encounter this problem, use the following commands to address the issue:
   - [Drop the user](/sql/t-sql/statements/drop-user-transact-sql) from the user database.
   - Execute `DBCC FREESYSTEMCACHE('TokenAndPermUserStore')` to clear security caches on the database.
   - Execute `DBCC FLUSHAUTHCACHE` to clear the federated authentication context cache.
@@ -144,7 +144,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 
 ### Microsoft Entra group server principal limitations
 
-The following are known limitations for Microsoft Entra group logins in Azure SQL Database and Azure Synapse Analytics:
+The following limitations apply to Microsoft Entra group logins in Azure SQL Database:
 
 - [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.
 - If your SQL admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually isn't part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
@@ -156,6 +156,10 @@ The following are known limitations for Microsoft Entra group logins in Azure SQ
     Msg 33181, Level 16, State 1, Line 4
     The new owner cannot be Azure Active Directory group.
     ```
+
+## Microsoft Entra server principals in Azure Synapse Analytics
+
+For dedicated SQL pools in Azure Synapse Analytics, see [Microsoft Entra server principals](/azure/synapse-analytics/sql/authentication-azure-ad-logins).
 
 ## Next steps
 

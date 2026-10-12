@@ -71,7 +71,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 ### `tempdb` file layout might differ between replicas after a failed file operation
 
-Changes to the `tempdb` file layout are applied to each replica and saved in the service configuration. A new file can become active on a replica before the operation finishes on every replica. If the operation fails, the service might be unable to remove the file after workload starts using it. This can leave the active file layout inconsistent with the saved configuration and cause replicas to have different file counts after a failover or rebuild.
+Changes to the `tempdb` file layout are applied to each replica and saved in the service configuration. A new file can become active on a replica before the operation finishes on every replica. If the operation fails, the service attempts to roll back the configuration change by removing the file. The rollback might not be possible after workload starts using the file, which can leave the file layout inconsistent across replicas until the affected replica restarts and restores the saved configuration.
 
 **Workaround**: Adjust the file layout during lower traffic hours. Apply changes one file at a time, and wait for the operation to report success before starting another file operation. For more information, see [Configure `tempdb` settings for Azure SQL Managed Instance](tempdb-configure.md#number-of-tempdb-files).
 

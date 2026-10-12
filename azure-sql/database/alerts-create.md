@@ -1,25 +1,26 @@
 ---
 title: Setup alerts and notifications in the Azure portal
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: Use the Azure portal to create alerts, which can trigger notifications or automation when the conditions you specify are met.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, srsaluru, dfurman
-ms.date: 04/29/2024
+ms.date: 10/07/2026
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
   - sqldbrb=1
 ---
-# Create alerts for Azure SQL Database and Azure Synapse Analytics using the Azure portal
-[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+
+# Create alerts for Azure SQL Database using the Azure portal
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](alerts-create.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/alerts-create.md?view=azuresql-mi&preserve-view=true)
 
-This article shows you how to set up alerts in Azure SQL Database and Azure Synapse Analytics dedicated SQL pools, using the Azure portal. Alerts can send you an email or call a web hook when some metric (for example database size or CPU usage) reaches the threshold.
+This article shows you how to set up alerts in Azure SQL Database, by using the Azure portal. Alerts can send you an email or call a webhook when some metric (for example, database size or CPU usage) reaches the threshold.
 
 ## Set up new alert rule
 
@@ -85,7 +86,7 @@ You can configure and get information about alert rules using:
   
   ### [Resource health](#tab/resource-health)
   
-  In Azure SQL Database, capture events and configure alerts for resource service health in the **Resource health** signal category. This category is not available for dedicated SQL pools in Azure Synapse Analytics.
+  In Azure SQL Database, capture events and configure alerts for resource service health in the **Resource health** signal category.
   
   1. On the **Conditions** pane, select **See all signals**.
   1. On the **Select a signal** pane, select **Resource health**. Select **Apply**.
@@ -145,6 +146,10 @@ Existing alerts need to be managed from the **Alerts** menu in the Azure portal 
     :::image type="content" source="media/alerts-insights-configure-portal/alert-rules.png" alt-text="Screenshot from the Azure portal showing a new alert called cpu." lightbox="media/alerts-insights-configure-portal/alert-rules.png":::
 
 1. Select an individual existing alert rule to manage it. Existing active rules can be modified and tuned to your preference. Active rules can also be suspended without being deleted.
+
+## Create alerts for Azure Synapse Analytics using the Azure portal
+
+For dedicated SQL pools in Azure Synapse Analytics, see [Create alerts using the Azure portal](/azure/synapse-analytics/sql/alerts-create).
 
 ## Related content
 

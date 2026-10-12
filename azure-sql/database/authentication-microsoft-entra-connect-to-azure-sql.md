@@ -1,16 +1,15 @@
 ---
 title: Connect with Microsoft Entra Authentication
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
-description: Learn how to use Microsoft Entra authentication to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+titleSuffix: Azure SQL Database & SQL Managed Instance
+description: Learn how to use Microsoft Entra authentication to connect to Azure SQL Database and Azure SQL Managed Instance.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma, maghan
-ms.date: 03/11/2026
+ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - azure-synapse
   - has-adal-ref
   - sqldbrb=2
   - devx-track-azurepowershell
@@ -22,9 +21,9 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 # Connect to Azure SQL resource with Microsoft Entra authentication
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-This article shows you how to use Microsoft Entra authentication to connect to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
+This article shows you how to use Microsoft Entra authentication to connect to [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 
 ## Prerequisites
 
@@ -60,7 +59,7 @@ Use this method when you want to log in using your Windows credentials that are 
 
 Use this method when connecting with a Microsoft Entra principal name using the Microsoft Entra managed domain. You can also use it for federated accounts without access to the domain when, for example, working remotely.
 
-Use this method to authenticate to the database in SQL Database or SQL Managed Instance with Microsoft Entra cloud-only identity users, or those who use Microsoft Entra hybrid identities. This method supports users who want to use their Windows credential, but their local machine isn't joined with the domain (for example, using remote access). In this case, a Windows user can indicate their domain account and password, and can authenticate to the database in SQL Database, the SQL Managed Instance, or Azure Synapse.
+Use this method to authenticate to the database in SQL Database or SQL Managed Instance with Microsoft Entra cloud-only identity users, or those who use Microsoft Entra hybrid identities. This method supports users who want to use their Windows credential, but their local machine isn't joined with the domain (for example, by using remote access). In this case, a Windows user can indicate their domain account and password, and can authenticate to the database in SQL Database or the SQL Managed Instance.
 
 1. Start SSMS or SSDT and on the **Login** tab of the **Connect to Server** (or **Connect to Database Engine**) dialog box:
    1. Provide the **Server name** in the format `<server-name>.database.windows.net`.
@@ -79,7 +78,7 @@ Use this method to authenticate to the database in SQL Database or SQL Managed I
 
 #### Microsoft Entra MFA
 
-Use this method for interactive authentication with [multifactor authentication (MFA)](authentication-aad-overview.md#multifactor-authentication-mfa), with the password being requested interactively. This method can be used to authenticate to databases in SQL Database, SQL Managed Instance, and Azure Synapse Analytics for Microsoft Entra cloud-only identity users, or those who use Microsoft Entra hybrid identities.
+Use this method for interactive authentication with [multifactor authentication (MFA)](authentication-aad-overview.md#multifactor-authentication-mfa), with the password requested interactively. You can use this method to authenticate to databases in SQL Database and SQL Managed Instance for Microsoft Entra cloud-only identity users, or those who use Microsoft Entra hybrid identities.
 
 The following steps show how to connect using multifactor authentication in the latest version of SSMS.
 
@@ -128,7 +127,7 @@ The following procedures show you how to connect to a SQL Database with a Micros
 >
 > If you must continue using *ADAL.DLL* in your applications, you can use the links in this section to install the latest ODBC or OLE DB driver, which contain the latest *ADAL.DLL* library.
 
-On all client machines from which your applications or users connect to SQL Database or Azure Synapse Analytics using Microsoft Entra identities, you must install the following software:
+On all client machines from which your applications or users connect to SQL Database using Microsoft Entra identities, install the following software:
 
 - [.NET Framework 4.6 or later](/dotnet/framework/install/guide-for-developers).
 - [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration) or Microsoft Authentication Library for SQL Server (*ADAL.DLL*). Links to install the latest SSMS, ODBC, and OLE DB driver that contains the *ADAL.DLL* library are available here:
@@ -180,7 +179,7 @@ Learn more about Microsoft Entra authentication methods using the demo code samp
 
 #### Microsoft Entra ID access token
 
-This authentication method allows middle-tier services to obtain [JSON Web Tokens (JWT)](/azure/active-directory/develop/id-tokens) to connect to the database in SQL Database, the SQL Managed Instance, or Azure Synapse by obtaining a token from Microsoft Entra ID. This method enables various application scenarios including service identities, service principals, and applications using certificate-based authentication. You must complete four basic steps to use Microsoft Entra token authentication:
+This authentication method allows middle-tier services to obtain [JSON Web Tokens (JWT)](/azure/active-directory/develop/id-tokens) to connect to the database in SQL Database or the SQL Managed Instance by obtaining a token from Microsoft Entra ID. This method enables various application scenarios including service identities, service principals, and applications using certificate-based authentication. You must complete four basic steps to use Microsoft Entra token authentication:
 
 1. Register your application with Microsoft Entra ID and get the client ID for your code.
 1. Create a database user representing the application (as described in the [Create contained users mapped to Microsoft Entra identities](authentication-aad-configure.md#create-microsoft-entra-principals-in-sql) section.)
@@ -226,11 +225,15 @@ For more information, see [Azure portal Query editor for Azure SQL Database](que
 
 1. Authenticate to your database with either **Microsoft Entra authentication** or **SQL authentication**. For more information, see [Quickstart: Use the Azure portal query editor to query Azure SQL Database](connect-query-portal.md).
 
+## Connect to Azure Synapse Analytics with Microsoft Entra authentication
+
+For Azure Synapse Analytics, see [Connect with Microsoft Entra authentication](/azure/synapse-analytics/sql/authentication-microsoft-entra-connect-to-azure-sql).
+
 ## Related content
 
-- [Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics](logins-create-manage.md)
+- [Authorize database access to SQL Database and SQL Managed Instance](logins-create-manage.md)
 - [Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)
 - [Database roles](/sql/relational-databases/security/authentication-access/database-level-roles)
-- [Azure SQL Database and Azure Synapse IP firewall rules](firewall-configure.md)
+- [Azure SQL Database IP firewall rules](firewall-configure.md)
 - [Create Microsoft Entra guest users and set them as a Microsoft Entra admin](authentication-aad-guest-users.md)
 - [Tutorial: Create Microsoft Entra users using Microsoft Entra applications](authentication-aad-service-principal-tutorial.md)

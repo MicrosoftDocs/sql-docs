@@ -327,10 +327,6 @@ For information on Microsoft Entra ID authentication in Azure Synapse Analytics,
 
 ## Related content
 
-> [!div class="nextstepaction"]
-> [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
-
-> [!div class="nextstepaction"]
-> [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
-
+- [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
+- [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

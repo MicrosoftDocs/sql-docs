@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path_from_root": "/azure-sql/database/free-offer.md",
+      "redirect_url": "/azure/azure-sql/database/free-tier",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/free-offer-faq.yml",
+      "redirect_url": "/azure/azure-sql/database/free-tier-faq",
+      "redirect_document_id": true
+    },
+    {
       "source_path_from_root": "/azure-sql/temporal-tables.md",
       "redirect_url": "/sql/relational-databases/tables/temporal/overview",
       "redirect_document_id": false

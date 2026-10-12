@@ -22,7 +22,7 @@ Each single database is isolated, using a dedicated database engine. Each has it
 
 Single database is a deployment model for Azure SQL Database. The other is [elastic pools](elastic-pool-overview.md).
 
-[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [azure-sql-database-free-tier-note](../includes/azure-sql-database-free-tier-note.md)]
 
 ## Dynamic scalability
 

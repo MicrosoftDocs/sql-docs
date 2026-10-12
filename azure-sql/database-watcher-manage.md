@@ -53,7 +53,7 @@ To use database watcher, the following prerequisites are required.
 - You need an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). You need to be a member of the **Contributor** role or the **Owner** role for the subscription or a resource group to be able to create resources.
 
 - To configure and start a watcher, you need an existing SQL target: an Azure SQL database, elastic pool, or SQL managed instance.
-    - If you don't already have an Azure SQL database created, visit [Quickstart: Create a single database](database/single-database-create-quickstart.md). Look for the option to use your offer to [Try Azure SQL Database for free](database/free-offer.md).
+    - If you don't already have an Azure SQL database created, visit [Quickstart: Create a single database](database/single-database-create-quickstart.md). Look for the option to [try Azure SQL Database for free with the free tier](database/free-tier.md).
     - Alternatively, [Try Azure SQL Managed Instance for free (preview)](managed-instance/free-offer.md).
 
 - The `Microsoft.DatabaseWatcher`, `Microsoft.Kusto`, and `Microsoft.Network` resource providers must be registered in your Azure subscription.

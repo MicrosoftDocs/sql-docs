@@ -1,0 +1,96 @@
+### YamlMime:FAQ
+metadata:
+  title: Free tier frequently asked questions (FAQ)
+  description: Frequently asked questions on the Azure SQL Database free tier.
+  services: sql-database
+  ms.service: azure-sql-database
+  ms.subservice: service-overview
+  ms.topic: faq
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: amapatil, mathoma, alpowers
+  ms.date: 10/12/2026
+  ai-usage: ai-assisted
+  monikerRange: "=azuresql||=azuresql-db"
+
+title: Azure SQL Database free tier FAQ
+summary: This article answers frequently asked questions on [the Azure SQL Database free tier](free-tier.md).
+sections:
+  - name: Free tier and eligibility
+    questions:
+      - question: Is the free tier a limited-time offer?
+        answer: |
+         No. The free tier isn't time bound. It's a configuration of the General Purpose, serverless service tier, and the free monthly amounts renew for the lifetime of your subscription. The earlier, time-bound [Azure free account offer](free-sql-db-free-account-how-to-deploy.md) is a separate, older offer. [Azure SQL Managed Instance](../managed-instance/free-offer.md) has its own free offer, which is limited to the first 12 months after you create the instance.
+
+      - question: How long can I use the free tier?
+        answer: |
+         You can use the free tier for the lifetime of your Azure subscription, subject to monthly limits. It isn't a time-limited offer.
+
+         Monthly usage limits are: 100,000 vCore seconds, 32 GB of data storage, and 32 GB of backup storage per free tier database. Each subscription can include up to 10 databases, and the same limits apply to each database individually.
+
+      - question: Can I use my Student subscription with an Azure SQL Database free tier database?
+        answer: |
+         There are multiple student offers. Currently, the Microsoft Azure for Students Starter offer is incompatible with this Azure SQL Database free tier. Instead, consider the [Azure for College Students offer](https://azure.microsoft.com/pricing/offers/ms-azr-0170p?cid=msft_learn) or the [Azure Free offer](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). If desired, the **Continue using database for additional charges** option can deduct from the starting credits.
+
+      - question: What if I don't see the free tier option in the Azure portal?
+        answer: |
+         There's a limit of 10 free databases per subscription. If you reach the limit, remove an existing free database to create another one.
+
+      - question: What if I delete a free tier database, can I get another?
+        answer: |
+         If you recently deleted a free tier database, it takes up to one hour for the slot to become available.
+
+      - question: Is the Azure SQL Database free tier a production quality database?
+        answer: |
+         While a free tier database is built on the same General Purpose, production-quality infrastructure, the free amount doesn't come with a service level agreement (SLA) and is recommended primarily for development and proof-of-concept scenarios. Since there are no charges, there are no credits for downtime.
+
+      - question: Will any unused vCore seconds in a month carry forward to the next month?
+        answer: |
+         No, vCore seconds for each free tier database reset at the start of each calendar month.
+
+  - name: Technical questions
+    questions:
+      - question: Help! I'm no longer able to sign in to my database.
+        answer: |
+         Check the overview page for the database [on the Azure portal](https://portal.azure.com) to see whether you have any remaining free credits for the month. If you choose the **Auto-pause the database until next month** option, once the free limits are met, the database is inaccessible until the start of the next calendar month. To continue usage with charges, go to the **Compute + Storage** tab and change the option to enable billing for usage of the database beyond the free amount.
+
+      - question: My vCore seconds are being used faster than I expected, how can I see what is using the vCore seconds?
+        answer: |
+         - Track usage throughout the month with the "Free amount remaining" Azure Metric. For more information, see [Track free usage](free-tier.md#track-free-usage).
+         - Review the Azure SQL Database serverless [features that prevent auto-pause](serverless-tier-overview.md#review-interoperability-that-prevents-auto-pause) for tips on saving vCore seconds.
+         - Disconnect querying tools such as [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms), including the Object Explorer, when you're done using them. Leaving connections open can continue to consume credits by preventing auto-pause.
+
+      - question: Can I restore a database to a free tier database?
+        answer: |
+         No. You can apply the free tier only to a new database. You can't restore or convert an existing database to the free tier.
+
+         You also can't copy a free tier database. To copy it, first [convert the database to a paid service tier](#can-i-upgrade-to-a-larger-or-more-powerful-database).
+
+      - question: Which features and configurations aren't supported?
+        answer: |
+         The following limitations apply to free tier databases:
+
+         - With **Auto-pause the database until next month**, the database is limited to 4 vCores and 32 GB. Long-term backup retention isn't available, point-in-time restore retention is limited to seven days, and backup storage is locally redundant.
+         - Data Sync, Elastic Jobs, and DNS aliases aren't available.
+         - A free tier database can't be part of an [elastic pool](elastic-pool-overview.md) or [failover group](failover-group-sql-db.md).
+
+      - question: Can I upgrade to a larger or more powerful database?
+        answer: |
+         Yes. At any time, you can upgrade the service tier or compute tier of the database. Select your database in the Azure portal, go to the **Compute and Storage** tab, then switch the **Free Database offer** options to **Continue using database with additional charges**. This option unlocks the ability to scale up to a larger General Purpose database. If you wish to change service tiers, you need to turn off the **Free database offer** before changing to Hyperscale or Business Critical service tiers. Once you convert a free tier database to a paid service tier, you can't revert to the free tier.
+
+      - question: Can I change the backup option to geo-redundant storage?
+        answer: |
+         Yes, if you change the **Free limit reached behavior** setting to **Continue using for additional charges**.
+
+      - question: How do I create a free tier database from the command line?
+        answer: |
+         Use [az sql db create](/cli/azure/sql/db#az-sql-db-create) with the `--use-free-limit` parameter. Without that parameter, you create a regular billable serverless database. Set `--free-limit-exhaustion-behavior` to `AutoPause` or `BillOverUsage` to choose what happens when the monthly free limits are reached. For the full commands, see [Create a database](free-tier.md?tabs=azure-cli#create-a-database).
+
+      - question: Can I monitor a free tier database in the Fabric Database Hub?
+        answer: |
+         Yes. [Database Hub in Microsoft Fabric](/fabric/database/hub/overview) (preview) discovers Azure SQL Database resources you already have permission to access, and supports performance monitoring for Azure SQL Database. Database Hub is available with a Fabric Free license, so you don't need Fabric capacity, a separate license, or any monitoring infrastructure. For more information, see [Monitor with Database Hub](free-tier.md#monitor-with-database-hub-preview).
+
+additionalContent: |
+ ## Next step
+ - [Azure SQL Database free tier](free-tier.md)
+ - [Database Hub in Microsoft Fabric](/fabric/database/hub/overview)

@@ -100,4 +100,4 @@ Together, these experiences give you an end-to-end path from a provisioned Azure
 - [Data API builder](mssql-data-api-builder.md)
 - [SQL Notebooks](mssql-sql-notebooks.md)
 - [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
-- [Deploy Azure SQL Database for free](/azure/azure-sql/database/free-offer)
+- [Deploy Azure SQL Database for free](/azure/azure-sql/database/free-tier)

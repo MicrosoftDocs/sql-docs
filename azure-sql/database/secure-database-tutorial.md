@@ -343,7 +343,7 @@ To enable or verify encryption:
 
 ## Related content
 
-- [Deploy Azure SQL Database for free](free-offer.md)
+- [Deploy Azure SQL Database for free](free-tier.md)
 - [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 - [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
 - [Plan and manage costs for Azure SQL Database](cost-management.md)

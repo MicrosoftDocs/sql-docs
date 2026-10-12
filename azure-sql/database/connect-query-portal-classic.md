@@ -22,7 +22,7 @@ In this quickstart, connect to an Azure SQL database in the Azure portal and use
 > [!IMPORTANT]
 > The classic Azure portal SQL query editor remains a preview feature. For the new Azure portal SQL query editor experience, see [Azure portal query editor for Azure SQL Database](query-editor.md).
 
-- If you don't already have an Azure SQL Database created, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+- If you don't already have an Azure SQL Database created, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to [deploy Azure SQL Database for free with the free tier](free-tier.md).
 
 ## Prerequisites
 
@@ -83,7 +83,7 @@ SELECT SYSDATETIMEOFFSET(), DB_NAME(), ORIGINAL_LOGIN();
 
 ### Query the AdventureWorksLT sample database
 
-This portion of quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+This portion of quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md). Look for the option to [deploy Azure SQL Database for free with the free tier](free-tier.md).
 
 On the **Query editor (preview)** page, run the following example queries against your `AdventureWorksLT` sample database.
 

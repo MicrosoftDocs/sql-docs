@@ -31,7 +31,7 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 - Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (latest version) or the [Azure portal query editor for Azure SQL Database](query-editor.md).
 - [BCP and SQLCMD](https://www.microsoft.com/download/details.aspx?id=36433) (latest version).
 - If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
-- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to [deploy Azure SQL Database for free with the free tier](free-tier.md).
 
 ## Sign in to the Azure portal
 
@@ -261,7 +261,7 @@ This query joins all four tables and finds the courses in which 'Noe Coleman' ha
 
 ## Related content
 
-- [Deploy Azure SQL Database for free](free-offer.md)
+- [Deploy Azure SQL Database for free](free-tier.md)
 - [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 - [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
 - [Plan and manage costs for Azure SQL Database](cost-management.md)

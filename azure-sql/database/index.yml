@@ -35,7 +35,7 @@ landingContent:
           - text: Configure firewall
             url: firewall-create-server-level-portal-quickstart.md
           - text: Try for free 
-            url: free-offer.md
+            url: free-tier.md
       - linkListType: concept
         links:
           - text: What is SQL Database?

@@ -17,7 +17,7 @@ ms.custom:
 
 You can create and manage servers and single databases in Azure SQL Database using the Azure portal, PowerShell, the Azure CLI, REST API, and Transact-SQL.
 
-[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [azure-sql-database-free-tier-note](../includes/azure-sql-database-free-tier-note.md)]
 
 ## Prerequisites
 

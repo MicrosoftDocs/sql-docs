@@ -71,7 +71,7 @@ The Azure portal enables you to convert to Hyperscale by modifying the service t
 1. Go to the database you want to convert in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.
 1. Select the **Service tier** dropdown list to expand the options for service tiers.
-    1. If you were using the [Azure SQL Database free offer](free-offer.md), select the button to remove the **Free database offer**. Then you see the **Service tier** dropdown list.
+    1. If you were using the [Azure SQL Database free tier](free-tier.md), select the button to remove the **Free database offer**. Then you see the **Service tier** dropdown list.
 1. Select **Hyperscale** from the dropdown list.
 1. Review the **Compute tier** and choose **Provisioned** or **Serverless**. 
 1. Review the **Cutover mode**, a choice specific to conversion to Hyperscale.

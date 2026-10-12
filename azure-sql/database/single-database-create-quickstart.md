@@ -39,7 +39,7 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 This quickstart creates a single database in the [serverless compute tier](serverless-tier-overview.md).
 
-[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [azure-sql-database-free-tier-note](../includes/azure-sql-database-free-tier-note.md)]
 
 [!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
 

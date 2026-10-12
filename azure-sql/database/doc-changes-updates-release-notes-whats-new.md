@@ -25,7 +25,7 @@ monikerRange: "=azuresql || =azuresql-db"
 This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). For more information about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md)
 
 > [!TIP]  
-> [Deploy Azure SQL Database for free](free-offer.md), for the life of your Azure subscription. This free offer provides up to ten free General Purpose databases, each with 100,000 vCore seconds of compute, every month.
+> [Deploy Azure SQL Database for free](free-tier.md), for the life of your Azure subscription. This free tier provides up to ten free General Purpose databases, each with 100,000 vCore seconds of compute, every month.
 
 For more announcements, discussion, and community content, see the [Azure SQL Database blog](https://techcommunity.microsoft.com/category/azuredatabases/blog/azuresqlblog).
 

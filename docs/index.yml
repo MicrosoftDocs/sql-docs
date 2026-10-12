@@ -21,7 +21,7 @@ highlightedContent:
   items:
     - title: Try Azure SQL Database for free
       itemType: deploy
-      url: /azure/azure-sql/database/free-offer?view=azuresql-db&preserve-view=true
+      url: /azure/azure-sql/database/free-tier?view=azuresql-db&preserve-view=true
     - title: Try Azure SQL Managed Instance for free
       itemType: deploy 
       url: /azure/azure-sql/managed-instance/free-offer?view=azuresql-mi&preserve-view=true

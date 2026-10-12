@@ -43,7 +43,7 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 ### Third-party GUI clients
 
-You can also connect to Azure SQL Database and Azure SQL Managed Instance using third-party SQL client tools. For example, [Beekeeper Studio](https://www.beekeeperstudio.io/alternatives/azure-data-studio) is a free, open-source editor that connects using its SQL Server connection type, supports MySQL, Postgres, and SQLite in addition to SQL Server, and supports Azure Active Directory (Microsoft Entra ID) authentication.
+You can also connect to Azure SQL Database and Azure SQL Managed Instance using third-party SQL client tools. For example, [Beekeeper Studio](https://www.beekeeperstudio.io/alternatives/azure-data-studio) is a free, open-source editor that connects using its SQL Server connection type, supports MySQL, Postgres, and SQLite in addition to SQL Server, and supports Microsoft Entra ID (formerly Azure Active Directory) authentication.
 
 ## Get server connection information
 

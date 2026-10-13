@@ -4,7 +4,7 @@ description: "Get an introduction to SQL Database: technical details and capabil
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 05/19/2026
+ms.date: 10/13/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: overview
@@ -73,7 +73,7 @@ Azure SQL Database provides the following deployment options for a database:
 
 You can define the amount of resources assigned. 
 
-- With single databases, each database is isolated from others and is portable. Each database has its own guaranteed amount of compute, memory, and storage resources. The resources you assign to the database are dedicated to that database and aren't shared with other databases in Azure. You can dynamically [scale single database resources](single-database-scale.md) up and down. The single database option provides different compute, memory, and storage resources for different needs. For example, you can get 1 to 128 vCores, or 32 GB to 4 TB. The [Hyperscale service tier](service-tier-hyperscale.md) enables you to scale up to 128 TB, with fast backup and restore capabilities.
+- With single databases, each database is isolated from others and is portable. Each database has its own guaranteed amount of compute, memory, and storage resources. The resources you assign to the database are dedicated to that database and aren't shared with other databases in Azure. You can dynamically [scale single database resources](single-database-scale.md) up and down. The single database option provides different compute, memory, and storage resources for different needs. For example, with Azure SQL Database you can provision up to 128 vCores and 4 TB, or up to 192 vCores and 128 TB with the [Hyperscale service tier](service-tier-hyperscale.md).
 - With elastic pools, you assign resources that all databases in the pool share. To maximize the use of resources and save money, you can create a new database or move existing single databases into a resource pool. This option also gives you the ability to dynamically [scale elastic pool resources](elastic-pool-scale.md) up and down.
 
 You can build your first app on a small single database at a low cost per month in the [General Purpose](service-tiers-sql-database-vcore.md#general-purpose) service tier. You can then change its service tier manually or programmatically at any time to the [Business Critical](service-tiers-sql-database-vcore.md#business-critical) or [Hyperscale](service-tier-hyperscale.md) service tier, to meet the needs of your solution. You can adjust performance without downtime to your app or to your customers. Dynamic scaling enables your database to transparently respond to rapidly changing resource requirements. You pay for only the resources that you need when you need them.

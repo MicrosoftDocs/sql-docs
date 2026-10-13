@@ -4,10 +4,11 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure `tempdb` settings for Azure SQL Managed Instance, such as the number of `tempdb` files, the growth increment, and the maximum size of `tempdb`.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 09/11/2025
+ms.date: 10/12/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 # Configure tempdb settings for Azure SQL Managed Instance
 
@@ -92,6 +93,9 @@ ALTER DATABASE tempdb REMOVE FILE [file_name]
 ```
 
 ---
+
+> [!CAUTION]
+> Changes to the `tempdb` file layout apply to each replica and save in the service configuration. Adjust the file layout during lower traffic hours. Apply changes one file at a time, and wait for the operation to report success before starting another file operation. A new file can become active on a replica before the operation finishes on every replica. If creating the file fails on any replica, the operation fails, and the service attempts to roll back the configuration change by removing the file. The rollback might not be possible after workload starts using the file, which can leave the file layout inconsistent across replicas until the affected replica restarts and restores the saved configuration.
 
 ## Growth increment
 

@@ -9970,16 +9970,6 @@ items:
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Edit SQL Documentation!
       href: sql-server/sql-server-docs-contribute.md
-  - name: Partners
-    items:
-    - name: Monitoring
-      href: sql-server/partner-monitor-sql-server.md
-    - name: High availability & disaster recovery
-      href: sql-server/partner-hadr-sql-server.md
-    - name: Management
-      href: sql-server/partner-management-sql-server.md
-    - name: Development
-      href: sql-server/partner-dev-sql-server.md
 - name: Reference
   items:
   - name: Database samples

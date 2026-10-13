@@ -87,7 +87,7 @@ ALTER DATABASE tempdb ADD FILE (NAME = 'file_name')
 ```
 
 > [!CAUTION]
-> Changes to the `tempdb` file layout are applied to each replica and saved in the service configuration. Adjust the file layout during lower traffic hours. Apply changes one file at a time, and wait for the operation to report success before starting another file operation. A new file can become active on a replica before the operation finishes on every replica. If the operation fails, the service attempts to roll back the configuration change by removing the file. The rollback might not be possible after workload starts using the file, which can leave the file layout inconsistent across replicas until the affected replica restarts and restores the saved configuration.
+> Changes to the `tempdb` file layout apply to each replica and save in the service configuration. Adjust the file layout during lower traffic hours. Apply changes one file at a time, and wait for the operation to report success before starting another file operation. A new file can become active on a replica before the operation finishes on every replica. If the operation fails, the service attempts to roll back the configuration change by removing the file. The rollback might not be possible after workload starts using the file, which can leave the file layout inconsistent across replicas until the affected replica restarts and restores the saved configuration.
 
 To remove an existing `tempdb` file, use the following command:
 

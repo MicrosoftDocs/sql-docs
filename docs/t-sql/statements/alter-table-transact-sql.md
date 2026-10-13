@@ -1298,6 +1298,12 @@ In Fabric Data Warehouse, you can alter distributed #temp tables with `ALTER TAB
 
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+
+Metadata for views can become outdated because of changes to the underlying tables upon which the view depends. To refresh a view's metadata, use [sys.sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md). Views created with `SCHEMABINDING` will block changes to underlying objects. If you don't create a view with `SCHEMABINDING`, run `sp_refreshview` when you make changes to the objects underlying the view that affect the definition of the view. Otherwise, the view might return unexpected results when you query it. 
+
+::: moniker-end
+
 ## Change the size of a column
 
 You can change the length, precision, or scale of a column by specifying a new size for the column data type. Use the `ALTER COLUMN` clause. If data exists in the column, the new size can't be smaller than the maximum size of the data. Also, you can't define the column in an index, unless the column is a **varchar**, **nvarchar**, or **varbinary** data type and the index isn't the result of a `PRIMARY KEY` constraint. See the example in the short section titled [Altering a Column Definition](#alter_column).

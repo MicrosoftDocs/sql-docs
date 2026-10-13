@@ -27,7 +27,7 @@ This article contains installation and configuration instructions for the `WideW
 
 Download the sample `WideWorldImportersDW` database backup/BACPAC that corresponds to your edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].
 
-The latest release of the sample is available from [wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630).
+The latest release of the sample is available from [wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkId=2384724).
 
 Source code to recreate the sample database is available from [wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts). Data population is based on ETL from the OLTP database (`WideWorldImporters`).
 

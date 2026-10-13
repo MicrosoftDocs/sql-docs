@@ -69,7 +69,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 ## Has workaround
 
-### `tempdb` file layout might differ between replicas after a failed file operation
+### tempdb file layout might differ between replicas after a failed file operation
 
 Changes to the `tempdb` file layout are applied to each replica and saved in the service configuration. A new file can become active on a replica before the operation finishes on every replica. If creating the file fails on any replica, the operation fails, and the service attempts to roll back the configuration change by removing the file. The rollback might not be possible after workload starts using the file, which can leave the file layout inconsistent across replicas until the affected replica restarts and restores the saved configuration.
 

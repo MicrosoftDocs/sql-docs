@@ -1300,7 +1300,7 @@ In Fabric Data Warehouse, you can alter distributed #temp tables with `ALTER TAB
 
 ::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
-Metadata for views can become outdated because of changes to the underlying tables upon which the view depends. To refresh a view's metadata, use [sys.sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md). Views created with `SCHEMABINDING` will block changes to underlying objects. If you don't create a view with `SCHEMABINDING`, run `sp_refreshview` when you make changes to the objects underlying the view that affect the definition of the view. Otherwise, the view might return unexpected results when you query it. 
+Metadata for views can become outdated because of changes to the underlying tables upon which the view depends. To refresh a view's metadata, use [sys.sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md).  Views created with `SCHEMABINDING` block changes to underlying objects when those changes affect the view definition. If you don't create a view with `SCHEMABINDING`, run `sp_refreshview` when you make changes to the objects underlying the view that affect the definition of the view. Otherwise, the view might return unexpected results when you query it. 
 
 ::: moniker-end
 

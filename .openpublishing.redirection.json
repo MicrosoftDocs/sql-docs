@@ -68835,6 +68835,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/partner-dev-sql-server.md",
+      "redirect_url": "https://partner.microsoft.com/partnership/find-a-partner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/partner-hadr-sql-server.md",
+      "redirect_url": "https://partner.microsoft.com/partnership/find-a-partner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/partner-management-sql-server.md",
+      "redirect_url": "https://partner.microsoft.com/partnership/find-a-partner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/partner-monitor-sql-server.md",
+      "redirect_url": "https://partner.microsoft.com/partnership/find-a-partner",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "azure-sql/database/ledger-digest-management-and-database-verification.md",
       "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
       "redirect_document_id": false

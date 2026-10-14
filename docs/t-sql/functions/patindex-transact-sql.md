@@ -44,7 +44,7 @@ PATINDEX ( '%pattern%' , expression )
 A character expression that contains the sequence to be found. Wildcard characters can be used; however, the % character must come before and follow *pattern* (except when you search for first or last characters). *pattern* is an expression of the character string data type category. *pattern* is limited to 8,000 characters.
 
 > [!NOTE]  
-> While traditional regular expressions aren't natively supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions, similar complex pattern matching can be achieved by using various wildcard expressions. See the [String operators](../language-elements/string-operators-transact-sql.md) documentation for more detail on wildcard syntax. For information about regular expression functions in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Regular expressions functions](regular-expressions-functions-transact-sql.md).
+> While traditional regular expressions aren't natively supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions, similar complex pattern matching can be achieved by using various wildcard expressions. See the [String operators](../language-elements/string-operators-transact-sql.md) documentation for more detail on wildcard syntax. For information about regular expression functions in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Regular expressions functions](../../relational-databases/regular-expressions/overview.md).
 
 #### *expression*
 

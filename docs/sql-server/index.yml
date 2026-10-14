@@ -175,8 +175,8 @@ landingContent:
             url: ../t-sql/functions/functions.md
           - text: Fuzzy string matching
             url: ../relational-databases/fuzzy-string-match/overview.md
-          - text: Regular expressions (REGEX)
-            url: ../t-sql/functions/regular-expressions-functions-transact-sql.md
+          - text: Regular expressions functions (REGEX)
+            url: ../relational-databases/regular-expressions/overview.md
           - text: Scripting
             url: ../ssms/scripting/database-engine-scripting.md
           - text: Synonyms

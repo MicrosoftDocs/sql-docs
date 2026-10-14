@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/t-sql/functions/regular-expressions-functions-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/regular-expressions/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md",
       "redirect_url": "/previous-versions/sql/relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql",
       "redirect_document_id": false

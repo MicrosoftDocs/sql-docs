@@ -15954,7 +15954,6 @@ items:
         - name: JSON_VALUE
           href: t-sql/functions/json-value-transact-sql.md
       - name: Regular expressions
-        href: t-sql/functions/regular-expressions-functions-transact-sql.md
         items:
         - name: REGEXP_LIKE
           href: t-sql/functions/regexp-like-transact-sql.md

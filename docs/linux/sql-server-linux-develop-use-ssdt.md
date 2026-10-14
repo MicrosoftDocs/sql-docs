@@ -1,8 +1,9 @@
 ---
 title: Develop and Deploy SQL Server Databases for Linux
 description: SQL Server Data Tools with Visual Studio is a powerful development and database lifecycle management environment for SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 07/03/2025
 ms.service: sql
 ms.subservice: linux

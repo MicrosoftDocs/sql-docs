@@ -1,8 +1,9 @@
 ---
 title: Enable and Run tempdb on tmpfs for SQL Server 2025 on Linux
 description: Learn how to use tmpfs for the tempdb system database, in SQL Server 2025 on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: linux

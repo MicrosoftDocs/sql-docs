@@ -1,9 +1,9 @@
 ---
 title: Deploy SQL Server Containers on Kubernetes with StatefulSets
 description: This article provides best practices and guidance for running SQL Server Linux containers on Kubernetes with StatefulSets.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 09/05/2025
 ms.service: sql
 ms.subservice: linux

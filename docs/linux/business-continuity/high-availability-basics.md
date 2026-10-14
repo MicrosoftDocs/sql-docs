@@ -2,9 +2,9 @@
 title: High Availability Basics
 titleSuffix: SQL Server on Linux
 description: Learn about the high availability options for SQL Server on Linux, such as availability groups, failover cluster instances (FCI), and log shipping.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux

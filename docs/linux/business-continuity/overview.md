@@ -1,8 +1,9 @@
 ---
 title: Business Continuity and Database Recovery - SQL Server on Linux
 description: This article is an overview of business continuity solutions for high availability and disaster recovery in SQL Server. It focuses on availability scenarios.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 12/11/2025
 ms.service: sql
 ms.subservice: linux

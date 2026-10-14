@@ -1,9 +1,9 @@
 ---
 title: "Quickstart: Deploy a SQL Server Linux Container to Kubernetes Using Helm Charts"
 description: Learn how to deploy a SQL Server on Linux container to Azure Kubernetes Service (AKS) using Helm charts.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/27/2026
 ms.service: sql
 ms.subservice: linux

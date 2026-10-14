@@ -1,9 +1,9 @@
 ---
 title: Deploy Availability Groups with DH2i DxOperator on AKS
 description: Set up an availability group in SQL Server on Kubernetes using DH2i DxOperator.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 07/14/2026
 ms.service: sql
 ms.subservice: linux

@@ -6,9 +6,9 @@ summary: Tutorials, quickstarts, and other educational resources for users who a
 metadata:
   title: "New to Linux: Learning Resources"
   description: Learning resources for users who are familiar with SQL Server but new to Linux.
-  author: rwestMSFT
-  ms.author: randolphwest
-  ms.reviewer: amitkh, atsingh
+  author: AttinderPalSingh
+  ms.author: atsingh
+  ms.reviewer: amitkh
   ms.date: 04/13/2026
   ms.service: sql
   ms.topic: landing-page

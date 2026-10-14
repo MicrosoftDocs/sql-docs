@@ -1,9 +1,9 @@
 ---
 title: Feature Support and Considerations for SSIS on Linux
 description: This article describes limitations and known issues for SQL Server Integration Services (SSIS) on Linux computers.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: lle, amitkh, atsingh, maghan
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, lle
 ms.date: 04/29/2026
 ms.service: sql
 ms.subservice: linux

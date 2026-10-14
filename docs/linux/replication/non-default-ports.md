@@ -2,9 +2,9 @@
 title: Configure Replication Snapshot Folder (Nondefault Ports)
 titleSuffix: SQL Server on Linux
 description: Learn to configure snapshot folder shares with nondefault ports for SQL Server replication on Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux

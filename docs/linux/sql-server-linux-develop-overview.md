@@ -1,8 +1,9 @@
 ---
 title: Develop Applications for SQL Server on Linux
 description: You can create applications that connect to and use SQL Server on Linux from various programming languages and popular web frameworks.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: linux

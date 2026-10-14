@@ -1,8 +1,9 @@
 ---
 title: Security and Permissions Guide for SQL Server on Linux
 description: Learn about the required service accounts, and file system permissions for SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux

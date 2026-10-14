@@ -1,9 +1,9 @@
 ---
 title: Schedule SSIS Packages on Linux with Cron
 description: This article describes how to schedule SQL Server Integration Services (SSIS) packages on Linux with the cron service.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: lle, amitkh, atsingh, maghan
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, lle
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux

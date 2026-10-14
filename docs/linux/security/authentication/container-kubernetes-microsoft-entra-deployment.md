@@ -1,8 +1,9 @@
 ---
 title: "Tutorial: Configure Microsoft Entra ID authentication manually for SQL Server on containers and Kubernetes"
 description: Learn how to enable Microsoft Entra authentication for SQL Server on Linux containers without using Azure Arc.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/05/2026
 ms.service: sql
 ms.subservice: linux

@@ -1,8 +1,9 @@
 ---
 title: Configure Repositories for Installing and Upgrading SQL Server 2025 on Linux
 description: Check and configure source repositories for SQL Server 2025 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 10/08/2026
 ms.service: sql
 ms.subservice: linux

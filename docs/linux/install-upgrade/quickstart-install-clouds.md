@@ -1,9 +1,10 @@
 ---
-title: "Get Started with SQL Server (On Linux) in the Cloud"
+title: Get Started with SQL Server (On Linux) in the Cloud
 titleSuffix: SQL Server
 description: Learn how to install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux

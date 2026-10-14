@@ -1,9 +1,9 @@
 ---
 title: Install SQL Server Integration Services on Linux
 description: This article describes how to install SQL Server Integration Services (SSIS) on Linux. You can install SSIS on Ubuntu and Red Hat Enterprise Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: lle, amitkh, atsingh, maghan
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, lle
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: linux

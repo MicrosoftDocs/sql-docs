@@ -2,9 +2,9 @@
 title: Editions and Supported Features
 titleSuffix: SQL Server 2025 on Linux
 description: This article describes editions, features, and components supported by the various editions of SQL Server 2025 on Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/08/2026
 ms.service: sql
 ms.subservice: linux

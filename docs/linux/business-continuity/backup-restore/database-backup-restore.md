@@ -1,9 +1,9 @@
 ---
 title: Back up and Restore SQL Server Databases on Linux
 description: Learn how to back up and restore SQL Server databases on Linux. Also learn how to back up and restore with SQL Server Management Studio (SSMS).
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux

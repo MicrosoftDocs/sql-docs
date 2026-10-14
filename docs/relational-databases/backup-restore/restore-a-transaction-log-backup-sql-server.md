@@ -1,9 +1,9 @@
 ---
 title: "Restore a Transaction Log Backup (SQL Server)"
-description: This article describes how to restore a transaction log backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
+description: This article describes how to restore a transaction log backup in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "03/14/2017"
+ms.date: "10/14/2026"
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -20,7 +20,7 @@ helpviewer_keywords:
 # Restore a Transaction Log Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to restore a transaction log backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to restore a transaction log backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
 
 <a id="BeforeYouBegin"></a>
 
@@ -267,6 +267,49 @@ RESTORE DATABASE AdventureWorks2022
 GO  
 ```  
   
+## Use PowerShell
+
+Use the `Restore-SqlDatabase` cmdlet and specify `Log` for the value of the `-RestoreAction` parameter. Include the `-NoRecovery` parameter for every restore in the sequence except the last one. Omit `-NoRecovery` on the final log restore to recover the database.
+
+> [!NOTE]  
+> These examples require the `SqlServer` module. For more information, see [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider).
+
+For full syntax, see [Restore-SqlDatabase](/powershell/module/sqlserver/restore-sqldatabase).
+
+### Examples (PowerShell)
+
+#### A. Apply a single transaction log backup
+
+The following example restores the `AdventureWorks2022` database from a full database backup, leaving the database in the restoring state. It then applies a transaction log backup and recovers the database.
+
+```powershell
+$instance = "Computer\Instance"
+
+Restore-SqlDatabase -ServerInstance $instance -Database AdventureWorks2022 -BackupFile "C:\Backup\AdventureWorks2022_full.bak" -RestoreAction Database -NoRecovery -ReplaceDatabase
+
+Restore-SqlDatabase -ServerInstance $instance -Database AdventureWorks2022 -BackupFile "C:\Backup\AdventureWorks2022_log1.trn" -RestoreAction Log
+```
+
+#### B. Apply multiple transaction log backups
+
+The following example restores the full database backup, applies three transaction log backups in sequence with `-NoRecovery`, and recovers the database when the last log backup is applied.
+
+```powershell
+$instance = "Computer\Instance"
+$logBackups = @(
+    "C:\Backup\AdventureWorks2022_log1.trn",
+    "C:\Backup\AdventureWorks2022_log2.trn",
+    "C:\Backup\AdventureWorks2022_log3.trn"
+)
+
+Restore-SqlDatabase -ServerInstance $instance -Database AdventureWorks2022 -BackupFile "C:\Backup\AdventureWorks2022_full.bak" -RestoreAction Database -NoRecovery -ReplaceDatabase
+
+for ($i = 0; $i -lt $logBackups.Count; $i++) {
+    $isLast = ($i -eq $logBackups.Count - 1)
+    Restore-SqlDatabase -ServerInstance $instance -Database AdventureWorks2022 -BackupFile $logBackups[$i] -RestoreAction Log -NoRecovery:(-not $isLast)
+}
+```
+
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

@@ -1,8 +1,9 @@
 ---
 title: Security Considerations for SQL Server on Linux
 description: Learn about SQL Server on Linux security overview, security best practices, restrictions, including how using keys stored in Azure Key Vault and extensible Key Management aren't supported.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux

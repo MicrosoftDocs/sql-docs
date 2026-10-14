@@ -1,9 +1,9 @@
 ---
 title: Considerations for Upgrading SQL Server on Linux
 description: Learn about the different options for upgrading SQL Server on Linux, including in-place upgrades and migration to a new instance.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux

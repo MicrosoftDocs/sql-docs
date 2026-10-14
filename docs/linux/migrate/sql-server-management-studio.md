@@ -1,8 +1,9 @@
 ---
 title: Export and Import a Database on Linux
 description: This article shows how to use SQL Server Management Studio or SqlPackage to export and import a database on SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 07/03/2025
 ms.service: sql
 ms.subservice: linux

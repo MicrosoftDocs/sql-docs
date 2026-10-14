@@ -1,8 +1,9 @@
 ---
 title: Restore master Database on SQL Server in Single-User Mode on Linux
-description: "Learn how to restore the master database using single-user mode in SQL Server on Linux."
-author: rwestMSFT
-ms.author: randolphwest
+description: Learn how to restore the master database using single-user mode in SQL Server on Linux.
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: configuration

@@ -4,7 +4,7 @@ description: REGEXP_REPLACE Returns a modified source string replaced by a repla
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: abhtiwar, wiassaf, randolphwest
-ms.date: 05/13/2026
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -12,14 +12,14 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # REGEXP_REPLACE (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
-Returns a modified source string replaced by a replacement string, where the occurrence of the regular expression pattern found. If no matches are found, the function returns the original string.
+The `REGEXP_REPLACE` scalar regular expression function returns a modified source string replaced by a replacement string, where the occurrence of the regular expression pattern found. If no matches are found, the function returns the original string.
 
 ```syntaxsql
 REGEXP_REPLACE
@@ -28,9 +28,6 @@ REGEXP_REPLACE
     pattern_expression [ , string_replacement [ , start [ , occurrence [ , flags ] ] ] ]
 )
 ```
-
-> [!NOTE]  
-> Regular expressions are available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Arguments
 
@@ -92,6 +89,13 @@ An expression (positive integer) that specifies which occurrence of the pattern 
 
 Expression.
 
+## Platform support
+
+- In Azure SQL Managed Instance, T-SQL regular expression functions are available with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy) only.
+- T-SQL regular expression functions are available in Azure SQL Database, SQL database in Fabric, and starting in SQL Server 2025.
+- T-SQL regular expression functions aren't available in SQL Server 2022 or earlier versions.
+- T-SQL regular expression scalar functions are available as a preview feature in Fabric Data Warehouse. For more information, see [Regular expressions functions in Fabric Data Warehouse](/fabric/data-warehouse/regular-expressions). T-SQL regular expression table-valued functions are not available in Fabric Data Warehouse. 
+
 ## Examples
 
 Replace all occurrences of `a` or `e` with `X` in the product names.
@@ -117,5 +121,4 @@ FROM CUSTOMERS;
 
 ## Related content
 
-- [Regular expressions](../../relational-databases/regular-expressions/overview.md)
-- [Regular expressions functions (Transact-SQL)](regular-expressions-functions-transact-sql.md)
+- [Regular expressions functions](../../relational-databases/regular-expressions/overview.md)

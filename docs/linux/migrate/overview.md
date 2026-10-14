@@ -1,8 +1,9 @@
 ---
 title: Migrate Databases to SQL Server on Linux
 description: This article describes the different options for migrating databases and data to SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 07/03/2025
 ms.service: sql
 ms.subservice: linux

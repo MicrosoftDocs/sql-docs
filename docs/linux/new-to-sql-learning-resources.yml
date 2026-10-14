@@ -8,9 +8,9 @@ metadata:
   description: A collection of resources meant to teach you to use SQL Server on Linux for Linux users.
   ms.service: sql
   ms.topic: landing-page
-  author: rwestMSFT
-  ms.author: randolphwest
-  ms.reviewer: amitkh, atsingh, mathoma
+  author: AttinderPalSingh
+  ms.author: atsingh
+  ms.reviewer: amitkh
   ms.date: 07/11/2025
 
 landingContent:

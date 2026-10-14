@@ -1,9 +1,9 @@
 ---
 title: What is SQL Server on Linux?
 description: This article describes how SQL Server runs on Linux and provides information on how to learn more.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 04/13/2026
 ms.service: sql
 ms.subservice: linux

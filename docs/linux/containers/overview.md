@@ -1,8 +1,9 @@
 ---
 title: SQL Server on Linux Containers
 description: A comparison of virtual machines vs containers, and guidance for containerized SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 04/13/2026
 ms.service: sql
 ms.subservice: linux

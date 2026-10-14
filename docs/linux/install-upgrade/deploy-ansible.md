@@ -1,9 +1,9 @@
 ---
 title: "Quickstart: Deploy SQL Server on Linux Using an Ansible Playbook"
 description: Learn how to deploy SQL Server on Linux to several managed nodes using Ansible playbook.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux

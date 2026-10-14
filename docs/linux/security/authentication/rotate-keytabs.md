@@ -1,9 +1,9 @@
 ---
 title: Rotate SQL Server on Linux Keytabs
 description: Recommendations on rotating keytabs for SQL Server on Linux using adutil when configured for Active Directory authentication
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux

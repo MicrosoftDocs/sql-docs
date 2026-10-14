@@ -1,9 +1,9 @@
 ---
 title: Configure SQL Server Availability Group with Custom High Availability Logic
 description: How to configure a SQL Server Always On availability group using custom high availability and failover logic.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: atsingh, amitkh-msft
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 02/04/2026
 ms.service: sql
 ms.subservice: linux

@@ -1,9 +1,9 @@
 ---
 title: "Performance Best Practices: SQL Server Memory on Linux"
 description: Memory configuration guidelines for SQL Server on Linux, including mssql-conf memory limits, cgroup settings, Docker container memory, and swap.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/11/2026
 ms.service: sql
 ms.subservice: linux

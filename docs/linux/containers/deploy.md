@@ -1,9 +1,9 @@
 ---
 title: Deploy and Connect to SQL Server Linux Containers
 description: Explore how SQL Server can be deployed on Linux containers and learn about various tools to connect to SQL Server from inside and outside the container
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux

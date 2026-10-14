@@ -1,9 +1,9 @@
 ---
 title: Deploy Availability Groups on AKS with DH2i DxOperator and Rancher by SUSE
 description: Set up an availability group in SQL Server on Kubernetes using DH2i DxOperator and Rancher by SUSE.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux

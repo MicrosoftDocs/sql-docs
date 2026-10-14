@@ -1,8 +1,9 @@
 ---
 title: What's New for SQL Server 2025 on Linux
 description: In this article, learn about the major features and services available for SQL Server 2025 running on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux

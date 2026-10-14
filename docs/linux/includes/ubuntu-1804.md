@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: AttinderPalSingh
+author: AttinderPalSingh
+ms.author: atsingh
 ms.reviewer: amitkh
 ms.date: 10/08/2026
 ms.service: sql

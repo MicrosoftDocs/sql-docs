@@ -2,9 +2,9 @@
 title: Operate Failover Cluster Instance
 titleSuffix: SQL Server on Linux
 description: Learn to operate a failover cluster instance (FCI) on SQL Server on Linux, including failover, monitoring, adding and removing nodes, and troubleshooting.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux

@@ -118,8 +118,7 @@ The following sections identify features that are improved or introduced in [!IN
 | [Fuzzy string matching](../relational-databases/fuzzy-string-match/overview.md) | Check if two strings are similar, and calculate the difference between two strings. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
 | [JSON data in SQL Server](../relational-databases/json/json-data-sql-server.md#sql-server-2025-changes) | Use SQL Server built-in functions and operators with JSON data stored in a native binary format:<br /><br />- Parse JSON text and read or modify values.<br />- Transform arrays of JSON objects into table format.<br />- Run any Transact-SQL query on the converted JSON objects.<br />- Format the results of Transact-SQL queries in JSON format.<br />- For more information and examples, see [JSON data type](../t-sql/data-types/json-data-type.md). |
 | New Chinese collations | New Chinese collations in database compatibility version 160 support GB18030-2022 standard. |
-| [Regular expressions](../relational-databases/regular-expressions/overview.md) | Define a search pattern for text with a sequence of characters. Query SQL Server with regex to find, replace, or validate text data. |
-| [Regular expressions functions](../t-sql/functions/regular-expressions-functions-transact-sql.md) | Match complex patterns and manipulate data in SQL Server with regular expressions. |
+| [Regular expressions functions](../relational-databases/regular-expressions/overview.md) | Define a search pattern for text with a sequence of characters. Query SQL Server with regex to find, replace, or validate text data. |
 | [SQL MCP Server](/azure/data-api-builder/mcp/overview) | Connect custom and [Foundry agents](/azure/data-api-builder/mcp/quickstart-azure-ai-foundry) to the database with a secure MCP Server. |
 
 

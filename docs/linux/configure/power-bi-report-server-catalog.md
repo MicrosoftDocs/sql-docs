@@ -1,8 +1,9 @@
 ---
 title: Configure Power BI Report Server Catalog Databases for SQL Server on Linux
 description: Learn how to configure SQL Server on Linux to host the Power BI Report Server catalog database.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux

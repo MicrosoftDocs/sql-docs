@@ -1,8 +1,9 @@
 ---
 title: Walkthrough for the Security Features of SQL Server on Linux
 description: Walk through the security features of SQL Server on Linux to get an idea of areas to investigate further.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux

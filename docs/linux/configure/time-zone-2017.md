@@ -1,9 +1,9 @@
 ---
 title: Configure the Time Zone for SQL Server 2017 on Linux
 description: In this article, learn how to configure the time zone on for SQL Server 2017 on Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ericjulien, amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, ericjulien
 ms.date: 07/03/2025
 ms.service: sql
 ms.subservice: linux

@@ -4,7 +4,7 @@ description: The native JSON data type provides advantages for storing JSON data
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, jovanpop, umajay
-ms.date: 09/15/2026
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -87,7 +87,11 @@ CREATE TABLE JsonTable
     d JSON
 );
 
-INSERT INTO JsonTable (id, d)
+INSERT INTO JsonTable
+(
+    id,
+    d
+)
 VALUES (1, '{"a":1, "b":"abc", "c":true}');
 
 UPDATE JsonTable
@@ -101,22 +105,22 @@ WHERE id = 1;
 
 ## Valid data
 
-Input to the **json** data type must be a JSON object or a JSON array. Scalars, booleans, and `NULL` values are not supported. The JSON data type conforms to IETF RFC 4627 which allows only a JSON object or array. The **json** data type and all JSON functions only work with IETF RFC 4627 compliant JSON documents.
+Input to the **json** data type must be a JSON object or a JSON array. Scalars, booleans, and `NULL` values aren't supported. The JSON data type conforms to IETF RFC 4627 which allows only a JSON object or array.
 
-The [ISJSON](../functions/isjson-transact-sql.md) function can be used to validate a string that contains JSON document conforms to IETF RFC 8259. An IETF RFC 8259 conformant JSON document contains only a JSON scalar value at top level. 
+Use the [ISJSON](../functions/isjson-transact-sql.md) function to test whether a string contains valid JSON. Without a type constraint, `ISJSON` accepts only a JSON object or array at the top level, the same as the **json** data type. The `VALUE` type constraint accepts any JSON value at the top level, including a scalar, as IETF RFC 8259 allows. The `ARRAY`, `OBJECT`, and `SCALAR` type constraints accept only that type.
 
 For example:
 
 ```sql
-DECLARE @true JSON = 'true'; -- invalid
-DECLARE @false JSON = 'false'; -- invalid
-DECLARE @number JSON = '1234.56'; -- invalid
-DECLARE @string JSON = '"contoso"'; -- invalid
-DECLARE @null JSON = 'null' -- invalid
+DECLARE @true AS JSON = 'true'; -- invalid
+DECLARE @false AS JSON = 'false'; -- invalid
+DECLARE @number AS JSON = '1234.56'; -- invalid
+DECLARE @string AS JSON = '"contoso"'; -- invalid
+DECLARE @null AS JSON = 'null'; -- invalid
 
-DECLARE @null JSON = NULL -- valid
-DECLARE @object JSON = '{}' -- valid
-DECLARE @array JSON = '[]' -- valid
+DECLARE @null AS JSON = NULL; -- valid
+DECLARE @object AS JSON = '{}'; -- valid
+DECLARE @array AS JSON = '[]'; -- valid
 ```
 
 ## Function support
@@ -135,9 +139,17 @@ The **json** type can't be used as key column in a `CREATE INDEX` statement. How
 
 ## Conversion
 
-Explicit conversion using `CAST` or `CONVERT` from the **json** type can be done to **char**, **nchar**, **varchar**, and **nvarchar** types. All implicit conversions aren't allowed, similar to the behavior of **xml**. Similarly, only **char**, **nchar**, **varchar**, and **nvarchar** can be explicitly converted to the **json** data type.
+Conversion from **json** to **char**, **nchar**, **varchar**, and **nvarchar** must be explicit. Use `CAST` or `CONVERT`.
 
-The **json** data type can't be used with the **sql_variant** type or assigned to a **sql_variant** variable or column. This restriction similar to **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **xml**, and CLR-based data types.
+Conversion from **char**, **nchar**, **varchar**, **nvarchar**, and **vector** to **json** can be implicit or explicit. Conversion from **json** to **vector** can also be implicit or explicit.
+
+Conversion between **json** and all other data types isn't allowed.
+
+A value that you convert to **json** must be a JSON object or a JSON array. A JSON scalar, such as `1`, `"abc"`, `true`, or `null`, causes error 13609. An empty string also causes error 13609. If an object has duplicate keys, **json** keeps the first value and discards the other values. No error occurs.
+
+Conversion from **json** to a string type returns the JSON text without insignificant white space. If the target length is too short for the JSON text, error 13639 occurs. The value isn't truncated.
+
+The **json** data type can't be used with the **sql_variant** type or assigned to a **sql_variant** variable or column. This restriction is similar to **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **xml**, and CLR-based data types.
 
 You can convert existing columns like **varchar(max)** to **json** using `ALTER TABLE`. Similar to the **xml** data type, you can't convert a **json** column to any of the string or binary types using `ALTER TABLE`.
 
@@ -147,7 +159,7 @@ For more information, see [Data type conversion (Database Engine)](data-type-con
 
 The **json** data type can be used as a parameter or return type in a user-defined function, or the parameter of a stored procedure. The **json** type is compatible with triggers and views.
 
-Currently, the [bcp](../../tools/bcp-utility.md) tool's native format contains the **json** document as **varchar** or **nvarchar**. You must specify a format file to designate a **json** column.
+Currently, the [bcp](../../tools/bcp/bcp-utility.md) tool's native format contains the **json** document as **varchar** or **nvarchar**. You must specify a format file to designate a **json** column.
 
 Creation of alias type using `CREATE TYPE` for the **json** data type isn't allowed. This behavior is the same as the **xml** data type.
 

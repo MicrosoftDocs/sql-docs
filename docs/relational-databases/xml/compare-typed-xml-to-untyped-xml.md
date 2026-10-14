@@ -1,10 +1,9 @@
 ---
-title: "Compare Typed XML to Untyped XML"
+title: Compare Typed XML to Untyped XML
 description: Learn about the differences between typed and untyped XML.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 05/05/2022
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: xml
 ms.topic: how-to
@@ -44,7 +43,9 @@ An XML schema provides the following:
 
 - **Data type information.** Schemas provide information about the types of attributes and elements in the **xml** data type instance. The type information provides more precise operational semantics to the values contained in the instance than is possible with untyped **xml**. For example, decimal arithmetic operations can be performed on a decimal value, but not on a string value. Because of this, typed XML storage can be made significantly more compact than untyped XML.
 
-## Choosing typed or untyped XML
+<a id="choosing-typed-or-untyped-xml"></a>
+
+## Choose typed or untyped XML
 
 Use untyped **xml** data type in the following situations:
 
@@ -62,9 +63,11 @@ Use typed **xml** data type in the following situations:
 
 Typed XML columns, parameters, and variables can store XML documents or content. However, you have to specify with a flag whether you're storing a document or content at the time of declaration. Additionally, you have to provide the collection of XML schemas. Specify DOCUMENT if each XML instance has exactly one top-level element. Otherwise, use CONTENT. The query compiler uses the DOCUMENT flag in type checks during query compilation to infer singleton top-level elements.
 
-## Creating typed XML
+<a id="creating-typed-xml"></a>
 
-Before you can create typed **xml** variables, parameters, or columns, you must first register the XML schema collection by using [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md). You can then associate the XML schema collection with variables, parameters, or columns of the **xml** data type.
+## Create typed XML
+
+Before you can create typed **xml** variables, parameters, or columns, you must first register the XML schema collection by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md). You can then associate the XML schema collection with variables, parameters, or columns of the **xml** data type.
 
 In the following examples, a two-part naming convention is used for specifying the XML schema collection name. The first part is the schema name, and the second part is the XML schema collection name.
 
@@ -73,7 +76,7 @@ In the following examples, a two-part naming convention is used for specifying t
 The following example creates an **xml** type variable and associates a schema collection with it. The schema collection specified in the example is already imported in the **AdventureWorks** database.
 
 ```sql
-DECLARE @x xml (Production.ProductDescriptionSchemaCollection);
+DECLARE @x AS XML(Production.ProductDescriptionSchemaCollection);
 ```
 
 ### Example: Specifying a Schema for an xml type column
@@ -81,9 +84,11 @@ DECLARE @x xml (Production.ProductDescriptionSchemaCollection);
 The following example creates a table with an **xml** type column and specifies a schema for the column:
 
 ```sql
-CREATE TABLE T1(
-Col1 int,
-Col2 xml (Production.ProductDescriptionSchemaCollection));
+CREATE TABLE T1
+(
+    Col1 INT,
+    Col2 XML(Production.ProductDescriptionSchemaCollection)
+);
 ```
 
 ### Example: Passing an XML type parameter to a stored procedure
@@ -92,31 +97,38 @@ The following example passes an **xml** type parameter to a stored procedure and
 
 ```sql
 CREATE PROCEDURE SampleProc
-  @ProdDescription xml (Production.ProductDescriptionSchemaCollection)
+(
+  @ProdDescription XML(Production.ProductDescriptionSchemaCollection)
+)
 AS
 ...
 ```
 
 Note the following about the XML schema collection:
 
-- An XML schema collection is available only in the database in which it was registered by using [Creating an XML Schema Collection](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
+- An XML schema collection is available only in the database in which it was registered by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
 - If you cast from a string to a typed **xml** data type, the parsing also performs validation and typing, based on the XML schema namespaces in the collection specified.
 
-- You can cast from a typed **xml** data type to an untyped **xml** data type, and vice versa.
+- You can cast from a typed **xml** data type to an untyped **xml** data type, and vice versa. This conversion can also be implicit.
+- Conversion between typed **xml** values can be implicit only when both values use the same XML schema collection and the same `DOCUMENT` or `CONTENT` facet. Otherwise, the conversion must be explicit. An implicit conversion between different XML schema collections causes error 527, and an implicit conversion between different facets causes error 526.
+- Conversion between a CLR user-defined type and typed **xml** isn't allowed. Conversion between a CLR user-defined type and untyped **xml** is allowed.
 
-For more information about other ways to generate XML in SQL Server, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md). After XML is generated, it can be assigned either to an **xml** data type variable or stored in **xml** type columns for additional processing.
+For more information about other ways to generate XML in SQL Server, see [Create instances of XML data](create-instances-of-xml-data.md). After XML is generated, you can assign it either to an **xml** data type variable or store it in **xml** type columns for additional processing.
 
-In the data type hierarchy, the **xml** data type appears below **sql_variant** and user-defined types, but above any of the built-in types.
+In the [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md) order, the **xml** data type appears below **json** and **sql_variant**, and above user-defined types and all other data types. For example, an expression that combines **xml** and a CLR user-defined type returns **xml**.
 
 ### Example: Specifying facets to constrain a typed XML column
 
 For typed **xml** columns, you can constrain the column to allow only single, top-level elements for each instance stored in it. You do this by specifying the optional `DOCUMENT` facet when a table is created, as shown in the following example:
 
 ```sql
-CREATE TABLE T(Col1 xml
-   (DOCUMENT Production.ProductDescriptionSchemaCollection));
+CREATE TABLE T
+(
+    Col1 XML(DOCUMENT Production.ProductDescriptionSchemaCollection)
+);
 GO
+
 DROP TABLE T;
 GO
 ```
@@ -130,14 +142,14 @@ By default, instances stored in the typed **xml** column are stored as XML conte
 You can also explicitly specify this behavior by adding `CONTENT` facet, as shown in the following example:
 
 ```sql
-CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
+CREATE TABLE T(Col1 XML(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default
 ```
 
 You can specify the optional DOCUMENT/CONTENT facets anywhere you define **xml** type (typed xml). For example, when you create a typed **xml** variable, you can add the DOCUMENT/CONTENT facet, as shown in the following:
 
 ```sql
-declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
+DECLARE @x AS XML(DOCUMENT Production.ProductDescriptionSchemaCollection);
 ```
 
 ## Document Type Definition (DTD)
@@ -146,21 +158,23 @@ The **xml** data type columns, variables, and parameters can be typed by using X
 
 You can convert DTDs to XML schema documents by using third-party tools, and load the XML schemas into the database.
 
-## Upgrading typed XML from SQL Server 2005
+<a id="upgrading-typed-xml-from-sql-server-2005"></a>
 
-[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes don't affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+## Upgrade typed XML from SQL Server 2005
 
-1. For every XML column, that is typed with an XML Schema Collection that contains elements or attributes that are typed as either **xs:anyType**, **xs:anySimpleType**, **xs:date** or any of its subtypes, **xs:time** or any subtype thereof, or **xs:dateTime** or any of its subtypes, or are union or list types containing any of these types the following occurs:
+[!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of `xs:date`, `xs:time` and `xs:dateTime` instance data, and added support for list and union types. In most cases the changes don't affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] that allowed values of type `xs:date`, `xs:time`, or `xs:dateTime` (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] database to a later version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-    1. All XML indices on the column will be disabled.
+1. For every XML column, that is typed with an XML Schema Collection that contains elements or attributes that are typed as either `xs:anyType`, `xs:anySimpleType`, `xs:date` or any of its subtypes, `xs:time` or any subtype thereof, or `xs:dateTime` or any of its subtypes, or are union or list types containing any of these types the following occurs:
 
-    2. All [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] values will continue to be represented in the Z timezone, because they've been normalized to the Z timezone.
+   1. All XML indices on the column are disabled.
 
-    3. Any **xs:date** or **xs:dateTime** values that are smaller than January 1 of year 1 will lead to a runtime error when the index gets rebuild or an XQuery or XML-DML statements gets executed against the **xml** data type containing that value.
+   1. All [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] values continue to be represented in the `Z` timezone, because they're normalized to the `Z` timezone.
 
-2. Any negative years in **xs:date** or **xs:dateTime** facets or default values in an XML Schema collection will automatically be updated to the smallest value allowed by the base **xs:date** or **xs:dateTime** type (for example, 0001-01-01T00:00:00.0000000Z for **xs:dateTime**).
+   1. Any `xs:date` or `xs:dateTime` values that are smaller than January 1 of year 1 cause a runtime error when the index is rebuilt, or when XQuery or XML-DML statements are executed against the **xml** data type containing that value.
 
-You can still use a Transact-SQL SELECT statement to retrieve the whole **xml** data type, even if it contains negative years. It's recommended that you replace negative years with a year within the newly supported range or change the type of the element or attribute to **xs:string**.
+1. Any negative years in `xs:date` or `xs:dateTime` facets or default values in an XML Schema collection automatically update to the smallest value allowed by the base `xs:date` or `xs:dateTime` type (for example, 0001-01-01T00:00:00.0000000Z for `xs:dateTime`).
+
+You can still use a Transact-SQL SELECT statement to retrieve the whole **xml** data type, even if it contains negative years. Replace negative years with a year within the newly supported range or change the type of the element or attribute to `xs:string`.
 
 ## Related content
 

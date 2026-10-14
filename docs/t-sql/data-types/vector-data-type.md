@@ -4,7 +4,7 @@ description: The vector data type stores vector data optimized for machine learn
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: pookam, randolphwest
-ms.date: 09/22/2026
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: quickstart
@@ -30,7 +30,13 @@ monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-curre
 
 The **vector** data type stores vector data optimized for operations such as similarity search and machine learning applications. Vectors are stored in an optimized binary format but are exposed as JSON arrays for convenience. Each element of the vector is stored as a single-precision (4-byte) floating-point value.
 
-To provide a familiar experience for developers, the **vector** data type is created and displayed as a JSON array. For example, a vector with three dimensions can be represented as `'[0.1, 2, 30]'`. You can implicitly and explicitly convert between the **vector** type and **varchar**, **nvarchar**, and **json** types.
+To provide a familiar experience for developers, the **vector** data type is created and displayed as a JSON array. For example, a vector with three dimensions can be represented as `'[0.1, 2, 30]'`. Conversion between the **vector** type and the **char**, **nchar**, **varchar**, **nvarchar**, and **json** types can be implicit or explicit, in both directions. Conversion between **vector** and all other data types isn't allowed. Conversion between two **vector** values is allowed only when the dimensions and the base type (**float32** or **float16**) are the same; otherwise, error 42204 or error 42238 occurs.
+
+When you convert a string or **json** value to **vector**, the value must be a JSON array of numbers. The number of elements must be equal to the vector dimensions; otherwise, error 42204 occurs. Other values cause error 13670. White space before and after the array is ignored.
+
+When you convert **vector** to a string type, the result uses scientific notation, for example `[1.0000000e+000,2.5000000e+000,-3.0000000e+000]`. When you convert **vector** to **json**, the result uses decimal notation, for example `[1.0000000000,2.5000000000,-3.0000000000]`. If the target length is too short, error 42211 occurs. The value isn't truncated.
+
+**vector** has lower precedence than the string types. In `UNION`, `CASE`, `COALESCE`, and other expressions that combine **vector** with a string type, the result is the string type.
 
 For more information on working with vector data, see:
 
@@ -70,7 +76,7 @@ Vector features are available in Azure SQL Managed Instance configured with the 
 
 - In SQL Server 2025 (17.x), half-precision (**float16**) vectors are available in preview. To use **float16** in SQL Server 2025, you must enable the `PREVIEW_FEATURES` database scoped configuration option. For more information, see [Enable preview features in SQL Server 2025](#enable-preview-features-in-sql-server-2025).
 
-For more information about half-precision vectors, see [Half-precision float support in the vector data type](vector-data-type-half-precision-float.md).
+For more information about half-precision vectors, see [Half-precision float support in vector data type](vector-data-type-half-precision-float.md).
 
 ### Enable preview features in SQL Server 2025
 
@@ -107,7 +113,11 @@ CREATE TABLE dbo.vectors_fp16
     v VECTOR(3, float16) -- Uses float16 for reduced storage and precision
 );
 
-INSERT INTO dbo.vectors (id, v)
+INSERT INTO dbo.vectors
+(
+    id,
+    v
+)
 VALUES (1, '[0.1, 2, 30]'),
        (2, '[-100.2, 0.123, 9.876]'),
        (3, JSON_ARRAY(1.0, 2.0, 3.0)); -- Using JSON_ARRAY to create a vector
@@ -124,9 +134,12 @@ Use the **vector** type with variables:
 
 ```sql
 DECLARE @v AS VECTOR(3) = '[0.1, 2, 30]';
+
 SELECT @v;
 GO
+
 DECLARE @v AS VECTOR(3, float16) = '[0.1, 2, 30]';
+
 SELECT @v;
 ```
 
@@ -136,8 +149,10 @@ You can use the **vector** data type as a parameter in stored procedures or func
 
 ```sql
 CREATE PROCEDURE dbo.SampleStoredProcedure
-@V VECTOR(3),
-@V2 VECTOR(3) OUTPUT
+(
+    @V VECTOR(3),
+    @V2 VECTOR(3) OUTPUT
+)
 AS
 BEGIN
     SELECT @V;
@@ -316,7 +331,7 @@ class Program
 
 ### [JDBC](#tab/jdbc)
 
-**Applies to:** Microsoft JDBC Driver for SQL Server 13.1.0 and later versions.
+**Applies to**: Microsoft JDBC Driver for SQL Server 13.1.0 and later versions.
 
 Example of inserting **vector** data into a table:
 

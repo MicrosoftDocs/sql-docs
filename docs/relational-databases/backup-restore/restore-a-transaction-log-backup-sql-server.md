@@ -1,6 +1,6 @@
 ---
 title: Restore a Transaction Log Backup (SQL Server)
-description: This article describes how to restore a transaction log backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
+description: This article describes how to restore a transaction log backup in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
@@ -22,7 +22,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-You can restore a transaction log backup in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
+You can restore a transaction log backup in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE [tsql](../../includes/tsql-md.md)], or PowerShell.
 
 <a id="BeforeYouBegin"></a>
 <a id="Prerequisites"></a>
@@ -45,6 +45,12 @@ For more information about transaction log backups, see [Transaction log backups
 For an existing database, `RESTORE` permissions default to members of the **sysadmin** and **dbcreator** fixed server roles and the owner (`dbo`) of the database.
 
 `RESTORE` permissions go to roles whose membership the server can always check. The server can check fixed database role membership only when the database is accessible and undamaged, which isn't always true when `RESTORE` runs. For this reason, members of the **db_owner** fixed database role don't have `RESTORE` permissions.
+
+## Remarks
+
+For a mirror database, or an availability group secondary database that you haven't joined to the availability group, restore the last log backup with the `NORECOVERY` option (`-NoRecovery` in PowerShell). The database must remain in the restoring state.
+
+For a log shipping secondary database, restore the last log backup with the `NORECOVERY` option or the `STANDBY` option (`-StandbyFile` in PowerShell). The `STANDBY` option gives read-only access to the database between restores.
 
 <a id="SSMSProcedure"></a>
 
@@ -162,9 +168,6 @@ For an existing database, `RESTORE` permissions default to members of the **sysa
 
      When you choose this option, the **Preserve the replication settings** option is unavailable.
 
-     > [!IMPORTANT]  
-     > For a mirror or secondary database, always select this option.
-
    - **Leave the database in read-only mode. Undo uncommitted transactions, but save the undo actions in a file so that recovery effects can be reversed. (RESTORE WITH STANDBY)**
 
      Leaves the database in a standby state. This option is equivalent to using the **STANDBY** option in a [!INCLUDE [tsql](../../includes/tsql-md.md)] **RESTORE** statement.
@@ -222,9 +225,6 @@ For an existing database, `RESTORE` permissions default to members of the **sysa
 
      The database stays in the restoring state after the last `RESTORE LOG` statement. You can check that you restored every necessary log backup, and then recover the database. This approach is often useful for a point-in-time restore.
 
-   > [!IMPORTANT]  
-   > If you're creating a mirror database, omit the recovery step. A mirror database must remain in the RESTORING state.
-
 <a id="TsqlExample"></a>
 
 ### Examples (Transact-SQL)
@@ -237,6 +237,8 @@ SET RECOVERY FULL;
 ```
 
 The switch to the full recovery model takes effect only after the first data backup. Take a full database backup to start the log chain.
+
+The following examples restore the backups to an instance where the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database doesn't exist, such as a different server.
 
 #### A. Apply a single transaction log backup
 
@@ -290,6 +292,78 @@ GO
 RESTORE DATABASE AdventureWorks2025
 WITH RECOVERY;
 GO
+```
+
+## Use PowerShell
+
+Use the `Restore-SqlDatabase` cmdlet, and set the `-RestoreAction` parameter to `Log`. Include the `-NoRecovery` parameter for every restore in the sequence except the last one. Omit `-NoRecovery` on the last log restore to recover the database.
+
+> [!NOTE]  
+> These examples require the `SqlServer` module. For more information, see [SQL Server PowerShell Provider](/powershell/sql-server/sql-server-powershell-provider).
+
+For the full syntax, see [Restore-SqlDatabase](/powershell/module/sqlserver/restore-sqldatabase).
+
+### Examples (PowerShell)
+
+The following examples restore the backups to an instance where the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database doesn't exist, such as a different server.
+
+#### A. Apply a single transaction log backup
+
+The following example restores the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database from a full database backup, leaving the database in the restoring state. It then applies a transaction log backup and recovers the database.
+
+```powershell
+$instance = "Computer\Instance"
+
+$fullRestore = @{
+    ServerInstance = $instance
+    Database       = "AdventureWorks2025"
+    BackupFile     = "C:\Backup\AdventureWorks2025_full.bak"
+    RestoreAction  = "Database"
+    NoRecovery     = $true
+}
+Restore-SqlDatabase @fullRestore
+
+$logRestore = @{
+    ServerInstance = $instance
+    Database       = "AdventureWorks2025"
+    BackupFile     = "C:\Backup\AdventureWorks2025_log1.trn"
+    RestoreAction  = "Log"
+}
+Restore-SqlDatabase @logRestore
+```
+
+#### B. Apply multiple transaction log backups
+
+The following example restores the full database backup, and then applies three transaction log backups in sequence. Every restore except the last one uses `-NoRecovery`, so the last log restore recovers the database.
+
+```powershell
+$instance = "Computer\Instance"
+$logBackups = @(
+    "C:\Backup\AdventureWorks2025_log1.trn",
+    "C:\Backup\AdventureWorks2025_log2.trn",
+    "C:\Backup\AdventureWorks2025_log3.trn"
+)
+
+$fullRestore = @{
+    ServerInstance = $instance
+    Database       = "AdventureWorks2025"
+    BackupFile     = "C:\Backup\AdventureWorks2025_full.bak"
+    RestoreAction  = "Database"
+    NoRecovery     = $true
+}
+Restore-SqlDatabase @fullRestore
+
+for ($i = 0; $i -lt $logBackups.Count; $i++) {
+    $isLast = ($i -eq $logBackups.Count - 1)
+    $logRestore = @{
+        ServerInstance = $instance
+        Database       = "AdventureWorks2025"
+        BackupFile     = $logBackups[$i]
+        RestoreAction  = "Log"
+        NoRecovery     = -not $isLast
+    }
+    Restore-SqlDatabase @logRestore
+}
 ```
 
 <a id="RelatedTasks"></a>

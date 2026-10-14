@@ -69,7 +69,7 @@ Every time [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started
 
 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require membership in the **securityadmin** fixed server role, or `VIEW SERVER STATE` permission on the server.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require membership in the **securityadmin** fixed server role, or either `VIEW ANY ERROR LOG` or `VIEW SERVER STATE` permission on the server. `VIEW SERVER PERFORMANCE STATE` alone isn't sufficient.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require membership in the **securityadmin** fixed server role, or either `VIEW ANY ERROR LOG` or `VIEW SERVER STATE` permission on the server.
 
 ## Examples
 

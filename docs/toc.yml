@@ -15072,7 +15072,7 @@ items:
       - name: ntext, text, & image
         href: t-sql/data-types/ntext-text-and-image-transact-sql.md
     - name: Spatial geography & instances (geography Data Type)
-      href: t-sql/spatial-geography/spatial-types-geography.md
+      href: t-sql/spatial-geography/spatial-types-geography-transact-sql.md
       items:
       - name: OGC Methods on Geography Instances
         href: t-sql/spatial-geography/ogc-methods-on-geography-instances.md

@@ -1,13 +1,12 @@
 ---
-title: "Data type precedence (Transact-SQL)"
+title: Data Type Precedence (Transact-SQL)
 description: Learn about data type precedence for Transact-SQL.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/25/2024
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - ignite-2025
 helpviewer_keywords:
@@ -17,7 +16,7 @@ helpviewer_keywords:
   - "converting data types [SQL Server], precedence"
   - "precedence [SQL Server], data types"
 dev_langs:
-  - "TSQL"
+  - TSQL
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqledge-current || =azure-sqldw-latest || =fabric || =fabric-sqldb"
 ---
 # Data type precedence (Transact-SQL)
@@ -28,10 +27,10 @@ When an operator combines expressions of different data types, the data type wit
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses the following precedence order for data types:
 
-1. user-defined data types (highest)
-1. **json**
+1. **json** (highest)
 1. **sql_variant**
 1. **xml**
+1. user-defined data types
 1. **datetimeoffset**
 1. **datetime2**
 1. **datetime**
@@ -57,8 +56,11 @@ When an operator combines expressions of different data types, the data type wit
 1. **nchar**
 1. **varchar**, including **varchar(max)**
 1. **char**
+1. **vector**
 1. **varbinary**, including **varbinary(max)**
 1. **binary** (lowest)
+
+The **hierarchyid**, **geometry**, and **geography** data types have higher precedence than the string and binary types.
 
 ## Related content
 

@@ -68461,7 +68461,12 @@
     },
     {
       "source_path": "docs/t-sql/spatial-geography/index.md",
-      "redirect_url": "/sql/t-sql/spatial-geography/spatial-types-geography",
+      "redirect_url": "/sql/t-sql/spatial-geography/spatial-types-geography-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/t-sql/spatial-geography/spatial-types-geography.md",
+      "redirect_url": "/sql/t-sql/spatial-geography/spatial-types-geography-transact-sql",
       "redirect_document_id": false
     },
     {

@@ -60,6 +60,11 @@ Wait for the resource move to finish. It takes resources up to one hour to move 
 
 Verify that the Azure Arc-enabled SQL Server instances and associated databases are in the new resource group or subscription.
 
+> [!IMPORTANT]  
+> If the SQL Server instances or databases associated with the moved virtual machines don't appear in the portal within three hours, ensure that the Azure Connected Machine agent is still running and connected to Azure Arc.
+>
+> Upgrading the `WindowsAgent.SqlServer` extension on the virtual machine also triggers a refresh of the SQL Server instance and database inventory.
+
 ## Enable features
 
 Enable any features that you disabled before the move.

@@ -1,10 +1,9 @@
 ---
-title: "CREATE JSON INDEX (Transact-SQL)"
+title: CREATE JSON INDEX (Transact-SQL)
 description: Creates a JSON index on a specified table and column.
 author: uc-msft
 ms.author: umajay
-ms.reviewer: randolphwest
-ms.date: 09/15/2026
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
@@ -296,7 +295,9 @@ The JSON index is supported with a `JSON_VALUE` predicate, and the following ope
 
 ### JSON_CONTAINS function
 
-The [JSON_CONTAINS](../functions/json-contains-transact-sql.md) function supports easy searching of JSON values in a JSON document that can use a JSON index if present on a **json** column. This function can be used to test if a JSON scalar value, object, or array is contained in the specified SQL/JSON path in a JSON document. The search values specified as SQL scalar types are converted per existing SQL/JSON type conversions. These rules are defined in the behavior section.
+The [JSON_CONTAINS](../functions/json-contains-transact-sql.md) function supports easy searching of JSON values in a JSON document that can use a JSON index if present on a **json** column.
+
+This function can be used to test if a JSON scalar value, object, or array is contained in the specified SQL/JSON path in a JSON document. The search values specified as SQL scalar types are converted per existing SQL/JSON type conversions.
 
 ## Requirement
 
@@ -339,7 +340,7 @@ CREATE JSON INDEX json_content_index
     ON docs (content);
 ```
 
-### A. Create a JSON index on a JSON column with specific paths
+### B. Create a JSON index on a JSON column with specific paths
 
 The following example creates a table named `docs` that contains a **json** type column, `content`. The example then creates a JSON index, `json_content_index`, on the `content` column. The example creates the **json** index on specific SQL/JSON paths in the JSON document.  
 The example also sets the index FILLFACTOR to `80`.
@@ -358,7 +359,7 @@ CREATE JSON INDEX json_content_index
     FOR ('$.a', '$.b') WITH (FILLFACTOR = 80);
 ```
 
-### B. JSON index with array search optimization
+### C. JSON index with array search optimization
 
 The following example returns JSON indexes for the table `dbo.Customers`. The JSON index is created with the array search optimization option enabled.
 

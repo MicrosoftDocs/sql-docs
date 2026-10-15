@@ -1,10 +1,10 @@
 ---
 title: Work with JSON Data in SQL Server
 description: Combine NoSQL and relational concepts in the same database with JSON data in SQL Server
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
-ms.date: 09/15/2026
+author: uc-msft
+ms.author: umajay
+ms.reviewer: jovanpop
+ms.date: 10/14/2026
 ms.service: sql
 ms.topic: overview
 ms.custom:
@@ -212,7 +212,7 @@ The `skills` array is returned in the first `OPENJSON` as original JSON text fra
 | 5 | Jane | Smith | | 2005-11-04T12:00:00 | C# |
 | 5 | Jane | Smith | | 2005-11-04T12:00:00 | Azure |
 
-`OUTER APPLY OPENJSON` joins first-level entity with sub-array and return flatten resultset. Due to JOIN, the second row is repeated for every skill.
+`OUTER APPLY OPENJSON` joins first-level entity with subarray and returns a flattened result set. Due to `JOIN`, the second row is repeated for every skill.
 
 ### Convert SQL Server data to JSON or export JSON
 
@@ -221,7 +221,7 @@ The `skills` array is returned in the first `OPENJSON` as original JSON text fra
 
 Format [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] data or the results of SQL queries as JSON by adding the `FOR JSON` clause to a `SELECT` statement. Use `FOR JSON` to delegate the formatting of JSON output from your client applications to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information, see [Format query results as JSON with FOR JSON](format-query-results-as-json-with-for-json-sql-server.md).
 
-The following example uses PATH mode with the `FOR JSON` clause:
+The following example uses `PATH` mode with the `FOR JSON` clause:
 
 ```sql
 SELECT id,
@@ -233,7 +233,7 @@ FROM People
 FOR JSON PATH;
 ```
 
-The `FOR JSON` clause formats SQL results as JSON text that can be provided to any app that understands JSON. The PATH option uses dot-separated aliases in the SELECT clause to nest objects in the query results.
+The `FOR JSON` clause formats SQL results as JSON text that can be provided to any app that understands JSON. The `PATH` option uses dot-separated aliases in the `SELECT` clause to nest objects in the query results.
 
 [!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
@@ -258,7 +258,7 @@ The `FOR JSON` clause formats SQL results as JSON text that can be provided to a
 ]
 ```
 
-For more information, see [Format query results as JSON with FOR JSON](format-query-results-as-json-with-for-json-sql-server.md) and [SELECT - FOR Clause](../../t-sql/queries/select-for-clause-transact-sql.md).
+For more information, see [Format query results as JSON with FOR JSON](format-query-results-as-json-with-for-json-sql-server.md) and [SELECT - FOR clause](../../t-sql/queries/select-for-clause-transact-sql.md).
 
 ### JSON data from aggregates
 

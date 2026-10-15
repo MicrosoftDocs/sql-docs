@@ -3,7 +3,7 @@ title: "sys.availability_groups (Transact-SQL)"
 description: sys.availability_groups returns a row for each availability group for which the local instance of SQL Server hosts an availability replica.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/29/2025
+ms.date: 10/15/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -59,11 +59,9 @@ The following table describes the possible failure condition levels for the `fai
 
 ## Permissions
 
-Requires `VIEW ANY DEFINITION` permission on the server instance.
+The view returns a row only for an availability group on which the caller has `VIEW DEFINITION` permission. `VIEW ANY DEFINITION` grants this permission for all availability groups. `VIEW SERVER STATE` and `VIEW SERVER PERFORMANCE STATE` don't make any rows visible.
 
-### Permissions for SQL Server 2022 and later
-
-Requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
+Without permission, the view returns no rows. It doesn't return an error.
 
 ## Related content
 

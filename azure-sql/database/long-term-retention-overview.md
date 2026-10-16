@@ -139,7 +139,7 @@ LTR restore doesn't require a managed identity.
 
 ### Configure access rules for an LTR restore
 
-1. [Associate the logical servers that take part in the restore with the perimeter](network-security-perimeter.md#get-started).
+1. [Associate each logical server with its perimeter](network-security-perimeter.md#get-started) if you haven't already. Skip this step for a server that stays outside a perimeter or for a deleted source server.
 1. If the source server is in a perimeter and the target server isn't in the same perimeter, add an outbound rule on the source profile with **Destination type** set to **FQDN** and the target server's fully qualified domain name.
 1. If the target server is in a perimeter and the source server isn't in the same perimeter, add an inbound rule on the target profile. The restore request comes from the Azure SQL management infrastructure, not from the source server. In the rule, allow one of these sources:
    - The subscription ID of the source server (recommended).

@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, mathoma, randolphwest, strrodic
-ms.date: 10/09/2026
+ms.date: 10/16/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: backup-restore
@@ -132,7 +132,7 @@ In enforced mode, these configurations are supported:
 | In a perimeter | In a different perimeter | Outbound on the source, inbound on the target. |
 | In a perimeter | Not in a perimeter | Outbound on the source. |
 | Not in a perimeter | In a perimeter | Inbound on the target. |
-| Deleted | In a perimeter | Inbound on the target. Source-side validation isn't possible. |
+| Deleted | In a perimeter | Inbound on the target. |
 | Not in a perimeter | Not in a perimeter | None. |
 
 LTR restore doesn't require a managed identity.
@@ -141,25 +141,18 @@ LTR restore doesn't require a managed identity.
 
 1. [Associate the logical servers that take part in the restore with the perimeter](network-security-perimeter.md#get-started).
 1. If the source server is in a perimeter and the target server isn't in the same perimeter, add an outbound rule on the source profile with **Destination type** set to **FQDN** and the target server's fully qualified domain name.
-1. If the target server is in a perimeter and the source server isn't in the same perimeter, add an inbound rule on the target profile that allows one of these sources:
-   - The subscription ID of the source server.
+1. If the target server is in a perimeter and the source server isn't in the same perimeter, add an inbound rule on the target profile. The restore request comes from the Azure SQL management infrastructure, not from the source server. In the rule, allow one of these sources:
+   - The subscription ID of the source server (recommended).
    - The `SqlManagement` [service tag](/azure/private-link/configure-network-security-perimeter-service-tag).
-   - The IP address ranges listed for `SqlManagement` in [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519). The restore request comes from the Azure SQL management infrastructure, not from the source server. Microsoft doesn't publish these ranges by region, so allow all of them.
+   - IP address ranges. For the public cloud, [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) lists each service tag and its IP address ranges. The service tag name is `SqlManagement`. Microsoft doesn't publish these ranges by region, so allow all of them.
 1. With the servers still in transition mode, run a restore and check the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) for unexpected denials.
-1. Switch to enforced mode only after the restore succeeds.
+1. Switch to enforced mode only after all diagnostic checks have passed.
 
 ### Limitations and behavior differences
 
 - You can't delete a logical server that has LTR backups while its perimeter association is in enforced mode. Immutable LTR backups also block deletion, whether or not the server is in a perimeter. For more information, see [Immutable long-term backups and deleting logical servers](backup-immutability.md#immutable-long-term-backups-and-deleting-logical-servers).
 - If you delete a source server while its association is in transition mode, the service can no longer read that server's perimeter metadata, so it can only validate the target side of a restore. Account for this gap if you rely on source-side validation as a control.
 - In transition mode, a restore succeeds even when the required rules are missing. In enforced mode, the same restore is blocked.
-
-### Errors when a perimeter blocks a restore
-
-The customer-facing error text for LTR restore isn't final yet, so this article doesn't list error numbers. A blocked restore fails because a required rule is missing.
-
-- If the source server still exists, check the outbound rule on the source and the inbound rule on the target.
-- If the source server was deleted, check the inbound rule on the target.
 
 ## Configure long-term backup retention
 

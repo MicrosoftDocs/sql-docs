@@ -485,7 +485,7 @@ All these permissions are under the same parent-permission: **ALTER ANY DATABASE
 - VIEW LEDGER CONTENT
 
 > [!NOTE]  
-> `VIEW LEDGER CONTENT` provides database-wide access to ledger history. A user with this permission can view ledger metadata, including table and column names, even when the user doesn't otherwise have metadata visibility on the underlying object. This permission doesn't grant access to application data stored in ledger tables.
+> `VIEW LEDGER CONTENT` provides database-wide access to ledger history. A user with this permission can view ledger metadata, including table and column names, even when the user doesn't otherwise have [metadata visibility](metadata-visibility-configuration.md) on the underlying object. This permission doesn't grant access to application data stored in ledger tables.
 
 #### Other database permissions
 

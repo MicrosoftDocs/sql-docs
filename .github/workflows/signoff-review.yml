@@ -8,7 +8,7 @@ on:
   issue_comment:
     types: [created]
   pull_request_target:
-    types: [opened]
+   types: [opened]
 
 jobs:
     build:
@@ -86,33 +86,28 @@ jobs:
 
                 $CatastrophicError = $False
 
-                $ContentApprovalMessage = "Approved by content team."
-                $ContentNeedsReviewMessage = "Needs review by content team when ready for sign off."
-                $ContentInReviewMessage = "PR is currently being reviewed by content team for approval."
+                $ContentApprovalMessage = "Signed off by an authorized owner."
+                $ContentNeedsReviewMessage = "Waiting for an authorized owner, typically a member of the product group, to sign off."
 
                 $SignOffString = "#sign-off"
-                $ReviewingString = "#review-pr"
-                $ApprovedString = "#approve-pr"
                 $SignOffRegex = "\s*$SignOffString\s*"
-                $ReviewingRegex = "\s*$ReviewingString\s*"
-                $ApprovedRegex = "\s*$ApprovedString\s*"
 
                 $EscalationEmail = "[Data Docs Team](mailto:dbdocsprreviews@microsoft.com?subject=[PR%20REVIEW]%20Question%20on%20$GitHubRepoName%20PR%20$PrIssueNumber&body=$PrGitHubLink)"
                 $ContentLeadsUrl = "[the content lead in your area](https://dev.azure.com/msft-skilling/Content/_dashboards/dashboard/b25043af-cab3-4b2c-8aac-9e8da15a796b)"
-                $PROpenMessage = "Thank you for your contribution! All PRs will be reviewed and approved by the content team. They will remain in a pending state until approved even after they successfully build and stage. When you are ready for the content team to publish this PR, sign off as normal. If you have any questions, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
-                $NeedsContentTeamReviewMessage = "The content team will review this pr and work with you to publish your changes. Thank you for working with us to improve content quality for our customers!`n`n**To expedite your review**, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
-                $CurrentlyInReviewMessage = "This PR is currently assigned to the content team for review. It must be reviewed and approved by the content team before merging.`n`n**To expedite your review**, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
+                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized owner, typically a member of the product group, comments `#` followed by `sign-off`, without a space,, even after it successfully builds and stages. If you have any questions, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
+                $NeedsContentTeamReviewMessage = "An authorized owner, typically a member of the product group, must comment `#` followed by `sign-off`, without a space, before this PR can merge. Please contact the appropriate product team or another authorized owner to review and sign off on this PR."
+                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized owner for this repository. Please contact the appropriate product team or another authorized owner to review this PR and comment `#` followed by `sign-off`, without a space,."
                 $AssignedReviewerMessage = "Assigning the pull request to @!!USER!! for review. #assign: !!USER!!"
                 $CheckFailed = $False
 
                 $ContentReviewNeededLabelColor = "eeee88"
                 $ContentReviewNeededLabelDescription = "The pull request requires a review from the content team."
                 $ContentReviewNeededLabel = "needs-content-team-review"
-                $ContentReviewInProgressLabelColor = "33DDFF"
-                $ContentReviewInProgressLabelDescription = "A content team review has been initiated."
-                $ContentReviewInProgressLabel = "content-team-review"
                 $ContentApprovedLabelColor = "2A8000"
-                $ContentApprovedLabelDescription = "The content team approved the pull request."
+                $ContentReviewNeededLabelDescription = "The pull request requires review by an authorized owner, typically a member of the product group."
+                $ContentReviewNeededLabel = "needs-authorized-owner-review"
+                $ContentApprovedLabelColor = "2A8000"
+                $ContentApprovedLabelDescription = "An authorized owner signed off on the pull request."
                 $ContentApprovedLabel = "pr-approved"
 
                 Write-Host "Repo: $GitHubRepoName"
@@ -140,7 +135,6 @@ jobs:
                 {
                     Write-Host "Initialize labels needed by the workflow"
                     Initialize-Label -LabelName $ContentReviewNeededLabel -LabelColor $ContentReviewNeededLabelColor -LabelDescription $ContentReviewNeededLabelDescription
-                    Initialize-Label -LabelName $ContentReviewInProgressLabel -LabelColor $ContentReviewInProgressLabelColor -LabelDescription $ContentReviewInProgressLabelDescription
                     Initialize-Label -LabelName $ContentApprovedLabel -LabelColor $ContentApprovedLabelColor -LabelDescription $ContentApprovedLabelDescription
                 }
 
@@ -515,8 +509,6 @@ jobs:
                     Write-Host "GitHub Request Event: $GitRequestEvent"
                     Write-Host "GitHub Action: $GitHubAction"
                     $SignOffFound = $false
-                    $ReviewingFound = $false
-                    $ApprovedFound = $false
                     $ActionableComment = $false
                     $PROpenEvent = $false
                     $EventIsCommentCreated = (($GitRequestEvent -eq "issue_comment") -and (($GitHubAction -eq "created")))
@@ -532,12 +524,10 @@ jobs:
                         Write-Host "$CommentBody"
                         Write-Host "--------------------------"
 
-                        # Check to see if comment includes #sign-off, #reviewing, or #approved
+                        # Check to see if the comment includes #sign-off
                         $SignOffFound = $CommentBody -match $SignOffRegex
-                        $ReviewingFound = $CommentBody -match $ReviewingRegex
-                        $ApprovedFound = $CommentBody -match $ApprovedRegex
 
-                        $ActionableComment = ($SignOffFound -or $ApprovedFound -or $ReviewingFound)
+                        $ActionableComment = $SignOffFound
                     }
                     ElseIf (($GitRequestEvent -eq "pull_request_target") -and (($GitHubAction -eq "opened") -or ($GitHubAction -eq "reopened") -or ($GitHubAction -eq "synchronize")))
                     {
@@ -556,15 +546,25 @@ jobs:
 
                     if ($PROpenEvent)
                     {
-                        # This runs when the PR is opened and does a check on the PR opener, not the commenter
+                        # Invalidate an earlier sign-off when a PR is reopened or receives new commits.
+                        # Eligible PR authors are reapproved below to preserve existing behavior.
+                        If (($GitHubAction -eq "reopened") -or ($GitHubAction -eq "synchronize"))
+                        {
+                            Initialize-Labels
 
-                        # Get permission level of user who created the PR. Need to use .role_name instead of .permission because .permission provides only legacy values. 
-                        # .role_name provides legacy plus triage, maintain, and custom roles like write-elevated.
+                            Remove-Label -LabelName $ContentApprovedLabel -IssueUrl $IssueUrl
+                            Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewNeededLabel
+
+                            Remove-Label -LabelName "ready-to-merge" -IssueUrl $IssueUrl
+                            Set-PrLabel -LabelName "do-not-merge" -IssueUrl $IssueUrl
+                        }
+
+                        # Check the PR opener so eligible authors remain pre-approved.
                         $UserPermission = $(Invoke-RestMethod -Method GET -Headers $GitHubHeaders -Uri $UserPermissionPROpenerUrl).role_name
 
                         Write-Host "User $PullRequestOpener permission level: $UserPermission."
 
-                        # If user has write or above, allow check to pass. If not, provide a welcome message
+                        # Keep the existing behavior: eligible PR authors are pre-approved.
                         If (($UserPermission -like "write*") -or ($UserPermission -eq "maintain") -or ($UserPermission -eq "admin")  -or ($UserPermission -eq "triage"))
                         {
                             Write-Host "Approving as pull request creator $PullRequestOpener has permission."
@@ -572,15 +572,13 @@ jobs:
                             Initialize-Labels
 
                             Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentApprovedLabel
+                            Remove-Label -LabelName $ContentReviewNeededLabel -IssueUrl $IssueUrl
 
                             $Status.state = "success"
-                            $Status.description = "Pull request opener $PullRequestOpener is pre-approved."                            
+                            $Status.description = "Pull request opener $PullRequestOpener is pre-approved."
                         }
-                        Else
+                        ElseIf ($GitHubAction -eq "opened")
                         {
-                            # Provide a welcome message
-                            Write-Host "User creating PR is not pre-approved. Adding welcome message."
-
                             Set-PrComment $PROpenMessage
                         }
                         
@@ -591,8 +589,6 @@ jobs:
                         # This was a comment on the PR so look for action tags
 
                         Write-Host "Regex result found $SignOffString : $SignOffFound."
-                        Write-Host "Regex result found $ReviewingString : $ReviewingFound."
-                        Write-Host "Regex result found $ApprovedString : $ApprovedFound."
 
                         # Check to see if it is a monitored folder
                         # Get the list of files on the PR.
@@ -606,11 +602,9 @@ jobs:
                         # Check to see what labels are already on the PR
                         Initialize-Labels
                         $LabelReviewNeededArray = Test-PrLabel -LabelArray $ContentReviewNeededLabel -IssueUrl $IssueUrl
-                        $LabelReviewInProgressArray = Test-PrLabel -LabelArray $ContentReviewInProgressLabel -IssueUrl $IssueUrl
                         $LabelApprovedArray = Test-PrLabel -LabelArray $ContentApprovedLabel -IssueUrl $IssueUrl
 
                         $ReviewNeededLabelSet = $LabelReviewNeededArray.$ContentReviewNeededLabel
-                        $ReviewInProgressLabelSet = $LabelReviewInProgressArray.$ContentReviewInProgressLabel
                         $ApprovedLabelSet = $LabelApprovedArray.$ContentApprovedLabel
                         
                         Write-Host "Monitored folders found: $MonitoredFoldersFound"
@@ -640,7 +634,7 @@ jobs:
                         }
                         ElseIf (-not $ActionableComment)
                         {
-                            Write-Host "Comment not sign off, review, or approval."
+                            Write-Host "Comment does not contain $SignOffString."
 
                             # Check to see if the content team has approved this yet
                             # If so, always return success. If not, always keep at pending until approved.
@@ -670,7 +664,7 @@ jobs:
 
                             Initialize-Labels
 
-                            Write-Host "String $SignOffString or $ApprovedString or $ReviewingString found on PR/Issue #$PrIssueNumber."
+                            Write-Host "String $SignOffString found on PR/Issue #$PrIssueNumber."
                             
                             # Get permission level of user who created the comment. Need to use .role_name instead of .permission because .permission provides only legacy values. 
                             # .role_name provides legacy plus triage, maintain, and custom roles like write-elevated.
@@ -678,59 +672,31 @@ jobs:
 
                             Write-Host "User $CommentUser permission level: $UserPermission."
 
-                            # If user has write or above, allow check to pass. If not, add content team review label.
+                            # Manage signers through MicrosoftDocs/sql-docs-signoff with Triage access.
+                            # Other collaborators with Triage or higher effective access can also sign off.
                             If (($UserPermission -like "write*") -or ($UserPermission -eq "maintain") -or ($UserPermission -eq "admin")  -or ($UserPermission -eq "triage")) 
                             {
                                 Write-Host "User $CommentUser has the permission level: $UserPermission. Pass check."
 
-                                If ($SignOffFound -or $ApprovedFound) 
-                                {
-                                    # Set the properties on the $Status object to allow the check to pass. $Status will be sent to GitHub at the end of the workflow.                                   
-                                    $Status.state = "success"
-                                    $Status.description = $ContentApprovalMessage
+                                # Set the properties on the $Status object to allow the check to pass. $Status will be sent to GitHub at the end of the workflow.
+                                $Status.state = "success"
+                                $Status.description = $ContentApprovalMessage
 
-                                    Write-Host "Adding $ContentApprovedLabel label to the PR"
-                                    Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentApprovedLabel
+                                Write-Host "Adding $ContentApprovedLabel label to the PR"
+                                Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentApprovedLabel
 
-                                    If ($ApprovedFound)
-                                    {
-                                        # If explicitly approved, set the content team reviewed label as well for tracking
-                                        Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewInProgressLabel
-                                    }
+                                Write-Host "Removing other labels"
+                                Remove-Label -LabelName $ContentReviewNeededLabel -IssueUrl $IssueUrl
 
-                                    Write-Host "Removing other labels"
-                                    # Don't remove the in progress label as we can see this to see what we reviewed
-                                    # Remove-Label -LabelName $ContentReviewInProgressLabel -IssueUrl $IssueUrl
-                                    Remove-Label -LabelName $ContentReviewNeededLabel -IssueUrl $IssueUrl
-
-                                    # Also assign the user to the PR. This way the person who gave approval or signed off
-                                    # can shepherd the PR through the final stages of publishing.
-                                    Write-Host "Assigning $CommentUser to the PR"
-                                    Add-PrAssignee -PrData $PrData -GitHubAssignee $CommentUser
-                                }
-                                ElseIf ($ReviewingFound)
-                                {
-                                    Write-Host "Adding $ContentReviewInProgressLabel label to the PR"
-
-                                    # Status is pending while reviewing
-                                    $Status.state = "pending"
-                                    $Status.description = $ContentInReviewMessage
-
-                                    Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewInProgressLabel
-
-                                    # Content team is explicitly setting this back to review state, so remove any approved tags and add review tag.
-                                    Write-Host "Removing other labels"
-                                    Remove-Label -LabelName $ContentApprovedLabel -IssueUrl $IssueUrl
-                                    Remove-Label -LabelName $ContentReviewNeededLabel -IssueUrl $IssueUrl
-
-                                    # Also assign the user to the PR. This way the person who added the reviewing label
-                                    # can shepherd the PR through the final stages of publishing.
-                                    Write-Host "Assigning $CommentUser to the PR"                                
-                                    Add-PrAssignee -PrData $PrData -GitHubAssignee $CommentUser
-                                }
+                                # Assign the signer to the PR so they can shepherd it through publishing.
+                                Write-Host "Assigning $CommentUser to the PR"
+                                Add-PrAssignee -PrData $PrData -GitHubAssignee $CommentUser
                             } 
                             Else 
                             {
+                                $CheckFailed = $True
+                                Set-PrComment $UnauthorizedSignOffMessage
+
                                 # If the content team has already approved, report success.
                                 # Technically, this means that once approved they could sneak other changes in, but maybe that is ok as we would see.
 
@@ -745,31 +711,13 @@ jobs:
                                     # Check failed. Add label.
                                     Write-Host "One or more files in monitored folders and user $CommentUser has the permission level: $UserPermission. Fail check."
 
-                                    If ($ReviewInProgressLabelSet)
-                                    {
-                                        Write-Host "$ContentReviewInProgressLabel already set, so not changing label or status."
-
-                                        # Already in review so just keep the same status and message
-                                        $Status.state = "pending"
-                                        $Status.description = $ContentInReviewMessage
-
-                                        Write-Host "User signed off without permissions but it is already in review with content team"
-                                        Set-PrComment $CurrentlyInReviewMessage
-                                    }
-                                    Else
-                                    {
-                                        Write-Host "Adding the $ContentReviewNeededLabel label."
-                                        Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewNeededLabel
-                                        
-                                        # Even though the check failed, leave the status as pending.
-                                        # It is always pending until the content team has approved.
-                                        $Status.state = "pending"
-                                        $Status.description = $ContentNeedsReviewMessage
-
-                                        Set-PrComment $NeedsContentTeamReviewMessage
-                                    }
-
-                                    $CheckFailed = $True
+                                    Write-Host "Adding the $ContentReviewNeededLabel label."
+                                    Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewNeededLabel
+                                    
+                                    # Even though the check failed, leave the status as pending.
+                                    # It remains pending until an authorized owner signs off.
+                                    $Status.state = "pending"
+                                    $Status.description = $ContentNeedsReviewMessage
                                 }
                             }                  
                         }

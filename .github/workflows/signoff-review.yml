@@ -94,9 +94,9 @@ jobs:
 
                 $EscalationEmail = "[Data Docs Team](mailto:dbdocsprreviews@microsoft.com?subject=[PR%20REVIEW]%20Question%20on%20$GitHubRepoName%20PR%20$PrIssueNumber&body=$PrGitHubLink)"
                 $ContentLeadsUrl = "[the content lead in your area](https://dev.azure.com/msft-skilling/Content/_dashboards/dashboard/b25043af-cab3-4b2c-8aac-9e8da15a796b)"
-                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized owner, typically a member of the product group, comments $SignOffString, even after it successfully builds and stages. If you have any questions, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
-                $NeedsContentTeamReviewMessage = "An authorized owner, typically a member of the product group, must comment $SignOffString before this PR can merge. Please contact the appropriate product team or another authorized owner to review and sign off on this PR."
-                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized owner for this repository. Please contact the appropriate product team or another authorized owner to review this PR and comment $SignOffString."
+                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized owner, typically a member of the product group, comments `#` followed by `sign-off`, without a space,, even after it successfully builds and stages. If you have any questions, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
+                $NeedsContentTeamReviewMessage = "An authorized owner, typically a member of the product group, must comment `#` followed by `sign-off`, without a space, before this PR can merge. Please contact the appropriate product team or another authorized owner to review and sign off on this PR."
+                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized owner for this repository. Please contact the appropriate product team or another authorized owner to review this PR and comment `#` followed by `sign-off`, without a space,."
                 $AssignedReviewerMessage = "Assigning the pull request to @!!USER!! for review. #assign: !!USER!!"
                 $CheckFailed = $False
 

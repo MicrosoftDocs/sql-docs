@@ -203,6 +203,8 @@ Computer name: sqlserver.domain.com
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] only checks the validity of the certificates at the time of configuration. For example, you can't use SQL Server Configuration Manager on [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, to provision an expired certificate. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] continues to run without problems if the certificate expires after it's already provisioned. But, some client applications like Power BI check the validity of the certificate on each connection and raise an error if the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is configured to use an expired certificate for encryption. We recommend that you don't use an expired certificate for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] encryption.
 
+An expired certificate only affects clients that validate the server certificate. Connections that skip validation, for example with `TrustServerCertificate=true`, continue to work. Clients that validate the certificate do so during a full TLS handshake. A client process that already holds a cached TLS session with the instance can resume that session without receiving the certificate again, so it might keep connecting after the certificate expires, until that cached session expires. New client processes fail immediately.
+
 ## Next step
 
 > [!div class="nextstepaction"]

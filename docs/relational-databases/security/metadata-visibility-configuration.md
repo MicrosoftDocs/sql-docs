@@ -56,6 +56,7 @@ Metadata visibility configuration doesn't apply to the following securables:
 - Replication system tables
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent system tables
 - Backup system tables
+- Ledger system tables
 - Replication and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent `sp_help` stored procedures
 
 Limited metadata accessibility means the following:

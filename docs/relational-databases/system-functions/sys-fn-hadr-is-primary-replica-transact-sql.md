@@ -64,9 +64,9 @@ GO
   
 ### Permissions
 
-For SQL Server 2019 (15.x) and earlier versions, requires `VIEW SERVER STATE` permission on the server.
+[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require `VIEW SERVER STATE` permission on the server.
 
-For SQL Server 2022 (16.x) and later versions, requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require `VIEW SERVER PERFORMANCE STATE` permission on the server.
   
 ## Related content
 

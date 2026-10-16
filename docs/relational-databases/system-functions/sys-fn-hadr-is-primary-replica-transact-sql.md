@@ -3,7 +3,7 @@ title: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 description: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/17/2017"
+ms.date: 10/15/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -62,8 +62,11 @@ GO
   
 ## Security  
   
-### Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+### Permissions
+
+[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require `VIEW SERVER STATE` permission on the server.
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require `VIEW SERVER PERFORMANCE STATE` permission on the server.
   
 ## Related content
 

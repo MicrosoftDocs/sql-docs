@@ -394,6 +394,8 @@ Controls automatic options.
 > The AUTO_CLOSE option isn't available in a contained database or on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 > You can determine this option's status by examining the `is_auto_close_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsAutoClose` property of the [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md) function.
 >  
+> In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], `CREATE DATABASE` creates the database with AUTO_CLOSE set to ON, even when AUTO_CLOSE is OFF in the `model` database.
+>  
 > When AUTO_CLOSE is set to ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view and the [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md) function returns NULL because the database is unavailable to retrieve the data. To resolve this issue, run a USE statement to open the database.
 >  
 > Database mirroring requires AUTO_CLOSE set to OFF.

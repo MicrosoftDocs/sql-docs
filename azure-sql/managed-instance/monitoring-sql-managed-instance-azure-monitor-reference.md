@@ -4,8 +4,8 @@ description: This article contains important reference material you need when yo
 ms.date: 02/12/2026
 ms.custom: horz-monitor
 ms.topic: reference
-author: MashaMSFT
-ms.author: mathoma
+author: thesqlsith
+ms.author: derekw
 ms.reviewer: wiassaf
 ms.service: azure-sql-managed-instance
 ms.subservice: monitoring

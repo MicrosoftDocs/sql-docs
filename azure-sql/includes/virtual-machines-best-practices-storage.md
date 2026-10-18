@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.date: 12/09/2025
 ms.service: azure-vm-sql-server
 ms.topic: include

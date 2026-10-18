@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about the architecture of Azure SQL Managed Instance that achieves availability through local redundancy, and high availability through zone redundancy.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

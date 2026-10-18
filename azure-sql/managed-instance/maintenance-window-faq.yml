@@ -8,7 +8,7 @@ metadata:
   ms.topic: faq
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: scottkim, mathoma, urosmil
+  ms.reviewer: scottkim, urosmil
   ms.custom: azure-sql-split
   ms.date: 10/23/2025
   monikerRange: "=azuresql||=azuresql-mi"

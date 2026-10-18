@@ -3,7 +3,7 @@ title: Automated Patching
 description: This article explains the Automated Patching feature for SQL Server on Azure virtual machines (VMs).
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 09/15/2025
 ms.service: azure-vm-sql-server
 ms.subservice: management

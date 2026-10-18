@@ -3,7 +3,7 @@ title: Backup and Restore to URL Using Managed Identities
 description: Learn how to back up and restore SQL Server databases to Azure Blob storage using managed identities for SQL Server on Azure VMs.
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: vanto, mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 03/31/2026
 ms.service: azure-vm-sql-server
 ms.subservice: security

@@ -1,7 +1,7 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/23/2025
 ms.service: azure-vm-sql-server
 ms.topic: include

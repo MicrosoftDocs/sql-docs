@@ -3,7 +3,7 @@ title: Configure DNN for Failover Cluster Instance
 description: Learn how to configure a distributed network name (DNN) to route traffic to your SQL Server on Azure VM failover cluster instance (FCI).
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/22/2025
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

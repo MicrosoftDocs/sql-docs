@@ -3,7 +3,7 @@ title: Register with SQL Server IaaS Agent extension (Linux)
 description: Learn how to register your SQL Server on Linux Azure Virtual Machines with the SQL Server IaaS Agent extension to enable Azure features, compliance, and improved manageability.
 author: adbadram
 ms.author: adbadram
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 09/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

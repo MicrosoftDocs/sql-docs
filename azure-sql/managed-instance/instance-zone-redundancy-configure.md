@@ -3,7 +3,7 @@ title: Configure Zone Redundancy
 description: Configure zone redundancy for your Azure SQL Managed Instance by using the Azure portal, PowerShell, Azure CLI, and REST API.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: urmilano, mathoma, randolphwest
+ms.reviewer: urmilano
 ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

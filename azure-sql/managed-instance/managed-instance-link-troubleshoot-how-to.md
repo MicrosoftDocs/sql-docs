@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to troubleshoot common issues with a link between SQL Server and Azure SQL Managed Instance.
 author: djordje-jeremic
 ms.author: djjeremi
-ms.reviewer: mathoma, danil
+ms.reviewer: danil
 ms.date: 06/25/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

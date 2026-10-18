@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to fail over a link between SQL Server and Azure SQL Managed Instance with SQL Server Management Studio (SSMS) and PowerShell.
 author: djordje-jeremic
 ms.author: djjeremi
-ms.reviewer: mathoma, danil
+ms.reviewer: danil
 ms.date: 12/06/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

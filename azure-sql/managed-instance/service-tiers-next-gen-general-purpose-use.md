@@ -3,7 +3,7 @@ title: Use Next-gen General Purpose service tier
 description: Learn how to use the Next-gen General Purpose service tier in Azure SQL Managed Instance, which is an architectural upgrade to the existing General Purpose service tier that can be used for new and existing instances.
 author: urosmil
 ms.author: urmilano
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

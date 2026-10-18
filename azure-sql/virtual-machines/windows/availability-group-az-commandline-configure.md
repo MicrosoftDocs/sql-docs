@@ -3,7 +3,7 @@ title: Configure a single-subnet Always On availability group (PowerShell & Azur
 description: "Use either PowerShell or the Azure CLI to create the Windows Server Failover Cluster (WSFC), the Always On availability group listener, and the internal load balancer on a SQL Server VM in Azure."
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

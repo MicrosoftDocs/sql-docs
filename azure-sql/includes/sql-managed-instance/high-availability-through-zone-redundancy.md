@@ -1,7 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: bluefooted
+ms.author: pamela
+ms.reviewer: vanto
 ms.date: 12/16/2024
 ms.service: azure-sql-managed-instance
 ms.topic: include

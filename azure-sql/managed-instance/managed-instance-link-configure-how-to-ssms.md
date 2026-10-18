@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure a link between SQL Server and Azure SQL Managed Instance with SQL Server Management Studio (SSMS).
 author: djordje-jeremic
 ms.author: djjeremi
-ms.reviewer: mathoma, danil
+ms.reviewer: danil
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

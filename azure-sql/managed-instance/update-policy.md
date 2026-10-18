@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Use the update policy setting in Azure SQL Managed Instance to control your database compatibility with SQL Server 2022, SQL Server 2025, or receive the latest updates to the Database Engine.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/25/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

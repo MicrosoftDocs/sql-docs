@@ -3,7 +3,7 @@ title: SQL Server Audit
 description: Learn about SQL Server Audit in Azure SQL Managed Instance.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: vanto, randolphwest, mathoma, wiassaf
+ms.reviewer: vanto, wiassaf
 ms.date: 05/12/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: security

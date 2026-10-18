@@ -3,7 +3,7 @@ title: "VM size: Performance best practices & guidelines"
 description: Provides VM size guidelines and best practices to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 05/27/2026
 ms.service: azure-vm-sql-server
 ms.subservice: performance

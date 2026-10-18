@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: This article describes the Managed Instance link, which you can use to replicate data continuously between SQL Server and Azure SQL Managed Instance for scenarios such as migrating to the cloud with minimal downtime, or disaster recovery.
 author: djordje-jeremic
 ms.author: djjeremi
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

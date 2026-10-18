@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to use the Managed Instance link to migrate your SQL Server data to Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

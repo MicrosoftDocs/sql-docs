@@ -2,9 +2,9 @@
 title: Restore a Database from a Backup
 titleSuffix: Azure SQL Managed Instance
 description: Learn about point-in-time restore, which enables you to roll back a database in Azure SQL Managed Instance up to 35 days.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: dinethi, mathoma, wiassaf, strrodic, mlandzic
+author: dnethi
+ms.author: dinethi
+ms.reviewer: dinethi, wiassaf, strrodic, mlandzic
 ms.date: 01/15/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore

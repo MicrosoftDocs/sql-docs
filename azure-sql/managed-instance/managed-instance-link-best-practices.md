@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about best practices when using the link feature for Azure SQL Managed Instance.
 author: djordje-jeremic
 ms.author: djjeremi
-ms.reviewer: mathoma, danil
+ms.reviewer: danil
 ms.date: 01/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

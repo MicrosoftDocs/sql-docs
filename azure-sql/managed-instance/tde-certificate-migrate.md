@@ -3,7 +3,7 @@ title: Migrate TDE certificate from SQL Server
 description: Learn how to migrate a SQL Server TDE certificate when you're migrating your SQL Server database to Azure SQL Managed Instance. 
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma, jovanpop
+ms.reviewer: jovanpop
 ms.date: 03/31/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: security

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
 author: vladai78
 ms.author: vladiv
-ms.reviewer: sachinp, wiassaf, randolphwest
+ms.reviewer: sachinp, wiassaf
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

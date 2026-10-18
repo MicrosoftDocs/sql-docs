@@ -3,7 +3,7 @@ title: "IDENTITY (Property) (Transact-SQL)"
 description: Creates an identity column in a table.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf, procha
+ms.reviewer: wiassaf, procha
 ms.date: 10/30/2025
 ms.service: sql
 ms.subservice: t-sql

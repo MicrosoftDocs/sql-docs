@@ -3,7 +3,7 @@ title: "DROP XML SCHEMA COLLECTION (Transact-SQL)"
 description: DROP XML SCHEMA COLLECTION deletes the whole XML schema collection and all of its components.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: t-sql

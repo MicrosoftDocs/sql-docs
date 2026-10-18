@@ -3,6 +3,7 @@ title: CREATE JSON INDEX (Transact-SQL)
 description: Creates a JSON index on a specified table and column.
 author: uc-msft
 ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql

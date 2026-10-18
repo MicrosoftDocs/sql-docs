@@ -1,9 +1,9 @@
 ---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 description: CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 01/06/2026
 ms.service: sql
 ms.subservice: t-sql

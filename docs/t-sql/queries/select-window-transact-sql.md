@@ -3,7 +3,7 @@ title: "WINDOW (Transact-SQL)"
 description: The WINDOW clause determines the partitioning and ordering of a rowset before the window function in an OVER clause.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/02/2026
 ms.service: sql
 ms.subservice: t-sql

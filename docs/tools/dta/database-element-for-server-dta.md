@@ -1,8 +1,8 @@
 ---
 title: "Database Element for Server (DTA)"
 description: In the dta utility, the Database element for Server specifies the database you want to tune on a specific server.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

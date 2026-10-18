@@ -1,8 +1,8 @@
 ---
 title: "COLLATE (Transact-SQL)"
 description: "The COLLATE statement sets the collation of a database or table column, or casts a collation to character string expression, in the SQL Database Engine."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf
 ms.date: 03/03/2025
 ms.service: sql

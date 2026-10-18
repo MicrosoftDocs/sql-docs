@@ -1,8 +1,8 @@
 ---
 title: "ALTER VIEW (Transact-SQL)"
 description: ALTER VIEW (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "05/25/2018"
 ms.service: sql
 ms.subservice: t-sql

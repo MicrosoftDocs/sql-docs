@@ -1,9 +1,9 @@
 ---
 title: "CREATE EVENT SESSION (Transact-SQL)"
 description: Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 10/02/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) creates a materialized view to persist the data returned from the view definition query and automatically gets updated as data changes in the underlying tables."
 description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: xiaoyul, mariyaali
 ms.date: 03/14/2023
 ms.service: sql

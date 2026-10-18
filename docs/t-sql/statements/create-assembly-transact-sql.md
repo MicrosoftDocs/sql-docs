@@ -1,9 +1,9 @@
 ---
 title: "CREATE ASSEMBLY (Transact-SQL)"
 description: CREATE ASSEMBLY creates a managed application module that contains class metadata and managed code as an object in an instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 07/23/2025
 ms.service: sql
 ms.subservice: t-sql

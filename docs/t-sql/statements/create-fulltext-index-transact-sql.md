@@ -1,9 +1,9 @@
 ---
 title: "CREATE FULLTEXT INDEX (Transact-SQL)"
 description: Creates a full-text index on a table or indexed view in a database in SQL Server and Azure SQL.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 07/28/2023
 ms.service: sql
 ms.subservice: t-sql

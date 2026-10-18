@@ -3,7 +3,7 @@ title: "TRUNCATE TABLE (Transact-SQL)"
 description: TRUNCATE TABLE removes all rows from a table or specified partitions of a table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/14/2025
 ms.service: sql
 ms.subservice: t-sql

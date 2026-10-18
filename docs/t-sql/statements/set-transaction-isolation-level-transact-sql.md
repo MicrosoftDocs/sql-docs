@@ -1,9 +1,9 @@
 ---
 title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"
 description: SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

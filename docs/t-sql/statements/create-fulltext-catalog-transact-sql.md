@@ -1,8 +1,8 @@
 ---
 title: "CREATE FULLTEXT CATALOG (Transact-SQL)"
 description: CREATE FULLTEXT CATALOG (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "DENY System Object Permissions (Transact-SQL)"
 description: Denies permissions on system objects such as stored procedures, extended stored procedures, functions, and views.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/20/2025
 ms.service: sql
 ms.subservice: t-sql

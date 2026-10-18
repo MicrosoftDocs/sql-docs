@@ -1,8 +1,8 @@
 ---
 title: "Shared Memory Properties"
 description: Learn how to enable or disable the shared memory protocol, which clients can use to connect to a SQL Server instance running on the same computer.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

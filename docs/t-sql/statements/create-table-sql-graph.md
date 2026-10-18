@@ -1,9 +1,9 @@
 ---
 title: "CREATE TABLE (SQL Graph)"
 description: CREATE TABLE (SQL Graph)
-author: "rwestMSFT"
-ms.author: "randolphwest"
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: t-sql

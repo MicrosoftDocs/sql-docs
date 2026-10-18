@@ -1,9 +1,9 @@
 ---
 title: "ALTER INDEX (Transact-SQL)"
 description: Modifies an existing table or view index (rowstore, columnstore, or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest, dfurman
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf, dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: t-sql

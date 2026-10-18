@@ -1,8 +1,8 @@
 ---
 title: "CREATE PARTITION FUNCTION (Transact-SQL)"
 description: CREATE PARTITION FUNCTION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "4/22/2022"
 ms.service: sql
 ms.subservice: t-sql

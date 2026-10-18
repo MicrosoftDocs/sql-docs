@@ -3,7 +3,7 @@ title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 description: Adds metadata about the sensitivity classification to one or more database columns.
 author: Madhumitatripathy
 ms.author: matripathy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/06/2024
 ms.service: sql
 ms.subservice: t-sql

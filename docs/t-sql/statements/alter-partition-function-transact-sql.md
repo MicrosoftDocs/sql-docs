@@ -1,8 +1,8 @@
 ---
 title: "ALTER PARTITION FUNCTION (Transact-SQL)"
 description: ALTER PARTITION FUNCTION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "4/5/2022"
 ms.service: sql
 ms.subservice: t-sql

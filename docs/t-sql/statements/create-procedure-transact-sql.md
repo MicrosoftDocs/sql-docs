@@ -1,9 +1,9 @@
 ---
 title: CREATE PROCEDURE (Transact-SQL)
 description: "CREATE PROCEDURE creates a Transact-SQL or common language runtime (CLR) stored procedure."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/20/2026
 ms.service: sql
 ms.subservice: t-sql

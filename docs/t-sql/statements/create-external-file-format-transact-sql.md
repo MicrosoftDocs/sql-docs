@@ -1,9 +1,9 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 description: "CREATE EXTERNAL FILE FORMAT creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, hudequei, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: hudequei, wiassaf
 ms.date: 10/22/2025
 ms.service: sql
 ms.subservice: t-sql

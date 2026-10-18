@@ -1,8 +1,8 @@
 ---
 title: "ALTER SCHEMA (Transact-SQL)"
 description: ALTER SCHEMA (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 05/08/2025
 ms.service: sql
 ms.subservice: t-sql

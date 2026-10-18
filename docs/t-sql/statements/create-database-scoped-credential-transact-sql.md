@@ -3,7 +3,7 @@ title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 description: Creates a database credential used by the database to access to the external location, anytime the database is performing an operation that requires access.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf
+ms.reviewer: wiassaf
 ms.date: 03/27/2026
 ms.service: sql
 ms.subservice: t-sql

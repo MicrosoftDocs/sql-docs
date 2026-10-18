@@ -4,7 +4,7 @@ titleSuffix: SQL Server (Transact-SQL)
 description: Learn how to create a database audit specification object using the SQL Server audit feature.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/06/2024
 ms.service: sql
 ms.subservice: t-sql

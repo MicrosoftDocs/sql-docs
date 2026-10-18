@@ -1,9 +1,9 @@
 ---
 title: "BACKUP (Transact-SQL)"
 description: BACKUP (Transact-SQL) backs up a SQL database.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: dinethi, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dinethi, wiassaf
 ms.date: 03/02/2026
 ms.service: sql
 ms.subservice: t-sql

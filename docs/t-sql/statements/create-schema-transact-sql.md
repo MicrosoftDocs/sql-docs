@@ -1,9 +1,9 @@
 ---
 title: "CREATE SCHEMA (Transact-SQL)"
 description: CREATE SCHEMA creates a schema in the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/18/2025
 ms.service: sql
 ms.subservice: t-sql

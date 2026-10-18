@@ -3,7 +3,7 @@ title: "Search condition (Transact-SQL)"
 description: A search condition is a combination of one or more predicates that use the logical operators AND, OR, and NOT.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/09/2024
 ms.service: sql
 ms.subservice: t-sql

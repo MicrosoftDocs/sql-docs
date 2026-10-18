@@ -3,7 +3,7 @@ title: "DROP PROCEDURE (Transact-SQL)"
 description: Removes one or more stored procedures or procedure groups from the current database in the SQL Server Database Engine.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/13/2024
 ms.service: sql
 ms.subservice: t-sql

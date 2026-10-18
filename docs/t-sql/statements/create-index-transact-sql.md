@@ -1,8 +1,8 @@
 ---
 title: "CREATE INDEX (Transact-SQL)"
 description: The CREATE INDEX statement creates a relational index on a table or view.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf, dfurman
 ms.date: 02/05/2026
 ms.service: sql

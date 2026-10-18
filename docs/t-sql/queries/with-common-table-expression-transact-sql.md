@@ -3,7 +3,7 @@ title: "WITH common_table_expression (Transact-SQL)"
 description: "Transact-SQL reference for how to use common table expressions (CTE) in queries."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/10/2026
 ms.service: sql
 ms.subservice: t-sql

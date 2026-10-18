@@ -1,9 +1,9 @@
 ---
 title: "DROP DATABASE (Transact-SQL)"
 description: DROP DATABASE removes one or more user databases or database snapshots from an instance of the SQL Server Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/09/2024
 ms.service: sql
 ms.subservice: t-sql

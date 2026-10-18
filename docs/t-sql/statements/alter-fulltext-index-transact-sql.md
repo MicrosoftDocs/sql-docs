@@ -1,9 +1,9 @@
 ---
 title: "ALTER FULLTEXT INDEX (Transact-SQL)"
 description: Changes the properties of a full-text index in SQL Server and Azure SQL.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 07/28/2023
 ms.service: sql
 ms.subservice: t-sql

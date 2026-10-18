@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)"
 description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics.
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf, dfurman
 ms.date: 04/27/2026
 ms.service: sql

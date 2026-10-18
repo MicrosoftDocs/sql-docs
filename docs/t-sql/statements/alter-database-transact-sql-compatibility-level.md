@@ -1,9 +1,9 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL)"
 description: Sets Transact-SQL and query processing behaviors to be compatible with the specified version of the Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql

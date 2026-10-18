@@ -2,8 +2,8 @@
 title: "ALTER DATABASE File and Filegroups"
 titleSuffix: SQL Server (Transact-SQL)
 description: Update a database's files and filegroups using Transact-SQL.
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "06/29/2026"
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "OVER Clause (Transact-SQL)"
 description: "Transact-SQL reference for the OVER clause, which defines a user-specified set of rows within a query result set."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf
+ms.reviewer: wiassaf
 ms.date: 06/12/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: ORDER BY Clause (Transact-SQL)
 description: The ORDER BY clause sorts data returned by a query in the SQL Server Database Engine.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: jovanpop, randolphwest, wiassaf
+ms.reviewer: jovanpop, wiassaf
 ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql

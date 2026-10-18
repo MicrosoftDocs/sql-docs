@@ -3,7 +3,7 @@ title: CREATE TABLE
 description: "CREATE TABLE creates a new table in Azure Synapse Analytics and Microsoft Fabric Data Warehouse."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, xiaoyul, mariyaali, maghan, periclesrocha, randolphwest
+ms.reviewer: vanto, xiaoyul, mariyaali, periclesrocha
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: t-sql

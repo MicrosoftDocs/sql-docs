@@ -1,9 +1,9 @@
 ---
 title: "CREATE WORKLOAD Classifier (Transact-SQL)"
 description: CREATE WORKLOAD creates a classifier object for use in workload management.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "SET LANGUAGE (Transact-SQL)"
 description: SET LANGUAGE specifies the language environment for the session.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/30/2024
 ms.service: sql
 ms.subservice: t-sql

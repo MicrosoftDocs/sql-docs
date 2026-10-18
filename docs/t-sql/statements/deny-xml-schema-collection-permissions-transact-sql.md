@@ -2,8 +2,8 @@
 title: "DENY XML Schema Collection Permissions"
 titleSuffix: SQL Server (Transact-SQL)
 description: Deny permissions on an XML schema collection.
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "06/09/2017"
 ms.service: sql
 ms.subservice: t-sql

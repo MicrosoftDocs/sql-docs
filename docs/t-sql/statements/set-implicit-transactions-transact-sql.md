@@ -3,7 +3,7 @@ title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"
 description: SET IMPLICIT_TRANSACTIONS sets the BEGIN TRANSACTION mode to implicit, for the connection.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/26/2025
 ms.service: sql
 ms.subservice: t-sql

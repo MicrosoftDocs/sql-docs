@@ -1,8 +1,8 @@
 ---
 title: Programming databases with T-SQL videos
 description: This page lists video content relevant for learning Transact-SQL (T-SQL).
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: t-sql

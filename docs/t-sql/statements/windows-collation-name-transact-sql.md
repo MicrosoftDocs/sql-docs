@@ -3,7 +3,7 @@ title: "Windows collation name (Transact-SQL)"
 description: The Windows collation name is composed of the collation designator and the comparison styles, and is specified in the COLLATE clause in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: t-sql

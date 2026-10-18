@@ -1,8 +1,8 @@
 ---
 title: "CREATE CONTRACT (Transact-SQL)"
 description: CREATE CONTRACT (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql

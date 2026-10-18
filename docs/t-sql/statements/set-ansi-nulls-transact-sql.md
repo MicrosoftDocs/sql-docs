@@ -3,7 +3,7 @@ title: "SET ANSI_NULLS (Transact-SQL)"
 description: SET ANSI_NULLS configures the behavior of the ANSI NULLS setting for equals and not equals comparison operators.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, randolphwest
+ms.reviewer: jovanpop
 ms.date: 04/28/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "SET ANSI_PADDING (Transact-SQL)"
 description: SET ANSI_PADDING controls the way the column stores values shorter than the defined size of the column.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, jovanpop
+ms.reviewer: jovanpop
 ms.date: 04/28/2025
 ms.service: sql
 ms.subservice: t-sql

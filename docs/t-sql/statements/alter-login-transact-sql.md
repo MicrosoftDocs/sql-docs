@@ -3,7 +3,7 @@ title: "ALTER LOGIN (Transact-SQL)"
 description: ALTER LOGIN changes the properties of a SQL Server login account.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/21/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: SET TIME ZONE (Transact-SQL)
 description: The SET TIME ZONE statements set a time zone value in Azure SQL Database and SQL database in Microsoft Fabric.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/06/2026
 ms.service: sql
 ms.subservice: t-sql

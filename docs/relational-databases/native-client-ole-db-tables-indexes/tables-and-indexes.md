@@ -1,8 +1,8 @@
 ---
 title: Tables and indexes (Native Client OLE DB provider)
 description: "Tables and Indexes in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

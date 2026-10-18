@@ -1,8 +1,8 @@
 ---
 title: "Transactions in ODBC"
 description: ODBC manages transactions at the connection level, committing or rolling back all work completed, either in autocommit or manual-commit mode.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: native-client

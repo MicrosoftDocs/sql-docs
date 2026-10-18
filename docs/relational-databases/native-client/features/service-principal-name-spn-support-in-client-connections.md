@@ -1,8 +1,8 @@
 ---
 title: "Service Principal Name in connections"
 description: Learn about support for service principal names for mutual authentication in SQL Server Native Client.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "08/08/2016"
 ms.service: sql
 ms.subservice: native-client

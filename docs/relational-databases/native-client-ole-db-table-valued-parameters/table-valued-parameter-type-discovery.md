@@ -1,8 +1,8 @@
 ---
 title: Table-valued parameter type discovery (Native Client OLE DB provider)
 description: "Table-Valued Parameter Type Discovery"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

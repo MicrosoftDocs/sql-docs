@@ -1,8 +1,8 @@
 ---
 title: SQL Server message results (Native Client OLE DB provider)
 description: "SQL Server Native Client Message Results"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

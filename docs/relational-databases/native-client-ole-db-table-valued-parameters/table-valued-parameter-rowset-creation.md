@@ -1,8 +1,8 @@
 ---
 title: Table-valued parameter rowset creation (Native Client OLE DB provider)
 description: "Table-Valued Parameter Rowset Creation in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

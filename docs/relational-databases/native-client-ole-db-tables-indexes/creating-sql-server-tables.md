@@ -1,8 +1,8 @@
 ---
 title: "Create SQL Server tables (Native Client OLE DB provider)"
 description: Learn how the SQL Server Native Client OLE DB provider exposes the functions that allow consumers to create SQL Server tables.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

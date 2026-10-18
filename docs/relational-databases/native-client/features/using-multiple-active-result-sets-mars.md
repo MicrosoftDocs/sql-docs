@@ -1,8 +1,8 @@
 ---
 title: "Using Multiple Active Result Sets (MARS)"
 description: SQL Server supports multiple active result sets. Applications can have more than one pending request and active default result set per connection.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "08/08/2017"
 ms.service: sql
 ms.subservice: native-client

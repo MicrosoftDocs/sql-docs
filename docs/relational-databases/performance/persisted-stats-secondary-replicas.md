@@ -1,9 +1,9 @@
 ---
 title: Persisted Statistics for Readable Secondary Replicas
 description: Describes functions of auto created statistics on readable secondary replicas. Introduces in SQL Server 2025.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, wiassaf
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: wiassaf
 ms.date: 02/04/2026
 ms.service: sql
 ms.topic: concept-article

@@ -1,8 +1,8 @@
 ---
 title: "Schema rowsets, OLE DB Table-Valued Parameters"
 description: "Schema Rowsets Changed for OLE DB Table-Valued Parameters in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -1,8 +1,8 @@
 ---
 title: "Database Engine Tuning Advisor"
 description: Learn how to use Database Engine Tuning Advisor to troubleshoot, tune a large set of queries, analyze design changes, and manage storage space in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "05/11/2021"
 ms.service: sql
 ms.subservice: performance

@@ -1,8 +1,8 @@
 ---
 title: "Installing"
 description: SQL Server Native Client 11.0 is installed with SQL Server 2016. Learn where components are installed. There is also a redistributable installation program.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "07/15/2016"
 ms.service: sql
 ms.subservice: native-client

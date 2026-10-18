@@ -1,8 +1,8 @@
 ---
 title: "Service Principal Names (SPNs) in ODBC Client"
 description: Learn about ODBC attributes and functions that support service principal names (SPNs) in client applications.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

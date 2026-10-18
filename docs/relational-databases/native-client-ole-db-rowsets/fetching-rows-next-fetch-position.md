@@ -1,8 +1,8 @@
 ---
 title: "Next fetch position (Native Client OLE DB provider)"
 description: "Fetching Rows - Next Fetch  (Native Client OLE DB Provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

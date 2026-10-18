@@ -1,8 +1,8 @@
 ---
 title: "ODBC change handling char conversions"
 description: "ODBC Driver Behavior Change When Handling Character Conversions"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

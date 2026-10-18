@@ -1,8 +1,8 @@
 ---
 title: "Using IRow::GetColumns (Native Client OLE DB provider)"
 description: "Using IRow::GetColumns in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client

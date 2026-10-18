@@ -1,8 +1,8 @@
 ---
 title: "Compare Execution Plans"
 description: Learn how to compare similarities and differences between actual graphical execution plans by using SQL Server Management Studio Plan Comparison feature.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.reviewer: wiassaf
 ms.date: 09/07/2025
 ms.service: sql

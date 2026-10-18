@@ -1,8 +1,8 @@
 ---
 title: "Update from SQL Server 2005"
 description: "Updating an Application from SQL Server 2005 Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -2,8 +2,8 @@
 title: "Partitioned Tables and Indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 description: "Learn about table and index partitioning."
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: dfurman
 ms.date: 12/29/2025
 ms.service: sql

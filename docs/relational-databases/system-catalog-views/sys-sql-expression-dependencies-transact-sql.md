@@ -1,8 +1,8 @@
 ---
 title: "sys.sql_expression_dependencies (Transact-SQL)"
 description: sys.sql_expression_dependencies contains one row for each by-name dependency on a user-defined entity in the current database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: system-objects

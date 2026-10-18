@@ -1,8 +1,8 @@
 ---
 title: "In-Memory OLTP System Views (Transact-SQL)"
 description: Learn about dynamic management views and object catalog views used with In-Memory OLTP.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/29/2025
 ms.service: sql
 ms.subservice: in-memory-oltp

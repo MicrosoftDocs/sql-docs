@@ -1,8 +1,8 @@
 ---
 title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL)"
 description: sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf, ryanston
 ms.date: "03/07/2017"
 ms.service: sql

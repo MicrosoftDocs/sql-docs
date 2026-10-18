@@ -1,8 +1,8 @@
 ---
 title: "sys.indexes (Transact-SQL)"
 description: "The sys.indexes catalog view contains a row per index or heap of a tabular object, such as a table, view, or table-valued function."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/24/2025
 ms.service: sql
 ms.subservice: system-objects

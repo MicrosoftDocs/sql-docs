@@ -1,8 +1,8 @@
 ---
 title: "sys.message_type_xml_schema_collection_usages (Transact-SQL)"
 description: sys.message_type_xml_schema_collection_usages (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

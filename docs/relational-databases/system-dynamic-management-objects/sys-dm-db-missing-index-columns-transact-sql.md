@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_missing_index_columns (Transact-SQL)"
 description: The sys.dm_db_missing_index_columns dynamic management function returns information about database table columns that are missing an index.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

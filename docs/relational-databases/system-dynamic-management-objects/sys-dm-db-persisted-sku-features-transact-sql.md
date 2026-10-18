@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_persisted_sku_features (Transact-SQL)"
 description: sys.dm_db_persisted_sku_features (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/23/2023
 ms.service: sql
 ms.subservice: system-objects

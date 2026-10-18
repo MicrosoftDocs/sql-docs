@@ -1,8 +1,8 @@
 ---
 title: "sys.syslanguages (Transact-SQL)"
 description: sys.syslanguages contains one row for each language present in the instance of the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 03/19/2024
 ms.service: sql
 ms.subservice: system-objects

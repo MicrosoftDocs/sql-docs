@@ -1,8 +1,8 @@
 ---
 title: "sys.master_files (Transact-SQL)"
 description: The sys.master_files system catalog view contains a row per file of a database as stored in the master database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/25/2023
 ms.service: sql
 ms.subservice: system-objects

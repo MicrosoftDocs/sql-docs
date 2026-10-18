@@ -1,8 +1,8 @@
 ---
 title: "sys.objects (Transact-SQL)"
 description: Contains a row for each user-defined, schema-scoped object that is created within a database, including natively compiled scalar user-defined functions.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/12/2024
 ms.service: sql
 ms.subservice: system-objects

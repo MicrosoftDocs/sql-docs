@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_connections (Transact-SQL)"
 description: sys.dm_exec_connections returns information about the connections established to this instance of the database engine and the details of each connection.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.system_objects (Transact-SQL)"
 description: sys.system_objects (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: sys.dm_exec_sessions (Transact-SQL)
 description: sys.dm_exec_sessions returns one row per authenticated session on SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: system-objects

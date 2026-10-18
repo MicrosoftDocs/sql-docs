@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_database_copies (Azure SQL Database)"
 description: sys.dm_database_copies (Azure SQL Database)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: "03/30/2022"
 ms.service: azure-sql-database
 ms.topic: "reference"

@@ -1,8 +1,8 @@
 ---
 title: "Service Broker Related Dynamic Management Views (Transact-SQL)"
 description: Service Broker related dynamic management views.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/07/2025
 ms.service: sql
 ms.subservice: system-objects

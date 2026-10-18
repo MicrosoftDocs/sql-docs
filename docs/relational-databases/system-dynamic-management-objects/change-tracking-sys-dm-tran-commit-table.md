@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tran_commit_table (Transact-SQL)"
 description: Displays one row for each transaction that is committed for a table that is tracked by SQL Server change tracking.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/28/2023
 ms.service: sql
 ms.subservice: system-objects

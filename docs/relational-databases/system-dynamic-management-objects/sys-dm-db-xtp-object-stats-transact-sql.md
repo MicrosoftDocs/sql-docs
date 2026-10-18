@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_object_stats (Transact-SQL)"
 description: sys.dm_db_xtp_object_stats reports the number rows affected by operations on each of the  In-Memory OLTP objects since the last database restart.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

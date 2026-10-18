@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_cdc_log_scan_sessions (Transact-SQL)"
 description: The Change Data Capture DMV sys.dm_cdc_log_scan_sessions returns status information about the current log scan session, or aggregated information about all sessions since the instance was last started.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

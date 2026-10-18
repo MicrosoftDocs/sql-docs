@@ -1,9 +1,9 @@
 ---
 title: "sys.vector_indexes (Transact-SQL)"
 description: "sys.vector_indexes contains a row per vector index."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, markingmyname
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.types (Transact-SQL)"
 description: "Contains a row for each system and user-defined type."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/23/2024
 ms.service: sql
 ms.subservice: system-objects

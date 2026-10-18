@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_task_space_usage (Transact-SQL)"
 description: sys.dm_db_task_space_usage returns page allocation and deallocation activity by task for the database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.query_store_wait_stats (Transact-SQL)"
 description: sys.query_store_wait_stats (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: system-objects

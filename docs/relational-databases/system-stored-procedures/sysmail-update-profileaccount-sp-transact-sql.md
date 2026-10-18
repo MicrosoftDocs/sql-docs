@@ -3,7 +3,7 @@ title: "sysmail_update_profileaccount_sp (Transact-SQL)"
 description: "Updates the sequence number of an account within a Database Mail profile."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

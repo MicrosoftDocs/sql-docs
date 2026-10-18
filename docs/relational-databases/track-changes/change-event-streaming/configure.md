@@ -3,7 +3,7 @@ title: Configure Change Event Streaming to Azure Event Hubs
 description: Describes how to configure change event streaming.
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 09/17/2026
 ms.service: sql
 ms.topic: how-to

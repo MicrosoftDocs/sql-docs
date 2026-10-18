@@ -1,8 +1,8 @@
 ---
 title: "Use the EVENTDATA Function"
 description: "Use the EVENTDATA Function"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: language-reference

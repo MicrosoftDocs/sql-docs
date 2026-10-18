@@ -1,9 +1,9 @@
 ---
 title: "Logon triggers"
 description: Logon triggers fire stored procedures in response to a LOGON event.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 04/08/2024
 ms.service: sql
 ms.topic: concept-article

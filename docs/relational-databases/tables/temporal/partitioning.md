@@ -1,8 +1,8 @@
 ---
 title: Partition with Temporal Tables
 description: Learn how to use table partitioning, on both the current and the history table independently.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

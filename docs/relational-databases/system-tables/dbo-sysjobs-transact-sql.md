@@ -3,7 +3,7 @@ title: dbo.sysjobs (Transact-SQL)
 description: dbo.sysjobs stores the information for each scheduled job that SQL Server Agent runs.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: system-objects

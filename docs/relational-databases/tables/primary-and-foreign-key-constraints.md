@@ -3,7 +3,7 @@ title: "Primary and foreign key constraints"
 description: "Learn about primary and foreign key constraints, important objects used to enforce data integrity in database tables."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index

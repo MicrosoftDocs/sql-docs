@@ -1,8 +1,8 @@
 ---
 title: "sp_query_store_clear_hints (Transact-SQL)"
 description: Removes all Query Store hints for a given query.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/25/2025
 ms.service: sql
 ms.subservice: system-objects

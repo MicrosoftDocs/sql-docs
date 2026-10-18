@@ -3,7 +3,7 @@ title: "sys.sp_verify_database_ledger (Transact-SQL)"
 description: "Verifies the database ledger and the table ledgers."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

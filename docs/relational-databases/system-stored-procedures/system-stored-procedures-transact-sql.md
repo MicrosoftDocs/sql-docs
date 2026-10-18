@@ -3,7 +3,7 @@ title: "System Stored Procedures (Transact-SQL)"
 description: Reference guide for system stored procedures organized by functional category, including replication, security, Database Engine, and SQL Server Agent procedures.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: system-objects

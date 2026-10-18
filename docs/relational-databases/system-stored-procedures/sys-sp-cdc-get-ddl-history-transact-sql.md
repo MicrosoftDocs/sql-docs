@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cdc_get_ddl_history (Transact-SQL)"
 description: "Returns the data definition language (DDL) change history associated with the specified capture instance since CDC was enabled for that instance."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

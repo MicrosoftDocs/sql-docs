@@ -3,7 +3,7 @@ title: "Create views"
 description: "Create views in the Database Engine with SQL Server Management Studio or Transact-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index

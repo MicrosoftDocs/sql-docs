@@ -3,7 +3,7 @@ title: "sp_syspolicy_update_policy_category_subscription (Transact-SQL)"
 description: "Updates a policy category subscription for a specified database."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

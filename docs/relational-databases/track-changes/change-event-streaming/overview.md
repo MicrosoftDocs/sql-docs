@@ -3,7 +3,7 @@ title: "What is change event streaming (preview)"
 description: "Provides an overview of change event streaming"
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 07/29/2026
 ms.service: sql
 ms.topic: overview

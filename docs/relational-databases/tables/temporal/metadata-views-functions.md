@@ -1,8 +1,8 @@
 ---
 title: Temporal Table Metadata Views and Functions
 description: A list of temporal table metadata views and functions.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

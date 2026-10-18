@@ -1,8 +1,8 @@
 ---
 title: Scalar UDF Inlining
 description: The scalar UDF inlining feature improves performance of queries that invoke scalar UDFs in SQL Server 2019 and later versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: karam, wiassaf, srdjanmatin
 ms.date: 06/29/2026
 ms.service: sql

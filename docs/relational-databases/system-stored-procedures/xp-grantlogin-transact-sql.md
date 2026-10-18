@@ -3,7 +3,7 @@ title: "sys.xp_grantlogin (Transact-SQL)"
 description: "Grants a Windows group or user access to SQL Server."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

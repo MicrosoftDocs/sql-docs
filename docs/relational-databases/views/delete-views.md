@@ -3,7 +3,7 @@ title: "Delete views"
 description: "Delete (drop) views in the Database Engine using SQL Server Management Studio or Transact-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/10/2023
 ms.service: sql
 ms.subservice: table-view-index

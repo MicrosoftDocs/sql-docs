@@ -3,7 +3,7 @@ title: "Modify Data Through a View"
 description: Learn how to modify data through a view.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: table-view-index

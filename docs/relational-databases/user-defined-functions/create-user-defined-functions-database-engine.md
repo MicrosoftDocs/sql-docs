@@ -1,9 +1,9 @@
 ---
 title: "Create User-Defined Functions (Database Engine)"
 description: Learn how to create user-defined functions with Transact-SQL.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.topic: language-reference

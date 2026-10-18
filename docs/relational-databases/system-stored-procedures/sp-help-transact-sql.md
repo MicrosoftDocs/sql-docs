@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help (Transact-SQL)"
 description: Reports information about a database object (any object listed in the sys.sysobjects compatibility view), a user-defined data type, or a data type.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

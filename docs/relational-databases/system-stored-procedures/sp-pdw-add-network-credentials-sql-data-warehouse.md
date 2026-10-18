@@ -4,7 +4,7 @@ titleSuffix: Azure Synapse Analytics
 description: sp_pdw_add_network_credentials stores network credentials in Azure Synapse Analytics and associates them with a server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"

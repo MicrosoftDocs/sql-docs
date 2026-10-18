@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_MSchange_distribution_agent_properties (Transact-SQL)"
 description: Describes the sp_MSchange_distribution_agent_properties stored procedure used to change the properties of the Distribution Agent for a SQL Server Replication topology.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

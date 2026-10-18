@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replication_agent_checkup (Transact-SQL)"
 description: Checks each distribution database for running replication agents with no logged history in the specified heartbeat interval.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

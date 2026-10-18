@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpsubscription_properties (Transact-SQL)"
 description: sp_helpsubscription_properties Retrieves security information from the MSsubscription_properties table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

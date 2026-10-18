@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_log_shipping_secondary_primary (Transact-SQL)"
 description: sp_help_log_shipping_secondary_primary retrieves the settings for a given primary database on the secondary server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_agent_default (Transact-SQL)"
 description: "Retrieves the ID of the default configuration for the agent type passed as parameter. This stored procedure is executed at Distributor on any database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

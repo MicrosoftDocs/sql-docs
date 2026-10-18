@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_publisherproperty (Transact-SQL)"
 description: sp_publisherproperty displays or changes publisher properties for non-SQL Server Publishers.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

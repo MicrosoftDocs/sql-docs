@@ -3,7 +3,7 @@ title: "sys.sp_revoke_publication_access (Transact-SQL)"
 description: sp_revoke_publication_access removes the login from a publications access list.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

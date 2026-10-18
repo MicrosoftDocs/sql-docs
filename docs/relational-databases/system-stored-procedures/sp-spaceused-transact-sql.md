@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_spaceused (Transact-SQL)"
 description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

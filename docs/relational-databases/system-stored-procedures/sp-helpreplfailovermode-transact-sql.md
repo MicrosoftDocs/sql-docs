@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpreplfailovermode (Transact-SQL)"
 description: sp_helpreplfailovermode displays the current failover mode of a subscription.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

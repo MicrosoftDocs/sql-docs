@@ -1,9 +1,9 @@
 ---
 title: "sp_help_jobschedule (Transact-SQL)"
 description: Returns information about the scheduling of jobs used by SQL Server Management Studio to perform automated activities.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

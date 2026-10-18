@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_requestpeerresponse (Transact-SQL)"
 description: sp_requestpeerresponse requests a response from every other node in a peer-to-peer topology.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

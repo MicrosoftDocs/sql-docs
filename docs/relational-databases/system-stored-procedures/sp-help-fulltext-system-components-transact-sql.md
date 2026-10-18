@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_fulltext_system_components (Transact-SQL)"
 description: sp_help_fulltext_system_components returns information for the registered word-breakers, filter, and protocol handlers.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

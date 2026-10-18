@@ -3,7 +3,7 @@ title: "jobs.sp_purge_jobhistory (Azure Elastic Jobs) (Transact-SQL)"
 description: jobs.sp_purge_jobhistory removes the history records for a job created in the Azure Elastic Jobs service for Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.subservice: system-objects

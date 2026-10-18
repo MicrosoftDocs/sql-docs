@@ -1,9 +1,9 @@
 ---
 title: "sp_helpdistributor_properties (Transact-SQL)"
 description: "sp_helpdistributor_properties (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

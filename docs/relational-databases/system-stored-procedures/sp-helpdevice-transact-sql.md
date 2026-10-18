@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpdevice (Transact-SQL)"
 description: sp_helpdevice reports information about SQL Server backup devices.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

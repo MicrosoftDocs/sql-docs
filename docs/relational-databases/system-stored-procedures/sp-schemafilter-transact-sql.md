@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_schemafilter (Transact-SQL)"
 description: Modifies and displays information on the schema that is excluded when listing Oracle tables eligible for publishing.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

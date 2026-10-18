@@ -4,7 +4,7 @@ titleSuffix: Azure Synapse Analytics
 description: sp_pdw_remove_network_credentials removes network credentials stored in Azure Synapse Analytics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"

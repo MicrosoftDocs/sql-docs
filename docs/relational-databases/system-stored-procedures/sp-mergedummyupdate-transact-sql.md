@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_mergedummyupdate (Transact-SQL)"
 description: "Does a dummy update on the given row so that it sends again during the next merge."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,9 +1,9 @@
 ---
 title: "sp_start_job (Transact-SQL)"
 description: sp_start_job instructs the SQL Server Agent to execute a job immediately.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_releaseapplock (Transact-SQL)"
 description: sp_releaseapplock releases a lock on an application resource.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

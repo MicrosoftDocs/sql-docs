@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helptrigger (Transact-SQL)"
 description: sp_helptrigger returns the type or types of DML triggers defined on the specified table for the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

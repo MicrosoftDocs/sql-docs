@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replmonitorhelppublicationthresholds (Transact-SQL)"
 description: sp_replmonitorhelppublicationthresholds returns the threshold metrics set for a monitored publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

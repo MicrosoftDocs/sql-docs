@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_setdefaultdatatypemapping (Transact-SQL)"
 description: Marks an existing data type mapping between SQL Server and a non-SQL Server database management system (DBMS) as the default.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

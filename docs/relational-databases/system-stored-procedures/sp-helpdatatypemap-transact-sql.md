@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpdatatypemap (Transact-SQL)"
 description: sp_helpdatatypemap returns information on the defined data type mappings between SQL Server and non-SQL Server database management systems (DBMS).
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

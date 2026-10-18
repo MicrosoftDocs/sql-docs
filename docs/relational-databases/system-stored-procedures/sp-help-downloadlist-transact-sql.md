@@ -1,9 +1,9 @@
 ---
 title: "sp_help_downloadlist (Transact-SQL)"
 description: Lists all rows in the sysdownloadlist system table for the supplied job, or all rows if no job is specified.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

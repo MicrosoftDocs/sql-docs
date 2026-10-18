@@ -3,7 +3,7 @@ title: "sp_special_columns_100 (Azure Synapse Analytics)"
 description: sp_special_columns_100 returns the optimal set of columns that uniquely identify a row in the table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"

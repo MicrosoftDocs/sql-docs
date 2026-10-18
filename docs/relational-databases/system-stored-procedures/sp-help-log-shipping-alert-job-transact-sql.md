@@ -1,9 +1,9 @@
 ---
 title: "sp_help_log_shipping_alert_job (Transact-SQL)"
 description: Returns the job ID of the alert job from the log shipping monitor.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

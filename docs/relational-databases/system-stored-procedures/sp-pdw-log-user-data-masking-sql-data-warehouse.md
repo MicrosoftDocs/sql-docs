@@ -3,7 +3,7 @@ title: "sp_pdw_log_user_data_masking (Azure Synapse Analytics)"
 description: sp_pdw_log_user_data_masking configures user data masking in Azure Synapse Analytics activity logs.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"

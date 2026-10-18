@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replsetoriginator (Transact-SQL)"
 description: sp_replsetoriginator used to invoke loopback detection and handling in bidirectional transactional replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

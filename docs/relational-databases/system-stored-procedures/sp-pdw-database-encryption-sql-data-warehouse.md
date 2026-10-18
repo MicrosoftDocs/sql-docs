@@ -3,7 +3,7 @@ title: "sp_pdw_database_encryption (Azure Synapse Analytics)"
 description: sp_pdw_database_encryption enables transparent data encryption for an Azure Synapse Analytics appliance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"

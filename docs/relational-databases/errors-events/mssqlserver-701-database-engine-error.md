@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_701"
 description: "MSSQLSERVER_701"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: wiassaf
 ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: supportability

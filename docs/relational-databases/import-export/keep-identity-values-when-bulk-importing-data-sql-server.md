@@ -1,8 +1,8 @@
 ---
 title: "Keep Identity Values When Bulk Importing Data"
 description: When you bulk import data that contains identity values to a SQL Server instance, by default, it assigns new values. You can choose to keep the original values.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: data-movement

@@ -1,8 +1,8 @@
 ---
 title: "XML Format Files (SQL Server)"
 description: SQL Server provides an XML schema that defines syntax for writing XML format files to use for bulk importing data into a SQL Server table.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: data-movement

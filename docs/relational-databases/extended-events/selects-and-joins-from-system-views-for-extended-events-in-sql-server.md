@@ -3,7 +3,7 @@ title: "SELECTs and JOINs from System Views for Extended Events"
 description: There are system views of Extended Events, and how to query them, with many examples.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: xevents

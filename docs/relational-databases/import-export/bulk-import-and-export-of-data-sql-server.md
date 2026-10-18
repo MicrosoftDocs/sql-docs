@@ -1,8 +1,8 @@
 ---
 title: Bulk Import and Export of Data (SQL Server)
 description: SQL Server supports exporting data in bulk from a SQL Server table and importing bulk data into a SQL Server table or nonpartitioned view.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 08/21/2026
 ms.service: sql
 ms.subservice: data-movement

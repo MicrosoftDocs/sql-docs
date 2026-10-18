@@ -1,8 +1,8 @@
 ---
 title: SQL Graph Architecture
 description: Learn about the architecture of SQL Graph.
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/25/2026
 ms.service: sql
 ms.topic: reference

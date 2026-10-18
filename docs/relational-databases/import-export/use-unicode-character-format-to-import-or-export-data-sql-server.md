@@ -1,8 +1,8 @@
 ---
 title: "Use Unicode Character Format to Import & Export Data"
 description: The Unicode character data format allows data to be exported from a SQL Server instance by using a code page that differs from the code page used by the client.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 02/10/2026
 ms.service: sql
 ms.subservice: data-movement

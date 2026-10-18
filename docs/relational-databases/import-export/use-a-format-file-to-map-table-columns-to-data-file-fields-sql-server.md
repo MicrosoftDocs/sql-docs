@@ -1,8 +1,8 @@
 ---
 title: "Map Table Columns to Data-File Fields with a Format File"
 description: In SQL Server, non-XML and XML format files can accommodate a data file whose fields are arranged in a different order from the table columns.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: data-movement

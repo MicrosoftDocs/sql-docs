@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_50000"
 description: An error from an attempt was made to install or update SQL Server Native Client. See an explanation of the error and possible resolutions.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

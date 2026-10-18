@@ -1,8 +1,8 @@
 ---
 title: "Monitor performance of natively compiled stored procedures"
 description: Learn how to monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "04/03/2018"
 ms.service: sql
 ms.subservice: in-memory-oltp

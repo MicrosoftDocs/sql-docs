@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_832
 description: "MSSQLSERVER_832"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: jopilov, mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

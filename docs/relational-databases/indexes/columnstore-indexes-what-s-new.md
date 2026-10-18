@@ -1,9 +1,9 @@
 ---
 title: "What's New in Columnstore Indexes"
 description: "This article explains features by version and the latest new features of SQL Server columnstore indexes."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wiassaf, dfurman, randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: wiassaf, dfurman
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: table-view-index

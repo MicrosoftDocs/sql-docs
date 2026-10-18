@@ -1,9 +1,9 @@
 ---
 title: "Columnstore indexes: Overview"
 description: "An overview on columnstore indexes. Columnstore indexes are the standard for storing and querying large data warehousing fact tables."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, derekw, randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: dfurman, derekw
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: table-view-index

@@ -1,8 +1,8 @@
 ---
 title: Specify Compatibility Data Formats with bcp
 description: For bulk exports in SQL Server with bcp, data formats might be incompatible with expected layout. A non-xml format file specifies compatibility data formats.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: mahyon
 ms.date: 08/21/2026
 ms.service: sql

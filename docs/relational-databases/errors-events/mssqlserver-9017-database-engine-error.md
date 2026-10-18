@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_9017"
 description: "MSSQLSERVER_9017"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/04/2026
 ms.service: sql
 ms.subservice: supportability

@@ -1,8 +1,8 @@
 ---
 title: Create a Format File with bcp (SQL Server)
 description: When you bulk import or export a SQL Server table, a format file allows writing data files with little editing or reading data files from other programs.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: mahyon
 ms.date: 08/21/2026
 ms.service: sql

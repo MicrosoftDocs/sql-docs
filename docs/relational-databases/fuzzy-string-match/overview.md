@@ -1,9 +1,9 @@
 ---
 title: Fuzzy String Match
 description: Look up data with fuzzy or approximate values.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: abhtiwar, randolphwest, wiassaf
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 09/15/2026
 ms.service: sql
 ms.topic: overview

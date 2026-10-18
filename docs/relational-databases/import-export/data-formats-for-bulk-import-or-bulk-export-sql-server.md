@@ -1,8 +1,8 @@
 ---
 title: "Data formats for bulk import & bulk export"
 description: SQL Server accepts data in character or native binary format. Use character format between SQL Server and other apps and native between instances of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: data-movement

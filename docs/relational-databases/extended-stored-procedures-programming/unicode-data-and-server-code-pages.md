@@ -1,9 +1,9 @@
 ---
 title: "Unicode Data and Server Code Pages"
 description: All metadata returned by, or provided to the Extended Stored Procedure API is assumed to be in the multibyte code page of the server.
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 08/29/2024
 ms.service: sql
 ms.topic: "reference"

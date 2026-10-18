@@ -3,7 +3,7 @@ title: "LOCALDB_ERROR_INTERNAL_ERROR"
 description: "LOCALDB_ERROR_INTERNAL_ERROR"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.subservice: performance

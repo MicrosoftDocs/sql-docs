@@ -1,8 +1,8 @@
 ---
 title: "Use a Format File to Bulk Import Data"
 description: In SQL Server, you can use a format file in bulk-import operations. A format file maps the fields of the data file to the columns of the table.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: data-movement

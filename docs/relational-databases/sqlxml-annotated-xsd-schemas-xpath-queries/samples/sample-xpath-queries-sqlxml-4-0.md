@@ -1,8 +1,8 @@
 ---
 title: "Sample XPath Queries (SQLXML)"
 description: View examples of XPath queries in SQLXML 4.0 that demonstrate how to specify axes, predicates, operators, functions, variables, and more.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

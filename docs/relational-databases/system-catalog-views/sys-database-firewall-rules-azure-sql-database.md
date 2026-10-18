@@ -3,7 +3,7 @@ title: "sys.database_firewall_rules"
 description: Returns information about the database-level firewall settings associated with your Azure SQL Database and SQL database in Fabric.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/29/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

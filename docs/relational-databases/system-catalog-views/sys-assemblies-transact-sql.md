@@ -1,8 +1,8 @@
 ---
 title: "sys.assemblies (Transact-SQL)"
 description: sys.assemblies (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Using Annotations in XSD Schemas (SQLXML)"
 description: Learn how to use the annotations supported by the XSD schema language in SQLXML 4.0 to specify XML-to-relational mapping within an XSD schema.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "sys.column_store_segments (Transact-SQL)"
 description: "sys.column_store_segments returns one row for each column segment in a columnstore index. There is one column segment per column per rowgroup."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 1/12/2026
 ms.service: sql
 ms.subservice: system-objects

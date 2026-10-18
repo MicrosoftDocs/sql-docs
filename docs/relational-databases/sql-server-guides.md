@@ -1,8 +1,8 @@
 ---
 title: SQL Server Guides
 description: SQL Server internals and architecture guides.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 01/19/2026
 ms.service: sql
 ms.topic: concept-article

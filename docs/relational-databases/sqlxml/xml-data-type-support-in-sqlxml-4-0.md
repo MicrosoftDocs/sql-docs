@@ -1,8 +1,8 @@
 ---
 title: "xml Data Type Support in SQLXML 4.0"
 description: Learn how SQLXML 4.0 recognizes instances of the xml data type and implements support for it.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

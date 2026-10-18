@@ -1,8 +1,8 @@
 ---
 title: "sys.all_objects (Transact-SQL)"
 description: sys.all_objects (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/20/2020"
 ms.service: sql
 ms.subservice: system-objects

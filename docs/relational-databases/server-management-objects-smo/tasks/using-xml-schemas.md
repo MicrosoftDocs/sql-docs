@@ -1,8 +1,8 @@
 ---
 title: "Using XML Schemas"
 description: "Using XML Schemas"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: 01/11/2019
 ms.service: sql
 ms.topic: "reference"

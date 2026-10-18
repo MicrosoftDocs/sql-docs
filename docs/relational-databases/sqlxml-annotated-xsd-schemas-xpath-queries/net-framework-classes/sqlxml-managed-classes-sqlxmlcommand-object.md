@@ -1,8 +1,8 @@
 ---
 title: "SqlXmlCommand Object (SQLXML)"
 description: Learn about the methods and properties of the SqlXmlCommand object.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

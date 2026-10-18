@@ -1,8 +1,8 @@
 ---
 title: "sys.external_tables (Transact-SQL)"
 description: sys.external_tables (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: hudequei, wiassaf
 ms.date: 05/13/2025
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "SQLXML 4.0 Security Considerations"
 description: View information about SQLXML 4.0 security considerations.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "Parameters"
 description: Learn how to use parameters to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures

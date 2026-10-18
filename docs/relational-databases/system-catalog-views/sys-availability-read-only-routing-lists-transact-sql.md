@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_read_only_routing_lists (Transact-SQL)"
 description: sys.availability_read_only_routing_lists returns a row for the read-only routing list of each availability replica.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

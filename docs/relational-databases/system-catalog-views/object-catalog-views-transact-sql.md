@@ -1,8 +1,8 @@
 ---
 title: "Object Catalog Views (Transact-SQL)"
 description: Object Catalog Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: system-objects

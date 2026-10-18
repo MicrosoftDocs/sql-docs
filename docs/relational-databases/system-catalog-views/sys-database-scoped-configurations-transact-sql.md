@@ -3,7 +3,7 @@ title: sys.database_scoped_configurations (Transact-SQL)
 description: sys.database_scoped_configurations contains one row per database scoped configuration.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Make constant elements with sql:is-constant (SQLXML)"
 description: "Learn how to use the sql:is-constant annotation in SQLXML 4.0 to create constant elements in an XSD schema that do not map to any database table or column."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/11/2019
 ms.service: sql
 ms.subservice: xml

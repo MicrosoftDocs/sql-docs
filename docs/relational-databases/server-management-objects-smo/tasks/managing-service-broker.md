@@ -1,8 +1,8 @@
 ---
 title: "Managing Service Broker"
 description: "Managing Service Broker"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "05/24/2019"
 ms.service: sql
 ms.topic: "reference"

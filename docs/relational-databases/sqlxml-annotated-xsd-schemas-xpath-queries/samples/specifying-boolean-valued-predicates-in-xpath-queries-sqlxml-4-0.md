@@ -1,8 +1,8 @@
 ---
 title: "Specify Boolean predicates in XPath queries (SQLXML)"
 description: View examples of how to specify Boolean-valued predicates in XPath queries (SQLXML 4.0).
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

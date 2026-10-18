@@ -1,9 +1,9 @@
 ---
 title: "Set a trace filter (Transact-SQL)"
 description: Learn how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/17/2024
 ms.service: sql
 ms.topic: language-reference

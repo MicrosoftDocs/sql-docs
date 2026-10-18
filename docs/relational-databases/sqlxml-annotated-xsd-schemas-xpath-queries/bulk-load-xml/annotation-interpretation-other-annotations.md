@@ -1,8 +1,8 @@
 ---
 title: "Other Annotations (SQLXML)"
 description: View a list of SQLXML annotations with a description of how each one is interpreted by XML Bulk Load.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "Spatial Data Catalog Views"
 description: Spatial Data Catalog Views
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: system-objects

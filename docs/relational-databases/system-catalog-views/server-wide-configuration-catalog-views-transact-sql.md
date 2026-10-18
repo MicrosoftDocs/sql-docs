@@ -1,8 +1,8 @@
 ---
 title: "Server-Wide Configuration Catalog Views (Transact-SQL)"
 description: Server-wide Configuration Catalog Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: system-objects

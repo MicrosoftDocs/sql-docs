@@ -1,8 +1,8 @@
 ---
 title: "sys.messages (Transact-SQL)"
 description: The sys.messages view contains a row for each message_id or language_id of the error messages in the system, for both system-defined and user-defined messages.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: system-objects

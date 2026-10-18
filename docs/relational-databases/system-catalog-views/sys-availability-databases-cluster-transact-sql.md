@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_databases_cluster (Transact-SQL)"
 description: sys.availability_databases_cluster returns a row for each availability database in the WSFC cluster.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

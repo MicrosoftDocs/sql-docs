@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_group_listener_ip_addresses (Transact-SQL)"
 description: sys.availability_group_listener_ip_addresses returns a row for every IP address associated with any availability group listener.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

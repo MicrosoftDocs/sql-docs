@@ -1,8 +1,8 @@
 ---
 title: "sys.change_tracking_tables (Transact-SQL)"
 description: Change Tracking Catalog Views - sys.change_tracking_tables
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/08/2016"
 ms.service: sql
 ms.subservice: system-objects

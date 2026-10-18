@@ -1,8 +1,8 @@
 ---
 title: sys.fulltext_stoplists (Transact-SQL)
 description: sys.fulltext_stoplists contains a row per full-text stoplist in the database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

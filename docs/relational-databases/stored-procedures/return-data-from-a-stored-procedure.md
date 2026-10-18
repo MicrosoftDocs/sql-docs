@@ -3,7 +3,7 @@ title: "Return Data From a Stored Procedure"
 description: Learn how to return data from a procedure to a calling program by using result sets, output parameters, and return codes.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures

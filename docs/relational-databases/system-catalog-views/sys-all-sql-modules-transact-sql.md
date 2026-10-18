@@ -1,8 +1,8 @@
 ---
 title: "sys.all_sql_modules (Transact-SQL)"
 description: sys.all_sql_modules (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: system-objects

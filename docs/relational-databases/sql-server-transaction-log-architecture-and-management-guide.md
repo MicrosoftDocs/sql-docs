@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Transaction Log Architecture and Management Guide"
 description: "The SQL Server transaction log is a critical component. Learn about its architecture and how to manage it."
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: jopilov
 ms.date: 08/28/2025
 ms.service: sql

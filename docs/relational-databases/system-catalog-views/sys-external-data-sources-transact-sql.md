@@ -1,8 +1,8 @@
 ---
 title: "sys.external_data_sources (Transact-SQL)"
 description: "The sys.external_data_sources system catalog view contains a row for each external data source in the current database."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: hudequei, wiassaf
 ms.date: 05/13/2025
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "sys.endpoints (Transact-SQL)"
 description: sys.endpoints returns one row per endpoint that is created in the system, including the SYSTEM endpoint.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

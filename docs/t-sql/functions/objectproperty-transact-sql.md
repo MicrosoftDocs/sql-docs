@@ -1,8 +1,8 @@
 ---
 title: "OBJECTPROPERTY (Transact-SQL)"
 description: "OBJECTPROPERTY returns information about schema-scoped objects in the current database."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "LIKE (Transact-SQL)"
 description: "Determines whether a specific character string matches a specified pattern."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: t-sql

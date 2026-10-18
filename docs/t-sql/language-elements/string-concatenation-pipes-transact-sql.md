@@ -3,7 +3,7 @@ title: "|| (String Concatenation) (Transact-SQL)"
 description: "Use || to concatenate two or more character or binary strings, columns, or a combination of strings and column names into one expression (a string operator)."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: abhtiwar, umajay, randolphwest
+ms.reviewer: abhtiwar, umajay
 ms.date: 07/28/2025
 ms.service: sql
 ms.subservice: t-sql

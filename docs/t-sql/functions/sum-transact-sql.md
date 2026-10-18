@@ -1,9 +1,9 @@
 ---
 title: "SUM (Transact-SQL)"
 description: SUM returns the sum of all the values, or only the DISTINCT values, in the expression.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

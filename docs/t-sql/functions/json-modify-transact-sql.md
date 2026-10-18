@@ -3,7 +3,7 @@ title: "JSON_MODIFY (Transact-SQL)"
 description: JSON_MODIFY updates the value of a property in a JSON string and returns the updated JSON string.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 07/23/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "STRING_ESCAPE (Transact-SQL)"
 description: "The STRING_ESCAPE Transact-SQL function escapes special characters in texts and returns text with escaped characters."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 02/09/2026
 ms.service: sql
 ms.subservice: t-sql

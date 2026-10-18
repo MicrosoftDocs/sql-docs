@@ -1,8 +1,8 @@
 ---
 title: "SHUTDOWN (Transact-SQL)"
 description: SHUTDOWN immediately stops SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/16/2025
 ms.service: sql
 ms.subservice: t-sql

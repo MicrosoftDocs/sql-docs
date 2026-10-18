@@ -1,8 +1,8 @@
 ---
 title: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
 description: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "01/29/2021"
 ms.service: sql
 ms.subservice: t-sql

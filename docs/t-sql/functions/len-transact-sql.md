@@ -1,8 +1,8 @@
 ---
 title: "LEN (Transact-SQL)"
 description: LEN returns the number of characters of the specified string expression, excluding trailing spaces.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: t-sql

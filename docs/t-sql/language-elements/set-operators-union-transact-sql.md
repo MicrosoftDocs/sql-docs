@@ -1,8 +1,8 @@
 ---
 title: "UNION (Transact-SQL)"
 description: "Set Operators - UNION (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "08/07/2017"
 ms.service: sql
 ms.subservice: t-sql

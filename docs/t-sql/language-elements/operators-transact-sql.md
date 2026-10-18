@@ -1,8 +1,8 @@
 ---
 title: "Operators (Transact-SQL)"
 description: An operator is a symbol specifying an action that is performed on one or more expressions.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/23/2024
 ms.service: sql
 ms.subservice: t-sql

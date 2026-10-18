@@ -1,8 +1,8 @@
 ---
 title: PERCENTILE_DISC (Transact-SQL)
 description: PERCENTILE_DISC computes a specific percentile for sorted values in an entire rowset or within a rowset's distinct partitions.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: jovanpop, wiassaf
 ms.date: 10/05/2026
 ms.service: sql

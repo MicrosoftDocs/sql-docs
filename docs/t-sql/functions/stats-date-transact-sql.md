@@ -1,8 +1,8 @@
 ---
 title: "STATS_DATE (Transact-SQL)"
 description: "STATS_DATE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "12/18/2017"
 ms.service: sql
 ms.subservice: t-sql

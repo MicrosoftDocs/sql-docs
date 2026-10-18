@@ -1,9 +1,9 @@
 ---
 title: "SUSER_SNAME (Transact-SQL)"
 description: "SUSER_SNAME returns the login name associated with a security identification number (SID)."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

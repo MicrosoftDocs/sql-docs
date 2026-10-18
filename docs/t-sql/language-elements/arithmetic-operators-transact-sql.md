@@ -1,8 +1,8 @@
 ---
 title: "Arithmetic Operators (Transact-SQL)"
 description: Arithmetic Transact-SQL operators run mathematical operations on two expressions of one or more data types, in the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/16/2024
 ms.service: sql
 ms.subservice: t-sql

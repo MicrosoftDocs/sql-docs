@@ -1,9 +1,9 @@
 ---
 title: "REGEXP_SPLIT_TO_TABLE (Transact-SQL)"
 description: Returns a table of strings split, delimited by the regex pattern. If there's no match to the pattern, the function returns the string.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql

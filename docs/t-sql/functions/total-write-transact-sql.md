@@ -1,8 +1,8 @@
 ---
 title: "@@TOTAL_WRITE (Transact-SQL)"
 description: "@@TOTAL_WRITE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "JSON_ARRAY (Transact-SQL)"
 description: JSON_ARRAY constructs JSON array text from zero or more expressions.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, randolphwest
+ms.reviewer: umajay
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "|= (Bitwise OR Assignment) (Transact-SQL)"
 description: Performs a bitwise logical OR operation between two integer values, and sets a value to the result of the operation.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: t-sql

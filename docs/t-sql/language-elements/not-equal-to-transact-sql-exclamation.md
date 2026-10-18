@@ -1,8 +1,8 @@
 ---
 title: "!= (Not Equal To) (Transact-SQL)"
 description: Tests whether one expression isn't equal to another expression (a comparison operator).
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "GREATEST (Transact-SQL)"
 description: "The GREATEST logical function returns the maximum value from a list of one or more expressions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/06/2023
 ms.service: sql
 ms.subservice: t-sql

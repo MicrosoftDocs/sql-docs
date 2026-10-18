@@ -1,9 +1,9 @@
 ---
 title: "T-SQL Tutorial: Delete database objects"
 description: "This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql

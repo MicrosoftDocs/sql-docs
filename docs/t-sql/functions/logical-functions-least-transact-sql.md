@@ -3,7 +3,7 @@ title: "LEAST (Transact-SQL)"
 description: "The LEAST logical function returns the minimum value from a list of one or more expressions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/04/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "+ (String concatenation) (Transact-SQL)"
 description: "+ (String concatenation) (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/03/2024
 ms.service: sql
 ms.subservice: t-sql

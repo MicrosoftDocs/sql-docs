@@ -1,8 +1,8 @@
 ---
 title: "Bitwise Operators (Transact-SQL)"
 description: Bitwise operators perform bit manipulations between two expressions of any of the data types of the integer data type category.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: t-sql

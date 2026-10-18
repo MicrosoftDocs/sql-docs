@@ -1,8 +1,8 @@
 ---
 title: "_ (Wildcard - Match One Character) (Transact-SQL)"
 description: Use the underscore character _ to match any single character in a string comparison operation.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

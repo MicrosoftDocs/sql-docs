@@ -1,8 +1,8 @@
 ---
 title: "WHILE (Transact-SQL)"
 description: WHILE sets a condition for the repeated execution of a SQL statement or statement block.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

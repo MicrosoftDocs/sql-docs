@@ -3,7 +3,7 @@ title: "||= (Compound assignment) (Transact-SQL)"
 description: "Use ||= to concatenate an expression with the value of a character or binary string variable, and assign the resulting expression to the variable."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: abhtiwar, randolphwest, umajay
+ms.reviewer: abhtiwar, umajay
 ms.date: 07/28/2025
 ms.service: sql
 ms.subservice: t-sql

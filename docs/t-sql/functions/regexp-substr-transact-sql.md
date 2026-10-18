@@ -1,9 +1,9 @@
 ---
 title: "REGEXP_SUBSTR (Transact-SQL)"
 description: REGEXP_SUBSTR returns one occurrence of a substring of a string that matches the regular expression pattern.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql

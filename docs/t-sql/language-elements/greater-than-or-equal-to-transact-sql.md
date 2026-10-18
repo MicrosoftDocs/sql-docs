@@ -1,8 +1,8 @@
 ---
 title: "&gt;= (Greater Than or Equal To) (Transact-SQL)"
 description: "&gt;= (Greater Than or Equal To) (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/13/2017"
 ms.service: sql
 ms.subservice: t-sql

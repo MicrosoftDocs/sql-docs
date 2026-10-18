@@ -1,8 +1,8 @@
 ---
 title: "CASE (Transact-SQL)"
 description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/18/2025
 ms.service: sql
 ms.subservice: t-sql

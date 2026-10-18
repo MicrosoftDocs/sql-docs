@@ -1,8 +1,8 @@
 ---
 title: "OPENDATASOURCE (Transact-SQL)"
 description: "OPENDATASOURCE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "09/26/2019"
 ms.service: sql
 ms.subservice: t-sql

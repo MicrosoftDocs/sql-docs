@@ -1,8 +1,8 @@
 ---
 title: "Wildcard search (%)"
 description: "Percent character (wildcard - characters to match) (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/19/2022
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "IN (Transact-SQL)"
 description: "IN (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "08/29/2016"
 ms.service: sql
 ms.subservice: t-sql

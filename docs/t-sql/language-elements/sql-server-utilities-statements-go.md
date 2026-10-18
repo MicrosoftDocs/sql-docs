@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Utilities Statements - GO"
 description: "SQL Server Utilities Statements - GO"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "07/27/2017"
 ms.service: sql
 ms.subservice: t-sql

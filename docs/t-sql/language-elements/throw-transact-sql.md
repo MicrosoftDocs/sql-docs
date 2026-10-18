@@ -1,8 +1,8 @@
 ---
 title: "THROW (Transact-SQL)"
 description: THROW raises an exception and transfers execution to a CATCH block of a TRY...CATCH construct.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "Relational operators (Transact-SQL)"
 description: A relational operator is a syntax element that can accept one or more named or unnamed input parameters and returns a result set.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 04/26/2024
 ms.service: sql
 ms.subservice: t-sql

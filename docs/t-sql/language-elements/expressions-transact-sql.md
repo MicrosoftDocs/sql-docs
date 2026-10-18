@@ -1,8 +1,8 @@
 ---
 title: "Expressions (Transact-SQL)"
 description: "Expressions (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 08/29/2024
 ms.service: sql
 ms.subservice: t-sql

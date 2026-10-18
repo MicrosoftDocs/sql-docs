@@ -3,7 +3,7 @@ title: "Vector Functions (Transact-SQL)"
 description: Vector functions perform operations on vector type allowing applications to store and manipulate vectors in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pookam, randolphwest
+ms.reviewer: pookam
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: system-objects

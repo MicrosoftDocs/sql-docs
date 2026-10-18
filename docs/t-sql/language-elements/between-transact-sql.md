@@ -1,8 +1,8 @@
 ---
 title: "BETWEEN (Transact-SQL)"
 description: "BETWEEN is a Transact-SQL language element that specifies a range to test."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/27/2025
 ms.service: sql
 ms.subservice: t-sql

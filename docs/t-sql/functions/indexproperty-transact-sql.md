@@ -1,9 +1,9 @@
 ---
 title: "INDEXPROPERTY (Transact-SQL)"
 description: Returns the named property value of a specified table identification number, index or statistics name, and property name.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/31/2025
 ms.service: sql
 ms.subservice: t-sql

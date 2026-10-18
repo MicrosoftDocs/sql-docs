@@ -1,8 +1,8 @@
 ---
 title: "SELECT @local_variable (Transact-SQL)"
 description: Sets a local variable to the value of an expression.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: t-sql

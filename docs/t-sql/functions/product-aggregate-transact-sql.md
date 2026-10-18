@@ -3,7 +3,7 @@ title: "PRODUCT (Transact-SQL)"
 description: PRODUCT (Transact-SQL)
 author: AaronPitman
 ms.author: aaronpitman
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

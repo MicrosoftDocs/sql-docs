@@ -3,7 +3,7 @@ title: "JSON_ARRAYAGG (Transact-SQL)"
 description: JSON_ARRAYAGG constructs a JSON array from an aggregation of SQL data or columns.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, jovanpop, randolphwest
+ms.reviewer: umajay, jovanpop
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql

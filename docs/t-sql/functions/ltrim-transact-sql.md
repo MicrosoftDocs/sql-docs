@@ -1,9 +1,9 @@
 ---
 title: "LTRIM (Transact-SQL)"
 description: LTRIM returns a character string after truncating leading characters.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/16/2024
 ms.service: sql
 ms.subservice: t-sql

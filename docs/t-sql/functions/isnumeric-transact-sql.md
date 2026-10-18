@@ -1,9 +1,9 @@
 ---
 title: "ISNUMERIC (Transact-SQL)"
 description: ISNUMERIC determines whether an expression is a valid numeric type.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 02/05/2024
 ms.service: sql
 ms.subservice: t-sql

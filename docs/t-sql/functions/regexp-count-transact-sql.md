@@ -1,9 +1,9 @@
 ---
 title: "REGEXP_COUNT (Transact-SQL)"
 description: REGEXP_COUNT returns the number of times that a matched expression pattern exists in a string.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "VECTORPROPERTY (Transact-SQL)"
 description: The VECTORPROPERTY function returns specific properties of a given vector.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pookam, randolphwest
+ms.reviewer: pookam
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

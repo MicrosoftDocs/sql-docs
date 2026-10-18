@@ -1,8 +1,8 @@
 ---
 title: "^ (Bitwise Exclusive OR) (Transact-SQL)"
 description: Performs a bitwise logical exclusive OR operation between two integer values.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: t-sql

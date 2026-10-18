@@ -1,8 +1,8 @@
 ---
 title: "Transact-SQL Syntax Conventions (Transact-SQL)"
 description: "This article lists and describes conventions that are used in the syntax diagrams for Transact-SQL."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 08/21/2024
 ms.service: sql
 ms.subservice: t-sql

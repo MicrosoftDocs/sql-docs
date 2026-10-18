@@ -1,9 +1,9 @@
 ---
 title: "ROUND (Transact-SQL)"
 description: ROUND returns a numeric value, rounded to the specified length or precision.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 03/31/2025
 ms.service: sql
 ms.subservice: t-sql

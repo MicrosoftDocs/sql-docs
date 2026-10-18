@@ -1,8 +1,8 @@
 ---
 title: "% (Modulus) (Transact-SQL)"
 description: "The % (modulus) operator returns the remainder of one number divided by another."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/19/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "RAISERROR (Transact-SQL)"
 description: RAISERROR generates an error message and initiates error processing for the session.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 11/22/2024
 ms.service: sql
 ms.subservice: t-sql

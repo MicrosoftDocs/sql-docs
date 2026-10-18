@@ -3,7 +3,7 @@ title: "OBJECT_ID (Transact-SQL)"
 description: OBJECT_ID returns the database object identification number of a schema-scoped object.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: t-sql

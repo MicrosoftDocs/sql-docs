@@ -1,8 +1,8 @@
 ---
 title: "NULLIF (Transact-SQL)"
 description: "NULLIF (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "09/08/2017"
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "Variables (Transact-SQL)"
 description: A Transact-SQL local variable is an object that can hold a single data value of a specific type.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: t-sql

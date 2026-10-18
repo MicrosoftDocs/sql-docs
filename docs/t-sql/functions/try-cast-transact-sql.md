@@ -1,9 +1,9 @@
 ---
 title: "TRY_CAST (Transact-SQL)"
 description: TRY_CAST returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: t-sql

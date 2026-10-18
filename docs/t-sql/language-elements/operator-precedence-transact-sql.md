@@ -1,8 +1,8 @@
 ---
 title: "Operator Precedence (Transact-SQL)"
 description: Operator precedence determines the sequence of operations when a complex expression has multiple operators.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/29/2026
 ms.service: sql
 ms.subservice: t-sql

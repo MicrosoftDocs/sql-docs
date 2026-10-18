@@ -1,8 +1,8 @@
 ---
 title: "= (Equals) (Transact-SQL)"
 description: "= (Equals) (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "12/06/2016"
 ms.service: sql
 ms.subservice: t-sql

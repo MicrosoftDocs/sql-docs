@@ -1,8 +1,8 @@
 ---
 title: "COALESCE (Transact-SQL)"
 description: "Transact-SQL reference for COALESCE, which returns the value of the first expression that doesn't evaluate to NULL."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/28/2025
 ms.service: sql
 ms.subservice: t-sql

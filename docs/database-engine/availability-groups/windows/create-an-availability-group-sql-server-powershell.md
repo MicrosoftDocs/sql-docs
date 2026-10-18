@@ -1,8 +1,8 @@
 ---
 title: "Create an availability group using PowerShell"
 description: "Learn how to use PowerShell cmdlets to create and configure an Always On availability group by using PowerShell in SQL Server 2019 (15.x)."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -1,8 +1,8 @@
 ---
 title: "WSFC cluster service is offline"
 description: WSFC Cluster State checks the state of the Windows Server Failover Cluster. The policy is unhealthy when the cluster is offline or in the forced quorum state.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

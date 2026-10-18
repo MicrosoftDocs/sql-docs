@@ -1,8 +1,8 @@
 ---
 title: "Configure Client Protocols"
 description: Learn various ways of configuring the protocols that client applications use in SQL Server. Supported protocols include TCP/IP, named pipes, and shared memory.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

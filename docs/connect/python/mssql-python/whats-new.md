@@ -3,7 +3,7 @@ title: What's New in mssql-python Driver
 description: Learn about new features and changes in each version of the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

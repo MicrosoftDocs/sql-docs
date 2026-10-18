@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: filestream access level"
 description: "Become familiar with the filestream_access_level option. See how it changes the FILESTREAM access level for an instance of SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: configuration

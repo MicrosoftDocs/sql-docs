@@ -1,8 +1,8 @@
 ---
 title: "Configure a flexible automatic failover policy for an availability group"
 description: "Describes how to configure a flexible failover policy for an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "11/05/2019"
 ms.service: sql
 ms.subservice: availability-groups

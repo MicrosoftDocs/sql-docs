@@ -3,7 +3,7 @@ title: Container and Local Development with mssql-python
 description: Set up local development environments, Docker containers, and CI pipelines for Python applications that connect to Microsoft SQL with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

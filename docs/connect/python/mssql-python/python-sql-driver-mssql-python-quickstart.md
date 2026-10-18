@@ -3,7 +3,7 @@ title: "Quickstart: Python SQL Driver - mssql-python"
 description: Install mssql-python, connect to a SQL database, run queries, and insert data from a Python script.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

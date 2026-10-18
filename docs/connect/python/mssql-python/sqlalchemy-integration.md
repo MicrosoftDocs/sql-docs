@@ -3,7 +3,7 @@ title: Use mssql-python with SQLAlchemy
 description: Learn how to use the mssql-python driver with SQLAlchemy ORM and Core for Microsoft SQL and Azure SQL database access.
 author: dlevy-msft-sql
 ms.author: mahyon
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2026
 ms.service: sql
 ms.subservice: connectivity

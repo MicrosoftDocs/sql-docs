@@ -3,7 +3,7 @@ title: Support Lifecycle for mssql-python Driver
 description: Learn about the support lifecycle, versioning policy, and compatibility for the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

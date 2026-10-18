@@ -1,8 +1,8 @@
 ---
 title: "Using the availability group dashboard in SSMS"
 description: "Describes how to use the Always On availability group dashboard to monitor the health of your availability group in SQL Server Management Studio (SSMS)."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/09/2018"
 ms.service: sql
 ms.subservice: availability-groups

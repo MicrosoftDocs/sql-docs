@@ -1,8 +1,8 @@
 ---
 title: "Configure backups on secondary replicas of an availability group"
 description: "Describes how to configure backups on secondary replicas of an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

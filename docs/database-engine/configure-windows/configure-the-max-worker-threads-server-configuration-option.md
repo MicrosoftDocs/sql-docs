@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: max worker threads"
 description: Find out how to use the max worker threads option to configure the number of worker threads that are available to SQL Server to process certain requests.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

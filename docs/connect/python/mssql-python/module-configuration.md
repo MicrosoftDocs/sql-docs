@@ -3,7 +3,7 @@ title: Configure mssql-python Module Settings
 description: Learn how to configure global module settings in the mssql-python driver, including lowercase queries, decimal separator, and custom settings.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

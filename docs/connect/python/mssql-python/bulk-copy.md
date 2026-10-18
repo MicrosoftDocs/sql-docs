@@ -3,7 +3,7 @@ title: Use Bulk Copy with mssql-python Driver
 description: Learn how to efficiently insert large amounts of data using the bulk copy feature with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

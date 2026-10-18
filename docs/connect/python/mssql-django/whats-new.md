@@ -3,7 +3,7 @@ title: "What's New in mssql-django"
 description: Learn about new features and changes in each version of the mssql-django Django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

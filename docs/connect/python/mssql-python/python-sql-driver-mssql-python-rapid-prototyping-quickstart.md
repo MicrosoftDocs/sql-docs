@@ -3,7 +3,7 @@ title: "Quickstart: Python SQL Driver - mssql-python Rapid Prototyping with the 
 description: Build a quick Streamlit prototype that connects to a SQL database by using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

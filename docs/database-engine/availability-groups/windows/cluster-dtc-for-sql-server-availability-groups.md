@@ -1,8 +1,8 @@
 ---
 title: "Cluster DTC service for an availability group"
 description: "Describes the requirements and steps for clustering the Microsoft Distributed Transaction Coordinator (DTC) service for an Always On availability group. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/30/2016"
 ms.service: sql
 ms.subservice: availability-groups

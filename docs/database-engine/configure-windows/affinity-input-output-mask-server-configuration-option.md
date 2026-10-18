@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: affinity I/O mask"
 description: Learn about the affinity I/O mask option. Use it to enhance the performance of SQL Server threads that issue I/Os by binding disk I/O to specified CPUs.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

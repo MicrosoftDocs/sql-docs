@@ -3,7 +3,7 @@ title: Install mssql-python
 description: Learn how to install the mssql-python driver on Windows, Linux, and macOS. No external ODBC driver is required.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

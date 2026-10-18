@@ -3,7 +3,7 @@ title: "Quickstart: Python SQL Driver - mssql-python Bulk Copy with the Python D
 description: This quickstart describes bulk copying data between databases using mssql-python and Apache Arrow (Parquet).
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: Security Best Practices for mssql-python Applications
 description: Learn security best practices for building SQL Server applications with the mssql-python driver, including authentication, parameterized queries, and data protection.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

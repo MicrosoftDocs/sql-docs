@@ -1,8 +1,8 @@
 ---
 title: "Resume an availability group database"
 description: Resume a suspended availability database in Always On availability groups by using SQL Server Management Studio, Transact-SQL, or PowerShell in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -3,7 +3,7 @@ title: Async Patterns with mssql-python
 description: Learn how to use the mssql-python driver with Python's asyncio for asynchronous database operations.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

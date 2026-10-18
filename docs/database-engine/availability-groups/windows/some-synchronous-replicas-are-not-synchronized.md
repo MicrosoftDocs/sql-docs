@@ -1,8 +1,8 @@
 ---
 title: "Some synchronous replicas are not synchronized"
 description: Describes some possible causes and solutions for when a synchronous replica is not synchronized for an Always On availability group.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -3,7 +3,7 @@ title: Troubleshoot Installation and Connection Issues with mssql-python
 description: Diagnose and resolve mssql-python installation, connection, container, and continuous integration issues.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sumitsar
+ms.reviewer: vanto, sumitsar
 ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity

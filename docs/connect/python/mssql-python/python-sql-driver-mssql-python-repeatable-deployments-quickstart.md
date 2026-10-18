@@ -3,7 +3,7 @@ title: "Quickstart: Python SQL Driver - mssql-python Repeatable Deployments with
 description: Use uv to create repeatable Python environments for database applications that use the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

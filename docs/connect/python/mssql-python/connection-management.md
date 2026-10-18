@@ -3,7 +3,7 @@ title: Manage Connections with mssql-python
 description: Learn how to open, close, and manage database connections using context managers, autocommit, and connection attributes with mssql-python.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

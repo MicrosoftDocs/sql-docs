@@ -1,8 +1,8 @@
 ---
 title: "Change availability mode of a replica for an availability group"
 description: "A description for how to change the availability mode of an availability replica within an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -1,8 +1,8 @@
 ---
 title: "Connect to an availability group listener"
 description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use TLS/SSL, and Kerberos."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 03/24/2026
 ms.service: sql
 ms.subservice: availability-groups

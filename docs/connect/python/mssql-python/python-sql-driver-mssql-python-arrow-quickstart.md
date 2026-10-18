@@ -3,7 +3,7 @@ title: "Quickstart: Apache Arrow with the mssql-python Driver"
 description: Use the mssql-python driver's Arrow fetch methods to retrieve SQL Server data as columnar Apache Arrow tables for high-performance analytics.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: Use mssql-python with Flask
 description: Learn how to build web applications with Flask and mssql-python for Microsoft SQL and Azure SQL database access.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

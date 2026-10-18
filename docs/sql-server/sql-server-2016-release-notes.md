@@ -1,9 +1,9 @@
 ---
 title: "SQL Server 2016 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2016 releases.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.service: sql
 ms.subservice: release-landing

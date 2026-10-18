@@ -3,7 +3,7 @@ title: "Converting MySQL Databases (MySQLToSQL)"
 description: Learn how to convert MySQL database objects to SQL Server or Azure SQL Database objects with SSMA, after you connect and set project and data mapping options.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/19/2024
 ms.service: sql
 ms.subservice: ssma

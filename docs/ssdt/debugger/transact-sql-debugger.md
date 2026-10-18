@@ -2,9 +2,9 @@
 title: Transact-SQL Debugger
 titleSuffix: T-SQL debugger
 description: Learn how to step through code and view the execution state using the Transact-SQL debugger, and how to do various other debugging tasks.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

@@ -3,7 +3,7 @@ title: "Connecting to MySQL (MySQLToSQL)"
 description: Learn how to connect to a target MySQL database to migrate a MySQL database. SSMA obtains metadata about databases in Azure SQL Database.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/19/2024
 ms.service: sql
 ms.subservice: ssma

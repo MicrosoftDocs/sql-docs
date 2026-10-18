@@ -4,7 +4,7 @@ titleSuffix: SQL Server migration in Azure Arc
 description: Prepare your SQL Server instance enabled by Azure Arc for migration to Azure SQL Database.
 author: danimir
 ms.author: danil
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.topic: how-to
 ai-usage: ai-assisted

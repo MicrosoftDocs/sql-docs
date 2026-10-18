@@ -8,8 +8,8 @@ metadata:
   description: A collection of tutorials and quickstarts meant to teach you to use SQL Server and Azure SQL Database.
   ms.service: sql
   ms.topic: landing-page
-  author: MashaMSFT
-  ms.author: mathoma
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
   ms.date: 08/11/2025
 
 landingContent:

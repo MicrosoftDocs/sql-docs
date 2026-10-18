@@ -1,8 +1,8 @@
 ---
 title: Plan a SQL Server Installation
 description: This article helps you plan to install SQL Server. It includes links to resources needed for SQL Server installation.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: install

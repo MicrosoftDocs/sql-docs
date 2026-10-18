@@ -1,8 +1,8 @@
 ---
 title: Deploy SQL Server on Azure Local with disconnected operations
 description: Plan and deploy SQL Server on Azure Local with disconnected operations, including local security, backups, monitoring, licensing, and offline updates.
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/28/2026
 ms.topic: how-to
 ms.service: sql

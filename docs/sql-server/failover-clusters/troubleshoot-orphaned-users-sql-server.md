@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot Orphaned Users"
 description: Orphaned users occur when a database user login no longer exists in the `master` database. This article discusses how to identify and resolve orphaned users.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: high-availability

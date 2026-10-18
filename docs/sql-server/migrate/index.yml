@@ -9,10 +9,10 @@ metadata:
   description: Choose the SQL Server migration path you're interested in.
   ms.service: sql
   ms.topic: landing-page
-  author: rwestMSFT
-  ms.author: randolphwest
+  author: cwebb-msft
+  ms.author: chweb
+  ms.reviewer: rajpo, wiassaf, vanto
   ms.date: 04/27/2026
-  ms.reviewer: rajpo, randolphwest
 
 landingContent:
   - title: SQL Server to SQL Server

@@ -1,8 +1,8 @@
 ---
 title: "Remove Failover Cluster Instance"
 description: Use this procedure to uninstall an Always On failover cluster instance. This article includes important considerations before you proceed.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: failover-cluster-instance

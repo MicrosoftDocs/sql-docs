@@ -3,7 +3,7 @@ title: "Find Databases Wizard (AccessToSQL)"
 description: Learn about the Find Databases Wizard in SQL Server Migration Assistant for Access, including Select Files, Select Locations, and Verify Selection.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

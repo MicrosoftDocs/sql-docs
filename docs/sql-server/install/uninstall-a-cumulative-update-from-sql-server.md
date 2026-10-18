@@ -1,8 +1,8 @@
 ---
 title: "Uninstall a Cumulative Update from SQL Server"
 description: This article describes how to remove a Cumulative Update from a stand-alone instance of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 07/23/2025
 ms.service: sql
 ms.subservice: install

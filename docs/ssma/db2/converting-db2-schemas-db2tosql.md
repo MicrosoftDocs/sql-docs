@@ -3,7 +3,7 @@ title: "Convert Db2 schemas (Db2ToSQL)"
 description: Learn how to convert Db2 database objects to SQL Server database objects in SSMA for Db2.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

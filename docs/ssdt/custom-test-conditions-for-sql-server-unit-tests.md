@@ -1,9 +1,9 @@
 ---
 title: Custom Test Conditions for SQL Server Unit Tests
 description: Find out how to install custom test conditions for SQL Server unit tests. View the risks involved with installing test conditions that you didn't create.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

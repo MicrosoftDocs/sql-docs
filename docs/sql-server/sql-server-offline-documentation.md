@@ -1,9 +1,9 @@
 ---
 title: Install SQL Server documentation to view offline
 description: Learn how to install offline documentation for SQL Server. Use SQL Server Management Studio (SSMS) to view the offline content.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/11/2024
 ms.service: sql
 ms.subservice: install

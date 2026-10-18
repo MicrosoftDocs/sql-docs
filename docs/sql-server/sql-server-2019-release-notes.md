@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2019 Release Notes
 description: Find information about SQL Server 2019 (15.x) limitations, known issues, help resources, and other release notes.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: release-landing

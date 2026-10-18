@@ -1,9 +1,9 @@
 ---
 title: How to Contribute to SQL Server Documentation
 description: "How to contribute to SQL Server Documentation"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: release-landing

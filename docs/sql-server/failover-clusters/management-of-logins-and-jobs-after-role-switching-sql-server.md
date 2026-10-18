@@ -1,8 +1,8 @@
 ---
 title: "Manage logins & jobs after mirror failover"
 description: Learn how to manage logins & jobs after failing over your mirrored database from the primary to the secondary database.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: high-availability

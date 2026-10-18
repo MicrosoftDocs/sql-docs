@@ -3,7 +3,7 @@ title: Release Notes
 description: Latest release notes for SQL Server enabled by Azure Arc
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.topic: release-notes
 ms.custom:

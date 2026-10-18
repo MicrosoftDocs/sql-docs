@@ -3,7 +3,7 @@ title: "Manage passwords (Db2ToSQL)"
 description: Learn about securing database passwords in SQL Server Migration Assistant for Db2.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

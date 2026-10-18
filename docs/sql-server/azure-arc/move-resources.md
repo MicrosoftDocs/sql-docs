@@ -1,8 +1,8 @@
 ---
 title: Move Resources to a New Resource Group or Subscription
 description: This article explains how to move resources to a new resource group or subscription for SQL Server enabled by Azure Arc.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: sashan
 ms.date: 06/22/2026
 ms.topic: how-to

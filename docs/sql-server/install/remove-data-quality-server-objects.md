@@ -1,8 +1,8 @@
 ---
 title: "Remove Data Quality Server Objects"
 description: If you uninstall Data Quality Server from an instance of SQL Server, some Data Quality Server objects, including the DQS databases, must be deleted manually.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: install

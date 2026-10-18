@@ -1,9 +1,9 @@
 ---
 title: Create a Test Project for SQL Server Database Unit Testing
 description: Learn how to create test projects for SQL Server database unit testing. View different ways of adding test projects to solutions that contain database projects.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

@@ -3,7 +3,7 @@ title: "Create script files (Db2ToSQL)"
 description: Learn how to create the script file, the variable value file, and the server connection file in SSMA for Db2.
 author: "F"
 ms.author: cpichuka
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

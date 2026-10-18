@@ -3,7 +3,7 @@ title: "Get Started with SQL Server Migration Assistant for Access"
 description: Get started using SSMA to convert Access database objects to SQL Server or Azure SQL Database objects, upload the resulting objects, and migrate data.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

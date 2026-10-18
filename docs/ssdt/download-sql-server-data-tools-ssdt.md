@@ -1,9 +1,9 @@
 ---
 title: "Install SQL Server Data Tools (SSDT)"
 description: "Learn about SQL Server Data Tools (SSDT). See how to install this database development tool set with Visual Studio 2019, 2022, and 2026."
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 02/06/2026
 ms.service: sql
 ms.subservice: ssdt

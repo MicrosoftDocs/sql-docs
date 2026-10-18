@@ -3,7 +3,7 @@ title: Assess Migration Readiness
 description: Select the optimal Azure SQL target by using migration assessment with SQL Server enabled by Azure Arc.
 author: ajithkr-ms
 ms.author: ajithkr
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/27/2026
 ms.topic: how-to
 ---

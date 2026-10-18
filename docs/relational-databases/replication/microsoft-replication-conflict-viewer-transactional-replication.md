@@ -1,8 +1,8 @@
 ---
 title: "Replication Conflict Viewer (Peer-to-Peer)"
 description: Learn about the Replication Conflict Viewer and how to use it to view conflicts for Peer-to-Peer Transactional Replication and Transactional Replication with queued updating subscriptions.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,9 +1,9 @@
 ---
 title: Example of Merge Conflict Resolution Based on Subscription Type and Assigned Priorities
 description: Walk through an example that describes a series of updates to a row over several merge synchronizations.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.subservice: replication

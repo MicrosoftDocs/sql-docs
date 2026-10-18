@@ -1,8 +1,8 @@
 ---
 title: Compare Differences Between Replicated Tables (Replication SP)
 description: Use replication stored procedures to compare the differences between replicated tables on the Publisher and the Subscriber.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

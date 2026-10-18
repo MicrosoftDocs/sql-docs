@@ -1,8 +1,8 @@
 ---
 title: "Set thresholds & warnings (Replication Monitor)"
 description: Learn how to enable warnings for various conditions that can occur with your replication using Replication Monitor within SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

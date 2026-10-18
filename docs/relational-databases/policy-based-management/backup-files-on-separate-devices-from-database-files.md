@@ -1,8 +1,8 @@
 ---
 title: "Backup files must be on separate devices from database files"
 description: Learn how to enable a policy to check the backup file location compared to the database file location for Policy-Based Management with SQL Server.
-author: dzsquared
-ms.author: drskwier
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: vanto
 ms.date: 12/15/2023
 ms.service: sql

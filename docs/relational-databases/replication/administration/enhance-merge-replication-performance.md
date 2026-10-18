@@ -1,8 +1,8 @@
 ---
 title: "Enhance Merge Replication Performance"
 description: "Enhance Merge Replication Performance"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Non-SQL Server Publishers"
 description: "Non-SQL Server Publishers"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

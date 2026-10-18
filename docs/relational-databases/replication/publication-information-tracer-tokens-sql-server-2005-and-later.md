@@ -1,8 +1,8 @@
 ---
 title: "Tracer Tokens (Publication Information)"
 description: A description of the 'Tracer Tokens' tab of the 'Publication Information' page found in Replication Monitor within SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

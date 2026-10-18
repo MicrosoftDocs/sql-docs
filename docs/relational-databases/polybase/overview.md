@@ -1,9 +1,9 @@
 ---
 title: PolyBase overview for SQL Server
 description: Overview of PolyBase in SQL Server - supported connectors, version enhancements, installation steps, and upgrade guidance for data virtualization.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: polybase

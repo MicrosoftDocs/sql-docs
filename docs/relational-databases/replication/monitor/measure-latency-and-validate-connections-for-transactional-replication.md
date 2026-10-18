@@ -1,8 +1,8 @@
 ---
 title: "Measure latency & validate connections (Transactional)"
 description: Learn how to measure the latency and validate connections for a Transaction Publication in SQL Server using Replication Monitor in SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or Replication Management Objects (RMO).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "PolyBase Transact-SQL reference"
 description: "Use PolyBase to query your external data in Hadoop, Azure Blob Storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 01/17/2024
 ms.service: sql
 ms.subservice: polybase

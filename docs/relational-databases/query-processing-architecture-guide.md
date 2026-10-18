@@ -1,9 +1,9 @@
 ---
 title: Query Processing Architecture Guide
 description: How the SQL Server Database Engine processes queries and optimizes query reuse through execution plan caching.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan, derekw
+author: thesqlsith 
+ms.author: derekw
+ms.reviewer: wiassaf, vanto
 ms.date: 10/03/2026
 ms.service: sql
 ms.topic: concept-article

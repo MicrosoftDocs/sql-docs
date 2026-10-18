@@ -1,8 +1,8 @@
 ---
 title: "Refresh Data in Replication Monitor"
 description: "Refresh Data in Replication Monitor"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

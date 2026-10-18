@@ -1,8 +1,8 @@
 ---
 title: "Implement custom conflict resolver (Merge)"
 description: Learn how to implement a custom conflict resolver for a Merge Publication in SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

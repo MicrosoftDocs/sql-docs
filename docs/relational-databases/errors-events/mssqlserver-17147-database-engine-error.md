@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_17147"
 description: "MSSQLSERVER_17147"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

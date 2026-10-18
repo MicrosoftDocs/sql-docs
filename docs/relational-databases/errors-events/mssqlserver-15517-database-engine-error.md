@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_15517"
 description: "MSSQLSERVER_15517"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "10/18/2023"
 ms.service: sql
 ms.subservice: supportability

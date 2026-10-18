@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_2579"
 description: "MSSQLSERVER_2579"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

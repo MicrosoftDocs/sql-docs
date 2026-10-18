@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_4104"
 description: The specified multi-part identifier could not be mapped to an existing entity. See an explanation of the error and possible resolutions.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

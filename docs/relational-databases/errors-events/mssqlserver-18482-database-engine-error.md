@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_18482
 description: "MSSQLSERVER_18482"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: vencher, tejasaks, docast
 ms.date: 12/25/2020
 ms.service: sql

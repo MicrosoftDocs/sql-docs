@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_5120
 description: "MSSQLSERVER_5120"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 07/25/2020
 ms.service: sql
 ms.subservice: supportability

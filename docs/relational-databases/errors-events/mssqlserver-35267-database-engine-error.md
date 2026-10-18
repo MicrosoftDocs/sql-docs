@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_35267"
 description: "MSSQLSERVER_35267"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: supportability

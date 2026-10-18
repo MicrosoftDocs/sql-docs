@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_207"
 description: A query error in SQL Server regarding an invalid column name. See an explanation of the error and possible resolutions.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

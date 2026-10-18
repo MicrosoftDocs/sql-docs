@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3168"
 description: "MSSQLSERVER_3168"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 02/10/2023
 ms.service: sql
 ms.subservice: supportability

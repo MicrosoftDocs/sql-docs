@@ -1,7 +1,7 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: williamdassafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 01/15/2026
 ms.topic: include
 ---

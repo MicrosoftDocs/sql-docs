@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 10/07/2026
 ms.topic: include
 ms.custom: references_regions

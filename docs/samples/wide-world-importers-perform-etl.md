@@ -1,8 +1,8 @@
 ---
 title: "WideWorldImportersDW - ETL workflow"
 description: Use the ETL package with SQL Server Integration Services (SSIS) to periodically migrate data from the WideWorldImporters database to the WideWorldImportersDW.
-author: MashaMSFT
-ms.author: mathoma
+author: cwebb-msft
+ms.author: chweb
 ms.date: "04/04/2018"
 ms.service: sql
 ms.subservice: samples

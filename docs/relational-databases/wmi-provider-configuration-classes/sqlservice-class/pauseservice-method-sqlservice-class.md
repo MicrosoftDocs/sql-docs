@@ -1,8 +1,8 @@
 ---
 title: "PauseService Method (SqlService)"
 description: "PauseService Method (SqlService Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: wmi

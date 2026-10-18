@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 04/01/2026
 ms.service: azure-arc
 ms.topic: include

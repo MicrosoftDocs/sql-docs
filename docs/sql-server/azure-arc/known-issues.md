@@ -1,9 +1,9 @@
 ---
 title: "Known Issues: SQL Server Enabled by Azure Arc"
 description: "Describes current behavior that isn't expected for SQL Server enabled by Azure Arc."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/24/2025
 ms.topic: troubleshooting-known-issue
 ---

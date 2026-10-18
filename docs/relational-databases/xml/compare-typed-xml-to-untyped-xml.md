@@ -1,8 +1,8 @@
 ---
 title: Compare Typed XML to Untyped XML
 description: Learn about the differences between typed and untyped XML.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: xml

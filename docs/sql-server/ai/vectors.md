@@ -3,7 +3,7 @@ title: Vector Search & Vector Index
 description: How to create, manage, and search vectors in the SQL Database Engine.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pookam, jovanpop, randolphwest
+ms.reviewer: pookam, jovanpop
 ms.date: 09/15/2026
 ms.service: sql
 ms.topic: language-reference

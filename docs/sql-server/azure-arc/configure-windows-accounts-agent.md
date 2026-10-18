@@ -1,9 +1,9 @@
 ---
 title: Configure Windows Service Accounts and Permissions for SQL Server Enabled by Azure Arc
 description: Get acquainted with permissions required to start and run Azure Extension for SQL Server agent service account. See how to configure them and assign appropriate permissions.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: safeitle, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: safeitle
 ms.date: 10/07/2026
 ms.topic: reference
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Specify a root element for use with FOR XML"
 description: View an example query that specifies the ROOT option of the FOR XML clause to request a single top-level element in the resulting XML.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

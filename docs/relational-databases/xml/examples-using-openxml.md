@@ -1,9 +1,9 @@
 ---
 title: "Examples: Using OPENXML"
 description: View examples of how to use OPENXML to create a rowset view of an XML document.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

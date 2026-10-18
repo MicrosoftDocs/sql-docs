@@ -3,7 +3,7 @@ title: Create and manage elastic jobs by using PowerShell
 description: Learn how to create an elastic job agent and run scripts across many databases with an elastic job agent, using PowerShell.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia, mathoma
+ms.reviewer: srinia
 ms.date: 01/23/2026
 ms.service: azure-sql-database
 ms.subservice: elastic-jobs

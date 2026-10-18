@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to connect to an Azure SQL database and use the Azure portal query editor to run Transact-SQL (T-SQL) queries.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ivujic, mathoma
+ms.reviewer: ivujic
 ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: development

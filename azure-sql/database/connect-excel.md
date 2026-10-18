@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Fabric SQL databa
 description: Learn how to connect Microsoft Excel to a database. Import data into Excel for reporting and data exploration.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 01/06/2026
 ms.service: azure-sql
 ms.subservice: connect

@@ -3,7 +3,7 @@ title: Monitoring Azure SQL Database with metrics and alerts
 description: An overview of Azure SQL Database monitoring using Azure Monitor metrics and alerts.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 02/11/2025
 ms.service: azure-sql-database
 ms.subservice: monitoring

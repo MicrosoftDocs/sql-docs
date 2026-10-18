@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about system assigned and user assigned managed identities in Microsoft Entra for Azure SQL Database and Azure SQL Managed Instance.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 03/05/2026
 ai-usage: ai-assisted
 ms.service: azure-sql

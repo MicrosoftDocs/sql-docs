@@ -3,7 +3,7 @@ title: Copy a Database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same logical server or a different logical server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest, hudequei
+ms.reviewer: hudequei
 ms.date: 10/07/2026
 ms.service: azure-sql-database
 ms.subservice: data-movement

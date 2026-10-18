@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & SQL database in F
 description: Provides example steps to create an event session in Azure SQL, using Azure Storage for the event_file target.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 10/02/2025
 ms.service: azure-sql
 ms.subservice: performance

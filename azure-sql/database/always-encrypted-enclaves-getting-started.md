@@ -3,7 +3,7 @@ title: "Getting Started Using Always Encrypted with Secure Enclaves"
 description: A collection of tutorials on how to create a basic environment for Always Encrypted with secure enclaves.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 09/02/2026
 ms.service: azure-sql-database
 ms.subservice: security

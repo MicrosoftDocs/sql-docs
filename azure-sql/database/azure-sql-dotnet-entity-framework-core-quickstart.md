@@ -3,7 +3,7 @@ title: Connect to and Query Azure SQL Database Using .NET and Entity Framework C
 description: Learn how to connect to a database in Azure SQL Database and query data using .NET and Entity Framework Core.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: alexwolf, mathoma, vanto, randolphwest
+ms.reviewer: alexwolf, vanto
 ms.date: 08/21/2026
 ms.service: azure-sql-database
 ms.subservice: security

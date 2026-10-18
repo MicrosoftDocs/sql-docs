@@ -2,9 +2,9 @@
 title: Dev Container Templates for Azure SQL Database
 titleSuffix: Azure SQL Database
 description: Learn about the local development experience for Azure SQL Database with Dev Container Templates.
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: wiassaf, randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: wiassaf
 ms.date: 09/16/2026
 ms.service: azure-sql-database
 ms.topic: overview

@@ -3,7 +3,7 @@ title: "Enable Always Encrypted with Secure Enclaves"
 description: Learn how to enable secure enclaves in Azure SQL Database and elastic pools by selecting Intel SGX-enabled hardware or virtualization-based security (VBS)
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 09/02/2026
 ms.service: azure-sql-database
 ms.subservice: security

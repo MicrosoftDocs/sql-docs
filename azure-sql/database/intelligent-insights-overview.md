@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Intelligent Insights in Azure SQL Database and Azure SQL Managed Instance uses built-in intelligence to continuously monitor database usage through artificial intelligence and detect disruptive events that cause poor performance.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 08/16/2024
 ms.service: azure-sql
 ms.subservice: performance

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to configure user-assigned managed identity and customer-managed transparent data encryption (TDE) while creating an Azure SQL Database logical server using the Azure portal, PowerShell, or Azure CLI.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 06/02/2026
 ms.service: azure-sql-database
 ms.subservice: security

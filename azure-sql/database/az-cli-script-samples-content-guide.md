@@ -3,7 +3,7 @@ title: Azure CLI samples
 description: Find Azure CLI script samples to create and manage Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/30/2024
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration

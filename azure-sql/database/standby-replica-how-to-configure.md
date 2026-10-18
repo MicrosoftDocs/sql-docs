@@ -1,9 +1,9 @@
 ---
 title: Configure license-free standby replica
 description: Learn how to save on licensing costs by using a standby Azure SQL Database replica.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 09/01/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability

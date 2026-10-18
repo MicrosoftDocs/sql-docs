@@ -3,7 +3,7 @@ title: Troubleshoot SQL Data Sync
 description: Learn how to identify, troubleshoot, and resolve common issues with SQL Data Sync in Azure.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei
+ms.reviewer: hudequei
 ms.date: 09/23/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync

@@ -3,7 +3,7 @@ title: Database File Space Management
 description: This page describes how to manage file space with single and pooled databases in Azure SQL Database. It provides code examples to determine if you need to shrink a single or a pooled database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, dfurman, randolphwest
+ms.reviewer: dfurman
 ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration

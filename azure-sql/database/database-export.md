@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal, PowerShell, Visual Studio Code, or SQL Server Management Studio.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei, randolphwest
+ms.reviewer: hudequei
 ms.date: 03/02/2026
 ms.service: azure-sql
 ms.subservice: data-movement

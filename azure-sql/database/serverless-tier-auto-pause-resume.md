@@ -3,7 +3,7 @@ title: Serverless auto-pause and auto-resume
 description: Learn how auto-pause and auto-resume work in the serverless compute tier for Azure SQL Database, including triggers, troubleshooting, and connectivity.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendalv, moslake, mathoma, dfurman
+ms.reviewer: kendalv, moslake, dfurman
 ms.date: 09/15/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

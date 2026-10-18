@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to prepare for planned maintenance events in Azure SQL Database and Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, urosmil
+ms.reviewer: urosmil
 ms.date: 02/13/2025
 ms.service: azure-sql
 ms.subservice: service-overview

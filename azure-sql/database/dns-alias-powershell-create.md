@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: PowerShell and Azure CLI cmdlets enable you to redirect new client connections to a different SQL server in Azure, without having to touch any client configuration.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, amagarwa, maboja, vanto
+ms.reviewer: amagarwa, maboja, vanto
 ms.date: 05/29/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability

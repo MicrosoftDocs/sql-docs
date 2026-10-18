@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article guides you through enabling the Directory Readers role using Microsoft Entra groups to manage Microsoft Entra role assignments with Azure SQL Database and Azure SQL Managed Instance
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma
+ms.reviewer: wiassaf, vanto
 ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Learn how to use Microsoft Entra authentication to connect to Azure SQL Database and Azure SQL Managed Instance.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma, maghan
+ms.reviewer: wiassaf
 ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security

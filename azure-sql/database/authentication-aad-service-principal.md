@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Use Microsoft Entra service principals and managed identities in Azure SQL Database and Azure SQL Managed Instance
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 03/03/2026
 ms.service: azure-sql
 ms.subservice: security

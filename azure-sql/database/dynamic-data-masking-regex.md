@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Use REGEXP_REPLACE in Azure SQL Database dynamic data masking to define pattern-driven masks for emails, phone numbers, and other structured string data.
 author: madhumitatripathy
 ms.author: matripathy
-ms.reviewer: vanto, wiassaf, mathoma, randolphwest
+ms.reviewer: vanto, wiassaf
 ms.date: 05/28/2026
 ms.service: azure-sql-database
 ms.subservice: security

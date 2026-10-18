@@ -3,7 +3,7 @@ title: Using Elastic Database Client Library with Entity Framework
 description: Use Elastic Database client library and Entity Framework for coding databases
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

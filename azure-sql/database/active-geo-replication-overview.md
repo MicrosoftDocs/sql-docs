@@ -3,7 +3,7 @@ title: Active Geo-Replication
 description: Use active geo-replication to create readable secondary databases of individual databases in Azure SQL Database in the same or different regions.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer:  mathoma
+ms.reviewer:  vanto
 ms.date: 08/07/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

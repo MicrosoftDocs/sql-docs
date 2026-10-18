@@ -3,7 +3,7 @@ title: "Configure Attestation for Always Encrypted Using Azure Attestation"
 description: Configure Azure Attestation for Always Encrypted with secure enclaves in Azure SQL Database.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 09/02/2026
 ms.service: azure-sql-database
 ms.subservice: security

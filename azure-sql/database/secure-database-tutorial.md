@@ -3,7 +3,7 @@ title: Secure a Database
 description: This tutorial teaches you the about techniques and features to secure an Azure SQL Database, whether it's a single database, or pooled.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 09/18/2025
 ms.service: azure-sql-database
 ms.subservice: security

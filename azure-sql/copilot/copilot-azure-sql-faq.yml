@@ -2,9 +2,9 @@
 metadata:
   title: "Frequently asked questions about Microsoft Copilot in Azure with Azure SQL Database"
   description: "Frequently asked questions about Microsoft Copilot in Azure with Azure SQL Database."
-  author: markingmyname
-  ms.author: maghan
-  ms.reviewer: wiassaf, kendalv
+  author: kendalvandyke
+  ms.author: kendalv
+  ms.reviewer: wiassaf
   ms.service: azure-sql-database
   ms.collection: ce-skilling-ai-copilot
   ms.custom:

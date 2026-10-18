@@ -3,7 +3,7 @@ title: What is the Hyperscale service tier?
 description: This article describes the Hyperscale service tier in the vCore-based purchasing model in Azure SQL Database and explains how it's different from the General Purpose and Business Critical service tiers.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, mathoma, oslake, randolphwest, adbadram, malstewart
+ms.reviewer: dfurman, oslake, adbadram, malstewart
 ms.date: 05/19/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

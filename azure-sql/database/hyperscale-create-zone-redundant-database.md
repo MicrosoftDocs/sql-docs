@@ -3,7 +3,7 @@ title: Create a Zone-Redundant Hyperscale Database
 description: Learn how to create a zone-redundant Hyperscale database.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: service-overview

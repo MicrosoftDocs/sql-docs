@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how automatic backup immutability protects up to the most recent seven days of point-in-time restore backups in Azure SQL Database and Azure SQL Managed Instance.
 author: dnethi
 ms.author: dinethi
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: azure-sql
 ms.subservice: backup-restore

@@ -3,7 +3,7 @@ title: Using the Elastic Database Client Library with Dapper
 description: Using the elastic database client library with Dapper.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

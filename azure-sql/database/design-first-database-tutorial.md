@@ -1,9 +1,9 @@
 ---
 title: "Tutorial: Design Your First Relational Database Using SSMS"
 description: Learn to design your first relational database in Azure SQL Database using SQL Server Management Studio.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: wiassaf, mathoma, v-masebo, randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: wiassaf, v-masebo
 ms.date: 03/10/2026
 ms.service: azure-sql-database
 ms.subservice: development

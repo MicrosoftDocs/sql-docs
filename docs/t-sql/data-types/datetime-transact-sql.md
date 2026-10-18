@@ -1,8 +1,8 @@
 ---
 title: "datetime (Transact-SQL)"
 description: datetime defines a date that is combined with a time of day with fractional seconds that is based on a 24-hour clock.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: t-sql

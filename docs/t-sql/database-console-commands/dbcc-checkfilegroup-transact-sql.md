@@ -1,8 +1,8 @@
 ---
 title: DBCC CHECKFILEGROUP (Transact-SQL)
 description: DBCC CHECKFILEGROUP checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: t-sql

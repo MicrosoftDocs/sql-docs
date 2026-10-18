@@ -1,8 +1,8 @@
 ---
 title: New Project Dialog Box
 description: Learn how to use the New Project dialog box to create a new SQL Server Migration Assistant (SSMA) project.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

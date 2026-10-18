@@ -1,8 +1,8 @@
 ---
 title: "DBCC TRACEOFF (Transact-SQL)"
 description: DBCC TRACEOFF disables the specified trace flags.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

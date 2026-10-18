@@ -3,7 +3,7 @@ title: "Map Oracle Schemas to SQL Server Schemas (OracleToSQL)"
 description: Learn how to either accept the default settings or customize SSMA for Oracle mappings between Oracle schemas and SQL Server.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: ssma

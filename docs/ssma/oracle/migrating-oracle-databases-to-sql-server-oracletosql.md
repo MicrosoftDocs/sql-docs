@@ -3,7 +3,7 @@ title: "Migrating Oracle Databases to SQL Server (OracleToSQL)"
 description: Use this recommended process to migrate Oracle databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/19/2024
 ms.service: sql
 ms.subservice: ssma

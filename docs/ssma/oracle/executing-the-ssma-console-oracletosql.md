@@ -3,7 +3,7 @@ title: "Executing the SSMA Console (OracleToSQL)"
 description: Executing the SSMA Console (OracleToSQL)
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/10/2025
 ms.service: sql
 ms.subservice: ssma

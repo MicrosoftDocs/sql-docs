@@ -1,9 +1,9 @@
 ---
 title: Analytic Functions (Transact-SQL)
 description: Analytic functions in Transact-SQL calculate an aggregate value based on a group of rows. Learn about the analytic functions in the SQL Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql

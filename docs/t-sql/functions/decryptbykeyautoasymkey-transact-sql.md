@@ -3,7 +3,7 @@ title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 description: DECRYPTBYKEYAUTOASYMKEY decrypts encrypted data.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: t-sql

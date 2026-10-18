@@ -1,8 +1,8 @@
 ---
 title: "GETDATE (Transact-SQL)"
 description: "Transact-SQL reference for the GETDATE function, which returns the current database system time as a datetime value."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "09/07/2018"
 ms.service: sql
 ms.subservice: t-sql

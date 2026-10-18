@@ -1,8 +1,8 @@
 ---
 title: "APPROX_COUNT_DISTINCT (Transact-SQL)"
 description: "APPROX_COUNT_DISTINCT (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "11/12/2019"
 ms.service: sql
 ms.subservice: t-sql

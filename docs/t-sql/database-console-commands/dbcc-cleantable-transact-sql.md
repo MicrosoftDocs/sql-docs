@@ -1,8 +1,8 @@
 ---
 title: DBCC CLEANTABLE (Transact-SQL)
 description: DBCC CLEANTABLE reclaims space from dropped variable-length columns in tables or indexed views.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/04/2024
 ms.service: sql
 ms.subservice: t-sql

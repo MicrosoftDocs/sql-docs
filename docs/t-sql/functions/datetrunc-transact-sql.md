@@ -1,9 +1,9 @@
 ---
 title: DATETRUNC (Transact-SQL)
 description: DATETRUNC in Transact-SQL truncates a date, time, or datetime value to a specified datepart. Explore syntax, supported dateparts, return types, and examples.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: derekw, maghan
+author: uc-msft
+ms.author: umajay
+ms.reviewer: derekw
 ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: t-sql

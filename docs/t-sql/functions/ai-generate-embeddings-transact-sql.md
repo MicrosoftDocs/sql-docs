@@ -1,8 +1,8 @@
 ---
 title: AI_GENERATE_EMBEDDINGS (Transact-SQL)
 description: The AI_GENERATE_EMBEDDINGS function creates vector arrays for data.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: bspendolini
 ms.date: 06/22/2026
 ms.service: sql

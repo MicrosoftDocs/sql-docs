@@ -3,7 +3,7 @@ title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 description: DBCC SHOWRESULTCACHESPACEUSED shows the storage space used result set caching for an Azure Synapse Analytics database.
 author: mstehrani
 ms.author: emtehran
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: data-warehouse

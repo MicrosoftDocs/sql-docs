@@ -1,8 +1,8 @@
 ---
 title: "DATALENGTH (Transact-SQL)"
 description: "DATALENGTH (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "08/20/2019"
 ms.service: sql
 ms.subservice: t-sql

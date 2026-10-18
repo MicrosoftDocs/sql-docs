@@ -1,8 +1,8 @@
 ---
 title: "DAY (Transact-SQL)"
 description: "DAY (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/30/2017"
 ms.service: sql
 ms.subservice: t-sql

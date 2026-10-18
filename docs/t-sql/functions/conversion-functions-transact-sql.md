@@ -1,9 +1,9 @@
 ---
 title: "Conversion functions (Transact-SQL)"
 description: Conversion functions support data type casting and conversion in the SQL Server Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: t-sql

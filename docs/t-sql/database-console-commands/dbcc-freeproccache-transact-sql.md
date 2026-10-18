@@ -1,8 +1,8 @@
 ---
 title: "DBCC FREEPROCCACHE (Transact-SQL)"
 description: DBCC FREEPROCCACHE removes all elements from the plan cache, removes a specific plan from the plan cache, or removes all cache entries associated with a specified resource pool.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

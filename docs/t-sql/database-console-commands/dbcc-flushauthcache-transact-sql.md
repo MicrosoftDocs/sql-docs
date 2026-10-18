@@ -3,7 +3,7 @@ title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 description: DBCC FLUSHAUTHCACHE empties the database authentication cache containing information about logins and firewall rules, for the current user database in Azure SQL Database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/13/2025
 ms.service: sql
 ms.subservice: t-sql

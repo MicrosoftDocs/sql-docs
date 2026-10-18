@@ -1,9 +1,9 @@
 ---
 title: "FORMAT (Transact-SQL)"
 description: The FORMAT function returns a value formatted with the specified format and optional culture.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql

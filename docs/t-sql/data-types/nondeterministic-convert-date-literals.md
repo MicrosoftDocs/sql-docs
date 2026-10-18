@@ -1,8 +1,8 @@
 ---
 title: "Nondeterministic conversion of date literals"
 description: "Nondeterministic conversion of literal date strings into DATE values"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "11/19/2018"
 ms.service: sql
 ms.subservice: t-sql

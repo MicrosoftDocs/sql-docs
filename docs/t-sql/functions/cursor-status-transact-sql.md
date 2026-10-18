@@ -1,9 +1,9 @@
 ---
 title: "CURSOR_STATUS (Transact-SQL)"
 description: CURSOR_STATUS shows whether or not a cursor declaration has returned a cursor and result set.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: t-sql

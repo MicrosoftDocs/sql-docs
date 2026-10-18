@@ -3,7 +3,7 @@ title: "DECRYPTBYKEY (Transact-SQL)"
 description: DECRYPTBYKEY uses a symmetric key to decrypt data.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

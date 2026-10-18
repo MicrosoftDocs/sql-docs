@@ -1,8 +1,8 @@
 ---
 title: "APPLOCK_MODE (Transact-SQL)"
 description: "APPLOCK_MODE (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/24/2017"
 ms.service: sql
 ms.subservice: t-sql

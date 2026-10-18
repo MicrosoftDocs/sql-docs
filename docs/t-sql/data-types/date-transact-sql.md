@@ -1,9 +1,9 @@
 ---
 title: "date (Transact-SQL)"
 description: Defines a date in the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/07/2024
 ms.service: sql
 ms.subservice: t-sql

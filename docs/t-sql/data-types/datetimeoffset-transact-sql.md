@@ -1,9 +1,9 @@
 ---
 title: "datetimeoffset (Transact-SQL)"
 description: "Defines a date that is combined with a time of a day based on a 24-hour clock like datetime2, and adds time zone awareness based on Coordinated Universal Time (UTC)."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: t-sql

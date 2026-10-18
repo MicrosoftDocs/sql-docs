@@ -1,9 +1,9 @@
 ---
 title: "money and smallmoney (Transact-SQL)"
 description: money and smallmoney are data types that represent monetary or currency values.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/21/2024
 ms.service: sql
 ms.subservice: t-sql

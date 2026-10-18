@@ -1,8 +1,8 @@
 ---
 title: CONTEXT_INFO (Transact-SQL)
 description: "CONTEXT_INFO (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/24/2017"
 ms.service: sql
 ms.subservice: t-sql

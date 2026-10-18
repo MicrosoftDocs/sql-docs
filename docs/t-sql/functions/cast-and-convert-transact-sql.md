@@ -1,9 +1,9 @@
 ---
 title: CAST and CONVERT (Transact-SQL)
 description: Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql

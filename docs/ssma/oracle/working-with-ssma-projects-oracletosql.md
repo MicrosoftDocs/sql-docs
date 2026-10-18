@@ -1,8 +1,8 @@
 ---
 title: Work with SSMA Projects (OracleToSQL)
 description: Learn how to create, customize, save, and open projects in SQL Server Migration Assistant (SSMA) for Oracle.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball
 ms.date: 04/20/2026
 ms.service: sql

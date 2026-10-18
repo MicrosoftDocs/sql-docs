@@ -1,9 +1,9 @@
 ---
 title: "CONCAT (Transact-SQL)"
 description: This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/22/2023
 ms.service: sql
 ms.subservice: t-sql

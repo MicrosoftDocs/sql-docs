@@ -1,8 +1,8 @@
 ---
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 description: DBCC PDW_SHOWSPACEUSED Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in Azure Synapse Analytics.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: data-warehouse

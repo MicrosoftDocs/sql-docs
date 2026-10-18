@@ -1,8 +1,8 @@
 ---
 title: "ASCII (Transact-SQL)"
 description: "ASCII (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 02/09/2026
 ms.service: sql
 ms.subservice: t-sql

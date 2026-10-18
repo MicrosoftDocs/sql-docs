@@ -1,8 +1,8 @@
 ---
 title: "DATETIME2FROMPARTS (Transact-SQL)"
 description: "DATETIME2FROMPARTS (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "01/29/2021"
 ms.service: sql
 ms.subservice: t-sql

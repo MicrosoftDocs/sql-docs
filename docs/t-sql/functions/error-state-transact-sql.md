@@ -1,8 +1,8 @@
 ---
 title: ERROR_STATE (Transact-SQL)
 description: "ERROR_STATE (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql

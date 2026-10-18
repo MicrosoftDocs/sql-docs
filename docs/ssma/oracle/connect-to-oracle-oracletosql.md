@@ -3,7 +3,7 @@ title: "Connect to Oracle (OracleToSQL)"
 description: Learn how to connect to an Oracle database to begin migration using SQL Server Migration Assistant for Oracle. Use the Connect to Oracle dialog box.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/22/2024
 ms.service: sql
 ms.subservice: ssma

@@ -1,9 +1,9 @@
 ---
 title: "FLOOR (Transact-SQL)"
 description: FLOOR returns the largest integer less than or equal to the specified numeric expression.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 11/21/2025
 ms.service: sql
 ms.subservice: t-sql

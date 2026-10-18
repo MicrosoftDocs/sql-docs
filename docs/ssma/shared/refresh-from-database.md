@@ -1,8 +1,8 @@
 ---
 title: Refresh from Database
 description: Learn how to select objects to refresh from the source database in SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

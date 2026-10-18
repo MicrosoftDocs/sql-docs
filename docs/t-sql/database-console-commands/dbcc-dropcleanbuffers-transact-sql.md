@@ -1,8 +1,8 @@
 ---
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 description: DBCC DROPCLEANBUFFERS removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/23/2023
 ms.service: sql
 ms.subservice: t-sql

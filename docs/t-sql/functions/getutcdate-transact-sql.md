@@ -1,8 +1,8 @@
 ---
 title: "GETUTCDATE (Transact-SQL)"
 description: "GETUTCDATE (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: t-sql

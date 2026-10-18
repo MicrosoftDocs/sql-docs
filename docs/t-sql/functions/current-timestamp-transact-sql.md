@@ -1,9 +1,9 @@
 ---
 title: CURRENT_TIMESTAMP (Transact-SQL)
 description: CURRENT_TIMESTAMP returns the current database system timestamp as a datetime value, without the database time zone offset.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql

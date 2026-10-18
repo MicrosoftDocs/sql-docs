@@ -3,7 +3,7 @@ title: "GET_BIT (Transact-SQL)"
 description: "Transact-SQL reference for the GET_BIT function."
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql

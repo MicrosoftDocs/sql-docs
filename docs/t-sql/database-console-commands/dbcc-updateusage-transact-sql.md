@@ -1,8 +1,8 @@
 ---
 title: DBCC UPDATEUSAGE (Transact-SQL)
 description: DBCC UPDATEUSAGE reports and corrects pages and row count inaccuracies in the catalog views.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

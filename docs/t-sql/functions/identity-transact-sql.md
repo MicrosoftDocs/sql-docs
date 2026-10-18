@@ -3,7 +3,7 @@ title: "@@IDENTITY (Transact-SQL)"
 description: The @@IDENTITY function returns the last-inserted identity value.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, randolphwest, procha
+ms.reviewer: wiassaf, procha
 ms.date: 08/19/2026
 ms.service: sql
 ms.subservice: t-sql

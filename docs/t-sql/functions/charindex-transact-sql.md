@@ -1,9 +1,9 @@
 ---
 title: "CHARINDEX (Transact-SQL)"
 description: "Transact-SQL reference for the CHARINDEX function."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/14/2025
 ms.service: sql
 ms.subservice: t-sql

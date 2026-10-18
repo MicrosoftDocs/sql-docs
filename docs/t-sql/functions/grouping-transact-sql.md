@@ -1,8 +1,8 @@
 ---
 title: "GROUPING (Transact-SQL)"
 description: "GROUPING (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "12/03/2019"
 ms.service: sql
 ms.subservice: t-sql

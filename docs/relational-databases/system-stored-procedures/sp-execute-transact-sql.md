@@ -1,9 +1,9 @@
 ---
 title: "sp_execute (Transact-SQL)"
 description: sp_execute executes a prepared Transact-SQL statement using a specified handle and optional parameter value.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_deletemergeconflictrow (Transact-SQL)"
 description: "Deletes rows from a conflict table or the MSmerge_conflicts_info table."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

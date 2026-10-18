@@ -3,7 +3,7 @@ title: "sp_enclave_send_keys (Transact-SQL)"
 description: "sp_enclave_send_keys (Transact-SQL)"
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_column_privileges_ex (Transact-SQL)"
 description: sp_column_privileges_ex returns column privileges for the specified table on the specified linked server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

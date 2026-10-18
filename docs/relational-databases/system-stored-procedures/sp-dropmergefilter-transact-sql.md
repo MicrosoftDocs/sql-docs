@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropmergefilter (Transact-SQL)"
 description: "sp_dropmergefilter drops all the merge filter columns defined on the merge filter that is to be dropped."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

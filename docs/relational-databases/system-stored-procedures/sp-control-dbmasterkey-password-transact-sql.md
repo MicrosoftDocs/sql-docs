@@ -3,7 +3,7 @@ title: "sp_control_dbmasterkey_password (Transact-SQL)"
 description: sp_control_dbmasterkey_password adds or drops a credential containing the password needed to open a database master key.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

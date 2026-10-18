@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_attachsubscription (Transact-SQL)"
 description: sp_attachsubscription attaches an existing subscription database to any Subscriber.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

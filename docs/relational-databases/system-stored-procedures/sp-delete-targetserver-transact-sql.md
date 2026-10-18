@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_targetserver (Transact-SQL)"
 description: Removes the specified server from the list of available target servers.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

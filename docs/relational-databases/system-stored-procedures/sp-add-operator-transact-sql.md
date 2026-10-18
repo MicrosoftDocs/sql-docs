@@ -1,9 +1,9 @@
 ---
 title: "sp_add_operator (Transact-SQL)"
 description: "Creates an operator (notification recipient) for use with alerts and jobs."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

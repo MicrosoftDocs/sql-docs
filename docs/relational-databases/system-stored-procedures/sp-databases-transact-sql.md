@@ -1,9 +1,9 @@
 ---
 title: "sp_databases (Transact-SQL)"
 description: sp_databases lists databases that either reside in an instance of SQL Server, or are accessible through a database gateway.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

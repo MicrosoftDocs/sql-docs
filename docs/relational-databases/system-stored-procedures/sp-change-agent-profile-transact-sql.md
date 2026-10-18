@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_change_agent_profile (Transact-SQL)"
 description: Changes a parameter of a replication agent profile stored in the MSagent_profiles table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

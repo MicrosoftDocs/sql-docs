@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_log_shipping_alert_job (Transact-SQL)"
 description: Removes an alert job from the log shipping monitor server if the job exists.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

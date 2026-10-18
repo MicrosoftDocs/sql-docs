@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_articlefilter (Transact-SQL)"
 description: sp_articlefilter filters data that are published based on a table article.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

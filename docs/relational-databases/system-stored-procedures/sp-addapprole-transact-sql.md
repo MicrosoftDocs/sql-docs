@@ -3,7 +3,7 @@ title: "sys.sp_addapprole (Transact-SQL)"
 description: Adds an application role to the current database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

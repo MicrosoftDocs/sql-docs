@@ -1,9 +1,9 @@
 ---
 title: "sp_cursoroption (Transact-SQL)"
 description: sp_cursoroption sets cursor options or returns cursor information created by the `sp_cursoropen` stored procedure.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

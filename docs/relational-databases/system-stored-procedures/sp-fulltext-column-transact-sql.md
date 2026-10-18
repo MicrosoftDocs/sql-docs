@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_fulltext_column (Transact-SQL)"
 description: Specifies whether or not a particular column of a table participates in full-text indexing.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

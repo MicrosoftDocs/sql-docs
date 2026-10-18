@@ -3,7 +3,7 @@ title: "jobs.sp_add_target_group_member (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_add_target_group_member adds a new member to a target group for the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.subservice: system-objects

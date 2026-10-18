@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)"
 description: Registers a pre-populated Semantic Language Statistics database in the current instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

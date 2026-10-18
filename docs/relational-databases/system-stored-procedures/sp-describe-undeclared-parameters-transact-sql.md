@@ -1,9 +1,9 @@
 ---
 title: "sp_describe_undeclared_parameters (Transact-SQL)"
 description: Returns a result set that contains metadata about undeclared parameters in a Transact-SQL batch.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

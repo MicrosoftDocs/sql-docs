@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_db_increased_partitions (Transact-SQL)"
 description: "sp_db_increased_partitions enables or disables support for up to 15,000 partitions for the specified database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

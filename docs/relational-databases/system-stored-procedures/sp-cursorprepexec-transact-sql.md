@@ -1,9 +1,9 @@
 ---
 title: "sp_cursorprepexec (Transact-SQL)"
 description: Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

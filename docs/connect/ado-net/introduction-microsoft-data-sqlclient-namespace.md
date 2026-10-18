@@ -3,7 +3,7 @@ title: Microsoft.Data.SqlClient Namespace and Compatibility
 description: Understand the Microsoft.Data.SqlClient namespace, its relationship to ADO.NET and System.Data.SqlClient, and where to find version-specific changes.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

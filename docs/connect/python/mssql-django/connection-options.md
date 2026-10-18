@@ -3,7 +3,7 @@ title: Connection Options for mssql-django
 description: Configure the Python database driver, ODBC driver selection, DSN, FreeTDS, MARS, timeouts, and connection retries in the mssql-django OPTIONS dictionary.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

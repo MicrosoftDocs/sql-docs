@@ -3,7 +3,7 @@ title: Using Connection String Keywords with OLE DB Driver
 description: "Some APIs in OLE DB Driver for SQL Server use connection strings, which are a list of keywords and values that identify particular connection attributes."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
+ms.reviewer: vanto, davidengel, sunilbs, vbeiranvand
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

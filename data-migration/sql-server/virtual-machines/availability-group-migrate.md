@@ -2,9 +2,9 @@
 title: Migrate Availability Group
 titleSuffix: SQL Server on Azure VMs
 description: Learn how to lift and shift your Always On availability group high availability solution to SQL Server on Azure VMs using Azure Migrate.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: vanto
 ms.date: 09/15/2025
 ms.service: azure-vm-sql-server
 ms.subservice: migration-guide

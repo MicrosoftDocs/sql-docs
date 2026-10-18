@@ -3,7 +3,7 @@ title: Microsoft OLE DB Driver for SQL Server Known Issues
 description: Find affected versions, fix release dates, upgrade guidance, and limitations for the Microsoft OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, wiassaf, davidengel, sunilbs, vbeiranvand
+ms.reviewer: vanto, wiassaf, davidengel, sunilbs, vbeiranvand
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity

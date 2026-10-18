@@ -2,9 +2,9 @@
 title: Use Distributed AG to Migrate Databases from a Standalone Instance
 titleSuffix: SQL Server on Azure VMs
 description: Learn to use a distributed availability group (AG) to migrate a database (or multiple databases) from a standalone instance of SQL Server to a target SQL Server on Azure VM.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: vanto
 ms.date: 09/17/2025
 ms.service: azure-vm-sql-server
 ms.subservice: migration-guide

@@ -3,7 +3,7 @@ title: Driver History for Microsoft SQL Server
 description: This page describes Microsoft's historical data connection technologies for connecting to SQL Server and other legacy sources.
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: Microsoft JDBC Driver for SQL Server
 description: Task hub for connecting Java applications to SQL Server, Azure SQL, and SQL database in Microsoft Fabric with the Microsoft JDBC Driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, vanto, davidengel, machavan, sunilbs
+ms.reviewer: vanto, davidengel, machavan, sunilbs
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity

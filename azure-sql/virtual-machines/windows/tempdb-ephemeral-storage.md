@@ -3,7 +3,7 @@ title: Place tempdb on Ephemeral Storage
 description: Learn how to configure your SQL Server tempdb database to use ephemeral storage for SQL Server on Azure VMs, and how to extend the buffer pool to the local SSD drive.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 04/24/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

@@ -3,7 +3,7 @@ title: Develop C and C++ Applications with the ODBC Driver
 description: Set up headers, libraries, and include order for the Microsoft ODBC Driver for SQL Server on Windows, Linux, and macOS, then choose between asynchronous execution and threads.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
 ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity

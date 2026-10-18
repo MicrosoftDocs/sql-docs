@@ -3,7 +3,7 @@ title: Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient
 description: Migrate a .NET application from System.Data.SqlClient to Microsoft.Data.SqlClient and validate namespace, encryption, parameter, configuration, and runtime changes.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
 ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity

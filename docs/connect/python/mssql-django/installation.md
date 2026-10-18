@@ -3,7 +3,7 @@ title: Install mssql-django
 description: Learn how to install the mssql-django Django database backend for SQL Server on Windows, Linux, and macOS.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

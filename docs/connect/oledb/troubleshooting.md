@@ -3,7 +3,7 @@ title: Troubleshoot the Microsoft OLE DB Driver for SQL Server
 description: Diagnose provider registration, authentication, certificate, network, parameter, conversion, and timeout failures in the Microsoft OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
+ms.reviewer: vanto, davidengel, sunilbs, vbeiranvand
 ms.date: 09/22/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: Configure Retry Logic in SqlClient
 description: Create and assign a built-in Microsoft.Data.SqlClient retry provider for transient connection or command failures.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
+ms.reviewer: davidengel, paulmedynski, cmalhotra
 ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -3,7 +3,7 @@ title: "R Tutorial: Develop a Predictive Model in SQL Server"
 description: Learn how to build end-to-end solution for predictive modeling based on R feature support in SQL Server 2017.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/13/2026
 ms.service: sql
 ms.subservice: machine-learning-services

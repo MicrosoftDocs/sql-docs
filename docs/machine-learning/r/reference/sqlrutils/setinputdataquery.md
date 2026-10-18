@@ -1,8 +1,8 @@
 ---
 title: "setInputDataQuery function (sqlrutils)"
 description: "setInputDataQuery: assigns a query to the InputData parameter of the stored procedure that is going to populate the input data frame of the embedded R function in the next run of the stored procedure."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

@@ -3,7 +3,7 @@ title: "Monitor and Troubleshoot Accelerated Database Recovery"
 description: "Monitor and troubleshoot accelerated database recovery and persistent version store"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: derekw, dfurman, randolphwest
+ms.reviewer: derekw, dfurman
 ms.date: 08/20/2026
 ms.service: sql
 ms.subservice: backup-restore

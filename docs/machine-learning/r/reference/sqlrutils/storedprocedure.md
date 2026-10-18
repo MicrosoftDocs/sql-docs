@@ -1,8 +1,8 @@
 ---
 title: "StoredProcedure function (sqlrutils)"
 description: "StoredProcedure: generates a SQLServer Stored Procedure Object and optionally a .sql file containing a query to create a stored  procedure."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

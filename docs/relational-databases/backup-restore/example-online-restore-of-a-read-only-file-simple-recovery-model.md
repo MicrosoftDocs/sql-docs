@@ -1,8 +1,8 @@
 ---
 title: "Online restore: read-only file (simple recovery model)"
 description: This example shows an online restore in SQL Server of a read-only file for a database using the simple recovery model with multiple filegroups.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: backup-restore

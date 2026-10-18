@@ -1,9 +1,9 @@
 ---
 title: Back up and Restore of SQL Server Databases
 description: This article describes the benefits of backing up SQL Server databases and introduces backup and restore strategies and security considerations.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: backup-restore

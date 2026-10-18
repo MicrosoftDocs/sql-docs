@@ -1,8 +1,8 @@
 ---
 title: "selectColumns function (MicrosoftML)"
 description: "Selects a set of columns to retrain, dropping all others (MicrosoftML)."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

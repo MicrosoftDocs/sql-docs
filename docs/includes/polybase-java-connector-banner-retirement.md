@@ -1,7 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: polybase

@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/22/2024
 ms.service: sql
 ms.topic: include

@@ -1,8 +1,8 @@
 ---
 title: include file
 description: include file
-author: rothja
-ms.author: jroth
+author: bluefooted
+ms.author: pamela
 ms.date: 04/05/2018
 ms.service: azure-sql-database
 ms.topic: include

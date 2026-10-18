@@ -2,8 +2,8 @@
 title: Overview of the Schema Compare Feature
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how the Schema Compare feature simplifies comparing databases, and gives you full control when synchronizing them, even across different database versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: tsiddique, roblescarlos
 ms.date: 04/23/2026
 ms.service: sql

@@ -1,9 +1,9 @@
 ---
 title: "XML Construction (XQuery)"
 description: Learn how to construct XML structures in an XQuery using the direct and computed constructors.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

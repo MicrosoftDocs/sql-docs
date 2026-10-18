@@ -2,8 +2,8 @@
 title: "Quickstart: Query Optimizer Assistant with GitHub Copilot"
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how GitHub Copilot helps developers optimize queries and analyze performance bottlenecks in SQL database code.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

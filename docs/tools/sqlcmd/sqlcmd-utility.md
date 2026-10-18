@@ -1,8 +1,8 @@
 ---
 title: Run Transact-SQL Commands with the sqlcmd Utility
 description: The sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes, using go-mssqldb or ODBC to run T-SQL batches.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: mahyon
 ms.date: 01/29/2026
 ms.service: sql

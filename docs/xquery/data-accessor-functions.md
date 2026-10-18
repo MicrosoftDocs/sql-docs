@@ -1,8 +1,8 @@
 ---
 title: "Data Accessor Functions"
 description: "Learn how to use the XQuery data-accessor functions fn:data(), fn:string(), and text()."
-author: rothja
-ms.author: jroth
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

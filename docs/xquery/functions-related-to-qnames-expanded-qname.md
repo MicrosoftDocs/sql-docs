@@ -1,8 +1,8 @@
 ---
 title: "expanded-QName (XQuery)"
 description: Learn how to use the expanded-QName() function to return the namespace URI and local name part of a QName.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

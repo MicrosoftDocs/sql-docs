@@ -1,9 +1,9 @@
 ---
 title: Create Azure Functions with the SQL Bindings Extension for Visual Studio Code Through the Object Explorer
 description: Use the mssql object explorer to create Azure functions with SQL Bindings in Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: vabhog, drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vabhog, drskwier
 ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions

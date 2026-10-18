@@ -1,8 +1,8 @@
 ---
 title: SQL Code Analysis
 description: Analyze database code to improve code quality.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 04/07/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: Get Started with SQL Database Projects
 description: A SQL database project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

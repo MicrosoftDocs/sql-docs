@@ -1,9 +1,9 @@
 ---
 title: MSSQL Extension for Visual Studio Code Get Started
 description: MSSQL extension for Visual Studio Code get started.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: roblescarlos, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: roblescarlos
 ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions

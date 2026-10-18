@@ -1,8 +1,8 @@
 ---
 title: "Sqllogship Application"
 description: The sqllogship application performs a backup, copy, or restore operation and clean-up tasks for a log shipping configuration on a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: tools-other

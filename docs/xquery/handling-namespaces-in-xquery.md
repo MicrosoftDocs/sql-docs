@@ -1,8 +1,8 @@
 ---
 title: "Handling Namespaces in XQuery"
 description: View examples of handling namespaces in an XQuery that include how to declare new and default namespaces.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: xml

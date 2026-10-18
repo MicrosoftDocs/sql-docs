@@ -1,8 +1,8 @@
 ---
 title: "round Function (XQuery)"
 description: Learn about the XQuery function round() that returns the number not having a fractional part that is closest to the specified argument.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: xml

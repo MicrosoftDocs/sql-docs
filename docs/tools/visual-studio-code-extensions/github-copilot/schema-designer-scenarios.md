@@ -2,8 +2,8 @@
 title: "Quickstart: Schema Designer with GitHub Copilot Scenarios"
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the GitHub Copilot embedded in Schema Designer to create tables from selected code, add relationships, generate test data, and import external artifacts in Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

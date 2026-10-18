@@ -2,8 +2,8 @@
 title: Local SQL Server Container
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the MSSQL extension for Visual Studio Code to create, manage, and connect to SQL Server containers for local development, with no Docker CLI required.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 04/23/2026
 ms.service: sql

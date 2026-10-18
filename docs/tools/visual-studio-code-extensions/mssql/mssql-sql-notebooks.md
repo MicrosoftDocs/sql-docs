@@ -2,8 +2,8 @@
 title: SQL Notebooks
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use SQL Notebooks in the MSSQL extension for Visual Studio Code to write and run SQL queries in Jupyter notebook format.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: yoleichen
 ms.date: 09/23/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "SequenceType Expressions (XQuery)"
 description: Learn about the XQuery SequenceType expressions instance of and cast as.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: DacFx and SqlPackage Release Notes
 description: Review features, fixes, and changes in current and previous releases of Microsoft DacFx and the SqlPackage command-line utility.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: mahyon, llali
 ms.date: 09/15/2026
 ms.service: sql

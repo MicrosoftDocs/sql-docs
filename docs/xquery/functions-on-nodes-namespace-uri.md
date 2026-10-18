@@ -1,8 +1,8 @@
 ---
 title: "namespace-uri Function (XQuery)"
 description: Learn how to use the namespace-uri function in an XQuery to return the namespace URI of a specified QName.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: xml

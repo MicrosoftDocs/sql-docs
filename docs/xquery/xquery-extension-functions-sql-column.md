@@ -1,8 +1,8 @@
 ---
 title: "sql:column() Function (XQuery)"
 description: "Learn how the XQuery function sql:column() can be used to bind non-XML relational data inside XML and bring relational and XML data together."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

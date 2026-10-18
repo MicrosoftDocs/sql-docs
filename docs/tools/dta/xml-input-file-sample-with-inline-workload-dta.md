@@ -2,8 +2,8 @@
 title: XML Input File Sample with Inline Workload
 titleSuffix: DTA
 description: This article contains a sample XML input file sample with inline workload to use for tuning workloads to use with Database Engine Tuning Advisor.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: tools-other

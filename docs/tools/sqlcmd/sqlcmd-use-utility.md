@@ -1,8 +1,8 @@
 ---
 title: Use sqlcmd
 description: Learn how to use the sqlcmd for ad hoc interactive execution of Transact-SQL statements and scripts, and automate Transact-SQL scripting tasks.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: mahyon
 ms.date: 01/28/2026
 ms.service: sql

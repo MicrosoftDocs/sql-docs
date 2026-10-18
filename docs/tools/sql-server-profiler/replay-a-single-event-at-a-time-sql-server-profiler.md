@@ -2,8 +2,8 @@
 title: Replay a Single Event at a Time
 titleSuffix: (SQL Server Profiler
 description: Discover how to replay one trace event at a time in SQL Server Profiler by stepping through a replay trace file or table.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

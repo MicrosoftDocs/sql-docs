@@ -1,8 +1,8 @@
 ---
 title: Publish Profiles Overview
 description: Learn about publish profiles for SQL projects, including the deployment settings, SQLCMD variables, and connection information they store.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 04/10/2026
 ms.service: sql

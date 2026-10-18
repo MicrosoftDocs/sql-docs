@@ -1,8 +1,8 @@
 ---
 title: Store the Database Schema in Git
 description: Track changes to your database schema by storing its definition in source control.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 07/03/2026
 ms.service: sql

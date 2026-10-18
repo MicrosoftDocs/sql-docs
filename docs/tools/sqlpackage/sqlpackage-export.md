@@ -1,9 +1,9 @@
 ---
 title: SqlPackage Export
 description: Learn how to automate database development tasks with SqlPackage Export. View examples and available parameters, properties, and SQLCMD variables.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 07/28/2025
 ms.service: sql
 ms.subservice: tools-other

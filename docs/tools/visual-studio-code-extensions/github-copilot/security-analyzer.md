@@ -2,8 +2,8 @@
 title: "Quickstart: Security Analyzer with GitHub Copilot"
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how GitHub Copilot helps developers identify and address common security risks in SQL code and application-layer queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

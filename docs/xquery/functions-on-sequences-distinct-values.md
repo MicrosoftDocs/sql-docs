@@ -1,8 +1,8 @@
 ---
 title: "distinct-values Function (XQuery)"
 description: Learn how to use the distinct-values function in an XQuery to remove duplicate values from a sequence.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

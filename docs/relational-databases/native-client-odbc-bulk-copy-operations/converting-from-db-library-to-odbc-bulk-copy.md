@@ -1,8 +1,8 @@
 ---
 title: "Converting from DB-Library to ODBC Bulk Copy"
 description: "Converting from DB-Library to ODBC Bulk Copy"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -1,8 +1,8 @@
 ---
 title: "sql_variant Support for Date and Time Types"
 description: "sql_variant Support for Date and Time Types"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: native-client

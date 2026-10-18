@@ -1,8 +1,8 @@
 ---
 title: "Allocate Handles and Connect to SQL Server (ODBC)"
 description: "Allocate Handles and Connect to SQL Server (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

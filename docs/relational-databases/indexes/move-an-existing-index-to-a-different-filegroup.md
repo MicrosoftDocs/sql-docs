@@ -1,8 +1,8 @@
 ---
 title: "Move an Existing Index to a Different Filegroup"
 description: Move an Existing Index to a Different Filegroup
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "05/11/2021"
 ms.service: sql
 ms.subservice: table-view-index

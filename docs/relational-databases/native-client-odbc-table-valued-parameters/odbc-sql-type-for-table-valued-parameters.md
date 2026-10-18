@@ -1,8 +1,8 @@
 ---
 title: "ODBC SQL Type for Table-Valued Parameters"
 description: "ODBC SQL Type for Table-Valued Parameters"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

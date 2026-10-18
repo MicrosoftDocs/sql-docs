@@ -1,8 +1,8 @@
 ---
 title: "Get Mutual Kerberos Authentication"
 description: "Get Mutual Kerberos Authentication"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

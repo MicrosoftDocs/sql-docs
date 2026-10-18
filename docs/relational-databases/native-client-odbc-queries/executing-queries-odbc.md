@@ -1,8 +1,8 @@
 ---
 title: "Executing Queries (ODBC)"
 description: An ODBC application can run statements on a SQL Server instance by initializing a connection handle and connecting to a data source.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

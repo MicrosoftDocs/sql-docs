@@ -1,8 +1,8 @@
 ---
 title: Parameter and rowset metadata (Native Client OLE DB provider)
 description: "Metadata - Parameter and Rowset in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

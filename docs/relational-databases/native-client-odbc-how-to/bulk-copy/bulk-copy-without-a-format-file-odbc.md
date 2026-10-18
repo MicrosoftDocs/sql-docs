@@ -1,8 +1,8 @@
 ---
 title: "Bulk Copy Without a Format File (ODBC)"
 description: "Bulk Copy Without a Format File (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

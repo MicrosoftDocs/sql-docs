@@ -1,8 +1,8 @@
 ---
 title: "Allocating an Environment Handle"
 description: "Allocating an Environment Handle"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

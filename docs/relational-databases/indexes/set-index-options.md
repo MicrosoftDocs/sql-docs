@@ -1,8 +1,8 @@
 ---
 title: "Set Index Options"
 description: Set Index Options
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 06/26/2019
 ms.service: sql
 ms.subservice: table-view-index

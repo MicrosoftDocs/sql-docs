@@ -1,8 +1,8 @@
 ---
 title: "ODBC API Implementation Details"
 description: "ODBC API Implementation Details"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: native-client

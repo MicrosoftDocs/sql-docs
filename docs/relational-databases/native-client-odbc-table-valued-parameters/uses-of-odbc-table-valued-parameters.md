@@ -1,8 +1,8 @@
 ---
 title: "Uses of ODBC Table-Valued Parameters"
 description: "Uses of ODBC Table-Valued Parameters"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

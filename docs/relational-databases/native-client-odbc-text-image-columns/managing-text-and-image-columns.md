@@ -1,8 +1,8 @@
 ---
 title: "Managing Text and Image Columns"
 description: "Managing Text and Image Columns"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

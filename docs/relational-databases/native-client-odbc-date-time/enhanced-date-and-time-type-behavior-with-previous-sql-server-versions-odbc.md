@@ -1,8 +1,8 @@
 ---
 title: "Date Time in SQL versions (ODBC)"
 description: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 12/18/2019
 ms.service: sql
 ms.subservice: native-client

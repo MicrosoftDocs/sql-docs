@@ -1,9 +1,9 @@
 ---
 title: "Index Disk Space Example"
 description: Index Disk Space Example
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 09/22/2025
 ms.service: sql
 ms.subservice: table-view-index

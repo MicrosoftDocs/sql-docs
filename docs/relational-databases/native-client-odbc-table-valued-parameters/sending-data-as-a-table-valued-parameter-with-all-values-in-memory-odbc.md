@@ -1,8 +1,8 @@
 ---
 title: "Table-Valued Parameter, values in Memory (ODBC)"
 description: "Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

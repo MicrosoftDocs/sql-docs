@@ -1,8 +1,8 @@
 ---
 title: "Create a Bulk Copy Format File (ODBC)"
 description: "Create a Bulk Copy Format File (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

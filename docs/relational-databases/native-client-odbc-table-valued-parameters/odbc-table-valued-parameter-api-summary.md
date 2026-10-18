@@ -1,8 +1,8 @@
 ---
 title: "ODBC Table-Valued Parameter API Summary"
 description: "ODBC Table-Valued Parameter API Summary"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: native-client

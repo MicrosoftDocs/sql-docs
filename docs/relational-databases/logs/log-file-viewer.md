@@ -1,8 +1,8 @@
 ---
 title: "Log File Viewer"
 description: Use Log File Viewer in SQL Server Management Studio for information about errors and events that are captured in log files.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: supportability

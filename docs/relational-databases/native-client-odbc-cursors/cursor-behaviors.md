@@ -1,8 +1,8 @@
 ---
 title: "Cursor Behaviors"
 description: "Cursor Behaviors"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "10/24/2016"
 ms.service: sql
 ms.subservice: native-client

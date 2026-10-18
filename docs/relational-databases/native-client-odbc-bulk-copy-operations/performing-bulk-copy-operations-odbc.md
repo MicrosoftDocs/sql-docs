@@ -1,8 +1,8 @@
 ---
 title: "Performing Bulk Copy Operations (ODBC)"
 description: Learn how the SQL Server Native Client ODBC driver supports DB-Library functions that perform SQL Server bulk copy operations.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

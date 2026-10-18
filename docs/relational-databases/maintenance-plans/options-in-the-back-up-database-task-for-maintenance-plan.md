@@ -1,9 +1,9 @@
 ---
 title: "Back Up Database Task (Maintenance Plan)"
 description: Learn how to add a backup task to a maintenance plan in SQL Server by using the Back Up Database Task.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/27/2023
 ms.service: sql
 ms.subservice: supportability

@@ -1,8 +1,8 @@
 ---
 title: "SQLConfigDataSource"
 description: "SQLConfigDataSource"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

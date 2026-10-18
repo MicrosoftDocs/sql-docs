@@ -1,8 +1,8 @@
 ---
 title: "Processing Results (ODBC)"
 description: Find out about processing data that SQL Server returns when an ODBC application submits a SQL statement.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -1,8 +1,8 @@
 ---
 title: "Diagnostic Records and Fields"
 description: "Diagnostic Records and Fields"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client

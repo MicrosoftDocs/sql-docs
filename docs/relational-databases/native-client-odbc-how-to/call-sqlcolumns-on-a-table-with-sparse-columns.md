@@ -1,8 +1,8 @@
 ---
 title: "Call SQLColumns on a Table with Sparse Columns"
 description: "Call SQLColumns on a Table with Sparse Columns"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

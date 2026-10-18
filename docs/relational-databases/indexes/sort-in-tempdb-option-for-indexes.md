@@ -1,8 +1,8 @@
 ---
 title: "SORT_IN_TEMPDB Option For Indexes"
 description: SORT_IN_TEMPDB Option For Indexes
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "04/24/2017"
 ms.service: sql
 ms.subservice: table-view-index

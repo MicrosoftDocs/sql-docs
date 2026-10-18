@@ -1,8 +1,8 @@
 ---
 title: "Comparability for IRowsetFind"
 description: "SQL Server Native Client Comparability for IRowsetFind"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/04/2017"
 ms.service: sql
 ms.topic: "reference"

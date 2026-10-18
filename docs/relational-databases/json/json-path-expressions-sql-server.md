@@ -3,7 +3,7 @@ title: JSON Path Expressions
 description: Learn how to use JSON Path expressions to reference the properties of JSON objects.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 09/15/2026
 ms.service: sql
 ms.topic: concept-article

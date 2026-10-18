@@ -1,8 +1,8 @@
 ---
 title: How Online Index Operations Work
 description: How Online Index Operations Work
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 02/19/2025
 ms.service: sql
 ms.subservice: table-view-index

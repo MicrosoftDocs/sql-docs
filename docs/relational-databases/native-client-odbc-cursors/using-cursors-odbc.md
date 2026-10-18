@@ -1,8 +1,8 @@
 ---
 title: "Using Cursors (ODBC)"
 description: ODBC supports a cursor model that allows several types of cursors, scrolling/positioning within a cursor, several concurrency options, and positioned updates.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

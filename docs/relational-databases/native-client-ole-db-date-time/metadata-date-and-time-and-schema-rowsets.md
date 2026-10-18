@@ -1,8 +1,8 @@
 ---
 title: "Date and Time and Schema Rowsets"
 description: "Metadata - Date and Time and Schema Rowsets in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

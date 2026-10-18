@@ -1,8 +1,8 @@
 ---
 title: "Data source properties (Native Client OLE DB provider)"
 description: "SQL Server Native Client Data Source Properties (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

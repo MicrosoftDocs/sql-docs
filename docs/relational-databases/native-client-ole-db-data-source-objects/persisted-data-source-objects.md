@@ -1,8 +1,8 @@
 ---
 title: Persisted data source objects (Native Client OLE DB provider)
 description: "Persisted Data Source Objects in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

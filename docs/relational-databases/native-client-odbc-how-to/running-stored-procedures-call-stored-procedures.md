@@ -1,8 +1,8 @@
 ---
 title: "Call Stored Procedures (ODBC)"
 description: Learn how to add a data source by using ODBC Administrator, programmatically, or using a file, before using ODBC applications with SQL Server 2005 or later.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client

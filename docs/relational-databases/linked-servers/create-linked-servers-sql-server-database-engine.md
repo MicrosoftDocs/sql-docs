@@ -3,7 +3,7 @@ title: "Create Linked Servers"
 description: "Create linked servers (SQL Server Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/13/2026
 ms.service: sql
 ms.topic: how-to

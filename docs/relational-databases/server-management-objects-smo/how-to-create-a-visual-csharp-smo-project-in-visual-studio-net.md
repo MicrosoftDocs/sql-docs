@@ -1,8 +1,8 @@
 ---
 title: "Create a Visual C# SMO Project in Visual Studio .NET"
 description: "How to Create a Visual C# SMO Project in Visual Studio .NET"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

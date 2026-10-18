@@ -3,7 +3,7 @@ title: SQL Server Security Best Practices
 description: This article provides general guidance for securing SQL Server, Azure SQL Database, and Azure SQL Managed Instance, as well as SQL Server on Azure virtual machines.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: security

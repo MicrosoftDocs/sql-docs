@@ -3,7 +3,7 @@ title: "SQL Injection"
 description: Learn how SQL injection attacks work. Mitigate such attacks by validating input and reviewing code for SQL injection in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf
+ms.reviewer: wiassaf
 ms.date: 06/30/2025
 ms.service: sql
 ms.subservice: security

@@ -1,8 +1,8 @@
 ---
 title: Subscribe to Publications
 description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

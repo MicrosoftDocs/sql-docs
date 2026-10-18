@@ -1,8 +1,8 @@
 ---
 title: "Search for Words Close to Another Word with NEAR"
 description: "Search for Words Close to Another Word with NEAR"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search

@@ -3,7 +3,7 @@ title: "Create and use updatable ledger tables"
 description: Learn how to create and use updatable ledger tables.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: security

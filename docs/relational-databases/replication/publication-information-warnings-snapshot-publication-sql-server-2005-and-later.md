@@ -1,8 +1,8 @@
 ---
 title: "Warnings (Snapshot - Replication Monitor)"
 description: "Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -2,8 +2,8 @@
 title: "Configure and manage filters"
 titleSuffix: SQL Server Full-Text Search
 description: Learn how full-text search filters extract text from documents, which filters are installed by default in each version, and how to view them.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: search

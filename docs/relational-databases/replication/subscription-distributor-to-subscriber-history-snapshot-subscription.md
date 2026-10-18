@@ -1,8 +1,8 @@
 ---
 title: "Distributor to Subscriber History (Snapshot)"
 description: Describes the 'Distributor to Subscriber History' tab of the Replication Monitor for a Snapshot Publication within SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

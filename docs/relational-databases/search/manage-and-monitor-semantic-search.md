@@ -1,8 +1,8 @@
 ---
 title: Manage and Monitor Semantic Search
 description: Manage and monitor Semantic Search
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

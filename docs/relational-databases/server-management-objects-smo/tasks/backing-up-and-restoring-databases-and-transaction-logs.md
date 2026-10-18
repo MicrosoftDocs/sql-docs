@@ -1,8 +1,8 @@
 ---
 title: "Backing Up and Restoring Databases and Transaction Logs"
 description: "Backing Up and Restoring Databases and Transaction Logs"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

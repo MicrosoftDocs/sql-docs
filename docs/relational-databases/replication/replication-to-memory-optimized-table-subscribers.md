@@ -1,8 +1,8 @@
 ---
 title: Replication to Memory-Optimized Table Subscribers
 description: Replication to memory-optimized table Subscribers lets you configure snapshot and transactional Subscriber tables for In-Memory OLTP.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

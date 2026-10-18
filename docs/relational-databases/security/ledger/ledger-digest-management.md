@@ -3,7 +3,7 @@ title: "Digest management"
 description: This article provides information on digest management for a ledger database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 07/09/2025
 ms.service: sql
 ms.subservice: security

@@ -1,8 +1,8 @@
 ---
 title: Maintain Publications
 description: Maintain publications after you create them in SQL Server replication. Discover which property changes require a new snapshot and subscription reinitialization.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

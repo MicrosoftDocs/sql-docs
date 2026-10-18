@@ -1,8 +1,8 @@
 ---
 title: "Publisher Properties dialog box (SSMS)"
 description: Describes the 'Publisher Properties' dialog box for a specific publication within SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

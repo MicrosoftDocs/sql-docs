@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & SQL Server enable
 description: Microsoft Purview DevOps, data owner, and self-service policies for SQL retire on October 30, 2027. Learn what changes, who is affected, and how to migrate to SQL native roles and permissions.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: shdasgupta, randolphwest
+ms.reviewer: shdasgupta
 ms.date: 10/02/2026
 ms.service: sql
 ms.subservice: security

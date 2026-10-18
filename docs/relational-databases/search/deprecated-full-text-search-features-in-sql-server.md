@@ -1,8 +1,8 @@
 ---
 title: Deprecated Full-Text Search Features in SQL Server
 description: Learn about the deprecated full-text search features still available in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/11/2026
 ms.service: sql
 ms.subservice: search

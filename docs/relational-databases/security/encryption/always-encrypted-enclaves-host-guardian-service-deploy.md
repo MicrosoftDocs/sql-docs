@@ -3,7 +3,7 @@ title: Deploy Host Guardian Service
 description: Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: security

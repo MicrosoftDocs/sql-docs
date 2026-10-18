@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Management Studio Replication Dialog Boxes"
 description: A reference for articles that describe the various dialog boxes for Replication within SQL Server Management Studio.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: replication

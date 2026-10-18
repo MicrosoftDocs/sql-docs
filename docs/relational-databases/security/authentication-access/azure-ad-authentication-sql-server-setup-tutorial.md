@@ -3,7 +3,7 @@ title: "Set up Microsoft Entra Authentication with App Registration for SQL Serv
 description: Tutorial on how to set up Microsoft Entra authentication for SQL Server
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 12/18/2025
 ms.service: sql
 ms.subservice: security

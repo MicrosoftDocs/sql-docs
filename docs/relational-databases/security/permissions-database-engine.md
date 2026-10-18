@@ -3,7 +3,7 @@ title: "Permissions (Database Engine)"
 description: Consult this complete list of SQL Server permissions to find out which permissions apply to platforms that you use.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/30/2025
 ms.service: sql
 ms.subservice: security

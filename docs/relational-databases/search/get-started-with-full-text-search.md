@@ -1,8 +1,8 @@
 ---
 title: "Get Started with Full-Text Search"
 description: "Get Started with Full-Text Search"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/31/2020"
 ms.service: sql
 ms.subservice: search

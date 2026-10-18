@@ -1,8 +1,8 @@
 ---
 title: "SMO Namespaces"
 description: "SMO Object Model Namespaces"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/02/2016"
 ms.service: sql
 ms.topic: "reference"

@@ -1,8 +1,8 @@
 ---
 title: "Specify article types (Replication SP)"
 description: Use Replication stored procedures to specify an article type programmatically when you define an article for SQL Server Replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

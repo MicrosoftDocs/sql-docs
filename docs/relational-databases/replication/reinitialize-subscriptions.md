@@ -1,8 +1,8 @@
 ---
 title: Reinitialize Subscriptions
 description: Reinitialize subscriptions in SQL Server replication to apply a fresh snapshot to Subscribers. Learn when reinitialization happens and how to upload pending changes.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

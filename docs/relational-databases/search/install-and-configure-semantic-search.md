@@ -1,8 +1,8 @@
 ---
 title: "Install and Configure Semantic Search"
 description: "Install and Configure Semantic Search"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search

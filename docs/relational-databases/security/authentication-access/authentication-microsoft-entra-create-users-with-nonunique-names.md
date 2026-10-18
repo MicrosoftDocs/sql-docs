@@ -4,7 +4,7 @@ titleSuffix: SQL Server Database Engine
 description: Learn how to mitigate naming conflicts for Microsoft Entra logins and users with nonunique display names by using the T-SQL Object_ID syntax.
 author: tameikal-msft
 ms.author: talawren
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: security

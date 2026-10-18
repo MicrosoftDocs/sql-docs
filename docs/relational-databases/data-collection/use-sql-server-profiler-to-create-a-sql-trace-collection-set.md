@@ -1,9 +1,9 @@
 ---
 title: "Create SQL Trace collection set with Profiler"
 description: Use SQL Server Profiler to create a SQL Trace collection set.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

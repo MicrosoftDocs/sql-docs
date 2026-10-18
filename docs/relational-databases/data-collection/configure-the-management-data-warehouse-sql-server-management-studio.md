@@ -1,9 +1,9 @@
 ---
 title: "Configure the management data warehouse (SSMS)"
 description: Learn how to configure the management data warehouse to support data storage on one or more instances of SQL Server that are using the data collector.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

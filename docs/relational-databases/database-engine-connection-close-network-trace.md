@@ -1,8 +1,8 @@
 ---
 title: Trace the network connection close process on SQL Server
 description: Learn about the sequence when a connection to the SQL Server Database Engine is closed.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/05/2024
 ms.service: sql
 ms.topic: concept-article

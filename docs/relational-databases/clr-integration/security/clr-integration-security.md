@@ -1,8 +1,8 @@
 ---
 title: CLR Integration Security
 description: SQL Server integration with the .NET Framework CLR security manages access between objects. Security checks performed on objects depend on the calls involved.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

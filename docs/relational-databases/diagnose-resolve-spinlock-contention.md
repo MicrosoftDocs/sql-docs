@@ -3,7 +3,7 @@ title: "Whitepaper: Diagnose & Resolve Spinlock Contention"
 description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
-ms.reviewer: wiassaf, randolphwest, dfurman
+ms.reviewer: wiassaf, dfurman
 ms.date: 05/28/2025
 ms.service: sql
 ms.subservice: performance

@@ -3,7 +3,7 @@ title: "Estimate the Size of a Database"
 description: When you design a database in SQL Server, estimating its size can help you determine the hardware configuration you need for performance and disk space.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/22/2025
 ms.service: sql
 ms.subservice: supportability

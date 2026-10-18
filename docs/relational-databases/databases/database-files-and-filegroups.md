@@ -3,7 +3,7 @@ title: "Database Files and Filegroups"
 description: Learn about database files and how to create filegroups in SQL Server for allocation and administrative purposes. View examples, rules, and recommendations.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/11/2025
 ms.service: sql
 ms.subservice: configuration

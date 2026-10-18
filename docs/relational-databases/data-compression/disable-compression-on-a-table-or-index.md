@@ -3,7 +3,7 @@ title: "Disable compression on a table or index"
 description: Learn how to disable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: performance

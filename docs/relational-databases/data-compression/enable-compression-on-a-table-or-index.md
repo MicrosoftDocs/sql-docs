@@ -3,7 +3,7 @@ title: "Enable compression on a table or index"
 description: Learn how to enable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/10/2024
 ms.service: sql
 ms.subservice: performance

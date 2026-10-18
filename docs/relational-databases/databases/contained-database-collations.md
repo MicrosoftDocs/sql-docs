@@ -3,7 +3,7 @@ title: Contained Database Collations
 description: Learn how collation works in contained and non-contained databases. See issues that can arise when sessions cross between contained and non-contained contexts.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/01/2025
 ms.service: sql
 ms.subservice: configuration

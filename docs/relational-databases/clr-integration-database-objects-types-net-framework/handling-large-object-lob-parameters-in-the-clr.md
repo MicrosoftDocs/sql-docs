@@ -1,8 +1,8 @@
 ---
 title: "Handling Large Object (LOB) Parameters in the CLR"
 description: This article describes how to handle large object (LOB) values for parameters in SQL Server CLR integration. Use SqlBytes and SqlChars for LOB types.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

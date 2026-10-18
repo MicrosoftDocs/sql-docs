@@ -1,9 +1,9 @@
 ---
 title: "Set database recovery model"
 description: Learn how to switch a SQL Server database from one recovery model to another by using SQL Server Management Studio or Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: backup-restore

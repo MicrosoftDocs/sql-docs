@@ -1,8 +1,8 @@
 ---
 title: "Select Backup Device"
 description: For SQL Server restore, use the Select Backup Device dialog box to select a logical backup device for the restore operation.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: backup-restore

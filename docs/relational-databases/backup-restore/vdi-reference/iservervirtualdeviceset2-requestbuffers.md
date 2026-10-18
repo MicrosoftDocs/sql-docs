@@ -2,8 +2,8 @@
 title: "IServerVirtualDeviceSet2::RequestBuffers"
 titleSuffix: SQL Server VDI reference
 description: "This article provides reference for the IServerVirtualDeviceSet2::RequestBuffers command."
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: 08/30/2019
 ms.service: sql
 ms.subservice: backup-restore

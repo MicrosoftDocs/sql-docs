@@ -1,9 +1,9 @@
 ---
 title: Database Engine events and errors
 description: Consult this MSSQL error code list to find explanations for error messages for SQL Server database engine events.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: williamdassafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: supportability

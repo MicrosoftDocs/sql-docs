@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
 description: sys.dm_resource_governor_workload_groups (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 04/15/2025
 ms.service: sql

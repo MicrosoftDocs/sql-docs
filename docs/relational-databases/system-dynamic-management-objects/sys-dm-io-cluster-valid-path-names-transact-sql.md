@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_io_cluster_valid_path_names (Transact-SQL)"
 description: sys.dm_io_cluster_valid_path_names returns information on all valid shared disks, including clustered shared volumes, for a SQL Server failover cluster instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/16/2024
 ms.service: sql
 ms.subservice: system-objects

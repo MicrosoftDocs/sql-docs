@@ -1,8 +1,8 @@
 ---
 title: "CHANGETABLE (Transact-SQL)"
 description: "CHANGETABLE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/12/2021"
 ms.service: sql
 ms.subservice: system-objects

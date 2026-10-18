@@ -1,8 +1,8 @@
 ---
 title: "FREETEXTTABLE (Transact-SQL)"
 description: "FREETEXTTABLE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "10/05/2021"
 ms.service: sql
 ms.subservice: system-objects

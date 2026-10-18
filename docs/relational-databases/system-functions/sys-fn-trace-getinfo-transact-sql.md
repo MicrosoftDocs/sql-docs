@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_trace_getinfo (Transact-SQL)"
 description: "sys.fn_trace_getinfo (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tran_current_snapshot (Transact-SQL)"
 description: sys.dm_tran_current_snapshot (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

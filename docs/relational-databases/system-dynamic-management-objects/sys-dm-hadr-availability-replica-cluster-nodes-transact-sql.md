@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)"
 description: Returns a row for every availability replica of the availability groups in the WSFC cluster.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/17/2023
 ms.service: sql
 ms.subservice: system-objects

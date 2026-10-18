@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_linux_net_stats (Transact-SQL)"
 description: sys.dm_os_linux_net_stats returns real-time Linux network interface statistics, including bytes/packets sent and received, errors, drops, and collisions.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/13/2026
 ms.service: sql
 ms.subservice: system-objects

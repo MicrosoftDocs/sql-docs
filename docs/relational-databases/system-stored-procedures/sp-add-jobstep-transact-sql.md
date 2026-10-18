@@ -1,9 +1,9 @@
 ---
 title: "sp_add_jobstep (Transact-SQL)"
 description: "sp_add_jobstep adds a step (operation) to a SQL Server Agent job."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

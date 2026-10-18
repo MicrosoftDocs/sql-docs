@@ -1,9 +1,9 @@
 ---
 title: "core.sp_add_collector_type (Transact-SQL)"
 description: "Adds a new entry to the core.supported_collector_types view in the management data warehouse database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

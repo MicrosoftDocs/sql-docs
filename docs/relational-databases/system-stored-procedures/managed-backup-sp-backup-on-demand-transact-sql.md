@@ -1,9 +1,9 @@
 ---
 title: "smart_admin.sp_backup_on_demand (Transact-SQL)"
 description: "Requests SQL Server Managed Backup to Microsoft Azure to perform a backup of the specified database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

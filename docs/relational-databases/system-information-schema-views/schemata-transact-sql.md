@@ -1,8 +1,8 @@
 ---
 title: "SCHEMATA (Transact-SQL)"
 description: "SCHEMATA (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "09/08/2017"
 ms.service: sql
 ms.subservice: system-objects

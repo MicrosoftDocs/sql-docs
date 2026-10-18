@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_add_log_shipping_alert_job (Transact-SQL)"
 description: "This stored procedure checks to see if an alert job has been created on this server."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

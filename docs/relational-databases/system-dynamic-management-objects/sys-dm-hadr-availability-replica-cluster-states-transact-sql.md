@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)"
 description: sys.dm_hadr_availability_replica_cluster_states returns a row for each replica of all AGs in the Windows Server failover cluster.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: system-objects

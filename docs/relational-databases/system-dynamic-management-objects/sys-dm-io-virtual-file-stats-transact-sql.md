@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_io_virtual_file_stats (Transact-SQL)"
 description: sys.dm_io_virtual_file_stats returns I/O statistics for data and log files.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/28/2025
 ms.service: sql
 ms.subservice: system-objects

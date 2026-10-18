@@ -3,7 +3,7 @@ title: "sys.dm_server_audit_status (Transact-SQL)"
 description: sys.dm_server_audit_status (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/09/2023
 ms.service: sql
 ms.subservice: system-objects

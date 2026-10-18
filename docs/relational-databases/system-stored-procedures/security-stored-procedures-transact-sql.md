@@ -3,7 +3,7 @@ title: "Security Stored Procedures (Transact-SQL)"
 description: "Security stored procedures (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

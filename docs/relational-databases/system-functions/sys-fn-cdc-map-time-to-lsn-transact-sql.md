@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_cdc_map_time_to_lsn (Transact-SQL)"
 description: "sys.fn_cdc_map_time_to_lsn (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/29/2022
 ms.service: sql
 ms.subservice: system-objects

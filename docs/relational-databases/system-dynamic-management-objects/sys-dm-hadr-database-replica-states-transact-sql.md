@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_database_replica_states (Transact-SQL)"
 description: Returns a row for each database that is participating in an availability group for which the local SQL Server instance is hosting an availability replica.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: system-objects

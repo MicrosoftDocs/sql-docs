@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_cdc_increment_lsn (Transact-SQL)"
 description: "sys.fn_cdc_increment_lsn (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "09/29/2021"
 ms.service: sql
 ms.subservice: system-objects

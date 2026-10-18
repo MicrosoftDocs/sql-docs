@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_job_object (Azure SQL Database)"
 description: sys.dm_os_job_object (Azure SQL Database)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 05/26/2026
 ms.service: azure-sql-database
 ms.topic: "reference"

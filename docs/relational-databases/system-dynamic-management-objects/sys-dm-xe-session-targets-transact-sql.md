@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_xe_session_targets (Transact-SQL)"
 description: sys.dm_xe_session_targets returns information about active server-scoped session targets in extended events.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 12/10/2024
 ms.service: sql

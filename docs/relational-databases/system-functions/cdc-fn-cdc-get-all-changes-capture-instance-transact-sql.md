@@ -1,8 +1,8 @@
 ---
 title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
 description: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; Returns one row for each change applied to the source table within the specified log sequence number (LSN) range."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/21/2025
 ms.service: sql
 ms.subservice: system-objects

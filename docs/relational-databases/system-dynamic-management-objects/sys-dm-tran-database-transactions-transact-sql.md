@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tran_database_transactions (Transact-SQL)"
 description: "sys.dm_tran_database_transactions returns information about transactions at the database level."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: system-objects

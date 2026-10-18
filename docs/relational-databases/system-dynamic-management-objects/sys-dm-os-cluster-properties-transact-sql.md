@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_cluster_properties (Transact-SQL)"
 description: sys.dm_os_cluster_properties returns one row with the current settings for the SQL Server cluster resource properties.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/22/2026
 ms.service: sql
 ms.subservice: system-objects

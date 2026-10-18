@@ -1,9 +1,9 @@
 ---
 title: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)"
 description: sys.fn_hadr_backup_is_preferred_replica is used to determine if the current replica is the preferred backup replica.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 11/01/2024
 ms.service: sql
 ms.subservice: system-objects

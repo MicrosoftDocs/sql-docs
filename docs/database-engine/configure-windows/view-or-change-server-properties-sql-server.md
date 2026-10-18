@@ -1,8 +1,8 @@
 ---
 title: View or Change Server Properties (SQL Server)
 description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: configuration

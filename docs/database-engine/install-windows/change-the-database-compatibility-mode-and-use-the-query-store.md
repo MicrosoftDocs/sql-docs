@@ -1,8 +1,8 @@
 ---
 title: "Change the Database Compatibility Level and Use the Query Store"
 description: This article explains the place of using the Query Store to establish a baseline and changing the database compatibility level in a SQL Server upgrade.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

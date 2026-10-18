@@ -1,8 +1,8 @@
 ---
 title: Prevent Automatic Startup of an Instance (SQL Server Configuration Manager)
 description: Find out how to prevent an instance of SQL Server from starting automatically. See how to set the start mode to manual to accomplish this task.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "How To: Deactivate Service Broker Message Delivery in Databases (Transact-SQL)"
 description: "When message delivery is not active, messages remain in the transmission queue."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: configuration

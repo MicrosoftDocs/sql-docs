@@ -3,7 +3,7 @@ title: "Server Configuration: max ucs send boxcars"
 description: "Learn about UCS flow control with the max ucs send boxcars configuration option, and when to change these options in SQL Server."
 author: sergten
 ms.author: sergeyten
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql
 ms.topic: how-to

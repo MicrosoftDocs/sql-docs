@@ -1,9 +1,9 @@
 ---
 title: Service Script Example
 description: "This Transact-SQL code sample defines a service that archives untyped XML documents."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

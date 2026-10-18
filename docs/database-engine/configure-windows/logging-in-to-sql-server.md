@@ -1,8 +1,8 @@
 ---
 title: "Sign in to SQL Server"
 description: Find out about different ways of signing in to an instance of SQL Server. Learn which format to use for the server name in various environments.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: "View and Read SQL Server Setup Log Files"
 description: This article describes the log files that SQL Server Setup creates. Log files are placed in a dated and time-stamped folder.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 05/29/2025
 ms.service: sql
 ms.subservice: install

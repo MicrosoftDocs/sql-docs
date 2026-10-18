@@ -1,8 +1,8 @@
 ---
 title: "Install SQL Server Replication"
 description: Install replication components by using the SQL Server Installation Wizard or in a Command Prompt window.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

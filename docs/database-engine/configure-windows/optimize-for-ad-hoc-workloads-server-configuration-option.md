@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: optimize for ad hoc workloads"
 description: "Learn about the 'optimize for ad hoc workloads' option. Use it to improve SQL Server plan cache efficiency when workloads contain many single-use ad hoc batches."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

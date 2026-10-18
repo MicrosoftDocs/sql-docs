@@ -1,8 +1,8 @@
 ---
 title: "Manually fail over a database mirror to partner"
 description: "Instructions to manually fail over a principle database mirror to a secondary partner using Transact-SQL (T-SQL)."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring

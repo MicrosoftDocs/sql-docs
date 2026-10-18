@@ -1,8 +1,8 @@
 ---
 title: Manage the Database Engine Services
 description: Get acquainted with services that are available in SQL Server. See how to start SQL Server Configuration Manager, which you can use to manage various services.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: configuration

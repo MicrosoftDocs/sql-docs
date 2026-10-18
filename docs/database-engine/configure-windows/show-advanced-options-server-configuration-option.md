@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: show advanced options"
 description: "Learn about the show advanced options option. See how to use it to list advanced options when you run the SQL Server system stored procedure sp_configure."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

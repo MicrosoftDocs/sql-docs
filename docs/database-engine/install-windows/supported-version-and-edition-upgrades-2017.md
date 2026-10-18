@@ -1,8 +1,8 @@
 ---
 title: "Supported Version and Edition Upgrades (SQL Server 2017)"
 description: The supported version and edition upgrades for SQL Server 2017.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

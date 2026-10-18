@@ -1,9 +1,9 @@
 ---
 title: "Lesson 3: Complete the Target Conversation Objects"
 description: "In this lesson, you learn to create the linked server and routes from the target instance of the Database Engine to the initiator instance."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

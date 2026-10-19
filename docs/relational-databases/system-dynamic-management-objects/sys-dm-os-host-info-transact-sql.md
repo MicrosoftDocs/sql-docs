@@ -41,9 +41,9 @@ This view is similar to [sys.dm_os_windows_info](sys-dm-os-windows-info-transact
 
 ### Permissions
 
-On [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions, the `SELECT` permission on `sys.dm_os_host_info` is granted to the public role by default. If revoked, you require `VIEW SERVER STATE` permission on the server.
+The `SELECT` permission on `sys.dm_os_host_info` is granted to the **public** role by default, so any login can query the view. No server-level permission, such as `VIEW SERVER STATE` or `VIEW SERVER PERFORMANCE STATE`, is required.
 
-On [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, you require `VIEW SERVER PERFORMANCE STATE` permission on the server.
+If the `SELECT` permission is revoked from **public**, granting `VIEW SERVER STATE` or `VIEW SERVER PERFORMANCE STATE` doesn't restore access. `CONTROL SERVER` does.
 
 ## Examples
 

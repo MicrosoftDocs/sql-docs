@@ -4,7 +4,7 @@ description: Learn how to work with JSON data in Microsoft SQL using the mssql-p
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 07/16/2026
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -523,11 +523,7 @@ Transform relational query results into JSON format in Python by converting each
 def query_to_json(cursor, query: str, params: dict = None) -> str:
     """Execute query and return results as JSON string."""
     cursor.execute(query, params or {})
-    columns = [col[0] for col in cursor.description]
-    
-    rows = []
-    for row in cursor:
-        rows.append(dict(zip(columns, row)))
+    rows = [dict(row._mapping) for row in cursor]
     
     return json.dumps(rows, default=str, indent=2)
 

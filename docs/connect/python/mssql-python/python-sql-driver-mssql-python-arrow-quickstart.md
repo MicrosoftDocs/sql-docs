@@ -4,7 +4,7 @@ description: Use the mssql-python driver's Arrow fetch methods to retrieve SQL S
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 09/14/2026
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -24,8 +24,10 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 ## Prerequisites
 
-- Python 3.10 or later
+- Python 3.10 or later.
+
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
@@ -35,20 +37,24 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - [Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli) for passwordless authentication on macOS and Linux.
 
 - If you don't already have `uv`, follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
 - A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
+
+### Install operating system prerequisites
+
 [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
 [!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
-1. [Create a new project](#create-a-new-project)
-1. [Add dependencies](#add-dependencies)
-1. [Launch Visual Studio Code](#launch-visual-studio-code)
-1. [Update pyproject.toml](#update-pyprojecttoml)
-1. [Update main.py](#update-mainpy)
-1. [Save the connection string](#save-the-connection-string)
-1. [Use uv run to execute the script](#use-uv-run-to-execute-the-script)
+- [Create a new project](#create-a-new-project)
+- [Add dependencies](#add-dependencies)
+- [Launch Visual Studio Code](#launch-visual-studio-code)
+- [Update pyproject.toml](#update-pyprojecttoml)
+- [Update main.py](#update-mainpy)
+- [Save the connection string](#save-the-connection-string)
+- [Use uv run to execute the script](#use-uv-run-to-execute-the-script)
 
 ### Create a new project
 
@@ -79,7 +85,7 @@ code .
 
 ### Update pyproject.toml
 
-1. The [pyproject.toml](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) file contains the metadata for your project. Open the file in your favorite editor.
+1. Open the [`pyproject.toml`](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) file in your editor. This file contains the metadata for your project.
 
 1. Review the contents of the file. It should be similar to this example. Note the Python version and dependency for `mssql-python` use `>=` to define a minimum version. If you prefer an exact version, change the `>=` before the version number to `==`. The resolved versions of each package are then stored in the [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile). The lockfile ensures that developers working on the project use consistent package versions. Commit both `pyproject.toml` and `uv.lock`, and run an organization-approved dependency scanner in CI. Don't edit the `uv.lock` file directly.
 
@@ -91,14 +97,14 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.15.0",
+       "mssql-python>=1.16.0",
        "pyarrow>=19.0.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
    ]
    ```
 
-1. Update the description to be more descriptive.
+1. Update the `description` value.
 
    ```toml
    description = "Fetch SQL Server data as Apache Arrow tables using mssql-python"
@@ -286,9 +292,9 @@ code .
 
 ### Save the connection string
 
-1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to this example. Be sure to save and close it when you're done.
+1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to the following example.
 
-   ```output
+   ```text
    # Python-generated files
    __pycache__/
    *.py[oc]
@@ -307,40 +313,41 @@ code .
    *.parquet
    ```
 
+1. Save and close `.gitignore`.
+
 1. In the current directory, create a new file named `.env`.
 
-1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the example here with your actual connection string value.
+1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the placeholders with your actual values.
 
    ```text
-   SQL_CONNECTION_STRING="Server=<server_name>;Database=<database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
+   SQL_CONNECTION_STRING="Server=<server>;Database=<database>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
    ```
 
-   > [!IMPORTANT]
+   > [!IMPORTANT]  
    > Keep `.env` local and out of source control. For CI and deployed environments, inject the connection string or its component secrets from your platform secret store instead of copying `.env` between machines.
 
-   > [!TIP]
-   > The connection string you use depends largely on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
+   The connection string depends on the type of SQL database you're connecting to. For Azure SQL Database or SQL database in Fabric, use the ODBC connection string from the connection strings tab, and adjust the authentication type for your scenario. For more information about connection string syntax, see [Connection strings for mssql-python](connection-strings.md).
+
+   > [!TIP]  
+   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once with the [Azure CLI](/cli/azure/install-azure-cli) `az login` command, and use `ActiveDirectoryDefault`. `ActiveDirectoryDefault` reuses the cached credential.
 
 ### Use uv run to execute the script
 
-> [!TIP]
-> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
+In the terminal window from before, or a new terminal window open to the same directory, run the following command.
 
-- In the terminal window from before, or a new terminal window open to the same directory, run the following command.
+```console
+uv run main.py
+```
 
-   ```console
-   uv run main.py
-   ```
+The script demonstrates three Arrow fetch methods:
 
-   The script demonstrates three Arrow fetch methods:
+- `cursor.arrow()` returns a complete `pyarrow.Table` with all rows. Use it for small to medium result sets where you need the full dataset in memory.
 
-    - `cursor.arrow()` returns a complete `pyarrow.Table` with all rows. Best for small to medium result sets where you need the full dataset in memory.
+- `cursor.arrow_batch()` returns one `pyarrow.RecordBatch` at a time. Use it for large result sets where you want to process data incrementally without loading everything into memory.
 
-    - `cursor.arrow_batch()` returns one `pyarrow.RecordBatch` at a time. Best for large result sets where you want to process data incrementally without loading everything into memory.
+- `cursor.arrow_reader()` returns a streaming reader that yields `pyarrow.RecordBatch` objects as you iterate it. Use it for pipeline-style processing or passing directly to libraries that accept a reader.
 
-    - `cursor.arrow_reader()` returns a streaming reader that yields `pyarrow.RecordBatch` objects as you iterate it. Use it for pipeline-style processing or passing directly to libraries that accept a reader.
-
-   The script also saves the product data to a Parquet file and reads it back to verify the round-trip.
+The script also saves the product data to a Parquet file and reads it back to verify the round-trip.
 
 ## How the code works
 
@@ -356,12 +363,8 @@ code .
 
 1. **Parquet I/O**: `pyarrow.parquet.write_table()` saves the Arrow table to a compressed Parquet file. This format preserves column types and supports efficient partial reads.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Arrow integration](arrow-integration.md)
-
 ## Related content
 
+- [Use mssql-python with Apache Arrow](arrow-integration.md)
 - [Use mssql-python with pandas](pandas-integration.md)
 - [Use mssql-python with Polars](polars-integration.md)

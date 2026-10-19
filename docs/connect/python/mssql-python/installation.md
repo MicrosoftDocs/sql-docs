@@ -4,7 +4,7 @@ description: Learn how to install the mssql-python driver on Windows, Linux, and
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 09/14/2026
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -13,12 +13,13 @@ ai-usage: ai-assisted
 
 # Install mssql-python
 
-The `mssql-python` driver is Microsoft's official Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Install the driver on Windows, Linux, or macOS by using pip.
+The `mssql-python` driver is Microsoft's official Python driver for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Install the driver on Windows, Linux, or macOS by using pip or conda.
 
 ## Prerequisites
 
 - The driver requires **Python 3.10 or later** and doesn't support earlier Python versions.
-- **pip** package manager (included with Python 3.4+).
+- To install with pip, the **pip** package manager, which is included with Python.
+- To install with conda, the **conda** package manager.
 
 > [!IMPORTANT]
 > The mssql-python driver uses **DDBC** (Direct Database Connectivity), which bundles and manages the ODBC layer internally. You don't need to install the Microsoft ODBC Driver for SQL Server separately.
@@ -40,8 +41,40 @@ pip install --upgrade mssql-python
 To install a specific version:
 
 ```bash
-pip install mssql-python==1.15.0
+pip install mssql-python==1.16.0
 ```
+
+The `pip install mssql-python` command also installs two companion packages that the driver requires at runtime:
+
+- `mssql-python-odbc` ships the Microsoft ODBC Driver 18 binaries.
+- `mssql-python-rs` ships the Rust runtime that powers bulk copy and the opt-in `mssql-odbc` provider.
+
+Starting with version 1.16.0, `mssql-python` pins exact versions of both packages. Earlier versions don't require `mssql-python-rs`. For the pins by version, see [Dependency requirements](support-lifecycle.md#dependency-requirements).
+
+## Install from conda
+
+The driver is also available on the `microsoft` channel on [Anaconda.org](https://anaconda.org/microsoft/mssql-python):
+
+```bash
+conda install -c microsoft mssql-python
+```
+
+The conda package is a self-contained package. It includes the Python bindings, the ODBC driver binaries, and the Rust runtime, so conda installs one package instead of three. Running `pip list` in the environment still shows `mssql-python-odbc` and `mssql-python-rs`, because the conda package includes their package metadata. Conda selects the build that matches your platform and Python version, and manages upgrades:
+
+```bash
+conda update -c microsoft mssql-python
+```
+
+Install the driver with either conda or pip in a given environment, not both.
+
+The conda package has these platform requirements:
+
+| Platform | Python versions | Requirement |
+| --- | --- | --- |
+| Windows x64 | 3.10 through 3.15 | None. |
+| Windows ARM64 | 3.12 through 3.15 | None. |
+| Linux x64, Linux ARM64 | 3.10 through 3.15 | glibc 2.34 and later versions. Use pip on Red Hat Enterprise Linux (RHEL) 8, Alpine Linux, and other distributions with an older glibc or with musl. |
+| macOS Intel, macOS Apple Silicon | 3.10 through 3.15 | macOS 15 and later versions. Encrypted connections require OpenSSL installed on the system, as described in [macOS](#macos). The driver doesn't load OpenSSL from the conda environment. |
 
 ## Verify the installation
 
@@ -59,7 +92,7 @@ print(f"Parameter style: {mssql_python.paramstyle}")
 Expected output:
 
 ```output
-mssql-python version: 1.15.0
+mssql-python version: 1.16.0
 DB-API level: 2.0
 Thread safety: 1
 Parameter style: pyformat
@@ -94,7 +127,7 @@ sudo dnf install libtool-ltdl krb5-libs
 **Alpine Linux:**
 
 ```bash
-apk add libltdl krb5-libs
+apk add libltdl krb5-libs libstdc++
 ```
 
 ### macOS

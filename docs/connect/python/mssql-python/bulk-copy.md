@@ -4,7 +4,7 @@ description: Learn how to efficiently insert large amounts of data using the bul
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 08/28/2026
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -22,7 +22,7 @@ The `cursor.bulkcopy()` method provides a high-performance path for loading larg
 - Uses the optimized TDS bulk insert protocol.
 - Achieves throughput comparable to `bcp.exe` and `SqlBulkCopy`.
 
-The Rust-based `mssql_py_core` native extension powers the bulk copy feature. It runs outside the normal cursor `execute()` pipeline.
+The Rust-based `mssql_py_core` native extension powers the bulk copy feature. It runs outside the normal cursor `execute()` pipeline. The extension ships in the `mssql-python-rs` package, which `pip install mssql-python` installs automatically.
 
 ## Basic usage
 
@@ -86,10 +86,22 @@ cursor.bulkcopy(
 )
 ```
 
+### Target table names
+
+The `table_name` argument accepts one-part, two-part, and three-part names, such as `MyTable`, `dbo.MyTable`, or `MyDatabase.dbo.MyTable`. Microsoft SQL rejects a server prefix on a bulk copy target with error 117. If the server name isn't in `sys.servers`, the error is 7202. Enclose a name part in brackets if it contains spaces or other special characters. Inside brackets, escape each `]` character as `]]`:
+
+```python
+# Schema dbo, table named Sales Data] 2026
+result = cursor.bulkcopy("dbo.[Sales Data]] 2026]", data)
+```
+
+A malformed name, such as an unclosed bracket or a missing table name like `dbo.`, raises `RuntimeError` before any rows are sent. An empty `table_name` raises `ValueError`.
+
 ## Column mappings
 
 By default, `bulkcopy()` maps columns by ordinal position. Each data column maps to the table column at the same index. Use the `column_mappings` parameter to override this behavior.
 
+Pass destination column names as they appear in the table, without brackets. The driver quotes them, so names that contain spaces or `]` characters, such as `Unit Price`, work as written. A bracketed name such as `[Unit Price]` raises `RuntimeError`, because the table has no column with that name. This rule differs from `table_name`, where you add the brackets yourself.
 ### Column name list
 
 Each position in the list corresponds to the source data index:

@@ -4,7 +4,7 @@ description: This quickstart describes bulk copying data between databases using
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 09/14/2026
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -25,8 +25,10 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 ## Prerequisites
 
-- Python 3.10 or later
+- Python 3.10 or later.
+
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
@@ -36,21 +38,26 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - [Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli) for passwordless authentication on macOS and Linux.
 
 - If you don't already have `uv`, follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
 - A source database with the `AdventureWorksLT` sample schema and a valid connection string.
+
 - A destination database with a valid connection string. The user must have permission to create and write to tables. If you don't have a second database, you can use the same database and a different schema for the destination tables.
+
+### Install operating system prerequisites
+
 [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
 [!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
-1. [Create a new project](#create-a-new-project)
-1. [Add dependencies](#add-dependencies)
-1. [Launch Visual Studio Code](#launch-visual-studio-code)
-1. [Update pyproject.toml](#update-pyprojecttoml)
-1. [Update main.py](#update-mainpy)
-1. [Save the connection strings](#save-the-connection-strings)
-1. [Use uv run to execute the script](#use-uv-run-to-execute-the-script)
+- [Create a new project](#create-a-new-project)
+- [Add dependencies](#add-dependencies)
+- [Launch Visual Studio Code](#launch-visual-studio-code)
+- [Update pyproject.toml](#update-pyprojecttoml)
+- [Update main.py](#update-mainpy)
+- [Save the connection strings](#save-the-connection-strings)
+- [Use uv run to execute the script](#use-uv-run-to-execute-the-script)
 
 ### Create a new project
 
@@ -81,7 +88,7 @@ code .
 
 ### Update pyproject.toml
 
-1. The [pyproject.toml](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) contains the metadata for your project. Open the file in your favorite editor.
+1. Open the [`pyproject.toml`](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) file in your editor. This file contains the metadata for your project.
 
 1. Review the contents of the file. It should be similar to this example. Note the Python version and dependency for `mssql-python` uses `>=` to define a minimum version. If you prefer an exact version, change the `>=` before the version number to `==`. The resolved versions of each package are then stored in the [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile). The lockfile ensures that developers working on the project are using consistent package versions. It also ensures that the exact same set of package versions is used when distributing your package to end users. You shouldn't edit the `uv.lock` file.
 
@@ -93,13 +100,13 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.15.0",
+       "mssql-python>=1.16.0",
        "python-dotenv>=1.1.1",
        "pyarrow>=19.0.0",
    ]
    ```
 
-1. Update the description to be more descriptive.
+1. Update the `description` value.
 
    ```toml
    description = "Bulk copies data between SQL databases using mssql-python and Apache Arrow"
@@ -425,9 +432,9 @@ code .
 
 ### Save the connection strings
 
-1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to this example. Be sure to save and close it when you're done.
+1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to the following example.
 
-   ```output
+   ```text
    # Python-generated files
    __pycache__/
    *.py[oc]
@@ -443,37 +450,40 @@ code .
    .env
    ```
 
+1. Save and close `.gitignore`.
+
 1. In the current directory, create a new file named `.env`.
 
 1. Within the `.env` file, add entries for your source and destination connection strings. Replace the placeholder values with your actual server and database names.
 
    ```text
-   SOURCE_CONNECTION_STRING="Server=<source_server_name>;Database=<source_database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
-   DEST_CONNECTION_STRING="Server=<dest_server_name>;Database=<dest_database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
+   SOURCE_CONNECTION_STRING="Server=<source_server>;Database=<source_database>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
+   DEST_CONNECTION_STRING="Server=<destination_server>;Database=<destination_database>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
    ```
 
-   > [!TIP]  
-   > The connection string used here largely depends on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
+   The connection string depends on the type of SQL database you're connecting to. For Azure SQL Database or SQL database in Fabric, use the ODBC connection string from the connection strings tab, and adjust the authentication type for your scenario. For more information about connection string syntax, see [Connection strings for mssql-python](connection-strings.md).
 
-> [!TIP]  
-> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
+   > [!TIP]  
+   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once with the [Azure CLI](/cli/azure/install-azure-cli) `az login` command, and use `ActiveDirectoryDefault`. `ActiveDirectoryDefault` reuses the cached credential.
 
 ### Use uv run to execute the script
 
 1. In the terminal window from before, or a new terminal window open to the same directory, run the following command.
 
    ```console
-    uv run main.py
+   uv run main.py
    ```
 
    Here's the expected output when the script completes.
 
    ```output
-   Found 12 SalesLT tables: Address, Customer, CustomerAddress, ...
+   Found 10 SalesLT tables: Address, Customer, CustomerAddress, ...
 
-   SalesLT.Address → SalesLT/Address.parquet: 450 rows downloaded in 0.15s (3,000 rows/sec)
+   SalesLT.Address -> SalesLT/Address.parquet: 450 rows downloaded in 0.15s (3,000 rows/sec)
    ...
-   SalesLT/Address.parquet → dbo.[Address]: 450 rows uploaded in 0.10s (4,500 rows/sec) | verified: 450
+   Enriching SalesLT/Address.parquet (no-op)
+   ...
+   SalesLT/Address.parquet -> dbo.[Address]: 450 rows uploaded in 0.10s (4,500 rows/sec, 1 batches) | destination rows: 450
    ...
    Total: 2.35s
    ```
@@ -490,12 +500,8 @@ The application performs a full round-trip data transfer in three phases:
 1. **Enrich** (optional): Provides a hook (`enrich_parquet`) where you can add transformations, derived columns, or joins before uploading.
 1. **Upload**: Reads each Parquet file in batches, recreates the table in the destination database using DDL generated from Arrow schema metadata, then uses `cursor.bulkcopy_arrow()` for high-performance bulk insert. Because the source is already in Arrow format, the record batches pass to the driver without being converted into Python objects.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Bulk copy](bulk-copy.md)
-
 ## Related content
 
+- [Use bulk copy with mssql-python](bulk-copy.md)
 - [Choose a data loading and movement pattern with mssql-python](data-loading-movement-patterns.md)
 - [Performance tuning for mssql-python applications](performance-tuning.md)

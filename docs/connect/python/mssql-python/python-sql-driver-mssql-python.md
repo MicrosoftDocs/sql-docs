@@ -4,7 +4,7 @@ description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 09/17/2026
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: get-started
@@ -176,7 +176,7 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 - **Native data type support**: [JSON, XML, spatial, sparse columns, datetimeoffset, and decimal/money](data-type-mappings.md) with precise handling.
 - **Apache Arrow integration**: [Zero-copy result sets](arrow-integration.md) for fast data interchange with pandas, Polars, and DuckDB.
 - **Async patterns**: Use the driver with `asyncio`-based applications and FastAPI through ThreadPoolExecutor workarounds. See [Async patterns](asynchronous-patterns.md) for integration patterns.
-- **TLS by default**: [TLS encryption and certificate validation](encryption-certificates.md) on by default (via ODBC Driver 18). TDS 8.0 encryption available when you set `Encrypt=strict`.
+- **TLS by default**: [TLS encryption and certificate validation](encryption-certificates.md) on by default with either [native ODBC provider](module-configuration.md#select-the-native-odbc-provider). TDS 8.0 encryption available when you set `Encrypt=strict`.
 
 ## Get started
 

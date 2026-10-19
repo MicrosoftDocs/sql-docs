@@ -3,7 +3,7 @@ title: "sys.availability_replicas (Transact-SQL)"
 description: Returns a row for each of the availability replicas that belong to any Always On availability group in the WSFC failover cluster.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 01/12/2026
+ms.date: 10/15/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -53,7 +53,7 @@ If the local server instance can't connect to the WSFC failover cluster, for exa
 
 ## Permissions
 
-Requires `VIEW ANY DEFINITION` permission on the server instance.
+Requires membership in the **public** role.
 
 ## Related content
 

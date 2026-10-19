@@ -48,9 +48,6 @@ LTRIM ( character_expression )
 
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
-> [!IMPORTANT]
-> You need your database compatibility level set to 160 to use the optional *characters* argument.
-
 ```syntaxsql
 LTRIM ( character_expression , [ characters ] )
 ```
@@ -71,7 +68,7 @@ Returns a character expression with a type of string argument where the space ch
 
 ## Remarks
 
-To enable the optional *characters* positional argument, enable database compatibility level `160` on the database that you connect to when executing queries.
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, the optional *characters* argument works at every database compatibility level. Only the `LEADING`, `TRAILING`, and `BOTH` keywords of [TRIM](trim-transact-sql.md) require database compatibility level `160`.
 
 ## Examples
 
@@ -112,9 +109,6 @@ Original string                                            Without spaces
 ```
 
 ### C. Remove specified characters from the beginning of a string
-
-> [!IMPORTANT]  
-> You need your database compatibility level set to `160` to use the optional *characters* argument.
 
 The following example removes the characters `123` from the beginning of the `123abc.` string.
 

@@ -49,7 +49,7 @@ The `event_file` target writes event session output from memory buffers to a dis
 
 - You can optionally specify the `MAX_FILE_SIZE` parameter. It defines the maximum size in megabytes (MB) to which the file can grow before a new file is created.
 
-- You can optionally specify the `MAX_ROLLOVER_FILES` option to choose the maximum number of files to retain in the file system in addition to the current file. The default value is `UNLIMITED`. When `MAX_ROLLOVER_FILES` is evaluated, if the number of files exceeds the `MAX_ROLLOVER_FILES` setting, the older files are deleted.
+- You can optionally specify `MAX_ROLLOVER_FILES` to limit the number of `.xel` files. The limit includes the current file. The default is 5 for the files retained on the local file system and unlimited for blobs in Azure Storage; 0 retains only the current file. As new files are created, older files are deleted to enforce the limit.
 
 > [!NOTE]
 >

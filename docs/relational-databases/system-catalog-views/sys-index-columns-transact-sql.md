@@ -1,8 +1,8 @@
 ---
 title: "sys.index_columns (Transact-SQL)"
 description: "sys.index_columns contains one row per column that is part of an index or unordered table (heap)."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/28/2025
 ms.service: sql
 ms.subservice: system-objects

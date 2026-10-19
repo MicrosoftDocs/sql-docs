@@ -3,7 +3,7 @@ title: Configure Managed Identity for Linked Servers
 description: Learn how to configure managed identity authentication for linked servers on SQL Server 2025 Azure Virtual Machines and SQL Server enabled by Azure Arc.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: security

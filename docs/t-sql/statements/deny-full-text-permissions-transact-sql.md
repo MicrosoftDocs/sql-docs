@@ -1,8 +1,8 @@
 ---
 title: "DENY Full-Text Permissions (Transact-SQL)"
 description: DENY Full-Text Permissions (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "05/15/2017"
 ms.service: sql
 ms.subservice: t-sql

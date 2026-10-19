@@ -3,7 +3,7 @@ title: "Generate reports (Db2ToSQL)"
 description: Learn how to generate reports in SQL Server Migration Assistant for Db2.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

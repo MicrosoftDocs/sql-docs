@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Oracle Publishers
 description: Oracle Publisher errors in SQL Server replication? Learn how to resolve connectivity failures, missing primary keys, and OLE DB provider problems step by step.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

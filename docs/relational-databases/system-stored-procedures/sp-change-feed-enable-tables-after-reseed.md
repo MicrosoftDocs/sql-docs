@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_enable_tables_after_reseed (Transact-SQL)"
 description: "The internal sys.sp_change_feed_enable_tables_after_reseed system stored procedure enables tables after reseed within the current database context."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 12/17/2025
 ms.service: fabric
 ms.subservice: system-objects

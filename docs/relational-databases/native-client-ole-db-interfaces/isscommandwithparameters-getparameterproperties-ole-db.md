@@ -1,8 +1,8 @@
 ---
 title: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
 description: "ISSCommandWithParameters::GetParameterProperties in SQL Server Native Client (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: native-client

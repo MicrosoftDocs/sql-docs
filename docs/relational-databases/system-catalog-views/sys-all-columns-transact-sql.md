@@ -1,8 +1,8 @@
 ---
 title: "sys.all_columns (Transact-SQL)"
 description: sys.all_columns shows the union of all columns belonging to user-defined objects and system objects.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/28/2025
 ms.service: sql
 ms.subservice: system-objects

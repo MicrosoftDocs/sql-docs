@@ -3,7 +3,7 @@ title: SET QUOTED_IDENTIFIER (Transact-SQL)
 description: SET QUOTED_IDENTIFIER causes the Database Engine to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/08/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: CHOOSE (Transact-SQL)
 description: The CHOOSE logical function returns the item at the specified index from a list of values.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: t-sql

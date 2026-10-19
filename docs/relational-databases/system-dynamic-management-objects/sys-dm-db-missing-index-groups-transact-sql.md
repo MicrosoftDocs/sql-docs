@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_missing_index_groups (Transact-SQL)"
 description: The sys.dm_db_missing_index_groups dynamic management view returns information about indexes that are missing in a specific index group.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

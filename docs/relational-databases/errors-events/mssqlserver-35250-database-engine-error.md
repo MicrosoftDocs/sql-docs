@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_35250"
 description: "MSSQLSERVER_35250"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: supportability

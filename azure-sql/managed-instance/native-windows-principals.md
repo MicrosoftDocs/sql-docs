@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about the new authentication metadata modes that allow you to use native Windows principals with Azure SQL Managed Instance.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, vanto, wiassaf
+ms.reviewer: vanto, wiassaf
 ms.date: 06/12/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: security

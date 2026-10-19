@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_setreplfailovermode (Transact-SQL)"
 description: sp_setreplfailovermode allows you to set the failover operation mode for subscriptions enabled for immediate updating, with queued updating as failover.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

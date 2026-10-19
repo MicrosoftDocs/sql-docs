@@ -3,7 +3,7 @@ title: "Connect to and Query Azure SQL Database Using .NET and the Microsoft.Dat
 description: Learn how to connect to a database in Azure SQL Database and query data using .NET
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: alexwolf, mathoma, vanto
+ms.reviewer: alexwolf, vanto
 ms.date: 08/07/2025
 ms.service: azure-sql-database
 ms.subservice: security

@@ -1,8 +1,8 @@
 ---
 title: "Conversions Performed from Client to Server"
 description: "SQL Server Native Client Conversions Performed from Client to Server"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

@@ -1,8 +1,8 @@
 ---
 title: "Delete a Pull Subscription"
 description: "Delete a Pull Subscription"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 02/03/2026
 ai-usage: ai-assisted
 ms.service: sql

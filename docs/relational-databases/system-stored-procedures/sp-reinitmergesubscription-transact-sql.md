@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_reinitmergesubscription (Transact-SQL)"
 description: Marks a merge subscription for reinitialization the next time the Merge Agent runs.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

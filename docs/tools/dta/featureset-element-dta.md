@@ -1,8 +1,8 @@
 ---
 title: "FeatureSet Element (DTA)"
 description: In the dta utility, the FeatureSet element contains the physical design structures Database Engine Tuning Advisor uses during analysis.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

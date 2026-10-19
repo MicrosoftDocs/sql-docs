@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cdc_help_change_data_capture (Transact-SQL)"
 description: "Returns the change data capture configuration for each table enabled for change data capture in the current database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

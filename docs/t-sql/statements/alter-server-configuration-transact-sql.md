@@ -1,8 +1,8 @@
 ---
 title: "ALTER SERVER CONFIGURATION (Transact-SQL)"
 description: ALTER SERVER CONFIGURATION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: t-sql

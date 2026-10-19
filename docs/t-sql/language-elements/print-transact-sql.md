@@ -1,8 +1,8 @@
 ---
 title: "PRINT (Transact-SQL)"
 description: "PRINT (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/16/2024
 ms.service: sql
 ms.subservice: t-sql

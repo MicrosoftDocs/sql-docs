@@ -1,8 +1,8 @@
 ---
 title: "Fast Forward-Only Cursors (ODBC)"
 description: "Fast Forward-Only Cursors (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

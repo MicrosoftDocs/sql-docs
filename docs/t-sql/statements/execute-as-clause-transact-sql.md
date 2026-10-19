@@ -3,7 +3,7 @@ title: "EXECUTE AS Clause (Transact-SQL)"
 description: Define the execution context of functions (except inline table-valued functions), procedures, queues, and triggers.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: t-sql

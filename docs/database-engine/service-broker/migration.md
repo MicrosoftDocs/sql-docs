@@ -1,9 +1,9 @@
 ---
 title: "Migration (Service Broker)"
 description: "The usual process for migrating a Service Broker application is to move the database that contains the application to another instance of the Database Engine."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

@@ -3,7 +3,7 @@ title: Move resources to new region
 description: Learn how to move your managed instance to another region.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/30/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

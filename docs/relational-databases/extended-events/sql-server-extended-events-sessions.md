@@ -3,7 +3,7 @@ title: "Extended Events Sessions"
 description: An Extended Events session is created in the Database Engine process that hosts the Extended Events engine.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: xevents

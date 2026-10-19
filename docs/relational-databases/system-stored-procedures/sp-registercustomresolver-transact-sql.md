@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_registercustomresolver (Transact-SQL)"
 description: Registers a business logic handler or a COM-based custom resolver that can be invoked during the merge replication synchronization process.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -3,7 +3,7 @@ title: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
 description: sys.dm_tran_version_store_space_usage (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: maghan
+ms.reviewer: vanto
 ms.date: 01/06/2025
 ms.service: sql
 ms.subservice: system-objects

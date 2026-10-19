@@ -1,8 +1,8 @@
 ---
 title: "Annotated Schema Security Considerations (SQLXML)"
 description: Learn about security guidelines for using annotated schemas in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

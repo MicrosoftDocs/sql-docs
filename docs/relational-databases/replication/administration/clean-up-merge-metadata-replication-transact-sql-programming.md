@@ -1,8 +1,8 @@
 ---
 title: Clean up Merge Metadata (Replication SP)
 description: Merge metadata cleanup in SQL Server replication doesn't have to wait for the Merge Agent. See how to run cleanup manually with stored procedures.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

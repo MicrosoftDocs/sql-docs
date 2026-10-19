@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_refreshsubscriptions (Transact-SQL)"
 description: sp_refreshsubscriptions adds subscriptions to new articles for all the existing Subscribers to an immediate-updating publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

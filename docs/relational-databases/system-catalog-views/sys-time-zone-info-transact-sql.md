@@ -1,8 +1,8 @@
 ---
 title: "sys.time_zone_info (Transact-SQL)"
 description: sys.time_zone_info returns information about supported time zones.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/25/2024
 ms.service: sql
 ms.subservice: system-objects

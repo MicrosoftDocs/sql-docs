@@ -1,8 +1,8 @@
 ---
 title: Data Transfer of Table-Valued Parameters
 description: Describe Data Transfer of Table-Valued Parameters
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 07/01/2020
 ms.service: sql
 ms.subservice: native-client

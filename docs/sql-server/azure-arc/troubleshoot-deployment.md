@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Deployment
 description: Describes how to troubleshoot SQL Server enabled by Azure Arc deployment.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 04/13/2026
 ms.topic: troubleshooting-general
 ---

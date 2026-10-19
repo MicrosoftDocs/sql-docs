@@ -1,9 +1,9 @@
 ---
 title: "DATETIMEFROMPARTS (Transact-SQL)"
 description: DATETIMEFROMPARTS returns a datetime value for the specified date and time arguments.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/21/2024
 ms.service: sql
 ms.subservice: t-sql

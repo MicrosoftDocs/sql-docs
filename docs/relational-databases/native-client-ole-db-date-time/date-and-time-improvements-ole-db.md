@@ -1,8 +1,8 @@
 ---
 title: "Date and Time Improvements (OLE DB)"
 description: "SQL Server Native Client Date and Time Improvements (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

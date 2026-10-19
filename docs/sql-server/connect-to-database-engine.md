@@ -1,8 +1,8 @@
 ---
 title: Connect to the SQL Server Database Engine
 description: Learn how to connect to the Database Engine used by SQL Server and Azure SQL services
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity

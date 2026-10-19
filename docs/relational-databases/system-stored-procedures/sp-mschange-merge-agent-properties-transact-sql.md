@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_MSchange_merge_agent_properties (Transact-SQL)"
 description: "Changes the properties of a Merge Agent job that runs at a SQL Server 2005 or later version Distributor."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

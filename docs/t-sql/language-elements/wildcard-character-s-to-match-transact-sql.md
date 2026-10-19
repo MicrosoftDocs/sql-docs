@@ -1,8 +1,8 @@
 ---
 title: "[ ] Wildcard to Match Characters (Transact-SQL)"
 description: Matches any single character within the specified range or set that is specified between brackets [ ].
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

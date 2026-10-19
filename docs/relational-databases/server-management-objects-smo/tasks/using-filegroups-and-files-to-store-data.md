@@ -1,8 +1,8 @@
 ---
 title: "Using Filegroups and Files to Store Data"
 description: "Using Filegroups and Files to Store Data"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

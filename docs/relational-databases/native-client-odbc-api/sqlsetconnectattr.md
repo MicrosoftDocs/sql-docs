@@ -1,8 +1,8 @@
 ---
 title: "SQLSetConnectAttr"
 description: Learn about connection attributes in SQLSetConnectAttr, including when they are set and possible values in the SQL Server Native Client ODBC driver.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: native-client

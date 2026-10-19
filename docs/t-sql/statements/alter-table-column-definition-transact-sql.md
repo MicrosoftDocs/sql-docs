@@ -1,8 +1,8 @@
 ---
 title: "column_definition (Transact-SQL)"
 description: Use ALTER TABLE column_definition syntax to specify the properties of a column that are added to a table.
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 02/11/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_flush_commit_table (Transact-SQL)"
 description: Flushes the in memory syscommittab to disk to help with Change Tracking cleanup.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

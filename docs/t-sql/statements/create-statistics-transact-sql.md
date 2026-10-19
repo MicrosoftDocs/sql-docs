@@ -1,9 +1,9 @@
 ---
 title: "CREATE STATISTICS (Transact-SQL)"
 description: Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: derekw, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: derekw, wiassaf
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: Connect, Query, and Export Data with PolyBase
 description: Guide to PolyBase and data virtualization across SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric. Describes feature availability, connection methods, how to choose between OPENROWSET, external tables, and BULK INSERT, type mapping, and quick start examples.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: polybase

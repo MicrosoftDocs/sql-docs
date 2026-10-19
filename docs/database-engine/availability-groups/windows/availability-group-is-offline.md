@@ -1,8 +1,8 @@
 ---
 title: "Availability group is offline"
 description: "Learn how to identify times when and possible reasons why an Always On availability group may go offline."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

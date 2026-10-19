@@ -3,7 +3,7 @@ title: FROM clause plus JOIN, APPLY, PIVOT (T-SQL)
 description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/08/2025
 ms.service: sql
 ms.subservice: t-sql

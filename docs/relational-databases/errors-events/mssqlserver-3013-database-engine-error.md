@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_3013
 description: "MSSQLSERVER_3013"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: sureshka, mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: sureshka
 ms.date: 03/23/2023
 ms.service: sql
 ms.subservice: supportability

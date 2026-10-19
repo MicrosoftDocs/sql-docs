@@ -1,8 +1,8 @@
 ---
 title: "Specifying Axes in XPath Queries (SQLXML)"
 description: Learn how to specify axes in SQLXML 4.0 XPath queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xml

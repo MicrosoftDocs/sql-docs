@@ -1,9 +1,9 @@
 ---
 title: "ERROR_SEVERITY (Transact-SQL)"
 description: "ERROR_SEVERITY (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/19/2025
 ms.service: sql
 ms.subservice: t-sql

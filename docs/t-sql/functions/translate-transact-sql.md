@@ -1,9 +1,9 @@
 ---
 title: "TRANSLATE (Transact-SQL)"
 description: "TRANSLATE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/23/2022
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: "DBCC CLONEDATABASE (Transact-SQL)"
 description: DBCC CLONEDATABASE generates a schema-only clone of a database by using DBCC CLONEDATABASE in order to investigate performance issues related to the query optimizer.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

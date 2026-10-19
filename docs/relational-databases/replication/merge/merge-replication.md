@@ -1,9 +1,9 @@
 ---
 title: Merge Replication
 description: Merge replication uses a snapshot of the publication database objects and data, and then tracks modifications at the Publisher and Subscribers with triggers.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/11/2025
 ms.service: sql
 ms.subservice: replication

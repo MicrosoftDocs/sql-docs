@@ -1,8 +1,8 @@
 ---
 title: CLR Integration Code Access Security
 description: For SQL Server CLR integration, CLR supports code access security for managed code, where permissions are granted to assemblies based on code identity.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/23/2025
 ms.service: sql
 ms.subservice: clr

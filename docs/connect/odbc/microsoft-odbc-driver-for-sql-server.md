@@ -3,7 +3,7 @@ title: Microsoft ODBC Driver for SQL Server
 description: The Microsoft ODBC Driver for SQL Server connects C and C++ applications to SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
 ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity

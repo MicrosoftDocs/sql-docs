@@ -1,8 +1,8 @@
 ---
 title: "DROP EXTERNAL TABLE (Transact-SQL)"
 description: DROP EXTERNAL TABLE removes an external table from a database, but doesn't delete the external data.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: hudequei, wiassaf
 ms.date: 05/13/2025
 ms.service: sql

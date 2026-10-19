@@ -1,9 +1,9 @@
 ---
 title: "FOR XML support for the timestamp data type"
 description: Learn about support for the timestamp data type when using the FOR XML clause in a SQL query.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/24/2024
 ms.service: sql
 ms.subservice: xml

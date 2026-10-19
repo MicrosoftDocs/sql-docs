@@ -3,7 +3,7 @@ title: T-SQL Differences Between SQL Server & Azure SQL Managed Instance
 description: This article discusses the Transact-SQL (T-SQL) differences between an Azure SQL Managed Instance and SQL Server.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, bonova, danil, randolphwest
+ms.reviewer: bonova, danil
 ms.date: 07/16/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

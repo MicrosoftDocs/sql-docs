@@ -3,7 +3,7 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sashan, moslake, vladiv, mathoma
+ms.reviewer: sashan, moslake, vladiv
 ms.date: 05/19/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: performance

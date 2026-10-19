@@ -1,8 +1,8 @@
 ---
 title: Upgrade to the Latest Version of SQL Server
 description: Step-by-step guidance for modernizing your data assets
-author: rwestMSFT
-ms.author: randolphwest
+author: abhims14
+ms.author: abhishekum
 ms.reviewer: ajithkr
 ms.date: 04/27/2026
 ms.service: sql

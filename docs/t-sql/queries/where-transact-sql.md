@@ -3,7 +3,7 @@ title: "WHERE (Transact-SQL)"
 description: The WHERE clause specifies the search condition for the rows returned by the query.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/01/2025
 ms.service: sql
 ms.subservice: t-sql

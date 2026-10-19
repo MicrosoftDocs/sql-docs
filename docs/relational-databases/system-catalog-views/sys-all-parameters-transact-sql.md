@@ -1,8 +1,8 @@
 ---
 title: "sys.all_parameters (Transact-SQL)"
 description: sys.all_parameters shows the union of all parameters that belong to user-defined or system objects.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/28/2025
 ms.service: sql
 ms.subservice: system-objects

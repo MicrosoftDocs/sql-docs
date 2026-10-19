@@ -3,7 +3,7 @@ title: Statistics
 description: The Query Optimizer uses statistics to create query plans that improve query performance. Learn about concepts and guidelines for using query optimization.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: derekw, randolphwest
+ms.reviewer: derekw
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance

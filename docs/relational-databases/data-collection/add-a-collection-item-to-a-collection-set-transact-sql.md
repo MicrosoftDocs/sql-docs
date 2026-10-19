@@ -1,9 +1,9 @@
 ---
 title: "Add collection item to collection set (T-SQL)"
 description: Add a collection item to an existing collection set using the stored procedures that are provided with the data collector.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropdistributiondb (Transact-SQL)"
 description: Drops a distribution database and files used by it if they aren't used by another database. This stored procedure runs at the Distributor on any database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Choose an encryption algorithm"
 description: Use this guidance to choose an encryption algorithm to help secure an instance of SQL Server, which supports several common algorithms.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: vanto
 ms.date: 09/22/2023
 ms.service: sql

@@ -3,7 +3,7 @@ title: "Step 4: Connect Resiliently to SQL with ADO.NET"
 description: Learn how to use retry logic to improve connection resiliency to a SQL database using ADO.NET.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra, randolphwest
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
 ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Provides steps to troubleshoot transaction log issues in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 03/24/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: development

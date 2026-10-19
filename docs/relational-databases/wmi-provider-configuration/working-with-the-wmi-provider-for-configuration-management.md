@@ -1,8 +1,8 @@
 ---
 title: "Use the WMI Provider for Configuration Management"
 description: Learn about the WMI Provider for Configuration Management, including binding, specifying a connection string, and permissions/server authentication.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "04/12/2019"
 ms.service: sql
 ms.subservice: wmi

@@ -3,7 +3,7 @@ title: "sys.sp_help_change_feed_table (Transact-SQL)"
 description: "The sys.sp_help_change_feed_table system stored procedure provides the provision or deprovision flow status of Azure Synapse Link for SQL or Fabric Mirrored Databases."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Disconnecting from a Data Source"
 description: "Disconnecting from a Data Source"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: native-client

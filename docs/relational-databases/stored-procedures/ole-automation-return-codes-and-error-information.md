@@ -3,7 +3,7 @@ title: "OLE automation return codes and error information"
 description: Learn the details about OLE automation return codes and how to convert error code information.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/21/2022
 ms.service: sql
 ms.subservice: stored-procedures

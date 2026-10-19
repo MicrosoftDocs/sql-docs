@@ -3,7 +3,7 @@ title: "TRIM (Transact-SQL)"
 description: "Removes the space character or other specified characters from the start and end of a string."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: "sp_update_jobstep (Transact-SQL)"
 description: sp_update_jobstep changes the settings for a step in a job in the SQL Server Agent service.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, wiassaf
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

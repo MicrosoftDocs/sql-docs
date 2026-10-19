@@ -1,8 +1,8 @@
 ---
 title: "Deprecated Features in SQL Server Replication"
 description: "Deprecated Features in SQL Server Replication"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

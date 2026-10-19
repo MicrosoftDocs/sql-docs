@@ -1,8 +1,8 @@
 ---
 title: "sys.backup_devices (Transact-SQL)"
 description: sys.backup_devices contains a row for each backup-device registered by using sp_addumpdevice or created in SQL Server Management Studio.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

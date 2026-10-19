@@ -3,8 +3,8 @@ title: "Quickstart: Python SQL Driver - mssql-python Connect to a SQL Database f
 description: Connect to a SQL database from a Jupyter Notebook in Visual Studio Code by using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 09/14/2026
+ms.reviewer: vanto
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -24,8 +24,10 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 ## Prerequisites
 
-- Python 3.10 or later
+- Python 3.10 or later.
+
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
@@ -40,45 +42,9 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 - A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
 
-- Install one-time operating system specific prerequisites.
+### Install operating system prerequisites
 
-  ### [Alpine](#tab/alpine-linux)
-
-  ```console
-  apk add libtool krb5-libs krb5-dev
-  ```
-
-  ### [Debian/Ubuntu](#tab/debianUbuntu-linux)
-
-  ```console
-  apt-get install -y libltdl7 libkrb5-3 libgssapi-krb5-2
-  ```
-
-  ### [RHEL](#tab/RHEL-linux)
-
-  ```console
-  dnf install -y libtool-ltdl krb5-libs
-  ```
-
-  ### [SUSE](#tab/SUSE-linux)
-
-  ```console
-  zypper install -y libltdl7 libkrb5-3 libgssapi-krb5-2
-  ```
-
-  ### [openSUSE](#tab/openSUSE-linux)
-
-  ```console
-  zypper install -y libltdl7
-  ```
-
-  ### [macOS](#tab/mac)
-
-  ```console
-  brew install openssl
-  ```
-
-   ---
+[!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
 [!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
@@ -124,9 +90,9 @@ code .
 
 ### Update pyproject.toml
 
-1. The [pyproject.toml](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) contains the metadata for your project.
+1. Open the [`pyproject.toml`](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) file in your editor. This file contains the metadata for your project.
 
-1. Update the description to be more descriptive.
+1. Update the `description` value.
 
    ```toml
    description = "A quick example using the mssql-python driver and Jupyter Notebooks."
@@ -136,9 +102,9 @@ code .
 
 ### Save the connection string
 
-1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to this example. Be sure to save and close it when you're done.
+1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to the following example.
 
-   ```output
+   ```text
    # Python-generated files
    __pycache__/
    *.py[oc]
@@ -154,16 +120,20 @@ code .
    .env
    ```
 
+1. Save and close `.gitignore`.
+
 1. In the current directory, create a new file named `.env`.
 
-1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the example here with your actual connection string value.
+1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the placeholders with your actual values.
 
    ```text
-   SQL_CONNECTION_STRING="Server=<server_name>;Database=<database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
+   SQL_CONNECTION_STRING="Server=<server>;Database=<database>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
    ```
 
+   The connection string depends on the type of SQL database you're connecting to. For Azure SQL Database or SQL database in Fabric, use the ODBC connection string from the connection strings tab, and adjust the authentication type for your scenario. For more information about connection string syntax, see [Connection strings for mssql-python](connection-strings.md).
+
    > [!TIP]  
-   > The connection string used here largely depends on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
+   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once with the [Azure CLI](/cli/azure/install-azure-cli) `az login` command, and use `ActiveDirectoryDefault`. `ActiveDirectoryDefault` reuses the cached credential.
 
 ### Create a Jupyter Notebook
 
@@ -200,28 +170,29 @@ code .
    ```python
    SQL_QUERY_ORDERS_BY_CUSTOMER = """
    SELECT TOP 5
-   c.CustomerID,
-   c.CompanyName,
-   COUNT(soh.SalesOrderID) AS OrderCount
-   FROM
-   SalesLT.Customer AS c
+       c.CustomerID,
+       c.CompanyName,
+       COUNT(soh.SalesOrderID) AS OrderCount
+   FROM SalesLT.Customer AS c
    LEFT OUTER JOIN SalesLT.SalesOrderHeader AS soh
-   ON c.CustomerID = soh.CustomerID
+       ON c.CustomerID = soh.CustomerID
    GROUP BY
-   c.CustomerID,
-   c.CompanyName
-   ORDER BY
-   OrderCount DESC;
+       c.CustomerID,
+       c.CompanyName
+   ORDER BY OrderCount DESC;
    """
 
    SQL_QUERY_SPEND_BY_CATEGORY = """
-   select top 10
-   pc.Name as ProductCategory,
-   SUM(sod.OrderQty * sod.UnitPrice) as Spend
-   from SalesLT.SalesOrderDetail sod
-   inner join SalesLT.SalesOrderHeader soh on sod.salesorderid = soh.salesorderid
-   inner join SalesLT.Product p on sod.productid = p.productid
-   inner join SalesLT.ProductCategory pc on p.ProductCategoryID = pc.ProductCategoryID
+   SELECT TOP 10
+       pc.Name AS ProductCategory,
+       SUM(sod.OrderQty * sod.UnitPrice) AS Spend
+   FROM SalesLT.SalesOrderDetail AS sod
+   INNER JOIN SalesLT.SalesOrderHeader AS soh
+       ON sod.SalesOrderID = soh.SalesOrderID
+   INNER JOIN SalesLT.Product AS p
+       ON sod.ProductID = p.ProductID
+   INNER JOIN SalesLT.ProductCategory AS pc
+       ON p.ProductCategoryID = pc.ProductCategoryID
    GROUP BY pc.Name
    ORDER BY Spend;
    """
@@ -258,14 +229,10 @@ code .
                records = cursor.fetchall()
 
                for r in records:
-                   table.add_row(f"{r.CustomerID}",
-                                   f"{r.CompanyName}", f"{r.OrderCount}")
+                   table.add_row(f"{r.CustomerID}", f"{r.CompanyName}", f"{r.OrderCount}")
 
                Console().print(table)
    ```
-
-   > [!TIP]  
-   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
 
 1. Use the **Run All** button at the top of the notebook to run the notebook.
 
@@ -273,7 +240,7 @@ code .
 
 ### Display results in a chart
 
-1. Review the output of the last cell. You should see a table with three columns and five rows.
+1. Review the output of the previous cell. You should see a table with three columns and five rows.
 
 1. Use the **+ Markdown** button at the top of the notebook to add a new markdown cell.
 
@@ -299,14 +266,10 @@ code .
 
 1. Use the **Execute Cell** button or `Ctrl+Alt+Enter` to run the cell.
 
-1. Review the results. Make this notebook your own.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build connection strings](build-connection-strings.md)
+1. Review the chart.
 
 ## Related content
 
+- [Build connection strings programmatically](build-connection-strings.md)
 - [Use mssql-python with pandas](pandas-integration.md)
 - [Use mssql-python with Apache Arrow](arrow-integration.md)

@@ -1,9 +1,9 @@
 ---
 title: "Administration of an availability Group (content index)"
 description: "A reference index linking you to articles describing the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/01/2024
 ms.service: sql
 ms.subservice: availability-groups

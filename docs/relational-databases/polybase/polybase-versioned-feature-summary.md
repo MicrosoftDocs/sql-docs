@@ -1,9 +1,9 @@
 ---
 title: "PolyBase features and limitations"
 description: "PolyBase features available for SQL Server products and services, including a list of T-SQL operators supported for pushdown and known limitations."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, hudequei
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 01/09/2024
 ms.service: sql
 ms.subservice: polybase

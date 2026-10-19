@@ -4,7 +4,7 @@ titleSuffix: SQL Server migration in Azure Arc
 description: Learn about the capabilities of SQL Server migration in Azure Arc.
 author: ajithkr-ms
 ms.author: ajithkr
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.topic: how-to
 ms.collection: ce-skilling-ai-copilot

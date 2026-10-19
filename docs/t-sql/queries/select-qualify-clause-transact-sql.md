@@ -3,7 +3,7 @@ title: "QUALIFY Clause (Transact-SQL)"
 description: The QUALIFY clause filters rows based on predicates that can reference window (analytic) functions, without requiring a subquery.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, jovanpop
+ms.reviewer: jovanpop
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: t-sql

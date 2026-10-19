@@ -3,7 +3,7 @@ title: Container and Local Development with mssql-django
 description: Set up local development environments, Docker containers, devcontainers, and CI pipelines for Django applications that use the mssql-django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

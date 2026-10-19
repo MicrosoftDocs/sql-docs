@@ -3,7 +3,7 @@ title: "Run Transact-SQL Statements Using Secure Enclaves"
 description: "Run Data Definition Language (DDL) statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 10/01/2026
 ms.service: sql
 ms.subservice: security

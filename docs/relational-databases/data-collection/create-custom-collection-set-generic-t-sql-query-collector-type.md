@@ -1,9 +1,9 @@
 ---
 title: "Create custom collection set - Generic T-SQL Query collector type"
 description: Create a custom collection set with collection items that use the Generic T-SQL Query collector type.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

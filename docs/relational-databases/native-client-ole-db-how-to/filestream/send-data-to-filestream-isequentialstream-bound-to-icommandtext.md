@@ -1,8 +1,8 @@
 ---
 title: "Data FILESTREAM, ISequentialStream ICommandText"
 description: "Send Data to FILESTREAM in SQL Server Native Client - ISequentialStream Bound to ICommandText"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

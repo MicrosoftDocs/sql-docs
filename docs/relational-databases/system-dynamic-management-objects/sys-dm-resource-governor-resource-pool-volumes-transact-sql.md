@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)"
 description: sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 02/10/2025
 ms.service: sql

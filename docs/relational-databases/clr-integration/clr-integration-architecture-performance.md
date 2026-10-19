@@ -1,8 +1,8 @@
 ---
 title: "Performance of CLR Integration Architecture"
 description: This article discusses design choices for Microsoft SQL Server integration with the .NET Framework CLR, including the compilation process and performance.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

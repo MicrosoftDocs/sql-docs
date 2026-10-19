@@ -1,8 +1,8 @@
 ---
 title: "TRY...CATCH (Transact-SQL)"
 description: "Implements error handling for Transact-SQL similar to the exception handling in C# and C++ languages."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: t-sql

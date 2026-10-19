@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Use Azure PowerShell script examples to help you create and manage Azure SQL Database resources.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/30/2024
 ms.service: azure-sql-database
 ms.subservice: development

@@ -1,8 +1,8 @@
 ---
 title: sys.views (Transact-SQL)
 description: sys.views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/24/2022"
 ms.service: sql
 ms.subservice: system-objects

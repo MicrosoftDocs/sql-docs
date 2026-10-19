@@ -1,9 +1,9 @@
 ---
 title: ALTER ENDPOINT (Transact-SQL)
 description: ALTER ENDPOINT (Transact-SQL)
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 04/22/2026
 ms.service: sql
 ms.subservice: t-sql

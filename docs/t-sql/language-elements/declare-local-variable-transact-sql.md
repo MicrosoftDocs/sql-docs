@@ -1,8 +1,8 @@
 ---
 title: "DECLARE @local_variable (Transact-SQL)"
 description: Transact-SQL reference for using DECLARE to define local variables for use in a batch or procedure.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 08/14/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "Numeric types"
 description: "Numeric types"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "Stored Procedures (Database Engine)"
 description: Learn how a stored procedure in SQL Server is a group of one or more Transact-SQL statements or a reference to a .NET Framework common runtime language method.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures

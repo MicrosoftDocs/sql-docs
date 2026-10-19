@@ -1,9 +1,9 @@
 ---
 title: "LocalDBGetInstances Function"
 description: LocalDBGetInstances returns all SQL Server Express LocalDB instances with the given version.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.topic: "reference"

@@ -1,9 +1,9 @@
 ---
 title: "COUNT (Transact-SQL)"
 description: "COUNT (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: t-sql

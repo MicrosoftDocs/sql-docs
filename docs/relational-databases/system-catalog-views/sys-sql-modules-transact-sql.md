@@ -1,8 +1,8 @@
 ---
 title: "sys.sql_modules (Transact-SQL)"
 description: sys.sql_modules returns a row for each object that is a SQL language-defined module in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf, srdjanmatin
 ms.date: 06/29/2026
 ms.service: sql

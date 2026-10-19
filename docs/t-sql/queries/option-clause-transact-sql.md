@@ -3,7 +3,7 @@ title: "OPTION clause (Transact-SQL)"
 description: The OPTION clause specifies that the indicated query hint should be used throughout the entire query.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 11/03/2025
 ms.service: sql
 ms.subservice: t-sql

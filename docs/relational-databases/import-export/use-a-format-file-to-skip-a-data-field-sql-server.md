@@ -1,8 +1,8 @@
 ---
 title: "Use a Format File to Skip a Data Field"
 description: You can use a format file with a data file that has more fields than table columns. It maps table columns to corresponding data fields and ignores extra fields.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: data-movement

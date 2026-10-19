@@ -2,9 +2,9 @@
 title: Specify a Hit Count
 titleSuffix: T-SQL debugger
 description: Learn how to set a hit count for a breakpoint, so that the debugger only breaks when the hit count is reached.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

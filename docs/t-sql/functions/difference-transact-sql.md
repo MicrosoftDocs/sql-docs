@@ -1,9 +1,9 @@
 ---
 title: "DIFFERENCE (Transact-SQL)"
 description: DIFFERENCE returns an integer value measuring the difference between the SOUNDEX values of two different character expressions.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/21/2025
 ms.service: sql
 ms.subservice: t-sql

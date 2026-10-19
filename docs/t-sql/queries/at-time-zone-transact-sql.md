@@ -3,7 +3,7 @@ title: AT TIME ZONE (Transact-SQL)
 description: AT TIME ZONE converts an input date to the corresponding datetimeoffset value in the target time zone.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql

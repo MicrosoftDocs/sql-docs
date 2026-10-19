@@ -3,7 +3,7 @@ title: "sp_change_feed_disable_db (Transact-SQL)"
 description: "The sys.sp_change_feed_disable_db system stored procedure disables the SQL change feed at the database level."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 12/17/2025
 ms.service: fabric
 ms.subservice: system-objects

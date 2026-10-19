@@ -1,8 +1,8 @@
 ---
 title: "Specify First and Last Triggers"
 description: "Specify First and Last Triggers"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/04/2017"
 ms.service: sql
 ms.topic: concept-article

@@ -1,9 +1,9 @@
 ---
 title: "sp_msx_get_account (Transact-SQL)"
 description: sp_msx_get_account lists information on the credential that the target server uses to log in to the master server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

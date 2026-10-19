@@ -1,8 +1,8 @@
 ---
 title: "Improve Access to Trace Data"
 description: "Improve Access to Trace Data"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/01/2017"
 ms.service: sql
 ms.topic: how-to

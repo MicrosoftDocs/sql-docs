@@ -1,9 +1,9 @@
 ---
 title: "COL_NAME (Transact-SQL)"
 description: "COL_NAME (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: sql
 ms.subservice: t-sql

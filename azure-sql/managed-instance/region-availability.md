@@ -1,8 +1,8 @@
 ---
 title: Feature Availability by Region
 description: Learn about feature availability by region for Azure SQL Managed Instance.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: 
 ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance

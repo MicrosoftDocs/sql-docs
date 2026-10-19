@@ -3,7 +3,7 @@ title: Monitor In-Memory OLTP storage
 description: Estimate and monitor In-Memory OLTP storage usage and capacity in Azure SQL Database; resolve capacity error 41823.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/01/2024
 ms.service: azure-sql-database
 ms.subservice: performance

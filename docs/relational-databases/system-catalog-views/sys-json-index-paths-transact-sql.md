@@ -3,7 +3,7 @@ title: "sys.json_index_paths (Transact-SQL)"
 description: "sys.json_index_paths contains the SQL/JSON paths for a JSON index."
 author: uc-msft
 ms.author: umajay
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_cdc_errors (Transact-SQL)"
 description: The Change Data Capture DMV sys.dm_cdc_errors returns one row for each error encountered during the change data capture log scan session.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

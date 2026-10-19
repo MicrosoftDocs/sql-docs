@@ -3,7 +3,7 @@ title: "backupset (Transact-SQL)"
 description: "Contains a row for each backup set. A backup set contains the backup from a single, successful backup operation."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/29/2024
 ms.service: sql
 ms.subservice: system-objects

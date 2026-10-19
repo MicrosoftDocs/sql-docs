@@ -3,7 +3,7 @@ title: "sys.sp_password (Transact-SQL)"
 description: sp_password adds or changes a password for a SQL Server login.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

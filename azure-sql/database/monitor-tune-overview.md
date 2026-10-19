@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: An overview of monitoring and performance tuning capabilities and methodology in Azure SQL Database and Azure SQL Managed Instance.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma, urmilano
+ms.reviewer: wiassaf, urmilano
 ms.date: 09/30/2026
 ms.service: azure-sql
 ms.subservice: monitoring

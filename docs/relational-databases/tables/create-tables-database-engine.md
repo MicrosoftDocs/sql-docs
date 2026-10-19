@@ -3,7 +3,7 @@ title: Create tables (Database Engine)
 description: Create a new table, name it, and add it to an existing database using the Database Engine.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: table-view-index

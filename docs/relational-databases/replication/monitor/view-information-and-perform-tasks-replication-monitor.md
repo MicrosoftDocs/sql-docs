@@ -1,8 +1,8 @@
 ---
 title: "View information & perform tasks (Replication Monitor)"
 description: Learn how to view information and perform various tasks using Replication Monitor in SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Administer a Peer-to-Peer topology (Replication SP)"
 description: Learn how to use replication stored procedures to administer a peer-to-peer topology, such as to add an article, or make a schema change.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,9 +1,9 @@
 ---
 title: "sys.sysobjects (Transact-SQL)"
 description: "Contains one row for each object that is created within a database, such as a constraint, default, log, rule, and stored procedure."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 09/10/2022
 ms.service: sql
 ms.subservice: system-objects

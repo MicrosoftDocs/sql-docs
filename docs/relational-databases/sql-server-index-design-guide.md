@@ -1,8 +1,8 @@
 ---
 title: Index Architecture and Design Guide
 description: Learn about designing efficient indexes in SQL Server and Azure SQL to achieve good database and application performance. Read about index architecture and best practices.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: dfurman, derekw
 ms.date: 09/14/2026
 ms.service: sql

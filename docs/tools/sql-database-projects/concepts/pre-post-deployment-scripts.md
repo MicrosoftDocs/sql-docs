@@ -1,8 +1,8 @@
 ---
 title: Pre-Deployment and Post-Deployment Scripts
 description: Add custom scripts for pre-deployment and post-deployment execution.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

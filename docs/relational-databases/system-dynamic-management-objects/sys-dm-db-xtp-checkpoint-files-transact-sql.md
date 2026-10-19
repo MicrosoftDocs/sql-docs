@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL)"
 description: sys.dm_db_xtp_checkpoint_files displays information about In-Memory OLTP checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: in-memory-oltp

@@ -1,8 +1,8 @@
 ---
 title: "sys.destination_data_spaces (Transact-SQL)"
 description: sys.destination_data_spaces (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/03/2021"
 ms.service: sql
 ms.subservice: system-objects

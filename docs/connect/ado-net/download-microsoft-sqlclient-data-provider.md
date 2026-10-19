@@ -3,7 +3,7 @@ title: Install, Update, and Deploy Microsoft.Data.SqlClient
 description: Install Microsoft.Data.SqlClient, choose a supported release, add optional feature packages, and prepare a .NET application for deployment.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

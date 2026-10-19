@@ -3,7 +3,7 @@ title: "UPDATE STATISTICS (Transact-SQL)"
 description: UPDATE STATISTICS updates query optimization statistics on a table or indexed view. Updating statistics ensures that queries compile with up-to-date statistics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: derekw, randolphwest
+ms.reviewer: derekw
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -2,9 +2,9 @@
 title: Set up a Development Environment with Dev Container Templates for Azure SQL Database
 titleSuffix: Azure SQL Database
 description: Create a local development environment for Azure SQL Database using dev containers.
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: wiassaf, randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: wiassaf
 ms.date: 09/16/2026
 ms.service: azure-sql-database
 ms.topic: quickstart

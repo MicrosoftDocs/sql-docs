@@ -1,8 +1,8 @@
 ---
 title: "XQuery and Static Typing"
 description: Learn about static type inference and static type checking in XQuery.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

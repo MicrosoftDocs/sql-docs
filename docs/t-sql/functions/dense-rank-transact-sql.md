@@ -3,7 +3,7 @@ title: DENSE_RANK (Transact-SQL)
 description: DENSE_RANK (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf, maghan
+ms.reviewer: wiassaf
 ms.date: 06/13/2026
 ms.service: sql
 ms.subservice: t-sql

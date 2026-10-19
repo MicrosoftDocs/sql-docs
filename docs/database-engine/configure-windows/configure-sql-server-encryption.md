@@ -3,7 +3,7 @@ title: Encrypt Connections by Importing a Certificate
 description: This article describes how to configure a SQL Server instance to enable encrypted connections by importing a certificate.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: sureshka, randolphwest
+ms.reviewer: sureshka
 ms.date: 11/20/2025
 ms.service: sql
 ms.subservice: configuration

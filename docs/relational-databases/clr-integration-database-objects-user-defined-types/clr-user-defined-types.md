@@ -1,8 +1,8 @@
 ---
 title: "CLR User-Defined Types"
 description: This article describes the process for creating user-defined types (UDTs) to store CLR objects in a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

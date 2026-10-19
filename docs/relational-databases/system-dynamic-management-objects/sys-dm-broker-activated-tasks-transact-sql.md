@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_broker_activated_tasks (Transact-SQL)"
 description: sys.dm_broker_activated_tasks returns a row for each stored procedure activated by Service Broker.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: system-objects

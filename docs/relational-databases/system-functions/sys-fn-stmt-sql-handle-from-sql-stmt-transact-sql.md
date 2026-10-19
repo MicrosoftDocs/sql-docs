@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)"
 description: Gets the stmt_sql_handle for a Transact-SQL statement under a given parameterization type (simple or forced).
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/08/2024
 ms.service: sql
 ms.subservice: system-objects

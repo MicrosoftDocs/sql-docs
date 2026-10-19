@@ -1,8 +1,8 @@
 ---
 title: "Connect to Azure SQL Database"
 description: "Connecting to an Azure SQL Database Using SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

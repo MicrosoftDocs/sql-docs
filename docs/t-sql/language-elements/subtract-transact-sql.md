@@ -1,8 +1,8 @@
 ---
 title: "- (Subtraction) (Transact-SQL)"
 description: Subtract two numbers using this built-in arithmetic subtraction operator.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

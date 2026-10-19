@@ -3,7 +3,7 @@ title: "sys.sp_remove_object_from_event_stream_group (Transact-SQL)"
 description: sys.sp_remove_object_from_event_stream_group removes a table from a stream group for the change event streaming feature.
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma,randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

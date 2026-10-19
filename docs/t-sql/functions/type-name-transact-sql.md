@@ -1,8 +1,8 @@
 ---
 title: "TYPE_NAME (Transact-SQL)"
 description: "TYPE_NAME (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql

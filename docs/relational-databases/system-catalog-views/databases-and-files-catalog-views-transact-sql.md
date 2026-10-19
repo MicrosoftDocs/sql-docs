@@ -1,8 +1,8 @@
 ---
 title: "Databases and Files Catalog Views (Transact-SQL)"
 description: Databases and Files Catalog Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "01/18/2016"
 ms.service: sql
 ms.subservice: system-objects

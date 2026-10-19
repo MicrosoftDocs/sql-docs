@@ -4,7 +4,7 @@ metadata:
   description: Answers to common questions about vector search and vector indexes in the SQL Database Engine.
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: pookam, randolphwest
+  ms.reviewer: pookam
   ms.date: 05/14/2026
   ms.service: sql
   ms.topic: faq

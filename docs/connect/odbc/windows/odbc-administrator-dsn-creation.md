@@ -3,7 +3,7 @@ title: ODBC Data Source Administrator DSN Options
 description: This article describes the options available when creating a new DSN connection to SQL Server using the ODBC Data Source Administrator application.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: davidengel, sunilbs, mcimfl
 ms.date: 01/16/2026
 ms.service: sql
 ms.subservice: connectivity

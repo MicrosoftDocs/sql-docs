@@ -1,8 +1,8 @@
 ---
 title: "Executing SQL Queries (SQLXMLOLEDB Provider)"
 description: Learn how to use the ClientSideXML and xml root properties of the SQLXMLOLEDB Provider when executing a client-side SQL query.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: SQL Trace
 description: SQL Trace
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 11/27/2018
 ms.service: sql
 ms.topic: concept-article

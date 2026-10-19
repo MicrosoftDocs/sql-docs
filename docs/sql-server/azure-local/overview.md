@@ -1,8 +1,8 @@
 ---
 title: SQL Server on Azure Local overview
 description: Learn how SQL Server on Azure Local runs database workloads on your infrastructure with connected or disconnected management and local data residency.
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/28/2026
 ms.topic: overview
 ms.service: sql

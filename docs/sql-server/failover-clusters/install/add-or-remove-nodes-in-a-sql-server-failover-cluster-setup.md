@@ -1,8 +1,8 @@
 ---
 title: "Add, remove nodes Failover Cluster Instance"
 description: This article shows you how to add or remove nodes in an existing SQL Server Always On failover cluster instance.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: failover-cluster-instance

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about tuning database applications and databases for performance in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/06/2025
 ms.service: azure-sql-database
 ms.subservice: performance

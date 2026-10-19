@@ -1,8 +1,8 @@
 ---
 title: "@@TRANCOUNT (Transact-SQL)"
 description: "@@TRANCOUNT (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "08/29/2017"
 ms.service: sql
 ms.subservice: t-sql

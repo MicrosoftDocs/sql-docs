@@ -3,7 +3,7 @@ title: SET IDENTITY_INSERT (Transact-SQL)
 description: Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, procha
+ms.reviewer: procha
 ms.date: 08/26/2026
 ms.service: sql
 ms.subservice: t-sql

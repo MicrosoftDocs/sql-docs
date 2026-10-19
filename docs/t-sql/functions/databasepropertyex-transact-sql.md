@@ -1,9 +1,9 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL)
 description: DATABASEPROPERTYEX returns the current setting of the specified database option or property.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 03/11/2026
 ms.service: sql
 ms.subservice: t-sql

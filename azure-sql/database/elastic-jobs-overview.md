@@ -3,7 +3,7 @@ title: Elastic Jobs Overview
 description: Learn about how you can use elastic jobs to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia, mathoma, randolphwest
+ms.reviewer: srinia
 ms.date: 09/10/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database

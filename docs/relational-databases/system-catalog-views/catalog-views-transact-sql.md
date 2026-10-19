@@ -1,8 +1,8 @@
 ---
 title: "System catalog views (Transact-SQL)"
 description: Catalog views return information that is used by the Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "ALTER PROCEDURE (Transact-SQL)"
 description: ALTER PROCEDURE (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: t-sql

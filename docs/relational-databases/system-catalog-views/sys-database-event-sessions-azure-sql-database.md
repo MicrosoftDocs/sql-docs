@@ -1,8 +1,8 @@
 ---
 title: "sys.database_event_sessions"
 description: The sys.database_event_sessions dynamic management view (DMV) lists all the database-scoped event session definitions that exist in the current database.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 07/03/2026
 ms.service: azure-sql-database
 ms.topic: "reference"

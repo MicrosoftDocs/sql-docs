@@ -1,8 +1,8 @@
 ---
 title: "Constructing a SQL Statement (ODBC)"
 description: Learn how the SQL Server Client ODBC driver deals with SQL statements, parsing some into Transact-SQL statements and passing others to the database unchanged.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

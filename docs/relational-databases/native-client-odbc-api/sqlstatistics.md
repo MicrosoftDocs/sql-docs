@@ -1,8 +1,8 @@
 ---
 title: "SQLStatistics"
 description: "SQLStatistics"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: native-client

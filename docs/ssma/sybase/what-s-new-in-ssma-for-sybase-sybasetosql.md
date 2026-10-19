@@ -1,8 +1,8 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for SAP ASE for each release.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball, subasak
 ms.date: 07/24/2026
 ms.service: sql

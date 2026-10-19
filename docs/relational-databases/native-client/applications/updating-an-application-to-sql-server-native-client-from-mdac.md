@@ -1,8 +1,8 @@
 ---
 title: "Update from MDAC"
 description: Upgrade from Windows Data Access Components to SQL Server Native Client, which exposes new features of SQL Server 2005 with backward compatibility.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 03/24/2026
 ms.service: sql
 ms.subservice: native-client

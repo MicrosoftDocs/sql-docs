@@ -3,7 +3,7 @@ title: Try Azure SQL Database for Free
 description: Guidance on how to deploy the Azure SQL Database offer for up to 10 free databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ivujic, reneamoso, amapatil, mathoma
+ms.reviewer: ivujic, reneamoso, amapatil
 ms.date: 03/10/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

@@ -1,8 +1,8 @@
 ---
 title: "BEGIN TRANSACTION (Transact-SQL)"
 description: Marks the starting point of an explicit, local transaction. Explicit transactions start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: dfurman
 ms.date: 12/17/2025
 ms.service: sql

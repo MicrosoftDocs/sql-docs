@@ -3,7 +3,7 @@ title: "sys.certificates (Transact-SQL)"
 description: sys.certificates returns a row for each certificate in the database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/21/2022
 ms.service: sql
 ms.subservice: system-objects

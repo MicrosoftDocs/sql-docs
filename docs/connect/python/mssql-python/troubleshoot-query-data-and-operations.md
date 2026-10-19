@@ -3,7 +3,7 @@ title: Troubleshoot Query, Data, and Operation Issues with mssql-python
 description: Diagnose and resolve mssql-python query, data type, performance, transaction, and bulk copy issues.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sumitsar
+ms.reviewer: vanto, sumitsar
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

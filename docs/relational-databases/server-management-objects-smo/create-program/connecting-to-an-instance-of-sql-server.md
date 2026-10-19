@@ -1,8 +1,8 @@
 ---
 title: "Connecting to an Instance of SQL Server"
 description: "Connecting to an Instance of SQL Server"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: 08/08/2023
 ms.service: sql
 ms.topic: "reference"

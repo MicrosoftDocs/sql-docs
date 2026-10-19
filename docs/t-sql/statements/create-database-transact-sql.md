@@ -1,9 +1,9 @@
 ---
 title: "CREATE DATABASE (Transact-SQL)"
 description: Create database syntax for SQL Server and all SQL Database Engine platforms.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, dnethi, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf, dnethi
 ms.date: 02/06/2026
 ms.service: sql
 ms.subservice: t-sql

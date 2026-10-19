@@ -1,8 +1,8 @@
 ---
 title: Data Migration Settings
 description: Learn how to write custom queries for data migration in SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

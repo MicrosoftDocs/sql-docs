@@ -3,7 +3,7 @@ title: Migrate from PostgreSQL to Microsoft SQL with mssql-python
 description: Guide for migrating Python applications from PostgreSQL to Microsoft SQL using the mssql-python driver, covering installation, SQL dialect differences, and data migration.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

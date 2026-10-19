@@ -1,8 +1,8 @@
 ---
 title: "ODBC"
 description: SQL Server supports ODBC, by using the SQL Server Native Client ODBC driver, as a native API for C and C++ applications that communicate with SQL Server.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "09/10/2026"
 ms.service: sql
 ms.subservice: native-client

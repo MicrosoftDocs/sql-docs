@@ -1,9 +1,9 @@
 ---
 title: "Backup Devices (SQL Server)"
 description: This article describes backup devices for a SQL Server database, including terminology and working with backup devices.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: backup-restore

@@ -3,7 +3,7 @@ title: "How to install custom security extensions"
 description: Learn about the new web portal that Reporting Services 2016 introduced. See how the resulting changes affect the implementation of custom security extensions.
 
 
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: extensions

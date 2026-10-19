@@ -3,7 +3,7 @@ title: "sys.sp_add_trusted_assembly (Transact-SQL)"
 description: Adds an assembly to the list of trusted assemblies for the server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Read (Database Engine)"
 description: "Read (Database Engine) by using CSharp"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "04/16/2020"
 ms.service: sql
 ms.subservice: t-sql

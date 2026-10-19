@@ -3,7 +3,7 @@ title: What's New in Microsoft.Data.SqlClient
 description: Find Microsoft.Data.SqlClient release notes, current stable and preview releases, major upgrade changes, and optional package releases.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -1,8 +1,8 @@
 ---
 title: Create Nonclustered Indexes
 description: This article shows you how to create nonclustered indexes by using SQL Server Management Studio or Transact-SQL.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: table-view-index

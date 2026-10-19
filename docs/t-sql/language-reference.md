@@ -1,9 +1,9 @@
 ---
 title: "Transact-SQL Reference (Database Engine)"
 description: This article gives the basics about how to find and use Transact-SQL (T-SQL) reference articles.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: t-sql

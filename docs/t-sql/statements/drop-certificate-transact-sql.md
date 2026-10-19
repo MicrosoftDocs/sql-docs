@@ -3,7 +3,7 @@ title: "DROP CERTIFICATE (Transact-SQL)"
 description: DROP CERTIFICATE removes a certificate from the database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/24/2025
 ms.service: sql
 ms.subservice: t-sql

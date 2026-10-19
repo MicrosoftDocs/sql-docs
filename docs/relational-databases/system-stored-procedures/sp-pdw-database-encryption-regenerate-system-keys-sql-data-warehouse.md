@@ -3,7 +3,7 @@ title: "sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analyti
 description: Use sp_pdw_database_encryption_regenerate_system_keys to rotate the certificate and database encryption key for internal databases that are encrypted when TDE is enabled on the appliance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

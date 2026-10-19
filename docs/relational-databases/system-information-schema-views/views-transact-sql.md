@@ -1,9 +1,9 @@
 ---
 title: VIEWS (Transact-SQL)
 description: "Returns one row for each view that can be accessed by the current user in the current database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 07/27/2022
 ms.service: sql
 ms.subservice: system-objects

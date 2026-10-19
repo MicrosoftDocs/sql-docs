@@ -8,7 +8,7 @@ metadata:
   ai-usage: ai-assisted
   author: nzagorac-ms
   ms.author: nzagorac
-  ms.reviewer: mathoma
+  ms.reviewer: vanto
   monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
   ms.custom: build-2025
 title: Frequently Asked Questions (FAQ) for Change Event Streaming (CES)

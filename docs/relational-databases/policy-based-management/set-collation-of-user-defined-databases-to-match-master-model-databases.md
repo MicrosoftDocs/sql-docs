@@ -1,8 +1,8 @@
 ---
 title: "Set the collation of user-defined databases to match master and model databases"
 description: Learn how to enable a policy to check if the collations of user-defined databases and system databases are the same.
-author: dzsquared
-ms.author: drskwier
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: vanto
 ms.date: 12/15/2023
 ms.service: sql

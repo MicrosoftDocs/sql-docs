@@ -3,7 +3,7 @@ title: View the dependencies of a table
 description: "View the dependencies of a table with SQL Server Management Studio or Transact-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/28/2024
 ms.service: sql
 ms.subservice: table-view-index

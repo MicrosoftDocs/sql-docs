@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database and SQL database in Fabric
 description: This article explains the Transport Layer Security (TLS) version choice and the Proxy versus Redirect settings for Azure SQL Database and SQL database in Microsoft Fabric.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 08/27/2025
 ms.service: azure-sql-database
 ms.subservice: connect

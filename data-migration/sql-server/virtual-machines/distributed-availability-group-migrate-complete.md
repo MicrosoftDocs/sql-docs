@@ -2,9 +2,9 @@
 title: Complete Migration Using a Distributed Availability Group
 titleSuffix: SQL Server on Azure VMs
 description: Use a distributed availability group to complete the migration of your SQL Server databases to SQL Server on Azure VMs.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: vanto
 ms.date: 09/17/2025
 ms.service: azure-vm-sql-server
 ms.subservice: migration-guide

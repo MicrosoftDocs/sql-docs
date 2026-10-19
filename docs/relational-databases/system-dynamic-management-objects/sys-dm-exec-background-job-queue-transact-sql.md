@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_background_job_queue (Transact-SQL)"
 description: sys.dm_exec_background_job_queue (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

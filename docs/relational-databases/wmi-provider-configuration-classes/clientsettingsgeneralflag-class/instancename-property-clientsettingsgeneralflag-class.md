@@ -1,8 +1,8 @@
 ---
 title: "InstanceName Property (ClientSettingsGeneralFlag)"
 description: "InstanceName Property (ClientSettingsGeneralFlag Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: wmi

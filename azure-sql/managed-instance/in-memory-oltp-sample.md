@@ -3,7 +3,7 @@ title: In-memory sample
 description: Try in-memory technologies in Azure SQL Managed Instance with OLTP and columnstore sample.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, srinia, strrodic 
+ms.reviewer: srinia, strrodic
 ms.date: 12/29/2023
 ms.service: azure-sql-managed-instance
 ms.subservice: performance

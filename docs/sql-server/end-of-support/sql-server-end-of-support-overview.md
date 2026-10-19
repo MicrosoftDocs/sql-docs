@@ -1,9 +1,9 @@
 ---
 title: "End of Support Options"
 description: Learn about the different options available for SQL Server products that reach end of support, including SQL Server 2014.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma, wiassaf
+author: adbadram
+ms.author: adbadram
+ms.reviewer: wiassaf
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: install

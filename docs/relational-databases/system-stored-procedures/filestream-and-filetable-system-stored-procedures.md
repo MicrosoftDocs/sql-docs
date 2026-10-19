@@ -1,9 +1,9 @@
 ---
 title: "FILESTREAM and FileTable System Stored Procedures (Transact-SQL)"
 description: "FILESTREAM and FileTable System stored procedures (Transact-SQL)"
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

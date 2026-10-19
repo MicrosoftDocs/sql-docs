@@ -1,8 +1,8 @@
 ---
 title: "FileTable functions, stored procedures, views"
 description: "FileTable DDL, functions, stored procedures, and views"
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: filestream

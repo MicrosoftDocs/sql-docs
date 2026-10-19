@@ -3,7 +3,7 @@ title: Microsoft SQL Drivers and Frameworks
 description: Choose a driver, provider, framework, or data access library for applications that connect to Microsoft SQL products.
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: connectivity

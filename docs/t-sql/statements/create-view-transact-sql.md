@@ -1,8 +1,8 @@
 ---
 title: "CREATE VIEW (Transact-SQL)"
 description: "CREATE VIEW creates a virtual table whose contents are defined by a query."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 04/09/2025
 ms.service: sql
 ms.subservice: t-sql

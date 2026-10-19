@@ -3,7 +3,7 @@ title: "Delete columns from a table"
 description: Learn how to delete table columns in the SQL Server Database Engine with SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: table-view-index

@@ -1,9 +1,9 @@
 ---
 title: "managed_backup.sp_backup_config_basic (Transact-SQL)"
 description: Configures the SQL Server Managed Backup to Azure basic settings for a specific database or for an instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

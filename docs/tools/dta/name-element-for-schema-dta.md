@@ -1,8 +1,8 @@
 ---
 title: "Name Element for Schema (DTA)"
 description: In the dta utility, the Name element for schema the contains name of the schema. This article describes that element.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

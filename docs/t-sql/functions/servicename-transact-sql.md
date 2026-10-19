@@ -3,7 +3,7 @@ title: "@@SERVICENAME (Transact-SQL)"
 description: "@@SERVICENAME returns the name of the registry key under which the SQL Server Database Engine is running."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: t-sql

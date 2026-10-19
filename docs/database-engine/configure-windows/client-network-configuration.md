@@ -1,8 +1,8 @@
 ---
 title: "Client Network Configuration"
 description: Find out how client computers connect to an instance of SQL Server on a network. Learn about the tools that you can use to manage clients.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

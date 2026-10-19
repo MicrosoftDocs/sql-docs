@@ -1,8 +1,8 @@
 ---
 title: Search Document Properties with Search Property Lists
 description: Search Document Properties with Search Property Lists
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

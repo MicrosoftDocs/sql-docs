@@ -3,7 +3,7 @@ title: Database Identifiers
 description: Get acquainted with database identifiers. Learn about their collation, various classes, delimiting requirements, and naming rules.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/08/2026
 ms.service: sql
 ms.subservice: configuration

@@ -3,7 +3,7 @@ title: JSON_CONTAINS (Transact-SQL)
 description: The JSON_CONTAINS function searches for a SQL value in a path in a JSON document.
 author: uc-msft
 ms.author: umajay
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql

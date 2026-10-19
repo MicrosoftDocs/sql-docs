@@ -1,8 +1,8 @@
 ---
 title: "Rename a Computer That Hosts a Stand-Alone Instance of SQL Server"
 description: When you rename a computer that hosts an instance of SQL Server, update the system metadata stored in sys.servers.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

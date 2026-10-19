@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_redirect_publisher (Transact-SQL)"
 description: "sp_redirect_publisher specifies a redirected publisher for an existing publisher and/or database pair."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -3,7 +3,7 @@ title: "SELECT (Transact-SQL)"
 description: The SELECT statement retrieves rows from the database and enables the selection of rows or columns from tables in the SQL Server Database Engine.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: jovanpop, randolphwest, wiassaf
+ms.reviewer: jovanpop, wiassaf
 ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql

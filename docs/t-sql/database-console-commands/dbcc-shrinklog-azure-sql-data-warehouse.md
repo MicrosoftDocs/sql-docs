@@ -1,8 +1,8 @@
 ---
 title: DBCC SHRINKLOG - Azure Synapse Analytics
 description: DBCC SHRINKLOG reduces the size of the transaction log across the appliance for the current Azure Synapse Analytics database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: t-sql

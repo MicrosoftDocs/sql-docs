@@ -1,8 +1,8 @@
 ---
 title: Full-Text and Semantic Search Dynamic Management Views and Functions
 description: Learn about dynamic management views and functions that are related to Full-Text Search and semantic search.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

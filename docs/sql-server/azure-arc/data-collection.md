@@ -3,7 +3,7 @@ title: Data collection and reporting
 description: Explains data that Microsoft collects for reporting for SQL Server enabled by Azure Arc, and how to configure related settings.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/17/2024
 ms.topic: concept-article
 ms.custom: references_regions

@@ -1,8 +1,8 @@
 ---
 title: Rowsets (Native Client OLE DB provider)
 description: Enable all data providers to expose result set data in tabular form. In OLE DB, use the rowset feature, a set of rows that contains columns of data.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

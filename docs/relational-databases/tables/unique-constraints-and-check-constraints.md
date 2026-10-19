@@ -3,7 +3,7 @@ title: "Unique constraints and check constraints"
 description: UNIQUE constraints and CHECK constraints are two types of constraints that can be used to enforce data integrity.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/29/2023
 ms.service: sql
 ms.subservice: table-view-index

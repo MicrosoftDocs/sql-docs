@@ -1,9 +1,9 @@
 ---
 title: "Replication Distribution Agent"
 description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 05/30/2025
 ms.service: sql
 ms.subservice: replication

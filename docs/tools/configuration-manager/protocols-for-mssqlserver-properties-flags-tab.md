@@ -1,8 +1,8 @@
 ---
 title: "Protocols for MSSQLSERVER Properties (Flags Tab)"
 description: Learn how to use the Flags tab on the Protocols for MSSQLSERVER Properties dialog box, to view or specify the protocol encryption and to hide instance options.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

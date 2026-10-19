@@ -3,7 +3,7 @@ title: "Quickstart: Connect and Query with the Microsoft OLE DB Driver"
 description: Connect a C++ application to a SQL database, run a parameterized query, and verify the result with the Microsoft OLE DB Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
+ms.reviewer: vanto, davidengel, sunilbs, vbeiranvand
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

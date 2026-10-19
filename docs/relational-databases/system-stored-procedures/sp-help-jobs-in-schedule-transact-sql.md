@@ -1,9 +1,9 @@
 ---
 title: "sp_help_jobs_in_schedule (Transact-SQL)"
 description: Returns information about the jobs that a particular schedule is attached to.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

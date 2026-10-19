@@ -1,9 +1,9 @@
 ---
 title: "sp_describe_first_result_set (Transact-SQL)"
 description: Returns the metadata for the first possible result set of the Transact-SQL batch.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 10/23/2025
 ms.service: sql
 ms.subservice: system-objects

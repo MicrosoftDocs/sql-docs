@@ -3,7 +3,7 @@ title: GRANT (Transact-SQL)
 description: Grant permissions on a securable to a principal.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/31/2024
 ms.service: sql
 ms.subservice: t-sql

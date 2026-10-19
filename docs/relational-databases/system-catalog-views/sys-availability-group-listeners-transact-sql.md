@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_group_listeners (Transact-SQL)"
 description: sys.availability_group_listeners returns a row for each availability group listener configuration in the WSFC cluster.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

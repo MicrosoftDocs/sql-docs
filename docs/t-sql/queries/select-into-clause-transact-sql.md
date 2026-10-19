@@ -3,7 +3,7 @@ title: "INTO Clause (Transact-SQL)"
 description: "SELECT - INTO Clause (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/02/2026
 ms.service: sql
 ms.subservice: t-sql

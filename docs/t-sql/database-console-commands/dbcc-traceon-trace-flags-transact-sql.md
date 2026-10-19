@@ -1,8 +1,8 @@
 ---
 title: Trace Flags (Transact-SQL)
 description: Learn how to set specific server characteristics or to alter a particular behavior in SQL Server, using DBCC TRACEON.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf
 ms.date: 09/28/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: Analyze T-SQL Code to Find Defects
 description: How to detect antipatterns and defects with code analysis.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

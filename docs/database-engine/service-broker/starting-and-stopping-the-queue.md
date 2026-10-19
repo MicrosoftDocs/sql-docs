@@ -1,9 +1,9 @@
 ---
 title: Starting and Stopping the Queue
 description: "Use the ALTER QUEUE statement to start and stop a Service Broker queue."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: configuration

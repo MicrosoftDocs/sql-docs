@@ -1,8 +1,8 @@
 ---
 title: "sys.internal_tables (Transact-SQL)"
 description: sys.internal_tables (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/07/2025
 ms.service: sql
 ms.subservice: system-objects

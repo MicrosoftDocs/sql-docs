@@ -3,7 +3,7 @@ title: Migrate from django-mssql-backend to mssql-django
 description: Migrate a Django project from django-mssql-backend to mssql-django with updated ENGINE and package configuration.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -1,8 +1,8 @@
 ---
 title: "Running Stored Procedures"
 description: A stored procedure is an executable object stored in a database. SQL Server supports stored procedures and extended stored procedures.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

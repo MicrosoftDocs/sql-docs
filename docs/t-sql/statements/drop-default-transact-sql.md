@@ -1,8 +1,8 @@
 ---
 title: "DROP DEFAULT (Transact-SQL)"
 description: DROP DEFAULT (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "05/10/2017"
 ms.service: sql
 ms.subservice: t-sql

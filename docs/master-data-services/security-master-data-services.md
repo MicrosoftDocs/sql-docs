@@ -3,7 +3,7 @@ title: Security
 description: Learn about security in Master Data Services, including types of users, how to set security, security in the add-in for Excel, and related tasks.
 author: meetdeepak
 ms.author: dkhare
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/05/2026
 ms.service: sql
 ms.subservice: master-data-services

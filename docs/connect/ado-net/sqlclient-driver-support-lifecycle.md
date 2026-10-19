@@ -3,7 +3,7 @@ title: SqlClient Driver Support Lifecycle
 description: Review supported Microsoft.Data.SqlClient releases, support dates, target frameworks, operating systems, and database compatibility.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, paulmedynski, cmalhotra
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

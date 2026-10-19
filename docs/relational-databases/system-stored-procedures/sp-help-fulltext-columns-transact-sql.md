@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_fulltext_columns (Transact-SQL)"
 description: sp_help_fulltext_columns returns the columns designated for full-text indexing.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

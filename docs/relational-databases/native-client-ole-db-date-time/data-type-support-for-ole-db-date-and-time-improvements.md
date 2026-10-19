@@ -1,8 +1,8 @@
 ---
 title: "Data type support for date and time improvements (Native Client OLE DB provider)"
 description: "Data type support for date and time improvements (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

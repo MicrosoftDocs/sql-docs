@@ -3,7 +3,7 @@ title: ROW_NUMBER (Transact-SQL)
 description: Transact-SQL reference for the ROW_NUMBER function. This function numbers the output of a result set.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf
+ms.reviewer: wiassaf
 ms.date: 06/15/2026
 ms.service: sql
 ms.subservice: t-sql

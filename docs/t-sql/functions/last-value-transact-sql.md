@@ -1,9 +1,9 @@
 ---
 title: "LAST_VALUE (Transact-SQL)"
 description: Returns the last value in an ordered set of values.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: kendalv, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: kendalv
 ms.date: 12/23/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "Common Language Runtime (CLR) Host Protection Attributes"
 description: The CLR provides a mechanism to annotate managed APIs in the .NET Framework with attributes such as SharedState, Synchronization, and ExternalProcessMgmt.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

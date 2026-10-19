@@ -1,8 +1,8 @@
 ---
 title: "SHORTEST PATH (SQL Graph)"
 description: "The SHORTEST_PATH function can be used inside MATCH with graph node and edge tables to find the shortest path between nodes/entities."
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/28/2023
 ms.service: sql
 ms.topic: reference

@@ -3,7 +3,7 @@ title: DBCC SHRINKFILE (Transact-SQL)
 description: DBCC SHRINKFILE shrinks the size of a database file.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, dpless, randolphwest, dfurman
+ms.reviewer: umajay, dpless, dfurman
 ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: Create and configure a serverless database
 description: Learn how to create a new serverless database, move an existing database to the serverless compute tier, and modify serverless configuration in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendalv, moslake, mathoma, dfurman
+ms.reviewer: kendalv, moslake, dfurman
 ms.date: 09/14/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

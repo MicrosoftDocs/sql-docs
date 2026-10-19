@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
 description: sp_estimated_rowsize_reduction_for_vardecimal estimates the reduction in the average size of rows if you enable vardecimal storage format on a table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

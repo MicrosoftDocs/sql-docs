@@ -1,8 +1,8 @@
 ---
 title: float and real (Transact-SQL)
 description: "float and real (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: t-sql

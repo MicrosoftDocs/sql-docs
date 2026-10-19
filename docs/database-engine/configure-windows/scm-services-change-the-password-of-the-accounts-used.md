@@ -1,8 +1,8 @@
 ---
 title: Change the Password of the Accounts Used (SQL Server Configuration Manager)
 description: "Find out how to change the password of the accounts that the Database Engine and the SQL Server Agent use. Learn when it's important to change the password."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_xe_file_target_read_file (Transact-SQL)"
 description: "The sys.fn_xe_file_target_read_file system function reads files created by the Extended Events asynchronous file target."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 08/24/2026
 ms.service: sql

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Use the Azure portal to create alerts, which can trigger notifications or automation when the conditions you specify are met.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, srsaluru, dfurman
+ms.reviewer: srsaluru, dfurman
 ms.date: 10/07/2026
 ms.service: azure-sql-database
 ms.subservice: performance

@@ -2,8 +2,8 @@
 title: XML Input File Reference
 titleSuffix: Database Engine Tuning Advisor
 description: This article summarizes the elements available for an XML input file that Database Engine Tuning Advisor uses to tune a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

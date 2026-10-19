@@ -3,7 +3,7 @@ title: "IS [NOT] NULL (Transact-SQL)"
 description: Determines whether a specified expression is NULL.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/16/2025
 ms.service: sql
 ms.subservice: t-sql

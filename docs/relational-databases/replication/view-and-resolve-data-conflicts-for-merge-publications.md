@@ -1,8 +1,8 @@
 ---
 title: "View & resolve data conflicts (Merge)"
 description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

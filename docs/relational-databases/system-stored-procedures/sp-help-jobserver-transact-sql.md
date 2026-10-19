@@ -1,9 +1,9 @@
 ---
 title: "sp_help_jobserver (Transact-SQL)"
 description: sp_help_jobserver returns information about the server for a given job.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

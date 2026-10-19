@@ -3,7 +3,7 @@ title: Working with Transient Errors
 description: Learn how to troubleshoot, diagnose, and prevent a SQL connection error or transient error when connecting to Azure SQL Database, SQL database in Fabric, Azure SQL Managed Instance, and Azure Synapse Analytics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sureshka, davidengel, mathoma, vanto
+ms.reviewer: sureshka, davidengel, vanto
 ms.date: 03/24/2026
 ms.service: azure-sql-database
 ms.subservice: development

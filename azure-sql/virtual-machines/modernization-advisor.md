@@ -3,7 +3,7 @@ title: Modernization Advisor (Preview)
 description: This article explains the Modernization Advisor, which helps you assess whether Azure SQL Managed Instance is a more cost-effective option for your business than SQL Server on Azure VMs. 
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/28/2025
 ms.service: azure-vm-sql-server
 ms.subservice: management

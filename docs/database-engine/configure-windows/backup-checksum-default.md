@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: backup checksum default"
 description: Find out about the backup checksum default option. See how to use it to turn backup checksum on or off during SQL Server backup and restore operations.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "PolyBase Connectivity Configuration (Transact-SQL)"
 description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: polybase

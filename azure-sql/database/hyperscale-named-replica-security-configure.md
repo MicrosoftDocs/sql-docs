@@ -3,7 +3,7 @@ title: Configure Hyperscale Named Replicas Security to Allow Isolated Access
 description: Learn the security considerations for configuring and managing Hyperscale named replicas so that a user can access the named replica but not other replicas.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: atsingh, vanto, randolphwest
+ms.reviewer: atsingh, vanto
 ms.date: 01/02/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out

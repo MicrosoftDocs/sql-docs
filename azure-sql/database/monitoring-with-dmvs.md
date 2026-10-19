@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL database in Microsoft Fabric
 description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database and SQL database in Fabric.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, mathoma, randolphwest
+ms.reviewer: dfurman
 ms.date: 09/30/2026
 ms.service: azure-sql-database
 ms.subservice: monitoring

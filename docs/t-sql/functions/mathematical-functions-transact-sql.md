@@ -1,9 +1,9 @@
 ---
 title: "Mathematical Functions (Transact-SQL)"
 description: Mathematical Transact-SQL functions in the SQL Server Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 12/16/2024
 ms.service: sql
 ms.subservice: t-sql

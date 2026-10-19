@@ -1,9 +1,9 @@
 ---
 title: "Tutorial: Design Your First Relational Database Using Visual Studio Code"
 description: Learn to design your first relational database in Azure SQL Database using the MSSQL extension for Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: timioshin, maghan, drskwier, mathoma
+author: bluefooted
+ms.author: pamela
+ms.reviewer: timioshin, drskwier
 ms.date: 02/17/2026
 ms.service: azure-sql-database
 ms.subservice: development

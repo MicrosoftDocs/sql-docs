@@ -1,8 +1,8 @@
 ---
 title: Data Type Conversion (Database Engine)
 description: Learn about SQL Server data type compatibility and implicit and explicit conversion.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf
 ms.date: 10/13/2026
 ms.service: sql

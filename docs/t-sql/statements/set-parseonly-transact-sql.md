@@ -3,7 +3,7 @@ title: "SET PARSEONLY (Transact-SQL)"
 description: "Examines the syntax of each Transact-SQL statement and returns any error messages without compiling or executing the statement."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/06/2023
 ms.service: sql
 ms.subservice: t-sql

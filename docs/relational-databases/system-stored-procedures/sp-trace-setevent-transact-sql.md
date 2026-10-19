@@ -1,9 +1,9 @@
 ---
 title: "sp_trace_setevent (Transact-SQL)"
 description: Adds or removes an event or event column to a trace.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

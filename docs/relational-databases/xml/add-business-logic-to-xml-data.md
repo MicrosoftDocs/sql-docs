@@ -1,9 +1,9 @@
 ---
 title: "Add Business Logic to XML Data"
 description: Learn how you can add business logic to XML data by applying XSL transformations, using domain-specific constraints on data, or by triggering validation rules.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

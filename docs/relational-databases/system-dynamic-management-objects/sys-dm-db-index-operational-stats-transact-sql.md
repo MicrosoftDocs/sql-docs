@@ -1,8 +1,8 @@
 ---
 title: sys.dm_db_index_operational_stats (Transact-SQL)
 description: sys.dm_db_index_operational_stats (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 07/08/2026
 ms.service: sql

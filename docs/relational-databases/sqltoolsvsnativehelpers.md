@@ -1,8 +1,8 @@
 ---
 title: "SqlToolsVSNativeHelpers"
 description: "SqlToolsVSNativeHelpers"
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/17/2017"
 ms.service: sql
 ms.topic: "reference"

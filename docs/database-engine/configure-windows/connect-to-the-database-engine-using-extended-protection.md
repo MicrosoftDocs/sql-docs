@@ -3,7 +3,7 @@ title: Connect to the Database Engine Using Extended Protection
 description: Learn how Extended Protection uses service binding and channel binding to help prevent authentication relay attacks. See how to enable this feature.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: maghan, randolphwest
+ms.reviewer: vanto
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: configuration

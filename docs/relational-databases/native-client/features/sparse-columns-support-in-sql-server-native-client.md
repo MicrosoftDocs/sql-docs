@@ -1,8 +1,8 @@
 ---
 title: "Sparse columns support"
 description: "Sparse Columns Support in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client

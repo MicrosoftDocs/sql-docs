@@ -1,8 +1,8 @@
 ---
 title: "IF...ELSE (Transact-SQL)"
 description: Transact-SQL language reference for IF-ELSE statements to provide control flow.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/17/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "sys.sp_datatype_info_90 (Transact-SQL)"
 description: sp_datatype_info_90 returns information about the data types supported by the current environment.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.topic: "reference"

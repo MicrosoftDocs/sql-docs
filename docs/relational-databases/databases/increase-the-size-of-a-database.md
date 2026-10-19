@@ -3,7 +3,7 @@ title: "Increase the Size of a Database"
 description: "Increase the Size of a Database"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/21/2024
 ms.service: sql
 ms.topic: how-to

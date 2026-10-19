@@ -1,9 +1,9 @@
 ---
 title: "Event Notifications"
 description: Event notifications send information about events to a Service Broker service.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.topic: concept-article

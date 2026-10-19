@@ -1,8 +1,8 @@
 ---
 title: Article Issues
 description: Article Issues in SQL Server replication lists the conditions detected for articles and actions to take. Review each issue before you generate your first snapshot.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

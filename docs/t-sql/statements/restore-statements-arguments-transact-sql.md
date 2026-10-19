@@ -1,8 +1,8 @@
 ---
 title: "RESTORE Arguments (Transact-SQL)"
 description: RESTORE Statements - Arguments that are described in the Syntax sections of the RESTORE T-SQL syntax.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/10/2022
 ms.service: sql
 ms.subservice: t-sql

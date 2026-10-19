@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the features and documentation improvements for Azure SQL Database made in previous years. (Archive)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, maghan
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

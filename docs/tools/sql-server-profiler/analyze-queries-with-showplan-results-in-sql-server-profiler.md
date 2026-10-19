@@ -2,8 +2,8 @@
 title: Analyze Queries with SHOWPLAN Results
 titleSuffix: SQL Server Profiler
 description: Find out how to extract Showplan events from a trace so that SQL Server Profiler displays query plan information. View a table of Showplan trace events.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

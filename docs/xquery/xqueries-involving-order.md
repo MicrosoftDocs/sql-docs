@@ -1,8 +1,8 @@
 ---
 title: "XQueries Involving Order"
 description: View examples of XQueries that are based on the sequence in which nodes appear in a document.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml

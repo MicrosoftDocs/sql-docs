@@ -1,8 +1,8 @@
 ---
 title: "Columnstore indexes - Query performance"
 description: "Columnstore index query performance recommendations for achieving the fast query performance."
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 04/04/2025
 ms.service: sql
 ms.subservice: table-view-index

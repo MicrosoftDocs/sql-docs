@@ -1,8 +1,8 @@
 ---
 title: "Using Autofetch with ODBC Cursors"
 description: "Using Autofetch with ODBC Cursors"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -8,7 +8,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.service: azure-sql-database
 ms.subservice: monitoring
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ---
 
 

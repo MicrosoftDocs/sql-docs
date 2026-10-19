@@ -3,7 +3,7 @@ title: "sys.sp_dropsrvrolemember (Transact-SQL)"
 description: sp_dropsrvrolemember removes a SQL Server login, Windows user, or Windows group, from a fixed server role.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

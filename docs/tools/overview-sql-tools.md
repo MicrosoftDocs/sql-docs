@@ -1,8 +1,8 @@
 ---
 title: SQL Tools Overview
 description: SQL query and management tools for SQL Server, Azure SQL (Azure SQL database, Azure SQL managed instance, SQL virtual machines), and Azure Synapse Analytics.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: erinstellato, iqrashaikh, mbarickman, drskwier, roblescarlos
 ms.date: 03/09/2026
 ms.service: sql

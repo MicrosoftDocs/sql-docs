@@ -1,8 +1,8 @@
 ---
 title: "DBCC SQLPERF (Transact-SQL)"
 description: DBCC SQLPERF provides transaction log space usage statistics for all databases.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2025
 ms.service: sql
 ms.subservice: t-sql

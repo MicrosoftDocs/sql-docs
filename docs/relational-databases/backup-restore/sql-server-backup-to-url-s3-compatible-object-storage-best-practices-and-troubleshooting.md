@@ -1,8 +1,8 @@
 ---
 title: "Back up to URL Best Practices & Troubleshooting for S3-Compatible Object Storage"
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: 03/06/2026
 ms.service: sql
 ms.subservice: backup-restore

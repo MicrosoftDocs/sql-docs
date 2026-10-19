@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_cached_plans (Transact-SQL)"
 description: sys.dm_exec_cached_plans (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: system-objects

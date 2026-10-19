@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_1101"
 description: "MSSQLSERVER_1101"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "08/23/2021"
 ms.service: sql
 ms.subservice: supportability

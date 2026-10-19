@@ -3,7 +3,7 @@ title: Failover Groups Overview & Best Practices
 description: Failover groups let you manage geo-replication and coordinated failover of all user databases on Azure SQL Managed Instance.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 09/11/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

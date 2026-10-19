@@ -3,7 +3,7 @@ title: Configure service endpoint policies
 description: Configure Azure Storage service endpoint policies to protect Azure SQL Managed Instance against exfiltration to unauthorized Azure Storage accounts.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/31/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: security

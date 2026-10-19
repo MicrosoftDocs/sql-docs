@@ -3,7 +3,7 @@ title: "sp_set_firewall_rule"
 description: "sp_set_firewall_rule creates or updates the server-level firewall settings for your Azure SQL Database server."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

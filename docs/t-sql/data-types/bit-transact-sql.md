@@ -1,9 +1,9 @@
 ---
 title: "bit (Transact-SQL)"
 description: The bit data type is an integer data type that can take a value of 1, 0, or NULL, representing Boolean values.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: t-sql

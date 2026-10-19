@@ -3,7 +3,7 @@ title: In-memory technology samples
 description: Try in-memory technologies in Azure SQL Database with OLTP and columnstore samples.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, srinia, strrodic
+ms.reviewer: srinia, strrodic
 ms.date: 09/20/2024
 ms.service: azure-sql-database
 ms.subservice: performance

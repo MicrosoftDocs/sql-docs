@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to calculate the size of the subnet where you intend to deploy Azure SQL Managed Instance.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, bonova, srbozovi, wiassaf
+ms.reviewer: bonova, srbozovi, wiassaf
 ms.date: 09/19/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

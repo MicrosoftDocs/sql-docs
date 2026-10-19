@@ -1,8 +1,8 @@
 ---
 title: "Use Table-Valued Parameters (ODBC)"
 description: "Use Table-Valued Parameters (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "06/30/2023"
 ms.service: sql
 ms.subservice: native-client

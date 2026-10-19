@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_waiting_tasks (Transact-SQL)"
 description: sys.dm_os_waiting_tasks returns information about the wait queue of tasks that are waiting on some resource.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 09/17/2025
 ms.service: sql

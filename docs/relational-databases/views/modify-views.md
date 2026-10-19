@@ -3,7 +3,7 @@ title: "Modify views"
 description: "After you define a view, you can modify its definition in the Database Engine without dropping and re-creating the view."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/10/2023
 ms.service: sql
 ms.subservice: table-view-index

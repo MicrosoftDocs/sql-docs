@@ -1,8 +1,8 @@
 ---
 title: "Data type synonyms (Transact-SQL)"
 description: "Data type synonyms (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "07/23/2017"
 ms.service: sql
 ms.subservice: t-sql

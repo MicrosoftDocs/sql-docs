@@ -1,8 +1,8 @@
 ---
 title: "Create Synonyms"
 description: "Create Synonyms"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "02/01/2022"
 ms.service: sql
 ms.subservice: t-sql

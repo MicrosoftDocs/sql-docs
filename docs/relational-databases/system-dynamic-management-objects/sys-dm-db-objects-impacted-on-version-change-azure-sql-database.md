@@ -2,8 +2,8 @@
 title: "sys.dm_db_objects_impacted_on_version_change"
 titleSuffix: Azure SQL Database & SQL database in Fabric
 description: The sys.dm_db_objects_impacted_on_version_change DMV provides an early warning system to determine objects that will be affected by a major release upgrade.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: wiassaf
 ms.date: 09/11/2025
 ms.service: azure-sql-database

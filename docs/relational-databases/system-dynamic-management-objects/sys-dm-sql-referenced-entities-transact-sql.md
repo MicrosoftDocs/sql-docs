@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_sql_referenced_entities (Transact-SQL)"
 description: sys.dm_sql_referenced_entities (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/21/2026"
 ms.service: sql
 ms.subservice: system-objects

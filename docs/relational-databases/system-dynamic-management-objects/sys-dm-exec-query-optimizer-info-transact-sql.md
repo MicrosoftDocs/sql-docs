@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_query_optimizer_info (Transact-SQL)"
 description: sys.dm_exec_query_optimizer_info returns detailed statistics about the operation of the SQL Server query optimizer.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: derekw
 ms.date: 07/05/2024
 ms.service: sql

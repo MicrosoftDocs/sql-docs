@@ -3,7 +3,7 @@ title: "sys.dm_pdw_exec_requests (Transact-SQL)"
 description: sys.dm_pdw_exec_requests holds information about all requests currently or recently active in Azure Synapse Analytics dedicated SQL pools.
 author: jacinda-eng
 ms.author: jacindaeng
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 12/16/2024
 ms.service: sql
 ms.subservice: data-warehouse

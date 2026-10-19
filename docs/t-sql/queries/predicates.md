@@ -3,7 +3,7 @@ title: "Predicates"
 description: Predicates are expressions, used in search conditions, that evaluate to TRUE, FALSE, or UNKNOWN.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/09/2024
 ms.service: sql
 ms.subservice: t-sql

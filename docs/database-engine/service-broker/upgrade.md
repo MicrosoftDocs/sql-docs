@@ -1,9 +1,9 @@
 ---
 title: "Upgrade (Service Broker)"
 description: "Service Broker operations do not change when a database or an instance of the Database Engine is upgraded."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "sp_help_fulltext_catalog_components (Transact-SQL)"
 description: Returns a list of all components used for all full-text catalogs in the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

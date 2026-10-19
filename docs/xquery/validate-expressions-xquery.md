@@ -1,8 +1,8 @@
 ---
 title: "Validate Expressions (XQuery)"
 description: Learn about the validate expression in XQuery.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xml

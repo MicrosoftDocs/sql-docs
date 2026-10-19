@@ -3,7 +3,7 @@ title: "Rename Columns (Database Engine)"
 description: Learn how to rename a table column in the SQL Server Database Engine with SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: sql
 ms.subservice: table-view-index

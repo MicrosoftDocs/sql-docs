@@ -1,8 +1,8 @@
 ---
 title: "KILL STATS JOB (Transact-SQL)"
 description: "KILL STATS JOB (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "07/27/2017"
 ms.service: sql
 ms.subservice: t-sql

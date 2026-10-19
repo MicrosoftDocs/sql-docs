@@ -1,9 +1,9 @@
 ---
 title: "PERCENT_RANK (Transact-SQL)"
 description: PERCENT_RANK calculates the relative rank of a row within a group of rows in the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 04/25/2024
 ms.service: sql
 ms.subservice: t-sql

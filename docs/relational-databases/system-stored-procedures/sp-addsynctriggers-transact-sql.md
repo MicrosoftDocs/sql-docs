@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addsynctriggers (Transact-SQL)"
 description: Creates triggers at the Subscriber used with all types of updatable subscriptions.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

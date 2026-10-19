@@ -4,7 +4,7 @@ titleSuffix: Azure SQL & SQL database in Fabric
 description: Automatic tuning analyzes SQL query and automatically adapts to user workload.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: nnikolic, mathoma, derekw
+ms.reviewer: nnikolic, derekw
 ms.date: 02/13/2025
 ms.service: azure-sql
 ms.subservice: performance

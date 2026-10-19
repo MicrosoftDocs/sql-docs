@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)"
 description: "Removes an existing binding between a database and a resource pool for purposes of tracking In-Memory OLTP memory usage."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

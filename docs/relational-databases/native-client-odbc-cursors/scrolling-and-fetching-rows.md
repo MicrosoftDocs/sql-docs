@@ -1,8 +1,8 @@
 ---
 title: "Scrolling and Fetching Rows"
 description: "Scrolling and Fetching Rows"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client

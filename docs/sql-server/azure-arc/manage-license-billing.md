@@ -3,7 +3,7 @@ title: Manage Licensing and Billing
 description: This article explains how to manage SQL Server licensing options. It also demonstrates how SQL Server enabled by Azure Arc can be billed from Microsoft Azure.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest, maghan, mathoma
+ms.reviewer: vanto
 ms.date: 04/01/2026
 ai-usage: ai-assisted
 ms.topic: how-to

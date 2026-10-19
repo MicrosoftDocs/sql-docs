@@ -1,8 +1,8 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL)
 description: "DATEDIFF_BIG (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "01/12/2021"
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: SQL Projects Tools
 description: Compare SQL project tools available in Visual Studio Code, SSMS, Visual Studio, and the command line.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 07/14/2026
 ms.service: sql

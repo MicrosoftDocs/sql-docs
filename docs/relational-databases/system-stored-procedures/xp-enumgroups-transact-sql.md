@@ -1,9 +1,9 @@
 ---
 title: "xp_enumgroups (Transact-SQL)"
 description: "Provides a list of local Microsoft Windows groups or a list of global groups that are defined in a specified Windows domain."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: Collation and Unicode Support
 description: Learn about collation and Unicode support in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/07/2026
 ms.service: sql
 ms.topic: concept-article

@@ -3,7 +3,7 @@ title: Using PIVOT and UNPIVOT
 description: Learn about the Transact-SQL PIVOT and UNPIVOT relational operators. Use these operators on SELECT statements to change a table-valued expression into another table.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: t-sql

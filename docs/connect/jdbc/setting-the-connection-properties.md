@@ -3,7 +3,7 @@ title: Set the Connection Properties
 description: The connection string properties for the Microsoft JDBC Driver for SQL Server can be specified in various ways.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, machavan, sunilbs
+ms.reviewer: davidengel, machavan, sunilbs
 ms.date: 09/10/2026
 ai-usage: ai-assisted
 ms.service: sql

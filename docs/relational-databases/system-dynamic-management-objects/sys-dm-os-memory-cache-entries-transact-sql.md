@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_memory_cache_entries (Transact-SQL)"
 description: "sys.dm_os_memory_cache_entries returns information about all entries in caches in SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/11/2024
 ms.service: sql
 ms.subservice: system-objects

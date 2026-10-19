@@ -1,8 +1,8 @@
 ---
 title: "datetime Data Type Conversions (ODBC)"
 description: Learn about data type conversions in ODBC, which are already defined by ODBC or are consistent extensions of ODBC.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

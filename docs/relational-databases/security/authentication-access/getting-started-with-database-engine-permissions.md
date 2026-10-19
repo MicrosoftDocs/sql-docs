@@ -3,7 +3,7 @@ title: "Get Started with Database Engine Permissions"
 description: Review some basic security concepts in SQL Server and learn about a typical implementation of Database Engine permissions.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/28/2025
 ms.service: sql
 ms.subservice: security

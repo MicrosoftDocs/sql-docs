@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to configure advance notifications before planned maintenance windows in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scottkim, urosmil, mathoma
+ms.reviewer: scottkim, urosmil
 ms.date: 06/19/2024
 ms.service: azure-sql-database
 ms.subservice: service-overview

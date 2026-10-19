@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_servershareddrives (Transact-SQL)"
 description: "sys.fn_servershareddrives (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects

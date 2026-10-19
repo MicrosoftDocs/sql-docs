@@ -1,8 +1,8 @@
 ---
 title: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 description: "OBJECT_SCHEMA_NAME (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: t-sql

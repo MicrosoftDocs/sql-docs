@@ -1,9 +1,9 @@
 ---
 title: "VECTOR_SEARCH (Transact-SQL)"
 description: VECTOR_SEARCH search for vectors similar to a given query vectors using an approximate nearest neighbors vector search algorithm.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: pookam, randolphwest, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: pookam, wiassaf
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "sys.sp_data_source_objects (Transact-SQL)"
 description: "sp_data_source_objects returns list of table objects that are available to be virtualized."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 06/19/2026
 ms.service: sql

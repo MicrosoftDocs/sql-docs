@@ -3,7 +3,7 @@ title: High availability and disaster recovery checklist
 description: Learn about the recommended user configurations that you can implement to maximize availability and ensure recovery for Azure SQL Managed Instance.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: urmilano, mathoma
+ms.reviewer: urmilano
 ms.date: 06/15/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

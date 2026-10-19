@@ -1,8 +1,8 @@
 ---
 title: "Record Generation Process (SQLXML)"
 description: Learn the details of the XML Bulk Load record generation process in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

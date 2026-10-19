@@ -1,8 +1,8 @@
 ---
 title: "ROLLBACK TRANSACTION (Transact-SQL)"
 description: This statement rolls back an explicit or implicit transaction to the beginning of the transaction, or to a savepoint inside the transaction.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: dfurman
 ms.date: 12/17/2025
 ms.service: sql

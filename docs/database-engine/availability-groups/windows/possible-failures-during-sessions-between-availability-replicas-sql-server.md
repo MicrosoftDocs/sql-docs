@@ -1,9 +1,9 @@
 ---
 title: "Reasons for connectivity failures between availability replicas"
 description: "This article describes the different possible reasons for a connection failure between replicas participating in an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 08/10/2022
 ms.service: sql
 ms.subservice: availability-groups

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Connect to Azure SQL Managed Instance with SQL Server Management Studio (SSMS) by using a point-to-site connection from an on-premises client computer.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, bonova, jovanpop
+ms.reviewer: bonova, jovanpop
 ms.date: 04/27/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

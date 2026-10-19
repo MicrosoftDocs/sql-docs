@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tran_locks (Transact-SQL)"
 description: sys.dm_tran_locks returns information about currently active lock manager resources in the Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 06/12/2026
 ms.service: sql

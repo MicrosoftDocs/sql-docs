@@ -1,8 +1,8 @@
 ---
 title: "Use Data-at-Execution Parameters (ODBC)"
 description: "Managing text and image Columns - Use Data-at-Execution Parameters"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

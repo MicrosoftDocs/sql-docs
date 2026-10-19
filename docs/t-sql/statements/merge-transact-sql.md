@@ -3,7 +3,7 @@ title: "MERGE (Transact-SQL)"
 description: The MERGE statement runs insert, update, or delete operations on a target table from the results of a join with a source table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: emtehran, randolphwest
+ms.reviewer: emtehran
 ms.date: 01/27/2026
 ms.service: sql
 ms.subservice: t-sql

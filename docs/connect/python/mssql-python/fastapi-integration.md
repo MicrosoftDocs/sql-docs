@@ -3,7 +3,7 @@ title: Use mssql-python with FastAPI
 description: Learn how to build REST APIs with FastAPI and mssql-python for Microsoft SQL and Azure SQL database access.
 author: mahyon
 ms.author: mahyon
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/25/2026
 ms.service: sql
 ms.subservice: connectivity

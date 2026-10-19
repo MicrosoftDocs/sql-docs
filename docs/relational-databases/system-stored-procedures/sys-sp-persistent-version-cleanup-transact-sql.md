@@ -1,8 +1,8 @@
 ---
 title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 description: sys.sp_persistent_version_cleanup manually starts the persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR).
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 06/19/2026
 ms.service: sql

@@ -1,9 +1,9 @@
 ---
 title: "ERROR_PROCEDURE (Transact-SQL)"
 description: ERROR_PROCEDURE returns the name of the stored procedure or trigger where an error occurs.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: t-sql

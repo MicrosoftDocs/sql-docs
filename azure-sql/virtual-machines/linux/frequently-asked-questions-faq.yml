@@ -4,7 +4,7 @@ metadata:
   description: This article provides answers to frequently asked questions about running SQL Server on Linux virtual machines.
   services: virtual-machines-linux
   documentationcenter: ''
-  author: MashaMSFT
+  author: bluefooted
   tags: azure-service-management
   ms.custom: linux-related-content
   ms.service: azure-vm-sql-server
@@ -12,7 +12,7 @@ metadata:
   ms.topic: faq
   ms.workload: iaas-sql-server
   ms.date: 09/23/2026
-  ms.author: mathoma
+  ms.author: pamela
   ai-usage: ai-assisted
 title: Frequently asked questions for SQL Server on Linux virtual machines
 summary: |

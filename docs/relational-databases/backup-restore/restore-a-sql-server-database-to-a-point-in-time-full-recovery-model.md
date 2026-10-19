@@ -1,8 +1,8 @@
 ---
 title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model)"
 description: "Restore a SQL Server Database to a Point in Time (Full Recovery Model)"
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: backup-restore

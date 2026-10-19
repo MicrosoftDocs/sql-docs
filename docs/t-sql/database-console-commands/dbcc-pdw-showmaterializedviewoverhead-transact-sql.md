@@ -3,7 +3,7 @@ title: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)"
 description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD Displays the number of incremental changes in the base tables that are held for materialized views for Azure Synapse Analytics.
 author: XiaoyuMSFT
 ms.author: xiaoyul
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: data-warehouse

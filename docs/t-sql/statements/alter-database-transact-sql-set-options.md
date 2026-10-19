@@ -1,9 +1,9 @@
 ---
 title: ALTER DATABASE SET Options (Transact-SQL)
 description: Learn how to set database options such as Automatic tuning, encryption, and Query Store settings.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: t-sql

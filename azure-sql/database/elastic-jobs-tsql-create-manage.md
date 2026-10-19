@@ -3,7 +3,7 @@ title: Create and manage elastic jobs by using Transact-SQL (T-SQL)
 description: Learn how to create an elastic job agent and run scripts across many databases with an elastic job agent, using Transact-SQL (T-SQL).
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia, mathoma
+ms.reviewer: srinia
 ms.date: 03/17/2025
 ms.service: azure-sql-database
 ms.subservice: elastic-jobs

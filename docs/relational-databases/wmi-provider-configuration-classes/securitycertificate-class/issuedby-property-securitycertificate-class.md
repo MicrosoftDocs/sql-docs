@@ -1,8 +1,8 @@
 ---
 title: "IssuedBy Property (SecurityCertificate)"
 description: "IssuedBy Property (SecurityCertificate Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: wmi

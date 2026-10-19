@@ -1,8 +1,8 @@
 ---
 title: TABLES (Transact-SQL)
 description: "TABLES (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/20/2019"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Import and Export Data from SQL Server and Azure SQL Database"
 description: You can use Transact-SQL, command-line tools, and wizards to import and export data in SQL Server and Azure SQL Database in various data formats.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 03/02/2026
 ms.service: sql
 ms.subservice: data-movement

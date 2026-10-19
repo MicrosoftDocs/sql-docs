@@ -3,7 +3,7 @@ title: System Requirements (ODBC Driver for SQL Server)
 description: This lists the system requirements for the ODBC Driver for SQL Server on Linux and macOS operating systems.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
 ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity

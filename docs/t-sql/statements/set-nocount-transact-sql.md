@@ -3,7 +3,7 @@ title: "SET NOCOUNT (Transact-SQL)"
 description: Controls whether a message that shows the number of rows affected by a Transact-SQL statement or stored procedure is returned after the result set.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jopilov, randolphwest
+ms.reviewer: jopilov
 ms.date: 06/07/2024
 ms.service: sql
 ms.subservice: t-sql

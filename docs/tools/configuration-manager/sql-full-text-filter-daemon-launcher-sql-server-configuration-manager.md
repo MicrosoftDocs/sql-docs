@@ -1,8 +1,8 @@
 ---
 title: "SQL Full-Text Filter Daemon Launcher (SQL Server Configuration Manager)"
 description: Learn about the SQL Full-text Filter Daemon Launcher, a service that SQL Server uses to start a process that it requires for full-text search.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

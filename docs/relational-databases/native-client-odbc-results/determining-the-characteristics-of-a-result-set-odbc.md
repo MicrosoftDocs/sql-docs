@@ -1,8 +1,8 @@
 ---
 title: "Characteristics of a Result Set (ODBC)"
 description: "Determining the Characteristics of a Result Set (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

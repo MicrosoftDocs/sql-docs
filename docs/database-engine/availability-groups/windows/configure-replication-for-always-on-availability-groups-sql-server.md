@@ -1,9 +1,9 @@
 ---
 title: "Configure Replication With Availability Groups"
 description: "Learn the detailed process required to configure SQL Server replication with your Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 01/08/2025
 ms.service: sql
 ms.subservice: availability-groups

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_special_columns (Transact-SQL)"
 description: sp_special_columns returns the optimal set of columns that uniquely identify a row in the table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

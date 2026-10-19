@@ -1,8 +1,8 @@
 ---
 title: Use a DNN listener instead of a VNN listener for availability groups on SQL Server VMs
 description: Redirect customers to using the distributed network name (DNN) listener instead of the virtual network name (VNN) listener.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.topic: include
 ---
 

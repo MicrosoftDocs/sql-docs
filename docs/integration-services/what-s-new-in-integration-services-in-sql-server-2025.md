@@ -1,7 +1,7 @@
 ---
 title: "What's New in Integration Services in SQL Server 2025"
 description: What's New in Integration Services in SQL Server 2025
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: integration-services

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_configure_peerconflictdetection (Transact-SQL)"
 description: sp_configure_peerconflictdetection configures conflict detection for a publication that is involved in a peer-to-peer transactional replication topology.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

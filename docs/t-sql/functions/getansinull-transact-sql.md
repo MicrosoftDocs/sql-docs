@@ -1,8 +1,8 @@
 ---
 title: "GETANSINULL (Transact-SQL)"
 description: "GETANSINULL (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql

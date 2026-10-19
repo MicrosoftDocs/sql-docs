@@ -1,8 +1,8 @@
 ---
 title: System Dynamic Management Views and Functions (Transact-SQL)
 description: Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/07/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "USE (Transact-SQL)"
 description: Changes the database context to the specified database or database snapshot.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

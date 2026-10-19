@@ -1,8 +1,8 @@
 ---
 title: "Execution Related Dynamic Management Views and Functions (Transact-SQL)"
 description: Execution Related Dynamic Management Views and Functions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/04/2026
 ms.service: sql
 ms.subservice: system-objects

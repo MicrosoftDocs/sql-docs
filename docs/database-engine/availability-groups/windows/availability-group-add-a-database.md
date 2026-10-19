@@ -1,8 +1,8 @@
 ---
 title: "Add a database to an availability group"
 description: "Add a database to an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: open objects"
 description: "Learn about the disabled configuration option open objects. See how SQL Server now manages the number of open database objects."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

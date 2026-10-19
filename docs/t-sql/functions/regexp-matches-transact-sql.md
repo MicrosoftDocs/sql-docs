@@ -1,9 +1,9 @@
 ---
 title: "REGEXP_MATCHES (Transact-SQL)"
 description: Returns a table of captured substrings that match a regular expression pattern to a string. If no match is found, the function returns no row.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql

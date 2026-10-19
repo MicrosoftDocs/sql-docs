@@ -1,8 +1,8 @@
 ---
 title: "sys.parameters (Transact-SQL)"
 description: sys.parameters (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/28/2025
 ms.service: sql
 ms.subservice: system-objects

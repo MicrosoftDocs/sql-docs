@@ -1,8 +1,8 @@
 ---
 title: "PowerShell Cmdlets for availability groups"
 description: "A reference for the different PowerShell cmdlets available to manage Always On availability groups. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/30/2017"
 ms.service: sql
 ms.subservice: availability-groups

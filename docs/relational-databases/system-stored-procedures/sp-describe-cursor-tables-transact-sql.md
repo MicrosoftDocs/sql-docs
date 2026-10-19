@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_describe_cursor_tables (Transact-SQL)"
 description: sp_describe_cursor_tables reports the objects or base tables referenced by a server cursor.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

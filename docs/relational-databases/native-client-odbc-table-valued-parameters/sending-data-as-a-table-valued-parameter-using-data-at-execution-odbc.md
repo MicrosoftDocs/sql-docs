@@ -1,8 +1,8 @@
 ---
 title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
 description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "06/30/2023"
 ms.service: sql
 ms.subservice: native-client

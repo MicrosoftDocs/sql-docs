@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_50000"
 description: "SQL Server Native Client Error MSSQLSERVER_50000"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

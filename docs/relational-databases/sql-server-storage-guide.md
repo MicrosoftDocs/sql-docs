@@ -1,8 +1,8 @@
 ---
 title: SQL Server I/O Fundamentals
 description: Learn how storage choice and caching affect SQL Server performance.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 04/29/2026
 ms.service: sql
 ms.subservice: supportability

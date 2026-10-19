@@ -3,7 +3,7 @@ title: Rename a Database
 description: Learn how to rename a user-defined database in SQL Server, Azure SQL Database, or Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: sql
 ms.topic: how-to

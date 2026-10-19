@@ -3,7 +3,7 @@ title: "sys.dm_os_memory_health_history"
 description: sys.dm_os_memory_health_history provides a recent history of memory usage by the database engine.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 10/03/2025
 ms.service: azure-sql-database
 ms.topic: reference

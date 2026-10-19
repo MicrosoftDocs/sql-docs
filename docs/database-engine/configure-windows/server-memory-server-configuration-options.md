@@ -1,8 +1,8 @@
 ---
 title: "Server Memory Configuration Options"
 description: Learn how to configure the amount of memory the SQL Server Memory Manager allocates to SQL Server processes. View memory management approaches and examples.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: wiassaf
 ms.date: 08/26/2025
 ms.service: sql

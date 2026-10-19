@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Full-Text Indexing
 description: Troubleshoot Full-Text Indexing
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

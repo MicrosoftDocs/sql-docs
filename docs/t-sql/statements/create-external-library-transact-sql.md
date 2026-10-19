@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/27/2026
 ms.service: sql
 ms.subservice: machine-learning

@@ -3,7 +3,7 @@ title: Error Handling and SQLSTATE Codes for mssql-python
 description: Reference for mssql-python exception classes, error handling patterns, and SQLSTATE code mappings.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

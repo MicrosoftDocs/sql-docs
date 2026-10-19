@@ -1,9 +1,9 @@
 ---
 title: "Editions and Supported Features of SQL Server 2019"
 description: "Editions and supported features of SQL Server 2019"
-author: "rwestMSFT"
-ms.author: "randolphwest"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/27/2025
 ms.service: sql
 ms.subservice: release-landing

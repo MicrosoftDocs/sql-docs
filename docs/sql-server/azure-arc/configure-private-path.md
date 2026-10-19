@@ -1,8 +1,8 @@
 ---
 title: Connect with Private Path
 description: This article describes how to connect SQL Server enabled by Azure Arc to Azure with a private path.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 10/06/2026
 ms.topic: how-to #Don't change
 # customer intent: As a data engineer, I want to use a private path to connect to Azure Arc so I can avoid internet traffic.

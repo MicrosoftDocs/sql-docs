@@ -1,9 +1,9 @@
 ---
 title: "managed_backup.sp_backup_config_schedule (Transact-SQL)"
 description: Configures automated or custom scheduling options for SQL Server Managed Backup to Azure.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "Map Db2 schemas to SQL Server schemas (Db2ToSQL)"
 description: Learn how to customize the mapping between Db2 schemas and SQL Server databases in SSMA for Db2.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

@@ -1,8 +1,8 @@
 ---
 title: "sys.http_endpoints (Transact-SQL)"
 description: sys.http_endpoints returns a row for each endpoint created in the server that uses the HTTP protocol.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

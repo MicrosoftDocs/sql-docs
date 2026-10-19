@@ -1,8 +1,8 @@
 ---
 title: Write Pages in the Database Engine
 description: Learn how the SQL Server Database Engine writes data and index pages to the buffer cache and physical storage subsystem.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 03/31/2025
 ms.service: sql
 ms.topic: concept-article

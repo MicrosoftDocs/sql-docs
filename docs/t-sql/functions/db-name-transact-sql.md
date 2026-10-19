@@ -3,7 +3,7 @@ title: "DB_NAME (Transact-SQL)"
 description: The DB_NAME function returns the name of a specified database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/04/2025
 ms.service: sql
 ms.subservice: t-sql

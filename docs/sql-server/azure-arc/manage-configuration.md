@@ -3,7 +3,7 @@ title: Configure SQL Server
 description: Learn how to manage configuration options for SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/22/2026
 ai-usage: ai-assisted
 ms.topic: how-to

@@ -1,8 +1,8 @@
 ---
 title: "CREATE QUEUE (Transact-SQL)"
 description: CREATE QUEUE (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 04/05/2024
 ms.service: sql
 ms.subservice: t-sql

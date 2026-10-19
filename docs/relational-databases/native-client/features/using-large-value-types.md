@@ -1,8 +1,8 @@
 ---
 title: "Using Large Value Types"
 description: Learn how SQL Server Native Client deals with large value data types that previously required special handling.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

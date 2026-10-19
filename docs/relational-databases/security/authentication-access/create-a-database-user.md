@@ -3,7 +3,7 @@ title: "Create a Database User"
 description: Learn how to create the most common types of database users by using SQL Server Management Studio or Transact-SQL.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/30/2025
 ms.service: sql
 ms.subservice: security

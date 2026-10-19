@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_enable_db (Transact-SQL)"
 description: "The sys.sp_change_feed_enable_db system stored procedure enables the current database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, randolphwest, ajayj
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

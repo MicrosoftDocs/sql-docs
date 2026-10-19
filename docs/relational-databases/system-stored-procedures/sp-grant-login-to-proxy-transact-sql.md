@@ -3,7 +3,7 @@ title: "sp_grant_login_to_proxy (Transact-SQL)"
 description: sp_grant_login_to_proxy grants a security principal access to a proxy.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

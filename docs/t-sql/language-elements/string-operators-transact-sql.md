@@ -1,8 +1,8 @@
 ---
 title: "String operators (Transact-SQL)"
 description: "String operators (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: jopilov
 ms.date: 06/06/2023
 ms.service: sql

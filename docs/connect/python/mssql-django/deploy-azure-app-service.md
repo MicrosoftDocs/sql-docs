@@ -3,7 +3,7 @@ title: Deploy a Django App with SQL Server to Azure App Service
 description: Deploy a Django application using mssql-django to Azure App Service with ODBC driver configuration and managed identity.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

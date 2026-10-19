@@ -3,7 +3,7 @@ title: SQL Server Agent Tables (Transact-SQL)
 description: SQL Server Agent Tables (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: system-objects

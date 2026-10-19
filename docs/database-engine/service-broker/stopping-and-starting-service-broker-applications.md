@@ -1,9 +1,9 @@
 ---
 title: Stop and Start Service Broker Applications
 description: "Sometimes it may be necessary to temporarily stop a Service Broker application."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

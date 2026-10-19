@@ -3,7 +3,7 @@ title: Move user databases
 description: Learn how to move user databases in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/19/2024
 ms.service: sql
 ms.topic: how-to

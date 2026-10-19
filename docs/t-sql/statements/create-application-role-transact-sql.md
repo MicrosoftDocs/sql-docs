@@ -3,7 +3,7 @@ title: "CREATE APPLICATION ROLE (Transact-SQL)"
 description: CREATE APPLICATION ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

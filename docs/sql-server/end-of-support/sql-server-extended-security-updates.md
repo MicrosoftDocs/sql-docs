@@ -1,8 +1,8 @@
 ---
 title: "What Are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2014 and SQL Server 2016.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: install

@@ -1,8 +1,8 @@
 ---
 title: "Configure distribution database in availability group"
 description: Configure the distribution database for SQL Server replication with an Always On availability group.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

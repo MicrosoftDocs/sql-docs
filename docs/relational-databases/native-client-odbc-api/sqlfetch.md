@@ -1,8 +1,8 @@
 ---
 title: "SQLFetch"
 description: "SQLFetch"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client

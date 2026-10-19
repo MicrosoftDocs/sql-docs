@@ -3,7 +3,7 @@ title: "sys.server_file_audits (Transact-SQL)"
 description: sys.server_file_audits contains extended information about the file audit type in a SQL Server audit on a server instance.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/23/2026
 ms.service: sql
 ms.subservice: system-objects

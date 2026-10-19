@@ -1,8 +1,8 @@
 ---
 title: "ALTER FUNCTION (Transact-SQL)"
 description: ALTER FUNCTION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 05/27/2025
 ms.service: sql
 ms.subservice: t-sql

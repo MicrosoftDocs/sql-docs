@@ -1,8 +1,8 @@
 ---
 title: "Upgrading Mirrored Instances"
 description: Learn how to reduce downtime when upgrading a SQL Server mirrored instance by using a rolling upgrade. This article includes best practices.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: database-mirroring

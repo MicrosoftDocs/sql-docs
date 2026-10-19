@@ -3,7 +3,7 @@ title: SSIS Projects Extension for Visual Studio 2019 Troubleshooting Guide
 description: SSIS Projects extension for Visual Studio 2019 troubleshooting guide
 author: kromerm
 ms.author: makromer
-ms.reviewer: drskwier, randolphwest, maghan
+ms.reviewer: drskwier
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

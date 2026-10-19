@@ -3,7 +3,7 @@ title: "Executing the SSMA Console (SybaseToSQL)"
 description: Executing the SSMA Console (SybaseToSQL)
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/10/2025
 ms.service: sql
 ms.subservice: ssma

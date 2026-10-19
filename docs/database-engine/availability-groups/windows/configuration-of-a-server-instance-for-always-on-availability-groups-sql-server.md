@@ -1,9 +1,9 @@
 ---
 title: "Enable the availability group feature for a SQL Server instance"
 description: "Describes how to enable the Always On availability group feature for an instance of SQL Server."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/01/2024
 ms.service: sql
 ms.subservice: availability-groups

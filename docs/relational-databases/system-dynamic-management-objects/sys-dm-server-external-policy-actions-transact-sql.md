@@ -3,7 +3,7 @@ title: "sys.dm_server_external_policy_actions (Transact-SQL)"
 description: Reference documentation to explain sys.dm_server_external_policy_actions (Transact-SQL) dynamic management view.
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/23/2026
 ms.service: sql
 ms.subservice: system-objects

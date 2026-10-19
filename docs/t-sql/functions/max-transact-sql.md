@@ -1,9 +1,9 @@
 ---
 title: "MAX (Transact-SQL)"
 description: MAX returns the maximum of all values of the specified expression in a group.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

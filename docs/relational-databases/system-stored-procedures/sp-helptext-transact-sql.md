@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helptext (Transact-SQL)"
 description: Displays the definition of a user-defined rule, default, unencrypted Transact-SQL stored procedure, user-defined function, trigger, computed column, CHECK constraint, view, or system object.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

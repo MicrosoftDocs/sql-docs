@@ -1,9 +1,9 @@
 ---
 title: "Install & configure WideWorldImportersDW sample database"
 description: Follow these instructions to download, install, and configure the WideWorldImportersDW sample database with SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: samples

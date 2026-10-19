@@ -1,8 +1,8 @@
 ---
 title: "getNetDefinition function (MicrosoftML)"
 description: "Returns the Net# definition from a trained neural network model."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

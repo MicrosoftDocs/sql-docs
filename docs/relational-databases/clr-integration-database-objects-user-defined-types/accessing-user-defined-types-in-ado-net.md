@@ -1,8 +1,8 @@
 ---
 title: "Accessing User-Defined Types in ADO.NET"
 description: UDTs, written in .NET Framework CLR languages, allow a SQL Server database to store objects and custom data structures. In ADO.NET, a provider exposes UDTs.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/19/2026
 ms.service: sql
 ms.subservice: clr

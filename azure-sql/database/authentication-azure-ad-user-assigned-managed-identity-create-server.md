@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-sql-database
 ms.subservice: security

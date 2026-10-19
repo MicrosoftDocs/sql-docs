@@ -1,8 +1,8 @@
 ---
 title: "How to: Insert Rows into Geography Column (ODBC)"
 description: "How to: Insert Rows into Geography Column (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -2,9 +2,9 @@
 title: "Monitor Backup Activity"
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to monitor Azure SQL Managed Instance backup activity by querying the `msdb` database, and by using extended events.
-author: dinethi
+author: dnethi
 ms.author: dinethi
-ms.reviewer: mathoma, strrodic, randolphwest
+ms.reviewer: strrodic
 ms.date: 06/24/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore

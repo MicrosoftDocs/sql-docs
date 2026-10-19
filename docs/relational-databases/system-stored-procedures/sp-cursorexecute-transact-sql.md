@@ -1,9 +1,9 @@
 ---
 title: "sp_cursorexecute (Transact-SQL)"
 description: sp_cursorexecute creates and populates a cursor based upon the execution plan created by sp_cursorprepare.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

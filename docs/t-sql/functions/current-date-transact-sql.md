@@ -3,7 +3,7 @@ title: CURRENT_DATE (Transact-SQL)
 description: CURRENT_DATE returns the current database system date as a date value, without the database time and time zone offset.
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql

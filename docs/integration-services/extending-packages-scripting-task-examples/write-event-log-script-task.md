@@ -1,7 +1,7 @@
 ---
 title: Work with write event log script task.
 description: "This article helps you to configure the Script Task."
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: "02/10/2023"
 ms.service: sql
 ms.subservice: integration-services

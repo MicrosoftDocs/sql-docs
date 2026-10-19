@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_qn_subscriptions (Transact-SQL)"
 description: Query Notifications - sys.dm_qn_subscriptions
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

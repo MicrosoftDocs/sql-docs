@@ -1,9 +1,9 @@
 ---
 title: ALTER FULLTEXT CATALOG (Transact-SQL)
 description: ALTER FULLTEXT CATALOG (Transact-SQL)
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 03/04/2026
 ms.service: sql
 ms.subservice: t-sql

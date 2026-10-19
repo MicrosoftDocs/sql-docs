@@ -3,7 +3,7 @@ title: Time Zone Support in mssql-django
 description: Configure time zone-aware datetime fields in Django applications using the mssql-django backend with SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

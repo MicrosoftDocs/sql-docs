@@ -1,8 +1,8 @@
 ---
 title: "sys.partitions (Transact-SQL)"
 description: sys.partitions contains a row for each partition of all the tables and most types of indexes in the database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/25/2023
 ms.service: sql
 ms.subservice: system-objects

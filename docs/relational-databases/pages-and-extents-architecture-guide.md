@@ -1,8 +1,8 @@
 ---
 title: "Page and Extent Architecture Guide"
 description: "This guide describes the data structures used by pages and extents in the database engine."
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: dfurman
 ms.date: 12/29/2025
 ms.service: sql

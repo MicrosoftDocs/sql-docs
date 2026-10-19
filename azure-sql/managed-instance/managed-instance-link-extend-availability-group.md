@@ -1,8 +1,8 @@
 ---
 title: Extend an Always On availability group
 description: Learn how to use a Managed Instance link to replicate databases when extending an Always On availability group between SQL Server and Azure SQL Managed Instance.
-author: MashaMSFT
-ms.author: mathoma
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: danil
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance

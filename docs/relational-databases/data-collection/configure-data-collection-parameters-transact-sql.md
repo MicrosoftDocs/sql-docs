@@ -1,9 +1,9 @@
 ---
 title: "Configure data collection parameters (T-SQL)"
 description: Before you create a custom collection set, you must first configure data collection parameters.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

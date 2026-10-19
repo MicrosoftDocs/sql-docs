@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: default trace enabled"
 description: "Learn about the default trace enabled option. Find out how default tracing can help with troubleshooting."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

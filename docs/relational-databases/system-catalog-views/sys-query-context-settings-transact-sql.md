@@ -1,8 +1,8 @@
 ---
 title: "sys.query_context_settings (Transact-SQL)"
 description: sys.query_context_settings contains information about the semantics affecting context settings associated with a query.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects

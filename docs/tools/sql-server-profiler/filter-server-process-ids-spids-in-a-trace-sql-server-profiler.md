@@ -2,8 +2,8 @@
 title: Filter Session IDs in a Trace File
 titleSuffix: SQL Server Profiler
 description: Learn how to limit trace output in SQL Server Profiler by applying a filter on the Session ID (SPID).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

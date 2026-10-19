@@ -1,8 +1,8 @@
 ---
 title: "Binding Parameters"
 description: Find out how to bind each parameter marker in a SQL statement to a variable in the application before the statement can run.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

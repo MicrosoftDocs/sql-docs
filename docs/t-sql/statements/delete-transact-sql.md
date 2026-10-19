@@ -1,8 +1,8 @@
 ---
 title: "DELETE (Transact-SQL)"
 description: DELETE (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "01/29/2025"
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_instance_node_map (Transact-SQL)"
 description: Returns the name of the Windows Server Failover Cluster node that hosts the server instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/17/2023
 ms.service: sql
 ms.subservice: system-objects

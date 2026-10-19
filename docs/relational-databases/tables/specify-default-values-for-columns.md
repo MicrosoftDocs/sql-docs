@@ -3,7 +3,7 @@ title: Specify default values for columns
 description: Specify a default value that is entered into the table column, with SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/09/2024
 ms.service: sql
 ms.subservice: table-view-index

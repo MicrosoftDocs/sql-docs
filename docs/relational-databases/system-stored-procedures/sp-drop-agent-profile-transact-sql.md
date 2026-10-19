@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_drop_agent_profile (Transact-SQL)"
 description: Drops a profile from the MSagent_profiles table. This stored procedure is executed at the Distributor on any database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

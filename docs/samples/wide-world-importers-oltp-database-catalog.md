@@ -1,8 +1,8 @@
 ---
 title: "WideWorldImporters OLTP database catalog - SQL"
 description: Understand the schemas, tables, stored procedures, and design considerations for the WideWorldImporters sample database catalog.
-author: MashaMSFT
-ms.author: mathoma
+author: cwebb-msft
+ms.author: chweb
 ms.date: "04/04/2018"
 ms.service: sql
 ms.subservice: samples

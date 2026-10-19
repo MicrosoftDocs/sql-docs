@@ -3,7 +3,7 @@ title: geography (Transact-SQL)
 description: Spatial Types - geography
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql

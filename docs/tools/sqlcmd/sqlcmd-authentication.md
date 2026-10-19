@@ -1,8 +1,8 @@
 ---
 title: Authenticate with Microsoft Entra ID in sqlcmd
 description: Authenticating with Microsoft Entra ID in the new standalone sqlcmd utility.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: mahyon
 ms.date: 07/02/2025
 ms.service: sql

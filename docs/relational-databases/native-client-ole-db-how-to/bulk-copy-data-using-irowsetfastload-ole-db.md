@@ -1,8 +1,8 @@
 ---
 title: "Bulk copy data using IRowsetFastLoad (Native Client OLE DB provider)"
 description: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) in  SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

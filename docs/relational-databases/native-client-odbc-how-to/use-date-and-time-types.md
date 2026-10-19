@@ -1,9 +1,9 @@
 ---
 title: "Use Date and Time Types"
 description: Learn how to initialize the date/time data structures that were added in SQL Server 2008.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/24/2025
 ms.service: sql
 ms.subservice: native-client

@@ -2,8 +2,8 @@
 title: Format T-SQL in the MSSQL Extension for Visual Studio Code
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to format T-SQL in Visual Studio Code with the SQL formatter in the MSSQL extension, including format on demand, format on save, and formatter configuration settings.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: yoleichen
 ms.date: 09/28/2026
 ms.service: sql

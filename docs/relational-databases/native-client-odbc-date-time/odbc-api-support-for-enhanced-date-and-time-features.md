@@ -1,8 +1,8 @@
 ---
 title: "ODBC API for Date Time"
 description: "ODBC API Support for Enhanced Date and Time Features"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: native-client

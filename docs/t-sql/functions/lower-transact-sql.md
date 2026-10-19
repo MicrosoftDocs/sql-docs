@@ -1,8 +1,8 @@
 ---
 title: "LOWER (Transact-SQL)"
 description: "LOWER (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/13/2017"
 ms.service: sql
 ms.subservice: t-sql

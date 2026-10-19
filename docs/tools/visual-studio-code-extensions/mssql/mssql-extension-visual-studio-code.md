@@ -2,8 +2,8 @@
 title: Overview
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn about the MSSQL extension for Visual Studio Code, which provides tools for connecting to databases, managing schemas, and executing queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: yoleichen
 ms.date: 08/17/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "TRY_PARSE (Transact-SQL)"
 description: TRY_PARSE returns the result of an expression, translated to the requested data type, or NULL if the cast fails.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: t-sql

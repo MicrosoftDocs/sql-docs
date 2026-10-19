@@ -3,7 +3,7 @@ title: Configure an availability group listener for SQL Server on Linux virtual 
 description: Learn about setting up an availability group listener in SQL Server on Linux virtual machines in Azure.
 author: aravindmahadevan-ms
 ms.author: armaha
-ms.reviewer: amitkh-msft, randolphwest
+ms.reviewer: amitkh-msft
 ms.date: 11/29/2023
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

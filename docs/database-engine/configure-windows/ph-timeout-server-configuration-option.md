@@ -1,8 +1,8 @@
 ---
 title: "Server configuration: PH timeout"
 description: "Learn about the PH timeout option. See how it limits the time that the full-text protocol handler allots for connecting to a SQL Server database."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

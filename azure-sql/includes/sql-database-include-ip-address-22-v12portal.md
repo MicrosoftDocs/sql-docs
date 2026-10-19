@@ -3,7 +3,7 @@ title: Server-Level Firewall Rules
 description: Server-level firewall rules
 author: dalechen
 ms.author: ninarn
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/14/2025
 ms.service: azure-sql-database
 ms.topic: include

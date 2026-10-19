@@ -1,8 +1,8 @@
 ---
 title: "USER (Transact-SQL)"
 description: "USER (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql

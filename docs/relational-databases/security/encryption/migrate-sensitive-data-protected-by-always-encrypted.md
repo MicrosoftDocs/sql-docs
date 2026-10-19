@@ -3,7 +3,7 @@ title: Bulk Load Encrypted Data to Columns Using Always Encrypted
 description: Learn how to bulk load data to columns using Always Encrypted with SQL Server.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: security

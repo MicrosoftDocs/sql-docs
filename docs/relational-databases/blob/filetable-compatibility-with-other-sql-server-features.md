@@ -1,9 +1,9 @@
 ---
 title: "FileTable Compatibility"
 description: Find out how FileTables work with other SQL Server features. Read about which features SQL Server supports with FileTables and which constraints it enforces.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: vanto
 ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: filestream

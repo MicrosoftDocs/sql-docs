@@ -3,7 +3,7 @@ title: "JSON Message format - change event streaming"
 description: "Describes the message format for change event streaming"
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/11/2026
 ms.service: sql
 ms.topic: "reference"

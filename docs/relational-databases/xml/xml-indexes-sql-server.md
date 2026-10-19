@@ -1,9 +1,9 @@
 ---
 title: "XML Indexes (SQL Server)"
 description: Learn how creating XML indexes on xml data type columns can benefit your application by improving query performance.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: xml

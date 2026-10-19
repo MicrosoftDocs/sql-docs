@@ -1,8 +1,8 @@
 ---
 title: "sys.schemas (Transact-SQL)"
 description: sys.schemas contains a row for each database schema.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/18/2024
 ms.service: sql
 ms.subservice: system-objects

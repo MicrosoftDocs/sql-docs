@@ -2,8 +2,8 @@
 title: "sys.dm_db_resource_stats"
 titleSuffix: Azure SQL Database & SQL database in Fabric
 description: sys.dm_db_resource_stats returns CPU, I/O, and memory consumption for a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: wiassaf
 ms.date: 09/11/2025
 ms.service: azure-sql-database

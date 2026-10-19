@@ -3,7 +3,7 @@ title: Deprecation of AMQP Protocol for Change Event Streaming
 description: Learn about the deprecation of the AMQP protocol for change event streaming and how to migrate stream groups to the Kafka protocol.
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/15/2026
 ms.service: sql
 ms.topic: concept-article

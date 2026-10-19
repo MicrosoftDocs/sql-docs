@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 description: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: system-objects

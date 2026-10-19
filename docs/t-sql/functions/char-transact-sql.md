@@ -1,9 +1,9 @@
 ---
 title: "CHAR (Transact-SQL)"
 description: Returns the single-byte character with the specified integer code, as defined by the character set and encoding of the default collation of the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/21/2024
 ms.service: sql
 ms.subservice: t-sql

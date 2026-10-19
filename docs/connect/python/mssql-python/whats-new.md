@@ -3,8 +3,8 @@ title: What's New in mssql-python Driver
 description: Learn about new features and changes in each version of the mssql-python driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 09/14/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -16,6 +16,99 @@ ai-usage: ai-assisted
 This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
 
 For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.16.0
+
+**Release date**: October 2026
+
+### Enhancements
+
+#### Python 3.15 support
+
+The Python Package Index (PyPI) now has wheels for Python 3.15 on Windows, Linux, and macOS. The release ships 41 wheels that cover Python 3.10 through 3.15.
+
+For more information, see [Support lifecycle](support-lifecycle.md#python-version-compatibility).
+
+#### Conda packages
+
+The driver is now published to the `microsoft` channel on Anaconda.org. The conda package is one self-contained package that includes the ODBC driver binaries and the Rust runtime:
+
+```bash
+conda install -c microsoft mssql-python
+```
+
+On Linux, the conda package requires glibc 2.34 and later versions. On macOS, it requires macOS 15 and later versions. For the full list of platforms and requirements, see [Install from conda](installation.md#install-from-conda).
+
+#### Opt-in `mssql-odbc` native provider
+
+You can now select a Rust-based ODBC provider named `mssql-odbc`. Microsoft ODBC Driver 18 (`msodbcsql18`) remains the default. Select the provider before the first connection with the `MSSQL_PYTHON_NATIVE_PROVIDER` environment variable or the `mssql_python.native_provider` attribute. Your application code doesn't change.
+
+For more information, see [Select the native ODBC provider](module-configuration.md#select-the-native-odbc-provider).
+
+#### Dictionary-style row access with `row._mapping`
+
+Each `Row` now has a read-only `_mapping` property that maps column names to values. Use `dict(row._mapping)` to convert a row to a dictionary without combining values with `cursor.description`.
+
+For more information, see [Row objects](row-objects.md#convert-to-dictionary).
+
+#### Rust runtime ships in the `mssql-python-rs` package
+
+The Rust runtime that powers bulk copy now ships in a separate, version-matched `mssql-python-rs` package instead of inside the `mssql-python` wheel. The `pip install mssql-python` command installs it automatically. Version 0.3.0 of the package uses CPython stable application binary interface (ABI) wheels, so each wheel serves Python 3.10 and later versions.
+
+For more information, see [Dependency requirements](support-lifecycle.md#dependency-requirements).
+
+#### Updated `mssql-python-odbc` companion package
+
+The driver now requires `mssql-python-odbc` version 18.6.2.2. Linux wheels are split by C library, so glibc and musl (Alpine Linux) environments each install only the matching ODBC Driver 18.6 binaries.
+
+#### Faster fetch operations
+
+Fetch operations spend less time in Python:
+
+- `fetchmany()` and `fetchall()` build `Row` objects in the native fetch path when the connection has no output converters and no **uniqueidentifier** values are converted to strings.
+- `date`, `time`, and `datetime` values are constructed with less overhead.
+- Column metadata is reused for the current result set instead of being described again on each fetch.
+- Clean fetches skip repeated diagnostic scans.
+- Integer indexes such as `row[0]` use a direct lookup path.
+- `fetchval()` skips debug logging calls when debug logging is off.
+
+No application change is needed.
+
+### Bug fixes
+
+#### Windows processes could crash at shutdown
+
+The driver could release its ODBC environment handle after Python finalization, which risked an access violation when a Windows process exited. The handle is no longer released after finalization.
+
+#### Leading U+FEFF and U+FFFE characters were dropped from fetched text
+
+When a fetched string began with U+FEFF or U+FFFE, the driver treated that code point as a byte-order mark and removed it. The driver now returns the complete value for bounded types such as `nvarchar(n)` and `varchar(n)`. Large-value types such as `nvarchar(max)` aren't covered by this fix: a leading U+FEFF is still removed, and a leading U+FFFE causes the value to be decoded with the wrong byte order.
+
+#### Pooled connections could keep an empty transaction open
+
+A pooled connection could return to the pool with an open empty transaction or with autocommit off. The driver now rolls back the physical connection and turns autocommit on before it returns the connection to the pool. If that cleanup fails, the driver discards the connection instead of pooling it.
+
+For more information, see [Connection pooling](connection-pooling.md#connection-lifecycle).
+
+#### User-defined type parameters lacked type metadata
+
+Parameters that you declare as SQL Server user-defined types with `setinputsizes()` and `SQL_SS_UDT` (`-151`), such as **geography** and **geometry**, now get their type metadata from the server before binding. The fix covers `None` values and reused statements for declared parameters. An undeclared `None` passed to a user-defined type column in a reused statement still fails.
+
+#### `setencoding()` ignored unsupported requests without warning
+
+The driver always sends Transact-SQL (T-SQL) statements and `str` parameters as UTF-16LE. Calling `setencoding()` with an encoding or `ctype` that differs from UTF-16LE with `SQL_WCHAR` now emits `UserWarning` instead of being silently ignored. Calling `setencoding()` with no arguments restores the defaults without a warning.
+
+For more information, see [Manage connections](connection-management.md#encoding-and-decoding).
+
+#### Native logging could interpret metadata as format directives
+
+When native logging was enabled, server-supplied values such as Arrow column metadata were passed to the native logger as format strings. The driver now logs those values as literal text.
+
+#### Bulk copy didn't consistently quote destination identifiers
+
+Bulk copy now quotes and escapes destination table names, column names, and collations consistently. Multipart names and bracket-quoted names that contain spaces or `]` characters work. A malformed name, such as an unclosed bracket or a missing table name, raises an error before any rows are sent.
+
+For more information, see [Bulk copy](bulk-copy.md).
 
 ## mssql-python 1.15.0
 

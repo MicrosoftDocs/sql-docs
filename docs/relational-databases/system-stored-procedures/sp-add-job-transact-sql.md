@@ -1,9 +1,9 @@
 ---
 title: sp_add_job (Transact-SQL)
 description: sp_add_job creates a new job to be executed by the SQL Server Agent service.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: system-objects

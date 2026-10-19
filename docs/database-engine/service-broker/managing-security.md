@@ -1,9 +1,9 @@
 ---
 title: "Manage Security (Service Broker)"
 description: "Service Broker provides a flexible security framework for helping you secure your applications."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

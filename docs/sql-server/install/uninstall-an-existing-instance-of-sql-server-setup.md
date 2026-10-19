@@ -1,8 +1,8 @@
 ---
 title: Uninstall an Existing Instance of SQL Server (Setup)
 description: This article describes how to uninstall a stand-alone instance of SQL Server, which also prepares the system so that you can reinstall SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 02/26/2026
 ms.service: sql
 ms.subservice: install

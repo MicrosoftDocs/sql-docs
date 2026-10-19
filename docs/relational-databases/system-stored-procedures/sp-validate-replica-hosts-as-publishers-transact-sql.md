@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_validate_replica_hosts_as_publishers (Transact-SQL)"
 description: Describes the sp_validate_replica_hosts_as_publishers stored procedure that allows all secondary replicas to be validated.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

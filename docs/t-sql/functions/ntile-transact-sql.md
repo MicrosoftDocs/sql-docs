@@ -3,7 +3,7 @@ title: NTILE (Transact-SQL)
 description: The NTILE ranking function distributes the rows in an ordered partition into a specified number of groups.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf
+ms.reviewer: wiassaf
 ms.date: 06/13/2026
 ms.service: sql
 ms.subservice: t-sql

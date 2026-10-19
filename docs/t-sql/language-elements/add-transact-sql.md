@@ -1,8 +1,8 @@
 ---
 title: "+ (Addition) (Transact-SQL)"
 description: "+ (Addition) (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql

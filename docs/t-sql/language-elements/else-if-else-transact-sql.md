@@ -1,8 +1,8 @@
 ---
 title: "ELSE (IF...ELSE) (Transact-SQL)"
 description: ELSE (IF...ELSE) imposes conditions on the execution of a Transact-SQL statement.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/17/2024
 ms.service: sql
 ms.subservice: t-sql

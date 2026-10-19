@@ -1,8 +1,8 @@
 ---
 title: "Effective Boolean Value (XQuery)"
 description: Learn about effective Boolean values in XQuery.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml

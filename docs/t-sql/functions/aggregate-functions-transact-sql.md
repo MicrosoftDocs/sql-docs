@@ -1,8 +1,8 @@
 ---
 title: Aggregate Functions (Transact-SQL)
 description: An aggregate function in Transact-SQL performs a calculation on a set of values, and returns a single value. Learn about the aggregate functions in the SQL Database Engine. 
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf
 ms.date: 09/16/2026
 ms.service: sql

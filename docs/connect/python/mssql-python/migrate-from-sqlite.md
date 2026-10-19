@@ -3,8 +3,8 @@ title: Migrate from SQLite to Microsoft SQL with mssql-python
 description: Guide for migrating Python applications from SQLite to Microsoft SQL using the mssql-python driver, covering SQL dialect differences and data migration.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 07/17/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -169,6 +169,8 @@ row["name"]   # String-key access, like SQLite
 row.name      # Attribute access
 row[0]        # Index access
 ```
+
+SQLite code that converts rows with `dict(row)` needs a change. An mssql-python `Row` isn't a mapping. Iterating it yields column values, not names, so `dict(row)` raises an exception or builds the wrong dictionary. Use `dict(row._mapping)` instead. For more information, see [Row objects](row-objects.md#convert-to-dictionary).
 
 ### Update parameter style
 

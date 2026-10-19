@@ -1,9 +1,9 @@
 ---
 title: "System data collection set reports"
 description: The data collector provides a report for each of the System Data collection sets for monitoring system capacity and system performance in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

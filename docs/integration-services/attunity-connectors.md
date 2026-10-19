@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Connectors for Oracle and Teradata by Attunity"
 description: "Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)"
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: integration-services

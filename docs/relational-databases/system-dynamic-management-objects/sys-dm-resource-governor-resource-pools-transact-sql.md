@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_resource_governor_resource_pools (Transact-SQL)"
 description: Returns information about the current resource pool state, the current configuration of resource pools, and resource pool statistics.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 02/10/2025
 ms.service: sql

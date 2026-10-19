@@ -4,7 +4,7 @@ metadata:
   description: Frequently asked questions about the serverless compute tier in Azure SQL Database, including billing, auto-pause, auto-resume, and scaling.
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: kendalv, moslake, mathoma, dfurman
+  ms.reviewer: kendalv, moslake, dfurman
   ms.date: 09/14/2026
   ms.service: azure-sql-database
   ms.subservice: service-overview

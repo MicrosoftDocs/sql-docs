@@ -5,8 +5,8 @@ brand: sql
 metadata:
   title: SQL Connectivity and Drivers
   description: Find resources for the platform of your choice to help you focus on building great applications, for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, and SQL Server on Azure VMs.
-  author: rwestMSFT
-  ms.author: randolphwest
+  author: adbadram
+  ms.author: adbadram
   ms.date: 08/27/2026
   ms.service: sql
   ms.subservice: connectivity

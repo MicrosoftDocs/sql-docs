@@ -1,8 +1,8 @@
 ---
 title: "Restore Files to a New Location (SQL Server)"
 description: This article shows you how to restore files to a new location in SQL Server by using SQL Server Management Studio or Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: backup-restore

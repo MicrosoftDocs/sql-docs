@@ -3,7 +3,7 @@ title: Azure CLI samples
 description: Find Azure CLI script samples to create and manage Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/30/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

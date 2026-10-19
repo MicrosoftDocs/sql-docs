@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replmonitorhelpmergesessiondetail (Transact-SQL)"
 description: Returns detailed, article-level information about a specific replication Merge Agent session, which is used to monitor merge replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

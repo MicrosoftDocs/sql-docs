@@ -3,7 +3,7 @@ title: Database States
 description: Find out about various database states, such as ONLINE, OFFLINE, or SUSPECT. Learn how to verify the current state of a database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: configuration

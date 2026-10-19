@@ -1,8 +1,8 @@
 ---
 title: "CURRENT_USER (Transact-SQL)"
 description: "CURRENT_USER (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/24/2017"
 ms.service: sql
 ms.subservice: t-sql

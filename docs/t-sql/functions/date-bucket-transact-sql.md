@@ -1,8 +1,8 @@
 ---
 title: "DATE_BUCKET (Transact-SQL)"
 description: DATE_BUCKET returns the date-time value corresponding to the start of each date-time bucket from a defined origin timestamp.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: kendalv, jovanpop
 ms.date: 12/17/2025
 ms.service: sql

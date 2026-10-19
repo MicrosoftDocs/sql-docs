@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Enable e-mail notifications for Azure SQL Database automatic query tuning.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: nnikolic, mathoma, derekw, randolphwest
+ms.reviewer: nnikolic, derekw
 ms.date: 04/23/2025
 ms.service: azure-sql
 ms.subservice: performance

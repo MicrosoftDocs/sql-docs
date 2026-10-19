@@ -3,7 +3,7 @@ title: Connect SQL Server on a Server Already Enabled by Azure Arc
 description: Connect an instance of SQL Server to Azure Arc on a server that is already enabled by Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: maghan
+ms.reviewer: vanto
 ms.date: 07/03/2025
 ms.topic: how-to
 ---

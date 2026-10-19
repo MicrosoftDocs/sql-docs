@@ -3,7 +3,7 @@ title: "sys.sp_MSchange_feed_ddl_event (Transact-SQL)"
 description: "The sys.sp_MSchange_feed_ddl_event internal system stored procedure handles data definition language events."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

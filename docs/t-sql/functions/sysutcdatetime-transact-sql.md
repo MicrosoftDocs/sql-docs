@@ -1,8 +1,8 @@
 ---
 title: SYSUTCDATETIME (Transact-SQL)
 description: SYSUTCDATETIME returns a datetime2 value that contains the current date and time of the system.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql

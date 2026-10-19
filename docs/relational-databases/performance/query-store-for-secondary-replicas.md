@@ -1,9 +1,9 @@
 ---
 title: Query Store for Secondary Replicas
 description: Query Store can be configured to monitor and tuning workloads on secondary read-only replicas.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: derekw, randolphwest, wiassaf
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: derekw, wiassaf
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: performance

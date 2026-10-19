@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_replicas (Transact-SQL)"
 description: Returns a row for each of the availability replicas that belong to any Always On availability group in the WSFC failover cluster.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/12/2026
 ms.service: sql
 ms.subservice: system-objects

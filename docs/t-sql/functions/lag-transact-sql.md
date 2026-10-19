@@ -1,8 +1,8 @@
 ---
 title: "LAG (Transact-SQL)"
 description: "LAG (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 12/23/2024
 ms.service: sql
 ms.subservice: t-sql

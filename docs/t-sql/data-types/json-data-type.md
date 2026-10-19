@@ -3,7 +3,7 @@ title: JSON Data Type
 description: The built-in JSON data type provides advantages for storing JSON data over varchar or nvarchar. Learn more about the JSON data type.
 author: uc-msft
 ms.author: umajay
-ms.reviewer: jovanpop
+ms.reviewer: jovanpop, wiassaf
 ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql

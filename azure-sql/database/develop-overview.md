@@ -2,9 +2,9 @@
 title: Application Development Overview
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about available connectivity libraries and best practices for applications connecting to Azure SQL Database and Azure SQL Managed Instance.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: wiassaf, mathoma
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: wiassaf
 ms.date: 05/26/2026
 ms.service: azure-sql
 ms.subservice: development

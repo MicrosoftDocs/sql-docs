@@ -1,9 +1,9 @@
 ---
 title: "LEAD (Transact-SQL)"
 description: LEAD accesses data from a subsequent row in the same result set without the use of a self-join.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/16/2024
 ms.service: sql
 ms.subservice: t-sql

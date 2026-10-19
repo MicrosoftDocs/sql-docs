@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_fts_memory_buffers (Transact-SQL)"
 description: sys.dm_fts_memory_buffers returns information about memory buffers belonging to a specific memory pool that are used as part of a full-text crawl or a full-text crawl range.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

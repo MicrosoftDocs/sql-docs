@@ -1,9 +1,9 @@
 ---
 title: "Enable Indexes and Constraints"
 description: Learn how to enable indexes and constraints in the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 07/16/2025
 ms.service: sql
 ms.subservice: table-view-index

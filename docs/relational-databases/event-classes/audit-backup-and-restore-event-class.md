@@ -1,8 +1,8 @@
 ---
 title: "Audit Backup and Restore Event Class"
 description: "Audit Backup and Restore Event Class"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: supportability

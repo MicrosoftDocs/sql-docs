@@ -1,8 +1,8 @@
 ---
 title: "Configure alerts for database mirroring performance metrics"
 description: "Guidance for configuring warning thresholds and alerts for performance metrics used by database mirroring. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring

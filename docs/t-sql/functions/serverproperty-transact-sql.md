@@ -3,7 +3,7 @@ title: "SERVERPROPERTY (Transact-SQL)"
 description: SERVERPROPERTY returns property information about the server instance.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, amitkh-msft
+ms.reviewer: amitkh-msft
 ms.date: 01/08/2026
 ms.service: sql
 ms.subservice: t-sql

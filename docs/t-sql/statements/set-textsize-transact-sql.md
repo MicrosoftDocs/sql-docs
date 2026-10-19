@@ -3,7 +3,7 @@ title: "SET TEXTSIZE (Transact-SQL)"
 description: Specifies the size, in bytes, of various data types returned to the client by a SELECT statement.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/17/2025
 ms.service: sql
 ms.subservice: t-sql

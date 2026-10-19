@@ -3,7 +3,7 @@ title: "TOP (Transact-SQL)"
 description: Limits the rows returned in a query result set to a specified number of rows or percentage of rows in the SQL Server Database Engine.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: t-sql

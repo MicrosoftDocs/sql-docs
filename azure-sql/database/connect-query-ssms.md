@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to connect to Azure SQL Database or SQL Managed Instance using SQL Server Management Studio (SSMS). Then run Transact-SQL (T-SQL) statements to query and edit data.
 author: erinstellato-ms
 ms.author: erinstellato
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 09/27/2024
 ms.service: azure-sql
 ms.subservice: connect

@@ -2,8 +2,8 @@
 title: Upgrade Full-Text Search
 titleSuffix: SQL Server Full-Text Search
 description: Upgrade Full-Text Search in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

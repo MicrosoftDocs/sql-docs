@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replshowcmds (Transact-SQL)"
 description: sp_replshowcmds returns the commands for transactions marked for replication in readable format.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

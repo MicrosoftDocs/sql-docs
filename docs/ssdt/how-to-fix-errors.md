@@ -1,9 +1,9 @@
 ---
 title: Fix Errors
 description: Become familiar with the Error List pane and the types of errors it displays. See how to sort and filter error list information and identify error sources.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

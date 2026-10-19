@@ -1,9 +1,9 @@
 ---
 title: SQLFreeStmt
 description: SQLFreeStmt
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: native-client

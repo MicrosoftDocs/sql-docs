@@ -3,7 +3,7 @@ title: "backupfilegroup (Transact-SQL)"
 description: backupfilegroup contains one row for each filegroup in a database at the time of backup.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: system-objects

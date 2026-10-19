@@ -1,8 +1,8 @@
 ---
 title: "Updategram Security Considerations (SQLXML)"
 description: Learn the security guidelines for using updategrams in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml

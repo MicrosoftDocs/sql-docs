@@ -3,7 +3,7 @@ title: "Join hints (Transact-SQL)"
 description: Join hints specify that the query optimizer enforce a join strategy between two tables in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, wiassaf
+ms.reviewer: wiassaf
 ms.date: 03/20/2025
 ms.service: sql
 ms.subservice: t-sql

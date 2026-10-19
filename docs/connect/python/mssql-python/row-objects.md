@@ -3,8 +3,8 @@ title: Row Objects in mssql-python
 description: Learn how to work with Row objects returned by cursor fetch operations in the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 07/16/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -19,6 +19,7 @@ The mssql-python driver returns row data as `Row` objects from fetch operations.
 - **String key access** (`row['ColumnName']`) provides dictionary-style access to columns by name, useful when you need programmatic column lookup or when column names contain spaces or special characters.
 - **Index access** (`row[0]`) is useful for dynamic queries where column names aren't known at development time, or when processing `SELECT *` results.
 - **Tuple unpacking** (`a, b, c = row`) is the most concise choice for loop bodies with a small, fixed number of columns.
+- **Mapping access** (`row._mapping`) returns a read-only mapping of column names to values. Use it to convert a row to a dictionary or to pass the row to code that expects a mapping.
 
 ## Attribute access
 
@@ -228,17 +229,22 @@ print(row_list)  # [1, 'Adjustable Race']
 
 ### Convert to dictionary
 
-Convert a row to a dictionary when you need to serialize it to JSON, pass it to a template engine, or merge it with other data. Build the dictionary from `cursor.description` and row values:
+Convert a row to a dictionary when you need to serialize it to JSON, pass it to a template engine, or merge it with other data. The `row._mapping` property returns a read-only mapping of column names to values in result-set column order. Pass it to `dict()` to get a regular dictionary:
 
 ```python
 cursor.execute("SELECT ProductID, Name, ListPrice FROM Production.Product WHERE ProductID = 1")
 row = cursor.fetchone()
 
-# Create dict from description and values
-columns = [col[0] for col in cursor.description]
-row_dict = dict(zip(columns, row))
-print(row_dict)  # {'ProductID': 1, 'Name': 'Adjustable Race', 'ListPrice': Decimal('0.00')}
+row_dict = dict(row._mapping)
+print(row_dict)  # {'ProductID': 1, 'Name': 'Adjustable Race', 'ListPrice': Decimal('0.0000')}
 ```
+
+The `_mapping` property has these behaviors:
+
+- The mapping is read-only. Assigning to a key raises `TypeError`. Convert it with `dict()` first if you need to change values.
+- Keys are the column names from `cursor.description`. Key lookups are case-sensitive. If you enable the `lowercase` module setting, the keys are lowercase, and the mapping matches only those lowercase keys. Attribute and string key access on the row itself become case-insensitive when `lowercase` is on, but `row._mapping` lookups don't.
+- If the result set has duplicate column names, the mapping keeps the last value for each name. Use Transact-SQL (T-SQL) `AS` aliases to give each column a unique name, or read the values by index.
+- The property takes precedence over a result column named `_mapping`, so `row._mapping` always returns the mapping. Read that column with `row['_mapping']`.
 
 ### Helper function for dict conversion
 
@@ -247,8 +253,7 @@ Create a reusable helper function to convert all fetched rows to dictionaries:
 ```python
 def rows_to_dicts(cursor):
     """Convert fetched rows to list of dictionaries."""
-    columns = [col[0] for col in cursor.description]
-    return [dict(zip(columns, row)) for row in cursor.fetchall()]
+    return [dict(row._mapping) for row in cursor.fetchall()]
 
 cursor.execute("SELECT ProductID, Name, ListPrice FROM Production.Product WHERE ProductID < 10")
 products = rows_to_dicts(cursor)
@@ -360,8 +365,7 @@ def json_serializer(obj):
     raise TypeError(f"Type {type(obj)} not serializable")
 
 def export_to_json(cursor, filename):
-    columns = [col[0] for col in cursor.description]
-    rows = [dict(zip(columns, row)) for row in cursor.fetchall()]
+    rows = [dict(row._mapping) for row in cursor.fetchall()]
     
     with open(filename, 'w') as f:
         json.dump(rows, f, default=json_serializer, indent=2)

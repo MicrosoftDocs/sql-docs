@@ -3,7 +3,7 @@ title: "View Foreign Key Properties"
 description: View the foreign key attributes of a relationship with SQL Server Management Studio or T-SQL queries.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/19/2024
 ms.service: sql
 ms.subservice: table-view-index

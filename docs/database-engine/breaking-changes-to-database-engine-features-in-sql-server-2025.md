@@ -2,9 +2,9 @@
 title: "Database Engine: Breaking Changes"
 titleSuffix: SQL Server 2025
 description: Breaking changes to database engine features in SQL Server 2025.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: release-landing

@@ -1,9 +1,9 @@
 ---
 title: ISNULL (Transact-SQL)
 description: ISNULL replaces NULL with the specified replacement value.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/02/2024
 ms.service: sql
 ms.subservice: t-sql

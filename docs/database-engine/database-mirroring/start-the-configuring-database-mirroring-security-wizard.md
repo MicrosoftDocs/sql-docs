@@ -1,8 +1,8 @@
 ---
 title: "Configuring Database Mirroring Security Wizard"
 description: A description of the 'Configure Database Mirroring Security' Wizard in SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: database-mirroring

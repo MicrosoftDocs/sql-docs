@@ -1,8 +1,8 @@
 ---
 title: "= (String comparison or assignment)"
 description: "Compares two strings in a WHERE or HAVING clause or sets a variable or column to string or result of a string operation on the right side of the equation."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: jopilov
 ms.date: 06/07/2023
 ms.service: sql

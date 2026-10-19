@@ -1,8 +1,8 @@
 ---
 title: "Executing a command (Native Client OLE DB provider)"
 description: "Executing a command (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -3,7 +3,7 @@ title: Build Connection Strings Programmatically with mssql-python
 description: Learn how to construct SQL Server connection strings dynamically in Python applications using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

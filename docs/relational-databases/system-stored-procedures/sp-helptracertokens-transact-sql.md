@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helptracertokens (Transact-SQL)"
 description: sp_helptracertokens returns one row for each tracer token that was inserted into a publication to determine latency.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

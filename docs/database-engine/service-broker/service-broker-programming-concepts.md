@@ -1,9 +1,9 @@
 ---
 title: Service Broker Programming Concepts
 description: "Service Broker introduces concepts that are unique to developing a Service Broker application."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: "Date and Time Improvements"
 description: "SQL Server Native Client Date and Time Improvements"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

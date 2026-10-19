@@ -3,7 +3,7 @@ title: Overview of Log Replay Service
 description: Learn about Log Replay Service with Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: migration

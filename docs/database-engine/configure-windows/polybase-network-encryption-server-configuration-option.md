@@ -1,9 +1,9 @@
 ---
 title: "Server Configuration: PolyBase Network Encryption"
 description: Set the configuration option for PolyBase network encryption in SQL Server settings.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: polybase

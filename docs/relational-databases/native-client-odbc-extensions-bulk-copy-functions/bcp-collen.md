@@ -1,8 +1,8 @@
 ---
 title: "bcp_collen"
 description: "bcp_collen"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

@@ -3,7 +3,7 @@ title: Troubleshoot mssql-python
 description: Find troubleshooting guidance for installation, connection, query, data, and operation issues in the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sumitsar
+ms.reviewer: vanto, sumitsar
 ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity

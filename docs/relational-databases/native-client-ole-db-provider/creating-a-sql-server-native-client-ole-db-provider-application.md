@@ -1,8 +1,8 @@
 ---
 title: "Create an OLE DB App"
 description: "Creating a SQL Server Native Client OLE DB Provider Application"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client

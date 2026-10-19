@@ -1,8 +1,8 @@
 ---
 title: "Modify a partition function"
 description: Modify a partition function
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "4/22/2022"
 ms.service: sql
 ms.topic: how-to

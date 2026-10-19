@@ -1,8 +1,8 @@
 ---
 title: "Configure a witness"
 description: "Describes how to configure a database mirroring witness with Windows authentication using Transact-SQL. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: database-mirroring

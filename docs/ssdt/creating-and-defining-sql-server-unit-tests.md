@@ -1,9 +1,9 @@
 ---
 title: Creating and Defining SQL Server Unit Tests
 description: Learn about SQL Server unit tests. View sources of information on how to create and run unit tests, troubleshoot problems, and perform other related tasks.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

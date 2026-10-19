@@ -3,7 +3,7 @@ title: Set Up Managed Identity and Microsoft Entra Authentication for SQL Server
 description: Learn how to set up and configure Microsoft Entra managed identity with SQL Server 2025 enabled by Azure Arc.
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: randolphwest, mathoma, vanto
+ms.reviewer: vanto
 ms.date: 11/05/2025
 ms.service: sql
 ms.topic: how-to

@@ -1,8 +1,8 @@
 ---
 title: "concat Function (XQuery)"
 description: Learn about the XQuery function concat() that returns a string created by concatenating zero or more strings specified as arguments.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "Bulk Copy, enhanced types, OLE DB"
 description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 12/18/2019
 ms.service: sql
 ms.subservice: native-client

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL)"
 description: Returns information about all the waits encountered by threads that executed.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/28/2025
 ms.service: sql
 ms.subservice: system-objects

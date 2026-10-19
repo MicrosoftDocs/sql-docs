@@ -2,8 +2,8 @@
 title: Overview of GitHub Copilot Integration
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Introduction to the GitHub Copilot integration with the MSSQL extension for Visual Studio Code that provides AI-assisted SQL development.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

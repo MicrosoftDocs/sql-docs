@@ -1,8 +1,8 @@
 ---
 title: "Working with Query Notifications"
 description: Query notifications allow you to request notification during a time-out period when the underlying data of a query changes in SQL Server Native Client.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "05/24/2019"
 ms.service: sql
 ms.subservice: native-client

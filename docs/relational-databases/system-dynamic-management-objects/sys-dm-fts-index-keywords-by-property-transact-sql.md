@@ -1,8 +1,8 @@
 ---
 title: sys.dm_fts_index_keywords_by_property (Transact-SQL)
 description: sys.dm_fts_index_keywords_by_property returns all property-related content in the full-text index of a given table.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

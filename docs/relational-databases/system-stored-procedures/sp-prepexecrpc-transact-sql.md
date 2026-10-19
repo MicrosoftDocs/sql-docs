@@ -1,9 +1,9 @@
 ---
 title: "sp_prepexecrpc (Transact-SQL)"
 description: sp_prepexecrpc prepares and executes a parameterized stored procedure call specified using an RPC identifier.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

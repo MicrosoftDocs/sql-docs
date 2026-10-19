@@ -1,9 +1,9 @@
 ---
 title: Work with Regular Expressions
 description: Use regular expressions to filter and manipulate text strings in SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: abhtiwar, randolphwest, wiassaf
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 09/01/2026
 ms.service: sql
 ms.topic: quickstart

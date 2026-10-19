@@ -1,8 +1,8 @@
 ---
 title: "Define logical record relationship between Merge table articles"
 description: Learn how to define the logical record relationship between related tables used for Merge Replication articles.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

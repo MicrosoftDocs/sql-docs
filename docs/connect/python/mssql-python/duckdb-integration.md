@@ -3,7 +3,7 @@ title: Use mssql-python with DuckDB
 description: Learn how to integrate the mssql-python driver with DuckDB for in-process SQL analytics on Microsoft SQL data using Apache Arrow.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

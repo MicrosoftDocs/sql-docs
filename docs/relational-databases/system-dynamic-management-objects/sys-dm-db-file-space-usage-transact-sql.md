@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_file_space_usage (Transact-SQL)"
 description: sys.dm_db_file_space_usage (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/23/2023
 ms.service: sql
 ms.subservice: system-objects

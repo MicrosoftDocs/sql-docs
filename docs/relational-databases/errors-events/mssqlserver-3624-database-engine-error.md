@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_3624"
 description: "MSSQLSERVER_3624"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/01/2023
 ms.service: sql
 ms.subservice: supportability

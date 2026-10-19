@@ -3,7 +3,7 @@ title: "Broker:Message Undeliverable Event Class"
 description: "Use the Broker:Message Undeliverable event class when Service Broker is unable to retain a received message that should have been delivered to a service in this instance."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/30/2025
 ms.service: sql
 ms.subservice: supportability

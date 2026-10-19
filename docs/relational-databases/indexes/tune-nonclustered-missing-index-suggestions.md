@@ -1,9 +1,9 @@
 ---
 title: Tune Nonclustered Indexes with Missing Index Suggestions
 description: How to use missing index suggestions to create and tune nonclustered indexes.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 10/01/2025
 ms.service: sql
 ms.topic: how-to

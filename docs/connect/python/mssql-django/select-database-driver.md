@@ -3,7 +3,7 @@ title: Select the Database Driver for mssql-django
 description: Learn how to opt a Django database alias into the mssql-python driver instead of the default pyodbc driver in mssql-django.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

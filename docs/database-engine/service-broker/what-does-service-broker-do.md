@@ -1,9 +1,9 @@
 ---
 title: What Does Service Broker Do?
 description: "Service Broker helps developers build asynchronous, loosely coupled applications in which independent components work together to accomplish a task."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

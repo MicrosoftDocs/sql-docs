@@ -1,8 +1,8 @@
 ---
 title: "Enable trustworthy property for a mirrored database"
 description: Learn how to enable the TRUSTWORTHY database property on a newly mirrored database by using Transact-SQL in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: database-mirroring

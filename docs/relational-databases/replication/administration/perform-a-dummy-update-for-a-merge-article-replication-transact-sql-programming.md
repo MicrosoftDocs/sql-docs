@@ -1,8 +1,8 @@
 ---
 title: "Dummy merge article update (Replication SP)"
 description: Use Transact-SQL replication stored procedures to perform a dummy update of a merge article used in merge replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

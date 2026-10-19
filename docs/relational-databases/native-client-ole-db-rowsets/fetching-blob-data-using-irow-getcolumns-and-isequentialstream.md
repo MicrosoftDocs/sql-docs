@@ -1,8 +1,8 @@
 ---
 title: "BLOB, IRow::GetColumns, ISequentialStream"
 description: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client

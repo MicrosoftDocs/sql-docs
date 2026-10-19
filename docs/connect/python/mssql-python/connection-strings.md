@@ -3,7 +3,7 @@ title: Connection Strings for mssql-python
 description: Reference for mssql-python connection string keywords, syntax, and examples for connecting to SQL Server and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

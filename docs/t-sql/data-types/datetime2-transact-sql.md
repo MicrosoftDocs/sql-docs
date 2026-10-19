@@ -1,9 +1,9 @@
 ---
 title: "datetime2 (Transact-SQL)"
 description: datetime2 defines a date that is combined with a time of day with high fractional precision, based on 24-hour clock.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/25/2024
 ms.service: sql
 ms.subservice: t-sql

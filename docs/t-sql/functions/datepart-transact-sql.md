@@ -1,8 +1,8 @@
 ---
 title: "DATEPART (Transact-SQL)"
 description: "Transact-SQL reference for the DATEPART function. This function returns an integer corresponding to the datepart of a specified date."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.reviewer: derekw
 ms.date: 07/25/2022
 ms.service: sql

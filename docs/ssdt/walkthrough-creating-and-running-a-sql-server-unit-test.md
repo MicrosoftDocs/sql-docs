@@ -1,9 +1,9 @@
 ---
 title: Creating and Running a SQL Server Unit Test
 description: Learn how to create a SQL Server unit test. Walk through the steps of setting up a test that detects an error in a stored procedure.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

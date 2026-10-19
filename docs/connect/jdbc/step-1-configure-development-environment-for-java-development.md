@@ -3,7 +3,7 @@ title: Configure the Environment for Java
 description: Find the current Maven quickstart for installing Java and adding the Microsoft JDBC Driver for SQL Server to your application.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, machavan, sunilbs
+ms.reviewer: davidengel, machavan, sunilbs
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: connectivity

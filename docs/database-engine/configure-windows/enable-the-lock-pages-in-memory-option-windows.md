@@ -1,8 +1,8 @@
 ---
 title: "Enable the Lock Pages in Memory Option (Windows)"
 description: Learn how to turn on the Lock pages in memory option. See how it can boost performance by keeping data in physical memory instead of paging it to disk.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 10/31/2025
 ms.service: sql
 ms.subservice: configuration

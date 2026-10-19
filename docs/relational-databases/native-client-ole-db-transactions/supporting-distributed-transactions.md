@@ -1,9 +1,9 @@
 ---
 title: Support distributed transactions (Native Client OLE DB provider)
 description: "Supporting Distributed Transactions in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: native-client

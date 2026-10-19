@@ -1,9 +1,9 @@
 ---
 title: "sp_server_diagnostics (Transact-SQL)"
 description: sp_server_diagnostics captures diagnostic data and health information about SQL Server to detect potential failures.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects

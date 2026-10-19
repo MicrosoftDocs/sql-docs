@@ -3,8 +3,8 @@ title: Troubleshoot Installation and Connection Issues with mssql-python
 description: Diagnose and resolve mssql-python installation, connection, container, and continuous integration issues.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sumitsar
-ms.date: 09/17/2026
+ms.reviewer: vanto, sumitsar
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -220,9 +220,16 @@ conn = mssql_python.connect(
 
 **Symptoms:**
 
+When `libltdl` or the Kerberos libraries are missing, `import mssql_python` succeeds, but the first `connect()` call raises `OperationalError`:
+
 ```text
-ImportError: libltdl.so.7: cannot open shared object file: No such file or directory
-ImportError: libkrb5.so.3: cannot open shared object file
+OperationalError: Driver Error: Connection operation failed; DDBC Error: Failed to load the driver. Please read the documentation (https://github.com/microsoft/mssql-python#installation) to install the required dependencies.
+```
+
+On Alpine Linux, when `libstdc++` is missing, `import mssql_python` fails:
+
+```text
+ImportError: Error loading shared library libstdc++.so.6: No such file or directory
 ```
 
 **Solution:**
@@ -233,7 +240,7 @@ Install the required system packages for your distribution:
 | --- | --- |
 | Ubuntu or Debian | `sudo apt-get install libltdl7 libkrb5-3 libgssapi-krb5-2` |
 | Red Hat or Fedora | `sudo dnf install libtool-ltdl krb5-libs` |
-| Alpine | `apk add libltdl krb5-libs` |
+| Alpine | `apk add libltdl krb5-libs libstdc++` |
 
 For Dockerfile examples, see [Container and local development](container-local-development.md).
 

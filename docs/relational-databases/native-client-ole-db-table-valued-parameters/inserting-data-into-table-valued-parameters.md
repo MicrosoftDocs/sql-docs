@@ -1,8 +1,8 @@
 ---
 title: "Insert data into table-valued parameters (Native Client OLE DB provider)"
 description: Learn about the two models that the SQL Server Native Client OLE DB Provider supports for the consumer to specify data for table-valued parameter rows.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

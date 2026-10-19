@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_601"
 description: "MSSQLSERVER_601"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/20/2026
 ai-usage: ai-assisted
 ms.service: sql

@@ -3,7 +3,7 @@ title: What Is a Single Database?
 description: Learn about the single database resource type in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: service-overview

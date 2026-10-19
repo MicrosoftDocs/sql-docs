@@ -1,9 +1,9 @@
 ---
 title: "Specify Field and Row Terminators (SQL Server)"
 description: Field terminators and row terminators indicate to programs that read the data file where one field or row ends and another field or row begins.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: vanto
 ms.date: 03/30/2025
 ms.service: sql
 ms.subservice: data-movement

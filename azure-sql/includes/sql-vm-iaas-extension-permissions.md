@@ -1,8 +1,8 @@
 ---
 title: "SQL IaaS extension note: least privilege & management mode"
 description: An include note to highlight differences in permissions models added for SQL VM in October 2022. 
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.topic: include
 ---
 

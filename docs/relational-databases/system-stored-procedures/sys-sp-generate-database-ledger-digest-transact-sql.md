@@ -3,7 +3,7 @@ title: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
 description: Generates the ledger digest, which is the hash of the last block in sys.database_ledger_blocks.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

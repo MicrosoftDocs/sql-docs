@@ -3,7 +3,7 @@ title: The msdb Database
 description: The msdb database stores SQL Server Agent jobs, alerts, backup history, and Database Mail settings. Learn its properties, restrictions, and backup best practices.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/10/2026
 ms.service: sql
 ms.topic: concept-article

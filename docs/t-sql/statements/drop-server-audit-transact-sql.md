@@ -3,7 +3,7 @@ title: "DROP SERVER AUDIT (Transact-SQL)"
 description: DROP SERVER AUDIT drops a server audit object using the SQL Server Audit feature.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/25/2024
 ms.service: sql
 ms.subservice: t-sql

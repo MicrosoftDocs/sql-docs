@@ -3,7 +3,7 @@ title: "IS [NOT] DISTINCT FROM (Transact-SQL)"
 description: "Transact-SQL reference for the IS [NOT] DISTINCT FROM language element. Determine whether two expressions evaluate to NULL"
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: t-sql

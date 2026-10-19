@@ -1,9 +1,9 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL)"
 description: CREATE FUNCTION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 11/03/2025
 ms.service: sql
 ms.subservice: t-sql

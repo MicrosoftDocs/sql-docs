@@ -1,8 +1,8 @@
 ---
 title: "sys.system_parameters (Transact-SQL)"
 description: sys.system_parameters contains one row for each system object that has parameters.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/28/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "sys.sp_adduser (Transact-SQL)"
 description: sp_adduser adds a new user to the current database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

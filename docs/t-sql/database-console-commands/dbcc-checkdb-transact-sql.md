@@ -1,8 +1,8 @@
 ---
 title: DBCC CHECKDB (Transact-SQL)
 description: DBCC CHECKDB checks the logical and physical integrity of all the objects in the specified database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: t-sql

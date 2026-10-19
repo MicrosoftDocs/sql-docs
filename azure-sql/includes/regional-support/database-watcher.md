@@ -1,7 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest, dfurman
+author: bluefooted
+ms.author: pamela
+ms.reviewer: dfurman
 ms.date: 05/05/2025
 ms.service: azure-sql
 ms.topic: include

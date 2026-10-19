@@ -1,8 +1,8 @@
 ---
 title: Self-Hosted Integration Runtime for Database Migrations
 description: Learn about the self-hosted integration runtime, used to migrate databases with Azure Database Migration Service.
-author: rwestMSFT
-ms.author: randolphwest
+author: abhims14
+ms.author: abhishekum
 ms.reviewer: abhishekum
 ms.date: 02/19/2026
 ms.service: azure-database-migration-service

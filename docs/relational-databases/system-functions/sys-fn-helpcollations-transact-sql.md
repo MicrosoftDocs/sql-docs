@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_helpcollations (Transact-SQL)"
 description: "sys.fn_helpcollations (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/23/2017"
 ms.service: sql
 ms.subservice: system-objects

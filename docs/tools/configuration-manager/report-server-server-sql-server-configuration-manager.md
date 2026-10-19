@@ -1,8 +1,8 @@
 ---
 title: "Report Server &lt;server&gt; (SQL Server Configuration Manager)"
 description: Find out how to use SQL Server Configuration Manager to view the properties of the SQL Server Reporting Services software system.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

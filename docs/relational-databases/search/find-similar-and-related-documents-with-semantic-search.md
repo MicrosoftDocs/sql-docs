@@ -1,8 +1,8 @@
 ---
 title: "Find Similar & Related Documents with Semantic Search"
 description: Find similar or related documents or text values in columns that are configured for statistical semantic indexing.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/24/2025
 ms.service: sql
 ms.subservice: search

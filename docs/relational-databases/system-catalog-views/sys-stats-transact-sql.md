@@ -1,8 +1,8 @@
 ---
 title: "sys.stats (Transact-SQL)"
 description: The sys.stats system catalog view contains a row for each statistics object that exists for the tables, indexes, and indexed views in a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: system-objects

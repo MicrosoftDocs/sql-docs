@@ -1,9 +1,9 @@
 ---
 title: "sp_migrate_user_to_contained (Transact-SQL)"
 description: sp_migrate_user_to_contained converts a database user that is mapped to a SQL Server login, to a contained database user with password.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

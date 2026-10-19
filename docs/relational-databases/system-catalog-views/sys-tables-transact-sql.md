@@ -1,8 +1,8 @@
 ---
 title: sys.tables (Transact-SQL)
 description: sys.tables returns a row for each user table in a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 03/27/2024
 ms.service: sql
 ms.subservice: system-objects

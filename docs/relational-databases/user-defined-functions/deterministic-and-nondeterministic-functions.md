@@ -1,8 +1,8 @@
 ---
 title: "Deterministic and Nondeterministic Functions"
 description: "Learn about deterministic and nondeterministic functions in the SQL Database Engine."
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/15/2025
 ms.service: sql
 ms.topic: concept-article

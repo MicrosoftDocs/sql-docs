@@ -1,9 +1,9 @@
 ---
 title: "SQL Server, Database Replica Object"
 description: "Learn about the SQLServer:Database Replica performance object, which contains performance counters about secondary databases of an Always On availability group."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 02/04/2026
 ms.service: sql
 ms.subservice: performance

@@ -1,8 +1,8 @@
 ---
 title: Memory-Optimized System-Versioned Temporal Table Performance
 description: This article discusses some specific performance considerations when using system-versioned memory-optimized temporal tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

@@ -3,7 +3,7 @@ title: Configure best practices assessment
 description: Learn how to configure best practices assessment on an instance of SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/09/2024
 ms.topic: how-to
 ms.custom: sfi-image-nochange

@@ -1,8 +1,8 @@
 ---
 title: "EXISTS (Transact-SQL)"
 description: EXISTS specifies a subquery to test for the existence of rows.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: t-sql

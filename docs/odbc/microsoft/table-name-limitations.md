@@ -3,7 +3,7 @@ title: "Table name limitations"
 description: "Table name limitations"
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: davidengel, sunilbs, mcimfl
 ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: connectivity

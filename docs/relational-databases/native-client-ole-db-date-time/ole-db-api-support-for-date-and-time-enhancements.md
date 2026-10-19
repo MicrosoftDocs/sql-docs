@@ -1,8 +1,8 @@
 ---
 title: API support for date and time enhancements (Native Client OLE DB provider)
 description: "OLE DB API Support for Date and Time Enhancements (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.topic: "reference"

@@ -3,7 +3,7 @@ title: Django Backend for SQL Server - mssql-django
 description: Overview and task hub for installing, configuring, querying, authenticating, deploying, and troubleshooting Django applications with the mssql-django backend for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, sharmag, sumitsar
+ms.reviewer: vanto, sharmag, sumitsar
 ms.date: 09/18/2026
 ms.service: sql
 ms.subservice: connectivity

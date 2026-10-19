@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_enumerate_fixed_drives (Transact-SQL)"
 description: "sys.dm_os_enumerate_fixed_drives enumerates volumes mounted to drive letters."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/11/2023
 ms.service: sql
 ms.subservice: system-objects

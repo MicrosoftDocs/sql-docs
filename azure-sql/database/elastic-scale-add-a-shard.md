@@ -3,7 +3,7 @@ title: Adding a Shard Using Elastic Database Tools
 description: How to use Elastic Scale APIs to add new shards to a shard set.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma, randolphwest
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

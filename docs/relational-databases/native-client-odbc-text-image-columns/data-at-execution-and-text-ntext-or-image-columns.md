@@ -1,8 +1,8 @@
 ---
 title: "Data-at-Execution and Text, ntext, Image"
 description: "Data-at-Execution and Text, ntext, or Image Columns"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client

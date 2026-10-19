@@ -1,8 +1,8 @@
 ---
 title: SYSDATETIME (Transact-SQL)
 description: SYSDATETIME returns a datetime2(7) value that contains the date and time of the computer running the Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql

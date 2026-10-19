@@ -1,8 +1,8 @@
 ---
 title: "Upgrade or Patch Replicated Databases"
 description: SQL Server supports upgrading replicated databases from previous versions of SQL Server without stopping activity on other nodes.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 02/26/2025
 ms.service: sql
 ms.subservice: install

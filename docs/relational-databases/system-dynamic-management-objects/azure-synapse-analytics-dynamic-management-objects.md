@@ -2,8 +2,8 @@
 title: Dynamic Management Objects
 titleSuffix: Azure Synapse Analytics
 description: Azure Synapse Analytics dynamic management objects.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: data-warehouse

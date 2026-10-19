@@ -1,8 +1,8 @@
 ---
 title: "DROP EXTERNAL MODEL (Transact-SQL)"
 description: DROP EXTERNAL MODEL (Transact-SQL) for dropping an external model object that contains the location, authentication method, and purpose of an AI model inference endpoint.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: bspendolini
 ms.date: 10/14/2025
 ms.service: sql

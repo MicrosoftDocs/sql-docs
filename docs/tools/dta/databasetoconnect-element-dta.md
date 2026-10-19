@@ -1,8 +1,8 @@
 ---
 title: "DatabaseToConnect Element (DTA)"
 description: In the dta utility, DatabaseToConnect element specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

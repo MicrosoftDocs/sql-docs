@@ -3,7 +3,7 @@ title: "sp_set_session_context (Transact-SQL)"
 description: sp_set_session_context sets a key-value pair in the session context.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

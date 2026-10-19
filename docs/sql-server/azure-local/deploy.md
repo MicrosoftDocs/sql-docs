@@ -1,8 +1,8 @@
 ---
 title: Deploy SQL Server on Azure Local
 description: Deploy SQL Server in Windows Server or Linux virtual machines on Azure Local, and configure connected management, availability, security, and licensing.
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/28/2026
 ms.topic: how-to
 ms.service: sql

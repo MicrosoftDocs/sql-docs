@@ -3,7 +3,7 @@ title: "sp_create_openrowset_statistics (Transact-SQL)"
 description: sp_create_openrowset_statistics creates column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"

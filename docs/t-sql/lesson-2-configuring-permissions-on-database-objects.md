@@ -1,9 +1,9 @@
 ---
 title: "T-SQL Tutorial: Configure permissions on db objects"
 description: This lesson shows you how to configure permissions and create a view and a stored procedure as the object.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql

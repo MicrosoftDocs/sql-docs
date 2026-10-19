@@ -3,7 +3,7 @@ title: "Always Encrypted"
 description: Overview of Always Encrypted that supports transparent client-side encryption and confidential computing in SQL Server and Azure SQL Database
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: security

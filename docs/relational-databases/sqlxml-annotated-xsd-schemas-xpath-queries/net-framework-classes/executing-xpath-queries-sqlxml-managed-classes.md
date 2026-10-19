@@ -1,8 +1,8 @@
 ---
 title: "Executing XPath Queries (SQLXML)"
 description: Learn how to execute an XPath query against a mapping schema using SQLXML Managed Classes.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

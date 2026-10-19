@@ -1,8 +1,8 @@
 ---
 title: "KILL (Transact-SQL)"
 description: The KILL statement ends a user process that is based on the session ID or unit of work (UOW).
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/09/2025
 ms.service: sql
 ms.subservice: t-sql

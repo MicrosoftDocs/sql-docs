@@ -2,8 +2,8 @@
 title: Organize Columns Displayed in a Trace
 titleSuffix: SQL Server Profiler
 description: Make it easier to analyze SQL Server Profiler trace output by grouping and aggregating events when you define or view a trace.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

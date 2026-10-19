@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tran_aborted_transactions (Transact-SQL)"
 description: sys.dm_tran_aborted_transactions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 02/03/2025
 ms.service: sql

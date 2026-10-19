@@ -1,8 +1,8 @@
 ---
 title: "Communicating with SQL Server (ODBC)"
 description: Learn how an ODBC application communicates with an instance of SQL Server by using connections and connection resources.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

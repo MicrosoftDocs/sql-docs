@@ -1,8 +1,8 @@
 ---
 title: "User-Defined Function, Return Code (OLE DB)"
 description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

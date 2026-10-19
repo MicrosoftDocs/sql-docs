@@ -3,7 +3,7 @@ title: "Restore a Database Backup Using SSMS"
 description: This article explains how to restore a full SQL Server database backup using SQL Server Management Studio.
 author: erinstellato-ms
 ms.author: erinstellato
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/08/2023
 ms.service: sql
 ms.subservice: backup-restore

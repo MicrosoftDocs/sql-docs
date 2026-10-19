@@ -1,8 +1,8 @@
 ---
 title: "Stored Procedure, ODBC CALL, Output"
 description: "Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client

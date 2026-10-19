@@ -1,9 +1,9 @@
 ---
 title: "OPENXML (Transact-SQL)"
 description: OPENXML provides a rowset view over an XML document.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/20/2024
 ms.service: sql
 ms.subservice: t-sql

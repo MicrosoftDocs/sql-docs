@@ -3,7 +3,7 @@ title: "sys.dm_pdw_exec_connections (Transact-SQL)"
 description: sys.dm_pdw_exec_connections returns information about the connections established to this instance of Azure Synapse Analytics and the details of each connection.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/29/2024
 ms.service: sql
 ms.subservice: data-warehouse

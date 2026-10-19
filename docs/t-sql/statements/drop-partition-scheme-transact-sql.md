@@ -3,7 +3,7 @@ title: "DROP PARTITION SCHEME (Transact-SQL)"
 description: DROP PARTITION SCHEME removes a partition scheme from the current database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: t-sql

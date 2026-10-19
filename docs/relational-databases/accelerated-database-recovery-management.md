@@ -1,9 +1,9 @@
 ---
 title: "Manage Accelerated Database Recovery"
 description: "Best practices for managing and configuring accelerated database recovery (ADR)."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf, derekw, dfurman, randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: wiassaf, derekw, dfurman
 ms.date: 05/01/2025
 ms.service: sql
 ms.subservice: backup-restore

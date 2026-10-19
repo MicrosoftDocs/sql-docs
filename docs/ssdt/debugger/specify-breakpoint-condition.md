@@ -2,9 +2,9 @@
 title: Specify a Breakpoint Condition
 titleSuffix: T-SQL debugger
 description: Learn how to establish a breakpoint condition to control whether the debugger performs an action when the breakpoint and hit count are reached.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

@@ -1,9 +1,9 @@
 ---
 title: char and varchar (Transact-SQL)
 description: "Character data types that are either fixed-size (char), or variable-size (varchar)."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: t-sql

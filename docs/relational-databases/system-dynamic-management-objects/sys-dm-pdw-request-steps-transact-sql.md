@@ -3,7 +3,7 @@ title: "sys.dm_pdw_request_steps (Transact-SQL)"
 description: sys.dm_pdw_request_steps Holds information about all steps that compose a given request or query in Azure Synapse Analytics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/15/2024
 ms.service: sql
 ms.subservice: data-warehouse

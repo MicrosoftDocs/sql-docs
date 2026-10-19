@@ -1,8 +1,8 @@
 ---
 title: "Use Character Format to Import & Export Data"
 description: Character format uses character data format for all columns. This is useful working with other programs or copying to an instance from another database vendor.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 02/10/2026
 ms.service: sql
 ms.subservice: data-movement

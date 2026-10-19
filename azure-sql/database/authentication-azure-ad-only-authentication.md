@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article provides information on the Microsoft Entra-only authentication feature with Azure SQL.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 10/07/2026
 ai-usage: ai-assisted
 ms.service: azure-sql

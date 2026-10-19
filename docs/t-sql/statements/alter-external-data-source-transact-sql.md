@@ -1,9 +1,9 @@
 ---
 title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL)"
 description: ALTER EXTERNAL DATA SOURCE modifies an external data source used to create an external table.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, hudequei, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: hudequei, wiassaf
 ms.date: 11/10/2025
 ms.service: sql
 ms.subservice: t-sql

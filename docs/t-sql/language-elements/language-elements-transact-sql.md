@@ -1,8 +1,8 @@
 ---
 title: "Language Elements (Transact-SQL)"
 description: "Language Elements (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: t-sql

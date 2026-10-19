@@ -1,8 +1,8 @@
 ---
 title: "EXECUTE (Transact-SQL)"
 description: Execute a command string or character string within a Transact-SQL batch, or other modules.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: t-sql

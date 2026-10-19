@@ -1,8 +1,8 @@
 ---
 title: Publish Data and Database Objects
 description: Publish data and database objects in SQL Server replication. Learn which tables, views, stored procedures, and types you can replicate, and how to publish them.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

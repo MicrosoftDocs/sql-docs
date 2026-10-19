@@ -1,8 +1,8 @@
 ---
 title: "sys.foreign_key_columns (Transact-SQL)"
 description: sys.foreign_key_columns (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "04/05/2022"
 ms.service: sql
 ms.subservice: system-objects

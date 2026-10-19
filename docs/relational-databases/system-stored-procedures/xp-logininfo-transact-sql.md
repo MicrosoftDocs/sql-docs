@@ -3,7 +3,7 @@ title: "sys.xp_logininfo (Transact-SQL)"
 description: xp_logininfo returns information about Windows users and Windows groups.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

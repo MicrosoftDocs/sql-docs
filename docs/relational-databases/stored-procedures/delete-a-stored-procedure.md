@@ -3,7 +3,7 @@ title: "Delete a Stored Procedure"
 description: Learn how to delete a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: stored-procedures

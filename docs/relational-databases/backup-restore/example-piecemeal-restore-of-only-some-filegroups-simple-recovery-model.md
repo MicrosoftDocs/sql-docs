@@ -1,8 +1,8 @@
 ---
 title: "Piecemeal restore: only some filegroups (simple recovery model)"
 description: This example shows a piecemeal restore of only some filegroups in SQL Server of a database using the simple recovery model.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore

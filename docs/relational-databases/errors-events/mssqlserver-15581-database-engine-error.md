@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_15581
 description: "MSSQLSERVER_15581"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: jopilov, mathoma, VenCher
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov, VenCher
 ms.date: 09/03/2020
 ms.service: sql
 ms.subservice: supportability

@@ -3,7 +3,7 @@ title: Create a Hyperscale Database
 description: Create a Hyperscale database in Azure SQL Database using the Azure portal, Transact-SQL, PowerShell, or the Azure CLI.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration

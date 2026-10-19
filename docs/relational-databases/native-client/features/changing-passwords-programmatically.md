@@ -1,8 +1,8 @@
 ---
 title: "Changing Passwords Programmatically"
 description: "Changing SQL Server Native Client Passwords Programmatically"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

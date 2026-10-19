@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_procedure_stats (Transact-SQL)"
 description: sys.dm_exec_procedure_stats (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "04/18/2024"
 ms.service: sql
 ms.subservice: system-objects

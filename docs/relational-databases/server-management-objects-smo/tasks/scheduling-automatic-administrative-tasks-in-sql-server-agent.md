@@ -1,8 +1,8 @@
 ---
 title: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
 description: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

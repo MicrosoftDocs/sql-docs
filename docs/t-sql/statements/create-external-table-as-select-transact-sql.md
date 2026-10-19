@@ -1,9 +1,9 @@
 ---
 title: "CREATE EXTERNAL TABLE AS SELECT (CETAS) (Transact-SQL)"
 description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table and then exports, in parallel, the results of a T-SQL SELECT statement."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf, mlandzic, nzagorac
 ms.date: 01/29/2025
 ms.service: sql
 ms.subservice: t-sql

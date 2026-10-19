@@ -1,8 +1,8 @@
 ---
 title: SqlPackage Extract
 description: Learn how to automate database development tasks with SqlPackage Extract. View examples and available parameters, properties, and SQLCMD variables.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 06/03/2026
 ms.service: sql

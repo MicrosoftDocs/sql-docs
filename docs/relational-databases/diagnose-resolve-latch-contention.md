@@ -3,7 +3,7 @@ title: "Whitepaper: Diagnose and Resolve Latch Contention"
 description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 07/17/2025
 ms.service: sql
 ms.subservice: performance

@@ -2,8 +2,8 @@
 title: "Aliasing"
 titleSuffix: Azure Synapse Analytics
 description: "Aliasing in Azure Synapse Analytics."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: t-sql

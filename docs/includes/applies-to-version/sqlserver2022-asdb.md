@@ -1,6 +1,6 @@
 ---
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 04/07/2022
 ms.service: sql
 ms.topic: include

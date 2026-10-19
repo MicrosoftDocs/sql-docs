@@ -3,7 +3,7 @@ title: CURRENT_TIMEZONE_ID (Transact-SQL)
 description: CURRENT_TIMEZONE_ID returns the ID of the time zone that a server or instance observes.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/20/2026
 ms.service: sql
 ms.subservice: t-sql

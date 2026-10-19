@@ -1,8 +1,8 @@
 ---
 title: "Handling Errors and Messages"
 description: Learn about what diagnostic information is returned when an application calls an ODBC function, including success or failure and detailed information.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client

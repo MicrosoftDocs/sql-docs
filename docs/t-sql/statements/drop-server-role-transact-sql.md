@@ -3,7 +3,7 @@ title: "DROP SERVER ROLE (Transact-SQL)"
 description: DROP SERVER ROLE removes a user-defined server role.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: "Create a Database Snapshot for an Availability Group"
 description: "Describes how to create a database snapshot for a database within an Always On availability group on either the primary or secondary database."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: availability-groups

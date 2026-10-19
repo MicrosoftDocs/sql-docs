@@ -1,8 +1,8 @@
 ---
 title: "SQLDriverConnect"
 description: Learn about SQLDriverConnect connection attributes and support for high availability/disaster recovery and SPNs in the SQL Server Native Client ODBC driver.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client

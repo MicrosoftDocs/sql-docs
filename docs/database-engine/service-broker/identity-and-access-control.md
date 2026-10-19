@@ -1,9 +1,9 @@
 ---
 title: "Identity and Access Control (Service Broker)"
 description: "Most Service Broker applications that involve more than one instance run in the security context of a database principal created specifically for the application."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)"
 description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "Server Configuration: column encryption enclave type"
 description: Find out how to enable or disable a secure enclave for Always Encrypted. Learn how to confirm whether an enclave was correctly initialized.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replmonitorsubscriptionpendingcmds (Transact-SQL)"
 description: Describes the sp_replmonitorsubscriptionpendingcmds stored procedure that returns information on the number of pending commands for a subscription to a transactional publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

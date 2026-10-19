@@ -1,9 +1,9 @@
 ---
 title: "ALTER EVENT SESSION (Transact-SQL)"
 description: Starts or stops an Extended Event session, or changes an event session configuration.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 10/02/2025
 ms.service: sql
 ms.subservice: t-sql

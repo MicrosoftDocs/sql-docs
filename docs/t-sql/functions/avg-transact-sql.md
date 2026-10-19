@@ -1,8 +1,8 @@
 ---
 title: "AVG (Transact-SQL)"
 description: "AVG (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 06/28/2024
 ms.service: sql
 ms.subservice: t-sql

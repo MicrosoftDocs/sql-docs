@@ -3,7 +3,7 @@ title: Configurable retry logic
 description: Use the JDBC driver's configurable retry logic (CRL) to automatically retry failed statements or connection attempts based on SQL Server error numbers, with timing parameters you control.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/02/2026
 ms.service: sql
 ms.subservice: connectivity

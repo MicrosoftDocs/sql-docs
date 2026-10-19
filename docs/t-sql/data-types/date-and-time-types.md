@@ -1,9 +1,9 @@
 ---
 title: "Date and time types"
 description: "Date and time types"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/07/2024
 ms.service: sql
 ms.subservice: t-sql

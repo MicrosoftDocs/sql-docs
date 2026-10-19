@@ -1,9 +1,9 @@
 ---
 title: "sp_polybase_join_group"
 description: "Adds a SQL Server instance as a compute node to a PolyBase group for scale-out computation."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

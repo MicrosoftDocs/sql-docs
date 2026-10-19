@@ -3,7 +3,7 @@ title: Manage Automatic Connection
 description: In this article, you learn how you can manage the automatic connection of SQL Server instance resources to Azure Arc with SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest, twright
+ms.reviewer: twright
 ms.date: 09/24/2025
 ms.topic: how-to
 ---

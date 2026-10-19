@@ -3,7 +3,7 @@ title: "RIGHT_SHIFT (Transact-SQL)"
 description: "Transact-SQL reference for the RIGHT_SHIFT function."
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/29/2026
 ms.service: sql
 ms.subservice: t-sql

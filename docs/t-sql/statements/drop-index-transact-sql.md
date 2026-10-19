@@ -3,7 +3,7 @@ title: "DROP INDEX (Transact-SQL)"
 description: DROP INDEX removes one or more relational, spatial, filtered, or XML indexes from the current database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/14/2025
 ms.service: sql
 ms.subservice: t-sql

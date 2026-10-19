@@ -1,8 +1,8 @@
 ---
 title: Add Database Objects Using Item Templates
 description: Use the SQL Database Projects extension for Visual Studio Code to add common database objects to your project using item templates.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: iqrashaikh
 ms.date: 02/10/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "BEGIN...END (Transact-SQL)"
 description: BEGIN...END allows the execution of a group of Transact-SQL statements in a control of flow.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 11/21/2025
 ms.service: sql
 ms.subservice: t-sql

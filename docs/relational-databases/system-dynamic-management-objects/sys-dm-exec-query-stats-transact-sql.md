@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_query_stats (Transact-SQL)"
 description: sys.dm_exec_query_stats returns aggregate performance statistics for cached query plans in the Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/16/2024
 ms.service: sql
 ms.subservice: system-objects

@@ -4,7 +4,7 @@ description: Microsoft.Data.SqlClient connects .NET applications to SQL Server, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/21/2026
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -18,7 +18,10 @@ Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azu
 
 ## Choose your starting point
 
+<a name="choose-a-database"></a>
+
 - To set up a project and run your first query, start with [Get started with the SqlClient driver](get-started-sqlclient-driver.md).
+- To create a database to connect to, see the [prerequisites](get-started-sqlclient-driver.md#prerequisites) in Get started with the SqlClient driver.
 - To add or update the driver in a .NET project, go to [Install, update, and deploy Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md).
 - To connect to Azure SQL with passwordless authentication, start with [Microsoft Entra authentication](sql/azure-active-directory-authentication.md) and [Connection strings](connection-strings.md).
 - To make an existing application resilient to transient failures, go to [Configurable retry logic](configurable-retry-logic.md) and [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md).
@@ -26,27 +29,25 @@ Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azu
 - To migrate from `System.Data.SqlClient`, start with [Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient](migrate-system-data-sql-client-to-microsoft-data-sql-client.md).
 - To diagnose a connection or query problem, go to [SqlClient troubleshooting guide](sqlclient-troubleshooting-guide.md) and [Enable event source tracing](enable-eventsource-tracing.md).
 
-## Choose a database
-
-Create a database or connect to an existing database on one of the following platforms:
-
-| Platform | Setup |
-| --- | --- |
-| Azure SQL Database | [Create a database by using the Azure portal](/azure/azure-sql/database/single-database-create-quickstart). |
-| SQL database in Microsoft Fabric | [Load the AdventureWorks sample data](/fabric/database/sql/load-AdventureWorks-sample-data). |
-| SQL Server | [Install SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md), or use an existing instance available through TCP. |
-| SQL Server container | Create a container with [Docker](../../linux/install-upgrade/quickstart-install-docker.md), [sqlcmd](../../tools/sqlcmd/quickstart-sqlcmd-create-container.md), or the [MSSQL extension for Visual Studio Code](../../tools/visual-studio-code-extensions/mssql/mssql-local-container.md). |
-
 ## Production baseline for Azure SQL
 
-Use this snippet as a starting point for a production-oriented Azure SQL data access path. It reads the server and database names from <xref:Microsoft.Extensions.Configuration.IConfiguration>, so the values come from whatever configuration providers the host wires up (`appsettings.json`, environment variables, Azure App Configuration, Key Vault-backed settings, and so on). The configuration combines Transport Layer Security (TLS), managed identity, idle-connection resiliency, initial-connect retry through configurable retry logic (CRL) with structured logging, command-level retry for transient errors that fire mid-query, and fast failover-group recovery.
+Use this snippet as a starting point for a production-oriented Azure SQL data access path. It reads the server and database names from <xref:Microsoft.Extensions.Configuration.IConfiguration>, so the values come from the configuration providers the host wires up, such as `appsettings.json`, environment variables, Azure App Configuration, and Key Vault-backed settings. The configuration combines these features:
+
+- Transport Layer Security (TLS).
+- Managed identity.
+- Idle-connection resiliency.
+- Initial-connect retry through configurable retry logic (CRL), with structured logging.
+- Command-level retry for transient errors that occur mid-query.
+- Fast failover-group recovery.
+- Asynchronous calls that accept a cancellation token.
 
 For higher security and to support configuration across environments, keep connection information outside your code. In production, store connection information in your application's configuration system, and use Azure Key Vault for sensitive values. For more information, see [Protect connection information](protecting-connection-information.md).
 
 The C# snippet in this article omits `using` directives and class wrappers for brevity.
 
 ```csharp
-public static void QuerySalesWithResilience(IConfiguration config, ILogger logger)
+public static async Task<string> QueryDatabaseNameAsync(
+    IConfiguration config, ILogger logger, CancellationToken cancellationToken = default)
 {
     string server = config["Sql:Server"]
         ?? throw new InvalidOperationException("Missing configuration value 'Sql:Server'.");
@@ -107,46 +108,35 @@ public static void QuerySalesWithResilience(IConfiguration config, ILogger logge
             args.RetryCount, args.Delay);
     };
 
-    try
+    await using var connection = new SqlConnection(builder.ConnectionString)
     {
-        using var connection = new SqlConnection(builder.ConnectionString)
-        {
-            RetryLogicProvider = openRetry,
-        };
-        connection.Open();
+        RetryLogicProvider = openRetry,
+    };
+    await connection.OpenAsync(cancellationToken);
 
-        using var command = new SqlCommand(
-            "SELECT TOP (100) SalesOrderId, OrderDate, TotalDue FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC",
-            connection)
-        {
-            RetryLogicProvider = commandRetry,
-            CommandTimeout = 30,
-        };
-
-        using var reader = command.ExecuteReader();
-        while (reader.Read())
-        {
-            logger.LogInformation(
-                "Order {SalesOrderId} placed {OrderDate:d} total ${TotalDue:N2}",
-                reader.GetInt32(0), reader.GetDateTime(1), reader.GetDecimal(2));
-        }
-    }
-    catch (SqlException ex)
+    await using var command = new SqlCommand("SELECT DB_NAME()", connection)
     {
-        logger.LogError(
-            ex,
-            "Query against {Server}/{Database} failed after retries (SQL error {ErrorNumber})",
-            server, database, ex.Number);
-        throw;
-    }
+        RetryLogicProvider = commandRetry,
+        CommandTimeout = 30,
+    };
+
+    var name = (string)await command.ExecuteScalarAsync(cancellationToken);
+    logger.LogInformation("Connected to database {DatabaseName}", name);
+    return name;
 }
 ```
 
-This snippet targets any [SQL Database Engine](/sql/database-engine/sql-database-engine) endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later versions on Azure Virtual Machines or enabled by Azure Arc.
+This snippet targets any [SQL Database Engine](../../database-engine/sql-database-engine.md) endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later versions on Azure Virtual Machines or enabled by Azure Arc.
 
 `Encrypt = SqlConnectionEncryptOption.Strict` selects TDS 8.0 encryption. It requires Microsoft.Data.SqlClient 5.0 and later versions and a server that supports TDS 8.0 (SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric). Fall back to `SqlConnectionEncryptOption.Mandatory` when you connect to older servers.
 
-`ConnectRetryCount` and `ConnectRetryInterval` apply during initial connection establishment and idle connection recovery. When `ConnectRetryCount` is greater than zero, the driver retries qualifying transient failures during `Open()`. After `Open()` succeeds, the driver also uses these settings to reconnect a dropped idle connection on the next command. The `openRetry` provider assigned to <xref:Microsoft.Data.SqlClient.SqlConnection.RetryLogicProvider%2A?displayProperty=nameWithType> adds a configurable exponential-backoff policy around `Open()`. Account for both retry layers when you set the retry counts and connection timeout.
+`ConnectRetryCount` and `ConnectRetryInterval` apply during initial connection establishment and idle connection recovery. When `ConnectRetryCount` is greater than zero, the driver retries qualifying transient failures during `Open()`. After `Open()` succeeds, the driver also uses these settings to reconnect a dropped idle connection on the next command. The `openRetry` provider assigned to <xref:Microsoft.Data.SqlClient.SqlConnection.RetryLogicProvider%2A?displayProperty=nameWithType> adds a configurable exponential-backoff policy around `Open()`. Account for both retry layers when you set the retry counts and connection timeout. The driver stops its internal retries when `ConnectTimeout` expires, so each provider attempt takes at most about `ConnectTimeout` seconds. With these values, the worst case before `OpenAsync` throws is five attempts of up to 30 seconds each, plus the provider's backoff delays.
+
+The snippet creates the retry providers on every call to keep the example self-contained. In an application, create them once and reuse them for every connection and command. The method doesn't catch exceptions. After the providers exhaust their retries or hit a nontransient error, the exception propagates to the caller, which logs it once with the rest of the request context. When a provider exhausts its retries, it throws <xref:System.AggregateException>, which holds the exception from each attempt. A nontransient error propagates as the original exception.
+
+The snippet uses the asynchronous methods and passes a <xref:System.Threading.CancellationToken>. Cancellation stops the provider's wait between retries. It doesn't interrupt the driver's own `ConnectRetryInterval` wait inside a single `Open` attempt. For more information, see [Asynchronous programming](asynchronous-programming.md).
+
+`ActiveDirectoryManagedIdentity` works only where a managed identity is available, such as Azure App Service, Azure Functions, or an Azure virtual machine. For local development, use `SqlAuthenticationMethod.ActiveDirectoryDefault`, which tries several credential sources, including the Azure CLI and Visual Studio sign-in. Keep `ActiveDirectoryDefault` out of production because probing each credential source slows the connection. For more information, see [Use default authentication](sql/azure-active-directory-authentication.md#use-default-authentication).
 
 The <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider.Retrying> event on each provider fires before each retry attempt and carries the retry count, the delay before the next attempt, and the exceptions observed so far. Route it to <xref:Microsoft.Extensions.Logging.ILogger> or your telemetry pipeline to keep the retry loop visible in production.
 
@@ -163,6 +153,17 @@ For more information about each part of this configuration, see:
 - [Encryption and certificate validation](encryption-and-certificate-validation.md)
 - [Configurable retry logic](configurable-retry-logic.md)
 - [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md)
+
+## Learn the core data-access tasks
+
+After you connect, use these articles in order:
+
+1. [Execute a command](execute-command.md) to choose a result shape and run Transact-SQL (T-SQL).
+1. [Configure parameters](configure-parameters.md) to match the database contract.
+1. [Retrieve data with SqlDataReader](retrieve-data-by-datareader.md) to process rows and multiple results.
+1. [Modify data with stored procedures](modify-data-with-stored-procedures.md) to use output parameters and return values.
+1. [Use asynchronous programming and cancellation](asynchronous-programming.md) to add caller cancellation and bounded timeouts.
+1. [Handle errors and messages](handle-errors-messages.md) before you add retries or production diagnostics.
 
 ## Key features
 
@@ -214,11 +215,12 @@ For more information about each part of this configuration, see:
 | --- | --- |
 | [Commands and parameters](commands-parameters.md) | Execute parameterized SQL statements and stored procedures. |
 | [DataAdapters and DataReaders](dataadapters-datareaders.md) | Stream result sets or populate disconnected data structures. |
+| [Execute multiple commands with SqlBatch](execute-multiple-commands-sql-batch.md) | Send an ordered collection of commands and process their results. |
+| [Stream data](sqlclient-streaming-support.md) | Transfer large binary, text, XML, and JSON values without buffering the complete value. |
 | [Transactions and concurrency](transactions-and-concurrency.md) | Use local and distributed transactions and concurrency controls. |
 | [Retrieve database schema information](retrieving-database-schema-information.md) | Discover schema collections and restrictions. |
 | [Bulk copy operations](sql/bulk-copy-operations-sql-server.md) | Load large data sets efficiently with <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. |
 | [Table-valued parameters](sql/table-valued-parameters.md) | Send multiple rows to a parameterized statement or stored procedure. |
-| [Asynchronous programming](asynchronous-programming.md) | Use asynchronous connection, command, and data operations. |
 | [Multiple Active Result Sets (MARS)](sql/multiple-active-result-sets-mars.md) | Interleave multiple batches on one connection. |
 
 ## Data types
@@ -227,7 +229,7 @@ For more information about each part of this configuration, see:
 | --- | --- |
 | [ADO.NET data type mappings](data-type-mappings-ado-net.md) | Map common language runtime types to provider and SQL Server types. |
 | [SQL Server data types](sql/sql-server-data-types.md) | Work with SQL Server-specific values and <xref:System.Data.SqlTypes> types. |
-| [JSON data](sql/json-data-sql-server.md) | Send and retrieve the SQL Server `json` data type. |
+| [JSON data](sql/json-data-sql-server.md) | Send and retrieve the SQL Server **json** data type. |
 | [Vector data](sql/vector-data-sql-server.md) | Send and retrieve vector values. |
 | [XML data](sql/xml-data-sql-server.md) | Read, write, and parameterize XML values. |
 | [Binary and large-value data](sql/sql-server-binary-large-value-data.md) | Stream and update binary, FILESTREAM, and large-value data. |

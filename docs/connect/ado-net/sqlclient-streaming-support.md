@@ -1,170 +1,154 @@
 ---
-title: "SqlClient streaming support"
-description: Describes how to write applications that stream large data from SQL Server without loading it all in memory.
+title: SqlClient streaming support
+description: Stream large binary, text, XML, and JSON values between a SQL database and an application without buffering the complete value.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: cmalhotra, davidengel, paulmedynski
-ms.date: "12/04/2020"
+ms.reviewer: vanto, cmalhotra, davidengel, paulmedynski
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
+dev_langs:
+  - csharp
+ai-usage: ai-assisted
 ---
+
 # SqlClient streaming support
 
-[!INCLUDE [dotnet-all](../../includes/products/applies-full/dotnet-all.md)]
+Use Microsoft.Data.SqlClient streaming methods to process large values without first loading the complete value into application memory. Streaming is useful for binary files, large text, XML, JSON, and server-to-server transfer.
 
-[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+Streaming doesn't make the value seekable or make concurrent operations on a reader safe. The connection, command, reader, source stream, and destination object must remain alive until the transfer finishes.
 
-Streaming support between SQL Server and an application supports unstructured data on the server (documents, images, and media files). A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a large amount of memory.
+The examples in this article assume that an open <xref:Microsoft.Data.SqlClient.SqlConnection> named `connection` targets the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
 
-Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.
+The C# examples require `using Microsoft.Data.SqlClient;`. Examples that use `SqlDbType` or `CommandBehavior` also require `using System.Data;`.
 
-Streaming support also enables middle-tier applications to scale better, especially in scenarios where business objects connect to Azure SQL in order to send, retrieve, and manipulate large BLOBs.
+<a id="streaming-support-from-sql-server"></a>
 
-> [!WARNING]
-> The members that support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures. The streaming feature addresses basic Online Transaction Processing (OLTP) and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.
+## Stream data from a SQL database
 
-## Streaming support from SQL Server
+Execute the command with `CommandBehavior.SequentialAccess` and read columns in ordinal order. With sequential access, after you advance past a column, don't read an earlier column in the same row.
 
-Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:Microsoft.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them. These classes are used to retrieve data from queries. As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.
+Use these <xref:Microsoft.Data.SqlClient.SqlDataReader> methods:
 
-The following members were added to <xref:Microsoft.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:
+| Method | Result | Typical SQL data |
+| --- | --- | --- |
+| <xref:Microsoft.Data.SqlClient.SqlDataReader.GetStream%2A> | <xref:System.IO.Stream> | **binary**, **varbinary**, **image**, and user-defined type (UDT) data |
+| <xref:Microsoft.Data.SqlClient.SqlDataReader.GetTextReader%2A> | <xref:System.IO.TextReader> | Character and JSON data |
+| <xref:Microsoft.Data.SqlClient.SqlDataReader.GetXmlReader%2A> | <xref:System.Xml.XmlReader> | **xml** |
 
-- <xref:Microsoft.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
+Call `IsDBNull` before requesting a stream for a nullable column. A streaming getter used with an incompatible SQL type throws. Consume or dispose the current stream before reading another column, advancing the row, or moving to the next result.
 
-- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>
+`GetStream` isn't supported for encrypted columns. `GetTextReader` doesn't support sequential access to an encrypted column.
 
-- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>
+`CommandTimeout` applies while Microsoft.Data.SqlClient waits for network packets during execution and reading. Time that your application spends processing already received data isn't counted. For cancellation and timeouts, see [Asynchronous programming](asynchronous-programming.md).
 
-- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetStream%2A>
+<a id="example"></a>
+<a id="sample--streaming-from-sql-server"></a>
 
-- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetTextReader%2A>
+### Stream binary data
 
-- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
+AdventureWorks stores file content in the nullable **varbinary(max)** `Production.Document.Document` column. This example copies one value to a file with a bounded buffer:
 
-The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:
+```csharp
+using var command = new SqlCommand("""
+    SELECT TOP (1) Document
+    FROM Production.Document
+    WHERE Document IS NOT NULL
+    ORDER BY ModifiedDate DESC;
+    """, connection);
 
-- <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
-
-- <xref:System.Data.Common.DbDataReader.GetStream%2A>
-
-- <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
-
-## Streaming support to SQL Server
-
-Streaming support to SQL Server is in the <xref:Microsoft.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects. <xref:Microsoft.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.
-
-> [!NOTE]
-> Disposing a <xref:Microsoft.Data.SqlClient.SqlCommand> object or calling <xref:Microsoft.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation. If an application sends <xref:System.Threading.CancellationToken>, cancellation isn't guaranteed.
-
-The following <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> types accept a <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:
-
-- `Binary`
-
-- `VarBinary`
-
-The following <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> types accept a <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:
-
-- `Char`
-
-- `NChar`
-
-- `NVarChar`
-
-- `Xml`
-
-- `Json`
-
-The **Xml** <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> type accepts a <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.
-
-<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.
-
-The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object is transferred up to the value defined by the <xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>.
-
-## Sample--streaming from SQL Server
-
-Use the following Transact-SQL to create the sample database:
-
-```sql
-CREATE DATABASE [Demo]
-GO
-USE [Demo]
-GO
-CREATE TABLE [Streams] (
-[id] INT PRIMARY KEY IDENTITY(1, 1),
-[textdata] NVARCHAR(MAX),
-[bindata] VARBINARY(MAX),
-[xmldata] XML)
-GO
-INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'This is a test', 0x48656C6C6F, N'<test>value</test>')
-INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Hello, World!', 0x54657374696E67, N'<test>value2</test>')
-INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666F6F626172, N'<fff>bbb</fff><fff>bbc</fff>')
-GO
+using SqlDataReader reader = command.ExecuteReader(
+    CommandBehavior.SequentialAccess);
+if (reader.Read())
+{
+    using Stream source = reader.GetStream(0);
+    using FileStream destination = File.Create("document.bin");
+    source.CopyTo(destination);
+}
 ```
 
-The sample shows how to do the following actions:
+For text, use `GetTextReader` and copy to a <xref:System.IO.TextWriter>. For XML, use `GetXmlReader` and process XML nodes without converting the complete value to string.
 
-- Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.
+<a id="streaming-support-to-sql-server"></a>
 
-- Transfer a large text file from SQL Server in .NET.
+## Stream data to a SQL database
 
-- Transfer a large XML file from SQL Server in .NET.
+Set <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> to a streaming object and choose a compatible SQL type:
 
-- Retrieve data from SQL Server.
+| Value type | Compatible parameter types |
+| --- | --- |
+| <xref:System.IO.Stream> | `Binary`, `VarBinary`, and the legacy `Image` type |
+| <xref:System.IO.TextReader> | `Char`, `NChar`, `VarChar`, `NVarChar`, the legacy `Text` and `NText` types, `Xml`, and `Json` |
+| <xref:System.Xml.XmlReader> | `Char`, `NChar`, `VarChar`, `NVarChar`, the legacy `Text` and `NText` types, `Xml`, and `Json` |
 
-- Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.
+Set <xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A> explicitly. `Size` limits the amount transferred. Use `-1` for a `(max)` parameter when you want to send the complete source.
 
-[!code-csharp[SqlClient_Streaming_FromServer#1](~/../sqlclient/doc/samples/SqlClient_Streaming_FromServer.cs#1)]
+For bounded-memory transfer, use `VarBinary`, `VarChar`, or `NVarChar` with `Size = -1`, or use `Xml` or `Json`. Microsoft.Data.SqlClient buffers the source into a byte array or string before execution for non-`(max)` character and binary types and the legacy `Image`, `Text`, and `NText` types.
 
-## Sample--streaming to SQL Server
+<a id="sample--streaming-to-sql-server"></a>
 
-Use the following Transact-SQL to create the sample database:
+### Stream a parameter value
 
-```sql
-CREATE DATABASE [Demo2]
-GO
-USE [Demo2]
-GO
-CREATE TABLE [BinaryStreams] (
-[id] INT PRIMARY KEY IDENTITY(1, 1),
-[bindata] VARBINARY(MAX))
-GO
-CREATE TABLE [TextStreams] (
-[id] INT PRIMARY KEY IDENTITY(1, 1),
-[textdata] NVARCHAR(MAX))
-GO
-CREATE TABLE [BinaryStreamsCopy] (
-[id] INT PRIMARY KEY IDENTITY(1, 1),
-[bindata] VARBINARY(MAX))
-GO
+This example sends a file through a **varbinary(max)** parameter and returns the number of bytes received. It doesn't store the value:
+
+```csharp
+using FileStream input = File.OpenRead("document.bin");
+using var command = new SqlCommand(
+    "SELECT DATALENGTH(@content);",
+    connection);
+command.Parameters.Add(
+    new SqlParameter("@content", SqlDbType.VarBinary, -1)
+    {
+        Value = input
+    });
+
+long length = (long)command.ExecuteScalar()!;
+Console.WriteLine($"{length} bytes");
 ```
 
-The sample shows how to do the following actions:
+Keep the input object open until command execution completes. Pass a cancellation token to an asynchronous execution method or call `Cancel` to request cancellation of the streaming operation. Cancellation is best effort. The operation might finish before cancellation takes effect.
 
-- Transferring a large BLOB to SQL Server in .NET.
+An exception from the source stream or reader faults command execution. Don't retry from the same object unless you can establish its position and the database operation is safe to repeat.
 
-- Transferring a large text file to SQL Server in .NET.
+<a id="sample--streaming-from-one-sql-server-to-another-sql-server"></a>
 
-- Using the new asynchronous feature to transfer a large BLOB.
+## Stream data from one SQL database to another
 
-- Using the new asynchronous feature and the `await` keyword to transfer a large BLOB.
+This example passes an AdventureWorks document stream directly to a parameter on another open `SqlConnection` named `destinationConnection`. The sample command reports the received length. Replace it with the destination database's parameterized insert or update command:
 
-- Canceling the transfer of a large BLOB.
+```csharp
+using var readSource = new SqlCommand("""
+    SELECT TOP (1) Document
+    FROM Production.Document
+    WHERE Document IS NOT NULL
+    ORDER BY ModifiedDate DESC;
+    """, connection);
 
-- Streaming from one SQL Server to another using the asynchronous feature.
+using SqlDataReader sourceReader = readSource.ExecuteReader(
+    CommandBehavior.SequentialAccess);
 
-[!code-csharp[SqlClient_Streaming_ToServer#1](~/../sqlclient/doc/samples/SqlClient_Streaming_ToServer.cs#1)]
+if (sourceReader.Read())
+{
+    using Stream content = sourceReader.GetStream(0);
+    using var write = new SqlCommand(
+        "SELECT DATALENGTH(@content);",
+        destinationConnection);
+    write.Parameters.Add(
+        new SqlParameter("@content", SqlDbType.VarBinary, -1)
+        {
+            Value = content
+        });
 
-## Sample--Streaming from one SQL Server to another SQL Server
+    Console.WriteLine(write.ExecuteScalar());
+}
+```
 
-This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.
-
-> [!NOTE]
-> Before running the following sample, be sure the Demo and Demo2 databases are created.
-
-[!code-csharp[SqlClient_Streaming_ServerToServer#1](~/../sqlclient/doc/samples/SqlClient_Streaming_ServerToServer.cs#1)]
+The source and destination commands don't share a transaction. If your application requires coordinated atomic work across servers, design and test that transaction boundary separately.
 
 ## Related content
 
-- [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)
+- [Retrieve data with SqlDataReader](retrieve-data-by-datareader.md)
+- [Configure streaming parameters](configure-parameters.md#configure-streaming-values)
+- [Asynchronous programming](asynchronous-programming.md)
+- [Binary and large-value data](sql/sql-server-binary-large-value-data.md)

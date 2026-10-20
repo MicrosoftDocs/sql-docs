@@ -43,8 +43,6 @@ This view is similar to [sys.dm_os_windows_info](sys-dm-os-windows-info-transact
 
 The `SELECT` permission on `sys.dm_os_host_info` is granted to the **public** role by default, so any login can query the view.
 
-If the `SELECT` permission is revoked from **public**, granting `CONTROL SERVER` restores access.
-
 ## Examples
 
 The following example returns all columns from the `sys.dm_os_host_info` view.

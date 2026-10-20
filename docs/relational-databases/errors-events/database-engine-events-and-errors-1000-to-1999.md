@@ -4,7 +4,7 @@ description: "Consult this SQL Server error code list (between 1000 and 1999) to
 author: williamdassafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 09/15/2026
+ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference

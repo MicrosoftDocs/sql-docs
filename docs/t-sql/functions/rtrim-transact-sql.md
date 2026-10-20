@@ -66,10 +66,6 @@ A literal, variable, or function call of any non-LOB character type (**nvarchar*
 
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from the end of a *character_expression*. Returns `NULL` if input string is `NULL`.
 
-## Remarks
-
-In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, the optional *characters* argument works at every database compatibility level. Only the `LEADING`, `TRAILING`, and `BOTH` keywords of [TRIM](trim-transact-sql.md) require database compatibility level `160`.
-
 ## Examples
 
 ### A. Remove trailing spaces

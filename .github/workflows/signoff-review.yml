@@ -81,36 +81,28 @@ jobs:
                 $GitHubHeaders.Add("Authorization","token $($AccessToken)")
                 $GitHubHeaders.Add("User-Agent", "OfficeDocs")
 
-                $StatusHelpUrl = "https://dev.azure.com/msft-skilling/Content/_wiki/wikis/Database%20Docs/2358/Partner-publishing-workflow"
-                $StatusCheckName = "PR signed off by content team"
+                $StatusCheckName = "PR signed off by authorized user"
                 $Status = @{}
                 $Status.Add("context", $StatusCheckName)
-                $Status.Add("target_url", $StatusHelpUrl)
 
-                $ContentApprovalMessage = "Signed off by an authorized owner."
-                $ContentNeedsReviewMessage = "Waiting for an authorized owner, typically a member of the product group, to sign off."
+                $ContentApprovalMessage = "Signed off by an authorized user."
+                $ContentNeedsReviewMessage = "Waiting for an authorized user, typically a member of the product group, to sign off."
 
                 $SignOffString = "#sign-off"
                 $SignOffRegex = "\s*$SignOffString\s*"
 
-                $EscalationEmail = "[Data Docs Team](mailto:dbdocsprreviews@microsoft.com?subject=[PR%20REVIEW]%20Question%20on%20$GitHubRepoName%20PR%20$PrIssueNumber&body=$PrGitHubLink)"
-                $ContentLeadsUrl = "[the content lead in your area](https://dev.azure.com/msft-skilling/Content/_dashboards/dashboard/b25043af-cab3-4b2c-8aac-9e8da15a796b)"
-                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized owner, typically a member of the product group, comments `#` followed by `sign-off`, without a space,, even after it successfully builds and stages. If you have any questions, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
-                $NeedsContentTeamReviewMessage = "An authorized owner, typically a member of the product group, must comment `#` followed by `sign-off`, without a space, before this PR can merge. Please contact the appropriate product team or another authorized owner to review and sign off on this PR."
-                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized owner for this repository. Please contact the appropriate product team or another authorized owner to review this PR and comment `#` followed by `sign-off`, without a space,."
-                $SignOffAcceptedMessage = "Thanks, @$CommentUser! Your sign-off has been accepted as an authorized owner, and the sign-off check is being cleared. PRMerger may briefly report that this PR is blocked while the check updates. If that happens, we'll automatically retry up to two times, so please wait before trying again. All other merge requirements still apply; if both retries are blocked, we'll post a follow-up explaining what to check."
+                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized user, typically a member of the product group, comments `#` followed by `sign-off`, without a space, even after it successfully builds and stages. Please contact the appropriate product team or another authorized user to review and sign off on this PR."
+                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized user for this repository. Please contact the appropriate product team or another authorized user to review this PR and comment `#` followed by `sign-off`, without a space."
+                $SignOffAcceptedMessage = "Thanks, @$CommentUser! Your sign-off has been accepted as an authorized user, and the sign-off check is being cleared. PRMerger may briefly report that this PR is blocked while the check updates. If that happens, we'll automatically retry up to two times, so please wait before trying again. All other merge requirements still apply; if both retries are blocked, we'll post a follow-up explaining what to check."
                 $AssignedReviewerMessage = "Assigning the pull request to @!!USER!! for review. #assign: !!USER!!"
                 $CheckFailed = $False
                 $RetryAuthorizedSignOff = $False
 
                 $ContentReviewNeededLabelColor = "eeee88"
-                $ContentReviewNeededLabelDescription = "The pull request requires a review from the content team."
-                $ContentReviewNeededLabel = "needs-content-team-review"
+                $ContentReviewNeededLabelDescription = "The pull request requires review by an authorized user, typically a member of the product group."
+                $ContentReviewNeededLabel = "needs-authorized-user-review"
                 $ContentApprovedLabelColor = "2A8000"
-                $ContentReviewNeededLabelDescription = "The pull request requires review by an authorized owner, typically a member of the product group."
-                $ContentReviewNeededLabel = "needs-authorized-owner-review"
-                $ContentApprovedLabelColor = "2A8000"
-                $ContentApprovedLabelDescription = "An authorized owner signed off on the pull request."
+                $ContentApprovedLabelDescription = "An authorized user signed off on the pull request."
                 $ContentApprovedLabel = "pr-approved"
 
                 Write-Host "Repo: $GitHubRepoName"
@@ -217,7 +209,6 @@ jobs:
 
                     # Remove placeholder text from repo URL
                     $RepoUri = $RepoUri.Replace("{/name}","")
-                    $Result = $Null
 
                     # Construct the JSON statement that will be sent to GitHub as the body of the web request. Include the name of the label, its color, and description. 
                     # Convert hash table to JSON
@@ -232,7 +223,7 @@ jobs:
 
                         Write-Host "Creating label $Name in repo $RepoUri."
                         
-                        $Result = Invoke-RestMethod -Uri $RepoUri -Headers $GitHubHeaders  -Body $Body -Method POST
+                        [void](Invoke-RestMethod -Uri $RepoUri -Headers $GitHubHeaders -Body $Body -Method POST)
 
                     } Catch {
 
@@ -322,7 +313,7 @@ jobs:
                         {
                             Write-Host "Setting label $LabelName on URL $IssueLabelUrl."
 
-                            $Result = Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $GitHubHeaders  -Method POST
+                            [void](Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $GitHubHeaders -Method POST)
                         } 
                         Catch 
                         {
@@ -355,7 +346,7 @@ jobs:
                         $LabelUrl = "$IssueUrl/labels/$LabelUrlName"
                         Write-Host "$LabelUrl"
 
-                        $Result = Invoke-WebRequest -UseBasicParsing -Uri $LabelUrl -Headers $GitHubHeaders -Method Delete -ErrorAction Stop
+                        [void](Invoke-WebRequest -UseBasicParsing -Uri $LabelUrl -Headers $GitHubHeaders -Method Delete -ErrorAction Stop)
 
                         Write-Host "Successfully removed $LabelName label."
                     }                 
@@ -410,7 +401,7 @@ jobs:
 
                     Try 
                     {
-                        $Result = Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop
+                        [void](Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop)
                     
                         $PostCommentSuccess = $True
                     }
@@ -663,13 +654,7 @@ jobs:
 
                         Write-Host "Regex result found $SignOffString : $SignOffFound."
 
-                        # Check to see what labels are already on the PR
                         Initialize-Labels
-                        $LabelReviewNeededArray = Test-PrLabel -LabelArray $ContentReviewNeededLabel -IssueUrl $IssueUrl
-                        $LabelApprovedArray = Test-PrLabel -LabelArray $ContentApprovedLabel -IssueUrl $IssueUrl
-
-                        $ReviewNeededLabelSet = $LabelReviewNeededArray.$ContentReviewNeededLabel
-                        $ApprovedLabelSet = $LabelApprovedArray.$ContentApprovedLabel
                         
                         Write-Host "Monitored folders found: $MonitoredFoldersFound"
 
@@ -757,7 +742,7 @@ jobs:
                                 # Preserve only a real approval on this head, never a stale PR label.
                                 If ((Get-PrSignOffStatus).state -eq "success")
                                 {
-                                    Write-Host "Content team already approved. Returning success."
+                                    Write-Host "Sign-off check already passed for this commit. Returning success."
                                     $Status.state = "success"
                                     $Status.description = $ContentApprovalMessage                             
                                 }
@@ -770,7 +755,7 @@ jobs:
                                     Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewNeededLabel
                                     
                                     # Even though the check failed, leave the status as pending.
-                                    # It remains pending until an authorized owner signs off.
+                                    # It remains pending until an authorized user signs off.
                                     $Status.state = "pending"
                                     $Status.description = $ContentNeedsReviewMessage
                                 }
@@ -885,7 +870,7 @@ jobs:
                     # Populates the job summary if a user doesn't have permissions to sign off.
                     echo "# Pull request validation error" >> $env:GITHUB_STEP_SUMMARY
                     echo "" >> $env:GITHUB_STEP_SUMMARY
-                    echo "The user $CommentUser with permission level $UserPermission tried to sign off PR: $PrHtmlUrl but doesn't have the necessary permissions to do so. Please contact the content team to request sign off." >> $env:GITHUB_STEP_SUMMARY
+                    echo "The user $CommentUser with permission level $UserPermission tried to sign off PR: $PrHtmlUrl but doesn't have the necessary permissions to do so. Please contact the appropriate product team or another authorized user to request sign-off." >> $env:GITHUB_STEP_SUMMARY
                 } 
 
     retry-signoff:
@@ -921,7 +906,7 @@ jobs:
                 $RootId = [long]$GitHubData.event.comment.id
                 $Signer = $GitHubData.event.comment.user.login
                 $HeadSha = $env:ApprovedHead
-                $StatusContext = "PR signed off by content team"
+                $StatusContext = "PR signed off by authorized user"
                 $MarkerPrefix = "<!-- sql-signoff-retry:${HeadSha}:${RootId}:"
                 $Since = [uri]::EscapeDataString(([datetime]$GitHubData.event.comment.created_at).ToUniversalTime().ToString("o"))
 

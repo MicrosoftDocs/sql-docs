@@ -5,7 +5,7 @@ description: This article explains the Transport Layer Security (TLS) version ch
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf
-ms.date: 08/27/2025
+ms.date: 10/20/2026
 ms.service: azure-sql-database
 ms.subservice: connect
 ms.topic: how-to
@@ -128,7 +128,6 @@ You can configure the minimum TLS version for client connections by using the Az
 
 > [!CAUTION]
 > - The default for the minimum TLS version is to allow all versions TLS 1.2 and above. After you enforce a version of TLS, it's not possible to revert to the default.
-> - Enforcing a minimum of TLS 1.3 might cause issues for connections from clients that don't support TLS 1.3 since not all [drivers](/sql/connect/driver-feature-matrix) and operating systems support TLS 1.3.
 
 For customers with applications that rely on older versions of TLS, we recommend setting the minimal TLS version according to the requirements of your applications. If application requirements are unknown or workloads rely on older drivers that are no longer maintained, we recommend not setting any minimal TLS version.
 

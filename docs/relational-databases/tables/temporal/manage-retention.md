@@ -221,7 +221,7 @@ Don't rely on business logic that reads the history table beyond the retention p
 
 ### Point-in-time restore considerations
 
-When you restore a database to a specific point in time, the new database has temporal retention disabled at the database level (`is_temporal_history_retention_enabled` set to `OFF`). This behavior lets you inspect historical rows older than the retention period before the cleanup task removes them. To resume automatic cleanup on the restored database, set `TEMPORAL_HISTORY_RETENTION` back to `ON`.
+When you restore a database to a specific point in time on [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], the new database has temporal retention disabled at the database level (`is_temporal_history_retention_enabled` set to `OFF`). This behavior lets you inspect historical rows older than the retention period before the cleanup task removes them. To resume automatic cleanup on the restored database, set `TEMPORAL_HISTORY_RETENTION` back to `ON`.
 
 On [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], a full database restore that's recovered without applying any log backup sets `is_temporal_history_retention_enabled` to `OFF`. To resume automatic cleanup on the restored database, set `TEMPORAL_HISTORY_RETENTION` back to `ON`.
 

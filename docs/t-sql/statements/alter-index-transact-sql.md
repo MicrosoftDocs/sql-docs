@@ -226,7 +226,8 @@ When you rebuild a primary XML index, the underlying user table is unavailable f
 For columnstore indexes, the rebuild operation:
 
 - Recompresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild operation is in progress. When the rebuild is finished, [!INCLUDE [ssDE](../../includes/ssde-md.md)] deletes the original columnstore index.
-- Doesn't preserve the column segment order introduced by the `ORDER` clause when creating the index. To rebuild a columnstore index and preserve or introduce a column segment order, use the `CREATE [CLUSTERED] COLUMNSTORE INDEX ... ORDER (...) ... WITH (DROP_EXISTING = ON)` statement. For more information, see [CREATE COLUMNSTORE INDEX](create-columnstore-index-transact-sql.md) and [Performance tuning with ordered columnstore indexes](../../relational-databases/indexes/ordered-columnstore-indexes.md).
+- For an ordered columnstore index, sorts the data again on the columns of the `ORDER` clause. The resulting order quality depends on the same factors as when the index is created. For more information, see [Reduce segment overlap and improve query performance](../../relational-databases/indexes/ordered-columnstore-indexes.md#reduce-segment-overlap).
+- For a columnstore index created without the `ORDER` clause, doesn't preserve an existing order of the data, such as the order obtained by creating the columnstore index from a clustered rowstore index. To introduce a column segment order, use the `CREATE [CLUSTERED] COLUMNSTORE INDEX ... ORDER (...) ... WITH (DROP_EXISTING = ON)` statement. For more information, see [CREATE COLUMNSTORE INDEX](create-columnstore-index-transact-sql.md) and [Performance tuning with ordered columnstore indexes](../../relational-databases/indexes/ordered-columnstore-indexes.md).
 
 For more information about index maintenance, see [Optimize index maintenance to improve query performance and reduce resource consumption](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
 
@@ -669,7 +670,7 @@ When `ALL` is specified, relational indexes, both clustered and nonclustered, an
 For more information, see [Optimize index maintenance to improve query performance and reduce resource consumption](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
 
 > [!NOTE]  
-> For a table with an ordered columnstore index, `ALTER INDEX REORGANIZE` doesn't re-sort the data. To resort the data use `CREATE [CLUSTERED] COLUMNSTORE INDEX ... ORDER (...) ... WITH (DROP_EXISTING = ON)`.
+> For a table with an ordered columnstore index, `ALTER INDEX REORGANIZE` doesn't re-sort the data. To resort the data, use `ALTER INDEX ... REBUILD` or `CREATE [CLUSTERED] COLUMNSTORE INDEX ... ORDER (...) ... WITH (DROP_EXISTING = ON)`.
 
 <a id="disabling-indexes"></a>
 

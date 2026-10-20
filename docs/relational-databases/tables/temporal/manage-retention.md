@@ -60,7 +60,7 @@ SELECT is_temporal_history_retention_enabled,
 FROM sys.databases;
 ```
 
-The database flag `is_temporal_history_retention_enabled` defaults to `ON`, but you can change it by using the `ALTER DATABASE` statement. The [!INCLUDE [ssde-md](../../../includes/ssde-md.md)] also sets it to `OFF` automatically after a point-in-time restore (PITR) operation on [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], and after some restore operations on [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], as described in [Point-in-time restore considerations](#point-in-time-restore-considerations). To enable temporal history retention cleanup for your database, run the following statement. Replace `<myDB>` with the database you want to alter:
+The database flag `is_temporal_history_retention_enabled` defaults to `ON`, but you can change it by using the `ALTER DATABASE` statement. The [!INCLUDE [ssde-md](../../../includes/ssde-md.md)] also sets it to `OFF` automatically after a point-in-time restore (PITR) operation on [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], and after a full database restore recovered without applying any log backup on [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], as described in [Point-in-time restore considerations](#point-in-time-restore-considerations). To enable temporal history retention cleanup for your database, run the following statement. Replace `<myDB>` with the database you want to alter:
 
 ```sql
 ALTER DATABASE [<myDB>]
@@ -223,7 +223,7 @@ Don't rely on business logic that reads the history table beyond the retention p
 
 When you restore a database to a specific point in time, the new database has temporal retention disabled at the database level (`is_temporal_history_retention_enabled` set to `OFF`). This behavior lets you inspect historical rows older than the retention period before the cleanup task removes them. To resume automatic cleanup on the restored database, set `TEMPORAL_HISTORY_RETENTION` back to `ON`.
 
-On [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], a point-in-time restore doesn't turn retention off by itself: the value depends on how the restore sequence ends. A full database restore that's recovered without applying any log backup sets `is_temporal_history_retention_enabled` to `OFF`. This includes `RESTORE DATABASE ... WITH RECOVERY`, `WITH NORECOVERY` followed by `RESTORE DATABASE ... WITH RECOVERY`, and `WITH REPLACE` over an existing database. A restore sequence that applies log backups, with or without `STOPAT`, doesn't set it to `OFF`. To resume automatic cleanup after a full database restore, set `TEMPORAL_HISTORY_RETENTION` back to `ON`.
+On [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], a full database restore that's recovered without applying any log backup sets `is_temporal_history_retention_enabled` to `OFF`. To resume automatic cleanup on the restored database, set `TEMPORAL_HISTORY_RETENTION` back to `ON`.
 
 > [!NOTE]  
 > A database created in the Premium tier on [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] retains backups for up to 35 days, so you can [restore it to a point in time](/azure/azure-sql/database/recovery-using-backups) anywhere in that window. For a temporal table with a one-month retention period, that lets you inspect historical rows up to 65 days old by querying the history table directly on the restored database.

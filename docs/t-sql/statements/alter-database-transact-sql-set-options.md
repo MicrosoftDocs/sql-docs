@@ -613,7 +613,7 @@ You can determine this option's status by examining the `is_local_cursor_default
 
 #### TEMPORAL_HISTORY_RETENTION { ON | OFF }
 
-`ON` by default but also automatically set to `OFF` after a full database restore that's recovered without applying any log backup. A restore sequence that applies log backups, with or without `STOPAT`, doesn't set it to `OFF`. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/temporal/manage-retention.md#how-to-configure-retention-policy).
+`ON` by default but also automatically set to `OFF` after a full database restore that's recovered without applying any log backup. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/temporal/manage-retention.md#how-to-configure-retention-policy).
 
 - `ON`
 

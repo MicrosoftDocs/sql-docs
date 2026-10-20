@@ -66825,7 +66825,17 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/connect/ado-net/find-additional-sqlclient-driver-information.md",
+      "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/ado-net/index.md",
+      "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/ado-net/overview-sqlclient-driver.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false
     },

@@ -4,7 +4,7 @@ description: Understand the Microsoft.Data.SqlClient namespace, its relationship
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/14/2026
+ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -38,16 +38,47 @@ Most applications use `SqlConnection`, `SqlCommand`, `SqlParameter`, `SqlDataRea
 
 ## Relationship to ADO.NET
 
-Microsoft.Data.SqlClient implements provider-independent types from <xref:System.Data.Common>, including `DbConnection`, `DbCommand`, `DbDataReader`, and `DbTransaction`. It also provides SQL Server-specific APIs such as:
+ADO.NET is the data access model built into .NET. It defines provider-independent abstractions in the <xref:System.Data.Common> namespace, and Microsoft.Data.SqlClient supplies the concrete implementations.
+
+| ADO.NET abstraction | SqlClient type | Purpose |
+| --- | --- | --- |
+| <xref:System.Data.Common.DbConnection> | <xref:Microsoft.Data.SqlClient.SqlConnection> | Opens a logical connection to one database. |
+| <xref:System.Data.Common.DbCommand> | <xref:Microsoft.Data.SqlClient.SqlCommand> | Executes Transact-SQL (T-SQL) text or a stored procedure. |
+| <xref:System.Data.Common.DbParameter> | <xref:Microsoft.Data.SqlClient.SqlParameter> | Sends a typed value separately from command text. |
+| <xref:System.Data.Common.DbDataReader> | <xref:Microsoft.Data.SqlClient.SqlDataReader> | Streams result rows forward from the server. |
+| <xref:System.Data.Common.DbTransaction> | <xref:Microsoft.Data.SqlClient.SqlTransaction> | Groups commands into one transaction that commits or rolls back as a unit. |
+| <xref:System.Data.Common.DbDataAdapter> | <xref:Microsoft.Data.SqlClient.SqlDataAdapter> | Fills and updates disconnected `DataSet` and `DataTable` objects. |
+| <xref:System.Data.Common.DbBatch> | <xref:Microsoft.Data.SqlClient.SqlBatch> | Sends multiple commands as one batch on supported target frameworks. |
+
+Microsoft.Data.SqlClient also provides SQL Server-specific APIs such as:
 
 - `SqlBulkCopy`
-- `SqlBatch`
 - `SqlConnectionStringBuilder`
 - `SqlConfigurableRetryFactory`
 - `SqlDependency`
 - SQL Server-specific authentication, encryption, and data type support
 
-For guidance on choosing provider-independent or SqlClient-specific APIs, see [ADO.NET architecture with Microsoft.Data.SqlClient](overview-sqlclient-driver.md).
+Program against the ADO.NET abstractions when a library must support multiple database providers. Use the SqlClient types when an application targets SQL Server and needs provider-specific features, such as Microsoft Entra authentication, Always Encrypted, bulk copy, table-valued parameters, or configurable retry logic. Keep provider-specific code behind a data access boundary if the rest of the application must remain provider-independent.
+
+### Connected and disconnected access
+
+*Connected access* keeps a connection open while a command runs and while the application reads its results. A typical request follows this sequence:
+
+1. Create a `SqlConnection` from a connection string, and open it.
+1. Create a `SqlCommand` and add `SqlParameter` values.
+1. Execute the command.
+1. Process a scalar value, an affected-row count, or a `SqlDataReader`.
+1. Dispose the reader, command, and connection.
+
+Use connected access for most web APIs, services, workers, and command-line applications. `SqlDataReader` streams rows and usually uses less memory than loading the entire result into a `DataSet`.
+
+*Disconnected access* uses `SqlDataAdapter` to copy data into an in-memory `DataSet` or `DataTable`. The application can close the connection while it reads or changes the in-memory data, then reconnect to submit updates. Use it for data binding, in-memory relations and constraints, offline edits that you reconcile later, or an existing application built around DataAdapters. For new request-oriented services, start with `SqlCommand` and `SqlDataReader`.
+
+### Object lifetime and concurrency
+
+Open and dispose a `SqlConnection` for each unit of work. Connection pooling reuses the underlying physical connection, so don't keep one global connection open for the lifetime of an application. Dispose connections, commands, readers, transactions, and bulk copy objects promptly. In asynchronous code, use `await using` for types that implement <xref:System.IAsyncDisposable> on the target framework, such as `SqlConnection` and `SqlDataReader` on .NET, and ordinary `using` for types that implement only <xref:System.IDisposable>, such as `SqlBulkCopy`.
+
+`SqlConnection`, `SqlCommand`, `SqlDataReader`, and `SqlTransaction` don't support concurrent use from multiple threads. Give each concurrent operation its own connection and rely on connection pooling. Multiple Active Result Sets (MARS) permits more than one active result set on a connection, but it doesn't make SqlClient objects thread-safe.
 
 ## Relationship to System.Data.SqlClient
 

@@ -41,9 +41,9 @@ This view is similar to [sys.dm_os_windows_info](sys-dm-os-windows-info-transact
 
 ### Permissions
 
-The `SELECT` permission on `sys.dm_os_host_info` is granted to the **public** role by default, so any login can query the view. No server-level permission, such as `VIEW SERVER STATE` or `VIEW SERVER PERFORMANCE STATE`, is required.
+The `SELECT` permission on `sys.dm_os_host_info` is granted to the **public** role by default, so any login can query the view.
 
-If the `SELECT` permission is revoked from **public**, granting `VIEW SERVER STATE` or `VIEW SERVER PERFORMANCE STATE` doesn't restore access. `CONTROL SERVER` does.
+If the `SELECT` permission is revoked from **public**, granting `CONTROL SERVER` restores access.
 
 ## Examples
 

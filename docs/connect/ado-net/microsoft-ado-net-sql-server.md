@@ -1,10 +1,10 @@
 ---
 title: Microsoft.Data.SqlClient for SQL Server
-description: Microsoft.Data.SqlClient connects .NET applications to SQL Server, Azure SQL, SQL database in Microsoft Fabric, and Warehouse in Microsoft Fabric.
+description: Microsoft.Data.SqlClient connects .NET applications to SQL Server, Azure SQL, SQL database in Microsoft Fabric, and Warehouse in Microsoft Fabric. Start here to install the driver, connect, and find every SqlClient article.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 10/13/2026
+ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, SQL database in Microsoft Fabric, and Warehouse in Microsoft Fabric. It's distributed as a NuGet package, evolves independently of the .NET runtime, and replaces <xref:System.Data.SqlClient> for new development. Use it to open connections, execute commands, process results, manage transactions, bulk load data, and use SQL Server-specific features from .NET applications.
+Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, SQL database in Microsoft Fabric, and Warehouse in Microsoft Fabric. It's distributed as a NuGet package, evolves independently of the .NET runtime, and replaces <xref:System.Data.SqlClient> for new development. It provides connections, commands, result processing, transactions, bulk copy, and SQL Server-specific features to .NET applications.
 
 ## Choose your starting point
 
@@ -45,6 +45,8 @@ For higher security and to support configuration across environments, keep conne
 
 The C# snippet in this article omits `using` directives and class wrappers for brevity.
 
+The snippet assumes a project that targets .NET 8 or later versions and references the `Microsoft.Data.SqlClient` and `Microsoft.Data.SqlClient.Extensions.Azure` 7.1.1 packages. The host, such as the .NET Generic Host or ASP.NET Core, supplies the <xref:Microsoft.Extensions.Logging.ILogger> and the `IConfiguration`, and configuration supplies the server name in `Sql:Server` and the database name in `Sql:Database`.
+
 ```csharp
 public static async Task<string> QueryDatabaseNameAsync(
     IConfiguration config, ILogger logger, CancellationToken cancellationToken = default)
@@ -59,7 +61,7 @@ public static async Task<string> QueryDatabaseNameAsync(
         DataSource = server,
         InitialCatalog = database,
         Authentication = SqlAuthenticationMethod.ActiveDirectoryManagedIdentity,
-        Encrypt = SqlConnectionEncryptOption.Strict, // TDS 8.0 encryption (SqlClient 5.0 and later versions; server must support it)
+        Encrypt = SqlConnectionEncryptOption.Strict, // TDS 8.0 encryption (server must support it)
         ConnectTimeout = 30,                         // per-attempt connect timeout in seconds
         // Retry transient failures during Open() and reconnect a dropped idle connection.
         // The configurable provider below adds another policy around Open().
@@ -126,25 +128,23 @@ public static async Task<string> QueryDatabaseNameAsync(
 }
 ```
 
-This snippet targets any [SQL Database Engine](../../database-engine/sql-database-engine.md) endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later versions on Azure Virtual Machines or enabled by Azure Arc.
+The method returns the name of the database it connected to and logs `Connected to database <database>`. When a retry happens, it also logs one warning per retry with the exception that triggered it.
 
-`Encrypt = SqlConnectionEncryptOption.Strict` selects TDS 8.0 encryption. It requires Microsoft.Data.SqlClient 5.0 and later versions and a server that supports TDS 8.0 (SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric). Fall back to `SqlConnectionEncryptOption.Mandatory` when you connect to older servers.
+How each part of the snippet works:
 
-`ConnectRetryCount` and `ConnectRetryInterval` apply during initial connection establishment and idle connection recovery. When `ConnectRetryCount` is greater than zero, the driver retries qualifying transient failures during `Open()`. After `Open()` succeeds, the driver also uses these settings to reconnect a dropped idle connection on the next command. The `openRetry` provider assigned to <xref:Microsoft.Data.SqlClient.SqlConnection.RetryLogicProvider%2A?displayProperty=nameWithType> adds a configurable exponential-backoff policy around `Open()`. Account for both retry layers when you set the retry counts and connection timeout. The driver stops its internal retries when `ConnectTimeout` expires, so each provider attempt takes at most about `ConnectTimeout` seconds. With these values, the worst case before `OpenAsync` throws is five attempts of up to 30 seconds each, plus the provider's backoff delays.
-
-The snippet creates the retry providers on every call to keep the example self-contained. In an application, create them once and reuse them for every connection and command. The method doesn't catch exceptions. After the providers exhaust their retries or hit a nontransient error, the exception propagates to the caller, which logs it once with the rest of the request context. When a provider exhausts its retries, it throws <xref:System.AggregateException>, which holds the exception from each attempt. A nontransient error propagates as the original exception.
-
-The snippet uses the asynchronous methods and passes a <xref:System.Threading.CancellationToken>. Cancellation stops the provider's wait between retries. It doesn't interrupt the driver's own `ConnectRetryInterval` wait inside a single `Open` attempt. For more information, see [Asynchronous programming](asynchronous-programming.md).
-
-`ActiveDirectoryManagedIdentity` works only where a managed identity is available, such as Azure App Service, Azure Functions, or an Azure virtual machine. For local development, use `SqlAuthenticationMethod.ActiveDirectoryDefault`, which tries several credential sources, including the Azure CLI and Visual Studio sign-in. Keep `ActiveDirectoryDefault` out of production because probing each credential source slows the connection. For more information, see [Use default authentication](sql/azure-active-directory-authentication.md#use-default-authentication).
-
-The <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider.Retrying> event on each provider fires before each retry attempt and carries the retry count, the delay before the next attempt, and the exceptions observed so far. Route it to <xref:Microsoft.Extensions.Logging.ILogger> or your telemetry pipeline to keep the retry loop visible in production.
-
-Set `MultiSubnetFailover = true` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. It selects a parallel-connect code path that attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds, avoiding the slow sequential per-IP walk that can otherwise stall those connects. On single-IP targets, the setting is safe. `MultiSubnetFailover` isn't supported when you connect to a named instance, over a protocol other than TCP, or to an instance configured with more than 64 IP addresses. You also can't use it with database mirroring, which is deprecated in all supported versions of SQL Server. Use Always On availability groups instead. For more information, see [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) and [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
-
-If the target is [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview) with auto-pause enabled, raise `ConnectTimeout` to at least 60 seconds. An auto-paused database resumes on the first `Open()`, and that first `Open()` can fail with error `40613` while the database resumes. Error `40613` is in the built-in transient error list, so `openRetry` retries it. Client-side timeouts surface as error `-2`, which isn't in that list, so `openRetry` won't rescue an `Open()` that times out mid-resume. The individual connect attempt must be long enough to cover the resume. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
-
-Command-level retry is the caller's decision, per command. Attach `commandRetry` to <xref:Microsoft.Data.SqlClient.SqlCommand.RetryLogicProvider%2A?displayProperty=nameWithType> only when replaying the command is safe: reads, `MERGE` guarded by a natural key, upserts through a stored procedure, and other idempotent operations. The built-in command provider skips retry when a transaction is active, so multi-statement transactions must be retried by application code that can reopen the transaction. Setting `TransientErrors` replaces the driver's built-in error list; to extend the built-in baseline instead, use <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.BaselineTransientErrors%2A?displayProperty=nameWithType> (Microsoft.Data.SqlClient 7.0 and later).
+- **Targets**: Any [SQL Database Engine](../../database-engine/sql-database-engine.md) endpoint configured for Microsoft Entra authentication: Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, and SQL Server 2022 and later versions on Azure Virtual Machines or enabled by Azure Arc.
+- **`Encrypt = SqlConnectionEncryptOption.Strict`**: Selects TDS 8.0 encryption. It requires SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, or SQL database in Microsoft Fabric. Use `SqlConnectionEncryptOption.Mandatory` for older servers.
+- **`ActiveDirectoryManagedIdentity`**: Works only where a managed identity is available, such as Azure App Service, Azure Functions, or an Azure virtual machine. For local development, use `SqlAuthenticationMethod.ActiveDirectoryDefault`, which tries the Azure CLI, Visual Studio sign-in, and other credential sources. Keep it out of production because probing each source slows the connection. For more information, see [Use default authentication](sql/azure-active-directory-authentication.md#use-default-authentication).
+- **`MultiSubnetFailover = true`**: Attempts TCP connections to all resolved IP addresses in parallel and uses the first connection that succeeds, avoiding the slow sequential per-IP walk. Set it for Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, availability group listeners, and failover cluster instances. It's safe on single-IP targets. It isn't supported for named instances, protocols other than TCP, instances with more than 64 IP addresses, or database mirroring, which is deprecated. Use Always On availability groups instead. For more information, see [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) and [Disabling Transparent Network IP Resolution](appcontext-switches.md#disabling-transparent-network-ip-resolution).
+- **`ConnectRetryCount = 3` and `ConnectRetryInterval = 10`**: The driver retries qualifying transient failures during `Open()`, and reconnects a dropped idle connection on the next command. The default count is 1. Three attempts 10 seconds apart outlast a longer reconfiguration or failover. The driver raises 1 to 2 only when the server name ends in a known Azure SQL domain, such as `.database.windows.net`, so a custom DNS alias gets 1.
+- **`openRetry`**: Assigned to <xref:Microsoft.Data.SqlClient.SqlConnection.RetryLogicProvider%2A?displayProperty=nameWithType>, it adds exponential backoff around `Open()`. The driver stops its internal retries when `ConnectTimeout` expires, so the worst case before `OpenAsync` throws is five attempts of up to 30 seconds each, plus backoff. Each idle reconnect attempt also runs the full `openRetry` policy, and when that policy exhausts its retries, idle recovery ends.
+- **Serverless auto-pause**: For [Azure SQL Database serverless](/azure/azure-sql/database/serverless-tier-overview), raise `ConnectTimeout` to at least 60 seconds. The first `Open()` can fail with error `40613` while the database resumes, and `openRetry` retries it. A client-side timeout surfaces as error `-2`, which isn't retried, so each connect attempt must outlast the resume. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-auto-pause-resume).
+- **`commandRetry`**: Attach it to <xref:Microsoft.Data.SqlClient.SqlCommand.RetryLogicProvider%2A?displayProperty=nameWithType> only when replaying the command is safe: reads, `MERGE` guarded by a natural key, upserts through a stored procedure, and other idempotent operations. It skips retry inside a transaction, so application code must retry multi-statement transactions. `ExecuteReader` and `ExecuteScalar` retry only errors returned before the first result set starts. `ExecuteNonQuery` retries the whole call.
+- **Transient error list**: Setting `TransientErrors` replaces the built-in list. To extend it instead, use <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.BaselineTransientErrors%2A?displayProperty=nameWithType> (Microsoft.Data.SqlClient 7.0 and later).
+- **`Retrying` event**: <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider.Retrying> fires before each retry with the retry count, the next delay, and the exceptions so far. Route it to <xref:Microsoft.Extensions.Logging.ILogger> or your telemetry pipeline.
+- **Exceptions**: The method doesn't catch exceptions. An exhausted provider throws <xref:System.AggregateException> with the exception from each attempt. A nontransient error propagates as the original exception. The caller logs it once with the rest of the request context.
+- **Cancellation**: The <xref:System.Threading.CancellationToken> stops the provider's wait between retries. It doesn't interrupt the driver's `ConnectRetryInterval` wait inside a single `Open` attempt. For more information, see [Asynchronous programming](asynchronous-programming.md).
+- **Provider lifetime**: The snippet creates the retry providers on every call to stay self-contained. In an application, create them once and reuse them.
 
 For more information about each part of this configuration, see:
 
@@ -168,42 +168,43 @@ After you connect, use these articles in order:
 ## Key features
 
 - **Modern .NET support**: Runs on current .NET and .NET Framework versions. For the per-version breakdown, see [Support lifecycle](sqlclient-driver-support-lifecycle.md).
-- **Encrypted by default**: TLS-encrypted connections with `Encrypt=true` as the default. Set `Encrypt=Strict` for TDS 8.0 encryption on Microsoft.Data.SqlClient 5.0 and later.
+- **Encrypted by default**: TLS-encrypted connections with `Encrypt=true` as the default. Set `Encrypt=Strict` for TDS 8.0 encryption.
 - **Microsoft Entra ID authentication**: Passwordless connections with managed identity, service principal, interactive, integrated, default credential chain, and access-token flows.
 - **Kerberos and NTLM**: Integrated Windows authentication for on-premises Active Directory and legacy scenarios.
 - **Always Encrypted**: Client-side encryption for sensitive columns, with optional secure enclaves for in-place operations.
 - **Bulk copy**: High-throughput inserts with <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.
+- **Connection pooling**: On by default. An opt-in [V2 pool](appcontext-switches.md#enable-the-v2-connection-pool) is in evaluation.
 - **Connection resiliency**: Built-in connection retries (`ConnectRetryCount` and `ConnectRetryInterval`) plus opt-in configurable retry logic for connections and commands.
 - **Rich SQL Server data types**: `datetimeoffset`, `sql_variant`, JSON, vector, spatial, XML, and table-valued parameters.
 - **Diagnostics**: Event source tracing, diagnostic counters, provider statistics, and a dedicated troubleshooting guide.
+- **Application identity**: Set `SqlConnection.RegisteredApplication` to identify your library or tool to SQL Server (Microsoft.Data.SqlClient 7.1 and later).
 
 ## Get started
 
 | Article | Description |
 | --- | --- |
 | [Get started with the SqlClient driver](get-started-sqlclient-driver.md) | Set up a project, create a database, connect, query, and add connection resiliency. |
-| [ADO.NET architecture with Microsoft.Data.SqlClient](overview-sqlclient-driver.md) | Learn how Microsoft.Data.SqlClient implements connected, disconnected, and provider-independent ADO.NET access. |
 | [Install, update, and deploy Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md) | Install NuGet packages, choose a release, update the driver, and prepare deployment output. |
 | [Support lifecycle](sqlclient-driver-support-lifecycle.md) | Review supported driver versions and support dates. |
 | [Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient](migrate-system-data-sql-client-to-microsoft-data-sql-client.md) | Update package references, namespaces, configuration, and changed driver behavior. |
-| [Microsoft.Data.SqlClient namespace and compatibility](introduction-microsoft-data-sqlclient-namespace.md) | Understand the driver's relationship to ADO.NET, System.Data.SqlClient, .NET, and SQL Server. |
+| [Microsoft.Data.SqlClient namespace and compatibility](introduction-microsoft-data-sqlclient-namespace.md) | Understand how SqlClient implements ADO.NET and its compatibility with System.Data.SqlClient, .NET, and SQL Server. |
 | [What's new in Microsoft.Data.SqlClient](microsoft-data-sql-client-release-notes.md) | Find current releases, major upgrade changes, and upstream release notes. |
 
 ## Configure and connect
 
 | Article | Description |
 | --- | --- |
-| [Connect to a data source](connecting-to-data-source.md) | Open and manage connections to SQL Server and Azure SQL. |
+| [Connect to a data source](connecting-to-data-source.md) | Open and manage connections, and respond to connection state changes. |
 | [Connection strings](connection-strings.md) | Configure server, database, authentication, encryption, and connection behavior. |
 | [Encryption and certificate validation](encryption-and-certificate-validation.md) | Configure encrypted connections and server certificate validation. |
 | [SQL Server connection pooling](sql-server-connection-pooling.md) | Reuse physical connections efficiently. |
-| [Connection events](connection-events.md) | Respond to connection state and informational messages. |
+| [Handle errors and messages](handle-errors-messages.md) | Catch errors and receive informational messages. |
 
 ## Authenticate and secure
 
 | Article | Description |
 | --- | --- |
-| [SQL Server security](sql/sql-server-security.md) | Review authentication, authorization, and application security guidance. |
+| [Security best practices for Microsoft.Data.SqlClient](sql/application-security-scenarios-sql-server.md) | Review authentication, authorization, and application security guidance. |
 | [Microsoft Entra authentication](sql/azure-active-directory-authentication.md) | Connect with managed identity, service principal, password, and interactive flows. |
 | [Protect connection information](protecting-connection-information.md) | Keep credentials and connection settings out of application code. |
 | [Always Encrypted](sql/sqlclient-support-always-encrypted.md) | Protect sensitive column values from the database system. |
@@ -213,7 +214,7 @@ After you connect, use these articles in order:
 
 | Article | Description |
 | --- | --- |
-| [Commands and parameters](commands-parameters.md) | Execute parameterized SQL statements and stored procedures. |
+| [Execute a command](execute-command.md) | Execute parameterized SQL statements and stored procedures. |
 | [DataAdapters and DataReaders](dataadapters-datareaders.md) | Stream result sets or populate disconnected data structures. |
 | [Execute multiple commands with SqlBatch](execute-multiple-commands-sql-batch.md) | Send an ordered collection of commands and process their results. |
 | [Stream data](sqlclient-streaming-support.md) | Transfer large binary, text, XML, and JSON values without buffering the complete value. |
@@ -227,8 +228,7 @@ After you connect, use these articles in order:
 
 | Article | Description |
 | --- | --- |
-| [ADO.NET data type mappings](data-type-mappings-ado-net.md) | Map common language runtime types to provider and SQL Server types. |
-| [SQL Server data types](sql/sql-server-data-types.md) | Work with SQL Server-specific values and <xref:System.Data.SqlTypes> types. |
+| [SQL Server data type mappings](sql-server-data-type-mappings.md) | Map SQL Server types to .NET and <xref:System.Data.SqlTypes> types. |
 | [JSON data](sql/json-data-sql-server.md) | Send and retrieve the SQL Server **json** data type. |
 | [Vector data](sql/vector-data-sql-server.md) | Send and retrieve vector values. |
 | [XML data](sql/xml-data-sql-server.md) | Read, write, and parameterize XML values. |
@@ -240,9 +240,8 @@ After you connect, use these articles in order:
 | --- | --- |
 | [Configurable retry logic](configurable-retry-logic.md) | Retry transient connection and command failures with bounded policies. |
 | [High availability and disaster recovery](sql/sqlclient-support-high-availability-disaster-recovery.md) | Connect to availability group listeners and failover partners. |
-| [Diagnostic counters](diagnostic-counters.md) | Monitor active connections, pooled connections, and other driver metrics. |
+| [Event counters in SqlClient](event-counters.md) | Monitor active connections, pooled connections, and other driver metrics. |
 | [Enable event source tracing](enable-eventsource-tracing.md) | Capture detailed driver events for diagnosis. |
-| [Data tracing](data-tracing.md) | Trace ADO.NET operations and data access. |
 | [SqlClient troubleshooting guide](sqlclient-troubleshooting-guide.md) | Diagnose common connection and driver problems. |
 | [Query notifications](sql/query-notifications-sql-server.md) | Receive notifications when query results change. |
 
@@ -260,7 +259,9 @@ After you connect, use these articles in order:
 | --- | --- |
 | [Microsoft.Data.SqlClient API reference](/dotnet/api/microsoft.data.sqlclient) | Browse .NET API reference for the driver. |
 | [AppContext switches](appcontext-switches.md) | Configure compatibility and security behavior. |
-| [Find additional SqlClient information](find-additional-sqlclient-driver-information.md) | Find source code, support, and community resources. |
+| [Microsoft.Data.SqlClient GitHub repository](https://github.com/dotnet/SqlClient) | Read the driver source code, release notes, and samples. |
+| [Microsoft.Data.SqlClient samples](https://github.com/dotnet/SqlClient/tree/main/doc/samples) | Browse C# samples for driver APIs. |
+| [.NET runtime GitHub repository](https://github.com/dotnet/runtime) | Read the source for the .NET runtime libraries. |
 
 ## Request a feature
 

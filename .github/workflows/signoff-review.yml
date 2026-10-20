@@ -8,15 +8,18 @@ on:
   issue_comment:
     types: [created]
   pull_request_target:
-   types: [opened]
+   types: [opened, reopened, synchronize]
 
 jobs:
     build:
         name: Run Script
         if: github.repository_visibility == 'private'
         runs-on: ubuntu-latest
+        outputs:
+          retry-head: ${{ steps.script.outputs.retry-head }}
         steps:
           - name: Script
+            id: script
             shell: pwsh
             env: 
               PayloadJson: ${{ toJSON(github) }}
@@ -78,36 +81,28 @@ jobs:
                 $GitHubHeaders.Add("Authorization","token $($AccessToken)")
                 $GitHubHeaders.Add("User-Agent", "OfficeDocs")
 
-                $StatusHelpUrl = "https://dev.azure.com/msft-skilling/Content/_wiki/wikis/Database%20Docs/2358/Partner-publishing-workflow"
-                $StatusCheckName = "PR signed off by content team"
+                $StatusCheckName = "PR signed off by authorized user"
                 $Status = @{}
                 $Status.Add("context", $StatusCheckName)
-                $Status.Add("target_url", $StatusHelpUrl)
 
-                $CatastrophicError = $False
-
-                $ContentApprovalMessage = "Signed off by an authorized owner."
-                $ContentNeedsReviewMessage = "Waiting for an authorized owner, typically a member of the product group, to sign off."
+                $ContentApprovalMessage = "Signed off by an authorized user."
+                $ContentNeedsReviewMessage = "Waiting for an authorized user, typically a member of the product group, to sign off."
 
                 $SignOffString = "#sign-off"
                 $SignOffRegex = "\s*$SignOffString\s*"
 
-                $EscalationEmail = "[Data Docs Team](mailto:dbdocsprreviews@microsoft.com?subject=[PR%20REVIEW]%20Question%20on%20$GitHubRepoName%20PR%20$PrIssueNumber&body=$PrGitHubLink)"
-                $ContentLeadsUrl = "[the content lead in your area](https://dev.azure.com/msft-skilling/Content/_dashboards/dashboard/b25043af-cab3-4b2c-8aac-9e8da15a796b)"
-                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized owner, typically a member of the product group, comments `#` followed by `sign-off`, without a space,, even after it successfully builds and stages. If you have any questions, please reach out to $ContentLeadsUrl or email the $EscalationEmail."
-                $NeedsContentTeamReviewMessage = "An authorized owner, typically a member of the product group, must comment `#` followed by `sign-off`, without a space, before this PR can merge. Please contact the appropriate product team or another authorized owner to review and sign off on this PR."
-                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized owner for this repository. Please contact the appropriate product team or another authorized owner to review this PR and comment `#` followed by `sign-off`, without a space,."
+                $PROpenMessage = "Thank you for your contribution! This PR will remain pending until an authorized user, typically a member of the product group, comments `#` followed by `sign-off`, without a space, even after it successfully builds and stages. Please contact the appropriate product team or another authorized user to review and sign off on this PR."
+                $UnauthorizedSignOffMessage = "Your sign-off was not accepted because you are not currently an authorized user for this repository. Please contact the appropriate product team or another authorized user to review this PR and comment `#` followed by `sign-off`, without a space."
+                $SignOffAcceptedMessage = "Thanks, @$CommentUser! Your sign-off has been accepted as an authorized user, and the sign-off check is being cleared. PRMerger may briefly report that this PR is blocked while the check updates. If that happens, we'll automatically retry up to two times, so please wait before trying again. All other merge requirements still apply; if both retries are blocked, we'll post a follow-up explaining what to check."
                 $AssignedReviewerMessage = "Assigning the pull request to @!!USER!! for review. #assign: !!USER!!"
                 $CheckFailed = $False
+                $RetryAuthorizedSignOff = $False
 
                 $ContentReviewNeededLabelColor = "eeee88"
-                $ContentReviewNeededLabelDescription = "The pull request requires a review from the content team."
-                $ContentReviewNeededLabel = "needs-content-team-review"
+                $ContentReviewNeededLabelDescription = "The pull request requires review by an authorized user, typically a member of the product group."
+                $ContentReviewNeededLabel = "needs-authorized-user-review"
                 $ContentApprovedLabelColor = "2A8000"
-                $ContentReviewNeededLabelDescription = "The pull request requires review by an authorized owner, typically a member of the product group."
-                $ContentReviewNeededLabel = "needs-authorized-owner-review"
-                $ContentApprovedLabelColor = "2A8000"
-                $ContentApprovedLabelDescription = "An authorized owner signed off on the pull request."
+                $ContentApprovedLabelDescription = "An authorized user signed off on the pull request."
                 $ContentApprovedLabel = "pr-approved"
 
                 Write-Host "Repo: $GitHubRepoName"
@@ -214,7 +209,6 @@ jobs:
 
                     # Remove placeholder text from repo URL
                     $RepoUri = $RepoUri.Replace("{/name}","")
-                    $Result = $Null
 
                     # Construct the JSON statement that will be sent to GitHub as the body of the web request. Include the name of the label, its color, and description. 
                     # Convert hash table to JSON
@@ -229,7 +223,7 @@ jobs:
 
                         Write-Host "Creating label $Name in repo $RepoUri."
                         
-                        $Result = Invoke-RestMethod -Uri $RepoUri -Headers $GitHubHeaders  -Body $Body -Method POST
+                        [void](Invoke-RestMethod -Uri $RepoUri -Headers $GitHubHeaders -Body $Body -Method POST)
 
                     } Catch {
 
@@ -319,7 +313,7 @@ jobs:
                         {
                             Write-Host "Setting label $LabelName on URL $IssueLabelUrl."
 
-                            $Result = Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $GitHubHeaders  -Method POST
+                            [void](Invoke-RestMethod -Uri $IssueLabelUrl -Body $Body -Headers $GitHubHeaders -Method POST)
                         } 
                         Catch 
                         {
@@ -352,7 +346,7 @@ jobs:
                         $LabelUrl = "$IssueUrl/labels/$LabelUrlName"
                         Write-Host "$LabelUrl"
 
-                        $Result = Invoke-WebRequest -UseBasicParsing -Uri $LabelUrl -Headers $GitHubHeaders -Method Delete -ErrorAction Stop
+                        [void](Invoke-WebRequest -UseBasicParsing -Uri $LabelUrl -Headers $GitHubHeaders -Method Delete -ErrorAction Stop)
 
                         Write-Host "Successfully removed $LabelName label."
                     }                 
@@ -407,7 +401,7 @@ jobs:
 
                     Try 
                     {
-                        $Result = Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop
+                        [void](Invoke-WebRequest -UseBasicParsing -Uri $CommentsUrl -Body $BodyJson -Headers $GitHubHeaders -Method POST -ErrorAction Stop)
                     
                         $PostCommentSuccess = $True
                     }
@@ -478,7 +472,26 @@ jobs:
                 #####################
                 #     Workflow      #         
                 #####################
-                #####################               
+                #####################
+
+                Function Get-PrSignOffStatus
+                {
+                    $ExistingStatusUrl = "$($GitHubData.event.repository.url)/commits/$($PrData.head.sha)/statuses"
+                    for ($Page = 1; ; $Page++)
+                    {
+                        $ExistingStatuses = Invoke-RestMethod -Headers $GitHubHeaders -Uri "${ExistingStatusUrl}?per_page=100&page=$Page" -ErrorAction Stop
+                        $ExistingSignOff = $ExistingStatuses | Where-Object context -eq $StatusCheckName | Select-Object -First 1
+                        if ($ExistingSignOff) { return $ExistingSignOff }
+                        if ($ExistingStatuses.Count -lt 100) { return $null }
+                    }
+                }
+
+                Function Test-ApprovalAfterLifecycleEvent
+                {
+                    $LatestSignOff = Get-PrSignOffStatus
+                    return ($LatestSignOff.state -eq "success" -and
+                        ([datetime]$LatestSignOff.created_at).ToUniversalTime() -gt $LifecycleEventTime)
+                }
 
                 Try
                 {
@@ -487,6 +500,28 @@ jobs:
                     $TargetBranch = $PrData.base.ref
                     $StatusUrl = $PrData.statuses_url
                     $PrHtmlUrl = $PrData.html_url
+
+                    if ($PrData.state -ne "open")
+                    {
+                        Write-Host "PR is no longer open; no approval changes."
+                        return
+                    }
+                    if ($GitRequestEvent -eq "pull_request_target" -and $GitHubData.event.pull_request.head.sha -ne $PrData.head.sha)
+                    {
+                        Write-Host "PR event refers to an older head; no approval changes."
+                        return
+                    }
+                    $LifecycleReset = $GitRequestEvent -eq "pull_request_target" -and $GitHubAction -in @("reopened", "synchronize")
+                    if ($LifecycleReset)
+                    {
+                        if (-not $GitHubData.event.pull_request.updated_at) { throw "PR lifecycle event is missing its update timestamp." }
+                        $LifecycleEventTime = ([datetime]$GitHubData.event.pull_request.updated_at).ToUniversalTime()
+                        if (Test-ApprovalAfterLifecycleEvent)
+                        {
+                            Write-Host "A newer approval already followed this lifecycle event; leaving it unchanged."
+                            return
+                        }
+                    }
 
                     Write-Host "PR status url: $StatusUrl"
                     
@@ -544,12 +579,41 @@ jobs:
                         Write-Host "GitHub event not a PR comment"
                     }
 
-                    if ($PROpenEvent)
+                    $MonitoredFoldersFound = $False
+                    if ($TargetingMonitoredBranch)
+                    {
+                        $PrFiles = @()
+                        for ($Page = 1; ; $Page++)
+                        {
+                            $FilePage = Invoke-RestMethod -Method GET -Headers $GitHubHeaders -Uri "$PrUrl/files?per_page=100&page=$Page" -ErrorAction Stop
+                            $PrFiles += @($FilePage)
+                            if ($FilePage.Count -lt 100) { break }
+                        }
+                        if ($PrData.changed_files -gt $PrFiles.Count)
+                        {
+                            throw "GitHub returned fewer PR files than expected. Cannot safely determine sign-off scope."
+                        }
+                        $MonitoredFoldersFound = Test-MonitoredFolders -PrFileList $PrFiles -MonitoredFolderList $MonitoredFolders
+                    }
+
+                    if ($PROpenEvent -and (-not $TargetingMonitoredBranch -or -not $MonitoredFoldersFound))
+                    {
+                        Initialize-Labels
+                        Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentApprovedLabel
+                        Remove-Label -LabelName $ContentReviewNeededLabel -IssueUrl $IssueUrl
+                        $Status.state = "success"
+                        $Status.description = "PR is outside the configured sign-off scope."
+                        $ActionableComment = $True
+                        $LifecycleReset = $False
+                    }
+                    elseif ($PROpenEvent)
                     {
                         # Invalidate an earlier sign-off when a PR is reopened or receives new commits.
                         # Eligible PR authors are reapproved below to preserve existing behavior.
                         If (($GitHubAction -eq "reopened") -or ($GitHubAction -eq "synchronize"))
                         {
+                            # Clear the old approval before metadata changes or author permission lookups can fail.
+                            $null = Invoke-RestMethod -Headers $GitHubHeaders -Uri $StatusUrl -Method POST -Body ($Status | ConvertTo-Json) -ErrorAction Stop
                             Initialize-Labels
 
                             Remove-Label -LabelName $ContentApprovedLabel -IssueUrl $IssueUrl
@@ -590,22 +654,7 @@ jobs:
 
                         Write-Host "Regex result found $SignOffString : $SignOffFound."
 
-                        # Check to see if it is a monitored folder
-                        # Get the list of files on the PR.
-                        Write-Host "Checking for monitored folders in PR"
-                        $PrFiles = Invoke-RestMethod -Method GET -Headers $GitHubHeaders -Uri "$PrUrl/files"
-
-                        # Check to see if any files in the PR exist in one or more monitored branches. Only a single
-                        # file needs to be in a monitored branch for the workflow to block the PR.
-                        $MonitoredFoldersFound = Test-MonitoredFolders -PrFileList $PrFiles -MonitoredFolderList $MonitoredFolders
-
-                        # Check to see what labels are already on the PR
                         Initialize-Labels
-                        $LabelReviewNeededArray = Test-PrLabel -LabelArray $ContentReviewNeededLabel -IssueUrl $IssueUrl
-                        $LabelApprovedArray = Test-PrLabel -LabelArray $ContentApprovedLabel -IssueUrl $IssueUrl
-
-                        $ReviewNeededLabelSet = $LabelReviewNeededArray.$ContentReviewNeededLabel
-                        $ApprovedLabelSet = $LabelApprovedArray.$ContentApprovedLabel
                         
                         Write-Host "Monitored folders found: $MonitoredFoldersFound"
 
@@ -634,29 +683,8 @@ jobs:
                         }
                         ElseIf (-not $ActionableComment)
                         {
-                            Write-Host "Comment does not contain $SignOffString."
-
-                            # Check to see if the content team has approved this yet
-                            # If so, always return success. If not, always keep at pending until approved.
-                            if ($ApprovedLabelSet)
-                            {
-                                $ActionableComment = $True
-                                
-                                Write-Host "Content team already approved. Returning success."
-                                $Status.state = "success"
-                                $Status.description = $ContentApprovalMessage
-                            }
-                            else
-                            {
-                                # The comment was not one to take action on
-                                # In the past, we returned pending, but below we are just not returning 
-                                # any status from the workflow so we don't change anything
-
-                                # This status is left in case we want to go back to pending in this case
-                                Write-Host "Folders monitored and no content team approval yet. Returning pending."
-                                $Status.state = "pending"
-                                $Status.description = $ContentNeedsReviewMessage
-                            }
+                            Write-Host "Ordinary comment; leaving the current head's approval status unchanged."
+                            return
                         }
                         Else
                         {
@@ -677,6 +705,20 @@ jobs:
                             If (($UserPermission -like "write*") -or ($UserPermission -eq "maintain") -or ($UserPermission -eq "admin")  -or ($UserPermission -eq "triage")) 
                             {
                                 Write-Host "User $CommentUser has the permission level: $UserPermission. Pass check."
+                                $RetryAuthorizedSignOff = $True
+
+                                # Read the head-bound status before any labels or approval writes can change it.
+                                $SignOffAlreadyPassed = (Get-PrSignOffStatus).state -eq "success"
+
+                                if (-not $SignOffAlreadyPassed)
+                                {
+                                    if (-not (Set-PrComment -Message $SignOffAcceptedMessage))
+                                    {
+                                        $NoticeWarning = "The authorized sign-off was accepted, but its informational comment could not be posted. Continuing approval and bounded retry handling."
+                                        Write-Warning $NoticeWarning
+                                        $NoticeWarning >> $env:GITHUB_STEP_SUMMARY
+                                    }
+                                }
 
                                 # Set the properties on the $Status object to allow the check to pass. $Status will be sent to GitHub at the end of the workflow.
                                 $Status.state = "success"
@@ -697,12 +739,10 @@ jobs:
                                 $CheckFailed = $True
                                 Set-PrComment $UnauthorizedSignOffMessage
 
-                                # If the content team has already approved, report success.
-                                # Technically, this means that once approved they could sneak other changes in, but maybe that is ok as we would see.
-
-                                If ($ApprovedLabelSet)
+                                # Preserve only a real approval on this head, never a stale PR label.
+                                If ((Get-PrSignOffStatus).state -eq "success")
                                 {
-                                    Write-Host "Content team already approved. Returning success."
+                                    Write-Host "Sign-off check already passed for this commit. Returning success."
                                     $Status.state = "success"
                                     $Status.description = $ContentApprovalMessage                             
                                 }
@@ -715,7 +755,7 @@ jobs:
                                     Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentReviewNeededLabel
                                     
                                     # Even though the check failed, leave the status as pending.
-                                    # It remains pending until an authorized owner signs off.
+                                    # It remains pending until an authorized user signs off.
                                     $Status.state = "pending"
                                     $Status.description = $ContentNeedsReviewMessage
                                 }
@@ -751,10 +791,8 @@ jobs:
                         Write-Host "Code at error line $errorLine : $($lines[$errorLine - 1])"
                     }
 
-                    # For catastrophic failure, make sure to not block PRs
-                    $Status.state = "success"
-                    $Status.description = "Unexpected error in workflow. Allowing sign off."
-                    $CatastrophicError = $True                     
+                    "Approval could not be verified or updated. No approval success or automated retry was issued by this failed run." >> $env:GITHUB_STEP_SUMMARY
+                    Throw
                 }
 
                 # Get ready to send $Status to GitHub. First need to convert the $Status object to JSON. Then set a couple variables to prepare for an attempt loop
@@ -771,6 +809,25 @@ jobs:
                 # submit a new sign off request.
                 if ($ActionableComment)
                 {
+                    $CurrentPr = Invoke-RestMethod -Method GET -Headers $GitHubHeaders -Uri $PrUrl -ErrorAction Stop
+                    if ($CurrentPr.state -ne "open" -or $CurrentPr.head.sha -ne $PrData.head.sha)
+                    {
+                        Write-Host "PR closed or head changed during processing; no status or retry will be published."
+                        return
+                    }
+                    if ($LifecycleReset -and (Test-ApprovalAfterLifecycleEvent))
+                    {
+                        Write-Host "Approval arrived while processing the lifecycle reset; not overwriting it."
+                        Set-PrLabel -IssueUrl $IssueUrl -LabelName $ContentApprovedLabel
+                        Remove-Label -LabelName $ContentReviewNeededLabel -IssueUrl $IssueUrl
+                        return
+                    }
+                    if ($LifecycleReset -and $Status.state -eq "pending")
+                    {
+                        Write-Host "Lifecycle reset already published pending; awaiting an authorized sign-off."
+                        return
+                    }
+
                     # Only post a status back if an actionable comment was provided.
                     # Otherwise leave as expected with no result. 
                     # This keeps the previous status unless explicitly changed.
@@ -780,7 +837,7 @@ jobs:
                         {
             
                             # Send POST request to GitHub 
-                            Invoke-RestMethod -Headers $GitHubHeaders -Uri $StatusUrl -Method POST -Body $StatusJson -ErrorAction Stop 
+                            $null = Invoke-RestMethod -Headers $GitHubHeaders -Uri $StatusUrl -Method POST -Body $StatusJson -ErrorAction Stop
                             $SuccessfulPost = $True
                         } 
                         Catch 
@@ -793,6 +850,16 @@ jobs:
                     } Until (($SuccessfulPost) -or ($RetryCount -gt 5))
                 }
 
+                If ($ActionableComment -and -not $SuccessfulPost)
+                {
+                    Throw "Failed to publish the sign-off status after six attempts. No automated merge retry was scheduled."
+                }
+
+                If ($RetryAuthorizedSignOff -and -not $SignOffAlreadyPassed -and $SuccessfulPost)
+                {
+                    "retry-head=$($PrData.head.sha)" >> $env:GITHUB_OUTPUT
+                }
+
                 # Print out current date and time
                 $currentDateTime = Get-Date
                 $currentDateTimeString = "{0:yyyy-MM-dd HH:mm:ss}" -f $currentDateTime
@@ -803,16 +870,172 @@ jobs:
                     # Populates the job summary if a user doesn't have permissions to sign off.
                     echo "# Pull request validation error" >> $env:GITHUB_STEP_SUMMARY
                     echo "" >> $env:GITHUB_STEP_SUMMARY
-                    echo "The user $CommentUser with permission level $UserPermission tried to sign off PR: $PrHtmlUrl but doesn't have the necessary permissions to do so. Please contact the content team to request sign off." >> $env:GITHUB_STEP_SUMMARY
+                    echo "The user $CommentUser with permission level $UserPermission tried to sign off PR: $PrHtmlUrl but doesn't have the necessary permissions to do so. Please contact the appropriate product team or another authorized user to request sign-off." >> $env:GITHUB_STEP_SUMMARY
                 } 
-                ElseIf ($CatastrophicError)
+
+    retry-signoff:
+        name: Retry PRMerger sign off
+        needs: build
+        if: needs.build.outputs.retry-head != ''
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        permissions:
+          pull-requests: write
+          statuses: read
+        concurrency:
+          group: signoff-retry-${{ github.repository }}-${{ github.event.issue.number }}
+          cancel-in-progress: false
+        steps:
+          - name: Retry only an authorized approval transition
+            shell: pwsh
+            env:
+              PayloadJson: ${{ toJSON(github) }}
+              AccessToken: ${{ secrets.GITHUB_TOKEN }}
+              ApprovedHead: ${{ needs.build.outputs.retry-head }}
+            run: |
+                $ErrorActionPreference = "Stop"
+                $GitHubData = $env:PayloadJson | ConvertFrom-Json -Depth 50
+                $Headers = @{
+                    Authorization = "Bearer $env:AccessToken"
+                    "User-Agent" = "sql-docs-signoff-retry"
+                    Accept = "application/vnd.github+json"
+                }
+                $ApiUrl = $GitHubData.event.repository.url
+                $PrUrl = $GitHubData.event.issue.pull_request.url
+                $CommentsUrl = $GitHubData.event.issue.comments_url
+                $RootId = [long]$GitHubData.event.comment.id
+                $Signer = $GitHubData.event.comment.user.login
+                $HeadSha = $env:ApprovedHead
+                $StatusContext = "PR signed off by authorized user"
+                $MarkerPrefix = "<!-- sql-signoff-retry:${HeadSha}:${RootId}:"
+                $Since = [uri]::EscapeDataString(([datetime]$GitHubData.event.comment.created_at).ToUniversalTime().ToString("o"))
+
+                Function Get-SignOffStatus
                 {
-                    # Makes sure the workflow looks failed so we can investigate the bug
+                    for ($Page = 1; ; $Page++)
+                    {
+                        $Statuses = Invoke-RestMethod -Headers $Headers -Uri "$ApiUrl/commits/$HeadSha/statuses?per_page=100&page=$Page"
+                        foreach ($Candidate in $Statuses)
+                        {
+                            if ($Candidate.context -eq $StatusContext)
+                            {
+                                return $Candidate
+                            }
+                        }
+                        if ($Statuses.Count -lt 100) { return $null }
+                    }
+                }
 
-                    echo "# Pull request validation error" >> $env:GITHUB_STEP_SUMMARY
-                    echo "" >> $env:GITHUB_STEP_SUMMARY
-                    echo "The user $CommentUser with permission level $UserPermission tried to sign off PR: $PrHtmlUrl. There was an unexpected error in the workflow, so sign-off was allowed to prevent blocking PRs. Please contact the developer of the workflow to investigate." >> $env:GITHUB_STEP_SUMMARY
+                Function Get-RetryComments
+                {
+                    for ($Page = 1; ; $Page++)
+                    {
+                        $Comments = Invoke-RestMethod -Headers $Headers -Uri "${CommentsUrl}?since=$Since&per_page=100&page=$Page"
+                        $Comments
+                        if ($Comments.Count -lt 100) { break }
+                    }
+                }
 
-                    # Force the workflow to fail so the validation failure can be tracked in Actions. In this workflow, this has no effect other than logging the failure.
-                    Throw "User $CommentUser signed off but an unexpected error occurred. Please contact contact team to investigate the workflow. Sign off allowed to prevent blocking PRs."
+                Function Test-CurrentApproval
+                {
+                    $Pr = Invoke-RestMethod -Headers $Headers -Uri $PrUrl
+                    if ($Pr.state -ne "open" -or $Pr.head.sha -ne $HeadSha)
+                    {
+                        Write-Host "PR closed or head changed; stopping retries."
+                        return $false
+                    }
+                    $LatestStatus = Get-SignOffStatus
+                    if ($LatestStatus.state -ne "success")
+                    {
+                        Write-Host "Current head no longer has a successful sign-off status; stopping retries."
+                        return $false
+                    }
+                    $Root = Invoke-RestMethod -Headers $Headers -Uri "$ApiUrl/issues/comments/$RootId"
+                    if ($Root.user.login -ne $Signer -or $Root.body -notmatch "#sign-off")
+                    {
+                        Write-Host "Original sign-off was changed; stopping retries."
+                        return $false
+                    }
+                    $Role = (Invoke-RestMethod -Headers $Headers -Uri "$ApiUrl/collaborators/$Signer/permission").role_name
+                    if ($Role -notlike "write*" -and $Role -notin @("triage", "maintain", "admin"))
+                    {
+                        Write-Host "Original signer is no longer authorized; stopping retries."
+                        return $false
+                    }
+                    return $true
+                }
+
+                Function Test-RetryMarker
+                {
+                    param($Comment, [int]$Attempt)
+
+                    return ($Comment.user.login -eq "github-actions[bot]" -and
+                        $Comment.user.type -eq "Bot" -and
+                        $Comment.body.EndsWith("$MarkerPrefix$Attempt -->", [StringComparison]::Ordinal))
+                }
+
+                Function Add-RetryComment
+                {
+                    param([string]$Message, [int]$Attempt)
+
+                    $Body = @{ body = "$Message`n`n$MarkerPrefix$Attempt -->" } | ConvertTo-Json
+                    return Invoke-RestMethod -Headers $Headers -Uri $CommentsUrl -Method POST -ContentType "application/json" -Body $Body
+                }
+
+                $LastCommandId = $RootId
+                for ($Attempt = 1; $Attempt -le 3; $Attempt++)
+                {
+                    $BlockingResult = $null
+                    $ExistingComment = $null
+                    for ($Poll = 0; $Poll -lt 24; $Poll++)
+                    {
+                        if (-not (Test-CurrentApproval)) { return }
+                        $Comments = @(Get-RetryComments)
+                        if (@($Comments | Where-Object { Test-RetryMarker $_ 3 }).Count -gt 0)
+                        {
+                            Write-Host "Terminal notice already posted; no further retries."
+                            return
+                        }
+                        $ExistingComment = $Comments | Where-Object { Test-RetryMarker $_ $Attempt } | Sort-Object id | Select-Object -First 1
+                        if ($ExistingComment) { break }
+                        $BlockingResult = $Comments | Where-Object {
+                            [long]$_.id -gt $LastCommandId -and
+                            $_.user.login -eq "prmerger-automator[bot]" -and
+                            $_.user.type -eq "Bot" -and
+                            $_.body -match "(?m)^(?:- )?You signed off, but "
+                        } | Sort-Object id | Select-Object -First 1
+                        if ($BlockingResult) { break }
+                        Start-Sleep -Seconds 5
+                    }
+
+                    if ($ExistingComment)
+                    {
+                        $LastCommandId = [long]$ExistingComment.id
+                        continue
+                    }
+                    if (-not $BlockingResult)
+                    {
+                        $Notice = "No new PRMerger blocking result observed within 120 seconds. No further command was posted; check the PR if merging has not completed."
+                        Write-Warning $Notice
+                        $Notice >> $env:GITHUB_STEP_SUMMARY
+                        return
+                    }
+
+                    # Allow status propagation before the external bot sees another command.
+                    Start-Sleep -Seconds 10
+                    if (-not (Test-CurrentApproval)) { return }
+                    if ($Attempt -eq 1)
+                    {
+                        $Message = "An authorized user, @$Signer, has signed off on this PR. PRMerger blocked the initial attempt; required checks may still be catching up. Please be patient: the sign-off should go through in a subsequent automated attempt if no other requirements are blocking it. Automation will stop after two retries. Automated retry 1 of 2: #sign-off"
+                    }
+                    elseif ($Attempt -eq 2)
+                    {
+                        $Message = "An authorized user, @$Signer, has already signed off, but PRMerger still reports a blocker. This is automated retry 2 of 2: #sign-off"
+                    }
+                    else
+                    {
+                        $Message = "Sign off could not complete after two automated retries. An authorized user, @$Signer, has already signed off. Please check whether another required check, review, merge conflict, or PRMerger rule is blocking this PR. No further automatic attempts will be made."
+                    }
+                    $PostedComment = Add-RetryComment -Message $Message -Attempt $Attempt
+                    $LastCommandId = [long]$PostedComment.id
                 }

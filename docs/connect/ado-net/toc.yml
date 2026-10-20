@@ -1,4 +1,4 @@
-- name: Microsoft.Data.SqlClient for SQL Server
+- name: Overview
   href: microsoft-ado-net-sql-server.md
 - name: Get started
   items:
@@ -6,8 +6,6 @@
     href: download-microsoft-sqlclient-data-provider.md
   - name: Connect and query
     href: get-started-sqlclient-driver.md
-  - name: ADO.NET architecture
-    href: overview-sqlclient-driver.md
   - name: Namespace and compatibility
     href: introduction-microsoft-data-sqlclient-namespace.md
   - name: Migrate from System.Data.SqlClient
@@ -293,5 +291,3 @@
   items:
   - name: AppContext switches
     href: appcontext-switches.md
-  - name: Finding additional information
-    href: find-additional-sqlclient-driver-information.md

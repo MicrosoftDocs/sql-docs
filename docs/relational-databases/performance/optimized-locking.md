@@ -31,7 +31,7 @@ Optimized locking helps to reduce lock memory as very few locks are held even fo
 Optimized locking is composed of two primary components: **transaction ID (TID) locking** and **lock after qualification (LAQ)**.
 
 - A transaction ID (TID) is a unique identifier of a transaction. Each row is labeled with the last TID that modified it. Instead of potentially many key or row identifier locks, a single lock on the TID is used to protect all modified rows. For more information, see [Transaction ID (TID) locking](#transaction-id-tid-locking).
-- Lock after qualification (LAQ) is an optimization that evaluates query predicates using the latest row version committed as of the statement start time without acquiring a lock, thus improving concurrency. LAQ requires [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-). For more information, see [Lock after qualification (LAQ)](#lock-after-qualification-laq).
+- Lock after qualification (LAQ) is an optimization that evaluates query predicates by using the latest row version committed as of the statement start time without acquiring a lock, thus improving concurrency. LAQ requires [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-). For more information, see [Lock after qualification (LAQ)](#lock-after-qualification-laq).
 
 For example:
 
@@ -371,7 +371,7 @@ In [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqld
 
 ### Avoid locking hints
 
-While [table and query hints](../../t-sql/queries/hints-transact-sql.md) such as `UPDLOCK`, `READCOMMITTEDLOCK`, `XLOCK`, `HOLDLOCK`, etc. are honored when optimized locking is enabled, they reduce the benefit of optimized locking. Lock hints force the database engine to take row or page locks, potentially holding them until the end of the transaction, to honor the intent of the lock hints. Some applications have logic where lock hints are needed, for example when reading a row with the `UPDLOCK` hint and then updating it later. We recommend using lock hints only where needed.
+While [table and query hints](../../t-sql/queries/hints-transact-sql.md) such as `UPDLOCK`, `READCOMMITTEDLOCK`, `XLOCK`, and `HOLDLOCK` are honored when optimized locking is enabled, they reduce the benefit of optimized locking. Lock hints force the database engine to take row or page locks, and it might hold them until the end of the transaction to honor the intent of the lock hints. Some applications have logic that requires lock hints, such as when you read a row with the `UPDLOCK` hint and then update it later. Use lock hints only when necessary.
 
 With optimized locking, there are no restrictions on existing queries and queries don't need to be rewritten. Queries that aren't using hints benefit from optimized locking most.
 

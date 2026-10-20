@@ -14,7 +14,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rule checks that the blocked process threshold option is set to 0 (disabled) or to a value of 5 seconds or higher. Values from 1 to 4 are accepted and can produce blocked process reports. When many tasks are blocked, low values can substantially increase the number of reports to process and store.
+This rule checks that the blocked process threshold option is set to 0 (disabled) or to a value of 5 seconds or higher.
 
 ## Best practices recommendations
 

@@ -1,53 +1,182 @@
 ### YamlMime:FAQ
 metadata:
-  title: "Frequently Asked Questions (FAQ) for ODBC Linux and macOS"
-  description: "Find answers to common questions about the Microsoft ODBC Driver for SQL Server on Linux and macOS."
+  title: "Frequently Asked Questions for ODBC on Linux and macOS"
+  description: "Find answers about driver versions, installation, encryption, authentication, tracing, and character data with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
   ms.custom: ""
-  ms.date: "05/06/2020"
+  ms.date: "10/15/2026"
   ms.service: sql
   ms.prod_service: connectivity
   ms.reviewer: ""
   ms.subservice: connectivity
-  ms.topic: article
+  ms.topic: faq
+  ai-usage: ai-assisted
   ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
   author: David-Engel
   ms.author: davidengel
-    
-title: Frequently Asked Questions (FAQ) for ODBC Linux and macOS
+
+title: Frequently Asked Questions for ODBC on Linux and macOS
 summary: |
-  [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
-  
-  The following are answers to questions about the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
-    
+  [!INCLUDE [Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+  This article answers common questions about installing, connecting with, and developing applications for the Microsoft ODBC Driver for SQL Server on Linux and macOS.
 
 sections:
-  - name: Ignored
+  - name: About the driver
     questions:
-      - question: Frequently Asked Questions
+      - question: Which ODBC driver version should I use?
         answer: |
-          **How do existing ODBC applications on Linux or macOS work with the driver?**  
-          You should be able to compile and run the ODBC applications that you have been compiling and running on Linux or macOS using other drivers. 
-            
-          **Which features of [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] does this version of the driver support?**
-          
-          The ODBC driver on Linux and macOS supports all server features in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] except LocalDB. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supported features, see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-            
-          **Does the driver support Kerberos authentication?**  
-          Yes. If you have an existing Kerberos environment setup, you should be able to connect to servers using the `Trusted_Connection=Yes` DSN or connection string option. For more information, see [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
-            
-          **Which Unicode encoding should an application use?**  
-          UTF-8 for SQL_CHAR data and UTF-16 for SQL_WCHAR data. Depending on the system locale and driver version, non-UTF-8 data in one of several encodings may also be supported. For more information, see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).
-          
-          **Are there ODBC samples that I can download and run with the driver to experiment with or evaluate it?**
-          
-          See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](/archive/blogs/sqlblog/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver) for a sample. This is also applicable to the macOS ODBC driver.
-          
-          **Is the ODBC driver on Linux or macOS open source?**
-          
-          No, the ODBC drivers on Linux and macOS are not an open source product.  
-          
-      - question: See Also
+          Use Microsoft ODBC Driver 18 for SQL Server, the current driver line, for new development. Microsoft ODBC Driver 17 for SQL Server remains supported for applications that already deploy it, as described in the [support lifecycle](../support-lifecycle.md).
+
+          The upgrade change that affects most applications is that Driver 18 encrypts connections by default. For all the differences, see [Major version differences](../major-version-differences.md).
+
+      - question: Which operating systems and processor architectures does the driver support?
         answer: |
-          - [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-          - [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-          
+          Driver 18 supports these operating systems and processor architectures:
+
+          | Operating system | x64 support | Arm64 support |
+          | --- | --- | --- |
+          | Alpine Linux | Yes | Starting with Driver 18.3 |
+          | Azure Linux | Yes | Starting with Driver 18.6.1 |
+          | Debian | Yes | Starting with Driver 18.1 |
+          | Oracle Linux | Yes | No |
+          | Red Hat Enterprise Linux | Yes | Starting with Driver 18.1 |
+          | SUSE Linux Enterprise Server | Yes | No |
+          | Ubuntu | Yes | Starting with Driver 18.1 |
+          | macOS | Yes | Starting with Driver 17.8 |
+
+          The supported operating system versions change with each driver release. For the version-by-version table, see [System requirements](system-requirements.md).
+
+      - question: Which SQL Server features does the Linux and macOS driver support?
+        answer: |
+          The driver on Linux and macOS supports most SQL Server features. It doesn't support distributed transaction enlistment through the `SQL_ATTR_ENLIST_IN_DTC` attribute, database mirroring, FILESTREAM, or the driver performance-profiling attributes. LocalDB isn't available on Linux or macOS. XA transactions through the Distributed Transaction Coordinator (DTC) are supported starting with Driver 17.3. For more information, see [Use XA transactions with DTC](../use-xa-with-dtc.md). For the full list, see [Limitations](programming-guidelines.md#unsupported-features).
+
+      - question: Is the driver open source?
+        answer: |
+          No. The Microsoft ODBC Driver for SQL Server isn't open source.
+
+  - name: Install and configure
+    questions:
+      - question: Which driver manager does the driver use?
+        answer: |
+          The driver uses the unixODBC driver manager. When you install Driver 17 or 18 with your platform's package manager or Homebrew, unixODBC installs as a dependency. Follow the steps for [Linux](installing-the-microsoft-odbc-driver-for-sql-server.md) or [macOS](install-microsoft-odbc-driver-sql-server-macos.md).
+
+          On macOS, build and run your application with unixODBC rather than iODBC. Match the processor architecture of the application, driver manager, and driver. An error such as `incompatible architecture (have 'arm64', need 'x86_64')` indicates an architecture mismatch, not necessarily the wrong driver manager.
+
+      - question: How do I check which drivers are installed and which configuration files are in use?
+        answer: |
+          Run `odbcinst -q -d` to list the registered drivers. The output shows each driver name exactly as a connection string must spell it:
+
+          ```output
+          [ODBC Driver 18 for SQL Server]
+          ```
+
+          Run `odbcinst -j` to show the unixODBC version and the paths of `odbcinst.ini`, which registers drivers, and `odbc.ini`, which holds system and user data source names (DSNs):
+
+          ```output
+          unixODBC 2.3.11
+          DRIVERS............: /etc/odbcinst.ini
+          SYSTEM DATA SOURCES: /etc/odbc.ini
+          FILE DATA SOURCES..: /etc/ODBCDataSources
+          USER DATA SOURCES..: /home/<user>/.odbc.ini
+          ```
+
+          To configure a DSN, see [Connection strings and DSNs](connection-string-keywords-and-data-source-names-dsns.md).
+
+      - question: Why does the driver manager report that it can't open the driver library?
+        answer: |
+          The error looks like this:
+
+          ```output
+          [01000][unixODBC][Driver Manager]Can't open lib 'ODBC Driver 18 for SQL Server' : file not found
+          ```
+
+          Check these causes in order:
+
+          1. The `Driver` value in the connection string or DSN doesn't match a registered driver name. Run `odbcinst -q -d` and copy the name exactly.
+          1. Your application uses different configuration files from the ones you edited. Run `odbcinst -j` from the same environment as the application and check which driver manager the application loads. On macOS, create configuration symbolic links only if the application needs them, as described in [Troubleshooting on macOS](install-microsoft-odbc-driver-sql-server-macos.md#troubleshooting).
+          1. More than one copy of the unixODBC driver manager is installed, and your application loads the wrong one. On Linux, run `find /usr -name 'libodbc*.so*'`. On macOS, run `find /opt/homebrew /usr/local -name 'libodbc*.dylib'`. Multiple paths alone don't prove that multiple driver managers are installed: Homebrew links can point to the same library in its Cellar directory. Check which library the application actually loads. For more information, see [Troubleshoot connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
+
+  - name: Connect and authenticate
+    questions:
+      - question: Why does a connection that works with Driver 17 fail with a certificate error on Driver 18?
+        answer: |
+          Driver 18 defaults to `Encrypt=yes`. Driver 17 defaults to `Encrypt=no` only when no nonempty `Authentication` setting or access token is supplied. A nonempty `Authentication` setting, including `Authentication=SqlPassword`, or an access token changes the Driver 17 default to `Encrypt=yes`. Explicit encryption settings override these defaults.
+
+          Check the effective settings in your connection string, DSN, and preconnection attributes set through `SQLSetConnectAttr`. For example, `Encrypt=yes` in a DSN or `SQL_COPT_SS_ENCRYPT=SQL_EN_ON` requests encryption even when the connection string omits `Encrypt`. Supply access tokens only through the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute, not a connection-string keyword.
+
+          With `Encrypt=yes` and `TrustServerCertificate=no`, both drivers encrypt the connection and validate the server certificate. With `Encrypt=no`, Driver 17 doesn't validate the certificate, while Driver 18 validates it if the server forces encryption and `TrustServerCertificate=no`. A connection that previously used the Driver 17 `Encrypt=no` default can therefore fail with Driver 18 against a server with a self-signed or otherwise untrusted certificate. With a self-signed certificate, the Driver 18 error looks like this:
+
+          ```output
+          [Microsoft][ODBC Driver 18 for SQL Server]SSL Provider: [error:0A000086:SSL routines::certificate verify failed:self-signed certificate]
+          [Microsoft][ODBC Driver 18 for SQL Server]Client unable to establish connection. For solutions related to encryption errors, see https://go.microsoft.com/fwlink/?linkid=2226722
+          ```
+
+          Prefer a trusted certificate or certificate pinning. Use these options:
+
+          - Install a certificate on the server that's issued by a certificate authority the client trusts. If the certificate is trusted but its name doesn't match the `Server` value, set `HostNameInCertificate` to the name in the certificate. `HostNameInCertificate` changes only the expected name, so it doesn't fix a self-signed certificate.
+          - With Driver 18.1 and later versions and a server that supports Tabular Data Stream (TDS) 8.0, set `Encrypt=strict` and set `ServerCertificate` to the path of a copy of the server's certificate. The driver then accepts only that exact certificate. `ServerCertificate` works only in strict mode.
+          - Set `Encrypt=no` only if you accept unencrypted application traffic when the server doesn't force encryption. This matches the Driver 17 default only when no nonempty `Authentication` setting or access token is supplied and no encryption override is set. If the server forces encryption, Driver 18 still validates the certificate unless `TrustServerCertificate=yes` disables validation.
+
+          > [!CAUTION]
+          > `TrustServerCertificate=yes` doesn't enable encryption. With `Encrypt=yes`, it bypasses certificate validation while keeping traffic encrypted, leaving the connection open to adversary-in-the-middle attacks. With `Encrypt=no`, application traffic remains unencrypted unless the server forces encryption; if the server forces encryption, certificate validation is bypassed. With `Encrypt=strict`, the driver ignores `TrustServerCertificate` and validates the certificate, or matches it against `ServerCertificate` when configured. Prefer a trusted certificate or certificate pinning.
+
+          For more information, see [Default encryption behavior](../major-version-differences.md#default-encryption-behavior).
+
+      - question: Does the driver support Kerberos authentication?
+        answer: |
+          Yes. Get a Kerberos ticket with `kinit`, then connect with `Trusted_Connection=yes` in the connection string or DSN. The SQL Server instance needs a registered service principal name (SPN). For setup steps, see [Use integrated authentication](using-integrated-authentication.md).
+
+      - question: Does the driver support Microsoft Entra ID authentication?
+        answer: |
+          <a id="does-the-driver-support-microsoft-entra-authentication"></a>
+
+          Yes, for Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2022 and later versions. To set up SQL Server, including through Azure Arc, use [Microsoft Entra authentication for SQL Server](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md). On Linux and macOS, Driver 17 and later versions support these methods:
+
+          - Managed identity, with `Authentication=ActiveDirectoryMsi`, starting with Driver 17.3.
+          - Service principal, with `Authentication=ActiveDirectoryServicePrincipal`, starting with Driver 17.7.
+          - Integrated authentication through Kerberos in a federated environment, with `Authentication=ActiveDirectoryIntegrated`, starting with Driver 17.6.
+          - An access token that your application obtains, passed through the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute.
+
+          `ActiveDirectoryInteractive` is available only in the Windows driver. `ActiveDirectoryPassword` is [deprecated](../using-azure-active-directory.md#activedirectorypassword-is-deprecated). Driver-managed authentication on Linux and macOS doesn't support scenarios that require conditional access policies. If your application acquires an access token separately, the authentication library and Microsoft Entra ID policies govern that token acquisition. Pass the token through `SQL_COPT_SS_ACCESS_TOKEN`.
+
+          On Alpine Linux, integrated authentication requires a `libcurl` build with support for the Simple and Protected Generic Security Service Application Program Interface Negotiation Mechanism (SPNEGO). Check your installed `libcurl` capabilities rather than assuming the default package supports it.
+
+          For connection strings and code samples, see [Use Microsoft Entra ID with the ODBC driver](../using-azure-active-directory.md).
+
+  - name: Develop and troubleshoot
+    questions:
+      - question: Can an existing ODBC application use the driver on Linux or macOS?
+        answer: |
+          Yes. An application written to the ODBC application programming interface (API) and built against unixODBC can load this driver. To use SQL Server-specific features, include `msodbcsql.h` after the unixODBC headers. For compiler commands and library names, see [Develop C and C++ applications with the ODBC driver](../develop-cpp-applications.md).
+
+      - question: Is there a sample application?
+        answer: |
+          Yes. [Connect and query with C++ and ODBC](../cpp-code-example-app-connect-access-sql-db.md) builds and runs a sample on Linux, macOS, and Windows.
+
+      - question: How do I trace ODBC calls?
+        answer: |
+          Trace files can contain sensitive data. As the account that runs your application, create a directory that only that account can access:
+
+          ```bash
+          mkdir -m 700 "$HOME/odbc-trace"
+          ```
+
+          Add these settings to the `[ODBC]` section of `odbcinst.ini`. Replace `/home/<user>/odbc-trace/odbctrace.log` with the absolute path inside the directory you created. On macOS, home directories typically use `/Users/<user>` instead of `/home/<user>`.
+
+          Keep the full trace-file path to 62 bytes or fewer to avoid truncation by unixODBC.
+
+          ```ini
+          [ODBC]
+          Trace = Yes
+          TraceFile = /home/<user>/odbc-trace/odbctrace.log
+          ```
+
+          These settings enable tracing for applications that use this driver manager configuration, and tracing slows them down. Use a separate private directory for each application account. Remove `Trace = Yes` when you finish, and delete trace files you no longer need. For per-application tracing, see [Data access tracing on Linux and macOS](data-access-tracing-with-the-odbc-driver-on-linux.md).
+
+  - name: Character data
+    questions:
+      - question: Which Unicode encoding should an application use?
+        answer: |
+          Use UTF-16LE (little endian) for `SQLWCHAR` data. Use UTF-16 `SQLWCHAR` buffers with the ODBC wide-character APIs instead of the native `wchar_t` type, which is 32 bits on Linux and macOS.
+
+          Use UTF-8 for `SQLCHAR` data. Starting with Driver 17, the driver also accepts a set of single-byte and double-byte code pages for `SQLCHAR` data when the process locale selects one. Processes start in the `C` locale, so the driver uses UTF-8 unless the application calls `setlocale`. For the list of encodings, see [Handle character data](programming-guidelines.md#handle-character-data).

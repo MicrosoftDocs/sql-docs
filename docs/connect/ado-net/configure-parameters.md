@@ -1,131 +1,262 @@
 ---
-title: Configuring parameters
-description: Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation in ADO.NET.
+title: Configure parameters with Microsoft.Data.SqlClient
+description: Learn how to configure input, output, table-valued, and streaming parameters for Microsoft.Data.SqlClient commands.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 11/25/2020
+ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: concept-article
+ms.topic: how-to
 dev_langs:
-  - "csharp"
+  - csharp
+ai-usage: ai-assisted
 ---
-# Configuring parameters
 
-[!INCLUDE [dotnet-all](../../includes/products/applies-full/dotnet-all.md)]
+# Configure parameters with Microsoft.Data.SqlClient
 
-[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+<a id="configuring-parameters"></a>
 
-Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation. Unlike command text, parameter input is treated as a literal value, not as executable code. This behavior helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into a SQL statement.
+Parameters send values to a command separately from its Transact-SQL (T-SQL) text. Use <xref:Microsoft.Data.SqlClient.SqlParameter> objects instead of concatenating or interpolating values into SQL statements. Parameters help protect against SQL injection and preserve the value's database type.
 
-Parameterized commands can also improve query execution performance, because they help the database server accurately match the incoming command with a proper cached query plan. For more information, see [Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) and [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#parameters-and-execution-plan-reuse). In addition to the security and performance benefits, parameterized commands provide a convenient method for organizing values passed to a data source.
+The examples in this article assume that an open <xref:Microsoft.Data.SqlClient.SqlConnection> named `connection` targets the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
 
-A <xref:System.Data.Common.DbParameter> object can be created by using its constructor, or by adding it to the <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> by calling the `Add` method of the <xref:System.Data.Common.DbParameterCollection> collection. The `Add` method will take as input either constructor arguments or an existing parameter object, depending on the data provider.
+The C# examples require `using Microsoft.Data.SqlClient;`. Examples that use `SqlDbType` also require `using System.Data;`.
 
-## Supply the ParameterDirection property
+<a id="example"></a>
 
-When adding parameters, you must supply a <xref:System.Data.ParameterDirection> property for parameters other than input parameters. The following table shows the `ParameterDirection` values that you can use with the <xref:System.Data.ParameterDirection> enumeration.
+## Add input parameters
 
-|Member name|Description|
-|-----------------|-----------------|
-|<xref:System.Data.ParameterDirection.Input>|The parameter is an input parameter. This value is the default.|
-|<xref:System.Data.ParameterDirection.InputOutput>|The parameter can perform both input and output.|
-|<xref:System.Data.ParameterDirection.Output>|The parameter is an output parameter.|
-|<xref:System.Data.ParameterDirection.ReturnValue>|The parameter represents a return value from an operation such as a stored procedure, built-in function, or user-defined function.|
+Add a parameter for each value placeholder in the command text. Specify the parameter's SQL Server type and assign its value:
+
+```csharp
+const string sql = """
+    SELECT ProductID, Name, ListPrice
+    FROM Production.Product
+    WHERE ProductSubcategoryID = @subcategoryId
+      AND ListPrice >= @minimumPrice
+    ORDER BY ListPrice;
+    """;
+
+using var command = new SqlCommand(sql, connection);
+command.Parameters.Add("@subcategoryId", SqlDbType.Int).Value = 2;
+command.Parameters.Add("@minimumPrice", SqlDbType.Money).Value = 1_000m;
+
+using SqlDataReader reader = command.ExecuteReader();
+while (reader.Read())
+{
+    Console.WriteLine(
+        $"{reader.GetInt32(0)}: {reader.GetString(1)} ({reader.GetDecimal(2):C})");
+}
+```
+
+Use the same casing for a parameter name in the command text and in the `SqlParameter`. SQL Server matches variable names by using the [server collation](../../relational-databases/collations/set-or-change-the-server-collation.md), so a mismatch fails with a "Must declare the scalar variable" error on a server with a case-sensitive collation.
 
 ## Work with parameter placeholders
 
-The syntax for parameter placeholders depends on the data source. The Microsoft SqlClient Data Provider for SQL Server handles naming and specifying parameters and parameter placeholders differently. The SqlClient data provider uses named parameters in the format `@parametername`.
+Microsoft.Data.SqlClient uses named parameters in the form `@parameterName`. Positional question mark (`?`) placeholders aren't supported.
+
+Parameter placeholders represent values, not SQL identifiers or syntax. You can't use a parameter for a table name, column name, sort direction, or an entire SQL fragment. If an application selects an identifier dynamically, validate it against an allow list and add it to the command text only after validation. Continue to pass all data values as parameters.
+
+For text commands, Microsoft.Data.SqlClient sends parameterized statements to SQL Server through `sp_executesql`. SQL Server can reuse an execution plan when the statement text and parameter definitions remain the same.
 
 ## Specify parameter data types
 
-The data type of a parameter is specific to the Microsoft SqlClient Data Provider for SQL Server. Specifying the type converts the value of the `Parameter` to the Microsoft SqlClient Data Provider for SQL Server type before passing the value to the data source. You may also specify the type of a `Parameter` in a generic manner by setting the `DbType` property of the `Parameter` object to a particular <xref:System.Data.DbType>.
+Set <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> explicitly when the application knows the target SQL Server type. Also set type-specific metadata such as <xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>, <xref:Microsoft.Data.SqlClient.SqlParameter.Precision%2A>, and <xref:Microsoft.Data.SqlClient.SqlParameter.Scale%2A> when applicable.
 
-The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` object is inferred from the .NET Framework type of the `Value` of the `Parameter` object, or from the `DbType` of the `Parameter` object. The following table shows the inferred `Parameter` type based on the object passed as the `Parameter` value or the specified `DbType`.
+This example matches the **nvarchar(50)** and **datetime** columns in `Person.Person`:
 
-|.NET type|DbType|SqlDbType|
-|-------------------------|------------|---------------|
-|<xref:System.Boolean>|`Boolean`|`Bit`|
-|<xref:System.Byte>|`Byte`|`TinyInt`|
-|`byte[]`|`Binary`|`VarBinary`. This implicit conversion will fail if the byte array is larger than the maximum size of a `VarBinary`, which is 8000 bytes. For byte arrays larger than 8000 bytes, explicitly set the <xref:System.Data.SqlDbType>.|
-|<xref:System.Char>| |Inferring a <xref:System.Data.SqlDbType> from char isn't supported.|
-|<xref:System.DateTime>|`DateTime`|`DateTime`|
-|<xref:System.DateTimeOffset>|`DateTimeOffset`|`DateTimeOffset` in SQL Server 2008. Inferring a <xref:System.Data.SqlDbType> from `DateTimeOffset` isn't supported in versions of SQL Server earlier than SQL Server 2008.|
-|<xref:System.Decimal>|`Decimal`|`Decimal`|
-|<xref:System.Double>|`Double`|`Float`|
-|<xref:System.Single>|`Single`|`Real`|
-|<xref:System.Guid>|`Guid`|`UniqueIdentifier`|
-|<xref:System.Int16>|`Int16`|`SmallInt`|
-|<xref:System.Int32>|`Int32`|`Int`|
-|<xref:System.Int64>|`Int64`|`BigInt`|
-|<xref:System.Object>|`Object`|`Variant`|
-|<xref:System.String>|`String`|`NVarChar`. This implicit conversion will fail if the string is larger than the maximum size of an `NVarChar`, which is 4000 characters. For strings larger than 4000 characters, explicitly set the <xref:System.Data.SqlDbType>.|
-|<xref:System.TimeSpan>|`Time`|`Time` in SQL Server 2008. Inferring a <xref:System.Data.SqlDbType> from `TimeSpan` isn't supported in versions of SQL Server earlier than SQL Server 2008.|
-|<xref:System.UInt16>|`UInt16`|Inferring a <xref:System.Data.SqlDbType> from `UInt16` isn't supported.|
-|<xref:System.UInt32>|`UInt32`|Inferring a <xref:System.Data.SqlDbType> from `UInt32` isn't supported.|
-|<xref:System.UInt64>|`UInt64`|Inferring a <xref:System.Data.SqlDbType> from `UInt64` isn't supported.|
-||`AnsiString`|`VarChar`|
-||`AnsiStringFixedLength`|`Char`|
-||`Currency`|`Money`|
-||`Date`|`Date` in SQL Server 2008. Inferring a <xref:System.Data.SqlDbType> from `Date` isn't supported in versions of SQL Server earlier than SQL Server 2008.|
-||`SByte`|Inferring a <xref:System.Data.SqlDbType> from `SByte` isn't supported.|
-||`StringFixedLength`|`NChar`|
-||`Time`|`Time` in SQL Server 2008. Inferring a <xref:System.Data.SqlDbType> from `Time` isn't supported in versions of SQL Server earlier than SQL Server 2008.|
-||`VarNumeric`|Inferring a <xref:System.Data.SqlDbType> from `VarNumeric` isn't supported.|
-|user-defined type (an object with <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>)|SqlClient always returns an Object|`SqlDbType.Udt` if <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> is present, otherwise `Variant`|
-|<xref:Microsoft.Data.SqlTypes.SqlJson>|`String`|`SqlDbType.Json`|
-|<xref:Microsoft.Data.SqlTypes.SqlVector%601>|`Binary`|`SqlDbType.Vector`|
+```csharp
+const string sql = """
+    SELECT BusinessEntityID, FirstName, LastName
+    FROM Person.Person
+    WHERE LastName = @lastName
+      AND ModifiedDate >= @modifiedSince
+    ORDER BY BusinessEntityID;
+    """;
 
-> [!NOTE]
-> Conversions from decimal to other types are narrowing conversions that round the decimal value to the nearest integer value toward zero. If the result of the conversion isn't representable in the destination type, an <xref:System.OverflowException> is thrown.
+using var command = new SqlCommand(sql, connection);
 
-> [!NOTE]
-> **JSON**
->
-> Set SqlDbType to Json when passing a parameter `Value` of type `string`. Otherwise SqlDbType defaults to `Nvarchar`.
->
-> **Vector**
->
-> For SQL vector data type, a parameter `Value` of type `Microsoft.Data.SqlTypes.SqlVector<T>` must be specified. Parameter `Size` and vector dimension are inferred from the parameter `Value`. The parameter `Size` is ignored.
+SqlParameter lastName = command.Parameters.Add(
+    "@lastName",
+    SqlDbType.NVarChar,
+    50);
+lastName.Value = "O'Brien";
 
-> [!NOTE]
-> When you send a null parameter value to the server, you must specify <xref:System.DBNull>, not `null` (`Nothing` in Visual Basic). The null value in the system is an empty object that has no value. <xref:System.DBNull> is used to represent null values.
+SqlParameter modifiedSince = command.Parameters.Add(
+    "@modifiedSince",
+    SqlDbType.DateTime);
+modifiedSince.Value = new DateTime(2013, 1, 1);
+```
+
+Matching the parameter metadata to the target column avoids implicit conversions and prevents changes in string length or decimal scale from changing the parameter definition.
+
+For decimal values, set precision and scale explicitly. The `Weight` column in `Production.Product` uses **decimal(8, 2)**:
+
+```csharp
+const string sql = """
+    SELECT ProductID, Name, Weight
+    FROM Production.Product
+    WHERE Weight >= @minimumWeight
+    ORDER BY Weight;
+    """;
+
+using var command = new SqlCommand(sql, connection);
+SqlParameter minimumWeight = command.Parameters.Add(
+    "@minimumWeight",
+    SqlDbType.Decimal);
+minimumWeight.Precision = 8;
+minimumWeight.Scale = 2;
+minimumWeight.Value = 10.25m;
+```
+
+### Pass database NULL values
+
+Assign <xref:System.DBNull.Value> to send a database `NULL`. C# `null` doesn't represent a SQL Server `NULL` for ordinary scalar parameters:
+
+```csharp
+const string sql = """
+    SELECT SalesOrderID, OrderDate, SalesPersonID
+    FROM Sales.SalesOrderHeader
+    WHERE (@salesPersonId IS NULL OR SalesPersonID = @salesPersonId)
+    ORDER BY SalesOrderID;
+    """;
+
+using var command = new SqlCommand(sql, connection);
+SqlParameter salesPersonId = command.Parameters.Add(
+    "@salesPersonId",
+    SqlDbType.Int);
+
+int? selectedSalesPersonId = null;
+salesPersonId.Value = selectedSalesPersonId.HasValue
+    ? selectedSalesPersonId.Value
+    : DBNull.Value;
+```
+
+### Use inferred metadata selectively
+
+The <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> method infers parameter metadata from the runtime value. Inference is convenient when the inferred metadata is stable and matches the database type. It can produce different parameter definitions when string lengths, decimal precision, or other value characteristics change.
+
+Prefer `Add` with an explicit `SqlDbType` for production commands whose target schema is known. Don't pass C# `null` to `AddWithValue`; specify the type and assign `DBNull.Value` instead.
+
+## Reuse command parameters
+
+Create a parameter once and change only its <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> when you run the same command with different values:
+
+```csharp
+const string sql = """
+    SELECT TOP (1) Name, ListPrice
+    FROM Production.Product
+    WHERE ProductSubcategoryID = @subcategoryId
+    ORDER BY ListPrice DESC;
+    """;
+
+using var command = new SqlCommand(sql, connection);
+SqlParameter subcategoryId = command.Parameters.Add(
+    "@subcategoryId",
+    SqlDbType.Int);
+
+foreach (int id in new[] { 1, 2, 3 })
+{
+    subcategoryId.Value = id;
+
+    using SqlDataReader reader = command.ExecuteReader();
+    if (reader.Read())
+    {
+        Console.WriteLine($"{id}: {reader.GetString(0)}");
+    }
+}
+```
+
+Don't add another parameter with the same name on each execution. Reuse the existing parameter or clear the collection before rebuilding it.
+
+<a id="supply-the-parameterdirection-property"></a>
+
+## Set parameter direction
+
+The <xref:Microsoft.Data.SqlClient.SqlParameter.Direction%2A> property identifies how a command uses a parameter. Set it to a <xref:System.Data.ParameterDirection> value:
+
+| Direction | Use |
+| --- | --- |
+| <xref:System.Data.ParameterDirection.Input> | Sends a value to a statement or stored procedure. This value is the default. |
+| <xref:System.Data.ParameterDirection.Output> | Receives a value from a stored procedure output parameter. |
+| <xref:System.Data.ParameterDirection.InputOutput> | Sends an initial value and receives the updated value. |
+| <xref:System.Data.ParameterDirection.ReturnValue> | Receives the integer value from a T-SQL `RETURN` statement. |
+
+For output, input/output, and return-value parameters, read <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> only after the command finishes. If a command returns rows, close or dispose the <xref:Microsoft.Data.SqlClient.SqlDataReader> before reading those values.
+
+For complete stored procedure examples, see [Modify data with stored procedures](modify-data-with-stored-procedures.md).
+
+<a id="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>
+
+## Use parameters with a stored procedure
+
+Set <xref:System.Data.CommandType.StoredProcedure> and use the procedure's parameter names. This example calls the `dbo.uspGetEmployeeManagers` procedure included in AdventureWorks:
+
+```csharp
+using var command = new SqlCommand(
+    "dbo.uspGetEmployeeManagers",
+    connection);
+command.CommandType = CommandType.StoredProcedure;
+command.Parameters.Add(
+    "@BusinessEntityID",
+    SqlDbType.Int).Value = 6;
+
+using SqlDataReader reader = command.ExecuteReader();
+while (reader.Read())
+{
+    Console.WriteLine(
+        $"{reader.GetString(2)} {reader.GetString(3)}");
+}
+```
+
+The parameter name must match the name declared by the stored procedure.
+
+## Configure table-valued parameters
+
+A table-valued parameter sends multiple rows to a stored procedure or parameterized statement. To configure one:
+
+1. Set `SqlDbType.Structured`.
+1. Set <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> to the database user-defined table type.
+1. Assign a <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader>, or `IEnumerable<SqlDataRecord>` row source.
+
+A `DataTable` with defined columns and no rows sends an empty table. An empty `IEnumerable<SqlDataRecord>` throws <xref:System.ArgumentException>; assign C# `null` to send zero rows for that input form. Don't assign `DBNull.Value` to a table-valued parameter.
+
+For type creation, row mapping, and complete examples, see [Table-valued parameters](sql/table-valued-parameters.md).
+
+## Configure streaming values
+
+Assign a <xref:System.IO.Stream>, <xref:System.IO.TextReader>, or <xref:System.Xml.XmlReader> to <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> to provide a large value incrementally. For bounded-memory transfer, use a `(max)`, **xml**, or **json** parameter type. Microsoft.Data.SqlClient buffers the source before execution for non-`(max)` character and binary types and the legacy large object types.
+
+The parameter type must match the value:
+
+| Value | Compatible `SqlDbType` values |
+| --- | --- |
+| <xref:System.IO.Stream> | `Binary`, `VarBinary`, or the legacy `Image` type |
+| <xref:System.IO.TextReader> | `Char`, `NChar`, `NVarChar`, `VarChar`, the legacy `Text` and `NText` types, `Xml`, or `Json` |
+| <xref:System.Xml.XmlReader> | `Char`, `NChar`, `NVarChar`, `VarChar`, the legacy `Text` and `NText` types, `Xml`, or `Json` |
+
+Microsoft.Data.SqlClient throws <xref:System.ArgumentException>, <xref:System.InvalidCastException>, or <xref:System.Data.SqlTypes.SqlTypeException> when the object type, `SqlDbType`, or declared size is incompatible. For complete upload and download examples, see [SqlClient streaming support](sqlclient-streaming-support.md).
 
 ## Derive parameter information
 
-Parameters can also be derived from a stored procedure using the `DbCommandBuilder` class. The `SqlCommandBuilder` class provides a static method, `DeriveParameters`, which automatically populates the parameters collection of a command object that uses parameter information from a stored procedure. `DeriveParameters` overwrites any existing parameter information for the command.
+<xref:Microsoft.Data.SqlClient.SqlCommandBuilder.DeriveParameters%2A> queries SQL Server for a stored procedure's parameter metadata and replaces the command's existing parameter collection:
 
-> [!NOTE]
-> Deriving parameter information incurs a performance penalty because it requires an additional round trip to the data source to retrieve the information. If parameter information is known at design time, you can improve the performance of your application by setting the parameters explicitly.
+```csharp
+using var command = new SqlCommand(
+    "dbo.uspGetEmployeeManagers",
+    connection);
+command.CommandType = CommandType.StoredProcedure;
 
-For more information, see [Generating Commands with CommandBuilders](generate-commands-with-commandbuilders.md).
-
-## Using parameters with a SqlCommand and a stored procedure
-
-Stored procedures offer many advantages in data-driven applications. By using stored procedures, database operations can be encapsulated in a single command, optimized for best performance, and enhanced with extra security. Although a stored procedure can be called by passing the stored procedure name followed by parameter arguments as a SQL statement, by using the <xref:System.Data.Common.DbCommand.Parameters%2A> collection of the ADO.NET <xref:System.Data.Common.DbCommand> object enables you to more explicitly define stored procedure parameters, and to access output parameters and return values.
-
-> [!NOTE]
-> Parameterized statements are executed on the server by using `sp_executesql,` which allows for query plan reuse. Local cursors or variables in the `sp_executesql` batch are not visible to the batch that calls `sp_executesql`. Changes in database context last only to the end of the `sp_executesql` statement. For more information, see [sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).
-
-When using parameters with a <xref:Microsoft.Data.SqlClient.SqlCommand> to execute a SQL Server stored procedure, the names of the parameters added to the <xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> collection must match the names of the parameter markers in the stored procedure. The Microsoft SqlClient Data Provider for SQL Server doesn't support the question mark (?) placeholder for passing parameters to a SQL statement or a stored procedure. It treats parameters in the stored procedure as named parameters and searches for matching parameter markers. For example, the `CustOrderHist` stored procedure is defined by using a parameter named `@CustomerID`. When your code executes the stored procedure, it must also use a parameter named `@CustomerID`.
-
-```sql
-CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
+SqlCommandBuilder.DeriveParameters(command);
+command.Parameters["@BusinessEntityID"].Value = 6;
 ```
 
-### Example
-
-This example demonstrates how to call a SQL Server stored procedure in the `Northwind` sample database. The name of the stored procedure is `dbo.SalesByCategory` and it has an input parameter named `@CategoryName` with a data type of `nvarchar(15)`. The code creates a new <xref:Microsoft.Data.SqlClient.SqlConnection> inside a using block so that the connection is disposed when the procedure ends. The <xref:Microsoft.Data.SqlClient.SqlCommand> and <xref:Microsoft.Data.SqlClient.SqlParameter> objects are created, and their properties set. A <xref:Microsoft.Data.SqlClient.SqlDataReader> executes the `SqlCommand` and returns the result set from the stored procedure, displaying the output in the console window.
-
-> [!NOTE]
-> Instead of creating `SqlCommand` and `SqlParameter` objects and then setting properties in separate statements, you can instead elect to use one of the overloaded constructors to set multiple properties in a single statement.
-
-[!code-csharp[DataWorks SqlClient.StoredProcedure#1](~/../sqlclient/doc/samples/SqlCommand_StoredProcedure.cs#1)]
+`DeriveParameters` requires an extra database round trip each time it's called. Derive metadata during development when necessary, then define parameters explicitly in performance-sensitive paths.
 
 ## Related content
 
-- [Commands and parameters](commands-parameters.md)
-- [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
-- [Microsoft.Data.SqlClient for SQL Server](microsoft-ado-net-sql-server.md)
+- [Execute a command](execute-command.md)
+- [Modify data with stored procedures](modify-data-with-stored-procedures.md)
+- [Table-valued parameters](sql/table-valued-parameters.md)
+- [SqlClient streaming support](sqlclient-streaming-support.md)

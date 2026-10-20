@@ -3,8 +3,8 @@ title: Microsoft ODBC Driver for SQL Server
 description: The Microsoft ODBC Driver for SQL Server connects C and C++ applications to SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, davidengel, sunilbs, mcimfl
-ms.date: 09/17/2026
+ms.reviewer: vanto, randolphwest, davidengel, sunilbs, mcimfl
+ms.date: 10/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,16 +14,18 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-ODBC is the primary native data access API for applications written in C and C++ for SQL Server. The Microsoft ODBC Driver for SQL Server connects to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and SQL database in Microsoft Fabric. For the database versions each driver release supports, see [SQL version compatibility](windows/system-requirements-installation-and-driver-files.md#sql-version-compatibility).
+ODBC is a native data access application programming interface (API) for applications written in C and C++. The Microsoft ODBC Driver for SQL Server connects to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and SQL database in Microsoft Fabric. For the database versions each driver release supports, see [SQL version compatibility](windows/system-requirements-installation-and-driver-files.md#sql-version-compatibility).
+
+Your application calls the ODBC driver manager, which loads the driver and passes ODBC calls to it. Use the Windows ODBC Driver Manager on Windows and unixODBC on Linux and macOS.
 
 Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios, and the [Microsoft Drivers for PHP for SQL Server](../php/microsoft-php-driver-for-sql-server.md) are built on this driver.
 
-The **sqlcmd** and **bcp** utilities work with this driver, but they install separately: the `mssql-tools18` package on Linux and macOS, and the Microsoft Command Line Utilities on Windows. Use [**sqlcmd**](../../tools/sqlcmd/sqlcmd-utility.md) to run Transact-SQL (T-SQL) statements, system procedures, and script files. Use [**bcp**](../../tools/bcp/bcp-utility.md) to bulk copy data between an instance of SQL Server and a data file, in either direction.
+The ODBC variant of **sqlcmd** and the **bcp** utility use this driver, but they install separately: the `mssql-tools18` package on Linux and macOS, and the Microsoft Command Line Utilities on Windows. The Go variant of **sqlcmd** doesn't use this driver. Use [sqlcmd](../../tools/sqlcmd/sqlcmd-utility.md) to run Transact-SQL (T-SQL) statements, system procedures, and script files. Use [bcp](../../tools/bcp/bcp-utility.md) to bulk copy data between an instance of SQL Server and a data file, in either direction.
 
 ## Choose your starting point
 
 - To install the driver, go to [System requirements, installation, and driver files](windows/system-requirements-installation-and-driver-files.md) for Windows, or [Install the ODBC driver on Linux](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md), [Install the ODBC driver on macOS](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md), and [Install the unixODBC driver manager](linux-mac/installing-the-driver-manager.md).
-- To write your first application, go to [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md), then [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md) for the connection string options. If your compiler can't find the headers or your build won't link, go to [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md).
+- To write your first application, go to [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md). For data source name (DSN) and connection string options, use [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md). If your compiler can't find the headers or your build won't link, go to [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md).
 - To connect to Azure SQL with passwordless authentication, go to [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md).
 - To make an existing app resilient to transient failures, go to [Connection resiliency](connection-resiliency.md) and [High availability and disaster recovery](odbc-driver-support-for-high-availability-disaster-recovery.md).
 - To upgrade from version 17, go to [Major version differences](major-version-differences.md) and [Connection encryption troubleshooting](connection-troubleshooting.md).
@@ -31,98 +33,255 @@ The **sqlcmd** and **bcp** utilities work with this driver, but they install sep
 
 ## Production baseline for Azure SQL
 
-Use this snippet as a starting point for a production-oriented Azure SQL connection. It loads the server name and database name from application configuration, authenticates with a managed identity so that no secret appears in the connection string, and enables Tabular Data Stream (TDS) 8.0 encryption with full certificate validation. It sets a per-attempt login timeout, and retries transient failures with exponential backoff and jitter.
+Use this complete C++17 program as a starting point for an Azure-hosted application. It connects, runs `SELECT 1`, checks the result, and releases the ODBC handles. Install Driver 18 and the platform's ODBC development files before you build it. For prerequisites, see [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md).
 
-The C++ snippet in this article omits includes, handle allocation, and the logging helper for brevity.
+Set `ODBC_CONNECTION_STRING` in the application's environment to your complete connection string. The following example uses a system-assigned managed identity. The host must have that identity enabled, and the database must grant it access. For host requirements, user-assigned identities, and local development authentication, see [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md).
+
+```text
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:<server>.database.windows.net,1433;Database=<database>;Authentication=ActiveDirectoryMsi;Encrypt=strict;ConnectRetryCount=3;ConnectRetryInterval=2;
+```
+
+`Encrypt=strict` requires an endpoint that supports Tabular Data Stream (TDS) 8.0. Otherwise, use `Encrypt=yes;TrustServerCertificate=no`. Configure a certificate that the client trusts and whose name matches the server. For setup and verification, see [Connection encryption troubleshooting](connection-troubleshooting.md).
+
+Keep credentials out of source files and shell history. For commands to set the environment variable, see [Configure the connection](cpp-code-example-app-connect-access-sql-db.md#configure-the-connection). On Linux and macOS, supply its value as UTF-8. Save the following program as `odbc-baseline.cpp`:
 
 ```cpp
-std::wstring BuildConnectionString(const wchar_t* server, const wchar_t* database) {
-    std::wstring cs = L"Driver={ODBC Driver 18 for SQL Server}";
-    cs += L";Server=tcp:"; cs += server; cs += L",1433";
-    cs += L";Database="; cs += database;
-    cs += L";Authentication=ActiveDirectoryMsi";   // managed identity, no stored secret
-    cs += L";Encrypt=strict";                      // TDS 8.0 with certificate validation
-    cs += L";ConnectRetryCount=3";                 // idle connection resiliency, not initial connect
-    cs += L";ConnectRetryInterval=10";
-    return cs;
-}
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <iconv.h>
+#endif
+#include <sql.h>
+#include <sqlext.h>
 
-// Transient fault codes documented for Azure SQL, plus the resource governance
-// codes. Network termination and timeout errors (64, 233, 258, 10053, 10054,
-// 10060) are retried a bounded number of times, which is the documented
-// guidance for them. 258 is the code the driver reports for a connect timeout.
-// 10053 and 10054 can also mean the encryption handshake failed rather than a
-// plain network reset, so read the error text before assuming a network fault.
-bool IsTransient(SQLINTEGER nativeError) {
-    switch (nativeError) {
-        case 615: case 926: case 4060: case 4221:
-        case 10928: case 10929: case 10936:
-        case 40197: case 40501: case 40613:
-        case 42108: case 42109:
-        case 49918: case 49919: case 49920:
-        case 40020: case 40143: case 40166: case 40540:   // failover subcodes
-        case 64: case 233: case 258:
-        case 10053: case 10054: case 10060:
-            return true;
-        default:
+#include <chrono>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include <random>
+#include <stdexcept>
+#include <string>
+#include <thread>
+#include <vector>
+
+struct Handles {
+    SQLHENV env = SQL_NULL_HENV;
+    SQLHDBC dbc = SQL_NULL_HDBC;
+    SQLHSTMT stmt = SQL_NULL_HSTMT;
+    bool connected = false;
+
+    ~Handles() {
+        if (stmt) SQLFreeHandle(SQL_HANDLE_STMT, stmt);
+        if (connected) SQLDisconnect(dbc);
+        if (dbc) SQLFreeHandle(SQL_HANDLE_DBC, dbc);
+        if (env) SQLFreeHandle(SQL_HANDLE_ENV, env);
+    }
+};
+
+bool logDiagnostics(SQLSMALLINT type, SQLHANDLE handle) {
+    bool retry = false;
+    bool permanent = false;
+    for (SQLSMALLINT record = 1; ; ++record) {
+        SQLWCHAR state[6] = {};
+        SQLWCHAR message[1024] = {};
+        SQLINTEGER native = 0;
+        SQLRETURN rc = SQLGetDiagRecW(type, handle, record, state, &native,
+                                     message, 1024, nullptr);
+        if (rc == SQL_NO_DATA) break;
+        if (!SQL_SUCCEEDED(rc)) {
+            std::cerr << "event=diagnostics_failed rc=" << rc << '\n';
             return false;
+        }
+        std::string sqlstate;
+        for (int i = 0; i < 5; ++i) {
+            sqlstate += static_cast<char>(state[i]);
+        }
+        std::cerr << "event=odbc_diagnostic sqlstate=" << sqlstate
+                  << " native_error=" << native << '\n';
+        permanent |= sqlstate.substr(0, 2) == "28" ||
+                     sqlstate.substr(0, 2) == "IM" ||
+                     sqlstate == "HY024" || sqlstate == "HY092";
+        retry |= sqlstate == "08S01" || sqlstate == "HYT00" ||
+                 sqlstate == "HYT01";
+        switch (native) {
+            case 10928: case 10929: case 10936:
+            case 40197: case 40501: case 40613:
+            case 49918: case 49919: case 49920:
+                retry = true;
+        }
+    }
+    return retry && !permanent;
+}
+
+void requireSuccess(SQLRETURN rc, SQLSMALLINT type, SQLHANDLE handle,
+                    const char* operation) {
+    if (rc == SQL_SUCCESS) return;
+    logDiagnostics(type, handle);
+    if (!SQL_SUCCEEDED(rc)) throw std::runtime_error(operation);
+}
+
+std::vector<SQLWCHAR> readConnectionString() {
+    static_assert(sizeof(SQLWCHAR) == 2, "Use a driver manager with 16-bit SQLWCHAR");
+#ifdef _WIN32
+    size_t length = 0;
+    if (_wgetenv_s(&length, nullptr, 0, L"ODBC_CONNECTION_STRING") != 0 ||
+        length == 0) {
+        throw std::runtime_error("ODBC_CONNECTION_STRING is required");
+    }
+    std::vector<wchar_t> raw(length);
+    if (_wgetenv_s(&length, raw.data(), raw.size(), L"ODBC_CONNECTION_STRING") != 0) {
+        throw std::runtime_error("Cannot read ODBC_CONNECTION_STRING");
+    }
+    std::vector<SQLWCHAR> result(raw.begin(), raw.end() - 1);
+#else
+    const char* raw = std::getenv("ODBC_CONNECTION_STRING");
+    if (!raw) throw std::runtime_error("ODBC_CONNECTION_STRING is required");
+    iconv_t converter = iconv_open("UTF-16LE", "UTF-8");
+    if (converter == reinterpret_cast<iconv_t>(-1)) {
+        throw std::runtime_error("Cannot create UTF-8 converter");
+    }
+    size_t inputBytes = std::strlen(raw);
+    std::vector<SQLWCHAR> result(inputBytes + 1);
+    char* input = const_cast<char*>(raw);
+    char* output = reinterpret_cast<char*>(result.data());
+    size_t outputBytes = result.size() * sizeof(SQLWCHAR);
+    const size_t capacity = outputBytes;
+    size_t status = iconv(converter, &input, &inputBytes, &output, &outputBytes);
+    int closeStatus = iconv_close(converter);
+    if (status == static_cast<size_t>(-1) || inputBytes != 0 || closeStatus != 0) {
+        throw std::runtime_error("ODBC_CONNECTION_STRING must be valid UTF-8");
+    }
+    result.resize((capacity - outputBytes) / sizeof(SQLWCHAR));
+#endif
+    if (result.empty() || result.size() >= 32767) {
+        throw std::runtime_error("Invalid ODBC_CONNECTION_STRING length");
+    }
+    result.push_back(0);
+    return result;
+}
+
+void connectWithRetry(SQLHDBC dbc, std::vector<SQLWCHAR>& connectionString) {
+    constexpr int maxAttempts = 4;
+    std::mt19937 random{std::random_device{}()};
+    std::uniform_int_distribution<int> jitter{0, 250};
+    for (int attempt = 1; attempt <= maxAttempts; ++attempt) {
+        requireSuccess(SQLSetConnectAttr(
+            dbc, SQL_ATTR_LOGIN_TIMEOUT,
+            reinterpret_cast<SQLPOINTER>(std::uintptr_t{30}), 0),
+            SQL_HANDLE_DBC, dbc, "Set login timeout");
+        SQLRETURN rc = SQLDriverConnectW(
+            dbc, nullptr, connectionString.data(), SQL_NTS,
+            nullptr, 0, nullptr, SQL_DRIVER_NOPROMPT);
+        if (SQL_SUCCEEDED(rc)) {
+            if (rc == SQL_SUCCESS_WITH_INFO) logDiagnostics(SQL_HANDLE_DBC, dbc);
+            std::cout << "event=connected attempt=" << attempt << '\n';
+            return;
+        }
+        bool transient = logDiagnostics(SQL_HANDLE_DBC, dbc);
+        if (!transient || attempt == maxAttempts) {
+            throw std::runtime_error("Connect failed");
+        }
+        auto delay = std::chrono::milliseconds{
+            (1 << (attempt - 1)) * 10000 + jitter(random)};
+        std::cerr << "event=connect_retry attempt=" << attempt
+                  << " delay_ms=" << delay.count() << '\n';
+        std::this_thread::sleep_for(delay);
     }
 }
 
-// Retries only errors that a new connection can clear, with exponential backoff
-// plus jitter so that concurrent clients don't retry in lockstep.
-SQLRETURN ConnectWithRetry(SQLHDBC hDbc, const std::wstring& connectionString, int maxAttempts) {
-    SQLRETURN rc = SQL_ERROR;
-    for (int attempt = 1; attempt <= maxAttempts; ++attempt) {
-        // Set the per-attempt connect timeout through the connection attribute.
-        // This works on every driver version, so the sample doesn't depend on
-        // which connection string keywords a given release accepts.
-        SQLSetConnectAttrW(hDbc, SQL_ATTR_LOGIN_TIMEOUT,
-                           reinterpret_cast<SQLPOINTER>(static_cast<SQLLEN>(30)), 0);
-
-        rc = SQLDriverConnectW(hDbc, nullptr,
-                               const_cast<SQLWCHAR*>(reinterpret_cast<const SQLWCHAR*>(connectionString.c_str())),
-                               SQL_NTS, nullptr, 0, nullptr, SQL_DRIVER_NOPROMPT);
-        if (SQL_SUCCEEDED(rc)) {
-            Log("INFO", "connected on attempt %d/%d", attempt, maxAttempts);
-            return rc;
+int main() {
+    try {
+        auto connectionString = readConnectionString();
+        Handles handles;
+        if (!SQL_SUCCEEDED(SQLAllocHandle(
+                SQL_HANDLE_ENV, SQL_NULL_HANDLE, &handles.env))) {
+            throw std::runtime_error("Allocate environment");
         }
-
-        // Walks the diagnostic records and returns the first record that carries
-        // a real SQL Server error number. Microsoft Entra failures report several
-        // driver-specific records first, whose native error is 0.
-        SQLINTEGER native = LogDiagnostics(SQL_HANDLE_DBC, hDbc, "connect");
-        if (attempt == maxAttempts || !IsTransient(native)) return rc;
-
-        // Cap the backoff at 64 seconds. This also keeps the shift in range
-        // when a caller passes a large maxAttempts.
-        int shift = (attempt - 1 < 6) ? attempt - 1 : 6;
-        DWORD delayMs = (1UL << shift) * 1000UL + (DWORD)(GetTickCount64() % 500);
-        Log("WARN", "retrying in %lu ms (attempt %d/%d)", delayMs, attempt + 1, maxAttempts);
-        Sleep(delayMs);
+        requireSuccess(SQLSetEnvAttr(
+            handles.env, SQL_ATTR_ODBC_VERSION,
+            reinterpret_cast<SQLPOINTER>(std::uintptr_t{SQL_OV_ODBC3}), 0),
+            SQL_HANDLE_ENV, handles.env, "Set ODBC version");
+        requireSuccess(SQLAllocHandle(SQL_HANDLE_DBC, handles.env, &handles.dbc),
+                       SQL_HANDLE_ENV, handles.env, "Allocate connection");
+        connectWithRetry(handles.dbc, connectionString);
+        handles.connected = true;
+        requireSuccess(SQLAllocHandle(SQL_HANDLE_STMT, handles.dbc, &handles.stmt),
+                       SQL_HANDLE_DBC, handles.dbc, "Allocate statement");
+        requireSuccess(SQLSetStmtAttr(
+            handles.stmt, SQL_ATTR_QUERY_TIMEOUT,
+            reinterpret_cast<SQLPOINTER>(std::uintptr_t{10}), 0),
+            SQL_HANDLE_STMT, handles.stmt, "Set query timeout");
+        SQLWCHAR query[] = {'S', 'E', 'L', 'E', 'C', 'T', ' ', '1', 0};
+        requireSuccess(SQLExecDirectW(handles.stmt, query, SQL_NTS),
+                       SQL_HANDLE_STMT, handles.stmt, "Execute probe");
+        requireSuccess(SQLFetch(handles.stmt),
+                       SQL_HANDLE_STMT, handles.stmt, "Fetch probe");
+        SQLINTEGER value = 0;
+        SQLLEN indicator = 0;
+        requireSuccess(SQLGetData(handles.stmt, 1, SQL_C_SLONG,
+                                 &value, sizeof(value), &indicator),
+                       SQL_HANDLE_STMT, handles.stmt, "Read probe");
+        if (indicator == SQL_NULL_DATA || value != 1) {
+            throw std::runtime_error("Unexpected probe result");
+        }
+        std::cout << "event=ready result=" << value << '\n';
+        return 0;
+    } catch (const std::exception& error) {
+        std::cerr << "event=failed operation=\"" << error.what() << "\"\n";
+        return 1;
     }
-    return rc;
 }
 ```
 
-`ConnectRetryCount` and `ConnectRetryInterval` enable *idle connection resiliency*, which transparently restores a connection that dropped while idle. They don't retry the initial connect, which is why this snippet also implements application-level retry. Keep both.
+The program requests a 30-second connection timeout for each of at most four connection attempts and a 10-second query timeout. Between failed transient connection attempts, it waits 10, 20, and 40 seconds, each with 0 to 250 milliseconds of random jitter. These limits don't impose a hard overall deadline on authentication. The example classifies selected transient connection errors; adapt the policy to your workload with the [Azure SQL transient fault error catalog](/azure/azure-sql/database/troubleshoot-common-errors-issues#list-of-transient-fault-error-codes). It doesn't retry application commands or writes.
 
-ODBC reports diagnostics through `SQLGetDiagRec` rather than the return code alone, so classify failures before retrying. An authentication or configuration error then fails immediately instead of consuming the whole retry budget.
+`ConnectRetryCount` and `ConnectRetryInterval` configure [connection resiliency](connection-resiliency.md) for eligible connections that drop while idle. They don't retry the initial connection or replay application commands. Keep idle-recovery delays shorter than your query timeout. The sample logs SQLSTATE values and native error numbers instead of connection strings or full diagnostic messages. If you need message text for troubleshooting, capture it in a protected diagnostic log.
 
-For more information about each part of this configuration, see:
+### Build and run the baseline
 
-- [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md)
-- [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md)
-- [Connection encryption troubleshooting](connection-troubleshooting.md)
-- [Connection resiliency](connection-resiliency.md)
-- [High availability and disaster recovery](odbc-driver-support-for-high-availability-disaster-recovery.md)
+Use a compiler environment that matches your application's processor architecture. On Windows, run the commands in Developer PowerShell for Visual Studio. On Linux and macOS, use a shell with your compiler and unixODBC development files available.
 
-For the catalog of Azure SQL transient errors, see [transient fault error codes](/azure/azure-sql/database/troubleshoot-common-errors-issues#list-of-transient-fault-error-codes).
+### [Windows](#tab/baseline-windows)
+
+```powershell
+cl /nologo /std:c++17 /EHsc /W4 odbc-baseline.cpp odbc32.lib
+.\odbc-baseline.exe
+```
+
+### [Linux](#tab/baseline-linux)
+
+```bash
+g++ -std=c++17 -Wall -Wextra -pthread odbc-baseline.cpp -lodbc -o odbc-baseline
+./odbc-baseline
+```
+
+### [macOS](#tab/baseline-macos)
+
+```bash
+clang++ -std=c++17 -Wall -Wextra -pthread \
+  -I"$(brew --prefix unixodbc)/include" -L"$(brew --prefix unixodbc)/lib" \
+  odbc-baseline.cpp -lodbc -liconv -o odbc-baseline
+./odbc-baseline
+```
+
+---
+
+A successful first connection prints the following output. Additional diagnostic records might also appear.
+
+```output
+event=connected attempt=1
+event=ready result=1
+```
+
+Clear `ODBC_CONNECTION_STRING` when you finish: use `Remove-Item Env:\ODBC_CONNECTION_STRING` in PowerShell, or `unset ODBC_CONNECTION_STRING` in Bash or Zsh.
+
+For availability group listeners and failover settings, use [High availability and disaster recovery](odbc-driver-support-for-high-availability-disaster-recovery.md).
 
 ## Key features
 
 - **Cross-platform**: The same API on Windows, Linux, and macOS.
-- **Microsoft Entra ID authentication**: Passwordless connections with managed identity, service principal, interactive, and integrated flows.
+- **Microsoft Entra ID authentication**: Managed identity, service principal, and integrated authentication, plus interactive authentication on Windows. Available methods depend on the host and database configuration.
 - **Strict encryption**: TDS 8.0 connections with full certificate validation in version 18 and later versions.
 - **Always Encrypted**: Client-side encryption for sensitive columns, with support for custom keystore providers.
 - **Connection resiliency**: Transparent restoration of a connection that dropped while idle.
@@ -157,8 +316,8 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | Article | Description |
 | --- | --- |
 | [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md) | The full catalog of connection string keywords, DSN entries, and `SQLSetConnectAttr` attributes, with accepted values for each. |
-| [Connection string keywords and data source names (Linux and macOS)](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) | How `odbc.ini` and `odbcinst.ini` define a DSN on Linux and macOS, plus the TLS and TCP keep-alive settings specific to those platforms. |
-| [ODBC Data Source Administrator DSN (Windows)](windows/odbc-administrator-dsn-creation.md) | Every option on the Windows DSN wizard pages, for when you configure a data source through the UI instead of a connection string. |
+| [Connection string keywords and data source names (Linux and macOS)](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) | How `odbc.ini` and `odbcinst.ini` define a DSN on Linux and macOS, plus Transport Layer Security (TLS) and Transmission Control Protocol (TCP) keep-alive settings specific to those platforms. |
+| [ODBC Data Source Administrator DSN (Windows)](windows/odbc-administrator-dsn-creation.md) | Configure a data source through the Windows user interface instead of a connection string. |
 | [Driver-aware connection pooling (Windows)](windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md) | Which connection string keywords and attributes put a connection in its own pool, and which ones cost an extra round trip to reset. |
 
 ## Authenticate and secure
@@ -166,7 +325,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | Article | Description |
 | --- | --- |
 | [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md) | Every `Authentication` keyword value, from managed identity and service principal to interactive and integrated, with the setup each one needs. |
-| [Use Always Encrypted with the ODBC driver](using-always-encrypted-with-the-odbc-driver.md) | Encrypt sensitive columns in the client process so plaintext never reaches the server, with the driver's API summary and its documented limitations. |
+| [Use Always Encrypted with the ODBC driver](using-always-encrypted-with-the-odbc-driver.md) | Encrypt sensitive column values before sending them to the database, with the driver's API summary and documented limitations. |
 | [Data classification](data-classification.md) | Read the sensitivity labels the server attaches to classified columns, so your application can enforce its own data protection policy. |
 | [Use integrated authentication (Linux and macOS)](linux-mac/using-integrated-authentication.md) | Configure Kerberos so a Linux or macOS client can connect with Windows credentials instead of a SQL Server login. |
 
@@ -176,7 +335,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | --- | --- |
 | [Connection resiliency](connection-resiliency.md) | How `ConnectRetryCount` and `ConnectRetryInterval` restore a connection when the server drops it while idle, and the `IMCxx` errors the driver returns when recovery isn't possible. |
 | [High availability and disaster recovery](odbc-driver-support-for-high-availability-disaster-recovery.md) | Connect through an availability group listener and use `MultiSubnetFailover` so failover doesn't stall on a subnet timeout. |
-| [Use transparent network IP resolution](using-transparent-network-ip-resolution.md) | How the legacy `TransparentNetworkIPResolution` fallback orders connection attempts across multiple IP addresses, and why `MultiSubnetFailover` supersedes it. |
+| [Use transparent network IP resolution](using-transparent-network-ip-resolution.md) | How the legacy `TransparentNetworkIPResolution` fallback orders connection attempts across multiple Internet Protocol (IP) addresses, and why `MultiSubnetFailover` supersedes it. |
 
 ## Work with data
 
@@ -184,7 +343,7 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 | --- | --- |
 | [Vector data type](vector-data-type.md) | Bind, send, and retrieve the **vector** type, including its native C representation and bulk copy support. |
 | [Use XA transactions with DTC](use-xa-with-dtc.md) | Enlist SQL Server in a distributed transaction through the Microsoft Distributed Transaction Coordinator on Windows, Linux, or macOS. |
-| [Programming guidelines (Linux and macOS)](linux-mac/programming-guidelines.md) | Which features the driver supports on Linux and macOS, which it doesn't, and how character set and OpenSSL handling differ from Windows. |
+| [Programming guidelines (Linux and macOS)](linux-mac/programming-guidelines.md) | Find Linux and macOS programming guidance, including feature status, character-set considerations, OpenSSL, and Alpine Linux. |
 
 ## Diagnose and troubleshoot
 
@@ -217,7 +376,7 @@ To request a feature, submit an idea through [SQL Server feedback](https://aka.m
 ## Related content
 
 - [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md): The ODBC API specification that this driver implements, documented separately from the driver.
-- [SQL Server Native Client features](../../relational-databases/native-client/features/sql-server-native-client-features.md): Driver behavior documented only in the Native Client content. These articles apply to the ODBC Driver for SQL Server except where they describe OLE DB.
+- [SQL Server Native Client features](../../relational-databases/native-client/features/sql-server-native-client-features.md): Historical API context. Check current driver documentation for platform support, authentication, and encryption behavior. Native Client and OLE DB guidance doesn't establish current ODBC driver support.
 - [bcp utility](../../tools/bcp/bcp-utility.md): The bulk copy utility, installed separately from the driver.
 - [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md): The command-line query utility, installed separately from the driver.
 - [Driver feature support matrix](../driver-feature-matrix.md)

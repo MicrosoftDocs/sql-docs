@@ -143,7 +143,7 @@ Applies to: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
-- Requires membership in the **db_owner** fixed server role.
+- Requires membership in the **db_owner** fixed database role.
 
 ## Remarks for Azure Synapse Analytics
 
@@ -171,7 +171,7 @@ A new row is added to the `sys.pdw_exec_requests` system view when `DBCC FREEPRO
 
 The following example clears a query plan from the plan cache by specifying the query plan handle. To ensure the example query is in the plan cache, the query is first executed. The `sys.dm_exec_cached_plans` and `sys.dm_exec_sql_text` dynamic management views are queried to return the plan handle for the query.
 
-The plan handle value from the result set is then inserted into the `DBCC FREEPROCACHE` statement to remove only that plan from the plan cache.
+The plan handle value from the result set is then inserted into the `DBCC FREEPROCCACHE` statement to remove only that plan from the plan cache.
 
 ```sql
 USE AdventureWorks2022;

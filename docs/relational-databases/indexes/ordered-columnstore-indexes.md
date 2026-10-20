@@ -48,8 +48,8 @@ The following table describes the resulting order type when you create or rebuil
 
 | Prerequisites | Order type |
 | --- | --- |
-| `ONLINE = ON` and `MAXDOP = 1` | Full |
-| `ONLINE = OFF`, `MAXDOP = 1`, and the data to sort fully fits in the query workspace memory | Full |
+| Clustered columnstore index, `ONLINE = ON`, and `MAXDOP = 1` | Full |
+| `MAXDOP = 1`, and the data to sort fully fits in the query workspace memory | Full |
 | All other cases | Partial |
 
 In the first case when both `ONLINE = ON` and `MAXDOP = 1`, the sort isn't limited by the query workspace memory because an online build of an ordered columnstore index uses the `tempdb` database to spill the data that doesn't fit in memory. This approach can make the index build process slower due to the additional `tempdb` I/O, and requires sufficient free space in `tempdb`. However, because the index build is performed online, queries can continue using the existing index while the new ordered index is being built.

@@ -4,7 +4,7 @@ description: The sqlcmd utility lets you enter Transact-SQL statements, system p
 author: cwebb-msft
 ms.author: chweb
 ms.reviewer: mahyon
-ms.date: 01/29/2026
+ms.date: 10/10/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: concept-article
@@ -340,8 +340,8 @@ The following table lists the command-line options available in **sqlcmd**, and 
 
 Signs in to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] with a dedicated administrator connection (DAC). Use this kind of connection to troubleshoot a server. This connection works only with server computers that support DAC. If DAC isn't available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic connection for database administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The `-A` option isn't supported with the `-G` option. When connecting to Azure SQL Database by using `-A`, you must be an administrator on the logical SQL server. DAC isn't available for a Microsoft Entra administrator.
 
-> [!NOTE]  
-> For information on how to make a dedicated administrator connection (DAC) on macOS or Linux, see [Programming Guidelines](../../connect/odbc/linux-mac/programming-guidelines.md).
+> [!NOTE]
+> For information on how to make a dedicated administrator connection (DAC) on macOS or Linux, see [Programming guidelines](../../connect/odbc/linux-mac/programming-guidelines.md).
 
 #### -C
 

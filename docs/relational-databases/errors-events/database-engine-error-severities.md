@@ -4,7 +4,7 @@ description: Use this list of severity levels to understand the type of problem 
 author: adbadram
 ms.author: adbadram
 ms.reviewer: vanto
-ms.date: 08/21/2025
+ms.date: 10/20/2026
 ms.update-cycle: 1825-days
 ms.service: sql
 ms.subservice: supportability

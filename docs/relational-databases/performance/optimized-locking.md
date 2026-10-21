@@ -1,10 +1,10 @@
 ---
 title: Optimized Locking
 description: Learn about the optimized locking enhancement to the database engine.
-author: thesqlsith
-ms.author: derekw
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: peskount, praspu, dfurman
-ms.date: 01/29/2025
+ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -31,7 +31,7 @@ Optimized locking helps to reduce lock memory as very few locks are held even fo
 Optimized locking is composed of two primary components: **transaction ID (TID) locking** and **lock after qualification (LAQ)**.
 
 - A transaction ID (TID) is a unique identifier of a transaction. Each row is labeled with the last TID that modified it. Instead of potentially many key or row identifier locks, a single lock on the TID is used to protect all modified rows. For more information, see [Transaction ID (TID) locking](#transaction-id-tid-locking).
-- Lock after qualification (LAQ) is an optimization that evaluates query predicates using the latest committed version of the row without acquiring a lock, thus improving concurrency. LAQ requires [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-). For more information, see [Lock after qualification (LAQ)](#lock-after-qualification-laq).
+- Lock after qualification (LAQ) is an optimization that evaluates query predicates by using the latest row version committed as of the statement start time without acquiring a lock, thus improving concurrency. LAQ requires [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md#read_committed_snapshot--on--off-). For more information, see [Lock after qualification (LAQ)](#lock-after-qualification-laq).
 
 For example:
 
@@ -259,7 +259,7 @@ For the purposes of the feedback mechanism, the work done by a statement is meas
 
 As statements execute, the database engine maintains LAQ feedback data that tracks the potentially wasted work, the occurrences of statement reprocessing, and the total work done by the statements that might be reprocessed.
 
-LAQ is disabled if the ratio of the potentially wasted work to the total work, or the ratio of the number of reprocessed statements to the total number of statements exceed their respective thresholds. If both of these ratios fall below thresholds, LAQ is reenabled.
+For plans containing operators that don't support requalification, LAQ is disabled if the ratio of the potentially wasted work to the total work, or the ratio of the number of reprocessed statements to the total number of statements, exceeds its respective threshold. LAQ can also be temporarily disabled if the count of reprocessed statements in a database reaches a separate fixed threshold. This count is reset periodically. LAQ is reenabled when both ratios fall below their thresholds and, if the separate threshold was reached, the count has been reset.
 
 LAQ feedback data is tracked at two levels:
 
@@ -359,7 +359,7 @@ The following improvements help you monitor and troubleshoot blocking and deadlo
 - Extended events
   - The `lock_after_qual_stmt_abort` event fires when a statement is internally reprocessed because of a conflict with another transaction. For more information, see [Lock after qualification (LAQ)](#lock-after-qualification-laq).
   - The `locking_stats` event fires for every database every several minutes and provides aggregate locking statistics for the time interval, such as the number of lock escalations, whether TID locking and LAQ components of optimized locking are enabled, and the number of queries where LAQ wasn't used for various reasons. This event fires even if optimized locking is disabled.
-  - In [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], the `locking_stats2` event fires for every database every several minutes and provides the [skip index locks](#skip-index-locks-sil) and [LAQ heuristics](#laq-heuristics) statistics for the time interval.
+  - The `locking_stats2` event fires for every database every several minutes and provides the [skip index locks](#skip-index-locks-sil) and [LAQ heuristics](#laq-heuristics) statistics for the time interval.
 
 ## Best practices with optimized locking
 
@@ -371,7 +371,7 @@ In [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqld
 
 ### Avoid locking hints
 
-While [table and query hints](../../t-sql/queries/hints-transact-sql.md) such as `UPDLOCK`, `READCOMMITTEDLOCK`, `XLOCK`, `HOLDLOCK`, etc. are honored when optimized locking is enabled, they reduce the benefit of optimized locking. Lock hints force the database engine to take row or page locks and hold them until the end of the transaction, to honor the intent of the lock hints. Some applications have logic where lock hints are needed, for example when reading a row with the `UPDLOCK` hint and then updating it later. We recommend using lock hints only where needed.
+While [table and query hints](../../t-sql/queries/hints-transact-sql.md) such as `UPDLOCK`, `READCOMMITTEDLOCK`, `XLOCK`, and `HOLDLOCK` are honored when optimized locking is enabled, they reduce the benefit of optimized locking. Lock hints force the database engine to take row or page locks, and it might hold them until the end of the transaction to honor the intent of the lock hints. Some applications have logic that requires lock hints, such as when you read a row with the `UPDLOCK` hint and then update it later. Use lock hints only when necessary.
 
 With optimized locking, there are no restrictions on existing queries and queries don't need to be rewritten. Queries that aren't using hints benefit from optimized locking most.
 

@@ -30,7 +30,7 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Try Azure SQL Database for free
-            url: /azure/azure-sql/database/free-offer?view=azuresql-db&preserve-view=true
+            url: /azure/azure-sql/database/free-tier?view=azuresql-db&preserve-view=true
           - text: Try Azure SQL Managed Instance for free
             url: /azure/azure-sql/managed-instance/free-offer?view=azuresql-mi&preserve-view=true
           - text: Free SQL tools

@@ -33,7 +33,7 @@ DBCC DROPRESULTSETCACHE
 
 ## Permissions
 
-Requires membership in the DB_OWNER fixed server role.
+Requires membership in the DB_OWNER fixed database role.
 
 ## Remarks
 

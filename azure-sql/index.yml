@@ -35,7 +35,7 @@ landingContent:
           - text: What's new in Azure SQL Database? 
             url: database/doc-changes-updates-release-notes-whats-new.md
           - text: Try for free
-            url: database/free-offer.md
+            url: database/free-tier.md
       - linkListType: quickstart
         links:
           - text: Create SQL Database

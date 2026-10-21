@@ -23,7 +23,7 @@ You can connect Excel to a database and then import data and create tables and c
 
 You'll need to create a database before you get started. If you don't have one:
 
-- You can [create a database in Azure SQL Database](single-database-create-quickstart.md) and [Create server-level IP firewall](firewall-create-server-level-portal-quickstart.md) to get a database with sample data up and running in a few minutes. Use the [Deploy Azure SQL Database for free](free-offer.md) to create a free Azure SQL Database for the life of your subscription.
+- Follow [Create a database in Azure SQL Database](single-database-create-quickstart.md) and [Create server-level IP firewall](firewall-create-server-level-portal-quickstart.md) to get a database with sample data running in a few minutes. To create a free database for the life of your subscription, see [Deploy Azure SQL Database for free](free-tier.md).
 - You can also [try Azure SQL Managed Instance for free](../managed-instance/free-offer.md).
 - You can also [create a SQL database in Microsoft Fabric in the Fabric portal](/fabric/database/sql/create).
 

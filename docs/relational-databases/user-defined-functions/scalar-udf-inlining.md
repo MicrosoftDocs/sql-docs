@@ -40,10 +40,15 @@ The goal of the scalar UDF inlining feature is to improve the performance of que
 By using the UDF inlining feature, the database engine automatically transforms scalar UDFs into scalar expressions or scalar subqueries. The database engine substitutes these expressions or subqueries in the calling query in place of the UDF operator. The query optimizer then optimizes these expressions and subqueries. As a result, the query plan no longer has a user-defined function operator, but you can observe its effects in the plan, like views or inline table-valued functions (TVFs).
 
 ### Automatic inlining of scalar UDFs in Microsoft Fabric Data Warehouse
+> [!NOTE]
+> Warehouse and the SQL analytics endpoint in Microsoft Fabric support two scalar UDF inlining techniques: Scalar UDF inlining and Expression Block inlining. The Fabric Data Warehouse engine selects the applicable technique based on the function definition.
+> Together, these techniques support a broader range of function definitions and query shapes. For example, Expression Block inlining supports procedural constructs such as `WHILE` loops and multiple `RETURN` statements, supports time-dependent built-ins, and more.
 
-In Microsoft Fabric Data Warehouse, scalar UDF inlining is available as a preview feature. 
+Eligible scalar UDFs can be automatically inlined during query compilation when both the function body and the calling query meet the inlining requirements. No syntax is required to select an inlining technique.
 
-In Fabric Data Warehouse, scalar UDFs are automatically inlined at compile time when the function body and the calling query meet requirements for inlining. For more information, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) and [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md?view=fabric&preserve-view=true). For examples of code changes to make a non-inlinable UDF inlinable, see [How to create scalar user-defined functions in Fabric Data Warehouse (preview)](/fabric/data-warehouse/how-to-inline-udf).
+By default, `CREATE OR ALTER FUNCTION` requires the function body to meet the requirements for inlining. To create an intentionally non-inlineable function, specify the `WITH INLINE = AUTO` function option. This option permits the function to be created, but it doesn't make the function inlineable.
+
+For Fabric Data Warehouse-specific requirements and supported constructs, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) and [Inlining of scalar UDF](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true#inlining-of-scalar-udf). For examples of code changes to make a noninlinable UDF inlinable, see [How to create scalar user-defined functions in Fabric Data Warehouse (preview)](/fabric/data-warehouse/how-to-inline-udf).
 
 ## Examples
 
@@ -207,7 +212,7 @@ All of the following conditions of the *UDF definition* must be true:
 
 <sup>9</sup> Because signatures could be added and dropped after a UDF is created, the decision whether to inline is done when the query referencing a scalar UDF is compiled. For example, system functions are typically signed with a certificate. You can use [sys.crypt_properties](../system-catalog-views/sys-crypt-properties-transact-sql.md) to find which objects are signed.
 
-All of the following requirement of the *execution context* must be true:
+All of the following requirements of the *execution context* must be true:
 
 - The UDF isn't used in `ORDER BY` clause.
 - The query invoking a scalar UDF doesn't reference a scalar UDF call in its `GROUP BY` clause.

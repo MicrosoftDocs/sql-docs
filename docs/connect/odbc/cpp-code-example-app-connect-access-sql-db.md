@@ -4,7 +4,7 @@ description: Connect a C++ application to a SQL database, run a parameterized qu
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 09/21/2026
+ms.date: 10/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
@@ -153,6 +153,7 @@ An environment variable keeps the connection string out of the source file, but 
    #include <iomanip>
    #include <iostream>
    #include <string>
+   #include <string_view>
 
    std::string ReadEnvironmentVariable(const char* name)
    {
@@ -171,8 +172,9 @@ An environment variable keeps the connection string out of the source file, but 
    #endif
    }
 
-   void PrintDiagnostics(SQLSMALLINT handleType, SQLHANDLE handle)
+   bool PrintDiagnostics(SQLSMALLINT handleType, SQLHANDLE handle)
    {
+       bool dataTruncated = false;
        SQLCHAR state[6];
        SQLINTEGER nativeError;
        SQLCHAR message[SQL_MAX_MESSAGE_LENGTH];
@@ -186,16 +188,22 @@ An environment variable keeps the connection string out of the source file, but 
        {
            std::cerr << '[' << state << "] (" << nativeError << ") "
                      << message << '\n';
+           if (std::string_view(reinterpret_cast<const char*>(state), 5) == "01004")
+               dataTruncated = true;
        }
+       return dataTruncated;
    }
 
-   bool Succeeded(SQLRETURN result, SQLSMALLINT handleType, SQLHANDLE handle)
+   bool Succeeded(SQLRETURN result, SQLSMALLINT handleType, SQLHANDLE handle,
+                  bool* dataTruncated = nullptr)
    {
-       if (SQL_SUCCEEDED(result))
+       if (result == SQL_SUCCESS)
            return true;
 
-       PrintDiagnostics(handleType, handle);
-       return false;
+       const bool diagnosticReportsTruncation = PrintDiagnostics(handleType, handle);
+       if (dataTruncated != nullptr)
+           *dataTruncated = diagnosticReportsTruncation;
+       return result == SQL_SUCCESS_WITH_INFO;
    }
 
    struct OdbcHandles
@@ -231,7 +239,7 @@ An environment variable keeps the connection string out of the source file, but 
        OdbcHandles handles;
        SQLRETURN result = SQLAllocHandle(
            SQL_HANDLE_ENV, SQL_NULL_HANDLE, &handles.environment);
-       if (!SQL_SUCCEEDED(result))
+       if (!Succeeded(result, SQL_HANDLE_ENV, handles.environment))
        {
            std::cerr << "Unable to allocate an ODBC environment handle.\n";
            return 1;
@@ -295,12 +303,15 @@ An environment variable keeps the connection string out of the source file, but 
        std::cout << "Product ID  Name\n"
                  << "----------  ----\n";
 
-       while (SQL_SUCCEEDED(result = SQLFetch(handles.statement)))
+       while ((result = SQLFetch(handles.statement)) != SQL_NO_DATA)
        {
-           SQLINTEGER productId;
-           SQLLEN productIdLength;
-           SQLCHAR productName[256];
-           SQLLEN productNameLength;
+           if (!Succeeded(result, SQL_HANDLE_STMT, handles.statement))
+               return 1;
+
+           SQLINTEGER productId = 0;
+           SQLLEN productIdLength = 0;
+           SQLCHAR productName[256] = {};
+           SQLLEN productNameLength = 0;
 
            result = SQLGetData(
                handles.statement, 1, SQL_C_SLONG, &productId,
@@ -308,20 +319,48 @@ An environment variable keeps the connection string out of the source file, but 
            if (!Succeeded(result, SQL_HANDLE_STMT, handles.statement))
                return 1;
 
+           bool productNameTruncated = false;
            result = SQLGetData(
                handles.statement, 2, SQL_C_CHAR, productName,
                sizeof(productName), &productNameLength);
-           if (!Succeeded(result, SQL_HANDLE_STMT, handles.statement))
+           if (!Succeeded(result, SQL_HANDLE_STMT, handles.statement,
+                          &productNameTruncated))
                return 1;
 
-           std::cout << std::left << std::setw(12) << productId
-                     << productName << '\n';
-       }
+           std::string productNameText;
+           if (productNameLength == SQL_NULL_DATA)
+           {
+               productNameText = "<NULL>";
+           }
+           else if (productNameTruncated ||
+                    productNameLength > static_cast<SQLLEN>(sizeof(productName) - 1))
+           {
+               std::cerr << "Product name was truncated; no partial value was printed.\n";
+               return 1;
+           }
+           else if (productNameLength == SQL_NO_TOTAL)
+           {
+               std::cerr << "Product name length is unknown; no value was printed.\n";
+               return 1;
+           }
+           else if (productNameLength < 0)
+           {
+               std::cerr << "The driver returned an invalid product-name length.\n";
+               return 1;
+           }
+           else if (productNameLength == 0)
+           {
+               productNameText = "<empty>";
+           }
+           else
+           {
+               productNameText.assign(
+                   reinterpret_cast<const char*>(productName),
+                   static_cast<std::size_t>(productNameLength));
+           }
 
-       if (result != SQL_NO_DATA)
-       {
-           PrintDiagnostics(SQL_HANDLE_STMT, handles.statement);
-           return 1;
+           std::cout << std::left << std::setw(12) << productId
+                     << productNameText << '\n';
        }
 
        return 0;
@@ -330,9 +369,9 @@ An environment variable keeps the connection string out of the source file, but 
 
 The application uses only the standard ODBC API, so it includes the driver-manager headers and links to the driver-manager library. The connection string selects Microsoft ODBC Driver 18 for SQL Server at runtime.
 
-`SQL_DRIVER_NOPROMPT` prevents `SQLDriverConnect` from opening a configuration dialog. If the connection string is incomplete, the call returns an error and the application prints every diagnostic record.
+`SQL_DRIVER_NOPROMPT` prevents `SQLDriverConnect` from opening a configuration dialog. If the connection string is incomplete, the call returns an error and the application prints every diagnostic record. The application also prints diagnostics when a checked ODBC call returns `SQL_SUCCESS_WITH_INFO`, which means the call succeeded with a warning.
 
-The query binds `0` as a SQL Server **int** parameter, reads the first five products in `SalesLT.Product`, and retrieves each product ID and name with `SQLGetData`.
+The query binds `0` as a SQL Server **int** parameter, reads the first five products in `SalesLT.Product`, and retrieves each product ID and name with `SQLGetData`. For a product name, the application displays `<NULL>` for `SQL_NULL_DATA` and `<empty>` for a zero-length value. If `SQLGetData` reports SQLSTATE `01004`, an unknown length, or a length larger than the buffer, the application reports the issue and exits without printing a partial name.
 
 ## Build and run the application
 

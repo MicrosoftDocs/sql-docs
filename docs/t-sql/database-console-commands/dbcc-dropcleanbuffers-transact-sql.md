@@ -91,7 +91,7 @@ Applies to: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
-- Requires membership in the **db_owner** fixed server role
+- Requires membership in the **db_owner** fixed database role
 
 ## Related content
 

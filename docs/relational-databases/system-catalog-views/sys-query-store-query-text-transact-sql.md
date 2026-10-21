@@ -39,9 +39,11 @@ Contains the [!INCLUDE [tsql](../../includes/tsql-md.md)] text and the SQL handl
 
 ## Permissions
 
-[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions require `VIEW SERVER STATE` permission on the server.
+Requires the `VIEW DATABASE STATE` permission.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require `VIEW SERVER PERFORMANCE STATE` permission on the server.
+### Permissions for SQL Server 2022 and later
+
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 

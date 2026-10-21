@@ -78,7 +78,7 @@ Suppresses all informational messages.
 
 Causes `DBCC CHECKFILEGROUP` to obtain locks instead of using an internal database snapshot.
 
-#### ESTIMATE ONLY
+#### ESTIMATEONLY
 
 Displays the estimated amount of `tempdb` space required to run `DBCC CHECKFILEGROUP` with all the other specified options.
 
@@ -172,7 +172,7 @@ The dump file contains the results of the `DBCC CHECKFILEGROUP` command and addi
 
 If any errors are reported by `DBCC CHECKFILEGROUP`, we recommend restoring the database from the database backup. Repair options can't be specified to `DBCC CHECKFILEGROUP`.
 
-If no backup exists, running `DBCC CHECKDB` with a repair option specified corrects the errors reported. The repair option to use is specified at the end of the list if reported errors. Correcting the errors by using the `REPAIR_ALLOW_DATA_LOSS` option might require that some pages, and therefore data, be deleted.
+If no backup exists, running `DBCC CHECKDB` with a repair option specified corrects the errors reported. The repair option to use is specified at the end of the list of reported errors. Correcting the errors by using the `REPAIR_ALLOW_DATA_LOSS` option might require that some pages, and therefore data, be deleted.
 
 <a id="result-sets"></a>
 

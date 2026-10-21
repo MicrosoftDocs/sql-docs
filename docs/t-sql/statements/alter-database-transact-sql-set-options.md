@@ -1011,7 +1011,7 @@ SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 Designates the currently active query capture mode. Each mode defines specific query capture policies. QUERY_CAPTURE_MODE is type **nvarchar**.
 
 > [!NOTE]  
-> Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM.
+> Queries inside Stored Procedures and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM. In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], cursors are also always captured. Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], cursors are subject to the capture policy.
 
 - `ALL`
 

@@ -148,37 +148,37 @@ AS { sql_statement  [ ; ] [ , ...n ]  [ ; ] }
 
 ## Arguments
 
-#### OR ALTER
+#### :::no-loc text="OR ALTER":::
 
 **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
 Conditionally alters the trigger only if it already exists.
 
-#### *schema_name*
+#### *:::no-loc text="schema_name":::*
 
 The name of the schema to which a DML trigger belongs. DML triggers are scoped to the schema of the table or view on which they're created. *schema_name* can't be specified for DDL or logon triggers.
 
-#### *trigger_name*
+#### *:::no-loc text="trigger_name":::*
 
 The name of the trigger. A *trigger_name* must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md), except that *trigger_name* can't start with `#` or `##`.
 
-#### *table* | *view*
+#### *:::no-loc text="table":::* | *:::no-loc text="view":::*
 
 The table or view on which the DML trigger runs. This table or view is sometimes referred to as the trigger table or trigger view. Specifying the fully qualified name of the table or view is optional. You can only reference a view by an `INSTEAD OF` trigger. You can't define DML triggers on local or global temporary tables.
 
-#### DATABASE
+#### :::no-loc text="DATABASE":::
 
 Applies the scope of a DDL trigger to the current database. If specified, the trigger fires whenever *event_type* or *event_group* occurs in the current database.
 
-#### ALL SERVER
+#### :::no-loc text="ALL SERVER":::
 
 Applies the scope of a DDL or logon trigger to the current server. If specified, the trigger fires whenever *event_type* or *event_group* occurs anywhere in the current server.
 
-#### WITH ENCRYPTION
+#### :::no-loc text="WITH ENCRYPTION":::
 
 Obscures the text of the `CREATE TRIGGER` statement. Using `WITH ENCRYPTION` prevents the trigger from being published as part of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] replication. `WITH ENCRYPTION` can't be specified for CLR triggers.
 
-#### EXECUTE AS
+#### :::no-loc text="EXECUTE AS":::
 
 Specifies the security context under which the trigger is executed. Enables you to control which user account the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the trigger.
 
@@ -186,25 +186,25 @@ This option is required for triggers on memory-optimized tables.
 
 For more information, see [EXECUTE AS Clause](execute-as-clause-transact-sql.md).
 
-#### NATIVE_COMPILATION
+#### :::no-loc text="NATIVE_COMPILATION":::
 
 Indicates that the trigger is natively compiled.
 
 This option is required for triggers on memory-optimized tables.
 
-#### SCHEMABINDING
+#### :::no-loc text="SCHEMABINDING":::
 
 Ensures that tables referenced by a trigger can't be dropped or altered.
 
 This option is required for triggers on memory-optimized tables and isn't supported for triggers on traditional tables.
 
-#### FOR | AFTER
+#### :::no-loc text="FOR"::: | :::no-loc text="AFTER":::
 
 `FOR` or `AFTER` specifies that the DML trigger fires only when all operations specified in the triggering SQL statement have launched successfully. All referential cascade actions and constraint checks must also succeed before this trigger fires.
 
 You can't define `AFTER` triggers on views.
 
-#### INSTEAD OF
+#### :::no-loc text="INSTEAD OF":::
 
 Specifies that the DML trigger launches *instead of* the triggering SQL statement, thus, overriding the actions of the triggering statements. You can't specify `INSTEAD OF` for DDL or logon triggers.
 
@@ -212,33 +212,33 @@ At most, you can define one `INSTEAD OF` trigger per `INSERT`, `UPDATE`, or `DEL
 
 You can't define `INSTEAD OF` triggers on updatable views that use `WITH CHECK OPTION`. Doing so results in an error when an `INSTEAD OF` trigger is added to an updatable view `WITH CHECK OPTION` specified. You remove that option by using `ALTER VIEW` before defining the `INSTEAD OF` trigger.
 
-#### { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }
+#### { [ :::no-loc text="DELETE"::: ] [ , ] [ :::no-loc text="INSERT"::: ] [ , ] [ :::no-loc text="UPDATE"::: ] }
 
 Specifies the data modification statements that activate the DML trigger when it's tried against this table or view. Specify at least one option. Use any combination of these options in any order in the trigger definition.
 
 For `INSTEAD OF` triggers, you can't use the `DELETE` option on tables that have a referential relationship, specifying a cascade action `ON DELETE`. Similarly, the `UPDATE` option isn't allowed on tables that have a referential relationship, specifying a cascade action `ON UPDATE`.
 
-#### WITH APPEND
+#### :::no-loc text="WITH APPEND":::
 
 **Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)].
 
 Specifies that an additional trigger of an existing type should be added. `WITH APPEND` can't be used with `INSTEAD OF` triggers or if an `AFTER` trigger is explicitly stated. For backward compatibility, only use `WITH APPEND` when `FOR` is specified, without `INSTEAD OF` or `AFTER`. You can't specify `WITH APPEND` if using `EXTERNAL NAME` (that is, if the trigger is a CLR trigger).
 
-#### *event_type*
+#### *:::no-loc text="event_type":::*
 
 The name of a [!INCLUDE [tsql](../../includes/tsql-md.md)] language event that, after launch, causes a DDL trigger to fire. Valid events for DDL triggers are listed in [DDL Events](../../relational-databases/triggers/ddl-events.md).
 
-#### *event_group*
+#### *:::no-loc text="event_group":::*
 
 The name of a predefined grouping of [!INCLUDE [tsql](../../includes/tsql-md.md)] language events. The DDL trigger fires after launch of any [!INCLUDE [tsql](../../includes/tsql-md.md)] language event that belongs to *event_group*. Valid event groups for DDL triggers are listed in [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).
 
 After the `CREATE TRIGGER` has finished running, *event_group* also acts as a macro by adding the event types it covers to the `sys.trigger_events` catalog view.
 
-#### NOT FOR REPLICATION
+#### :::no-loc text="NOT FOR REPLICATION":::
 
 Indicates that the trigger shouldn't be run when a replication agent modifies the table that's involved in the trigger.
 
-#### *sql_statement*
+#### *:::no-loc text="sql_statement":::*
 
 The trigger conditions and actions. Trigger conditions specify additional criteria that determine whether the tried DML, DDL, or logon events cause the trigger actions to be run.
 
@@ -263,7 +263,7 @@ DDL and logon triggers capture information about the triggering event by using t
 
 For triggers on memory-optimized tables, the only *sql_statement* allowed at the top level is an `ATOMIC` block. The T-SQL allowed inside the `ATOMIC` block is limited by the T-SQL allowed inside native procs.
 
-#### \<method_specifier>
+#### \<:::no-loc text="method_specifier":::>
 
 For a CLR trigger, specifies the method of an assembly to bind with the trigger. The method must take no arguments and return void. *class_name* must be a valid [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly with assembly visibility. If the class has a namespace-qualified name that uses `.` to separate namespace parts, the class name must be delimited by using [ ] or " " delimiters. The class can't be a nested class.
 

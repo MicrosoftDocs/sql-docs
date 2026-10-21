@@ -96,6 +96,19 @@ The density vector contains one density for each prefix of columns in the statis
 | (`CustomerId`, `ItemId`) | Rows with matching values for `CustomerId` and `ItemId` |
 | (`CustomerId`, `ItemId`, `Price`) | Rows with matching values for `CustomerId`, `ItemId`, and `Price` |
 
+#### String summary
+
+When the first key column of a statistics object is of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext**, with the exception of **char** and **varchar** columns using a UTF-8 collation, the statistics object also contains string summary statistics. [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) reports them with `String Index` set to `YES`. The Query Optimizer uses the string summary to estimate `LIKE` predicates with wildcards, such as `WHERE ProductName LIKE '%Bike'`, that the histogram can't estimate.
+
+The Query Optimizer doesn't use the string summary when:
+
+- The pattern has a different data type than the column, for example an **nvarchar** literal (`N'%Bike'`) or an **nvarchar** parameter compared with a **varchar** column.
+- The pattern is a local variable, unless the query uses `OPTION (RECOMPILE)`.
+- The predicate has an `ESCAPE` clause.
+- The column is an argument of a function, such as `LOWER(ProductName) LIKE '%bike'`.
+
+In these cases, with the default cardinality estimator, a pattern that starts with a wildcard gets a fixed selectivity guess. To use the string summary, pass the pattern with the same data type as the column.
+
 ### Filtered statistics
 
 Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate to select the subset of data that is included in the statistics. Well-designed filtered statistics can improve the query execution plan compared with full-table statistics. For more information about the filter predicate, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md). For more information about when to create filtered statistics, see the [When to Create Statistics](#CreateStatistics) section in this article.

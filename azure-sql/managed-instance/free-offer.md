@@ -16,7 +16,7 @@ monikerRange: "=azuresql || =azuresql-mi"
 # Try Azure SQL Managed Instance for free
 
 > [!div class="op_single_selector"]
-> - [Azure SQL Database](../database/free-offer.md?view=azuresql&preserve-view=true)
+> - [Azure SQL Database](../database/free-tier.md?view=azuresql&preserve-view=true)
 > - [Azure SQL Managed Instance](free-offer.md?view=azuresql&preserve-view=true)
 
 This article describes the free offer of [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md), which provides a free instance with up to 500 databases, 720 vCore hours of compute, and 64 GB of storage for the first 12 months.

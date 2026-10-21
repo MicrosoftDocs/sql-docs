@@ -84,7 +84,7 @@ Together, these experiences give you an end-to-end path from a provisioned Azure
 ## Limitations
 
 - Only Azure SQL Database is currently supported. Azure SQL Managed Instance and SQL Server on Azure Virtual Machines aren't supported.
-- The free tier follows standard Azure SQL Database free offer limits. Once you reach the monthly limit, your chosen behavior (autopause or continue) applies.
+- The free tier follows standard Azure SQL Database free tier limits. After you reach the monthly limit, your chosen behavior (autopause or continue) applies.
 - You need Microsoft Entra ID authentication for provisioning.
 
 ## Feedback and support
@@ -100,4 +100,4 @@ Together, these experiences give you an end-to-end path from a provisioned Azure
 - [Data API builder](mssql-data-api-builder.md)
 - [SQL Notebooks](mssql-sql-notebooks.md)
 - [MSSQL extension for Visual Studio Code](mssql-extension-visual-studio-code.md)
-- [Deploy Azure SQL Database for free](/azure/azure-sql/database/free-offer)
+- [Deploy Azure SQL Database for free](/azure/azure-sql/database/free-tier)

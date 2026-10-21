@@ -23,7 +23,7 @@ The Query editor (Classic experience) is a tool to run T-SQL queries in the Azur
 
 - For a quickstart on the Azure portal query editor, see [Quickstart: Use the Azure portal query editor (Classic experience) (Preview)](connect-query-portal-classic.md).
 - For more advanced object explorer capabilities and management functions, use [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
-- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database](single-database-create-quickstart.md). Look for the option to [deploy Azure SQL Database for free with the free tier](free-tier.md).
 
 ## Query your Azure SQL Database from the Azure portal
 

@@ -269,10 +269,10 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: Azure SQL Database free offer
-      href: database/free-offer.md
-    - name: Azure SQL Database free offer FAQ
-      href: database/free-offer-faq.yml
+    - name: Azure SQL Database free tier
+      href: database/free-tier.md
+    - name: Azure SQL Database free tier FAQ
+      href: database/free-tier-faq.yml
     - name: Intelligent applications and AI
       href: database/ai-artificial-intelligence-intelligent-applications.md
     - name: Copilot with Azure SQL Database

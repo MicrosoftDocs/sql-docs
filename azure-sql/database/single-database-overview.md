@@ -22,7 +22,7 @@ Each single database is isolated, using a dedicated database engine. Each has it
 
 Single database is a deployment model for Azure SQL Database. The other is [elastic pools](elastic-pool-overview.md).
 
-[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [azure-sql-database-free-tier-note](../includes/azure-sql-database-free-tier-note.md)]
 
 ## Dynamic scalability
 
@@ -34,7 +34,7 @@ A single database can be moved into or out of an [elastic pool](elastic-pool-ove
 
 ## Monitoring and alerting
 
-You use the built-in [performance monitoring](performance-guidance.md) and [alerting tools](alerts-create.md), combined with the performance ratings. Using these tools, you can quickly assess the impact of scaling up or down based on your current or project performance needs. Additionally, SQL Database can [emit metrics and resource logs](metrics-diagnostic-telemetry-logging-streaming-export-configure.md) for easier monitoring.
+Use the built-in [performance monitoring](performance-guidance.md) and [alerting tools](alerts-create.md), combined with the performance ratings. By using these tools, you can quickly assess the impact of scaling up or down based on your current or projected performance needs. Additionally, SQL Database can [emit metrics and resource logs](metrics-diagnostic-telemetry-logging-streaming-export-configure.md) for easier monitoring.
 
 ## Availability capabilities
 

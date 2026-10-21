@@ -65,7 +65,7 @@ SQL Server Query Store works much like a flight data recorder, constantly collec
  
  During the read of the Query Store data, in-memory and on-disk data are unified transparently. 
  
- If a session is terminated or the client application restarts or crashes, query statistics won't be recorded. 
+ If a session is terminated with `KILL`, the runtime statistics of the query it was running aren't recorded. If the client application cancels the query or disconnects while the query runs, the execution is recorded with the `Aborted` execution type in [sys.query_store_runtime_stats](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md). 
   
  ![Query Store process plan information](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

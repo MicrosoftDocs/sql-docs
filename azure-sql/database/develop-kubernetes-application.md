@@ -46,7 +46,7 @@ In this article, we explain the process for creating the entire proof-of-concept
 1. [Set up prerequisites](#prerequisites)
 1. [Create the application](#create-the-application)
 1. [Create a Docker Container to deploy the application and test](#deploy-the-application-to-a-docker-container)
-1. [Create an Azure Container Registry and load the Container](#deploy-the-image-to-a-docker-registry)
+1. [Create an Azure Container Registry and load the container](#deploy-the-image-to-a-docker-registry)
 1. [Create the Azure Kubernetes Service (AKS) environment](#tag-the-local-docker-image-to-prepare-it-for-uploading)
 1. [Deploy the application container from the ACS Registry to AKS](#deploy-to-kubernetes)
 1. [Test the application](#test-the-application)
@@ -278,7 +278,7 @@ The Container is now working, but is only available on the developer's machine. 
 
 The storage area for Container Images is called a *repository*, and there can be both public and private repositories for Container Images. In fact, AdventureWorks used a public Image for the Python environment in their Dockerfile.
 
-The team would like to control access to the Image, and rather than putting it on the web they decide they would like to host it themselves, but in Microsoft Azure where they have full control over security and access. For more information, see [Microsoft Azure Container Registry](/azure/aks/tutorial-kubernetes-prepare-acr?tabs=azure-cli).
+The team wants to control access to the image. Instead of putting it on the web, they decide to host it themselves in Microsoft Azure, where they have full control over security and access. For more information, see [Microsoft Azure Container Registry](/azure/aks/tutorial-kubernetes-prepare-acr?tabs=azure-cli).
 
 Returning to the command-line, the Development team uses `az CLI` to add a Container registry service, enable an administration account, set it to anonymous "pulls" during the testing phase, and set a login context to the registry:
 
@@ -293,10 +293,10 @@ This context will be used in subsequent steps.
 
 ## Tag the local Docker image to prepare it for uploading
 
-The next step is to send the local application Container Image to the Azure Container Registry (ACR) so that it's available in the cloud. 
+The next step is to send the local application container image to the Azure Container Registry (ACR) so that it's available in the cloud.
 
 1. In the following sample script, the team uses the Docker commands to list the Images on the machine.
-1. They use the `az CLI` utility to list the Images in the Azure Container Registry.
+1. They use the `az CLI` utility to list the images in the Azure Container Registry.
 1. They use the Docker command to "tag" the image with the destination name of the Azure Container Registry they created in the previous step, and to set a version number for proper DevOps. 
 1. Finally, they list the local Image information again to ensure the tag applied correctly.
 
@@ -307,7 +307,7 @@ docker tag flask2sql ReplaceWith_AzureContainerRegistryName.azurecr.io/azure-fla
 docker images
 ```
 
-With the code written and tested, the Dockerfile, image and container run and tested, the Azure Container Registry set up, and all tags applied, the team can upload the image to the Azure Container Registry. 
+With the code written and tested, the Dockerfile, image, and container run and tested, the Azure Container Registry set up, and all tags applied, the team can upload the image to the Azure Container Registry.
 
 They use the Docker "push" command to send the file, and then the `az CLI` utility to ensure the image was loaded:
 
@@ -350,7 +350,7 @@ These keys are stored [in a file called *.config* in the user's directory](https
 kubectl get nodes
 ```
 
-Now the team uses the `az CLI` tool to list the Images in the Azure Container Registry:
+Now the team uses the `az CLI` tool to list the images in the Azure Container Registry:
 
 ```azurecli
 az acr list --resource-group ReplaceWith_PoCResourceGroupName --query "[].{acrLoginServer:loginServer}" --output table

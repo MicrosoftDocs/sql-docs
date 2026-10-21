@@ -133,7 +133,7 @@ GO
 
 ### D. Update page or row counts or both for a specific index in a table
 
- The following example specifies `IX_Employee_ManagerID` as the index name.
+ The following example specifies `IX_Employee_OrganizationLevel_OrganizationNode` as the index name.
 
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2022, 'HumanResources.Employee', IX_Employee_OrganizationLevel_OrganizationNode);

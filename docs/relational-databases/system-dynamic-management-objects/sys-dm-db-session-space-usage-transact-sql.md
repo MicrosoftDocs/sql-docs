@@ -3,7 +3,7 @@ title: "sys.dm_db_session_space_usage (Transact-SQL)"
 description: sys.dm_db_session_space_usage (Transact-SQL) returns the number of pages allocated and deallocated by each session for the tempdb system database
 author: dimitri-furman
 ms.author: dfurman
-ms.date: "06/19/2023"
+ms.date: "10/21/2026"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,27 +20,26 @@ dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
+
 # sys.dm_db_session_space_usage (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
-  Returns the number of pages allocated and deallocated by each session for the database.  
-  
+Returns the number of pages allocated and deallocated by each session in the `tempdb` database during the session's lifetime.
+ 
 > [!NOTE]  
->  This view is applicable only to the [tempdb database](../databases/tempdb-database.md).  
-  
-> [!NOTE]  
->  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_db_session_space_usage`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+> To obtain this data in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], use the name `sys.dm_pdw_nodes_db_session_space_usage`. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|Session ID.<br /><br /> **session_id** maps to **session_id** in [sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md).|  
-|**database_id**|**smallint**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
-|**user_objects_alloc_page_count**|**bigint**|Number of pages reserved or allocated for user objects by this session.|  
-|**user_objects_dealloc_page_count**|**bigint**|Number of pages deallocated and no longer reserved for user objects by this session.|  
-|**internal_objects_alloc_page_count**|**bigint**|Number of pages reserved or allocated for internal objects by this session.|  
-|**internal_objects_dealloc_page_count**|**bigint**|Number of pages deallocated and no longer reserved for internal objects by this session.|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|Number of pages which have been marked for deferred deallocation.<br /><br /> **Note:** Introduced in service packs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+| Column name | Data type | Description |
+| --- | --- | --- |
+| `session_id` | **smallint** | Session ID.<br /><br /> **session_id** maps to **session_id** in [sys.dm_exec_sessions](sys-dm-exec-sessions-transact-sql.md). |
+| `database_id` | **smallint** | Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server. |
+| `user_objects_alloc_page_count` | **bigint** | Number of pages reserved or allocated for user objects by this session during its lifetime. |
+| `user_objects_dealloc_page_count` | **bigint** | Number of pages deallocated and no longer reserved for user objects by this session during its lifetime. |
+| `internal_objects_alloc_page_count` | **bigint** | Number of pages reserved or allocated for internal objects by this session during its lifetime. |
+| `internal_objects_dealloc_page_count` | **bigint** | Number of pages deallocated and no longer reserved for internal objects by this session during its lifetime. |
+| `user_objects_deferred_dealloc_page_count` | **bigint** | Number of pages queued for deferred deallocation by this session during its lifetime. |
+| `pdw_node_id` | **int** | **Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on. |
   
 ## Permissions  
 
@@ -53,16 +52,20 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks  
- IAM pages are not included in any of the allocation or deallocation counts reported by this view.  
+
+IAM pages aren't included in any of the allocation or deallocation counts that this view reports.  
   
- Page counters are initialized to zero (0) at the start of a session. The counters track the total number of pages that have been allocated or deallocated for tasks that are already completed in the session. The counters are updated only when a task ends; they do not reflect running tasks.  
+Page counters initialize to zero at the start of a session and increment during the session lifetime. The counters track the total number of pages that are allocated or deallocated for tasks that are already completed in the session. The counters update only when a task ends. They don't reflect running tasks.  
+
+When deferred deallocation is used, the `user_objects_deferred_dealloc_page_count` column reports the pages queued for a later deallocation by a background process. When the queue is long, the actual deallocation can be delayed. As a consequence, the user session `tempdb` space usage reported by the `user_objects_alloc_page_count - user_objects_dealloc_page_count - user_objects_deferred_dealloc_page_count` calculation might be temporarily lower than the actual usage.
+
+A session can have multiple requests active at the same time. A request can start multiple threads or tasks if it's a parallel query.  
   
- A session can have multiple requests active at the same time. A request can start multiple threads, tasks, if it is a parallel query.  
-  
- For more information about the sessions, requests, and tasks, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](sys-dm-exec-sessions-transact-sql.md), [sys.dm_exec_requests &#40;Transact-SQL&#41;](sys-dm-exec-requests-transact-sql.md), and [sys.dm_os_tasks &#40;Transact-SQL&#41;](sys-dm-os-tasks-transact-sql.md).  
+For more information about the sessions, requests, and tasks, see [sys.dm_exec_sessions (Transact-SQL)](sys-dm-exec-sessions-transact-sql.md), [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md), and [sys.dm_os_tasks (Transact-SQL)](sys-dm-os-tasks-transact-sql.md).  
   
 ## User objects  
- The following objects are included in the user object page counters:  
+
+The user object page counters include the following objects:  
   
 -   User-defined tables and indexes  
   
@@ -78,7 +81,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Internal objects  
 
- Internal objects are only in `tempdb`. The following objects are included in the internal object page counters:  
+The internal object page counters include the following objects:  
   
 -   Work tables for cursor or spool operations and temporary large object (LOB) storage  
   

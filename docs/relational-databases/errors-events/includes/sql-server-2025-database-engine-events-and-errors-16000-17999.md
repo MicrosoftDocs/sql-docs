@@ -1,8 +1,8 @@
 ---
-author: williamdassafMSFT
+author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 05/14/2026
+ms.date: 10/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |

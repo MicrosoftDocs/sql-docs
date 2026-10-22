@@ -1,14 +1,14 @@
 ---
 title: Database Engine events and errors
 description: Consult this MSSQL error code list to find explanations for error messages for SQL Server database engine events.
-author: williamdassafMSFT
+author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 09/15/2026
+ms.date: 10/15/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Database Engine events and errors
 
@@ -54,7 +54,7 @@ This article shows events and errors for [!INCLUDE [sssql22-md](../../includes/s
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb || =fabric"
 This article shows events and errors for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)

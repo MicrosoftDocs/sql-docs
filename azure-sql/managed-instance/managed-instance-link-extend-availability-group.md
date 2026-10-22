@@ -1,8 +1,8 @@
 ---
 title: Extend an Always On availability group
 description: Learn how to use a Managed Instance link to replicate databases when extending an Always On availability group between SQL Server and Azure SQL Managed Instance.
-author: HugoMSFT
-ms.author: hudequei
+author: danimir
+ms.author: danil
 ms.reviewer: danil
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
@@ -39,13 +39,19 @@ The following requirements apply to extending an availability group through a mu
 | SQL Server 2022 (16.x) | CU27 or later | Enterprise and Developer |
 | SQL Server 2025 (17.x) | CU9 or later | Enterprise and Developer |
 
+| Managed Instance | Supported update policies |
+| --- | --- |
+| General Purpose and Business Critical | SQL Server 2025 and Always-up-to-date [update policy](update-policy.md) |
+
+SQL managed instances using the SQL Server 2022 update policy aren't supported for multiple-database link mode.
+
 Consider the following:
 
 - Standard edition isn't supported because basic availability groups support only one database.
 - SQL Server 2019 and earlier versions aren't supported for multiple-database link mode because they lack the required technology introduced in SQL Server 2022.
-- To create the link *from* SQL Managed Instance or reverse roles back to SQL Server, your SQL managed instance must use the [update policy](update-policy.md) that matches your SQL Server version. For one-way replication and cutover from SQL Server, the destination update policy must match, or be higher than, your SQL Server version. 
-   - SQL Server 2022 supports replication to instances configured with the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** policies. 
-   - SQL Server 2025 supports replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies, but not **SQL Server 2022**. You can't replicate data or fail back to SQL Server after cutover if the policies don't match.
+- To create the link *from* SQL Managed Instance or reverse roles back to SQL Server, your SQL managed instance must use the [update policy](update-policy.md) that matches your SQL Server version. For one-way replication and cutover from SQL Server, the destination update policy must match, or be higher than, your SQL Server version.
+   - SQL Server 2022 supports one-way replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Failback with role reversal isn't supported in this configuration.
+   - SQL Server 2025 supports replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Failback with role reversal is supported only when the managed instance uses the **SQL Server 2025** update policy.
 
 For SQL Server versions and editions that support single-database links, see [Managed Instance link version supportability](managed-instance-link-feature-overview.md#version-supportability).
 

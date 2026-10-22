@@ -5,7 +5,6 @@ ms.date: 08/06/2025
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
-ai-usage: ai-assisted
 ms.custom:
   - updatefrequency5
 # customer intent: As a SSRS user, I want to learn how to configure the Report Server Service Account so that I can update and troubleshoot my accounts information.
@@ -95,7 +94,7 @@ For help with deciding on an approach that's best for your deployment, see [Conf
 
 ## Update an expired password
 
-If the Report Server service runs under a domain user account and the password expires before you can update it in the Report Server Configuration Manager, the service doesn't start until you specify a new password. This manual password update doesn't apply to gMSAs, whose passwords Windows manages.
+If the Report Server service runs under a domain user account and the password expires before you update it in the Report Server Configuration Manager, the service doesn't start until you specify a new password. This manual password update doesn't apply to gMSAs, whose passwords Windows manages.
 
 If the service account password for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] expires, the **rsReportServerDatabaseUnavailable** error occurs when you try to connect to the report server. Resetting the password resolves this error.
 

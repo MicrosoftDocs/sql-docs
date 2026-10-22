@@ -5,6 +5,7 @@ ms.date: 08/06/2025
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.custom:
   - updatefrequency5
 # customer intent: As a SSRS user, I want to learn how to configure the Report Server Service Account so that I can update and troubleshoot my accounts information.

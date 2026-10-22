@@ -1,9 +1,9 @@
 ---
 title: "sp_query_store_unforce_plan (Transact-SQL)"
 description: "Enables unforcing a previously forced plan for a particular query in the Query Store."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: system-objects

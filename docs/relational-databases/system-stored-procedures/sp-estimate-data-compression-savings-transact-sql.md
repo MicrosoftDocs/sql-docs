@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_estimate_data_compression_savings (Transact-SQL)"
 description: The sp_estimate_data_compression_savings system stored procedure returns the current size of the requested object and estimates the object size for the requested compression state.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dimitri-furman, wiassaf, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: dimitri-furman, wiassaf
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

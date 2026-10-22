@@ -1,8 +1,8 @@
 ---
 title: "Defining UDT Tables and Columns"
 description: After you register the assembly that contains a UDT definition, you can use it in a column definition.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

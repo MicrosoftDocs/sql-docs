@@ -3,7 +3,7 @@ title: Create In-Memory OLTP App Control and Managed Installer Policies
 description: Learn how to create Windows Defender Application Control policies and designate the hkdllgen.exe (Hekaton DLL generator) as a managed installer for a SQL Server database with memory-optimized tables.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/01/2026
 ms.service: sql
 ms.subservice: in-memory-oltp

@@ -1,11 +1,11 @@
 ---
 title: Microsoft Entra-Only Authentication
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article provides information on the Microsoft Entra-only authentication feature with Azure SQL.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
-ms.date: 09/01/2026
+ms.reviewer: wiassaf
+ms.date: 10/07/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: security
@@ -18,13 +18,11 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 # Microsoft Entra-only authentication with Azure SQL
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 Microsoft Entra-only authentication is a feature within [Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) that allows the service to only support Microsoft Entra authentication, and is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
-
-Microsoft Entra-only authentication is also available for dedicated SQL pools (formerly SQL DW) in standalone servers. Microsoft Entra-only authentication can be enabled for the Azure Synapse workspace. For more information, see [Microsoft Entra-only authentication with Azure Synapse workspaces](/azure/synapse-analytics/sql/active-directory-authentication).
 
 When you enable Microsoft Entra-only authentication, you disable SQL authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users who use [Microsoft Entra authentication](authentication-aad-overview.md) can connect to the server or database.
 
@@ -448,6 +446,10 @@ When Microsoft Entra-only authentication is enabled for SQL Managed Instance, th
 - `EXEC AS` statement for Microsoft Entra group member accounts
 
 For more limitations, see [T-SQL differences between SQL Server & Azure SQL Managed Instance](../managed-instance/transact-sql-tsql-differences-sql-server.md#logins-and-users).
+
+## Microsoft Entra-only authentication with Azure Synapse Analytics
+
+For dedicated SQL pools in Azure Synapse Analytics, see [Microsoft Entra-only authentication](/azure/synapse-analytics/sql/authentication-azure-ad-only-authentication).
 
 ## Related content
 

@@ -1,7 +1,7 @@
 ---
 title: Upgrade Integration Services Packages
 description: Upgrade Integration Services Packages
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/13/2026
 ms.service: sql
 ms.subservice: integration-services

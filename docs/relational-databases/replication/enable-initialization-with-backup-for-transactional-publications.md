@@ -1,8 +1,8 @@
 ---
 title: "Enable initialization with backup (Transactional)"
 description: Learn how to enable initialization from a backup for a Transactional Publication in SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

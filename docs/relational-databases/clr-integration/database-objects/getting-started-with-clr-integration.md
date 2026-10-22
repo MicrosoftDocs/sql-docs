@@ -1,8 +1,8 @@
 ---
 title: "Get Started With CLR Integration"
 description: This article describes the namespaces and libraries required to compile database objects using the Microsoft SQL Server integration with the .NET Framework CLR.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

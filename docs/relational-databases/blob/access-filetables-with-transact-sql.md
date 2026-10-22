@@ -1,8 +1,8 @@
 ---
 title: "Access FileTables with Transact-SQL"
 description: Learn how Transact-SQL data manipulation language (DML) commands work with FileTables. See which system-defined constraints are enforced during DML operations.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: filestream

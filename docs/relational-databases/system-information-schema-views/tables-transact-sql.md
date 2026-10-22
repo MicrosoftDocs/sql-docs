@@ -1,8 +1,8 @@
 ---
 title: TABLES (Transact-SQL)
 description: "TABLES (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/20/2019"
 ms.service: sql
 ms.subservice: system-objects
@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.TABLES view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # TABLES (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns one row for each table or view in the current database for which the current user has permissions.  
   

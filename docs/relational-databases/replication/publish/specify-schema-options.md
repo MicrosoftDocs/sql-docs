@@ -1,8 +1,8 @@
 ---
 title: "Specify Schema Options for SQL Server replication"
 description: "Specify Schema Options for SQL Server replication"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

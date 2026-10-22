@@ -1,8 +1,8 @@
 ---
 title: Advanced Object Selection
 description: Learn how to filter and select database objects using the Advanced Object Selection dialog box in SSMA.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

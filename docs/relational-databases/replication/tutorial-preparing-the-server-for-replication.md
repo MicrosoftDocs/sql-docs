@@ -1,9 +1,9 @@
 ---
 title: "Tutorial: Prepare for replication"
 description: In this tutorial, learn how to prepare your publisher, distributor, and subscriber for replication by creating Windows accounts, preparing the snapshot folder, and configuring distribution.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 10/11/2024
 ms.service: sql
 ms.subservice: replication

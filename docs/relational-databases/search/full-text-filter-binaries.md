@@ -2,8 +2,8 @@
 title: Full-text filter binaries
 titleSuffix: SQL Server Full-Text Search
 description: View the list of SQL Server Full-Text Search filter binaries by full-text index version.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: search

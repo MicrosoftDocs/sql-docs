@@ -1,9 +1,9 @@
 ---
 title: Dialog Conversations
 description: "All messages sent by Service Broker are part of a conversation."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

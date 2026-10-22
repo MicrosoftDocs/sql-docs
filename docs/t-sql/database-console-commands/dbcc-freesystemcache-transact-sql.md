@@ -1,8 +1,8 @@
 ---
 title: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 description: "DBCC FREESYSTEMCACHE releases all unused cache entries from all caches."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

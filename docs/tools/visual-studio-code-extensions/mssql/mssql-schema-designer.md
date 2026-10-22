@@ -2,8 +2,8 @@
 title: Schema Designer
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the Schema Designer in the MSSQL extension for Visual Studio Code to visualize, design, and manage database schemas.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: yoleichen, roblescarlos
 ms.date: 07/10/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "Getting Started in Visual C# .NET"
 description: "SMO Programming - Getting Started in Visual C# .NET"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/02/2016"
 ms.service: sql
 ms.topic: quickstart

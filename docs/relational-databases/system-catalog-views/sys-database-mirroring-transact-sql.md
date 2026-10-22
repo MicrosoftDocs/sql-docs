@@ -1,8 +1,8 @@
 ---
 title: "sys.database_mirroring (Transact-SQL)"
 description: sys.database_mirroring contains one row for each database in the instance of SQL Server with database mirroring information.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

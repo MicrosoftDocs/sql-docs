@@ -1,8 +1,8 @@
 ---
 title: Logical and Physical Showplan Operator Reference
 description: Learn about the logical and physical operators for XML and graphical showplans.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 04/24/2026
 ms.service: sql
 ms.topic: concept-article

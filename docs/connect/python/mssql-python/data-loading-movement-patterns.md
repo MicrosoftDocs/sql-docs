@@ -3,7 +3,7 @@ title: Choose a Data Loading and Movement Pattern with mssql-python
 description: Learn when to use single inserts, batched writes, bulk copy, or MERGE for loading data into Microsoft SQL with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

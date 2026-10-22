@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 08/21/2024
 ms.service: sql

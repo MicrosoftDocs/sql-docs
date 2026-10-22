@@ -1,8 +1,8 @@
 ---
 title: "sys.filetable_system_defined_objects (Transact-SQL)"
 description: sys.filetable_system_defined_objects (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

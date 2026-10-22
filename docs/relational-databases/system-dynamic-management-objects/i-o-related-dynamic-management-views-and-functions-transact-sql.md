@@ -1,8 +1,8 @@
 ---
 title: "I/O Related Dynamic Management Views and Functions (Transact-SQL)"
 description: I/O Related Dynamic Management Views and Functions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: system-objects

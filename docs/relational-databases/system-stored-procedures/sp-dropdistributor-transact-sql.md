@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropdistributor (Transact-SQL)"
 description: Uninstalls the Distributor. This stored procedure is executed at the Distributor on any database except the distribution database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

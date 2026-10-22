@@ -1,9 +1,9 @@
 ---
 title: VIEWS (Transact-SQL)
 description: "Returns one row for each view that can be accessed by the current user in the current database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 07/27/2022
 ms.service: sql
 ms.subservice: system-objects
@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.VIEWS view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # VIEWS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns one row for each view that can be accessed by the current user in the current database.
 

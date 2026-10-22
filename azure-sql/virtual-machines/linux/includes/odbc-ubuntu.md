@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 11/29/2023
 ms.service: sql
 ms.topic: include

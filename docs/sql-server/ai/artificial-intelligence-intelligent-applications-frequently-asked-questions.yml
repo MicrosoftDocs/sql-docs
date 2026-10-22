@@ -2,9 +2,9 @@
 metadata:
   title: Intelligent applications and AI frequently asked questions (FAQ)
   description: Answers to common questions about using AI with the SQL Database Engine.
-  author: markingmyname
-  ms.author: maghan
-  ms.reviewer: randolphwest, mathoma
+  author: kendalvandyke
+  ms.author: kendalv
+  ms.reviewer: vanto
   ms.date: 08/20/2025
   ms.service: sql
   ms.topic: faq

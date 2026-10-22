@@ -1,8 +1,8 @@
 ---
 title: "Client-side vs. Server-side XML Formatting (SQLXML)"
 description: Learn the general differences between client-side and server-side XML formatting in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

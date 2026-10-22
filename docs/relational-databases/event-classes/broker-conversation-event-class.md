@@ -3,7 +3,7 @@ title: "Broker:Conversation Event Class"
 description: "Use the Broker:Conversation event class to report the progress of a Service Broker conversation."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/30/2025
 ms.service: sql
 ms.subservice: supportability

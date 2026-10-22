@@ -2,8 +2,8 @@
 title: Overview of the Data-Tier Application Experience
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the Data-tier Application experience in the MSSQL extension for Visual Studio Code to work with DACPAC and BACPAC files.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: tsiddique, roblescarlos
 ms.date: 05/25/2026
 ms.service: sql

@@ -3,7 +3,7 @@ title: "Parse and Transform JSON Data with OPENJSON"
 description: OPENJSON converts JSON into a set of rows and columns. Use it to run any SQL query on the returned data, or insert it into a SQL Server table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 07/23/2025
 ms.service: sql
 ms.topic: how-to

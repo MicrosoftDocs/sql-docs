@@ -1,8 +1,8 @@
 ---
 title: "Determine Whether the Database Engine Is Installed and Started"
 description: Learn how to determine whether the Database Engine is installed and started. See how to use SQL Server Configuration Manager to check for installed components.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

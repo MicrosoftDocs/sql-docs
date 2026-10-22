@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addmergearticle (Transact-SQL)"
 description: Adds an article to an existing merge publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

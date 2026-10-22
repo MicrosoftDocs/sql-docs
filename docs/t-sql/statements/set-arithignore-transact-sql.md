@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "divide-by-zero errors"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # SET ARITHIGNORE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `SET ARITHIGNORE` setting controls whether the query returns error messages for arithmetic overflow or divide-by-zero errors. The `SET ARITHIGNORE ON` setting suppresses the messages "Division by zero occurred." or "Arithmetic overflow occurred."
 
@@ -40,7 +40,7 @@ The `SET ARITHIGNORE` setting controls whether the query returns error messages 
 SET ARITHIGNORE { ON | OFF }
 ```
 
-#### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [sspdw-md.md](../../includes/sspdw-md.md)]
+#### Syntax for [!INCLUDE [ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)]
 
 ```syntaxsql
 
@@ -104,7 +104,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```
 
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example demonstrates divide-by-zero and the overflow errors. This example doesn't return an error message for these errors because `ARITHIGNORE` is `OFF`.    
 

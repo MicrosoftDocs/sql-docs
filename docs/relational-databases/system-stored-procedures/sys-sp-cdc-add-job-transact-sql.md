@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cdc_add_job (Transact-SQL)"
 description: "Creates a change data capture cleanup or capture job in the current database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

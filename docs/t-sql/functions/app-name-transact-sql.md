@@ -1,8 +1,8 @@
 ---
 title: "APP_NAME (Transact-SQL)"
 description: "APP_NAME (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/24/2017"
 ms.service: sql
 ms.subservice: t-sql

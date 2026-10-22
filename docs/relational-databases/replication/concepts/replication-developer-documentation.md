@@ -1,8 +1,8 @@
 ---
 title: "Replication Developer Documentation"
 description: Programming interfaces and concepts for building applications that configure, maintain, and monitor SQL Server replication topologies.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: replication

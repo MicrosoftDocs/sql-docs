@@ -1,8 +1,8 @@
 ---
 title: "Specifying Node Test in a Path Expression Step"
 description: Learn how to specify a node test in the axis step of an XQuery path expression.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

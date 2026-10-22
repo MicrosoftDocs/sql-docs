@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_changearticlecolumndatatype (Transact-SQL)"
 description: sp_changearticlecolumndatatype changes the article column data type mapping for an Oracle publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

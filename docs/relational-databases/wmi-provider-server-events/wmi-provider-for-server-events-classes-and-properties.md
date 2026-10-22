@@ -1,9 +1,9 @@
 ---
 title: "WMI Provider for Server Events classes and properties"
 description: "WMI Provider for Server Events classes and properties."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: wmi

@@ -1,8 +1,8 @@
 ---
 title: "BEGIN DIALOG CONVERSATION (Transact-SQL)"
 description: BEGIN DIALOG CONVERSATION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/26/2017"
 ms.service: sql
 ms.subservice: t-sql

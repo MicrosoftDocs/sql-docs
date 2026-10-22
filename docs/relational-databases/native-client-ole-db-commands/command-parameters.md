@@ -1,8 +1,8 @@
 ---
 title: "Command Parameters (Native Client OLE DB provider)"
 description: "Command Parameters (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "commands [OLE DB]"
 ---
 # SQL Server Native Client Command Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Parameters are marked in command text with the question mark character. For example, the following SQL statement is marked for a single input parameter:  
   

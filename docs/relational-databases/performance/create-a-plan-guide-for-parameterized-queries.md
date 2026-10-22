@@ -1,8 +1,8 @@
 ---
 title: "Create a Plan Guide for Parameterized Queries"
 description: Learn how to create a plan guide that matches any query that parameterizes to a specified form and directs SQL Server to force parameterization of the query.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance

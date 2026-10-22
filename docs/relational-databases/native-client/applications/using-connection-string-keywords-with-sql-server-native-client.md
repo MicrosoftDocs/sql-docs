@@ -1,8 +1,8 @@
 ---
 title: "Using connection string keywords"
 description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "02/15/2022"
 ms.service: sql
 ms.subservice: native-client
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.custom: sfi-ropc-blocked
 ---
 # Using Connection String Keywords with SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

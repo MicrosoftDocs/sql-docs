@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_catalogs (Transact-SQL)"
 description: sp_catalogs returns the list of catalogs in the specified linked server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

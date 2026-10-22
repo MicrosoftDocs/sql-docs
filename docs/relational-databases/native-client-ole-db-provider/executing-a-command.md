@@ -1,8 +1,8 @@
 ---
 title: "Executing a command (Native Client OLE DB provider)"
 description: "Executing a command (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, command execution"
 ---
 # Executing a SQL Server Native Client Command
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   After the connection to a data source is established, the consumer calls the **IDBCreateSession::CreateSession** method to create a session. The session acts as a command, rowset, or transaction factory.  
   

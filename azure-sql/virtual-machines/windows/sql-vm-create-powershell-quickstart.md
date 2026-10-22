@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Create SQL Server VM with PowerShell"
 description: This tutorial shows how to use Azure PowerShell to create a Windows virtual machine running SQL Server 2022.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: dpless
 ms.date: 05/29/2024
 ms.service: azure-vm-sql-server

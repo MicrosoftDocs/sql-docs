@@ -1,9 +1,9 @@
 ---
 title: "Initialize an availability group using automatic seeding"
 description: "Use automatic seeding to automatically create secondary replicas for every database in an Always On availability group without having to manually back up and restore."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 04/11/2022
 ms.service: sql
 ms.subservice: availability-groups

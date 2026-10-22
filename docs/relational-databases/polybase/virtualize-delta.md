@@ -1,9 +1,9 @@
 ---
 title: Virtualize a delta table with PolyBase
 description: "Virtualize a delta table with PolyBase starting with SQL Server 2022."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 02/05/2024
 ms.service: sql
 ms.subservice: polybase

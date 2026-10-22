@@ -3,7 +3,7 @@ title: AI Functions (Transact-SQL)
 description: Use AI functions to integrate relational data with AI inference endpoints.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, bspendolini, randolphwest
+ms.reviewer: jovanpop, bspendolini
 ms.date: 06/11/2026
 ms.service: sql
 ms.subservice: t-sql

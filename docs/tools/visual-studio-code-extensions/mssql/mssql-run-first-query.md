@@ -2,8 +2,8 @@
 title: "Quickstart: Run Your First Query"
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Use the MSSQL extension for Visual Studio Code to create a database and table, insert data, and run your first Transact-SQL query.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 04/23/2026
 ms.service: sql

@@ -3,7 +3,7 @@ title: "Event Tracing for Windows target"
 description: Learn how to use Event Tracing for Windows (ETW) as a target. Use ETW tracing either together with Extended Events or as an Extended Events event consumer.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: xevents

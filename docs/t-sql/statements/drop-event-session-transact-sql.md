@@ -1,9 +1,9 @@
 ---
 title: "DROP EVENT SESSION (Transact-SQL)"
 description: DROP EVENT SESSION drops an Extended Event session.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: t-sql

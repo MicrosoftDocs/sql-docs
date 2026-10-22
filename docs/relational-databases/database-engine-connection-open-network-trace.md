@@ -1,8 +1,8 @@
 ---
 title: Trace the Network Authentication Process to SQL Server
 description: Learn about the various handshakes and authentication sequences during the connection process to the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/07/2025
 ms.service: sql
 ms.topic: concept-article

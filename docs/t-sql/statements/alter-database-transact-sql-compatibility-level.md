@@ -1,10 +1,10 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL)"
 description: Sets Transact-SQL and query processing behaviors to be compatible with the specified version of the Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 06/29/2026
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -62,6 +62,8 @@ The version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] with w
 For the recommended workflow for upgrading the compatibility level, see [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Additionally, for an assisted experience with upgrading the database compatibility level, see [Upgrade databases using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
 ## Remarks
+
+`ALTER DATABASE ... SET COMPATIBILITY_LEVEL` isn't supported in Fabric Data Warehouse.
 
 For all installations of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE [ssDE](../../includes/ssde-md.md)]. New databases are set to this level unless the `model` database has a lower compatibility level. For databases attached or restored from any earlier version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the database keeps its existing compatibility level, if it's at least minimum allowed for that instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Moving a database with a compatibility level lower than the allowed level by the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.
 
@@ -221,7 +223,7 @@ This section describes new behaviors introduced with compatibility level 170.
 | Compatibility level setting of 160 or lower | Compatibility level setting of 170 |
 | :--- | :--- |
 | To protect the key material of the symmetric key, database master key and service master key, SQL Server and Azure SQL stores the key material in encrypted form. The encryption uses PKCS#1 v1.5 padding mode. | To protect the key material of the symmetric key, database master key and service master key, SQL Server and Azure SQL stores the key material in encrypted form. The encryption uses OAEP-256 padding mode. In the dm_database_encryption_keys, the encryptor_type will be displayed as `CERTIFICATE_OAEP_256` instead of `CERTIFICATE`. |
-| Regular expressions can be used to match complex patterns and manipulate data in SQL Server and Azure SQL database. Regular expression support within T-SQL has been added. Some regular expression functions aren't available in all database compatibility levels For more information, see [Regular expressions functions preview](../functions/regular-expressions-functions-transact-sql.md). | Regular expression functions such as `REGEXP_LIKE`, `REGEXP_MATCHES`, and `REGEXP_SPLIT_TO_TABLE` have been introduced to enable pattern matching, extraction, and splitting directly in T-SQL. |
+| Regular expressions can be used to match complex patterns and manipulate data in SQL Server and Azure SQL database. Regular expression support within T-SQL has been added. Some regular expression functions aren't available in all database compatibility levels For more information, see [Regular expressions functions](../../relational-databases/regular-expressions/overview.md). | Regular expression functions such as `REGEXP_LIKE`, `REGEXP_MATCHES`, and `REGEXP_SPLIT_TO_TABLE` have been introduced to enable pattern matching, extraction, and splitting directly in T-SQL. |
 | The ability to create AI embeddings (vector arrays) from text expressions has been added the Database engine. For more information, see [AI functions](../functions/ai-functions-transact-sql.md). | Introduces the `AI_GENERATE_CHUNKS` function, which enables chunking of text input for AI model consumption, improving integration with AI services. |
 | Parameterized queries can have multiple cached query plans for different selectivity categories of a parameter. Parameter sensitive plan optimization is enabled by default in compatibility level 160 for select queries only | When [Parameter sensitive plan optimization](../../relational-databases/performance/parameter-sensitive-plan-optimization.md#remarks) is operating under compatibility level 170, DML query support as well as support for `tempdb` is also available |
 | Parameterized queries which have optional parameters might suffer from suboptimal plans due to parameter sniffing. | Query plan optimization for optional parameters, improving performance by generating more appropriate plans for NULL and non-NULL values. |

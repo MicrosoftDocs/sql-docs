@@ -1,9 +1,9 @@
 ---
 title: Query Queues
 description: "Sometimes it may be necessary to inspect the content of a queue as a whole."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: "Use group policies for availability group health"
 description: "Learn how to view the group system policies that the Always On dashboard uses to provide information about the availability group health."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups

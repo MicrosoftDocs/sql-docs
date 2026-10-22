@@ -1,8 +1,8 @@
 ---
 title: "Sequence and QNames (XQuery)"
 description: Learn about the fundamental concepts of sequences and QNames in XQuery.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

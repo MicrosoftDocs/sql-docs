@@ -1,9 +1,9 @@
 ---
 title: "JARO_WINKLER_SIMILARITY (Transact-SQL)"
 description: JARO_WINKLER_SIMILARITY calculates a similarity value ranging from 0 (indicating no match) to 100 (indicating full match).
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

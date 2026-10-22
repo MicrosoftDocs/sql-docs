@@ -1,8 +1,8 @@
 ---
 title: "Use a Format File to Bulk Import Data"
 description: In SQL Server, you can use a format file in bulk-import operations. A format file maps the fields of the data file to the columns of the table.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: data-movement
@@ -10,11 +10,11 @@ ms.topic: how-to
 helpviewer_keywords:
   - "bulk importing [SQL Server], format files"
   - "format files [SQL Server], importing data using"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Use a format file to bulk import data (SQL Server)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article illustrates the use of a format file in bulk-import operations. A format file maps the fields of the data file to the columns of the table. Review [Create a format file with bcp (SQL Server)](create-a-format-file-sql-server.md) for additional information.
 

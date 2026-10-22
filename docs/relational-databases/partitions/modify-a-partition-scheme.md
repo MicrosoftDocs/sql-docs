@@ -2,8 +2,8 @@
 title: "Modify a partition scheme"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 description: Modify a partition scheme
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/29/2025
 ms.service: sql
 ms.topic: how-to

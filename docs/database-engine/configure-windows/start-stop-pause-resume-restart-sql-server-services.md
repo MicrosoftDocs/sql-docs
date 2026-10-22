@@ -1,8 +1,8 @@
 ---
 title: Start, Stop, Pause, Resume, and Restart SQL Server Services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: Edit Type Mapping
 description: Learn how to create or modify data type mappings between source and target databases in SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

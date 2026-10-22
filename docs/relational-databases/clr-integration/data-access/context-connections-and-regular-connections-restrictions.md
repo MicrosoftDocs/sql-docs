@@ -1,8 +1,8 @@
 ---
 title: Restrictions on Context Connections and Regular Connections
 description: This article describes the restrictions associated with code running in the Microsoft SQL Server process through context and regular connections.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

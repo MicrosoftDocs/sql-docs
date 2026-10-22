@@ -1,9 +1,9 @@
 ---
 title: "Database Lifecycle Management"
 description: Learn how to use database lifecycle management in SQL Server to manage databases and data assets for performance, protection, availability, and cost.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/06/2026
 ms.service: sql
 ms.subservice: supportability

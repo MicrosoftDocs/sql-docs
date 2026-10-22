@@ -1,9 +1,9 @@
 ---
 title: "Back Up and Restore SQL Server With S3-Compatible Object Storage"
 description: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 01/07/2025
 ms.service: sql
 ms.subservice: backup-restore

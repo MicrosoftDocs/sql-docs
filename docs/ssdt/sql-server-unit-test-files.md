@@ -1,9 +1,9 @@
 ---
 title: SQL Server Unit Test Files
 description: Learn about the files that make up a SQL Server unit test, such as the source code file, the resource file, the configuration file, and the setup file.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

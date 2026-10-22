@@ -1,8 +1,8 @@
 ---
 title: "Using the SQLXMLOLEDB Provider (SQLXML)"
 description: View information about using SQLXMLOLEDB Provider-specific properties in ADO applications.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

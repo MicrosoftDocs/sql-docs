@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)"
 description: For in-memory OLTP tables, sys.dm_db_xtp_gc_cycle_stats returns the current state of committed transactions that deleted one or more rows from in-memory OLTP tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/29/2023
 ms.service: sql
 ms.subservice: system-objects

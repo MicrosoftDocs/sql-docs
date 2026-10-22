@@ -3,7 +3,7 @@ title: Design disaster recovery solutions
 description: Learn how to design your cloud solution for disaster recovery by choosing the right failover pattern.
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 02/03/2025
 ms.service: azure-sql-database
 ms.subservice: elastic-pools

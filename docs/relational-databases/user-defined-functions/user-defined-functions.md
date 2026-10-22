@@ -1,8 +1,8 @@
 ---
 title: User-Defined Functions
 description: User-defined functions are routines that accept parameters, perform an action, and return the result as a single scalar value or a result set.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/18/2025
 ms.service: sql
 ms.topic: concept-article

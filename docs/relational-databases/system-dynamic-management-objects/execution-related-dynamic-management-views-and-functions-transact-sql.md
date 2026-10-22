@@ -1,9 +1,9 @@
 ---
 title: "Execution Related Dynamic Management Views and Functions (Transact-SQL)"
 description: Execution Related Dynamic Management Views and Functions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
-ms.date: 05/28/2021
+author: dimitri-furman
+ms.author: dfurman
+ms.date: 10/04/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -12,14 +12,14 @@ helpviewer_keywords:
   - "execution-related dynamic management objects [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || >=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-::: moniker range=">=sql-server-linux-2017 || >=sql-server-2017"
+::: moniker range="=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 
-  This section contains the following dynamic management objects:  
+  This section contains the following dynamic management objects. Refer to individual reference pages for platform applicability.
   
 :::row:::
     :::column:::
@@ -111,12 +111,14 @@ monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017 || >=aps-pdw-2016 ||
 :::row-end:::
 
 > [!NOTE]  
->  The **sys.dm_exec_query_transformation_stats** dynamic management view is identified for informational purposes only. Not supported. Future compatibility is not guaranteed.  
+> The `sys.dm_exec_query_transformation_stats` dynamic management view is identified for informational purposes only. Not supported. Future compatibility is not guaranteed.  
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = azure-sqldw-latest"
+::: moniker range="=azure-sqldw-latest"
+
+[!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
   
-This section contains Azure Synapse Analytics or Parallel Data Warehouse dynamic management views (DMVs):
+This section contains Azure Synapse Analytics dynamic management views (DMVs):
 
 :::row:::
     :::column:::

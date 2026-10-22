@@ -2,8 +2,8 @@
 title: Customize Filters and Word Breakers
 titleSuffix: SQL Server Full-Text Search
 description: View registered Full-Text Search filters and word breakers, and customize component registration for version 2 or version 1 full-text indexes.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

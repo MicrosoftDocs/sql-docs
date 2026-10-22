@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_reseed_table (Transact-SQL)"
 description: "The internal sys.sp_change_feed_reseed_table system stored procedure reseeds the link table in the current database context."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

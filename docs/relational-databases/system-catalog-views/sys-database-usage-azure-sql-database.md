@@ -1,8 +1,8 @@
 ---
 title: "sys.database_usage (Azure SQL Database)"
 description: sys.database_usage (Azure SQL Database)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: "08/11/2022"
 ms.service: azure-sql-database
 ms.topic: "reference"

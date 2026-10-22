@@ -3,7 +3,7 @@ title: "sp_configure_automatic_tuning (Transact-SQL)"
 description: sp_configure_automatic_tuning changes the automatic tuning for a given query_id, to be allowed or skipped for consideration by automatic plan correction.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, derekw
+ms.reviewer: derekw
 ms.date: 04/29/2026
 ms.service: sql
 ms.subservice: system-objects

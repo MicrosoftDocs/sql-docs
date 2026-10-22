@@ -1,8 +1,8 @@
 ---
 title: "Use Updategram in a sample ASP Application (SQLXML)"
 description: View an example of using an SQLXML updategram in an Active Server Pages (ASP) application.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

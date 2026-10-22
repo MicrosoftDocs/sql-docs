@@ -3,7 +3,7 @@ title: "Deploy SQL Server VM with Premium SSD v2 in Azure portal (Preview)"
 description: Learn how you can use the Azure portal to deploy your SQL Server on Azure VM with Premium SSDs (preview), the new generation storage solution designed for IO-intensive enterprise workloads that require submillisecond disk latencies, high IOPS and throughput at a low cost.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/18/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

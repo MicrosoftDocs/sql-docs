@@ -3,7 +3,7 @@ title: "Performance Tuning with Ordered Columnstore Indexes"
 description: "Learn more about how ordered columnstore indexes can benefit query performance."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: nibruno, xiaoyul, randolphwest, dfurman
+ms.reviewer: nibruno, xiaoyul, dfurman
 ms.date: 01/12/2026
 ms.service: sql
 ms.subservice: performance

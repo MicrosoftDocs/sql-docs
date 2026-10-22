@@ -1,8 +1,8 @@
 ---
 title: Updatable Subscriptions (Transactional)
 description: Learn how updatable subscriptions for SQL Server transactional replication propagate Subscriber changes to the Publisher, and how to switch between update modes.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

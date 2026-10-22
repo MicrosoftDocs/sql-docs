@@ -1,8 +1,8 @@
 ---
 title: "String Search in XQuery"
 description: Learn how to search text in XML documents by viewing an example of string search in XQuery.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xml

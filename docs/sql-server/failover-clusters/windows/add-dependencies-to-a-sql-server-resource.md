@@ -1,8 +1,8 @@
 ---
 title: "Add dependencies to a SQL Server FCI resource"
 description: "Add Dependencies to a SQL Server Resource"
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance

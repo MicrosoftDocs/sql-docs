@@ -1,9 +1,9 @@
 ---
 title: Remove Log Shipping Secondary
 description: Learn how to remove a log shipping secondary partner by using SQL Server Management Studio or Transact-SQL in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: log-shipping

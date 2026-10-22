@@ -1,9 +1,9 @@
 ---
 title: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)"
 description: Unregisters an existing Semantic Language Statistics database from the current instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

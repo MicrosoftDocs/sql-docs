@@ -1,37 +1,36 @@
 ---
 title: Set up Auditing
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: This article provides an overview of how to set up Auditing and storing those audits to an Azure storage account, Log Analytics workspace, or Event Hubs destination.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, vanto, randolphwest
-ms.date: 05/07/2025
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sfi-image-nochange
+monikerRange: "=azuresql || =azuresql-db"
 ---
-# Set up Auditing for Azure SQL Database and Azure Synapse Analytics
+# Set up Auditing for Azure SQL Database
 
-[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-In this article, we go over setting up Auditing for your logical server or database in [Azure SQL Database](sql-database-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
+This article explains how to set up auditing for your logical server or database in [Azure SQL Database](sql-database-paas-overview.md).
 
 ## Configure Auditing for your server
 
 The default auditing policy includes the following set of action groups, which audits all the queries and stored procedures executed against the database, as well as successful and failed logins:
 
-- BATCH_COMPLETED_GROUP
-- SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
-- FAILED_DATABASE_AUTHENTICATION_GROUP
+- `BATCH_COMPLETED_GROUP`
+- `SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP`
+- `FAILED_DATABASE_AUTHENTICATION_GROUP`
 
 To configure auditing for different types of actions and action groups using PowerShell, see [Manage Azure SQL Database Auditing using APIs](auditing-manage-using-api.md).
 
 The following section describes the Auditing configuration using the Azure portal.
 
 > [!NOTE]  
-> You can't enable auditing on a paused dedicated SQL pool. To enable auditing, [resume the dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/pause-and-resume-compute-portal).
->
 > When Auditing is configured to a Log Analytics workspace or to an Event Hubs destination in the Azure portal or PowerShell cmdlet, a [Diagnostic Setting](/azure/azure-monitor/essentials/diagnostic-settings) is created with `SQLSecurityAuditEvents` category enabled.
 
 1. Go to the [Azure portal](https://portal.azure.com).
@@ -79,10 +78,14 @@ If the diagnostic settings are deleted, either intentionally or unintentionally,
 > [!NOTE]  
 > If you're using multiple targets like storage account, Log Analytics, or Event Hubs, make sure you have permissions for all the targets, or else saving audit configuration would fail as it tries to save the settings for all targets.
 
+## Auditing in Azure Synapse Analytics
+
+For information about setting up auditing in Azure Synapse Analytics, see [Set up auditing](/azure/synapse-analytics/sql/auditing-setup).
+
 ## Related content
 
 - [Use Auditing to analyze audit logs and reports](auditing-analyze-audit-logs.md)
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

@@ -3,7 +3,7 @@ title: "Create SQL Server VM with PowerShell script"
 description: This article provides an end-to-end Azure PowerShell sample script to create SQL Server on Azure VMs.
 author: bluefooted
 ms.author: pamela
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: deployment

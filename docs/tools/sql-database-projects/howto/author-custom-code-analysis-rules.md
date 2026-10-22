@@ -1,8 +1,8 @@
 ---
 title: Author Custom Code Analysis Rules
 description: How to create custom code analysis rules with DacFx and ScriptDOM.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

@@ -13,7 +13,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Ties the materialized view to internal object names by object_id.
 
@@ -37,6 +37,6 @@ Requires VIEW DATABASE STATE permission.
 - [sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)](sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)](sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)](../../t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)
 - [T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

@@ -3,7 +3,7 @@ title: "Format JSON Output Automatically with AUTO Mode"
 description: "To format the output of the FOR JSON clause automatically based on the structure of the SELECT statement, specify the AUTO option."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 01/28/2026
 ms.service: sql
 ms.topic: how-to

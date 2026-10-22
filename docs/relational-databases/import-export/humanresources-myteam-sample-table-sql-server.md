@@ -1,8 +1,8 @@
 ---
 title: "HumanResources.myTeam Sample Table (SQL Server)"
 description: To run code examples for importing and exporting bulk data in SQL Server, you need to create a test table named myTeam in the HumanResources schema.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: data-movement
@@ -11,10 +11,10 @@ helpviewer_keywords:
   - "myTeam sample table [SQL Server]"
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
   Many of the code examples in [Importing and Exporting Bulk Data](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) require a special-purpose test table named **myTeam**. Before you can run the examples, you must create the **myTeam** table in the **HumanResources** schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 > [!NOTE]  

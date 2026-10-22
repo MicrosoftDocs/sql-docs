@@ -1,9 +1,9 @@
 ---
 title: Project References Overview
 description: Learn about dependencies between SQL projects and other projects, including database references and .NET project references.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 01/21/2026
 ms.service: sql
 ms.subservice: sql-database-projects

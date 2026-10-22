@@ -2,9 +2,9 @@
 title: Specify a Breakpoint Action
 titleSuffix: T-SQL debugger
 description: Learn now to specify a What Hit action - a custom task for the Transact-SQL debugger to perform when a breakpoint is hit and certain other conditions are satisfied.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

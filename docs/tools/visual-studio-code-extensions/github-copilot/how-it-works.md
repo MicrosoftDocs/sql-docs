@@ -2,8 +2,8 @@
 title: How GitHub Copilot Works with the MSSQL Extension
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Understand the architecture behind the GitHub Copilot integration with the MSSQL extension for Visual Studio Code, including chat, agent, inline completions, and embedded experiences.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

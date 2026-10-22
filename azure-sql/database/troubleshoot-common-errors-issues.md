@@ -4,7 +4,7 @@ titleSuffix: Azure SQL & SQL database in Fabric
 description: Provides steps to troubleshoot connection issues and resolve other connectivity issues in Azure SQL Database, Fabric SQL database, or Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: sureshka, mathoma, vanto
+ms.reviewer: sureshka, vanto
 ms.date: 04/28/2026
 ai-usage: ai-assisted
 ms.service: azure-sql

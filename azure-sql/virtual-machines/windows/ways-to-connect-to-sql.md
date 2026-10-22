@@ -3,7 +3,7 @@ title: "Connect to a SQL Server Virtual Machine "
 description: Learn how to connect to your SQL Server virtual machine on Azure. The scenarios differ depending on the networking configuration and the location of the client.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

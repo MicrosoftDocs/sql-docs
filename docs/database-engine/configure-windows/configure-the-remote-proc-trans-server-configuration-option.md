@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: remote proc trans"
 description: "Find out about the remote proc trans option. See how it helps protect the actions of a server-to-server procedure through an MS DTC transaction."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

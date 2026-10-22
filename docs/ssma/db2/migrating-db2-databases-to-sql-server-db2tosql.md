@@ -1,8 +1,8 @@
 ---
 title: "Migrate Db2 Databases to SQL Server (Db2ToSQL)"
 description: Use this recommended process to migrate Db2 databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball, subasak
 ms.date: 02/03/2026
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: ERROR_LINE (Transact-SQL)
 description: "ERROR_LINE (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: t-sql

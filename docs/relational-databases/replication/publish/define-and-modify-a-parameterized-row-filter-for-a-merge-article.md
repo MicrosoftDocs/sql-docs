@@ -1,8 +1,8 @@
 ---
 title: "Define & modify a parameterized row filter (Merge)"
 description: Learn how to define and modify a parameterized row filter for a Merge Publication article for SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

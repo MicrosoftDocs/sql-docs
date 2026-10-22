@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_scriptpublicationcustomprocs (Transact-SQL)"
 description: Scripts the custom INSERT, UPDATE, and DELETE procedures for all table articles in a publication in which the autogenerate custom procedure schema option is enabled.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

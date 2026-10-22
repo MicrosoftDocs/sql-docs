@@ -3,7 +3,7 @@ title: Install from a Command Prompt
 description: Run SQL Server command line setup to add Machine Learning Services with Python and R to a SQL Server Database Engine instance.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/13/2026
 ms.service: sql
 ms.subservice: machine-learning-services

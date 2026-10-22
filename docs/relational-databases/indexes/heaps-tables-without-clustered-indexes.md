@@ -1,8 +1,8 @@
 ---
 title: Heaps (Tables Without Clustered Indexes)
 description: Heaps are tables without clustered indexes in SQL Server. Learn when to use a heap, when to avoid one, and how to create, rebuild, and identify heaps.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/10/2026
 ms.service: sql
 ms.subservice: table-view-index

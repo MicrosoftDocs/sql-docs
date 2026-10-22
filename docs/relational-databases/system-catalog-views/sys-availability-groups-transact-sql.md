@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_groups (Transact-SQL)"
 description: sys.availability_groups returns a row for each availability group for which the local instance of SQL Server hosts an availability replica.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: system-objects

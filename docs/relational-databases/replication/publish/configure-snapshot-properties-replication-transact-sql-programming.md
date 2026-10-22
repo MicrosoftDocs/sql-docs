@@ -1,8 +1,8 @@
 ---
 title: "Configure snapshot properties (Replication SP)"
 description: Use replication stored procedures to configure snapshot properties for Snapshot or Transactional publications.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

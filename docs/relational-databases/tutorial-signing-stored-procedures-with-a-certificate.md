@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Signing Stored Procedures with a Certificate"
 description: "Tutorial: Signing Stored Procedures with a Certificate"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/23/2018"
 ms.service: sql
 ms.topic: quickstart

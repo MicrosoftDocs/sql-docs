@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_deletepeerrequesthistory (Transact-SQL)"
 description: "Deletes history related to a publication status request, which includes the request history (MSpeer_request) as well as the response history (MSpeer_response)."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

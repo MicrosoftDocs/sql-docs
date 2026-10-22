@@ -1,8 +1,8 @@
 ---
 title: "Choose an encryption algorithm"
 description: Use this guidance to choose an encryption algorithm to help secure an instance of SQL Server, which supports several common algorithms.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: vanto
 ms.date: 09/22/2023
 ms.service: sql
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "encryption [SQL Server], algorithms"
   - "security [SQL Server], encryption"
   - "algorithms [SQL Server encryption]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Choose an encryption algorithm
 
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Encryption is one of several defenses available to the administrator who wants to secure an instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)].
 

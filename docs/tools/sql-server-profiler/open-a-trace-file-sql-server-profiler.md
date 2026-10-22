@@ -1,8 +1,8 @@
 ---
 title: "Open a Trace File (SQL Server Profiler)"
 description: Learn how to open a file that contains event data that was captured during a trace. Get started opening trace files in SQL Server Profiler.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

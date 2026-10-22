@@ -1,10 +1,10 @@
 ---
-title: "Index JSON Data"
-description: "Learn how to optimize your queries over JSON documents using indexes."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: umajay, jovanpop, randolphwest
-ms.date: 07/23/2025
+title: Index JSON Data
+description: Learn how to optimize your queries over JSON documents using indexes.
+author: uc-msft
+ms.author: umajay
+ms.reviewer: jovanpop
+ms.date: 10/14/2026
 ms.service: sql
 ms.topic: how-to
 ms.custom:
@@ -18,20 +18,55 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
 
-You can optimize your queries over JSON documents using standard indexes.
+You can optimize your queries over JSON documents by using standard B-tree indexes. Database indexes improve the performance of filter and sort operations. Without indexes, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] has to perform a full table scan every time you query data.
 
-> [!NOTE]  
-> In [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], you can use the [CREATE JSON INDEX (Transact-SQL)](../../t-sql/statements/create-json-index-transact-sql.md) feature.
-
-Indexes work the same way on JSON data in **varchar**/**nvarchar** or the [native **json** data type](../../t-sql/data-types/json-data-type.md).
-
-Database indexes improve the performance of filter and sort operations. Without indexes, SQL Server has to perform a full table scan every time you query data.
+> [!TIP]  
+> Indexes work the same way on JSON data in **varchar**/**nvarchar** or the [native **json** data type](../../t-sql/data-types/json-data-type.md).
 
 [!INCLUDE [json-data-supportability](../../includes/json-data-supportability.md)]
 
+There are two ways to index JSON data, depending on how you store it:
+
+| Index type | Description |
+| --- | --- |
+| **JSON index** | When you store JSON in a [**json** column](../../t-sql/data-types/json-data-type.md), create a [JSON index](../../t-sql/statements/create-json-index-transact-sql.md) on the column. A single JSON index can optimize many queries that use functions such as `JSON_VALUE`, `JSON_PATH_EXISTS`, and `JSON_CONTAINS` to search values within the document. This approach is recommended for the **json** data type. |
+| **Computed column index** | When you store JSON as **varchar** or **nvarchar** text, or when you want to index a single JSON property as a strongly typed column, create a computed column with [JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md) and build a standard index on that column. |
+
+## Index a JSON column with a JSON index
+
+**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]
+
+You can create a [JSON index](../../t-sql/statements/create-json-index-transact-sql.md) directly on a **json** column. The JSON index indexes the paths within the JSON document, so a single index can optimize many searches over the document without a separate computed column for each property.
+
+> [!NOTE]  
+> JSON indexes aren't supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions.
+
+The following example creates a table with a **json** column and a JSON index on that column:
+
+```sql
+CREATE TABLE Orders
+(
+    OrderID INT IDENTITY PRIMARY KEY,
+    OrderDetails JSON NOT NULL
+);
+
+CREATE JSON INDEX IX_OrderDetails
+    ON Orders (OrderDetails);
+```
+
+With the JSON index in place, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] can use it to optimize queries that use `JSON_VALUE`, `JSON_PATH_EXISTS`, or `JSON_CONTAINS`. For example, the following query can use the JSON index to filter orders by customer name:
+
+```sql
+SELECT OrderID
+FROM Orders
+WHERE JSON_VALUE(OrderDetails, '$.Customer.Name') = N'Aaron Campbell';
+```
+
+For the full syntax, index options, and the complete list of supported predicates, see [CREATE JSON INDEX](../../t-sql/statements/create-json-index-transact-sql.md).
+
 ## Index JSON properties by using computed columns
 
-When you store JSON data in SQL Server, typically you want to filter or sort query results by one or more *properties* of the JSON documents.
+Use a computed column index when you store JSON as **varchar** or **nvarchar** text, or when you want to expose a single JSON property as a strongly typed column for filtering or sorting. Typically you want to filter or sort query results by one or more *properties* of the JSON documents.
 
 ### Example
 
@@ -51,13 +86,13 @@ GO
 UPDATE h
 SET [Info] =
 (
-    SELECT [Customer.Name] = concat(p.FirstName, N' ', p.LastName), 
-           [Customer.ID] = p.BusinessEntityID, 
-           [Customer.Type] = p.[PersonType], 
-           [Order.ID] = soh.SalesOrderID, 
-           [Order.Number] = soh.SalesOrderNumber, 
-           [Order.CreationData] = soh.OrderDate, 
-           [Order.TotalDue] = soh.TotalDue
+    SELECT concat(p.FirstName, N' ', p.LastName) AS [Customer.Name],
+            p.BusinessEntityID AS [Customer.ID],
+            p.[PersonType] AS [Customer.Type],
+            soh.SalesOrderID AS [Order.ID],
+            soh.SalesOrderNumber AS [Order.Number],
+            soh.OrderDate AS [Order.CreationDate],
+            soh.TotalDue AS [Order.TotalDue]
     FROM [Sales].SalesOrderHeader AS soh
         INNER JOIN [Sales].[Customer] AS c
             ON c.CustomerID = soh.CustomerID
@@ -138,9 +173,11 @@ CREATE INDEX idx_soh_json_CustomerName
 
 In this case, SQL Server doesn't have to read more data from the `SalesOrderHeader` table because everything it needs is included in the nonclustered JSON index. This type of index is a good way to combine JSON and column data in queries and to create optimal indexes for your workload.
 
-## JSON indexes are collation-aware indexes
+<a id="json-indexes-are-collation-aware-indexes"></a>
 
-An important feature of indexes over JSON data is that the indexes are collation-aware. The result of the `JSON_VALUE` function that you use when you create the computed column is a text value that inherits its collation from the input expression. Therefore, values in the index are ordered using the collation rules defined in the source columns.
+## Computed column indexes are collation-aware
+
+An important feature of computed column indexes over JSON data is that they're collation-aware. The result of the `JSON_VALUE` function that you use when you create the computed column is a text value that inherits its collation from the input expression. Therefore, values in the index are ordered using the collation rules defined in the source columns.
 
 To demonstrate that the indexes are collation-aware, the following example creates a simple collection table with a primary key and JSON content.
 
@@ -157,21 +194,20 @@ The preceding command specifies the Serbian Cyrillic collation for the `json` co
 
 ```sql
 INSERT INTO JsonCollection
-VALUES
-    (N'{"name":"Иво","surname":"Андрић"}'),
-    (N'{"name":"Андрија","surname":"Герић"}'),
-    (N'{"name":"Владе","surname":"Дивац"}'),
-    (N'{"name":"Новак","surname":"Ђоковић"}'),
-    (N'{"name":"Предраг","surname":"Стојаковић"}'),
-    (N'{"name":"Михајло","surname":"Пупин"}'),
-    (N'{"name":"Борислав","surname":"Станковић"}'),
-    (N'{"name":"Владимир","surname":"Грбић"}'),
-    (N'{"name":"Жарко","surname":"Паспаљ"}'),
-    (N'{"name":"Дејан","surname":"Бодирога"}'),
-    (N'{"name":"Ђорђе","surname":"Вајферт"}'),
-    (N'{"name":"Горан","surname":"Бреговић"}'),
-    (N'{"name":"Милутин","surname":"Миланковић"}'),
-    (N'{"name":"Никола","surname":"Тесла"}');
+VALUES (N'{"name":"Иво","surname":"Андрић"}'),
+       (N'{"name":"Андрија","surname":"Герић"}'),
+       (N'{"name":"Владе","surname":"Дивац"}'),
+       (N'{"name":"Новак","surname":"Ђоковић"}'),
+       (N'{"name":"Предраг","surname":"Стојаковић"}'),
+       (N'{"name":"Михајло","surname":"Пупин"}'),
+       (N'{"name":"Борислав","surname":"Станковић"}'),
+       (N'{"name":"Владимир","surname":"Грбић"}'),
+       (N'{"name":"Жарко","surname":"Паспаљ"}'),
+       (N'{"name":"Дејан","surname":"Бодирога"}'),
+       (N'{"name":"Ђорђе","surname":"Вајферт"}'),
+       (N'{"name":"Горан","surname":"Бреговић"}'),
+       (N'{"name":"Милутин","surname":"Миланковић"}'),
+       (N'{"name":"Никола","surname":"Тесла"}');
 GO
 
 ALTER TABLE JsonCollection

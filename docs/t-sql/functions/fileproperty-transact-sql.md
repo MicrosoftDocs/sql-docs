@@ -1,9 +1,9 @@
 ---
 title: "FILEPROPERTY (Transact-SQL)"
 description: FILEPROPERTY returns the specified file name property value when a file name in the current database and a property name are specified.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: t-sql

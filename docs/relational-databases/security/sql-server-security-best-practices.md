@@ -3,7 +3,7 @@ title: SQL Server Security Best Practices
 description: This article provides general guidance for securing SQL Server, Azure SQL Database, and Azure SQL Managed Instance, as well as SQL Server on Azure virtual machines.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: security
@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 # SQL Server security best practices
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides information about best practices and guidelines that help establish security for SQL Server. For a comprehensive review of SQL Server security features, see [Securing SQL Server](securing-sql-server.md).
 

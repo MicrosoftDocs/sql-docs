@@ -1,8 +1,8 @@
 ---
 title: SQL Server Migration Assistant for Oracle (OracleToSQL)
 description: Learn about SSMA for Oracle and follow step-by-step instructions for migrating Oracle databases to SQL Server and Azure SQL.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball
 ms.date: 04/20/2026
 ms.service: sql

@@ -3,7 +3,7 @@ title: Create Indexed Views
 description: Creating a unique clustered index on a view improves query performance, because the view is stored in the same way as a clustered index is stored.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/14/2025
 ms.service: sql
 ms.subservice: table-view-index

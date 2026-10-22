@@ -2,8 +2,8 @@
 title: "sys.database_connection_stats"
 titleSuffix: Azure SQL Database
 description: sys.database_connection_stats (Azure SQL Database)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: "04/18/2022"
 ms.service: azure-sql-database
 ms.topic: "reference"

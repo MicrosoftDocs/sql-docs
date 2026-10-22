@@ -1,8 +1,8 @@
 ---
 title: MSSQLSERVER_1785
 description: "MSSQLSERVER_1785"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: vencher, tejasaks, docast
 ms.date: 12/25/2020
 ms.service: sql

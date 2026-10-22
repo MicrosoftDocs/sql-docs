@@ -1,7 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/02/2026
 ms.topic: include
 ms.custom:

@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Replication"
 description: Learn about replication in SQL Server, technologies for copying and distributing data and database objects among databases and synchronizing between databases.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: replication

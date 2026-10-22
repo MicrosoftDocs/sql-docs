@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, randolphwest
+ms.reviewer: bonova, urmilano, wiassaf
 ms.date: 04/17/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

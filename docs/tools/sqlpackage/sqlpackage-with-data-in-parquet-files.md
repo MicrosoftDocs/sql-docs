@@ -1,8 +1,8 @@
 ---
 title: "SqlPackage with Data in Parquet Files (Preview)"
 description: Tips for using SqlPackage with data stored in Azure Blob Storage
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier, llali
 ms.date: 07/30/2025
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: "Conversions from SQL to C"
 description: "datetime Data Type Conversions from SQL to C"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "conversions [ODBC], SQL to C"
 ---
 # datetime Data Type Conversions from SQL to C
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The following table lists issues to consider when you convert from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time types to C types.  
   

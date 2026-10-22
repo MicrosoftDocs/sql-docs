@@ -2,8 +2,8 @@
 title: Replay Requirements
 titleSuffix: SQL Server Profiler
 description: Learn which event classes and data columns to capture in a trace so that you can replay trace data with SQL Server Profiler or the Distributed Replay Utility.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

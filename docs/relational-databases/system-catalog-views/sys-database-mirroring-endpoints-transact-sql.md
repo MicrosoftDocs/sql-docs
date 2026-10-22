@@ -1,8 +1,8 @@
 ---
 title: "sys.database_mirroring_endpoints (Transact-SQL)"
 description: sys.database_mirroring_endpoints contains one row for the database mirroring endpoint of an instance of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

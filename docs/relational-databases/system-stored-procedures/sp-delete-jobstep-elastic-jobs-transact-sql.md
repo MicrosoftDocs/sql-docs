@@ -3,7 +3,7 @@ title: "jobs.sp_delete_jobstep (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_delete_jobstep removes an existing job step from an existing job created for the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.subservice: system-objects

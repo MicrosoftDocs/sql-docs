@@ -1,8 +1,8 @@
 ---
 title: Virtualize external data
 description: This page details the steps for using the Create External Table wizard for ODBC Data sources
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: hudequei
 ms.date: 12/13/2019
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: System-Versioned Temporal Tables with Memory-Optimized Tables
 description: Memory-optimized temporal tables provide high throughput, lock-free concurrency, and the ability to store large amounts of history data.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

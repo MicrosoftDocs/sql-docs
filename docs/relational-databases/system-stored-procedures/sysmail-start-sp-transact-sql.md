@@ -1,9 +1,9 @@
 ---
 title: "sysmail_start_sp (Transact-SQL)"
 description: "Starts Database Mail by starting the Service Broker objects that the external program uses."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

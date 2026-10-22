@@ -1,8 +1,8 @@
 ---
 title: "Fail over an availability group"
 description: Describes how to perform a planned/forced manual failover of an Always On availability group with SQL Server Management Studio, Transact-SQL, or SQL PowerShell.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

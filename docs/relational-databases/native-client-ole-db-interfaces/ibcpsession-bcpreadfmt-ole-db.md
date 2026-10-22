@@ -1,8 +1,8 @@
 ---
 title: "IBCPSession::BCPReadFmt (Native Client OLE DB provider)"
 description: "IBCPSession::BCPReadFmt (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -13,7 +13,7 @@ apiname: "IBCPSession::BCPReadFmt (OLE DB)"
 apitype: "COM"
 ---
 # IBCPSession::BCPReadFmt (Native Client OLE DB Provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT]
 > [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]

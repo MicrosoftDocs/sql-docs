@@ -1,8 +1,9 @@
 ---
 title: Prepare Machine Key for Contained Availability Groups on Linux and Containers
 description: Learn how to prepare a machine key in a contained availability group, for SQL Server on Linux and containers.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 07/03/2025
 ms.service: sql
 ms.subservice: linux
@@ -78,6 +79,8 @@ The following instructions show an example of generating a new machine key in `b
    AQAAAAAAAAAAAAAA//////////////////////////////////////////8=
    ```
 
+   The Base64 output varies because `openssl rand` generates random data.
+
 1. Inside the container, verify the key. First, connect to an interactive terminal in the container.
 
    ```bash
@@ -87,7 +90,7 @@ The following instructions show an example of generating a new machine key in `b
    Then, verify the key.
 
    ```bash
-   cat machine-key | base64
+   cat /var/opt/mssql/secrets/machine-key | base64
    ```
 
    Here's the sample output:
@@ -95,6 +98,8 @@ The following instructions show an example of generating a new machine key in `b
    ```output
    AQAAAAAAAAAAAAAA//////////////////////////////////////////8=
    ```
+
+   Confirm that the Base64 values from the host and container match.
 
 You can use the same steps across all the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container deployments that you intend to use as replicas in your contained AG. You must use the same machine key, and don't generate different machine keys for each of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] container deployments.
 

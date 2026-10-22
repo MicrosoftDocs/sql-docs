@@ -3,7 +3,7 @@ title: Restart an instance with a manual failover
 description: Learn how to restart an instance by manually failing over primary and secondary replicas of Azure SQL Managed Instance by using PowerShell, the Azure CLI or REST API. 
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/27/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

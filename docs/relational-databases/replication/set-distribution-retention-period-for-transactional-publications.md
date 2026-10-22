@@ -1,8 +1,8 @@
 ---
 title: "Set Distribution retention period"
 description: Set the retention period for data within the Distribution Database in SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

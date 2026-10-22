@@ -3,7 +3,7 @@ title: Connect to and Query Azure SQL Database Using Python and the mssql-python
 description: Learn how to connect to a database in Azure SQL Database and query data using Python and the mssql-python driver.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: rotabor, mathoma, dlevy
+ms.reviewer: rotabor, dlevy
 ms.date: 01/29/2026
 ms.service: azure-sql-database
 ms.subservice: security

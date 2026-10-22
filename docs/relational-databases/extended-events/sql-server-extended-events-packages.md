@@ -3,7 +3,7 @@ title: "Extended Events packages"
 description: A package is a container for Extended Events objects. This article describes the objects a package can contain.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: xevents

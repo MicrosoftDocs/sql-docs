@@ -1,8 +1,8 @@
 ---
 title: "Modify an Existing Trace (Transact-SQL)"
 description: "Modify an Existing Trace (Transact-SQL)"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.service: sql
 ms.topic: language-reference

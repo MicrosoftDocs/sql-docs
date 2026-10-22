@@ -3,7 +3,7 @@ title: "sys.server_resource_stats (Azure SQL Managed Instance)"
 description: sys.server_resource_stats returns CPU usage, IO, and storage data for Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, urmilano, wiassaf
+ms.reviewer: urmilano, wiassaf
 ms.date: "03/09/2022"
 ms.service: azure-sql-database
 ms.topic: "reference"

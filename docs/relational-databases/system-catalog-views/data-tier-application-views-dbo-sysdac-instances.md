@@ -1,8 +1,8 @@
 ---
 title: "dbo.sysdac_instances (Transact-SQL)"
 description: Displays one row for each data-tier application (DAC) instance deployed to an instance of the Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: system-objects

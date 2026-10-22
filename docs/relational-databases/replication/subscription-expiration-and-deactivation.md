@@ -1,8 +1,8 @@
 ---
 title: Subscription Expiration and Deactivation
 description: Subscription expiration in SQL Server replication happens when Subscribers don't sync in time. Explore retention periods, cleanup jobs, and reinitialization steps.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

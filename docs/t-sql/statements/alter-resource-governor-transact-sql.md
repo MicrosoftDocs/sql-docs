@@ -1,8 +1,8 @@
 ---
 title: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
 description: ALTER RESOURCE GOVERNOR (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.reviewer: dfurman
 ms.date: 02/17/2025
 ms.service: sql

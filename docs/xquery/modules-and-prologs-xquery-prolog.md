@@ -1,8 +1,8 @@
 ---
 title: "XQuery Prolog"
 description: Learn about the XQuery prolog that contains a series of declarations and definitions which create the required environment for query processing.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: xml

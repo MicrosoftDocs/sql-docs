@@ -1,9 +1,9 @@
 ---
 title: "Atomization (XQuery)"
 description: Learn about the process of atomization in XQuery in which the typed values of an item are extracted.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "modifying default schemas"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # ALTER USER (Transact-SQL)
 
@@ -56,9 +56,6 @@ Renames a database user or changes its default schema.
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -267,9 +264,6 @@ GO
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -558,9 +552,6 @@ GO
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -860,9 +851,6 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup;
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 &nbsp;
@@ -969,148 +957,6 @@ GO
 ### B. Change the default schema of a user
 
 The following example changes the default schema of the user `Mary51` to `Purchasing`.
-
-```sql
-ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;
-GO
-```
-
-## Related content
-
-- [CREATE USER (Transact-SQL)](create-user-transact-sql.md)
-- [DROP USER (Transact-SQL)](drop-user-transact-sql.md)
-- [Contained Databases](../../relational-databases/databases/contained-databases.md)
-- [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-
-::: moniker-end
-
-::: moniker range=">=aps-pdw-2016"
-
-:::row:::
-    :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Microsoft Fabric Data Warehouse](alter-user-transact-sql.md?view=fabric&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL database in Microsoft Fabric](alter-user-transact-sql.md?view=fabric-sqldb&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        **_\* Analytics<br />Platform System (PDW) \*_**
-    :::column-end:::
-:::row-end:::
-
-&nbsp;
-
-## Analytics Platform System
-
-## Syntax
-
-```syntaxsql
--- Syntax for Analytics Platform System
-
-ALTER USER user_name
- WITH <set_item> [ ,...n ]
-
-<set_item> ::=
- NAME = new_user_name
- | LOGIN = login_name
- | DEFAULT_SCHEMA = schema_name
-[;]
-```
-
-## Arguments
-
-#### *user_name*
-
- Specifies the name by which the user is identified inside this database.
-
-#### LOGIN = _login_name_
-
- Remaps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.
-
- If the ALTER USER statement is the only statement in a SQL batch, Azure SQL Database supports the `WITH LOGIN` clause. If the ALTER USER statement isn't the only statement in a SQL batch or is executed in dynamic SQL, the `WITH LOGIN` clause isn't supported.
-
-#### NAME = _new_user_name_
-
- Specifies the new name for this user. *new_user_name* must not already exist in the current database.
-
-#### DEFAULT_SCHEMA = { *schema_name* | NULL }
-
- Specifies the first schema that will be searched by the server when it resolves the names of objects for this user. Setting the default schema to NULL removes a default schema from a Windows group. The NULL option can't be used with a Windows user.
-
-## Remarks
-
- The default schema will be the first schema that will be searched by the server when it resolves the names of objects for this database user. Unless otherwise specified, the default schema will be the owner of objects created by this database user.
-
- If the user has a default schema, that default schema is used. If the user doesn't have a default schema, but the user is a member of a group that has a default schema, the default schema of the group will be used. If the user doesn't have a default schema, and is a member of more than one group, the default schema for the user will be that of the Windows group with the lowest principal_id and an explicitly set default schema. If no default schema can be determined for a user, the `dbo` schema is used.
-
- DEFAULT_SCHEMA can be set to a schema that doesn't currently occur in the database. Therefore, you can assign a DEFAULT_SCHEMA to a user before that schema is created.
-
- DEFAULT_SCHEMA can't be specified for a user who is mapped to a certificate, or an asymmetric key.
-
-> [!IMPORTANT]
-> The value of DEFAULT_SCHEMA is ignored if the user is a member of the **sysadmin** fixed server role. All members of the **sysadmin** fixed server role have a default schema of `dbo`.
-
- The `WITH LOGIN` clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The `WITH LOGIN` clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.
-
- The name of the user will be automatically renamed to the login name if the following conditions are true.
-
-- No new name was specified.
-
-- The current name differs from the login name.
-
- Otherwise, the user won't be renamed unless the caller additionally invokes the `NAME` clause.
-
-The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, a certificate, or an asymmetric key can't contain the backslash character (`\`).
-
-> [!NOTE]  
-> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
-
-## Security
-
-> [!NOTE]
-> A user who has **ALTER ANY USER** permission can change the default schema of any user. A user who has an altered schema might unknowingly select data from the wrong table or execute code from the wrong schema.
-
-### Permissions
-
- To change the name of a user requires the **ALTER ANY USER** permission.
-
- To change the target login of a user requires the **CONTROL** permission on the database.
-
- To change the user name of a user having **CONTROL** permission on the database requires the **CONTROL** permission on the database.
-
- To change the default schema or language requires **ALTER** permission on the user. Users can change their own default schema or language.
-
-## Examples
-
-All examples are executed in a user database.
-
-<a id="a-changing-the-name-of-a-database-user"></a>
-
-### A. Change the name of a database user
-
- The following example changes the name of the database user `Mary5` to `Mary51`.
-
-```sql
-ALTER USER Mary5 WITH NAME = Mary51;
-GO
-```
-
-<a id="b-changing-the-default-schema-of-a-user"></a>
-
-### B. Change the default schema of a user
- The following example changes the default schema of the user `Mary51` to `Purchasing`.
 
 ```sql
 ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;

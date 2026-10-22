@@ -1,9 +1,9 @@
 ---
 title: "Backup overview (SQL Server)"
 description: Learn about the SQL Server backup component, including backup types and restrictions, and also backup devices and backup media.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 10/05/2023
 ms.service: sql
 ms.subservice: backup-restore

@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: install

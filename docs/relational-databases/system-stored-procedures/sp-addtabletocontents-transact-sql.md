@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addtabletocontents (Transact-SQL)"
 description: Inserts references into the merge tracking tables for any rows in a source table that aren't currently included in the tracking tables.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Uses of ODBC Table-Valued Parameters"
 description: "Uses of ODBC Table-Valued Parameters"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "ODBC, table-valued parameters"
 ---
 # Uses of ODBC Table-Valued Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic discusses the primary user scenarios for using table-valued parameters with ODBC:  
   

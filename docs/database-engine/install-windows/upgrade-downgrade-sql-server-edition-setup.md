@@ -1,8 +1,8 @@
 ---
 title: In-place change of SQL Server edition
 description: SQL Server Setup supports edition upgrade among various editions of SQL Server. Before you begin an edition upgrade, review the resources in this article. You can also perform an edition downgrade, which is also described in this article.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.reviewer: jopilov
 ms.service: sql

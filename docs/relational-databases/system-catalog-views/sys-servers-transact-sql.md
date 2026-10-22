@@ -1,8 +1,8 @@
 ---
 title: "sys.servers (Transact-SQL)"
 description: sys.servers contains a row per linked or remote server registered, and a row for the local server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

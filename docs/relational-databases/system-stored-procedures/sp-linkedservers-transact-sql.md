@@ -1,9 +1,9 @@
 ---
 title: "sp_linkedservers (Transact-SQL)"
 description: sp_linkedservers returns the list of linked servers defined in the local server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

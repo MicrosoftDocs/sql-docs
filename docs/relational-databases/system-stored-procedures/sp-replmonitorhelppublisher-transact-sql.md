@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replmonitorhelppublisher (Transact-SQL)"
 description: sp_replmonitorhelppublisher returns current status information for one or more Publishers associated with a Distributor.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

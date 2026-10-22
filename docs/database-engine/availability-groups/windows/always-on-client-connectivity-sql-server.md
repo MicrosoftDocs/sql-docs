@@ -1,9 +1,9 @@
 ---
 title: "Driver and client connectivity support for availability groups"
 description: "This topic describes considerations for client connectivity to Always On availability groups, including prerequisites, restrictions, and recommendations for client configurations and settings. "
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 07/29/2022
 ms.service: sql
 ms.subservice: availability-groups

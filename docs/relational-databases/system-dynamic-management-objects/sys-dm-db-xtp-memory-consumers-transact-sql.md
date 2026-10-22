@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_memory_consumers (Transact-SQL)"
 description: dm_db_xtp_memory_consumers returns data on database-level memory consumers that the database engine uses for In-Memory OLTP.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/05/2023
 ms.service: sql
 ms.subservice: system-objects

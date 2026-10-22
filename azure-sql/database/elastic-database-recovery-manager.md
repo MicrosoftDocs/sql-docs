@@ -3,7 +3,7 @@ title: Recovery Manager to Fix Shard Map Problems
 description: Learn how to use the RecoveryManager class to solve problems with shard maps.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scoriani, mathoma
+ms.reviewer: scoriani
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

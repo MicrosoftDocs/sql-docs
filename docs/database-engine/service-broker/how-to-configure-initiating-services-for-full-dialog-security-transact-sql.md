@@ -1,9 +1,9 @@
 ---
 title: "How To: Configure Initiating Services for Full Dialog Security (Transact-SQL)"
 description: Learn how to configure initiating services in Service Broker for full dialog security.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

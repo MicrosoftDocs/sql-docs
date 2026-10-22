@@ -3,7 +3,7 @@ title: HADR configuration best practices
 description: "Learn about the supported cluster configurations when you configure high availability and disaster recovery (HADR) for SQL Server on Azure Virtual Machines, such as supported quorums or connection routing options."
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

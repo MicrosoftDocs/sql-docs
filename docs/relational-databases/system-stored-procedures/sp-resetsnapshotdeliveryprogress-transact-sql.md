@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_resetsnapshotdeliveryprogress (Transact-SQL)"
 description: sp_resetsnapshotdeliveryprogress resets the snapshot delivery process for a pull subscription so that snapshot delivery can be restarted.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,9 @@
 ---
 title: Security and Permissions Guide for SQL Server on Linux
 description: Learn about the required service accounts, and file system permissions for SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
@@ -45,7 +46,7 @@ drwxr-xr-x 3 root  root  4096 May 14 17:17 ../
 drwxr-xr-x 5 mssql mssql 4096 May 14 17:17 .system/
 drwxr-xr-x 2 mssql mssql 4096 May 14 17:17 data/
 drwxr-xr-x 3 mssql mssql 4096 Sep 16 22:57 log/
--rw-r--r-- 1 root  root    85 May 14 17:17 mssql.conf
+-rw-rw---- 1 mssql mssql   28 Sep 14 17:17 mssql.conf
 drwxrwxr-x 2 mssql mssql 4096 May 14 17:17 secrets/
 drwxr-xr-x 2 mssql mssql 4096 May 14 17:17 security/
 ```
@@ -67,8 +68,8 @@ For more information on how to change user data location, log file location, or 
 
 | Agent | Runs as (Linux) | Connects to | Required database roles/rights |
 | --- | --- | --- | --- |
-| Snapshot Agent | `mssql` (via SQL Agent job) | Distributor | **db_owner** in distribution database; read/write on snapshot folder |
-| Log Reader Agent | `mssql` | Publisher & Distributor | **db_owner** in publication database and distribution. Might need **sysadmin** when you use [initialize from backup](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md) |
+| Snapshot Agent | `mssql` (via SQL Server Agent job) | Distributor | **db_owner** in distribution database; read/write on snapshot folder |
+| Log Reader Agent | `mssql` | Publisher & Distributor | **db_owner** in publication database and distribution database. Might need **sysadmin** when you use [initialize from backup](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md) |
 | Distribution Agent (push) | `mssql` | Distributor to Subscriber | **db_owner** in distribution; **db_owner** in subscription database. Read snapshot folder. PAL member. |
 | Distribution Agent (pull) | `mssql` (on Subscriber) | Subscriber to Distributor<br />Distributor to Subscriber | Same as Distribution Agent (push), but snapshot share permissions apply on Subscriber host |
 | Merge Agent | `mssql` | Publisher, Distributor, Subscriber | **db_owner** in distribution. PAL member. Read snapshot folder. Read/write in publication & subscription databases. |

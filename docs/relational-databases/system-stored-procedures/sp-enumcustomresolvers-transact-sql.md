@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_enumcustomresolvers (Transact-SQL)"
 description: sp_enumcustomresolvers returns a list of all available business logic handlers and custom resolvers registered at the Distributor.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

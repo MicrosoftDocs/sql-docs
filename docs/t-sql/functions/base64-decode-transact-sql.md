@@ -3,7 +3,7 @@ title: "BASE64_DECODE (Transact-SQL)"
 description: "BASE64_DECODE converts a Base64 encoded varchar into the corresponding varbinary."
 author: abledenthusiast
 ms.author: aaronpitman
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 01/13/2026
 ms.service: sql
 ms.subservice: t-sql

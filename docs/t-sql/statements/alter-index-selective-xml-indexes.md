@@ -1,8 +1,8 @@
 ---
 title: "ALTER INDEX (Selective XML Indexes)"
 description: ALTER INDEX (Selective XML Indexes)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "05/01/2017"
 ms.service: sql
 ms.subservice: t-sql

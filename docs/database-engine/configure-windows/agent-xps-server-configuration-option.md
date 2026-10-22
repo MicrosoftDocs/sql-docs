@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: Agent XPs"
 description: Discover how to use the Agent XPs option to enable SQL Server Agent extended stored procedures. View an example that uses this option.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

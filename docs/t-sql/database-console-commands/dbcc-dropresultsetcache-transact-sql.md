@@ -3,19 +3,19 @@ title: DBCC DROPRESULTSETCACHE (Transact-SQL)
 description: DBCC DROPRESULTSETCACHE removes all result set cache entries from an Azure Synapse Analytics database.
 author: mstehrani
 ms.author: emtehran
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: "= azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # DBCC DROPRESULTSETCACHE (Transact-SQL)
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Removes all result set cache entries from an [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] database.
 
@@ -33,7 +33,7 @@ DBCC DROPRESULTSETCACHE
 
 ## Permissions
 
-Requires membership in the DB_OWNER fixed server role.
+Requires membership in the DB_OWNER fixed database role.
 
 ## Remarks
 

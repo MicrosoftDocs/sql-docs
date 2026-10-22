@@ -1,8 +1,8 @@
 ---
 title: "SQLColumns"
 description: "SQLColumns"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -12,7 +12,7 @@ helpviewer_keywords:
 apitype: "DLLExport"
 ---
 # SQLColumns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   **SQLColumns** returns SQL_SUCCESS whether or not values exist for the *CatalogName*, *TableName*, or *ColumnName* parameters. **SQLFetch** returns SQL_NO_DATA when invalid values are used in these parameters.  
   

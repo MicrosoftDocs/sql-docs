@@ -1,8 +1,8 @@
 ---
 title: sys.fulltext_index_fragments (Transact-SQL)
 description: sys.fulltext_index_fragments contains a row for each full-text index fragment in every table that contains a full-text index.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

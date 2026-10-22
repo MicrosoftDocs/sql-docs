@@ -3,7 +3,7 @@ title: Configure Column Encryption Using Always Encrypted Wizard in SSMS
 description: Learn how to configure Always Encrypted for database columns by using the Always Encrypted Wizard in SSMS 21 and later versions.
 author: pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, maghan, randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: security

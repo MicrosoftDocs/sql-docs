@@ -1,8 +1,8 @@
 ---
 title: "cursor (Transact-SQL)"
 description: "cursor (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "07/23/2017"
 ms.service: sql
 ms.subservice: t-sql

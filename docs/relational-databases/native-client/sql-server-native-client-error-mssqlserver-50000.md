@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_50000"
 description: "SQL Server Native Client Error MSSQLSERVER_50000"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "50000 [SQL Server Native Client setup error]"
 ---
 # SQL Server Native Client Error MSSQLSERVER_50000
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT]
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]

@@ -4,7 +4,7 @@ titleSuffix: SQL Server migration in Azure Arc
 description: SQL Server migration in Azure Arc to Azure SQL Managed Instance in the Azure portal. Learn how to migrate your instance to Azure.
 author: danimir
 ms.author: danil
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 06/25/2026
 ms.topic: how-to
 ms.collection: ce-skilling-ai-copilot

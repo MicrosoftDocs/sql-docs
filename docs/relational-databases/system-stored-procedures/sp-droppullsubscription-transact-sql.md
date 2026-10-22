@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_droppullsubscription (Transact-SQL)"
 description: sp_droppullsubscription drops a subscription at the current database of the Subscriber.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

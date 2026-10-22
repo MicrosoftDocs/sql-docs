@@ -1,9 +1,9 @@
 ---
 title: Contracts
 description: "A contract defines which message types an application uses to accomplish a particular task."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

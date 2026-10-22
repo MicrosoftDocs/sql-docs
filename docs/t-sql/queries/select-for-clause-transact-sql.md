@@ -3,7 +3,7 @@ title: "FOR Clause (Transact-SQL)"
 description: "Use the FOR clause to specify options for query results."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/02/2026
 ms.service: sql
 ms.subservice: t-sql

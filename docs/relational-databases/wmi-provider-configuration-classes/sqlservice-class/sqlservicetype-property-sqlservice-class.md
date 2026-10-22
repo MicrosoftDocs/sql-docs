@@ -1,8 +1,8 @@
 ---
 title: "SqlServiceType Property (SqlService)"
 description: "SqlServiceType Property (SqlService Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: wmi

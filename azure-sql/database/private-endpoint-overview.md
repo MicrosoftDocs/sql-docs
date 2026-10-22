@@ -1,11 +1,11 @@
 ---
 title: Azure Private Link
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: Overview of private endpoint feature.
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 07/29/2026
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: pivanho, vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: overview
@@ -13,11 +13,12 @@ ms.custom:
   - sqldbrb=1
   - fasttrack-edit
   - sfi-image-nochange
+monikerRange: "=azuresql || =azuresql-db"
 ---
 
-# Azure Private Link for Azure SQL Database and Azure Synapse Analytics
+# Azure Private Link for Azure SQL Database
 
-[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > - [Azure SQL Database](private-endpoint-overview.md?view=azuresql-db&preserve-view=true)
@@ -26,7 +27,7 @@ ms.custom:
 [Azure Private Link](/azure/private-link/private-link-overview) allows you to connect to various PaaS services in Azure via a **private endpoint**. For a list of PaaS services that support Private Link functionality, go to the [Private Link Documentation](/azure/private-link/availability) page. A private endpoint is a private IP address within a specific [VNet](/azure/virtual-network/virtual-networks-overview) and subnet.
 
 > [!IMPORTANT]  
-> This article applies to both Azure SQL Database and [dedicated SQL pool (formerly SQL DW)](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) in Azure Synapse Analytics. These settings apply to all SQL Database and dedicated SQL pool (formerly SQL DW) databases associated with the server. For simplicity, the term 'database' refers to both databases in Azure SQL Database and Azure Synapse Analytics. Likewise, any references to 'server' is referring to the [logical server](logical-servers.md) that hosts Azure SQL Database and dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics. This article does *not* apply to Azure SQL Managed Instance or dedicated SQL pools in Azure Synapse Analytics workspaces.
+> This article applies to Azure SQL Database. These settings apply to all databases associated with the [logical server](logical-servers.md). This article doesn't apply to Azure SQL Managed Instance.
 >
 > Always use the fully qualified domain name (FQDN) of the server (`<server>.database.windows.net`) in connection strings for all client drivers and tools. Login attempts made directly to the private IP address or using the private link FQDN (`<server>.privatelink.database.windows.net`) fail. This behavior is by design because the private endpoint routes traffic to the SQL Gateway, which requires the correct FQDN to route logins successfully.
 
@@ -48,9 +49,7 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 1. Navigate to the server resource in the [Azure portal](https://portal.azure.com).
 
-1. Navigate to the private endpoint approval page:
-    - In the **SQL server** resource, under **Security**, select **Networking**. Select the **Private access** tab.
-    - In Synapse workspace, under **Security** in the resource menu, select **Private endpoint connections**.
+1. In the **SQL server** resource, under **Security**, select **Networking**. Select the **Private access** tab. 
 
 1. The page shows the following:
 
@@ -129,6 +128,8 @@ telnet 10.9.0.4 1433
 When Telnet connects successfully, it outputs a blank screen at the command window, as shown in the following image:
 
 :::image type="content" source="media/private-endpoint/telnet-result.png" alt-text="Diagram of the Telnet window with blank screen." lightbox="media/private-endpoint/telnet-result.png":::
+
+### Check connectivity by using PowerShell
 
 Use PowerShell command to check the connectivity:
 
@@ -209,9 +210,6 @@ If it isn't feasible to modify the firewall settings to allow outbound access on
 
 Existing private endpoints using **Default** connection policy will be using the Proxy connection policy with port 1433. The reason for doing this is to avoid any disruption to client traffic from reaching SQL Database due to requisite port ranges for redirection not being open.
 
-> [!NOTE]
-> For dedicated SQL pools, the connection policy when using private endpoints is always **Proxy**. Changing the setting won't affect dedicated SQL pools when using private endpoints.
-
 ## On-premises connectivity over private peering
 
 When customers connect to the public endpoint from on-premises machines, their IP address needs to be added to the IP-based firewall using a [Server-level firewall rule](firewall-create-server-level-portal-quickstart.md). While this model works well for allowing access to individual machines for dev or test workloads, it's difficult to manage in a production environment.
@@ -244,17 +242,13 @@ To establish connectivity from an on-premises environment to the database in SQL
 
 Consider [DNS configuration scenarios](/azure/private-link/private-endpoint-dns#dns-configuration-scenarios) as well, as the FQDN of the service can resolve to the public IP address.
 
-## Connect from Azure Synapse Analytics to Azure Storage using PolyBase and the COPY statement
-
-PolyBase and the COPY statement are commonly used to load data into Azure Synapse Analytics from Azure Storage accounts. If the Azure Storage account that you're loading data from limits access only to a set of virtual network subnets via Private Endpoints, Service Endpoints, or IP-based firewalls, the connectivity from PolyBase and the COPY statement to the account will break. For enabling both import and export scenarios with Azure Synapse Analytics connecting to Azure Storage that's secured to a virtual network, see [Impact of using virtual network service endpoints with Azure Storage](vnet-service-endpoint-rule-overview.md#impact-of-using-virtual-network-service-endpoints-with-azure-storage).
-
 ## Data exfiltration prevention
 
 Data exfiltration in Azure SQL Database is when a user, such as a database admin is able extract data from one system and move it another location or system outside the organization. For example, the user moves the data to a storage account owned by a non-Microsoft entity.
 
 Consider a scenario with a user running SQL Server Management Studio (SSMS) inside an Azure virtual machine connecting to a database in SQL Database. This database is in the West US data center. The following example shows how to limit access with public endpoints on SQL Database using network access controls.
 
-1. Disable all Azure service traffic to SQL Database via the public endpoint by setting Allow Azure Services to **OFF**. Ensure no IP addresses are allowed in the server and database level firewall rules. For more information, see [Azure SQL Database and Azure Synapse Analytics network access controls](network-access-controls-overview.md).
+1. Disable all Azure service traffic to SQL Database through the public endpoint by setting **Allow Azure Services** to **OFF**. Ensure that no IP addresses are allowed in the server and database level firewall rules. For more information, see [Azure SQL Database network access controls](network-access-controls-overview.md).
 1. Only allow traffic to the database in SQL Database using the Private IP address of the VM. For more information, see the articles on [Service Endpoint](vnet-service-endpoint-rule-overview.md) and [virtual network firewall rules](firewall-configure.md).
 1. On the Azure VM, narrow down the scope of outgoing connection by using [Network Security Groups (NSGs)](/azure/virtual-network/manage-network-security-group) and Service Tags as follows.
    - Specify an NSG rule to allow traffic for Service Tag = SQL.WestUs - only allowing connection to SQL Database in West US.
@@ -264,9 +258,13 @@ At the end of this setup, the Azure VM can connect only to a database in SQL Dat
 
 With Private Link, customers can now set up network access controls like NSGs to restrict access to the private endpoint. Individual Azure PaaS resources are then mapped to specific private endpoints. A malicious insider can only access the mapped PaaS resource (for example a database in SQL Database) and no other resource.
 
+## Private endpoints in Azure Synapse Analytics
+
+For information about private endpoints in Azure Synapse Analytics, see [Private endpoints](/azure/synapse-analytics/sql/private-endpoint-overview).
+
 ## Related content
 
 - [An overview of Azure SQL Database and SQL Managed Instance security capabilities](security-overview.md)
-- [Azure SQL Database and Azure Synapse Analytics connectivity architecture](connectivity-architecture.md)
+- [Azure SQL Database connectivity architecture](connectivity-architecture.md)
 - [Web app with private connectivity to Azure SQL database](/azure/architecture/example-scenario/private-web-app/private-web-app)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

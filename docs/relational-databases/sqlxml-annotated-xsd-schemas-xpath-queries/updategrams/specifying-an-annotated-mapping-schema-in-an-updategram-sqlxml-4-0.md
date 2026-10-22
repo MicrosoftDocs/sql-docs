@@ -1,8 +1,8 @@
 ---
 title: "Annotated mapping schemas for an Updategram (SQLXML)"
 description: Learn how an annotated XSD or XDR mapping schema that is specified in an SQLXML 4.0 updategram is used to process updates to a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

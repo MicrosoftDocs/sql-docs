@@ -1,8 +1,8 @@
 ---
 title: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)"
 description: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/21/2022
 ms.service: sql
 ms.subservice: t-sql

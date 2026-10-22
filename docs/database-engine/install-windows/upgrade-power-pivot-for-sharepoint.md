@@ -1,9 +1,9 @@
 ---
 title: Upgrade Power Pivot for SharePoint
 description: Upgrade Power Pivot for SharePoint
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 06/03/2025
 ms.service: sql
 ms.topic: upgrade-and-migration-article

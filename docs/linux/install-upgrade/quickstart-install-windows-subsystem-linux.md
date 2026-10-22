@@ -1,8 +1,9 @@
 ---
 title: "WSL 2: Install SQL Server on Windows Subsystem for Linux"
 description: This quickstart shows how to install SQL Server on Windows Subsystem for Linux (WSL 2) and then create and query a database with sqlcmd.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux
@@ -20,7 +21,7 @@ Use the Windows Subsystem for Linux (WSL) to run a Linux environment directly on
 
 ## SQL Server on WSL is for development use only
 
-SQL Server on WSL 2 is intended for development purposes only, and is **not** supported for production workloads. Run SQL Server in WSL environments on one of the [supported platforms](../sql-server-linux-release-notes-2022.md#supported-platforms), for the version of SQL Server you intend to run.
+SQL Server on WSL 2 is intended for development purposes only, and is **not** supported for production workloads. Run SQL Server in WSL environments on one of the [supported platforms](../sql-server-linux-release-notes.md#supported-platforms), for the version of SQL Server you intend to run.
 
 For any support related issues, you can [obtain support from Microsoft](/troubleshoot/sql/database-engine/install/windows/support-policy-sql-server#obtain-support-from-microsoft).
 
@@ -117,9 +118,9 @@ This message is shown once a day. To disable it please create the
 
 ### Install SQL Server
 
-After you sign in to the Ubuntu 22.04 Bash shell, follow the steps outlined in [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true&tabs=ubuntu2204#install-sql-server) to install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+After you sign in to the Ubuntu 22.04 Bash shell, follow the steps outlined in [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true#install-sql-server) to install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
-You should also [install the SQL Server command-line tools](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true&tabs=ubuntu2204#install-the-sql-server-command-line-tools).
+You should also [install the SQL Server command-line tools](quickstart-install-ubuntu.md?view=sql-server-ver16&preserve-view=true#install-the-sql-server-command-line-tools).
 
 ### Get IP address
 
@@ -169,7 +170,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<password>" \
 
 ### Add persistent storage with WSL for SQL Server containers
 
-Create data volumes as described in [Mount a host directory as data volume](../containers/configure.md?pivots=cs1-bash#mount-a-host-directory-as-data-volume).
+Create a data volume as described in [Use a named data volume](../containers/configure.md?pivots=cs1-bash#use-a-named-data-volume).
 
 For example, run the following command to set up a volume called `sql_volume` located at `/var/opt/mssql/`.
 

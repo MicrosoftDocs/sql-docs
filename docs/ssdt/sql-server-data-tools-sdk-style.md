@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Data Tools, SDK-Style (Preview)"
 description: SDK-style SQL projects in Visual Studio enable the next generation of SQL projects.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 12/03/2025
 ms.service: sql
 ms.subservice: ssdt

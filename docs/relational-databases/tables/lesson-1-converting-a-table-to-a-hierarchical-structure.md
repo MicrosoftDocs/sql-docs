@@ -1,9 +1,9 @@
 ---
 title: "Lesson 1: Converting a Table to a Hierarchical Structure"
 description: Learn how to convert a table to a hierarchical structure.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 01/05/2026
 ms.service: sql
 ms.subservice: table-view-index

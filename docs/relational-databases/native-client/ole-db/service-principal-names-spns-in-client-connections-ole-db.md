@@ -1,15 +1,15 @@
 ---
 title: "OLE DB Service Principal Names connections"
 description: "Service Principal Names (SPNs) in Client Connections (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]

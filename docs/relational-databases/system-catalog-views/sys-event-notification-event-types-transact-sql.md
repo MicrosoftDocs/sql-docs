@@ -1,8 +1,8 @@
 ---
 title: "sys.event_notification_event_types (Transact-SQL)"
 description: sys.event_notification_event_types (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: system-objects

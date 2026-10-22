@@ -1,9 +1,9 @@
 ---
 title: "sp_cycle_agent_errorlog (Transact-SQL)"
 description: Closes the current SQL Server Agent error log file, and cycles the SQL Server Agent error log extension numbers.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

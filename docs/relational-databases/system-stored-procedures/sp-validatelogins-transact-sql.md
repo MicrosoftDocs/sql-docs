@@ -3,7 +3,7 @@ title: "sp_validatelogins (Transact-SQL)"
 description: Reports information about Windows users and groups that are mapped to SQL Server principals but no longer exist in the Windows environment.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

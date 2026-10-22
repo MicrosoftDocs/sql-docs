@@ -1,8 +1,8 @@
 ---
 title: Parameter and rowset metadata (Native Client OLE DB provider)
 description: "Metadata - Parameter and Rowset in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"
@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "metadata [OLE DB]"
 ---
 # Metadata - Parameter and Rowset in SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic provides information about the following type and type members, related to the OLE DB date and time enhancements.  
   

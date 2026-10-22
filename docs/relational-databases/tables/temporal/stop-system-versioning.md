@@ -1,8 +1,8 @@
 ---
 title: Stop System-Versioning on a System-Versioned Temporal Table
 description: Learn how to stop versioning on your system-versioned temporal table either temporarily or permanently.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

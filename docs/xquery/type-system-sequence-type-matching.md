@@ -1,8 +1,8 @@
 ---
 title: "Sequence Type Matching"
 description: Learn how to match the sequence type returned by an XQuery expression with a specific type.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml

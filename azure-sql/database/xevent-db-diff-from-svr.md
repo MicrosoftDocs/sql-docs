@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance & SQL database in F
 description: Describes extended events (XEvents) in Azure SQL
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma, randolphwest, dfurman
+ms.reviewer: wiassaf, dfurman
 ms.date: 08/21/2026
 ai-usage: ai-assisted
 ms.service: azure-sql

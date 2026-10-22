@@ -1,8 +1,8 @@
 ---
 title: Global Settings (Output Window)
 description: Learn how to configure Output and Error List pane settings in SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

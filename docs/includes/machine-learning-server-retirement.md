@@ -1,7 +1,7 @@
 ---
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/06/2022
 ms.service: sql
 ms.subservice: machine-learning

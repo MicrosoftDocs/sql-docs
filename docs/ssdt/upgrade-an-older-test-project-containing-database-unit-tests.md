@@ -1,9 +1,9 @@
 ---
 title: Upgrade an Older Test Project Containing Database Unit Tests
 description: Find out how to upgrade Visual Studio 2010 test projects that contain database unit tests. See how to use SQL Server Data Tools with those projects.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

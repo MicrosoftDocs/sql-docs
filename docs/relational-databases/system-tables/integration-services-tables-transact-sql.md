@@ -1,9 +1,9 @@
 ---
 title: Integration Services Tables (Transact-SQL)
 description: Integration Services Tables (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: makromer, maghan
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: makromer
 ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: system-objects

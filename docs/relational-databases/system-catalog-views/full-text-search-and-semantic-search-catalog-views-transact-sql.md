@@ -1,8 +1,8 @@
 ---
 title: Full-Text Search and Semantic Search Catalog Views (Transact-SQL)
 description: Learn about the catalog views that provide information about full-text indexes and semantic indexes.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

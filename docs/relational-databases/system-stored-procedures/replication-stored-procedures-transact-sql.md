@@ -1,9 +1,9 @@
 ---
 title: "Replication Stored Procedures (Transact-SQL)"
 description: Reference guide for replication system stored procedures used to configure, manage, and monitor publications, subscriptions, and replication agents in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: replication

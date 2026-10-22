@@ -1,8 +1,8 @@
 ---
 title: "Managing Users, Roles, and Logins"
 description: "Managing Users, Roles, and Logins"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: 12/23/2024
 ms.service: sql
 ms.topic: "reference"

@@ -3,7 +3,7 @@ title: "SQL Server encryption"
 description: Use these resources to understand how SQL Server uses encryption to enhance security for your databases.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 09/16/2024
 ms.service: sql
 ms.subservice: security

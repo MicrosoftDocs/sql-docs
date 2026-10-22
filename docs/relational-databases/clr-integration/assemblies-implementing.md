@@ -1,8 +1,8 @@
 ---
 title: Implementing Assemblies
 description: Learn how to work with assemblies hosted on SQL Server, including how to create/modify assemblies, drop or enable/disable assemblies, and manage versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

@@ -3,7 +3,7 @@ title: Upgrade or Patch Peer-to-Peer Replicated Databases
 description: SQL Server supports upgrading Peer-to-Peer replicated databases from previous versions of SQL Server without stopping activity on other peers.
 author: asavioliMSFT
 ms.author: akbarf
-ms.reviewer: jopilov, mathoma
+ms.reviewer: jopilov
 ms.date: 12/12/2025
 ms.service: sql
 ms.subservice: install

@@ -3,7 +3,7 @@ title: "SET NOCOUNT (Transact-SQL)"
 description: Controls whether a message that shows the number of rows affected by a Transact-SQL statement or stored procedure is returned after the result set.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jopilov, randolphwest
+ms.reviewer: jopilov
 ms.date: 06/07/2024
 ms.service: sql
 ms.subservice: t-sql
@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # SET NOCOUNT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 Controls whether a message that shows the number of rows affected by a [!INCLUDE [tsql](../../includes/tsql-md.md)] statement or stored procedure is returned after the result set. This message is an extra result set.
 

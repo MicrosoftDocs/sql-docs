@@ -3,7 +3,7 @@ title: "SUSER_NAME (Transact-SQL)"
 description: "SUSER_NAME returns the login identification name of the user."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: Clustered and Nonclustered Indexes
 description: Learn about clustered and nonclustered indexes in SQL Server, Azure SQL, and SQL database in Fabric, and how the query optimizer uses them to make queries faster.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 09/11/2026
 ms.service: sql
 ms.subservice: table-view-index

@@ -1,8 +1,8 @@
 ---
 title: "Control Transaction Durability"
 description: Learn about delayed durable transactions. SQL Server transaction commits can be fully durable or delayed durable, also known as lazy commit.
-author: "MashaMSFT"
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: wiassaf
 ms.date: 11/11/2022
 ms.service: sql

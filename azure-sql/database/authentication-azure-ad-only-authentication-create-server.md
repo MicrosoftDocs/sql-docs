@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL authentication.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma
+ms.reviewer: wiassaf, vanto
 ms.date: 03/18/2026
 ms.service: azure-sql
 ms.subservice: security

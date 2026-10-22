@@ -1,9 +1,9 @@
 ---
 title: "View or change collection set schedules"
 description: View or change collection set schedules in SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

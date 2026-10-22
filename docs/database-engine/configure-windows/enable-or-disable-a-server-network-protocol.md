@@ -1,8 +1,8 @@
 ---
 title: Enable or Disable a Server Network Protocol
 description: Use SQL Server Configuration Manager or PowerShell to enable or disable a SQL Server server network protocol.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "SQL Server VSS Writer logging"
 description: This article describes the new text file-based logging feature of the VSS writer of SQL Server, which was initially introduced in SQL Server 2019.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 01/12/2023
 ms.service: sql
 ms.subservice: backup-restore

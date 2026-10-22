@@ -1,8 +1,8 @@
 ---
 title: Temporal Table Security
 description: Learn how to secure system-versioned temporal tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

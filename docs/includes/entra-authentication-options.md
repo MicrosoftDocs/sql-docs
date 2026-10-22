@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/25/2023
 ms.service: sql
 ms.topic: include

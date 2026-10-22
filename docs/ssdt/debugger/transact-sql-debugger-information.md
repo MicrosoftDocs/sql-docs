@@ -2,9 +2,9 @@
 title: Transact-SQL Debugger Information
 titleSuffix: T-SQL debugger
 description: Learn how to view Transact-SQL debugger output, which includes information such as call stacks, threads, breakpoints, code, variables, and commands.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

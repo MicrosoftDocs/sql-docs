@@ -3,7 +3,7 @@ title: "Connect to Sybase (SybaseToSQL)"
 description: Connect to the SAP ASE instance to begin migration using SSMA for Sybase (SAP ASE). Use the Connect to Sybase dialog box.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma

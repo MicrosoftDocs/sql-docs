@@ -3,7 +3,7 @@ title: Serverless compute tier billing
 description: Learn how billing works for the serverless compute tier in Azure SQL Database, including compute costs, minimum billing, and scenario examples.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendalv, moslake, mathoma, dfurman
+ms.reviewer: kendalv, moslake, dfurman
 ms.date: 07/28/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

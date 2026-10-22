@@ -1,9 +1,9 @@
 ---
 title: "sp_add_category (Transact-SQL)"
 description: "Adds the specified category of jobs, alerts, or operators to the server."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

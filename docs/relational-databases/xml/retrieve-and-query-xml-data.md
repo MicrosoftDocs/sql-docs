@@ -1,9 +1,9 @@
 ---
 title: "XML query options and preserved data"
 description: Learn about the query options that must be specified when querying XML data, and about the parts of XML instances that aren't preserved when stored in databases.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

@@ -1,9 +1,9 @@
 ---
 title: "sp_prepare (Transact-SQL)"
 description: Prepares a parameterized Transact-SQL statement and returns a statement handle for execution.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "sp_prepare"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_prepare (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
 Prepares a parameterized [!INCLUDE [tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution. `sp_prepare` is invoked by specifying `ID = 11` in a tabular data stream (TDS) packet.
 

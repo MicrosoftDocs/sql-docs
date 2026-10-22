@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_fts_index_population (Transact-SQL)"
 description: sys.dm_fts_index_population returns information about the full-text index and semantic key phrase populations currently in progress in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

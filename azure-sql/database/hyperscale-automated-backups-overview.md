@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about automated backups for Hyperscale databases in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dinethi, mathoma, danil, randolphwest
+ms.reviewer: dinethi, danil
 ms.date: 01/07/2026
 ms.service: azure-sql-database
 ms.subservice: backup-restore

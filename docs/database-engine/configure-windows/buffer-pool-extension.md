@@ -1,8 +1,8 @@
 ---
 title: Buffer Pool Extension
 description: Learn about buffer pool extension and its benefits, which include improved I/O throughput. View best practices to follow when turning on this feature.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/29/2026
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_showpendingchanges (Transact-SQL)"
 description: sp_showpendingchanges returns a result set showing the changes that are waiting to be replicated.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

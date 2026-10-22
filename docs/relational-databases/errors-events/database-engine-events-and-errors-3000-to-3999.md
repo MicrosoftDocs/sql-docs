@@ -1,9 +1,9 @@
 ---
 title: "Database Engine events and errors (3000 to 3999)"
 description: "Consult this SQL Server error code list (between 3000 and 3999) to find explanations for error messages for SQL Server database engine events."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: williamdassafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: supportability

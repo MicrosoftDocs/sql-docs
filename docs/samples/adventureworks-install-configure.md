@@ -1,9 +1,9 @@
 ---
 title: AdventureWorks Sample Databases
 description: Follow these instructions to download and install AdventureWorks sample databases to SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: samples

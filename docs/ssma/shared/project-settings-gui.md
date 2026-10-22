@@ -1,8 +1,8 @@
 ---
 title: Project Settings (GUI)
 description: Learn how to configure user interface settings for your SQL Server Migration Assistant (SSMA) project.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

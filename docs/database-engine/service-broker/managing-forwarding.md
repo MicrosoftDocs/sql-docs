@@ -1,9 +1,9 @@
 ---
 title: "Managing Forwarding (Service Broker)"
 description: "Message forwarding allows a SQL Server instance to forward Service Broker messages between two or more other instances of SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

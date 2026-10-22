@@ -1,8 +1,8 @@
 ---
 title: "SYSTEM_USER (Transact-SQL)"
 description: "SYSTEM_USER (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -22,10 +22,10 @@ helpviewer_keywords:
   - "users [SQL Server], names"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # SYSTEM_USER (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   
@@ -123,7 +123,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
   
 ### C. Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  

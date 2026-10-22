@@ -1,8 +1,8 @@
 ---
 title: "Replication conflict viewer & resolver"
 description: A reference for articles that explain the Microsoft Replication Conflict Viewer and Microsoft Replication Interactive Conflict Resolver for SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

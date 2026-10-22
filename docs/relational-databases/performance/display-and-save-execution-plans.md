@@ -1,9 +1,9 @@
 ---
 title: "Display and save Execution Plans"
 description: Learn how to display execution plans and how to save execution plans to a file in XML format by using SQL Server Management Studio.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: performance

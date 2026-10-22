@@ -1,7 +1,7 @@
 ---
 author: dlevy-msft
 ms.author: dlevy
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/07/2023
 ms.service: sql
 ms.topic: include

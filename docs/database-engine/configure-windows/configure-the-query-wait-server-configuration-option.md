@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: query wait"
 description: Learn about the query wait option. See how to use it to specify the number of seconds a SQL Server query waits for resources before it times out.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "SQL Server to Azure SQL Managed Instance: Performance Baseline"
 description: Learn to create and compare a performance baseline when migrating your SQL Server databases to Azure SQL Managed Instance.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma, wiassaf
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: wiassaf
 ms.date: 10/08/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: migration-guide

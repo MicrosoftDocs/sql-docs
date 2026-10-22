@@ -1,8 +1,8 @@
 ---
 title: "Supported Version and Edition Upgrades (SQL Server 2019)"
 description: The supported version and edition upgrades for SQL Server 2019.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/16/2025
 ms.service: sql
 ms.subservice: install

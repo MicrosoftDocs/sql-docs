@@ -1,8 +1,8 @@
 ---
 title: "Failover modes for availability groups"
 description: "A description of the different failover modes available for databases participating in an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/16/2025
 ms.service: sql
 ms.subservice: availability-groups

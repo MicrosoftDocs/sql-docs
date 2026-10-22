@@ -1,8 +1,8 @@
 ---
 title: "Executing XPath Queries with Namespaces (SQLXML)"
 description: Learn how to include namespaces in SQLXML XPath queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

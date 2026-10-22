@@ -3,7 +3,7 @@ title: "Azure CLI example: Create a managed instance"
 description: Use this Azure CLI example script to create a managed instance in Azure SQL Managed Instance.
 author: urosmil
 ms.author: urmilano
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 02/26/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

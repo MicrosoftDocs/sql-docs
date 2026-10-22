@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Compare log replay service (LRS) with the Managed Instance link when migrating to Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: migration

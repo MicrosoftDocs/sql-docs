@@ -1,9 +1,9 @@
 ---
 title: "sp_post_msx_operation (Transact-SQL)"
 description: Inserts rows into the sysdownloadlist system table for target servers to download and execute.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

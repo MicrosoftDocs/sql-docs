@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_8645"
 description: "MSSQLSERVER_8645"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: jopilov
 ms.date: 04/01/2025
 ms.service: sql

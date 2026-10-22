@@ -1,9 +1,9 @@
 ---
 title: PolyBase EES Encryption on Linux
 description: Learn how PolyBase External Execution Service (EES) communication is encrypted on SQL Server for Linux in SQL Server 2025 CU 8 and later versions.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: hudequei, amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, hudequei
 ms.date: 08/13/2026
 ms.service: sql
 ms.subservice: linux

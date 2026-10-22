@@ -3,7 +3,7 @@ title: "sp_delete_database_firewall_rule (Azure SQL Database)"
 description: sp_delete_database_firewall_rule removes database-level firewall setting from your Azure SQL Database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

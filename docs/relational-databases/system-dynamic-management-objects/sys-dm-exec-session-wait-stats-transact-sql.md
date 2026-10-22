@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_session_wait_stats (Transact-SQL)"
 description: sys.dm_exec_session_wait_stats returns information about all the waits encountered by threads that executed for each session.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: system-objects

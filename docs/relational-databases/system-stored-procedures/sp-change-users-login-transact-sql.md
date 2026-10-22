@@ -3,7 +3,7 @@ title: "sys.sp_change_users_login (Transact-SQL)"
 description: sp_change_users_login Maps an existing database user to a SQL Server login.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

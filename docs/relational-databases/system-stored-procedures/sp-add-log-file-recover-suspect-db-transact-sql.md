@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_add_log_file_recover_suspect_db (Transact-SQL)"
 description: "Adds a log file to a database when recovery can't complete on a database due to insufficient log space (error 9002)."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

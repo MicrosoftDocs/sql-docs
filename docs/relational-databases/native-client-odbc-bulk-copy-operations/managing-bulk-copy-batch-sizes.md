@@ -1,8 +1,8 @@
 ---
 title: "Managing Bulk Copy Batch Sizes"
 description: Learn how the batch size for a bulk copy defines the scope of a transaction, which effects error behavior and locking overhead in SQL Server Native Client ODBC.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "bulk copy [ODBC], batch sizes"
 ---
 # Managing Bulk Copy Batch Sizes
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The primary purpose of a batch in bulk copy operations is to define the scope of a transaction. If a batch size is not set, then bulk copy functions consider an entire bulk copy to be one transaction. If a batch size is set, then each batch constitutes a transaction that is committed when the batch finishes.  
   

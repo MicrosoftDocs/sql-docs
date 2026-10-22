@@ -1,9 +1,9 @@
 ---
 title: Key Differences for Machine Learning Services
 description: This article describes key differences between Machine Learning Services in Azure SQL Managed Instance and SQL Server Machine Learning Services.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: wiassaf
 ms.date: 01/26/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: machine-learning

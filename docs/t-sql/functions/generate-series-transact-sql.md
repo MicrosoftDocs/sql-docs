@@ -3,7 +3,7 @@ title: "GENERATE_SERIES (Transact-SQL)"
 description: "Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user."
 author: kendalvandyke
 ms.author: kendalv
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/05/2026
 ms.service: sql
 ms.subservice: t-sql

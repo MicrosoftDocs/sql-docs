@@ -1,8 +1,8 @@
 ---
 title: "Install and configure WideWorldImporters sample database"
 description: Follow these instructions to download, install, and configure the WideWorldImporters sample database with SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
+author: cwebb-msft
+ms.author: chweb
 ms.date: "04/04/2018"
 ms.service: sql
 ms.subservice: samples
@@ -22,7 +22,7 @@ Wide World Importers OLTP database installation and configuration instructions.
 
 The latest release of the sample:
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkId=2384724)
 
 Download the sample WideWorldImporters database backup/bacpac that corresponds to your edition of SQL Server or Azure SQL Database.
 

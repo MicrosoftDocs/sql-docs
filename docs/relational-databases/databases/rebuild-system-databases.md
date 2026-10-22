@@ -3,7 +3,7 @@ title: "Rebuild system databases"
 description: "System databases must be rebuilt to fix corruption problems in the master, model, msdb, or resource system databases, or to modify the default server-level collation."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/19/2024
 ms.service: sql
 ms.topic: how-to

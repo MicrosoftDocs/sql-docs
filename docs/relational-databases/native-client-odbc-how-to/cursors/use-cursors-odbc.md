@@ -1,8 +1,8 @@
 ---
 title: "Use Cursors (ODBC)"
 description: "Use Cursors (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "cursors [ODBC], how to topics"
 ---
 # Use Cursors (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To use cursors  

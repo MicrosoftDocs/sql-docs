@@ -3,7 +3,7 @@ title: "MSpublications (Transact-SQL)"
 description: MSpublications (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/16/2023
 ms.service: sql
 ms.subservice: replication

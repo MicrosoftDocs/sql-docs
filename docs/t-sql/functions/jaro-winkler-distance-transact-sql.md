@@ -1,9 +1,9 @@
 ---
 title: "JARO_WINKLER_DISTANCE (Transact-SQL)"
 description: JARO_WINKLER_DISTANCE calculates the edit distance between two strings giving preference to strings that match from the beginning for a set prefix length.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

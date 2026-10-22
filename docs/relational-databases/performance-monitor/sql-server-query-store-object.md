@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Query Store object"
 description: Learn about the Query Store object, which provides counters to monitor resource usage of SQL Server to store query texts, execution plans and runtime stats.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

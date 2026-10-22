@@ -3,7 +3,7 @@ title: "MSdistpublishers (Transact-SQL)"
 description: MSdistpublishers contains one row for each Publisher supported by the Distributor.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/21/2025
 ms.service: sql
 ms.subservice: replication

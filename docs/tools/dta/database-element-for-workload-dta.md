@@ -1,8 +1,8 @@
 ---
 title: "Database Element for Workload (DTA)"
 description: In the dta utility, the Database element for Workload, specifies the database where the workload trace table is located.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

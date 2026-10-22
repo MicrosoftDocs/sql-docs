@@ -1,9 +1,9 @@
 ---
 title: Replication backward compatibility
 description: Review these resources for backward compatibility in replication before you upgrade or if you have several versions of SQL Server in a replication topology.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/26/2025
 ms.service: sql
 ms.subservice: replication

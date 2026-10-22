@@ -3,7 +3,7 @@ title: "Set or change the database collation"
 description: "Set or change the database collation"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/27/2024
 ms.service: sql
 ms.topic: how-to

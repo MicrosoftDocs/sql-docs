@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
 description: Reports system level memory consumers for In-Memory OLTP.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/18/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "RPC:Completed Event Class"
 description: "The RPC:Completed event class indicates that a remote procedure call has been completed in SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: supportability

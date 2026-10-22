@@ -3,7 +3,7 @@ title: "Create the server connection files (Db2ToSQL)"
 description: Specify server information in the servers section of the script file, or in a separate server connection file, in SSMA for Db2.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

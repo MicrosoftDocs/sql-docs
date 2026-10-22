@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_unbindrule (Transact-SQL)"
 description: Unbinds a rule from a column or an alias data type in the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

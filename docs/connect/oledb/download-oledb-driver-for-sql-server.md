@@ -3,8 +3,8 @@ title: Download Microsoft OLE DB Driver for SQL Server
 description: Download the Microsoft OLE DB Driver for SQL Server to develop native Windows applications that connect to SQL Server and Azure SQL Database.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
-ms.date: 05/26/2026
+ms.reviewer: vanto, davidengel, sunilbs, vbeiranvand
+ms.date: 10/09/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: install-set-up-deploy
@@ -13,7 +13,7 @@ ms.custom:
 ---
 # Download Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The OLE DB Driver for SQL Server is a stand-alone data access application programming interface (API), used for OLE DB. OLE DB Driver for SQL Server is available on Windows and delivers the SQL OLE DB driver in one dynamic-link library (DLL).
 
@@ -21,11 +21,11 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
 
 The redistributable installer for Microsoft OLE DB Driver for SQL Server installs the client components required during run time to take advantage of newer SQL Server features.
 
-Microsoft OLE DB Driver 19.4.2 for SQL Server is the latest general availability (GA) version. The Microsoft OLE DB Driver 19 for SQL Server can install side by side with Microsoft OLE DB Driver 18 for SQL Server.
+Microsoft OLE DB Driver 19.4.3 for SQL Server is the latest general availability (GA) version. The Microsoft OLE DB Driver 19 for SQL Server can install side by side with Microsoft OLE DB Driver 18 for SQL Server.
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x64 and Arm64)](https://go.microsoft.com/fwlink/?linkid=2364027)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x64 and Arm64)](https://go.microsoft.com/fwlink/?linkid=2382896)**
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2364026)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft OLE DB Driver 19 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2383708)**
 
 > [!NOTE]  
 > Installation of the [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is a prerequisite,
@@ -34,8 +34,8 @@ Microsoft OLE DB Driver 19.4.2 for SQL Server is the latest general availability
 
 ### Version information
 
-- Release number: 19.4.2
-- Released: May 22, 2026
+- Release number: 19.4.3
+- Released: October 9, 2026
 
 > [!NOTE]  
 > If you're accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
@@ -44,13 +44,13 @@ Microsoft OLE DB Driver 19.4.2 for SQL Server is the latest general availability
 
 This release of Microsoft OLE DB Driver for SQL Server can be installed in the following languages:
 
-Microsoft OLE DB Driver 19.4.2 for SQL Server (x64 and Arm64):
+Microsoft OLE DB Driver 19.4.3 for SQL Server (x64 and Arm64):
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2364027&clcid=0x41f)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2382896&clcid=0x41f)
 
-Microsoft OLE DB Driver 19.4.2 for SQL Server (x86):
+Microsoft OLE DB Driver 19.4.3 for SQL Server (x86):
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2364026&clcid=0x41f)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2383708&clcid=0x41f)
 
 ## Release notes
 

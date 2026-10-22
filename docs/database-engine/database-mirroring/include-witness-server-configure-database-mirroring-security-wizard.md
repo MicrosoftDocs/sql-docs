@@ -1,8 +1,8 @@
 ---
 title: "Include Witness Server (Configure Database Mirroring Security Wizard)"
 description: Describes the 'Include Witness Server' page of the 'Configure Database Mirroring Security' Wizard within the SQL Server Management Studio (SSMS) GUI.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: database-mirroring

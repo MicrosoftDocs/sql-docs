@@ -3,7 +3,7 @@ title: "Unicode compression implementation"
 description: SQL Server uses the Standard Compression Scheme for Unicode algorithm to compress Unicode values that are stored in row or page compressed objects.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: performance

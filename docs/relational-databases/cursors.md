@@ -1,8 +1,8 @@
 ---
 title: "Cursors (SQL Server)"
 description: Cursors extend result processing by manipulating result sets in small blocks at a time.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 12/07/2023
 ms.service: sql
 ms.topic: concept-article

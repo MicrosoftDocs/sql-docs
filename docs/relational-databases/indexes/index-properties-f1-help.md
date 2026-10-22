@@ -1,8 +1,8 @@
 ---
 title: "Index Properties F1 Help"
 description: Index Properties F1 Help
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "02/17/2017"
 ms.service: sql
 ms.subservice: table-view-index

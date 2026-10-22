@@ -1,8 +1,8 @@
 ---
 title: Configure Windows Service Accounts and Permissions
 description: Get acquainted with the service accounts that are used to start and run services in SQL Server. See how to configure them and assign appropriate permissions.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 10/14/2025
 ms.service: sql
 ms.subservice: configuration

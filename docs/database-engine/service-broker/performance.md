@@ -1,9 +1,9 @@
 ---
 title: "Performance (Service Broker)"
 description: "The performance of a Service Broker application is generally determined by two factors."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

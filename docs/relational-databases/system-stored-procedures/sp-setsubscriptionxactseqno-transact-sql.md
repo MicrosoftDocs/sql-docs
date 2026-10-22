@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_setsubscriptionxactseqno (Transact-SQL)"
 description: Troubleshooting method to specify the last delivered transaction using the log sequence number (LSN), allowing the Distribution Agent to begin delivering at the next transaction.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,9 +1,9 @@
 ---
 title: Offload Backups to Secondary Availability Group Replica
 description: Learn about the different supported backup types when offloading backups to a secondary replica of an Always On availability group.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: dinethi, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: dinethi
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: availability-groups

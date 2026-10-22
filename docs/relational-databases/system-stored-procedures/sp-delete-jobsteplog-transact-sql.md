@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_jobsteplog (Transact-SQL)"
 description: Removes all SQL Server Agent job step logs that are specified with the arguments.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

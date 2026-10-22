@@ -1,8 +1,8 @@
 ---
 title: "Connecting Using IPv6"
 description: Learn about support for IPv4 and IPv6 in SQL Server and SQL Server Native Client, and see how to configure the Database Engine for the address you want to use.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

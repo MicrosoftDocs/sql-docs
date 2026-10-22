@@ -3,7 +3,7 @@ title: Resource Management in Dense Elastic Pools
 description: Manage compute resources in Azure SQL Database elastic pools with many databases.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma, jackli
+ms.reviewer: wiassaf, jackli
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: elastic-pools

@@ -1,9 +1,9 @@
 ---
 title: "Ghost Cleanup Process Guide"
 description: Learn about the ghost cleanup process, a background process that physically removes rows that are marked for deletion from data pages.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: dfurman, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: dfurman
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: supportability

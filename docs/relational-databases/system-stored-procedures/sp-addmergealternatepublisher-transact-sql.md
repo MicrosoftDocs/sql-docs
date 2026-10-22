@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addmergealternatepublisher (Transact-SQL)"
 description: Adds the ability for a Subscriber to use an alternate synchronization partner.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

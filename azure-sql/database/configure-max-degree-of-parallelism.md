@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the max degree of parallelism (MAXDOP) in Azure SQL Database and SQL database in Fabric.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 07/28/2025
 ms.service: azure-sql-database
 ms.subservice: performance

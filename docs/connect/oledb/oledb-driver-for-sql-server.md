@@ -3,8 +3,8 @@ title: Microsoft OLE DB Driver for SQL Server
 description: The Microsoft OLE DB Driver for SQL Server connects C and C++ applications to SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Microsoft Fabric.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, vbeiranvand
-ms.date: 08/26/2026
+ms.reviewer: vanto, davidengel, sunilbs, vbeiranvand
+ms.date: 09/17/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -32,11 +32,11 @@ The Microsoft OLE DB Driver for SQL Server is a standalone data access applicati
 ## Choose your starting point
 
 - To decide whether OLE DB is the right API for your application, start with [When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md).
-- To install the driver and start writing code, go to [Download OLE DB Driver for SQL Server](download-oledb-driver-for-sql-server.md), [System requirements](system-requirements-for-oledb-driver-for-sql-server.md), and [Building applications with OLE DB Driver for SQL Server](applications/building-applications-with-oledb-driver-for-sql-server.md).
+- To install the driver and build an end-to-end C++ application, start with [Connect and query with C++](quickstart-cpp.md).
 - To connect to Azure SQL with passwordless authentication, go to [Using Microsoft Entra ID](features/using-azure-active-directory.md) and [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 - To move from `SQLNCLI` or `SQLOLEDB`, go to [Updating an application to OLE DB Driver for SQL Server from MDAC](applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md) and [Major version differences](major-version-differences.md).
 - To use the driver from ADO, go to [Using ADO with OLE DB Driver for SQL Server](applications/using-ado-with-oledb-driver-for-sql-server.md).
-- To diagnose a connection or query problem, go to [Accessing diagnostic information in the extended events log](features/accessing-diagnostic-information-in-the-extended-events-log.md) and [Known issues](oledb-driver-for-sql-server-known-issues.md).
+- To diagnose a connection or query problem, start with [Troubleshooting](troubleshooting.md).
 
 ## Production baseline for Azure SQL
 
@@ -151,8 +151,10 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 
 | Article | Description |
 | --- | --- |
+| [Connect and query with C++](quickstart-cpp.md) | Install the driver, connect to Azure SQL Database, SQL database in Fabric, or SQL Server, execute a parameterized query, and verify the result. |
 | [When to use OLE DB Driver](when-to-use-oledb-driver-for-sql-server.md) | When to choose OLE DB Driver for SQL Server over the other SQL Server drivers. |
 | [Download](download-oledb-driver-for-sql-server.md) | Installer downloads for every supported driver version. |
+| [Release notes](release-notes-for-oledb-driver-for-sql-server.md) | What changed in each driver release, newest first. |
 | [System requirements](system-requirements-for-oledb-driver-for-sql-server.md) | Supported operating systems, SQL Server versions, and prerequisites to install first. |
 | [Building applications](applications/building-applications-with-oledb-driver-for-sql-server.md) | Header and library files, installation layout, and what changes when you upgrade from MDAC. |
 | [Creating an application](ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) | The call sequence an application follows, from connecting to executing a command to reading results. |
@@ -264,11 +266,11 @@ For the catalog of Azure SQL transient errors, see [transient fault error codes]
 
 | Article | Description |
 | --- | --- |
+| [Troubleshooting](troubleshooting.md) | Diagnose provider, authentication, certificate, network, parameter, conversion, and timeout failures by symptom. |
 | [Errors](ole-db-errors/errors.md) | How the driver reports failures, and which interfaces carry the detail. |
 | [Retrieving error information](ole-db-errors/retrieving-error-information.md) | Walk the error interfaces to read message text, SQLSTATE, and the native error number. |
 | [Accessing diagnostic information in the extended events log](features/accessing-diagnostic-information-in-the-extended-events-log.md) | Turn on driver tracing and read the resulting extended events log. |
 | [Known issues](oledb-driver-for-sql-server-known-issues.md) | Open issues in the current driver, with workarounds where one exists. |
-| [Release notes](release-notes-for-oledb-driver-for-sql-server.md) | What changed in each driver release, newest first. |
 
 ## Migrate to the current driver
 
@@ -296,6 +298,10 @@ There are three generations of Microsoft OLE DB providers for SQL Server. Use `M
 | [OLE DB interfaces](ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) | The OLE DB interfaces and methods that exhibit provider-specific behavior in this driver. |
 | [Schema rowset support](ole-db/schema-rowset-support-ole-db.md) | Provider-specific schema rowset behavior, including metadata returned from linked servers. |
 | [Finding more information](finding-more-oledb-driver-for-sql-server-information.md) | Specifications, samples, and community resources outside this documentation set. |
+
+## Request a feature
+
+To request a feature, submit an idea through [SQL Server feedback](https://aka.ms/sqlfeedback).
 
 ## Related content
 

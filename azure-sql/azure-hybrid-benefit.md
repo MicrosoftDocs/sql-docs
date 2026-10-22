@@ -2,8 +2,8 @@
 title: Azure Hybrid Benefit
 titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Use existing SQL Server licenses for Azure SQL Database and SQL Managed Instance discounts.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: sashan
 ms.date: 05/19/2025
 ms.service: azure-sql

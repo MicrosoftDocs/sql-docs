@@ -3,7 +3,7 @@ title: "sys.sp_cdc_set_scheduler_job (Transact-SQL)"
 description: "For Azure SQL Database, instruct the change data capture (CDC) scheduler to pause or resume scheduling of CDC scan and/or CDC cleanup jobs."
 author: abhimantiwari
 ms.author: abhtiwar
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

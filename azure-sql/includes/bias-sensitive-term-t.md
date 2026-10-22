@@ -1,7 +1,7 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan
+author: bluefooted
+ms.author: pamela
+ms.reviewer: vanto
 ms.date: 05/29/2025
 ms.service: sql
 ms.topic: include

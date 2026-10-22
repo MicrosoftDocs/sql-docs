@@ -1,9 +1,9 @@
 ---
 title: Monitor Replication with Performance Monitor
 description: Learn which performance objects and counters to use when monitoring replication with Performance Monitor.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

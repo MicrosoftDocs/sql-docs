@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_8992"
 description: MSSQLSERVER_8992 describes when DBCC CHECKDB finds an inconsistency in the system metadata tables for the specified object.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/09/2025
 ms.service: sql
 ms.subservice: supportability

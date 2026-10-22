@@ -1,8 +1,8 @@
 ---
 title: "KILL (Transact-SQL)"
 description: The KILL statement ends a user process that is based on the session ID or unit of work (UOW).
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/09/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -32,11 +32,11 @@ helpviewer_keywords:
   - "terminating process"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # KILL (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Ends a user process that is based on the session ID or unit of work (UOW). If the specified session ID or UOW has much work to undo, the `KILL` statement can take some time to complete. The process takes longer to complete particularly when the process involves rolling back a long transaction.
 
@@ -53,7 +53,7 @@ KILL { session_id [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBAC
 [ ; ]
 ```
 
-Syntax for Azure Synapse Analytics, Analytics Platform System (PDW), and Microsoft Fabric:
+Syntax for Azure Synapse Analytics and Microsoft Fabric:
 
 ```syntaxsql
 KILL 'session_id'

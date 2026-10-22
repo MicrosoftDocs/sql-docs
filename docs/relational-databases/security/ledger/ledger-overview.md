@@ -3,7 +3,7 @@ title: "Ledger Overview"
 description: Learn the basics of the ledger feature.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: azure-sql-database
 ms.subservice: security

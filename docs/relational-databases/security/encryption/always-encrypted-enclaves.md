@@ -4,7 +4,7 @@ description: Learn about the Always Encrypted with secure enclaves feature for S
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 03/28/2025
+ms.date: 09/02/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: concept-article
@@ -42,6 +42,9 @@ To use Always Encrypted with secure enclaves, an application must use a client d
 ## Supported enclave technologies
 
 Always Encrypted supports the following enclave technologies (or enclave types):
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](always-encrypted-enclaves-migration.md).
 
 - [Virtualization-based Security (VBS) enclaves](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (also known as Virtual Secure Mode, or VSM enclaves) - a software-based technology that relies on Windows hypervisor and doesn't require any special hardware.
 - [Intel Software Guard Extensions (Intel SGX) enclaves](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) - a hardware-based trusted execution environment technology.

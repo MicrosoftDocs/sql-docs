@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3183"
 description: "MSSQLSERVER_3183"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: jopilov
 ms.date: 10/14/2022
 ms.service: sql

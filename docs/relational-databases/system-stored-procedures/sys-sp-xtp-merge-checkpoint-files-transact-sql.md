@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL)"
 description: "Merges all data and delta files in the transaction range specified."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

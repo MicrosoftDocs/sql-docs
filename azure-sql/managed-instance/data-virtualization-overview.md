@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about data virtualization capabilities of Azure SQL Managed Instance.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma, wiassaf, nzagorac
+ms.reviewer: wiassaf, nzagorac
 ms.date: 09/11/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

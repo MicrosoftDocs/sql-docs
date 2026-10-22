@@ -1,9 +1,9 @@
 ---
 title: "OPENROWSET (Transact-SQL)"
 description: "OPENROWSET includes all connection information that is required to access remote data from an OLE DB data source."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, hudequei, wiassaf, nzagorac, jovanpop
+author: uc-msft
+ms.author: umajay
+ms.reviewer: hudequei, wiassaf, nzagorac, jovanpop
 ms.date: 06/25/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "not Function (XQuery)"
 description: Learn how the XQuery not() function is used with Boolean values.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

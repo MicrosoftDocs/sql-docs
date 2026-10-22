@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addlogreader_agent (Transact-SQL)"
 description: Adds a Log Reader agent for a given database.
-author: mashamsft
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

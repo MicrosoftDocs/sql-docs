@@ -1,8 +1,8 @@
 ---
 title: What Is SQL Server?
 description: An overview of the relational database engine and components of SQL Server
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/09/2026
 ms.service: sql
 ms.subservice: release-landing
@@ -34,7 +34,7 @@ The underlying [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] is
 
 Older products:
 
-- [Microsoft Analytics Platform System](../analytics-platform-system/home-analytics-platform-system-aps-pdw.md) (PDW)
+- [Analytics Platform System](/previous-versions/sql/analytics-platform-system/home-analytics-platform-system-aps-pdw)
 - [[!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/overview-what-is)
 - [[!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]](/azure/azure-sql-edge/overview)
 

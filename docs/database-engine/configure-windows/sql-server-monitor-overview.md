@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Monitor Overview"
 description: Learn about SQL Server Monitor. See how to use its Replication Monitor and Database Mirroring Monitor modules. View permissions that are required for its use.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 05/27/2025
 ms.service: sql
 ms.subservice: configuration

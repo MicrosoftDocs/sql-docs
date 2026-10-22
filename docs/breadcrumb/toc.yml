@@ -8,10 +8,6 @@
     topicHref: /sql/index
     items:
    
-    - name: Analytics Platform System
-      tocHref: /sql/analytics-platform-system/
-      topicHref: /sql/analytics-platform-system/index
-      
     - name: Data Mining Extensions
       tocHref: /sql/mdx/
       topicHref: /sql/mdx/multidimensional-expressions-mdx-reference
@@ -29,10 +25,6 @@
       topicHref: /sql/sql-server/index
 
     - name: SQL Server
-      tocHref: /sql/big-data-cluster/
-      topicHref: /sql/sql-server/index
-      
-    - name: SQL Server
       tocHref: /sql/connect/
       topicHref: /sql/sql-server/index
       
@@ -44,10 +36,6 @@
       tocHref: /sql/database-engine/
       topicHref: /sql/sql-server/index
       
-    - name: SQL Server
-      tocHref: /sql/dma/
-      topicHref: /sql/sql-server/index
-
     - name: SQL Server
       tocHref: /sql/language-extensions/
       topicHref: /sql/sql-server/index
@@ -86,10 +74,6 @@
 
     - name: SQL Server
       tocHref: /sql/ssma/
-      topicHref: /sql/sql-server/index
-
-    - name: SQL Server
-      tocHref: /sql/ssms/
       topicHref: /sql/sql-server/index
 
     - name: SQL Server

@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: locks"
 description: Learn about the locks option. See how to use it to limit the amount of memory that the SQL Server Database Engine uses for locks.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

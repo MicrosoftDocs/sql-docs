@@ -2,8 +2,8 @@
 title: Save Trace Results to a File
 titleSuffix: SQL Server Profiler
 description: Find out how to save captured event data to a trace file, specify a maximum trace file size, and enable the file rollover option in SQL Server Profiler.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

@@ -1,9 +1,9 @@
 ---
 title: "sp_cursorfetch (Transact-SQL)"
 description: sp_cursorfetch fetches a buffer of one or more rows from the database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

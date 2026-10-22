@@ -1,9 +1,9 @@
 ---
 title: "Enumeration Facets"
 description: Learn how SQL Server uses enumeration facets to validate XML schemas.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

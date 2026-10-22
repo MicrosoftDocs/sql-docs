@@ -1,8 +1,8 @@
 ---
 title: "last Function (XQuery)"
 description: Learn about the XQuery last() function that returns the integer index of the last item in a sequence.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

@@ -3,7 +3,7 @@ title: "Import Flat File to SQL"
 description: Import Flat File Wizard is a simple way to copy data from a .csv or .txt file to a new database table. This article shows you how and when to use the wizard.
 author: erinstellato-ms
 ms.author: erinstellato
-ms.reviewer: maghan, vanto
+ms.reviewer: vanto
 ms.date: 09/16/2024
 ms.service: sql
 ms.subservice: data-movement

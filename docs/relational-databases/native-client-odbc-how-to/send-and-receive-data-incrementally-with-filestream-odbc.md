@@ -1,15 +1,15 @@
 ---
 title: "Data incrementally, FILESTREAM (ODBC)"
 description: "Send and Receive Data Incrementally with FILESTREAM (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to use the FILESTREAM feature to send and receive data incrementally with SQLPutData and SQLGetData.  
   

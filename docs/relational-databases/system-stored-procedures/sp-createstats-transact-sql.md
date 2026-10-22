@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_createstats (Transact-SQL)"
 description: Calls the CREATE STATISTICS Transact-SQL statement to create single-column statistics on columns that aren't already the first column in a statistics object.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

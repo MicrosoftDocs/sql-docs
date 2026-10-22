@@ -1,8 +1,8 @@
 ---
 title: "sys.key_constraints (Transact-SQL)"
 description: sys.key_constraints (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: system-objects
@@ -18,10 +18,10 @@ helpviewer_keywords:
   - "sys.key_constraints catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # sys.key_constraints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw-fabric](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricdw-fabric](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
   Contains a row for each object that is a primary key or unique constraint. Includes **sys.objects.type** PK and UQ.  
   

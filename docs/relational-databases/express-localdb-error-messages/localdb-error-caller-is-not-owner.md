@@ -3,7 +3,7 @@ title: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER"
 description: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.subservice: performance

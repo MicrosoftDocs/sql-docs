@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropsubscriber (Transact-SQL)"
 description: sp_dropsubscriber removes the Subscriber designation from a registered server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

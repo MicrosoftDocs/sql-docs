@@ -21,6 +21,14 @@ For the release notes for Report Viewer controls, see [Release notes for the Rep
 
 ## SQL Server 2022 Reporting Services
 
+## 16.0.1119.11, 2026/09/21
+*(Product Version: 16.0.1119.11)*
+
+- Fixed an issue where some SSAS Multidimensional reports hung during query processing when dataset queries began with long multiline comments.
+- Fixed an issue where the web portal failed to load.
+- Security improvements.
+- Accessibility improvements.
+
 ## 16.0.9388.19190, 2025/09/22
 *(Product Version: 16.0.1118.33)*
 

@@ -1,8 +1,8 @@
 ---
 title: "Ssbdiagnose Utility (Service Broker)"
 description: The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: tools-other

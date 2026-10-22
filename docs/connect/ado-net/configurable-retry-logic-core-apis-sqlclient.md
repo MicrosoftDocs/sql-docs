@@ -3,7 +3,7 @@ title: Create a Custom Retry Provider for SqlClient
 description: Implement custom Microsoft.Data.SqlClient retry intervals, conditions, and execution behavior with the configurable retry logic APIs.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
+ms.reviewer: davidengel, paulmedynski, cmalhotra
 ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity

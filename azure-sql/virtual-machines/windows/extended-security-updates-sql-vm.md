@@ -3,7 +3,7 @@ title: Extended Security Updates (ESUs)
 description: Extended Security Updates (ESUs) for SQL Server on Azure Virtual Machines.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 05/01/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

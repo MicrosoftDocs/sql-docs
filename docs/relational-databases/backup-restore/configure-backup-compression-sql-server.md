@@ -1,8 +1,8 @@
 ---
 title: "Configure Backup Compression (SQL Server)"
 description: This article describes how to over override the server-level default when creating a single backup or scheduling a series of routine backups in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: backup-restore

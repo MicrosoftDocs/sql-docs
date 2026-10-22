@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about types of query performance issues in Azure SQL Database and how to identify and resolve queries with these issues.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, nnikolic
+ms.reviewer: nnikolic
 ms.date: 07/28/2025
 ms.service: azure-sql-database
 ms.subservice: performance

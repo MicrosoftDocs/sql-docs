@@ -3,7 +3,7 @@ title: Azure Resource Manager templates
 description: Use Azure Resource Manager templates to create and configure Azure SQL Managed Instance.
 author: urosmil
 ms.author: urmilano
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 04/30/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

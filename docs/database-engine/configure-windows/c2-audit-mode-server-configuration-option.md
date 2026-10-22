@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: c2 audit mode"
 description: Get acquainted with C2 audit mode, a SQL Server configuration option that can help you profile system activity and track possible security policy violations.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

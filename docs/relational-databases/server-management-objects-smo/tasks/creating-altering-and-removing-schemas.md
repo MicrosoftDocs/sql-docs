@@ -1,8 +1,8 @@
 ---
 title: "Creating, Altering, and Removing Schemas"
 description: "Creating, Altering, and Removing Schemas"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

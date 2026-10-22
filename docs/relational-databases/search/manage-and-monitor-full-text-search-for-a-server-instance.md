@@ -1,8 +1,8 @@
 ---
 title: "Manage & monitor Full-Text Search for a SQL Server instance"
 description: "Manage and Monitor Full-Text Search for a Server Instance"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: search

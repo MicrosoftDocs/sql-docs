@@ -1,8 +1,8 @@
 ---
 title: "Logical Operators (Transact-SQL)"
 description: Logical operators test for the truth of some condition.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/29/2026
 ms.service: sql
 ms.subservice: t-sql

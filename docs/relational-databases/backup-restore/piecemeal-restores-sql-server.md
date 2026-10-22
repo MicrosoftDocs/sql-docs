@@ -1,8 +1,8 @@
 ---
 title: "Piecemeal Restores (SQL Server)"
 description: In SQL Server, piecemeal restore allows databases with multiple filegroups to be restored/recovered in stages. Piecemeal restore works with all recovery models.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "10/23/2019"
 ms.service: sql
 ms.subservice: backup-restore

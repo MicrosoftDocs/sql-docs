@@ -1,9 +1,9 @@
 ---
 title: Create an Empty SQL Server Unit Test
 description: Learn how to create SQL Server unit tests. See how to use the same TestInitialize and TestCleanup scripts that other tests use and how to use different scripts.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

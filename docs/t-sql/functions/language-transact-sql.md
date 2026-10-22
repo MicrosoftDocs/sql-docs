@@ -1,8 +1,8 @@
 ---
 title: "@@LANGUAGE (Transact-SQL)"
 description: "@@LANGUAGE (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "names [SQL Server], language in use"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # @@LANGUAGE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
   Returns the name of the language currently being used.  
   

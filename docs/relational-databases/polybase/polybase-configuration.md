@@ -1,9 +1,9 @@
 ---
 title: PolyBase Configuration and Security for Hadoop
 description: Use these settings for PolyBase connectivity to Hadoop, including Hadoop.RPC.Protection, example XML files for CDH 5.X cluster, and Kerberos configuration.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 08/13/2026
 ms.service: sql
 ms.subservice: polybase

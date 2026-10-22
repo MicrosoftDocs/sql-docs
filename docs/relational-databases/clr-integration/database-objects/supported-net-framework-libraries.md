@@ -1,8 +1,8 @@
 ---
 title: "Supported .NET Framework Libraries"
 description: With the CLR hosted in SQL Server, you can author using supported .NET Framework class libraries and unsupported libraries that you register with a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

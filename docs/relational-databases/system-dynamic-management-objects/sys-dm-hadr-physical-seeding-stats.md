@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_physical_seeding_stats (Transact-SQL)"
 description: sys.dm_hadr_physical_seeding_stats (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

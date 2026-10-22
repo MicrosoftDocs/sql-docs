@@ -1,8 +1,8 @@
 ---
 title: "Always On Availability Groups Functions (Transact-SQL)"
 description: "Always On Availability Groups Functions (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: system-objects

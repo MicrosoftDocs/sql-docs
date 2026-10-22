@@ -1,8 +1,8 @@
 ---
 title: "Backslash (Line Continuation) (Transact-SQL)"
 description: "Backslash (Line Continuation) (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "07/25/2019"
 ms.service: sql
 ms.subservice: t-sql

@@ -1,10 +1,10 @@
 ---
 title: "REGEXP_LIKE (Transact-SQL)"
 description: REGEXP_LIKE Returns a Boolean value that indicates whether the text input matches the regex pattern.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
-ms.date: 11/21/2025
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf, jovanpop
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -12,14 +12,14 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # REGEXP_LIKE (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
-Indicates if the regular expression pattern matches in a string.
+The `REGEXP_LIKE` scalar regular expression function indicates if the regular expression pattern matches in a string.
 
 ```syntaxsql
 REGEXP_LIKE
@@ -29,17 +29,12 @@ REGEXP_LIKE
 )
 ```
 
-`REGEXP_LIKE` requires database compatibility level 170 and above. If the database compatibility level is lower than 170, `REGEXP_LIKE` isn't available. Other [regular expression scalar functions](regular-expressions-functions-transact-sql.md) are available at all compatibility levels.
-
 You can check the compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:
 
 ```sql
 ALTER DATABASE [DatabaseName]
     SET COMPATIBILITY_LEVEL = 170;
 ```
-
-> [!NOTE]  
-> Regular expressions are available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Arguments
 
@@ -68,6 +63,15 @@ To enhance the accuracy of [cardinality estimation](../../relational-databases/p
 These query hints also integrate with [Cardinality estimation (CE) feedback](../../relational-databases/performance/intelligent-query-processing-cardinality-estimation-feedback.md). The CE feedback model automatically identifies queries that use the `REGEXP_LIKE` function where there's a significant difference between estimated and actual row counts. It then applies the appropriate selectivity hint at the query level to improve plan quality without requiring manual input.
 
 To disable the automatic feedback behavior, enable trace flag 16268.
+
+### Platform support
+
+`REGEXP_LIKE` requires database compatibility level 170 and above. If the database compatibility level is lower than 170, `REGEXP_LIKE` isn't available. Other [regular expression scalar functions](../../relational-databases/regular-expressions/overview.md) are available at all compatibility levels.
+
+- In Azure SQL Managed Instance, T-SQL regular expression functions are available with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy) only.
+- T-SQL regular expression functions are available in Azure SQL Database, SQL database in Fabric, and starting in SQL Server 2025.
+- T-SQL regular expression functions aren't available in SQL Server 2022 or earlier versions.
+- T-SQL regular expression scalar functions are available as a preview feature in Fabric Data Warehouse. For more information, see [Regular expressions functions in Fabric Data Warehouse](/fabric/data-warehouse/regular-expressions). T-SQL regular expression table-valued functions are not available in Fabric Data Warehouse.
 
 ### SARGable pattern support
 
@@ -190,5 +194,4 @@ DROP TABLE #Users;
 
 ## Related content
 
-- [Regular expressions](../../relational-databases/regular-expressions/overview.md)
-- [Regular expressions functions (Transact-SQL)](regular-expressions-functions-transact-sql.md)
+- [Regular expressions functions](../../relational-databases/regular-expressions/overview.md)

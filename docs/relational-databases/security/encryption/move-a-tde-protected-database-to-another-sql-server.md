@@ -1,8 +1,8 @@
 ---
 title: "Move a TDE-Protected Database to Another SQL Server"
 description: Describes how to protect a database using transparent data encryption (TDE) and then move the database to another instance of SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: vanto
 ms.date: 09/07/2025
 ms.service: sql

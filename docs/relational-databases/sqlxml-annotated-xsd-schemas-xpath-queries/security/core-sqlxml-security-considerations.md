@@ -1,8 +1,8 @@
 ---
 title: "Core SQLXML Security Considerations"
 description: Learn the core security guidelines for using SQLXML for data access.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

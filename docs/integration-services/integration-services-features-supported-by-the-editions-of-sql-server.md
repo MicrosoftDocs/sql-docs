@@ -1,7 +1,7 @@
 ---
 title: "Integration Services Features Supported by the Editions of SQL Server"
 description: "Integration Services Features Supported by the Editions of SQL Server"
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/27/2025
 ms.service: sql
 ms.subservice: integration-services

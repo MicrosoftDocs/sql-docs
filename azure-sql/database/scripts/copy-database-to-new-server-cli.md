@@ -3,7 +3,7 @@ title: "Azure CLI Example: Copy Database to New Logical Server"
 description: Use this Azure CLI example script to copy a database in Azure SQL Database to a new logical server
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-sql-database
 ms.subservice: data-movement

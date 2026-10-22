@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_xe_database_session_object_columns"
 description: The sys.dm_xe_database_session_object_columns dynamic management view (DMV) shows the configuration values for objects that are bound to an active database-scoped session.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 07/29/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

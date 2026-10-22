@@ -1,9 +1,9 @@
 ---
 title: Query Store Hints Best Practices
 description: Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 10/03/2025
 ms.service: sql
 ms.subservice: performance

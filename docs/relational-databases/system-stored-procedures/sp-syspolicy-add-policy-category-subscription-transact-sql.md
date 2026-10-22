@@ -3,7 +3,7 @@ title: "sp_syspolicy_add_policy_category_subscription (Transact-SQL)"
 description: "Adds a policy category subscription to the specified database."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

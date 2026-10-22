@@ -1,8 +1,8 @@
 ---
 title: "Extended Events Dynamic Management Views"
 description: Extended Events Dynamic Management Views
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: system-objects

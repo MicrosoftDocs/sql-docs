@@ -3,7 +3,7 @@ title: Time zones
 description: Learn about the time zone specifics of Azure SQL Managed Instance
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/03/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

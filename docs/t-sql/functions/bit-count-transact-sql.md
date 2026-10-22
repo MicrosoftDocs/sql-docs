@@ -1,8 +1,8 @@
 ---
 title: BIT_COUNT (Transact-SQL)
 description: Transact-SQL reference for the BIT_COUNT function.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: derekw
 ms.date: 06/23/2026
 ms.service: sql

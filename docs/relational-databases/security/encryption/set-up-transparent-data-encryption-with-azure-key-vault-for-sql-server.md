@@ -3,7 +3,7 @@ title: "Set up Transparent Data Encryption with Azure Key Vault for SQL Server"
 description: Install and configure the SQL Server Connector for Azure Key Vault and configure Transparent Data Encryption
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: randolphwest, vanto
+ms.reviewer: vanto
 ms.date: 06/16/2026
 ms.service: sql
 ms.subservice: security

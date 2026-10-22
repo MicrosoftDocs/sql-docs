@@ -3,7 +3,7 @@ title: "Export and Import Databases Using Always Encrypted"
 description: "Export and import databases using Always Encrypted"
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 03/11/2025
 ms.service: sql
 ms.subservice: security

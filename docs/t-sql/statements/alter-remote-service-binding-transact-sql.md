@@ -1,8 +1,8 @@
 ---
 title: "ALTER REMOTE SERVICE BINDING (Transact-SQL)"
 description: ALTER REMOTE SERVICE BINDING (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql

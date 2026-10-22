@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_MSxe_read_event_stream (Transact-SQL)"
 description: "sys.fn_MSxe_read_event_stream (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 09/10/2025
 ms.service: sql

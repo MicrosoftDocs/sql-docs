@@ -1,7 +1,7 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, randolphwest
+ms.reviewer: dfurman
 ms.date: 10/02/2025
 ms.service: sql
 ms.subservice: xevents

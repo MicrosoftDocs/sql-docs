@@ -1,9 +1,9 @@
 ---
 title: "Remove Log Shipping (SQL Server)"
 description: Learn how to remove log shipping by using SQL Server Management Studio or Transact-SQL in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: log-shipping

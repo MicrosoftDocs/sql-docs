@@ -1,8 +1,8 @@
 ---
 title: Modify Data in a System-Versioned Temporal Table
 description: Data in a system-versioned temporal table is modified using regular DML statements, excluding period column data.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

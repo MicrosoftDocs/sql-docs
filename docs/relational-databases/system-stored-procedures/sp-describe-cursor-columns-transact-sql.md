@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_describe_cursor_columns (Transact-SQL)"
 description: sp_describe_cursor_columns reports the attributes of the columns in the result set of a server cursor.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

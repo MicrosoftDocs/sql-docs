@@ -3,8 +3,8 @@ title: Async Patterns with mssql-python
 description: Learn how to use the mssql-python driver with Python's asyncio for asynchronous database operations.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -65,8 +65,7 @@ def _execute_query(connection_string: str, query: str, params: dict = None) -> l
     try:
         cursor.execute(query, params or {})
         if cursor.description:
-            columns = [col[0] for col in cursor.description]
-            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+            return [dict(row._mapping) for row in cursor.fetchall()]
         return []
     finally:
         cursor.close()
@@ -224,8 +223,7 @@ class AsyncDatabasePool:
             def _execute():
                 conn.cursor.execute(query, params or {})
                 if conn.cursor.description:
-                    columns = [col[0] for col in conn.cursor.description]
-                    return [dict(zip(columns, row)) for row in conn.cursor.fetchall()]
+                    return [dict(row._mapping) for row in conn.cursor.fetchall()]
                 return []
             
             return await loop.run_in_executor(self._executor, _execute)

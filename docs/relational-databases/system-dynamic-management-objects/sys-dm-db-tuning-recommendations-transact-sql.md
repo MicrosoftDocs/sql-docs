@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_tuning_recommendations (Transact-SQL)"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: jovanpop
 ms.date: 01/08/2026
 ms.service: sql
@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # sys.dm_db_tuning_recommendations (Transact-SQL)
 
-[!INCLUDE [sqlserver2017-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
 Returns detailed information about automatic tuning recommendations. For more information, see [Automatic tuning](../automatic-tuning/automatic-tuning.md).
 

@@ -1,9 +1,9 @@
 ---
 title: "Use Full-Text Search with XML Columns"
 description: Learn how to create a full-text index of XML columns and perform a full-text search of XML values using SQL.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

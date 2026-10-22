@@ -1,8 +1,8 @@
 ---
 title: "Filter with sql:limit-field and sql:limit-value (SQLXML)"
 description: "Learn how to use the sql:limit-field and sql:limit-value annotations in SQLXML 4.0 to filter the data returned by a query on the basis of a limiting value."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

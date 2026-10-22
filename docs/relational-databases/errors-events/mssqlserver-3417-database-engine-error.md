@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3417"
 description: "MSSQLSERVER_3417"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "12/07/2022"
 ms.service: sql
 ms.subservice: supportability

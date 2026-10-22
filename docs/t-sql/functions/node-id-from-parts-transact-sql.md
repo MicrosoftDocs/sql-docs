@@ -3,7 +3,7 @@ title: "NODE_ID_FROM_PARTS (Transact-SQL)"
 description: "NODE_ID_FROM_PARTS (Transact-SQL)"
 author: "WilliamDAssafMSFT"
 ms.author: "wiassaf"
-ms.date: 08/16/2022
+ms.date: 08/25/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,9 +19,9 @@ dev_langs:
 monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # NODE_ID_FROM_PARTS (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [SQL Server 2017 Azure SQL Database Azure SQL Managed Instance SQL database in Fabric](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
-Returns the character representation (JSON) of the node ID for a given object ID and graph ID.
+In SQL Graph tables, the `NODE_ID_FROM_PARTS` function returns the character representation (JSON) of the node ID for a given object ID and graph ID.
 
 ## Syntax  
   
@@ -50,6 +50,8 @@ Returns an **nvarchar(1000)** character representation (JSON) of the node ID. Th
 - `NODE_ID_FROM_PARTS` is useful for bulk inserting of data into a graph table, when the source data has a suitable natural or surrogate key with an integer data type.
 - The value returned from `NODE_ID_FROM_PARTS` can be used to populate the `$node_id` column in a node table. It can also be used to populate the `$from_id` / `$to_id` columns in an edge table.
 - For `NODE_ID_FROM_PARTS` to return valid character representation (JSON) of a node ID, the `object_id` parameter must correspond to an existing node table. The `graph_id` parameter can be any valid integer, but it need not exist in that node table. If any of these checks fail, `NODE_ID_FROM_PARTS` returns NULL.
+
+Graph tables were introduced in SQL Server 2017. The `NODE_ID_FROM_PARTS` function isn't available in SQL Server 2016 or in Fabric Data Warehouse.
   
 ## Examples
 

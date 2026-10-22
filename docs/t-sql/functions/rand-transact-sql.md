@@ -1,9 +1,9 @@
 ---
 title: "RAND (Transact-SQL)"
 description: Returns a pseudo-random float value from 0 through 1, exclusive.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 02/16/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ---
 # RAND (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Returns a pseudo-random **float** value from `0` through `1`, exclusive.
 

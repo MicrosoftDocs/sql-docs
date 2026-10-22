@@ -1,8 +1,8 @@
 ---
 title: "Agents (Transactional - SSMS)"
 description: Describes the 'Agents' tab for a selected Transactional Publication within SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

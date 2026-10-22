@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_register_custom_scripting (Transact-SQL)"
 description: sp_register_custom_scripting registers a stored procedure or Transact-SQL script file that is executed when a schema change occurs.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

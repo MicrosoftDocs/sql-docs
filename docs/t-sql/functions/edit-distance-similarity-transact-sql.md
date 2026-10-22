@@ -1,8 +1,8 @@
 ---
 title: EDIT_DISTANCE_SIMILARITY (Transact-SQL)
 description: EDIT_DISTANCE_SIMILARITY calculates a similarity value ranging from 0 (indicating no match) to 100 (indicating full match).
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: abhtiwar, wiassaf
 ms.date: 09/04/2026
 ms.service: sql

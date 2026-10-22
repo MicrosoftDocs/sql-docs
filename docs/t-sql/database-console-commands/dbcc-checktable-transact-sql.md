@@ -1,8 +1,8 @@
 ---
 title: DBCC CHECKTABLE (Transact-SQL)
 description: DBCC CHECKTABLE checks the integrity of all the pages and structures that make up the table or indexed view.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: t-sql

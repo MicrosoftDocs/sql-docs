@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: abhims14
+ms.author: abhishekum
 ms.date: 12/10/2025
 ms.service: azure-database-migration-service
 ms.topic: include

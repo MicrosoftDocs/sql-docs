@@ -1,8 +1,8 @@
 ---
 title: "Set backup or restore after error"
 description: Learn to specify if a backup or restore operation continues after it encounters an error in SQL Server by using SQL Server Management Studio or Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore

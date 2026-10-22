@@ -1,8 +1,8 @@
 ---
 title: "Sign in to an Instance of SQL Server (Command Prompt)"
 description: "Learn about the sqlcmd utility. See how to use it in a command prompt to test connectivity to an instance of SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: configuration

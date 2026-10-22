@@ -3,7 +3,7 @@ title: What is a server in Azure SQL Database?
 description: Learn about logical servers used by Azure SQL Database and how to manage them.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/28/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

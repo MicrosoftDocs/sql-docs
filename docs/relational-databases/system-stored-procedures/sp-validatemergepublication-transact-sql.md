@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_validatemergepublication (Transact-SQL)"
 description: Performs a publication-wide validation for which all subscriptions (push, pull, and anonymous) are validated once.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

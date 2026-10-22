@@ -3,7 +3,7 @@ title: "Configure Windows authentication on the report server"
 description: "Configure Windows Authentication on the Report Server"
 
 
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/25/2024
 ms.service: reporting-services
 ms.subservice: security

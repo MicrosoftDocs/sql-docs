@@ -1,8 +1,8 @@
 ---
 title: "floor Function (XQuery)"
 description: Learn about the XQuery floor() function that returns the largest number with no fraction part that is not greater than the value of its argument.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

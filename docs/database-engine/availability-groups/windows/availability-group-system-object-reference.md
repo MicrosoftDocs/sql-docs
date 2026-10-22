@@ -1,9 +1,9 @@
 ---
 title: Availability Group System Object Reference
 description: A reference of various system objects that can be used when working with Always On availability groups.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: availability-groups

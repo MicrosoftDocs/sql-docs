@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article explains how to scale your database in Azure SQL Database and Azure SQL Managed Instance by adding or removing allocated resources.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma, urmilano
+ms.reviewer: wiassaf, urmilano
 ms.date: 06/13/2025
 ms.service: azure-sql
 ms.subservice: performance

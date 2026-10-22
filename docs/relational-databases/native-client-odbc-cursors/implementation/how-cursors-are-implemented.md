@@ -1,8 +1,8 @@
 ---
 title: "How Cursors Are Implemented"
 description: "How Cursors Are Implemented"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "cursors [ODBC], about ODBC cursors"
 ---
 # How Cursors Are Implemented
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ODBC applications control the behavior of a cursor by setting one or more statement attributes before executing a SQL statement. ODBC has two different ways to specify the characteristics of a cursor:  
   

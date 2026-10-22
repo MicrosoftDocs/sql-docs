@@ -1,8 +1,8 @@
 ---
 title: "DATEFROMPARTS (Transact-SQL)"
 description: "DATEFROMPARTS (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/29/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "DATEFROMPARTS function"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # DATEFROMPARTS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This function returns a **date** value that maps to the specified year, month, and day values.
   

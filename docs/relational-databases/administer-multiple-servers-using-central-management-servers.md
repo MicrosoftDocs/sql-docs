@@ -1,9 +1,9 @@
 ---
 title: "Administer Multiple Servers Using Central Management Servers"
 description: Learn to administer multiple servers in SQL Server by designating Central Management Servers and creating server groups.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: wiassaf, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: wiassaf
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: supportability

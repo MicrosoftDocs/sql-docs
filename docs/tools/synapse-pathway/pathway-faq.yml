@@ -4,7 +4,7 @@ metadata:
   description: Frequently asked question for Azure Synapse Pathway
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: charlesf, randolphwest
+  ms.reviewer: charlesf
   ms.service: sql
   ms.topic: faq
   ms.date: 02/11/2022

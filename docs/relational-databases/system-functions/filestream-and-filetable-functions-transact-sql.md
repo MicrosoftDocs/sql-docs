@@ -1,8 +1,8 @@
 ---
 title: "FILESTREAM and FileTable Functions (Transact-SQL)"
 description: "FILESTREAM and FileTable Functions (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: system-objects

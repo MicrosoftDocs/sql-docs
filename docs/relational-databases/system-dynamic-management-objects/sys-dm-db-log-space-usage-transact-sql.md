@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_log_space_usage (Transact-SQL)"
 description: "The sys.dm_db_log_space_usage dynamic management view returns space usage information for the transaction log."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: system-objects

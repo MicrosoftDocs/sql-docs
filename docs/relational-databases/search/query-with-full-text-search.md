@@ -1,8 +1,8 @@
 ---
 title: Query with Full-Text Search
 description: Query with Full-Text Search
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

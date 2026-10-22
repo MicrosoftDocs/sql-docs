@@ -1,15 +1,15 @@
 ---
 title: "Support for LocalDB"
 description: Learn how to connect to a database in a LocalDB instance, which is a lightweight version of SQL Server that is supported by SQL Server Native Client.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
 # SQL Server Native Client Support for LocalDB
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

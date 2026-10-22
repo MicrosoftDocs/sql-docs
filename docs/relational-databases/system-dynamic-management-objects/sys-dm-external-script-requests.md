@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_external_script_requests"
 description: sys.dm_external_script_requests
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: machine-learning

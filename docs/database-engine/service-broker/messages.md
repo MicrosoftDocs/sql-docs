@@ -1,9 +1,9 @@
 ---
 title: Messages
 description: "Messages are the information exchanged between applications that use Service Broker."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

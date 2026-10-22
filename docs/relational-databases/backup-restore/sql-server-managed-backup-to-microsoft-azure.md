@@ -1,9 +1,9 @@
 ---
 title: SQL Server Managed Backup to Microsoft Azure
 description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob storage.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: backup-restore

@@ -1,9 +1,9 @@
 ---
 title: "Lesson 1: Connecting to the Database Engine"
 description: Learn about the main tools of the Database Engine and how to connect to the engine and authorize more users.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan, vanto, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helplogins (Transact-SQL)"
 description: sp_helplogins provides information about logins and the users associated with them in each database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

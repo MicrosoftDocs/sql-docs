@@ -3,7 +3,7 @@ title: "sysmail_update_principalprofile_sp (Transact-SQL)"
 description: "Updates the information for an association between a principal and a profile."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

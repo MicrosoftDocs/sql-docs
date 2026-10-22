@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_broker_queue_monitors (Transact-SQL)"
 description: sys.dm_broker_queue_monitors returns a row for each queue monitor in the instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/07/2025
 ms.service: sql
 ms.subservice: system-objects

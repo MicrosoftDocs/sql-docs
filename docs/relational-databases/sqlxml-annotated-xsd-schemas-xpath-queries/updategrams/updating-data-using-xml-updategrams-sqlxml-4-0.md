@@ -1,8 +1,8 @@
 ---
 title: "Updating Data Using XML Updategrams (SQLXML)"
 description: Learn how to update existing data using an XML updategram in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

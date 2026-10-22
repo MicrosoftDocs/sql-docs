@@ -1,22 +1,23 @@
 ---
 title: Network Access Controls
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
-description: Overview of how to manage and control network access for Azure SQL Database and Azure Synapse Analytics.
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: wiassaf, mathoma
-ms.date: 06/30/2025
+titleSuffix: Azure SQL Database
+description: Learn how to manage public and private network access for Azure SQL Database by using firewall rules, virtual networks, and Private Link.
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: pivanho, vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
 ms.custom: sqldbrb=3
+monikerRange: "=azuresql || =azuresql-db"
 ---
 
-# Azure SQL Database and Azure Synapse Analytics network access controls
+# Azure SQL Database network access controls
 
-[!INCLUDE [appliesto-sqldb-asa](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-When you create a logical server from the [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format: `yourservername.database.windows.net`.
+When you create a logical server by using the [Quickstart: Create a single database](single-database-create-quickstart.md) for Azure SQL Database, you get a public endpoint in the format: `yourservername.database.windows.net`.
 
 By default, the logical server denies all connections to ensure security. You can use one or more of the following network access controls to selectively allow access to a database via the **public endpoint**
 
@@ -63,9 +64,9 @@ When **Allow Azure services and resources to access this server** is enabled, yo
 In many cases, enabling the setting is more permissive than what most customers want. You might want to uncheck this setting and replace it with more restrictive IP firewall rules or use one the options for private access.
 
 > [!IMPORTANT]  
-> Checking *Allow Azure services and resources to access this server* adds an IP based firewall rule with start and end IP address of 0.0.0.0
+> Checking *Allow Azure services and resources to access this server* adds an IP-based firewall rule with start and end IP address of `0.0.0.0`.
 
-However, doing so affects the following features that run on virtual machines in Azure that aren't part of your virtual network and hence connect to the database via an Azure IP address:
+However, doing so affects the following features that run on virtual machines in Azure that aren't part of your virtual network and connect to the database via an Azure IP address.
 
 ### Import Export Service
 
@@ -123,7 +124,7 @@ The **Sql** service tag consists of all IP addresses that are being used by SQL 
 
 The **Sql** service tag consists of IP addresses that are required to establish connectivity to SQL Database as documented in [Gateway IP addresses](connectivity-architecture.md#gateway-ip-addresses). Additionally, a service tag will also be associated with any outbound traffic from SQL Database used in features such as:
 
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [Vulnerability assessment](/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview)
 - [Import or export an Azure SQL Database without allowing Azure services to access the server](database-import-export-azure-services-off.md)
 - [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql)
@@ -143,6 +144,10 @@ SqlManagement service tag is used for control plane operations against SQL Datab
 ## Private Link
 
 Private Link allows you to connect to a server via a **private endpoint**. A [private endpoint](private-endpoint-overview.md) is a private IP address within a specific [virtual network](/azure/virtual-network/virtual-networks-overview) and subnet.
+
+## Network access controls in Azure Synapse Analytics
+
+For information about network access controls in Azure Synapse Analytics, see [Network access controls](/azure/synapse-analytics/sql/network-access-controls-overview).
 
 ## Related content
 

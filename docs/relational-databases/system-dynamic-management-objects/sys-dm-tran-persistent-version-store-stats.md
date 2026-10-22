@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
 description: sys.dm_tran_persistent_version_store_stats returns information for accelerated database recovery (ADR) persistent version store (PVS) metrics.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf, dfurman
 ms.date: 02/02/2026
 ms.service: sql

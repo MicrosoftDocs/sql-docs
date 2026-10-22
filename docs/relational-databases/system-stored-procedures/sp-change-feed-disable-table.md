@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_disable_table (Transact-SQL)"
 description: "The internal sys.sp_change_feed_disable_table system stored procedure disables a table in the change feed."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, ajayj, imotiwala
+ms.reviewer: ajayj, imotiwala
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

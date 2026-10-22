@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropdistpublisher (Transact-SQL)"
 description: Drops a distribution Publisher. This stored procedure is executed at the Distributor on any database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

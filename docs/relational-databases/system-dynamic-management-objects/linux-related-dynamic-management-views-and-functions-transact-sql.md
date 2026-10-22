@@ -1,8 +1,8 @@
 ---
 title: "Linux Related Dynamic Management Views and Functions (Transact-SQL)"
 description: Linux related dynamic management views and functions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/13/2026
 ms.service: sql
 ms.subservice: system-objects

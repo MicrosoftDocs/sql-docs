@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cdc_help_jobs (Transact-SQL)"
 description: "Reports information about all change data capture cleanup or capture jobs in the current database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

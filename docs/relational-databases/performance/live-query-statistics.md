@@ -1,8 +1,8 @@
 ---
 title: "Live Query Statistics"
 description: Learn how to view the live execution plan of an active query in SQL Server Management Studio. Use the execution statistics to debug query performance issues.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 04/07/2026
 ms.service: sql
 ms.subservice: performance

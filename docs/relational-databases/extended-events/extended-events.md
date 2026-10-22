@@ -3,7 +3,7 @@ title: Extended Events Overview - SQL Server, Azure SQL Database, Azure SQL Mana
 description: Extended Events is a lightweight feature that collects detailed data necessary to monitor and troubleshoot database engine performance in SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 10/02/2025
 ms.service: sql
 ms.subservice: xevents

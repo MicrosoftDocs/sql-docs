@@ -3,7 +3,7 @@ title: Create check constraints
 description: Learn how to can create a check constraint in a table to specify the data values that are acceptable in one or more columns in the SQL Server Database Engine.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/22/2024
 ms.service: sql
 ms.subservice: table-view-index

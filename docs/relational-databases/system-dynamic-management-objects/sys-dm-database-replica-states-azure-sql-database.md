@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_database_replica_states (Azure SQL Database)"
 description: sys.dm_database_replica_states returns state information for each database that participates in primary and secondary replicas.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/20/2026
 ms.service: sql
 ms.subservice: system-objects

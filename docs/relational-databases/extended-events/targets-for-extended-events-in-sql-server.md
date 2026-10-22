@@ -3,7 +3,7 @@ title: Extended Events Targets
 description: This article explains different targets for Extended Events sessions. Learn about target abilities in gathering and reporting data.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, randolphwest
+ms.reviewer: dfurman
 ms.date: 05/28/2026
 ms.service: sql
 ms.subservice: xevents

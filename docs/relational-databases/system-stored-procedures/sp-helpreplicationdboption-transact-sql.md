@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpreplicationdboption (Transact-SQL)"
 description: sp_helpreplicationdboption shows whether databases at the Publisher are enabled for replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

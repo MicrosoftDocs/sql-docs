@@ -3,7 +3,7 @@ title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
 ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity

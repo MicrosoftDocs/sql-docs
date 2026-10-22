@@ -1,9 +1,9 @@
 ---
 title: "Rebuild Index Task (Maintenance Plan)"
 description: Learn how to re-create the indexes on the tables in a SQL Server database with a new fill factor by using the Rebuild Index Task.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/27/2023
 ms.service: sql
 ms.subservice: supportability

@@ -1,8 +1,8 @@
 ---
 title: "Make Schema Changes on Publication Databases"
 description: Replication supports a range of schema changes to published objects. Learn about schema changes that are propagated by default to all SQL Server Subscribers.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Creating, Altering, and Removing Views"
 description: "Creating, Altering, and Removing Views"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

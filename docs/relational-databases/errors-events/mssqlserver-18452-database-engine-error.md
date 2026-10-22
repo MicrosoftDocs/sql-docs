@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_18452"
 description: "MSSQLSERVER_18452: The user attempted to sign in with credentials that can't be validated."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/08/2024
 ms.service: sql
 ms.subservice: supportability

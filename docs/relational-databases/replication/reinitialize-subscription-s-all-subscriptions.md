@@ -1,8 +1,8 @@
 ---
 title: Reinitialize Subscriptions - All Subscriptions
 description: Reinitialize Subscriptions marks every subscription to a publication for a fresh snapshot. Learn how to use the dialog box options in SQL Server replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

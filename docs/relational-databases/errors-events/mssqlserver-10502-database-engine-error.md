@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_10502"
 description: "MSSQLSERVER_10502"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

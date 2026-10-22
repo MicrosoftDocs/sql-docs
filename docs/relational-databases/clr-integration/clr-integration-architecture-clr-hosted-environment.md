@@ -1,8 +1,8 @@
 ---
 title: "CLR Hosted Environment"
 description: This article describes how CLR and SQL Server are integrated to manage system resources uniformly and how CAS and SQL Server security are integrated.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

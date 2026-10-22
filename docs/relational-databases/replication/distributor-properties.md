@@ -1,8 +1,8 @@
 ---
 title: "Distributor Properties dialog box"
 description: Describe the different pages within the 'Distributor Properties' dialog box in SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

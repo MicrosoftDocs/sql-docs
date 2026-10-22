@@ -1,8 +1,8 @@
 ---
 title: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
 description: "ISSCommandWithParameters::SetParameterProperties in SQL Server Native Client (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -13,7 +13,7 @@ apiname: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
 apitype: "COM"
 ---
 # ISSCommandWithParameters::SetParameterProperties in SQL Server Native Client (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT]
 > [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]

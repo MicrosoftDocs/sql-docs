@@ -1,9 +1,9 @@
 ---
 title: Configure SQL Server Unit Test Execution
 description: Learn how to configure SQL Server unit tests. See how to specify connection strings and how to deploy a database schema.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

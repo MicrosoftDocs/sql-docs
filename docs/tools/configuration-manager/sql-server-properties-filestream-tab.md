@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Properties (FILESTREAM Tab)"
 description: Find out how to use the FILESTREAM tab of the SQL Server Properties dialog box to enable FILESTREAM for an installation of SQL Server 2019.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

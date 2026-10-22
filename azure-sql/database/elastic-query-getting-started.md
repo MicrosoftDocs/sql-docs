@@ -3,7 +3,7 @@ title: Report Across Scaled-Out Cloud Databases
 description: Use cross database queries to report across multiple databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

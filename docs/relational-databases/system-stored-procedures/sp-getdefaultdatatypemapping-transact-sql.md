@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_getdefaultdatatypemapping (Transact-SQL)"
 description: "Returns information on the default mapping for data types between SQL Server and a non-SQL Server DBMS."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

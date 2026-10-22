@@ -1,8 +1,8 @@
 ---
 title: "Disaster Recovery through forced quorum"
 description: Recovery from a quorum failure requires manual intervention. Learn how to force quorum in the event of a disaster of a SQL Server failover cluster instance.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance

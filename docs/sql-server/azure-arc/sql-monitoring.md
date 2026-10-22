@@ -3,7 +3,7 @@ title: Monitor SQL Server
 description: Learn about the monitoring capabilities of SQL Server enabled by Azure Arc.
 author: lcwright
 ms.author: lancewright
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/09/2024
 ms.topic: how-to
 ms.custom:

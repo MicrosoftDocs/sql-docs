@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_procoption (Transact-SQL)"
 description: "sp_procoption sets or clears a stored procedure for automatic execution."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 05/29/2026
 ms.service: sql
 ms.subservice: system-objects

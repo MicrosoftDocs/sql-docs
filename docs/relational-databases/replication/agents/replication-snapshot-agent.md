@@ -1,8 +1,8 @@
 ---
 title: "Replication Snapshot Agent"
 description: In SQL Server, the Replication Snapshot Agent prepares snapshot files, stores them in a folder, and records synchronization jobs in the distribution database.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 05/30/2025
 ms.service: sql
 ms.subservice: replication

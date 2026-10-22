@@ -1,8 +1,8 @@
 ---
 title: "Backup history & header"
 description: The msdb database stores SQL Server backup and restore operation history of a server instance. Learn about Transact-SQL statements that access backup history.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore

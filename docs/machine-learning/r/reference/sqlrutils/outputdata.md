@@ -1,8 +1,8 @@
 ---
 title: "OutputData function (sqlrutils)"
 description: "OutputData: generates an OutputData Object that captures the information about the data frame that needs to be returned after the execution of the R function embedded into the stored procedure."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

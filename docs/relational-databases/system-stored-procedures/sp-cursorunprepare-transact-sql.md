@@ -1,9 +1,9 @@
 ---
 title: "sp_cursorunprepare (Transact-SQL)"
 description: sp_cursorunprepare discards the execution plan developed in the sp_cursorprepare stored procedure.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

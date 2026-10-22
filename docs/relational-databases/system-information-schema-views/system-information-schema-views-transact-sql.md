@@ -1,9 +1,9 @@
 ---
 title: "System Information Schema Views (Transact-SQL)"
 description: System information schema views are one method to provide SQL Server Database Engine metadata.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 07/16/2025
 ms.service: sql
 ms.subservice: system-objects

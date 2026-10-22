@@ -1,9 +1,9 @@
 ---
 title: "sysmail_help_principalprofile_sp (Transact-SQL)"
 description: "Lists information about associations between Database Mail profiles and database principals."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

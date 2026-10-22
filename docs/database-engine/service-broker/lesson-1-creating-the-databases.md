@@ -1,9 +1,9 @@
 ---
 title: "Lesson 1: Create the Databases"
 description: "In this lesson, you learn to create the databases and enable the trustworthy option."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/03/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: "Building Applications"
 description: Find out how to build applications, with upgrades from MDAC, header and library files, and connection strings, with the SQL Server Native Client library.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 12/16/2019
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQL Server Native Client, building applications"
 ---
 # Building Applications with SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

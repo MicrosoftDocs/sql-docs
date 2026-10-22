@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_windows_info (Transact-SQL)"
 description: The sys.dm_os_windows_info DMV returns one row that displays Windows operating system version information.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/20/2023
 ms.service: sql
 ms.subservice: system-objects

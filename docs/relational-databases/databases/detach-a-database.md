@@ -3,7 +3,7 @@ title: "Detach a database"
 description: Learn how to detach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Files can be reattached or attached to another server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/30/2024
 ms.service: sql
 ms.subservice: supportability

@@ -1,8 +1,8 @@
 ---
 title: Start from an Existing Database
 description: Create a SQL project with objects from an existing database.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 05/12/2026
 ms.service: sql

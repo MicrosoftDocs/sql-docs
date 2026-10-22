@@ -3,7 +3,7 @@ title: "sys.sp_disable_event_stream (Transact-SQL)"
 description: sys.sp_disable_event_stream disables change event streaming at the database level for the change event streaming feature.
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma,randolphwest
+ms.reviewer: vanto
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: system-objects

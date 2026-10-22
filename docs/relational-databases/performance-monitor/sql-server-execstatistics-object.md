@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Exec Statistics object"
 description: "Learn about the SQLServer:Exec Statistics object, which provides counters to monitor various executions."
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

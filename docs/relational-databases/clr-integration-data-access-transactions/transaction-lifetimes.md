@@ -1,8 +1,8 @@
 ---
 title: "Transaction Lifetimes"
 description: Learn about transaction lifetimes in SQL Server CLR integration. Transactions started in Transact-SQL stored procedures differ from ones started in managed code.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

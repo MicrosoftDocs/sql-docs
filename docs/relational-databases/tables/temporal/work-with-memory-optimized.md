@@ -1,8 +1,8 @@
 ---
 title: Work with Memory-Optimized System-Versioned Temporal Tables
 description: Work with memory-optimized system-versioned temporal tables
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

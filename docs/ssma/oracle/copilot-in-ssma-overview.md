@@ -1,8 +1,8 @@
 ---
 title: What Is Microsoft Copilot in SSMA for Oracle?
 description: Learn how Copilot in SQL Server Migration Assistant (SSMA) for Oracle provides intelligent, AI-powered assistance to convert complex or unsupported objects.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball, subasak
 ms.date: 07/24/2026
 ms.service: sql

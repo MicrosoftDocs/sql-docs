@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: remote login timeout"
 description: "Learn about the remote login timeout option. See how it limits the number of seconds that SQL Server allots for connecting to a remote server."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

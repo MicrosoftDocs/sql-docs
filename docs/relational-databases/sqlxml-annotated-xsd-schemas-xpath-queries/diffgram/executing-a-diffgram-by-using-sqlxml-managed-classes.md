@@ -1,8 +1,8 @@
 ---
 title: "Executing a DiffGram by Using SQLXML Managed Classes"
 description: Learn how to execute a DiffGram file in the Microsoft .NET Framework environment to apply data updates to SQL Server tables using SQLXML Managed Classes.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: Change the Schema of a System-Versioned Temporal Table
 description: Change the schema of a system-versioned temporal table with the ALTER TABLE statement.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.reviewer: panant
 ms.date: 08/18/2026
 ms.service: sql

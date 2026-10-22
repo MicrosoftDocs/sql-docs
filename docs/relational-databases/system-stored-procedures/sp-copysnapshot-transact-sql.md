@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_copysnapshot (Transact-SQL)"
 description: sp_copysnapshot copies the snapshot folder of the specified publication to the folder listed in the destination folder.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

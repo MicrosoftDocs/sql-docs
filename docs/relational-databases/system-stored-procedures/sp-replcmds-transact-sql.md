@@ -1,9 +1,9 @@
 ---
 title: "sp_replcmds (Transact-SQL)"
 description: sp_replcmds returns the commands for transactions marked for replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

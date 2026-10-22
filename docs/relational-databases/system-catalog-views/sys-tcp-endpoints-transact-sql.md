@@ -1,8 +1,8 @@
 ---
 title: "sys.tcp_endpoints (Transact-SQL)"
 description: sys.tcp_endpoints contains one row for each TCP endpoint in the system.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

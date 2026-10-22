@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE Database Mirroring (Transact-SQL)"
 description: ALTER DATABASE Database Mirroring (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "02/21/2019"
 ms.service: sql
 ms.subservice: t-sql

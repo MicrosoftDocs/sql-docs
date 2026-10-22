@@ -1,8 +1,8 @@
 ---
 title: "Database related dynamic management views (Transact-SQL)"
 description: Database Related Dynamic Management Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/23/2023
 ms.service: sql
 ms.subservice: system-objects

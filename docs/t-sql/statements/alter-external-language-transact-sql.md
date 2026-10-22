@@ -1,8 +1,8 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: rothja
 ms.date: 03/15/2021
 ms.service: sql

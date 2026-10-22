@@ -3,7 +3,7 @@ title: Enable automatic digest storage
 description: This article discusses how to enable automatic digest storage in Azure SQL Database using the Azure portal, PowerShell, and the Azure CLI.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 02/07/2024
 ms.service: sql
 ms.subservice: security

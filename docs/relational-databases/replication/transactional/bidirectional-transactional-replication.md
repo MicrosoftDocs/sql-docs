@@ -1,8 +1,8 @@
 ---
 title: "Bidirectional Transactional Replication"
 description: Bidirectional transactional replication lets two servers exchange changes. Each server publishes data and subscribes to a publication from the other server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -3,7 +3,7 @@ title: Manage Licensing and Billing
 description: This article explains how to manage SQL Server licensing options. It also demonstrates how SQL Server enabled by Azure Arc can be billed from Microsoft Azure.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest, maghan, mathoma
+ms.reviewer: vanto
 ms.date: 04/01/2026
 ai-usage: ai-assisted
 ms.topic: how-to
@@ -307,7 +307,14 @@ For an availability group replica to qualify for passive disaster recovery licen
 
 - No instances of the SQL Server service — whether as standalone or as an active node of an FCI — can be in a running state on the node, unless those instances qualify as free passive replicas of availability groups (AGs).
 
-- No instances of [associated services](#manage-ssxs) can be running in the same OSE. For example, if SQL Server Integration Services is running on the machine, even if all engine instances are passive, the Integration Services instance will be billed.
+### Associated SQL Server services on HADR servers
+
+SQL Server associated services, such as SQL Server Integration Services (SSIS), are evaluated separately from the SQL Server Database Engine for licensing and billing purposes. Configuring a Database Engine instance as an HADR or passive instance doesn't automatically establish the same passive status for other SQL Server associated services installed on the server.
+
+For regular pay-as-you-go usage, associated service running state is considered when determining usage. For Extended Security Updates (ESU), running state is not considered. An installed associated service can result in ESU billing even when the associated service isn't running.
+
+When multiple SQL Server versions are installed on the same server, eligibility should not be inferred solely from the Database Engine version. Associated services can have a different version and are evaluated according to the applicable eligibility requirements.
+
 
 ### Limitations
 
@@ -358,6 +365,19 @@ If you're an eligible pay-as-you-go Azure Arc customer and need a PBIRS or SSRS 
 > When the SQL Server associated service is a standalone instance (without SQL Server database engine) and the machine is configured using a pay-as-you-go subscription, the corresponding pay-as-you-go meters are activated for the instance.
 >
 > If you activate a physical core license as a pay-as-you-go subscription in the corresponding scope, and you configure the machine to use it, the SQL Server associated service isn't individually billed for the pay-as-you-go subscription when it's a standalone instance (without SQL Server engine). For details, see [Use a physical core license](manage-configuration.md#use-physical-core-license).
+
+## 180-day dual-use benefit
+
+Azure provides 180 days of dual-use rights to apply to current deployments and deployments in Azure to allow for data migration.
+
+For details, review the [licensing guide](https://download.microsoft.com/download/9/3/d/93d32de6-f268-45ed-ba25-2f9a6756b6af/SQL_Server_2022_Licensing_guide.pdf).
+
+To use the 180-day dual use benefit and avoid double billing while migrating to Azure, follow these steps:
+1. Enable pay-as-you-go on the source SQL Server instance after it's enabled by Arc.
+1. Deploy your Azure SQL resource, such as Azure SQL Managed Instance or SQL Server on Azure VM, and choose **Azure Hybrid Benefit** as the license type.
+1. Migrate your data from the source SQL Server instance to the Azure SQL resource within the 180-day dual-use period.
+1. Disconnect the source SQL Server instance from Azure Arc after the migration is complete, or change the license type to `LicenseOnly`.
+1. Switch the Azure SQL resource to pay-as-you-go.
 
 <a id="usage-metering"></a>
 
@@ -421,6 +441,8 @@ The following table shows the meter SKUs that are used for metering and billing 
 | --- | --- | --- | --- |
 | Physical core license | Enterprise | `PAYG` | `Ent edition - Host - PAYG` |
 | Physical core license | Enterprise | `Paid` | `Ent edition - AHB` |
+
+
 
 ## Related content
 

@@ -3,7 +3,7 @@ title: TDS 8.0
 description: This article discusses TDS 8.0, the application layer protocol used by clients to connect to SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest, jaferebe, jopilov
+ms.reviewer: jaferebe, jopilov
 ms.date: 07/14/2026
 ms.service: sql
 ms.subservice: security

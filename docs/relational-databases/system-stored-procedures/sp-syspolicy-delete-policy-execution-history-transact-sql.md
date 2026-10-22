@@ -3,7 +3,7 @@ title: "sp_syspolicy_delete_policy_execution_history (Transact-SQL)"
 description: "Deletes execution history for policies in Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

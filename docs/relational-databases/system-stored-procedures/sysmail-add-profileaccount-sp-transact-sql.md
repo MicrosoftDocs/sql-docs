@@ -1,9 +1,9 @@
 ---
 title: "sysmail_add_profileaccount_sp (Transact-SQL)"
 description: "Adds a Database Mail account to a Database Mail profile."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.date: 12/17/2020
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration

@@ -3,7 +3,7 @@ title: "sys.sp_flush_log (Transact-SQL)"
 description: Flushes to disk the transaction log of the current database, hardening all previously committed delayed durable transactions.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

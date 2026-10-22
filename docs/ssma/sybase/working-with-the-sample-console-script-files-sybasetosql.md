@@ -3,7 +3,7 @@ title: "Working with the Sample Console Script Files (SybaseToSQL)"
 description: Working with the Sample Console Script Files (SybaseToSQL)
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/10/2025
 ms.service: sql
 ms.subservice: ssma

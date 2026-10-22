@@ -1,8 +1,8 @@
 ---
 title: "Expression Context and Query Evaluation (XQuery)"
 description: Learn how information from the static and dynamic context of an XQuery expression is used to analyze and evaluate it.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

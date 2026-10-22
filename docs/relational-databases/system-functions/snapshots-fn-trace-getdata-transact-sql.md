@@ -1,8 +1,8 @@
 ---
 title: "snapshots.fn_trace_getdata (Transact-SQL)"
 description: "snapshots.fn_trace_getdata (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: system-objects

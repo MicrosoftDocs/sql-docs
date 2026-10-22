@@ -1,8 +1,8 @@
 ---
 title: SQLCMD Variables in SQL Projects
 description: Dynamically set values in a SQL project at deployment.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

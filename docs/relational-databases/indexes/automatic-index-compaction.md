@@ -1,23 +1,20 @@
 ---
 title: Automatic Index Compaction
 description: Describes the automatic index compaction feature in the SQL Server database engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.reviewer: dfurman
-ms.date: 07/24/2026
+ms.date: 10/08/2026
 ms.service: sql
 ms.topic: concept-article
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
-# Automatic index compaction (preview)
+# Automatic index compaction
 
 [!INCLUDE [ssazure-sqldb-sqlmi-autd-fabricsqldb](../../includes/applies-to-version/ssazure-sqldb-sqlmi-autd-fabricsqldb.md)]
 
 Automatic index compaction helps you reduce the consumption of storage space, disk I/O, CPU, memory, and improve workload performance without investing time and effort into index maintenance jobs. Index compaction is performed continuously and with low overhead as the data in the database changes.
-
-> [!NOTE]  
-> Automatic index compaction is currently in preview in Azure SQL Database, Azure SQL Managed Instance with the Always-up-to-date [update policy](/azure/azure-sql/managed-instance/update-policy), and SQL database in Fabric.
 
 For answers to common questions, see [Frequently asked questions (FAQ)](#frequently-asked-questions-faq).
 
@@ -62,7 +59,7 @@ Automatic index compaction provides the following benefits:
   - A compact index is more likely to be selected to improve a query plan.
 
 > [!IMPORTANT]  
-> Automatic compaction acts on recently modified pages only. As a result, the overhead of compaction is minimal compared to index rebuild or index reorganization, which process all pages.
+> Automatic compaction acts only on data pages that have rows recently modified by the `INSERT`, `UPDATE`, `DELETE`, or `MERGE` statements. As a result, the overhead of compaction is minimal compared to index rebuild or index reorganization, which process all pages.
 
 While the overhead of the compaction process is minimal, it's not zero. When you enable automatic index compaction, consider:
 
@@ -104,16 +101,18 @@ For more information about data pages, see [Page and extent architecture guide](
 
 For more information about indexes, see [Index architecture and design guide](../sql-server-index-design-guide.md).
 
-## Comparison with index reorganization and index rebuild
+## When to use index compaction, reorganization, or rebuild
 
-Consider the following differences between the traditional index maintenance operations (index reorganization, index rebuild) and automatic index compaction:
+Consider the following differences between index maintenance operations:
 
 | Considerations | Recommendations |
 | --- | --- |
 | Compaction occurs continuously and with minimal overhead as long as data in the database is modified. | You don't need to set up, monitor, and maintain index maintenance jobs to gain the benefits that these jobs might provide. |
-| Unlike index reorganization and rebuild which process all pages, the compaction process only considers the pages modified after you enable automatic index compaction. | If the page density for an index is already low, consider running a one-time index reorganization or index rebuild to increase it. This one-time operation is an extra optimization to increase page density right away. From that point on, automatic compaction keeps indexes compact without any user action. |
+| Unlike index reorganization and rebuild which process all pages, the compaction process only considers data pages modified by the `INSERT`, `UPDATE`, `DELETE`, or `MERGE` statements after you enable automatic index compaction. | If the page density for an index is already low, consider running a one-time index reorganization or index rebuild to increase it. This one-time operation is an extra optimization to increase page density right away. From that point on, automatic compaction keeps indexes compact without any user action. |
 | Each index rebuild operation requires a substantial free space in the data files, commonly equal to the size of the index or partition being rebuilt. | You don't need to allocate free space in data files for automatic index compaction or for index reorganization. |
 | Unlike index rebuild or index reorganization, compaction doesn't reduce index fragmentation. | Increased page density after compaction is more important than index fragmentation. For most workloads, a higher index fragmentation doesn't affect query performance or resource consumption. |
+| Unlike index reorganization, compaction or rebuild don't compact LOB data. | If you delete a large amount of LOB data (stored in columns with data types such as **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, or **json**) consider running a one-time index reorganization with `LOB_COMPACTION = ON`. |
+| Compaction and reorganization are not available for [heap tables](heaps-tables-without-clustered-indexes.md) (though both operations are available for nonclustered indexes on heaps). | Consider `ALTER TABLE ... REBUILD` for heaps with low page density or a large number of forwarding pointers. |
 | When the fill factor for an index is less than 100 percent but the amount of data on a page exceeds the fill factor, neither index compaction nor reorganization moves rows away from the page. An index rebuild creates new pages and fills them according to the fill factor. | For most workloads, a higher page density is preferred. Workloads that require a lower fill factor to reduce page splits might benefit from an occasional index rebuild. The rebuild creates pages with a lower page density that matches the fill factor. |
 | Unlike index rebuild, compaction doesn't update statistics on the index. | If [automatic statistics update](../statistics/statistics.md#auto_update_statistics-option) is insufficient for your workload and you rely on the [index rebuild to update statistics](reorganize-and-rebuild-indexes.md#a-positive-side-effect-of-index-rebuild), consider using automatic compaction in combination with a statistics update job. |
 
@@ -186,7 +185,7 @@ If a query is blocked, check the command of the head blocker in [sys.dm_exec_req
 
 ### Does it honor the fill factor?
 
-Auto compaction doesn't use the free page space reserved by [fill factor](specify-fill-factor-for-an-index.md). However, if that reserved space is already used by the previous DML statements, then compaction doesn't free it up.
+Auto compaction doesn't fill the free page space reserved by [fill factor](specify-fill-factor-for-an-index.md). However, if that reserved space is already filled by the previous data modifications, then compaction doesn't currently free it up.
 
 ### Does it work if an index uses row or page compression?
 
@@ -203,6 +202,10 @@ Auto compaction skips indexes that are being rebuilt or reorganized, including t
 ### Can auto compaction prevent a serverless database from auto-pausing?
 
 No. Indexes that remain eligible for auto compaction when a database pauses are compacted after the database resumes. Auto index compaction doesn't resume a paused serverless database. For more information, see [Auto-pause and auto-resume](/azure/azure-sql/database/serverless-tier-overview#auto-pause-and-auto-resume).
+
+### I deleted a lot of data and then enabled auto compaction, but page density remains low. Why?
+
+Auto compaction acts only on pages that are modified while the feature is enabled. To ensure that indexes are automatically compacted after data deletion, enable auto compaction first and then delete data.
 
 ## Examples
 

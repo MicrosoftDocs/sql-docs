@@ -1,8 +1,8 @@
 ---
 title: Change the Service Startup Account (SQL Server Configuration Manager)
 description: Learn how to change the service accounts that SQL Server and many of its services use. View limitations and restrictions on changes in service accounts.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: configuration

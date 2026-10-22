@@ -1,8 +1,8 @@
 ---
 title: "Transaction Promotion"
 description: In SQL Server CLR integration, a lightweight local transaction can be promoted to a fully distributable transaction through Transaction promotion.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

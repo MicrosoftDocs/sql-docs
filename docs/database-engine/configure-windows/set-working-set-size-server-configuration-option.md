@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: set working set size"
 description: "View information on the set working set size configuration option. This setting has no effect because its functionality is no longer available in SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

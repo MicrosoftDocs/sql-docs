@@ -1,8 +1,8 @@
 ---
 title: "Configure Topology (Peer-to-Peer Replication)"
 description: "Configure Topology (Peer-to-Peer Replication)"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

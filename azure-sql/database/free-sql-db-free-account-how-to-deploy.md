@@ -3,7 +3,7 @@ title: "Free SQL Database with Azure Free Account (Old Offer)"
 description: Guidance on how to deploy an Azure SQL Database for free using an Azure free account.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: service-overview
@@ -21,7 +21,7 @@ Azure SQL Database is an intelligent, scalable, relational database service buil
 This offer is still active for existing resources for 12 months after provisioning, providing a S0 database with 10 database transaction units and 250-GB storage for an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 > [!IMPORTANT]  
-> This free offer has been replaced by the Azure SQL Database free offer, see [Deploy Azure SQL Database for free](free-offer.md). Starting in September 2023, you can try Azure SQL Database free of charge and get 100,000 vCore seconds of compute every month, for the life of your subscription. This free offer provides a General Purpose database for the lifetime of your subscription.
+> Microsoft replaced this free offer with the Azure SQL Database free tier. To learn more, see [Deploy Azure SQL Database for free](free-tier.md). Starting in September 2023, you can try Azure SQL Database at no cost and get 100,000 vCore seconds of compute every month for the life of your subscription. The free tier provides a General Purpose database for the lifetime of your subscription.
 
 ## Monitor and track service usage of previous free offer
 
@@ -53,7 +53,7 @@ The following table describes the values on the track usage page:
 
 ## Clean up resources
 
-When you're finished using these resources, you can delete the resource group you created, which also delete the server and single database within it.
+When you're finished using these resources, you can delete the resource group you created, which also deletes the server and single database within it.
 
 To delete `myResourceGroup` and all its resources using the Azure portal:
 
@@ -64,4 +64,4 @@ To delete `myResourceGroup` and all its resources using the Azure portal:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy Azure SQL Database for free](free-offer.md)
+> [Deploy Azure SQL Database for free](free-tier.md)

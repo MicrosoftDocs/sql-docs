@@ -1,9 +1,9 @@
 ---
 title: Running SQL Server Unit Tests
 description: Become familiar with SQL Server unit tests. View resources on creating tests, creating custom test conditions, running tests, and interpreting results.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

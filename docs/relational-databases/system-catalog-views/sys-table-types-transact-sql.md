@@ -1,8 +1,8 @@
 ---
 title: "sys.table_types (Transact-SQL)"
 description: sys.table_types (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

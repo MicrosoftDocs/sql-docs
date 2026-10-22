@@ -1,8 +1,8 @@
 ---
 title: "sys.service_contract_message_usages (Transact-SQL)"
 description: sys.service_contract_message_usages (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: system-objects

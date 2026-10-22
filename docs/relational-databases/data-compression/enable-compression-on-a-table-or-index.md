@@ -3,7 +3,7 @@ title: "Enable compression on a table or index"
 description: Learn how to enable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/10/2024
 ms.service: sql
 ms.subservice: performance
@@ -22,11 +22,11 @@ f1_keywords:
 helpviewer_keywords:
   - "data compression wizard"
   - "compression [SQL Server], enable"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =fabric-sqldb"
 ---
 # Enable compression on a table or index
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This article describes how to enable [data compression](data-compression.md) on an existing table or index in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. To enable data compression when creating a table or index, see the [Create a compressed index](../../t-sql/statements/create-index-transact-sql.md#l-create-a-compressed-index) and [Creating a table that uses row compression](../../t-sql/statements/create-table-transact-sql.md#n-creating-a-table-that-uses-row-compression) examples.
 

@@ -1,8 +1,8 @@
 ---
 title: "Remote Servers"
 description: Learn about remote servers, which have been replaced with linked servers in SQL Server. View information on functionality, configuration, and security.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

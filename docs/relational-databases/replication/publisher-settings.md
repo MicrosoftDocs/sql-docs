@@ -1,8 +1,8 @@
 ---
 title: "'Publisher Settings' (SSMS)"
 description: "SQL Server Replication 'Publisher Settings' dialog box"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Find key phrases in documents with semantic search"
 description: "Find Key Phrases in Documents with Semantic Search"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: search

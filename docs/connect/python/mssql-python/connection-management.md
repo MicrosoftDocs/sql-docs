@@ -3,8 +3,8 @@ title: Manage Connections with mssql-python
 description: Learn how to open, close, and manage database connections using context managers, autocommit, and connection attributes with mssql-python.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -253,32 +253,45 @@ cursor.execute(
 
 ## Encoding and decoding
 
-Configure text encoding for SQL statements and results. The default settings work for most applications. Change them only if you connect to a server that uses a non-UTF-8 encoding for `char`/`varchar` columns. The encoding a server uses depends on the [column collation](../../../relational-databases/collations/collation-and-unicode-support.md):
+The driver always sends Transact-SQL (T-SQL) statements and `str` parameters to the server as UTF-16LE and binds text parameters as `SQL_C_WCHAR`. You can't change the outbound encoding. The `setencoding()` method records the values you request but doesn't change what the driver sends:
+
+- Calling `setencoding()` with no arguments restores the defaults.
+- A valid request that differs from UTF-16LE with `SQL_WCHAR`, such as `encoding='utf-8'` or `ctype=mssql_python.SQL_CHAR`, emits `UserWarning` and has no effect. A request that explicitly names UTF-16LE with `SQL_WCHAR` doesn't warn. The `getencoding()` method still reports the requested values.
 
 ```python
-# Set encoding for outbound text
-conn.setencoding(encoding='utf-8')
+import warnings
 
-# Get current encoding settings
-settings = conn.getencoding()
-print(settings)  # {'encoding': 'utf-8', 'ctype': ...}
+with warnings.catch_warnings(record=True) as caught:
+    warnings.simplefilter("always")
+    conn.setencoding(encoding="utf-8")
+print(caught[0].category.__name__)  # UserWarning
 
-# Set decoding for inbound text from specific SQL types
+conn.setencoding()  # Restore the defaults
+print(conn.getencoding())  # {'encoding': 'utf-16le', 'ctype': -8}
+```
+
+Configure decoding for text that the server returns. By default, the driver requests **char** and **varchar** data as UTF-16LE with `SQL_WCHAR`, so values decode correctly regardless of the [column collation](../../../relational-databases/collations/collation-and-unicode-support.md) and its code page. Most applications don't need to change the decoding settings. Calling `setdecoding()` with only the SQL type restores the default:
+
+```python
+# Decode char and varchar data as UTF-8 instead of the default
 conn.setdecoding(mssql_python.SQL_CHAR, encoding='utf-8')
+
+# Restore the default
+conn.setdecoding(mssql_python.SQL_CHAR)
 
 # Get current decoding settings
 settings = conn.getdecoding(mssql_python.SQL_CHAR)
-print(settings)
+print(settings)  # {'encoding': 'utf-16le', 'ctype': -8}
 ```
 
 Default encodings:
 
-| Direction | SQL type | Default encoding |
-| ----------- | ---------- | ------------------ |
-| Outbound (str) | SQL_WCHAR | `utf-16le` |
-| Inbound | SQL_CHAR | `utf-8` |
-| Inbound | SQL_WCHAR | `utf-16le` |
-| Inbound | SQL_WMETADATA | `utf-16le` |
+| Direction | SQL type | Default encoding | Change with |
+| --- | --- | --- | --- |
+| Outbound (str) | SQL_WCHAR | `utf-16le` | Can't be changed |
+| Inbound | SQL_CHAR | `utf-16le` | `setdecoding()` |
+| Inbound | SQL_WCHAR | `utf-16le` | `setdecoding()` |
+| Inbound | SQL_WMETADATA | `utf-16le` | `setdecoding()` |
 
 ## Best practices
 

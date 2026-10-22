@@ -1,9 +1,9 @@
 ---
 title: "Previous Releases of SQL Server Data Tools (SSDT)"
 description: "See how to install 2017 and earlier versions of SSDT and SSDT-BI. View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2017 and earlier Visual Studio versions."
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt
@@ -11,12 +11,12 @@ ms.topic: release-notes
 ms.custom:
   - UpdateFrequency5
   - sfi-ropc-nochange
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current"
 ---
 
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types - relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.
 

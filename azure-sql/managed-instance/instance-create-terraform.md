@@ -3,7 +3,7 @@ title: "Quickstart: Create Instance with Terraform"
 description: Learn how to create and deploy Azure SQL Managed Instance with Terraform
 author: vladai78
 ms.author: vladiv
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: azure-sql-managed-instance
 ms.topic: quickstart

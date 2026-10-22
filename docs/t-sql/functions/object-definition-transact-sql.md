@@ -3,7 +3,7 @@ title: "OBJECT_DEFINITION (Transact-SQL)"
 description: "OBJECT_DEFINITION (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.date: "03/14/2017"
+ms.date: "08/21/2026"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "OBJECT_DEFINITION function"
 dev_langs:
   - "TSQL"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # OBJECT_DEFINITION (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
   Returns the [!INCLUDE[tsql](../../includes/tsql-md.md)] source text of the definition of a specified object.  
   

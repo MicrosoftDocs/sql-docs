@@ -3,7 +3,7 @@ title: "Configure Column Encryption In-Place with Transact-SQL"
 description: "Configure column encryption in-place with Transact-SQL"
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: security

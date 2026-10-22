@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_drop_agent_parameter (Transact-SQL)"
 description: sp_drop_agent_parameter drops one or all parameters from a profile in the MSagent_parameters table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

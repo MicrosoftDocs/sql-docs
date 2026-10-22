@@ -1,8 +1,8 @@
 ---
 title: "PropertyNumVal Property (ClientNetworkProtocolProperty)"
 description: "PropertyNumVal Property (ClientNetworkProtocolProperty Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: wmi

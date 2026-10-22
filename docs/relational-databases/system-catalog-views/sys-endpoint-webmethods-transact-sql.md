@@ -1,8 +1,8 @@
 ---
 title: "sys.endpoint_webmethods (Transact-SQL)"
 description: sys.endpoint_webmethods contains a row for each SOAP method defined on a SOAP-enabled HTTP endpoint.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

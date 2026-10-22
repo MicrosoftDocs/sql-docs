@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_change_log_shipping_primary_database (Transact-SQL)"
 description: "Changes the primary database settings."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

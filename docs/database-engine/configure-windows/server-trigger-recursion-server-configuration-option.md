@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: server trigger recursion"
 description: "Learn how the server trigger recursion option affects recursion in SQL Server server-level triggers. See how to turn direct and indirect recursion on and off."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

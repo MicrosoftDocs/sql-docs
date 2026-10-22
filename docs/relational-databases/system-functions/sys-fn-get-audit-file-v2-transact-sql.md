@@ -3,7 +3,7 @@ title: "sys.fn_get_audit_file_v2 (Transact-SQL)"
 description: "The sys.fn_get_audit_file_v2 system function replaces sys.fn_get_audit_file, and returns information from an audit file created by a server audit."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, srsaluru, fresantos
+ms.reviewer: srsaluru, fresantos
 ms.date: 10/24/2025
 ms.service: sql
 ms.subservice: system-objects

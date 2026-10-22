@@ -1,9 +1,9 @@
 ---
 title: Scalability
 description: Learn about enhancements to scalability to on-disk storage for memory-optimized tables in SQL Server, such as using multiple threads to persist tables.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: in-memory-oltp

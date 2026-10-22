@@ -1,7 +1,7 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 09/29/2024
 ms.service: sql
 ms.topic: include

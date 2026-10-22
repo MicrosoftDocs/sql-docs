@@ -1,9 +1,9 @@
 ---
 title: Create Service Broker Queues
 description: "A queue holds incoming messages for a service."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

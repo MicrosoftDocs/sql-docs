@@ -1,6 +1,7 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/21/2025
 ms.service: sql
 ms.subservice: linux

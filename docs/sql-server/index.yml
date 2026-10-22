@@ -8,7 +8,7 @@ metadata:
   ms.topic: landing-page
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: randolphwest, mathoma
+  ms.reviewer: vanto
   ms.date: 04/02/2026
   ms.custom: build-2025
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -30,7 +30,7 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Try Azure SQL Database for free
-            url: /azure/azure-sql/database/free-offer?view=azuresql-db&preserve-view=true
+            url: /azure/azure-sql/database/free-tier?view=azuresql-db&preserve-view=true
           - text: Try Azure SQL Managed Instance for free
             url: /azure/azure-sql/managed-instance/free-offer?view=azuresql-mi&preserve-view=true
           - text: Free SQL tools
@@ -78,6 +78,13 @@ landingContent:
             url: /fabric/database/sql/overview
   - title: Azure SQL & Microsoft Fabric
     linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Fabric Database Hub
+          url: /fabric/database/hub/
+        - text: Monitor Microsoft SQL in Fabric
+          url: /fabric/database/hub/monitor-sql
+          
       - linkListType: overview
         links:
           - text: Azure SQL family of products
@@ -168,8 +175,8 @@ landingContent:
             url: ../t-sql/functions/functions.md
           - text: Fuzzy string matching
             url: ../relational-databases/fuzzy-string-match/overview.md
-          - text: Regular expressions (REGEX)
-            url: ../t-sql/functions/regular-expressions-functions-transact-sql.md
+          - text: Regular expressions functions (REGEX)
+            url: ../relational-databases/regular-expressions/overview.md
           - text: Scripting
             url: ../ssms/scripting/database-engine-scripting.md
           - text: Synonyms

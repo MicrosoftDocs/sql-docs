@@ -1,8 +1,8 @@
 ---
 title: "CHECKPOINT (Transact-SQL)"
 description: "CHECKPOINT generates a manual checkpoint in the current database."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 08/20/2025
 ms.service: sql
 ms.subservice: t-sql

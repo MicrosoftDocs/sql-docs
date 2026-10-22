@@ -1,8 +1,8 @@
 ---
 title: Set up a Business Logic Handler for Merge Article
 description: Use replication programming or Replication Management Objects to configure a business logic handler for Merge Replication synchronization.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

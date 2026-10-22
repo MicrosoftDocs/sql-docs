@@ -1,8 +1,8 @@
 ---
 title: "sys.query_store_query_hints (Transact-SQL)"
 description: The sys.query_store_query_hints system catalog view returns Query Store hints.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/25/2025
 ms.service: sql
 ms.subservice: system-objects

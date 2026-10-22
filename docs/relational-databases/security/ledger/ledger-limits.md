@@ -3,7 +3,7 @@ title: "Ledger considerations and limitations"
 description: Limitations and considerations for the ledger feature
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 02/25/2026
 ms.service: sql
 ms.subservice: security

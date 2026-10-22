@@ -1,9 +1,9 @@
 ---
 title: "Toolbox Component F1 Help"
 description: Toolbox Component F1 Help
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/27/2023
 ms.service: sql
 ms.subservice: supportability

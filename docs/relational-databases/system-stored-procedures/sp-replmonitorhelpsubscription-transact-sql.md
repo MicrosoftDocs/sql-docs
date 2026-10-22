@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replmonitorhelpsubscription (Transact-SQL)"
 description: sp_replmonitorhelpsubscription returns current status information for subscriptions belonging to one or more publications at the Publisher.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

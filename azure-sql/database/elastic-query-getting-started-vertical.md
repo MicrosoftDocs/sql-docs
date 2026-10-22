@@ -3,7 +3,7 @@ title: Get Started With Cross-Database Queries
 description: How to use elastic database query with vertically partitioned databases
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bogavril, mathoma
+ms.reviewer: bogavril
 ms.date: 12/09/2024
 ms.service: azure-sql-database
 ms.subservice: scale-out

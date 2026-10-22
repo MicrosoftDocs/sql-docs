@@ -1,8 +1,8 @@
 ---
 title: "sys.resource_governor_configuration (Transact-SQL)"
 description: sys.resource_governor_configuration (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 02/10/2025
 ms.service: sql

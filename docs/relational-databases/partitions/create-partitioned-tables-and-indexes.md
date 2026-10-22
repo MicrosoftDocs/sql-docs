@@ -2,8 +2,8 @@
 title: "Create partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 description: Create partitioned tables and indexes
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/29/2025
 ms.service: sql
 ms.topic: how-to

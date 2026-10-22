@@ -2,9 +2,9 @@
 title: "Configure Replication with Microsoft Entra Authentication for SQL Server Enabled by Azure Arc"
 titleSuffix: SQL Server enabled by Azure Arc
 description: "Learn to configure Transactional or Snapshot replication with Microsoft Entra authentication."
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: replication

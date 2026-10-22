@@ -1,8 +1,8 @@
 ---
 title: "Database recovery model best practice policy"
 description: Learn how to enable a policy to check the backup recovery model for user databases to reduce data loss.
-author: dzsquared
-ms.author: drskwier
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: vanto
 ms.date: 12/15/2023
 ms.service: sql

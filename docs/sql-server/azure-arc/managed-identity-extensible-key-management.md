@@ -3,7 +3,7 @@ title: "Managed Identity Support for Extensible Key Management (EKM) with Azure 
 description: Learn how to use managed identities with SQL Server enabled by Azure Arc and Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: randolphwest, vanto
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.topic: concept-article

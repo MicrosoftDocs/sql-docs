@@ -4,10 +4,11 @@ description: Learn about syntax of connection strings in the Microsoft SqlClient
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 04/19/2023
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 # Connection string syntax
 
@@ -39,6 +40,28 @@ The syntax for a <xref:Microsoft.Data.SqlClient.SqlConnection> connection string
 
 > [!IMPORTANT]
 > The default setting for the `Persist Security Info` keyword is `false`. Setting it to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from the connection after the connection has been opened. Keep `Persist Security Info` set to `false` to ensure that an untrusted source does not have access to sensitive connection string information.
+
+### Connection string aliases
+
+Starting in Microsoft.Data.SqlClient 7.1, SqlClient accepts the following space-free aliases for compatibility with other SQL Server drivers. Connection string keywords are case-insensitive.
+
+| Canonical keyword | Alias |
+| --- | --- |
+| `Column Encryption Setting` | `ColumnEncryption` |
+| `Connect Timeout` | `ConnectTimeout` |
+| `Failover Partner` | `FailoverPartner` |
+| `Packet Size` | `PacketSize` |
+| `Workstation ID` | `WorkstationID` |
+
+### Configure pooled connection idle time
+
+Starting in Microsoft.Data.SqlClient 7.1.0, `Connection Idle Timeout` sets the maximum duration that a pooled connection can remain idle in the pool before it's marked as idle-expired. Idle-expired connections are closed and removed from their associated pool. The default is 300 seconds, and a value of 0 disables idle expiration.
+
+```text
+Data Source=MySqlServer;Initial Catalog=AdventureWorks;Integrated Security=true;Connection Idle Timeout=120;
+```
+
+The keyword is enforced only when the `Switch.Microsoft.Data.SqlClient.UseLegacyIdleTimeoutBehavior` AppContext switch is set to `false`. For more information, see [Limit connection idle time](sql-server-connection-pooling.md#limit-connection-idle-time).
 
 ### Windows authentication with SqlClient
 

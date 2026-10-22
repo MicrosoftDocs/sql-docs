@@ -3,7 +3,7 @@ title: Database Instant File Initialization
 description: Learn about instant file initialization and how to enable it on your database. Instant file initialization (IFI) allows for faster file operations.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/16/2025
 ms.service: sql
 ms.subservice: configuration

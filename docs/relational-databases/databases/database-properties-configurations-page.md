@@ -3,7 +3,7 @@ title: "Database Properties (Configurations Page)"
 description: "Learn how to use the Configurations tab in the Database Properties dialog box to view or modify a database scoped option."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, erinstellato 
+ms.reviewer: erinstellato
 ms.date: 01/07/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,8 +1,8 @@
 ---
 title: SQL Database Projects Refactor Overview
 description: Learn what a refactor log is, why it matters, and how SQL projects and DacFx use it during deployment.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 07/14/2026
 ms.service: sql

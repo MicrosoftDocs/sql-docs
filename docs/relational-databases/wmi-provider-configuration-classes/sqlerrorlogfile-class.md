@@ -1,9 +1,9 @@
 ---
 title: SqlErrorLogFile class
 description: Provides properties for viewing information about a SQL Server log file.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/23/2023
 ms.service: sql
 ms.subservice: wmi

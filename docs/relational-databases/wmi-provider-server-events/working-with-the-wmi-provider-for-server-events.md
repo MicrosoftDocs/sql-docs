@@ -1,9 +1,9 @@
 ---
 title: "Work with the WMI Provider for Server Events"
 description: Consider these guidelines to program using the WMI Provider for Server Events. Learn about enabling Service Broker, connection strings, and permissions.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: wmi

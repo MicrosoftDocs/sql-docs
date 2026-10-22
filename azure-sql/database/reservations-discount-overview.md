@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Learn how to buy Azure SQL Database and SQL Managed Instance reservations to save on your compute costs.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 02/23/2026
 ms.service: azure-sql
 ms.subservice: service-overview

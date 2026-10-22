@@ -3,7 +3,7 @@ title: "How FOR JSON Escapes Special Characters and Control Characters"
 description: This article describes how the FOR JSON clause of a SQL Server SELECT statement escapes special characters and represents control characters in the JSON output.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 07/23/2025
 ms.service: sql
 ms.topic: concept-article

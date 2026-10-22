@@ -1,9 +1,9 @@
 ---
 title: "Handling SMO events"
 description: Handle SMO event types by subscribing to them using an event handler and the ServerConnection object.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/18/2024
 ms.service: sql
 ms.topic: "reference"

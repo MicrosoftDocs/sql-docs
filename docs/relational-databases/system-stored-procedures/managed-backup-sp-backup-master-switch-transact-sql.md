@@ -1,9 +1,9 @@
 ---
 title: "smart_admin.sp_backup_master_switch (Transact-SQL)"
 description: "Pauses or resumes the SQL Server Managed Backup to Microsoft Azure."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

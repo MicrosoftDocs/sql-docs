@@ -2,8 +2,9 @@
 title: New to Linux Resources for SQL Users
 titleSuffix: SQL Server
 description: Resources and guidance for SQL Server users who are new to Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux
@@ -27,9 +28,12 @@ The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module in
 
 After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs.
 
-[!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is [supported](sql-server-linux-release-notes-2025.md#supported-platforms) on Red Hat Enterprise Linux (RHEL) and Ubuntu.
+| [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] version | Distributions supported |
+| --- | --- |
+| [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] | Red Hat Enterprise Linux (RHEL) and Ubuntu |
+| [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions | Red Hat Enterprise Linux (RHEL), Ubuntu, and SUSE Linux Enterprise Server (SLES) |
 
-[!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and earlier versions are [also supported](sql-server-linux-release-notes-2022.md#supported-platforms) on SUSE Linux Enterprise Server (SLES).
+For more information, see [Supported platforms](sql-server-linux-release-notes.md#supported-platforms).
 
 ## Get around directories
 
@@ -39,7 +43,7 @@ This module helps you answer the following questions:
 
 - How to navigate between different files
 - How to identify a file from a directory
-- Identify different directories
+- How to identify different directories
 
 ## Install new software
 
@@ -55,12 +59,12 @@ After you're familiar with recognizing different users and groups in Linux, lear
 
 ## Commands for system administration
 
-Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) that system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`.
+Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) that system administrators rely on to control their Linux operating systems. These commands include `df`, `du`, `top`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`.
 
 ## Related content
 
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
-- [Release notes for SQL Server on Linux](sql-server-linux-release-notes.md)
-- [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.yml)
+- [Release information for SQL Server on Linux](sql-server-linux-release-notes.md)
+- [SQL Server on Linux frequently asked questions (FAQ)](sql-server-linux-faq.yml)
 - [SQL Server help and feedback](../sql-server/sql-server-get-help.md)
 - [Other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/)

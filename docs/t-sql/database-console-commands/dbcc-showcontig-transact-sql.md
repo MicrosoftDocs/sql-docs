@@ -1,8 +1,8 @@
 ---
 title: DBCC SHOWCONTIG (Transact-SQL)
 description: DBCC SHOWCONTIG displays fragmentation information for the data and indexes of the specified table or view.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

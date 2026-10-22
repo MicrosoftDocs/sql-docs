@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_unregister_custom_scripting (Transact-SQL)"
 description: Removes a user-defined custom stored procedure or Transact-SQL script file registered with sp_register_custom_scripting.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

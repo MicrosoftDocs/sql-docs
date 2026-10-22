@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_maintenance_plan_db (Transact-SQL)"
 description: Disassociates the specified maintenance plan from the specified database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

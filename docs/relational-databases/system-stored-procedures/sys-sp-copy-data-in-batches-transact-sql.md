@@ -3,7 +3,7 @@ title: "sys.sp_copy_data_in_batches (Transact-SQL)"
 description: "Copies data from the source table to the target table after verifying that their schema is identical in terms of number of columns, column names and their data types."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

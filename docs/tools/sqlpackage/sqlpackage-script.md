@@ -1,9 +1,9 @@
 ---
 title: SqlPackage Script
 description: Learn how to automate database development tasks with SqlPackage Script. View examples and available parameters, properties, and SQLCMD variables.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 07/30/2025
 ms.service: sql
 ms.subservice: tools-other

@@ -1,8 +1,8 @@
 ---
 title: "Complete Database Restores (Full Recovery Model)"
 description: Learn about a complete SQL Server database restore, where all data is recovered to a consistent point in time.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: backup-restore

@@ -1,8 +1,8 @@
 ---
 title: Repair a Failed SQL Server Installation
 description: Follow these steps to repair an installation of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: install

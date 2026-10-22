@@ -1,8 +1,8 @@
 ---
 title: "Configure Windows Firewall for Database Engine Access"
 description: Find out how to configure Windows Firewall so that client computers can access an instance of the SQL Server Database Engine through the firewall.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -3,7 +3,7 @@ title: Configure a failover group
 description: Learn how to configure a failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 04/27/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

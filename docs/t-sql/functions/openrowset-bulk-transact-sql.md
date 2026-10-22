@@ -1,9 +1,9 @@
 ---
 title: "OPENROWSET BULK (Transact-SQL)"
 description: "OPENROWSET BULK function reads data from an external data source."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, hudequei, wiassaf, jovanpop, fresantos
+author: uc-msft
+ms.author: umajay
+ms.reviewer: hudequei, wiassaf, jovanpop, fresantos
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: t-sql

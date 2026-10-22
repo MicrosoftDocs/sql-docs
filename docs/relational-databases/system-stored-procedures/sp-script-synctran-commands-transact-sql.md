@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_script_synctran_commands (Transact-SQL)"
 description: Generates a script that contains the sp_addsynctrigger calls to be applied at Subscribers for updatable subscriptions.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

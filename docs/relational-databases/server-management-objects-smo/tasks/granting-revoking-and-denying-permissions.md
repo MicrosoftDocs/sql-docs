@@ -1,8 +1,8 @@
 ---
 title: "Granting, Revoking, and Denying Permissions"
 description: "Granting, Revoking, and Denying Permissions"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "08/06/2017"
 ms.service: sql
 ms.topic: "reference"

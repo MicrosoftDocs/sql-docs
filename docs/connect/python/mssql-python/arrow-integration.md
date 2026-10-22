@@ -3,7 +3,7 @@ title: Use mssql-python with Apache Arrow
 description: Learn how to use Apache Arrow fetch methods in mssql-python for high-performance columnar data retrieval from Microsoft SQL and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

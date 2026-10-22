@@ -1,8 +1,8 @@
 ---
 title: "Specifying Axis in a Path Expression Step"
 description: Learn how to specify an axis step in an XQuery path expression.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

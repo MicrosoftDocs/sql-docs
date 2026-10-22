@@ -3,7 +3,7 @@ title: "UNISTR (Transact-SQL)"
 description: The UNISTR function provides support for Unicode string literals and returns the Unicode output for the input expression.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: abhtiwar, umajay, randolphwest
+ms.reviewer: abhtiwar, umajay
 ms.date: 07/28/2025
 ms.service: sql
 ms.subservice: t-sql

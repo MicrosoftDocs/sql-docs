@@ -3,7 +3,7 @@ title: Secure Azure SQL Managed Instance Public Endpoints
 description: "Securely use public endpoints in Azure SQL Managed Instance"
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: security

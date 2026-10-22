@@ -1,8 +1,8 @@
 ---
 title: Set an Instance to Start Automatically (SQL Server Configuration Manager)
 description: Find out how to set an instance of SQL Server to start automatically. Learn about the default configuration, and see how to set the start mode to automatic.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: configuration

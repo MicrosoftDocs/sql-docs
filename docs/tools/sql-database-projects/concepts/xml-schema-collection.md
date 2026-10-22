@@ -1,9 +1,9 @@
 ---
 title: SQL Projects XML Schema Collections
 description: "Automatic generation of XML schema collections in SQL database projects."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 03/03/2026
 ms.service: sql
 ms.subservice: sql-database-projects

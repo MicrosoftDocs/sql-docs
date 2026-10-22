@@ -1,8 +1,8 @@
 ---
 title: "Optimize SQL Trace"
 description: "Optimize SQL Trace"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/04/2017"
 ms.service: sql
 ms.topic: best-practice

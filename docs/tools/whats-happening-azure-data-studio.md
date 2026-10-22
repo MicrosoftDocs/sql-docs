@@ -1,8 +1,8 @@
 ---
 title: What's Happening with Azure Data Studio
 description: Learn about the Azure Data Studio retirement, and the recommended replacement options.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: tsiddique, roblescarlos
 ms.date: 06/09/2026
 ms.service: sql

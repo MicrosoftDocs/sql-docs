@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: contained database authentication"
 description: "Learn about the contained database authentication option. See how to turn it on so that you can attach contained databases to the SQL Server Database Engine."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

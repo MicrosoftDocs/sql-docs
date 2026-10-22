@@ -1,15 +1,15 @@
 ---
 title: Use large CLR UDTs (Native Client OLE DB provider)
 description: "Use Large CLR UDTs  in SQL Server Native Client (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Use Large CLR UDTs  in SQL Server Native Client (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later.  
   

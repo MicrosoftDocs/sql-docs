@@ -3,7 +3,7 @@ title: Managed identity overview
 description: Learn about managed identity with SQL Server 2025 enabled by Azure Arc.
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: randolphwest, mathoma, vanto
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.topic: concept-article

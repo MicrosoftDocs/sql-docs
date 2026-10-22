@@ -1,8 +1,8 @@
 ---
 title: "Prepare a secondary database for an availability group"
 description: "A description for how to manually prepare a secondary database to join an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "07/25/2017"
 ms.service: sql
 ms.subservice: availability-groups

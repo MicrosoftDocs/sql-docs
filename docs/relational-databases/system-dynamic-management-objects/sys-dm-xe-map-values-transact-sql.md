@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_xe_map_values (Transact-SQL)"
 description: sys.dm_xe_map_values (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: system-objects

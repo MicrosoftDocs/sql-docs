@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_gettopologyinfo (Transact-SQL)"
 description: sp_gettopologyinfo returns information about a peer-to-peer transactional replication topology.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

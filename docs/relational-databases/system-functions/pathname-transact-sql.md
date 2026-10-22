@@ -1,8 +1,8 @@
 ---
 title: "PathName (Transact-SQL)"
 description: "PathName (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/02/2016"
 ms.service: sql
 ms.subservice: system-objects

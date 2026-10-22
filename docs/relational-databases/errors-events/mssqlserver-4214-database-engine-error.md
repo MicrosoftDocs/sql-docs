@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_4214
 description: "MSSQLSERVER_"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: jopilov, mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 08/20/2020
 ms.service: sql
 ms.subservice: supportability

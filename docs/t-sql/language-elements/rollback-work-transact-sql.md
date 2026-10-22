@@ -1,9 +1,9 @@
 ---
 title: ROLLBACK WORK (Transact-SQL)
 description: "ROLLBACK WORK (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: t-sql

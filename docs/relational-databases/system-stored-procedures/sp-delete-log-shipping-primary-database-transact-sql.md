@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_delete_log_shipping_primary_database (Transact-SQL)"
 description: Removes log shipping of primary database including backup job, and local and remote history.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

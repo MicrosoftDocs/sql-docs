@@ -1,9 +1,9 @@
 ---
 title: "sp_fulltext_keymappings (Transact-SQL)"
 description: Returns mappings between document identifiers (DocIds) and full-text key values.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], troubleshooting"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_fulltext_keymappings (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Returns mappings between document identifiers (DocIds) and full-text key values. The DocId column contains values for a **bigint** integer that maps to a particular full-text key value in a full-text indexed table. DocId values that satisfy a search condition are passed from the Full-Text Engine to the Database Engine, where they are mapped to full-text key values from the base table being queried. The full-text key column is a unique index that is required on one column of the table.
 

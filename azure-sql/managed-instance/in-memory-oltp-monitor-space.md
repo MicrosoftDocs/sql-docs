@@ -3,7 +3,7 @@ title: Monitor XTP In-memory storage
 description: Estimate and monitor XTP in-memory storage usage and capacity in Azure SQL Managed Instance; resolve capacity error 41823.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/16/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: performance

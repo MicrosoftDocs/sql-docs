@@ -1,8 +1,8 @@
 ---
 title: Use sqlcmd
 description: Learn how to use the sqlcmd for ad hoc interactive execution of Transact-SQL statements and scripts, and automate Transact-SQL scripting tasks.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: mahyon
 ms.date: 01/28/2026
 ms.service: sql
@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "sqlcmd utility, about sqlcmd utility"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Use sqlcmd
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 **sqlcmd** is a command-line utility for ad hoc, interactive execution of Transact-SQL (T-SQL) statements and scripts. It also automates T-SQL scripting tasks. To use **sqlcmd** interactively or to build script files for **sqlcmd**, you should understand T-SQL. You can use **sqlcmd** in various ways. For example:
 

@@ -1,8 +1,8 @@
 ---
 title: "Register SQL Server instances for ESUs"
 description: Learn how to register SQL Server instances in the Azure portal to receive Extended Security Updates (ESUs) for SQL Server 2014 and SQL Server 2016.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: install

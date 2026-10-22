@@ -16,13 +16,13 @@ helpviewer_keywords:
   - "sys.sql_logins catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom:
   - build-2025
 ---
 # sys.sql_logins (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns one row for every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication login.
 

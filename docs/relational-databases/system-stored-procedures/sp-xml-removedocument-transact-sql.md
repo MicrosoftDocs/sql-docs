@@ -1,9 +1,9 @@
 ---
 title: "sp_xml_removedocument (Transact-SQL)"
 description: "Removes the internal representation of the XML document specified by the document handle and invalidates the document handle."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "SqlPipe Object"
 description: For CLR database objects running in SQL Server, you can send results to the connected pipe using the Send methods of the SqlPipe object.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

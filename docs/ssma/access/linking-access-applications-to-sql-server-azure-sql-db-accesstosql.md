@@ -3,7 +3,7 @@ title: "Link Access Applications to SQL Server and Azure SQL Database"
 description: Learn how to link your Access tables to the migrated tables so that you can use your existing Access applications with SQL Server or Azure SQL Database.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

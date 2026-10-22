@@ -1,8 +1,8 @@
 ---
 title: "DISABLE TRIGGER (Transact-SQL)"
 description: DISABLE TRIGGER (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "05/10/2017"
 ms.service: sql
 ms.subservice: t-sql

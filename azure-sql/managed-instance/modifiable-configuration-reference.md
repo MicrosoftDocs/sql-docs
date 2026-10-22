@@ -1,8 +1,8 @@
 ---
 title: Modifiable Configuration Reference
 description: Learn which configuration settings you can modify after you create Azure SQL Managed Instance, and which settings are immutable.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: mlandzic, vladiv, urmilano
 ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance

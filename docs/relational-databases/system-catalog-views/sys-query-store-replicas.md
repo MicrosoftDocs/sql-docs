@@ -1,9 +1,9 @@
 ---
 title: "sys.query_store_replicas (Transact-SQL)"
 description: The sys.query_store_replicas system view contains information about Query Store replicas.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects

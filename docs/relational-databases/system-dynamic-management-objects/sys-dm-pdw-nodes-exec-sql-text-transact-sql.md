@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.dm_pdw_nodes_exec_sql_text (Transact-SQL)
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns the text of the SQL batch that is identified by the specified `sql_handle`. This table-valued function replaces the system function `fn_get_sql`.
 
@@ -40,5 +40,5 @@ The same remarks in [sys.dm_exec_sql_text](sys-dm-exec-sql-text-transact-sql.md)
   
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)
 - [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)

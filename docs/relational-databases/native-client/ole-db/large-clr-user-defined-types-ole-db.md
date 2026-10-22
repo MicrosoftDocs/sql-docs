@@ -1,8 +1,8 @@
 ---
 title: "Large CLR User-Defined Types (OLE DB)"
 description: "Large CLR User-Defined Types in SQL Server Native Client (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "large CLR user-defined types [OLE DB]"
 ---
 # Large CLR User-Defined Types in SQL Server Native Client (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]

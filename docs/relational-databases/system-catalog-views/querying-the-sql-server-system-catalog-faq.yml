@@ -17,8 +17,8 @@ metadata:
     - "metadata [SQL Server], example queries"
     - "system catalogs [SQL Server], example queries"
     - "catalog views [SQL Server], frequently asked questions"
-  author: rwestMSFT
-  ms.author: randolphwest
+  author: adbadram
+  ms.author: adbadram
 title: Querying the SQL Server System Catalog FAQ
 summary: |
   [!INCLUDE[sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]

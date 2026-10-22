@@ -4,10 +4,11 @@ description: The Microsoft ODBC Driver for SQL Server allows ODBC applications t
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl
-ms.date: 01/16/2026
+ms.date: 10/19/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ms.custom:
   - linux-related-content
   - sfi-image-nochange
@@ -34,7 +35,7 @@ The `Authentication` keyword can be used when connecting with a DSN or connectio
 |Name|Values/Default|Description|
 |-|-|-|
 |`Authentication`|`(not set)`(default), `(empty string)`, `SqlPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryPassword` [DEPRECATED]|Controls the authentication mode.<br/><br/>`(not set)` - Authentication mode determined by other keywords (existing legacy connection options.)<br/><br/>`(empty string)` - (Connection string only.) Override and unset an `Authentication` value set in the DSN.<br/><br/>`SqlPassword` - Directly authenticate to SQL using a username and password.<br/><br/>`ActiveDirectoryIntegrated` - _Windows, and Linux/Mac 17.6+, driver only_. Authenticate with a Windows credential federated through Microsoft Entra ID with integrated authentication.<br/><br/>`ActiveDirectoryInteractive` - _Windows driver only_. Authenticate with a Microsoft Entra identity using interactive authentication.<br/><br/>`ActiveDirectoryMsi` - Authenticate with a Microsoft Entra managed identity. For a user-assigned identity, set UID to the identity's client ID for Azure App Service or Azure Container Instance; otherwise, use its object ID. For system-assigned identity, UID isn't required.<br/><br/>`ActiveDirectoryServicePrincipal` - (17.7+) Authenticate with a Microsoft Entra  service principal. UID is set to the client ID of the service principal. PWD is set to the client secret.<br/><br/>`ActiveDirectoryPassword` - [DEPRECATED] Authenticate with a Microsoft Entra identity using a username and password.<br/><br/>`ActiveDirectoryPassword` is deprecated. For more information, see [ActiveDirectoryPassword is deprecated](#activedirectorypassword-is-deprecated).|
-|`Encrypt`|`(not set)`(default), `Yes`/`Mandatory`(18.0+), `No`/`Optional`(18.0+), `Strict`(18.0+)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting isn't _`none`_ in the DSN or connection string, the default is `Yes`. The default is also `Yes` in versions 18.0.1+. Otherwise, the default is `No`. If the attribute `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set the value of Encryption in the DSN or connection string or connection attribute. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
+|`Encrypt`|`(not set)` (default), `Yes`/`Mandatory` (18.0 and later versions), `No`/`Optional` (18.0 and later versions), `Strict` (18.0 and later versions)|Controls encryption for a connection. When you don't explicitly set encryption, Driver 17 defaults to `Yes` if the pre-attribute value of `Authentication` isn't _`none`_ or `SQL_COPT_SS_ACCESS_TOKEN` is set; otherwise, the default is `No`. In Driver 18.0.1 and later versions, the default is `Yes` (`Mandatory`). Authentication and encryption remain separate settings. If `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set encryption in the DSN, connection string, or `SQL_COPT_SS_ENCRYPT` connection attribute.|
 
 ## New and/or Modified Connection Attributes
 
@@ -44,7 +45,7 @@ The following pre-connect connection attributes have either been introduced or m
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_AD_SPA`, `SQL_AU_RESET`|(not set)|See description of `Authentication` keyword above. `SQL_AU_NONE` is provided to explicitly override a set `Authentication` value in the DSN and/or connection string, while `SQL_AU_RESET` unsets the attribute if it was set, allowing the DSN or connection string value to take precedence.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Pointer to `ACCESSTOKEN` or NULL|NULL|If non-null, specifies the Microsoft Entra access token to use. It's an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes. <br> **NOTE:** ODBC Driver version 13.1 only supports this setting on _Windows_.|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(see description)|Controls encryption for a connection. `SQL_EN_OFF` and `SQL_EN_ON` disable and enable encryption, respectively. If the pre-attribute value of the `Authentication` setting isn't _`none`_ or `SQL_COPT_SS_ACCESS_TOKEN` is set, and `Encrypt` wasn't specified in either the DSN or connection string, the default is `SQL_EN_ON`. Otherwise, the default is `SQL_EN_OFF`. If the connection attribute `SQL_COPT_SS_AUTHENTICATION` is set to not _`none`_, explicitly set `SQL_COPT_SS_ENCRYPT` to the desired value if `Encrypt` wasn't specified in the DSN or connection string. The effective value of this attribute controls [whether encryption is used for the connection](../../relational-databases/native-client/features/using-encryption-without-validation.md).|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(see description)|Controls the client's encryption request. `SQL_EN_OFF` doesn't prevent the server from requiring encryption. In Driver 17, if you don't explicitly set encryption and the pre-attribute value of `Authentication` isn't _`none`_ or `SQL_COPT_SS_ACCESS_TOKEN` is set, the default is `SQL_EN_ON`. Otherwise, Driver 17 defaults to `SQL_EN_OFF`. In Driver 18.0.1 and later versions, the default is `SQL_EN_ON` regardless of authentication when you don't explicitly set encryption. If `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set encryption in the DSN, connection string, or this attribute. For encryption and certificate-validation behavior, see [Example connection strings](#example-connection-strings).|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Not supported with Microsoft Entra ID, since password changes to Microsoft Entra principals can't be accomplished through an ODBC connection. <br><br>Password expiration for SQL Server Authentication was introduced in SQL Server 2005. The `SQL_COPT_SS_OLDPWD` attribute was added to allow the client to provide both the old and the new password for the connection. When this property is set, the provider won't use the connection pool for the first connection or for future connections, since the connection string contains the "old password", which has now changed.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_Deprecated_; use `SQL_COPT_SS_AUTHENTICATION` set to `SQL_AU_AD_INTEGRATED` instead. <br><br>Forces use of Windows Authentication (Kerberos on Linux and macOS) for access validation on server login. When Windows Authentication is used, the driver ignores user identifier and password values provided as part of `SQLConnect`, `SQLDriverConnect`, or `SQLBrowseConnect` processing.|
 
@@ -108,40 +109,45 @@ These options correspond to the same six available in the DSN setup UI above.
 
 ### Example connection strings
 
+> [!NOTE]
+> The encryption and certificate-validation descriptions in these examples apply to ordinary remote connections without DSN or connection-attribute overrides, Windows **Force Protocol Encryption** registry settings, or internal Windows certificate-validation callbacks. They describe non-`Strict` encryption. Login-only encryption protects the authentication exchange, not subsequent application data.
+>
+> With `Encrypt=yes` and `TrustServerCertificate=no` (the default), Drivers 17 and 18 request full-session encryption and validate the server certificate. If the client sets `Encrypt=no` but the server requires full-session encryption, Driver 17 doesn't select normal certificate validation for that server-only request. Driver 18 checks the negotiated full-session encrypted state and validates the certificate unless `TrustServerCertificate=yes`. In the ordinary non-`Strict` path, `TrustServerCertificate=yes` suppresses normal validation; Windows registry-forced encryption can select validation independently of that setting, and an internal Windows callback can replace the normal validation path.
+
 1. SQL Server Authentication - legacy syntax. Server certificate isn't validated, and encryption is used only if the server enforces it. The username/password is passed in the connection string.
 
    `server=Server;database=Database;UID=UserName;PWD=<password>;Encrypt=no;TrustServerCertificate=yes;`
 
-2. SQL Authentication - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string.
+1. SQL Authentication - new syntax. By using `Authentication=SqlPassword` and omitting encryption as shown, Drivers 17 and 18 default to requesting full-session encryption. The driver validates the server certificate with the default `TrustServerCertificate=no`. The username and password are in the connection string.
 
    `server=Server;database=Database;UID=UserName;PWD=<password>;Authentication=SqlPassword;`
 
-3. Integrated Windows Authentication (Kerberos on Linux and macOS) using SSPI (to SQL Server or SQL IaaS) - current syntax. Server certificate isn't validated, unless encryption is required by the server.
+1. Integrated Windows Authentication (Kerberos on Linux and macOS) using SSPI (to SQL Server or SQL IaaS) - current syntax. With `Encrypt=no`, full-session encryption is used only if the server requires it. For that server-only request, Driver 17 doesn't select normal certificate validation; Driver 18 validates with the default `TrustServerCertificate=no`.
 
    `server=Server;database=Database;Trusted_Connection=yes;Encrypt=no;`
 
-4. (_Windows driver only_.) Integrated Windows Authentication using SSPI (if the target database is in SQL Server or SQL Server on Azure VMs) - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`).
+1. (_Windows driver only_.) Integrated Windows Authentication using SSPI (if the target database is in SQL Server or SQL Server on Azure VMs) - new syntax. By using `Authentication=ActiveDirectoryIntegrated` and omitting encryption as shown, Drivers 17 and 18 default to requesting full-session encryption. The driver validates the server certificate with the default `TrustServerCertificate=no`.
 
    `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 
-5. Microsoft Entra username/password authentication (if the target database is in Azure SQL Database or Azure SQL Managed Instance). Server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string.
+1. Microsoft Entra username and password authentication (if the target database is in Azure SQL Database or Azure SQL Managed Instance). The explicit `Encrypt=yes` requests full-session encryption. The driver validates the server certificate with the default `TrustServerCertificate=no`. The username and password are in the connection string.
 
    > [!NOTE]
    > ActiveDirectoryPassword is deprecated. For more information, see [ActiveDirectoryPassword is deprecated](#activedirectorypassword-is-deprecated).
 
    `server=Server;database=Database;UID=UserName;PWD=<password>;Authentication=ActiveDirectoryPassword;Encrypt=yes;`
 
-6. (_Windows, and Linux/macOS 17.6+, driver only_.) Integrated Windows Authentication using ADAL or Kerberos, which involves redeeming Windows account credentials for a Microsoft Entra access token, assuming the target database is in Azure SQL. Server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). On Linux/macOS, a suitable Kerberos ticket needs to be available. For more information, see the section below on Federated Accounts and [Using Integrated Authentication](linux-mac/using-integrated-authentication.md).
+1. (_Windows, and Linux/macOS 17.6 and later versions, driver only_.) Integrated Windows Authentication using ADAL or Kerberos, which involves redeeming Windows account credentials for a Microsoft Entra access token, assuming the target database is in Azure SQL. The explicit `Encrypt=yes` requests full-session encryption. The driver validates the server certificate with the default `TrustServerCertificate=no`. On Linux/macOS, a suitable Kerberos ticket needs to be available. For more information, see [Considerations for using ADFS Federated Accounts on Linux/macOS](#considerations-for-using-adfs-federated-accounts-on-linuxmacos) and [Using Integrated Authentication](linux-mac/using-integrated-authentication.md).
 
    `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;Encrypt=yes;`
 
-7. (_Windows driver only_.) Microsoft Entra Interactive Authentication uses Microsoft Entra multifactor authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input additional verification to complete the connection. The username is passed in the connection string.
+1. (_Windows driver only_.) Microsoft Entra Interactive Authentication uses Microsoft Entra multifactor authentication technology to set up a connection. You can omit `UID` with Driver 17.8 and later versions, or set it to the user account to authenticate. When you supply `UID`, the sign-in dialog might not offer a way to select a different account. To use another account, change `UID` before connecting, or omit it with Driver 17.8 and later versions. The driver opens an Azure Authentication dialog so the user can complete any additional verification.
 
    `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`
 
    ![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
 
-8. Microsoft Entra managed identity authentication can use a system-assigned or user-assigned managed identity. For a user-assigned identity, set UID to the identity's client ID for Azure App Service or Azure Container Instance; otherwise, use its object ID. For system-assigned identity, UID isn't required.
+1. Microsoft Entra managed identity authentication can use a system-assigned or user-assigned managed identity. For a user-assigned identity, set UID to the identity's client ID for Azure App Service or Azure Container Instance; otherwise, use its object ID. For system-assigned identity, UID isn't required.
 
    For system-assigned identity:
 
@@ -151,7 +157,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
    `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
 
-9. Microsoft Entra service principal authentication
+1. Microsoft Entra service principal authentication
 
    `server=Server;database=Database;UID=clientId;PWD=<password>;Authentication=ActiveDirectoryServicePrincipal;Encrypt=yes;`
 
@@ -170,7 +176,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
 - To connect using Windows Integrated or Microsoft Entra Integrated (Windows, and Linux/macOS 17.6+, driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. For driver versions 17.7 or earlier, `UID` and `PWD` must not be specified. Beginning with driver version 17.8, `UID` and `PWD` are ignored.
 
-- To connect using Microsoft Entra interactive authentication (Windows driver only), `UID` must be specified. For driver versions 17.7 and earlier, `PWD` must not be specified. Beginning with driver version 17.8, `PWD` is ignored.
+- To connect by using Microsoft Entra interactive authentication (Windows driver only), you can omit `UID` with Driver 17.8 and later versions, or set it to the user account to authenticate. The sign-in dialog might not let you change accounts when you supply `UID`. To use another account, change `UID` before connecting, or omit it with Driver 17.8 and later versions. Driver versions 17.7 and earlier require `UID` and prohibit `PWD`. Beginning with driver version 17.8, `PWD` is ignored.
 
 - Starting with version 18.1, `Trusted_Connection=Yes` no longer uses Microsoft Entra ID federated authentication by default and uses SSPI-integrated instead. To use Microsoft Entra ID for this option, `TrustedConnection_UseAAD=Yes` should be configured.
 
@@ -192,7 +198,10 @@ typedef struct AccessToken
 
 The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_ followed by _length_ bytes of opaque data that form the access token. Because of how SQL Server handles access tokens, one obtained via an [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) JSON response must be expanded so that each byte is followed by a zero padding byte, similar to a UCS-2 string containing only ASCII characters. However, the token is an opaque value and the length specified, in bytes, must NOT include any null terminator. Because of their considerable length and format constraints, this method of authentication is only available programmatically via the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute.
 
-The `ACCESSTOKEN` must remain allocated for as long as the connection handle is allocated. Otherwise access violations might occur. The pointer is part of the connection pool key, so a new pointer results in a new pool and new connections. If a token expires, you can renew the access token by updating the data buffer directly to continue using existing connections.
+You must keep the `ACCESSTOKEN` allocated for as long as the connection handle is allocated. Otherwise, access violations might occur. When you use the Windows ODBC Driver Manager, the token pointer is part of the connection pool key, so a different pointer selects a different pool. Keep the buffer associated with the same identity when you replace an expired token. Updating the buffer doesn't change the identity of an already authenticated connection.
+
+> [!CAUTION]
+> On Linux and macOS, unixODBC connection pooling doesn't use `SQL_COPT_SS_ACCESS_TOKEN` to distinguish identities. When you use the same connection string, a connection request with a different token can reuse a pooled connection authenticated as the previous identity. If your process connects with tokens for different identities, disable unixODBC pooling before starting it: set `Pooling=No` in the `[ODBC]` section of the effective `odbcinst.ini` file, and ensure your application and its libraries don't enable ODBC pooling. Restart existing application processes after changing the configuration. Don't rely on changing token pointers to isolate identities.
 
 There's no corresponding DSN or connection string keyword. The connection string must not contain `UID`, `PWD`, `Authentication`, or `Trusted_Connection` keywords.
 

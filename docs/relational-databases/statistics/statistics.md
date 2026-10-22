@@ -3,8 +3,8 @@ title: Statistics
 description: The Query Optimizer uses statistics to create query plans that improve query performance. Learn about concepts and guidelines for using query optimization.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: derekw, randolphwest
-ms.date: 06/12/2026
+ms.reviewer: derekw
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -26,12 +26,12 @@ helpviewer_keywords:
   - "statistics [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # Statistics
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Synapse Analytics FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high-quality query plan. In some cases, you need to create extra statistics or modify the query design for best results. This article discusses statistics concepts and provides guidelines for using query optimization statistics effectively.
 
@@ -479,7 +479,7 @@ WHERE s.object_id = OBJECT_ID(N'Sales.SalesOrderDetail')
   AND s.name = N'IX_SalesOrderDetail_ProductID';
 ```
 
-To determine whether the current database's [automatic statistics creation and update options](../../t-sql/statements/alter-database-transact-sql.md#set-auto_create_statistics--on--off-) are enabled, use: 
+To determine whether the current database's [automatic statistics creation and update options](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) are enabled, use:
 
 ```sql
 SELECT [name],
@@ -625,7 +625,11 @@ GO
 
 For some applications, query design guidelines might not apply because you can't change the query or the `RECOMPILE` query hint might cause too many recompiles. Use plan guides to specify other hints, such as `USE PLAN`, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../performance/plan-guides.md).
 
-In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], consider Query Store hints to force plans, instead of plan guides. For more information, see [Query Store hints](../performance/query-store-hints.md).
+ In SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric, consider Query Store hints to force plans, instead of plan guides. For more information, see [Query Store hints](../performance/query-store-hints.md).
+
+## Platform support
+
+In Fabric Data Warehouse and the SQL analytics endpoint, only single-column histogram statistics can be manually created or modified. In Fabric Data Warehouse and the SQL analytics endpoint, only single-column histogram statistics can be manually updated with `UPDATE STATISTICS`. The `sp_updatestats` stored procedure isn't supported in Fabric Data Warehouse or the SQL analytics endpoint. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
 
 ## Related content
 

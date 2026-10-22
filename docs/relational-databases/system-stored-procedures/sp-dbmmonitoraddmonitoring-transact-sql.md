@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dbmmonitoraddmonitoring (Transact-SQL)"
 description: sp_dbmmonitoraddmonitoring creates a database mirroring monitor job that periodically updates the mirroring status for every mirrored database on the server instance.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

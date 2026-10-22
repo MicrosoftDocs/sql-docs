@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_enable_table (Transact-SQL)"
 description: "The sys.sp_change_feed_enable_table system stored procedure enables the addition of a new table to an existing table group for Fabric Mirrored Databases or Azure Synapse Link."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

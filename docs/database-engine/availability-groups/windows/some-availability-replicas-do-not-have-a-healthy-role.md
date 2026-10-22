@@ -1,8 +1,8 @@
 ---
 title: "Some availability replicas do not have a healthy role"
 description: Availability Replicas Role State checks if there are any availability replicas that are not in a healthy role.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

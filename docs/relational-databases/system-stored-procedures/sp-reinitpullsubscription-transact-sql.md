@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_reinitpullsubscription (Transact-SQL)"
 description: sp_reinitpullsubscription marks a transactional pull or anonymous subscription for reinitialization the next time the Distribution Agent runs.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_index_physical_stats (Transact-SQL)"
 description: Returns size and fragmentation information for the data and indexes of the specified table or view in the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 03/19/2026
 ms.service: sql

@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer: mathoma
+  ms.reviewer: vanto
   ms.date: 02/07/2024
   monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
   titleSuffix: SQL Server and Azure SQL

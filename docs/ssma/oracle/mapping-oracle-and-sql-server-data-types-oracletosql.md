@@ -3,7 +3,7 @@ title: "Map Oracle and SQL Server Data Types (OracleToSQL)"
 description: Learn how to customize SSMA for Oracle mappings between Oracle data types and SQL Server.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: ssma

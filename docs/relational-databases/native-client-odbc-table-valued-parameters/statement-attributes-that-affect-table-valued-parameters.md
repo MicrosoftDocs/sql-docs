@@ -1,8 +1,8 @@
 ---
 title: "Attributes that affect Table-Valued Parameters"
 description: "Statement Attributes that Affect Table-Valued Parameters"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), statement attribute"
 ---
 # Statement Attributes that Affect Table-Valued Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The following table describes the attributes in a descriptor field.  
   

@@ -1,8 +1,8 @@
 ---
 title: "sys.database_query_store_internal_state (Transact-SQL)"
 description: "sys.database_query_store_internal_state contains information about queue length and memory usage for the Query Store when Query Store for secondary replicas is enabled."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/17/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Implicit Cursor Conversions (ODBC)"
 description: "Implicit Cursor Conversions (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "cursors [ODBC], implicit cursor conversions"
 ---
 # Implicit Cursor Conversions (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Applications can request a cursor type through [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) and then execute a SQL statement that is not supported by server cursors of the type requested. A call to **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO and **SQLGetDiagRec** returns:  
   

@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_4064"
 description: "MSSQLSERVER_4064"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sureshka, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: sureshka
 ms.date: 03/17/2026
 ai-usage: ai-assisted
 ms.service: sql

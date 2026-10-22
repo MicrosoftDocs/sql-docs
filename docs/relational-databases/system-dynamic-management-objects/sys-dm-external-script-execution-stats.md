@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_external_script_execution_stats"
 description: sys.dm_external_script_execution_stats
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/17/2023
 ms.service: sql
 ms.subservice: machine-learning

@@ -1,8 +1,8 @@
 ---
 title: "Availability replicas not synchronizing data"
 description: "Possible causes and resolutions for when one or more availability replicas in an Always On availability group are not synchronizing data with the primary replica."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

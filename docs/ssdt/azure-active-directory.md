@@ -1,9 +1,9 @@
 ---
 title: Microsoft Entra ID in SSDT
 description: "Learn about the Microsoft Entra authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure Synapse Analytics."
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

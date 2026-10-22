@@ -3,7 +3,7 @@ title: "sp_audit_write (Transact-SQL)"
 description: sp_audit_write adds a user-defined audit event to USER_DEFINED_AUDIT_GROUP.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

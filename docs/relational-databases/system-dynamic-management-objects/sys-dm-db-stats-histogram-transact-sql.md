@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_stats_histogram (Transact-SQL)"
 description: sys.dm_db_stats_histogram returns the statistics histogram for the specified database object (table or indexed view) in the current database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: system-objects

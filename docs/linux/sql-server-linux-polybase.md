@@ -1,9 +1,9 @@
 ---
 title: Use ODBC Data Source with SQL Server on Linux
 description: Learn how to connect to ODBC data sources with PolyBase on SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: hudequei, amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, hudequei
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux
@@ -65,7 +65,7 @@ Installation creates the following files:
 | File | Description |
 | --- | --- |
 | `/etc/odbcinst.ini` | Driver name, description, and version information. |
-| `/etc/odbc.ini` | DNS name, encryption, and other specifications. |
+| `/etc/odbc.ini` | DSN name, encryption, and other specifications. |
 
 You need to create the `odbc.ini` file based on the driver's properties and specifications. Multiple drivers share the same `odbc.ini` and `odbcinst.ini` files, with multiple entries.
 
@@ -109,7 +109,7 @@ For the full list of supported parameters check the driver's provider documentat
 
 ## Example queries
 
-Once the driver setup is complete, you can use database scoped credential, external data source, and other PolyBase.
+Once the driver setup is complete, you can create a database scoped credential, an external data source, and an external table with PolyBase.
 
 For example:
 
@@ -132,7 +132,7 @@ CREATE EXTERNAL TABLE T_EXT
     C1 INT
 )
 WITH (
-    DATA_SOURCE = [EDS_SYBASE],
+    DATA_SOURCE = [EDS_Sybase],
     LOCATION = N'TEST.DBO.T'
 );
 GO
@@ -151,7 +151,7 @@ The service uses the default port number `25100`. If this port is in use, it fai
 Failed to bind port "127.0.0.1:25100"
 ```
 
-You can find this message in PolyBase's log file, located at: `/var/opt/mssql-polybase-ees/log/`. In [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] and later versions, the location has moved to `/var/opt/mssql/log/polybase-ees-log`.
+You can find this message in the PolyBase log file located at: `/var/opt/mssql-polybase-ees/log/`. In [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] and later versions, the location has moved to `/var/opt/mssql/log/polybase-ees-log`.
 
 ## Related content
 

@@ -12,17 +12,8 @@
     href: installation-tutorial-linux-mac.md
   - name: Loading the drivers
     href: loading-the-php-sql-driver.md
-  - name: Getting started with the PHP SQL driver
+  - name: Connect and query with PHP
     href: getting-started-with-the-php-sql-driver.md
-    items:
-    - name: 'Step 1: Configure development environment'
-      href: step-1-configure-development-environment-for-php-development.md
-    - name: 'Step 2: Create a SQL database'
-      href: step-2-create-a-sql-database-for-php-development.md
-    - name: 'Step 3: Proof of concept connecting to SQL'
-      href: step-3-proof-of-concept-connecting-to-sql-using-php.md
-    - name: 'Step 4: Connect resiliently to SQL'
-      href: step-4-connect-resiliently-to-sql-with-php.md
   - name: Overview
     href: overview-of-the-php-sql-driver.md
 - name: Configure and connect

@@ -1,9 +1,9 @@
 ---
 title: Guidelines for Online Index Operations
 description: Guidelines for online index operations.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 09/22/2025
 ms.service: sql
 ms.subservice: table-view-index
@@ -113,6 +113,8 @@ To use the `RESUMABLE` option, you must also use the `ONLINE` option. When you p
 - The `SORT_IN_TEMPDB = ON` option isn't supported.
 
 - Disabled indexes aren't supported.
+
+- Filtered indexes aren't supported.
 
 > [!TIP]  
 > Resumable index operations don't require a large transaction, allowing frequent log truncation during this operation and avoiding large log growth. The data required to resume and complete an index operation is stored in the data files of a database.

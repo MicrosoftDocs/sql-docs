@@ -2,9 +2,9 @@
 title: Pacemaker for Availability Groups and Failover Cluster Instances
 titleSuffix: SQL Server on Linux
 description: Learn about using Pacemaker for high availability options for SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: linux
@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../../../includes/applies-to-version/sql-linux.md)]
 
-Starting with [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)], [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is supported on both Linux and Windows. Like Windows-based [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deployments, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] databases and instances need to be highly available under Linux. This article covers the basic information to understand Pacemaker with Corosync, and how to plan and deploy it for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] configurations.
+[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is supported on both Linux and Windows. Like Windows-based deployments, [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] databases and instances need to be highly available under Linux. This article covers the basic information to understand Pacemaker with Corosync, and how to plan and deploy it for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] configurations.
 
 ## HA add-on and extension basics
 
@@ -69,7 +69,7 @@ A newly created AG requires a specialized form of a clone resource called a *mul
 
 ### Resource groups/sets
 
-Similar to roles in a WSFC, a Pacemaker cluster has the concept of a resource group. A resource group (called a *set* in SLES) is a collection of resources that function together and can fail over from one node to another as a single unit. Resource groups can't contain resources that are configured as *Promoted* or *Unpromoted*; thus, they can't be used for AGs. While a resource group can be used for FCIs, it isn't generally a recommended configuration.
+Similar to roles in a WSFC, a Pacemaker cluster has the concept of a resource group. A resource group (called a *set* in SLES) is a collection of resources that function together and can fail over from one node to another as a single unit. Resource groups can't contain resources that are configured as *promoted* or *unpromoted*; thus, they can't be used for AGs. While a resource group can be used for FCIs, it isn't generally a recommended configuration.
 
 ### Constraints
 
@@ -131,7 +131,7 @@ One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker 
 
 Quorum configuration and requirements are related to AG or FCI-specific deployments of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
-STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is at [Storage-based Fencing](https://documentation.suse.com/sle-ha/15-SP2/html/SLE-HA-all/cha-ha-storage-protect.html) for SLES. There's also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, see [Stonith Plugin Agent for VMware VM VCenter SOAP Fencing (Unofficial)](https://github.com/olafrv/fence_vmware_soap).
+STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is at [Storage-based Fencing](https://documentation.suse.com/sle-ha/15-SP2/html/SLE-HA-all/cha-ha-storage-protect.html) for SLES. There's also a STONITH agent for VMware vCenter for ESXi-based solutions. For more information, see [Stonith Plugin Agent for VMware VM vCenter SOAP Fencing (Unofficial)](https://github.com/olafrv/fence_vmware_soap).
 
 ### Interoperability
 

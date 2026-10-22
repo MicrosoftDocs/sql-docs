@@ -1,9 +1,9 @@
 ---
 title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
 description: GET_FILESTREAM_TRANSACTION_CONTEXT returns a token that represents the current transaction context of a session.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 03/24/2026
 ms.service: sql
 ms.subservice: t-sql

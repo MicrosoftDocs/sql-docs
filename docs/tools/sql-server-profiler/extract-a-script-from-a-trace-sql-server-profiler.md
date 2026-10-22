@@ -2,8 +2,8 @@
 title: Extract a Script from a Trace
 titleSuffix: SQL Server Profiler
 description: Learn how to extract Transact-SQL events from a trace file or table in SQL Server Profiler and save them as a Transact-SQL script file.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

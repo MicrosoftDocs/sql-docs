@@ -1,11 +1,11 @@
 ---
 title: Rotate TDE protector (PowerShell & the Azure CLI)
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
-description: Learn how to rotate the Transparent data encryption (TDE) protector for a server in Azure used by Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics using PowerShell and the Azure CLI.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn how to rotate the transparent data encryption (TDE) protector for Azure SQL Database and Azure SQL Managed Instance by using PowerShell and the Azure CLI.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/21/2026
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -18,7 +18,7 @@ ms.custom:
 ---
 # Rotate the Transparent data encryption (TDE) protector
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This article describes key rotation for a [server](logical-servers.md) using a TDE protector from Azure Key Vault. Rotating the logical TDE protector for a server means switching to a new supported key that protects the databases on the server. Depending on the configuration, the TDE protector can be backed by a supported asymmetric (RSA) or symmetric (AES) key stored in Azure Key Vault or Azure Key Vault Managed HSM. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database's data encryption key, not the entire database.
 
@@ -39,14 +39,9 @@ This article discusses both automated and manual methods to rotate the TDE prote
       > [!NOTE]  
       > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview. You may see this capability appear over time depending on your region and service deployment status.
 
-> [!NOTE]
-> A paused dedicated SQL pool in Azure Synapse Analytics must be resumed before key rotations.
->
-> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics dedicated SQL pools (formerly SQL DW). For documentation on transparent data encryption (TDE) for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
-
 ## Prerequisites
 
-- This how-to guide assumes that you're already using a key from Azure Key Vault as the TDE protector for Azure SQL Database or Azure Synapse Analytics. See [Transparent data encryption with BYOK Support](transparent-data-encryption-byok-overview.md).
+- This article assumes that you're already using a key from Azure Key Vault as the TDE protector for Azure SQL Database or Azure SQL Managed Instance. See [Transparent data encryption with BYOK Support](transparent-data-encryption-byok-overview.md).
 - You must have Azure PowerShell installed and running.
 
 > [!TIP]
@@ -446,6 +441,10 @@ The following examples use [az sql mi tde-key set](/cli/azure/sql/mi/tde-key#az-
    ```
 
 ---
+
+## TDE in Azure Synapse Analytics
+
+For information about rotating the TDE protector in Azure Synapse Analytics, see [Rotate the TDE protector](/azure/synapse-analytics/sql/transparent-data-encryption-byok-key-rotation). For documentation on transparent data encryption (TDE) for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 ## Related content
 

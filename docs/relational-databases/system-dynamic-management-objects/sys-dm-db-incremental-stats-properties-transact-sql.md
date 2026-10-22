@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_incremental_stats_properties (Transact-SQL)"
 description: sys.dm_db_incremental_stats_properties (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "12/18/2017"
 ms.service: sql
 ms.subservice: system-objects

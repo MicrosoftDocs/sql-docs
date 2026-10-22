@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropserver (Transact-SQL)"
 description: Removes a server from the list of known remote and linked servers on the local instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

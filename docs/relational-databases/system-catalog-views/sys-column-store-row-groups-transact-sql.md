@@ -1,8 +1,8 @@
 ---
 title: "sys.column_store_row_groups (Transact-SQL)"
 description: sys.column_store_row_groups (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 01/05/2026
 ms.service: sql

@@ -3,7 +3,7 @@ title: "System Base Tables"
 description: System base tables are the underlying tables that actually store the metadata for a specific database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/09/2025
 ms.service: sql
 ms.subservice: system-objects

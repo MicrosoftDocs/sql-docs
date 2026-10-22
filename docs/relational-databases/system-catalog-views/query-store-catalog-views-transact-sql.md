@@ -1,8 +1,8 @@
 ---
 title: "Query Store catalog views (Transact-SQL)"
 description: Query Store catalog views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/09/2021"
 ms.service: sql
 ms.subservice: system-objects

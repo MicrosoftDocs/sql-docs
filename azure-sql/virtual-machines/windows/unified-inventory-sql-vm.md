@@ -9,6 +9,7 @@ ms.subservice: management
 ms.topic: concept-article
 ai-usage: ai-assisted
 ms.custom: references_regions
+monikerRange: ">=azuresql-vm"
 ---
 
 # Unified inventory for SQL Server on Azure Virtual Machines (preview)

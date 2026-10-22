@@ -1,8 +1,8 @@
 ---
 title: Install SQL Server Servicing Updates
 description: This article provides information about installing updates for SQL Server during a new installation or after SQL Server has been installed.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_reseed_db_init (Transact-SQL)"
 description: "The sys.sp_change_feed_reseed_db_init system internal stored procedure executes a database reseed."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

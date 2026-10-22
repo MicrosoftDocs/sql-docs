@@ -3,8 +3,8 @@ title: Configure mssql-python Module Settings
 description: Learn how to configure global module settings in the mssql-python driver, including lowercase queries, decimal separator, and custom settings.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -99,6 +99,56 @@ conn = mssql_python.connect(connection_string, native_uuid=False)
 > [!NOTE]
 > The `native_uuid` setting was introduced in mssql-python version 1.5.0.
 
+## Select the native ODBC provider
+
+The driver loads one native ODBC provider per process. Two providers are available:
+
+| Provider | Description | Ships in |
+| --- | --- | --- |
+| `msodbcsql18` | Default. Microsoft ODBC Driver 18 for SQL Server. | `mssql-python-odbc` |
+| `mssql-odbc` | Opt-in. A Rust-based ODBC provider. | `mssql-python-rs` |
+
+Both packages install with `pip install mssql-python`, so you don't need to install anything else to try the `mssql-odbc` provider. Your application code doesn't change.
+
+Select the provider with the `MSSQL_PYTHON_NATIVE_PROVIDER` environment variable. On Linux or macOS:
+
+```bash
+export MSSQL_PYTHON_NATIVE_PROVIDER=mssql-odbc
+```
+
+On Windows PowerShell:
+
+```powershell
+$env:MSSQL_PYTHON_NATIVE_PROVIDER = "mssql-odbc"
+```
+
+Or set the `native_provider` module attribute before you open the first connection:
+
+```python
+import mssql_python
+
+mssql_python.native_provider = "mssql-odbc"
+
+conn = mssql_python.connect(connection_string)
+print(mssql_python.get_native_provider_info())
+```
+
+The `get_native_provider_info()` function returns the selected provider and where the selection came from:
+
+```output
+{'id': 'mssql-odbc', 'package': 'mssql_py_core', 'version': None, 'driver_path': '...', 'source': 'property', 'frozen': True}
+```
+
+The driver applies these rules when it resolves the provider:
+
+- The environment variable takes precedence over the `native_provider` attribute. If you set the attribute to a different provider than the environment variable, the driver emits `RuntimeWarning` and uses the environment variable.
+
+- The selection is fixed when the driver loads the provider, which happens after the connection string is parsed and before the driver contacts the server. The selection stays fixed even if the connection then fails, for example because the server is unreachable. An error raised before the provider loads, such as a connection string parsing error or a missing provider package, doesn't fix the selection. After the selection is fixed, a change to `native_provider` emits `RuntimeWarning` and has no effect for the rest of the process.
+
+- An unrecognized provider name raises `ValueError`. Setting the attribute to an unknown name raises immediately. An unknown name in the environment variable raises when you open the first connection. The driver doesn't fall back to the default provider.
+
+- Set `native_provider` to `None` to clear a selection before the first connection.
+
 ## Module-level constants
 
 The driver exposes read-only DB-API 2.0 compliance constants that describe its capabilities. Use these constants to write code that adapts to different DB-API drivers:
@@ -171,7 +221,7 @@ Check which version of the driver is installed:
 import mssql_python
 
 # Driver version
-print(mssql_python.__version__)  # e.g., '1.14.0'
+print(mssql_python.__version__)  # For example, '1.16.0'
 ```
 
 ## Configure settings at startup

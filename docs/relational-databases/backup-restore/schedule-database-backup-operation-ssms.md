@@ -1,9 +1,9 @@
 ---
 title: Schedule a database backup operation using SSMS
 description: This article describes how to schedule a database backup operation by using SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sureshka, mathoma
+author: dnethi
+ms.author: dinethi
+ms.reviewer: sureshka
 ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: backup-restore

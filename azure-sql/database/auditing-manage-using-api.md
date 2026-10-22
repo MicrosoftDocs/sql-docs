@@ -1,22 +1,23 @@
 ---
 title: Manage Auditing Using APIs
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: Use Azure SQL Database auditing to track database events into an audit log.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma
-ms.date: 06/10/2025
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: concept-article
 ms.custom:
   - devx-track-azurepowershell
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # Manage Azure SQL Database Auditing using APIs
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides an overview of the different APIs used for managing Auditing for Azure SQL Database and Azure Synapse Analytics.
+This article provides an overview of the different APIs for managing auditing for Azure SQL Database.
 
 ## Use Azure PowerShell
 
@@ -66,9 +67,13 @@ You can manage Azure SQL Database auditing using [Azure Resource Manager](/azure
 > [!NOTE]  
 > The linked samples are on an external public repository and are provided 'as is', without warranty, and are not supported under any Microsoft support program/service.
 
+## Auditing in Azure Synapse Analytics
+
+For information about managing auditing by using APIs in Azure Synapse Analytics, see [Manage auditing using APIs](/azure/synapse-analytics/sql/auditing-manage-using-api).
+
 ## Related content
 
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

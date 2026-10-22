@@ -1,8 +1,8 @@
 ---
 title: "Configure cluster quorum NodeWeight settings"
 description: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance

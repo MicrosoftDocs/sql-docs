@@ -1,9 +1,9 @@
 ---
 title: "General XQuery Use Cases"
 description: View several examples of general XQuery use including searching, retrieving, and listing specific data from a product catalog.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

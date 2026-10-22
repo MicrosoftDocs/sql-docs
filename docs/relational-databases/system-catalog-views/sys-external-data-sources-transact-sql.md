@@ -1,8 +1,8 @@
 ---
 title: "sys.external_data_sources (Transact-SQL)"
 description: "The sys.external_data_sources system catalog view contains a row for each external data source in the current database."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: hudequei, wiassaf
 ms.date: 05/13/2025
 ms.service: sql
@@ -15,16 +15,14 @@ f1_keywords:
   - "sys.external_data_sources"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # sys.external_data_sources (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricsqldb.md)]
 
 
   Contains a row for each external data source in the current database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
-
-  Contains a row for each external data source on the server for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  

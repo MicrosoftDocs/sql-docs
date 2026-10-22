@@ -1,8 +1,9 @@
 ---
 title: What's New for SQL Server 2025 on Linux
 description: In this article, learn about the major features and services available for SQL Server 2025 running on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
@@ -17,7 +18,7 @@ ms.custom:
 
 [!INCLUDE [sqlserver2025-linux](../includes/applies-to-version/sqlserver2025-linux.md)]
 
-This article describes the major features and services available for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2025.md).
+This article describes the major features and services available for [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] running on Linux. For package downloads and known issues, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
 ## Updates
 
@@ -39,9 +40,9 @@ The following updates apply to [!INCLUDE [sssql25-md](../includes/sssql25-md.md)
 
 The following updates apply to [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] Cumulative Update (CU) 1.
 
-- **Red Hat Enterprise Linux 10 support**. [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is fully supported on Red Hat Enterprise Linux (RHEL) 10. For more information, see [Quickstart: Install SQL Server and create a database on Red Hat](install-upgrade/quickstart-install-red-hat.md?view=sql-server-ver17&tabs=rhel8%2C2025rhel10&preserve-view=true).
+- **Red Hat Enterprise Linux 10 support**. [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is fully supported on Red Hat Enterprise Linux (RHEL) 10. For more information, see [Quickstart: Install SQL Server and create a database on Red Hat](install-upgrade/quickstart-install-red-hat.md?view=sql-server-ver17&preserve-view=true).
 
-- **Ubuntu 24.04 support**. [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is fully supported on Ubuntu 24.04. For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-ver17&tabs=ubuntu2004%2C2505ubuntu2404%2Codbc-ubuntu-2404&preserve-view=true).
+- **Ubuntu 24.04 support**. [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] is fully supported on Ubuntu 24.04. For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-ver17&preserve-view=true).
 
 - **Contained availability groups (AGs)**. Enable database create and restore operations directly through the contained AG listener. This improvement eliminates the need to connect to the physical replica, simplifying high availability automation on Linux.
 

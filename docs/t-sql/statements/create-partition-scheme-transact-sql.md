@@ -1,9 +1,9 @@
 ---
 title: "CREATE PARTITION SCHEME (Transact-SQL)"
 description: Creates a scheme in the current database that maps the partitions of a partitioned table or index to one or more filegroups.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

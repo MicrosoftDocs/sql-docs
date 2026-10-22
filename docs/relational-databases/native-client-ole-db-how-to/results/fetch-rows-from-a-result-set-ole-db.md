@@ -1,8 +1,8 @@
 ---
 title: "Fetch rows from a result set (Native Client OLE DB provider)"
 description: "Fetch rows from a result set (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "rows [OLE DB]"
 ---
 # Fetch Rows from a Result Set (Native Client OLE DB Provider)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to fetch rows from a result set. This sample is not supported on IA64.  
   

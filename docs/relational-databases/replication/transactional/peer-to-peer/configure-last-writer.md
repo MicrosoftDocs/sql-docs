@@ -1,9 +1,9 @@
 ---
 title: Configure Last Writer Conflict Detection & Resolution
 description: Describes how to configure last writer conflict detection and resolution for peer-to-peer replication.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/07/2025
 ms.service: sql
 ms.topic: how-to

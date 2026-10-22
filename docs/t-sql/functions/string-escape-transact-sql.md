@@ -1,8 +1,8 @@
 ---
 title: "STRING_ESCAPE (Transact-SQL)"
 description: "The STRING_ESCAPE Transact-SQL function escapes special characters in texts and returns text with escaped characters."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 02/09/2026
 ms.service: sql
 ms.subservice: t-sql
@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "STRING_ESCAPE function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
 ---
 # STRING_ESCAPE (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
 Escapes special characters in texts and returns text with escaped characters. `STRING_ESCAPE` is a deterministic function first introduced in SQL Server 2016. 
 

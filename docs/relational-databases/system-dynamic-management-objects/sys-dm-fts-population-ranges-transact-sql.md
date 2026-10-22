@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_fts_population_ranges (Transact-SQL)"
 description: sys.dm_fts_population_ranges returns information about the specific ranges related to a full-text index population currently in progress.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

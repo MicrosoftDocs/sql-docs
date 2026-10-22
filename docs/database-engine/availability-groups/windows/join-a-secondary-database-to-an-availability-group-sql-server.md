@@ -1,8 +1,8 @@
 ---
 title: "Join a secondary database to an availability group"
 description: "Steps to join a secondary database to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -3,7 +3,7 @@ title: Configure Azure Elastic SAN
 description: This article describes how you can configure an Azure Elastic SAN for both new and existing SQL Server on Azure VMs. 
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/17/2025
 ms.service: azure-vm-sql-server
 ms.subservice: management

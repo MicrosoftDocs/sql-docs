@@ -3,7 +3,7 @@ title: Rename a Database
 description: Learn how to rename a user-defined database in SQL Server, Azure SQL Database, or Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: sql
 ms.topic: how-to
@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 This article describes how to rename a user-defined database in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], or [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) or [!INCLUDE [tsql](../../includes/tsql-md.md)] (T-SQL). The name of the database can include any characters that follow the rules for identifiers.
 
 > [!NOTE]  
-> To rename a database in Azure Synapse Analytics or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
+> To rename a database in Azure Synapse Analytics, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
 
 ## Limitations
 

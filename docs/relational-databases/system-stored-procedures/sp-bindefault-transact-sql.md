@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_bindefault (Transact-SQL)"
 description: sp_bindefault binds a default to a column or to an alias data type.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

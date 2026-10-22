@@ -1,8 +1,8 @@
 ---
 title: "XQuery Operators Against the xml Data Type"
 description: Learn about the XQuery operators that can be used against the xml data type.
-author: rothja
-ms.author: jroth
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

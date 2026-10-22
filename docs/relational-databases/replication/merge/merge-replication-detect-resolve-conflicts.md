@@ -1,9 +1,9 @@
 ---
 title: How Merge Replication Detects and Resolves Conflicts
 description: Learn how merge replication resolves when a change made at one node could conflict with a change made to the same data at another node.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.subservice: replication

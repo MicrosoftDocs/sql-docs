@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: recovery interval (min)"
 description: Learn about the recovery interval option. See how its value affects how often SQL Server issues automatic checkpoints on a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

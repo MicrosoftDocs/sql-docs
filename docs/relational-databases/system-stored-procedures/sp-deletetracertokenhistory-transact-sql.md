@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_deletetracertokenhistory (Transact-SQL)"
 description: Removes tracer token records from the MStracer_tokens and MStracer_history system tables.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

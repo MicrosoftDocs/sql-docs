@@ -1,8 +1,8 @@
 ---
 title: Configure Server Core Installation
 description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 07/10/2025
 ms.service: sql
 ms.subservice: install

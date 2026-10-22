@@ -1,8 +1,8 @@
 ---
 title: "Implement DDL Triggers"
 description: "Implement DDL Triggers"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: how-to

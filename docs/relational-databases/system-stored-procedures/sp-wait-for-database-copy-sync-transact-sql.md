@@ -2,9 +2,9 @@
 title: "sp_wait_for_database_copy_sync"
 titleSuffix: Azure SQL Database
 description: "sp_wait_for_database_copy_sync is scoped to an active geo-replication relationship between a primary and secondary."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: bluefooted
+ms.author: pamela
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

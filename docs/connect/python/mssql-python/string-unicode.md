@@ -3,8 +3,8 @@ title: Handle Strings and Unicode with mssql-python
 description: Learn how to work with string data types, Unicode, and character encoding with the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 07/16/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -266,16 +266,16 @@ Encoding behavior depends on the Microsoft SQL column type and the source collat
 
 ### Encoding assumptions and Unicode defaults
 
-The `mssql-python` driver handles encoding automatically based on the Microsoft SQL column type. By default, string parameters are sent as UTF-16LE for nvarchar columns and according to the database collation for varchar columns:
+The `mssql-python` driver sends every `str` parameter as UTF-16LE and declares it as `nvarchar` by default. The server converts the value to the code page of the target column's collation when it stores the value:
 
-| Column type | Wire encoding | Python result |
+| Column type | Stored encoding | Python result |
 | --- | --- | --- |
-| `nvarchar`, `nchar`, `ntext` | UTF-16LE | `str` (decoded by driver) |
-| `varchar`, `char`, `text` | Database or column collation encoding | `str` (decoded by the driver using the source encoding) |
+| `nvarchar`, `nchar`, `ntext` | UTF-16LE | `str` |
+| `varchar`, `char`, `text` | Code page of the column collation | `str`. By default, the driver requests the value as UTF-16LE, so it decodes correctly for any collation. |
 
-Python strings are always Unicode internally. When you pass a `str` parameter, the driver encodes it for the target column type. By default, the driver sends string parameters as `nvarchar` (Unicode), which ensures characters are preserved regardless of the database collation. For `varchar` columns, UTF-8 applies only when the database or column uses a UTF-8-enabled collation.
+Python strings are always Unicode internally. Because the driver declares string parameters as `nvarchar`, characters reach the server intact regardless of the database collation. When the target column is `varchar`, characters that the column's code page can't represent are stored as `?`. A `varchar` column with a UTF-8 collation stores every character.
 
-If your column is `varchar` and you need to send non-Unicode data to match the column type exactly (for example, to avoid implicit conversion warnings), use `setinputsizes()` to override the default:
+If your column is `varchar` and you need to match the column type exactly (for example, to avoid implicit conversion warnings), use `setinputsizes()` to declare the parameter as `varchar`. The declaration changes the parameter's SQL type, not the encoding: the driver still sends UTF-16LE, and the server converts the parameter to the code page of the database's default collation. Characters outside that code page become `?`, even when the target column uses a UTF-8 collation.
 
 ```python
 import mssql_python
@@ -298,7 +298,7 @@ For most applications, the default behavior is correct. Override only when you s
 
 ### Connection encoding
 
-The mssql-python driver automatically handles encoding for the connection based on the Microsoft SQL Server version and configuration. Because Python strings are Unicode, the driver encodes them appropriately (UTF-8 or UTF-16) for the target data type. You don't need to configure connection encoding manually.
+The mssql-python driver sends Transact-SQL (T-SQL) statements and `str` parameters as UTF-16LE. You can't change the outbound encoding, and you don't need to configure it. For the decoding settings that control how the driver reads text from the server, see [Encoding and decoding](connection-management.md#encoding-and-decoding).
 
 ### VARCHAR columns with legacy collations
 

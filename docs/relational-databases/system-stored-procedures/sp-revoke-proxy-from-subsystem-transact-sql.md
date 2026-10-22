@@ -3,7 +3,7 @@ title: "sp_revoke_proxy_from_subsystem (Transact-SQL)"
 description: sp_revoke_proxy_from_subsystem revokes access to a subsystem from a proxy.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: Name Service Broker Objects
 description: "This topic describes considerations for naming service broker objects."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

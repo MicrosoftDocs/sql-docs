@@ -1,9 +1,9 @@
 ---
 title: "sp_xp_cmdshell_proxy_account (Transact-SQL)"
 description: Creates a proxy credential for xp_cmdshell.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

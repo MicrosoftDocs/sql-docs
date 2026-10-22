@@ -1,15 +1,15 @@
 ---
 title: "Integrated Kerberos authentication (Native Client OLE DB provider)"
 description: "Integrated Kerberos authentication (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Integrated Kerberos Authentication (Native Client OLE DB Provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later.  
   

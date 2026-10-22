@@ -1,8 +1,8 @@
 ---
 title: "Deferred Transactions (SQL Server)"
 description: A deferred transaction in SQL Server Enterprise occurs if data required by rollback is offline. Learn how to move them out of the deferred state.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: backup-restore

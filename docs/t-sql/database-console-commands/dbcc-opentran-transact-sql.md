@@ -1,8 +1,8 @@
 ---
 title: "DBCC OPENTRAN (Transact-SQL)"
 description: DBCC OPENTRAN helps to identify active transactions that may be preventing log truncation.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: "sp_execute_remote (Azure SQL Database)"
 description: sp_execute_remote executes a Transact-SQL statement on a single remote Azure SQL Database or set of databases serving as shards in a horizontal partitioning scheme.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: bluefooted
+ms.author: pamela
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.topic: reference

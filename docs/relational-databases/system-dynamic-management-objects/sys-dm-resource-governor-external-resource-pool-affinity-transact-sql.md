@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
 description: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/11/2025
 ms.service: sql
 ms.subservice: system-objects

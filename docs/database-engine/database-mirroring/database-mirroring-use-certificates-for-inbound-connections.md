@@ -1,8 +1,8 @@
 ---
 title: "Use certificates for inbound connection"
 description: Describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: database-mirroring

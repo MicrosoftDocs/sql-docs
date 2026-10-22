@@ -1,9 +1,9 @@
 ---
 title: "Recovery Models (SQL Server)"
 description: Learn about SQL Server recovery models, which control how to log transactions, whether the transaction log requires backing up, and what restore operations are available.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 02/19/2026
 ms.service: sql
 ms.subservice: backup-restore

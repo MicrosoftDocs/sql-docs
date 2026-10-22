@@ -1,8 +1,8 @@
 ---
 title: "Create a Publication from an Oracle Database"
 description: "Create a Publication from an Oracle Database"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

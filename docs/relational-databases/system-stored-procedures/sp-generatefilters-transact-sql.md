@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_generatefilters (Transact-SQL)"
 description: sp_generatefilters creates filters on foreign key tables when a specified table is replicated.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

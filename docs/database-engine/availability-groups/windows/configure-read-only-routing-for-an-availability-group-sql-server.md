@@ -1,8 +1,8 @@
 ---
 title: "Configure read-only routing for an availability group"
 description: "Automatically route all read-only traffic to a secondary replica using read-only routing for your Always On availability group - using Transact-SQL (T-SQL), or PowerShell."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/15/2025"
 ms.service: sql
 ms.subservice: availability-groups

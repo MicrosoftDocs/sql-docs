@@ -3,7 +3,7 @@ title: "Mapping Source and Target Databases (AccessToSQL)"
 description: Learn to specify a target database for Access database migration to SQL Server or Azure SQL Database, including multiple databases to multiple databases.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

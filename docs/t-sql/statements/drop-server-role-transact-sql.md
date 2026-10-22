@@ -3,7 +3,7 @@ title: "DROP SERVER ROLE (Transact-SQL)"
 description: DROP SERVER ROLE removes a user-defined server role.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "DROP SERVER ROLE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # DROP SERVER ROLE (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
 Removes a user-defined server role.
 

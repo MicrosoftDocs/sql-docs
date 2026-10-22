@@ -1,8 +1,8 @@
 ---
 title: "sysmail_allitems (Transact-SQL)"
 description: sysmail_allitems contains one row for each message processed by Database Mail. Use this view when you want to see the status of all messages.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/20/2024
 ms.service: sql
 ms.subservice: system-objects

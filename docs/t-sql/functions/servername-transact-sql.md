@@ -3,7 +3,7 @@ title: "@@SERVERNAME (Transact-SQL)"
 description: "@@SERVERNAME (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: t-sql

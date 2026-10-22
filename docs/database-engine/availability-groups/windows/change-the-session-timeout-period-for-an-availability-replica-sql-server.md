@@ -1,8 +1,8 @@
 ---
 title: "Modify session-timeout for an availability group replica"
 description: "Describes how to configure the session-timeout period of a replica within an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

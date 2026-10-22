@@ -1,13 +1,13 @@
 ---
-title: "sys.sp_refreshview (Transact-SQL)"
+title: sys.sp_refreshview (Transact-SQL)
 description: sp_refreshview updates the metadata for the specified non-schema-bound view.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
-ms.date: 06/19/2026
+author: vanMSFT
+ms.author: vanto
+ms.reviewer: wiassaf
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: system-objects
-ms.topic: "reference"
+ms.topic: reference
 ms.custom:
   - ignite-2025
 f1_keywords:
@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
   - "sp_refreshview"
 dev_langs:
-  - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+  - TSQL
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # sys.sp_refreshview (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
-Updates the metadata for the specified non-schema-bound view. Persistent metadata for a view can become outdated because of changes to the underlying objects upon which the view depends.
+The `sys.sp_refreshview` system stored procedure updates the metadata for the specified non-schema-bound view. Persistent metadata for a view can become outdated because of changes to the underlying objects upon which the view depends.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -46,7 +46,7 @@ The name of the view. *@viewname* is **nvarchar**, with no default. *@viewname* 
 
 ## Remarks
 
-If a view isn't created with `SCHEMABINDING`, `sp_refreshview` should be run when changes are made to the objects underlying the view, which affects the definition of the view. Otherwise, the view could produce unexpected results when you query it.
+If you don't create a view with `SCHEMABINDING`, run `sp_refreshview` when you make changes to the objects underlying the view that affect the definition of the view. Otherwise, the view might return unexpected results when you query it.
 
 ## Permissions
 
@@ -69,7 +69,7 @@ EXECUTE sp_refreshview N'Sales.vIndividualCustomer';
 
 ### B. Create a script that updates all views that have dependencies on a changed object
 
-Assume that the table `Person.Person` was changed in a way that would affect the definition of any views that are created on it. The following example creates a script that refreshes the metadata for all views that have a dependency on table `Person.Person`.
+Assume that the table `Person.Person` was changed in a way that affects the definition of any views on it. The following example creates a script that refreshes the metadata for all views that depend on the table `Person.Person`.
 
 ```sql
 USE AdventureWorks2025;

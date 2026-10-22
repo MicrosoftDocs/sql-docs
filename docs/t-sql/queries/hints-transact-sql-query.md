@@ -1,8 +1,8 @@
 ---
 title: "Query Hints (Transact-SQL)"
 description: Query hints specify that the indicated hints are used in the scope of a query. They affect all operators in the statement.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf
 ms.date: 10/03/2025
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: MSSQL Extension for Visual Studio Code Feedback
 description: MSSQL extension for Visual Studio Code feedback.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: tsiddique, roblescarlos
 ms.date: 02/21/2026
 ms.service: sql

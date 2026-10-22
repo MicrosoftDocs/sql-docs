@@ -3,8 +3,8 @@ title: Handle NULL Values with mssql-python
 description: Learn how to properly handle NULL values when working with SQL Server data using the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 07/16/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -382,14 +382,13 @@ print(json_output)
 Opt to exclude NULL values when converting rows to dictionaries:
 
 ```python
-def row_to_dict(row, cursor) -> dict:
+def row_to_dict(row) -> dict:
     """Convert row to dict, optionally excluding NULL values."""
-    columns = [col[0] for col in cursor.description]
-    return {col: val for col, val in zip(columns, row) if val is not None}
+    return {col: val for col, val in row._mapping.items() if val is not None}
 
 cursor.execute("SELECT * FROM Person.Person WHERE BusinessEntityID = 1")
 row = cursor.fetchone()
-person_dict = row_to_dict(row, cursor)
+person_dict = row_to_dict(row)
 # Only includes non-NULL columns
 ```
 

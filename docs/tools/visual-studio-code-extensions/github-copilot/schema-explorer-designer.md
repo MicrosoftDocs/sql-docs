@@ -2,8 +2,8 @@
 title: Schema Explorer & Designer with GitHub Copilot
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how GitHub Copilot can help design, understand, and evolve database schemas with context-aware suggestions in Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

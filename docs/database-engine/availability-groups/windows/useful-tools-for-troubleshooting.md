@@ -1,8 +1,8 @@
 ---
 title: "Availability group troubleshooting tools (content index)"
 description: A reference of articles describing tools that can be used to monitor and troubleshoot issues with availability groups.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/14/2017"
 ms.service: sql
 ms.subservice: availability-groups

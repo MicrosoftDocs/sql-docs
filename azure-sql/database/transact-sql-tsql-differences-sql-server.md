@@ -1,9 +1,9 @@
 ---
 title: T-SQL Differences Between SQL Server and Azure SQL Database
 description: This article discusses the Transact-SQL (T-SQL) differences between an Azure SQL Database and SQL Server.
-author: croblesm
-ms.author: roblescarlos
-ms.reviewer: wiassaf, mathoma, randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: wiassaf
 ms.date: 04/02/2026
 ms.service: azure-sql-database
 ms.subservice: migration

@@ -1,8 +1,8 @@
 ---
 title: "Transactions (Transact-SQL)"
 description: In the SQL Server Database Engine, a transaction is a single unit of work.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 10/30/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,9 @@
 ---
 title: SQL Server on Linux Containers
 description: A comparison of virtual machines vs containers, and guidance for containerized SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 04/13/2026
 ms.service: sql
 ms.subservice: linux
@@ -48,6 +49,9 @@ To begin working with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.m
 ### High availability
 
 - [High availability for SQL Server containers](../business-continuity/containers/high-availability-overview.md)
+
+### Operations and troubleshooting
+
 - [How to use distributed transactions with SQL Server Linux containers](configure-distributed-transactions.md)
 - [Troubleshoot SQL Server Docker containers](troubleshoot.md)
 

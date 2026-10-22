@@ -1,12 +1,13 @@
 ---
 title: Work with Regular Expressions
 description: Use regular expressions to filter and manipulate text strings in SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: abhtiwar, randolphwest, wiassaf
-ms.date: 05/13/2026
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: abhtiwar, wiassaf
+ms.date: 09/01/2026
 ms.service: sql
 ms.topic: quickstart
+ai-usage: ai-assisted
 ms.custom:
   - ignite-2025
 helpviewer_keywords:
@@ -14,19 +15,16 @@ helpviewer_keywords:
   - "regex"
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # Regular expressions
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
 This article introduces regular expressions for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 A regular expression, or regex, is a sequence of characters that defines a search pattern for text. Regex is commonly used for a variety of tasks including pattern matching, data validation, data transformation, and querying. It offers a flexible and an efficient way to search, manipulate, and handle complex data operations.
-
-> [!NOTE]  
-> Regular expressions are available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 This implementation of regular expression is based on the [RE2 regular expression library](https://github.com/google/re2/). For more information, visit [RE2 Regular Expression Syntax](https://cran.r-project.org/web/packages/re2/vignettes/re2_syntax.html#:~:text=The%20simplest%20regular%20expression%20is,matches%20a%20literal%20plus%20character).
 
@@ -177,6 +175,13 @@ This implementation supports the POSIX standard of regular expressions following
 - A basic knowledge of SQL syntax and queries.
 - A basic understanding of regular expression syntax and concepts.
 
+### Platform support
+
+- In Azure SQL Managed Instance, T-SQL regular expression functions are available with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy) only.
+- T-SQL regular expression functions are available in Azure SQL Database, SQL database in Fabric, and starting in SQL Server 2025.
+- T-SQL regular expression functions aren't available in SQL Server 2022 or earlier versions.
+- T-SQL regular expression scalar functions are available as a preview feature in Fabric Data Warehouse. For more information, see [Regular expressions functions in Fabric Data Warehouse](/fabric/data-warehouse/regular-expressions). T-SQL regular expression table-valued functions aren't available in Fabric Data Warehouse.
+
 ## FAQ
 
 ### What is the performance impact of using regex?
@@ -189,7 +194,3 @@ The following limitations currently apply:
 
 - LOB data types (**varchar(max)** or **nvarchar(max)**) for `string_expression` are supported in all `REGEXP_*` functions, but the input size is limited to 2 MB.
 - Regular expression functions aren't supported in natively compiled stored procedures.
-
-## Related content
-
-- [Regular expressions functions (Transact-SQL)](../../t-sql/functions/regular-expressions-functions-transact-sql.md)

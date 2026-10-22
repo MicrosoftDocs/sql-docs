@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_table_memory_stats (Transact-SQL)"
 description: sys.dm_db_xtp_table_memory_stats returns memory usage statistics for each In-Memory OLTP table (user and system) in the current database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

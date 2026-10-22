@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_changemergearticle (Transact-SQL)"
 description: "Changes the properties of a merge article. This stored procedure is executed at the Publisher on the publication database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

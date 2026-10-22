@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cdc_drop_job (Transact-SQL)"
 description: "Removes a change data capture cleanup or capture job for the current database from msdb."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

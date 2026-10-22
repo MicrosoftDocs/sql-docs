@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Properties (Advanced Tab)"
 description: Learn about the options on the Advanced tab in the SQL Server Properties dialog box, such as the data path, the instance ID, and custom properties.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

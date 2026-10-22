@@ -4,7 +4,7 @@ description: This tutorial teaches you how to encrypt columns using Always Encry
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 6/17/2026
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
@@ -77,7 +77,7 @@ In this step, you'll create the **HR** schema and the **Employees** table. Then,
     )
     VALUES
     (
-        '795-73-9838'
+        '987-65-4320'
         , N'Catherine'
         , N'Abel'
         , $31692
@@ -156,7 +156,7 @@ $query = @'
     )
     VALUES
     (
-        '795-73-9838'
+        '987-65-4320'
         , N'Catherine'
         , N'Abel'
         , $31692
@@ -488,7 +488,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 1. Paste in and execute the below query, which filters data by the encrypted **SSN** column. The query should return one row containing plaintext values.
 
     ```sql
-    DECLARE @SSN [char](11) = '795-73-9838'
+    DECLARE @SSN [char](11) = '987-65-4320'
     SELECT [SSN], [Salary] FROM [HR].[Employees]
     WHERE [SSN] = @SSN
     ```

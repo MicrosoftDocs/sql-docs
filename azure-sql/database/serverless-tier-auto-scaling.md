@@ -3,7 +3,7 @@ title: Serverless Compute Tier Autoscaling
 description: Learn how autoscaling works for the serverless compute tier in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendalv, moslake, mathoma, dfurman
+ms.reviewer: kendalv, moslake, dfurman
 ms.date: 07/28/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

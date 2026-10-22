@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_mergecleanupmetadata (Transact-SQL)"
 description: "Only for use in replication topologies with servers running versions of SQL Server 2000 before Service Pack 1."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

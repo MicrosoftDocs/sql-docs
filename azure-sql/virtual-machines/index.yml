@@ -10,8 +10,8 @@ metadata:
   ms.service: azure-vm-sql-server
   ms.subservice: service-overview
   ms.topic: landing-page
-  author: MashaMSFT
-  ms.author: mathoma
+  author: bluefooted
+  ms.author: pamela
   ms.date: 05/27/2020
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

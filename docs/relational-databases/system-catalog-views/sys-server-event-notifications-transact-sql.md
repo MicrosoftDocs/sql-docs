@@ -1,8 +1,8 @@
 ---
 title: "sys.server_event_notifications (Transact-SQL)"
 description: The sys.server_event_notifications system view returns a row for each server-level event notification object. 
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: system-objects

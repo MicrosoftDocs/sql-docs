@@ -1,8 +1,8 @@
 ---
 title: Improve the Performance of Full-Text Indexes
 description: Improve the Performance of Full-Text Indexes
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

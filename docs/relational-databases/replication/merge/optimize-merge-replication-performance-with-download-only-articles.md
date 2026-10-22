@@ -1,8 +1,8 @@
 ---
 title: Optimize Download-only Article Performance (Merge)
 description: Optimize merge replication performance with download-only articles in SQL Server. Compare article types, review requirements, and choose the best fit for your app.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

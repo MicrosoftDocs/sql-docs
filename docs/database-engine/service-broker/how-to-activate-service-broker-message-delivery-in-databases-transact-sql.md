@@ -1,9 +1,9 @@
 ---
 title: "How To: Activate Service Broker Message Delivery in Databases (Transact-SQL)"
 description: "By default, Service Broker message delivery is active in a database when the database is created."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

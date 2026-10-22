@@ -1,8 +1,8 @@
 ---
 title: Monitor Performance with Replication Monitor
 description: Replication Monitor helps you track transactional and merge replication performance in SQL Server. Learn to set thresholds, read metrics, and use tracer tokens.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

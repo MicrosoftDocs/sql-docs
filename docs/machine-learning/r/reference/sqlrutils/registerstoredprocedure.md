@@ -1,8 +1,8 @@
 ---
 title: "registerStoredProcedure function (sqlrutils)"
 description: "registerStoredProcedure: Uses the StoredProcedure object to register the stored procedure with the specified database"
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

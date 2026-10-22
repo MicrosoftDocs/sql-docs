@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_7399"
 description: "MSSQLSERVER_7399"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: prmadhes, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: prmadhes
 ms.date: 11/20/2023
 ms.service: sql
 ms.subservice: supportability

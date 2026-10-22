@@ -3,7 +3,7 @@ title: "Deploy and Manage Machine Learning Server Web Services in Python"
 description: "This class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: "machine-learning-services"

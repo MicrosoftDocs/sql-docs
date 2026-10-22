@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_add_agent_profile (Transact-SQL)"
 description: "sp_add_agent_profile (Transact-SQL)"
-author: mashamsft
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

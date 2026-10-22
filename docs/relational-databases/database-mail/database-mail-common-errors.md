@@ -1,8 +1,8 @@
 ---
 title: "Common Errors with Database Mail"
 description: "Learn how to diagnose and troubleshoot common errors with Database Mail."
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/16/2025
 ms.service: sql
 ms.topic: concept-article

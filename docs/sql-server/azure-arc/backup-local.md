@@ -3,7 +3,7 @@ title: Manage Automated Backups
 description: Describes how to configure automated backups to local storage for SQL Server enabled by Azure Arc
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/30/2025
 ms.topic: how-to
 ms.custom:

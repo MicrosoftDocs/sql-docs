@@ -1,8 +1,8 @@
 ---
 title: Create CLR Functions
 description: "Learn how to create a database object inside SQL Server that is programmed in the .NET Framework common language runtime (CLR)."
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 12/27/2024
 ms.service: sql
 ms.topic: how-to

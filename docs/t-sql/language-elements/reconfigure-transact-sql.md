@@ -1,8 +1,8 @@
 ---
 title: "RECONFIGURE (Transact-SQL)"
 description: "RECONFIGURE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "05/20/2016"
 ms.service: sql
 ms.subservice: t-sql

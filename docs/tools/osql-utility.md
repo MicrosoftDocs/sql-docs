@@ -1,8 +1,8 @@
 ---
 title: Osql Utility
 description: In SQL Server, the osql utility lets you enter Transact-SQL statements, system procedures, and script files. Osql uses ODBC to communicate with the server.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.manager: jroth
 ms.date: 12/16/2025
 ms.service: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
   - "GO command"
   - "command prompt utilities [SQL Server], osql"
   - "CTRL+C command"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017"
 ---
 
 # osql Utility
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The **osql** utility allows you to enter [!INCLUDE [tsql](../includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.
 

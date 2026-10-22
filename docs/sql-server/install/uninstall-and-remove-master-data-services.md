@@ -1,8 +1,8 @@
 ---
 title: "Uninstall and Remove Master Data Services"
 description: This uninstall process removes Master Data Services folders and files, and uninstalls Master Data Services Configuration Manager from the local computer.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: install

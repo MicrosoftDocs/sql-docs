@@ -1,8 +1,8 @@
 ---
 title: "executeMD function (olapR)"
 description: "Takes a Query object or an MDX string, and returns the result as a multi-dimensional array."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

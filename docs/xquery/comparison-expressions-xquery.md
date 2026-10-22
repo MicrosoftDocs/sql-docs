@@ -1,8 +1,8 @@
 ---
 title: "Comparison Expressions (XQuery)"
 description: Learn how to use XQuery comparison expressions that contain general, value, node, and node order comparison operators.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: xml

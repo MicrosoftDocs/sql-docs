@@ -1,9 +1,9 @@
 ---
 title: Execute a Partial Query
 description: Get help debugging a section of a complex query. Use the Transact-SQL Editor to highlight a specific script segment and execute it as a single query.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

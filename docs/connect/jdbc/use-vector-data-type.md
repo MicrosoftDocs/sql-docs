@@ -4,7 +4,7 @@ description: Learn about the vector data type in the JDBC driver, including FLOA
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 03/13/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -158,6 +158,8 @@ try (CallableStatement callableStatement = con.prepareCall("{call " + inputProc 
 }
 ```
 
+Starting with version 13.6, the named `SQLServerCallableStatement.setObject(String, Object, int, int)` overload and its `forceEncrypt` variant preserve the vector dimension count supplied through the fourth argument.
+
 ## Use TVP with vector
 
 ```java
@@ -171,6 +173,8 @@ try (SQLServerPreparedStatement preparedStatement = (SQLServerPreparedStatement)
     pstmt.execute();
 }
 ```
+
+Starting with version 13.6, the driver validates negotiated vector support before writing TVP column metadata. A FLOAT16 vector requires `vectorTypeSupport=v2` and a server that negotiates vector version 2. The driver rejects FLOAT16 TVP values on a version 1 connection and rejects all native vector TVP values when `vectorTypeSupport=off`.
 
 ## Use SQLServerBulkCopy from source table to destination table with vector
 
@@ -237,6 +241,23 @@ Vector vector = new Vector(3, Vector.VectorDimensionType.FLOAT16, new Float[]{1.
 // Using precision and scale (2 bytes = FLOAT16)
 Vector vector = new Vector(3, 2, new Float[]{1.0f, 2.0f, 3.0f});
 ```
+
+## Convert between FLOAT16 and FLOAT32 vectors
+
+On servers that support cross-type vector conversion, SQL Server can implicitly or explicitly convert between FLOAT16 and FLOAT32 vectors. For example:
+
+```sql
+INSERT INTO float32Table (vector_col)
+SELECT vector_col FROM float16Table;
+
+SELECT CAST(vector_col AS VECTOR(3, float32))
+FROM float16Table;
+
+SELECT CONVERT(VECTOR(3, float16), vector_col)
+FROM float32Table;
+```
+
+The source and destination vectors must have the same number of dimensions. Converting from FLOAT32 to FLOAT16 can lose precision because FLOAT16 has a smaller representable range and fewer significant bits. Null values remain null after conversion. These conversions also apply to assignments through prepared statements, stored procedure parameters, table-valued parameters, and bulk copy.
 
 ## Backward compatibility
 

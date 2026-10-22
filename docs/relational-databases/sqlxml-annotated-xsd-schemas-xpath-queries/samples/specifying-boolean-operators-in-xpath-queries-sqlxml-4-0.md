@@ -1,8 +1,8 @@
 ---
 title: "Use Boolean operators in XPath Queries (SQLXML)"
 description: Learn how to use Boolean operators in SQLXML 4.0 XPath queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

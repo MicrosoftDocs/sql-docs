@@ -3,12 +3,12 @@ title: "Whitepaper: Diagnose and Resolve Latch Contention"
 description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 07/17/2025
 ms.service: sql
 ms.subservice: performance
 ms.topic: troubleshooting
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ms.custom:
   - ignite-2024
   - sfi-image-nochange

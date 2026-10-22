@@ -1,8 +1,8 @@
 ---
 title: Temporal Table Usage Scenarios
 description: Temporal table usage scenarios
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

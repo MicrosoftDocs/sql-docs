@@ -1,8 +1,8 @@
 ---
 title: Monitor Memory-Optimized System-Versioned Temporal Tables
 description: Learn how to use existing views to track detailed and summarized memory consumption for every system-versioned memory-optimized table.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

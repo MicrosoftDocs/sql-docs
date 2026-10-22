@@ -1,8 +1,8 @@
 ---
 title: "Modify snapshot initialization options"
 description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

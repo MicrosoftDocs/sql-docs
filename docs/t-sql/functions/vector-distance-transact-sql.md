@@ -3,7 +3,7 @@ title: "VECTOR_DISTANCE (Transact-SQL)"
 description: VECTOR_DISTANCE calculates the distance between two vectors using a specified distance metric.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pookam, randolphwest
+ms.reviewer: pookam
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

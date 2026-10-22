@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_broker_forwarded_messages (Transact-SQL)"
 description: sys.dm_broker_forwarded_messages returns a row for each Service Broker message that an instance of SQL Server is in the process of forwarding.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/07/2025
 ms.service: sql
 ms.subservice: system-objects

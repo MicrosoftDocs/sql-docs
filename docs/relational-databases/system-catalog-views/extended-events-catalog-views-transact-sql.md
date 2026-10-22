@@ -1,8 +1,8 @@
 ---
 title: "Extended Events Catalog Views (Transact-SQL)"
 description: Extended Events Catalog Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 09/23/2025
 ms.service: sql

@@ -1,9 +1,9 @@
 ---
 title: "Add an encrypted database to an availability group"
 description: "Learn the steps to add an encrypted (or recently decrypted) database to an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 01/19/2024
 ms.service: sql
 ms.subservice: availability-groups

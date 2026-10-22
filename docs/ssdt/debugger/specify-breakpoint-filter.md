@@ -2,9 +2,9 @@
 title: Specify a Breakpoint Filter
 titleSuffix: T-SQL debugger
 description: Learn how to implement a breakpoint filter to limit the breakpoint to acting only when debugging is on specified computers, operating system processes, and threads.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

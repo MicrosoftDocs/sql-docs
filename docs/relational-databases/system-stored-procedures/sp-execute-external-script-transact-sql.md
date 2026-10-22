@@ -1,8 +1,8 @@
 ---
 title: "sp_execute_external_script (Transact-SQL)"
 description: Executes a script provided as an input argument to the procedure, and is used with Machine Learning Services and Language Extensions.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: machine-learning-services

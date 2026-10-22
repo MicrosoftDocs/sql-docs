@@ -1,8 +1,8 @@
 ---
 title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
 description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "06/30/2023"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), sending data to a stored procedure one row at a time"
 ---
 # Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This is similar to the [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procedure, but uses data-at-execution for the table-valued parameter.  
   

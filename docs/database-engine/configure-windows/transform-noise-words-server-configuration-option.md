@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: transform noise words"
 description: "Learn about the transform noise words option. See how it can be useful in some SQL Server full-text queries that include noise words (stopwords)."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

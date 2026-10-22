@@ -3,7 +3,7 @@ title: "Hints (Transact-SQL)"
 description: Hints are options or strategies specified for enforcement by the SQL Server query processor on SELECT, INSERT, UPDATE, or DELETE statements.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/07/2025
 ms.service: sql
 ms.subservice: t-sql

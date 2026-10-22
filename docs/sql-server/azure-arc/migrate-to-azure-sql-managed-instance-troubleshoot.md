@@ -4,7 +4,7 @@ titleSuffix: SQL Server migration in Azure Arc
 description: Learn how to troubleshoot common issues when migrating SQL Server databases to Azure SQL Managed Instance using SQL Server migration in Azure Arc.
 author: danimir
 ms.author: danil
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 06/25/2026
 ms.topic: how-to
 ---

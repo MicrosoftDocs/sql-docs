@@ -1,8 +1,8 @@
 ---
 title: "sys.extended_procedures (Transact-SQL)"
 description: sys.extended_procedures contains a row for each object that is an extended stored procedure.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/12/2024
 ms.service: sql
 ms.subservice: system-objects

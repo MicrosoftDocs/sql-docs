@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_readerrorlog (Transact-SQL)"
 description: sp_readerrorlog allows you to read the contents of the SQL Server or SQL Server Agent error log file and filter on keywords.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 06/19/2026
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -67,9 +67,9 @@ Every time [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is started
 
 ## Permissions
 
-[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require VIEW SERVER STATE permission on the server.
+[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require membership in the **securityadmin** fixed server role, or `VIEW SERVER STATE` permission on the server.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require either `VIEW ANY ERROR LOG` or `VIEW SERVER PERFORMANCE STATE` permission on the server.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require membership in the **securityadmin** fixed server role, or either `VIEW ANY ERROR LOG` or `VIEW SERVER STATE` permission on the server.
 
 ## Examples
 

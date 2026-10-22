@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_18483
 description: "MSSQLSERVER_18483"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: jopilov, mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 12/25/2020
 ms.service: sql
 ms.subservice: supportability

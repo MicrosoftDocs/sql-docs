@@ -1,8 +1,8 @@
 ---
 title: "Create a database mirroring endpoint (Transact-SQL)"
 description: Use Transact-SQL to create a database mirroring endpoint using Windows Authentication in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "04/12/2023"
 ms.service: sql
 ms.subservice: database-mirroring

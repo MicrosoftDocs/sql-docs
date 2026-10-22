@@ -1,8 +1,8 @@
 ---
 title: "Backup & restore with Azure Blob Storage"
 description: "SQL Server Backup and Restore with Microsoft Azure Blob Storage"
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: backup-restore

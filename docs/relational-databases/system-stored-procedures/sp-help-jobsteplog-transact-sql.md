@@ -1,9 +1,9 @@
 ---
 title: "sp_help_jobsteplog (Transact-SQL)"
 description: Returns metadata about a specific SQL Server Agent job step log.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

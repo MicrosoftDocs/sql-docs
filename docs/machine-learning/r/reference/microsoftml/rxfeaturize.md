@@ -1,8 +1,8 @@
 ---
 title: "rxFeaturize function (MicrosoftML) "
 description: "Transforms data from an input data set to an output data set (MicrosoftML)."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

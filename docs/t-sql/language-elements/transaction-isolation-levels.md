@@ -1,8 +1,8 @@
 ---
 title: "Transaction Isolation Levels"
 description: Learn about transaction isolation levels in the SQL Server Database Engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "sys.resource_stats (Azure SQL Database)"
 description: sys.resource_stats returns CPU usage and storage data for an Azure SQL Database.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: wiassaf
 ms.date: "4/18/2022"
 ms.service: azure-sql-database

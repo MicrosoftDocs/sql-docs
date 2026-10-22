@@ -1,9 +1,9 @@
 ---
 title: "Database Checkpoints (SQL Server)"
 description: Learn about checkpoints, known good points from which the SQL Server Database Engine can start applying changes contained in the log during recovery.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/21/2022
 ms.service: sql
 ms.subservice: supportability

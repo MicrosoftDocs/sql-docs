@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
 description: sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 02/11/2025
 ms.service: sql
 ms.subservice: machine-learning-services

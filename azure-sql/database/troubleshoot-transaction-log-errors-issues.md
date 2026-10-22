@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Provides steps to troubleshoot transaction log issues in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/24/2026
 ms.service: azure-sql-database
 ms.subservice: development

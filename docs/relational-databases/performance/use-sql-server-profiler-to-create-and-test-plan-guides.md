@@ -2,8 +2,8 @@
 title: "Create and test plan guides"
 titleSuffix: SQL Server Profiler
 description: Use SQL Server Profiler to capture exact query text for use in the statement_text argument of the sp_create_plan_guide stored procedure in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance

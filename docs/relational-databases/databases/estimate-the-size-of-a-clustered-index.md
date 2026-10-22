@@ -3,7 +3,7 @@ title: "Estimate the Size of a Clustered Index"
 description: Use this procedure to estimate the amount of space that is required to store data in a clustered index in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/22/2025
 ms.service: sql
 ms.subservice: supportability

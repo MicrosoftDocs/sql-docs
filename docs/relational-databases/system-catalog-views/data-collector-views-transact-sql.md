@@ -1,8 +1,8 @@
 ---
 title: "Data Collector Views (Transact-SQL)"
 description: Data Collector Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: Bulk-Load Data into Tables in a Merge Publication
 description: Bulk-loading data into merge replication tables skips tracking triggers by default. Discover two reliable ways to generate the metadata your publication needs.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

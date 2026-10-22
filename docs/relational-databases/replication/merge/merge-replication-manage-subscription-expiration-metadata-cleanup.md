@@ -1,9 +1,9 @@
 ---
 title: How Merge Replication Manages Subscription Expiration and Metadata Cleanup
 description: A subscription to a merge publication expires if it hasn't synchronized with the Publisher within the publication retention period.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: Snapshot Folder
 description: Snapshot Folder settings let you set the default share where SQL Server replication stores snapshot files. Learn how to specify and secure the folder.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "Specifying XPath Variables in XPath Queries (SQLXML)"
 description: View examples of how to specify XPath variables in SQLXML 4.0 XPath queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

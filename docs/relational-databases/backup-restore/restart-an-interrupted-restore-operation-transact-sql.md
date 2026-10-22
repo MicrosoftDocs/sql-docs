@@ -1,9 +1,9 @@
 ---
 title: "Restart interrupted restore operation"
 description: This example shows you how to restart an interrupted restore operation in SQL Server using Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: backup-restore

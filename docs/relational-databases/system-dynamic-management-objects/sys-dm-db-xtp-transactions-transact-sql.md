@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_transactions (Transact-SQL)"
 description: sys.dm_db_xtp_transactions reports the active transactions in the In-Memory OLTP database engine.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 08/31/2023
 ms.service: sql
 ms.subservice: system-objects

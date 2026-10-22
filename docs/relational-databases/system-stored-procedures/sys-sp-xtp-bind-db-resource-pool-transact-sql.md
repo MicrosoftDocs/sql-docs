@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL)"
 description: "Binds the specified In-Memory OLTP database to the specified resource pool."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

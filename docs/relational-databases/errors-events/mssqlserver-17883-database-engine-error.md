@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_17883"
 description: "MSSQLSERVER_17883"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: supportability

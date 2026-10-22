@@ -1,9 +1,9 @@
 ---
 title: "DROP ASSEMBLY (Transact-SQL)"
 description: DROP ASSEMBLY removes an assembly and all its associated files from the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/02/2024
 ms.service: sql
 ms.subservice: t-sql

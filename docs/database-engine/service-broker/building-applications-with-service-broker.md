@@ -1,9 +1,9 @@
 ---
 title: Build Applications with Service Broker
 description: "Any program that can run Transact-SQL statements can use Service Broker."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

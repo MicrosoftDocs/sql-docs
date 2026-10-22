@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about the upcoming changes of root certificate changes that will affect Azure SQL Database & Azure SQL Managed Instance
 author: tameikal-msft
 ms.author: talawren
-ms.reviewer: mathoma, vanto
+ms.reviewer: vanto
 ms.date: 04/24/2025
 ms.service: azure-sql
 ms.subservice: security

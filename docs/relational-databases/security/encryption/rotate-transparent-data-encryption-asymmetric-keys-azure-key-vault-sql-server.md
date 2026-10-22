@@ -3,7 +3,7 @@ title: "Rotate asymmetric keys for TDE by using Azure Key Vault on SQL Server"
 description: Manually rotate the Azure Key Vault asymmetric key used for SQL Server Transparent Data Encryption with Extensible Key Management.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: randolphwest, vanto
+ms.reviewer: vanto
 ms.date: 06/16/2026
 ms.service: sql
 ms.subservice: security

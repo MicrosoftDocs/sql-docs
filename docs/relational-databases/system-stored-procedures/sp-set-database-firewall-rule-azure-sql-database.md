@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: sp_set_database_firewall_rule creates or updates the database-level firewall rules for your Azure SQL database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

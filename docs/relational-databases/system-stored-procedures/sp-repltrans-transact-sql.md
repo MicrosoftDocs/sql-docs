@@ -1,9 +1,9 @@
 ---
 title: "sp_repltrans (Transact-SQL)"
 description: sp_repltrans Returns a result set of all the transactions in the publication database transaction log that are marked for replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

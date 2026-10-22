@@ -3,7 +3,7 @@ title: "sys.internal_partitions (Transact-SQL)"
 description: sys.internal_partitions returns one row for each rowset that tracks internal data for columnstore indexes on disk-based tables.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, randolphwest
+ms.reviewer: dfurman
 ms.date: 06/20/2025
 ms.service: sql
 ms.subservice: system-objects

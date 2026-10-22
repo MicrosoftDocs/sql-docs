@@ -1,8 +1,8 @@
 ---
 title: "EVENTDATA (Transact-SQL)"
 description: "EVENTDATA (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql

@@ -3,7 +3,7 @@ title: "Work with sample console script files (Db2ToSQL)"
 description: Learn how to work with sample console script files for SQL Server Migration Assistant for Db2.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Integrating SSIS with Fabric Data Warehouse"
 description: Learn how to integrate SSIS with Fabric Data Warehouse
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: integration-services

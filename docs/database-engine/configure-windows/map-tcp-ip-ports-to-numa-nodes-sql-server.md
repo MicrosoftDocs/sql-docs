@@ -1,8 +1,8 @@
 ---
 title: "Map TCP IP Ports to NUMA Nodes (SQL Server)"
 description: "Learn how to use SQL Server Configuration Manager to map TCP/IP ports to non-uniform memory access (NUMA) nodes. See how to create a node identification bitmap."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

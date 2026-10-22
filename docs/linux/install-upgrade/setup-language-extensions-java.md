@@ -2,8 +2,9 @@
 title: Install Java Language Extension on Linux
 titleSuffix: SQL Server Language Extensions
 description: Learn how to install SQL Server Java Language Extension on Red Hat, Ubuntu, and SUSE Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: language-extensions
@@ -23,7 +24,7 @@ Although you can [install the Database Engine and Language Extensions concurrent
 
 ## Prerequisites
 
-- Your Linux distribution must be [supported by SQL Server](../sql-server-linux-release-notes-2019.md#supported-platforms). Containers are covered separately in a later bullet. Supported distributions include:
+- Your Linux distribution must be [supported by SQL Server](../sql-server-linux-release-notes.md#supported-platforms). Containers are covered separately in a later bullet. Supported distributions include:
 
   - [Red Hat Enterprise Linux](quickstart-install-red-hat.md) (RHEL)
   - [SUSE Linux Enterprise Server](quickstart-install-suse.md) (SLES)
@@ -239,11 +240,11 @@ To install the packages, follow the [Offline installation](setup.md#offline) ins
 > [!TIP]  
 > Several package management tools provide commands that help you determine package dependencies. For `yum`, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
-#### Download site
+### Download site
 
 Download the packages from <https://packages.microsoft.com/>. The site hosts all Java packages alongside the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] package.
 
-#### Download paths
+### Download paths
 
 | Package | Distribution | Download location |
 | --- | --- | --- |
@@ -251,7 +252,7 @@ Download the packages from <https://packages.microsoft.com/>. The site hosts all
 | `mssql/extensibility-java packages` | SUSE v15 | <https://packages.microsoft.com/sles/15/mssql-server-2019/> |
 | `mssql/extensibility-java packages` | Ubuntu 20.04 | <https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/> |
 
-#### Package list
+### Package files
 
 Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the following file names help you determine which files to get.
 

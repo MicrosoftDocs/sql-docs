@@ -3,17 +3,17 @@ title: "sp_pdw_log_user_data_masking (Azure Synapse Analytics)"
 description: sp_pdw_log_user_data_masking configures user data masking in Azure Synapse Analytics activity logs.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sp_pdw_log_user_data_mask (Azure Synapse Analytics)
 
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Use `sp_pdw_log_user_data_masking` to enable user data masking in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] activity logs. User data masking affects the statements on all databases on the appliance.
 
@@ -22,7 +22,7 @@ Use `sp_pdw_log_user_data_masking` to enable user data masking in [!INCLUDE [ssa
 
 ## Syntax
 
-Syntax for Azure Synapse Analytics and Analytics Platform System (PDW).
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ]

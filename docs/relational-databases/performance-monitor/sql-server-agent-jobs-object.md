@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Agent, Jobs object"
 description: Learn about the SQL Server Agent Jobs performance object, which contains performance counters that report information about SQL Server Agent jobs.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

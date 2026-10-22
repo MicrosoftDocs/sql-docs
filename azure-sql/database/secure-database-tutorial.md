@@ -3,7 +3,7 @@ title: Secure a Database
 description: This tutorial teaches you the about techniques and features to secure an Azure SQL Database, whether it's a single database, or pooled.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 09/18/2025
 ms.service: azure-sql-database
 ms.subservice: security
@@ -86,7 +86,9 @@ To set up a server-level firewall rule:
 
 You can now connect to any database in the server with the specified IP address or IP address range.
 
-### Setup database firewall rules
+<a id="setup-database-firewall-rules"></a>
+
+### Set up database firewall rules
 
 Database-level firewall rules only apply to individual databases. The database will retain these rules during a server failover. Database-level firewall rules can only be configured using Transact-SQL (T-SQL) statements, and only after you've configured a server-level firewall rule.
 
@@ -343,7 +345,7 @@ To enable or verify encryption:
 
 ## Related content
 
-- [Deploy Azure SQL Database for free](free-offer.md)
+- [Deploy Azure SQL Database for free](free-tier.md)
 - [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 - [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
 - [Plan and manage costs for Azure SQL Database](cost-management.md)

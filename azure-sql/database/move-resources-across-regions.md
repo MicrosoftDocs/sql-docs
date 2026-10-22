@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to move your database or elastic pool to another region for Azure SQL Database. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/30/2024
 ms.service: azure-sql-database
 ms.subservice: data-movement

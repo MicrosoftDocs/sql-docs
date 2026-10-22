@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_availability_group_states (Transact-SQL)"
 description: sys.dm_hadr_availability_group_states returns a row for each AG that possesses an availability replica on the local instance of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/17/2023
 ms.service: sql
 ms.subservice: system-objects

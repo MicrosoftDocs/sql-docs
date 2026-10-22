@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about system assigned and user assigned managed identities in Microsoft Entra for Azure SQL Database and Azure SQL Managed Instance.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 03/05/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
@@ -321,12 +321,12 @@ To update the UMI settings for the server, you can also use the Azure Resource M
 - If you use an SMI or a UMI as the server or instance identity, deleting the identity makes the server or instance unable to access Microsoft Graph. Microsoft Entra authentication and other functions fail. To restore Microsoft Entra functionality, assign a new SMI or UMI to the server with appropriate permissions.
 - To grant permissions to access Microsoft Graph through an SMI or a UMI, you need to use PowerShell. You can't grant these permissions by using the Azure portal.
 
+## Microsoft Entra ID managed identity authentication in Azure Synapse Analytics
+
+For information on Microsoft Entra ID authentication in Azure Synapse Analytics, see [Managed identities in Microsoft Entra for Azure Synapse Analytics](/azure/synapse-analytics/sql/authentication-azure-ad-user-assigned-managed-identity).
+
 ## Related content
 
-> [!div class="nextstepaction"]
-> [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
-
-> [!div class="nextstepaction"]
-> [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
-
+- [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
+- [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

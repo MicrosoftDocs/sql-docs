@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "certificates [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # ALTER CERTIFICATE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
   Changes the password used to encrypt the private key of a certificate, removes the private key, or imports the private key if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -52,18 +52,6 @@ ALTER CERTIFICATE certificate_name
          [ DECRYPTION BY PASSWORD = 'current_password' ]  
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
-```
-
-```syntaxsql  
--- Syntax for Parallel Data Warehouse  
-  
-ALTER CERTIFICATE certificate_name   
-{  
-      REMOVE PRIVATE KEY  
-    | WITH PRIVATE KEY (   
-        FILE = '<path_to_private_key>',  
-        DECRYPTION BY PASSWORD = '<key password>' )
-}  
 ```
 
 ## Arguments

@@ -1,9 +1,9 @@
 ---
 title: "Full database backups (SQL Server)"
 description: In SQL Server, a full database backup backs up the whole database. Full database backups represent the database at the time the backup finished.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 12/01/2023
 ms.service: sql
 ms.subservice: backup-restore

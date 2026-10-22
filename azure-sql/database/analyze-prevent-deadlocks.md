@@ -2,9 +2,9 @@
 title: Analyze and Prevent Deadlocks
 titleSuffix: Azure SQL Database
 description: Learn how to analyze deadlocks and prevent them from reoccurring in Azure SQL Database and SQL database in Fabric.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma, dfurman, wiassaf
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: dfurman, wiassaf
 ms.date: 10/09/2025
 ms.service: azure-sql-database
 ms.subservice: performance

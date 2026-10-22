@@ -1,8 +1,8 @@
 ---
 title: Replication Programming Concepts
 description: Replication programming in SQL Server requires careful planning. Discover how to define application functionality, plan security, and pick a replication API.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

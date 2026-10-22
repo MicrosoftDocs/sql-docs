@@ -1,8 +1,8 @@
 ---
 title: Read Data Pages in the Database Engine
 description: Learn how the SQL Server Database Engine reads data and index pages from the buffer cache.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 03/31/2025
 ms.service: sql
 ms.topic: concept-article

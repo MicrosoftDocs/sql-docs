@@ -1,8 +1,8 @@
 ---
 title: "bcp_init"
 description: "bcp_init"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ apiname: ["bcp_init", "bcp_initA", "bcp_initW"]
 apitype: "DLLExport"
 ---
 # bcp_init
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Initializes the bulk copy operation.  
 

@@ -1,8 +1,8 @@
 ---
 title: "General Database Mail Troubleshooting"
 description: "Troubleshoot database mail with these steps."
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: wiassaf
 ms.date: 02/20/2026
 ms.service: sql

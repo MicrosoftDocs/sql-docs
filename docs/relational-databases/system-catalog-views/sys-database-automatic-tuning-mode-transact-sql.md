@@ -3,7 +3,7 @@ title: "sys.database_automatic_tuning_mode (Transact-SQL)"
 description: Learn how to view automatic tuning mode on SQL Server or Azure SQL Database.
 author: "danimir"
 ms.author: "danil"
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 12/08/2022
 ms.service: sql
 ms.subservice: system-objects

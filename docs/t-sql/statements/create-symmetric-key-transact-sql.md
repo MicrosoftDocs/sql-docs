@@ -3,7 +3,7 @@ title: "CREATE SYMMETRIC KEY (Transact-SQL)"
 description: Generates a symmetric key and specifies its properties in SQL Server and Azure SQL.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: t-sql

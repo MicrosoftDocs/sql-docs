@@ -1,9 +1,9 @@
 ---
 title: "Data collection"
 description: Learn introductory information about the data collector, a component of SQL Server 2019 that collects different sets of data.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

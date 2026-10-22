@@ -1,8 +1,8 @@
 ---
 title: "MSSQL_ENG020574"
 description: "MSSQL_ENG020574"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

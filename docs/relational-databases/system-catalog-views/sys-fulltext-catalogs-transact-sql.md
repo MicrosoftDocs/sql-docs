@@ -1,8 +1,8 @@
 ---
 title: sys.fulltext_catalogs (Transact-SQL)
 description: sys.fulltext_catalogs contains a row for each full-text catalog.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

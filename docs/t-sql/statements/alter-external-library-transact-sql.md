@@ -3,7 +3,7 @@ title: "ALTER EXTERNAL LIBRARY (Transact-SQL)"
 description: ALTER EXTERNAL LIBRARY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/27/2026
 ms.service: sql
 ms.subservice: machine-learning

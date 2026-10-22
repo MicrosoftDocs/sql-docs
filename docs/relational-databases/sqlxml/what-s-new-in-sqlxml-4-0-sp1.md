@@ -1,8 +1,8 @@
 ---
 title: "What's New in SQLXML 4.0 SP1"
 description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 with links to more detailed information.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

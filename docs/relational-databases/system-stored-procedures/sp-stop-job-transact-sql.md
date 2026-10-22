@@ -1,9 +1,9 @@
 ---
 title: "sp_stop_job (Transact-SQL)"
 description: sp_stop_job instructs SQL Server Agent to stop the execution of a job.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

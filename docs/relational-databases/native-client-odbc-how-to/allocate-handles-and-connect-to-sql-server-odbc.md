@@ -1,8 +1,8 @@
 ---
 title: "Allocate Handles and Connect to SQL Server (ODBC)"
 description: "Allocate Handles and Connect to SQL Server (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "handles [ODBC], about handles"
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To allocate handles and connect to SQL Server  

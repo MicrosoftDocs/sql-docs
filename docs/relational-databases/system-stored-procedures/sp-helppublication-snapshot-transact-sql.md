@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helppublication_snapshot (Transact-SQL)"
 description: sp_helppublication_snapshot returns information on the Snapshot agent for a given publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

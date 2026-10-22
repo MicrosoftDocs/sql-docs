@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: 06/02/2026
 ms.service: azure-sql-database
 ms.subservice: backup-restore

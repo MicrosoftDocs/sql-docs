@@ -1,9 +1,9 @@
 ---
 title: "Prerequisites to convert log shipping to availability groups"
 description: "A description of the prerequisites necessary to convert log shipping to an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/23/2026
 ms.service: sql
 ms.subservice: availability-groups

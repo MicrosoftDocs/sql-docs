@@ -3,7 +3,7 @@ title: "Database detach and attach (SQL Server)"
 description: Detach and reattach data and transaction log files of a SQL Server database when changing the database to a different instance, or to move the database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/30/2024
 ms.service: sql
 ms.subservice: backup-restore

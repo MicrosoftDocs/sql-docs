@@ -1,8 +1,8 @@
 ---
 title: Optimize Performance with Conditional Delete Tracking (Merge)
 description: Conditional delete tracking gives SQL Server administrators control over which merge replication deletes propagate. Explore scenarios and configure the option.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,9 +1,9 @@
 ---
 title: "data Function (XQuery)"
 description: Learn how to use the XQuery function data() to return the typed value for each item in a specified sequence of items.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

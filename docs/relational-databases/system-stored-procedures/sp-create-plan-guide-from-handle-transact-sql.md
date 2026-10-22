@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_create_plan_guide_from_handle (Transact-SQL)"
 description: sp_create_plan_guide_from_handle creates one or more plan guides from a query plan in the plan cache.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

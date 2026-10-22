@@ -1,8 +1,8 @@
 ---
 title: "Always On availability groups dynamic management views and functions"
 description: Always On availability groups dynamic management views and functions for monitoring availability groups, replicas, and databases.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: system-objects

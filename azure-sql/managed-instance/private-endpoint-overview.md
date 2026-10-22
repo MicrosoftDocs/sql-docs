@@ -3,7 +3,7 @@ title: Azure Private Link and Private Endpoints
 description: Connect your Azure SQL Managed Instance to virtual networks and Azure services via private endpoints.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, srbozovi
+ms.reviewer: srbozovi
 ms.date: 03/30/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore

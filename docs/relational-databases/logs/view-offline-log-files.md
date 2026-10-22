@@ -1,8 +1,8 @@
 ---
 title: "View Offline Log Files"
 description: Learn how to view SQL Server log files from a local or remote instance of SQL Server when the target instance is offline or cannot start.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: supportability

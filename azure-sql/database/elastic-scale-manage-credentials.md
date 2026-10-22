@@ -3,7 +3,7 @@ title: Managing Credentials in the Elastic Database Client Library
 description: How to set the right level of credentials, admin to read-only, for elastic database apps
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

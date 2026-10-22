@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_backuphistory (Transact-SQL)"
 description: Reduces the size of the backup and restore history tables by deleting the entries for backup sets older than the specified date.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

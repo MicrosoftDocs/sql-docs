@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpsubscriptionerrors (Transact-SQL)"
 description: sp_helpsubscriptionerrors returns all transactional replication errors for a given subscription.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

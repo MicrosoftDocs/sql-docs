@@ -3,7 +3,7 @@ title: "sp_syspolicy_purge_health_state (Transact-SQL)"
 description: "Deletes the policy health states in Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

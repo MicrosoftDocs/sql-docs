@@ -3,7 +3,7 @@ title: "SELECT Examples (Transact-SQL)"
 description: "Examples of the SELECT Transact-SQL statement in the Database Engine."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/02/2026
 ms.service: sql
 ms.subservice: t-sql

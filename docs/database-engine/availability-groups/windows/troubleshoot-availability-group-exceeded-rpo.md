@@ -1,8 +1,8 @@
 ---
 title: "Availability group exceeded RPO"
 description: "Common issues and resolutions for when your Always On availability group exceeds the recovery point objective (RPO)"
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to understand and troubleshoot geo-replication and redo lag in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mahyon, randolphwest
+ms.reviewer: mahyon
 ms.date: 03/02/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability

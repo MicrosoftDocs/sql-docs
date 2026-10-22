@@ -1,8 +1,8 @@
 ---
 title: "namespace-uri-from-QName (XQuery)"
 description: Learn how to use the namespace-uri-from-QName function to retrieve the namespace URI of a QName.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: xml

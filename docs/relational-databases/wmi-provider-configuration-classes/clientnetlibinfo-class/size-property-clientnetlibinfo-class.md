@@ -1,8 +1,8 @@
 ---
 title: "Size Property (ClientNetLibInfo)"
 description: "Size Property (ClientNetLibInfo Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: wmi

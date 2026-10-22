@@ -2,8 +2,8 @@
 title: Revert word breakers used by Full-Text Search to previous version
 titleSuffix: SQL Server Full-Text Search
 description: Revert legacy Full-Text Search word breakers to previous versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: search

@@ -1,8 +1,8 @@
 ---
 title: "GetSvcInstanceIDFromName()"
 description: "GetSvcInstanceIDFromName()"
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/18/2021"
 ms.service: sql
 ms.topic: reference

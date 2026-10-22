@@ -1,9 +1,9 @@
 ---
 title: "Files and version numbers"
 description: "File and version number information for SQL Management Objects (SMO)"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/08/2023
 ms.service: sql
 ms.topic: "reference"

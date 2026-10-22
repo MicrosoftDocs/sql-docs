@@ -3,7 +3,7 @@ title: "dbo.sysjobhistory (Transact-SQL)"
 description: Contains information about the execution of scheduled jobs by the SQL Server Agent.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/20/2026
 ai-usage: ai-assisted
 ms.service: sql

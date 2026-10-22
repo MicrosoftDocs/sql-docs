@@ -1,9 +1,9 @@
 ---
 title: "sp_cursorprepare (Transact-SQL)"
 description: sp_cursorprepare compiles the cursor statement or batch into an execution plan, but doesn't create the cursor.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

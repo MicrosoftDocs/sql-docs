@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_repladdcolumn (Transact-SQL)"
 description: sp_repladdcolumn adds a column to an existing published table article in SQL Server 2000.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

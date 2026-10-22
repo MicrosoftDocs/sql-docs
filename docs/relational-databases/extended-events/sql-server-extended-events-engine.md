@@ -3,7 +3,7 @@ title: "Extended Events engine"
 description: The Extended Events engine enables the definition of events and processing of event data, manages Extended Events, and maintains a list of sessions.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: xevents

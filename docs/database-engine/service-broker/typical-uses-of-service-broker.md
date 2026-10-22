@@ -1,9 +1,9 @@
 ---
 title: Typical Uses of Service Broker
 description: "Service Broker can be useful for any application that needs to perform processing asynchronously, or that needs to distribute processing across a number of computers."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

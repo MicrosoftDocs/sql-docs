@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_check_subset_filter (Transact-SQL)"
 description: sp_check_subset_filter checks a filter clause against any table to determine if the filter clause is valid for the table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

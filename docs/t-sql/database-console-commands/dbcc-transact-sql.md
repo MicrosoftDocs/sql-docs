@@ -1,8 +1,8 @@
 ---
 title: DBCC (Transact-SQL)
 description: The Transact-SQL programming language provides DBCC statements that act as Database Console Commands for SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

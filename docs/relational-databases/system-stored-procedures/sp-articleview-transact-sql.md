@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_articleview (Transact-SQL)"
 description: Creates the view that defines the published article when a table is filtered vertically or horizontally.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

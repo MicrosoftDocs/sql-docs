@@ -3,7 +3,7 @@ title: Disaster recovery drills
 description: Learn guidance and best practices for using Azure SQL Database to perform disaster recovery drills.
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 02/03/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

@@ -131,7 +131,11 @@ END_ROUTINE:
 RETURN;  
 GO  
 ```  
-  
+
+## Supported platforms
+
+OLE Automation objects aren't available in Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, or Fabric Data Warehouse.
+
 ## Related content
 
 - [OLE Automation Objects in Transact-SQL](ole-automation-objects-in-transact-sql.md)

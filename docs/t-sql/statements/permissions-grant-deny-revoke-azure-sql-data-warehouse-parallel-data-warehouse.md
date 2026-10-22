@@ -1,7 +1,7 @@
 ---
 title: "GRANT-DENY-REVOKE permissions"
-titleSuffix: "Azure Synapse Analytics, Analytics Platform System (PDW), Microsoft Fabric"
-description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Analytics Platform System (PDW), Microsoft Fabric)"
+titleSuffix: "Azure Synapse Analytics, Microsoft Fabric"
+description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Microsoft Fabric)"
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/03/2025
@@ -10,10 +10,10 @@ ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
+monikerRange: "=azure-sqldw-latest||=fabric"
 ---
 # Permissions: GRANT, DENY, REVOKE 
-[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE[applies-to-version/asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
   Use **GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
   
@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||=fabric"
 ## Syntax  
   
 ```syntaxsql
--- Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
+-- Azure Synapse Analytics and Microsoft Fabric
 GRANT   
     <permission> [ ,...n ]  
     [ ON [ <class_type> :: ] securable ]   
@@ -110,7 +110,7 @@ REVOKE
   
  Some statements require multiple permissions. For example, to create a table requires the **CREATE TABLE** permissions in the database, and the **ALTER SCHEMA** permission for the table that will contain the table.  
   
- [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
+ [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
   
  In [!INCLUDE [fabric](../../includes/fabric.md)], currently the CREATE USER cannot be explicitly executed. When GRANT or DENY is executed, the user will be created automatically. 
 
@@ -253,7 +253,7 @@ REVOKE
   
 -   The **USE** statement does not require permissions. All principals can run the **USE** statement on any database.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="Examples"></a> Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
 ### A. Granting a server level permission to a login  
  The following two statements grant a server level permission to a login.  

@@ -3,7 +3,7 @@ title: "tempdb Database"
 description: This article provides details about the configuration and use of the tempdb database in SQL Server, Azure SQL Database, SQL database in Fabric, and Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 08/06/2026
 ms.service: sql
 ms.topic: concept-article

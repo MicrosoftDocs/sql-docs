@@ -1,8 +1,8 @@
 ---
 title: Microsoft Extensibility SDK for C#
 description: Learn how you can implement a C# program for SQL Server using the Microsoft Extensibility SDK for C#.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 04/29/2024
 ms.service: sql
 ms.subservice: language-extensions

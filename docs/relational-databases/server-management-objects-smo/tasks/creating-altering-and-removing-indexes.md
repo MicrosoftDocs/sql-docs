@@ -1,8 +1,8 @@
 ---
 title: "Creating, Altering, and Removing Indexes"
 description: "Creating, Altering, and Removing Indexes"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: 01/11/2019
 ms.service: sql
 ms.topic: "reference"

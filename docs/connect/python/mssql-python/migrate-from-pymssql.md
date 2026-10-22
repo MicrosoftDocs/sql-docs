@@ -3,8 +3,8 @@ title: Migrate from pymssql to mssql-python
 description: Guide for migrating existing Python applications from pymssql to the mssql-python driver for Microsoft SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/21/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -174,6 +174,8 @@ for row in cursor:
     print(f"ID={row.BusinessEntityID}, Name={row.FirstName}")
     # Index access also works: row[0], row[1]
 ```
+
+If your code passes `as_dict=True` rows to functions that expect a dictionary, use `dict(row._mapping)` to convert each row. For more information, see [Row objects](row-objects.md#convert-to-dictionary).
 
 ## Stored procedure migration
 

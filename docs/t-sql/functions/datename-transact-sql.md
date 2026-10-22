@@ -1,8 +1,8 @@
 ---
 title: "DATENAME (Transact-SQL)"
 description: "DATENAME (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "07/29/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -23,10 +23,10 @@ helpviewer_keywords:
   - "dates [SQL Server], dateparts"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # DATENAME (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This function returns a character string representing the specified *datepart* of the specified *date*.
 
@@ -152,7 +152,7 @@ This example returns the date parts for the specified date. Substitute a *datepa
 |**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
-[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 This example returns the date parts for the specified date. Substitute a *datepart* value from the table for the `datepart` argument in the SELECT statement:
   

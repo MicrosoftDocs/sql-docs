@@ -1,9 +1,9 @@
 ---
 title: "Object Hierarchy Syntax (Transact-SQL)"
 description: "Object hierarchy syntax (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

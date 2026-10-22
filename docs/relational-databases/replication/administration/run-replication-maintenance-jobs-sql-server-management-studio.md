@@ -1,8 +1,8 @@
 ---
 title: "Run replication maintenance jobs (SSMS)"
 description: Learn how to start and stop replication maintenance jobs in SQL Server management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

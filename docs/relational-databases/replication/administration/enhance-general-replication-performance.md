@@ -1,8 +1,8 @@
 ---
 title: "Enhance General Replication Performance"
 description: "Enhance General Replication Performance"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 06/05/2026
 ms.service: sql
 ms.subservice: replication

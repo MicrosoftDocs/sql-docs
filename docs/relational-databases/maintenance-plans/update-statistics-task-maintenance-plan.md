@@ -1,9 +1,9 @@
 ---
 title: "Update Statistics Task (Maintenance Plan)"
 description: Learn how to update SQL Server information about the data in the tables and indexes by using the Use the Update Statistics Task.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/27/2023
 ms.service: sql
 ms.subservice: supportability

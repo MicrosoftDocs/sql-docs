@@ -3,7 +3,7 @@ title: "MSagent_profiles (Transact-SQL)"
 description: The MSagent_profiles table contains one row for each defined replication agent profile.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/15/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "sysmail_sentitems (Transact-SQL)"
 description: sysmail_sentitems (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

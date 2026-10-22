@@ -1,6 +1,7 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/27/2026
 ms.service: sql
 ms.topic: include

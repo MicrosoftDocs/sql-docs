@@ -1,9 +1,9 @@
 ---
 title: "Availability Group: Prerequisites, Restrictions, and Recommendations"
 description: A description of the prerequisites, restrictions, and recommendations for deploying an Always On availability group to SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: availability-groups

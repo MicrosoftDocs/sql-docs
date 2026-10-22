@@ -3,7 +3,7 @@ title: "sys.sp_revokelogin (Transact-SQL)"
 description: sp_revokelogin Removes the login entries from SQL Server for a Windows user or group.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

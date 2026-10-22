@@ -1,25 +1,24 @@
 ---
 title: Data Discovery & Classification
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
-description: Data Discovery & Classification for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Data Discovery & Classification for Azure SQL Database and Azure SQL Managed Instance
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: matripathy, shdasgupta, wiassaf, mathoma
-ms.date: 08/26/2026
+ms.reviewer: matripathy, shdasgupta, wiassaf
+ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
 ms.custom:
   - sqldbrb=1
   - sfi-image-nochange
-tags: azure-synapse
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Data Discovery & Classification
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Data Discovery & Classification is built into Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It provides basic capabilities for discovering, classifying, labeling, and reporting the sensitive data in your databases.
+Data Discovery & Classification is built into Azure SQL Database and Azure SQL Managed Instance. It provides basic capabilities for discovering, classifying, labeling, and reporting the sensitive data in your databases.
 
 Your most sensitive data might include business, financial, healthcare, or personal information. It can serve as infrastructure for:
 
@@ -161,6 +160,8 @@ Microsoft Purview Information Protection labels provide a simple and uniform way
 
 <a id="enabling-access-control-for-sensitive-data-using-microsoft-purview-information-protection-policies-public-preview"></a>
 
+<a id="microsoft-purview-information-protection-policies-for-azure-sql-database-and-azure-synapse-analytics"></a>
+
 ### Microsoft Purview Information Protection policies for Azure SQL Database
 
 > [!IMPORTANT]
@@ -228,9 +229,6 @@ This is the required action to modify the data classification of a database are:
 
 Learn more about role-based permissions in [Azure RBAC](/azure/role-based-access-control/overview).
 
-> [!NOTE]
-> The Azure SQL built-in roles in this section apply to a dedicated SQL pool (formerly SQL DW) but aren't available for dedicated SQL pools and other SQL resources within Azure Synapse workspaces. For SQL resources in Azure Synapse workspaces, use the available actions for data classification to create custom Azure roles as needed for labeling. For more information on the `Microsoft.Synapse/workspaces/sqlPools` provider operations, see [Microsoft.Synapse](/azure/role-based-access-control/resource-provider-operations#microsoftsynapse).
-
 ## Manage classifications
 
 You can use T-SQL, a REST API, or PowerShell to manage classifications.
@@ -251,6 +249,8 @@ For information about using T-SQL for classifications, see the following referen
 ### Use PowerShell cmdlets
 
 Manage classifications and recommendations for Azure SQL Database and Azure SQL Managed Instance using PowerShell.
+
+<a id="powershell-cmdlets-for-azure-sql-database-and-azure-synapse-analytics"></a>
 
 #### PowerShell cmdlets for Azure SQL Database
 
@@ -296,6 +296,10 @@ You can use the following SQL drivers to retrieve classification metadata:
 
 **Question**: Will [Microsoft Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
 **Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you'll receive advance notice including a migration or transition path. For more information, see the [Microsoft Lifecycle policies](/lifecycle/index).
+
+## Data Discovery & Classification in Azure Synapse Analytics
+
+For Azure Synapse Analytics, see [Data Discovery & Classification](/azure/synapse-analytics/sql/data-discovery-and-classification-overview).
 
 ## Related content
 

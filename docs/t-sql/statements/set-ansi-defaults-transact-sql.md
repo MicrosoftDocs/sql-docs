@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "SET ANSI_DEFAULTS statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Controls a group of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings that collectively specify some ISO standard behavior.  
   
@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=s
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
-### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)]
 ```syntaxsql
 SET ANSI_DEFAULTS ON
 ```

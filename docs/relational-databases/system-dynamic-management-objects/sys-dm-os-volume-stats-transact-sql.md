@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_volume_stats (Transact-SQL)"
 description: sys.dm_os_volume_stats returns information about the operating system volume (directory) on which the specified databases and files are stored.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/07/2025
 ms.service: sql
 ms.subservice: system-objects

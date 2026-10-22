@@ -1,9 +1,9 @@
 ---
 title: "sys.sysobjects (Transact-SQL)"
 description: "Contains one row for each object that is created within a database, such as a constraint, default, log, rule, and stored procedure."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 09/10/2022
 ms.service: sql
 ms.subservice: system-objects
@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "sysobjects system table"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # sys.sysobjects (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
 Contains one row for each object that is created within a database, such as a constraint, default, log, rule, and stored procedure.
 

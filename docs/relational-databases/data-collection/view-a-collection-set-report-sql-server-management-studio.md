@@ -1,9 +1,9 @@
 ---
 title: "View a collection set report (SSMS)"
 description: View a collection set report in SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

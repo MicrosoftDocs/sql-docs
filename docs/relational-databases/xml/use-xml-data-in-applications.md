@@ -1,9 +1,9 @@
 ---
 title: "Use XML Data in Applications"
 description: Learn about the options that are available for working with the xml data type in your applications.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

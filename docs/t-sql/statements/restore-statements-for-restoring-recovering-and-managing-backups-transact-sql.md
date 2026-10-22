@@ -1,8 +1,8 @@
 ---
 title: Restoring, recovering, and managing backups
 description: Transact-SQL RESTORE statements for restoring, recovering, and managing backups.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/30/2018"
 ms.service: sql
 ms.subservice: t-sql

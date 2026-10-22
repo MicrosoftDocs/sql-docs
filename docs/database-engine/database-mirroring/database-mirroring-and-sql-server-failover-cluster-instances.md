@@ -1,8 +1,8 @@
 ---
 title: "Database mirroring & failover cluster instances"
 description: You can combine database mirroring with SQL Server failover cluster instances. Learn about high-performance mode and high-safety mode with and without failover.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: database-mirroring

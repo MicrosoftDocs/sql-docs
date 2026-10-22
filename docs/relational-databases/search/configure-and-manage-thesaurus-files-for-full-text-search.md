@@ -1,8 +1,8 @@
 ---
 title: "Configure & Manage Thesaurus Files for Full-Text Search"
 description: "Configure and Manage Thesaurus Files for Full-Text Search"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 05/27/2025
 ms.service: sql
 ms.subservice: search

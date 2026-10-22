@@ -1,8 +1,8 @@
 ---
 title: "Publisher to Distributor History (Transactional - SSMS)"
 description: Describes the 'Publisher to Distributor History' tab of Replication Monitor for a Transactional Publication in SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "DBCC USEROPTIONS (Transact-SQL)"
 description: DBCC USEROPTIONS returns the SET options active (set) for the current connection.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

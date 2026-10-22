@@ -1,8 +1,8 @@
 ---
 title: Connect to SQL using Microsoft Entra with SSMS 18.6 and later
 description: Message to explain starting December 2021, you can only use Microsoft Entra with SSMS 18.6 and later
-author: markingmyname
-ms.author: maghan
+author: bluefooted
+ms.author: pamela
 ms.reviewer: drskwier
 ms.topic: include
 ---

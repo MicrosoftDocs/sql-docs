@@ -1,9 +1,9 @@
 ---
 title: "How To: Configure Permissions for a Local Service (Transact-SQL)"
 description: "SQL Server enforces SEND permission for each service and RECEIVE permissions for each queue."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration
@@ -53,6 +53,5 @@ GO
 - [How to: Configure target services for full dialog security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
 - [How to: Configure initiating services for full dialog security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
 - [How to: Configure initiating services for anonymous dialog security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
-- [Grant T-SQL permissions for Parallel Data Warehouse](../../analytics-platform-system/grant-permissions.md)
 - [GRANT Service Broker Permissions (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)
 - [Identity and access control (Service Broker)](identity-and-access-control.md)

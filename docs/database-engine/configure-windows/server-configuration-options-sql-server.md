@@ -2,8 +2,8 @@
 title: Server Configuration Options
 titleSuffix: SQL Server, Azure SQL Managed Instance
 description: Find out how to manage and optimize SQL Server and Azure SQL Managed Instance resources. View available configuration options, possible settings, default values, and restart requirements.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: dfurman
 ms.date: 05/20/2026
 ms.service: sql
@@ -113,7 +113,7 @@ The following table lists all available configuration options, the range of poss
 | [backup checksum default](backup-checksum-default.md) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `1` <br />**Default**: `0` | Yes | Yes |
 | [backup compression algorithm](view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: <br /> - `2` ([!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]), <br /> - `3` ([!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]) <br />**Default**: `0` | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions | Yes |
-| [blocked process threshold (s)](blocked-process-threshold-server-configuration-option.md) (A) | **Minimum**: `5`<br />**Maximum**: `86400`<br />**Default**: `0` | Yes | Yes |
+| [blocked process threshold (s)](blocked-process-threshold-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `86400`<br />**Default**: `0` | Yes | Yes |
 | [c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | No |
 | [clr enabled](clr-enabled-server-configuration-option.md) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | Yes |
 | [clr strict security](clr-strict-security.md) (A) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `1` | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions | Yes |

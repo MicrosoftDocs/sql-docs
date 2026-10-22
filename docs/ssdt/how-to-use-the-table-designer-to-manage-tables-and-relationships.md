@@ -1,9 +1,9 @@
 ---
 title: Using Table Designer to Manage Tables and Relationships
 description: Become familiar with Table Designer. See how to use this tool to create and edit database table structure and to view relationships among database objects.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

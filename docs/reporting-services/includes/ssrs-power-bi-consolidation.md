@@ -1,5 +1,5 @@
 ---
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/16/2025
 ms.service: reporting-services
 ms.topic: include

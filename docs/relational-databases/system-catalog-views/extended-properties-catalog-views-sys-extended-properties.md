@@ -1,8 +1,8 @@
 ---
 title: "sys.extended_properties (Transact-SQL)"
 description: Extended properties catalog views - sys.extended_properties
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/25/2024
 ms.service: sql
 ms.subservice: system-objects
@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sys.extended_properties catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # Extended properties catalog views - sys.extended_properties
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Returns a row for each extended property in the current database.
 

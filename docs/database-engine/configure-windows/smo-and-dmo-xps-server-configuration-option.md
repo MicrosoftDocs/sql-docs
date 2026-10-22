@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: SMO and DMO XPs"
 description: Learn how to enable SQL Server Management Object (SMO) extended stored procedures on a server. View information on the SMO and DMO XPs configuration option.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: configuration

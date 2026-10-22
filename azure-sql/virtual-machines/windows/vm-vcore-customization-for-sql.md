@@ -3,7 +3,7 @@ title: VM vCore Customization
 description: Learn how to configure VM vCore customization for SQL Server on Azure Virtual Machines to optimize performance and reduce licensing costs.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/27/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

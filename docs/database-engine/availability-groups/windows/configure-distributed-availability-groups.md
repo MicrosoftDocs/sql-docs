@@ -1,9 +1,9 @@
 ---
 title: "Configure a Distributed Availability Group"
 description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: mathoma
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 05/27/2025
 ms.service: sql
 ms.subservice: availability-groups

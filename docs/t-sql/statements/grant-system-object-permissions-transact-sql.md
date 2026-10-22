@@ -3,7 +3,7 @@ title: "GRANT system object permissions (Transact-SQL)"
 description: Grants permissions on system objects such as system stored procedures, extended stored procedures, functions, and views.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/04/2024
 ms.service: sql
 ms.subservice: t-sql

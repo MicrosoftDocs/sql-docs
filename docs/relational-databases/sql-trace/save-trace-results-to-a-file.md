@@ -1,8 +1,8 @@
 ---
 title: "Save Trace Results to a File"
 description: "Save Trace Results to a File"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: concept-article

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_droplinkedsrvlogin (Transact-SQL)"
 description: Removes an existing mapping between a login on the local server running SQL Server, and a login on the linked server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Restore Pages (SQL Server)"
 description: Learn how to restore pages in SQL Server by using SQL Server Management Studio or Transact-SQL. Restore damaged pages without restoring the whole database.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: backup-restore

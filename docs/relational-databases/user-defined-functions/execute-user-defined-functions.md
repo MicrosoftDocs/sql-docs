@@ -1,8 +1,8 @@
 ---
 title: "Execute user-defined functions"
 description: Learn how to execute a user defined function using Transact-SQL.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 04/26/2024
 ms.service: sql
 ms.topic: language-reference

@@ -3,7 +3,7 @@ title: Configure Storage
 description: This article describes how you can configure storage for both new and existing SQL Server on Azure VMs.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/22/2025
 ms.service: azure-vm-sql-server
 ms.subservice: management

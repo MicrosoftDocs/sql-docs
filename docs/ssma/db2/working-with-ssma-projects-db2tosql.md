@@ -1,8 +1,8 @@
 ---
 title: Work with SSMA Projects (Db2ToSQL)
 description: Learn how to create, customize, save, and open projects in SQL Server Migration Assistant (SSMA) for Db2.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball
 ms.date: 04/20/2026
 ms.service: sql

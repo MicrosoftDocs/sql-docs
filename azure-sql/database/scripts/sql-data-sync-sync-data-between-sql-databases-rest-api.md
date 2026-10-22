@@ -3,7 +3,7 @@ title: "REST API: Sync between multiple databases"
 description: Use a REST API example script to sync between multiple databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei
+ms.reviewer: hudequei
 ms.date: 09/23/2024
 ms.service: azure-sql-database
 ms.subservice: sql-data-sync

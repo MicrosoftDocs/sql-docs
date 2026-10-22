@@ -1,8 +1,8 @@
 ---
 title: "Execution Plan Overview"
 description: Learn about execution plans or query plans, which the Query Optimizer creates for the SQL Server Database Engine to run queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.reviewer: wiassaf, vanto
 ms.date: 01/26/2026
 ms.service: sql

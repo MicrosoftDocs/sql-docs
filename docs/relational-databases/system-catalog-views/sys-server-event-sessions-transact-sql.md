@@ -1,8 +1,8 @@
 ---
 title: "sys.server_event_sessions (Transact-SQL)"
 description: sys.server_event_sessions lists all the server-scoped event session definitions that exist in SQL Server or Azure SQL Managed Instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/28/2025
 ms.service: sql
 ms.subservice: system-objects

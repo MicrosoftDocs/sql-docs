@@ -1,8 +1,8 @@
 ---
 title: "Distributor and Publisher Information Script"
 description: Use this script to answer commonly asked questions about objects at the Distributor and Publisher in SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -3,7 +3,7 @@ title: Create Foreign Key Relationships
 description: Create foreign key relationships in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: sql
 ms.subservice: table-view-index

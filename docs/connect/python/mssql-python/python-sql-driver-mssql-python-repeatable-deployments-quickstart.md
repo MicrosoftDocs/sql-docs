@@ -3,8 +3,8 @@ title: "Quickstart: Python SQL Driver - mssql-python Repeatable Deployments with
 description: Use uv to create repeatable Python environments for database applications that use the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.reviewer: vanto
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 
 # Quickstart: Repeatable deployments with the mssql-python driver for Python
 
-In this quickstart, you use [`uv`](https://docs.astral.sh/uv/) to manage project dependencies and environments for a Python script that connects to a database that you created and loaded with sample data. You use the `mssql-python` driver for Python to connect to your database and perform basic operations, like reading and writing data.
+In this quickstart, you use [`uv`](https://docs.astral.sh/uv/) to manage project dependencies and environments for a Python script that connects to a database that you created and loaded with sample data. You use the `mssql-python` driver for Python to connect to your database and perform basic operations, such as reading and writing data.
 
 The `mssql-python` driver doesn't require any external dependencies on Windows machines. The driver installs everything that it needs with a single `pip` install, allowing you to use the latest version of the driver for new scripts without breaking other scripts that you don't have time to upgrade and test.
 
@@ -24,8 +24,10 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 ## Prerequisites
 
-- Python 3.10 or later
+- Python 3.10 or later.
+
 - If you don't already have Python, install the **Python runtime** and **pip package manager** from [python.org](https://www.python.org/downloads/).
+
 - Don't want to use your own environment? Follow [Container and local development](container-local-development.md) to create a reproducible devcontainer or GitHub Codespaces environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/download) with the following extensions:
@@ -35,10 +37,14 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 - [Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli) for passwordless authentication on macOS and Linux.
 
 - If you don't already have `uv`, follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
 - A database on SQL Server, Azure SQL Database, or SQL database in Fabric with the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample schema and a valid connection string.
+
+### Install operating system prerequisites
+
 [!INCLUDE [prereq-linux-macos](includes/prereq-linux-macos.md)]
 
-[!INCLUDE [prereq-create-sql-database](includes/prereq-create-sql-database.md)]
+[!INCLUDE [prereq-create-sql-database](../../../includes/paragraph-content/prereq-create-sql-database.md)]
 
 ## Create the project and run the code
 
@@ -65,9 +71,9 @@ The `mssql-python` driver doesn't require any external dependencies on Windows m
 
 In the same directory, install the `mssql-python`, `python-dotenv`, and `rich` packages.
 
-   ```console
-   uv add mssql-python python-dotenv rich
-   ```
+```console
+uv add mssql-python python-dotenv rich
+```
 
 ### Launch Visual Studio Code
 
@@ -79,7 +85,7 @@ code .
 
 ### Update pyproject.toml
 
-1. The [pyproject.toml](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) contains the metadata for your project. Open the file in your favorite editor.
+1. Open the [`pyproject.toml`](https://docs.astral.sh/uv/concepts/projects/layout/#the-pyprojecttoml) file in your editor. This file contains the metadata for your project.
 
 1. Review the contents of the file. It should be similar to this example. Note the Python version and dependency for `mssql-python` use `>=` to define a minimum version. If you prefer an exact version, change the `>=` before the version number to `==`. The resolved versions of each package are stored in the [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile). The lockfile ensures that developers working on the project use consistent package versions. It also ensures that the exact same set of package versions is used when distributing your package to end users. Commit both `pyproject.toml` and `uv.lock`, review lockfile changes in pull requests, and run an organization-approved dependency scanner in CI. Don't edit the `uv.lock` file directly.
 
@@ -91,13 +97,13 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.14.0",
+       "mssql-python>=1.16.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
    ]
    ```
 
-1. Update the description to be more descriptive.
+1. Update the `description` value.
 
    ```toml
    description = "Connects to a SQL database using mssql-python"
@@ -137,41 +143,39 @@ code .
 
    ```python
    def get_results(sleep_time: int = 0) -> None:
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        transient=True,
-    ) as progress:
-        task = progress.add_task(
-            description="Connecting to SQL...")
+       with Progress(
+           SpinnerColumn(),
+           TextColumn("[progress.description]{task.description}"),
+           transient=True,
+       ) as progress:
+           task = progress.add_task(description="Connecting to SQL...")
 
-        cursor = query_sql()
+           cursor = query_sql()
 
-        # Simulate a slow connection for demo purposes
-        sleep(sleep_time)
+           # Simulate a slow connection for demo purposes
+           sleep(sleep_time)
 
-        progress.update(task, description="Formatting results...")
+           progress.update(task, description="Formatting results...")
 
-        table = Table(title="Orders by Customer")
-        # https://rich.readthedocs.io/en/stable/appendix/colors.html
-        table.add_column("Customer ID", style="bright_blue", justify="center")
-        table.add_column("Company Name", style="bright_white", justify="left")
-        table.add_column("Order Count", style="bold green", justify="right")
+           table = Table(title="Orders by Customer")
+           # https://rich.readthedocs.io/en/stable/appendix/colors.html
+           table.add_column("Customer ID", style="bright_blue", justify="center")
+           table.add_column("Company Name", style="bright_white", justify="left")
+           table.add_column("Order Count", style="bold green", justify="right")
 
-        records = cursor.fetchall()
-        for r in records:
-            table.add_row(f"{r.CustomerID}",
-                          f"{r.CompanyName}", f"{r.OrderCount}")
+           records = cursor.fetchall()
+           for r in records:
+               table.add_row(f"{r.CustomerID}", f"{r.CompanyName}", f"{r.OrderCount}")
 
-        if cursor:
-            cursor.close()
+           if cursor:
+               cursor.close()
 
-        # Simulate a slow connection for demo purposes
-        sleep(sleep_time)
+           # Simulate a slow connection for demo purposes
+           sleep(sleep_time)
 
-        progress.stop()
+           progress.stop()
 
-        Console().print(table)
+           Console().print(table)
    ```
 
 1. Between the imports and `def get_results(sleep_time: int = 0) -> None:`, add this code.
@@ -180,34 +184,31 @@ code .
    _connection = None
 
    def get_connection() -> Connection:
-      global _connection
-      if not _connection:
-          load_dotenv()
-          _connection = connect(getenv("SQL_CONNECTION_STRING"))  # type: ignore
-      return _connection
+       global _connection
+       if not _connection:
+           load_dotenv()
+           _connection = connect(getenv("SQL_CONNECTION_STRING"))  # type: ignore
+       return _connection
 
    def query_sql() -> Cursor:
+       SQL_QUERY = """
+       SELECT TOP 5
+           c.CustomerID,
+           c.CompanyName,
+           COUNT(soh.SalesOrderID) AS OrderCount
+       FROM SalesLT.Customer AS c
+       LEFT OUTER JOIN SalesLT.SalesOrderHeader AS soh
+           ON c.CustomerID = soh.CustomerID
+       GROUP BY
+           c.CustomerID,
+           c.CompanyName
+       ORDER BY OrderCount DESC;
+       """
 
-      SQL_QUERY = """
-        SELECT TOP 5
-        c.CustomerID,
-        c.CompanyName,
-        COUNT(soh.SalesOrderID) AS OrderCount
-        FROM
-        SalesLT.Customer AS c
-        LEFT OUTER JOIN SalesLT.SalesOrderHeader AS soh
-        ON c.CustomerID = soh.CustomerID
-        GROUP BY
-        c.CustomerID,
-        c.CompanyName
-        ORDER BY
-        OrderCount DESC;
-      """
-
-      conn = get_connection()
-      cursor = conn.cursor()
-      cursor.execute(SQL_QUERY)
-      return cursor
+       conn = get_connection()
+       cursor = conn.cursor()
+       cursor.execute(SQL_QUERY)
+       return cursor
    ```
 
 1. Find this code.
@@ -221,27 +222,27 @@ code .
 
    ```python
    def main() -> None:
-      parser = ArgumentParser()
-      parser.add_argument("--sleep-time", type=int, default=0,
-                          help="Time to sleep in seconds to simulate slow connection")
-      args = parser.parse_args()
+       parser = ArgumentParser()
+       parser.add_argument("--sleep-time", type=int, default=0,
+                           help="Time to sleep in seconds to simulate slow connection")
+       args = parser.parse_args()
 
-      if args.sleep_time > 0:
-          get_results(args.sleep_time)
-      else:
-          get_results()
+       if args.sleep_time > 0:
+           get_results(args.sleep_time)
+       else:
+           get_results()
 
-      if _connection:
-          _connection.close()
+       if _connection:
+           _connection.close()
    ```
 
 1. Save and close `main.py`.
 
 ### Save the connection string
 
-1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to this example. Be sure to save and close it when you're done.
+1. Open the `.gitignore` file and add an exclusion for `.env` files. Your file should be similar to the following example.
 
-   ```output
+   ```text
    # Python-generated files
    __pycache__/
    *.py[oc]
@@ -257,34 +258,36 @@ code .
    .env
    ```
 
+1. Save and close `.gitignore`.
+
 1. In the current directory, create a new file named `.env`.
 
-1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the example here with your actual connection string value.
+1. Within the `.env` file, add an entry for your connection string named `SQL_CONNECTION_STRING`. Replace the placeholders with your actual values.
 
    ```text
-   SQL_CONNECTION_STRING="Server=<server_name>;Database=<database_name>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
+   SQL_CONNECTION_STRING="Server=<server>;Database=<database>;Encrypt=yes;TrustServerCertificate=no;Authentication=ActiveDirectoryInteractive"
    ```
 
-   > [!IMPORTANT]
+   > [!IMPORTANT]  
    > Keep `.env` local and out of source control. For CI and deployed environments, inject the connection string or its component secrets from your platform secret store instead of copying `.env` between machines.
+
+   The connection string depends on the type of SQL database you're connecting to. For Azure SQL Database or SQL database in Fabric, use the ODBC connection string from the connection strings tab, and adjust the authentication type for your scenario. For more information about connection string syntax, see [Connection strings for mssql-python](connection-strings.md).
+
    > [!TIP]  
-   > The connection string used here largely depends on the type of SQL database you're connecting to. If you're connecting to an *Azure SQL Database* or a *SQL database in Fabric*, use the *ODBC* connection string from the connection strings tab. You might need to adjust the authentication type depending on your scenario. For more information on connection strings and their syntax, see [connection string syntax reference](../../odbc/dsn-connection-string-attribute.md).
+   > On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once with the [Azure CLI](/cli/azure/install-azure-cli) `az login` command, and use `ActiveDirectoryDefault`. `ActiveDirectoryDefault` reuses the cached credential.
 
 ### Use uv run to execute the script
-
-> [!TIP]  
-> On macOS, both `ActiveDirectoryInteractive` and `ActiveDirectoryDefault` work for Microsoft Entra authentication. `ActiveDirectoryInteractive` prompts you to sign in every time you run the script. To avoid repeated sign-in prompts, sign in once through the [Azure CLI](/cli/azure/install-azure-cli) by running `az login`, then use `ActiveDirectoryDefault`, which reuses the cached credential.
 
 1. In the terminal window from before, or a new terminal window open to the same directory, run the following command.
 
    ```console
-    uv run main.py
+   uv run main.py
    ```
 
-1. Now let's run it again but more slowly to be able to see both status updates.
+1. Run the script again with a delay so that you can see both status updates.
 
    ```console
-    uv run main.py --sleep-time 5
+   uv run main.py --sleep-time 5
    ```
 
    Here's the expected output when the script completes.
@@ -304,12 +307,8 @@ code .
 
 1. To deploy your script to another machine, copy the project files, including `pyproject.toml` and `uv.lock`, but not the `.venv` folder or any local `.env` file. Recreate the virtual environment on first run and supply secrets through the target environment.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build connection strings](build-connection-strings.md)
-
 ## Related content
 
+- [Build connection strings programmatically](build-connection-strings.md)
 - [Execute queries with mssql-python](executing-queries.md)
 - [Manage connections with mssql-python](connection-management.md)

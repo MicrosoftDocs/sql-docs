@@ -1,8 +1,8 @@
 ---
 title: "sys.service_broker_endpoints (Transact-SQL)"
 description: sys.service_broker_endpoints contains one row for the Service Broker endpoint.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

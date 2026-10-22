@@ -1,8 +1,8 @@
 ---
 title: "DTAXML Element (DTA)"
 description: In the dta utility, the DTAXML element contains all elements that describe tuning input and output that the Database Engine Tuning Advisor generates.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: tools-other

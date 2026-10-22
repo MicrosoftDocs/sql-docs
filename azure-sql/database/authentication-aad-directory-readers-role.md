@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn about the directory reader's role in Microsoft Entra for Azure SQL.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma
+ms.reviewer: wiassaf, vanto
 ms.date: 07/17/2025
 ms.service: azure-sql
 ms.subservice: security

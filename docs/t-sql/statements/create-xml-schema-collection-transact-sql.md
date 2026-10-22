@@ -1,9 +1,9 @@
 ---
 title: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
 description: CREATE XML SCHEMA COLLECTION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: t-sql

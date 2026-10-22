@@ -1,8 +1,8 @@
 ---
 title: "Disallowed Types and Members in Microsoft.VisualBasic.dll"
 description: Lists the members and types of the Microsoft.VisualBasic.dll assembly whose Host Protection Attribute (HPA) values are disallowed.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

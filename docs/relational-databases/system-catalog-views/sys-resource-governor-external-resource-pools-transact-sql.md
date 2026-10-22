@@ -1,8 +1,8 @@
 ---
 title: "sys.resource_governor_external_resource_pools (Transact-SQL)"
 description: sys.resource_governor_external_resource_pools (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/11/2025
 ms.service: sql
 ms.subservice: system-objects

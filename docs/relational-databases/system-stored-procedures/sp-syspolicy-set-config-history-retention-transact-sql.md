@@ -3,7 +3,7 @@ title: "sp_syspolicy_set_config_history_retention (Transact-SQL)"
 description: "Specifies the number of days to keep policy evaluation history for Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

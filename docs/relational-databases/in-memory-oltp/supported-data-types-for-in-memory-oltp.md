@@ -1,9 +1,9 @@
 ---
 title: Supported Data Types for In-Memory OLTP
 description: Learn about data types that are unsupported for the In-Memory OLTP features memory-optimized tables and natively compiled T-SQL modules.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 10/27/2025
 ms.service: sql
 ms.subservice: in-memory-oltp

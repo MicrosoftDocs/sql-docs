@@ -1,8 +1,8 @@
 ---
 title: "Switch database mirror roles"
 description: Learn about switching database mirroring roles, where a mirror server becomes the principal in response to failures or for admin purposes in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring

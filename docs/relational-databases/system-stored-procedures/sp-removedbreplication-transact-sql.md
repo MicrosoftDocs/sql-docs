@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_removedbreplication (Transact-SQL)"
 description: sp_removedbreplication removes all replication objects on the publication database on the Publisher instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

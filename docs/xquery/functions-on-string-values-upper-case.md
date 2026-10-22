@@ -1,8 +1,8 @@
 ---
 title: "upper-case  Function (XQuery)"
 description: Learn how to use the XQuery function upper-case(), that converts characters to their upper case equivalent.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

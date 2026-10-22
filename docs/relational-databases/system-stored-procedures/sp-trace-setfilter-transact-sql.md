@@ -1,9 +1,9 @@
 ---
 title: "sp_trace_setfilter (Transact-SQL)"
 description: Applies a filter to a trace.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

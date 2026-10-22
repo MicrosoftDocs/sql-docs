@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_wait_stats"
 description: sys.dm_db_wait_stats returns information about all the waits encountered by threads that executed during operation.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 09/11/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

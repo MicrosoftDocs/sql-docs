@@ -3,7 +3,7 @@ title: "sys.sp_cdc_cleanup_change_table (Transact-SQL)"
 description: Removes rows from the change table in the current database based on the specified @low_water_mark value.
 author: tameikal-msft
 ms.author: talawren
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

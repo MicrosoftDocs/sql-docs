@@ -1,8 +1,8 @@
 ---
 title: "Create snapshot with parameterized filters (Merge)"
 description: Learn how to create a snapshot for a Merge Publication using parameterized filters.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

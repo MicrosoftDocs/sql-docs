@@ -1,8 +1,9 @@
 ---
 title: Restore master Database on SQL Server in Single-User Mode on Linux
-description: "Learn how to restore the master database using single-user mode in SQL Server on Linux."
-author: rwestMSFT
-ms.author: randolphwest
+description: Learn how to restore the master database using single-user mode in SQL Server on Linux.
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: configuration
@@ -81,7 +82,7 @@ When you start an instance of [!INCLUDE [ssNoVersion](../../../includes/ssnovers
    /opt/mssql-tools/bin/sqlcmd -S <ServerName> -U sa -P <password>
    ```
 
-   In the previous example, `<ServerName>` is the name of the host running SQL Server if you're connecting remotely. If you're connecting directly on the host where SQL Server is running, you can skip this parameter, or use `localhost`. `<StringPassword>` is the password for the **SA** account.
+   In the previous example, `<ServerName>` is the name of the host running SQL Server if you're connecting remotely. If you're connecting directly on the host where SQL Server is running, you can skip this parameter, or use `localhost`. `<password>` is the password for the **SA** account.
 
 ## Restore the `master` database
 

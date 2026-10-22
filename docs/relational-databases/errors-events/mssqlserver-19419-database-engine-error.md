@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_19419"
 description: "MSSQLSERVER_19419"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/04/2026
 ms.service: sql
 ms.subservice: supportability

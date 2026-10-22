@@ -1,9 +1,9 @@
 ---
 title: "Lesson 2: Connect to the Database Engine from Another Computer"
 description: Learn how to enable the protocols, configure the ports, and configure Windows Firewall for connecting to the Database Engine from another computer.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan, randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 08/11/2025
 ms.service: sql
 ms.topic: how-to

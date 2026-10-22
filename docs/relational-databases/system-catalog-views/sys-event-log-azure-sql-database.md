@@ -1,8 +1,8 @@
 ---
 title: "sys.event_log (Azure SQL Database)"
 description: sys.event_log (Azure SQL Database)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: "04/18/2022"
 ms.service: azure-sql-database
 ms.topic: "reference"

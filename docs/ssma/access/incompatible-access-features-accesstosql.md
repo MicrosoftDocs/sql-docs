@@ -3,7 +3,7 @@ title: "Incompatible Access Features (AccessToSQL)"
 description: Learn about possible migration issues with Access database features that aren't compatible with SQL Server, and how to address them.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

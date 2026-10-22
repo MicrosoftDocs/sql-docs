@@ -4,7 +4,7 @@ description: The Microsoft JDBC Driver for SQL Server provides support for Java 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 10/27/2023
+ms.date: 09/23/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -38,13 +38,15 @@ The following extra guidelines apply to tightly coupled transactions:
 
 - When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you might notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and work that loosely coupled XA branches perform is isolated from one another.
 
-- MS DTC also supports tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- MS DTC supports tightly coupled XA branches where multiple XA branches with the same global transaction ID (GTRID) map to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 - A [SSTRANSTIGHTLYCPLD](reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:
 
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);
     ```
+
+- When more than one tightly coupled XA branch participates in the same global transaction, MS DTC doesn't support the one-phase commit optimization. `XAResource.commit` with `onePhase` set to `true` fails with `XAER_PROTO` (-6). Because `XAResource.prepare` returns `XA_RDONLY` for branches that joined an existing global transaction, a transaction manager can conclude that only one branch remains and select the one-phase optimization. Configure the transaction manager to use two-phase commit for these transactions, or use loosely coupled branches instead.
 
 ## Configuration instructions
 
@@ -100,7 +102,7 @@ Skip to the [Configuring server-side timeout settings for automatic rollback of 
 > [!NOTE]
 > This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
 >
-> The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.
+> These components aren't required for XA functionality with JDBC Driver 13.6 and later when you connect to SQL Server 2017 CU16 or higher. Therefore, the driver package no longer includes the sqljdbc_xa directory or its xa_install.sql and sqljdbc_xa.dll components. These legacy instructions apply only to driver packages earlier than 13.6.
 
 You can configure the JDBC driver distributed transaction components by following these steps:
 
@@ -130,7 +132,7 @@ There are three ways to verify the version of sqljdbc_xa.dll currently installed
 > [!NOTE]
 > This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
 
-When you install a new version of the JDBC driver, you should also use sqljdbc_xa.dll from the new version to upgrade sqljdbc_xa.dll on the server.
+For driver packages earlier than 13.6, use the newest available sqljdbc_xa.dll when you upgrade the driver. JDBC Driver 13.6 and later don't include this DLL.
 
 > [!IMPORTANT]
 > You should upgrade sqljdbc_xa.dll during a maintenance window or when there are no MS DTC transactions in progress.

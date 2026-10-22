@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_18456
 description: A connection attempt is rejected due to a failure with a bad password or username in SQL Server. See an explanation of the error and possible resolutions.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: jopilov, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 05/03/2024
 ms.service: sql
 ms.subservice: supportability

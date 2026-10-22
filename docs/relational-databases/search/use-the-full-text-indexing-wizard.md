@@ -1,8 +1,8 @@
 ---
 title: "Use the Full-Text Indexing Wizard"
 description: "Use the Full-Text Indexing Wizard"
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "08/19/2016"
 ms.service: sql
 ms.subservice: search

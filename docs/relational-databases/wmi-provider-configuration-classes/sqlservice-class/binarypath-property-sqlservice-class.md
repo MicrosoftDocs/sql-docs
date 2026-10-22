@@ -1,8 +1,8 @@
 ---
 title: "BinaryPath Property (SqlService class)"
 description: "BinaryPath Property (SqlService class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: wmi

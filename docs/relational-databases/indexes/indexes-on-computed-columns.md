@@ -1,9 +1,9 @@
 ---
 title: Indexes on computed columns
 description: Learn how to create indexes on computed columns
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 10/14/2022
 ms.service: sql
 ms.subservice: table-view-index

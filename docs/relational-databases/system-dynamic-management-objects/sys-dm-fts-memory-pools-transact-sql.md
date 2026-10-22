@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_fts_memory_pools (Transact-SQL)"
 description: sys.dm_fts_memory_pools returns information about the shared memory pools available to the Full-Text Gatherer component for a full-text crawl or a full-text crawl range.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

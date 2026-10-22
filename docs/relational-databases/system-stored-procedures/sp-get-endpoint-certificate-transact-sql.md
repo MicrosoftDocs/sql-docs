@@ -3,7 +3,7 @@ title: "sp_get_endpoint_certificate (Transact-SQL)"
 description: Returns a public key of the certificate used for authentication on endpoint of specified type with certificate-based trust configured.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

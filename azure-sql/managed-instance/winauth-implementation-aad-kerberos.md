@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how Windows Authentication for Azure SQL Managed Instance is implemented with Microsoft Entra ID and Kerberos.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf
+ms.reviewer: bonova, urmilano, wiassaf
 ms.date: 08/26/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

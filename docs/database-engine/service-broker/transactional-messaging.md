@@ -1,9 +1,9 @@
 ---
 title: Transactional Messaging
 description: "The foundation of the Service Broker programming model is transactional messaging."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

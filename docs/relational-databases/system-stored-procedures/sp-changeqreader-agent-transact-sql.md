@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_changeqreader_agent (Transact-SQL)"
 description: sp_changeqreader_agent changes security properties of a Queue Reader agent.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

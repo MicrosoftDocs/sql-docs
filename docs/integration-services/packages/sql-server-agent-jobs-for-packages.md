@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Agent Jobs for Packages"
 description: "Automate and schedule the execution of SSIS packages with SQL Server Agent Jobs"
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: integration-services

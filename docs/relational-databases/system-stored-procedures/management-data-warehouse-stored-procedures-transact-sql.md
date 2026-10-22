@@ -1,9 +1,9 @@
 ---
 title: "Management Data Warehouse Stored Procedures (Transact-SQL)"
 description: "Management Data Warehouse stored procedures (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects
@@ -12,11 +12,11 @@ helpviewer_keywords:
   - "management data warehouse, data collector stored procedures"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Management Data Warehouse stored procedures (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The data collector stores data and data collector type information in the management data warehouse. The following stored procedures are used to update data and change the tables in the management data warehouse.
 

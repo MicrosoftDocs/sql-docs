@@ -1,8 +1,8 @@
 ---
 title: Script to Grant Oracle Permissions
 description: Script to grant Oracle permissions creates a replication user with the privileges SQL Server publishing requires. See the full PL/SQL script and setup steps.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

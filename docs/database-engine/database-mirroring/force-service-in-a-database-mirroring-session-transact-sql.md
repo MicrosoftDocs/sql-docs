@@ -1,8 +1,8 @@
 ---
 title: "Force database mirroring service"
 description: If the principal server fails while the mirror server is available, make the database available by forcing the service to fail over to the mirrored database.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: database-mirroring

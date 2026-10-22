@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 This article covers how to rename a table in a database.
 
-To rename a table in Azure Synapse Analytics or Parallel Data Warehouse, use [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
+To rename a table in Azure Synapse Analytics, use [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
 
 <a id="Restrictions"></a>
 

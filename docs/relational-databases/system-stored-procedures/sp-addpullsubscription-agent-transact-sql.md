@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addpullsubscription_agent (Transact-SQL)"
 description: Adds a new scheduled agent job used to synchronize a pull subscription to a transactional publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

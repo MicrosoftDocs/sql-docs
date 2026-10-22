@@ -3,7 +3,7 @@ title: Elastic Query Overview
 description: Elastic query enables you to run a Transact-SQL query that spans multiple databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: drskwier, bgavrilovic, mathoma, randolphwest
+ms.reviewer: drskwier, bgavrilovic
 ms.date: 08/12/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out

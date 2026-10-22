@@ -4,7 +4,7 @@ description: This tutorial teaches you how to create a basic environment for Alw
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: security
 ms.topic: tutorial
@@ -148,7 +148,7 @@ In this step, you'll create a database with some sample data, which you'll encry
             ,[LastName]
             ,[Salary])
         VALUES
-            ('795-73-9838'
+            ('987-65-4320'
             , N'Catherine'
             , N'Abel'
             , $31692);

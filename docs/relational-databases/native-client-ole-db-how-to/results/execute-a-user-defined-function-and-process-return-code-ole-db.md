@@ -1,8 +1,8 @@
 ---
 title: "User-Defined Function, Return Code (OLE DB)"
 description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "user-defined functions [OLE DB]"
 ---
 # Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  
   

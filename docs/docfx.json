@@ -516,13 +516,12 @@
         "**/toc.yml": null
       },
       "monikerRange": {
-        "ado/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016",
-        "analytics-platform-system/**/*.md": ">=aps-pdw-2016",
+        "ado/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest",
         "azdata/**/*.md": ">=sql-server-ver15 || >=sql-server-linux-ver15",
-        "azure-data-studio/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || =fabric",
+        "azure-data-studio/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric",
         "big-data-cluster/**/*.md": "=sql-server-ver15 || =sql-server-linux-ver15",
         "big-data-cluster/**/*.yml": "=sql-server-ver15 || =sql-server-linux-ver15",
-        "connect/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || =fabric",
+        "connect/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric",
         "database-engine/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017",
         "data-quality-services/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15 || =sql-server-ver16 || =sql-server-linux-ver16",
         "dmx/**/*.md": ">=sql-server-2017",
@@ -532,48 +531,48 @@
         "machine-learning/**/*.md": ">=sql-server-2017",
         "master-data-services/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15 || =sql-server-ver16 || =sql-server-linux-ver16",
         "mdx/**/*.md": ">=sql-server-2017",
-        "odbc/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || =fabric",
-        "powershell/**/*.md": ">=aps-pdw-2016 || =azure-sqldw-latest || =azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric",
+        "odbc/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric",
+        "powershell/**/*.md": "=azure-sqldw-latest || =azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric",
         "relational-databases/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017",
-        "relational-databases/native-client/**/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-api/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-bulk-copy-operations/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-communication/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-cursors/**/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-date-time/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-error-messages/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-extensions-bulk-copy-functions/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-how-to/**/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-queries/**/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-results/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-stored-procedures/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-table-valued-parameters/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-odbc-text-image-columns/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-blobs/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-commands/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-data-source-objects/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-data-types/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-date-time/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-errors/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-how-to/**/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-interfaces/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-provider/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-rowsets/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-tables-indexes/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-table-valued-parameters/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/native-client-ole-db-transactions/*.md": "=aps-pdw-2016 || =aps-pdw-2016-au7 || =sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
-        "relational-databases/system-dynamic-management-views/*.md": "=azuresqldb-current",
+        "relational-databases/native-client/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-api/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-bulk-copy-operations/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-communication/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-cursors/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-date-time/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-error-messages/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-extensions-bulk-copy-functions/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-how-to/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-queries/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-results/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-stored-procedures/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-table-valued-parameters/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-odbc-text-image-columns/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-blobs/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-commands/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-data-source-objects/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-data-types/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-date-time/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-errors/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-how-to/**/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-interfaces/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-provider/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-rowsets/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-tables-indexes/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-table-valued-parameters/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/native-client-ole-db-transactions/*.md": "=sql-server-2017 || =sql-server-linux-2017 || =sql-server-ver15 || =sql-server-linux-ver15",
+        "relational-databases/system-dynamic-management-objects/*.md": "=azuresqldb-current",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017",
-        "relational-databases/security/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric",
+        "relational-databases/security/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric",
         "relational-databases/xml/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017",
         "reporting-services/**/*.md": ">=sql-server-2017",
         "reporting-services/mobile-reports/**/*.md": ">=sql-server-2017",
         "samples/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017",
         "sql-server/**/*.md": ">=sql-server-2017",
-        "ssdt/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || =fabric",
-        "ssma/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016",
-        "toc/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric",
-        "tools/**/*.md": ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresql || =azuresql-db || =azuresqldb-mi-current || =azuresqldb-current || =fabric",
+        "ssdt/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric",
+        "ssma/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest",
+        "toc/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric",
+        "tools/**/*.md": ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresql || =azuresql-db || =azuresqldb-mi-current || =azuresqldb-current || =fabric",
         "tools/distributed-replay/*.md": "=sql-server-2017 || =sql-server-ver15 || =sql-server-linux-2017 || =sql-server-linux-ver15",
         "t-sql/**/*.md": "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqledge-current",
         "t-sql/spatial-geography/*.md": "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric",
@@ -585,13 +584,13 @@
         "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       },
       "author": {
-        "**/*/index.yml": "rwestMSFT",
-        "reporting-services/**/*.md": "JulCsc",
-        "reporting-services/**/*.yml": "JulCsc",
-        "integration-services/**/*.md": "kromerm",
-        "integration-services/**/*.yml": "kromerm",
-        "data-quality-services/**/*.md": "kromerm",
-        "data-quality-services/**/*.yml": "kromerm",
+        "**/*/index.yml": "WilliamDAssafMSFT",
+        "reporting-services/**/*.md": "VanMSFT",
+        "reporting-services/**/*.yml": "VanMSFT",
+        "integration-services/**/*.md": "VanMSFT",
+        "integration-services/**/*.yml": "VanMSFT",
+        "data-quality-services/**/*.md": "VanMSFT",
+        "data-quality-services/**/*.yml": "VanMSFT",
         "dmx/**/*.md": "KayUnkroth",
         "dmx/**/*.yml": "KayUnkroth",
         "mdx/**/*.md": "KayUnkroth",
@@ -600,13 +599,13 @@
         "machine-learning/**/*.yml": "VanMSFT"
       },
       "ms.author": {
-        "**/*/index.yml": "randolphwest",
-        "reporting-services/**/*.md": "juliacawthra",
-        "reporting-services/**/*.yml": "juliacawthra",
-        "integration-services/**/*.md": "makromer",
-        "integration-services/**/*.yml": "makromer",
-        "data-quality-services/**/*.md": "makromer",
-        "data-quality-services/**/*.yml": "makromer",
+        "**/*/index.yml": "wiassaf",
+        "reporting-services/**/*.md": "vanto",
+        "reporting-services/**/*.yml": "vanto",
+        "integration-services/**/*.md": "vanto",
+        "integration-services/**/*.yml": "vanto",
+        "data-quality-services/**/*.md": "vanto",
+        "data-quality-services/**/*.yml": "vanto",
         "dmx/**/*.md": "kayu",
         "dmx/**/*.yml": "kayu",
         "mdx/**/*.md": "kayu",
@@ -681,7 +680,70 @@
         "ado/**/*.md": [
           "sql-server-ver15"
         ],
-        "analytics-platform-system/**/*.{md,yml,yaml}": [
+        "relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-active-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-alerts-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-component-health-status-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-diag-processing-stats-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-network-credentials-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-node-status-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-event-logs-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-os-performance-counters-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-file-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "relational-databases/system-dynamic-management-objects/sys-dm-pdw-query-stats-xe-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "t-sql/language-elements/create-diagnostics-session-transact-sql.md": [
+          "aps-pdw-2016-au7"
+        ],
+        "t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md": [
           "aps-pdw-2016-au7"
         ]
       }
@@ -695,7 +757,7 @@
     "groups": {
       "gr-sql-2016-a": {
         "dest": "temp2016a",
-        "moniker_range": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
+        "moniker_range": "=azuresqldb-current || =azuresqldb-mi-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric || =fabric-sqldb"
       }
     },
     "dest": "docs",

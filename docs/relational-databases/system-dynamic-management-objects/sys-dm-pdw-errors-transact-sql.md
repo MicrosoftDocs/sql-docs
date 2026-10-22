@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_pdw_errors (Transact-SQL)"
-description: sys.dm_pdw_errors holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
+description: sys.dm_pdw_errors holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 04/23/2024
@@ -9,14 +9,14 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.dm_pdw_errors (Transact-SQL)
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 [!INCLUDE [synapse-fabric-migration](../../includes/synapse-fabric-migration.md)]
 
-  Holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools and Analytics Platform System (PDW).
+  Holds information about all errors encountered during execution of a request or query in Azure Synapse Analytics dedicated SQL pools.
 
 > [!NOTE]
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
@@ -39,4 +39,4 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ## Related content
 
 - [sys.dm_pdw_exec_requests (Transact-SQL)](sys-dm-pdw-exec-requests-transact-sql.md)
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)

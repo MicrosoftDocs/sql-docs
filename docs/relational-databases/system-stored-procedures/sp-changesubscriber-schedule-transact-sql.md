@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_changesubscriber_schedule (Transact-SQL)"
 description: sp_changesubscriber_schedule changes the Distribution Agent or Merge Agent schedule for a subscriber.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -3,7 +3,7 @@ title: Create SQL Server VM using Bicep
 description: Learn how to create a SQL Server on Azure Virtual Machine (VM) using Bicep.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 06/17/2022
 ms.service: azure-vm-sql-server
 ms.subservice: deployment

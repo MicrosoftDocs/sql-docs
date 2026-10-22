@@ -19,6 +19,16 @@ ms.custom:
 
 This article shows you how to create a new watcher to monitor an Azure SQL database, elastic pool, or SQL managed instance. For an introduction to database watcher, see [Monitor Azure SQL workloads with database watcher](database-watcher-overview.md). For a detailed description of database watcher setup and configuration, see [Create and configure a watcher](database-watcher-manage.md).
 
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
+
 Follow the steps to create a watcher and start monitoring your Azure SQL resources in minutes. The watcher you create uses Microsoft Entra authentication and private connectivity to the monitoring targets.
 
 > [!NOTE]

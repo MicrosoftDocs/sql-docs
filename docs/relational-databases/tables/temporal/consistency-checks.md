@@ -1,8 +1,8 @@
 ---
 title: Temporal Table System Consistency Checks
 description: Learn how the system performs several consistency checks to ensure the schema complies with the requirements for temporal data.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

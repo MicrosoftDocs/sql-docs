@@ -1,8 +1,8 @@
 ---
 title: "FILESTREAM, functions, stored procedures, views"
 description: FILESTREAM works with specific Transact-SQL statements, APIs, functions, stored procedures, and views. Learn which statements and objects support FILESTREAM.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: filestream

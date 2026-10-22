@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
 description: sys.fn_db_backup_file_snapshots (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: system-objects

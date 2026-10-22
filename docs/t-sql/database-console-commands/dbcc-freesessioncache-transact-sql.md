@@ -1,8 +1,8 @@
 ---
 title: "DBCC FREESESSIONCACHE (Transact-SQL)"
 description: DBCC FREESESSIONCACHE flushes the distributed query connection cache used by distributed queries against an instance of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

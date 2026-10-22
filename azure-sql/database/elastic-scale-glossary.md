@@ -3,7 +3,7 @@ title: Elastic Database Tools Glossary
 description: Explanation of terms used for elastic database tools
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

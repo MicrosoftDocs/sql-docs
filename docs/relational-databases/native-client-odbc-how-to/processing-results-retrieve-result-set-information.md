@@ -1,8 +1,8 @@
 ---
 title: "Retrieve Result Set Information (ODBC)"
 description: "Processing Results - Retrieve Result Set Information"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "result sets [ODBC], fetching"
 ---
 # Processing Results - Retrieve Result Set Information
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To get information about a result set  

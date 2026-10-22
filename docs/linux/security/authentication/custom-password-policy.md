@@ -1,9 +1,9 @@
 ---
 title: Use Custom Password Policy for SQL Logins on Linux
 description: Learn how to use a custom password policy for SQL logins with SQL Server on Linux.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: matripathy, amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh, matripathy
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux
@@ -30,7 +30,7 @@ This enforcement ensures that logins that use SQL Server authentication are secu
 
 ## Custom policy settings
 
-Set the following configuration parameters in the `mssql.conf` file to enforce a custom password policy:
+Set the following configuration parameters in the [mssql.conf file](../../configure/mssql-conf.md#mssql-conf-format) to enforce a custom password policy:
 
 | Configuration option | Description |
 | --- | --- |
@@ -40,12 +40,12 @@ Set the following configuration parameters in the `mssql.conf` file to enforce a
 | `passwordpolicy.passwordmaximumage` | Sets the maximum duration a password can be used before it must be changed. |
 
 > [!NOTE]  
-> You can currently set the `passwordminimumlength` to fewer than eight characters. [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
+> You can set the `passwordminimumlength` to fewer than eight characters. [!INCLUDE [password-complexity](../../includes/password-complexity.md)]
 
 Configure the policy in one of two ways:
 
-- [Set the policy with adutil](#adutil), which fetches values from Active Directory.
-- [Set the policy manually with mssql-conf](#manual).
+- [Set the policy](#adutil) with [adutil](adutil-introduction.md), which fetches values from Active Directory.
+- [Set the policy manually](#manual) with the [mssql-conf tool](../../configure/mssql-conf.md).
 
 <a id="adutil"></a>
 
@@ -90,7 +90,7 @@ Use [adutil](adutil-introduction.md) to fetch the password policy from the AD se
 
    Optionally, you can add the `--path` option to the previous command. You might use this option if you have the **`mssql-conf`** tool in a different location from the default path. The default path is `/opt/mssql/bin/mssql-conf`.
 
-1. Restart SQL Server service:
+1. Restart the SQL Server service:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -144,7 +144,11 @@ Run the following **`mssql-conf`** commands to set each policy property.
 
 ## Limitations
 
-Before [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 23 and [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] CU 3, the `passwordminimumlength` parameter can't be set to more than 14 characters.
+Custom password policies are supported as follows:
+
+- In [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CU 23, the `passwordminimumlength` parameter supports values up to 14 characters.  
+
+- In [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] CU 3 and later versions, the `passwordminimumlength` parameter supports values with more than 14 characters.
 
 Changes to the group password policy in Active Directory don't automatically propagate. Run `adutil updatepasswordpolicy` to refresh `mssql.conf` after each change, or set the values manually by using **`mssql-conf`** if the Linux host isn't joined to the domain.
 

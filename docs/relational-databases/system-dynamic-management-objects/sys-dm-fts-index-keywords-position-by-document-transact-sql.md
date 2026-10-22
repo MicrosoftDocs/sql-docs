@@ -1,8 +1,8 @@
 ---
 title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 description: sys.dm_fts_index_keywords_position_by_document returns keyword positional information in the indexed documents.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

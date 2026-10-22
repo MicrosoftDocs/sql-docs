@@ -1,9 +1,9 @@
 ---
 title: Connect to an Existing Database in SSDT
 description: Connect to an existing database in SSDT using SQL Server Object Explorer.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

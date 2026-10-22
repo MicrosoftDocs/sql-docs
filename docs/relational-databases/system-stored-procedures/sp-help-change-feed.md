@@ -3,7 +3,7 @@ title: "sys.sp_help_change_feed (Transact-SQL)"
 description: "The sys.sp_help_change_feed system stored procedure monitors the current configuration of Azure Synapse Link or Fabric Mirrored Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, randolphwest, anagha-todalbagi, ajayj
+ms.reviewer: imotiwala, anagha-todalbagi, ajayj
 ms.date: 06/23/2025
 ms.service: fabric
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Cursor Properties"
 description: "Cursor Properties"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC cursors, cursor behaviors"
 ---
 # Cursor Properties
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The overall characteristics of a cursor are determined by setting either the ODBC-style cursor type or the SQL-92/ISO cursor behaviors. The following topics describe additional statement and connection attributes that affect the behavior of a cursor.  
   

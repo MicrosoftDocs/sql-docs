@@ -1,9 +1,9 @@
 ---
 title: State Management
 description: "An application that maintains state typically stores that state in database tables."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

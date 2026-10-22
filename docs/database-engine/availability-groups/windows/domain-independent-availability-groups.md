@@ -1,9 +1,9 @@
 ---
 title: "Create a domain-independent availability group"
 description: "Learn the steps required to create an availability group that uses a workgroup cluster."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 04/25/2024
 ms.service: sql
 ms.subservice: availability-groups

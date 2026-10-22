@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)"
 description: Returns current row-level I/O, locking, and access method activity for compressed rowgroups in a columnstore index.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: system-objects

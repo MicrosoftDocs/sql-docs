@@ -1,14 +1,14 @@
 ---
 title: API support for date and time enhancements (Native Client OLE DB provider)
 description: "OLE DB API Support for Date and Time Enhancements (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.topic: "reference"
 ---
 # OLE DB API Support for Date and Time Enhancements (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The following OLE DB APIs support enhanced date/time features.  
   

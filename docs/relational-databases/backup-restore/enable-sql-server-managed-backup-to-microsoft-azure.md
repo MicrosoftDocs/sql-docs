@@ -1,8 +1,8 @@
 ---
 title: Use managed backup to Azure
 description: Learn how to enable SQL Server Managed Backup to Microsoft Azure at the database and instance level, and enable notifications and monitor backup activity.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore

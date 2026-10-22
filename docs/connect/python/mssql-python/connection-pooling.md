@@ -3,8 +3,8 @@ title: Connection Pooling with mssql-python
 description: Learn how to configure and use connection pooling to improve application performance with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/27/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -123,6 +123,7 @@ The driver refreshes pooled connections whose token is within 5 minutes of expir
 
 **Release (returning a connection):**
 
+1. The driver rolls back any open transaction on the physical connection and turns autocommit on. If this cleanup fails, the driver closes the connection instead of returning it to the pool.
 1. If the pool has capacity, it stores the connection for reuse.
 1. If the pool is at `max_size`, the driver closes the connection immediately.
 

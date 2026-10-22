@@ -1,8 +1,8 @@
 ---
 title: DacFx and SqlPackage Release Notes (Archive)
 description: Release note archive for Microsoft SqlPackage for 162.x and earlier versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier, llali
 ms.date: 03/16/2026
 ms.service: sql

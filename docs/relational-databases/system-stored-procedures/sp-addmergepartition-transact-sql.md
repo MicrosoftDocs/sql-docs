@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addmergepartition (Transact-SQL)"
 description: Creates a dynamically filtered partition for a subscription that is filtered.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

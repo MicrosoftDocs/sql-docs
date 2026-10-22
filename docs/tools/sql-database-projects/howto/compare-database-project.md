@@ -1,8 +1,8 @@
 ---
 title: Compare a Database and a Project
 description: Compare a project and a database and with different approaches.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 06/09/2026
 ms.service: sql

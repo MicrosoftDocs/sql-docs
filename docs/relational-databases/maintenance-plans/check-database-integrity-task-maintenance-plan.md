@@ -1,9 +1,9 @@
 ---
 title: "Check Database Integrity Task (Maintenance Plan)"
 description: Use Check Database Integrity Task to check the allocation and structural integrity of user and system tables, and indexes in a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/27/2023
 ms.service: sql
 ms.subservice: supportability

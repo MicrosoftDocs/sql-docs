@@ -1,8 +1,8 @@
 ---
 title: Configure Server Startup Options (SQL Server Configuration Manager)
 description: Learn how to set options that the SQL Server Database Engine uses when it starts. View limitations and restrictions on making changes to startup parameters.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 03/16/2026
 ms.service: sql
 ms.subservice: configuration

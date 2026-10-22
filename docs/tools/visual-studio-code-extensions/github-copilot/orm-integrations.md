@@ -2,8 +2,8 @@
 title: Object-Relational Mapping Integrations with GitHub Copilot
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Reference guide for using GitHub Copilot with the MSSQL extension across Entity Framework, Prisma, Sequelize, SQLAlchemy, Django ORM, TypeORM, Drizzle, and Dapper.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

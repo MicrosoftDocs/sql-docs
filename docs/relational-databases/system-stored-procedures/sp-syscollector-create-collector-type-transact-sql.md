@@ -1,9 +1,9 @@
 ---
 title: "sp_syscollector_create_collector_type (Transact-SQL)"
 description: Creates a collector type for the data collector.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "sys.sp_drop_trusted_assembly (Transact-SQL)"
 description: Drops an assembly from the list of trusted assemblies on the server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

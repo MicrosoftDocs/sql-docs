@@ -1,8 +1,8 @@
 ---
 title: "Resource Governor Catalog Views (Transact-SQL)"
 description: Resource Governor Catalog Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/11/2025
 ms.service: sql
 ms.subservice: system-objects

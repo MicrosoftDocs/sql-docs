@@ -3,7 +3,7 @@ title: "Assessing Access Database Objects for Conversion (AccessToSQL)"
 description: "Assessing Access Database Objects for Conversion (AccessToSQL)"
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

@@ -1,8 +1,8 @@
 ---
 title: "Ordered and Unordered Expressions (XQuery)"
 description: Learn about ordered and unordered expressions in XQuery.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

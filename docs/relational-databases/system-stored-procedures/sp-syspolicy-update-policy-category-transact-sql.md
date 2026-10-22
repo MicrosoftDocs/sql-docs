@@ -3,7 +3,7 @@ title: "sp_syspolicy_update_policy_category (Transact-SQL)"
 description: "Updates whether a policy category is set to mandate database subscriptions."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

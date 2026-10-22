@@ -1,8 +1,8 @@
 ---
 title: "substring Function (XQuery)"
 description: Learn about the XQuery function substring() that returns the specified portion of a source string.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "CREATE SPATIAL INDEX (Transact-SQL)"
 description: CREATE SPATIAL INDEX (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "04/10/2019"
 ms.service: sql
 ms.subservice: t-sql

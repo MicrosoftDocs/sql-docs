@@ -1,8 +1,8 @@
 ---
 title: "sys.key_encryptions (Transact-SQL)"
 description: sys.key_encryptions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: vanto
 ms.date: 04/30/2025
 ms.service: sql

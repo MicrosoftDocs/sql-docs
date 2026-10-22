@@ -1,9 +1,9 @@
 ---
 title: Configure IIS 7 for Web Synchronization
 description: Configure IIS 7 for Web synchronization.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 04/07/2025
 ms.service: sql
 ms.subservice: replication

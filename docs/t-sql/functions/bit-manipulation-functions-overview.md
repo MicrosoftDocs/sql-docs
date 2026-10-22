@@ -3,7 +3,7 @@ title: "Bit manipulation functions (Transact-SQL)"
 description: "Bit manipulation functions allow moving, retrieving (getting), setting, or counting single bits within an integer or binary value."
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/26/2022
 ms.service: sql
 ms.subservice: t-sql

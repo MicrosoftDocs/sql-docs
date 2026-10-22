@@ -3,8 +3,8 @@ title: Manage Cursors and Result Sets in mssql-python
 description: Learn best practices for managing cursors, handling multiple result sets, and efficient memory usage with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 07/01/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -261,13 +261,12 @@ for col in cursor.description:
 
 ### Build dynamic result handlers
 
-Build result handlers that work with any query by constructing the column list from `cursor.description` at runtime:
+Build result handlers that work with any query by converting each row with `row._mapping`:
 
 ```python
 def query_to_dicts(cursor) -> list[dict]:
     """Convert query results to list of dictionaries."""
-    columns = [col[0] for col in cursor.description]
-    return [dict(zip(columns, row)) for row in cursor.fetchall()]
+    return [dict(row._mapping) for row in cursor.fetchall()]
 
 cursor.execute("SELECT ProductID, Name, ListPrice FROM Production.Product WHERE ProductID < 10")
 products = query_to_dicts(cursor)

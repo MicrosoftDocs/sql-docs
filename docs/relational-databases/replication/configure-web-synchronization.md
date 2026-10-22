@@ -1,8 +1,8 @@
 ---
 title: Configure Web Synchronization
 description: Configure Web synchronization for SQL Server merge replication to sync data over HTTPS. Learn how to set up IIS, accounts, publications, and pull subscriptions.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

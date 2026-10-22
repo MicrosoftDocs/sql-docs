@@ -3,7 +3,7 @@ title: "sys.database_audit_specifications (Transact-SQL)"
 description: sys.database_audit_specifications (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: rwestMSFT
+ms.reviewer: vanto
 ms.date: 04/04/2022
 ms.service: sql
 ms.subservice: system-objects

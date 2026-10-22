@@ -3,7 +3,7 @@ title: Reporting Across Scaled-Out Cloud Databases
 description: How to set up elastic queries over horizontal partitions.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 08/11/2026
 ms.service: azure-sql-database
 ms.subservice: scale-out

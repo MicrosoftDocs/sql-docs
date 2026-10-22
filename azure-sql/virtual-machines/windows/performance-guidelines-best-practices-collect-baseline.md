@@ -3,7 +3,7 @@ title: "Collect Baseline: Performance Best Practices & Guidelines"
 description: Provides steps to collect a performance baseline as guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/31/2026
 ms.service: azure-vm-sql-server
 ms.subservice: performance

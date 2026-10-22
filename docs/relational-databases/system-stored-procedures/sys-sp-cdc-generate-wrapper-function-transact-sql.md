@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
 description: "Generates scripts to create wrapper functions for the change data capture query functions that are available in SQL Server."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

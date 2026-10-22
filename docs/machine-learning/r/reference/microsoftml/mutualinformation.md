@@ -1,8 +1,8 @@
 ---
 title: "mutualInformation function (MicrosoftML)"
 description: "Mutual information mode of feature selection used in the feature selection transform [selectFeatures](selectFeatures.md)."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

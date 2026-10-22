@@ -2,9 +2,9 @@
 title: "Editions and Supported Features"
 titleSuffix: SQL Server 2017
 description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
-author: "rwestMSFT"
-ms.author: "randolphwest"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/27/2025
 ms.service: sql
 ms.subservice: release-landing

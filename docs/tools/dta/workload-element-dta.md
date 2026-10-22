@@ -1,8 +1,8 @@
 ---
 title: "Workload Element (DTA)"
 description: In the dta utility, the Workload element specifies the workload to be used for a tuning session. This article describes that element.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/14/2017
 ms.service: sql
 ms.subservice: tools-other

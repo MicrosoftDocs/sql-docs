@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_cleanup_temporal_history (Transact-SQL)"
 description: "Removes all rows from temporal history table that match configured HISTORY_RETENTION PERIOD within a single transaction."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.topic: reference

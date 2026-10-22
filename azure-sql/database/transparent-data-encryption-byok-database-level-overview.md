@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Overview of customer managed keys (CMK) support for transparent data encryption (TDE) with Azure Key Vault for Azure SQL Database at a database level granularity.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 08/21/2026
 ms.service: azure-sql-database
 ms.subservice: security

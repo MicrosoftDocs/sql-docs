@@ -1,8 +1,8 @@
 ---
 title: "Bulk access to data in Azure Blob Storage"
 description: "Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob Storage account."
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 12/20/2023
 ms.service: sql
 ms.subservice: data-movement

@@ -1,8 +1,8 @@
 ---
 title: "Synchronize Data"
 description: Synchronizing data in replication refers to data and schema changes propagating between the Publisher and Subscribers in SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

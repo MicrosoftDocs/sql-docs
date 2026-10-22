@@ -1,8 +1,8 @@
 ---
 title: "Distribution Agent Security (Peer-to-Peer)"
 description: Describes the 'Distribution Agent Security' page for a Peer-to-Peer Replication topology in SQL Server Management Studio.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

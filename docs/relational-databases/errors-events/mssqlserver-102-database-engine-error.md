@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_102"
 description: "MSSQLSERVER_102"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 03/28/2024
 ms.service: sql
 ms.subservice: supportability
@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # MSSQLSERVER_102
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 ## Details
 

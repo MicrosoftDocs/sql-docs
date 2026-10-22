@@ -1,7 +1,7 @@
 ---
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.date: 06/29/2026
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: include
@@ -11,7 +11,7 @@ Install one-time operating system specific prerequisites. Windows users can skip
 ### [Alpine](#tab/alpine-linux)
 
 ```console
-apk add libtool krb5-libs krb5-dev
+apk add libtool krb5-libs krb5-dev libstdc++
 ```
 
 ### [Debian/Ubuntu](#tab/debianUbuntu-linux)

@@ -1,8 +1,8 @@
 ---
 title: Post-Migration Validation and Optimization Guide
 description: Learn about the post-migration validation and optimization steps in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/07/2025
 ms.service: sql
 ms.topic: concept-article

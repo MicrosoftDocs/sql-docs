@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about restoring a deleted logical server in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dinethi, jaypatel, mathoma
+ms.reviewer: dinethi, jaypatel
 ms.date: 05/27/2026
 ms.service: azure-sql-database
 ms.subservice: backup-restore

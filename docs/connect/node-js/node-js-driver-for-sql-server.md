@@ -4,7 +4,7 @@ description: "The tedious module is an open source, JavaScript implementation of
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel
-ms.date: "10/06/2020"
+ms.date: "09/17/2026"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -31,7 +31,11 @@ You can connect to a SQL Database using Node.js on Windows, Linux, or macOS.
 
 `Tedious` for Node.js is community-supported software. Microsoft contributes to the `tedious` open-source community and is an active participant in the [GitHub repository](https://github.com/tediousjs/tedious). However, this software doesn't come with Microsoft support.
 
-To get help, file an [issue in the tedious GitHub repository](https://github.com/tediousjs/tedious/issues) or visit other Node.js community resources.
+For help, use the resources in the [Community resources](#community-resources) section.
+
+## Request a feature
+
+To request a feature, open an issue in the [tedious GitHub repository](https://github.com/tediousjs/tedious/issues/new/choose).
 
 ## Community resources
 

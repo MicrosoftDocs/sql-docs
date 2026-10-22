@@ -4,7 +4,7 @@ description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 02/15/2023
+ms.date: 10/01/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,6 +17,9 @@ ms.custom: sfi-ropc-nochange
 This page provides information on how to develop Java applications using [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the Microsoft JDBC Driver 8.2 (or higher) for SQL Server.
 
 The secure enclaves feature is an addition to the existing [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. The purpose of secure enclaves is to address limitations when working with Always Encrypted data. Previously, users could only do equality comparisons on Always Encrypted data, and had to retrieve and decrypt the data to do other operations. Secure enclaves address this limitation by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process. It acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There's no way to view any data or code inside the enclave from the outside, even with a debugger.
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 ## Prerequisites
 
@@ -47,6 +50,12 @@ To enable enclave computations for a database connection, you need to set the fo
   - If you're using `NONE` attestation protocol, this property can be left blank.
 
 Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+
+Starting with version 13.6, when `enclaveAttestationProtocol=HGS`, the driver validates that the signed VBS enclave report is bound to the enclave public key used for the session. Attestation fails if the report and session key don't match. No connection string changes are required.
+
+## Column encryption key caching
+
+Starting with version 13.6, the driver routes enclave column encryption key lookups through `SQLServerSymmetricKeyCache`, consistent with non-enclave Always Encrypted operations. Repeated enclave queries can reuse a cached plaintext column encryption key instead of making another request to the column master key store. This behavior reduces key-store requests and query latency, especially with remote stores such as Azure Key Vault, and requires no application changes.
 
 ## Working with secure enclaves
 

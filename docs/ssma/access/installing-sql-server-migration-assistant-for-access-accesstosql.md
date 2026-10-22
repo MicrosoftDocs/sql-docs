@@ -1,8 +1,8 @@
 ---
 title: Installing SQL Server Migration Assistant for Access (AccessToSQL)
 description: Learn about installation prerequisites for SQL Server Migration Assistant (SSMA) for Access and how to install, license, upgrade, and uninstall.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: niball
 ms.date: 04/20/2026
 ms.service: sql

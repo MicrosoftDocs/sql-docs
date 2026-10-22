@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_getagentparameterlist (Transact-SQL)"
 description: sp_getagentparameterlist returns a list of all replication agent parameters that can be set in an agent profile for the specified agent type.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

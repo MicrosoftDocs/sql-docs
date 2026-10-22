@@ -1,8 +1,8 @@
 ---
 title: "sys.availability_groups_cluster (Transact-SQL)"
 description: Returns a row for each Always On availability group in the Windows Server Failover Clustering (WSFC).
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/17/2023
 ms.service: sql
 ms.subservice: system-objects

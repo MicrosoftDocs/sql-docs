@@ -1,8 +1,8 @@
 ---
 title: "Tools to monitor availability groups"
 description: "A reference for the various tools available to monitor the performance and health of Always On availability groups. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: availability-groups

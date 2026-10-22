@@ -1,8 +1,8 @@
 ---
 title: "rxEnsemble function (MicrosoftML)"
 description: "Train an ensemble of models (MicrosoftML)."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

@@ -1,8 +1,8 @@
 ---
 title: "Upgrade SQL Server Management Tools"
 description: This article describes support for upgrading SQL Server Management Tools and management components, such as SQL Server Agent.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

@@ -3,7 +3,7 @@ title: "OLE automation return codes and error information"
 description: Learn the details about OLE automation return codes and how to convert error code information.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/21/2022
 ms.service: sql
 ms.subservice: stored-procedures
@@ -27,6 +27,10 @@ For example, passing an invalid object name (SQLDMO.Xyzzy) to sp_OACreate causes
 You can use `CONVERT(binary(4), @hresult)` to convert an **int** HRESULT to a **binary** value.
 
 For examples of supported conversion, see [H. Using CONVERT with binary and character data](../../t-sql/functions/cast-and-convert-transact-sql.md#h-use-convert-with-binary-and-character-data).
+
+## Supported platforms
+
+OLE Automation objects aren't available in Azure SQL Database, Azure SQL Managed Instance, SQL database in Fabric, or Fabric Data Warehouse.
 
 ## Related content
 

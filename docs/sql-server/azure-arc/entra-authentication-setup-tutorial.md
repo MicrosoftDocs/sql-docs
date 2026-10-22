@@ -1,9 +1,9 @@
 ---
 title: Set up Microsoft Entra Authentication with App Registration
 description: Tutorial on how to set up Microsoft Entra authentication for SQL Server enabled by Azure Arc.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: vanto, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: security

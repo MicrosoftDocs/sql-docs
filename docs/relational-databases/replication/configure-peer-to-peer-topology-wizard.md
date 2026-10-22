@@ -1,8 +1,8 @@
 ---
 title: "Configure Peer-to-Peer Topology Wizard"
 description: "Configure Peer-to-Peer Topology Wizard"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

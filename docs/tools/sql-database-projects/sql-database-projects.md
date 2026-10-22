@@ -1,9 +1,9 @@
 ---
 title: "What Are SQL Database Projects?"
 description: "This overview introduces SQL database projects, which enable database development and CI/CD workflows."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 02/06/2026
 ms.service: sql
 ms.subservice: sql-database-projects

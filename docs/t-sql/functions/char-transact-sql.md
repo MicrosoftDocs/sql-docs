@@ -1,9 +1,9 @@
 ---
 title: "CHAR (Transact-SQL)"
 description: Returns the single-byte character with the specified integer code, as defined by the character set and encoding of the default collation of the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/21/2024
 ms.service: sql
 ms.subservice: t-sql
@@ -26,11 +26,11 @@ helpviewer_keywords:
   - "printing ASCII values"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # CHAR (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the single-byte character with the specified integer code, as defined by the character set and encoding of the [default collation](../../relational-databases/collations/view-collation-information.md) of the current database.
 
@@ -174,7 +174,7 @@ name                                      create_date               name        
 --------------------------------------------------------------------------------------------------------------------
 master                    was created on  2003-04-08 09:13:36.390   master                  is currently  ONLINE
 tempdb                    was created on  2014-01-10 17:24:24.023   tempdb                  is currently  ONLINE
-AdventureWorksPDW2012     was created on  2014-05-07 09:05:07.083   AdventureWorksPDW2012   is currently  ONLINE
+AdventureWorks2012     was created on  2014-05-07 09:05:07.083      AdventureWorks2012      is currently  ONLINE
 ```
 
 ### E. Use CHAR to return single-byte characters

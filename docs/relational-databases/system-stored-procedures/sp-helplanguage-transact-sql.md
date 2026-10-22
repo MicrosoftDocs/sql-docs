@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helplanguage (Transact-SQL)"
 description: sp_helplanguage Reports information about a particular alternative language or about all languages in the SQL Server Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

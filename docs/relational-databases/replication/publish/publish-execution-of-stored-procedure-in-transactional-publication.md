@@ -1,8 +1,8 @@
 ---
 title: "Publish execution of stored procedure (Transactional)"
 description: Learn how to publish the execution of stored procedures using SQL Server Management Studio.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

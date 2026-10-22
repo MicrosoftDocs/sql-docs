@@ -1,8 +1,8 @@
 ---
 title: Best Practices for Time-Based Row Filters
 description: Time-based row filters in Merge Replication often miss rows because GETDATE() filters only process changed data. Learn a reliable bit-column approach to fix it.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

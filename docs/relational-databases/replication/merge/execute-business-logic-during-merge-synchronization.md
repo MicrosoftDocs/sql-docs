@@ -1,8 +1,8 @@
 ---
 title: "Business logic for Merge synchronization"
 description: Learn about writing managed assembly code tor the business logic used for synchronization for Merge Replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

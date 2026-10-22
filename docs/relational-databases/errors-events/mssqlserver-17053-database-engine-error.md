@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_17053"
 description: "MSSQLSERVER_17053"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: jopilov
 ms.date: 01/17/2023
 ms.service: sql

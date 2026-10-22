@@ -2,8 +2,8 @@
 title: "Managed backup - configure advanced options"
 titleSuffix: "to Microsoft Azure"
 description: This tutorial describes how to set advanced options for SQL Server Managed Backup to Microsoft Azure, in the event default options don't suit your needs.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore

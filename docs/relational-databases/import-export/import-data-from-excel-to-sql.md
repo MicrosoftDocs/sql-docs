@@ -1,8 +1,8 @@
 ---
 title: Import Data from Excel to SQL Server or Azure SQL Database
 description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 07/16/2025
 ms.service: sql
 ms.subservice: data-movement

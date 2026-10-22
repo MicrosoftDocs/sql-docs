@@ -1,9 +1,9 @@
 ---
 title: "Precision, scale, and length (Transact-SQL)"
 description: "Precision is the number of digits in a number. Scale is the number of digits to the right of the decimal point in a number."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: t-sql
@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "data types [SQL Server], precision"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Precision, scale, and length (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Precision is the number of digits in a number. Scale is the number of digits to the right of the decimal point in a number. For example, the number `123.45` has a precision of `5` and a scale of `2`.
 

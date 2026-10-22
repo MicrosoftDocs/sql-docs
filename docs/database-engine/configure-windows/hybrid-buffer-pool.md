@@ -3,7 +3,7 @@ title: Hybrid Buffer Pool
 description: See how the hybrid buffer pool makes persistent memory devices accessible via the memory bus. Turn this SQL Server feature on or off, and view best practices.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

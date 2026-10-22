@@ -1,8 +1,8 @@
 ---
 title: "Deploying CLR Database Objects"
 description: Using Microsoft Visual Studio, you can develop CLR database objects for SQL Server, deploy them to a test server, and distribute them to production servers.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

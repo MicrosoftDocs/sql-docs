@@ -1,8 +1,8 @@
 ---
 title: "View replicated commands & information in Distribution database"
 description: Learn how to view replicated commands and other replication related information in the Distribution database for SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

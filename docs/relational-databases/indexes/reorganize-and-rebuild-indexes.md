@@ -1,10 +1,10 @@
 ---
 title: Maintain Indexes Optimally to Improve Performance and Reduce Resource Utilization
 description: This article describes index maintenance concepts, and a recommended strategy to maintain indexes.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: dfurman, randolphwest
-ms.date: 03/11/2026
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: dfurman
+ms.date: 09/11/2026
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: how-to
@@ -30,12 +30,12 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || >=aps-pdw-2016 || =fabric-sqldb"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Optimize index maintenance to improve query performance and reduce resource consumption
 
-[!INCLUDE [SQL Server Azure SQL Database PDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 This article helps you decide when and how to perform index maintenance. It covers concepts such as index fragmentation and page density, and their impact on query performance and resource consumption. It describes two index maintenance methods: [reorganizing an index](#reorganize-an-index) and [rebuilding an index](#rebuild-an-index). The article also suggests an index maintenance [strategy](#index-maintenance-strategy) that balances potential performance improvements against resource consumption required for maintenance.
 
@@ -110,7 +110,7 @@ You can reduce index fragmentation and increase page density by using one of the
 - Rebuild an index
 
 > [!TIP]  
-> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction (preview)](automatic-index-compaction.md).
+> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction](automatic-index-compaction.md).
 
 For [partitioned](../partitions/partitioned-tables-and-indexes.md) indexes, you can use either of the following methods on all partitions or a single partition of an index.
 

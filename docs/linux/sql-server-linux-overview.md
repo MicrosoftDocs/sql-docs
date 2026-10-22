@@ -1,9 +1,9 @@
 ---
 title: What is SQL Server on Linux?
 description: This article describes how SQL Server runs on Linux and provides information on how to learn more.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 04/13/2026
 ms.service: sql
 ms.subservice: linux
@@ -74,7 +74,7 @@ To learn more about containers, see [SQL Server on Linux containers](containers/
 
 ### Install SQL Server on Windows Subsystem for Linux (WSL 2)
 
-SQL Server on WSL 2 is intended for development purposes only, and is **not** supported for production workloads. Run SQL Server in WSL environments on one of the [supported platforms](sql-server-linux-release-notes-2025.md#supported-platforms) for the version of SQL Server you intend to run.
+SQL Server on WSL 2 is intended for development purposes only, and is **not** supported for production workloads. Run SQL Server in WSL environments on one of the [supported platforms](sql-server-linux-release-notes.md#supported-platforms) for the version of SQL Server you intend to run.
 
 For instructions on how to install SQL Server on WSL 2, see [Quickstart: Install SQL Server and create a database on Windows Subsystem for Linux (WSL 2)](install-upgrade/quickstart-install-windows-subsystem-linux.md).
 
@@ -106,7 +106,7 @@ Because [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux shar
 - **Query Store** for monitoring query performance and managing execution plans.
 - **Automatic tuning** and **intelligent query processing (IQP)** to improve performance without application changes, including adaptive joins, memory grant feedback, parameter-sensitive plan optimization, and related enhancements.
 
-These features are enabled through standard Transact-SQL configuration and database compatibility levels.
+These features are enabled through standard Transact-SQL (T-SQL) configuration and database compatibility levels.
 
 #### Security
 
@@ -124,7 +124,7 @@ These capabilities help organizations meet compliance and data protection requir
 
 #### Automation and maintenance
 
-SQL Server Agent is available on Linux to run scheduled and automated tasks, including Transact-SQL (T-SQL) jobs, Database Mail, and [log shipping](business-continuity/use-log-shipping.md). The agent is included in the SQL Server package and can be enabled by using the `mssql-conf` utility.
+SQL Server Agent is available on Linux to run scheduled and automated tasks, including T-SQL jobs, Database Mail, and [log shipping](business-continuity/use-log-shipping.md). The agent is included in the SQL Server package and can be enabled by using the `mssql-conf` utility.
 
 #### High availability and disaster recovery
 
@@ -149,12 +149,12 @@ Some features, such as PolyBase, Machine Learning Services, and full-text search
 
 If you're already familiar with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, review the release notes for general guidelines and known issues for each release.
 
-| SQL Server version | Release notes (Linux) | What's new (Linux) | What's new (Windows) |
+| SQL Server version | Release information (Linux) | What's new (Linux) | What's new (Windows) |
 | --- | --- | --- | --- |
-| [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] | [Release notes](sql-server-linux-release-notes-2025.md) | [SQL Server on Linux](sql-server-linux-whats-new-2025.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2025.md) |
-| [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] | [Release notes](sql-server-linux-release-notes-2022.md) | [SQL Server on Linux](sql-server-linux-whats-new-2022.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2022.md) |
-| [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] | [Release notes](sql-server-linux-release-notes-2019.md) | [SQL Server on Linux](sql-server-linux-whats-new-2019.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2019.md) |
-| [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] | [Release notes](sql-server-linux-release-notes-2017.md) | [SQL Server on Linux](sql-server-linux-whats-new-2017.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2017.md) |
+| [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] | [Release information](sql-server-linux-release-notes.md) | [SQL Server on Linux](sql-server-linux-whats-new-2025.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2025.md) |
+| [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] | [Release information](sql-server-linux-release-notes.md) | [SQL Server on Linux](sql-server-linux-whats-new-2022.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2022.md) |
+| [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] | [Release information](sql-server-linux-release-notes.md) | [SQL Server on Linux](sql-server-linux-whats-new-2019.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2019.md) |
+| [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] | [Release information](sql-server-linux-release-notes.md) | [SQL Server on Linux](sql-server-linux-whats-new-2017.md) | [SQL Server on Windows](../sql-server/what-s-new-in-sql-server-2017.md) |
 
 > [!TIP]  
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).

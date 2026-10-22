@@ -1,8 +1,8 @@
 ---
 title: "XQuery Basics"
 description: Learn the fundamentals of the XQuery language, including sequence and QNames, expression context, atomization, type system, error handling, and comments.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/11/2025
 ms.service: sql
 ms.subservice: xml

@@ -3,7 +3,7 @@ title: "VECTOR_NORMALIZE (Transact-SQL)"
 description: VECTOR_NORMALIZE takes a vector as an input and returns the normalized vector, which is a vector scaled to have a length of 1 in a given norm type.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pookam, randolphwest
+ms.reviewer: pookam
 ms.date: 10/03/2025
 ms.service: sql
 ms.subservice: t-sql

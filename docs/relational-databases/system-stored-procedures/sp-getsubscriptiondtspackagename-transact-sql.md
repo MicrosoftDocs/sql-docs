@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_getsubscriptiondtspackagename (Transact-SQL)"
 description: Returns the name of the Data Transformation Services (DTS) package used to transform data before sending them to a Subscriber.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

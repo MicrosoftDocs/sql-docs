@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_changedynamicsnapshot_job (Transact-SQL)"
 description: Modifies the agent job that generates the snapshot for a subscription to a publication with a parameterized row filter.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

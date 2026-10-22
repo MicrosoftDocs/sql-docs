@@ -1,8 +1,8 @@
 ---
 title: "Add Features to an Instance of SQL Server (Setup)"
 description: This article provides a step-by-step procedure for adding instance-aware features to an instance of SQL Server  2019.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

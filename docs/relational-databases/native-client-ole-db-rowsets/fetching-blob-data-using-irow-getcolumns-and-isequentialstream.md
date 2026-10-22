@@ -1,8 +1,8 @@
 ---
 title: "BLOB, IRow::GetColumns, ISequentialStream"
 description: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "BLOBs, fetching"
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The following function uses **IRow::GetColumns** and **ISequentialStream** to fetch large data:  
   

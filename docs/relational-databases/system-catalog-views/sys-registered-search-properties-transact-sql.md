@@ -1,8 +1,8 @@
 ---
 title: "sys.registered_search_properties (Transact-SQL)"
 description: sys.registered_search_properties (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

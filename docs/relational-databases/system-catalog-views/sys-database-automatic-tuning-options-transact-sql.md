@@ -3,7 +3,7 @@ title: "sys.database_automatic_tuning_options (Transact-SQL)"
 description: Learn how to view automatic tuning options on SQL Server or Azure SQL Database. See required permissions and view additional available resources.
 author: "danimir"
 ms.author: "danil"
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/04/2022
 ms.service: sql
 ms.subservice: system-objects

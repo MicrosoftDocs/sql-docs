@@ -1,7 +1,7 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/11/2026
 ms.service: azure-sql
 ms.subservice: service-overview

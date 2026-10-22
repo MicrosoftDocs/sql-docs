@@ -1,8 +1,8 @@
 ---
 title: "INDEXKEY_PROPERTY (Transact-SQL)"
 description: "INDEXKEY_PROPERTY (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: t-sql
@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdbmi-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-fabricse-fabricdw.md)]
 
   Returns information about the index key. Returns NULL for XML indexes.  
   

@@ -1,8 +1,8 @@
 ---
 title: "Processing Results (ODBC)"
 description: Find out about processing data that SQL Server returns when an ODBC application submits a SQL statement.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "COMPUTE BY clause"
 ---
 # Processing Results (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   After an application submits a SQL statement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns any resulting data as one or more result sets. A result set is a set of rows and columns that match the criteria of the query. SELECT statements, catalog functions, and some stored procedures produce a result set made available to an application in tabular form. If the executed SQL statement is a stored procedure, a batch containing multiple commands, or a SELECT statement containing keywords, there will be multiple result sets to process.  
   

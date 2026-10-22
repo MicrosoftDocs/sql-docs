@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_tables (Transact-SQL)"
 description: sp_tables returns a list of objects that can be queried in the current environment.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "sp_tables"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # sys.sp_tables (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns a list of objects that can be queried in the current environment. This means any table or view, except synonym objects.
 
@@ -32,7 +32,7 @@ Returns a list of objects that can be queried in the current environment. This m
 
 ## Syntax
 
-Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Analytics Platform System (PDW):
+Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics:
 
 ```syntaxsql
 sys.sp_tables
@@ -120,7 +120,7 @@ EXECUTE sp_tables
     @table_qualifier = 'AdventureWorks2022';
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Return a list of objects that can be queried in the current environment
 
@@ -132,14 +132,14 @@ EXECUTE sp_tables;
 
 ### D. Return information about the tables in a specified schema
 
-The following example returns information about the dimension tables in the `AdventureWorksPDW2012` database.
+The following example returns information about the dimension tables in the `AdventureWorks2012` database.
 
 ```sql
 -- Uses AdventureWorks
 EXECUTE sp_tables
     @table_name = 'Dim%',
     @table_owner = 'dbo',
-    @table_qualifier = 'AdventureWorksPDW2012';
+    @table_qualifier = 'AdventureWorks2012';
 ```
 
 ## Related content

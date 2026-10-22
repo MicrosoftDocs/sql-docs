@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addlinkedsrvlogin (Transact-SQL)"
 description: Creates or updates a mapping between a login on the local instance of SQL Server and a security account on a remote server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

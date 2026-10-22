@@ -1,8 +1,8 @@
 ---
 title: "sys.syslogins (Transact-SQL)"
 description: "sys.syslogins (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "09/08/2017"
 ms.service: sql
 ms.subservice: system-objects

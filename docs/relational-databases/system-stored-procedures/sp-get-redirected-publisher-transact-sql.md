@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_get_redirected_publisher (Transact-SQL)"
 description: Used by replication agents to query a distributor to determine whether the original publisher was redirected.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

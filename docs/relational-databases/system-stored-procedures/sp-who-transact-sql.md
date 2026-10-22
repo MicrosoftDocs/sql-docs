@@ -3,7 +3,7 @@ title: "sys.sp_who (Transact-SQL)"
 description: Provides information about current users, sessions, and processes in an instance of the SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

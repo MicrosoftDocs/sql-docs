@@ -1,8 +1,8 @@
 ---
 title: "sys.transmission_queue (Transact-SQL)"
 description: sys.transmission_queue (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: system-objects

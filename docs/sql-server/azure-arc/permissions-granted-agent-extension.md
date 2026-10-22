@@ -1,8 +1,8 @@
 ---
 title: Server Level Roles Created by Azure Extension for SQL Server
 description: "Explains server level roles create when you install Azure extension for SQL Server. Used by SQL Server enabled by Azure Arc"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: nikitatakru
 ms.date: 04/13/2026
 ms.topic: reference

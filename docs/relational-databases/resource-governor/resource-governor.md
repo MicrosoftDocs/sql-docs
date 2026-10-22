@@ -3,7 +3,7 @@ title: Resource Governor
 description: Learn about the SQL Server resource governor feature that limits the amount of CPU, physical I/O, and memory that query workloads can use.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, randolphwest
+ms.reviewer: dfurman
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: performance

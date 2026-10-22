@@ -3,7 +3,7 @@ title: "Azure CLI Example: Add a Database to a Failover Group"
 description: Use this Azure CLI example script to create a database in Azure SQL Database, add it to a failover group, and test failover.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer:  mathoma
+ms.reviewer:  vanto
 ms.date: 06/10/2025
 ms.service: azure-sql-database
 ms.subservice: high-availability

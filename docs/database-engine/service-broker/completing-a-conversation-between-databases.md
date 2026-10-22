@@ -1,9 +1,9 @@
 ---
 title: Complete a Conversation Between Databases
 description: "This tutorial is intended for users who are new to Service Broker, but are familiar with database concepts and Transact-SQL statements"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

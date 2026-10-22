@@ -1,8 +1,8 @@
 ---
 title: "Configure predefined Replication alerts (SSMS)"
 description: Learn how to configure predefined replication alerts using SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,9 +1,9 @@
 ---
 title: "sp_help_jobcount (Transact-SQL)"
 description: sp_help_jobcount provides the number of jobs that a schedule is attached to.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

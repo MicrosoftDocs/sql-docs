@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Broker TO Statistics object"
 description: "Learn about the SQLServer:Broker TO Statistics performance object, which reports information about Service Broker request transmission objects."
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

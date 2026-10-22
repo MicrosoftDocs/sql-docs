@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Configure server-level IP firewall rules for a database in Azure SQL Database firewall. Manage access and configure database-level IP firewall rules for SQL Database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 05/28/2026
 ms.service: azure-sql-database
 ms.subservice: security

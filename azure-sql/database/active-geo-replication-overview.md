@@ -4,7 +4,7 @@ description: Use active geo-replication to create readable secondary databases o
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer:  vanto
-ms.date: 09/10/2026
+ms.date: 10/21/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: high-availability
@@ -147,6 +147,13 @@ Once a geo-secondary is added, [public network access can be denied](connectivit
 
 A [network security perimeter](network-security-perimeter.md) (preview) controls inbound and outbound network traffic for a logical server. Active geo-replication continuously moves data between logical servers over internal, platform-managed connectivity, so a perimeter evaluates that traffic.
 
+### How active geo-replication uses network access
+
+The perimeter checks access rules when you create a geo-replication link, and again when you associate a server that's already in a geo-replication relationship. In enforced mode, the perimeter blocks either action if the required rules are missing.
+
+> [!IMPORTANT]
+> Replication on an established link continues even if you later change the rules to disallow it. Stopping replication would leave the databases unhealthy and put your recovery objectives at risk, so data movement and geo-failover keep working. Until you correct the rules, you can't change perimeter associations or add geo-secondaries.
+
 ### Supported configurations
 
 Active geo-replication works in both transition and enforced mode. In transition mode, the perimeter logs replication traffic without blocking it. Configure the access rules before you switch to enforced mode.
@@ -159,15 +166,17 @@ Active geo-replication doesn't require a managed identity.
 
 1. [Associate every logical server in the geo-replication set with the perimeter](network-security-perimeter.md#get-started). A newly associated server starts in transition mode.
 1. On each server's profile, add an outbound access rule for every partner server. Set **Destination type** to **FQDN** and use the partner's fully qualified domain name, such as `partnerserver.database.windows.net`.
-1. On each server's profile, add an inbound access rule for every partner server. Set **Source type** to **Subscription** and use the partner's subscription ID, to **IP address ranges** and use the partner's IP range, or to **Service tags** and use `Sql` or `Sql.<region>`, where `<region>` is the partner's Azure region.
+1. On each server's profile, add an inbound access rule for every partner server. Set **Source type** to one of these values:
+   - **Subscription**, and use the partner's subscription ID.
+   - **IP address ranges**, and use the partner's IP range.
+   - **Service tags**, and use `Sql` or `Sql.<region>`, where `<region>` is the partner's Azure region.
 1. With the servers still in transition mode, create the geo-replication links and run a geo-failover. Review the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) after each step to confirm there are no unexpected denials.
-1. Switch the perimeter to enforced mode only after the logs are clean.
+1. Switch each server's association to enforced mode only after the logs are clean.
 
 ### Limitations and behavior differences
 
 - Chaining, which means creating a geo-secondary from another geo-secondary, isn't supported with a network security perimeter. Configuring it can produce unexpected results.
-- The perimeter checks access rules when you create a geo-replication link, and again when you associate a server that's already in a geo-replication relationship. In enforced mode, either action is blocked if the required rules are missing.
-- **Replication on an established link continues even if you later change the rules to disallow it.** Stopping replication would leave the databases unhealthy and put your recovery objectives at risk, so data movement and geo-failover keep working. Perimeter association changes and new geo-secondaries are blocked until you correct the rules.
+- When a logical server belongs to a perimeter, in either transition or enforced mode, Transact-SQL isn't a supported way to add a geo-secondary. Use the Azure portal, Azure CLI, or PowerShell instead.
 
 ### Errors when a perimeter blocks geo-replication
 

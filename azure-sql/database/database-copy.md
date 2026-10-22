@@ -4,7 +4,7 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 10/21/2026
+ms.date: 10/22/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: data-movement
@@ -310,7 +310,9 @@ In enforced mode, the rules you need depend on the topology:
 | --- | --- |
 | The target is on the same logical server as the source | None. |
 | Both logical servers are in the same perimeter | None. Access between resources in the same perimeter is always allowed. |
-| The logical servers are in different perimeters, or only one server is in a perimeter | An outbound rule on the source server and an inbound rule on the target server. |
+| The logical servers are in different perimeters | An outbound rule on the source server and an inbound rule on the target server. |
+| Only the source server is in a perimeter | An outbound rule on the source server. |
+| Only the target server is in a perimeter | An inbound rule on the target server. |
 
 Database copy doesn't require a managed identity.
 
@@ -338,7 +340,7 @@ The following steps are one example. They assume that each logical server is in 
 | 48001 | The operation could not be completed because the associated Network Security Perimeter denied inbound access from '*source*' to the '*target*' server. |
 | 48002 | The operation could not be completed because the associated Network Security Perimeter denied outbound access from the '*source*' server to '*target*'. |
 
-The placeholders in these messages are replaced with logical server names. For either error, review the inbound and outbound access rules on both perimeter profiles.
+The placeholders in these messages are replaced with logical server names. For 48001, review the inbound rules on the profile associated with the target server. For 48002, review the outbound rules on the profile associated with the source server.
 
 ## Database copy errors
 

@@ -1,9 +1,9 @@
 ---
 title: "sp_query_store_force_plan (Transact-SQL)"
 description: "Enables forcing a particular plan for a particular query in the Query Store."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 04/23/2026
 ms.service: sql
 ms.subservice: system-objects

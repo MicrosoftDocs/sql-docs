@@ -1,8 +1,8 @@
 ---
 title: "Recommendation Element (DTA)"
 description: In the dta utility, the Recommendation element contains information about the hypothetical indexes that are part of a user-specified configuration.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

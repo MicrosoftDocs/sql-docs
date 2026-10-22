@@ -3,7 +3,7 @@ title: "Lesson 2: Create and Manage Data in a Hierarchical Table"
 description: Learn how to create and manage data in a hierarchical table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/05/2026
 ms.service: sql
 ms.subservice: table-view-index

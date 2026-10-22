@@ -1,8 +1,8 @@
 ---
 title: "Backup Device (Media Contents Page)"
 description: Use the Backup Device dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: backup-restore

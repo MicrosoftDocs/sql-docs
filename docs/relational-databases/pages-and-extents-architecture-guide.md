@@ -1,8 +1,8 @@
 ---
 title: "Page and Extent Architecture Guide"
 description: "This guide describes the data structures used by pages and extents in the database engine."
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: dfurman
 ms.date: 12/29/2025
 ms.service: sql
@@ -12,12 +12,12 @@ ms.custom:
 helpviewer_keywords:
   - "page and extent architecture guide"
   - "guide, page and extent architecture"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # Page and extent architecture guide
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricSQLDB](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricSQLDB](../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 This guide describes the structure of pages and extents, and the organization of pages and extents within data files.
 

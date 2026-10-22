@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_xe_database_session_targets"
 description: The sys.dm_xe_database_session_targets dynamic management view (DMV) returns information about active database-scoped session targets.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 07/29/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

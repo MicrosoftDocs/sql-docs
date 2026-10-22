@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_17892
 description: "MSSQLSERVER_17892"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: jopilov, mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 02/06/2026
 ai-usage: ai-assisted
 ms.service: sql

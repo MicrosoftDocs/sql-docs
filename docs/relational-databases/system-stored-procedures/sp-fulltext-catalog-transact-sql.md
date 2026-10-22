@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_fulltext_catalog (Transact-SQL)"
 description: Creates and drops a full-text catalog, and starts and stops the indexing action for a catalog.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

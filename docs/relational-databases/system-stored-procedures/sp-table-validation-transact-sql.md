@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_table_validation (Transact-SQL)"
 description: "Returns and compares rowcount and checksum information on a table or indexed view."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

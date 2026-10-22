@@ -3,7 +3,7 @@ title: Create Microsoft Entra Users Using Service Principals
 description: This tutorial walks you through creating Microsoft Entra users with a Microsoft Entra application (service principal) in Azure SQL Database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 04/10/2026
 ms.service: azure-sql-database
 ms.subservice: security
@@ -209,7 +209,7 @@ Connect to your SQL Database using a Microsoft Entra identity that has permissio
    GO
    ```
 
-   You can set the *DBOwnerApp* as the Microsoft Entra admin. Use the Azure portal, PowerShell, or Azure CLI commands. For more information, see [Set Microsoft Entra admin](authentication-aad-configure.md#azure-sql-database-and-azure-synapse-analytics).
+   You can set the *DBOwnerApp* as the Microsoft Entra admin. Use the Azure portal, PowerShell, or Azure CLI commands. For more information, see [Set Microsoft Entra admin](authentication-aad-configure.md#azure-sql-database).
 
 <a id="create-an-azure-ad-user-in-sql-database-using-an-azure-ad-service-principal"></a>
 

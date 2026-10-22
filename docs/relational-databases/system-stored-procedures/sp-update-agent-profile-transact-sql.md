@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_update_agent_profile (Transact-SQL)"
 description: Updates the profile used by a replication agent.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

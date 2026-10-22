@@ -1,9 +1,9 @@
 ---
 title: "Database Engine events and errors (22000 to 22999)"
 description: "Consult this SQL Server error code list (between 22000 and 22999) to find explanations for error messages for SQL Server database engine events."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: williamdassafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 09/15/2026
 ms.service: sql
 ms.subservice: supportability

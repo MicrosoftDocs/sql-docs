@@ -1,8 +1,8 @@
 ---
 title: "Database Engine Instances (SQL Server)"
 description: Find out about Database Engine instances. View information on tasks you can perform on instances, such as configuring properties and enabling protocols.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

@@ -9,10 +9,10 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.dm_pdw_waits (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
   Holds information about all wait states encountered during execution of a request or query, including locks, waits on transmission queues, and so on.
 
@@ -34,5 +34,5 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)
 - [sys.dm_pdw_wait_stats (Transact-SQL)](sys-dm-pdw-wait-stats-transact-sql.md)

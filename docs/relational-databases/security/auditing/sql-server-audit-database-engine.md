@@ -3,7 +3,7 @@ title: SQL Server Audit (Database Engine)
 description: Learn about server audits for the SQL Server Database Engine or an individual database. Server audits contain server and database audit specifications.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 04/15/2026
 ms.service: sql
 ms.subservice: security

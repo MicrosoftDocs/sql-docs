@@ -1,8 +1,8 @@
 ---
 title: SQL Projects Package References
 description: Reference database objects with package references.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how Azure SQL Database & Azure SQL Managed Instance support storing full database backups for up to 10 years via the long-term retention policy.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dinethi, mathoma, randolphwest, strrodic
+ms.reviewer: dinethi, strrodic
 ms.date: 10/22/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
@@ -168,7 +168,6 @@ When a restore request is initiated in the final seven days of the LTR retention
 
 [!INCLUDE [hyperscale-cross-tier-restore-note](../includes/hyperscale-cross-tier-restore-note.md)]
 
-
 In Azure SQL Managed Instance, you can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?view=azuresqldb-mi-current&preserve-view=true) and move them to your own storage account as an alternative to: 
 - Keep backups for longer than 10 years. 
 - Keep daily copies of your databases for longer than 35 days.
@@ -176,6 +175,9 @@ In Azure SQL Managed Instance, you can use SQL Agent jobs to schedule [copy-only
 
 > [!TIP]  
 > If you're using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in the expected database state.
+
+> [!NOTE]
+> LTR backups depend on successful full backups. A full transaction log can prevent a scheduled full backup, which can prevent an LTR backup. Change data capture (CDC), and other features that prevent transaction log truncation, can delay an LTR backup, which only succeeds after the full backup succeeds. Evaluate features that prevent transaction log truncation and consider temporarily disabling them until backup operations recover.
 
 ## Next step
 

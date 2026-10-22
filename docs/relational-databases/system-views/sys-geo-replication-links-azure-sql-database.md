@@ -3,7 +3,7 @@ title: sys.geo_replication_links (Azure SQL Database)
 description: sys.geo_replication_links (Azure SQL Database)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/08/2026
 ms.service: azure-sql-database
 ms.topic: reference

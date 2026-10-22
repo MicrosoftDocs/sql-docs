@@ -4,6 +4,8 @@
   items:
   - name: Download ODBC Driver for SQL Server
     href: download-odbc-driver-for-sql-server.md
+  - name: Develop C and C++ applications with the ODBC driver
+    href: develop-cpp-applications.md
   - name: Connect to and query a database with C++
     href: cpp-code-example-app-connect-access-sql-db.md
   - name: Support lifecycle

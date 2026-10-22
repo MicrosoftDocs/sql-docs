@@ -1,9 +1,9 @@
 ---
 title: Change Target Recovery Time of a Database
 description: Learn how to set or change the target recovery time of a SQL Server database in SQL Server by using SQL Server Management Studio or Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/31/2025
 ms.service: sql
 ms.subservice: supportability

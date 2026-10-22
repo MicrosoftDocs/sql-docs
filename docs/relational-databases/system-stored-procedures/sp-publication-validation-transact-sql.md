@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_publication_validation (Transact-SQL)"
 description: sp_publication_validation initiates an article validation request for each article in the specified publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

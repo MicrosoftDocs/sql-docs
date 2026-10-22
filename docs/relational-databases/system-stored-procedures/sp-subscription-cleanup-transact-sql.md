@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_subscription_cleanup (Transact-SQL)"
 description: sp_subscription_cleanup removes metadata when a subscription is dropped at a Subscriber.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

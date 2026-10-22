@@ -1,8 +1,8 @@
 ---
 title: "Remove an availability group"
 description: "Describes how to remove an availability group with SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

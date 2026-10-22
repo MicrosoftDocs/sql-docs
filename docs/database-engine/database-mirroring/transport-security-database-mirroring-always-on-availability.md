@@ -1,9 +1,9 @@
 ---
 title: "Transport Security: Availability Groups & Database Mirroring"
 description: Learn how to secure messages between databases participating in an Always On availability group or in a database mirroring session hosted on SQL Server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 05/19/2026
 ms.service: sql
 ms.subservice: database-mirroring

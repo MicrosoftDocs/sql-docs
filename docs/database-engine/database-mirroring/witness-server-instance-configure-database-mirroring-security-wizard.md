@@ -1,8 +1,8 @@
 ---
 title: "Configure Security Wizard: Witness Server Instance"
 description: "Describes the 'Witness Server Instance' page of the 'Configure Database Mirroring Security Wizard'. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring

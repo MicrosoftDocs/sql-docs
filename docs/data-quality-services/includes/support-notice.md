@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 04/21/2025
 ms.service: sql
 ms.subservice: data-quality-services

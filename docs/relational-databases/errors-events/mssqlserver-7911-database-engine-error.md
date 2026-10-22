@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_7911"
 description: "MSSQLSERVER_7911"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "05/25/2022"
 ms.service: sql
 ms.subservice: supportability

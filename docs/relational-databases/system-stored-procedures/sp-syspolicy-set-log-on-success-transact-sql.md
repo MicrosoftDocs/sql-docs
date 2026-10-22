@@ -3,7 +3,7 @@ title: "sp_syspolicy_set_log_on_success (Transact-SQL)"
 description: "Specifies whether successful policy evaluations are logged in the Policy History log for Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

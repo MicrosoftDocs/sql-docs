@@ -1,9 +1,9 @@
 ---
 title: "Unpack a DACPAC File"
 description: "Unpack a DACPAC file to review or examine the contents."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 02/06/2026
 ms.service: sql
 ms.subservice: sql-database-projects

@@ -1,19 +1,20 @@
 ---
 title: Auditing Using Managed Identity
-titleSuffix: Azure SQL Database & Azure Synapse Analytics
+titleSuffix: Azure SQL Database
 description: How to use managed identity with storage accounts for auditing
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest, mathoma
-ms.date: 06/10/2025
+ms.reviewer: vanto
+ms.date: 10/05/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
 ms.custom: sfi-image-nochange
+monikerRange: "=azuresql || =azuresql-db"
 ---
 # Auditing using managed identity
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 Auditing for Azure SQL Database can be configured to use a **Storage account** with two authentication methods:
 
@@ -29,9 +30,6 @@ By default, the identity used is the primary user identity assigned to the serve
 :::image type="content" source="media/auditing-managed-identity/auditing-selecting-managed-identity.png" alt-text="Screenshot of the Auditing menu in the Azure portal and selecting Managed Identity as the Storage Authentication Type." lightbox="media/auditing-managed-identity/auditing-selecting-managed-identity.png":::
 
 Select the retention period by opening the **Advanced properties**. Then select **Save**. Logs older than the retention period are deleted.
-
-> [!NOTE]  
-> To set up managed identity-based auditing on Azure Synapse Analytics, see the [Configure system-assigned managed identity for Azure Synapse Analytics auditing](#configure-system-assigned-managed-identity-for-azure-synapse-analytics-auditing) section later in this article.
 
 ## User-assigned managed identity
 
@@ -110,35 +108,14 @@ For more information, see [Server Auditing Settings - Create Or Update](/rest/ap
 > [!NOTE] 
 > When auditing is configured using a managed identity, copying the database to a new server or creating a geo-replica may break audit logging. This is because the new server has a different managed identity, which might not have access to the audit storage account. Ensure the new server's identity is granted appropriate permissions to maintain audit continuity.
 
-## Configure system-assigned managed identity for Azure Synapse Analytics auditing
 
-You can't use UMI based authentication to a storage account for auditing. Only system-assigned managed identity (SMI) can be used for Azure Synapse Analytics. For SMI authentication to work, the managed identity must have the **Storage Blob Data Contributor** role assigned to it, in the storage account's **Access Control** settings. This role is automatically added if Azure portal is used to configure auditing.
+## Auditing in Azure Synapse Analytics
 
-In the Azure portal for Azure Synapse Analytics, there is no option to explicitly choose SAS key or SMI authentication, as is the case for Azure SQL Database.
-
-- If the storage account is behind a VNet or firewall, auditing is automatically configured using SMI authentication.
-
-- If the storage account isn't behind a VNet or firewall, auditing is automatically configured using SAS key based authentication. However, managed identity cannot be used if the storage account isn't behind a VNet or firewall.
-
-To force the use of SMI authentication, regardless of whether the storage account is behind a VNet or firewall, use REST API or PowerShell, as follows:
-
-- If using the REST API, omit the `StorageAccountAccessKey` field explicitly in the request body.
-
-  For more information, reference:
-
-  - [Server Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database)](/rest/api/sql/server-blob-auditing-policies/create-or-update)
-  - [Database Blob Auditing Policies - Create Or Update - REST API (Azure SQL Database](/rest/api/sql/database-blob-auditing-policies/create-or-update)
-
-- If using PowerShell, pass the `UseIdentity` parameter as `true`.
-
-  For more information, reference:
-
-  - [Set-AzSqlServerAudit (Az.Sql)](/powershell/module/az.sql/set-azsqlserveraudit)
-  - [Set-AzSqlDatabaseAudit (Az.Sql)](/powershell/module/az.sql/set-azsqldatabaseaudit)
+For information about managed identity-based auditing in Azure Synapse Analytics, see [Auditing using managed identity](/azure/synapse-analytics/sql/auditing-managed-identity).
 
 ## Related content
 
-- [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
+- [Auditing for Azure SQL Database](auditing-overview.md)
 - [What's New in Azure SQL Auditing](/Shows/Data-Exposed/Whats-New-in-Azure-SQL-Auditing)
 - [Get started with Azure SQL Managed Instance auditing](../managed-instance/auditing-configure.md)
 - [Auditing for SQL Server](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)

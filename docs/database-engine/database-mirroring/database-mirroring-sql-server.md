@@ -1,8 +1,8 @@
 ---
 title: "Database Mirroring (SQL Server)"
 description: Learn about database mirroring, which is a solution for increasing the availability of a SQL Server database and is implemented on a per-database basis.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: database-mirroring

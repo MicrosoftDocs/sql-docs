@@ -2,13 +2,14 @@
 title: Known Issues
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 08/11/2026
+author: bluefooted
+ms.author: pamela
+ms.reviewer: vanto
+ms.date: 10/12/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: troubleshooting-known-issue
+ai-usage: ai-assisted
 ---
 # Known issues with Azure SQL Managed Instance
 
@@ -23,6 +24,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
 | [Committime incorrectly appends Z suffix in change event streaming messages](#incorrect-utc-qualifier-for-the-committime-ces-value) | August 2026 | No resolution | |
+| [`tempdb` file layout might differ between replicas after a failed file operation](#tempdb-file-layout-might-differ-between-replicas-after-a-failed-file-operation) | July 2026 | Has workaround | |
 | [Linked server queries that use MSDASQL fail with error 7416](#linked-server-queries-that-use-msdasql-fail-with-error-7416) | April 2026 | Has workaround | |
 | [Restore operation failures after migrating to SQL Managed Instance](#restore-operation-failures-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
 | [Unable to use Service Broker after migrating to SQL Managed Instance](#unable-to-use-service-broker-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
@@ -66,6 +68,12 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | Contained databases not supported in SQL Managed Instance | | Resolved | Aug 2019 |
 
 ## Has workaround
+
+### tempdb file layout might differ between replicas after a failed file operation
+
+Changes to the `tempdb` file layout are applied to each replica and saved in the service configuration. A new file can become active on a replica before the operation finishes on every replica. If creating the file fails on any replica, the operation fails, and the service attempts to roll back the configuration change by removing the file. The rollback might not be possible after workload starts using the file, which can leave the file layout inconsistent across replicas until the affected replica restarts and restores the saved configuration.
+
+**Workaround**: Adjust the file layout during lower traffic hours. Apply changes one file at a time, and wait for the operation to report success before starting another file operation. For more information, see [Configure `tempdb` settings for Azure SQL Managed Instance](tempdb-configure.md#number-of-tempdb-files).
 
 ### Database becomes unavailable after server restart following MI link failover
 

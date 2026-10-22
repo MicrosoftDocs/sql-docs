@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_add_log_shipping_primary_secondary (Transact-SQL)"
 description: "This stored procedure adds an entry for a secondary database on the primary server."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

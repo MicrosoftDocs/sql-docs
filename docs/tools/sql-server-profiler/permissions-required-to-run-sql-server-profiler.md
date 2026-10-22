@@ -2,8 +2,8 @@
 title: Permissions Required
 titleSuffix: SQL Server Profiler
 description: Find out which permissions you need to run SQL Server Profiler and replay traces, and learn which checks are performed during replays.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Getting Started with the Database Engine"
 description: "Tutorial: Getting Started with the Database Engine"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/05/2025
 ms.service: sql
 ms.topic: quickstart

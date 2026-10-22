@@ -1,8 +1,8 @@
 ---
 title: "Perform a planned manual failover of an availability group"
 description: "This topic describes how to perform a planned manual failover of an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "10/25/2017"
 ms.service: sql
 ms.subservice: availability-groups

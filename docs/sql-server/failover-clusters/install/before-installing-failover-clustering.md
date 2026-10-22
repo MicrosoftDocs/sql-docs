@@ -1,9 +1,9 @@
 ---
 title: "Before Installing Failover Clustering"
 description: This article describes planning considerations preparing to install a SQL Server failover cluster, including hardware, operating system, and configuration.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 12/16/2022
 ms.service: sql
 ms.subservice: failover-cluster-instance

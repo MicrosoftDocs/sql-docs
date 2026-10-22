@@ -3,8 +3,8 @@ title: Container and Local Development with mssql-python
 description: Set up local development environments, Docker containers, and CI pipelines for Python applications that connect to Microsoft SQL with the mssql-python driver.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
-ms.date: 08/28/2026
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -169,7 +169,7 @@ CMD ["python", "app.py"]
 Your `requirements.txt`:
 
 ```text
-mssql-python>=1.14.0
+mssql-python>=1.16.0
 ```
 
 Build and run:
@@ -192,7 +192,7 @@ Alpine uses `musl` instead of `glibc`. Install the required packages:
 ARG PYTHON_BASE=python:3-alpine
 FROM ${PYTHON_BASE}
 
-RUN apk add --no-cache libltdl krb5-libs
+RUN apk add --no-cache libltdl krb5-libs libstdc++
 
 WORKDIR /app
 COPY requirements.txt .
@@ -300,7 +300,7 @@ The `mssql-python` driver bundles its native components. You don't need to insta
 | Windows | None | Included in the wheel. |
 | Ubuntu / Debian | `libltdl7`, `libkrb5-3`, `libgssapi-krb5-2` | `sudo apt-get install libltdl7 libkrb5-3 libgssapi-krb5-2` |
 | Red Hat / CentOS / Fedora | `libtool-ltdl`, `krb5-libs` | `sudo dnf install libtool-ltdl krb5-libs` |
-| Alpine | `libltdl`, `krb5-libs` | `apk add libltdl krb5-libs` |
+| Alpine | `libltdl`, `krb5-libs`, `libstdc++` | `apk add libltdl krb5-libs libstdc++` |
 | macOS | OpenSSL (via Homebrew) | `brew install openssl` |
 
 For macOS, if you encounter SSL errors, set the linker flags:
@@ -594,8 +594,8 @@ uv run pytest
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |
-| `ImportError: libltdl.so.7` | Missing system library. | Install `libltdl7` (Debian) or `libltdl` (Alpine). |
-| `ImportError: libkrb5.so.3` | Missing Kerberos library. | Install `libkrb5-3` (Debian) or `krb5-libs` (Alpine/RHEL). |
+| `OperationalError: ... Failed to load the driver` on the first `connect()` | Missing `libltdl` or Kerberos library. | Install `libltdl7`, `libkrb5-3`, and `libgssapi-krb5-2` (Debian), or `libltdl` and `krb5-libs` (Alpine). |
+| `ImportError: Error loading shared library libstdc++.so.6` | Missing C++ runtime on Alpine. | Install `libstdc++`. |
 | `SSL: CERTIFICATE_VERIFY_FAILED` | Self-signed cert on local SQL Server. | Add `trust_server_certificate="yes"` to the connection. Don't use this in production. |
 | Connection refused on port 1433 | SQL Server container not ready. | Add a health check or wait for the service to start. |
 | `Login failed for user 'sa'` | Password doesn't meet complexity requirements. | Use a password with uppercase, lowercase, digits, and special characters. |

@@ -1,9 +1,9 @@
 ---
 title: sp_update_job (Transact-SQL)
 description: sp_update_job (Transact-SQL) update the attributes of an existing job created in the SQL Server Agent service.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, wiassaf
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: system-objects

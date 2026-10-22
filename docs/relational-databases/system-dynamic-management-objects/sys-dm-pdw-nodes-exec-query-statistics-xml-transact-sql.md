@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 
 # dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics.
 
@@ -40,5 +40,5 @@ The same remarks in [sys.dm_exec_query_statistics_xml](sys-dm-exec-query-statist
 
 ## Related content
 
-- [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+- [Azure Synapse Analytics dynamic management objects](azure-synapse-analytics-dynamic-management-objects.md)
 - [Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)

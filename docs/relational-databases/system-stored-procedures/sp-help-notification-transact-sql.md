@@ -1,9 +1,9 @@
 ---
 title: "sp_help_notification (Transact-SQL)"
 description: Reports a list of alerts for a given operator or a list of operators for a given alert.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

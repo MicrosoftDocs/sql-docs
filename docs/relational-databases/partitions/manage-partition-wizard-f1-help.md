@@ -1,8 +1,8 @@
 ---
 title: "Manage Partition Wizard"
 description: Manage Partition Wizard
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

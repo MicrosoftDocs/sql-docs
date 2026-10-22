@@ -3,7 +3,7 @@ title: "SET_BIT (Transact-SQL)"
 description: "Transact-SQL reference for the SET_BIT function."
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: t-sql

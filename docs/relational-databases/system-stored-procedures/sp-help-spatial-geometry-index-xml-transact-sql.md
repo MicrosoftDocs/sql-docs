@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_spatial_geometry_index_xml (Transact-SQL)"
 description: sp_help_spatial_geometry_index_xml returns the names and values for a specified set of properties about a geometry spatial index.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

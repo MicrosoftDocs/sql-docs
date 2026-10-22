@@ -1,9 +1,9 @@
 ---
 title: "sp_remove_job_from_targets (Transact-SQL)"
 description: sp_remove_job_from_targets removes the specified job from the given target servers or target server groups.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

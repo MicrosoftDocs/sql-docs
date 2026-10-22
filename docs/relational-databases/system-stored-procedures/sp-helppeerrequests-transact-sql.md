@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helppeerrequests (Transact-SQL)"
 description: sp_helppeerrequests returns information on all status requests received by participants in a peer-to-peer replication topology.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

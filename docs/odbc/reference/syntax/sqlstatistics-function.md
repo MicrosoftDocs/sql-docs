@@ -3,7 +3,7 @@ title: "SQLStatistics Function"
 description: SQLStatistics retrieves a list of statistics about a single table and the indexes associated with the table. The driver returns the information as a result set.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: connectivity

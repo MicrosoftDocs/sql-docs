@@ -1,8 +1,8 @@
 ---
 title: "CreateVersionedSOSHostObject()"
 description: "CreateVersionedSOSHostObject()"
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/06/2024"
 ms.service: sql
 ms.topic: reference

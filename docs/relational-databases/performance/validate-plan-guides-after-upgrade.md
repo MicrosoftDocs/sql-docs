@@ -1,8 +1,8 @@
 ---
 title: "Validate Plan Guides After Upgrade"
 description: When you upgrade your application to a new release of SQL Server, we recommend that you re-evaluate and test plan guide definitions.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance

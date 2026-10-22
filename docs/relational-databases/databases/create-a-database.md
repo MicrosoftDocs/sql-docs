@@ -3,7 +3,7 @@ title: "Create a Database"
 description: Create a database in SQL Server by using SQL Server Management Studio or Transact-SQL. View recommendations for the procedure.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: sql
 ms.subservice: configuration

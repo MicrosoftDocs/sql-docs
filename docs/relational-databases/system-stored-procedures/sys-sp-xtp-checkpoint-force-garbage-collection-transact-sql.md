@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)"
 description: "Marks source files used in the merge operation with the log sequence number (LSN) after which they aren't needed and can be garbage collected."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

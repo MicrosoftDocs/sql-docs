@@ -1,8 +1,8 @@
 ---
 title: "Name Element for Column (DTA)"
 description: In the dta utility, the Name element for Column specifies the name for an index column in a user-specified configuration.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

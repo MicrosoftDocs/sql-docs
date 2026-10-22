@@ -1,9 +1,9 @@
 ---
 title: "@@CURSOR_ROWS (Transact-SQL)"
 description: "@@CURSOR_ROWS returns the number of qualifying rows currently in the last cursor opened on the connection."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/02/2025
 ms.service: sql
 ms.subservice: t-sql

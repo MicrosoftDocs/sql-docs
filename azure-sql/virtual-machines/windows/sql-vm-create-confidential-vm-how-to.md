@@ -3,7 +3,7 @@ title: Deploy SQL Server to an Azure Confidential VM
 description: This article shows you how to deploy SQL Server to an Azure confidential VM.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/25/2025
 ms.service: azure-vm-sql-server
 ms.subservice: deployment

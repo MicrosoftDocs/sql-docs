@@ -1,8 +1,8 @@
 ---
 title: "Replication Monitor"
 description: "Reference guide for replication monitor pages and dialog boxes in SQL Server, including monitoring Publishers, Distributors, publications, and subscriptions."
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: replication

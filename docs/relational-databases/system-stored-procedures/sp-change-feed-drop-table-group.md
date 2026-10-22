@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_drop_table_group (Transact-SQL)"
 description: "The sys.sp_change_feed_drop_table_group system stored procedure drops a table group and internal metadata objects."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

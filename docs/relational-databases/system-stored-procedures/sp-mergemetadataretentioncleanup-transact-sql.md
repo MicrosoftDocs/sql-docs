@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_mergemetadataretentioncleanup (Transact-SQL)"
 description: "Performs a manual cleanup of metadata in the MSmerge_* system tables."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

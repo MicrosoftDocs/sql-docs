@@ -3,7 +3,7 @@ title: Move database files
 description: Learn how to move system and user databases by specifying the new file location in the FILENAME clause of the ALTER DATABASE statement.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/19/2024
 ms.service: sql
 ms.topic: how-to

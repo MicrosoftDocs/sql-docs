@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_proxy (Transact-SQL)"
 description: sp_delete_proxy removes the specified proxy.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

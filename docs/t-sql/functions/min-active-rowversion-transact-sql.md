@@ -1,8 +1,8 @@
 ---
 title: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql

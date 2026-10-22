@@ -1,9 +1,9 @@
 ---
 title: "Type Mapping with PolyBase"
 description: Refer to these tables for mapping between PolyBase external data sources and SQL Server. Define external tables with Transact-SQL CREATE EXTERNAL TABLE.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: hudequei, nathansc, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei, nathansc
 ms.date: 12/03/2025
 ms.service: sql
 ms.subservice: polybase

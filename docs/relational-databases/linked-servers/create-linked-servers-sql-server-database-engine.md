@@ -3,8 +3,8 @@ title: "Create Linked Servers"
 description: "Create linked servers (SQL Server Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 09/11/2025
+ms.reviewer: vanto
+ms.date: 10/13/2026
 ms.service: sql
 ms.topic: how-to
 f1_keywords:
@@ -91,7 +91,9 @@ In [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ### Edit the Security page for the linked server properties
 
-On the **Security** page, specify the security context that is used when the original instance connects to the linked server. There are two strategies to configure here that can be used alone or combined. The first is to map logins from the local server to the remote server, and the second is how the linked server should treat logins that aren't mapped.
+On the **Security** page, specify the security context that the original instance uses when it connects to the linked server. You can use two strategies, either alone or combined. The first strategy is to map logins from the local server to the remote server. The second strategy is to decide how the linked server should treat logins that aren't mapped. 
+
+As a security best practice, review access to linked servers and their associated data sources. Configure access for the users and workloads that need it, use least-privilege permissions, and periodically review authentication settings and access controls to help prevent unintended access.
 
 #### Add login mappings
 

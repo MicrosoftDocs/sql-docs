@@ -1,8 +1,8 @@
 ---
 title: "ALTER XML SCHEMA COLLECTION (Transact-SQL)"
 description: ALTER XML SCHEMA COLLECTION (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: t-sql

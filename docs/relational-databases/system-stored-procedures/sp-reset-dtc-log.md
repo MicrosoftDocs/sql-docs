@@ -3,7 +3,7 @@ title: "sp_reset_dtc_log (Transact-SQL)"
 description: "sp_reset_dtc_log (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

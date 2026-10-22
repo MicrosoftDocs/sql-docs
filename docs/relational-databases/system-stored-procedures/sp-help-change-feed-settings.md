@@ -3,7 +3,7 @@ title: "sys.sp_help_change_feed_settings (Transact-SQL)"
 description: "The sys.sp_help_change_feed_settings system stored procedure returns state information for Microsoft Fabric Mirroring."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 12/17/2025
 ms.service: fabric
 ms.subservice: system-objects

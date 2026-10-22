@@ -1,8 +1,8 @@
 ---
 title: "Sequence Expressions (XQuery)"
 description: Learn about XQuery sequence expressions that construct, filter, and combine a sequence of items.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: xml

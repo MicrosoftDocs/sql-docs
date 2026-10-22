@@ -2,9 +2,9 @@
 title: Transact-SQL Breakpoints
 titleSuffix: T-SQL debugger
 description: Breakpoints are used when debugging to pause execution as needed. Look here for a list of breakpoint tasks with links to articles that describe them.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

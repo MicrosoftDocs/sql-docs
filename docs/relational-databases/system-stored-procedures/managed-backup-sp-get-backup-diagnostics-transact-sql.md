@@ -1,9 +1,9 @@
 ---
 title: "smart_admin.sp_get_backup_diagnostics (Transact-SQL)"
 description: "Returns the Extended Events logged by Smart Admin."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

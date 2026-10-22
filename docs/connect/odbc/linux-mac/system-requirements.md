@@ -3,7 +3,7 @@ title: System Requirements (ODBC Driver for SQL Server)
 description: This lists the system requirements for the ODBC Driver for SQL Server on Linux and macOS operating systems.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
 ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity
@@ -72,6 +72,7 @@ The driver supports the x64 architecture on all listed operating systems. The Ar
 | Ubuntu Linux 20.04 | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
 | Ubuntu Linux 22.04 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No |
 | Ubuntu Linux 24.04 | Yes | Yes | Yes | Yes | Yes | No | No | No |
+| Ubuntu Linux 25.10 | No | Yes | No | No | No | No | No | No |
 | Ubuntu Linux 26.04 | Yes | No | No | No | No | No | No | No |
 
 ## Previous ODBC Driver versions (17 and 13)

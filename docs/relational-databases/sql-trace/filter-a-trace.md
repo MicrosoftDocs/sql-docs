@@ -1,9 +1,9 @@
 ---
 title: Filter a trace
 description: Learn how to use filters limit the events collected in a trace.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/17/2024
 ms.service: sql
 ms.topic: how-to

@@ -3,7 +3,7 @@ title: Back up to URL with Managed Identity
 description: Describes how to back up and restore databases with for SQL Server enabled by Azure Arc using managed identity
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: randolphwest, mathoma, vanto
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.topic: how-to
 ms.custom:

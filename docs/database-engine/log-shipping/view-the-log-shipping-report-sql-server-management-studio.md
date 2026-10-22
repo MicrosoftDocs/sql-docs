@@ -1,8 +1,8 @@
 ---
 title: "View log shipping report (SSMS)"
 description: View the Transaction Log Shipping Status report in SQL Server Management Studio. Run a status report at a monitor server, primary server, or secondary server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/04/2017"
 ms.service: sql
 ms.subservice: log-shipping

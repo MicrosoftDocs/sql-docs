@@ -1,8 +1,8 @@
 ---
 title: "Using User-Defined Types"
 description: "Using User-Defined Types in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ---
 # Using User-Defined Types in SQL Server Native Client
 
-[!INCLUDE [sql-asdb-pdw](../../../includes/applies-to-version/sql-asdb-pdw.md)]
+[!INCLUDE [sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

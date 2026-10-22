@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: A how-to guide on creating, updating, and utilizing database level customer-managed keys with transparent data encryption (TDE) in Azure SQL Database.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 08/21/2026
 ms.service: azure-sql-database
 ms.subservice: security

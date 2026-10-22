@@ -1,9 +1,9 @@
 ---
 title: "sp_query_store_reset_exec_stats (Transact-SQL)"
 description: "Clears the runtime stats for a specific query plan from the Query Store."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 11/17/2025
 ms.service: sql
 ms.subservice: system-objects

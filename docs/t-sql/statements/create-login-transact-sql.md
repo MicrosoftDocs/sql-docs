@@ -23,13 +23,13 @@ helpviewer_keywords:
   - "certificates [SQL Server], logins"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ms.custom:
   - build-2025
 ---
 # CREATE LOGIN (Transact-SQL)
 
-Creates a login for SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, or Analytics Platform System databases. Choose one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
+Creates a login for SQL Server, Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics databases. Choose one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
 
 CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
 
@@ -53,9 +53,6 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -377,9 +374,6 @@ CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 &nbsp;
@@ -542,9 +536,6 @@ For more information on obtaining the Object ID of a service principal, see [ser
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -770,9 +761,6 @@ GO
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
-    :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
-    :::column-end:::
 :::row-end:::
 
 &nbsp;
@@ -887,142 +875,6 @@ CREATE LOGIN TestLogin
 WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;
 
 SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
-GO
-```
-
-## Related content
-
-- [Get started with Database Engine permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
-- [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
-- [Password policy](../../relational-databases/security/password-policy.md)
-- [ALTER LOGIN (Transact-SQL)](alter-login-transact-sql.md)
-- [DROP LOGIN (Transact-SQL)](drop-login-transact-sql.md)
-- [EVENTDATA (Transact-SQL)](../functions/eventdata-transact-sql.md)
-- [Create a login](../../relational-databases/security/authentication-access/create-a-login.md)
-
-::: moniker-end
-
-::: moniker range=">=aps-pdw-2016"
-
-:::row:::
-    :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
-    :::column-end:::
-    :::column:::
-        **_\* Analytics<br />Platform System (PDW) \*_**
-    :::column-end:::
-:::row-end:::
-
-&nbsp;
-
-## Analytics Platform System
-
-## Syntax
-
-```syntaxsql
--- Syntax for Analytics Platform System
-CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
-
-<option_list1> ::=
-    PASSWORD = { 'password' } [ MUST_CHANGE ]
-    [ , <option_list> [ ,... ] ]
-  
-<option_list> ::=
-      CHECK_EXPIRATION = { ON | OFF}
-    | CHECK_POLICY = { ON | OFF}
-```
-
-## Arguments
-
-#### *login_name*
-Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you're creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You can't use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and can't contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
-
-#### PASSWORD ='_password_'
-Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
-
-Passwords are case-sensitive. Passwords should always be at least eight characters long, and can't exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most nonalphanumeric characters. Passwords can't contain single quotes, or the *login_name*.
-
-#### MUST_CHANGE
-Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
-
-#### CHECK_EXPIRATION = { ON | OFF }
-Applies to SQL Server logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.
-
-#### CHECK_POLICY = { ON | OFF }
-Applies to SQL Server logins only. Specifies that the Windows password policies of the computer on which SQL Server is running should be enforced on this login. The default value is ON.
-
-If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:
-
-- An uppercase character (A-Z).
-- A lowercase character (a-z).
-- A digit (0-9).
-- One of the nonalphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
-
-#### WINDOWS
-Specifies that the login be mapped to a Windows login.
-
-## Remarks
-
-- Passwords are case-sensitive.
-- If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON. Otherwise, the statement will fail.
-- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON isn't supported.
-- When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.
-
-> [!IMPORTANT]
-> CHECK_EXPIRATION and CHECK_POLICY are only enforced on Windows Server 2003 and later versions. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).
-
-- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
-- Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.
-- For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
-
-## Permissions
-
-Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](alter-server-role-transact-sql.md).
-
-## After creating a login
-
-After creating a login, the login can connect to Azure Synapse Analytics, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
-
-- To connect to a database, create a database user for the login. For more information, see [CREATE USER](create-user-transact-sql.md).
-- Create a user-defined server role by using [CREATE SERVER ROLE](create-server-role-transact-sql.md). Use `ALTER SERVER ROLE ... ADD MEMBER` to add the new login to the user-defined server role. For more information, see [CREATE SERVER ROLE](create-server-role-transact-sql.md) and [ALTER SERVER ROLE](alter-server-role-transact-sql.md).
-- Use `sp_addsrvrolemember` to add the login to a fixed server role. For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md) and [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).
-- Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](grant-transact-sql.md).
-
-## Examples
-
-### <a id="g-creating-a-sql-server-authentication-login-with-a-password"></a> G. Create a SQL Server authentication login with a password
-
-The following example creates the login `Mary7` with password `A2c3456`.
-
-```sql
-CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;
-```
-
-### <a id="h-using-options"></a> H. Use Options
-
-The following example creates the login `Mary8` with password and some of the optional arguments.
-
-```sql
-CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,
-CHECK_EXPIRATION = ON,
-CHECK_POLICY = ON;
-```
-
-### <a id="i-creating-a-login-from-a-windows-domain-account"></a> I. Create a login from a Windows domain account
-
-The following example creates a login from a Windows domain account named `Mary` in the `Contoso` domain.
-
-```sql
-CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO
 ```
 

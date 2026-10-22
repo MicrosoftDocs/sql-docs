@@ -1,8 +1,8 @@
 ---
 title: "Additional Sample XQueries Against the xml Data Type"
 description: View samples that show how to use XQuery queries against the xml data type.
-author: rothja
-ms.author: jroth
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

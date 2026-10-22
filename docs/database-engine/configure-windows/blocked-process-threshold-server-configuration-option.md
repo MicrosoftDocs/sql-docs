@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: blocked process threshold"
 description: Learn how to use the blocked process threshold option to specify the interval at which SQL Server generates blocked process reports and issues alerts.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration
@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use the `blocked process threshold` option to specify the threshold, in seconds, at which blocked process reports are generated. The threshold can be set from 5 to 86,400. The lock monitor only wakes up every 5 seconds to detect blocking conditions (it's also looking for other conditions such as deadlocks). Therefore, if you set a `blocked process threshold` value to `1`, it doesn't detect a process that has been blocking for 1 second. The minimum time it can detect a blocked process is 5 seconds.
+Use the `blocked process threshold` option to specify the minimum threshold, in seconds, at which blocked process reports are generated. The actual time to detect a blocked process might be several seconds longer than the configured value. The option accepts values from 0 to 86,400; `0` disables reporting. Low threshold values can substantially increase the number of reports when many tasks are blocked.
 
 By default, no blocked process reports are produced. This event isn't generated for system tasks or for tasks that are waiting on resources that don't generate detectable deadlocks.
 

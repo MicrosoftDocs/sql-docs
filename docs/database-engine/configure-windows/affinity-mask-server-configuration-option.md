@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: affinity mask"
 description: Learn about the affinity mask option in SQL Server. View an example that uses it to bind processors to specific threads.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

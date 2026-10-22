@@ -1,9 +1,9 @@
 ---
 title: "Data collector security"
 description: Learn about the role-based security model implemented by SQL Server Agent.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

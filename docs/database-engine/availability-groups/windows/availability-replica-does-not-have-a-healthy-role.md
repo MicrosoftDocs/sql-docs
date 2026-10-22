@@ -1,8 +1,8 @@
 ---
 title: "Replica does not have a healthy role for an availability group"
 description: "Identify possible causes for why an availability replica does not have a healthy role within an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

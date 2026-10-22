@@ -3,7 +3,7 @@ title: "MySQL to Azure SQL Database: Migration Guide"
 description: In this guide, you learn how to migrate your MySQL databases to an Azure SQL database by using SQL Server Migration Assistant for MySQL (SSMA for MySQL).
 author: nilabjaball
 ms.author: niball
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/02/2026
 ms.service: azure-sql-database
 ms.subservice: migration-guide

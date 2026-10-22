@@ -3,7 +3,7 @@ title: "sp_enum_proxy_for_subsystem (Transact-SQL)"
 description: sp_enum_proxy_for_subsystem lists permissions for SQL Server Agent proxies to access subsystems.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

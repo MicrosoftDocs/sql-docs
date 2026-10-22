@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Your applications can connect to an alias for the name of the server for Azure SQL Database. Meanwhile, you can change the SQL Database the alias points to anytime, to facilitate testing and so on.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, vanto
+ms.reviewer: vanto
 ms.date: 05/29/2026
 ms.service: azure-sql-database
 ms.subservice: security

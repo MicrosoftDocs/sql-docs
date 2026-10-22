@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_control_proc_exec_stats (Transact-SQL)"
 description: "Enables statistics collection for natively compiled stored procedures for the instance."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "Working with the Sample Console Script Files (MySQLToSQL)"
 description: Working with the Sample Console Script Files (MySQLToSQL)
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/10/2025
 ms.service: sql
 ms.subservice: ssma

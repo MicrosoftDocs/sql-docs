@@ -1,9 +1,9 @@
 ---
 title: "managed_backup.sp_backup_config_advanced (Transact-SQL)"
 description: Configures advanced settings for SQL Server Managed Backup to Azure.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

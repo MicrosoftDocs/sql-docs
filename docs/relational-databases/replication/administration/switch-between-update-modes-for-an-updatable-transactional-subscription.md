@@ -1,8 +1,8 @@
 ---
 title: "Switch between modes (Updatable Transactional)"
 description: Describes how to switch between update modes for an Updatable Transactional Publication by using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

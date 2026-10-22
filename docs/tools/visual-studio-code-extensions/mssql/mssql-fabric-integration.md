@@ -2,8 +2,8 @@
 title: Fabric Integration
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the MSSQL extension for Visual Studio Code to connect to Fabric workspaces and provision SQL databases.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos, tsiddique
 ms.date: 03/13/2026
 ms.service: sql

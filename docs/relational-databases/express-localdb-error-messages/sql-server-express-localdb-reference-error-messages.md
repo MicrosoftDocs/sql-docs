@@ -4,7 +4,7 @@ titleSuffix: SQL Server Express
 description: This section provides reference information about the following SQL Server Express LocalDB error messages.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.subservice: performance

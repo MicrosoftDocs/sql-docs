@@ -1,8 +1,8 @@
 ---
 title: Menu Commands and Other Shortcut Keys
 description: Learn about the keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

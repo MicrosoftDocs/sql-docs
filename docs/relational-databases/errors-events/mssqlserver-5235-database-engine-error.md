@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_5235"
 description: "MSSQLSERVER_5235"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "09/05/2017"
 ms.service: sql
 ms.subservice: supportability

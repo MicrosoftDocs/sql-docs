@@ -1,8 +1,8 @@
 ---
 title: Create a Memory-Optimized System-Versioned Temporal Table
 description: Learn how to create a memory-optimized system-versioned temporal table.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

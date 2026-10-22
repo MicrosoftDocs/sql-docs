@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_clean_db_free_space (Transact-SQL)"
 description: Removes residual information left on database pages because of data modification routines in SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest, dfurman
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: dfurman
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

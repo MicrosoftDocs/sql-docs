@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_agent_parameter (Transact-SQL)"
 description: Returns all the parameters of a profile from the MSagent_parameters system table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

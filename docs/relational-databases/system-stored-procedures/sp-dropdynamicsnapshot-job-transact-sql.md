@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropdynamicsnapshot_job (Transact-SQL)"
 description: sp_dropdynamicsnapshot_job removes a filtered data snapshot job for a publication with parameterized row filters.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

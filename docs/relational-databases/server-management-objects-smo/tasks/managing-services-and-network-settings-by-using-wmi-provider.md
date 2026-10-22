@@ -1,9 +1,9 @@
 ---
 title: Manage services and network settings with the WMI provider
 description: Manage SQL Server services and network settings with the WMI provider in MMC.
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/30/2023
 ms.service: sql
 ms.topic: "reference"

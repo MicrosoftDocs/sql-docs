@@ -9,7 +9,7 @@ metadata:
   ms.service: sql
   ms.subservice: machine-learning
   ms.topic: landing-page
-  ms.reviewer: randolphwest, wiassaf
+  ms.reviewer: wiassaf
   ms.date: 05/24/2022
 landingContent:
   - title: Machine learning on SQL Server

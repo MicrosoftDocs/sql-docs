@@ -1,8 +1,8 @@
 ---
 title: "sys.trace_subclass_values (Transact-SQL)"
 description: sys.trace_subclass_values (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: system-objects

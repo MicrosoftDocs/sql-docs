@@ -1,9 +1,9 @@
 ---
 title: "Programming extended stored procedures"
 description: Learn about extended stored procedures in SQL Server, including how they work, and how to use them.
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 08/29/2024
 ms.service: sql
 ms.topic: "reference"

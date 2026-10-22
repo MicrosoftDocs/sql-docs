@@ -3,12 +3,12 @@ title: SSIS Projects Extension for Visual Studio 2022+ Troubleshooting Guide
 description: SSIS Projects extension for Visual Studio 2022+ troubleshooting guide
 author: kromerm
 ms.author: makromer
-ms.reviewer: drskwier, randolphwest, maghan
+ms.reviewer: drskwier
 ms.date: 10/14/2025
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: troubleshooting-general
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # SSIS Projects extension for Visual Studio 2022+ troubleshooting guide
 

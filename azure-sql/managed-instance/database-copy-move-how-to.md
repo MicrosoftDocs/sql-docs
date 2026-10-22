@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to perform an online move or copy operation of your database across instances for Azure SQL Managed Instance.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma, danil, randolphwest, wiassaf
+ms.reviewer: danil, wiassaf
 ms.date: 09/15/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

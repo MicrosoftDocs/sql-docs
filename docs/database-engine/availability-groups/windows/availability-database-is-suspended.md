@@ -1,8 +1,8 @@
 ---
 title: "Availability database is suspended for an availability group"
 description: "Identify possible causes for why a database in an Always On availability group might be suspended."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

@@ -1,8 +1,8 @@
 ---
 title: "OutputParameter function (sqlrutils)"
 description: "OutputParameter: generates an OutputParameter Object that captures the information about the output parameters of the function that is to be embedded into a SQL Server stored procedure."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

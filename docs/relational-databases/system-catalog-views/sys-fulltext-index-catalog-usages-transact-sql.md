@@ -1,8 +1,8 @@
 ---
 title: sys.fulltext_index_catalog_usages (Transact-SQL)
 description: sys.fulltext_index_catalog_usages returns a row for each full-text catalog to full-text index reference.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

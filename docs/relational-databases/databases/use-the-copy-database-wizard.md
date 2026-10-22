@@ -3,7 +3,7 @@ title: "Use the Copy Database Wizard"
 description: "Use the Copy Database Wizard"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/16/2025
 ms.service: sql
 ms.topic: how-to

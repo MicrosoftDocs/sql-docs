@@ -18,10 +18,10 @@ helpviewer_keywords:
   - "sys.database_role_members catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # sys.database_role_members (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
   Returns one row for each member of each database role.  Database users, application roles, and other database roles can be members of a database role. To add members to a role, use the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement with the `ADD MEMBER` option. Join with [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) to return the names of the `principal_id` values.
   

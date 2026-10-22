@@ -1,8 +1,8 @@
 ---
 title: "Restore database to marked transaction (SSMS)"
 description: When a SQL Server database is restoring, use the Restore Transaction Log dialog box to restore the database to a marked transaction in available log backups.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "12/17/2019"
 ms.service: sql
 ms.subservice: backup-restore

@@ -1,8 +1,8 @@
 ---
 title: "Change IP Address of a Failover Cluster Instance"
 description: Learn how to change the IP address of a SQL Server failover cluster instance using the Failover Cluster Manager.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: failover-cluster-instance

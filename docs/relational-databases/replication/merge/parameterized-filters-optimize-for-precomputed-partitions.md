@@ -1,8 +1,8 @@
 ---
 title: Optimize Parameterized Filters with Precomputed Partitions (Merge)
 description: Precomputed partitions speed up merge replication by evaluating Subscriber partitions in advance. Learn the requirements, collation rules, and performance gains.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

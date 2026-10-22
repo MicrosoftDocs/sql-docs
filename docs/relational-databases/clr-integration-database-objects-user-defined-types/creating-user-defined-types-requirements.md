@@ -1,8 +1,8 @@
 ---
 title: "User-Defined Type Requirements"
 description: This article describes important design decisions you need to make when you create a UDT to install on SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn to troubleshoot Microsoft Entra Kerberos authentication for Azure SQL Managed Instance.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, randolphwest
+ms.reviewer: bonova, urmilano, wiassaf
 ms.date: 09/27/2023
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

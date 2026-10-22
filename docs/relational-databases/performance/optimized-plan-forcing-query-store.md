@@ -3,7 +3,7 @@ title: "Optimized plan forcing with Query Store"
 description: Learn about optimized plan forcing and optimization replay scripts in Query Store.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 10/18/2024
 ms.service: sql
 ms.subservice: performance

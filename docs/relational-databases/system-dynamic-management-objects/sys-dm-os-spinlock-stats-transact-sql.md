@@ -3,7 +3,7 @@ title: "sys.dm_os_spinlock_stats (Transact-SQL)"
 description: Returns information about all spinlock waits organized by type.
 author: "bluefooted"
 ms.author: "pamela"
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

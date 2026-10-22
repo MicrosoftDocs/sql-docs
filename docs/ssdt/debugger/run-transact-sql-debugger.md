@@ -1,9 +1,9 @@
 ---
 title: Run the Transact-SQL Debugger
 description: Learn how to customize the Transact-SQL debugger, and how to use it to debug your Transact-SQL code. You can run the debugger on an instance of the Database Engine that is on another computer.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

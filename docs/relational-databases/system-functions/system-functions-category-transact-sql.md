@@ -1,8 +1,8 @@
 ---
 title: "System Functions by category"
 description: "System Functions by category for Transact-SQL"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: system-objects

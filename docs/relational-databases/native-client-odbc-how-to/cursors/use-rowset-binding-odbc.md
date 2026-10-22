@@ -1,8 +1,8 @@
 ---
 title: "Use Rowset Binding (ODBC)"
 description: "Use Rowset Binding (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "rowset binding [ODBC]"
 ---
 # Use Rowset Binding (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To use column-wise binding  

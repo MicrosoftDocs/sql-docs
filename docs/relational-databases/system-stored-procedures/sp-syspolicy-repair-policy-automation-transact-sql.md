@@ -3,7 +3,7 @@ title: "sp_syspolicy_repair_policy_automation (Transact-SQL)"
 description: "Repairs policy automation in Policy-Based Management."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: SqlErrorLogEvent class
 description: Provides properties for viewing events in a specified SQL Server log file.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/23/2023
 ms.service: sql
 ms.subservice: wmi

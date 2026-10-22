@@ -1,8 +1,8 @@
 ---
 title: "Configure SQL Server Error Logs (SQL Server Configuration Manager)"
 description: Learn about error log recycling. See how to set a maximum log file size and how to set the number of previous log files that SQL Server backs up and archives.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

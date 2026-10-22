@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about point-in-time restore, which enables you to roll back a database in Azure SQL Database up to 35 days.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dinethi, mathoma, danil
+ms.reviewer: dinethi, danil
 ms.date: 01/26/2026
 ms.service: azure-sql-database
 ms.subservice: backup-restore

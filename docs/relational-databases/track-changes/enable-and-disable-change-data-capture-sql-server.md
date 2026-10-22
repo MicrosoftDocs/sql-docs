@@ -1,9 +1,9 @@
 ---
 title: "Enable and Disable change data capture"
 description: "Enable and Disable change data capture"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 10/19/2023
 ms.service: sql
 ms.topic: how-to
@@ -92,6 +92,8 @@ EXEC sys.sp_cdc_enable_table
     @supports_net_changes = 1
 GO
 ```
+> [!NOTE]  
+> When you create a separate filegroup for the change table, ensure it has enough space to store change data. If the filegroup runs out of space, it stops capturing changes until space is available, and the capture job fails with error 1105. Depending on your cleanup configuration, you could lose captured changes.
 
 **A role for controlling access to a change table.**
 

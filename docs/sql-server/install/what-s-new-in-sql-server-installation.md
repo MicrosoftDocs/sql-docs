@@ -1,8 +1,8 @@
 ---
 title: "What's New in SQL Server Installation"
 description: This article summarizes some changes to the SQL Server installation process, including SysPrep support and upgrading from SQL Server 2005.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: install

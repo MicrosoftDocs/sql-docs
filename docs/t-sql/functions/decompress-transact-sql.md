@@ -1,9 +1,9 @@
 ---
 title: "DECOMPRESS (Transact-SQL)"
 description: "DECOMPRESS function decompresses an input expression value, using the Gzip algorithm."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 03/09/2023
 ms.service: sql
 ms.subservice: t-sql

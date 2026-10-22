@@ -3,7 +3,7 @@ title: "dbo.sysalerts (Transact-SQL)"
 description: dbo.sysalerts contains one row for each alert.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/20/2024
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_stats_properties (Transact-SQL)"
 description: The sys.dm_db_stats_properties dynamic management function returns properties of statistics for the specified database object.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/13/2026
 ms.service: sql
 ms.subservice: system-objects

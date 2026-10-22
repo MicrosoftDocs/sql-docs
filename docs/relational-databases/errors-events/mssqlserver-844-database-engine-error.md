@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_844"
 description: "MSSQLSERVER_844"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 05/30/2025
 ms.service: sql
 ms.subservice: supportability

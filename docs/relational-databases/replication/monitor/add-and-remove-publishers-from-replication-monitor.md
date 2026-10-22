@@ -1,8 +1,8 @@
 ---
 title: "Add & remove Publishers from Replication Monitor (SSMS)"
 description: Learn to add and remove Publishers from Replication Monitor in SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

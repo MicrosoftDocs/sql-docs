@@ -1,15 +1,15 @@
 ---
 title: "Data FILESTREAM, ISequentialStream ICommandText"
 description: "Send Data to FILESTREAM in SQL Server Native Client - ISequentialStream Bound to ICommandText"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Send Data to FILESTREAM in SQL Server Native Client - ISequentialStream Bound to ICommandText
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample uses an ISequentialStream interface bound to an ICommandText parameter to send between 4MB and 4GB of data to a filestream column.  
   

@@ -3,7 +3,7 @@ title: "ODBC API reference"
 description: "Comprehensive reference for ODBC API functions organized by category, including connection, statement execution, data retrieval, and catalog functions."
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl
+ms.reviewer: davidengel, sunilbs, mcimfl
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: connectivity

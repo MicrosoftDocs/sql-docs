@@ -1,9 +1,9 @@
 ---
 title: "Example: Retrieving Employee Information"
 description: View an example of how to retrieve employee information from a database as XML using a query with FOR XML EXPLICIT.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

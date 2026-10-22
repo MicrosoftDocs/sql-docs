@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_adddynamicsnapshot_job (Transact-SQL)"
 description: Creates an agent job that generates a filtered data snapshot for a publication with parameterized row filters.
-author: mashamsft
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

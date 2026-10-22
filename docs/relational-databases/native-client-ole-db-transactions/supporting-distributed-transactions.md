@@ -1,9 +1,9 @@
 ---
 title: Support distributed transactions (Native Client OLE DB provider)
 description: "Supporting Distributed Transactions in SQL Server Native Client"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: native-client
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ---
 # Support distributed transactions in SQL Server Native Client
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumers can use the **ITransactionJoin::JoinTransaction** method to participate in a distributed transaction coordinated by Microsoft Distributed Transaction Coordinator (MS DTC).
 

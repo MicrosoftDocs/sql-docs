@@ -1,8 +1,8 @@
 ---
 title: " [^] Wildcard to Exclude Characters (Transact-SQL)"
 description: Matches any single character that isn't within the range or set specified between the square brackets [^].
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: SqlPackage Import
 description: Learn how to automate database development tasks with SqlPackage Import. View examples and available parameters, properties, and SQLCMD variables.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 4/29/2024
 ms.service: sql
 ms.subservice: tools-other

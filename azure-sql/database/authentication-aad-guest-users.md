@@ -4,14 +4,14 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: How to create Microsoft Entra guest users and set them as Microsoft Entra admin in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma, randolphwest
+ms.reviewer: wiassaf, vanto
 ms.date: 02/23/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
   - azure-synapse
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=azuresql-vm"
 ---
 # Create Microsoft Entra guest users and set them as a Microsoft Entra admin
 

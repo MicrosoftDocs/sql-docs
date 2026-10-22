@@ -1,9 +1,9 @@
 ---
 title: "SQL Server 2012 Service Pack Release Notes"
 description: This article contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/08/2025
 ms.service: sql
 ms.subservice: release-landing

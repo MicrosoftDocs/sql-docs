@@ -1,8 +1,8 @@
 ---
 title: "CREATE AVAILABILITY GROUP (Transact-SQL)"
 description: Creates a new availability group, if the instance of SQL Server is enabled for availability groups feature.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: uc-msft
+ms.author: umajay
 ms.date: 08/15/2025
 ms.service: sql
 ms.subservice: t-sql

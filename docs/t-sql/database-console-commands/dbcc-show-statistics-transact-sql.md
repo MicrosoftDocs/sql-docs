@@ -1,8 +1,8 @@
 ---
 title: DBCC SHOW_STATISTICS (Transact-SQL)
 description: DBCC SHOW_STATISTICS displays current query optimization statistics for a table or indexed view.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/12/2026
 ms.service: sql
 ms.subservice: t-sql
@@ -31,12 +31,12 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 dev_langs:
   - TSQL
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # DBCC SHOW_STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 The `DBCC SHOW_STATISTICS` command displays current query optimization statistics for a table or indexed view. The query optimizer uses statistics to estimate the cardinality or number of rows in the query result, which enables the Query Optimizer to create a high quality query plan. For example, the Query Optimizer could use cardinality estimates to choose the index seek operator instead of the index scan operator in the query plan, improving query performance by avoiding a resource-intensive index scan.
 
@@ -70,7 +70,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 [ ; ]
 ```
 
-Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]:
+Syntax for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]:
 
 ```syntaxsql
 DBCC SHOW_STATISTICS ( table_name , target )
@@ -97,7 +97,7 @@ Name of the index, statistics, or column for which to display statistics informa
 
 If an automatically created statistic doesn't exist for a column target, error message 2767 is returned.
 
-In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], *target* can't be a column name.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], *target* can't be a column name.
 
 In [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)], *target* can be either the name of a single-column histogram statistics or a column. If a column name is used for *target*, this command returns distribution information only about the automatically generated histogram statistic. To view the information about a manually created histogram statistic, specify the statistics name as *target*.
 
@@ -124,7 +124,7 @@ The following table describes the columns returned in the result set when STAT_H
 | `Steps` | Number of steps in the histogram. Each step spans a range of column values followed by an upper bound column value. The histogram steps are defined on the first key column in the statistics. The maximum number of steps is 200. |
 | `Density` | Calculated as 1 / *distinct values* for all values in the first key column of the statistics object, excluding the histogram boundary values. This `Density` value isn't used by the Query Optimizer and is displayed for backward compatibility with versions before [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)]. |
 | `Average Key Length` | Average number of bytes per value for all of the key columns in the statistics object. |
-| `String Index` | Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the `LIKE` operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it's of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext** and it doesn't use a UTF-8 collation. |
+| `String Index` | Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the `LIKE` operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it's of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext**, with the exception of **char** and **varchar** columns using a UTF-8 collation. |
 | `Filter Expression` | Predicate for the subset of table rows included in the statistics object. `NULL` = non-filtered statistics. For more information about filtered predicates, see [Create filtered indexes](../../relational-databases/indexes/create-filtered-indexes.md). For more information about filtered statistics, see [Statistics](../../relational-databases/statistics/statistics.md). |
 | `Unfiltered Rows` | Total number of rows in the table before applying the filter expression. If Filter Expression is `NULL`, `Unfiltered Rows` is equal to `Rows`. |
 | `Persisted Sample Percent` | Persisted sample percentage used for statistic updates that don't explicitly specify a sampling percentage. If value is zero, then no persisted sample percentage is set for this statistic.<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU 4 and later versions.|
@@ -204,11 +204,11 @@ In versions before [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Service Pa
 
 In order to view the statistics object in Fabric Data Warehouse or the SQL analytics endpoint, the user must have the `SELECT` permission on the table, or a member of the Viewer Fabric workspace role or higher role membership.
 
-## Permissions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Permissions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 `DBCC SHOW_STATISTICS` requires `SELECT` permission on the table or membership in the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-## Limitations and Restrictions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+## Limitations and Restrictions for [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 `DBCC SHOW_STATISTICS` shows statistics stored in the `Shell` database at the Control node level. It doesn't show statistics that are autocreated by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on the Compute nodes.
 
@@ -236,17 +236,17 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer", Customer_LastName) WITH HISTOGRAM;
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### C. Display the contents of one statistics object
 
-The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the [!INCLUDE [ssawpdw-md](../../includes/ssawpdw-md.md)] sample database.
+The following example creates a statistics object and then displays the contents of the `Customer_LastName` statistics on the `DimCustomer` table in the AdventureWorks2012 sample database.
 
 ```sql
--- Uses AdventureWorksPDW
+-- Uses AdventureWorks2012
 --First, create a statistics object
 CREATE STATISTICS Customer_LastName
-ON AdventureWorksPDW2012.dbo.DimCustomer (LastName);
+ON AdventureWorks2012.dbo.DimCustomer (LastName);
 GO
 DBCC SHOW_STATISTICS ("dbo.DimCustomer", Customer_LastName);
 GO

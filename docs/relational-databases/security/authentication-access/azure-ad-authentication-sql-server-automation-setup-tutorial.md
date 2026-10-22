@@ -3,7 +3,7 @@ title: "Using automation to set up the Microsoft Entra admin for SQL Server"
 description: Tutorial on how to set up Microsoft Entra authentication that automatically creates a certificate and Microsoft Entra application used to authenticate with SQL Server
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: security

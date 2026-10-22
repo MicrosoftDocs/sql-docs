@@ -1,9 +1,9 @@
 ---
 title: Preview Features FAQ
 description: Frequently asked questions about the PREVIEW_FEATURES opt-in mechanism.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: release-landing

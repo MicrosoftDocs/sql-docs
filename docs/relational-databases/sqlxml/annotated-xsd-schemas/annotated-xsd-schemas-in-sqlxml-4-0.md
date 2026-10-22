@@ -1,8 +1,8 @@
 ---
 title: "Annotated XSD Schemas in SQLXML 4.0"
 description: View information about using annotated XSD schemas in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 01/11/2019
 ms.service: sql
 ms.subservice: xml

@@ -1,7 +1,7 @@
 ---
 title: "ADO.NET Connection Manager"
 description: An ADO.NET connection manager enables a package to access data sources by using a .NET provider.
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: integration-services

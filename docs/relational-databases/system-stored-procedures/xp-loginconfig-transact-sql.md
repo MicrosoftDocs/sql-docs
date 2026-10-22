@@ -3,7 +3,7 @@ title: "xp_loginconfig (Transact-SQL)"
 description: "Reports the login security configuration of an instance of SQL Server."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

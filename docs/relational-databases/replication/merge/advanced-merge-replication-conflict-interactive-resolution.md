@@ -1,8 +1,8 @@
 ---
 title: Interactive Conflict Resolution
 description: Interactive conflict resolution in SQL Server Merge Replication lets you review and resolve each conflict manually. Learn how to enable the Interactive Resolver.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

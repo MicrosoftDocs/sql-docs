@@ -1,8 +1,8 @@
 ---
 title: "Caching Templates, XSL, and Schemas (SQLXML)"
 description: View information about caching templates, XSL, and schemas in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

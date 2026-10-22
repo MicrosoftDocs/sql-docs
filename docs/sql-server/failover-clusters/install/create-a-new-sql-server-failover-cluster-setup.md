@@ -1,8 +1,8 @@
 ---
 title: "Create new Failover Cluster Instance"
 description: This article describes how to use the Setup program to install or upgrade a SQL Server Always On failover cluster instance or add a node to an existing failover cluster instance.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: failover-cluster-instance

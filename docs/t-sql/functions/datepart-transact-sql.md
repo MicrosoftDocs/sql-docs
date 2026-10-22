@@ -1,8 +1,8 @@
 ---
 title: "DATEPART (Transact-SQL)"
 description: "Transact-SQL reference for the DATEPART function. This function returns an integer corresponding to the datepart of a specified date."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.reviewer: derekw
 ms.date: 07/25/2022
 ms.service: sql
@@ -26,12 +26,12 @@ helpviewer_keywords:
   - "dates [SQL Server], dateparts"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # DATEPART (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 This function returns an integer representing the specified *datepart* of the specified *date*.
   

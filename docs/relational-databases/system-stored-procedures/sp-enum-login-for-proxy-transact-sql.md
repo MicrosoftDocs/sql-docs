@@ -3,7 +3,7 @@ title: "sp_enum_login_for_proxy (Transact-SQL)"
 description: sp_enum_login_for_proxy lists associations between security principals and proxies.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

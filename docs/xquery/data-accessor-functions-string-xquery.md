@@ -1,9 +1,9 @@
 ---
 title: "string Function (XQuery)"
 description: Learn about the XQuery function string() that returns the value of its argument represented as a string.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

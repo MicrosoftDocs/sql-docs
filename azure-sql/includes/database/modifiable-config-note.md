@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.service: azure-sql-database
 ms.topic: include
 ms.date: 07/20/2026

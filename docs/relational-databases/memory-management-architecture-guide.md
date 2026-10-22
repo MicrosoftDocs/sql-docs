@@ -1,8 +1,8 @@
 ---
 title: Memory Management Architecture Guide
 description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: supportability
@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "buffer manager, SQL Server"
   - "buffer pool, SQL Server"
   - "resource monitor, SQL Server"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Memory management architecture guide
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ## Windows Virtual Memory Manager
 

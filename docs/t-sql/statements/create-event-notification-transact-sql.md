@@ -1,9 +1,9 @@
 ---
 title: "CREATE EVENT NOTIFICATION (Transact-SQL)"
 description: CREATE EVENT NOTIFICATION creates an object that sends information about a database or server event to a Service Broker service.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 11/06/2025
 ms.service: sql
 ms.subservice: t-sql

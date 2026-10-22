@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: disallow results from triggers"
 description: "Learn about the 'disallow results from triggers' option. See how it can prevent problems in applications that aren't designed to work with result sets."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

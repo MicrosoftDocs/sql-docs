@@ -3,7 +3,7 @@ title: Validate, Query, and Change JSON Data with Built-In Functions
 description: "Validate, query, and change JSON data with built-in functions in the SQL Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 07/23/2025
 ms.service: sql
 ms.topic: concept-article

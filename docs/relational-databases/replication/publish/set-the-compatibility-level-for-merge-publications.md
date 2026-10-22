@@ -1,8 +1,8 @@
 ---
 title: "Set compatibility level for Merge Publications"
 description: Learn how to set the compatibility level for Merge Publications using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

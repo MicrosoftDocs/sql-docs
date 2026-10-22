@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_scriptsubconflicttable (Transact-SQL)"
 description: Generates script for creating a conflict table on the Subscriber for a given queued subscription article.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

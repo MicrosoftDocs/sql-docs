@@ -3,7 +3,7 @@ title: "queryinsights.exec_requests_history (Transact-SQL)"
 description: "The queryinsights.exec_requests_history in Fabric Data Warehouse provides information about each complete SQL request."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mariyaali, randolphwest, emtehran, marakiketema, jovanpop
+ms.reviewer: mariyaali, emtehran, marakiketema, jovanpop
 ms.date: 08/24/2026
 ms.service: sql
 ms.topic: "reference"

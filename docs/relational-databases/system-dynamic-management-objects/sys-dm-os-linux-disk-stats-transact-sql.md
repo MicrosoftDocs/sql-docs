@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_os_linux_disk_stats (Transact-SQL)"
 description: sys.dm_os_linux_disk_stats returns a table with detailed Linux CPU statistics, offering system-level insights beyond SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/13/2026
 ms.service: sql
 ms.subservice: system-objects

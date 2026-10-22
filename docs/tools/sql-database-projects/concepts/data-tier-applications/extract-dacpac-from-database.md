@@ -1,9 +1,9 @@
 ---
 title: Extract a DACPAC from a Database
 description: Extract a DACPAC from a database.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, wiassaf, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier, wiassaf
 ms.date: 03/13/2026
 ms.service: sql
 ms.subservice: sql-database-projects

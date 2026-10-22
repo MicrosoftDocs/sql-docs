@@ -1,8 +1,8 @@
 ---
 title: Database Engine Service Startup Options
 description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: configuration

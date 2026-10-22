@@ -3,7 +3,7 @@ title: "Create and use append-only ledger tables"
 description: Learn how to create and use append-only ledger tables.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: security

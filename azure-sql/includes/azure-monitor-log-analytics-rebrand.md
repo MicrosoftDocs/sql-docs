@@ -1,7 +1,7 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: austinmc, maghan
+ms.reviewer: austinmc
 ms.date: 06/26/2026
 ms.service: azure-monitor
 ms.topic: include

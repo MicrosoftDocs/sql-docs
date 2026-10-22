@@ -2,8 +2,8 @@
 title: Full-text index version upgrade
 titleSuffix: SQL Server Full-Text Search
 description: Learn about SQL Server 2025 full-text index versions, behavior changes, migration steps, and component binaries.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: search

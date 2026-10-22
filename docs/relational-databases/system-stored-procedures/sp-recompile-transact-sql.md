@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_recompile (Transact-SQL)"
 description: "Causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they're run."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

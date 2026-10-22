@@ -10,7 +10,7 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_column_distribution_properties (Transact-SQL)
 [!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
@@ -25,5 +25,5 @@ Returns distribution information for columns.
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [Distribution Advisor in Azure Synapse SQL](/azure/synapse-analytics/sql/distribution-advisor)

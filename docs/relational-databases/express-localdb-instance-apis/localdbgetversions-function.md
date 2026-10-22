@@ -1,9 +1,9 @@
 ---
 title: "LocalDBGetVersions Function"
 description: LocalDBGetVersions returns all SQL Server Express LocalDB versions available on the computer.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.topic: "reference"

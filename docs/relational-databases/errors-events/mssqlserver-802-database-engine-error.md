@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_802 - Database Engine error"
 description: "MSSQLSERVER_802 - Database Engine error"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.reviewer: wiassaf
 ms.date: "11/04/2021"
 ms.service: sql

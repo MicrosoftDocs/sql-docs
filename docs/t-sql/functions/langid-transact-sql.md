@@ -1,8 +1,8 @@
 ---
 title: "@@LANGID (Transact-SQL)"
 description: "@@LANGID (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql

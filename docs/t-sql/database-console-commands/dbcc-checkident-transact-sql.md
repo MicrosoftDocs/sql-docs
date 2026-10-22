@@ -1,8 +1,8 @@
 ---
 title: DBCC CHECKIDENT (Transact-SQL)
 description: DBCC CHECKIDENT checks the current identity value for the specified table in SQL Server, and changes the value if needed.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: procha
 ms.date: 08/26/2026
 ms.service: sql

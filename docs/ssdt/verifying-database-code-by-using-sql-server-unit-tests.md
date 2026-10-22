@@ -1,9 +1,9 @@
 ---
 title: Verifying Database Code by Using SQL Server Unit Tests
 description: Learn about SQL Server unit tests. See which Visual Studio editions provide support for the tests, and view resources on using tests to verify database code.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

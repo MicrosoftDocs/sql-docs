@@ -3,7 +3,7 @@ title: "sys.database_automatic_tuning_configurations (Transact-SQL)"
 description: sys.database_automatic_tuning_configurations returns the automatic tuning configuration settings that are enabled for the current database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, derekw
+ms.reviewer: derekw
 ms.date: 11/21/2024
 ms.service: sql
 ms.subservice: system-objects

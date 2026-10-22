@@ -1,8 +1,8 @@
 ---
 title: Create and Deploy a SQL Project
 description: Deploy a SQL project tutorial for SQL DevOps.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 03/11/2026
 ms.service: sql

@@ -2,8 +2,8 @@
 metadata:
   title: "Extended Security Updates FAQ"
   description: Frequently asked questions about using Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2014.
-  author: rwestMSFT
-  ms.author: randolphwest
+  author: adbadram
+  ms.author: adbadram
   ms.date: 06/22/2026
   ms.service: sql
   ms.subservice: install

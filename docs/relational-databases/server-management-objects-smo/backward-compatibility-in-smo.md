@@ -1,8 +1,8 @@
 ---
 title: "Backward Compatibility in SMO"
 description: "Backward Compatibility in SMO"
-author: "markingmyname"
-ms.author: "maghan"
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: "reference"

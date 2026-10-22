@@ -1,8 +1,8 @@
 ---
 title: "Database Mail: Mail Queued, Not Delivered"
 description: "Learn more about how to troubleshoot Database Mail when an email is queued but not delivered."
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/16/2025
 ms.service: sql
 ms.topic: troubleshooting-general

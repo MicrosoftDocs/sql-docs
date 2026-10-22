@@ -1,9 +1,9 @@
 ---
 title: Add Existing Files to a SQL Project
 description: "How to add the contents of a dacpac or SQL scripts to a project."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 01/29/2026
 ms.service: sql
 ms.subservice: sql-database-projects

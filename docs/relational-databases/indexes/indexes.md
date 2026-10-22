@@ -1,9 +1,9 @@
 ---
 title: "Indexes"
 description: Indexes
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.service: sql
 ms.subservice: table-view-index

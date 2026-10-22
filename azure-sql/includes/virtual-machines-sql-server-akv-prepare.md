@@ -1,8 +1,8 @@
 ---
 title: "Include file"
 description: "Include file"
-author: rothja
-ms.author: jroth
+author: adbadram
+ms.author: adbadram
 ms.date: 04/30/2018
 ms.service: azure-vm-sql-server
 ms.subservice: security

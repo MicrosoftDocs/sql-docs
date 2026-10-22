@@ -3,8 +3,8 @@ title: "sp_external_policy_refresh (Transact-SQL)"
 description: Reference documentation to explain sp_external_policy_refresh (Transact-SQL) system stored procedure.
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.reviewer: randolphwest
-ms.date: 06/23/2025
+ms.reviewer: vanto
+ms.date: 09/23/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -19,6 +19,9 @@ dev_langs:
 # sp_external_policy_refresh (Transact-SQL)
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
+
+> [!IMPORTANT]  
+> Microsoft Purview access policies for Azure SQL Database, Azure SQL Managed Instance, and Azure Arc-enabled SQL Server 2022 retire on October 30, 2027. Migrate the access these policies grant to SQL native roles and permissions. For more information, see [Retirement of Microsoft Purview access policies for SQL](../security/purview-access-policies-retirement.md).
 
 Forces immediate download of latest published policies for the whole instance (for every database).
 

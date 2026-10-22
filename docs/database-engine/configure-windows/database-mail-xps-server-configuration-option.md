@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: Database Mail XPs"
 description: "Learn about the Database Mail XPs option. View different ways of turning on this option so that you can use Database Mail in SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: configuration

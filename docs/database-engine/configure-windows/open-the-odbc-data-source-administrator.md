@@ -1,8 +1,8 @@
 ---
 title: "Open and Use ODBC Data Source Administrator"
 description: Find out how to open the ODBC Data Source Administrator on various operating systems. You can use this Windows component to create and manage ODBC data sources, and see which ODBC drivers are available.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: vanto
 ms.date: 02/26/2026
 ms.service: sql

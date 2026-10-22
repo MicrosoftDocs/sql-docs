@@ -3,7 +3,7 @@ title: Azure Automation and Azure SQL Managed Instance
 description: Learn about how the Azure Automation service can be used to manage databases in Azure SQL Managed Instance at scale.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 01/16/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

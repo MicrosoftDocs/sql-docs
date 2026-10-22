@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Data Types in the .NET Framework"
 description: The SqlTypes library is part of the Microsoft .NET Framework. It provides data types with the same semantics and precision as data types in the SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

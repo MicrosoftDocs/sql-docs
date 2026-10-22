@@ -1,9 +1,9 @@
 ---
 title: "int, bigint, smallint, and tinyint (Transact-SQL)"
 description: "Transact-SQL reference for int, bigint, smallint, and tinyint data types. These data types are used to represent integer data."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -27,11 +27,11 @@ helpviewer_keywords:
   - "smallint data type"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Exact-number data types that use integer data. To save space in the database, use the smallest data type that can reliably contain all possible values. For example, **tinyint** would be sufficient for a small lookup table with status values, because it can store as many as 256 rows. But **tinyint** isn't sufficient for a list of employees, because your company could have hundreds or thousands of employees.
 

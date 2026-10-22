@@ -3,7 +3,7 @@ title: "Azure SQL SKU Sizing Recommendation (Preview) for Db2 Workloads (Db2ToSQ
 description: Learn how to use the builtin SKU sizing recommendation engine to get the ideal Azure SQL target when migrating a Db2 database.
 author: subhojit-msft
 ms.author: subasak
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/27/2025
 ms.service: sql
 ms.subservice: ssma

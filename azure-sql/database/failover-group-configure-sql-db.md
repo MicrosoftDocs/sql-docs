@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how to configure a failover group for a single or pooled database in Azure SQL Database by using the Azure portal, PowerShell, and the Azure CLI.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest, mahyon
+ms.reviewer: mahyon
 ms.date: 01/29/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability

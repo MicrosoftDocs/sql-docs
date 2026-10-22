@@ -1,9 +1,9 @@
 ---
 title: "sp_add_notification (Transact-SQL)"
 description: "Sets up a notification for an alert."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

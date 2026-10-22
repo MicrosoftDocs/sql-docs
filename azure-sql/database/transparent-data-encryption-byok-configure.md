@@ -1,11 +1,11 @@
 ---
 title: Enable SQL TDE with Azure Key Vault
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
-description: Learn how to configure an Azure SQL Database and Azure Synapse Analytics to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or Azure CLI.
+titleSuffix: Azure SQL Database & SQL Managed Instance
+description: Learn how to configure Transparent Data Encryption (TDE) with a customer-managed key by using PowerShell or Azure CLI.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
-ms.date: 06/02/2026
+ms.reviewer: vanto
+ms.date: 10/06/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -13,19 +13,17 @@ ms.custom:
   - sqldbrb=1
   - devx-track-azurecli
   - devx-track-azurepowershell
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 
 # PowerShell and Azure CLI: Enable Transparent Data Encryption with customer-managed key from Azure Key Vault
 
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-This article walks through how to use a key from Azure Key Vault for transparent data encryption (TDE) on Azure SQL Database or Azure Synapse Analytics. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md). If you are looking for Azure portal instructions on how to enable TDE with a customer-managed key from Azure Key Vault, see [Create server configured with user-assigned managed identity and customer-managed TDE](transparent-data-encryption-byok-create-server.md).
-
-This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics dedicated SQL pools. For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
+This article shows how to use a key from Azure Key Vault for transparent data encryption (TDE) on Azure SQL Database. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md). If you want Azure portal instructions on how to enable TDE with a customer-managed key from Azure Key Vault, see [Create server configured with user-assigned managed identity and customer-managed TDE](transparent-data-encryption-byok-create-server.md).
 
 > [!NOTE] 
-> Azure SQL Database supports both asymmetric (RSA) and symmetric (AES) keys for customer-managed Transparent Data Encryption, depending on the configuration. Support for symmetric (AES) keys is currently in public preview and is limited to Azure SQL Database. You may see this capability appear over time depending on your region and service deployment status. For details, see [Transparent Data Encryption with customer-managed keys (BYOK) – overview](transparent-data-encryption-byok-overview.md).
+> Azure SQL Database supports both asymmetric (RSA) and symmetric (AES) keys for customer-managed Transparent Data Encryption, depending on the configuration. Support for symmetric (AES) keys is currently in public preview and is limited to Azure SQL Database. You might see this capability appear over time depending on your region and service deployment status. For details, see [Transparent Data Encryption with customer-managed keys (BYOK)](transparent-data-encryption-byok-overview.md).
 
 ## Prerequisites for PowerShell
 
@@ -49,17 +47,17 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 For specifics on Azure Key Vault, see [PowerShell instructions from Azure Key Vault](/azure/key-vault/secrets/quick-create-powershell) and [How to use Azure Key Vault soft-delete with PowerShell](/azure/key-vault/general/key-vault-recovery).
 
-<a name='assign-an-azure-active-directory-azure-ad-identity-to-your-server'></a>
+<a id="assign-an-azure-active-directory-azure-ad-identity-to-your-server"></a>
 
 ## Assign a Microsoft Entra identity to your server
 
-If you have an existing [server](logical-servers.md), use the following to add a Microsoft Entra identity to your server:
+If you have an existing [server](logical-servers.md), use the following instructions to add a Microsoft Entra identity to your server:
 
    ```powershell
    $server = Set-AzSqlServer -ResourceGroupName <SQLDatabaseResourceGroupName> -ServerName <LogicalServerName> -AssignIdentity
    ```
 
-If you are creating a server, use the [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver) cmdlet with the tag -Identity to add a Microsoft Entra identity during server creation:
+If you're creating a server, use the [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver) cmdlet with the `-Identity` tag to add a Microsoft Entra identity during server creation:
 
    ```powershell
    $server = New-AzSqlServer -ResourceGroupName <SQLDatabaseResourceGroupName> -Location <RegionName> `
@@ -75,7 +73,7 @@ Use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvau
        -ObjectId $server.Identity.PrincipalId -PermissionsToKeys get, wrapKey, unwrapKey
    ```
 
-For adding permissions to your server on a Managed HSM, add the 'Managed HSM Crypto Service Encryption User' local RBAC role to the server. This enables the server to perform get, wrap key, unwrap key operations on the keys in the Managed HSM. For more information, see [Managed HSM role management](/azure/key-vault/managed-hsm/role-management)
+To add permissions to your server on a Managed HSM, add the **Managed HSM Crypto Service Encryption User** local RBAC role to the server. This role enables the server to perform `get`, `wrap key`, and `unwrap key` operations on the keys in the Managed HSM. For more information, see [Managed HSM role management](/azure/key-vault/managed-hsm/role-management).
 
 ## Add the Azure Key Vault key to the server and set the TDE Protector
 
@@ -88,14 +86,14 @@ For adding permissions to your server on a Managed HSM, add the 'Managed HSM Cry
 > For Managed HSM keys, use Az.Sql 2.11.1 version of PowerShell or higher.
 
 > [!NOTE]
-> The combined length for the key vault name and key name cannot exceed 94 characters.
+> The combined length for the key vault name and key name can't exceed 94 characters.
 
 > [!TIP]
 > **Using versioned and versionless Azure Key Vault keys for TDE**
 >
-> When setting the TDE protector, you can reference an Azure Key Vault key using either a specific key version or a versionless key identifier.
+> When setting the TDE protector, you can reference an Azure Key Vault key by using either a specific key version or a versionless key identifier.
 >
-> In both cases, Azure SQL Database always resolves and uses the latest enabled version of the key in Azure Key Vault or Azure Key Vault Managed HSM. Versionless key identifiers can be used to avoid embedding a specific key version in the TDE protector configuration.
+> In both cases, Azure SQL Database always resolves and uses the latest enabled version of the key in Azure Key Vault or Azure Key Vault Managed HSM. Use versionless key identifiers to avoid embedding a specific key version in the TDE protector configuration.
 >
 > Versionless key identifiers are currently supported only for Azure SQL Database.
 >
@@ -129,11 +127,11 @@ Set-AzSqlDatabaseTransparentDataEncryption -ResourceGroupName <SQLDatabaseResour
    -ServerName <LogicalServerName> -DatabaseName <DatabaseName> -State "Enabled"
 ```
 
-Now the database or data warehouse has TDE enabled with an encryption key in Azure Key Vault.
+Now the database has TDE enabled with an encryption key in Azure Key Vault.
 
 ## Check the encryption state and encryption activity
 
-Use the [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) to get the encryption state for a database or data warehouse.
+Use the [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) to get the encryption state for a database.
 
 ```powershell
 # get the encryption state of the database
@@ -147,7 +145,7 @@ To install the required version of Azure CLI (version 2.0 or later) and connect 
 
 For specifics on Azure Key Vault, see [Manage Azure Key Vault using Azure CLI 2.0](/azure/key-vault/general/manage-with-cli2) and [How to use Azure Key Vault soft-delete with the CLI](/azure/key-vault/general/key-vault-recovery).
 
-<a name='assign-an-azure-ad-identity-to-your-server'></a>
+<a id="assign-an-azure-ad-identity-to-your-server"></a>
 
 ## Assign a Microsoft Entra identity to your server
 
@@ -170,7 +168,7 @@ az keyvault set-policy --name <kvname>  --object-id <objectid> --resource-group 
 ```
 
 > [!TIP]
-> Keep the key URI or keyID of the new key for the next step, for example: `https://contosokeyvault.vault.azure.net/keys/Key1/<key-id>`
+> Keep the key URI or key ID of the new key for the next step, for example: `https://contosokeyvault.vault.azure.net/keys/Key1/<key-id>`
 
 ## Add the Azure Key Vault key to the server and set the TDE Protector
 
@@ -181,7 +179,7 @@ az sql server tde-key set --server <servername> --server-key-type AzureKeyVault 
 ```
 
 > [!NOTE]
-> The combined length for the key vault name and key name cannot exceed 94 characters.
+> The combined length for the key vault name and key name can't exceed 94 characters.
 
 ## Turn on TDE
 
@@ -190,7 +188,7 @@ az sql server tde-key set --server <servername> --server-key-type AzureKeyVault 
 az sql db tde set --database <dbname> --server <servername> --resource-group <rgname> --status Enabled
 ```
 
-Now the database or data warehouse has TDE enabled with a customer-managed encryption key in Azure Key Vault.
+Now the database has TDE enabled with a customer-managed encryption key in Azure Key Vault.
 
 ## Check the encryption state
 
@@ -199,7 +197,7 @@ Now the database or data warehouse has TDE enabled with a customer-managed encry
 az sql db tde show --database <dbname> --server <servername> --resource-group <rgname>
 ```
 
-* * *
+---
 
 ## Useful PowerShell cmdlets
 
@@ -234,11 +232,11 @@ az sql db tde show --database <dbname> --server <servername> --resource-group <r
 
 - For TDE settings, see [az sql server tde-key](/cli/azure/sql/server/tde-key) and [az sql db tde](/cli/azure/sql/db/tde).
 
-* * *
+---
 
 ## Troubleshooting
 
-- If the key vault cannot be found, make sure you're in the right subscription.
+- If the key vault can't be found, ensure you're in the right subscription.
 
    # [PowerShell](#tab/azure-powershell)
 
@@ -252,14 +250,18 @@ az sql db tde show --database <dbname> --server <servername> --resource-group <r
    az account show - s <SubscriptionId>
    ```
 
-   * * *
+   ---
 
-- If the new key cannot be added to the server, or the new key cannot be updated as the TDE Protector, check the following:
+- If you can't add the new key to the server, or if you can't update the new key as the TDE Protector, check the following conditions:
 
-  - The key should not have an expiration date.
+  - The key shouldn't have an expiration date.
   - The key must have the *get*, *wrap key*, and *unwrap key* operations enabled.
+
+## TDE BYOK Azure Synapse Analytics
+
+For TDE BYOK documentation about Azure Synapse Analytics, see [Azure Synapse Analytics SQL documentation](/azure/synapse-analytics/sql/transparent-data-encryption-byok-configure). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 ## Related content
 
-- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-key-rotation.md).
-- Learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-remove-tde-protector.md).
+- [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-key-rotation.md)
+- [Remove a potentially compromised key](transparent-data-encryption-byok-remove-tde-protector.md)

@@ -1,33 +1,29 @@
 ---
-title: Customer-managed transparent data encryption (TDE)
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
-description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database and Azure Synapse Analytics. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
+title: Customer-Managed Transparent Data Encryption (TDE)
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn how customer-managed keys in Azure Key Vault protect Azure SQL Database and Azure SQL Managed Instance with transparent data encryption.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 09/15/2026
+ms.reviewer: vanto
+ms.date: 10/06/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
 ms.custom:
-  - azure-synapse
   - sfi-image-nochange
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
-# Azure SQL transparent data encryption with customer-managed key
+# Azure SQL Transparent Data Encryption with customer-managed key
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) in Azure SQL with customer-managed key (CMK) enables Bring Your Own Key (BYOK) scenario for data protection at rest, and allows organizations to implement separation of duties in the management of keys and data. With customer-managed TDE, the customer is responsible for and in a full control of a key lifecycle management (key creation, upload, rotation, deletion), key usage permissions, and auditing of operations on keys.
 
 In this scenario, the Transparent Data Encryption (TDE) protector is a customer-managed key that secures the Database Encryption Key (DEK). You store the TDE protector in either [Azure Key Vault](/azure/key-vault/general/security-features) or [Azure Key Vault Managed HSM](/azure/key-vault/managed-hsm/overview), which are secure cloud-based key management services designed for high availability and scalability. Both services support cryptographic keys protected by FIPS 140-2 validated hardware: Azure Key Vault supports FIPS 140-2 Level 2, and Azure Key Vault Managed HSM supports FIPS 140-2 Level 3. Both services also support asymmetric and symmetric key types, and the supported algorithms and usage depend on the TDE deployment model. You can generate the key in the service, import it, or [securely transfer it from on-premises HSMs](/azure/key-vault/keys/hsm-protected-keys). Direct access to keys is restricted, so authorized services perform cryptographic operations without exposing the key material.
 
-For Azure SQL Database and Azure Synapse Analytics, the TDE protector is set at the server level and is inherited by all encrypted databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and is inherited by all encrypted databases on that instance. The term *server* refers both to a server in SQL Database and Azure Synapse and to a managed instance in SQL Managed Instance throughout this article, unless stated differently.
+For Azure SQL Database, you set the TDE protector at the server level, and all encrypted databases associated with that server inherit it. For Azure SQL Managed Instance, you set the TDE protector at the instance level, and all encrypted databases on that instance inherit it. The term *server* refers both to a logical server in Azure SQL Database and to a managed instance in SQL Managed Instance throughout this article, unless stated differently.
 
 Managing the TDE protector at the database level in Azure SQL Database is available. For more information, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
-
-> [!NOTE]  
-> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For more information on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
@@ -132,7 +128,7 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
 - Asymmetric keys (RSA or RSA HSM)
   - Supported in Azure Key Vault and Azure Key Vault Managed HSM
   - Supported key sizes: 2,048-bit and 3,072-bit
-  - Supported for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
+  - Supported for Azure SQL Database and Azure SQL Managed Instance
 
 - Symmetric keys (AES)
   - Supported in Azure Key Vault Premium (preview) and Azure Key Vault Managed HSM
@@ -412,7 +408,7 @@ If the key that is needed for restoring a backup is no longer available to the t
 
 To mitigate it, run the [Get-AzSqlServerKeyVaultKey](/powershell/module/az.sql/get-azsqlserverkeyvaultkey) cmdlet for the target server or [Get-AzSqlInstanceKeyVaultKey](/powershell/module/az.sql/get-azsqlinstancekeyvaultkey) for the target managed instance to return the list of available keys and identify the missing ones. To ensure all backups can be restored, make sure the target server for the restore has access to all of keys needed. These keys don't need to be marked as TDE protector.
 
-To learn more about backup recovery for SQL Database, see [Restore a database from a backup in Azure SQL Database](recovery-using-backups.md). To learn more about backup recovery for dedicated SQL pools in Azure Synapse Analytics, see [Recover a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/backup-and-restore). For SQL Server's native backup/restore with SQL Managed Instance, see [Quickstart: Restore a database to Azure SQL Managed Instance with SSMS](../managed-instance/restore-sample-database-quickstart.md).
+To learn more about backup recovery for SQL Database, see [Restore a database from a backup in Azure SQL Database](recovery-using-backups.md). For SQL Server's native backup/restore with SQL Managed Instance, see [Quickstart: Restore a database to Azure SQL Managed Instance with SSMS](../managed-instance/restore-sample-database-quickstart.md).
 
 Another consideration for log files: Backed up log files remain encrypted with the original TDE protector, even if it was rotated and the database is now using a new TDE protector. At restore time, both keys are needed to restore the database. If the log file is using a TDE protector stored in Azure Key Vault or Azure Managed HSM, this key is needed at restore time, even if the database was changed to use service-managed TDE in the meantime.
 
@@ -504,6 +500,10 @@ If the Azure Policy for customer-managed TDE is set to **Deny**, Azure SQL logic
 
 > [!IMPORTANT]  
 > Earlier versions of built-in policies for customer-managed TDE containing the `AuditIfNotExists` effect are deprecated. Existing policy assignments using the deprecated policies aren't affected and continue to work as before.
+
+## TDE in Azure Synapse Analytics
+
+For information about TDE with customer-managed keys in Azure Synapse Analytics, see [TDE with customer-managed keys](/azure/synapse-analytics/sql/transparent-data-encryption-byok-overview). To learn more about backup recovery for dedicated SQL pools in Azure Synapse Analytics, see [Recover a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/backup-and-restore).
 
 ## Related content
 

@@ -2,8 +2,8 @@
 title: "sys.elastic_pool_resource_stats"
 titleSuffix: Azure SQL Database
 description: sys.elastic_pool_resource_stats (Azure SQL Database)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 08/11/2022
 ms.service: azure-sql-database
 ms.topic: "reference"

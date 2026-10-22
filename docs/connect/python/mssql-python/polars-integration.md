@@ -3,7 +3,7 @@ title: Use mssql-python with Polars
 description: Learn how to integrate the mssql-python driver with Polars DataFrames for high-performance data analysis with Microsoft SQL and Azure SQL.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

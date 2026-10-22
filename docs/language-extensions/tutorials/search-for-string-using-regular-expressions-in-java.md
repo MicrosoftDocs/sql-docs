@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Regex String Search in Java"
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that searches a string with regular expressions (regex).
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: language-extensions

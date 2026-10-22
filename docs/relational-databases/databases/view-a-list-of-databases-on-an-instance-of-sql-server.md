@@ -3,7 +3,7 @@ title: "View list of databases on SQL Server"
 description: Learn how to view a list of databases on an instance of SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/27/2024
 ms.service: sql
 ms.subservice: supportability

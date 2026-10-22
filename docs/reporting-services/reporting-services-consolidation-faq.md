@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Consolidation FAQ"
 description: Frequently asked questions about the Reporting Services consolidation in SQL Server 2025.
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/16/2025
 ms.service: reporting-services
 ms.subservice: reporting-services

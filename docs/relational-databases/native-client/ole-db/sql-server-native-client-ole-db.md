@@ -1,8 +1,8 @@
 ---
 title: "OLE DB"
 description: The SQL Server Native Client OLE DB provider is a COM API for accessing data, used for tools, utilities, or low-level components that need high performance.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL Server Native Client, OLE DB"
 ---
 # SQL Server Native Client (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]

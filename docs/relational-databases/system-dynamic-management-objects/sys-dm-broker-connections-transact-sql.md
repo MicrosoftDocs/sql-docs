@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_broker_connections (Transact-SQL)"
 description: sys.dm_broker_connections returns a row for each Service Broker network connection.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/12/2026
 ms.service: sql
 ms.subservice: system-objects

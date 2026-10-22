@@ -1,8 +1,8 @@
 ---
 title: "Specifying Predicates in a Path Expression Step"
 description: Learn about specifying predicates in the axis step of an XQuery PATH expression to filter an XML node sequence.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

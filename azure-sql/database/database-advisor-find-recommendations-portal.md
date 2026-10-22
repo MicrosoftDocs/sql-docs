@@ -3,7 +3,7 @@ title: Apply Performance Recommendations
 description: Use the Azure portal to find performance recommendations that can optimize performance of your database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: nnikolic, mathoma
+ms.reviewer: nnikolic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: performance

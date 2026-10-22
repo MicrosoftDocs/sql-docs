@@ -1,8 +1,8 @@
 ---
 title: Considerations and Limitations (Oracle Publishers)
 description: Oracle Publisher replication in SQL Server has key design limits. Review supported objects, LOB behavior, index rules, and security differences before you publish.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

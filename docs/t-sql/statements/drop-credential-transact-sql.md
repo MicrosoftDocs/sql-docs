@@ -3,7 +3,7 @@ title: "DROP CREDENTIAL (Transact-SQL)"
 description: DROP CREDENTIAL removes a credential from the server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: t-sql

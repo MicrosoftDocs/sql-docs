@@ -1,9 +1,9 @@
 ---
 title: "Specify a target namespace with targetNamespace (SQLXML)"
 description: Learn how to specify a target namespace in an XSD schema by using the targetNamespace attribute in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/03/2024
 ms.service: sql
 ms.subservice: xml

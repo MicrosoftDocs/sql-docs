@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_adddistributiondb (Transact-SQL)"
 description: Creates a new distribution database and installs the Distributor schema.
-author: mashamsft
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

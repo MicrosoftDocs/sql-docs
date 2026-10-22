@@ -1,8 +1,8 @@
 ---
 title: "fn_syscollector_get_execution_stats (Transact-SQL)"
 description: "fn_syscollector_get_execution_stats (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: DBCC UPDATEUSAGE (Transact-SQL)
 description: DBCC UPDATEUSAGE reports and corrects pages and row count inaccuracies in the catalog views.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql
@@ -133,7 +133,7 @@ GO
 
 ### D. Update page or row counts or both for a specific index in a table
 
- The following example specifies `IX_Employee_ManagerID` as the index name.
+ The following example specifies `IX_Employee_OrganizationLevel_OrganizationNode` as the index name.
 
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2022, 'HumanResources.Employee', IX_Employee_OrganizationLevel_OrganizationNode);

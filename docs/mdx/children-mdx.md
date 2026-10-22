@@ -1,7 +1,7 @@
 ---
 title: "Children (MDX)"
 description: "Returns the set of children of a specified member."
-ms.reviewer: kfollis, randolphwest
+ms.reviewer: kfollis
 ms.date: 08/08/2022
 ms.service: sql
 ms.subservice: analysis-services

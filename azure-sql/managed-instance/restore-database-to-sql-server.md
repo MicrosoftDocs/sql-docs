@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to restore a database to SQL Server 2022, or SQL Server 2025, from Azure SQL Managed Instance.
 author: mladjoa
 ms.author: mlandzic
-ms.reviewer: mathoma, danil, randolphwest
+ms.reviewer: danil
 ms.date: 09/15/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

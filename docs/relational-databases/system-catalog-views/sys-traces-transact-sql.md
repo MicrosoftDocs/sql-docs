@@ -1,8 +1,8 @@
 ---
 title: "sys.traces (Transact-SQL)"
 description: sys.traces contains the current running traces on the system.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 03/23/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "Manage Change Tracking"
 description: "Manage Change Tracking (SQL Server)"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.service: sql
 ms.topic: concept-article

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_db_threads (Transact-SQL)"
 description: sys.dm_hadr_db_threads (Transact-SQL)
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf, ryanston
 ms.date: "02/27/2023"
 ms.service: sql

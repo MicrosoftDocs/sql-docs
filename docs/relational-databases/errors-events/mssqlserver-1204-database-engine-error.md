@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_1204"
 description: "MSSQLSERVER_1204"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sureshka, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: sureshka
 ms.date: 06/12/2024
 ms.service: sql
 ms.subservice: supportability

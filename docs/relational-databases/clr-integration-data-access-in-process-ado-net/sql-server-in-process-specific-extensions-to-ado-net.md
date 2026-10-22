@@ -1,8 +1,8 @@
 ---
 title: "SQL Server In-Process Extensions to ADO.NET"
 description: Links to articles about the four main functional extensions to ADO.NET that are specifically for in-process use.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

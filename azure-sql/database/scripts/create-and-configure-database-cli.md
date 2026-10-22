@@ -3,7 +3,7 @@ title: "Azure CLI Example: Create a Single Database"
 description: Use this Azure CLI example script to create a single database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 06/10/2025
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration

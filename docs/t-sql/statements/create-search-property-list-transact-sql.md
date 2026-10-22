@@ -1,8 +1,8 @@
 ---
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
 description: CREATE SEARCH PROPERTY LIST (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "04/10/2017"
 ms.service: sql
 ms.subservice: t-sql

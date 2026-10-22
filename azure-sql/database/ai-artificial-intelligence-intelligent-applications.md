@@ -3,7 +3,7 @@ title: Intelligent Applications and AI
 description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database and Fabric SQL database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 04/02/2026
 ms.service: azure-sql-database
 ms.topic: overview

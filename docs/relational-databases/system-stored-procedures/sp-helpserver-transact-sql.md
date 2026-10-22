@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpserver (Transact-SQL)"
 description: sp_helpserver reports information about a particular remote or replication server, or about all servers of both types.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

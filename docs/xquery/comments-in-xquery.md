@@ -1,8 +1,8 @@
 ---
 title: "Comments in XQuery"
 description: Learn the syntax and delimiters for adding comments to a query in XQuery.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/11/2025
 ms.service: sql
 ms.subservice: xml

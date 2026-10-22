@@ -1,8 +1,8 @@
 ---
 title: "sp_rxPredict"
 description: sp_rxPredict generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: machine-learning-services

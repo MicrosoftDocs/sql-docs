@@ -1,9 +1,9 @@
 ---
 title: "Use FILESTREAM and FileTable with availability groups"
 description: "Steps to use either FILESTREAM or FileTable with databases participating in an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: availability-groups

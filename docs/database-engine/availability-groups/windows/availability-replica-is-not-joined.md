@@ -1,8 +1,8 @@
 ---
 title: "Availability replica is not joined to an availability group"
 description: "Learn how to identify possible reasons why a replica is not joined to an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

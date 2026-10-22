@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_showrowreplicainfo (Transact-SQL)"
 description: sp_showrowreplicainfo displays information about a row in a table that is being used as an article in merge replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

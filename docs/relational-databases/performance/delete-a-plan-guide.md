@@ -1,8 +1,8 @@
 ---
 title: "Delete a Plan Guide"
 description: Learn to delete or drop a plan guide in SQL Server by using SQL Server Management Studio or Transact-SQL. Use Transact-SQL to delete all guides in a database.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: performance

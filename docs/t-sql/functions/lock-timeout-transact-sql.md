@@ -1,8 +1,8 @@
 ---
 title: "@@LOCK_TIMEOUT (Transact-SQL)"
 description: "The @@LOCK_TIMEOUT Transact-SQL function returns the current lock timeout setting in milliseconds for the current session."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 02/09/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_refresh_parameter_encryption (Transact-SQL)"
 description: sp_refresh_parameter_encryption updates the Always Encrypted metadata for the parameters of the specified non-schema-bound object.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

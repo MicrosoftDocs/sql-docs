@@ -1,8 +1,8 @@
 ---
 title: "Use Object Explorer Details to Monitor Availability Groups"
 description: Learn how to use SQL Server Management Studio to monitor and manage existing Always On availability groups, availability replicas, and availability databases.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

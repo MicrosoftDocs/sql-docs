@@ -1,9 +1,9 @@
 ---
 title: "Server Configuration: ADR cleaner thread count"
 description: "Explains the SQL Server instance configuration setting for ADR cleaner thread count."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, dfurman
+author: adbadram
+ms.author: adbadram
+ms.reviewer: dfurman
 ms.date: 11/25/2025
 ms.service: sql
 ms.subservice: configuration

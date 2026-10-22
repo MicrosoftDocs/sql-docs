@@ -1,8 +1,8 @@
 ---
 title: "sys.external_library_files (Transact-SQL)"
 description: sys.external_library_files (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "06/25/2020"
 ms.service: sql
 ms.subservice: machine-learning

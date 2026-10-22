@@ -1,8 +1,8 @@
 ---
 title: Create and Manage Full-Text Indexes
 description: This article describes how to create, populate, and manage full-text indexes in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

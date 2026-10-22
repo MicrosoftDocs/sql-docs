@@ -1,8 +1,8 @@
 ---
 title: "Replication Related Dynamic Management Views (Transact-SQL)"
 description: Replication Related Dynamic Management Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: system-objects

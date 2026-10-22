@@ -3,7 +3,7 @@ title: Disaster recovery drills
 description: Learn guidance and best practices for using Azure SQL Managed Instance to perform disaster recovery drills.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 05/05/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

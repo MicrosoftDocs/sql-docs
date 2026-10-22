@@ -1,9 +1,9 @@
 ---
 title: sys.database_query_store_options (Transact-SQL)
 description: sys.database_query_store_options returns the Query Store options for this database.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 02/25/2026
 ms.service: sql
 ms.subservice: system-objects

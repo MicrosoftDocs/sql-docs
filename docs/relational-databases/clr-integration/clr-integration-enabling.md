@@ -1,8 +1,8 @@
 ---
 title: "Enabling CLR Integration"
 description: Microsoft SQL Server hosting CLR is called CLR integration, which is disabled by default. Use the sp_configure stored procedure to enable CLR integration.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

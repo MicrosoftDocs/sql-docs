@@ -3,7 +3,7 @@ title: Configure Public Endpoint
 description: "Learn how to configure a public endpoint for Azure SQL Managed Instance by using the Azure portal, Azure PowerShell, or the Azure CLI."
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 09/11/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: security

@@ -1,9 +1,9 @@
 ---
 title: "Slipstream Installation for SQL Server"
 description: This article describes how to use the slipstream installation process to install SQL Server and all available updates.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest, jopilov
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 08/21/2025
 ms.service: sql
 ms.subservice: install

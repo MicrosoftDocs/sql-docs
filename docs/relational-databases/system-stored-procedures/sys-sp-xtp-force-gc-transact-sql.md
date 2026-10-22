@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_force_gc (Transact-SQL)"
 description: "Manually release memory related to deleted rows of in-memory data that are eligible for garbage collection."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

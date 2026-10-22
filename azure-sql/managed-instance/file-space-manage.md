@@ -3,7 +3,7 @@ title: Database File Space Management
 description: This page describes how to manage file space with databases in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, dfurman
+ms.reviewer: dfurman
 ms.date: 08/26/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

@@ -3,7 +3,7 @@ title: "sys.dm_os_ring_buffers (Transact-SQL)"
 description: sys.dm_os_ring_buffers (Transact-SQL)
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/09/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "Database backup with Memory-optimized tables"
 description: Learn how memory-optimized tables are backed up as part of regular database backups. Read about full database backup and differential backups.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/20/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

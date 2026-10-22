@@ -1,9 +1,9 @@
 ---
 title: "sp_prepexec (Transact-SQL)"
 description: sp_prepexec prepares and executes a parameterized Transact-SQL statement.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

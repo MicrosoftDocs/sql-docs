@@ -9,7 +9,7 @@ metadata:
   ms.topic: faq
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.reviewer: bgavrilovic, mathoma
+  ms.reviewer: bgavrilovic
   ms.date: 06/13/2025
   monikerRange: "=azuresql || =azuresql-db "
 title: Elastic database tools frequently asked questions (FAQ)

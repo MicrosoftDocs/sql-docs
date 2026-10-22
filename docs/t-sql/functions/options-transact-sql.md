@@ -1,9 +1,9 @@
 ---
 title: "@@OPTIONS (Transact-SQL)"
 description: "Returns information about the current SET options."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 03/13/2023
 ms.service: sql
 ms.subservice: t-sql

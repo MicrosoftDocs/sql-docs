@@ -1,9 +1,9 @@
 ---
 title: Discontinued Database Engine Functionality
 description: Learn which database engine functionality and features were discontinued in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: release-landing
@@ -62,6 +62,8 @@ This article describes the [!INCLUDE [ssDE](../includes/ssde-md.md)] features th
   - In place of **SQL Security Auditing** Purview policy action, use the `##MS_ServerSecurityStateReader##` and/or `##MS_SecurityDefinitionReader##` fixed server roles.
 
   - Use the `##MS_DatabaseConnector##` server role with existing logins, to connect to a database without the need to create a user in that database.
+
+  - Purview access policies for Azure SQL Database, Azure SQL Managed Instance, and Azure Arc-enabled SQL Server 2022 retire on October 30, 2027. For more information, see [Retirement of Microsoft Purview access policies for SQL](../relational-databases/security/purview-access-policies-retirement.md).
 
 ## Discontinued features in SQL Server 2022 (16.x)
 

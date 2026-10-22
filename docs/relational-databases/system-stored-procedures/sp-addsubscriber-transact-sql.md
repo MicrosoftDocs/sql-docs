@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addsubscriber (Transact-SQL)"
 description: sp_addsubscriber adds a new Subscriber to a Publisher, enabling it to receive publications.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

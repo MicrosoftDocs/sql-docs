@@ -3,7 +3,7 @@ title: Create a Single Database
 description: Create a single database in Azure SQL Database using the Azure portal, PowerShell, or the Azure CLI.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration
@@ -39,7 +39,7 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 This quickstart creates a single database in the [serverless compute tier](serverless-tier-overview.md).
 
-[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [azure-sql-database-free-tier-note](../includes/azure-sql-database-free-tier-note.md)]
 
 [!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
 
@@ -185,7 +185,7 @@ The following values are used in subsequent commands to create the database and 
 
 In the following code snippet:
 
-1. Replace `0.0.0.0` in the ip address range to match your specific environment.
+1. Replace `0.0.0.0` in the IP address range to match your specific environment.
 1. Replace `<strong password here>` with a strong password for your `adminLogin`.
 
 ```azurepowershell-interactive
@@ -333,5 +333,5 @@ Want to optimize and save on your cloud spending?
 
 - [Connect and query your database](connect-query-content-reference-guide.md)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database](connect-query-ssms.md)
-- [Connect and with the MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/connect-database-visual-studio-code)
+- [Connect with the MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/connect-database-visual-studio-code)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)

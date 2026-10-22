@@ -1,9 +1,9 @@
 ---
 title: "LocalDBUnshareInstance Function"
 description: LocalDBUnshareInstance stops the sharing of the specified SQL Server Express LocalDB instance.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.topic: "reference"

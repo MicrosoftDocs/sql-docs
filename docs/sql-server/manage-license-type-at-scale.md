@@ -1,8 +1,8 @@
 ---
 title: Automate the Transition to Pay-as-you-go SQL Licensing at Scale
 description: Learn how to preview, automate, and enforce transitions to pay-as-you-go SQL licensing at scale across Azure SQL and SQL Server enabled by Azure Arc.
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: rajpo
 ms.date: 09/07/2026
 ms.service: sql

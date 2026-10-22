@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Browser Properties (Service Tab)"
 description: Learn about the options on the Service tab in the SQL Server Browser Properties dialog box, such as the binary path, the host name, and the start mode.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

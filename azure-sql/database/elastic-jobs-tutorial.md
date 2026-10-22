@@ -3,7 +3,7 @@ title: Create, configure, and manage elastic jobs
 description: "Learn how to create, configure, and manage elastic jobs to run Transact-SQL (T-SQL) scripts across a set of one or more databases in Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: srinia, mathoma
+ms.reviewer: srinia
 ms.date: 04/03/2024
 ms.service: azure-sql-database
 ms.subservice: elastic-jobs

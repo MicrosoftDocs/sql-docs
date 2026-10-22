@@ -3,7 +3,7 @@ title: "Quickstart: Create an Azure SQL Database server and database using Terra
 description: In this article, you create an Azure SQL Database server and database using Terraform.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 01/23/2026
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration

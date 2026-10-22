@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about automatic internal connectivity tests for Azure SQL Managed Instance, including test types, failed login signatures, and security considerations.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/12/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

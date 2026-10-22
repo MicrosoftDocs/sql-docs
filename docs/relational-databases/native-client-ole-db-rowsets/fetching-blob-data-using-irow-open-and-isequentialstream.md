@@ -1,8 +1,8 @@
 ---
 title: "BLOB, IRow::Open, ISequentialStream"
 description: "Fetching BLOB Data by Using IRow::Open and ISequentialStream"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "BLOBs, fetching"
 ---
 # Fetching BLOB Data by Using IRow::Open and ISequentialStream
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   **IRow::Open** supports only DBGUID_STREAM and DBGUID_NULL type of objects to be opened.  
   

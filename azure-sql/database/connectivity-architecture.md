@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database and SQL database in Fabric
 description: This article explains the connectivity architecture for database connections from within Azure or from outside of Azure for Azure SQL Database, SQL database in Fabric
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma, randolphwest
+ms.reviewer: wiassaf
 ms.date: 02/26/2026
 ms.service: azure-sql-database
 ms.subservice: connect

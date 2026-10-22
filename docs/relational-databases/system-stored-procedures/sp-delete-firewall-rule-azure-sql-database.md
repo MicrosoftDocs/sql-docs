@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Removes server-level firewall settings from your Azure SQL Database logical server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

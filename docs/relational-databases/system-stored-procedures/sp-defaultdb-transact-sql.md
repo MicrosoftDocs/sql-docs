@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_defaultdb (Transact-SQL)"
 description: sp_defaultdb changes the default database for a SQL Server login.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

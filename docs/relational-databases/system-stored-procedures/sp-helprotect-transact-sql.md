@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helprotect (Transact-SQL)"
 description: sp_helprotect returns a report that's information about user permissions for an object, or statement permissions, in the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

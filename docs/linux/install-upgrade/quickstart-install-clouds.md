@@ -1,9 +1,10 @@
 ---
-title: "Get Started with SQL Server (On Linux) in the Cloud"
+title: Get Started with SQL Server (On Linux) in the Cloud
 titleSuffix: SQL Server
 description: Learn how to install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: linux
@@ -51,7 +52,7 @@ If you choose to run a paid edition of [!INCLUDE [ssnoversion-md](../../includes
 
    1. Add an inbound rule to allow traffic on the port on which [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] listens (default TCP port 1433).
 
-## Digital Ocean
+## DigitalOcean
 
 1. Sign in to the [control panel](https://cloud.digitalocean.com/login) and select **Create a droplet**.
 

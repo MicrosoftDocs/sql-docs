@@ -1,8 +1,8 @@
 ---
 title: "DMVs and system catalog views for availability groups"
 description: "A collection of dynamic management and catalog views that can help you monitor and diagnose the health of an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups

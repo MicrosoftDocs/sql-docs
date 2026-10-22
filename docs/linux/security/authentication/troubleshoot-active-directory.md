@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Active Directory Authentication for SQL Server on Linux and Containers
 description: Troubleshoot Active Directory authentication issues with SQL Server on Linux and containers, configuration tips, common errors. Includes Kerberos, keytabs, and DNS.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh, atsingh
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: linux
@@ -24,7 +24,7 @@ This article helps you troubleshoot Active Directory Domain Services authenticat
 
 Before you begin troubleshooting, validate the current user, `mssql.conf`, Service Principal Name (SPN), and realm settings.
 
-1. Obtain or renew the Kerberos TGT (ticket-granting ticket) with **`kinit`**:
+1. Obtain or renew the Kerberos ticket-granting ticket (TGT) with **`kinit`**:
 
    ```bash
    kinit privilegeduser@CONTOSO.COM
@@ -71,7 +71,7 @@ Before you begin troubleshooting, validate the current user, `mssql.conf`, Servi
    klist -kte /var/opt/mssql/secrets/mssql.keytab
    ```
 
-   An example of a working keytab follows. The example uses two encryption types, but you can use just one or more depending on the encryption types supported in your environment. In the example, `sqluser@CONTOSO.COM` is the privileged account (which matches the `network.privilegedadaccount` setting in **`mssql-conf`**), and the host name for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] is `sqllinux.contoso.com` listening on the default port `1433`.
+   An example of a working keytab follows. The example uses two encryption types, but you can use just one or more depending on the encryption types supported in your environment. In the example, `sqluser@CONTOSO.COM` is the privileged account (which matches the `network.privilegedadaccount` setting in **`mssql-conf`**). The keytab includes SPNs for the short host name on the default port `1433` and the fully qualified domain name (FQDN) on the custom port `5533`. Each port-qualified SPN must match the host name and port that clients use to connect.
 
    ```bash
    $ kinit privilegeduser@CONTOSO.COM
@@ -116,7 +116,7 @@ Before you begin troubleshooting, validate the current user, `mssql.conf`, Servi
    CONTOSO.COM = {
        kdc = adVM.contoso.com
        admin_server = adVM.contoso.com
-       default_domain= contoso.com
+       default_domain = contoso.com
    }
 
    [domain_realm]
@@ -344,7 +344,7 @@ Here's an example of the error message:
 
 - **No credentials**
 
-  Other error messages appear first if credentials don't load for LDAP connections. [Enable PAL logging](#enable-kerberos-and-security-based-pal-logging) and check the error log for error messages before this one. If there aren't any other errors, it's most likely not a credentials issue. If you find an error, fix it before moving on. In most cases, it's one of the error messages this article covers.
+   Other error messages appear first if credentials don't load for LDAP connections. [Enable PAL logging](#enable-kerberos-and-security-based-pal-logging) and check the security log for error messages before this one. If there aren't any other errors, it's most likely not a credentials issue. If you find an error, fix it before moving on. In most cases, it's one of the error messages this article covers.
 
 - **rDNS problems**
 

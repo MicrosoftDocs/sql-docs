@@ -4,7 +4,7 @@ titleSuffix: Azure Synapse Analytics
 description: Azure Synapse Analytics catalog views.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/14/2026
 ms.service: sql
 ms.subservice: system-objects

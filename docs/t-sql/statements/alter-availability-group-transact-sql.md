@@ -1,9 +1,9 @@
 ---
 title: "ALTER AVAILABILITY GROUP (Transact-SQL)"
 description: ALTER AVAILABILITY GROUP (Transact-SQL)
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/02/2026
 ms.service: sql
 ms.subservice: t-sql

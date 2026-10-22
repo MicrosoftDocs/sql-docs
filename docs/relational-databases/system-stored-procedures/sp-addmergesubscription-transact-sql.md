@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addmergesubscription (Transact-SQL)"
 description: Creates a push or pull merge subscription, executed at the Publisher on the publication database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

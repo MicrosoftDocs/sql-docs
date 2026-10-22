@@ -3,7 +3,7 @@ title: "Migrate from SQL Server: Pre-Migration"
 description: Follow these steps when migrating from SQL Server, for a successful discovery and assessment of your environment.
 author: abhims14
 ms.author: abhishekum
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/19/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: migration-guide

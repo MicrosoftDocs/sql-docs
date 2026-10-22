@@ -3,7 +3,7 @@ title: "sp_describe_parameter_encryption (Transact-SQL)"
 description: sp_describe_parameter_encryption analyzes the specified Transact-SQL statement and its parameters.
 author: jaszymas
 ms.author: jaszymas
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

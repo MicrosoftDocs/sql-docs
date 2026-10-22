@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_10061"
 description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

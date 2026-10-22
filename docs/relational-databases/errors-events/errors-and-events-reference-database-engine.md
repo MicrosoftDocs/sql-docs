@@ -1,9 +1,9 @@
 ---
 title: "Errors and events reference (Database Engine)"
 description: Learn about selected SQL Server Database Engine error messages that need further explanation and use links to external resources.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/03/2023
 ms.service: sql
 ms.subservice: supportability

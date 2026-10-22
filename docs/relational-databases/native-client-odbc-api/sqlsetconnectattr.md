@@ -1,8 +1,8 @@
 ---
 title: "SQLSetConnectAttr"
 description: Learn about connection attributes in SQLSetConnectAttr, including when they are set and possible values in the SQL Server Native Client ODBC driver.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 01/09/2019
 ms.service: sql
 ms.subservice: native-client
@@ -13,7 +13,7 @@ apitype: "DLLExport"
 ---
 # SQLSetConnectAttr
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver ignores the setting of SQL_ATTR_CONNECTION_TIMEOUT.  
   

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_posttracertoken (Transact-SQL)"
 description: sp_posttracertoken posts a tracer token into the transaction log at the Publisher.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

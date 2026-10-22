@@ -1,9 +1,9 @@
 ---
 title: "ALTER ASSEMBLY (Transact-SQL)"
 description: ALTER ASSEMBLY alters an assembly by modifying the SQL Server catalog properties of an assembly.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/02/2024
 ms.service: sql
 ms.subservice: t-sql

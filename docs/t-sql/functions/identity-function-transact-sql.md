@@ -3,7 +3,7 @@ title: "IDENTITY (Function) (Transact-SQL)"
 description: The IDENTITY (Function) is used only in a SELECT statement with an INTO table clause to insert an identity column into a new table.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, randolphwest, procha
+ms.reviewer: wiassaf, procha
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: t-sql

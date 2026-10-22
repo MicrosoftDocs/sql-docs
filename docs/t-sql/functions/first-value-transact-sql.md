@@ -1,9 +1,9 @@
 ---
 title: "FIRST_VALUE (Transact-SQL)"
 description: Returns the first value in an ordered set of values.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: kendalv, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: kendalv
 ms.date: 12/23/2024
 ms.service: sql
 ms.subservice: t-sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "analytic functions, FIRST_VALUE"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # FIRST_VALUE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-edge-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-edge-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the first value in an ordered set of values.
 

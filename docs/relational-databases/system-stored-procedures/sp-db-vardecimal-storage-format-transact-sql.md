@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_db_vardecimal_storage_format (Transact-SQL)"
 description: sp_db_vardecimal_storage_format returns the current vardecimal storage format state of a database, or enables a database for vardecimal storage format.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

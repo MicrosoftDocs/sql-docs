@@ -1,8 +1,8 @@
 ---
 title: Install SQL Server Using a Configuration File
 description: You can use SQL Server Setup to generate a configuration file to deploy SQL Server across your organization using a uniform configuration.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

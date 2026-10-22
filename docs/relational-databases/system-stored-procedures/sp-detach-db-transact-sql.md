@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_detach_db (Transact-SQL)"
 description: Detaches a database that is currently not in use from a server instance and, optionally, runs UPDATE STATISTICS on all tables before detaching.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

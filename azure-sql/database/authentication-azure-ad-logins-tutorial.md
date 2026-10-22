@@ -1,11 +1,11 @@
 ---
 title: Create and Utilize Microsoft Entra Server Logins
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article guides you through creating and utilizing Microsoft Entra logins in the virtual master database of Azure SQL
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
-ms.date: 05/15/2026
+ms.reviewer: vanto
+ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: tutorial
@@ -14,7 +14,7 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 # Tutorial: Create and utilize Microsoft Entra server logins
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
 
@@ -40,7 +40,7 @@ In this tutorial, you learn how to:
 
 ## Create Microsoft Entra login
 
-1. Create an Azure SQL Database login for a Microsoft Entra account. In our example, we'll use `bob@contoso.com` that exists in our Microsoft Entra domain called `contoso`. A login can also be created from a Microsoft Entra group or [service principal (applications)](authentication-aad-service-principal.md). For example, `mygroup` that is a Microsoft Entra group consisting of Microsoft Entra accounts that are a member of that group. For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
+1. Create an Azure SQL Database login for a Microsoft Entra account. In this example, use `bob@contoso.com` that exists in the Microsoft Entra domain called `contoso`. You can also create a login from a Microsoft Entra group or [service principal (applications)](authentication-aad-service-principal.md). For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
 
    > [!NOTE]  
    > The first Microsoft Entra login must be created by the Microsoft Entra admin. The Microsoft Entra admin can be a Microsoft Entra user or group. A SQL login can't create Microsoft Entra logins.
@@ -169,7 +169,7 @@ SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
 
 ## Grant special roles for Microsoft Entra users
 
-[Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to users in the virtual `master` database.
+Assign [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles) to users in the virtual `master` database.
 
 In order to grant one of the special database roles to a user, the user must exist in the virtual `master` database.
 
@@ -241,6 +241,10 @@ WHERE is_disabled = 1
 ```
 
 A use case for this would be to allow read-only on [geo-replicas](active-geo-replication-overview.md), but deny connection on a primary server.
+
+## Create and use Microsoft Entra server logins in Azure Synapse Analytics
+
+For dedicated SQL pools in Azure Synapse Analytics, see [Tutorial: Create and use Microsoft Entra server logins](/azure/synapse-analytics/sql/authentication-azure-ad-logins-tutorial).
 
 ## Related content
 

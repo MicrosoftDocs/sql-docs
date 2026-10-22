@@ -1,8 +1,8 @@
 ---
 title: SQL Graph Database Sample
 description: "In this tutorial, create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph."
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/28/2023
 ms.service: sql
 ms.topic: reference

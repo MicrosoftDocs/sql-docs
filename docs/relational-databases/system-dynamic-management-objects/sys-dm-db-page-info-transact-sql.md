@@ -3,7 +3,7 @@ title: "sys.dm_db_page_info (Transact-SQL)"
 description: sys.dm_db_page_info (Transact-SQL)
 author: bluefooted
 ms.author: pamela
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: "06/19/2023"
 ms.service: sql
 ms.subservice: system-objects

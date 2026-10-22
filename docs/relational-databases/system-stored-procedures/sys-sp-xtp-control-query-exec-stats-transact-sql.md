@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL)"
 description: "Enables per query statistics collection for all or specific natively compiled stored procedures on an instance."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

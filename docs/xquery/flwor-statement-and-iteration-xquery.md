@@ -1,9 +1,9 @@
 ---
 title: "FLWOR Statement and Iteration (XQuery)"
 description: Learn about for, let, where, order by, and return clauses that make up the FLOWR iteration syntax in XQuery.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_flush_commit_table_on_demand (Transact-SQL)"
 description: Deletes rows from syscommittab in batches.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

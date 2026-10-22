@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_validate_redirected_publisher (Transact-SQL)"
 description: Verifies that the current host for the publishing database is capable of supporting replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

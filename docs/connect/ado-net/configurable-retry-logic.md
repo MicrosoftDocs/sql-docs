@@ -3,7 +3,7 @@ title: Configurable Retry Logic in SqlClient
 description: Learn when and how to configure Microsoft.Data.SqlClient to retry transient connection and command failures with bounded backoff.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
+ms.reviewer: davidengel, paulmedynski, cmalhotra
 ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity

@@ -1,8 +1,8 @@
 ---
 title: "Schema Element for Database (DTA)"
 description: In the dta utility, the Schema element for Database specifies the schema of the database that you want to tune.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 03/01/2017
 ms.service: sql
 ms.subservice: tools-other

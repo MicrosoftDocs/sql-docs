@@ -3,7 +3,7 @@ title: Optional Parameter Plan Optimization
 description: Optional parameter plan optimization improvement.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/07/2026
 ms.service: sql
 ms.topic: concept-article

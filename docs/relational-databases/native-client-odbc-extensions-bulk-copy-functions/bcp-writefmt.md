@@ -1,8 +1,8 @@
 ---
 title: "bcp_writefmt"
 description: "bcp_writefmt"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ apiname: ["bcp_writefmt", "bcp_writefmtA", "bcp_writefmtW"]
 apitype: "DLLExport"
 ---
 # bcp_writefmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Creates a format file containing a description of the format of the current bulk copy data file.  
   

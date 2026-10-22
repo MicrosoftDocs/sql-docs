@@ -1,8 +1,8 @@
 ---
 title: "Connect to SQL Server When System Administrators Are Locked Out"
 description: Learn how to regain access to SQL Server as a system administrator if you're mistakenly locked out.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: configuration

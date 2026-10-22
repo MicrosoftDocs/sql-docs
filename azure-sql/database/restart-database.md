@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about restarting a database or elastic pool in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mahyon, randolphwest
+ms.reviewer: mahyon
 ms.date: 03/10/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability

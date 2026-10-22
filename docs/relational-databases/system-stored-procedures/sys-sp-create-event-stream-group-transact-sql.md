@@ -3,7 +3,7 @@ title: "sys.sp_create_event_stream_group (Transact-SQL)"
 description: sys.sp_create_event_stream_group creates an event stream group for the change event streaming feature.
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma,randolphwest
+ms.reviewer: vanto
 ms.date: 08/15/2026
 ms.service: sql
 ms.subservice: system-objects

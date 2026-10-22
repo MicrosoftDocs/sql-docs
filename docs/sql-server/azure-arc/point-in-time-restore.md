@@ -3,7 +3,7 @@ title: Restore to a point-in-time
 description: Describes how to configure automated backups and restore to a point in time
 author: AbdullahMSFT
 ms.author: amamun 
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/25/2023
 ms.topic: how-to
 ms.custom: ignite-2023

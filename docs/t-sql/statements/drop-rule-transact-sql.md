@@ -3,7 +3,7 @@ title: "DROP RULE (Transact-SQL)"
 description: DROP RULE removes one or more user-defined rules from the current database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/16/2024
 ms.service: sql
 ms.subservice: t-sql

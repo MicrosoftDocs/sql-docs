@@ -3,8 +3,8 @@ title: "UPDATE STATISTICS (Transact-SQL)"
 description: UPDATE STATISTICS updates query optimization statistics on a table or indexed view. Updating statistics ensures that queries compile with up-to-date statistics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: derekw, randolphwest
-ms.date: 07/07/2025
+ms.reviewer: derekw
+ms.date: 09/30/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "statistical information [SQL Server], updating"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # UPDATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics FabricSE FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Updates query optimization [statistics](../../relational-databases/statistics/statistics.md) on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.
 
@@ -34,7 +34,7 @@ Updating statistics ensures that queries compile with up-to-date statistics. Upd
 ::: moniker range="=fabric"
 
 > [!NOTE]  
-> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
+> For more information about statistics in Fabric Data Warehouse and the SQL analytics endpoint, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
 
 ::: moniker-end
 
@@ -42,7 +42,7 @@ Updating statistics ensures that queries compile with up-to-date statistics. Upd
 
 ## Syntax
 
-Syntax for SQL Server and Azure SQL Database.
+Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric.
 
 ```syntaxsql
 UPDATE STATISTICS table_or_indexed_view_name
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_constant ]
 ```
 
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+Syntax for Azure Synapse Analytics.
 
 ```syntaxsql
 UPDATE STATISTICS [ schema_name . ] table_name
@@ -90,7 +90,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
 [;]
 ```
 
-Syntax for Microsoft Fabric.
+Syntax for Fabric Data Warehouse and the SQL analytics endpoint.
 
 ```syntaxsql
 UPDATE STATISTICS [ schema_name . ] table_name
@@ -148,7 +148,7 @@ Update each statistic using its most recent sample rate.
 
 Using `RESAMPLE` can result in a full-table scan. For example, statistics for indexes use a full-table scan for their sample rate. When none of the sample options (`SAMPLE`, `FULLSCAN`, `RESAMPLE`) are specified, the query optimizer samples the data and computes the sample size by default.
 
-In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], `RESAMPLE` isn't supported.
+The `RESAMPLE` option isn't supported in the SQL analytics endpoint or Fabric Data Warehouse.
 
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }
 
@@ -255,6 +255,8 @@ For more information about when to use `UPDATE STATISTICS`, see [When to update 
 
 - The `MAXDOP` option is limited by the Resource Governor workload group `MAX_DOP` setting, if used.
 
+- The `sp_updatestats` stored procedure isn't supported in the SQL analytics endpoint or Fabric Data Warehouse.
+
 ### Update all statistics with sp_updatestats
 
 For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls `sp_updatestats` to update all statistics for the database.
@@ -271,9 +273,11 @@ Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tiger
 
 To determine when statistics were last updated, use the [STATS_DATE](../functions/stats-date-transact-sql.md) function.
 
-### PDW / Azure Synapse Analytics
+<a id="pdw--azure-synapse-analytics"></a>
 
-The following syntax isn't supported by [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
+### Azure Synapse Analytics
+
+The following syntax isn't supported by [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]:
 
 ```sql
 UPDATE STATISTICS t1 (a, b);
@@ -355,7 +359,7 @@ UPDATE STATISTICS Production.Product (Products)
 GO
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### E. Update statistics on a table
 

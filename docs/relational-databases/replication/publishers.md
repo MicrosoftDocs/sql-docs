@@ -1,8 +1,8 @@
 ---
 title: Publishers
 description: Publishers options in SQL Server replication let you grant servers permission to use this Distributor. See how to add and configure Publishers step by step.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

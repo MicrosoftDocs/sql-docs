@@ -3,7 +3,7 @@ title: "sp_update_proxy (Transact-SQL)"
 description: Changes the properties of an existing proxy.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

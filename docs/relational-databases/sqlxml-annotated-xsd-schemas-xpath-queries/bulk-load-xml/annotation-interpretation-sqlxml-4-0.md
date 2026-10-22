@@ -1,8 +1,8 @@
 ---
 title: "Annotation Interpretation (SQLXML)"
 description: Learn how XML Bulk Load in SQLXML 4.0 interprets annotations in the XSD and XDR schemas.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

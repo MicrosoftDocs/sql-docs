@@ -1,9 +1,9 @@
 ---
 title: "Change data capture and Other Features"
 description: "Learn how change data capture and functions with other features such as change tracking and database mirroring."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: "10/19/2023"
 ms.service: sql
 ms.topic: how-to

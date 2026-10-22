@@ -1,9 +1,9 @@
 ---
 title: "sp_syscollector_start_collection_set (Transact-SQL)"
 description: Starts a collection set if the collector is already enabled and the collection set isn't running.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

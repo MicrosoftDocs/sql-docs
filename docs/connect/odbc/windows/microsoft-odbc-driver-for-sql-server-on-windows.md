@@ -3,7 +3,7 @@ title: Microsoft ODBC Driver for SQL Server on Windows
 description: Learn about creating applications that use the Microsoft ODBC Driver for SQL Server on Windows.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: maghan, davidengel, sunilbs, mcimfl
+ms.reviewer: davidengel, sunilbs, mcimfl
 ms.date: 09/19/2024
 ms.service: sql
 ms.subservice: connectivity

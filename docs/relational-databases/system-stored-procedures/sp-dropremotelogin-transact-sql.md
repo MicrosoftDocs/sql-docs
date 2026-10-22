@@ -3,7 +3,7 @@ title: "sys.sp_dropremotelogin (Transact-SQL)"
 description: Removes a remote login mapped to a local login used to execute remote stored procedures against the local server running SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

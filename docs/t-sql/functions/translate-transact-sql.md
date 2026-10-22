@@ -1,9 +1,9 @@
 ---
 title: "TRANSLATE (Transact-SQL)"
 description: "TRANSLATE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 08/23/2022
 ms.service: sql
 ms.subservice: t-sql
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "TRANSLATE function"
 dev_langs:
   - "TSQL"
-monikerRange: ">= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current || = fabric || =fabric-sqldb"
 ---
 # TRANSLATE (Transact-SQL)
 
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the string provided as a first argument, after some characters specified in the second argument are translated into a destination set of characters, specified in the third argument.
 

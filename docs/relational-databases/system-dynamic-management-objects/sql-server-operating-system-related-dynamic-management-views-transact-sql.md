@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL)"
 description: Dynamic management views (DMVs) associated with SQL Server Operating System (SQLOS).
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/19/2026
 ms.service: sql
 ms.subservice: system-objects

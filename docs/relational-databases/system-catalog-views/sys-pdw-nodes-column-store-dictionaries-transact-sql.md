@@ -9,10 +9,10 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE[asa-md](../../includes/applies-to-version/asa.md)]
 
   Contains a row for each dictionary used in columnstore indexes. Dictionaries are used to encode some, but not all data types, therefore not all columns in a columnstore index have dictionaries. A dictionary can exist as a primary dictionary (for all segments) and possibly for other secondary dictionaries used for a subset of the column's segments.  
   
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 - [sys.pdw_nodes_column_store_segments (Transact-SQL)](sys-pdw-nodes-column-store-segments-transact-sql.md)
 - [sys.pdw_nodes_column_store_row_groups (Transact-SQL)](sys-pdw-nodes-column-store-row-groups-transact-sql.md)

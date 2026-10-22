@@ -1,8 +1,8 @@
 ---
 title: Create and update statistics
 description: "Create and update statistics"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.reviewer: matteot
 ms.date: 06/04/2020
 ms.service: sql

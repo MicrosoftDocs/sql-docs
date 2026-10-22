@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_server_accelerator_status (Transact-SQL)"
 description: "sys.dm_server_accelerator_status returns information about integrated offload and acceleration solutions that are available to the current instance of SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: david.pless, wiassaf
 ms.date: 08/17/2022
 ms.service: sql

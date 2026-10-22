@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_18210"
 description: "MSSQLSERVER_18210"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: "02/06/2023"
 ms.service: sql
 ms.subservice: supportability

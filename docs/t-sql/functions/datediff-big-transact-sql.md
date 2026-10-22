@@ -1,8 +1,8 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL)
 description: "DATEDIFF_BIG (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "01/12/2021"
 ms.service: sql
 ms.subservice: t-sql
@@ -25,7 +25,7 @@ dev_langs:
 
 # DATEDIFF_BIG (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
 This function returns the count (as a signed big integer value) of the specified *datepart* boundaries crossed between the specified *startdate* and *enddate*.
   

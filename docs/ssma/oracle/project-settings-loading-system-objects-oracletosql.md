@@ -3,7 +3,7 @@ title: "Default Project Settings (Loading System Objects) (OracleToSQL)"
 description: "Default Project Settings (Loading System Objects) (OracleToSQL)"
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/21/2025
 ms.service: sql
 ms.subservice: ssma

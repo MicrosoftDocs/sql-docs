@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot change tracking auto cleanup issues
 description: Learn how to troubleshoot common issues with auto cleanup on change tracking for SQL Server, Azure SQL Managed Instance, and Azure SQL Database.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/03/2024
 ms.service: sql
 ms.topic: troubleshooting-general

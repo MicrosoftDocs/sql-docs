@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure advance notifications before planned maintenance windows in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scottkim, mathoma, urosmil
+ms.reviewer: scottkim, urosmil
 ms.date: 07/22/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

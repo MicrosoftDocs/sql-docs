@@ -1,9 +1,9 @@
 ---
 title: "CREATE SYNONYM (Transact-SQL)"
 description: The CREATE SYNONYM statement creates a new synonym.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

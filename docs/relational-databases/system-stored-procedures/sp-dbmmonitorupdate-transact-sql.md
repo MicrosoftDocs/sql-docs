@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dbmmonitorupdate (Transact-SQL)"
 description: Updates the database mirroring monitor status table by inserting a new table row for each mirrored database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

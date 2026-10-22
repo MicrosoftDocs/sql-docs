@@ -1,8 +1,8 @@
 ---
 title: "Add Non-SQL Server Subscriber"
 description: "Add Non-SQL Server Subscriber"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

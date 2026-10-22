@@ -1,10 +1,10 @@
 ---
 title: "What's New in SQL Server 2025"
 description: Learn about new features for SQL Server 2025 (17.x), which gives you choices of development languages, data types, environments, and operating systems.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest
-ms.date: 07/29/2026
+author: adbadram
+ms.author: adbadram
+ms.reviewer: wiassaf
+ms.date: 09/28/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: whats-new
@@ -104,7 +104,7 @@ The following sections identify features that are improved or introduced in [!IN
 | [GitHub Copilot in SQL Server Management Studio](/ssms/github-copilot/overview) | Ask questions. Get answers from your data. |
 | [Vector data type](../t-sql/data-types/vector-data-type.md) | Store vector data optimized for operations such as similarity search and machine learning applications. Vectors are stored in an optimized binary format but are exposed as JSON arrays for convenience. Each element of the vector can be stored either using a single-precision (4-byte) or half-precision (2-byte) floating-point value. |
 | [Vector functions](../t-sql/functions/vector-functions-transact-sql.md) | New scalar functions perform operations on vectors in binary format, allowing applications to store and manipulate vectors in the SQL Database Engine. |
-| [Vector index](ai/vectors.md#vector-search) | Create and manage approximate vector indexes to quickly and efficiently find similar vectors to a given reference vector.<br /><br />Query vector indexes from [sys.vector_indexes](../relational-databases/system-catalog-views/sys-vector-indexes-transact-sql.md). Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
+| [Vector index](ai/vectors.md#vector-search) (preview) | Create and manage approximate vector indexes to quickly and efficiently find similar vectors to a given reference vector.<br /><br />Query vector indexes from [sys.vector_indexes](../relational-databases/system-catalog-views/sys-vector-indexes-transact-sql.md). Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
 | [Manage external AI models](../t-sql/statements/create-external-model-transact-sql.md) | Manage external AI model objects for embedding tasks (creating vector arrays) accessing REST AI inference endpoints. |
 
 ## Developer
@@ -118,8 +118,7 @@ The following sections identify features that are improved or introduced in [!IN
 | [Fuzzy string matching](../relational-databases/fuzzy-string-match/overview.md) | Check if two strings are similar, and calculate the difference between two strings. Requires [PREVIEW_FEATURES database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features). |
 | [JSON data in SQL Server](../relational-databases/json/json-data-sql-server.md#sql-server-2025-changes) | Use SQL Server built-in functions and operators with JSON data stored in a native binary format:<br /><br />- Parse JSON text and read or modify values.<br />- Transform arrays of JSON objects into table format.<br />- Run any Transact-SQL query on the converted JSON objects.<br />- Format the results of Transact-SQL queries in JSON format.<br />- For more information and examples, see [JSON data type](../t-sql/data-types/json-data-type.md). |
 | New Chinese collations | New Chinese collations in database compatibility version 160 support GB18030-2022 standard. |
-| [Regular expressions](../relational-databases/regular-expressions/overview.md) | Define a search pattern for text with a sequence of characters. Query SQL Server with regex to find, replace, or validate text data. |
-| [Regular expressions functions](../t-sql/functions/regular-expressions-functions-transact-sql.md) | Match complex patterns and manipulate data in SQL Server with regular expressions. |
+| [Regular expressions functions](../relational-databases/regular-expressions/overview.md) | Define a search pattern for text with a sequence of characters. Query SQL Server with regex to find, replace, or validate text data. |
 | [SQL MCP Server](/azure/data-api-builder/mcp/overview) | Connect custom and [Foundry agents](/azure/data-api-builder/mcp/quickstart-azure-ai-foundry) to the database with a secure MCP Server. |
 
 
@@ -137,6 +136,7 @@ The following sections identify features that are improved or introduced in [!IN
 | New feature or update | Details |
 | --- | --- |
 | **Always On availability groups** | |
+| [Extend an availability group to Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group) | Starting with SQL Server 2025 Cumulative Update 9 (CU9), extend an Always On availability group containing multiple databases to Azure SQL Managed Instance by replicating all its databases through one Managed Instance link. Every SQL Server replica requires CU9 or later and multiple-database link mode enabled. |
 | [Availability group asynchronous page request dispatching improvement](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md#asynchronous-page-request-dispatching-improvement) | Perform asynchronous page requests and in batches during failover recovery. Enabled by default. |
 | [Allow database to switch to resolving state](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md#databases-switch-to-resolving-state-after-a-failure) | After a failure to read the persisted configuration data due to network service interruption. |
 | [Configure AG group commit wait in milliseconds](../database-engine/configure-windows/availability-group-commit-time-server-configuration-options.md) | Set `availability group commit time` in milliseconds for an availability group replica so that transactions are sent to the secondary replica faster. |

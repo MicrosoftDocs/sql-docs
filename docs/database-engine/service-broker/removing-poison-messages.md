@@ -1,9 +1,9 @@
 ---
 title: Remove Poison Messages
 description: "A poison message is a message containing information that an application cannot successfully process."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/10/2025
 ms.service: sql
 ms.subservice: configuration

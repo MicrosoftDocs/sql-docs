@@ -1,8 +1,8 @@
 ---
 title: DBCC INDEXDEFRAG (Transact-SQL)
 description: DBCC INDEXDEFRAG defragments indexes of the specified table or view.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/05/2022
 ms.service: sql
 ms.subservice: t-sql

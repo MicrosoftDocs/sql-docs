@@ -3,7 +3,7 @@ title: "sysdac_history_internal (Transact-SQL)"
 description: sysdac_history_internal contains information about the actions taken to manage data-tier applications (DAC).
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/25/2025
 ms.service: sql
 ms.subservice: system-objects

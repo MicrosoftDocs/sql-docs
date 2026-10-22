@@ -1,9 +1,9 @@
 ---
 title: Using Transact-SQL Assertions in SQL Server Unit Tests
 description: Learn about Transact-SQL assertions. See when to use assertions in SQL Server unit tests and when to use test conditions, and view examples of assertion usage.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

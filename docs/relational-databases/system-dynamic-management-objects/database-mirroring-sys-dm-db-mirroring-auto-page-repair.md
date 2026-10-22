@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_mirroring_auto_page_repair (Transact-SQL)"
 description: Database Mirroring - sys.dm_db_mirroring_auto_page_repair
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

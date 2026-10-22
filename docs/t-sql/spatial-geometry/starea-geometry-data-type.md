@@ -3,7 +3,7 @@ title: "STArea (geometry Data Type)"
 description: "STArea (geometry Data Type)"
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: maghan
+ms.reviewer: vanto
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: t-sql

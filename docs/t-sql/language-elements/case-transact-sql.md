@@ -1,8 +1,8 @@
 ---
 title: "CASE (Transact-SQL)"
 description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/18/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "searched CASE expression"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # CASE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Evaluates a list of conditions and returns one of multiple possible result expressions.
 
@@ -53,15 +53,6 @@ END
 -- Searched CASE expression:
 CASE
      WHEN Boolean_expression THEN result_expression [ ...n ]
-     [ ELSE else_result_expression ]
-END
-```
-
-Syntax for Parallel Data Warehouse.
-
-```syntaxsql
-CASE
-     WHEN when_expression THEN result_expression [ ...n ]
      [ ELSE else_result_expression ]
 END
 ```
@@ -398,7 +389,7 @@ FROM Production.Product
 ORDER BY ListPrice DESC;
 ```
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 ### H. Use a SELECT statement with a CASE expression
 

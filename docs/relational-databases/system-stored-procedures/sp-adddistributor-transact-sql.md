@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_adddistributor (Transact-SQL)"
 description: Adds an entry in the sys.servers and marks the server entry as a Distributor, storing property information.
-author: mashamsft
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: Manage Historical Data in System-Versioned Temporal Tables
 description: Learn how to manage historical data retention in system-versioned temporal tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

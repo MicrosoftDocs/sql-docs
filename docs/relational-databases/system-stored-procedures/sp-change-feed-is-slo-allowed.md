@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_is_slo_allowed (Transact-SQL)"
 description: "The sys.sp_change_feed_is_slo_allowed system internal stored procedure checks for a supported service level objective."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 12/17/2025
 ms.service: fabric
 ms.subservice: system-objects

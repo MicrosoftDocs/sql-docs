@@ -1,8 +1,8 @@
 ---
 title: "Database Mirroring Monitor (Status Page)"
 description: Use this read-only Database Mirroring Monitor page to view the mirroring status for the principal and mirror server instances of a selected database.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring

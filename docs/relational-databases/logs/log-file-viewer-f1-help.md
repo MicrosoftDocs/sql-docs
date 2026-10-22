@@ -1,8 +1,8 @@
 ---
 title: "Log File Viewer F1 Help"
 description: Get guidance from F1 Help for frequently displayed columns, permissions, and other options for Log File Viewer in SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: supportability

@@ -1,9 +1,9 @@
 ---
 title: "sp_apply_job_to_targets (Transact-SQL)"
 description: Applies a job to one or more target servers or to the target servers belonging to one or more target server groups.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

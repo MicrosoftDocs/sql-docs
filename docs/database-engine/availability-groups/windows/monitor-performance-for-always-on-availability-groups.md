@@ -1,9 +1,9 @@
 ---
 title: Monitor Performance for Availability Groups
 description: This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 03/27/2025
 ms.service: sql
 ms.subservice: availability-groups

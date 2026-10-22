@@ -1,10 +1,10 @@
 ---
 title: "REGEXP_SUBSTR (Transact-SQL)"
 description: REGEXP_SUBSTR returns one occurrence of a substring of a string that matches the regular expression pattern.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhtiwar, wiassaf, randolphwest
-ms.date: 11/18/2025
+author: uc-msft
+ms.author: umajay
+ms.reviewer: abhtiwar, wiassaf
+ms.date: 10/14/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -12,14 +12,14 @@ ms.custom:
   - ignite-2025
 dev_langs:
   - TSQL
-monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=sql-server-ver17 || =sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 
 # REGEXP_SUBSTR (Transact-SQL)
 
-[!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
 
-Returns one occurrence of a substring of a string that matches the regular expression pattern. If no match is found, it returns `NULL`.
+The `REGEXP_SUBSTR` scalar regular expression function returns one occurrence of a substring of a string that matches the regular expression pattern. If no match is found, it returns `NULL`.
 
 ```syntaxsql
 REGEXP_SUBSTR
@@ -28,9 +28,6 @@ REGEXP_SUBSTR
     pattern_expression [ , start [ , occurrence [ , flags [ , group ] ] ] ]
 )
 ```
-
-> [!NOTE]  
-> Regular expressions are available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Arguments
 
@@ -66,6 +63,13 @@ The capture groups are numbered in the order in which their left parentheses app
 
 String.
 
+## Platform support
+
+- In Azure SQL Managed Instance, T-SQL regular expression functions are available with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy) only.
+- T-SQL regular expression functions are available in Azure SQL Database, SQL database in Fabric, and starting in SQL Server 2025.
+- T-SQL regular expression functions aren't available in SQL Server 2022 or earlier versions.
+- T-SQL regular expression scalar functions are available as a preview feature in Fabric Data Warehouse. For more information, see [Regular expressions functions in Fabric Data Warehouse](/fabric/data-warehouse/regular-expressions). T-SQL regular expression table-valued functions are not available in Fabric Data Warehouse. 
+
 ## Examples
 
 Extract the domain name from an email address.
@@ -91,5 +95,4 @@ FROM PAYMENTS;
 
 ## Related content
 
-- [Regular expressions](../../relational-databases/regular-expressions/overview.md)
-- [Regular expressions functions (Transact-SQL)](regular-expressions-functions-transact-sql.md)
+- [Regular expressions functions](../../relational-databases/regular-expressions/overview.md)

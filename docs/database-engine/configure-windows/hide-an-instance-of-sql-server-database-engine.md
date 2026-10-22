@@ -1,8 +1,8 @@
 ---
 title: Hide an Instance of SQL Server Database Engine
 description: Find out how to hide an instance of the SQL Server Database Engine. Client computers can't use the SQL Server Browser service to locate hidden instances.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: configuration

@@ -3,7 +3,7 @@ title: Configure SQL Server
 description: Learn how to manage configuration options for SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/22/2026
 ai-usage: ai-assisted
 ms.topic: how-to
@@ -99,8 +99,6 @@ Select the **Use physical core license** checkbox if you're configuring a virtua
 
 > [!IMPORTANT]  
 > If you configure the physical core license with a pay-as-you-go billing plan, set the **License type** value to **Pay-as-you-go**. This selection doesn't trigger extra charges at the VM level, but it does ensure uninterrupted licensing and billing if the physical core license is deactivated or deleted.
-
-
 
 <a id="subscribe-esu"></a>
 

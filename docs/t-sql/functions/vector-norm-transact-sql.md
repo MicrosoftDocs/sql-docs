@@ -3,7 +3,7 @@ title: "VECTOR_NORM (Transact-SQL)"
 description: VECTOR_NORM takes a vector as an input and returns the norm of the vector (which is a measure of its length or magnitude) in a given norm type.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: pookam, randolphwest
+ms.reviewer: pookam
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "Database-level health detection"
 description: Learn about the database-level health detection feature available for SQL Server Always On availability groups.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/19/2019
 ms.service: sql
 ms.subservice: availability-groups

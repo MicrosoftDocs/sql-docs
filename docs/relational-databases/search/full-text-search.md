@@ -1,8 +1,8 @@
 ---
 title: Full-Text Search
 description: Full-Text Search lets users and applications run full-text queries against character-based data in Database Engine tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

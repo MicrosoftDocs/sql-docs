@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Express LocalDB Reference"
 description: "SQL Server Express LocalDB Reference"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.topic: "reference"

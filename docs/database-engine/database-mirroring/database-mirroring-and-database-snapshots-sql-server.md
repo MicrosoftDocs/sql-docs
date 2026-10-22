@@ -1,8 +1,8 @@
 ---
 title: "Database mirroring & database snapshots"
 description: Learn about the interoperability of using database snapshots with database mirroring to offload reporting in SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: database-mirroring

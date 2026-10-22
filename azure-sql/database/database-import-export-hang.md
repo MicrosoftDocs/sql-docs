@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL Database and Azure SQL Managed Instance Import/Export service takes a long time to import or export a database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei, sureshka, randolphwest
+ms.reviewer: hudequei, sureshka
 ms.date: 01/26/2026
 ms.service: azure-sql
 ms.subservice: data-movement

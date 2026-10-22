@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dbfixedrolepermission (Transact-SQL)"
 description: sp_dbfixedrolepermission displays the permissions of a fixed database role.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

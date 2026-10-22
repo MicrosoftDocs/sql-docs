@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpmergedeleteconflictrows (Transact-SQL)"
 description: "Returns information on data rows that lost delete conflicts."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

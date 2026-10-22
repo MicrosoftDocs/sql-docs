@@ -3,7 +3,7 @@ title: Verify a Ledger Table to Detect Tampering
 description: This article discusses how to verify if a table was tampered with.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: security

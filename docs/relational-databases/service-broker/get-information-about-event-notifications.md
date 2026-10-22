@@ -1,8 +1,8 @@
 ---
 title: "Get Information About Event Notifications"
 description: "Get Information About Event Notifications"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.topic: how-to

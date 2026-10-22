@@ -1,8 +1,8 @@
 ---
 title: "Get Information About DML Triggers"
 description: "Get Information About DML Triggers"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: language-reference

@@ -1,9 +1,9 @@
 ---
 title: "Regenerate Custom Procedures for Schema Changes (Transactional)"
 description: Regenerate custom transactional stored procedures to reflect schema changes for Transactional Replication.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 04/21/2025
 ms.service: sql
 ms.subservice: replication

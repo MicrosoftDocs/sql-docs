@@ -1,9 +1,9 @@
 ---
 title: sysssispackagefolders (Transact-SQL)
 description: sysssispackagefolders (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: makromer, maghan
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: makromer
 ms.date: 06/10/2016
 ms.service: sql
 ms.subservice: system-objects

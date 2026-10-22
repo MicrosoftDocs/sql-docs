@@ -3,7 +3,7 @@ title: Dynamic Data Masking
 description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to nonprivileged users. It can greatly simplify security in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/30/2025
 ms.service: sql
 ms.subservice: security

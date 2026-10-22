@@ -1,9 +1,9 @@
 ---
 title: "Create a publication"
 description: Learn how to create a publication in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

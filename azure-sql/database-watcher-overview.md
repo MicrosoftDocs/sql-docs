@@ -19,6 +19,16 @@ ms.custom:
 
 [!INCLUDE [sqldb-sqlmi](./includes/appliesto-sqldb-sqlmi.md)]
 
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
+
 Database watcher is a managed monitoring solution for database services in the Azure SQL family. It supports [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/) and [Azure SQL Managed Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/).
 
 Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Monitoring data from the databases, elastic pools, and SQL managed instances you select is [collected](database-watcher-data.md#data-collection) into a central data store in your Azure subscription. [Dashboards](#dashboards) in Azure portal provide a single-pane-of-glass view of your Azure SQL estate and a detailed view of each database, elastic pool, and SQL managed instance. [Alerts](database-watcher-alerts.md) send you notifications when database conditions across your Azure SQL estate might require attention.
@@ -192,7 +202,7 @@ This section describes recent database watcher fixes, changes, and improvements.
 
 | Time period | Changes |
 |:--|:--|
-| July 2025 | - Fix an issue where database watcher monitoring queries prevented [serverless](./database/serverless-tier-overview.md) databases, including [free offer](./database/free-offer.md) databases, from pausing. For more information, see [Data collection in serverless databases](database-watcher-data.md#data-collection-in-serverless-databases). |
+| July 2025 | - Fix an issue where database watcher monitoring queries prevented [serverless](./database/serverless-tier-overview.md) databases, including [free offer](./database/free-tier.md) databases, from pausing. For more information, see [Data collection in serverless databases](database-watcher-data.md#data-collection-in-serverless-databases). |
 | April 2025 | - Fix a bug where a database watcher deployment via Bicep, an ARM template, Terraform, or REST API would fail if the **subscription ID**, **resource group name**, or **watcher name** deployment parameters used inconsistent casing.<br /> - Fix a bug where collection of certain datasets for a **SQL database** target would stop if the database was restored from backup.<br /> - Change to limit data collection in the **Table metadata** datasets for databases with many tables and for SQL managed instances with many databases to avoid long-running collection queries.<br /> - Improve collection query performance for the **Session statistics** dataset for **SQL managed instance** targets. |
 | February 2025 | - Add support for alerting. For more information, see [Database watcher alerts](database-watcher-alerts.md). |
 | January 2025 | - Fix to make database watcher deployments via Bicep or ARM templates idempotent.<br /> - Fix a bug where SQL Agent job history details on the SQL Managed Instance detailed dashboard weren't displayed.<br /> - Fix a bug when filtering data on the **Sessions** charts on the detailed dashboards would cause KQL query errors.<br /> - Fix a bug where storage throughput values on the detailed dashboards were incorrect.<br /> - Improve storage utilization charts on the detailed dashboards to include the maximum storage size.<br /> - Improve to show the original and compressed size of collected data in the **Data store** section.<br /> - Improve the message shown when a dashboard cannot connect to the data store to include suggestions for common problems.<br /> - Add informational messages when there is no data shown on the **Top queries** dashboards for known reasons.<br /> - Add Hyperscale log rate limit information in the **Replicas** dataset for Azure SQL databases.<br /> - Add transaction start time and log bytes used to the **Active sessions** datasets. |

@@ -3,7 +3,7 @@ title: "sys.dm_server_external_policy_role_actions (Transact-SQL)"
 description: Reference documentation to explain sys.dm_server_external_policy_role_actions (Transact-SQL) dynamic management view.
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.date: "11/07/2022"
+ms.date: 09/23/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -23,6 +23,9 @@ dev_langs:
 # sys.dm_server_external_policy_role_actions (Transact-SQL)
 
 [!INCLUDE [sqlserver2022-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-fabricsqldb.md)]
+
+> [!IMPORTANT]  
+> Microsoft Purview access policies for Azure SQL Database, Azure SQL Managed Instance, and Azure Arc-enabled SQL Server 2022 retire on October 30, 2027. Migrate the access these policies grant to SQL native roles and permissions. For more information, see [Retirement of Microsoft Purview access policies for SQL](../security/purview-access-policies-retirement.md). This retirement doesn't affect SQL database in Microsoft Fabric.
 
 Lists the links between the roles and actions and can be used to join the two DMVs *sys.dm_server_external_policy_roles* and *sys.dm_server_external_policy_actions*. 
   

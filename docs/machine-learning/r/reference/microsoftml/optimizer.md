@@ -1,8 +1,8 @@
 ---
 title: "maOptimizer function (MicrosoftML)"
 description: "Specifies Optimization Algorithms for Neural Net."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

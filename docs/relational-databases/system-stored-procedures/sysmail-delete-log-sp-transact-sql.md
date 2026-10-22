@@ -1,9 +1,9 @@
 ---
 title: "sysmail_delete_log_sp (Transact-SQL)"
 description: "Deletes events from the Database Mail log."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sp_syscollector_delete_collection_set (Transact-SQL)"
 description: Deletes a user-defined collection set and all its collection items.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

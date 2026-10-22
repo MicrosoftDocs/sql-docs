@@ -1,8 +1,8 @@
 ---
 title: "Compatibility Certification"
 description: Compatibility certification eliminates risks of application compatibility, which allows you to upgrade a SQL Server database on-premises and in the cloud.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/16/2025
 ms.service: sql
 ms.subservice: install

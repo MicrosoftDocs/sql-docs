@@ -16,6 +16,8 @@
     href: configuration-reference.md
   - name: Connection options
     href: connection-options.md
+  - name: Select the database driver
+    href: select-database-driver.md
   - name: Microsoft Entra authentication
     href: microsoft-entra-authentication.md
   - name: Connection pooling

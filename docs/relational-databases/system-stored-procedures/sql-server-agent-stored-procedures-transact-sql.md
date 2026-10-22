@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Agent Stored Procedures (Transact-SQL)"
 description: Reference guide for SQL Server Agent system stored procedures used to manage jobs, schedules, alerts, and operators for automated tasks.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: system-objects

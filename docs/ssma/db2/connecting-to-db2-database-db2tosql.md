@@ -3,7 +3,7 @@ title: "Connect to Db2 database (Db2ToSQL)"
 description: Learn how to connect to a target instance of Db2 database to migrate Db2 databases. SSMA obtains metadata about all Db2 schemas.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

@@ -1,8 +1,8 @@
 ---
 title: "Azure SQL Database and SQL Database in Fabric Catalog Views"
 description: A list of catalog views for Azure SQL Database and SQL database in Fabric.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: wiassaf
 ms.date: 07/29/2025
 ms.service: azure-sql-database

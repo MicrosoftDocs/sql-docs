@@ -1,8 +1,8 @@
 ---
 title: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)"
 description: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/08/2016"
 ms.service: sql
 ms.subservice: system-objects

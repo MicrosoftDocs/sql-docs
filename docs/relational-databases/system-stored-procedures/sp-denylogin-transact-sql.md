@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_denylogin (Transact-SQL)"
 description: sp_denylogin Prevents a Windows user or Windows group from connecting to an instance of SQL Server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

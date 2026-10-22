@@ -3,7 +3,7 @@ title: "Enable Microsoft Entra authentication"
 description: This article teaches you to configure Microsoft Entra authentication for your SQL Server on Azure VM.
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: azure-vm-sql-server
 ms.subservice: security

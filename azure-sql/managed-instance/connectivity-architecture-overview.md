@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance communication and connectivity architecture and how the components direct traffic for a SQL managed instance.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, bonova
+ms.reviewer: bonova
 ms.date: 05/12/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

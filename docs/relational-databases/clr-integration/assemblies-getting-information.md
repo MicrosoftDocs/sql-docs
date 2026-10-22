@@ -1,8 +1,8 @@
 ---
 title: "Get Information About Assemblies"
 description: Learn how to get information about assemblies using catalog views and functions.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.topic: "reference"

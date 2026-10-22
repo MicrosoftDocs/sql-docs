@@ -1,8 +1,8 @@
 ---
 title: Thread and task architecture guide
 description: Learn about thread and task architecture in SQL Server, including task scheduling, and the best practices for using computers with more than 64 CPUs.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: jopilov
 ms.date: 06/03/2025
 ms.service: sql

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: "Learn about the purchasing models that are available for Azure SQL Database: the vCore purchasing model and the DTU purchasing model."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 08/07/2025
 ms.service: azure-sql-database
 ms.subservice: service-overview

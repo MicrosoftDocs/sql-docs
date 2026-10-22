@@ -3,7 +3,7 @@ title: "Database ledger"
 description: This article provides information on ledger database tables and associated views.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: security

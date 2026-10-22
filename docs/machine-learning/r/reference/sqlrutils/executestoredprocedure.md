@@ -1,8 +1,8 @@
 ---
 title: "executeStoredProcedure function (sqlrutils)"
 description: "executeStoredProcedure: Executes a stored procedure registered with the database"
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

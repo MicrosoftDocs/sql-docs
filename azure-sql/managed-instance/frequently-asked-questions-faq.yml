@@ -3,9 +3,9 @@ metadata:
   title: Frequently asked questions (FAQ)
   titleSuffix: Azure SQL Managed Instance
   description: Azure SQL Managed Instance frequently asked questions (FAQ)
-  author: MashaMSFT
-  ms.author: mathoma
-  ms.reviewer: urmilano, danil, nnikolic, wiassaf, mathoma
+  author: bonova
+  ms.author: bonova
+  ms.reviewer: urmilano, danil, nnikolic, wiassaf
   ms.date: 08/10/2026
   ms.service: azure-sql-managed-instance
   ms.subservice: service-overview

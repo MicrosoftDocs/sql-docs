@@ -1,9 +1,9 @@
 ---
 title: How to Use Batching to Improve Application Performance
 description: The article provides evidence that batching database operations greatly improves the speed and scalability of your cloud applications. 
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: mathoma, wiassaf
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: wiassaf
 ms.date: 07/29/2025
 ms.service: azure-sql-database
 ms.subservice: performance

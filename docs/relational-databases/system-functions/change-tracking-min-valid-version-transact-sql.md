@@ -1,8 +1,8 @@
 ---
 title: "CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)"
 description: "CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/08/2016"
 ms.service: sql
 ms.subservice: system-objects

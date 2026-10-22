@@ -3,7 +3,7 @@ title: View event data in SQL Server Management Studio
 description: Use SQL Server Management Studio to view target data from Extended Events in detail. You can view, export, filter, and aggregate event data.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: xevents

@@ -1,9 +1,9 @@
 ---
 title: "Change Tracking tables (Transact-SQL)"
 description: Change Tracking tables (Transact-SQL)
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: "10/20/2022"
 ms.service: sql
 ms.subservice: system-objects

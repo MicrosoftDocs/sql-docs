@@ -1,9 +1,9 @@
 ---
 title: "Configure distributed transactions for an availability group"
 description: Describes how to configure distributed transactions for databases within an Always On availability group.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/20/2024
 ms.service: sql
 ms.subservice: availability-groups

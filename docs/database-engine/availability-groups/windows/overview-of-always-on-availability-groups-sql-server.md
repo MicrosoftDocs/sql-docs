@@ -1,9 +1,9 @@
 ---
 title: "What is an Always On Availability Group?"
 description: "An introduction to the concepts that are central for configuring and managing Always On availability groups for high-availability and disaster-recovery."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest, vanto
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: availability-groups

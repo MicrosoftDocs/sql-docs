@@ -3,7 +3,7 @@ title: High Availability and Disaster Recovery
 description: Learn about how the Microsoft ODBC Driver for SQL Server supports Always On availability groups and failover clusters.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl, randolphwest
+ms.reviewer: davidengel, sunilbs, mcimfl
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

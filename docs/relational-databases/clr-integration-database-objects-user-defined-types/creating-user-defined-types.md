@@ -1,8 +1,8 @@
 ---
 title: "Creating a User-Defined Type"
 description: To create a UDT to install in SQL Server, first create a class in a .NET Framework programming language, which conforms to the specifications for creating UDTs.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

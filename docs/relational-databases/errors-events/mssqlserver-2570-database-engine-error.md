@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_2570"
 description: "MSSQLSERVER_2570"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "07/27/2023"
 ms.service: sql
 ms.subservice: supportability

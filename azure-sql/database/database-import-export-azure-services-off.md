@@ -3,7 +3,7 @@ title: Import or Export Database Without Allowing Azure Services to Access the S
 description: Import or export an Azure SQL Database without allowing Azure services to access the server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, hudequei, randolphwest
+ms.reviewer: hudequei
 ms.date: 09/17/2025
 ms.service: azure-sql-database
 ms.subservice: migration

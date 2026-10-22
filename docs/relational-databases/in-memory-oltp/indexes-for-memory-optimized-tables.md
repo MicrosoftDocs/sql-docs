@@ -1,8 +1,8 @@
 ---
 title: "Indexes for Memory-Optimized Tables"
 description: Learn how an index on a memory-optimized table differs from a traditional index on a disk-based table in SQL Server and Azure SQL Database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "09/16/2019"
 ms.service: sql
 ms.subservice: in-memory-oltp

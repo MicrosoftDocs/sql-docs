@@ -1,8 +1,8 @@
 ---
 title: Temporal Tables
 description: System-versioned temporal tables bring built-in support for providing information about data stored in the table at any point in time.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

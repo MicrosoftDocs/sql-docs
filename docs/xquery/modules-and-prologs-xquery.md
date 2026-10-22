@@ -1,8 +1,8 @@
 ---
 title: "Modules and Prologs (XQuery)"
 description: Learn which specifications are not supported when declaring a namespace in an XQuery prolog.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml

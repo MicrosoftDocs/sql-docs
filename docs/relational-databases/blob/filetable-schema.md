@@ -1,8 +1,8 @@
 ---
 title: "FileTable Schema"
 description: Learn about the pre-defined and fixed schema of FileTables, a SQL Server feature that uses a directory structure to store files.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: filestream

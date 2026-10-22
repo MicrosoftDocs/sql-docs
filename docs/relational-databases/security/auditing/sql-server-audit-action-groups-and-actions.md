@@ -3,7 +3,7 @@ title: "SQL Server Audit Action Groups and Actions"
 description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 11/25/2024
 ms.service: sql
 ms.subservice: security

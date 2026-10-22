@@ -1,8 +1,8 @@
 ---
 title: "ODBC Cursor Library"
 description: "ODBC Cursor Library"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL_CUR_USE_ODBC option"
 ---
 # ODBC Cursor Library
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Some ODBC drivers only support the default cursor settings; these drivers also do not support positioned cursor operations, such as **SQLSetPos**. The ODBC cursor library is a component of the Microsoft Data Access Components (MDAC) used to implement block or static cursors on a driver that normally does not support them. The cursor library also implements positioned UPDATE and DELETE statements and **SQLSetPos** for the cursors it creates.  
   

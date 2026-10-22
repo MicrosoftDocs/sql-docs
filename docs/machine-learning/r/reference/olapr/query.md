@@ -1,8 +1,8 @@
 ---
 title: "Query function (olapR)"
 description: "Query constructs a Query object. Set functions are used to build and modify the Query axes and cube name."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

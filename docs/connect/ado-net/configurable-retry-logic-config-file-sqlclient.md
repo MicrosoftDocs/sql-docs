@@ -3,7 +3,7 @@ title: Configure SqlClient Retry Logic with a Configuration File
 description: Configure application-wide Microsoft.Data.SqlClient connection and command retry providers, timing, transient errors, and command filters.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
+ms.reviewer: davidengel, paulmedynski, cmalhotra
 ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity

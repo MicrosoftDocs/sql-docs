@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: JSON functionality in the database enables you to parse, query, and format data in JavaScript Object Notation (JSON) notation.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, mathoma
+ms.reviewer: jovanpop, umajay
 ms.date: 07/23/2025
 ms.service: azure-sql
 ms.subservice: development

@@ -3,7 +3,7 @@ title: "Migrate data from regular tables to ledger tables"
 description: Learn how to migrate data from regular tables to ledger tables.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/23/2023
 ms.service: sql
 ms.subservice: security

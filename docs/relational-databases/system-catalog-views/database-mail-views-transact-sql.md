@@ -1,8 +1,8 @@
 ---
 title: "Database Mail Views (Transact-SQL)"
 description: Database Mail Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: system-objects

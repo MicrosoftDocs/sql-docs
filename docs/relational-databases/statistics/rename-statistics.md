@@ -3,7 +3,7 @@ title: "Rename Statistics"
 description: Learn how to rename a statistics object in SQL Server by using Transact-SQL. You must have ALTER permission on the table or view.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/14/2017"
+ms.date: "08/20/2026"
 ms.service: sql
 ms.subservice: performance
 ms.topic: how-to
@@ -24,6 +24,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  By default, creating an index creates a statistic on the key columns of that index. Therefore, renaming the index automatically renames the statistics object, and vice versa.  
   
  Changing any part of an object name can break scripts and stored procedures. Instead of renaming, we recommend that you drop the statistics object and re-create it with the new name.  
+
+ Renaming a statistics object isn't supported in Fabric Data Warehouse or the SQL analytics endpoint.
   
   
 <a id="Security"></a>

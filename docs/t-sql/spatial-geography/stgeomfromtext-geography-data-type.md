@@ -3,7 +3,7 @@ title: "STGeomFromText (geography data type)"
 description: Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/10/2024
 ms.service: sql
 ms.subservice: t-sql

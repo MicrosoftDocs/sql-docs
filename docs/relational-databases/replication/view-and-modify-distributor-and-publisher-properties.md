@@ -1,8 +1,8 @@
 ---
 title: "View & modify Distributor & Publisher properties"
 description: Learn how to modify the properties for the Distributor and Publisher using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or Replication Management Objects (RMO).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

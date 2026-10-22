@@ -3,7 +3,7 @@ title: "IsSparseColumnSet Method (SQLServerResultSetMetaData)"
 description: Indicates if a column in a result set is a sparse column set.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, machavan, sunilbs
+ms.reviewer: davidengel, machavan, sunilbs
 ms.date: 07/24/2025
 ms.service: sql
 ms.subservice: connectivity

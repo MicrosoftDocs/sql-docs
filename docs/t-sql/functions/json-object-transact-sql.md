@@ -3,7 +3,7 @@ title: "JSON_OBJECT (Transact-SQL)"
 description: JSON_OBJECT constructs JSON object text from zero or more expressions.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 10/27/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-v
 ---
 # JSON_OBJECT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw-fabricsqldb.md)]
 
 The `JSON_OBJECT` syntax constructs JSON object text from zero or more expressions.
 

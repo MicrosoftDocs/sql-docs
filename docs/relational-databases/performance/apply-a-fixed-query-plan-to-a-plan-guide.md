@@ -1,8 +1,8 @@
 ---
 title: "Apply a Fixed Query Plan to a Plan Guide"
 description: Learn how to apply a fixed query plan to a plan guide of type OBJECT or SQL in SQL Server. This example creates a plan guide for a simple ad hoc SQL statement.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: performance

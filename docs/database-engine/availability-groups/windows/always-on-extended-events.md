@@ -1,9 +1,9 @@
 ---
 title: Configure Extended Events for Availability Groups
 description: Configure Extended Events for availability groups in SQL Server to capture failover, connectivity, and replica state data. Learn how to set up sessions.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: availability-groups

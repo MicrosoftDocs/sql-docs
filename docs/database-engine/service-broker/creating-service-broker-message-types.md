@@ -1,9 +1,9 @@
 ---
 title: Create Service Broker Message Types
 description: "A message type defines the name of a specific kind of message and the validation that Service Broker performs on that kind of message."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

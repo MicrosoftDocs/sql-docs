@@ -1,9 +1,9 @@
 ---
 title: Migrate from SQL Server Overview
 description: "Follow the five steps to a successful SQL Server migration to Azure SQL: Discovery, Assessment, Business case, Conversion, and Migration."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: abhishekum, mathoma
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: abhishekum
 ms.date: 04/13/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: migration-guide

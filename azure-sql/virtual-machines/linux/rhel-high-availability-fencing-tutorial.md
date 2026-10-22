@@ -3,7 +3,7 @@ title: Configure Availability Groups for SQL Server on RHEL Virtual Machines in 
 description: Learn about setting up high availability in an RHEL cluster environment and set up fencing.
 author: aravindmahadevan-ms
 ms.author: armaha
-ms.reviewer: amitkh-msft, randolphwest
+ms.reviewer: amitkh-msft
 ms.date: 09/25/2025
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

@@ -3,7 +3,7 @@ title: "sysmail_update_profile_sp (Transact-SQL)"
 description: "Changes the description or name of a Database Mail profile."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

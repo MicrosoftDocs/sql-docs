@@ -3,7 +3,7 @@ title: "Tutorial: Use managed identity authentication for import and export (pre
 description: This tutorial shows how to import and export Azure SQL Database BACPAC files with managed identity authentication, eliminating the need for SQL administrator credentials and storage account keys.
 author: HugoMSFT
 ms.author: hudequei
-ms.reviewer: mathoma, wiassaf
+ms.reviewer: wiassaf
 ms.date: 03/02/2026
 ms.service: azure-sql-database
 ms.subservice: data-movement

@@ -1,8 +1,8 @@
 ---
 title: Customize Behavior of Word Breakers with a Dictionary File
 description: Customize behavior of word breakers with a dictionary file
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

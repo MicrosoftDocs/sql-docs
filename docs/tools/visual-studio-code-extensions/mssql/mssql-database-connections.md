@@ -2,8 +2,8 @@
 title: Connect to a Database
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Connect to SQL Server, Azure SQL, or SQL database in Fabric with the MSSQL extension for Visual Studio Code. Manage connections, authentication, and groups.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos, benjind
 ms.date: 06/01/2026
 ms.service: sql

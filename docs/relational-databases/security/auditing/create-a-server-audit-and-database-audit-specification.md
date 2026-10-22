@@ -3,7 +3,7 @@ title: "Create a server audit & database audit specification"
 description: Learn to create a SQL Server audit and a database audit specification by using SQL Server Management Studio or Transact-SQL (T-SQL).
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/06/2024
 ms.service: sql
 ms.subservice: security

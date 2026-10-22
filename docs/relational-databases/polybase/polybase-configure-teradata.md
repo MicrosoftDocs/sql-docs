@@ -1,8 +1,8 @@
 ---
 title: "Access external data: Teradata - PolyBase"
 description: Learn how to use PolyBase on a SQL Server instance to query external data in Teradata. Create external tables to reference the external data.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 12/13/2019
 ms.service: sql
 ms.subservice: polybase

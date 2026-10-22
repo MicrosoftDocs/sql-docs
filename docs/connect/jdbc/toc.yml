@@ -1,14 +1,5 @@
 - name: Microsoft JDBC Driver for SQL Server
   href: microsoft-jdbc-driver-for-sql-server.md
-- name: Getting started
-  href: getting-started-with-the-jdbc-driver.md
-  items:
-  - name: 'Step 1: Configure development environment'
-    href: step-1-configure-development-environment-for-java-development.md
-  - name: 'Step 2: Create a SQL database'
-    href: step-2-create-a-sql-database-for-java-development.md
-  - name: 'Step 3: Proof of concept connecting to SQL'
-    href: step-3-proof-of-concept-connecting-to-sql-using-java.md
 - name: Overview
   href: overview-of-the-jdbc-driver.md
   items:
@@ -36,6 +27,10 @@
     href: frequently-asked-questions-faq-for-jdbc-driver.yml
   - name: Finding additional information
     href: finding-additional-jdbc-driver-information.md
+- name: Get started
+  items:
+  - name: Quickstart with Java and Maven
+    href: getting-started-with-the-jdbc-driver.md
 - name: Connections
   href: connecting-to-sql-server-with-the-jdbc-driver.md
   items:

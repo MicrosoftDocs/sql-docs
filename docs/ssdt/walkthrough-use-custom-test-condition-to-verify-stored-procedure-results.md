@@ -1,9 +1,9 @@
 ---
 title: Custom Test Condition to Verify the Results of a Stored Procedure
 description: Walk through the steps of setting up a custom test condition that checks whether a stored procedure returns the correct number of columns.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

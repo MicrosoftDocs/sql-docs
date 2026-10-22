@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_valid_use_hints (Transact-SQL)"
 description: sys.dm_exec_valid_use_hints (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "11/17/2016"
 ms.service: sql
 ms.subservice: system-objects

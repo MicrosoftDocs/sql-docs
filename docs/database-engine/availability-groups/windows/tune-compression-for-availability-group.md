@@ -1,9 +1,9 @@
 ---
 title: Tune compression for availability group
 description: Learn how SQL Server compresses data streams for availability groups, which reduces network traffic, increases CPU load, and might induce latency.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 01/25/2024
 ms.service: sql
 ms.subservice: availability-groups

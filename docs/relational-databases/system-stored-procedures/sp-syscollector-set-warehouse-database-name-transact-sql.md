@@ -1,9 +1,9 @@
 ---
 title: "sp_syscollector_set_warehouse_database_name (Transact-SQL)"
 description: Specifies the database name defined in the connection string used to connect to the management data warehouse.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sp_repldone (Transact-SQL)"
 description: sp_repldone updates the record that identifies the last distributed transaction of the server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

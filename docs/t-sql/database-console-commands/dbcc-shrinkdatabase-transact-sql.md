@@ -3,7 +3,7 @@ title: DBCC SHRINKDATABASE (Transact-SQL)
 description: DBCC SHRINKDATABASE shrinks the size of the data and log files in the specified database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, KevinConanMSFT, dplessMSFT, randolphwest
+ms.reviewer: umajay, KevinConanMSFT, dplessMSFT
 ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "DECLARE CURSOR (Transact-SQL)"
 description: Defines the attributes of a Transact-SQL server cursor, such as its scrolling behavior and the query used to build the result set on which the cursor operates.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 09/04/2026
 ms.service: sql
 ms.subservice: t-sql

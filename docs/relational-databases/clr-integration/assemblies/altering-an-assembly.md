@@ -1,8 +1,8 @@
 ---
 title: Alter an Assembly
 description: Use ALTER ASSEMBLY to update assemblies registered in SQL Server. You can also change the permission set and add source code or other files for an assembly.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

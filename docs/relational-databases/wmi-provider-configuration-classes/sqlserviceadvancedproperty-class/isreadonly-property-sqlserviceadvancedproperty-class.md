@@ -1,8 +1,8 @@
 ---
 title: "IsReadOnly Property (SqlServiceAdvancedProperty)"
 description: "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: wmi

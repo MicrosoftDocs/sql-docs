@@ -1,8 +1,8 @@
 ---
 title: "Some availability replicas are disconnected"
 description: Possible causes and solutions for when your availability group replica is disconnected for an Always On SQL Server availability group.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

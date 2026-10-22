@@ -1,9 +1,9 @@
 ---
 title: "T-SQL Tutorial: Write Transact-SQL Statements"
 description: This tutorial is intended for users who are new to writing SQL statements. It helps new users get started by reviewing some basic statements for creating tables and inserting data.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "Transact-SQL statements, tutorials"
   - "Transact-SQL tutorials"
   - "tutorials [Transact-SQL]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Tutorial: Write Transact-SQL statements
 
-[!INCLUDE [sql-asdb-asdbmi-pdw-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 > [!NOTE]  
 > The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.

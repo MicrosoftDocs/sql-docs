@@ -3,7 +3,7 @@ title: MicrosoftML API
 description: MicrosoftML API
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/23/2025
 ms.service: sql
 ms.subservice: machine-learning-services

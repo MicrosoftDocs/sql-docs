@@ -3,7 +3,7 @@ title: "JSON_VALUE (Transact-SQL)"
 description: JSON_VALUE extracts a scalar value from a JSON string.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: t-sql

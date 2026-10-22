@@ -3,7 +3,7 @@ title: "SQL Server Connector Maintenance & Troubleshooting"
 description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: vanto, maghan
+ms.reviewer: vanto
 ms.date: 04/27/2026
 ms.service: sql
 ms.subservice: security

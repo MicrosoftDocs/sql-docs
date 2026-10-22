@@ -3,7 +3,7 @@ title: "Get started with SSMA for Db2 (Db2ToSQL)"
 description: Learn how SSMA for Db2 quickly converts Db2 database schemas to SQL Server schemas, and migrates data.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: ssma

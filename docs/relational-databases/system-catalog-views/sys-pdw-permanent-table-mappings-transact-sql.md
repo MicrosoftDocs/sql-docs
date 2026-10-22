@@ -26,5 +26,5 @@ Ties permanent user tables to internal object names by **object_id**.
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)
 - [sys.pdw_index_mappings (Transact-SQL)](sys-pdw-index-mappings-transact-sql.md)

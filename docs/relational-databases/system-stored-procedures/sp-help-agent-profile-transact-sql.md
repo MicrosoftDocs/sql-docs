@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_agent_profile (Transact-SQL)"
 description: Displays the profile of a specified agent. This stored procedure is executed at the Distributor on any database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

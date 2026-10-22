@@ -1,15 +1,15 @@
 ---
 title: Programming databases with T-SQL videos
 description: This page lists video content relevant for learning Transact-SQL (T-SQL).
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 05/24/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - ignite-2024
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # Programming databases with T-SQL videos

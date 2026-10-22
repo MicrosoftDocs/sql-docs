@@ -1,8 +1,8 @@
 ---
 title: "Failover Cluster Instance with Availability Groups"
 description: "Enhance your high availability and disaster recoverability by combining the features of a SQL Server failover cluster instance and an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 08/21/2025
 ms.update-cycle: 1825-days
 ms.service: sql

@@ -1,9 +1,9 @@
 ---
 title: "core.sp_update_data_source (Transact-SQL)"
 description: "Updates an existing row or inserts a new row in the management data warehouse core.source_info_internal table."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

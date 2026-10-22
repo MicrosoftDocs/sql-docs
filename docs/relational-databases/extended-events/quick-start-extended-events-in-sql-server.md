@@ -3,7 +3,7 @@ title: "Quickstart: Extended Events"
 description: This quickstart helps you use Extended Events, a lightweight performance monitoring system, to collect data to monitor and troubleshoot problems.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: maghan, randolphwest, dfurman
+ms.reviewer: dfurman
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: xevents

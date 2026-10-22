@@ -1,8 +1,8 @@
 ---
 title: Get Started with System-Versioned Temporal Tables
 description: Learn how to get started with system-versioned temporal tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

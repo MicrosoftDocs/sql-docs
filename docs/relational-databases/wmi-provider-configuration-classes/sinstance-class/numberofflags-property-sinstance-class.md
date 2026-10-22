@@ -1,8 +1,8 @@
 ---
 title: "NumberOfFlags Property (SInstance)"
 description: "NumberOfFlags Property (SInstance Class)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: wmi

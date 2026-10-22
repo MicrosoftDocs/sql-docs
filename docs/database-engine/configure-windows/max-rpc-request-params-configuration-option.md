@@ -3,7 +3,7 @@ title: "Server Configuration: max RPC request params (KB)"
 description: "Explains the max RPC request params instance configuration setting."
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

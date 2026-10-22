@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Azure portal query editor (Classic experience)"
+title: "Quickstart: Azure portal query editor (Classic experience) (Preview)"
 titleSuffix: Azure SQL Database
 description: Learn how to connect to the Classic experience of the Azure portal query editor for Azure SQL Database.
 author: WilliamDAssafMSFT
@@ -13,16 +13,16 @@ ms.topic: quickstart
 monikerRange: "=azuresql || =azuresql-db"
 ROBOTS: NOINDEX
 ---
-# Quickstart: Use the Azure portal query editor (Classic experience)
+# Quickstart: Use the Azure portal query editor (Classic experience) (Preview)
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 In this quickstart, connect to an Azure SQL database in the Azure portal and use the query editor (Classic experience) to run Transact-SQL (T-SQL) queries.
 
 > [!IMPORTANT]
-> For the new Azure portal SQL query editor experience, see [Quickstart: Use the Azure portal query editor to query Azure SQL Database](connect-query-portal.md).
+> The classic Azure portal SQL query editor remains a preview feature. For the new Azure portal SQL query editor experience, see [Azure portal query editor for Azure SQL Database](query-editor.md).
 
-- If you don't already have an Azure SQL Database created, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+- If you don't already have an Azure SQL database, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). To create a database at no cost, see [Deploy Azure SQL Database for free](free-tier.md).
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ You can also connect to your Azure SQL database using other tools, including:
 
 ## Query the database
 
-On any database, execute the following query in the Query editor to return the time in UTC, the database name, and your authenticated login name.
+On any database, run the following query in the Query editor to return the time in UTC, the database name, and your authenticated login name.
 
 ```sql
 SELECT SYSDATETIMEOFFSET(), DB_NAME(), ORIGINAL_LOGIN();
@@ -83,7 +83,7 @@ SELECT SYSDATETIMEOFFSET(), DB_NAME(), ORIGINAL_LOGIN();
 
 ### Query the AdventureWorksLT sample database
 
-This portion of quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+This portion of the quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md). Look for the option to [deploy Azure SQL Database for free with the free tier](free-tier.md).
 
 On the **Query editor (preview)** page, run the following example queries against your `AdventureWorksLT` sample database.
 

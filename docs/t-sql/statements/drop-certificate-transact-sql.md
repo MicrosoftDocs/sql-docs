@@ -3,7 +3,7 @@ title: "DROP CERTIFICATE (Transact-SQL)"
 description: DROP CERTIFICATE removes a certificate from the database.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/24/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -62,16 +62,6 @@ The following example drops the certificate `Shipping04` from the `AdventureWork
 
 ```sql
 USE AdventureWorks2022;
-
-DROP CERTIFICATE Shipping04;
-```
-
-## Examples: Analytics Platform System (PDW)
-
-The following example drops the certificate `Shipping04`.
-
-```sql
-USE master;
 
 DROP CERTIFICATE Shipping04;
 ```

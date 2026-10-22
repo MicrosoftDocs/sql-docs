@@ -1,8 +1,8 @@
 ---
 title: Inform customers how to find Gen4 resources
 description: Inform customers how to find Gen4 resources.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.date: 04/03/2023
 ms.topic: include
 ---

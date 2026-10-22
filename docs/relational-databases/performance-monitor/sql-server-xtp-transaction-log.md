@@ -1,8 +1,8 @@
 ---
 title: "SQL Server XTP Transaction Log object"
 description: Learn about the SQL Server XTP Transaction Log performance object, which contains counters related to In-Memory OLTP transaction log activity in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_check_dynamic_filters (Transact-SQL)"
 description: sp_check_dynamic_filters displays information on parameterized row filter properties for a publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

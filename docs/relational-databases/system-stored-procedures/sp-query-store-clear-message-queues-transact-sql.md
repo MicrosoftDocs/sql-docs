@@ -1,9 +1,9 @@
 ---
 title: "sp_query_store_clear_message_queues (Transact-SQL)"
 description: "Clears all queued (non-persisted) Query Store messages pending for the replica against which the command is executed."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 11/17/2025
 ms.service: sql
 ms.subservice: system-objects

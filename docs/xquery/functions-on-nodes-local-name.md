@@ -1,9 +1,9 @@
 ---
 title: "local-name Function (XQuery)"
 description: Learn how to use the XQuery function local-name() to return the local-name part of a node.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

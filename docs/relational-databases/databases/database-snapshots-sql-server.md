@@ -3,7 +3,7 @@ title: "Database Snapshots (SQL Server)"
 description: "Find out how to use database snapshots to create read-only, static views of a database in SQL Server. See their benefits, prerequisites, and limitations."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: maghan
+ms.reviewer: vanto
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: configuration

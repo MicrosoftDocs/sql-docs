@@ -3,7 +3,7 @@ title: Connect Your SQL Server to Azure Arc
 description: Connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: maghan
+ms.reviewer: vanto
 ms.date: 07/08/2025
 ms.topic: how-to
 ms.custom:

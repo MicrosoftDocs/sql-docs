@@ -1,9 +1,9 @@
 ---
 title: "PATINDEX (Transact-SQL)"
 description: PATINDEX returns the starting position of the first occurrence of a pattern in a specified expression, or zero.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "PATINDEX function"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # PATINDEX (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns the starting position of the first occurrence of a pattern in a specified expression, or zero if the pattern isn't found, on all valid text and character data types.
 
@@ -44,7 +44,7 @@ PATINDEX ( '%pattern%' , expression )
 A character expression that contains the sequence to be found. Wildcard characters can be used; however, the % character must come before and follow *pattern* (except when you search for first or last characters). *pattern* is an expression of the character string data type category. *pattern* is limited to 8,000 characters.
 
 > [!NOTE]  
-> While traditional regular expressions aren't natively supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions, similar complex pattern matching can be achieved by using various wildcard expressions. See the [String operators](../language-elements/string-operators-transact-sql.md) documentation for more detail on wildcard syntax. For information about regular expression functions in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Regular expressions functions](regular-expressions-functions-transact-sql.md).
+> While traditional regular expressions aren't natively supported in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions, similar complex pattern matching can be achieved by using various wildcard expressions. See the [String operators](../language-elements/string-operators-transact-sql.md) documentation for more detail on wildcard syntax. For information about regular expression functions in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], see [Regular expressions functions](../../relational-databases/regular-expressions/overview.md).
 
 #### *expression*
 

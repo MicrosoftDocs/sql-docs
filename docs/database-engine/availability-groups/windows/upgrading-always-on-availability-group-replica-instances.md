@@ -1,9 +1,9 @@
 ---
 title: "Upgrade Availability Group Replicas"
 description: Learn how to reduce downtime for the primary replica during SQL Server upgrades by performing a rolling upgrade.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/22/2026
 ms.update-cycle: 1825-days
 ms.service: sql

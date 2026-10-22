@@ -1,9 +1,9 @@
 ---
 title: Specify a Merge Article Resolver
 description: Learn how to specify a merge article resolver using SQL Server Management Studio (SSMS).
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/12/2026
 ms.service: sql
 ms.subservice: replication

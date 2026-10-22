@@ -3,7 +3,7 @@ title: "sys.sp_enable_event_stream (Transact-SQL)"
 description: "Enables the change event streaming feature."
 author: nzagorac-ms
 ms.author: nzagorac
-ms.reviewer: mathoma,randolphwest
+ms.reviewer: vanto
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: system-objects

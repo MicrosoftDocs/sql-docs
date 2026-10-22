@@ -1,8 +1,8 @@
 ---
 title: "Database Mirroring History"
 description: Learn how to view the history of mirroring status for a mirrored database on a specified server instance in SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: database-mirroring

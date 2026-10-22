@@ -3,7 +3,7 @@ title: "Permissions (Database Engine)"
 description: Consult this complete list of SQL Server permissions to find out which permissions apply to platforms that you use.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/30/2025
 ms.service: sql
 ms.subservice: security
@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "permissions [SQL Server]"
   - "security [SQL Server], permissions"
   - "naming conventions [SQL Server]"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Permissions (Database Engine)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Every [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE [ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has the same system for the database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Get started with Database Engine permissions](authentication-access/getting-started-with-database-engine-permissions.md).
 
@@ -483,6 +483,9 @@ All these permissions are under the same parent-permission: **ALTER ANY DATABASE
 - ALTER LEDGER CONFIGURATION
 - ENABLE LEDGER
 - VIEW LEDGER CONTENT
+
+> [!NOTE]  
+> `VIEW LEDGER CONTENT` provides database-wide access to ledger history. A user with this permission can view ledger metadata, including table and column names, even when the user doesn't otherwise have [metadata visibility](metadata-visibility-configuration.md) on the underlying object. This permission doesn't grant access to application data stored in ledger tables.
 
 #### Other database permissions
 

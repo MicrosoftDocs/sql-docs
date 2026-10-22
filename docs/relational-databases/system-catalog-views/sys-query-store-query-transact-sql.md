@@ -1,8 +1,8 @@
 ---
 title: "sys.query_store_query (Transact-SQL)"
 description: Contains information about the query and its associated overall aggregated runtime execution statistics.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: system-objects

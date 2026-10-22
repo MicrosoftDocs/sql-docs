@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: This article describes how to configure Azure SQL Managed Instance to resolve private domain names.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, srbozovi
+ms.reviewer: srbozovi
 ms.date: 08/26/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

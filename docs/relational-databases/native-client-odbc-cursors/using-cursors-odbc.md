@@ -1,8 +1,8 @@
 ---
 title: "Using Cursors (ODBC)"
 description: ODBC supports a cursor model that allows several types of cursors, scrolling/positioning within a cursor, several concurrency options, and positioned updates.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC cursors"
 ---
 # Using Cursors (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ODBC supports a cursor model that allows:  
   

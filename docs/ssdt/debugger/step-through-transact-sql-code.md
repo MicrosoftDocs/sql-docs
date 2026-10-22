@@ -1,9 +1,9 @@
 ---
 title: Step Through Transact-SQL Code
 description: Learn how to use the Transact-SQL debugger to control which Transact-SQL statements are run in a Database Engine Query Editor window.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

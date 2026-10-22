@@ -3,7 +3,7 @@ title: Using Transparent Network IP Resolution
 description: Learn about Transparent Network IP Resolution in the ODBC Driver for SQL Server and how it affects the MultiSubnetFailover feature.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, sunilbs, mcimfl, randolphwest
+ms.reviewer: davidengel, sunilbs, mcimfl
 ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: connectivity

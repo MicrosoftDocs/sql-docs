@@ -1,10 +1,10 @@
 ---
 title: "Database Engine Error Severities"
 description: Use this list of severity levels to understand the type of problem that SQL Server encountered when the SQL Server Database Engine raises an error.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
-ms.date: 08/21/2025
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
+ms.date: 10/20/2026
 ms.update-cycle: 1825-days
 ms.service: sql
 ms.subservice: supportability

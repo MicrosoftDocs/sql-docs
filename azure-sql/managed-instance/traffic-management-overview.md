@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how Azure SQL Managed Instance separates traffic into user-managed and service-managed planes.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, bonova
+ms.reviewer: bonova
 ms.date: 12/03/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

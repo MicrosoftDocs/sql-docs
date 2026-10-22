@@ -3,7 +3,7 @@ title: Disable SQL Authentication
 description: Learn how to disable SQL authentication for SQL Server 2025 enabled by Azure Arc instances, so the instance supports only Microsoft Entra and Windows authentication. Configure it from the Azure portal without restarting SQL Server.
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: vanto, randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 07/10/2026
 ms.service: sql
 ms.subservice: security

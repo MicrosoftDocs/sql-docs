@@ -1,8 +1,8 @@
 ---
 title: Migrating SQL Server Workloads FAQ
 description: Frequently Asked Questions about migrating from SQL Server to Azure SQL, and modernizing the data platform
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: dmarinkovic
 ms.date: 06/22/2026
 ms.service: azure-sql-database

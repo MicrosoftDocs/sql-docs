@@ -1,8 +1,8 @@
 ---
 title: "sys.query_store_plan (Transact-SQL)"
 description: The sys.query_store_plan view contains information about each execution plan associated with a query.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: wiassaf
 ms.date: 05/26/2026
 ms.service: sql

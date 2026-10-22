@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_vupgrade_mergeobjects (Transact-SQL)"
 description: Regenerates the article-specific triggers, stored procedures, and views that are used to track and apply data changes for merge replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

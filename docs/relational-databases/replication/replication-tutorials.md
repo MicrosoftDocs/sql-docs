@@ -1,8 +1,8 @@
 ---
 title: "Replication tutorials"
 description: Use these tutorials to help prepare your server for replication in SQL Server, and then learn to configure both transactional and merge replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

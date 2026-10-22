@@ -3,7 +3,7 @@ title: Service-Aided Subnet Configuration
 description: Learn how you can enable the service-aided subnet configuration for Azure SQL Managed Instance with subnet delegation.
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/11/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

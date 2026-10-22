@@ -1,8 +1,8 @@
 ---
 title: Specify How Changes are Propagated (Transactional)
 description: Transactional replication in SQL Server propagates changes through stored procedures, DML statements, or custom logic. Explore call syntax options and examples.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

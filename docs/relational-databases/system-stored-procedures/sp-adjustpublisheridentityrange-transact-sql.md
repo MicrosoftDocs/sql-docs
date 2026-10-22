@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_adjustpublisheridentityrange (Transact-SQL)"
 description: Adjusts the identity range on a publication and reallocates new ranges based on the threshold value on the publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

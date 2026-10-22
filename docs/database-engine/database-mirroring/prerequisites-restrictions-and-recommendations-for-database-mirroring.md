@@ -1,8 +1,8 @@
 ---
 title: "Database Mirroring: Prerequisites, restrictions, & recommendations"
 description: Learn about the prerequisites, restrictions, and recommendations for configuring database mirroring with SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: database-mirroring

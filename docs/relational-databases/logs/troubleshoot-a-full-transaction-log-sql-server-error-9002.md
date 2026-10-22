@@ -1,9 +1,9 @@
 ---
 title: "Troubleshoot Full Transaction Log Error 9002"
 description: Learn how to resolve a full SQL Server transaction log, and how to avoid the problem in the future.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: sql
 ms.subservice: supportability

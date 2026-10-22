@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_category (Transact-SQL)"
 description: Removes the specified category of jobs, alerts, or operators from the current server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -4,7 +4,7 @@ description: Learn how to configure and use Always Encrypted with secure enclave
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: "vanto"
-ms.date: 11/14/2023
+ms.date: 09/02/2026
 ms.service: sql
 ms.subservice: security
 ms.custom: ignite-2023
@@ -41,6 +41,9 @@ To set up Always Encrypted with secure enclaves and attestation, see:
 - [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)
 
 ### Set up the secure enclave and attestation in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)]
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](always-encrypted-enclaves-migration.md).
 
 For details, see the following articles:
 

@@ -3,7 +3,7 @@ title: "sys.sp_srvrolepermission (Transact-SQL)"
 description: sp_srvrolepermission displays the permissions of a fixed server role.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

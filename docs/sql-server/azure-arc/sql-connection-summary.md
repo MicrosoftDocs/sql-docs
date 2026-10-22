@@ -3,7 +3,7 @@ title: SQL Server Connection Summary
 description: Learn how you can view client connections to an instance of SQL Server enabled by Azure Arc.
 author: ajithkr-ms
 ms.author: ajithkr
-ms.reviewer: nhebbar, randolphwest
+ms.reviewer: nhebbar
 ms.date: 11/26/2025
 ms.topic: how-to
 ---

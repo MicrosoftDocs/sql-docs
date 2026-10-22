@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows Authentication access to Azure SQL Managed Instance using Microsoft Entra ID and Kerberos.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf
+ms.reviewer: bonova, urmilano, wiassaf
 ms.date: 09/11/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

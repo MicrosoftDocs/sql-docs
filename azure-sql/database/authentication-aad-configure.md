@@ -1,16 +1,15 @@
 ---
 title: Configure Microsoft Entra Authentication
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
-description: Learn how to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics using the Microsoft Entra authentication.
+titleSuffix: Azure SQL Database & SQL Managed Instance
+description: Learn how to connect to Azure SQL Database and Azure SQL Managed Instance using Microsoft Entra authentication.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, mathoma, maghan
-ms.date: 05/15/2026
+ms.reviewer: wiassaf
+ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
 ms.custom:
-  - azure-synapse
   - has-adal-ref
   - sqldbrb=2
   - devx-track-azurepowershell
@@ -23,7 +22,7 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 # Configure and manage Microsoft Entra authentication with Azure SQL
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > - [SQL Server 2022](/sql/sql-server/azure-arc/entra-authentication-setup-tutorial)
@@ -31,13 +30,14 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 > - [Azure SQL Database & Azure SQL Managed Instance](authentication-aad-configure.md)
 > - [SQL Server on Azure VMs](../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md)
 
-This article shows you how to use [Microsoft Entra ID for authentication](authentication-aad-overview.md) with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
+This article shows you how to use [Microsoft Entra ID for authentication](authentication-aad-overview.md) with [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
 Alternatively, you can also [configure Microsoft Entra authentication for SQL Server on Azure Virtual Machines](../virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md).
 
 <a id="azure-ad-authentication-methods"></a>
+<a id="azure-active-directory---integrated"></a>
 
 ## Prerequisites
 
@@ -66,22 +66,20 @@ For more information, see:
 
 ## Set Microsoft Entra admin
 
-To use Microsoft Entra authentication with your resource, it needs to have the Microsoft Entra administrator set. While conceptually the steps are the same for Azure SQL Database, Azure Synapse Analytics, and Azure SQL Managed Instance, this section describes in detail the different APIs and portal experiences to do so per product.
+To use Microsoft Entra authentication with your resource, you need to set the Microsoft Entra administrator. While the steps are conceptually the same for Azure SQL Database and Azure SQL Managed Instance, this section describes in detail the different APIs and portal experiences to set the admin for each product.
 
 The Microsoft Entra admin can also be configured when the Azure SQL resource is created. If a Microsoft Entra admin is already configured, skip this section.
 
 <a id="azure-ad-admin-with-a-server-in-sql-database"></a>
 <a id="provision-azure-ad-admin-sql-database"></a>
 
-### Azure SQL Database and Azure Synapse Analytics
+### Azure SQL Database
 
-Setting the Microsoft Entra admin enables Microsoft Entra authentication for your [Logical server](logical-servers.md) for Azure SQL Database and Azure Synapse Analytics. You can set a Microsoft Entra admin for your server by using the Azure portal, PowerShell, Azure CLI, or REST APIs.
+Setting the Microsoft Entra admin enables Microsoft Entra authentication for your [logical server](logical-servers.md) for Azure SQL Database. You can set a Microsoft Entra admin for your server by using the Azure portal, PowerShell, Azure CLI, or REST APIs.
 
 In the Azure portal, you can find the **logical server** name
 
 - In the **server name** field on the **Overview** page of Azure SQL Database.
-- In the **server name** field on the **Overview** page of your standalone dedicated SQL pool in Azure Synapse Analytics.
-- In the relevant **SQL endpoint** on the **Overview** page of your Azure Synapse Analytics workspace.
 
 #### [Azure portal](#tab/azure-portal)
 
@@ -115,13 +113,13 @@ To remove the admin, at the top of the **Microsoft Entra ID** page, select **Rem
 
 To run PowerShell cmdlets, you need to have Azure PowerShell installed and running. See [How to install and configure Azure PowerShell](/powershell/azure/) for detailed information.
 
-The following Azure PowerShell cmdlets can be used to set and manage a Microsoft Entra admin for Azure SQL Database and Azure Synapse Analytics:
+The following Azure PowerShell cmdlets can be used to set and manage a Microsoft Entra admin for Azure SQL Database:
 
 | Cmdlet name | Description |
 | --- | --- |
-| [Set-AzSqlServerActiveDirectoryAdministrator](/powershell/module/az.sql/set-azsqlserveractivedirectoryadministrator) | Sets a Microsoft Entra administrator for the server hosting SQL Database or Azure Synapse. |
-| [Remove-AzSqlServerActiveDirectoryAdministrator](/powershell/module/az.sql/remove-azsqlserveractivedirectoryadministrator) | Removes a Microsoft Entra administrator for the server hosting SQL Database or Azure Synapse. |
-| [Get-AzSqlServerActiveDirectoryAdministrator](/powershell/module/az.sql/get-azsqlserveractivedirectoryadministrator) | Returns information about a Microsoft Entra administrator currently configured for the server hosting SQL Database or Azure Synapse. |
+| [Set-AzSqlServerActiveDirectoryAdministrator](/powershell/module/az.sql/set-azsqlserveractivedirectoryadministrator) | Sets a Microsoft Entra administrator for the server hosting SQL Database. |
+| [Remove-AzSqlServerActiveDirectoryAdministrator](/powershell/module/az.sql/remove-azsqlserveractivedirectoryadministrator) | Removes a Microsoft Entra administrator for the server hosting SQL Database. |
+| [Get-AzSqlServerActiveDirectoryAdministrator](/powershell/module/az.sql/get-azsqlserveractivedirectoryadministrator) | Returns information about a Microsoft Entra administrator currently configured for the server hosting SQL Database. |
 
 Use PowerShell command get-help to see more information for each of these commands. For example, `get-help Set-AzSqlServerActiveDirectoryAdministrator`.
 
@@ -137,9 +135,9 @@ $parameters = @{
 Set-AzSqlServerActiveDirectoryAdministrator @parameters
 ```
 
-The **DisplayName** parameter accepts either the Microsoft Entra ID display name or the User Principal Name, such as the following examples: ``DisplayName="Adrian King"`` and ``DisplayName="adrian@contoso.com"``. If you're using a Microsoft Entra group, then only the display name is supported.
+The `DisplayName` parameter accepts either the Microsoft Entra ID display name or the User Principal Name, such as the following examples: ``DisplayName="Adrian King"`` and ``DisplayName="adrian@contoso.com"``. If you're using a Microsoft Entra group, then only the display name is supported.
 
-The following example uses the optional **ObjectID** parameter:
+The following example uses the optional `ObjectID` parameter:
 
 ```powershell
 $parameters = @{
@@ -152,7 +150,7 @@ Set-AzSqlServerActiveDirectoryAdministrator @parameters
 ```
 
 > [!NOTE]  
-> The **ObjectID** is required when the **DisplayName** isn't unique. To retrieve the **ObjectID** and **DisplayName** values, you can view the properties of a user or group in the Microsoft Entra ID section of the Azure portal.
+> The `ObjectID` is required when the `DisplayName` isn't unique. To retrieve the `ObjectID` and `DisplayName` values, you can view the properties of a user or group in the Microsoft Entra ID section of the Azure portal.
 
 The following example returns information about the current Microsoft Entra admin for the server:
 
@@ -178,20 +176,20 @@ Remove-AzSqlServerActiveDirectoryAdministrator @parameters
 
 #### [Azure CLI](#tab/azure-cli)
 
-You can set a Microsoft Entra admin for Azure SQL Database and Azure Synapse Analytics with the following Azure CLI commands:
+You can set a Microsoft Entra admin for Azure SQL Database with the following Azure CLI commands:
 
 | Command | Description |
 | --- | --- |
-| [az sql server ad-admin create](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-create) | Sets a Microsoft Entra administrator for the logical server hosting SQL Database or Azure Synapse Analytics. |
-| [az sql server ad-admin delete](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-delete) | Removes a Microsoft Entra administrator from the logical server hosting the SQL Database or Azure Synapse Analytics. |
-| [az sql server ad-admin list](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-list) | Returns information about the Microsoft Entra administrator configured for the server hosting the SQL Database or Azure Synapse Analytics. |
-| [az sql server ad-admin update](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-update) | Updates the Microsoft Entra administrator for the server hosting the SQL Database or Azure Synapse Analytics. |
+| [az sql server ad-admin create](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-create) | Sets a Microsoft Entra administrator for the logical server hosting SQL Database. |
+| [az sql server ad-admin delete](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-delete) | Removes a Microsoft Entra administrator from the logical server hosting the SQL Database. |
+| [az sql server ad-admin list](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-list) | Returns information about the Microsoft Entra administrator configured for the server hosting the SQL Database. |
+| [az sql server ad-admin update](/cli/azure/sql/server/ad-admin#az-sql-server-ad-admin-update) | Updates the Microsoft Entra administrator for the server hosting the SQL Database. |
 
 For more CLI commands, see [az sql server](/cli/azure/sql/server).
 
 #### [REST APIs](#tab/rest-apis)
 
-You can also use the [Server Azure AD Administrator](/rest/api/sql/server-azure-ad-administrators) REST APIs to create, update, delete, and get the Microsoft Entra administrator for Azure SQL Database and Azure Synapse Analytics.
+You can also use the [Server Azure AD Administrator](/rest/api/sql/server-azure-ad-administrators) REST APIs to create, update, delete, and get the Microsoft Entra administrator for Azure SQL Database.
 
 | API | Description |
 | --- | --- |
@@ -323,12 +321,12 @@ You can use the [Managed Instance Administrators](/rest/api/sql/managed-instance
 
 SQL Managed Instance needs permissions to read Microsoft Entra ID for scenarios like authorizing users who connect through security group membership and new user creation. For Microsoft Entra authentication to work, you need to assign the managed instance identity to the **Directory Readers** role. You can do this using the Azure portal or PowerShell.
 
-For some operations, Azure SQL Database and Azure Synapse Analytics also require permissions to query Microsoft Graph, explained in [Microsoft Graph permissions](./authentication-aad-overview.md#microsoft-graph-permissions). Azure SQL Database and Azure Synapse Analytics support fine-grained Graph permissions for these scenarios, whereas SQL Managed Instance requires the **Directory Readers** role. Fine-grained permissions and their assignment are described in detail in [enable service principals to create Microsoft Entra users](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users).
+For some operations, Azure SQL Database requires permissions to query Microsoft Graph, explained in [Microsoft Graph permissions](./authentication-aad-overview.md#microsoft-graph-permissions). Azure SQL Database supports fine-grained Graph permissions for these scenarios, whereas SQL Managed Instance requires the **Directory Readers** role. Fine-grained permissions and their assignment are described in detail in [enable service principals to create Microsoft Entra users](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users).
 
 > [!IMPORTANT]
 > **Azure SQL Database** and **SQL Managed Instance** use different permission models for Microsoft Graph access:
 >
-> - **Azure SQL Database and Azure Synapse Analytics**: Support fine-grained Microsoft Graph API permissions (such as `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`) assigned directly to the server identity. This approach follows the principle of least privilege and is recommended. For step-by-step instructions, see [Enable service principals to create Microsoft Entra users](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users). The Directory Readers role can also be used as a broader alternative.
+> - **Azure SQL Database**: Supports fine-grained Microsoft Graph API permissions (such as `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.All`) assigned directly to the server identity. This approach follows the principle of least privilege and is recommended. For step-by-step instructions, see [Enable service principals to create Microsoft Entra users](authentication-aad-service-principal.md#enable-service-principals-to-create-azure-ad-users). The Directory Readers role can also be used as a broader alternative.
 > - **SQL Managed Instance**: Requires the **Directory Readers** role or equivalent [fine-grained Microsoft Graph permissions](authentication-aad-directory-readers-role.md) assigned to the instance identity. The Azure portal provides a convenient banner on the **Microsoft Entra ID** page that prompts you to grant the Directory Readers role. Follow the steps in the [Directory Readers role](#directory-readers-role) section.
 >
 > If you're configuring **Azure SQL Database**, you don't need to assign the Directory Readers role for basic Microsoft Entra admin setup. Instead, assign the fine-grained Microsoft Graph permissions to the server identity as described in [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
@@ -418,7 +416,7 @@ The Microsoft Entra admin can now be used to create Microsoft Entra server princ
 
 ## Create Microsoft Entra principals in SQL
 
-To connect to a database in SQL Database or Azure Synapse Analytics with Microsoft Entra authentication, a principal has to be configured on the database for that identity with at least the `CONNECT` permission.
+To connect to a database in Azure SQL Database with Microsoft Entra authentication, you need to configure a principal on the database for that identity with at least the `CONNECT` permission.
 
 ### Database user permissions
 
@@ -463,7 +461,7 @@ CREATE USER [adrian@contoso.com] FROM EXTERNAL PROVIDER;
 ### Login based users
 
 > [!NOTE]  
-> [Microsoft Entra server principals (logins)](authentication-azure-ad-logins.md) are generally available for Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2022 and later. Microsoft Entra server principals are currently in public preview for Azure Synapse Analytics.
+> [Microsoft Entra server principals (logins)](authentication-azure-ad-logins.md) are generally available for Azure SQL Database, Azure SQL Managed Instance, and SQL Server 2022 and later versions.
 
 [Microsoft Entra server principals (or logins)](authentication-azure-ad-logins.md) are supported, which means contained database users aren't required. Database principals (users) can be created based off of a server principal, which means Microsoft Entra users can inherit server-level assigned permissions of a login.
 
@@ -472,6 +470,8 @@ CREATE USER [appName] FROM LOGIN [appName];
 ```
 
 For more information, see [SQL Managed Instance overview](../managed-instance/sql-managed-instance-paas-overview.md#microsoft-entra-integration). For syntax on creating Microsoft Entra server principals (logins), see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true).
+
+<a id="create-contained-users-mapped-to-azure-ad-identities"></a>
 
 ### External users
 
@@ -518,29 +518,18 @@ After Microsoft Entra authentication has been configured, you can use it to conn
 
 For guidance on troubleshooting issues, see [Blog: Troubleshooting problems related to Microsoft Entra authentication with Azure SQL Database and Azure Synapse](https://techcommunity.microsoft.com/t5/azure-sql-blog/troubleshooting-problems-related-to-azure-ad-authentication-with/ba-p/1062991).
 
+## Configure and manage Microsoft Entra authentication with Azure Synapse Analytics
+
+For Azure Synapse Analytics, see [Configure and manage Microsoft Entra authentication](/azure/synapse-analytics/sql/authentication-aad-configure).
+
 ## Related content
 
-- [Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics](logins-create-manage.md)
+- [Authorize database access to SQL Database and SQL Managed Instance](logins-create-manage.md)
 - [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 - [Microsoft Entra service principals with Azure SQL](authentication-aad-service-principal.md)
 - [Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)
 - [Database roles](/sql/relational-databases/security/authentication-access/database-level-roles)
-- [Azure SQL Database and Azure Synapse IP firewall rules](firewall-configure.md)
+- [Azure SQL Database IP firewall rules](firewall-configure.md)
 - [Create Microsoft Entra guest users and set them as a Microsoft Entra admin](authentication-aad-guest-users.md)
 - [Tutorial: Create Microsoft Entra users using Microsoft Entra applications](authentication-aad-service-principal-tutorial.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)
-
-<a id="using-an-azure-ad-identity-to-connect-using-ssms-or-ssdt"></a>  
-<a id="using-a-microsoft-entra-identity-to-connect-using-ssms-or-ssdt"></a>
-<a id='using-an-azure-ad-identity-to-connect-using-ssms-or-ssdt'></a>
-<a id='azure-active-directory---integrated'></a>
-<a id='azure-active-directory---password'></a>
-<a id='azure-active-directory---universal-with-mfa'></a>
-<a id='azure-active-directory---service-principal'></a>
-<a id='azure-active-directory---managed-identity'></a>
-<a id='azure-active-directory---default'></a>
-<a id='using-an-azure-ad-identity-to-connect-from-a-client-application'></a>
-<a id='azure-active-directory-integrated-authentication'></a>
-<a id='azure-active-directory-password-authentication'></a>
-<a id='azure-active-directory-access-token'></a>
-<a id='troubleshoot-azure-ad-authentication'></a>

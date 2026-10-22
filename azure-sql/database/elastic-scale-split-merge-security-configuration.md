@@ -3,7 +3,7 @@ title: Split-Merge Security Configuration
 description: Set up x409 certificates for encryption with the split/merge service for elastic scale.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: bgavrilovic, mathoma
+ms.reviewer: bgavrilovic
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

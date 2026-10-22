@@ -3,7 +3,7 @@ title: "sys.dm_operation_status"
 description: The sys.dm_operation_status dynamic management view displays information about operations performed on databases.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/11/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

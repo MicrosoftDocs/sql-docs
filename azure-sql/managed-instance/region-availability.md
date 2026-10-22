@@ -1,8 +1,8 @@
 ---
 title: Feature Availability by Region
 description: Learn about feature availability by region for Azure SQL Managed Instance.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: 
 ms.date: 08/10/2026
 ms.service: azure-sql-managed-instance
@@ -106,6 +106,9 @@ Choosing a [maintenance window](maintenance-window.md) for Azure SQL Managed Ins
 
 > [!NOTE]
 > Zone redundancy for the Next-gen General Purpose service tier is currently in preview. The preview also supports [flexible memory](resource-limits.md#flexible-memory) for zone-redundant instances on Premium-series hardware.
+
+> [!IMPORTANT]
+> Next-gen General Purpose zone redundancy isn't available in every region that supports zone redundancy for SQL Managed Instance. It requires Azure Elastic SAN zone-redundant storage (ZRS), which isn't available in some multi-zone regions. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
 
 #### [Americas](#tab/americas1)
 

@@ -3,7 +3,7 @@ title: Built-In Retry Logic Providers in SqlClient
 description: Learn how the built-in Microsoft.Data.SqlClient retry providers schedule retries, select transient errors, and handle commands and transactions.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: davidengel, paulmedynski, cmalhotra, randolphwest
+ms.reviewer: davidengel, paulmedynski, cmalhotra
 ms.date: 08/14/2026
 ms.service: sql
 ms.subservice: connectivity

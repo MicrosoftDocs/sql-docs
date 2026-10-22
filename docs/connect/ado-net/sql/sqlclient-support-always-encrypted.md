@@ -4,7 +4,7 @@ description: Learn how to develop applications using Microsoft.Data.SqlClient an
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 02/15/2023
+ms.date: 10/01/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -69,6 +69,9 @@ Enabling Always Encrypted isn't sufficient for encryption or decryption to succe
 ## Enabling Always Encrypted with secure enclaves
 
 Beginning with Microsoft.Data.SqlClient version 1.1.0, the driver supports [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+> [!IMPORTANT]
+> Always Encrypted with Intel Software Guard Extensions (Intel SGX) enclaves reaches the end of support on October 31, 2027. Migrate affected databases before this date. After October 31, 2027, Azure automatically moves any database that remains on the DC-series compute tier to a supported standard-series (non-DC) compute tier and enables virtualization-based security (VBS) enclaves. For migration options, see [Always Encrypted with Intel SGX enclaves migration guide](/sql/relational-databases/security/encryption/always-encrypted-enclaves-migration).
 
 For general information on developing applications using enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
 
@@ -143,7 +146,7 @@ using (SqlCommand cmd = connection.CreateCommand())
     paramSSN.ParameterName = @"@SSN";
     paramSSN.DbType = DbType.AnsiStringFixedLength;
     paramSSN.Direction = ParameterDirection.Input;
-    paramSSN.Value = "795-73-9838";
+    paramSSN.Value = "987-65-4320";
     paramSSN.Size = 11;
     cmd.Parameters.Add(paramSSN);
 
@@ -190,7 +193,7 @@ using (SqlCommand cmd = connection.CreateCommand())
     paramSSN.ParameterName = @"@SSN";
     paramSSN.DbType = DbType.AnsiStringFixedLength;
     paramSSN.Direction = ParameterDirection.Input;
-    paramSSN.Value = "795-73-9838";
+    paramSSN.Value = "987-65-4320";
     paramSSN.Size = 11;
     cmd.Parameters.Add(paramSSN);
     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -283,7 +286,7 @@ To prevent such errors, make sure:
 ```csharp
 using (SqlCommand cmd = connection.CreateCommand())
 {
-    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = '795-73-9838'";
+    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = '987-65-4320'";
     cmd.ExecuteNonQuery();
 }
 ```

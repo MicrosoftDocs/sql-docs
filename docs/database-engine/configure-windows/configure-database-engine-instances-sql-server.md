@@ -1,8 +1,8 @@
 ---
 title: "Configure Database Engine Instances (SQL Server)"
 description: Get acquainted with SQL Server configuration tasks so that you can configure a Database Engine instance to meet performance and availability requirements.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

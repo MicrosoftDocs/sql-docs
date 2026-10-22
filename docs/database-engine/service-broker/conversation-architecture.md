@@ -1,9 +1,9 @@
 ---
 title: Conversation Architecture
 description: "All Service Broker applications communicate through conversations."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

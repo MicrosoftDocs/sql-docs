@@ -1,8 +1,8 @@
 ---
 title: "Connecting to a Data Source (ODBC)"
 description: "Connecting to a Data Source (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, connections"
 ---
 # Connecting to a Data Source (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   After allocating environment and connection handles and setting any connection attributes, the application connects to the data source or driver. There are three functions you can use to connect:  
   

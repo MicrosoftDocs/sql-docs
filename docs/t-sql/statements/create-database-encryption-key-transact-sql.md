@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "database encryption key, create"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates an encryption key for transparently encrypting a database. For more information about transparent data encryption (TDE), see [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -51,15 +51,6 @@ CREATE DATABASE ENCRYPTION KEY
 ```  
   
   
-```syntaxsql
--- Syntax for Parallel Data Warehouse  
-
-CREATE DATABASE ENCRYPTION KEY  
-       WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
-   ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
-[ ; ]  
-```  
-
 ## Arguments
 
 WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  

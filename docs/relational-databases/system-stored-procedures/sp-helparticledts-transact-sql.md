@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helparticledts (Transact-SQL)"
 description: sp_helparticledts is used to get information on the correct custom task names to use, when creating a transformation subscription using Visual Basic.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

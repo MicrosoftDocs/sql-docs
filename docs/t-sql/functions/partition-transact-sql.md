@@ -1,9 +1,9 @@
 ---
 title: "$PARTITION (Transact-SQL)"
 description: "$PARTITION returns the partition number into which a set of partitioning column values can be mapped for any specified partition function."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 01/07/2025
 ms.service: sql
 ms.subservice: t-sql

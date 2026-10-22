@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Ownership Chains and Context Switching"
 description: "Tutorial: Ownership Chains and Context Switching"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: quickstart

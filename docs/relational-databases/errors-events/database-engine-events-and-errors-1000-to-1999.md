@@ -1,14 +1,14 @@
 ---
 title: "Database Engine events and errors (1000 to 1999)"
 description: "Consult this SQL Server error code list (between 1000 and 1999) to find explanations for error messages for SQL Server database engine events."
-author: williamdassafMSFT
+author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
 ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Database Engine events and errors (1000 to 1999)
 
@@ -59,7 +59,7 @@ This article shows events and errors (between the range 1,000 and 1,999) for [!I
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb || =fabric"
 This article shows events and errors (between the range 1,000 and 1,999) for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
@@ -81,7 +81,7 @@ This article shows events and errors (between the range 1,000 and 1,999) for [!I
 [!INCLUDE [sql-server-2022-database-engine-events-and-errors-1000-1999](includes/sql-server-2022-database-engine-events-and-errors-1000-1999.md)]
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb"
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb || =fabric"
 [!INCLUDE [sql-server-2025-database-engine-events-and-errors-1000-1999](includes/sql-server-2025-database-engine-events-and-errors-1000-1999.md)]
 ::: moniker-end
 

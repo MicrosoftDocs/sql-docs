@@ -1,8 +1,8 @@
 ---
-author: williamdassafMSFT
+author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 09/15/2026
+ms.date: 10/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -505,6 +505,7 @@ ms.topic: include
 | 21583 | 16 | No | Cannot update the column in article '%s'. The article has a value of 2 or 3 (nonoverlapping partitions) for the partition_options property, and the column is involved in a row filter and/or a join filter. In this situation, the column cannot be updated at a Subscriber or republisher; it must be updated at the top-level Publisher. |
 | 21584 | 16 | No | Cannot insert the row for article '%s'. The row does not belong to the Subscriber's partition, and the article has a value of 2 or 3 (nonoverlapping partitions) for the partition_options property. Nonoverlapping partitions do not allow out-of-partition inserts. |
 | 21585 | 16 | No | Cannot specify custom article ordering in publication '%s' because the publication has a compatibility level lower than 90RTM. Use sp_changemergepublication to set the publication_compatibility_level to 90RTM. |
+| 21596 | 16 | No | Cannot execute the stored procedure '%s' because it is not a Microsoft-shipped system object. Merge replication only executes Microsoft-shipped generated procedures. |
 | 21597 | 16 | No | The article includes only the rowguidcol column. You must publish at least one other column. |
 | 21598 | 16 | No | Modifying DDL triggers created by replication is disallowed since these are required to track DDL changes. |
 | 21599 | 16 | No | The parameters @article and @join_articlename cannot have the same value. Specify different articles for the two parameters; self-joins are not permitted. |

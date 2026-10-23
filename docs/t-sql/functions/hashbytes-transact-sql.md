@@ -58,7 +58,7 @@ Specifies an expression that evaluates to a character or binary string to be has
 ## Remarks  
 Consider using `CHECKSUM` or `BINARY_CHECKSUM` as alternatives to compute a hash value.
 
-The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Use SHA2_256 or SHA2_512 instead. Older algorithms will continue working, but they will raise a deprecation event.
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Use SHA2_256 or SHA2_512 instead.
 
 ## Examples  
 ### Return the hash of a variable  

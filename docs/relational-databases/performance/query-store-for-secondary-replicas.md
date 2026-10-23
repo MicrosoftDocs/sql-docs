@@ -41,7 +41,7 @@ The following table summarizes the availability and the enabled state of Query s
 | [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] | Yes | No (can be enabled, per database) |
 | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | No<sup>2</sup> | No |
 
-<sup>1</sup> Query store for readable secondaries in the Hyperscale service tier of Azure SQL Database is coming soon.
+<sup>1</sup> Query Store for readable secondary replicas in the Hyperscale service tier of Azure SQL Database is coming soon.
 <sup>2</sup> Query Store for readable secondaries remains in **limited** preview for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and is therefore **not** supported in production, and is disabled by default. To enable Query Store for readable secondaries in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, a trace flag 12606 is required to be enabled to the primary and all readable secondary replicas. Trace flag 12606 **is not** intended for production deployments that are based on [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [SQL Server 2022 release notes](../../sql-server/sql-server-2022-release-notes.md).
 
 ## Supported high availability scenarios

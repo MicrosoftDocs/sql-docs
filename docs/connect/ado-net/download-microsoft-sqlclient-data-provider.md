@@ -4,7 +4,7 @@ description: Install Microsoft.Data.SqlClient, choose a supported release, add o
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/18/2026
+ms.date: 10/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -19,11 +19,11 @@ Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azu
 
 ## Choose a release
 
-Use a supported General Availability (GA) release for production applications. The latest GA release is [Microsoft.Data.SqlClient 7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0).
+Use a supported General Availability (GA) release for production applications. The latest GA release is [Microsoft.Data.SqlClient 7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1).
 
 | Release line | Latest version | Support level | Choose it when |
 | --- | --- | --- | --- |
-| 7.1 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0) | Standard Term Support (STS) | You need current driver features and can update on the regular release cadence. |
+| 7.1 | [7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1) | Standard Term Support (STS) | You need current driver features and can update on the regular release cadence. |
 | 7.0 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | Standard Term Support (STS) | You need servicing fixes while you prepare to upgrade before support ends on December 17, 2026. |
 | 6.1 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | Long Term Support (LTS) | You prefer a longer support period and don't need features introduced in 7.x. |
 
@@ -43,12 +43,22 @@ The command selects the latest stable version compatible with the project. To pi
 dotnet add package Microsoft.Data.SqlClient --version <version>
 ```
 
+The command adds a `PackageReference` element to your project file. For version 7.1.1, the project file contains this line:
+
+```xml
+<PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+```
+
+If you also add `Microsoft.Data.SqlClient.Extensions.Azure`, its `PackageReference` uses the same version.
+
 Restore dependencies and build the project:
 
 ```console
 dotnet restore
 dotnet build
 ```
+
+If restore or build reports a warning about a package with a known vulnerability, such as `NU1902` or `NU1903`, follow the steps in [Actions when packages with known vulnerabilities are reported](/nuget/concepts/auditing-packages#actions-when-packages-with-known-vulnerabilities-are-reported).
 
 Import the driver namespace in C#:
 
@@ -65,7 +75,7 @@ For new applications, don't reference the older `System.Data.SqlClient` package 
 1. Select the package owned by Microsoft.
 1. Select a supported stable version, and then select **Install**.
 
-For more information, see [Install and manage packages in Visual Studio](/nuget/consume-packages/install-use-packages-visual-studio).
+For more information, see [Install and manage packages in Visual Studio using the NuGet Package Manager](/nuget/consume-packages/install-use-packages-visual-studio).
 
 ## Add optional packages
 
@@ -82,18 +92,20 @@ For Microsoft Entra authentication with SqlClient 7.0 or later, run:
 dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version <same-version-as-Microsoft.Data.SqlClient>
 ```
 
-The 7.0 core package no longer includes Azure Identity dependencies. Starting with version 7.0.2, the core driver and companion packages use aligned versions. Reference the same version of `Microsoft.Data.SqlClient` and `Microsoft.Data.SqlClient.Extensions.Azure`. Applications that don't use driver-provided Microsoft Entra authentication don't need the Azure extension package. For authentication setup, see [Microsoft Entra authentication](sql/azure-active-directory-authentication.md).
+The 7.0 core package no longer includes Azure Identity dependencies. Starting with version 7.0.2, the core driver and companion packages use aligned versions. Reference the same version of `Microsoft.Data.SqlClient` and `Microsoft.Data.SqlClient.Extensions.Azure`. Applications that don't use driver-provided Microsoft Entra authentication don't need the Azure extension package. For authentication setup, see [Microsoft Entra authentication with Microsoft.Data.SqlClient](sql/azure-active-directory-authentication.md).
 
 ## Update the driver
 
-Before you update:
+1. Before you update, check these items:
 
-1. Read [What's new in Microsoft.Data.SqlClient](microsoft-data-sql-client-release-notes.md) and the upstream release notes for each version crossed by the update.
-1. Check the application's direct and transitive package references.
+   - Read [What's new in Microsoft.Data.SqlClient](microsoft-data-sql-client-release-notes.md) and the upstream release notes for each version crossed by the update.
+   - List the application's direct and transitive package references:
 
-   ```console
-   dotnet list package --include-transitive
-   ```
+     ```console
+     dotnet list package --include-transitive
+     ```
+
+   - Note every companion package that the application references directly, such as `Microsoft.Data.SqlClient.Extensions.Azure` or `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`.
 
 1. Update the package reference.
 
@@ -101,6 +113,7 @@ Before you update:
    dotnet add package Microsoft.Data.SqlClient --version <version>
    ```
 
+1. For version 7.0.2 and later, update each directly referenced companion package to the same version.
 1. Restore, build, and run the application's tests.
 1. Test connection establishment, authentication, certificate validation, connection pooling, data type conversions, transactions, and retry behavior against each supported database target.
 
@@ -112,12 +125,18 @@ Starting with version 7.0.2, the assembly versions of `Microsoft.Data.SqlClient.
 
 Microsoft.Data.SqlClient 7.1 supports applications on:
 
-- .NET Framework 4.6.2 or later on Windows.
 - .NET 8 or later on supported Windows, Linux, and macOS versions.
+- .NET Framework 4.6.2 or later on Windows.
 
 The NuGet package also contains a .NET Standard 2.0 compatibility asset for libraries. An executable application must target a supported .NET or .NET Framework runtime. A library's .NET Standard target doesn't make every consuming runtime supported.
 
 The package restores its managed and native dependencies through NuGet. Don't copy individual driver assemblies or native SQL Network Interface (SNI) libraries between applications.
+
+## .NET Framework projects
+
+The samples in these articles target .NET. For new development, use .NET instead of .NET Framework. For more information, see [Overview of .NET Framework](/dotnet/framework/get-started/overview).
+
+Projects that target .NET Framework use C# 7.3 by default, so a sample written for .NET doesn't compile there without changes. [Quickstart: Connect and query with Microsoft.Data.SqlClient](get-started-sqlclient-driver.md) has a .NET Framework tab with a C# 7.3 version of its sample.
 
 ## Prepare for deployment
 
@@ -147,7 +166,8 @@ Download the package and its dependencies from [NuGet.org](https://www.nuget.org
 
 ## Related content
 
-- [Get started with the SqlClient driver](get-started-sqlclient-driver.md)
+- [Quickstart: Connect and query with Microsoft.Data.SqlClient](get-started-sqlclient-driver.md)
+- [Quickstart: Use Microsoft.Data.SqlClient in an ASP.NET Core app](quickstart-asp-net-core-sql-client.md)
 - [What's new in Microsoft.Data.SqlClient](microsoft-data-sql-client-release-notes.md)
 - [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md)
 - [Microsoft.Data.SqlClient releases](https://github.com/dotnet/SqlClient/releases)

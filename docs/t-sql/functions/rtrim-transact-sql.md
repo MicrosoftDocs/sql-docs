@@ -46,9 +46,6 @@ RTRIM ( character_expression )
 
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
-> [!IMPORTANT]
-> The database compatibility level must be set to 160 or higher to use the optional *characters* argument.
-
 ```syntaxsql
 RTRIM ( character_expression , [ characters ] )
 ```
@@ -68,10 +65,6 @@ A literal, variable, or function call of any non-LOB character type (**nvarchar*
 ## Return types
 
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from the end of a *character_expression*. Returns `NULL` if input string is `NULL`.
-
-## Remarks
-
-To enable the optional *characters* positional argument, enable database compatibility level `160` on the databases that you connect to when executing queries.
 
 ## Examples
 
@@ -110,9 +103,6 @@ Four spaces are after the period in this sentence. Next string.
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 
 ### C. Remove specified characters from the end of a string
-
-> [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the optional *characters* argument.
 
 The following example removes the characters `abc.` from the end of the `.123abc.` string.
 

@@ -1,8 +1,8 @@
 ---
 title: Save Metadata
 description: Learn about the Save Metadata dialog box that prompts you to save metadata before saving your SSMA project.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

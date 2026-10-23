@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_replqueuemonitor (Transact-SQL)"
 description: sp_replqueuemonitor lists the queue messages from a queue in SQL Server or Microsoft Message Queue.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

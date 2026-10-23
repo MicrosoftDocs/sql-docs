@@ -1,8 +1,8 @@
 ---
 title: "Prepare and Execute a Statement (ODBC)"
 description: "Prepare and Execute a Statement (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "statement preparation"
 ---
 # Prepare and Execute a Statement (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
     
 ### To prepare a statement once, and then execute it multiple times  

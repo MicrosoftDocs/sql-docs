@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpsubscription (Transact-SQL)"
 description: sp_helpsubscription lists subscription information associated with a particular publication, article, Subscriber, or set of subscriptions.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

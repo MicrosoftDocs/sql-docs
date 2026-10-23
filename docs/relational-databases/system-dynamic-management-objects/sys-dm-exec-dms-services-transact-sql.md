@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_dms_services (Transact-SQL)"
 description: sys.dm_exec_dms_services (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/04/2019
 ms.service: sql
 ms.subservice: system-objects

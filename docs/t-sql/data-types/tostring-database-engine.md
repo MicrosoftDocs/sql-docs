@@ -1,8 +1,8 @@
 ---
 title: ToString (Database Engine)
 description: "ToString (Database Engine)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: t-sql

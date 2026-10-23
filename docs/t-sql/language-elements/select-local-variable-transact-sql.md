@@ -1,8 +1,8 @@
 ---
 title: "SELECT @local_variable (Transact-SQL)"
 description: Sets a local variable to the value of an expression.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: t-sql
@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || =azure-sqldw-latest |
 
 # SELECT @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Sets a local variable to the value of an expression.
 

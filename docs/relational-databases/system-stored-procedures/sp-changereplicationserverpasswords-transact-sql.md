@@ -3,7 +3,7 @@ title: "sys.sp_changereplicationserverpasswords (Transact-SQL)"
 description: Changes stored passwords for the Windows account or SQL Server login used by replication agents.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

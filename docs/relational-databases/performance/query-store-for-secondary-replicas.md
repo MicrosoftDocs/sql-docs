@@ -1,10 +1,10 @@
 ---
 title: Query Store for Secondary Replicas
 description: Query Store can be configured to monitor and tuning workloads on secondary read-only replicas.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: derekw, randolphwest, wiassaf
-ms.date: 04/23/2026
+author: thesqlsith
+ms.author: derekw
+ms.reviewer: derekw, wiassaf, erinstellato
+ms.date: 10/23/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -27,7 +27,7 @@ Query Store for readable secondary replicas enables Query Store insights for wor
 
 ## Availability
 
-Query Store for readable secondary replicas is available starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], as well as Azure SQL Database and Azure SQL Managed Instance with the [Always-up-to-date update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy). For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store for readable secondary replicas requires enabling trace flag 12606 to use the feature.
+Query Store for readable secondary replicas is available starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], as well as Azure SQL Database. It's also available in Azure SQL Managed Instance with the [Always-up-to-date update policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy) and the [SQL Server 2025 update policy](/azure/azure-sql/managed-instance/update-policy#sql-server-2025-update-policy). For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store for readable secondary replicas requires enabling trace flag 12606 to use the feature.
 
 The following table summarizes the availability and the enabled state of Query store for readable secondaries.
 
@@ -36,12 +36,12 @@ The following table summarizes the availability and the enabled state of Query s
 | [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | Yes<sup>1</sup> | Yes (always enabled) |
 | [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] | Yes | Yes (always enabled) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[AUTD](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#always-up-to-date-update-policy)</sup> | Yes | Yes (always enabled) |
-| [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2025](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2025-update-policy)</sup> | No | No |
+| [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2025](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2025-update-policy)</sup> | Yes | No (can be enabled, per database) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2022](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2022-update-policy)</sup> | No | No |
 | [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] | Yes | No (can be enabled, per database) |
 | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | No<sup>2</sup> | No |
 
-<sup>1</sup> Query store for readable secondaries is not currently available in the Hyperscale service tier of Azure SQL Database.   
+<sup>1</sup> Query Store for readable secondary replicas in the Hyperscale service tier of Azure SQL Database is coming soon.   
 <sup>2</sup> Query Store for readable secondaries remains in **limited** preview for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and is therefore **not** supported in production, and is disabled by default. To enable Query Store for readable secondaries in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, a trace flag 12606 is required to be enabled to the primary and all readable secondary replicas. Trace flag 12606 **is not** intended for production deployments that are based on [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [SQL Server 2022 release notes](../../sql-server/sql-server-2022-release-notes.md).
 
 ## Supported high availability scenarios
@@ -53,7 +53,7 @@ The following table summarizes the availability and the enabled state of Query s
     - Premium (includes built-in high availability replicas; active geo-replication or failover groups also supported)
     - Business critical (includes built-in high availability replicas; active geo-replication or failover groups also supported)
       
-- For [Azure SQL Managed Instance with the Always-up-to-date policy](/azure/azure-sql/managed-instance/update-policy#always-up-to-date-update-policy), Query Store for readable secondary replicas supports the following service tiers:
+- For Azure SQL Managed Instance, Query Store for readable secondary replicas supports the following service tiers:
     - General purpose with a [failover group](/azure/azure-sql/managed-instance/failover-group-sql-mi) (no built-in high availability replicas; requires a failover group configuration for secondary support)
     - Business critical (includes built-in high availability replicas)
 
@@ -82,7 +82,7 @@ ALTER DATABASE [Database_Name]
 
 ### Enable automatic plan correction for secondary replicas
 
-**Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions.
 
 After enabling Query Store for secondary replicas, you can optionally enable automatic tuning to allow the automatic plan correction feature to force plans on secondary replicas. This enables the query optimizer to automatically identify and fix query performance issues caused by execution plan regressions on secondary replicas.
 
@@ -92,6 +92,15 @@ To enable automatic plan correction for secondary replicas, connect to the prima
 ALTER DATABASE [Database_Name]
 FOR SECONDARY
 SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON);
+```
+
+#### Disable automatic plan correction automatic actions on secondary replicas
+The [automatic plan correction](../automatic-tuning/automatic-tuning.md#automatic-plan-correction) feature is automatically enabled on the primary and all secondary replicas in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[AUTD](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#always-up-to-date-update-policy)</sup>. To disable the automatic plan correction on secondary replicas, connect to the `primary` replica and execute the following script:
+
+```sql
+ALTER DATABASE [Database_Name]
+FOR SECONDARY
+SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = OFF);
 ```
 
 #### Disable Query Store for secondary replicas

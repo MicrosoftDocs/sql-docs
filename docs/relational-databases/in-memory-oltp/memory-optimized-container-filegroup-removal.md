@@ -3,7 +3,7 @@ title: "Memory-Optimized Container and Filegroup Removal"
 description: Learn how to remove the memory-optimized containers and filegroup from a SQL Server database.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/29/2025
 ms.service: sql
 ms.subservice: in-memory-oltp

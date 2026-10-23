@@ -1,9 +1,9 @@
 ---
 title: "sp_enumdsn (Transact-SQL)"
 description: Returns a list of all defined ODBC and OLE DB data source names for a server running under a specific Windows user account.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_cluster_members (Transact-SQL)"
 description: Returns a row for each of the members that constitute the WSFC quorum, and the state of each of them.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/13/2026
 ms.service: sql
 ms.subservice: system-objects

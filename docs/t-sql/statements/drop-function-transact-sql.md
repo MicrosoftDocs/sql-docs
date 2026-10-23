@@ -20,10 +20,10 @@ helpviewer_keywords:
   - "deleting user-defined functions"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # DROP FUNCTION (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
   Removes one or more user-defined functions from the current database. User-defined functions are created by using [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) and modified by using [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md).  
   
@@ -41,7 +41,7 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```
 
 ```syntaxsql
- -- Azure Synapse Analytics, Parallel Data Warehouse, Microsoft Fabric
+ -- Azure Synapse Analytics and Microsoft Fabric
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 

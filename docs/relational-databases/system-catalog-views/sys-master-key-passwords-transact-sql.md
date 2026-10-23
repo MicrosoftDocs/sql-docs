@@ -1,8 +1,8 @@
 ---
 title: "sys.master_key_passwords (Transact-SQL)"
 description: sys.master_key_passwords returns a row for each database master key password added by using the sp_control_dbmasterkey_password stored procedure.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

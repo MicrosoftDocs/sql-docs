@@ -3,7 +3,7 @@ title: DBCC SHRINKFILE (Transact-SQL)
 description: DBCC SHRINKFILE shrinks the size of a database file.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: umajay, dpless, randolphwest, dfurman
+ms.reviewer: umajay, dpless, dfurman
 ms.date: 07/23/2026
 ms.service: sql
 ms.subservice: t-sql
@@ -106,7 +106,7 @@ For FILESTREAM filegroup containers, you can't use `ALTER DATABASE` to remove a 
 
 #### NOTRUNCATE
 
-Moves allocated pages from a data file's end to unallocated pages in a file's front with or without specifying *target_percent*. The free space at the file's end isn't returned to the operating system, and the file's physical size doesn't change. Therefore, if `NOTRUNCATE` is specified, the file appears not to shrink.
+Moves allocated pages from a data file's end to unallocated pages in a file's front with or without specifying *target_size*. The free space at the file's end isn't returned to the operating system, and the file's physical size doesn't change. Therefore, if `NOTRUNCATE` is specified, the file appears not to shrink.
 
 `NOTRUNCATE` is applicable only to data files. The log files aren't affected.
 

@@ -1,9 +1,9 @@
 ---
 title: "Database Engine Stored Procedures (Transact-SQL)"
 description: Reference guide for Database Engine system stored procedures that perform general maintenance, configuration, and management tasks for SQL Server instances.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/24/2026
 ms.service: sql
 ms.subservice: system-objects

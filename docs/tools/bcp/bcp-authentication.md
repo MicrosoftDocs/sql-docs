@@ -1,8 +1,8 @@
 ---
 title: Authenticate with Microsoft Entra ID in bcp
 description: Use Microsoft Entra ID to authenticate the bulk copy program (bcp) utility against Azure SQL, Microsoft Fabric SQL database, or SQL Server 2022 and later versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: mahyon
 ms.date: 06/25/2026
 ms.service: sql
@@ -22,7 +22,7 @@ monikerRange: ">=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 
 ---
 # Authenticate with Microsoft Entra ID in bcp
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics FabricDW FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricdw-fabricsqldb.md)]
 
 The [bulk copy program utility (bcp)](bcp-utility.md) supports several Microsoft Entra ID authentication models when you connect to Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], Azure Synapse Analytics, or [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
 

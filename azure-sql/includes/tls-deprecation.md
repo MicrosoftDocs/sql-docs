@@ -1,7 +1,7 @@
 ---
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 09/19/2025
 ms.service: azure-sql
 ms.topic: include

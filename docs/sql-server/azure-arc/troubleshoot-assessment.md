@@ -3,7 +3,7 @@ title: "Troubleshoot best practices assessment"
 description: "Describes how to troubleshoot best practices assessment on SQL Server enabled by Azure Arc."
 author: nhebbar2011
 ms.author: nhebbar
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/07/2024
 ms.topic: troubleshooting
 ---

@@ -1,8 +1,8 @@
 ---
 title: "ALTER PARTITION SCHEME (Transact-SQL)"
 description: "ALTER PARTITION SCHEME adds a filegroup to a partition scheme or alters the designation of the NEXT USED filegroup for the partition scheme."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: t-sql

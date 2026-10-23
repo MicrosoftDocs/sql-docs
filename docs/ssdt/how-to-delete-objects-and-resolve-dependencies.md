@@ -1,9 +1,9 @@
 ---
 title: Delete Objects and Resolve Dependencies
 description: Find out how to rename or delete database objects. See which dependent objects SSDT automatically updates, and which dependencies you need to update.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

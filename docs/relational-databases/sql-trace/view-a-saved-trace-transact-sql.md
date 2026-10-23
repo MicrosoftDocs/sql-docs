@@ -1,9 +1,9 @@
 ---
 title: "Get information about a saved trace (Transact-SQL)"
 description: "This article describes how to use built-in functions to view information about a saved trace."
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 06/19/2023
 ms.service: sql
 ms.topic: how-to

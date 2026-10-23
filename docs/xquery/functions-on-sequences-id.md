@@ -1,8 +1,8 @@
 ---
 title: "id Function (XQuery)"
 description: "Learn how to use the XQuery id function to return a sequence of elements in the XML instance, in document order, with the supplied xs:IDREF values."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

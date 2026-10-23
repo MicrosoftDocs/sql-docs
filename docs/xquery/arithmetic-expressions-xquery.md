@@ -1,8 +1,8 @@
 ---
 title: "Arithmetic Expressions (XQuery)"
 description: Learn about arithmetic expressions in XQuery and which arithmetic operators are supported.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: xml

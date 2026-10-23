@@ -1,9 +1,9 @@
 ---
 title: "BULK INSERT (Transact-SQL)"
 description: Transact-SQL reference for the BULK INSERT statement.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: jovanpop, randolphwest, wiassaf
+author: uc-msft
+ms.author: umajay
+ms.reviewer: jovanpop, wiassaf
 ms.date: 03/20/2026
 ms.service: sql
 ms.subservice: t-sql

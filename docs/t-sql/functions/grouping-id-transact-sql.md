@@ -3,7 +3,7 @@ title: "GROUPING_ID (Transact-SQL)"
 description: GROUPING_ID is a function that computes the level of grouping, in a SELECT, HAVING, or ORDER BY clause.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/06/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_server_services (Transact-SQL)"
 description: sys.dm_server_services returns information about the services in the current SQL Server instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/12/2024
 ms.service: sql
 ms.subservice: system-objects

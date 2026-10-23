@@ -1,7 +1,7 @@
 ---
 title: Work with write event log script task.
 description: "This article helps you to configure the Script Task."
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: "02/10/2023"
 ms.service: sql
 ms.subservice: integration-services
@@ -166,8 +166,8 @@ To configure the Script Task code sample, follow these steps in the SSIS designe
         </Event>
     ```
 
-## References
+## Related content
 
-[EventLog.WriteEntry Method (System.Diagnostics)](/dotnet/api/system.diagnostics.eventlog.writeentry?view=windowsdesktop-7.0&preserve-view=true)
+- [EventLog.WriteEntry Method (System.Diagnostics)](/dotnet/api/system.diagnostics.eventlog.writeentry?view=windowsdesktop-7.0&preserve-view=true)
 
-[Instrument Code to Create EventSource Events](/dotnet/core/diagnostics/eventsource-instrumentation)
+- [Instrument Code to Create EventSource Events](/dotnet/core/diagnostics/eventsource-instrumentation)

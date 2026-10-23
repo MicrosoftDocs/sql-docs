@@ -1,8 +1,8 @@
 ---
 title: "WMI Provider for Configuration Management Classes"
 description: Discover and implement the functionality that Windows Management Instrumentation provides. Choose from these classes for Configuration Manager.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: wmi

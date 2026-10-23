@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Understand how the Azure SQL Managed Instance maintenance window can be configured.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, urosmil, scottkim
+ms.reviewer: urosmil, scottkim
 ms.date: 06/25/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

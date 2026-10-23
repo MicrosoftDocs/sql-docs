@@ -1,8 +1,8 @@
 ---
 title: "Performance Dashboard"
 description: Learn about SQL Server Management Studio Performance Dashboard, which provides fast insight into SQL Server and Azure SQL Managed Instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.reviewer: wiassaf
 ms.date: 09/07/2025
 ms.service: sql

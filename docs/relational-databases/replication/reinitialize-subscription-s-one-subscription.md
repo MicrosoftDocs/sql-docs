@@ -1,8 +1,8 @@
 ---
 title: Reinitialize Subscriptions - One Subscription
 description: Reinitialize a subscription in SQL Server replication using the current or a new snapshot. Explore each dialog box option and mark your subscription.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

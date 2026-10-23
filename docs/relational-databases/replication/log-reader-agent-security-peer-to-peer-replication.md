@@ -1,8 +1,8 @@
 ---
 title: "Log Reader Agent Security (SSMS)"
 description: Describes the 'Log Reader Agent Security' page for a Transaction and Peer-to-peer Publication within SQL Server Management Studio (SSMS).
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

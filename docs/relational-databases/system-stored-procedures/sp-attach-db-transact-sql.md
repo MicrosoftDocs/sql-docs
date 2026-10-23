@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_attach_db (Transact-SQL)"
 description: sp_attach_db attaches a database to a server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

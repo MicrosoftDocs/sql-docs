@@ -1,8 +1,8 @@
 ---
 title: "GetPathLocator (Transact-SQL)"
 description: GetPathLocator returns the path locator ID value for the specified file or directory in a FileTable.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/08/2024
 ms.service: sql
 ms.subservice: system-objects

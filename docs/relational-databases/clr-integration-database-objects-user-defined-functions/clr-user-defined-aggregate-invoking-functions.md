@@ -1,8 +1,8 @@
 ---
 title: "Invoking CLR User-Defined Aggregate Functions"
 description: In SQL Server CLR integration, use Transact-SQL SELECT to invoke CLR user-defined aggregates, subject to the rules that apply to system aggregate functions.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/19/2026
 ms.service: sql
 ms.subservice: clr

@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
 description: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "09/29/2021"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,8 +1,8 @@
 ---
 title: "sys.sysfulltextcatalogs (Transact-SQL)"
 description: "sys.sysfulltextcatalogs (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/15/2017"
 ms.service: sql
 ms.subservice: system-objects
@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "sysfulltextcatalogs system table"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains information about the full-text catalogs.  
   

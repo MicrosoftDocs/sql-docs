@@ -3,7 +3,7 @@ title: SqlClient Troubleshooting Guide
 description: Article that provides resolutions to commonly observed problems.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, paulmedynski, cmalhotra
+ms.reviewer: davidengel, paulmedynski, cmalhotra
 ms.date: 08/11/2026
 ms.service: sql
 ms.subservice: connectivity

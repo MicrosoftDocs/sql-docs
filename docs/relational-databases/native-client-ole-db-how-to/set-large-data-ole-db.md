@@ -1,8 +1,8 @@
 ---
 title: Set large data (Native Client OLE DB provider)
 description: "Set Large Data (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "large data"
 ---
 # Set Large Data (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This sample shows how to set BLOB data, create a table, add a sample record, fetches that record in the rowset, and then set the value of the BLOB field. This sample is not supported on IA64.  
   

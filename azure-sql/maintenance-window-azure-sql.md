@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn more about configurable maintenance windows in Azure SQL Database and Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, urosmil, scottkim
+ms.reviewer: urosmil, scottkim
 ms.date: 01/11/2024
 ms.service: azure-sql
 ms.subservice: service-overview

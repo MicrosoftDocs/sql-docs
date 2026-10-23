@@ -3,7 +3,7 @@ title: "Linked Server for SQL Server with Microsoft Entra Authentication"
 description: Learn about how to use linked server for SQL Server with Microsoft Entra authentication
 author: PratimDasgupta
 ms.author: prdasgu
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: security

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_describe_first_result_set (Transact-SQL)"
 description: sys.dm_exec_describe_first_result_set describes the metadata of the first result set for a statement as a parameter.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/12/2025
 ms.service: sql
 ms.subservice: system-objects

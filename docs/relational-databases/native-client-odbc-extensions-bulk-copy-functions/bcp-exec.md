@@ -1,8 +1,8 @@
 ---
 title: "bcp_exec"
 description: "bcp_exec"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ apiname: "bcp_exec"
 apitype: "DLLExport"
 ---
 # bcp_exec
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Executes a complete bulk copy of data between a database table and a user file.  
   

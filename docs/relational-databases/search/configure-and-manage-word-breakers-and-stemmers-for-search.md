@@ -2,8 +2,8 @@
 title: Configure and Manage Word Breakers and Stemmers
 titleSuffix: SQL Server Full-Text Search
 description: Configure and manage word breakers and stemmers for Full-Text Search.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

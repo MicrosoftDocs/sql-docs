@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)"
 description: sys.dm_exec_cached_plan_dependent_objects returns a row for each execution plan, common language runtime (CLR) execution plan, and cursor associated with a plan.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

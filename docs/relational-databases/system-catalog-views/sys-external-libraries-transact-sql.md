@@ -1,8 +1,8 @@
 ---
 title: "sys.external_libraries (Transact-SQL)"
 description: sys.external_libraries lists a row for each external library that is uploaded into the database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 02/17/2026
 ms.service: sql
 ms.subservice: machine-learning

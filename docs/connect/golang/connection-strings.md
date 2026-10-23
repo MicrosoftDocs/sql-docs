@@ -3,7 +3,7 @@ title: "go-mssqldb Connection Strings"
 description: "Connection string formats for the go-mssqldb driver, including URL, ADO, and ODBC styles."
 author: dlevy-msft
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

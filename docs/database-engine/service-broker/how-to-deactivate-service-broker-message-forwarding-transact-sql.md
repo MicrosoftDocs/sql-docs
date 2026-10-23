@@ -1,9 +1,9 @@
 ---
 title: "How To: Deactivate Service Broker Message Forwarding (Transact-SQL)"
 description: "Message forwarding allows an instance of SQL Server to accept messages from outside the instance and send those messages to a different instance."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/02/2025
 ms.service: sql
 ms.subservice: configuration

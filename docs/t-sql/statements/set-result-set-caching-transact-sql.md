@@ -14,7 +14,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
 Controls the result set caching behavior for the current client session.  
 

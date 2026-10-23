@@ -1,8 +1,8 @@
 ---
 title: "XQuery Language Reference (SQL Server)"
 description: Learn about the XQuery language for SQL Server and view a complete language reference.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

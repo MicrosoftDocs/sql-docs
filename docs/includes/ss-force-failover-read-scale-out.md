@@ -1,8 +1,8 @@
 ---
 title: "SQL Server force failover for availability groups"
 description: "Force failover for availability groups with cluster type of NONE"
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 02/05/2018
 ms.topic: "include"
 ms.custom: include file

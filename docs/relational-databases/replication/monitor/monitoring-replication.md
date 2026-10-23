@@ -1,8 +1,8 @@
 ---
 title: Monitoring (Replication)
 description: Monitoring replication in SQL Server helps you track agent activity, status, and latency across your topology. Explore the tools to keep replication healthy.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

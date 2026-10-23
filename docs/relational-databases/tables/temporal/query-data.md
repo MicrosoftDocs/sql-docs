@@ -1,8 +1,8 @@
 ---
 title: Query Data in a System-Versioned Temporal Table
 description: Use FOR SYSTEM_TIME clause to query data in temporal tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 08/18/2026
 ms.service: sql
 ms.subservice: table-view-index

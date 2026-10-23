@@ -1,8 +1,8 @@
 ---
 title: "Use conversion functions in XPath Queries (SQLXML)"
 description: Learn how to specify the explicit conversion functions string() and number() in SQLXML 4.0 XPath queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

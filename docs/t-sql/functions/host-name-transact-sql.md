@@ -1,9 +1,9 @@
 ---
-title: "HOST_NAME (Transact-SQL)"
-description: "HOST_NAME (Transact-SQL)"
+title: HOST_NAME (Transact-SQL)
+description: HOST_NAME returns the name of the current session's client workstation name.
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/21/2017"
+ms.date: 08/19/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -16,36 +16,42 @@ helpviewer_keywords:
   - "HOST_NAME function"
   - "workstation names [SQL Server]"
 dev_langs:
-  - "TSQL"
+  - TSQL
+monikerRange: ">=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # HOST_NAME (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
 
-  Returns the workstation name.  
-  
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+The `HOST_NAME` built-in function returns the name of the current session's client workstation name.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-HOST_NAME ()  
+HOST_NAME ()
 ```  
 
-## Return Types
+## Return types
+
  **nvarchar(128)**  
-  
-## Remarks  
+
+## Remarks
+
  When the parameter to a system function is optional, the current database, host computer, server user, or database user is assumed. Built-in functions must always be followed by parentheses.  
-  
- System functions can be used in the select list, in the WHERE clause, and anywhere an expression is allowed.  
-  
+
+ System functions can be used in the select list, in the `WHERE` clause, and anywhere an expression is allowed.
+
 > [!IMPORTANT]  
->  The client application provides the workstation name and can provide inaccurate data. Do not rely upon HOST_NAME as a security feature.  
-  
-## Examples  
+>  The client application provides the workstation name and can provide inaccurate data. Do not rely upon `HOST_NAME` as a security feature.
+
+The `HOST_NAME` function isn't supported in Fabric Data Warehouse.
+
+## Examples
+
  The following example creates a table that uses `HOST_NAME()` in a `DEFAULT` definition to record the workstation name of computers that insert rows into a table recording orders.  
-  
+
 ```sql  
 CREATE TABLE Orders  
    (OrderID     INT        PRIMARY KEY,  
@@ -56,7 +62,7 @@ CREATE TABLE Orders
     ShipperID   INT        NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
-  
+
 ## Related content
 
 - [Expressions (Transact-SQL)](../language-elements/expressions-transact-sql.md)

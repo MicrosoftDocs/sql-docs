@@ -1,8 +1,8 @@
 ---
 title: "Service Broker with availability groups"
 description: Contains information about configuring Service Broker with SQL Server Always On availability groups.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

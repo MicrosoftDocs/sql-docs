@@ -1,8 +1,8 @@
 ---
 title: EDIT_DISTANCE (Transact-SQL)
 description: EDIT_DISTANCE calculates the number of insertions, deletions, substitutions, and transpositions needed to transform one string to another.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: abhtiwar, wiassaf
 ms.date: 09/04/2026
 ms.service: sql

@@ -3,7 +3,7 @@ title: Manage Always On availability groups
 description: Describes how to manage Always On availability groups in Azure portal
 author: AbdullahMSFT
 ms.author: amamun 
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2023
 ms.topic: how-to
 ms.custom: ignite-2023

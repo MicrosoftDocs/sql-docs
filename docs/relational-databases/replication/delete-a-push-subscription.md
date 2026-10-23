@@ -1,8 +1,8 @@
 ---
 title: "Delete a Push Subscription"
 description: Learn how to delete a push subscription in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 02/03/2026
 ai-usage: ai-assisted
 ms.service: sql

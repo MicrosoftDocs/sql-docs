@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dropmessage (Transact-SQL)"
 description: Drops a specified user-defined error message from an instance of the Database Engine.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -2,8 +2,8 @@
 title: "sys.database_service_objectives"
 titleSuffix: Azure SQL Database & Azure Synapse Analytics & SQL database in Fabric
 description: "sys.database_service_objectives returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for an Azure SQL database or a dedicated SQL pool in Azure Synapse Analytics."
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: wiassaf
 ms.date: 11/18/2025
 ms.service: azure-sql-database

@@ -3,7 +3,7 @@ title: "Format Nested JSON Output with PATH Mode"
 description: "To maintain full control over the output of the FOR JSON clause, specify the PATH option."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 01/28/2026
 ms.service: sql
 ms.topic: how-to

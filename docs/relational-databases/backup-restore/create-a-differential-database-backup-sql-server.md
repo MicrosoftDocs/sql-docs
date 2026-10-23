@@ -1,9 +1,9 @@
 ---
 title: Differential Backup
 description: Learn how to create a differential database backup in SQL Server using SQL Server Management Studio, Transact-SQL, and PowerShell.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: backup-restore

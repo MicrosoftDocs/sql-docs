@@ -1,8 +1,8 @@
 ---
 title: "sys.configurations (Transact-SQL)"
 description: sys.configurations contains a row for each server-wide configuration option value in the system.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

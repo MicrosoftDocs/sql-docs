@@ -1,7 +1,7 @@
 ---
 title: Basic load balancer retirement note
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.topic: include
 ---
 > [!NOTE]

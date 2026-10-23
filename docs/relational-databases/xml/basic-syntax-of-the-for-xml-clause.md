@@ -1,9 +1,9 @@
 ---
 title: "Basic syntax of the FOR XML Clause"
 description: Learn the basic syntax of the FOR XML clause and how it is used to determine the shape of XML resulting from a SQL query.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

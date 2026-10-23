@@ -1,8 +1,8 @@
 ---
 title: "getSentiment function (MicrosoftML)"
 description: "Scores natural language text and creates a column that  contains probabilities that the sentiments in the text are positive."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

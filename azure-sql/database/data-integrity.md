@@ -3,7 +3,7 @@ title: Data Integrity
 description: This article discusses data integrity in Azure SQL Database, including Microsoft's monitoring, actions, and responsibility.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dfurman, mathoma, oslake, adbadram, dinethi
+ms.reviewer: dfurman, oslake, adbadram, dinethi
 ms.date: 07/20/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview

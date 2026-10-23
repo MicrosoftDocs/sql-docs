@@ -1,8 +1,8 @@
 ---
 title: Convert an Original SQL Project
 description: Create an SDK-style SQL project from an existing project.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: drskwier
 ms.date: 07/17/2026
 ms.service: sql

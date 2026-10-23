@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_missing_index_details (Transact-SQL)"
 description: The sys.dm_db_missing_index_details dynamic management view returns detailed information about missing indexes.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/24/2023"
 ms.service: sql
 ms.subservice: system-objects

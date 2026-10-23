@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_916"
 description: The login does not have sufficient permissions to connect to the named SQL Server database. See an explanation of the error and possible resolutions.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

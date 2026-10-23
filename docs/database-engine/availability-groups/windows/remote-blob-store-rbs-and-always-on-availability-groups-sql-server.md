@@ -1,8 +1,8 @@
 ---
 title: "Remote Blob Store (RBS) with availability groups"
 description: "A description of how to use the Remote Blob Store (RBS) with databases that are part of an Always On availability group. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

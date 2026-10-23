@@ -1,9 +1,9 @@
 ---
 title: "COLUMNS_UPDATED (Transact-SQL)"
 description: The COLUMNS_UPDATED Transact-SQL function returns a bit pattern indicating the inserted or updated columns of a table or view.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 02/28/2025
 ms.service: sql
 ms.subservice: t-sql

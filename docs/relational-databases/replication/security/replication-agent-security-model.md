@@ -1,8 +1,8 @@
 ---
 title: "Replication Agent Security Model"
 description: In SQL Server, the replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 10/01/2025
 ms.service: sql
 ms.subservice: replication

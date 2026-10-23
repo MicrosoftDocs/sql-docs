@@ -1,8 +1,8 @@
 ---
 title: Prerequisites for Minimal Logging in Bulk Import
 description: In a simple recovery or bulk-logged recovery model, minimal logging of bulk-import operations reduces the possibility that an operation fills the log space.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: data-movement

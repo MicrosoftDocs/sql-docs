@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_cluster_networks (Transact-SQL)"
 description: Returns a row for every WSFC cluster member that is participating in an availability group's subnet configuration.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/17/2023
 ms.service: sql
 ms.subservice: system-objects

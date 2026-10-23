@@ -1,8 +1,8 @@
 ---
 title: "RESTORE REWINDONLY (Transact-SQL)"
 description: RESTORE Statements - REWINDONLY (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "08/10/2017"
 ms.service: sql
 ms.subservice: t-sql

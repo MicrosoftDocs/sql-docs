@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: common criteria compliance enabled"
 description: Learn how to enable Common Criteria compliance. See how to comply with Common Criteria evaluation assurance level 2 (EAL2) and 4+ (EAL4+) for EU cybersecurity certification scheme on Common Criteria (EUCC) certification approval. A world-wide compliance obligation across regulated industries and authorities.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.reviewer: dianas
 ms.date: 01/22/2026
 ms.service: sql

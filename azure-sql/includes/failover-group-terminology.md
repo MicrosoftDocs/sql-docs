@@ -1,8 +1,8 @@
 ---
 title: Failover group overview
 description: Deduplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for failover groups that overlap between both products.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: mlandzic, strrodic
 ms.date: 12/15/2023
 ms.topic: include

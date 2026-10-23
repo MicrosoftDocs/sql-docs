@@ -1,9 +1,9 @@
 ---
 title: Upgrade SQL Server Log Shipping
 description: Learn the appropriate order to preserve your log shipping disaster recovery solution when upgrading SQL Server from a previous version.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: jaferebe, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: jaferebe
 ms.date: 06/22/2026
 ms.service: sql
 ms.subservice: log-shipping

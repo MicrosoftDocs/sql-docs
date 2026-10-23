@@ -1,8 +1,8 @@
 ---
 title: "sys.soap_endpoints (Transact-SQL)"
 description: sys.soap_endpoints contains one row for each endpoint in the server that carries a SOAP-type payload.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 02/05/2026
 ms.service: sql
 ms.subservice: system-objects

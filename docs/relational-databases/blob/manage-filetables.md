@@ -1,8 +1,8 @@
 ---
 title: "Manage FileTables"
 description: Explore common administrative tasks you can use to manage FileTables, and learn about FileTable security, backup, and auditing.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "08/23/2017"
 ms.service: sql
 ms.subservice: filestream

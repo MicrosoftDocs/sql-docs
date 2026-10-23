@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_tcp_listener_states (Transact-SQL)"
 description: sys.dm_tcp_listener_states returns a row containing dynamic-state information for each TCP listener.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/03/2025
 ms.service: sql
 ms.subservice: system-objects

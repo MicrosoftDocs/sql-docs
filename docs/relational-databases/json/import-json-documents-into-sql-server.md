@@ -3,7 +3,7 @@ title: "Import JSON Documents"
 description: "Learn how to import JSON documents into SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 07/23/2025
 ms.service: sql
 ms.topic: how-to

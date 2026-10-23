@@ -3,7 +3,7 @@ title: Updating SQL Server
 description: Learn the supported methods to keep SQL Server up to date for SQL Server on Azure VMs, including Azure Update Manager, Automated Patching, custom images, winget for client tools, and post-deployment automation. SQL Server Marketplace images deploy at RTM and require post-deployment servicing.
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/31/2026
 ms.service: azure-vm-sql-server
 ms.subservice: management

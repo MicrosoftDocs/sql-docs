@@ -1,8 +1,8 @@
 ---
 title: "Synonyms (Database Engine)"
 description: "Synonyms (Database Engine)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "03/03/2017"
 ms.service: sql
 ms.subservice: t-sql

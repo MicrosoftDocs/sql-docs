@@ -3,7 +3,7 @@ title: "Delete Primary Keys"
 description: "Learn more about how to delete the primary key from a table in the SQL Server Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/23/2025
 ms.service: sql
 ms.subservice: table-view-index

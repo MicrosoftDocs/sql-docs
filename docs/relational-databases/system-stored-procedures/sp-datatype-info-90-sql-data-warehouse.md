@@ -3,19 +3,19 @@ title: "sys.sp_datatype_info_90 (Transact-SQL)"
 description: sp_datatype_info_90 returns information about the data types supported by the current environment.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
+monikerRange: "=azure-sqldw-latest || =fabric"
 ---
 # sys.sp_datatype_info_90 (Transact-SQL)
 
-[!INCLUDE [applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [applies-to-version/asa-fabricse-fabricdw](../../includes/applies-to-version/asa-fabricse-fabricdw.md)]
 
-Returns information about the data types supported by the current environment in [!INCLUDE [sspdw-md](../../includes/sspdw-md.md)], [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
+Returns information about the data types supported by the current environment in [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -78,7 +78,7 @@ None.
 
 Requires membership in the **public** role.
 
-## Examples: Azure Synapse Analytics and Analytics Platform System (PDW)
+## Examples: Azure Synapse Analytics
 
 The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *@data_type* value of `-9`.
 

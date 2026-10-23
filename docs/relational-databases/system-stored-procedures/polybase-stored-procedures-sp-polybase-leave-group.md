@@ -1,9 +1,9 @@
 ---
 title: "sp_polybase_leave_group (Transact-SQL)"
 description: Removes a SQL Server instance from a PolyBase group for scale-out computation.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: polybase

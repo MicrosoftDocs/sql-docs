@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Provides steps to investigate and troubleshoot out of memory issues in Azure SQL Database and Fabric SQL database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 01/25/2024
 ms.service: azure-sql-database
 ms.subservice: development

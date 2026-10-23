@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 
 # REVOKE Database Scoped Credential (Transact-SQL)
-[!INCLUDE [sqlserver2017-asdb-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
 Revokes permissions on a database scoped credential.  
   

@@ -1,8 +1,8 @@
 ---
 title: "Defining Durability for Memory-Optimized Objects"
 description: "Learn about the durability options for memory-optimized tables in SQL Server: the default SCHEMA_AND_DATA and SCHEMA_ONLY."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: in-memory-oltp

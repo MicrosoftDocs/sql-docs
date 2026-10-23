@@ -1,8 +1,8 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
-ms.date: 09/15/2026
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
+ms.date: 10/15/2026
 ms.topic: include
 ---
 > [!NOTE]  
@@ -123,6 +123,7 @@ ms.topic: include
 | 31742 | 17 | No | Unrecoverable HTTP error %d %ls occured. |
 | 31744 | 16 | No | The JSON path for embeddings could not be found in the response. |
 | 31745 | 16 | No | The HTTP response does not contain valid JSON. |
+| 31759 | 16 | No | An empty key was found in the JSON object for '%.\*ls'. |
 | 32001 | 10 | No | Log shipping backup log job for %s. |
 | 32002 | 10 | No | Log shipping copy job for %s:%s. |
 | 32003 | 10 | No | Log shipping restore log job for %s:%s. |
@@ -247,6 +248,7 @@ ms.topic: include
 | 33065 | 10 | No | An error occurred while configuring the password policy: HRESULT 0x%x, state %d. To skip configuring the password policy, use trace flag -T4634 during startup. This will cause SQL Server to run using a minimal password policy. |
 | 33066 | 10 | No | An error occurred while configuring the password policy: NTSTATUS 0x%x, state %d. To skip configuring the password policy, use trace flag -T4634 during startup. This will cause SQL Server to run using a minimal password policy. |
 | 33067 | 16 | No | Secret provided can not contain more than 120 characters. Please provide a valid credential. |
+| 33068 | 16 | No | Cannot load cryptographic provider '%.\*ls' because another EKM provider is already loaded in this process. Only one third-party EKM provider or one Azure Key Vault (AKV) provider can be active at a time. DROP the existing provider before loading another one. |
 | 33069 | 16 | No | CREATE CERTIFICATE statement cannot mix file and binary modes. Rewrite the statement using only the FILE or the BINARY keyword. |
 | 33070 | 16 | No | The specified maximum size limit for the audit log file is less than the minimum value allowed. The maximum size limit must be at least 2 MB. |
 | 33071 | 16 | No | This command requires %S_MSG to be disabled. Disable the %S_MSG and rerun this command. |

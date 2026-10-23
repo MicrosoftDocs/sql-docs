@@ -1,8 +1,8 @@
 ---
 title: "Connect to Microsoft Azure Storage (Restore) in SQL Server Management Studio (SSMS)"
 description: In SQL Server Management Studio (SSMS) the Azure Storage Account dialog box lets you specify a connection to Azure storage account information to get files storage in an Azure account.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: backup-restore

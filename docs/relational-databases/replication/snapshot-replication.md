@@ -1,9 +1,9 @@
 ---
 title: "Snapshot Replication"
 description: Snapshot replication distributes data as it appears at a moment in time. It doesn't monitor for updates. A snapshot is generated and sent to Subscribers.
-author: "MashaMSFT"
-ms.author: "mathoma"
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/11/2025
 ms.service: sql
 ms.subservice: replication

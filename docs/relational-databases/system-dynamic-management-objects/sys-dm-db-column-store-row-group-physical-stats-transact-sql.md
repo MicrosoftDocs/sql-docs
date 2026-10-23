@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)"
 description: sys.dm_db_column_store_row_group_physical_stats provides current rowgroup-level information about all of the columnstore indexes in the current database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/17/2025
 ms.service: sql
 ms.subservice: system-objects

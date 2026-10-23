@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_log_shipping_monitor_primary (Transact-SQL)"
 description: Returns information regarding a primary database from the monitor tables.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

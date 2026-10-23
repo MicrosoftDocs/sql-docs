@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_fts_active_catalogs (Transact-SQL)"
 description: sys.dm_fts_active_catalogs returns information on the full-text catalogs that have some population activity in progress on the server.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

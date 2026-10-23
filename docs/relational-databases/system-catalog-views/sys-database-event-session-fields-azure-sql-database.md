@@ -1,8 +1,8 @@
 ---
 title: "sys.database_event_session_fields"
 description: The sys.database_event_session_fields dynamic management view (DMV) returns a row for each customizable column that was explicitly set on events and targets in a database-scoped event session.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/29/2025
 ms.service: sql
 ms.subservice: system-objects

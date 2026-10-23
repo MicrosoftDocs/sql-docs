@@ -1,9 +1,9 @@
 ---
 title: "T-SQL Tutorial: Delete database objects"
 description: "This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 04/19/2023
 ms.service: sql
 ms.subservice: t-sql
@@ -12,11 +12,11 @@ ms.custom:
   - ignite-2025
 helpviewer_keywords:
   - "deleting database objects"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Lesson 3: Delete database objects
 
-[!INCLUDE[sql-asdb-asdbmi-pdw-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-pdw-fabricsqldb.md)]
+[!INCLUDE[sql-asdb-asdbmi-fabricsqldb](../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 > [!NOTE]  
 > The [Get Started Querying with Transact-SQL](/training/paths/get-started-querying-with-transact-sql/) learning path provides more in-depth content, along with practical examples.

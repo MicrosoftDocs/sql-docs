@@ -3,7 +3,7 @@ title: "Set Project Options (OracleToSQL)"
 description: Learn how to set project options for your SSMA projects.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: ssma

@@ -1,8 +1,8 @@
 ---
 title: "false Function (XQuery)"
 description: Learn about the false() function that returns the boolean value False.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: xml

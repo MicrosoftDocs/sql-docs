@@ -1,8 +1,8 @@
 ---
 title: "true Function (XQuery)"
 description: Learn about the XQuery function true() that returns the Boolean value True.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "08/10/2016"
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "Offload workload to secondary availability group replica"
 description: "Learn about offloading read-only queries and reports to a secondary replica of an Always On availability group on SQL Server."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/06/2016"
 ms.service: sql
 ms.subservice: availability-groups

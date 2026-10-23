@@ -1,8 +1,8 @@
 ---
 title: "CLR Integration: Custom Attributes for CLR Routines"
 description: Custom attributes can be applied to CLR routines, user-defined types, and user-defined aggregates that are registered in Microsoft SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

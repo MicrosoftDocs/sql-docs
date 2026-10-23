@@ -1,8 +1,9 @@
 ---
-title: "What's New for SQL Server 2017 on Linux"
+title: What's New for SQL Server 2017 on Linux
 description: In this article, learn about the major features and services available for SQL Server 2017 running on Linux.
-author: rwestMSFT
-ms.author: randolphwest
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
 ms.date: 05/07/2026
 ms.service: sql
 ms.subservice: linux
@@ -19,15 +20,15 @@ ms.custom:
 
 This article describes the major features and services available for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] running on Linux.
 
-In addition to these capabilities in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2017 build versions](/troubleshoot/sql/releases/sqlserver-2017/build-versions). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2017.md).
+In addition to the capabilities described in this article, cumulative updates (CUs) are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [SQL Server 2017 build versions](/troubleshoot/sql/releases/sqlserver-2017/build-versions). For package downloads and known issues, see [Release information for SQL Server on Linux](sql-server-linux-release-notes.md).
 
 ## Red Hat Enterprise Linux 8 support
 
-Red Hat Enterprise Linux (RHEL) 8 is supported in [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 20 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-linux-2017&preserve-view=true).
+[!INCLUDE [rhel-8](includes/rhel-8.md)] For more information, see [Quickstart: Install SQL Server and create a database on Red Hat](install-upgrade/quickstart-install-red-hat.md?view=sql-server-linux-2017&preserve-view=true).
 
 ## Ubuntu 18.04 support
 
-Ubuntu 18.04 is supported in [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] CU 20 and later versions. For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-2017&preserve-view=true).
+[!INCLUDE [ubuntu-1804](includes/ubuntu-1804.md)] For more information, see [Quickstart: Install SQL Server and create a database on Ubuntu](install-upgrade/quickstart-install-ubuntu.md?view=sql-server-linux-2017&preserve-view=true).
 
 ## SQL Server Database Engine
 

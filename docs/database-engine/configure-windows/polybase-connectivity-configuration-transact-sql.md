@@ -1,20 +1,20 @@
 ---
 title: "PolyBase Connectivity Configuration (Transact-SQL)"
 description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: hudequei, randolphwest
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: hudequei
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: polybase
 ms.topic: reference
 helpviewer_keywords:
   - "PolyBase"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017"
 ---
 # PolyBase connectivity configuration (Transact-SQL)
 
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql](../../includes/applies-to-version/sqlserver.md)]
 
 Displays or changes global configuration settings for PolyBase Hadoop and Microsoft Azure Blob Storage connectivity.
 
@@ -117,7 +117,7 @@ When executed with no parameters, `sp_configure` returns a result set with five 
 
 In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-In [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] region.
+In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] region.
 
 In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, Hadoop is no longer supported in PolyBase.
 

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_resource_governor_workload_groups_history_ex"
 description: Each row in sys.dm_resource_governor_workload_groups_history_ex represents a periodic snapshot of workload group statistics.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 02/11/2025
 ms.service: sql

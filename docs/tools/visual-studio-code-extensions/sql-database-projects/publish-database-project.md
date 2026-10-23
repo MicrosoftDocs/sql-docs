@@ -1,8 +1,8 @@
 ---
 title: Publish SQL Database Projects from Visual Studio Code
 description: Learn how to publish SQL database projects from Visual Studio Code using the Publish dialog.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: iqrashaikh, drskwier
 ms.date: 02/04/2026
 ms.service: sql

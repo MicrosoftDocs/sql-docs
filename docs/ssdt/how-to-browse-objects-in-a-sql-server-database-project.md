@@ -1,9 +1,9 @@
 ---
 title: Browse Objects in a SQL Server Database Project
 description: Learn how to view objects in a SQL Server Database project. See how to use the Projects node in SQL Server Object Explorer in Visual Studio for this task.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

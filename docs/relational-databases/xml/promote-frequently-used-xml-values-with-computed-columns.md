@@ -1,9 +1,9 @@
 ---
 title: "Promote frequent XML values with computed columns"
 description: Learn how to promote frequently used XML values by creating computed columns for more efficient querying.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

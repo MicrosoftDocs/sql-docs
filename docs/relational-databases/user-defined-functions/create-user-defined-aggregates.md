@@ -1,8 +1,8 @@
 ---
 title: "Create User-Defined Aggregates"
 description: Learn how to create a user-defined aggregate object inside SQL Server that is programmed in a CLR assembly.
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 12/27/2024
 ms.service: sql
 ms.topic: how-to

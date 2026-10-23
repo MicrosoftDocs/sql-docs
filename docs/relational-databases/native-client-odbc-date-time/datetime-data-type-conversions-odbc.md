@@ -1,8 +1,8 @@
 ---
 title: "datetime Data Type Conversions (ODBC)"
 description: Learn about data type conversions in ODBC, which are already defined by ODBC or are consistent extensions of ODBC.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC, bindings and conversions"
 ---
 # datetime Data Type Conversions (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The following conversions are either already defined by ODBC or are a consistent extension of ODBC. The conversions supplied by each provider are determined by the community served by the provider, and there are often inconsistencies between providers as a result. Values in square brackets are optional.  
   

@@ -1,8 +1,8 @@
 ---
 title: "Configure read-only access to secondary availability group replica"
 description: "Configure your secondary replica to allow only read access for your Always On availability group. "
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

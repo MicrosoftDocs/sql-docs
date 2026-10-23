@@ -3,7 +3,7 @@ title: "Connect .NET with Microsoft Entra Multifactor Authentication"
 description: "C# Code example, with explanations, for connecting to Azure SQL Database by using SqlAuthenticationMethod.ActiveDirectoryInteractive mode."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma
+ms.reviewer: wiassaf, vanto
 ms.date: 06/10/2025
 ms.service: azure-sql-database
 ms.subservice: security

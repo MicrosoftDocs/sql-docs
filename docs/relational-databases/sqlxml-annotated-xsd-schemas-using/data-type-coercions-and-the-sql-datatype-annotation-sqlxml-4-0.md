@@ -1,8 +1,8 @@
 ---
 title: "Convert data types with sql:datatype (SQLXML)"
 description: "Learn how to use the xsd:type and sql:datatype attributes in SQLXML 4.0 to control the mapping between XSD data types and SQL Server data types."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: xml

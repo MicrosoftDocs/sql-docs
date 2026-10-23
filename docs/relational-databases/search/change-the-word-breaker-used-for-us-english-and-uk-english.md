@@ -2,8 +2,8 @@
 title: Change the word breaker used for US English and UK English
 titleSuffix: SQL Server Full-Text Search
 description: Change the word breaker used for US English and UK English in earlier full-text search versions.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/02/2026
 ms.service: sql
 ms.subservice: search

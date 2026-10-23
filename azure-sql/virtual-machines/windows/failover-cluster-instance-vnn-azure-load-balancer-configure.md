@@ -3,7 +3,7 @@ title: Configure an Azure load balancer for an FCI VNN
 description: Learn to configure an Azure Load Balancer to route traffic to the virtual network name (VNN) for your failover cluster instance (FCI) with SQL Server on Azure VMs for high availability and disaster recovery (HADR).
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 04/30/2025
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

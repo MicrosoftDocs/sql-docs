@@ -1,8 +1,8 @@
 ---
 title: "Using ADO"
 description: To use new features introduced in SQL Server 2005, existing applications that use ADO should use the SQL Server Native Client OLE DB provider.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.custom: sfi-ropc-nochange
 ---
 # Using ADO with SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

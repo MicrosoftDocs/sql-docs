@@ -1,9 +1,9 @@
 ---
 title: "TRY_CONVERT (Transact-SQL)"
 description: TRY_CONVERT returns a value cast to the specified data type if the cast succeeds; otherwise, returns NULL.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "TRY_CONVERT function"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || >=aps-pdw-2016 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =fabric || =fabric-sqldb"
 ---
 # TRY_CONVERT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns a value cast to the specified data type if the cast succeeds; otherwise, returns `NULL`.
 

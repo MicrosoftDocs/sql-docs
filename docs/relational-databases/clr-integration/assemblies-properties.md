@@ -1,8 +1,8 @@
 ---
 title: "Assembly Properties (General Page)"
 description: You can view or modify properties for an assembly hosted on SQL Server. These include assembly name and owner, permission set, and other properties.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

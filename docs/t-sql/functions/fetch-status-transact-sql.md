@@ -1,8 +1,8 @@
 ---
 title: FETCH_STATUS (Transact-SQL)
 description: "@@FETCH_STATUS (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "09/18/2017"
 ms.service: sql
 ms.subservice: t-sql

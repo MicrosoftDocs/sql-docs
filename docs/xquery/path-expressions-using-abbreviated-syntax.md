@@ -1,9 +1,9 @@
 ---
 title: "Using Abbreviated Syntax in a Path Expression"
 description: Learn how to use abbreviated syntax in XQuery path expressions.
-author: rothja
-ms.author: jroth
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 09/26/2025
 ms.service: sql
 ms.subservice: xml

@@ -1,9 +1,9 @@
 ---
 title: "sp_trace_generateevent (Transact-SQL)"
 description: Fires a user-defined event to a trace or an event session.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

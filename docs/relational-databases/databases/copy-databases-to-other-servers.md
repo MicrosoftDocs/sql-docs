@@ -3,7 +3,7 @@ title: "Copy databases to other servers"
 description: Learn how to copy a SQL Server database from one computer to another for testing, to make it available to remote-branch operations, or for other reasons.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/19/2024
 ms.service: sql
 ms.subservice: backup-restore

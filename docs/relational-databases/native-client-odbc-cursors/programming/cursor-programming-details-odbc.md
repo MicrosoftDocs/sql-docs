@@ -1,8 +1,8 @@
 ---
 title: "Cursor Programming Details (ODBC)"
 description: "Cursor Programming Details (ODBC)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "cursors [ODBC], programming"
 ---
 # Cursor Programming Details (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Choosing the correct cursor type can improve application performance. Under certain conditions, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may implicitly convert a cursor type when you execute a SQL statement that is not supported by the cursor type you requested.  
   

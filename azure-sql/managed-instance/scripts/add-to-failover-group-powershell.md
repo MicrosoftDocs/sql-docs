@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Azure PowerShell example script to create a SQL managed instance, add it to a failover group, and test failover.
 author: Stralle
 ms.author: strrodic
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 12/15/2023
 ms.service: azure-sql-managed-instance
 ms.subservice: high-availability

@@ -3,7 +3,7 @@ title: "Format Query Results as JSON with FOR JSON"
 description: Format query results as JSON, or export data from SQL Server as JSON, by adding the FOR JSON clause to a SELECT statement.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: jovanpop, umajay, randolphwest
+ms.reviewer: jovanpop, umajay
 ms.date: 01/28/2026
 ms.service: sql
 ms.topic: how-to

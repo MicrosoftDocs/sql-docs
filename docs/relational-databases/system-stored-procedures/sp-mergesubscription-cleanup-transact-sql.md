@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_mergesubscription_cleanup (Transact-SQL)"
 description: "Removes metadata, such as triggers and entries, in sysmergesubscriptions and sysmergearticles."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

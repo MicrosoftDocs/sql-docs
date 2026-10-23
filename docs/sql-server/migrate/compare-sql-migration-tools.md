@@ -2,8 +2,8 @@
 title: Compare SQL Data Migration Tools
 titleSuffix: SQL Server
 description: Compare SQL data migration tools including Azure Migrate, Azure Database Migration Service (DMS), SQL Server Migration Assistant (SSMA), and Fabric Migration Assistant.
-author: rwestMSFT
-ms.author: randolphwest
+author: abhims14
+ms.author: abhishekum
 ms.reviewer: roblescarlos
 ms.date: 04/20/2026
 ms.service: sql

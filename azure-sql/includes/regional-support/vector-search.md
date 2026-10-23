@@ -1,7 +1,7 @@
 ---
 author: pookam90
 ms.author: pookam
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/07/2026
 ms.service: azure-sql
 ms.topic: include

@@ -1,9 +1,9 @@
 ---
 title: "Microsoft SQL samples"
 description: View information about the WideWorldImporters and AdventureWorks sample databases, Azure samples and templates, and code samples for Microsoft SQL products.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/11/2025
 ms.service: sql
 ms.subservice: samples
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-late
 ---
 # SQL samples
 
-[!INCLUDE [sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa-fabricsqldb.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 

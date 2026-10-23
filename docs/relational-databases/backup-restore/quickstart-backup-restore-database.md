@@ -2,9 +2,9 @@
 title: "Quickstart: Back Up and Restore a Database by Using SSMS"
 titleSuffix: SQL Server
 description: Learn how to create a new database, create a backup of the database, and restore the backup in SQL Server by using SSMS.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest, markingmyname
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.update-cycle: 365-days
 ms.service: sql

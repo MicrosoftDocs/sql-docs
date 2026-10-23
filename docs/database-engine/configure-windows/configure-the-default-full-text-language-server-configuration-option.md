@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: default full-text language"
 description: Learn about the default full-text language option. See how to configure it to specify the default language that SQL Server uses for full-text indexes.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

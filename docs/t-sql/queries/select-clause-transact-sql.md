@@ -3,7 +3,7 @@ title: "SELECT Clause (Transact-SQL)"
 description: The SELECT clause specifies the columns that the Transact-SQL query returns.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/02/2026
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)"
 description: sys.dm_db_xtp_nonclustered_index_stats includes statistics about operations on nonclustered indexes in memory-optimized tables.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

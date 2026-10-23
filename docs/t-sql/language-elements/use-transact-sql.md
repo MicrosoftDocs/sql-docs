@@ -1,8 +1,8 @@
 ---
 title: "USE (Transact-SQL)"
 description: Changes the database context to the specified database or database snapshot.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "modifying database context"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # USE (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-pdw-fabricdw](../../includes/applies-to-version/sql-asdbmi-pdw-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-fabricdw](../../includes/applies-to-version/sql-asdbmi-fabricdw.md)]
 
 Changes the database context to the specified database or database snapshot.
 

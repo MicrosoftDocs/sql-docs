@@ -1,8 +1,8 @@
 ---
 title: Find Property Set GUIDs & Property Integer IDs for Search Properties
 description: Find property set GUIDs and property integer IDs for search properties
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 07/20/2026
 ms.service: sql
 ms.subservice: search

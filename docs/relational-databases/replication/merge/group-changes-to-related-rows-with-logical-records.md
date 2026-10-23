@@ -1,8 +1,8 @@
 ---
 title: Group Changes to Related Rows with Logical Records
 description: Logical records in Merge Replication let you group changes to related rows across tables so they're processed as a single unit.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

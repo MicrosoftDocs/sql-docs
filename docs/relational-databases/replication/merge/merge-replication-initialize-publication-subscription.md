@@ -1,9 +1,9 @@
 ---
 title: How Merge Replication Initializes Publications and Subscriptions
 description: Merge replication must initialize both the publisher and subscriber before data can flow between them.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.subservice: replication

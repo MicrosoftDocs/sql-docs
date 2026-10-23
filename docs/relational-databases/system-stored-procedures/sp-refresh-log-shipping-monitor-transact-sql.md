@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_refresh_log_shipping_monitor (Transact-SQL)"
 description: sp_refresh_log_shipping_monitor refreshes the remote monitor tables with the latest information from a given primary or secondary server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

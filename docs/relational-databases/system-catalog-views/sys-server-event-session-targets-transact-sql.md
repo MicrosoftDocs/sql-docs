@@ -1,8 +1,8 @@
 ---
 title: "sys.server_event_session_targets (Transact-SQL)"
 description: "The sys.server_event_session_targets system view returns a row for each event target for an event session."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: system-objects

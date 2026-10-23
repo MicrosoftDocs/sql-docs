@@ -1,8 +1,8 @@
 ---
 title: "sys.query_store_query_text (Transact-SQL)"
 description: sys.query_store_query_text (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 11/01/2024
 ms.service: sql
 ms.subservice: system-objects

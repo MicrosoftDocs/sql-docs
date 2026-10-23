@@ -1,9 +1,9 @@
 ---
 title: How Merge Replication Evaluates Partitions in Filtered Publications
 description: When one or more tables in a merge publication is filtered using parameterization, data in the published tables is partitioned.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/18/2025
 ms.service: sql
 ms.subservice: replication

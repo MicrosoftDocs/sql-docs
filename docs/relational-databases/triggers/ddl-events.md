@@ -1,8 +1,8 @@
 ---
 title: "DDL Events"
 description: "DDL Events"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/01/2016"
 ms.service: sql
 ms.topic: concept-article

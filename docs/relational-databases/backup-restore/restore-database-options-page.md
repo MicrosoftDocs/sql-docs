@@ -1,8 +1,8 @@
 ---
 title: "Restore Database (Options Page)"
 description: While restoring a database in SQL Server, use the Options page of the Restore Database dialog box to modify the behavior and outcome of the restore operation.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: backup-restore

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows authentication for Microsoft Entra ID with the incoming trust-based flow.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, randolphwest
+ms.reviewer: bonova, urmilano, wiassaf
 ms.date: 03/31/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

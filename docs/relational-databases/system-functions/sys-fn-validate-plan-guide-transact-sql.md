@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_validate_plan_guide (Transact-SQL)"
 description: "sys.fn_validate_plan_guide (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/22/2021"
 ms.service: sql
 ms.subservice: system-objects

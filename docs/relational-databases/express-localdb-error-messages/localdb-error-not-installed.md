@@ -3,7 +3,7 @@ title: "LOCALDB_ERROR_NOT_INSTALLED"
 description: "LOCALDB_ERROR_NOT_INSTALLED"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 07/14/2025
 ms.service: sql
 ms.subservice: performance

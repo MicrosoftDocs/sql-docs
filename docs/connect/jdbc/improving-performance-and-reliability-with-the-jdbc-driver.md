@@ -4,7 +4,7 @@ description: Learn about various techniques for improving application performanc
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 03/13/2026
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -33,6 +33,12 @@ The articles in this section describe various techniques for improving applicati
 |[Using bulk copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md)|Describes how to enable Bulk Copy API for batch insert operations and its benefits.|
 |[Not sending String parameters as Unicode](setting-the-connection-properties.md)|When you're working with **CHAR**, **VARCHAR**, and **LONGVARCHAR** data, set the connection property **sendStringParametersAsUnicode** to `false` for optimal performance gain.|
 |[Performance Logger and callback](performance-logger-callback.md)|Describes how to use the performance logging framework and callback infrastructure to track execution timing for critical driver operations such as connections, prelogin, login, and token acquisition.|
+|[Prepared statement parameter length hints](prepared-statement-parameter-performance.md#specify-string-and-binary-parameter-lengths)|Describes how parameter length hints can improve SQL Server memory grant calculations.|
+|[Result set read-path optimizations](working-with-statements-and-result-sets.md#result-set-read-path-optimizations)|Describes automatic allocation and decoding optimizations for result sets.|
+|[Reduced disabled-logging overhead](tracing-driver-operation.md)|Describes how the driver avoids unnecessary work when `FINER` logging is disabled.|
+|[Nanosecond timing and statement context](performance-logger-callback.md#use-nanosecond-timing-and-statement-context)|Describes high-resolution callback timing and SQL statement context.|
+|[Column encryption key caching for secure enclaves](using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md#column-encryption-key-caching)|Describes caching that reduces repeated key-store requests for enclave queries.|
+|[`getColumns` capability caching](reference/getcolumns-method-sqlserverdatabasemetadata.md#remarks)|Describes automatic per-connection caching that avoids repeated failed `sp_columns_170` probes on servers earlier than SQL Server 2025.|
 
 ## Related content
 

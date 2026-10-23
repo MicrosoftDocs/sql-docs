@@ -1,8 +1,8 @@
 ---
 title: SQL Server Installation Guide
 description: An index of content that helps you install SQL Server and associated components using options such as the installation wizard, command prompt, or sysprep.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: install

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_cluster (Transact-SQL)"
 description: Returns a row that exposes the cluster name and information about the quorum. If the WSFC node has no quorum, no row is returned.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/17/2023
 ms.service: sql
 ms.subservice: system-objects

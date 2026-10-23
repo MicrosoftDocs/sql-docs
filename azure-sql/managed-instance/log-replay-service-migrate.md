@@ -3,7 +3,7 @@ title: Migrate SQL Server Databases by Using Log Replay Service
 description: Migrate SQL Server databases to Azure SQL Managed Instance by using Log Replay Service (LRS). Step-by-step guide with prerequisites, best practices, and troubleshooting tips. Start your migration today.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 04/16/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: migration

@@ -1,8 +1,8 @@
 ---
 title: "Soft-NUMA (SQL Server)"
 description: Learn about soft-NUMA in SQL Server 2014 SP2 and newer versions. See how to use automatic soft-NUMA and how to manually configure SQL Server to use soft-NUMA.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

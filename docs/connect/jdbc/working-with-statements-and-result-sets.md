@@ -4,7 +4,7 @@ description: Learn how to work with statements and result sets in JDBC and how t
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: "08/12/2019"
+ms.date: 09/10/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: best-practice
@@ -34,6 +34,10 @@ Consider using the [setMaxRows](reference/setmaxrows-method-sqlserverstatement.m
 ## Use the appropriate fetch size
 
 For read-only server cursors, the tradeoff is round trips to the server versus the amount of memory used in the driver. For updatable server cursors, the fetch size also influences the sensitivity of the result set to changes and concurrency on the server. Updates to rows within the current fetch buffer are not visible until an explicit [refreshRow](reference/refreshrow-method-sqlserverresultset.md) method is issued or until the cursor leaves the fetch buffer. Large fetch buffers will have better performance (fewer server round trips) but are less sensitive to changes and reduce concurrency on the server if CONCUR_SS_SCROLL_LOCKS (1009) is used. For maximum sensitivity to changes, use a fetch size of 1. However this setting will incur a round trip to the server for every row fetched.
+
+## Result set read-path optimizations
+
+Starting with version 13.6, the driver reduces temporary allocations when reading result sets and uses fast paths for common string, `DECIMAL`, `NUMERIC`, `MONEY`, and `SMALLMONEY` values. These optimizations are automatic and can reduce garbage collection pressure for large and wide result sets. No application configuration is required.
 
 ## Use streams for large IN parameters
 

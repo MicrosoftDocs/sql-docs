@@ -1,8 +1,8 @@
 ---
 title: "Backup Device (General Page)"
 description: In SQL Server, use the General page to specify or view the general properties of a logical backup device, including specifying the device name.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: backup-restore

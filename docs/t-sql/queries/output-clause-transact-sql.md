@@ -3,7 +3,7 @@ title: "OUTPUT clause (Transact-SQL)"
 description: Returns information from, or expressions based on, each row affected by an INSERT, UPDATE, DELETE, or MERGE statement.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 09/06/2024
 ms.service: sql
 ms.subservice: t-sql

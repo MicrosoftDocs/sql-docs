@@ -1,8 +1,8 @@
 ---
 title: "GetLevel (Database Engine)"
 description: "GetLevel (Database Engine)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "07/22/2017"
 ms.service: sql
 ms.subservice: t-sql

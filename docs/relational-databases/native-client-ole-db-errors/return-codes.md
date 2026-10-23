@@ -1,8 +1,8 @@
 ---
 title: Return codes (Native Client OLE DB provider)
 description: Learn about return codes supported for SQL Server Native Client OLE DB, including the commonly encountered DB_S_ERRORSOCCURRED HRESULT value.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "errors [OLE DB], return codes"
 ---
 # Return Codes (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   At the most basic level, a member function either succeeds or fails. At a somewhat more precise level, a function can succeed, but its success may not be what the application developer intended.  
   

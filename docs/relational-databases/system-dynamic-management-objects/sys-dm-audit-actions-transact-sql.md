@@ -3,7 +3,7 @@ title: "sys.dm_audit_actions (Transact-SQL)"
 description: sys.dm_audit_actions returns a row for every audit action that can be reported in the audit log.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: system-objects

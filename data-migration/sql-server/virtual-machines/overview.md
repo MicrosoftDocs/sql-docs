@@ -2,9 +2,9 @@
 title: "SQL Server to SQL Server on Azure VM (Migration Overview)"
 titleSuffix: SQL Server on Azure VMs
 description: Learn about the different migration strategies when you want to migrate your SQL Server to SQL Server on Azure VMs.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: vanto
 ms.date: 06/22/2026
 ms.service: azure-vm-sql-server
 ms.subservice: migration-guide

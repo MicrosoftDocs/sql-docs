@@ -1,8 +1,8 @@
 ---
 title: "explore function (olapR)"
 description: "Allows for exploration of cube metadata."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

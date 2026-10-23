@@ -1,9 +1,9 @@
 ---
 title: SQL Projects System Objects
 description: Learn about referencing system objects in SQL projects.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier
 ms.date: 10/10/2025
 ms.service: sql
 ms.subservice: sql-database-projects

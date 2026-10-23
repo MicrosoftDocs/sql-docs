@@ -3,7 +3,7 @@ title: List of Bugs Fixed
 description: This page contains a listing of bugs fixed in each release of the Microsoft ODBC Driver for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
 ms.date: 09/07/2026
 ms.service: sql
 ms.subservice: connectivity

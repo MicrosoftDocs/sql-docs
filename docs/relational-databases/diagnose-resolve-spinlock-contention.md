@@ -3,14 +3,14 @@ title: "Whitepaper: Diagnose & Resolve Spinlock Contention"
 description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft.
 author: bluefooted
 ms.author: pamela
-ms.reviewer: wiassaf, randolphwest, dfurman
+ms.reviewer: wiassaf, dfurman
 ms.date: 05/28/2025
 ms.service: sql
 ms.subservice: performance
 ms.topic: troubleshooting
 ms.custom:
   - ignite-2024
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # Diagnose and resolve spinlock contention on SQL Server

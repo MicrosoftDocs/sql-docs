@@ -3,7 +3,7 @@ title: "Server Configuration: suppress recovery model errors"
 description: "Suppress recovery model errors"
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

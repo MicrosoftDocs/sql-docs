@@ -1,8 +1,8 @@
 ---
 title: "SQL Server, Memory Manager object"
 description: Learn about the Memory Manager object, which provides counters to monitor overall server memory usage in SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: thesqlsith
+ms.author: derekw
 ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance

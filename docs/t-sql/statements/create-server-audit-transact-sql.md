@@ -3,7 +3,7 @@ title: CREATE SERVER AUDIT (Transact-SQL)
 description: CREATE SERVER AUDIT creates a server audit object using SQL Server Audit.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/10/2026
 ms.service: sql
 ms.subservice: t-sql

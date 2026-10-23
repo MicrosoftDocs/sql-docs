@@ -1,19 +1,19 @@
 ---
 title: "Install & configure WideWorldImportersDW sample database"
 description: Follow these instructions to download, install, and configure the WideWorldImportersDW sample database with SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 08/01/2023
 ms.service: sql
 ms.subservice: samples
 ms.topic: how-to
 ms.custom: intro-installation
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || >=aps-pdw-2016 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-mi-current"
 ---
 # Install and configure WideWorldImportersDW sample database
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article contains installation and configuration instructions for the `WideWorldImportersDW` database.
 
@@ -27,7 +27,7 @@ This article contains installation and configuration instructions for the `WideW
 
 Download the sample `WideWorldImportersDW` database backup/BACPAC that corresponds to your edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].
 
-The latest release of the sample is available from [wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630).
+The latest release of the sample is available from [wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkId=2384724).
 
 Source code to recreate the sample database is available from [wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts). Data population is based on ETL from the OLTP database (`WideWorldImporters`).
 

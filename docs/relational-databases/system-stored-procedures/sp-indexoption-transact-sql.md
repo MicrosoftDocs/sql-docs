@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_indexoption (Transact-SQL)"
 description: sp_indexoption sets locking option values for user-defined clustered and nonclustered indexes or tables with no clustered index.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

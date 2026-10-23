@@ -1,8 +1,8 @@
 ---
 title: "Server Network Configuration"
 description: Become familiar with SQL Server network configuration tasks. View information on enabling protocols, configuring encryption, registering SPNs, and other actions.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

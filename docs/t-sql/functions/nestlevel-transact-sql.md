@@ -1,8 +1,8 @@
 ---
 title: "@@NESTLEVEL (Transact-SQL)"
 description: "@@NESTLEVEL (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "09/17/2017"
 ms.service: sql
 ms.subservice: t-sql

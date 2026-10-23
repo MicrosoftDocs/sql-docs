@@ -1,8 +1,8 @@
 ---
 title: Non-SQL Server Subscribers
 description: Non-SQL Server Subscribers can receive snapshot and transactional publications through push subscriptions. Learn about considerations for Oracle and IBM Db2.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

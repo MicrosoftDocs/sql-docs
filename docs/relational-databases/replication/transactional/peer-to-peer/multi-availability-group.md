@@ -1,8 +1,8 @@
 ---
 title: Configure Peer-to-Peer Replication with Two Replicas in an Availability Group
 description: Set up peer-to-peer replication in SQL Server availability groups with these T-SQL examples covering distributors, publishers, listeners, and push subscriptions.
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.topic: how-to

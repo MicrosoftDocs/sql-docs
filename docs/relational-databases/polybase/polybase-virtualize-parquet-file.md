@@ -1,8 +1,8 @@
 ---
 title: Virtualize parquet file with PolyBase
 description: SQL Server can virtualize data from parquet files in S3-compatible object storage using PolyBase.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: hudequei
 ms.date: 06/03/2024
 ms.service: sql

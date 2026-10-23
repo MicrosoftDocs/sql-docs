@@ -3,7 +3,7 @@ title: "Change Data Capture (CDC) With Azure SQL Database"
 description: "Learn about change data capture (CDC) in Azure SQL Database, which records insert, update, and delete activity that applies to a table."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest, roblescarlos
+ms.reviewer: roblescarlos
 ms.date: 09/24/2025
 ms.service: azure-sql-database
 ms.subservice: replication

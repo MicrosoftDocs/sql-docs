@@ -1,8 +1,8 @@
 ---
 title: SQL Server Service Broker
 description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL Managed Instance.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 09/23/2025
 ms.service: sql
 ms.subservice: configuration

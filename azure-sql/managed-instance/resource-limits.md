@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
 author: vladai78
 ms.author: vladiv
-ms.reviewer: mathoma, sachinp, wiassaf, randolphwest
-ms.date: 08/10/2026
+ms.reviewer: sachinp, wiassaf
+ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -151,7 +151,7 @@ The following table lists the maximum storage size based on the number of vCores
 | Max log file size | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) | 500 - 7500 per file<br />\*[Increase file size to get more IOPS](#iops-and-throughput) | Reserved storage * 3 - up to the VM limit. 300 in case of 32 GB, 64 GB, and 96 GB of reserved storage.<br />VM limit depends on the number of vCores<br />6400 IOPS for a VM with 4 vCores - 80 K IOPS for a VM with 128 vCores | 16 K - 320 K (4000 IOPS/vCore)<br />Add more vCores to get better IO performance. |
 | Data throughput (approximate) | 100 - 250 MiB/s per file<br />\*[Increase the file size to get better IO performance](#iops-and-throughput) | IOPS / 30 MBps - up to the VM limit. 75 MBps in case of 32 GB, 64 GB, and 96 GB of reserved storage. | Not limited. |
-| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#iops-and-throughput) | 4.5 MiB/s per vCore<br />Max 192 MiB/s | Standard-series:<br />4.5 MiB/s per vCore<br />Max 96 MiB/s<br /><br />Premium-series and Memory optimized premium-series:<br />12 MiB/s per vCore<br />Max 192 MiB/s |
+| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#iops-and-throughput) | Standard-series:<br />4.5 MiB/s per vCore<br />Max 120 MiB/s<br /><br />Premium-series and Memory optimized premium-series:<br /> 4.5 MiB/s per vCore<br />Max 192 MiB/s | Standard-series:<br />16 MiB/s per vCore<br />Max 160 MiB/s<br /><br />Premium-series and Memory optimized premium-series:<br />16 MiB/s per vCore<br />Max 192 MiB/s |
 | Storage IO latency (approximate<sup>1</sup>) | 5-10 ms | 3-5 ms | 1-2 ms |
 | In-memory OLTP | Not supported | Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions | 30000 | 30000 | 30000 |
@@ -307,8 +307,8 @@ By default, the amount of memory allocated to Azure SQL Managed Instance is a st
 
 The flexible memory feature is available in the following service tiers and deployment configurations on [Premium-series](#hardware-configuration-characteristics) hardware:
 
-- **[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for locally redundant instances and is currently in preview for zone-redundant instances.
-- **[Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is currently in preview for the Business Critical service tier.
+- **[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for locally redundant instances and is currently in preview for zone-redundant instances. Zone-redundant Next-gen General Purpose instances require Azure Elastic SAN zone-redundant storage (ZRS), which isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
+- **[Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for the Business Critical service tier.
 
 You can change the amount of memory allocated to your SQL managed instance at any time for new and existing instances by using the Azure portal, or the REST API. The memory allocation change is applied to all databases in the instance and performs a failover of the instance as the final operation step. Check [management operations duration](management-operations-duration.md#management-operation-duration) to determine the estimated time for the operation to complete.
 
@@ -405,6 +405,58 @@ The following table shows the **default regional limits** for supported subscrip
 
 > [!IMPORTANT]  
 > In case your vCore limit is 0, it means that default regional limit for your subscription type isn't set. You can also use quota increase request for getting subscription access in specific region following the same procedure - providing required vCore values.
+
+### Check vCore quota limit and usage with PowerShell
+
+Use the [Subscription Usages - Get](/rest/api/sql/subscription-usages/get) REST API to retrieve the current vCore quota limit and consumption for Azure SQL Managed Instance in a subscription and region. Query each hardware generation separately by specifying its usage name:
+
+| Hardware generation | Usage name |
+| --- | --- |
+| Standard-series (Gen5) | `SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota` |
+| Premium-series | `SubscriptionSQLManagedInstancePremiumSeriesVCoreQuota` |
+| Memory optimized premium-series | `SubscriptionSQLManagedInstancePremiumSeriesMemoryOptimizedVCoreQuota` |
+
+Run the following script in a PowerShell session with the [Az module installed](/powershell/azure/install-azure-powershell), or in [Azure Cloud Shell](/azure/cloud-shell/overview) using PowerShell. Your account needs permission to read subscription usage, such as the [Reader role](/azure/role-based-access-control/built-in-roles/general#reader) assigned at subscription scope.
+
+Replace `<subscription-id>` with your subscription ID, set `$location` to the Azure region name (for example, `eastus`), and set `$usageName` to one of the values in the table. If you're already signed in through Cloud Shell, omit `Connect-AzAccount`.
+
+```powershell
+$subscriptionId = "<subscription-id>"
+$location = "eastus"
+$usageName = "SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota"
+
+Connect-AzAccount -ErrorAction Stop | Out-Null
+Set-AzContext -SubscriptionId $subscriptionId -ErrorAction Stop | Out-Null
+
+$path = "/subscriptions/$subscriptionId/providers/Microsoft.Sql/locations/$location/usages/${usageName}?api-version=2025-01-01"
+$response = Invoke-AzRestMethod -Method GET -Path $path -ErrorAction Stop
+
+if ($response.StatusCode -ne 200) {
+    throw "Unable to retrieve quota usage. HTTP $($response.StatusCode): $($response.Content)"
+}
+
+$response.Content | ConvertFrom-Json -ErrorAction Stop | ConvertTo-Json -Depth 10
+```
+
+Example output (excerpt; values are illustrative):
+
+```json
+{
+  "name": "SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota",
+  "properties": {
+    "currentValue": 80,
+    "limit": 320,
+    "unit": "SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota"
+  }
+}
+```
+
+In this example, `properties.currentValue` is the current quota consumption: **80 vCore units**. `properties.limit` is the current quota limit: **320 vCore units**. The remaining quota is `limit - currentValue`, or **240 vCore units**, for standard-series hardware in the specified subscription and region.
+
+As described earlier in this section, each General Purpose vCore consumes one vCore unit, and each Business Critical vCore consumes four vCore units. Repeat the request with a different `$usageName` or `$location` to check another hardware generation or region. To increase the limit, see [Request a quota increase](#request-a-quota-increase).
+
+> [!IMPORTANT]
+> The previously used `VCoreQuota` usage name, which represented a single regional quota shared across all hardware generations, is being deprecated in favor of hardware-generation-specific quotas. Use the usage names listed in the table above to retrieve the quota limit and consumption for each hardware generation.
 
 ## Request a quota increase
 

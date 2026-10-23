@@ -3,7 +3,7 @@ title: "View or Change the Compatibility Level of a Database"
 description: Learn how to view or change the compatibility level of a database in SQL Server or Azure SQL by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/22/2025
 ms.service: sql
 ms.subservice: supportability

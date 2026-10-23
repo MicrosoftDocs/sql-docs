@@ -1,8 +1,8 @@
 ---
 title: "RESTORE LABELONLY (Transact-SQL)"
 description: RESTORE Statements - LABELONLY (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/30/2018"
 ms.service: sql
 ms.subservice: t-sql

@@ -1,8 +1,8 @@
 ---
 title: "computed_column_definition (Transact-SQL)"
 description: "ALTER TABLE computed_column_definition specifies the properties of a computed column that is added to a table by using ALTER TABLE."
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: 07/26/2022
 ms.service: sql
 ms.subservice: t-sql

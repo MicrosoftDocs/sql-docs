@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_certify_removable (Transact-SQL)"
 description: Verifies that a database is correctly configured for distribution on removable media and reports any problems to the user.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

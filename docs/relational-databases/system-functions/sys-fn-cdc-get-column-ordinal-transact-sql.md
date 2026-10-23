@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
 description: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "01/25/2016"
 ms.service: sql
 ms.subservice: system-objects

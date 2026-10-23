@@ -1,8 +1,8 @@
 ---
 title: Processing results how-to topics (Native Client OLE DB provider)
 description: "Processing Results How-to Topics (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/07/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "OLE DB, processing results"
 ---
 # Processing Results How-to Topics (Native Client OLE DB provider)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Processing results in an OLE DB application involves first determining the characteristics of the result set, and then retrieving the data into program variables. If the command executes a stored procedure, you also must know how to process return codes and output parameters from the stored procedures.  
   

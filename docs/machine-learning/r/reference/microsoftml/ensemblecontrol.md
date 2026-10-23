@@ -1,8 +1,8 @@
 ---
 title: "ensembleControl function (MicrosoftML)"
 description: "Control the parameters used to create an ensemble."
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: 07/15/2019
 ms.service: sql
 ms.subservice: machine-learning

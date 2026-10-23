@@ -1,8 +1,8 @@
 ---
 title: "SQL Server error log (availability groups)"
 description: Learn about the SQL Server error log events that affect an Always On availability group and which symptoms should lead to review of the error log.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/13/2017"
 ms.service: sql
 ms.subservice: availability-groups

@@ -3,7 +3,7 @@ title: Analyze I/O Performance
 description: "Identify I/O performance issues associated with VM and data disk throttling for your SQL Server on Azure VM workloads."
 author: dplessMSFT
 ms.author: dpless
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 02/19/2026
 ms.service: azure-vm-sql-server
 ms.topic: how-to

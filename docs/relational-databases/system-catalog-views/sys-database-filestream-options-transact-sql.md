@@ -1,8 +1,8 @@
 ---
 title: "sys.database_filestream_options (Transact-SQL)"
 description: sys.database_filestream_options (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

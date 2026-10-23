@@ -3,7 +3,7 @@ title: "Audit Broker Conversation Event Class"
 description: Use the Audit Broker Conversation event class to report audit messages related to Service Broker dialog security.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/30/2025
 ms.service: sql
 ms.subservice: supportability

@@ -2,8 +2,8 @@
 title: "Quickstart: Use GitHub Copilot Slash Commands"
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use GitHub Copilot slash commands with the MSSQL extension to manage connections, explore schemas, and run SQL queries directly in the GitHub Copilot chat in Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

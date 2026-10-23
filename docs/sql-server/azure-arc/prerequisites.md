@@ -3,7 +3,7 @@ title: Prerequisites
 description: Describes prerequisites required for SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 04/16/2026
 ms.topic: checklist
 ms.custom:

@@ -3,7 +3,7 @@ title: Performance Counters to Track Shard Map Manager
 description: Learn about the ShardMapManager class and data dependent routing performance counters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: scoriani, mathoma
+ms.reviewer: scoriani
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: scale-out

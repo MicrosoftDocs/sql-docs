@@ -9,7 +9,7 @@ ms.topic: include
 | ㅤ | **General Purpose** | **Business Critical** | **Hyperscale** |
 | :---: | :---: | :---: | :---: |
 | **Best for** | Budget-oriented balanced compute and storage options. | OLTP applications with high transaction rate and low I/O latency. High resilience to failures and fast failovers by using multiple hot standby replicas. | **The recommended and default service tier for all new and modernizing OLTP and HTAP workloads.** Best for the widest variety of workloads, including those workloads with highly scalable storage and read-scale requirements. Offers higher resilience to failures by allowing configuration of more than one high availability secondary replica. |
-| **Compute size** | 2 to 128 vCores | 2 to 128 vCores | 2 to 192 vCores<sup>3</sup> |
+| **Compute size** | 2 to 128 vCores | 2 to 128 vCores | 2 to 192 vCores |
 | **Storage type** | Premium remote storage (per instance) | Super-fast local SSD storage (per instance) | Decoupled storage with local SSD cache (per compute replica) |
 | **Storage size** | 1 GB - 4 TB | 1 GB - 4 TB | 10 GB - 128 TB |
 | **Max IOPS** | 320 IOPS per vCore with 16,000 maximum IOPS | 4,000 IOPS per vCore with 327,680 maximum IOPS | 5,500 IOPS per vCore with 544,000 maximum local SSD IOPS.<br />Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
@@ -23,5 +23,3 @@ ms.topic: include
 <sup>1</sup> Simplified pricing for SQL Database Hyperscale arrived in December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 <sup>2</sup> As of December 2023, Azure Hybrid Benefit isn't available for new Hyperscale databases, or in dev/test subscriptions. Existing Hyperscale single databases with provisioned compute can continue to use Azure Hybrid Benefit to save on compute costs until December 2026. For more information, review the [Hyperscale pricing blog](https://aka.ms/hsignite2023).
-
-<sup>3</sup> Currently, the 160 and 192 vCore options are a preview feature.

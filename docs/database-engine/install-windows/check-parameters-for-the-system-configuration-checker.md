@@ -1,8 +1,8 @@
 ---
 title: "Check Parameters System Configuration Checker"
 description: During SQL Server Setup, the System Configuration Checker for conditions that prevent a successful SQL Server installation.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

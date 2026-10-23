@@ -1,8 +1,8 @@
 ---
 title: Manipulating UDT Data
 description: This article describes how to insert, select, and update data in UDT columns of a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

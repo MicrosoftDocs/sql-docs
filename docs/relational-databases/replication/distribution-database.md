@@ -1,8 +1,8 @@
 ---
 title: "Distribution Database"
 description: In SQL Server, the distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

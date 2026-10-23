@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Use REGEXP_REPLACE in Azure SQL Database dynamic data masking to define pattern-driven masks for emails, phone numbers, and other structured string data.
 author: madhumitatripathy
 ms.author: matripathy
-ms.reviewer: vanto, wiassaf, mathoma, randolphwest
+ms.reviewer: vanto, wiassaf
 ms.date: 05/28/2026
 ms.service: azure-sql-database
 ms.subservice: security
@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 This article shows you how to use the `REGEXP_REPLACE` masking function to define pattern-driven [dynamic data masking](dynamic-data-masking-overview.md) rules in Azure SQL Database. Regex-based masking lets you mask variable-length string data and preserve specific segments that built-in masks can't express.
 
 > [!IMPORTANT]
-> Regex-based dynamic data masking is currently in public preview for Azure SQL Database. Preview features are provided "as is" and are excluded from the service-level agreements and limited warranty. Use this feature only in nonproduction environments. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+> Regex-based dynamic data masking is currently in preview for Azure SQL Database. Preview features are provided "as is" and are excluded from the service-level agreements and limited warranty. Use this feature only in nonproduction environments. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 ## Overview
 
@@ -207,5 +207,4 @@ WHERE is_masked = 1;
 - [sys.masked_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-masked-columns-transact-sql)
 - [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)
 - [REGEXP_REPLACE (Transact-SQL)](/sql/t-sql/functions/regexp-replace-transact-sql)
-- [Regular expressions (SQL Server)](/sql/relational-databases/regular-expressions/overview)
-- [Regular expressions functions (Transact-SQL)](/sql/t-sql/functions/regular-expressions-functions-transact-sql)
+- [Regular expressions functions (Transact-SQL)](/sql/relational-databases/regular-expressions/overview)

@@ -1,8 +1,8 @@
 ---
 title: "sys.database_event_session_actions"
 description: The sys.database_event_session_actions dynamic management view (DMV) returns a row for each action on each event of a database-scoped event session.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/29/2025
 ms.service: sql
 ms.subservice: system-objects

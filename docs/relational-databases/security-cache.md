@@ -3,7 +3,7 @@ title: Security cache
 description: Discover how the security cache in SQL Server and Azure SQL operates.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: randolphwest, vanto
+ms.reviewer: vanto
 ms.date: 04/29/2025
 ms.service: sql
 ms.topic: concept-article

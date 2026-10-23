@@ -1,8 +1,8 @@
 ---
 title: "SQL Server XML Bulk Load Object Model (SQLXML)"
 description: Learn about the methods and properties of the SQLXMLBulkLoad object that is used for bulk loading XML in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

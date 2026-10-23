@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_create_plan_guide (Transact-SQL)"
 description: sp_create_plan_guide creates a plan guide for associating query hints or actual query plans with queries in a database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

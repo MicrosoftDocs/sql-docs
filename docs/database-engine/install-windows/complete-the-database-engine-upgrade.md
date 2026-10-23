@@ -1,8 +1,8 @@
 ---
 title: "Complete the Database Engine Upgrade"
 description: This article describes some extra steps you might have to take after you finish upgrading the Database Engine of SQL Server.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

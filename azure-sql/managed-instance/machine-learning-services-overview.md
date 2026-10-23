@@ -1,9 +1,9 @@
 ---
 title: Machine Learning Services in Azure SQL Managed Instance
 description: This article provides an overview or Machine Learning Services in Azure SQL Managed Instance.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: mathoma, davidph
+author: uc-msft
+ms.author: umajay
+ms.reviewer: davidph
 ms.date: 03/17/2021
 ms.service: azure-sql-managed-instance
 ms.subservice: machine-learning

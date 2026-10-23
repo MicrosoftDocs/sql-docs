@@ -1,8 +1,8 @@
 ---
 title: "Graph edge constraints"
 description: "Graph edge constraints can be used to enforce data integrity and specific semantics on the edge tables in a graph database."
-author: "rwestMSFT"
-ms.author: "randolphwest"
+author: thesqlsith
+ms.author: derekw
 ms.date: 06/28/2023
 ms.service: sql
 ms.subservice: table-view-index

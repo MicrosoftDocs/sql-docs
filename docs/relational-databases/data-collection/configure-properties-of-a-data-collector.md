@@ -1,9 +1,9 @@
 ---
 title: "Configure properties of a data collector"
 description: Configure properties of a data collector in SQL Server Management Studio.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

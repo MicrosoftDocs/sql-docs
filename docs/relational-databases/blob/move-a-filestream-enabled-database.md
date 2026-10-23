@@ -1,8 +1,8 @@
 ---
 title: "Move a FILESTREAM-enabled database"
 description: Discover how to move a FILESTREAM-enabled database. See which Transact-SQL scripts to use in the Query Editor of SQL Server Management Studio.
-author: markingmyname
-ms.author: maghan
+author: HugoMSFT
+ms.author: hudequei
 ms.date: "01/31/2022"
 ms.service: sql
 ms.subservice: filestream

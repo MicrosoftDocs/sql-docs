@@ -1,8 +1,8 @@
 ---
 title: "Advanced conflict detection & resolution (Merge)"
 description: Learn advanced methods of conflict detection and resolution with Merge Replication.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

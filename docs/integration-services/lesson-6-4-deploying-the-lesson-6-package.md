@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Deploy the Lesson 6 package"
 description: "Lesson 6-4: Deploy the Lesson 6 package"
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/09/2023
 ms.service: sql
 ms.subservice: integration-services

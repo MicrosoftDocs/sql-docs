@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helplinkedsrvlogin (Transact-SQL)"
 description: Provides information about login mappings defined against a specific linked server used for distributed queries and remote stored procedures.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

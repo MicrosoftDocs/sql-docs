@@ -1,8 +1,8 @@
 ---
 title: "Conditional Expressions (XQuery)"
 description: Learn about the conditional expressions that are supported by XQuery.
-author: rothja
-ms.author: jroth
+author: uc-msft
+ms.author: umajay
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: xml

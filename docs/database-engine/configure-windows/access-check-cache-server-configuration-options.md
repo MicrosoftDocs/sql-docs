@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: access check cache"
 description: "Learn about the access check result cache and the options that control the cache's behavior. See when to change these options in SQL Server."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

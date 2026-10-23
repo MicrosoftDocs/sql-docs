@@ -3,7 +3,7 @@ title: "go-mssqldb Support and Lifecycle"
 description: "Go version support, SQL Server version compatibility, and support lifecycle for the go-mssqldb driver."
 author: dlevy-msft
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

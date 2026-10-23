@@ -3,7 +3,7 @@ title: "BASE64_ENCODE (Transact-SQL)"
 description: "BASE64_ENCODE converts the value of a varbinary into a Base64 encoded varchar."
 author: abledenthusiast
 ms.author: aaronpitman
-ms.reviewer: wiassaf, randolphwest
+ms.reviewer: wiassaf
 ms.date: 01/13/2026
 ms.service: sql
 ms.subservice: t-sql

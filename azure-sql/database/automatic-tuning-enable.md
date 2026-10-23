@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: You can enable automatic tuning on your database easily using the Azure portal.
 author: NikaKinska
 ms.author: nnikolic
-ms.reviewer: wiassaf, mathoma, randolphwest
+ms.reviewer: wiassaf
 ms.date: 02/03/2025
 ms.service: azure-sql
 ms.subservice: performance

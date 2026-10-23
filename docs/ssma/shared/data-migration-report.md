@@ -1,8 +1,8 @@
 ---
 title: Data Migration Report
 description: Learn about the Data Migration Report dialog box that shows migration results for each table.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

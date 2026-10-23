@@ -1,8 +1,8 @@
 ---
 title: "Install SQL Server Using SysPrep"
 description: This article describes how to prepare and complete images by using SysPrep in SQL Server installation.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

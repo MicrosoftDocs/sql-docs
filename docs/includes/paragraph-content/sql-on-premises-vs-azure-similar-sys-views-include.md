@@ -1,6 +1,6 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.reviewer: dfurman
 ms.date: 10/02/2025
 ms.service: azure-sql-database

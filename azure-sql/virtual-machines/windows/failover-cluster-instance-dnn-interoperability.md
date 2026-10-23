@@ -3,7 +3,7 @@ title: Feature Interoperability with SQL Server FCI and DNN
 description: "Learn about the considerations when working with certain SQL Server features and a distributed network name (DNN) resource with a failover cluster instance on SQL Server on Azure VMs. "
 author: AbdullahMSFT
 ms.author: amamun
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 01/26/2026
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

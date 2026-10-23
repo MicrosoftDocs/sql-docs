@@ -1,8 +1,8 @@
 ---
 title: "Retrieving UDT Data"
 description: This article describes how to access UDTs in a SQL Server database.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 03/19/2026
 ms.service: sql
 ms.subservice: clr

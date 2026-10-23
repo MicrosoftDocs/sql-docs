@@ -1,7 +1,7 @@
 ---
 title: Literals (SSIS)
 description: Numeric, string, and Boolean literals
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/13/2026
 ms.service: sql
 ms.subservice: integration-services

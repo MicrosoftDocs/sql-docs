@@ -1,9 +1,9 @@
 ---
 title: "Tail-log backups (SQL Server)"
 description: In SQL Server, a tail-log backup captures any log records that haven't yet been backed up to prevent data loss and to keep the log chain intact.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 09/28/2023
 ms.service: sql
 ms.subservice: backup-restore

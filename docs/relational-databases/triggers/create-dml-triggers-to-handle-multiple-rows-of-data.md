@@ -1,8 +1,8 @@
 ---
 title: "Create DML Triggers to Handle Multiple Rows of Data"
 description: "Create DML Triggers to Handle Multiple Rows of Data"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: language-reference

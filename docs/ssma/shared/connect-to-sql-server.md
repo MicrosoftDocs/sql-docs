@@ -1,8 +1,8 @@
 ---
 title: Connect to SQL Server Dialog Box
 description: Learn about the Connect to SQL Server dialog box options in SQL Server Migration Assistant (SSMA).
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 04/16/2026
 ms.service: sql
 ms.subservice: ssma

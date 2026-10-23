@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_spatial_geography_index_xml (Transact-SQL)"
 description: Returns the name and value for a specified set of properties about a geography spatial index.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

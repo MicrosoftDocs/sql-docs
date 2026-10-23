@@ -1,9 +1,9 @@
 ---
 title: Business Continuity and Database Recovery - SQL Server
 description: Use this overview of business continuity solutions for high availability and disaster recovery in SQL Server to provide resources with minimal interruption.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 12/11/2025
 ms.service: sql
 ms.subservice: availability-groups

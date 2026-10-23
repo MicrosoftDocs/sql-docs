@@ -3,7 +3,7 @@ title: "sys.dm_db_log_info (Transact-SQL)"
 description: "The sys.dm_db_log_info (Transact-SQL) dynamic management function returns virtual log file (VLF) information from the transaction log."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: maghan
+ms.reviewer: vanto
 ms.date: 01/06/2025
 ms.service: sql
 ms.subservice: system-objects

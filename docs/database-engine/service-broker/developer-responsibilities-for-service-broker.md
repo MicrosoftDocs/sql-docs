@@ -1,9 +1,9 @@
 ---
 title: Developer Responsibilities for Service Broker
 description: "The application developer is responsible for designing the Service Broker application and creating elements that require programming."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql
 ms.subservice: configuration

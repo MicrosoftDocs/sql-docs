@@ -1,8 +1,8 @@
 ---
 title: "SqlXmlParameter Object (SQLXML)"
 description: Learn about the properties supported by the SqlXmlParameter object, a SQLXML Managed Class.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

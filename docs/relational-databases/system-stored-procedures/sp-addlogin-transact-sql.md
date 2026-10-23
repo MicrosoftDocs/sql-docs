@@ -3,7 +3,7 @@ title: "sys.sp_addlogin (Transact-SQL)"
 description: Creates a new SQL Server login that allows a user to connect to a SQL Server instance with SQL Server authentication.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

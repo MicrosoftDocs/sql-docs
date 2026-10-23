@@ -1,9 +1,9 @@
 ---
 title: "Error Handling (XQuery)"
 description: Learn about error handling in XQuery and view examples of handling dynamic errors.
-author: "rothja"
-ms.author: "jroth"
-ms.reviewer: mathoma
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/14/2025
 ms.service: sql
 ms.subservice: xml

@@ -3,7 +3,7 @@ title: Configure an Availability Group for SQL Server on Ubuntu Virtual Machines
 description: Learn about setting up an availability group in SQL Server on Ubuntu virtual machines in Azure.
 author: aravindmahadevan-ms
 ms.author: armaha
-ms.reviewer: amitkh-msft, randolphwest
+ms.reviewer: amitkh-msft
 ms.date: 09/25/2025
 ms.service: azure-vm-sql-server
 ms.subservice: hadr

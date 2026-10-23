@@ -1,9 +1,9 @@
 ---
 title: MSSQLSERVER_17112
 description: "MSSQLSERVER_17112"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: jopilov, mathoma, randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: jopilov
 ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: supportability

@@ -1,8 +1,8 @@
 ---
 title: "Upgrade the Database Engine"
 description: The article provides links to resources that help you upgrade the SQL Server Database Engine from a prior release of SQL Server to the latest version.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: install

@@ -3,7 +3,7 @@ title: "ADD SIGNATURE (Transact-SQL)"
 description: ADD SIGNATURE adds a digital signature to a stored procedure, function, assembly, or DML-trigger.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/10/2025
 ms.service: sql
 ms.subservice: t-sql

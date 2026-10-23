@@ -1,8 +1,8 @@
 ---
 title: "NEWID (Transact-SQL)"
 description: "NEWID creates a unique value of type uniqueidentifier."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/19/2024
 ms.service: sql
 ms.subservice: t-sql

@@ -1,25 +1,24 @@
 ---
 title: Dynamic Data Masking
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
-description: Dynamic data masking (DDM) limits sensitive data exposure by masking it to nonprivileged users for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Dynamic data masking (DDM) limits sensitive data exposure by masking it to nonprivileged users for Azure SQL Database and Azure SQL Managed Instance.
 author: madhumitatripathy
 ms.author: matripathy
-ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 11/24/2025
+ms.reviewer: vanto
+ms.date: 10/07/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
 ms.custom:
   - sqldbrb=1
   - ignite-2024
-tags: azure-synapse
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || =fabricsql"
 ---
 # Dynamic data masking
 
-[!INCLUDE [appliesto-sqldb-sqlmi-asa-dedicated-only-fabricsqldb](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only-fabricsqldb.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi-fabricsqldb](../includes/appliesto-sqldb-sqlmi-fabricsqldb.md)]
 
-Azure SQL Database, SQL database in Microsoft Fabric, Azure SQL Managed Instance, and Azure Synapse Analytics support dynamic data masking (DDM). Dynamic data masking limits sensitive data exposure by masking it to nonprivileged users.
+Azure SQL Database, SQL database in Microsoft Fabric, and Azure SQL Managed Instance support dynamic data masking (DDM). Dynamic data masking limits sensitive data exposure by masking it to nonprivileged users.
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal effect on the application layer. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database isn't changed.
 
@@ -316,6 +315,10 @@ Prevent unauthorized access to sensitive data and gain control by masking it to 
    REVOKE UNMASK ON SCHEMA::Service FROM ServiceManager;
    REVOKE UNMASK FROM ServiceHead;
    ```
+
+## Dynamic data masking in Azure Synapse Analytics
+
+For dedicated SQL pools in Azure Synapse Analytics, see [Dynamic data masking](/azure/synapse-analytics/sql/dynamic-data-masking-overview).
 
 ## Related content
 

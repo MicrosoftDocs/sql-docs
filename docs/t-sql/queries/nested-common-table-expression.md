@@ -1,8 +1,8 @@
 ---
 title: "Nested Common Table Expression (CTE)"
 description: "Nested common table expressions (CTEs) can simplify complex queries by deconstructing ordinarily complex queries into reusable blocks."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.reviewer: wiassaf, xiaoyul
 ms.date: 09/11/2025
 ms.service: sql

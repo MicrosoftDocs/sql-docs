@@ -1,8 +1,8 @@
 ---
 title: "Restore Database (Files Page)"
 description: While restoring a database in SQL Server, use the Files page of the Restore Database dialog box to manage specific files to restore within the database.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/06/2017"
 ms.service: sql
 ms.subservice: backup-restore

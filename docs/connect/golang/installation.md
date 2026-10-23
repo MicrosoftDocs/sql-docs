@@ -3,7 +3,7 @@ title: "Install the go-mssqldb Driver"
 description: "Install the go-mssqldb driver for Go and verify your development environment for Microsoft SQL platform connectivity."
 author: dlevy-msft
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/27/2026
 ms.service: sql
 ms.subservice: connectivity

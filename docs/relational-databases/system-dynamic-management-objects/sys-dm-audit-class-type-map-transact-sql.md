@@ -3,7 +3,7 @@ title: "sys.dm_audit_class_type_map (Transact-SQL)"
 description: sys.dm_audit_class_type_map returns a table that lists securable classes that can be mapped to the class_type column in the audit log.
 author: sravanisaluru
 ms.author: srsaluru
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: system-objects

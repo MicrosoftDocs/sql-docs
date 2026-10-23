@@ -1,8 +1,8 @@
 ---
 title: "Always On Availability Groups Catalog Views (Transact-SQL)"
 description: Always On Availability Groups Catalog Views (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 04/11/2022
 ms.service: sql
 ms.subservice: system-objects

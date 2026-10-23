@@ -1,8 +1,8 @@
 ---
 title: "Replication Publishing Model Overview"
 description: Learn about the replication publishing model in SQL Server, including Publisher, Distributor, Subscribers, publications, articles, and subscriptions.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

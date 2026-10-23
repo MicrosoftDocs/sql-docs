@@ -3,7 +3,7 @@ title: "Shrink a Database"
 description: Learn how to shrink a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/17/2025
 ms.service: sql
 ms.subservice: supportability

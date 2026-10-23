@@ -3,7 +3,7 @@ title: "Install SSMA components on SQL Server (SybaseToSQL)"
 description: Install components on the server that runs SQL Server to support SAP ASE database conversion with SSMA, including the SSMA extension pack and Sybase providers.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: "04/24/2026"
 ms.service: sql
 ms.subservice: ssma

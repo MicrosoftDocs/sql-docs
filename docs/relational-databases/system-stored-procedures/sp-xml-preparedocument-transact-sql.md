@@ -1,9 +1,9 @@
 ---
 title: "sp_xml_preparedocument (Transact-SQL)"
 description: "Reads the XML text provided as input, parses the text by using the MSXML parser, and provides the parsed document."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

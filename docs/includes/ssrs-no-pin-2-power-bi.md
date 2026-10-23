@@ -2,7 +2,7 @@
 description: Include file
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 01/07/2026
 ms.service: reporting-services
 ms.topic: include

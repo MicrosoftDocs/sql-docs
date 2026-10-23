@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_7937"
 description: "MSSQLSERVER_7937"
-author: MashaMSFT
-ms.author: mathoma
+author: adbadram
+ms.author: adbadram
 ms.date: "04/04/2017"
 ms.service: sql
 ms.subservice: supportability

@@ -1,9 +1,9 @@
 ---
 title: "Modify or Rename DML Triggers"
 description: Learn how to modify or rename a DML trigger in the Database Engine using SQL Server Management Studio or Transact-SQL.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 08/08/2024
 ms.service: sql
 ms.topic: how-to

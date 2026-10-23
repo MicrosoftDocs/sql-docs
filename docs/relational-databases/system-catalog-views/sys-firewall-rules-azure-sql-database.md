@@ -1,8 +1,8 @@
 ---
 title: "sys.firewall_rules (Azure SQL Database)"
 description: Returns information about the server-level firewall settings associated with your Azure SQL Database.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: system-objects

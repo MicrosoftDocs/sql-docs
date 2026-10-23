@@ -1,9 +1,9 @@
 ---
 title: "Load XML data"
 description: Learn several methods for transferring XML data into SQL Server databases.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 05/05/2022
 ms.service: sql
 ms.subservice: xml

@@ -1,8 +1,8 @@
 ---
 title: "Backup Timeline"
 description: In SQL Server, the Backup Timeline dialog box allows you to locate and specify backups to restore a database to a point-in-time.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: backup-restore

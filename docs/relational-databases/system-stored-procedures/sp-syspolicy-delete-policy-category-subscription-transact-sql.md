@@ -3,7 +3,7 @@ title: "sp_syspolicy_delete_policy_category_subscription (Transact-SQL)"
 description: "Deletes a policy category subscription for a specific database."
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

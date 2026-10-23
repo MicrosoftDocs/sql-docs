@@ -3,7 +3,7 @@ title: "Server Configuration: max lock manager cache memory (%)"
 description: Explains the max lock manager cache memory instance configuration setting.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 05/26/2026
 ms.service: sql
 ms.subservice: configuration

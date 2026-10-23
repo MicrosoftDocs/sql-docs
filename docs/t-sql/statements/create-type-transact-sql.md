@@ -1,9 +1,9 @@
 ---
 title: "CREATE TYPE (Transact-SQL)"
 description: Creates an alias data type or a user-defined type in the current database in SQL Server or Azure SQL Database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 10/10/2024
 ms.service: sql
 ms.subservice: t-sql

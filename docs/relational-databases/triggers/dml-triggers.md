@@ -1,9 +1,9 @@
 ---
 title: "DML Triggers"
 description: A special type of stored procedure that automatically takes effect when a data manipulation language (DML) event takes place.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 07/16/2025
 ms.service: sql
 ms.topic: concept-article

@@ -1,8 +1,8 @@
 ---
 title: "sys.database_mirroring_witnesses (Transact-SQL)"
 description: Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "06/10/2016"
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "sysmail_add_profile_sp (Transact-SQL)"
 description: "Created a new Database Mail profile in an instance of SQL Server or Azure SQL Managed Instance."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

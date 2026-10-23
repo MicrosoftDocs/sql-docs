@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Overview of network security perimeter for Azure SQL Database
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: wiassaf, vanto, mathoma
+ms.reviewer: wiassaf, vanto
 ms.date: 10/23/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database

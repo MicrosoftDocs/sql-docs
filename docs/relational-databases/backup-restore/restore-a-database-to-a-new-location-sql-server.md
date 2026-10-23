@@ -1,9 +1,9 @@
 ---
 title: "Restore a Database to a New Location (SQL Server)"
 description: Restore a SQL Server database to a new location by using SQL Server Management Studio or Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/25/2025
 ms.service: sql
 ms.subservice: backup-restore

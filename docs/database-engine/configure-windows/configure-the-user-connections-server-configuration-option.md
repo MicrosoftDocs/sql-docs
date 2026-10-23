@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: user connections"
 description: Learn about the user connections option. See how it can help you avoid overloading an instance of SQL Server with too many concurrent connections.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

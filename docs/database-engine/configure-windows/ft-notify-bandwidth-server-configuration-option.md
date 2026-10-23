@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: ft notify bandwidth"
 description: "Learn about the ft notify bandwidth option. See how it affects the number of buffers that SQL Server maintains in the pool of small memory buffers."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 05/27/2025
 ms.service: sql
 ms.subservice: configuration

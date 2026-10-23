@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about the duration of Azure SQL Managed Instance management operations.
 author: urosmil
 ms.author: urmilano
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 07/10/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

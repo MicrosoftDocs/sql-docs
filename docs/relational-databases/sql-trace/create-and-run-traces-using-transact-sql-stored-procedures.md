@@ -1,8 +1,8 @@
 ---
 title: "Create and Run Traces Using Transact-SQL Stored Procedures"
 description: "Create and Run Traces Using Transact-SQL Stored Procedures"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: language-reference

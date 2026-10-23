@@ -1,9 +1,9 @@
 ---
 title: "Accelerated Database Recovery (ADR)"
 description: "Learn about accelerated database recovery (ADR), which redesigned the database engine recovery process to significantly speed up recovery and improve database availability in SQL Server, Azure SQL Database, Azure SQL Managed Instance, and SQL database in Fabric."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf, derekw, randolphwest, dfurman
+author: dnethi
+ms.author: dinethi
+ms.reviewer: wiassaf, derekw, dfurman
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: backup-restore

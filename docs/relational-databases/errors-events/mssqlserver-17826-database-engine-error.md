@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_17826"
 description: "MSSQLSERVER_17826"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mathoma
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/02/2023
 ms.service: sql
 ms.subservice: supportability

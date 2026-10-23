@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_browsesnapshotfolder (Transact-SQL)"
 description: sp_browsesnapshotfolder returns the complete path for the latest snapshot generated for a publication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

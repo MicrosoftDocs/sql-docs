@@ -1,8 +1,8 @@
 ---
 title: "SqlTriggerContext Object"
 description: In SQL Server CLR integration, the SqlTriggerContext class provides context information for a trigger including type of action and columns modified in operation.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

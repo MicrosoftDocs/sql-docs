@@ -1,8 +1,8 @@
 ---
 title: "Database mirroring system object reference"
 description: "See information about database mirroring system objects: system catalog views, system dynamic management views, and system tables."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: database-mirroring

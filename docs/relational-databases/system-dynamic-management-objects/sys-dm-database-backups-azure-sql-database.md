@@ -3,7 +3,7 @@ title: "sys.dm_database_backups"
 description: Returns information about backups of a database in an Azure SQL Database logical server and in Fabric SQL database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, nvraparl
+ms.reviewer: nvraparl
 ms.date: 02/10/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

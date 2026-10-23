@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_updatestats (Transact-SQL)"
 description: "Runs UPDATE STATISTICS against all user-defined and internal tables in the current database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: wiassaf, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf
 ms.date: 08/06/2026
 ms.service: sql
 ms.subservice: system-objects

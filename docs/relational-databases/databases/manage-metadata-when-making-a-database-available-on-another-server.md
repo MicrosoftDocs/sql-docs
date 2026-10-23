@@ -3,7 +3,7 @@ title: "Manage metadata when making a database available on another server"
 description: "Manage Metadata When Making a Database Available on Another Server"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/16/2022
 ms.service: sql
 ms.topic: concept-article

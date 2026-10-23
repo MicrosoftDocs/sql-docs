@@ -1,9 +1,9 @@
 ---
 title: What is an Availability Group Listener?
 description: An overview of the Always On availability group listener and how it functions to direct traffic automatically to the intended server.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: availability-groups

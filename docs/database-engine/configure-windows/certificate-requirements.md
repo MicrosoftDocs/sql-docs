@@ -3,7 +3,7 @@ title: Certificate Requirements for SQL Server
 description: This article describes the requirements for SQL Server encryption and how to check if a certificate meets the requirements.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 02/27/2026
 ai-usage: ai-assisted
 ms.service: sql

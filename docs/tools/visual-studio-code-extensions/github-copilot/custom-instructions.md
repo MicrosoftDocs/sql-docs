@@ -2,8 +2,8 @@
 title: "Quickstart: Custom Instructions for GitHub Copilot and T-SQL"
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to create a custom instructions file so GitHub Copilot follows your team's T-SQL conventions across ask, edit, agent, and inline completions in Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: roblescarlos
 ms.date: 06/01/2026
 ms.service: sql

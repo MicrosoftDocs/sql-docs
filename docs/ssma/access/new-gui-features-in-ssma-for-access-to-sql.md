@@ -3,7 +3,7 @@ title: "New GUI Features in SSMA for Access to SQL"
 description: "New GUI Features in SSMA for Access to SQL"
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/30/2025
 ms.service: sql
 ms.subservice: ssma

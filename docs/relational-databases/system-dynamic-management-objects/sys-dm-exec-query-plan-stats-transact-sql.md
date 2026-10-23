@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_query_plan_stats (Transact-SQL)"
 description: sys.dm_exec_query_plan_stats returns the equivalent of the last known actual execution plan for a previously cached query plan.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 09/07/2025
 ms.service: sql
 ms.subservice: system-objects

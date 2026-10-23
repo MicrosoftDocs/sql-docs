@@ -1,9 +1,9 @@
 ---
 title: "Oracle to SQL Server: Migration guide"
 description: "This guide teaches you how to migrate your Oracle schemas to Microsoft SQL Server by using SQL Server Migration Assistant (SSMA) for Oracle."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: abhims14
+ms.author: abhishekum
+ms.reviewer: vanto
 ms.date: 01/08/2025
 ms.service: sql
 ms.subservice: migration-guide

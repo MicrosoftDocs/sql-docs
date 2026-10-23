@@ -1,9 +1,9 @@
 ---
 title: "Manage job logins for databases in an availability group"
 description: Learn how to manage logins for jobs that use databases that participate in an availability group.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 09/06/2024
 ms.service: sql
 ms.subservice: availability-groups

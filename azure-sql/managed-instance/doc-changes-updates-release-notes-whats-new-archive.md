@@ -2,10 +2,10 @@
 title: What's new? (Archive)
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the features and documentation improvements for Azure SQL Managed Instance made in previous years. (Archive)
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: wiassaf, randolphwest
-ms.date: 02/19/2026
+author: bluefooted
+ms.author: pamela
+ms.reviewer: wiassaf
+ms.date: 09/15/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -62,7 +62,8 @@ Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-releas
 | **\|\| (String concatenation) and \|\|= (Compound assignment) syntax support preview** |  May |Azure SQL Managed Instance now supports [\|\| (String concatenation)](/sql/t-sql/language-elements/string-concatenation-pipes-transact-sql) and [\|\|= (Compound assignment)](/sql/t-sql/language-elements/compound-assignment-pipes-transact-sql) Transact-SQL syntax. This capability is currently in preview.|
 | **Vector data type and functions preview** | April | Working with vector data is now easier in Azure SQL Managed Instance with the introduction of a new [vector data type](/sql/t-sql/data-types/vector-data-type) and [vector functions](/sql/t-sql/functions/vector-functions-transact-sql). This feature is now in preview. For more information, see [Intelligent applications with Azure SQL Managed Instance](ai-artificial-intelligence-intelligent-applications.md#vectors). |
 |**MI link from SQL Server 2017 GA** | March | Configure a link from SQL Server 2017 to Azure SQL Managed Instance. This feature is generally available. Review [Managed Instance link from SQL Server 2017](managed-instance-link-feature-overview.md#) to learn more. |
-|**Invoke an HTTPS REST endpoint SP preview** | February | Use the [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) stored procedure to invoke an HTTPS REST endpoint provided as an input argument to the procedure. This stored procedure is currently in preview for Azure SQL Managed Instance.  | 
+|**Invoke an HTTPS REST endpoint SP preview** | February | Use the [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) stored procedure to invoke an HTTPS REST endpoint provided as an input argument to the procedure. This stored procedure is currently in preview for Azure SQL Managed Instance. |
+|**Service endpoint policies for Azure Storage** | February | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration. For more information, see [Configure service endpoint policies for Azure SQL Managed Instance](service-endpoint-policies-configure.md). |
 |**Native Windows principals GA** |  February | Use the  **Windows** authentication metadata mode to allow Windows authentication or Microsoft Entra authentication (using a Windows principal metadata) with Azure SQL Managed Instance. This feature is now generally available (GA). Review [Native Windows principals](native-windows-principals.md) to learn more. |
 | **SQL Insights retired** |January | SQL Insights has been retired and is no longer available. Use [database watcher](../database-watcher-overview.md) or another monitoring solution to monitor Azure SQL Managed Instance. |
 | **Modernization Advisor preview** | January | Use the **Modernization Advisor** in the Azure portal for your SQL Server on Azure VM to determine if you can save on cost or optimize your performance by migrating your workload to Azure SQL Managed Instance. This feature is currently in preview. Review [Modernization Advisor](../virtual-machines/modernization-advisor.md) to learn more. |
@@ -78,8 +79,8 @@ Return to [What's new in Azure SQL Managed Instance?](doc-changes-updates-releas
 |**Link from SQL MI to SQL Server GA** |  October | Configure a link *from* Azure SQL Managed Instance to SQL Server 2022. This feature is now generally available. Review [Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md)  to learn more.  |
 |**Two-way DR with SQL Server 2022 GA** | October | In the event of a disaster, you can fail your SQL Server 2022 workloads to Azure SQL Managed Instance using the link, and then, once the disaster is mitigated, you can fail back to SQL Server. This feature is now generally available. Review [Two-way DR with SQL Server 2022](managed-instance-link-disaster-recovery.md) to learn more.|
 | **CURRENT_DATE Transact-SQL GA** | August | The `CURRENT_DATE` Transact-SQL (T-SQL) function returns the current database system date as a date value, without the database time and time zone offset. This function is now generally available. For more information, see [CURRENT_DATE (Transact-SQL)](/sql/t-sql/functions/current-date-transact-sql). |
-| **JSON native data type preview** |  August | The new [**JSON** native data type](/sql/t-sql/data-types/json-data-type) and is currently in preview. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
-| **JSON aggregate functions preview** |  August | Two new **JSON** aggregate functions [JSON_OBJECTAGG and JSON_ARRAYAGG](/sql/relational-databases/json/json-data-sql-server#json-data-from-aggregates) enable construction of JSON objects or arrays based on an aggregate from SQL data. For more information, see [JSON Type and aggregates preview](https://aka.ms/json-type-aggregates-public-preview). |
+| **JSON native data type introduced** | August | The [native **json** data type](/sql/t-sql/data-types/json-data-type?view=azuresqlmi-current&preserve-view=true) was introduced in Azure SQL Managed Instance. The data type became generally available in May 2025. |
+| **JSON aggregate functions introduced** | August | The [JSON_OBJECTAGG and JSON_ARRAYAGG](/sql/relational-databases/json/json-data-sql-server?view=azuresqlmi-current&preserve-view=true#json-data-from-aggregates) aggregate functions were introduced in Azure SQL Managed Instance. The functions became generally available in May 2025. |
 | **Fail over link with T-SQL preview** |  August | You can now fail over a [Managed Instance link](managed-instance-link-feature-overview.md) by using Transact-SQL (T-SQL) commands. This capability is currently in preview starting with [SQL Server 2022 CU13 (KB5036432)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate13). To learn more, review [fail over a database](managed-instance-link-failover-how-to.md?tabs=tsql#fail-over-a-database). |
 |**Native Windows principals**| July | [Native Windows principals](native-windows-principals.md) in SQL Managed Instance is in preview. |
 |**Advance notifications GA**| June | [Advance notifications](advance-notifications.md) for upcoming SQL managed instance [maintenance windows](maintenance-window.md) are now generally available. |

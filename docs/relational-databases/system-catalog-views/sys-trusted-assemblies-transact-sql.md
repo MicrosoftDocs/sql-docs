@@ -3,7 +3,7 @@ title: "sys.trusted_assemblies (Transact-SQL)"
 description: sys.trusted_assemblies contains a row for each trusted assembly for the server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/05/2024
 ms.service: sql
 ms.subservice: system-objects

@@ -3,7 +3,7 @@ title: "Table Hints (Transact-SQL)"
 description: Table hints override the default behavior of the query optimizer during the DML operation.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 03/12/2026
 ms.service: sql
 ms.subservice: t-sql

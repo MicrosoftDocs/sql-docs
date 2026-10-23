@@ -1,7 +1,7 @@
 ---
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.topic: include

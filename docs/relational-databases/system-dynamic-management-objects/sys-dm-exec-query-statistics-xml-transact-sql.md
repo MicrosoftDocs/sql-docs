@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
 description: sys.dm_exec_query_statistics_xml returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 03/31/2025
 ms.service: sql
 ms.subservice: system-objects

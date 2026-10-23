@@ -1,8 +1,8 @@
 ---
 title: SQL Writer Service
 description: The SQL Writer service provides added backup and restore functionality in SQL Server through the Volume Shadow Copy Service framework.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: configuration

@@ -1,9 +1,9 @@
 ---
 title: "table (Transact-SQL)"
 description: "table (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: vanto
 ms.date: 04/05/2023
 ms.service: sql
 ms.subservice: t-sql

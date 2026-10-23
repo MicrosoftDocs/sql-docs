@@ -3,7 +3,7 @@ title: Cardinality Estimation Feedback for Expressions in SQL Server 2025
 description: Describes the CE feedback for expressions feature in SQL Server 2025.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 12/08/2025
 ms.service: sql
 ms.topic: concept-article

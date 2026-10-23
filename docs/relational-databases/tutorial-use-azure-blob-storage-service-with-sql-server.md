@@ -3,7 +3,7 @@ title: "Tutorial: Use Azure Blob Storage with SQL Server"
 description: "Tutorial: Use Azure Blob Storage with SQL Server"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/06/2025
 ms.service: sql
 ms.topic: tutorial

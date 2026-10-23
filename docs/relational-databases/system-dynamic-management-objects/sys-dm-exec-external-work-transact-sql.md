@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_exec_external_work (Transact-SQL)"
 description: sys.dm_exec_external_work (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 05/20/2021
 ms.service: sql
 ms.subservice: system-objects

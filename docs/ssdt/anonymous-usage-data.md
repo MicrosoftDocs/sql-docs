@@ -1,9 +1,9 @@
 ---
 title: "Usage and Diagnostic Data for SQL Server Data Tools (SSDT)"
 description: "SQL Server Data Tools (SSDT) usage and diagnostic data collection"
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

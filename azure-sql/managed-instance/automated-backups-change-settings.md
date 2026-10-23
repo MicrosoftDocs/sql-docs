@@ -2,9 +2,9 @@
 title: Change automated backup settings
 titleSuffix: Azure SQL Managed Instance
 description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
-author: dinethi
+author: dnethi
 ms.author: dinethi
-ms.reviewer: wiassaf, mathoma, strrodic, mlandzic
+ms.reviewer: wiassaf, strrodic, mlandzic
 ms.date: 02/23/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore

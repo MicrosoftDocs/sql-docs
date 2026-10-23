@@ -1,8 +1,8 @@
 ---
 title: "Rename Failover Cluster Instance"
 description: This article describes how to rename a SQL Server instance that is part of a failover cluster, which differs from renaming a stand-alone instance.
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "12/13/2019"
 ms.service: sql
 ms.subservice: failover-cluster-instance

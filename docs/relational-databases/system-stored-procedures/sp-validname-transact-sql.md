@@ -3,7 +3,7 @@ title: "sys.sp_validname (Transact-SQL)"
 description: Checks for valid SQL Server identifier names.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

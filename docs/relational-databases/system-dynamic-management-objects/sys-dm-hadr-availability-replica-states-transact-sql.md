@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_hadr_availability_replica_states (Transact-SQL)"
 description: Returns a row for each local replica and a row for each remote replica in the same Always On availability group as a local replica.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 12/16/2025
 ms.service: sql
 ms.subservice: system-objects

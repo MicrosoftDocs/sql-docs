@@ -1,8 +1,8 @@
 ---
 title: "Analysis Server Properties (Advanced Tab)"
 description: Learn about the options on the Advanced tab in the Analysis Server Properties dialog box, such as the dump directory and the instance ID.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

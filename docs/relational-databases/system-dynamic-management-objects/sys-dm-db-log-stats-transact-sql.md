@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_log_stats (Transact-SQL)"
 description: sys.dm_db_log_stats returns summary level attributes and information on transaction log files of databases.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 01/28/2026
 ms.service: sql
 ms.subservice: system-objects

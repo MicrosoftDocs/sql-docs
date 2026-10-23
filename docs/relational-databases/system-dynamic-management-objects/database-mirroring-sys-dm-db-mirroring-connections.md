@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_mirroring_connections (Transact-SQL)"
 description: sys.dm_db_mirroring_connections returns a row for each connection established for database mirroring.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/12/2026
 ms.service: sql
 ms.subservice: system-objects

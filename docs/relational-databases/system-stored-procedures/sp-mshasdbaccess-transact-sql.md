@@ -1,9 +1,9 @@
 ---
 title: "sp_MShasdbaccess (Transact-SQL)"
 description: sp_MShasdbaccess lists the name and owner of all the databases to which the user has access.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

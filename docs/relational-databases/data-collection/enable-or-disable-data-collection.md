@@ -1,9 +1,9 @@
 ---
 title: "Enable or disable data collection"
 description: Enable or disable data collection with SQL Server Management Studio or Transact-SQL.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 12/28/2023
 ms.service: sql
 ms.subservice: supportability

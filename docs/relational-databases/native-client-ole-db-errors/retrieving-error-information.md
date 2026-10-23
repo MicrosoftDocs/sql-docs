@@ -1,8 +1,8 @@
 ---
 title: Retrieving error information (Native Client OLE DB provider)
 description: "Retrieving Error Information (Native Client OLE DB provider)"
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "OLE DB error handling, examples"
 ---
 # Retrieving Error Information (Native Client OLE DB provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This example obtains information from the various error interfaces exposed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   

@@ -1,8 +1,8 @@
 ---
 title: "Keep Identity Values When Bulk Importing Data"
 description: When you bulk import data that contains identity values to a SQL Server instance, by default, it assigns new values. You can choose to keep the original values.
-author: rwestMSFT
-ms.author: randolphwest
+author: HugoMSFT
+ms.author: hudequei
 ms.date: 05/19/2025
 ms.service: sql
 ms.subservice: data-movement
@@ -11,11 +11,11 @@ helpviewer_keywords:
   - "identity values [SQL Server], bulk imports"
   - "data formats [SQL Server], identity values"
   - "bulk importing [SQL Server], identity values"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Keep identity values when bulk importing data (SQL Server)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Data files that contain identity values can be bulk imported into an instance of Microsoft SQL Server. 
 

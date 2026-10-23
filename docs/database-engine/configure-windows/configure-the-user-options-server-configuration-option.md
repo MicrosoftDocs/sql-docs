@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: user options"
 description: "Learn about setting user options. See how it changes the default values of the query processing options that SQL Server establishes for user work sessions."
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

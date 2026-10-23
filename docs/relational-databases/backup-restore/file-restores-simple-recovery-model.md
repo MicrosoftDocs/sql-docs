@@ -1,8 +1,8 @@
 ---
 title: "File Restores (Simple Recovery Model)"
 description: In SQL Server, a file restore applies to one or more damaged files without restoring the whole database.
-author: MashaMSFT
-ms.author: mathoma
+author: dnethi
+ms.author: dinethi
 ms.date: "03/24/2017"
 ms.service: sql
 ms.subservice: backup-restore

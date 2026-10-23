@@ -1,8 +1,8 @@
 ---
 title: "Type support, ODBC Date and Time"
 description: Learn about ODBC types that support SQL Server date and time data types, including data type mapping and formats for strings, literals, and data structures.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: 12/18/2019
 ms.service: sql
 ms.subservice: native-client
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "ODBC, date/time improvements"
 ---
 # Data Type Support for ODBC Date and Time Improvements
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This topic provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types.  
   

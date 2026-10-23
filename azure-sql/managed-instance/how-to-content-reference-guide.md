@@ -2,9 +2,9 @@
 title: Configure & manage content reference
 titleSuffix: Azure SQL Managed Instance
 description: A reference guide of content that teaches you how to configure and manage Azure SQL Managed Instance.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: mathoma, danil
+author: bluefooted
+ms.author: pamela
+ms.reviewer: danil
 ms.date: 12/06/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

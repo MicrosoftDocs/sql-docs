@@ -2,9 +2,9 @@
 title: Toggle a Breakpoint
 titleSuffix: T-SQL debugger
 description: Learn how to toggle a breakpoint to highlight the associated Transact-SQL statement, and to perform various actions on the statement (such as editing).
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

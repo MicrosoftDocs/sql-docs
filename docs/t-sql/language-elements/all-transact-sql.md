@@ -1,8 +1,8 @@
 ---
 title: "ALL (Transact-SQL)"
 description: "ALL (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: t-sql

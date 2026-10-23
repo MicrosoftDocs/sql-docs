@@ -1,8 +1,8 @@
 ---
 title: query() Method (xml Data Type)
 description: "query() Method (xml Data Type)"
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 04/16/2020
 ms.service: sql
 ms.subservice: t-sql

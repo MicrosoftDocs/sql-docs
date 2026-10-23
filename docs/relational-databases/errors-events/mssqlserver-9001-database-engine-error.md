@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_9001"
 description: "MSSQLSERVER_9001"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 02/17/2023
 ms.service: sql
 ms.subservice: supportability

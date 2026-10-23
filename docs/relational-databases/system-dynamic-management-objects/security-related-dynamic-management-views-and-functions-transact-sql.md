@@ -1,8 +1,8 @@
 ---
 title: "Security-Related Dynamic Management Views and Functions (Transact-SQL)"
 description: Security-Related Dynamic Management Views and Functions (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "01/20/2023"
 ms.service: sql
 ms.subservice: system-objects

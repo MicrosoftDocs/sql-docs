@@ -1,9 +1,9 @@
 ---
 title: "Create CLR Triggers"
 description: Learn how to create a user-defined trigger object inside SQL Server that is programmed in a CLR assembly.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 12/27/2024
 ms.service: sql
 ms.topic: how-to

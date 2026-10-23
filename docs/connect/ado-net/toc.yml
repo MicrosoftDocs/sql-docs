@@ -1,69 +1,61 @@
-- name: Microsoft.Data.SqlClient for SQL Server
+- name: Overview
   href: microsoft-ado-net-sql-server.md
 - name: Get started
   items:
-  - name: Getting started
+  - name: Install, update, and deploy
+    href: download-microsoft-sqlclient-data-provider.md
+  - name: Connect and query
     href: get-started-sqlclient-driver.md
-    items:
-    - name: 'Step 1: Configure development environment'
-      href: step-1-configure-development-environment-ado-net-development.md
-    - name: 'Step 2: Create a SQL database'
-      href: step-2-create-sql-database-ado-net-development.md
-    - name: 'Step 3: Proof of concept connecting to SQL'
-      href: step-3-connect-sql-ado-net.md
-    - name: 'Step 4: Connect resiliently to SQL'
-      href: step-4-connect-resiliently-sql-ado-net.md
-  - name: Overview
-    href: overview-sqlclient-driver.md
-    items:
-    - name: Microsoft.Data.SqlClient namespace
-      href: introduction-microsoft-data-sqlclient-namespace.md
-    - name: Download
-      href: download-microsoft-sqlclient-data-provider.md
-    - name: Support lifecycle
-      href: sqlclient-driver-support-lifecycle.md
+  - name: Use in an ASP.NET Core app
+    href: quickstart-asp-net-core-sql-client.md
+  - name: Namespace and compatibility
+    href: introduction-microsoft-data-sqlclient-namespace.md
+  - name: Migrate from System.Data.SqlClient
+    href: migrate-system-data-sql-client-to-microsoft-data-sql-client.md
+  - name: Release notes
+    href: microsoft-data-sql-client-release-notes.md
+  - name: Support lifecycle
+    href: sqlclient-driver-support-lifecycle.md
 - name: Configure and connect
   items:
-  - name: Connecting To Data Source
+  - name: Connect to a data source
     href: connecting-to-data-source.md
-    items:
-    - name: Establishing Connection
-      href: establishing-connection.md
-    - name: Connection Events
-      href: connection-events.md
-  - name: Connection Strings
+  - name: Establish a connection
+    href: establishing-connection.md
+  - name: Connection events
+    href: connection-events.md
+  - name: Connection strings
     href: connection-strings.md
-    items:
-    - name: Connection String Builders
-      href: connection-string-builders.md
-    - name: Connection Strings And Configuration Files
-      href: connection-strings-and-configuration-files.md
-    - name: Connection String Syntax
-      href: connection-string-syntax.md
-    - name: Encryption and certificate validation
-      href: encryption-and-certificate-validation.md
-  - name: Connection Pooling
+  - name: Build connection strings
+    href: connection-string-builders.md
+  - name: Store connection strings
+    href: connection-strings-and-configuration-files.md
+  - name: Connection string syntax
+    href: connection-string-syntax.md
+  - name: Connection options
+    href: connection-options.md
+  - name: Connection pooling overview
     href: connection-pooling.md
-    items:
-    - name: SQL Server Connection Pooling (ADO.NET)
-      href: sql-server-connection-pooling.md
-  - name: DbProviderFactories
+  - name: SQL Server connection pooling
+    href: sql-server-connection-pooling.md
+  - name: Provider factories
     href: dbproviderfactories.md
-    items:
-    - name: Obtain a SqlClientFactory
-      href: obtain-sqlclientfactory.md
+  - name: Obtain a SqlClientFactory
+    href: obtain-sqlclientfactory.md
 - name: Authenticate and secure
   items:
+  - name: Encryption and certificate validation
+    href: encryption-and-certificate-validation.md
   - name: Protecting connection information
     href: protecting-connection-information.md
   - name: SQL Server security
     href: sql/sql-server-security.md
     items:
-    - name: Authentication
+    - name: SQL Server and Windows authentication
       href: sql/authentication-sql-server.md
     - name: Microsoft Entra authentication
       href: sql/azure-active-directory-authentication.md
-    - name: Application security scenarios
+    - name: Security best practices
       href: sql/application-security-scenarios-sql-server.md
       items:
       - name: Writing secure dynamic SQL
@@ -81,16 +73,28 @@
       href: sql/azure-key-vault-enclave-example.md
 - name: Retrieve and update data
   items:
+  - name: Execute a command
+    href: execute-command.md
+  - name: Configure parameters
+    href: configure-parameters.md
+  - name: Execute multiple commands with SqlBatch
+    href: execute-multiple-commands-sql-batch.md
+  - name: Modify data with stored procedures
+    href: modify-data-with-stored-procedures.md
+  - name: Retrieve data with SqlDataReader
+    href: retrieve-data-by-datareader.md
+  - name: Stream data
+    href: sqlclient-streaming-support.md
+  - name: Asynchronous programming and cancellation
+    href: asynchronous-programming.md
+  - name: Handle errors and messages
+    href: handle-errors-messages.md
   - name: Retrieving and Modifying Data In ADO.NET
     href: retrieving-modifying-data.md
     items:
     - name: Commands and Parameters
       href: commands-parameters.md
       items:
-      - name: Executing a Command
-        href: execute-command.md
-      - name: Configuring Parameters
-        href: configure-parameters.md
       - name: Generating Commands with CommandBuilders
         href: generate-commands-with-commandbuilders.md
       - name: Obtaining a Single Value from a Database
@@ -105,8 +109,6 @@
     - name: DataAdapters and DataReaders
       href: dataadapters-datareaders.md
       items:
-      - name: Retrieve data by a DataReader
-        href: retrieve-data-by-datareader.md
       - name: Populate a DataSet from a DataAdapter
         href: populate-dataset-from-dataadapter.md
       - name: DataAdapter parameters
@@ -149,12 +151,6 @@
       href: retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data
       href: retrieve-binary-data.md
-    - name: Modify data with stored procedures
-      href: modify-data-with-stored-procedures.md
-    - name: Asynchronous programming
-      href: asynchronous-programming.md
-    - name: SqlClient streaming support
-      href: sqlclient-streaming-support.md
     - name: SQL Server data operations in ADO.NET
       href: sql/sql-server-data-operations.md
       items:
@@ -272,7 +268,7 @@
       href: sql/detect-changes-sqldependency.md
     - name: SqlCommand execution with a SqlNotificationRequest
       href: sql/sqlcommand-execution-sqlnotificationrequest.md
-  - name: SqlClient support for high availability, disaster recovery
+  - name: High availability and disaster recovery
     href: sql/sqlclient-support-high-availability-disaster-recovery.md
 - name: SQL Server features
   items:
@@ -289,7 +285,7 @@
       href: sql/context-connection.md
     - name: Snapshot isolation in SQL Server
       href: sql/snapshot-isolation-sql-server.md
-    - name: SqlClient support for LocalDB
+    - name: LocalDB and local development
       href: sql/sqlclient-support-localdb.md
     - name: Data Discovery and Classification in SqlClient
       href: sql/data-classification.md
@@ -297,5 +293,3 @@
   items:
   - name: AppContext switches
     href: appcontext-switches.md
-  - name: Finding additional information
-    href: find-additional-sqlclient-driver-information.md

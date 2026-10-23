@@ -1,9 +1,9 @@
 ---
 title: SQL Server Shared Management Objects (SMO) License Terms
 description: "SQL Server Shared Management Objects (SMO) License Terms"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 12/15/2025
 ms.service: sql
 ms.subservice: tools-other

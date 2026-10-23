@@ -1,9 +1,9 @@
 ---
 title: Connection Strings and Permissions
 description: Learn about the connection strings, accounts, and permissions that you need to run SQL Server unit tests. See how to configure the connection strings.
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

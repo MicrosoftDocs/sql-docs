@@ -1,8 +1,8 @@
 ---
 title: "Execute XPath queries with namespaces (SQLXMLOLEDB)"
 description: Learn how to specify namespaces in SQLXML 4.0 when executing XPath queries with the SQLXMLOLEDB Provider.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

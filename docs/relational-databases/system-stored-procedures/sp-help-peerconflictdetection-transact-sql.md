@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_help_peerconflictdetection (Transact-SQL)"
 description: Returns information about the conflict detection settings for a publication involved in a peer-to-peer transactional replication.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

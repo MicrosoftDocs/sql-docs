@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_2814"
 description: "MSSQLSERVER_2814"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/16/2025
 ms.service: sql
 ms.subservice: supportability

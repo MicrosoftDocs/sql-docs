@@ -3,7 +3,7 @@ title: Stop and Start an Instance
 description: This article describes how to use the stop and start feature of Azure SQL Managed Instance.
 author: urosmil
 ms.author: urmilano
-ms.reviewer: mathoma, randolphwest
+ms.reviewer: vanto
 ms.date: 08/27/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: deployment-configuration

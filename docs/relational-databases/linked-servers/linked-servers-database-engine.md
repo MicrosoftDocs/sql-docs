@@ -3,7 +3,7 @@ title: "Linked Servers (Database Engine)"
 description: Linked servers enable SQL Server and Azure SQL Managed Instance to read from and execute data in remote data sources.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 12/05/2025
 ms.service: sql
 ms.topic: concept-article

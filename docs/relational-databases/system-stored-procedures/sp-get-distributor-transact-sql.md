@@ -1,9 +1,9 @@
 ---
 title: "sp_get_distributor (Transact-SQL)"
 description: sp_get_distributor determines whether a Distributor is installed on a server.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: replication

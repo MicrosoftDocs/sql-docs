@@ -3,7 +3,7 @@ title: Configure Minimal TLS Version - SQL Managed Instance
 description: "Learn how to configure minimal TLS version for a managed instance"
 author: zoran-rilak-msft
 ms.author: zoranrilak
-ms.reviewer: mathoma, vanto
+ms.reviewer: vanto
 ms.date: 07/17/2025
 ms.service: azure-sql-managed-instance
 ms.subservice: security

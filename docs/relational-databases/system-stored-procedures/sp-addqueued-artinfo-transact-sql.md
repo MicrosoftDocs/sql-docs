@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addqueued_artinfo (Transact-SQL)"
 description: Creates the MSsubscription_articles table at the Subscriber that is used to track article subscription information.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

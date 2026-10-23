@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpmergefilter (Transact-SQL)"
 description: "Returns information about merge filters. This stored procedure is executed at the Publisher on any database."
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

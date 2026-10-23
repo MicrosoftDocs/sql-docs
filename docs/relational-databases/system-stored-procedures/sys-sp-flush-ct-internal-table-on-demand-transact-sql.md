@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_flush_CT_internal_table_on_demand (Transact-SQL)"
 description: "Manually clean the side table (change_tracking_objectid) for a table in a database for which change tracking is enabled"
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini, randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

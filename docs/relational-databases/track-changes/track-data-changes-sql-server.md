@@ -1,9 +1,9 @@
 ---
 title: "Track Data Changes"
 description: "Enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database, using track changes and change data capture."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: roblescarlos, bspendolini, randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.service: sql
 ms.topic: how-to

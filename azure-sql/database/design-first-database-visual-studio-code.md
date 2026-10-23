@@ -1,9 +1,9 @@
 ---
 title: "Tutorial: Design Your First Relational Database Using Visual Studio Code"
 description: Learn to design your first relational database in Azure SQL Database using the MSSQL extension for Visual Studio Code.
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: timioshin, maghan, drskwier, mathoma
+author: bluefooted
+ms.author: pamela
+ms.reviewer: timioshin, drskwier
 ms.date: 02/17/2026
 ms.service: azure-sql-database
 ms.subservice: development
@@ -34,7 +34,7 @@ To complete this tutorial, make sure you've installed:
 - [Visual Studio Code](https://code.visualstudio.com/download) and [the MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code)
 - [bcp utility](/sql/tools/bcp-utility) and [sqlcmd utility](/sql/tools/sqlcmd/sqlcmd-utility)
 - If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
-- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to use your offer to [Deploy Azure SQL Database for free](free-offer.md).
+- If you don't already have an Azure SQL Database created, visit [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md). Look for the option to [deploy Azure SQL Database for free with the free tier](free-tier.md).
 
 ## Sign in to the Azure portal
 
@@ -261,7 +261,7 @@ This query joins all four tables and finds the courses in which 'Noe Coleman' ha
 ## Related content
 
 - [Tutorial: Design a relational database in Azure SQL Database](design-first-database-tutorial.md)
-- [Deploy Azure SQL Database for free](free-offer.md)
+- [Deploy Azure SQL Database for free](free-tier.md)
 - [What's new in Azure SQL Database?](doc-changes-updates-release-notes-whats-new.md)
 - [Configure and manage content reference - Azure SQL Database](how-to-content-reference-guide.md)
 - [Plan and manage costs for Azure SQL Database](cost-management.md)

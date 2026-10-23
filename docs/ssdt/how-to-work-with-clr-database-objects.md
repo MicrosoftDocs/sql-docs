@@ -1,9 +1,9 @@
 ---
 title: Work with CLR Database Objects
 description: "Learn how to use .NET Framework languages to retrieve and update data. See how to create and use a Common Language Run (CLR) database object in a project."
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: randolphwest
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: vanto
 ms.date: 09/09/2025
 ms.service: sql
 ms.subservice: ssdt

@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_xe_database_sessions"
 description: The sys.dm_xe_database_sessions dynamic management view (DMV) returns information about active database-scoped extended events sessions.
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: 07/29/2025
 ms.service: azure-sql-database
 ms.topic: "reference"

@@ -3,7 +3,7 @@ title: Create an Application Role
 description: Create an application role in SQL Server by using SQL Server Management Studio or Transact-SQL to restrict access to a database except through an application.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: security

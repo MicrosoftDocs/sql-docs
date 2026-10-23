@@ -1,8 +1,8 @@
 ---
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
-ms.date: 06/11/2026
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
+ms.date: 10/15/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |

@@ -1,8 +1,8 @@
 ---
 title: SQL Server I/O Fundamentals
 description: Learn how storage choice and caching affect SQL Server performance.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 04/29/2026
 ms.service: sql
 ms.subservice: supportability
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQL Server I/O architecture"
   - "SQL Server I/O guide"
   - "SQL Server I/O guidance"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # SQL Server I/O fundamentals
 

@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Browser Service (Database Engine and SSAS)"
 description: Learn about SQL Server Browser. This service listens for requests for SQL Server resources and provides information about installed SQL Server instances.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

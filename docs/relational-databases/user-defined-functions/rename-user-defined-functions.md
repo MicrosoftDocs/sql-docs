@@ -1,8 +1,8 @@
 ---
 title: "Rename User-defined Functions"
 description: "Rename User-defined Functions"
-author: rwestMSFT
-ms.author: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/28/2022"
 ms.service: sql
 ms.topic: language-reference

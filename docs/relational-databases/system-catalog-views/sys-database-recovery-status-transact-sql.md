@@ -1,8 +1,8 @@
 ---
 title: "sys.database_recovery_status (Transact-SQL)"
 description: sys.database_recovery_status (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/12/2016"
 ms.service: sql
 ms.subservice: system-objects

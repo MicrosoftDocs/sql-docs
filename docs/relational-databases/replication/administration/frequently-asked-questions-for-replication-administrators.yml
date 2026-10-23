@@ -2,9 +2,9 @@
 metadata:
   title: "Frequently Asked Questions for Replication Administrators"
   description: A list of frequently asked questions relevant to replication administrators for SQL Server.
-  author: MashaMSFT
-  ms.author: mathoma
-  ms.reviewer: randolphwest
+  author: adbadram
+  ms.author: adbadram
+  ms.reviewer: vanto
   ms.date: 07/20/2026
   ms.service: sql
   ms.subservice: replication

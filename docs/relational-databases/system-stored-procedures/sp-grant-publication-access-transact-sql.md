@@ -3,7 +3,7 @@ title: "sys.sp_grant_publication_access (Transact-SQL)"
 description: sp_grant_publication_access adds a login to the access list of the publication.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

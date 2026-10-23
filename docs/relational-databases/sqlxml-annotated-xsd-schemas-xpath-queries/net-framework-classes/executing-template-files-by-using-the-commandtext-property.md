@@ -1,8 +1,8 @@
 ---
 title: "Run template files with the CommandText property"
 description: View an example of how to use the SQLXML CommandText property to specify the name of a template file containing SQL or XPath queries.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

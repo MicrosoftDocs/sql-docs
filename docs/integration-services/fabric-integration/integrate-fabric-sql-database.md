@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Integrate SSIS with SQL Database in Microsoft Fabric"
 description: Learn how to integrate SSIS with Fabric SQL Database
-ms.reviewer: randolphwest, mathoma
+ms.reviewer: vanto
 ms.date: 04/06/2026
 ms.service: sql
 ms.subservice: integration-services

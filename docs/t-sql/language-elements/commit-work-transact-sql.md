@@ -1,9 +1,9 @@
 ---
 title: COMMIT WORK (Transact-SQL)
 description: "COMMIT WORK (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: t-sql

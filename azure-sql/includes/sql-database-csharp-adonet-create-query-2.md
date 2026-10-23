@@ -1,6 +1,6 @@
 ---
-author: rothja
-ms.author: jroth
+author: bluefooted
+ms.author: pamela
 ms.date: 02/09/2026
 ms.service: azure-sql-database
 ms.topic: include

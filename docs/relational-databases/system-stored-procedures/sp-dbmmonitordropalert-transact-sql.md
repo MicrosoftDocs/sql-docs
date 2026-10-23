@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_dbmmonitordropalert (Transact-SQL)"
 description: sp_dbmmonitordropalert drops the warning for a specified performance metric, by setting the threshold to NULL.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

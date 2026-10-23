@@ -1,8 +1,8 @@
 ---
 title: "Architecture of client and server-side XML (SQLXML)"
 description: Learn about the architecture of client-side and server-side XML formatting in SQLXML 4.0.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

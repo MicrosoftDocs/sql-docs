@@ -3,7 +3,7 @@ title: Performance Tuning for mssql-python Applications
 description: Learn performance optimization techniques for SQL Server applications using the mssql-python driver, including connection pooling, query optimization, and bulk operations.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, randolphwest
+ms.reviewer: vanto
 ms.date: 08/28/2026
 ms.service: sql
 ms.subservice: connectivity

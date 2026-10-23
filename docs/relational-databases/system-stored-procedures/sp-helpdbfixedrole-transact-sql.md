@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpdbfixedrole (Transact-SQL)"
 description: sp_helpdbfixedrole returns a list of the fixed database roles.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

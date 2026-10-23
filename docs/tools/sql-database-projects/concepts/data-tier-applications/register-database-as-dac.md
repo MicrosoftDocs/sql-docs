@@ -1,9 +1,9 @@
 ---
 title: "Register a Database as a DAC"
 description: "Data-tier application (DAC) registration process and tools."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, wiassaf, maghan
+author: cwebb-msft
+ms.author: chweb
+ms.reviewer: drskwier, wiassaf
 ms.date: 03/11/2025
 ms.service: sql
 ms.subservice: sql-database-projects

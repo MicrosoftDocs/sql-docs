@@ -3,8 +3,8 @@ title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: randolphwest, davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.reviewer: davidengel, sunilbs, mcimfl, vanto
+ms.date: 10/07/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -85,7 +85,7 @@ echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
-# optional: kerberos library for debian-slim distributions
+# required: the driver links libgssapi_krb5.so.2 but the package doesn't declare it
 sudo apt-get install -y libgssapi-krb5-2
 ```
 
@@ -275,7 +275,7 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
-# optional: kerberos library for debian-slim distributions
+# required: the driver links libgssapi_krb5.so.2 but the package doesn't declare it
 sudo apt-get install -y libgssapi-krb5-2
 ```
 
@@ -782,7 +782,7 @@ If you can't make a connection to SQL Server by using the ODBC driver, see the k
 
 ## Related content
 
-- [C / C++ ODBC example application accesses a SQL database](../cpp-code-example-app-connect-access-sql-db.md)
+- [Connect and query with C++ and ODBC](../cpp-code-example-app-connect-access-sql-db.md)
 - [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md)
 - [Release notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](release-notes-odbc-sql-server-linux-mac.md)
 - [System Requirements (Linux and macOS)](system-requirements.md)

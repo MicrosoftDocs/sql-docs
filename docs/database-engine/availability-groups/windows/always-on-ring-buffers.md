@@ -1,9 +1,9 @@
 ---
 title: "Ring buffers for health information on availability groups"
 description: "Obtain certain diagnostics information about Always On availability groups using the SQL Server ring buffers."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 01/30/2023
 ms.service: sql
 ms.subservice: availability-groups

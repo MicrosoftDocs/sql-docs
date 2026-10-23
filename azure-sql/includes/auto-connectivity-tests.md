@@ -1,6 +1,6 @@
 ---
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.date: 05/13/2026
 ms.service: azure-sql-managed-instance
 ms.topic: include

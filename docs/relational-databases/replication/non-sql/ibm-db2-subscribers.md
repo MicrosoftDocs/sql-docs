@@ -1,8 +1,8 @@
 ---
 title: IBM Db2 Subscribers
 description: IBM Db2 Subscribers let SQL Server replicate data through push subscriptions. Learn how to configure the OLE DB provider, connection strings, and data type mappings.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

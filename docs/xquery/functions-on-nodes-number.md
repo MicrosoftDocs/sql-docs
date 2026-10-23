@@ -1,8 +1,8 @@
 ---
 title: "number Function (XQuery)"
 description: Learn about the XQuery function number() that returns the numeric value of a specified argument.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

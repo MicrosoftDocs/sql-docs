@@ -1,8 +1,8 @@
 ---
 title: sys.dm_fts_index_keywords (Transact-SQL)
 description: sys.dm_fts_index_keywords (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 07/09/2026
 ms.service: sql
 ms.subservice: system-objects

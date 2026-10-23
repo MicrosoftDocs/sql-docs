@@ -1,8 +1,8 @@
 ---
 title: "CREATE SELECTIVE XML INDEX (Transact-SQL)"
 description: CREATE SELECTIVE XML INDEX (Transact-SQL)
-author: markingmyname
-ms.author: maghan
+author: uc-msft
+ms.author: umajay
 ms.date: "08/10/2017"
 ms.service: sql
 ms.subservice: t-sql

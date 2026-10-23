@@ -1,8 +1,8 @@
 ---
 title: "Performing Asynchronous Operations"
 description: Allow applications to perform asynchronous database operations with the SQL Server Native Client OLD DB provider.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SQL Server Native Client, asynchronous operations"
 ---
 # Performing Asynchronous Operations in SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 > [!IMPORTANT] 
 > [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]

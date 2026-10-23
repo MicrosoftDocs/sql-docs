@@ -1,9 +1,9 @@
 ---
 title: "Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)"
 description: "Full-Text Search and Semantic Search stored procedures (Transact-SQL)"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

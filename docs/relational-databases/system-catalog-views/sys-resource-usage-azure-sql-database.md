@@ -2,8 +2,8 @@
 title: "sys.resource_usage"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 description: sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)
-author: rwestMSFT
-ms.author: randolphwest
+author: bluefooted
+ms.author: pamela
 ms.date: "04/18/2022"
 ms.service: azure-sql-database
 ms.topic: "reference"

@@ -21,6 +21,16 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 This article contains detailed steps to create, configure, and start a watcher in the Azure portal for Azure SQL Database and Azure SQL Managed Instance.
 
+> [!TIP]
+>
+> Try the [Database Hub in Microsoft Fabric](https://powerbi.com/workloads/fdh/databaseHub)! The Database Hub:
+> - automatically discovers your databases in Azure, Microsoft Fabric, on-premises, and supported multicloud environments.
+> - automatically provides prebuilt, configurable, shareable dashboards.
+> - automatically identifies top priorities and recommendations in your databases that you should investigate or correct.
+> - **is completely free**. 
+>
+> For more information, see [Database Hub in Microsoft Fabric](/fabric/database/hub).
+
 Database watcher does not require you to deploy and maintain any monitoring agents or other monitoring infrastructure. You can enable in-depth database monitoring of your Azure SQL resources in minutes.
 
 For a simplified step-by-step example to create and configure a watcher, see [Quickstart: Create a watcher to monitor Azure SQL](database-watcher-quickstart.md).
@@ -43,7 +53,7 @@ To use database watcher, the following prerequisites are required.
 - You need an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). You need to be a member of the **Contributor** role or the **Owner** role for the subscription or a resource group to be able to create resources.
 
 - To configure and start a watcher, you need an existing SQL target: an Azure SQL database, elastic pool, or SQL managed instance.
-    - If you don't already have an Azure SQL database created, visit [Quickstart: Create a single database](database/single-database-create-quickstart.md). Look for the option to use your offer to [Try Azure SQL Database for free](database/free-offer.md).
+    - If you don't already have an Azure SQL database created, visit [Quickstart: Create a single database](database/single-database-create-quickstart.md). To try Azure SQL Database at no cost, see [Deploy Azure SQL Database for free](database/free-tier.md).
     - Alternatively, [Try Azure SQL Managed Instance for free (preview)](managed-instance/free-offer.md).
 
 - The `Microsoft.DatabaseWatcher`, `Microsoft.Kusto`, and `Microsoft.Network` resource providers must be registered in your Azure subscription.

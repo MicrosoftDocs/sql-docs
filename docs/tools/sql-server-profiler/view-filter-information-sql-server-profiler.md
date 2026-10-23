@@ -2,8 +2,8 @@
 title: View Filter Information
 titleSuffix: SQL Server Profiler
 description: Find out how to view the filters that SQL Server Profiler is currently applying to data columns to limit the events that are traced.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

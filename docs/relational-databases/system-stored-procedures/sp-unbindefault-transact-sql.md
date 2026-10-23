@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_unbindefault (Transact-SQL)"
 description: Unbinds, or removes, a default from a column or from an alias data type in the current database.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 04/08/2026
 ms.service: sql
 ms.subservice: system-objects

@@ -9,12 +9,12 @@ ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_loader_backup_runs (Transact-SQL)
-[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
+[!INCLUDE [asa-md](../../includes/applies-to-version/asa.md)]
 
-  Contains information about ongoing and completed backup and restore operations in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and about ongoing and completed backup, restore, and load operations in [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]. The information persists across system restarts.  
+  Contains information about ongoing and completed backup and restore operations in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and about ongoing and completed backup, restore. The information persists across system restarts.  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -40,4 +40,4 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
   
 ## Related content
 
-- [Azure Synapse Analytics and Analytics Platform System (PDW) catalog views](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+- [Azure Synapse Analytics catalog views](azure-synapse-analytics-catalog-views.md)

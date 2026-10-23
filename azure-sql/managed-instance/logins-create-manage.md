@@ -4,7 +4,7 @@ titleSuffix: SQL Managed Instance
 description: Learn about how SQL Managed Instance authenticate users for access using logins and user accounts. Also learn how to grant database roles and explicit permissions to authorize logins and users to perform actions and query data.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 05/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: security

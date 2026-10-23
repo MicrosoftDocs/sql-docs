@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helpstats (Transact-SQL)"
 description: sp_helpstats returns statistics information about columns and indexes on the specified table.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

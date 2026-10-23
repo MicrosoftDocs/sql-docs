@@ -1,8 +1,8 @@
 ---
 title: "Data synchronization state of availability database is not healthy"
 description: "Identify possible causes for why the data synchronization state of database in an Always On availability group is not healthy."
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "05/17/2016"
 ms.service: sql
 ms.subservice: availability-groups

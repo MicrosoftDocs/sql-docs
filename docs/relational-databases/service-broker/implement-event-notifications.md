@@ -1,8 +1,8 @@
 ---
 title: "Implement Event Notifications"
 description: "Implement Event Notifications"
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.topic: how-to

@@ -1,8 +1,8 @@
 ---
 title: "count Function (XQuery)"
 description: "Aggregate Functions - count"
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "03/09/2017"
 ms.service: sql
 ms.subservice: xml

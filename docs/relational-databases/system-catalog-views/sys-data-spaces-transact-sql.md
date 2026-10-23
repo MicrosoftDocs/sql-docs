@@ -1,8 +1,8 @@
 ---
 title: "sys.data_spaces (Transact-SQL)"
 description: sys.data_spaces (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "03/17/2017"
 ms.service: sql
 ms.subservice: system-objects
@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sys.data_spaces catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # sys.data_spaces (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
 
   Contains a row for each data space. This can be a filegroup, partition scheme, or FILESTREAM data filegroup.  
   

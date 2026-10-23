@@ -1,8 +1,8 @@
 ---
 title: "Executing Queries (ODBC)"
 description: An ODBC application can run statements on a SQL Server instance by initializing a connection handle and connecting to a data source.
-author: markingmyname
-ms.author: maghan
+author: adbadram
+ms.author: adbadram
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: native-client
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "queries [ODBC]"
 ---
 # Executing Queries (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   After an ODBC application initializes a connection handle and connects with a data source, it allocates one or more statement handles on the connection handle. The application can then execute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements on the statement handle. The general sequence of events in executing a SQL statement is:  
   

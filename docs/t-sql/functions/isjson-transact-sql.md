@@ -4,7 +4,7 @@ description: ISJSON tests whether a string contains valid JSON.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jovanpop, umajay
-ms.date: 07/23/2025
+ms.date: 10/13/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -62,7 +62,7 @@ If the *json_type_constraint* is specified then the function checks for the JSON
 |`OBJECT`|Tests for a valid JSON object|
 |`SCALAR`|Tests for a valid JSON scalar – number or string|
 
- The `json_type_constraint` value SCALAR can be used to test for IETF RFC 8259 conformant JSON document that contains only a JSON scalar value at top level. A JSON document that doesn't contain a JSON scalar value at top level conforms with IETF RFC 4627.
+ The `SCALAR` value tests for a JSON document that contains only a JSON scalar value at the top level. IETF RFC 8259 allows any JSON value at the top level, so use `VALUE` to test for an IETF RFC 8259 conformant JSON document. IETF RFC 4627 allows only a JSON object or array at the top level.
 
 Does not return errors.  
 

@@ -1,8 +1,8 @@
 ---
 title: "Security Role Requirements for Replication"
 description: Learn about the authentication level necessary for common replication setup tasks and for common replication maintenance tasks in SQL Server.
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: adbadram
+ms.author: adbadram
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

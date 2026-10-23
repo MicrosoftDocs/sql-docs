@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn how Azure SQL Database automatically backs up all databases and provides a point-in-time restore capability.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, danil, dinethi
+ms.reviewer: danil, dinethi
 ms.date: 07/13/2026
 ms.service: azure-sql-database
 ms.subservice: backup-restore
@@ -262,6 +262,9 @@ Storage consumption depends on the selected frequency and retention periods of L
 When restoring a Hyperscale database from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created. You need to specify the target service level objective when restoring from an LTR backup. 
 
 You can enable long-term retention for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it isn't yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, contact Microsoft support and create a support ticket to resolve.
+
+> [!NOTE]
+> LTR backups depend on successful full backups. A full transaction log can prevent a scheduled full backup, which can prevent an LTR backup. Change data capture (CDC), and other features that prevent transaction log truncation, can delay an LTR backup, which only succeeds after the full backup succeeds. Evaluate features that prevent transaction log truncation and consider temporarily disabling them until backup operations recover.
 
 ## Backup storage costs
 

@@ -1,8 +1,8 @@
 ---
 title: "sys.fn_builtin_permissions (Transact-SQL)"
 description: "Returns a description of the built in permissions hierarchy of the server."
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 10/14/2022
 ms.service: sql
 ms.subservice: system-objects

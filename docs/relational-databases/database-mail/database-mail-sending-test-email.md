@@ -1,8 +1,8 @@
 ---
 title: "Send a Test Email with Database Mail"
 description: "Send a test email with database mail"
-author: MashaMSFT
-ms.author: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/16/2025
 ms.service: sql
 ms.topic: how-to

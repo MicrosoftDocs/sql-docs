@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_helppullsubscription (Transact-SQL)"
 description: sp_helppullsubscription displays information about one or more subscriptions at the Subscriber.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

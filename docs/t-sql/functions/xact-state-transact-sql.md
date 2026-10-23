@@ -1,9 +1,9 @@
 ---
 title: "XACT_STATE (Transact-SQL)"
 description: "XACT_STATE (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: dfurman, randolphwest
+author: uc-msft
+ms.author: umajay
+ms.reviewer: dfurman
 ms.date: 12/17/2025
 ms.service: sql
 ms.subservice: t-sql
@@ -22,12 +22,12 @@ helpviewer_keywords:
   - "active transactions"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 
 # XACT_STATE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 Is a scalar function that reports the user transaction state of the current session. `XACT_STATE` indicates whether the session has an active user transaction, and whether the transaction is capable of being committed.
 

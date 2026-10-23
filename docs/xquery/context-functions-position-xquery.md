@@ -1,8 +1,8 @@
 ---
 title: "position Function (XQuery)"
 description: Learn about the XQuery function position() that returns an integer value indicating the position of a context item within a sequence of items.
-author: "rothja"
-ms.author: "jroth"
+author: uc-msft
+ms.author: umajay
 ms.date: "08/09/2016"
 ms.service: sql
 ms.subservice: xml

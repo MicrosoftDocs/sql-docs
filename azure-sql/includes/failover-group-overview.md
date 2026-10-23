@@ -1,8 +1,8 @@
 ---
 title: failover group overview
 description: Deduplicating content between SQL Database and SQL Managed Instance, in this case using an include file for an overview of the failover group feature.
-author: MashaMSFT
-ms.author: mathoma
+author: bluefooted
+ms.author: pamela
 ms.reviewer: mlandzic, wiassaf, strrodic
 ms.date: 12/15/2023
 ms.topic: include

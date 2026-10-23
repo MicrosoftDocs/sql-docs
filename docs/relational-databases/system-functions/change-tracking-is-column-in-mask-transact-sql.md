@@ -1,8 +1,8 @@
 ---
 title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
 description: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "08/08/2016"
 ms.service: sql
 ms.subservice: system-objects

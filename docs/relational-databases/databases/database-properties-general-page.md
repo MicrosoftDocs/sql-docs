@@ -3,7 +3,7 @@ title: "Database Properties (General Page)"
 description: Learn how to use the General tab in the Database Properties dialog box to view or modify the properties of a database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 10/20/2025
 ms.service: sql
 ms.subservice: configuration

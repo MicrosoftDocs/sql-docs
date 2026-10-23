@@ -1,9 +1,9 @@
 ---
 title: "sys.sp_addsubscriber_schedule (Transact-SQL)"
 description: sp_addsubscriber_schedule adds a schedule for the Distribution Agent and Merge Agent.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: replication

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Use SSIS Packages to Write Files to OneLake Through Azure Data Lake Storage Gen2"
 description: Learn how to use SSIS packages with Azure Storage connection managers to write files to Azure Data Lake Storage Gen2 and access them in OneLake through shortcuts.
-ms.reviewer: randolphwest, maghan
+ms.reviewer: vanto
 ms.date: 03/27/2026
 ms.service: sql
 ms.subservice: integration-services

@@ -1,9 +1,9 @@
 ---
 title: "Create DML Triggers"
 description: "Create DML Triggers"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: vanto
 ms.date: 03/27/2025
 ms.service: sql
 ms.topic: language-reference

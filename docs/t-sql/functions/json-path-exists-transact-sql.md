@@ -3,7 +3,7 @@ title: "JSON_PATH_EXISTS (Transact-SQL)"
 description: JSON_PATH_EXISTS tests whether a specified SQL/JSON path exists in the input JSON string.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, umajay, jovanpop
+ms.reviewer: umajay, jovanpop
 ms.date: 07/23/2025
 ms.service: sql
 ms.subservice: t-sql

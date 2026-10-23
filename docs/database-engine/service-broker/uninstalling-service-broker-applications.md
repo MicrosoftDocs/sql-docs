@@ -1,9 +1,9 @@
 ---
 title: Uninstall Service Broker Applications
 description: "You must uninstall a Service Broker application only when the database continues to be hosted in the same instance, but no longer provides the service that the application implements."
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: maghan
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 09/03/2025
 ms.service: sql
 ms.subservice: configuration

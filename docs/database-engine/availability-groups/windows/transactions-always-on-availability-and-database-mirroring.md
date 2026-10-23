@@ -1,8 +1,8 @@
 ---
 title: "Transactions: availability groups & database mirroring"
 description: "Transactions - availability groups and database mirroring"
-author: MashaMSFT
-ms.author: mathoma
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "12/11/2018"
 ms.service: sql
 ms.subservice: availability-groups

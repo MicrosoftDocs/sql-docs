@@ -2,8 +2,8 @@
 title: Customize Keyboard Shortcuts
 titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to customize MSSQL keyboard shortcuts in Visual Studio Code by using keybindings.json and the mssql.shortcuts setting in settings.json.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.reviewer: yoleichen
 ms.date: 07/10/2026
 ms.service: sql

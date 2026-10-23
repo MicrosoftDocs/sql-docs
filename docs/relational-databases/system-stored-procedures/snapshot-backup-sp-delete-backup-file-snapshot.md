@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_backup_file_snapshot (Transact-SQL)"
 description: "Deletes a specified backup snapshot from the specified database."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql
 ms.subservice: system-objects

@@ -1,9 +1,9 @@
 ---
 title: "Always On availability groups: interoperability"
 description: "Describes the different features that can and cannot function alongside an Always On availability group."
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: maghan
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: vanto
 ms.date: 02/01/2024
 ms.service: sql
 ms.subservice: availability-groups

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Lists Azure Policy Regulatory Compliance controls available for Azure SQL Database and SQL Managed Instance. These built-in policy definitions provide common approaches to managing the compliance of your Azure resources.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 06/13/2025
 ms.service: azure-sql-database
 ms.subservice: security

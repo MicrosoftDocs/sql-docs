@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_3043"
 description: "MSSQLSERVER_3043"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: "10/05/2022"
 ms.service: sql
 ms.subservice: supportability

@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article details features allowing Azure administrators to block T-SQL commands to create or modify Azure SQL Database and Azure SQL Managed Instance resources.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: vanto
 ms.date: 03/27/2026
 ms.service: azure-sql
 ms.subservice: security

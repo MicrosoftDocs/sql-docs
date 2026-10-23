@@ -3,7 +3,7 @@ title: "sys.sp_change_feed_configure_parameters (Transact-SQL)"
 description: "The sys.sp_change_feed_configure_parameters system stored procedure is used to increase the batch size with higher transactions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: imotiwala, ajayj, randolphwest
+ms.reviewer: imotiwala, ajayj
 ms.date: 06/19/2026
 ms.service: fabric
 ms.subservice: system-objects

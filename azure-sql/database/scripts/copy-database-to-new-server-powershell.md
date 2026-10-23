@@ -3,7 +3,7 @@ title: "PowerShell: Copy a Database to New Logical Server"
 description: Azure PowerShell example script to copy a database to a new logical server
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
+ms.reviewer: wiassaf
 ms.date: 06/10/2025
 ms.service: azure-sql-database
 ms.subservice: data-movement

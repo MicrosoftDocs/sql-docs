@@ -3,7 +3,7 @@ title: "Metadata Visibility Configuration"
 description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 08/21/2025
 ms.service: sql
 ms.subservice: security
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "displaying metadata"
   - "database metadata [SQL Server]"
   - "metadata [SQL Server], permissions"
-monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
 ---
 # Metadata visibility configuration
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricsqldb.md)]
 
 The visibility of metadata is limited to securables that a user either owns or on which the user has been granted some permission.
 
@@ -56,6 +56,7 @@ Metadata visibility configuration doesn't apply to the following securables:
 - Replication system tables
 - [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent system tables
 - Backup system tables
+- Ledger catalog views, such as [sys.ledger_table_history](../system-catalog-views/sys-ledger-table-history-transact-sql.md) and [sys.ledger_column_history](../system-catalog-views/sys-ledger-column-history-transact-sql.md)
 - Replication and [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent `sp_help` stored procedures
 
 Limited metadata accessibility means the following:

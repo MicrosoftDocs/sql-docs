@@ -1,8 +1,8 @@
 ---
 title: "sys.allocation_units (Transact-SQL)"
 description: sys.allocation_units (Transact-SQL)
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "09/01/2021"
 ms.service: sql
 ms.subservice: system-objects

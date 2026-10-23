@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_db_xtp_index_stats (Transact-SQL)"
 description: For In-Memory OLTP tables, sys.dm_db_xtp_index_stats contains statistics collected since the last database restart.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: "02/27/2023"
 ms.service: sql
 ms.subservice: system-objects

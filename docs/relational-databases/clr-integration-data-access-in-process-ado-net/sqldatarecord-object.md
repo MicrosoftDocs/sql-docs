@@ -1,8 +1,8 @@
 ---
 title: "SqlDataRecord Object"
 description: In SQL Server CLR integration, stored procedures can use the SqlDataRecord class to send custom result sets to the client.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: 12/27/2024
 ms.service: sql
 ms.subservice: clr

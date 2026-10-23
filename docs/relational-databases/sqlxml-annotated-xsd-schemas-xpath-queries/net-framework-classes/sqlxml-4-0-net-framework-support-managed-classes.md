@@ -1,8 +1,8 @@
 ---
 title: "SQLXML Managed Classes"
 description: Learn about Microsoft SQLXML Managed Classes that expose the functionality of SQLXML 4.0 inside the Microsoft .NET Framework.
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: xml

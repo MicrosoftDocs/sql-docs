@@ -3,7 +3,7 @@ title: "SESSION_CONTEXT (Transact-SQL)"
 description: SESSION_CONTEXT returns the value of the specified key in the current session context.
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: derekw, randolphwest
+ms.reviewer: derekw
 ms.date: 07/07/2025
 ms.service: sql
 ms.subservice: t-sql

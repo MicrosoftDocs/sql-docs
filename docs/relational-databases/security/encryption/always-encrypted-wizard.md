@@ -3,7 +3,7 @@ title: "Configure Column Encryption Using Always Encrypted Wizard"
 description: Learn how to set the Always Encrypted configuration for database columns by using the Always Encrypted Wizard in SQL Server.
 author: Pietervanhove
 ms.author: pivanho
-ms.reviewer: vanto, mathoma
+ms.reviewer: vanto
 ms.date: 04/25/2025
 ms.service: sql
 ms.subservice: security

@@ -1,8 +1,8 @@
 ---
 title: "sys.sp_data_source_table_columns (Transact-SQL)"
 description: sp_data_source_table_columns returns a list of columns in external data source table.
-author: rwestMSFT
-ms.author: randolphwest
+author: dimitri-furman
+ms.author: dfurman
 ms.date: 06/19/2026
 ms.service: sql
 ms.subservice: system-objects

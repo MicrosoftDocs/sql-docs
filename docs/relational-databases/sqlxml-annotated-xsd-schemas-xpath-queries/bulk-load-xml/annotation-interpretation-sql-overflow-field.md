@@ -1,8 +1,8 @@
 ---
 title: "sql:overflow-field (SQLXML)"
 description: "Learn how to use the sql:overflow-field annotation to identify a column as an overflow column that will receive all unconsumed data from the XML document."
-author: rwestMSFT
-ms.author: randolphwest
+author: uc-msft
+ms.author: umajay
 ms.date: "03/16/2017"
 ms.service: sql
 ms.subservice: xml

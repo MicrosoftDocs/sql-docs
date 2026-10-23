@@ -3,7 +3,7 @@ title: "Assess Oracle Schemas for Conversion (OracleToSQL)"
 description: Learn how to assess Oracle schemas for conversion.
 author: nilabjaball
 ms.author: niball
-ms.reviewer: randolphwest
+ms.reviewer: vanto
 ms.date: 06/03/2025
 ms.service: sql
 ms.subservice: ssma

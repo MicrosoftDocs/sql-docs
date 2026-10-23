@@ -1,38 +1,35 @@
 ---
 title: Develop Applications for SQL Server on Linux
 description: You can create applications that connect to and use SQL Server on Linux from various programming languages and popular web frameworks.
-author: rwestMSFT
-ms.author: randolphwest
-ms.date: 05/25/2026
+author: AttinderPalSingh
+ms.author: atsingh
+ms.reviewer: amitkh
+ms.date: 09/21/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: get-started
 ms.custom:
   - linux-related-content
+ai-usage: ai-assisted
 ---
 # How to get started developing applications for SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-You can create applications that connect to and use [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux from various programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
+You can create applications that connect to and use [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux from C#, C++, Go, Java, Node.js, PHP, Python, Ruby, and other languages. You can also use web frameworks, object-relational mappers (ORMs), and other data access libraries.
 
 > [!TIP]  
-> These same development options also enable you to target [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on other platforms. Applications can target [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure Synapse Analytics.
+> These development options can also target [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Windows or in containers. Many drivers also support Azure SQL and SQL database in Microsoft Fabric. Review the driver documentation for product and platform support.
 
-## Try the tutorials
+## Try a quickstart
 
-The best way to get started and build applications with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is to try it out for yourself.
-
-- Browse to [SQL Data Developer](../connect/sql-data-developer.md).
+- Browse to [SQL connectivity and drivers](../connect/index.yml).
 - Select your language and development platform.
-- Try the code samples.
-
-> [!TIP]  
-> If you want to develop for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Docker, take a look at the **macOS** tutorials.
+- Open the get-started guide or code samples.
 
 ## Create new applications
 
-If you're creating a new application, refer to the [Connectivity libraries and frameworks for Microsoft SQL Server](sql-server-linux-develop-connectivity-libraries.md), for a summary of the connectors and popular frameworks available for various programming languages.
+If you're creating a new application, see [Microsoft SQL drivers and frameworks](../connect/sql-connection-libraries.md) to choose a driver and, when applicable, a framework or data access library.
 
 ## Use existing applications
 
@@ -40,7 +37,7 @@ If you have an existing database application, you can change its connection stri
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 
-Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also work with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Although they don't run natively on Linux, you can still manage remote [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances on Linux.
+Windows tools such as SQL Server Management Studio (SSMS), SQL Server Data Tools (SSDT), and PowerShell also work with remote [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instances on Linux.
 
 See the following articles for more information:
 
@@ -51,11 +48,11 @@ See the following articles for more information:
 > [!NOTE]  
 > Make sure that you're using the latest versions of these tools for the best experience.
 
-## Use new SQL tools for Linux
+## Use SQL tools on Linux
 
 You can use the [MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md) on Linux, macOS, and Windows. For a step-by-step walkthrough, see [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](../tools/visual-studio-code-extensions/mssql/mssql-run-first-query.md).
 
-You can also use command-line tools that are native for Linux. These tools include the following:
+You can also use command-line tools that are native to Linux. These tools include the following:
 
 - [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)
 - [bcp](migrate/bulk-copy.md)

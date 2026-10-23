@@ -2,8 +2,8 @@
 title: Filter Traces
 titleSuffix: SQL Server Profiler
 description: Find out how to define a filter so that SQL Server Profiler gathers the information you need during traces. Read about other advantages of trace filters.
-author: rwestMSFT
-ms.author: randolphwest
+author: cwebb-msft
+ms.author: chweb
 ms.date: 06/05/2025
 ms.service: sql
 ms.subservice: profiler

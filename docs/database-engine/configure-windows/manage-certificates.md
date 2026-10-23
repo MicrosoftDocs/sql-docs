@@ -1,8 +1,8 @@
 ---
 title: "Certificate Management (SQL Server Configuration Manager)"
 description: Learn how to install certificates in various SQL Server configurations. Examples include single instances, failover clusters, and Always On availability groups.
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 08/28/2025
 ms.service: sql
 ms.subservice: configuration

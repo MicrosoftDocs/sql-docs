@@ -1,9 +1,9 @@
 ---
 title: "Maintenance Plan (Design Tab)"
 description: Maintenance Plan (Design Tab)
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 11/03/2025
 ms.service: sql
 ms.subservice: supportability

@@ -1,9 +1,9 @@
 ---
 title: "Use Date and Time Types"
 description: Learn how to initialize the date/time data structures that were added in SQL Server 2008.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: adbadram
+ms.author: adbadram
+ms.reviewer: vanto
 ms.date: 07/24/2025
 ms.service: sql
 ms.subservice: native-client
@@ -11,7 +11,7 @@ ms.topic: "reference"
 ---
 # Use date and time types
 
-[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This sample shows how to initialize the date/time data structures that were added in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)]. It then prepares the input values, binds parameters, and executes the query. For more information about using these types, see [Date and Time Improvements (ODBC)](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).
 

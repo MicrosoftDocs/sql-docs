@@ -1,8 +1,8 @@
 ---
 title: "MSSQLSERVER_18053"
 description: "MSSQLSERVER_18053"
-author: rwestMSFT
-ms.author: randolphwest
+author: adbadram
+ms.author: adbadram
 ms.date: 12/18/2024
 ms.service: sql
 ms.subservice: supportability

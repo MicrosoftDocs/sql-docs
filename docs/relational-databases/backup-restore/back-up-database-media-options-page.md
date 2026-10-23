@@ -1,9 +1,9 @@
 ---
 title: "Back Up Database (Media Options page)"
 description: In SQL Server, use Media Options in the Back Up Database dialog box to view/modify media options, including Overwrite media, Reliability, and Transaction log.
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: randolphwest
+author: dnethi
+ms.author: dinethi
+ms.reviewer: vanto
 ms.date: 08/08/2024
 ms.service: sql
 ms.subservice: backup-restore

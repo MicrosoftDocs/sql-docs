@@ -3,7 +3,7 @@ title: "sys.dm_exec_requests (Transact-SQL)"
 description: sys.dm_exec_requests returns information about each request that is executing in the Database Engine.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest, derekw
+ms.reviewer: derekw
 ms.date: 10/02/2025
 ms.service: sql
 ms.subservice: system-objects
@@ -24,12 +24,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 # sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Returns information about each request that is executing in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and task architecture guide](../thread-and-task-architecture-guide.md).
 
 > [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [ssPDW](../../includes/sspdw-md.md)], see [sys.dm_pdw_exec_requests](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool or [!INCLUDE [fabric](../../includes/fabric.md)], use `sys.dm_exec_requests`.
+> To call this from dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], see [sys.dm_pdw_exec_requests](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool or [!INCLUDE [fabric](../../includes/fabric.md)], use `sys.dm_exec_requests`.
 
 | Column name | Data type | Description |
 | --- | --- | --- |

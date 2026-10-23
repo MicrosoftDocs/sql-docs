@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, strrodic
-ms.date: 10/22/2026
+ms.date: 10/23/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: backup-restore
@@ -143,7 +143,7 @@ LTR restore doesn't require a managed identity.
 1. If the source server is in a perimeter and the target server isn't in the same perimeter, add an outbound rule on the source profile with **Destination type** set to **FQDN** and the target server's fully qualified domain name.
 1. If the target server is in a perimeter and the source server isn't in the same perimeter, add an inbound rule on the target profile. The restore request comes from the Azure SQL management infrastructure, not from the source server. In the rule, allow one of these sources:
    - The subscription ID of the source server (recommended).
-   - The `SqlManagement` [service tag](/azure/private-link/configure-network-security-perimeter-service-tag) (recommended).
+   - The [service tag](/azure/private-link/configure-network-security-perimeter-service-tag) (recommended).
    - IP address ranges. For the public cloud, [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) lists each service tag and its IP address ranges. The service tag name is `SqlManagement`. Microsoft doesn't publish these ranges by region, so allow all of them.
 1. With the servers still in transition mode, run a restore and check the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) for unexpected denials.
 1. Switch to enforced mode only after all diagnostic checks have passed.

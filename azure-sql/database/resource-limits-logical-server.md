@@ -144,7 +144,7 @@ Learn more about troubleshooting specific errors for session or worker limits in
 
 ### External connections
 
-The number of concurrent connections to external endpoints done via [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) are capped to 10% of worker threads, with a hard cap of max 150 workers.
+The number of concurrent connections to external endpoints done via [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) are capped to 15% of worker threads, with a hard cap of max 175 workers.
 
 ### Memory
 

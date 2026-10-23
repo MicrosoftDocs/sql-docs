@@ -82,7 +82,7 @@ ALTER DATABASE [Database_Name]
 
 ### Enable automatic plan correction for secondary replicas
 
-**Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+**Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions.
 
 After enabling Query Store for secondary replicas, you can optionally enable automatic tuning to allow the automatic plan correction feature to force plans on secondary replicas. This enables the query optimizer to automatically identify and fix query performance issues caused by execution plan regressions on secondary replicas.
 
@@ -92,6 +92,15 @@ To enable automatic plan correction for secondary replicas, connect to the prima
 ALTER DATABASE [Database_Name]
 FOR SECONDARY
 SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON);
+```
+
+#### Disable automatic plan correction automatic actions on secondary replicas
+The [automatic plan correction](../automatic-tuning/automatic-tuning.md#automatic-plan-correction) feature is automatically enabled on the primary and all secondary replicas in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[AUTD](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#always-up-to-date-update-policy)</sup>. To disable the automatic plan correction on secondary replicas, connect to the `primary` replica and execute the following script:
+
+```sql
+ALTER DATABASE [Database_Name]
+FOR SECONDARY
+SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = OFF);
 ```
 
 #### Disable Query Store for secondary replicas

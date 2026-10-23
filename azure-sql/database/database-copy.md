@@ -4,7 +4,8 @@ description: Create a transactionally consistent copy of an existing database in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 10/07/2026
+ms.date: 10/22/2026
+ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: data-movement
 ms.topic: how-to
@@ -288,6 +289,59 @@ All users in the new database retain the permissions that they had in the source
 
 To learn about managing users and logins when you copy a database to a different logical server, see [Configure and manage Azure SQL Database security for geo-restore or failover](active-geo-replication-security-configure.md).
 
+## Network security perimeter (preview)
+
+A [network security perimeter](network-security-perimeter.md) (preview) controls inbound and outbound network traffic for a logical server. Database copy moves data between logical servers over internal, platform-managed connectivity, so a perimeter evaluates that traffic and can block the copy.
+
+### How database copy uses network access
+
+Database copy uses geo-replication technology to seed the target database, then drops the link once the copy finishes. When either logical server belongs to a perimeter, that server-to-server connectivity is subject to the perimeter's access rules.
+
+> [!IMPORTANT]
+> The perimeter evaluates access rules once, when the copy request starts. It doesn't re-evaluate them while the copy runs or when the copy ends. A rule change or an association change made during the copy doesn't stop it, and the copy runs to completion.
+
+### Supported configurations
+
+Database copy works in both transition and enforced mode. In transition mode, the perimeter logs traffic without blocking it, so a copy succeeds even if you don't configure any rules. Configure the rules anyway, so that copies keep working after you switch to enforced mode.
+
+In enforced mode, the rules you need depend on the topology:
+
+| Copy topology | Access rules required |
+| --- | --- |
+| The target is on the same logical server as the source | None. |
+| Both logical servers are in the same perimeter | None. Access between resources in the same perimeter is always allowed. |
+| The logical servers are in different perimeters | An outbound rule on the source server and an inbound rule on the target server. |
+| Only the source server is in a perimeter | An outbound rule on the source server. |
+| Only the target server is in a perimeter | An inbound rule on the target server. |
+
+Database copy doesn't require a managed identity.
+
+### Configure access rules for a database copy
+
+The following steps are one example. They assume that each logical server is in its own perimeter, and that you switch each server's association to enforced mode after a test copy. If both servers are in the same perimeter, you don't need access rules.
+
+1. [Associate each logical server with its perimeter](network-security-perimeter.md#get-started). A newly associated server starts in transition mode.
+1. On the profile associated with the source server, add an outbound access rule. Set **Destination type** to **FQDN** and use the target server's fully qualified domain name, such as `targetserver.database.windows.net`.
+1. On the profile associated with the target server, add an inbound access rule. Set **Source type** to one of these values:
+   - **Subscription**, and use the source server's subscription ID.
+   - **IP address ranges**, and use the source server's IP range.
+   - **Service tags**, and use `Sql` or `Sql.<region>`, where `<region>` is the source server's Azure region.
+1. Leave the servers in transition mode and run a database copy. Review the [network security perimeter diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) to confirm there are no unexpected denials.
+1. Switch each server's association to enforced mode only after the copy succeeds and the logs are clean.
+
+### Limitations and behavior differences
+
+- When a logical server belongs to a perimeter, in either transition or enforced mode, Transact-SQL isn't a supported way to copy a database to a *different* logical server. You can still use Transact-SQL to copy a database within the same logical server. For cross-server copies, use the Azure portal, Azure CLI, or PowerShell.
+
+### Errors when a perimeter blocks a copy
+
+| Error code | Message |
+| ---: | :--- |
+| 48001 | The operation could not be completed because the associated Network Security Perimeter denied inbound access from '*source*' to the '*target*' server. |
+| 48002 | The operation could not be completed because the associated Network Security Perimeter denied outbound access from the '*source*' server to '*target*'. |
+
+The placeholders in these messages are replaced with logical server names. For 48001, review the inbound rules on the profile associated with the target server. For 48002, review the outbound rules on the profile associated with the source server.
+
 ## Database copy errors
 
 The following errors can be encountered while copying a database in Azure SQL Database. For more information, see [Copy a transactionally consistent copy of a database in Azure SQL Database](database-copy.md).
@@ -314,3 +368,4 @@ The following errors can be encountered while copying a database in Azure SQL Da
 - [Configure and manage Azure SQL Database security for geo-restore or failover](active-geo-replication-security-configure.md)
 - [Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance](database-export.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)
+- [Network security perimeter for Azure SQL Database (preview)](network-security-perimeter.md)

@@ -5,6 +5,7 @@ ms.date: 08/06/2025
 ms.service: reporting-services
 ms.subservice: report-server
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.custom:
   - updatefrequency5
 # customer intent: As a SSRS user, I want to learn how to configure the Report Server Service Account so that I can update and troubleshoot my accounts information.
@@ -46,11 +47,11 @@ To view and reconfigure service account information, always use the [!INCLUDE[ss
 
 1. Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and connect to the report server.
 
-1. On the Service Account page, select the option that describes the type of account you want to use.
+1. On the **Service Account** page, select the option that describes the type of account you want to use.
 
-1. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters and can't contain special characters ```" / \ [ ] : ; | = , + * ? < > '``` per Windows user account naming rules.
+1. If you selected a Windows user account, specify the new account. For a domain or local user account, also specify its password. Domain and local user account names can't be more than 20 characters and can't contain special characters ```" / \ [ ] : ; | = , + * ? < > '``` per Windows user account naming rules.
 
-   If you deploy the report server in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a report server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).
+   If you use a domain user account and deploy the report server in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a report server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).
 
 1. Select **Apply**.
 
@@ -67,10 +68,11 @@ To view and reconfigure service account information, always use the [!INCLUDE[ss
  For best results, specify an account that has network connection permissions, with access to network domain controllers and corporate Simple Mail Transfer Protocol(SMTP) servers or gateways. The following table summarizes the accounts and provides recommendations for how to use them.
 
 > [!NOTE]
-> Managed Service Account (MSA), including both standalone MSA (sMSA) and [group MSA (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) aren't supported as a report server service account.
+> Power BI Report Server supports a [group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) as the Report Server service account. SQL Server Reporting Services (SSRS) doesn't support gMSAs. Standalone Managed Service Accounts (sMSAs) aren't supported as the Report Server service account for either product.
 
 |Account|Explanation|
 |-------------|-----------------|
+|Group Managed Service Account (gMSA)|Supported for Power BI Report Server only. Windows manages the account password, so you don't need to manage password changes manually. For background and requirements, see [Group Managed Service Accounts overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).|
 |Domain user accounts|If you have a Windows domain user account that has the minimum permissions required for report server operations, you should use it.<br /><br /> You should use a domain user account because it isolates the Report Server service from other applications. If you run multiple applications under a shared account, such as Network Service, you increase the risk of a malicious user taking control of the report server. A security breach for any one application can easily extend to all applications that run under the same account.<br /><br /> If you use a domain user account, you have to change the password periodically if your organization enforces a password expiration policy. You might also need to register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a report server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Avoid local Windows user accounts. Local accounts typically don't have sufficient permission to access resources on other computers. For more information about how local accounts limit report server functionality, see [Considerations for using local accounts](#localaccounts).|
 |**Virtual Service Account**|**Virtual Service Account** represents the Windows service. It's a built-in least-privilege account that has network sign-in permissions. You should use this account if you don't have a domain user account available or if you want to avoid any service disruptions that might occur as a result of password expiration policies.|
 |**Network Service**|**Network Service** is a built-in least-privilege account that has network sign-in permissions. <br /><br /> If you select **Network Service**, try to minimize the number of other services that run under the same account. A security breach for any one application compromises the security of all other applications that run under the same account.|
@@ -93,7 +95,7 @@ For help with deciding on an approach that's best for your deployment, see [Conf
 
 ## Update an expired password
 
-If the Report Server service runs under a domain account and the password expires before you can update it in the Report Server Configuration Manager, the service doesn't start until you specify a new password.
+If the Report Server service runs under a domain user account and the password expires before you update it in the Report Server Configuration Manager, the service doesn't start until you specify a new password. This manual password update doesn't apply to gMSAs, whose passwords Windows manages.
 
 If the service account password for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] expires, the **rsReportServerDatabaseUnavailable** error occurs when you try to connect to the report server. Resetting the password resolves this error.
 

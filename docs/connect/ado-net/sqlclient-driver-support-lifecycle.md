@@ -4,10 +4,10 @@ description: Review supported Microsoft.Data.SqlClient releases, support dates, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/18/2026
+ms.date: 10/21/2026
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: concept-article
+ms.topic: reference
 ai-usage: ai-assisted
 ---
 
@@ -26,7 +26,7 @@ Microsoft.Data.SqlClient ships independently of .NET. A supported application us
 
 | Version | Initial release | Latest patch | Patch release | Support level | End of support |
 | --- | --- | --- | --- | --- | --- |
-| 7.1 | September 17, 2026 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0) | September 17, 2026 | STS | To be determined by the next release |
+| 7.1 | September 17, 2026 | [7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1) | September 29, 2026 | STS | To be determined by the next release |
 | 7.0 | March 17, 2026 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | September 10, 2026 | STS | December 17, 2026 |
 | 6.1 | August 14, 2025 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | September 10, 2026 | LTS | August 14, 2028 |
 
@@ -57,8 +57,8 @@ Microsoft.Data.SqlClient 7.1 supports applications that target:
 
 | Application target | Operating systems |
 | --- | --- |
-| .NET Framework 4.6.2 or later | Supported Windows versions for the selected .NET Framework version |
 | .NET 8 or later | Supported Windows, Linux, and macOS versions for the selected .NET version |
+| .NET Framework 4.6.2 or later | Supported Windows versions for the selected .NET Framework version |
 
 The package includes a .NET Standard 2.0 compatibility asset for libraries. Executable applications must target a supported .NET or .NET Framework runtime. For deployment steps, see [Install, update, and deploy Microsoft.Data.SqlClient](download-microsoft-sqlclient-data-provider.md).
 
@@ -86,7 +86,7 @@ SQL database and Warehouse in Microsoft Fabric use TDS endpoints and require Mic
 
 | Version | Initial release | Latest patch | Patch release | Support level | End of support |
 | --- | --- | --- | --- | --- | --- |
-| 7.x | March 17, 2026 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/7.1.0) | September 17, 2026 | STS | To be determined by the next release |
+| 7.x | March 17, 2026 | [7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/7.1.1) | September 29, 2026 | STS | To be determined by the next release |
 | 6.x | August 14, 2025 | [6.1.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/6.1.2) | August 19, 2025 | LTS | August 14, 2028 |
 | 5.x | February 2, 2024 | [5.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider/5.1.0) | February 2, 2024 | LTS | February 3, 2027 |
 
@@ -104,15 +104,21 @@ The extension packages introduced with Microsoft.Data.SqlClient 7.0 initially us
 
 | Package | Latest aligned version | Initial release | Support level | End of support |
 | --- | --- | --- | --- | --- |
-| `Microsoft.Data.SqlClient.Extensions.Abstractions` | 7.1.0 | March 17, 2026 | LTS | March 17, 2029 |
-| `Microsoft.Data.SqlClient.Extensions.Azure` | 7.1.0 | March 17, 2026 | LTS | March 17, 2029 |
+| `Microsoft.Data.SqlClient.Extensions.Abstractions` | 7.1.1 | March 17, 2026 | LTS | March 17, 2029 |
+| `Microsoft.Data.SqlClient.Extensions.Azure` | 7.1.1 | March 17, 2026 | LTS | March 17, 2029 |
+
+The extension packages ship with every core driver release, and you reference the same version of both. Plan support around the core driver line, not the extension's end-of-support date:
+
+- Because the versions must match, an application that uses an extension package is supported only while its core driver line is supported. The extension's LTS date doesn't make an out-of-support core driver line supported.
+- When a core driver line reaches end of support, update the core driver and its extension packages together to a supported line. For example, after 7.0 support ends on December 17, 2026, use 7.1.1 or later for both packages.
+- Since version 7.0.2, extension fixes have shipped as aligned versions alongside core driver releases. For example, the Microsoft Entra authority parsing fix in `Microsoft.Data.SqlClient.Extensions.Azure` shipped in 7.0.3.
 
 ## Supported operating systems
 
 Microsoft.Data.SqlClient supports:
 
-- .NET Framework applications on operating systems supported by [.NET Framework 4.6.2 or later](/dotnet/framework/get-started/system-requirements).
 - .NET applications on operating systems supported by an active [.NET release](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md).
+- .NET Framework applications on operating systems supported by [.NET Framework 4.6.2 or later](/dotnet/framework/get-started/system-requirements).
 
 Globalization-invariant mode isn't supported.
 

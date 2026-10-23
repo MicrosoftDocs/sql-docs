@@ -66840,6 +66840,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/connect/ado-net/step-1-configure-development-environment-ado-net-development.md",
+      "redirect_url": "/sql/connect/ado-net/get-started-sqlclient-driver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/ado-net/step-2-create-sql-database-ado-net-development.md",
+      "redirect_url": "/sql/connect/ado-net/get-started-sqlclient-driver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/ado-net/step-3-connect-sql-ado-net.md",
+      "redirect_url": "/sql/connect/ado-net/get-started-sqlclient-driver",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/homepage-sql-connection-programming.md",
       "redirect_url": "/sql/connect",
       "redirect_document_id": false

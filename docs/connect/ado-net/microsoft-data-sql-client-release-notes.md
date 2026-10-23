@@ -4,7 +4,7 @@ description: Find Microsoft.Data.SqlClient release notes, current stable and pre
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 09/18/2026
+ms.date: 10/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -19,13 +19,47 @@ Microsoft.Data.SqlClient ships independently of .NET. This article summarizes th
 
 | Release line | Latest version | Release date | Support |
 | --- | --- | --- | --- |
-| 7.1 | [7.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.0) | September 2026 | Standard Term Support (STS) |
+| 7.1 | [7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1) | September 2026 | Standard Term Support (STS) |
 | 7.0 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | September 2026 | Standard Term Support (STS) |
 | 6.1 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | September 2026 | Long Term Support (LTS) |
 
 Don't use preview releases in production. Preview APIs and behavior can change before General Availability (GA).
 
 Release tables and general availability summaries use the NuGet publication month. The lifecycle article lists official release dates, which can differ. For support windows, see [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md).
+
+## Version timeline
+
+These releases changed how existing applications connect. They're listed newest first. Check each one that falls between your current version and the version you're moving to.
+
+| Version | Change | What to do |
+| --- | --- | --- |
+| [7.0](#entra-auth-extension-package) | Microsoft Entra authentication moves to `Microsoft.Data.SqlClient.Extensions.Azure`. | Add the extension package when you use an `Active Directory` authentication mode. |
+| [5.0](#encrypt-strict) | `Encrypt=Strict` adds TDS 8.0. `SqlConnectionStringBuilder.Encrypt` changes from `bool` to `SqlConnectionEncryptOption`. | Recompile code that uses `SqlConnectionStringBuilder.Encrypt`. |
+| [4.0](#encrypt-default-true) | `Encrypt` defaults to `true`. | Trust the server certificate, or set `TrustServerCertificate=true` only for development. |
+
+<a id="entra-auth-extension-package"></a>
+
+### Microsoft Entra authentication moves to an extension package in 7.0
+
+Starting with version 7.0, the core package no longer depends on `Azure.Core`, `Azure.Identity`, or MSAL. The `Active Directory` authentication modes require `Microsoft.Data.SqlClient.Extensions.Azure`. Without that package, `Open` or `OpenAsync` throws a `System.ArgumentException` when the server requests Microsoft Entra authentication, with a message such as:
+
+```output
+Cannot find an authentication provider for 'ActiveDirectoryDefault'. Install the 'Microsoft.Data.SqlClient.Extensions.Azure' NuGet package (https://www.nuget.org/packages/Microsoft.Data.SqlClient.Extensions.Azure) to use Active Directory (Entra ID) authentication methods.
+```
+
+The exception isn't a `SqlException`, so code that catches only `SqlException` doesn't handle it. Starting with 7.0.2, use the same version of the core package and its companion packages. For setup, see [Microsoft Entra authentication with Microsoft.Data.SqlClient](sql/azure-active-directory-authentication.md).
+
+<a id="encrypt-strict"></a>
+
+### Strict encryption and TDS 8.0 in 5.0
+
+Version 5.0 added `Encrypt=Strict`, which uses TDS 8.0. Strict mode starts TLS before the TDS login exchange and always validates the server certificate, so `TrustServerCertificate` has no effect. Strict mode requires SQL Server 2022 or later, Azure SQL Database, or Azure SQL Managed Instance. The same release changed `SqlConnectionStringBuilder.Encrypt` from `bool` to `SqlConnectionEncryptOption`. That change is binary breaking, so recompile applications and libraries that set the property.
+
+<a id="encrypt-default-true"></a>
+
+### Encrypt defaults to true in 4.0
+
+Starting with version 4.0, connections encrypt by default and validate the server certificate. Before 4.0, `Encrypt` defaulted to `false`. After the upgrade, a server that presents a self-signed certificate, or a certificate whose name doesn't match the server name in the connection string, fails the connection with a certificate chain or name error. Install a certificate that the client trusts and connect by the name on the certificate. For development only, you can set `TrustServerCertificate=true`. For details, see [Encryption and certificate validation in Microsoft.Data.SqlClient](encryption-and-certificate-validation.md).
 
 ## 7.1 STS
 
@@ -43,7 +77,7 @@ Version 7.1 reached general availability in September 2026. It's the current STS
 - An opt-in connection timeout mode that includes time spent waiting for a pooled connection through `Switch.Microsoft.Data.SqlClient.UseOverallConnectTimeoutForPoolWait=true`. The switch defaults to `false`.
 - Expanded transaction support, broken-connection recovery, pool warmup, idle pruning, leaked-connection reclamation, and diagnostics in connection pool V2. The pool remains in evaluation and requires `Switch.Microsoft.Data.SqlClient.UseConnectionPoolV2`.
 - Asynchronous methods on Always Encrypted key store providers. The driver doesn't yet call these methods during command execution, so they don't make existing Always Encrypted operations asynchronous.
-- Updated native SNI packages to 7.1.0. Supported application targets remain .NET Framework 4.6.2 and later versions and .NET 8 and later versions.
+- Updated native SNI packages to 7.1.0. Supported application targets remain .NET 8 and later versions and .NET Framework 4.6.2 and later versions.
 
 ### Compatibility changes
 
@@ -65,12 +99,15 @@ Version 7.1 also includes the certificate and enclave validation fixes serviced 
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
+| [7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.1.md) | September 2026 | Fixed an `ArgumentException` for zero-valued `decimal` and `SqlDecimal` parameters whose precision equals their scale. Fixed connection opens that fail when `ClearPool` or `ClearAllPools` runs during an in-flight open. Connection pool V2 now checks access token expiry before it reuses a pooled connection, which matches the default pool. The token fix affects only applications that opt in to connection pool V2. |
 | [7.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0.md) | September 2026 | General availability release, including the cumulative changes from the 7.1 preview cycle. |
 
 > [!IMPORTANT]
-> Upgrade directly referenced companion packages to 7.1.0 alongside the core driver, including `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. Aligned assemblies retain `AssemblyVersion 7.0.0.0`, so updating from 7.0.2 or 7.0.3 doesn't require new .NET Framework binding redirects. When you update from 7.0.0 or 7.0.1, review the one-time assembly version changes described in the [7.0.2 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md).
+> Upgrade directly referenced companion packages to 7.1.1 alongside the core driver, including `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. Aligned assemblies retain `AssemblyVersion 7.0.0.0`, so updating from 7.0.2, 7.0.3, or 7.1.0 doesn't require new .NET Framework binding redirects. When you update from 7.0.0 or 7.0.1, review the one-time assembly version changes described in the [7.0.2 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md).
 
 The [Azure Key Vault Provider 7.1.0 release](https://github.com/dotnet/SqlClient/blob/main/release-notes/add-ons/AzureKeyVaultProvider/7.1/7.1.0.md) implements the asynchronous key store provider methods and fixes cache growth and duplicate key clients under concurrency. These asynchronous methods benefit direct provider calls; the driver's command execution paths still use synchronous key operations. The [Azure extension](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Azure/7.1/7.1.0.md) and [extension abstractions](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Abstractions/7.1/7.1.0.md) releases align versions without public API changes.
+
+The companion packages also ship as 7.1.1 with no functional changes, so you can update every package in the family to the same version. For details, see the [Azure Key Vault Provider 7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/add-ons/AzureKeyVaultProvider/7.1/7.1.1.md), [Azure extension 7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Azure/7.1/7.1.1.md), and [extension abstractions 7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Abstractions/7.1/7.1.1.md) release notes.
 
 For preview history, see the release notes for [preview1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview1.md), [preview2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview2.md), and [preview3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview3.md).
 
@@ -84,10 +121,10 @@ Version 7.0 reached general availability in March 2026. It remains supported unt
 - The core package no longer depends on `Azure.Core`, `Azure.Identity`, or Microsoft Authentication Library (MSAL).
 - `SqlConnection.SspiContextProvider` supports custom Kerberos and NTLM token negotiation. The provider identity is part of the connection pool key.
 - Enhanced routing for Azure SQL Hyperscale and named read replicas is negotiated automatically.
-- Strongly typed command, connection, and transaction diagnostic events are available on .NET Framework and current .NET.
+- Strongly typed command, connection, and transaction diagnostic events are available on current .NET and .NET Framework.
 - `SqlConfigurableRetryFactory.BaselineTransientErrors` exposes the driver's default transient error list.
 - `Active Directory Password` authentication is obsolete. Use interactive authentication for user applications, service principal authentication for services, or managed identity for Azure-hosted workloads.
-- Target support starts at .NET Framework 4.6.2 and .NET 8. The driver also supports building and running on .NET 10.
+- Target support starts at .NET 8 and .NET Framework 4.6.2. The driver also supports building and running on .NET 10.
 
 Packet multiplexing for asynchronous reads remains preview functionality and is opt-in in 7.0. Test compatibility switches with production workloads and keep a rollback path.
 
@@ -95,10 +132,10 @@ Packet multiplexing for asynchronous reads remains preview functionality and is 
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [7.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.0.md) | March 2026 | General availability release. |
-| [7.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.1.md) | April 2026 | Fixed `SqlBulkCopy` metadata queries for SQL Server 2016 and Azure Synapse Analytics dedicated SQL pools, corrected vector field metadata, added the missing .NET Framework `System.Data.Common` dependency, and added type forwarding for authentication abstractions. |
-| [7.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md) | June 2026 | Aligned the core driver and companion packages, hardened TDS token parsing, corrected Always Encrypted signature-verification cache handling, and fixed errors in cancellation and null-buffer `GetBytes` and `GetChars` calls. |
 | [7.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.3.md) | September 2026 | Updated SNI to 6.0.3. Fixed `SqlBulkCopy` metadata access, tracing allocations, `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` TNIR defaults on .NET Framework, authentication state preservation, and configurable retry assembly resolution. Conflicting SSPI and token authentication settings now throw `InvalidOperationException`. The aligned Azure extension fixes Entra authority parsing for Dataverse and Dynamics 365 connections. |
+| [7.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md) | June 2026 | Aligned the core driver and companion packages, hardened TDS token parsing, corrected Always Encrypted signature-verification cache handling, and fixed errors in cancellation and null-buffer `GetBytes` and `GetChars` calls. |
+| [7.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.1.md) | April 2026 | Fixed `SqlBulkCopy` metadata queries for SQL Server 2016 and Azure Synapse Analytics dedicated SQL pools, corrected vector field metadata, added the missing .NET Framework `System.Data.Common` dependency, and added type forwarding for authentication abstractions. |
+| [7.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.0.md) | March 2026 | General availability release. |
 
 > [!IMPORTANT]
 > Starting with 7.0.2, align direct references to `Microsoft.Data.SqlClient`, `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. On .NET Framework, the assembly versions of `Extensions.Azure`, `Extensions.Abstractions`, and `Internal.Logging` changed from `1.0.0.0` to `7.0.0.0`. Rebuild the application or add binding redirects when you update these packages.
@@ -122,14 +159,14 @@ Don't deploy version 6.1.0. Version 6.1.1 reverted the affected packet detection
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [6.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.0.md) | July 2025 | General availability release. This package was unlisted because of critical regressions. Don't use it. |
-| [6.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.1.md) | August 2025 | Reverted partial-packet detection, fixup, and replay changes from 6.1.0. Corrected vector reference assemblies and `SqlVector<T>.Null`. |
-| [6.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.2.md) | October 2025 | Fixed early performance-counter initialization, replacement of custom authentication providers, and pool concurrency that prevented use of the configured maximum pool size. |
-| [6.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.3.md) | November 2025 | Added `IgnoreServerProvidedFailoverPartner` for Basic Availability Groups and custom ports. Fixed early EventSource metrics initialization. |
-| [6.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.4.md) | January 2026 | Added `EnableMultiSubnetFailoverByDefault`. Fixed `SqlDataAdapter` batching failures and negative active-connection counts in pool metrics. |
-| [6.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.5.md) | April 2026 | Removed unnecessary Service Principal Name (SPN) and Domain Name System (DNS) work for non-integrated authentication, made `ExecuteScalar` propagate server errors returned after data, and corrected vector metadata types. |
-| [6.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.6.md) | June 2026 | Added opt-in Windows Web Account Manager (WAM) broker support, hardened TDS token parsing, corrected cached column master key signature failures, and fixed `GetChars` argument validation. |
 | [6.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.7.md) | September 2026 | Updated SNI to 6.0.3. Fixed `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` TNIR defaults on .NET Framework, token authentication state in connection pool keys, callback-based prelogin certificate validation, and configurable retry assembly resolution. |
+| [6.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.6.md) | June 2026 | Added opt-in Windows Web Account Manager (WAM) broker support, hardened TDS token parsing, corrected cached column master key signature failures, and fixed `GetChars` argument validation. |
+| [6.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.5.md) | April 2026 | Removed unnecessary Service Principal Name (SPN) and Domain Name System (DNS) work for non-integrated authentication, made `ExecuteScalar` propagate server errors returned after data, and corrected vector metadata types. |
+| [6.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.4.md) | January 2026 | Added `EnableMultiSubnetFailoverByDefault`. Fixed `SqlDataAdapter` batching failures and negative active-connection counts in pool metrics. |
+| [6.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.3.md) | November 2025 | Added `IgnoreServerProvidedFailoverPartner` for Basic Availability Groups and custom ports. Fixed early EventSource metrics initialization. |
+| [6.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.2.md) | October 2025 | Fixed early performance-counter initialization, replacement of custom authentication providers, and pool concurrency that prevented use of the configured maximum pool size. |
+| [6.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.1.md) | August 2025 | Reverted partial-packet detection, fixup, and replay changes from 6.1.0. Corrected vector reference assemblies and `SqlVector<T>.Null`. |
+| [6.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.0.md) | July 2025 | General availability release. This package was unlisted because of critical regressions. Don't use it. |
 
 ## Previous release lines
 
@@ -144,19 +181,19 @@ Version 6.0 reached general availability in January 2025. The final patch was 6.
 - Added `OpenAsync(SqlConnectionOverrides, CancellationToken)`, including `OpenWithoutRetry`.
 - Added `DateOnly` and `TimeOnly` support in `DataTable` and `SqlDataRecord` structured parameters.
 - Added .NET 9 support.
-- Dropped .NET Standard and .NET 6 runtime assets. Supported targets became .NET Framework 4.6.2 and later versions and .NET 8 and later versions.
+- Dropped .NET Standard and .NET 6 runtime assets. Supported targets became .NET 8 and later versions and .NET Framework 4.6.2 and later versions.
 - Restricted `EnableOptimizedParameterBinding` to text commands.
 
 #### Releases
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [6.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.0.md) | January 2025 | General availability release. This package is unlisted on NuGet, and the upstream notes don't document a reason. |
-| [6.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.1.md) | January 2025 | Corrected `SqlClientDiagnostic` reference APIs, down-level TLS warnings, and dependencies. |
-| [6.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.2.md) | April 2025 | Fixed possible socket-receive null failures, `SqlJson` reference APIs, JSON output parameters, and dependencies. |
-| [6.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.3.md) | October 2025 | Prevented replacement of custom authentication providers and fixed pool concurrency that underused `Max Pool Size`. |
-| [6.0.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.4.md) | November 2025 | Added `Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner` for Basic Availability Groups that use custom TCP ports. |
 | [6.0.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.5.md) | January 2026 | Fixed `SqlDataAdapter` batch RPC null handling, added `Switch.Microsoft.Data.SqlClient.EnableMultiSubnetFailoverByDefault`, and updated dependencies. |
+| [6.0.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.4.md) | November 2025 | Added `Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner` for Basic Availability Groups that use custom TCP ports. |
+| [6.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.3.md) | October 2025 | Prevented replacement of custom authentication providers and fixed pool concurrency that underused `Max Pool Size`. |
+| [6.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.2.md) | April 2025 | Fixed possible socket-receive null failures, `SqlJson` reference APIs, JSON output parameters, and dependencies. |
+| [6.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.1.md) | January 2025 | Corrected `SqlClientDiagnostic` reference APIs, down-level TLS warnings, and dependencies. |
+| [6.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.0/6.0.0.md) | January 2025 | General availability release. This package is unlisted on NuGet, and the upstream notes don't document a reason. |
 
 ### 5.2
 
@@ -175,10 +212,10 @@ Version 5.2 reached general availability in February 2024. The final patch was 5
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [5.2.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.0.md) | February 2024 | General availability release. |
-| [5.2.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.1.md) | May 2024 | Fixed Linux named-instance connections with ports, `FireInfoMessageEventOnUserErrors`, **datetimeoffset(n)** table-valued parameters, delayed `OpenAsync`, and `AccessTokenCallback` preservation by `SqlConnection.Clone()`. |
-| [5.2.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.2.md) | August 2024 | Fixed token timeouts, managed SNI socket connections, assembly targeting, SSPI retries, user-defined type reads, and encrypted-reader data. Updated identity packages for CVE-2024-35255. |
 | [5.2.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.3.md) | April 2025 | Fixed possible socket-receive null failures and reference-assembly inconsistencies, allowed negative transient error numbers, and updated dependencies. |
+| [5.2.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.2.md) | August 2024 | Fixed token timeouts, managed SNI socket connections, assembly targeting, SSPI retries, user-defined type reads, and encrypted-reader data. Updated identity packages for CVE-2024-35255. |
+| [5.2.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.1.md) | May 2024 | Fixed Linux named-instance connections with ports, `FireInfoMessageEventOnUserErrors`, **datetimeoffset(n)** table-valued parameters, delayed `OpenAsync`, and `AccessTokenCallback` preservation by `SqlConnection.Clone()`. |
+| [5.2.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.2/5.2.0.md) | February 2024 | General availability release. |
 
 ### 5.1
 
@@ -196,16 +233,16 @@ Version 5.1 reached general availability in January 2023. The final patch was 5.
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [5.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.0.md) | January 2023 | General availability release. |
-| [5.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.1.md) | March 2023 | Fixed Always Encrypted error reporting, redirect-mode transactions, token throttling, large-query TDS RPC failures, and `GetBytesAsync` null handling. |
-| [5.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.2.md) | October 2023 | Fixed SQL Express user instances, enclave retries, LocalDB, connection-string builder values, `SqlConnectionEncryptOption` configuration conversion, and `OpenAsync` transient faults. |
-| [5.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.3.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
-| [5.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.4.md) | January 2024 | Fixed a .NET distributed-transaction deadlock and upgraded `Azure.Identity` for CVE-2023-36414. |
-| [5.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.5.md) | January 2024 | Fixed transaction cleanup before pooling and Always Encrypted date and time conversion failures. Updated IdentityModel dependencies for CVE-2024-21319. |
-| [5.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.6.md) | August 2024 | Fixed `OpenAsync`, authentication timeout, and encrypted-reader pending-data failures. Updated identity dependencies for CVE-2024-35255 and cached `TokenCredential` instances. |
-| [5.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.7.md) | April 2025 | Fixed a possible socket-receive null failure, aligned source and reference assemblies, and updated dependencies. |
-| [5.1.8](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.8.md) | November 2025 | Added `Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner`, fixed UTF-8 byte order mark handling in bulk copy, modernized MSAL creation, and updated dependencies. |
 | [5.1.9](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.9.md) | January 2026 | Moved `SqlStatistics` timing to `Environment.TickCount` and updated framework-specific dependencies. |
+| [5.1.8](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.8.md) | November 2025 | Added `Switch.Microsoft.Data.SqlClient.IgnoreServerProvidedFailoverPartner`, fixed UTF-8 byte order mark handling in bulk copy, modernized MSAL creation, and updated dependencies. |
+| [5.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.7.md) | April 2025 | Fixed a possible socket-receive null failure, aligned source and reference assemblies, and updated dependencies. |
+| [5.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.6.md) | August 2024 | Fixed `OpenAsync`, authentication timeout, and encrypted-reader pending-data failures. Updated identity dependencies for CVE-2024-35255 and cached `TokenCredential` instances. |
+| [5.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.5.md) | January 2024 | Fixed transaction cleanup before pooling and Always Encrypted date and time conversion failures. Updated IdentityModel dependencies for CVE-2024-21319. |
+| [5.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.4.md) | January 2024 | Fixed a .NET distributed-transaction deadlock and upgraded `Azure.Identity` for CVE-2023-36414. |
+| [5.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.3.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
+| [5.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.2.md) | October 2023 | Fixed SQL Express user instances, enclave retries, LocalDB, connection-string builder values, `SqlConnectionEncryptOption` configuration conversion, and `OpenAsync` transient faults. |
+| [5.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.1.md) | March 2023 | Fixed Always Encrypted error reporting, redirect-mode transactions, token throttling, large-query TDS RPC failures, and `GetBytesAsync` null handling. |
+| [5.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.1/5.1.0.md) | January 2023 | General availability release. |
 
 ### 5.0
 
@@ -226,9 +263,9 @@ Version 5.0 reached general availability in August 2022. The final patch was 5.0
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [5.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.0/5.0.0.md) | August 2022 | General availability release. |
-| [5.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.0/5.0.1.md) | October 2022 | Restored `HostNameInCertificate` on .NET Framework and fixed attention deadlocks, `SqlConnectionStringBuilder.Encrypt`, cancellation registration, managed SNI hangs, UTF-8 collation, and an SNI application-domain crash. |
 | [5.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.0/5.0.2.md) | March 2023 | Fixed an asynchronous-read memory leak, redirect-mode `TransactionScope`, Always Encrypted errors, large-query TDS RPC failures, and distributed-transaction deadlocks. |
+| [5.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.0/5.0.1.md) | October 2022 | Restored `HostNameInCertificate` on .NET Framework and fixed attention deadlocks, `SqlConnectionStringBuilder.Encrypt`, cancellation registration, managed SNI hangs, UTF-8 collation, and an SNI application-domain crash. |
+| [5.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/5.0/5.0.0.md) | August 2022 | General availability release. |
 
 ### 4.1
 
@@ -243,8 +280,8 @@ Version 4.1 reached general availability in January 2022. The final patch was 4.
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [4.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.1/4.1.0.md) | January 2022 | General availability release. |
 | [4.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.1/4.1.1.md) | September 2022 | Fixed certificate revocation list failures, parallelized SQL Server Resolution Protocol requests for `MultiSubnetFailover`, and corrected Microsoft Entra authentication, **rowversion**, UTF-8, and SNI application-domain failures. |
+| [4.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.1/4.1.0.md) | January 2022 | General availability release. |
 
 ### 4.0
 
@@ -267,13 +304,13 @@ Version 4.0 reached general availability in November 2021. The final patch was 4
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [4.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.0.md) | November 2021 | General availability release. |
-| [4.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.1.md) | January 2022 | Added `SuppressInsecureTLSWarning` and fixed .NET 6 Kerberos, LocalDB pipe names, and concurrent enclave queries. |
-| [4.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.2.md) | September 2022 | Fixed certificate revocation list failures, parallelized SQL Server Resolution Protocol requests for `MultiSubnetFailover`, and corrected Microsoft Entra authentication, **rowversion**, UTF-8, and SNI application-domain failures. |
-| [4.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.3.md) | April 2023 | Reduced cached-account token throttling and fixed large-query TDS RPC failures. |
-| [4.0.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.4.md) | October 2023 | Fixed asynchronous enclave retries, LocalDB and managed SNI fallback, file versions, and connection activity correlation. |
-| [4.0.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.5.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
 | [4.0.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.6.md) | August 2024 | Fixed transaction-event cleanup before pooling and `ActiveDirectoryAuthenticationProvider.AcquireTokenAsync` timeout handling. |
+| [4.0.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.5.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
+| [4.0.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.4.md) | October 2023 | Fixed asynchronous enclave retries, LocalDB and managed SNI fallback, file versions, and connection activity correlation. |
+| [4.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.3.md) | April 2023 | Reduced cached-account token throttling and fixed large-query TDS RPC failures. |
+| [4.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.2.md) | September 2022 | Fixed certificate revocation list failures, parallelized SQL Server Resolution Protocol requests for `MultiSubnetFailover`, and corrected Microsoft Entra authentication, **rowversion**, UTF-8, and SNI application-domain failures. |
+| [4.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.1.md) | January 2022 | Added `SuppressInsecureTLSWarning` and fixed .NET 6 Kerberos, LocalDB pipe names, and concurrent enclave queries. |
+| [4.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/4.0/4.0.0.md) | November 2021 | General availability release. |
 
 ### 3.1
 
@@ -290,14 +327,14 @@ Version 3.1 reached general availability in March 2022. The final patch was 3.1.
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [3.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.0.md) | March 2022 | General availability release. |
-| [3.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.1.md) | August 2022 | Fixed null `SqlBinary` **rowversion** values, .NET 6 Kerberos failures, and Microsoft Entra authentication null-reference failures. |
-| [3.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.2.md) | February 2023 | Added .NET Framework Windows ARM64 support and fixed retry-list thread safety, distributed-transaction deadlocks, UTF-8 collation, and stored-procedure validation. |
-| [3.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.3.md) | March 2023 | Reduced Microsoft Entra token throttling with `AcquireTokenSilent` and fixed large-query TDS RPC failures. |
-| [3.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.4.md) | October 2023 | Fixed asynchronous enclave retries, LocalDB and managed SNI fallback, file versions, connection activity correlation, and EventSource formatting. |
-| [3.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.5.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
-| [3.1.6](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.1.6) | August 2024 | This package wasn't properly signed and was unlisted. No upstream release-note file exists. Use 3.1.7 instead. |
 | [3.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.7.md) | August 2024 | Fixed transaction-event cleanup before pooling, authentication timeouts, assembly signing, and an SNI application-domain crash. |
+| [3.1.6](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.1.6) | August 2024 | This package wasn't properly signed and was unlisted. No upstream release-note file exists. Use 3.1.7 instead. |
+| [3.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.5.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
+| [3.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.4.md) | October 2023 | Fixed asynchronous enclave retries, LocalDB and managed SNI fallback, file versions, connection activity correlation, and EventSource formatting. |
+| [3.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.3.md) | March 2023 | Reduced Microsoft Entra token throttling with `AcquireTokenSilent` and fixed large-query TDS RPC failures. |
+| [3.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.2.md) | February 2023 | Added .NET Framework Windows ARM64 support and fixed retry-list thread safety, distributed-transaction deadlocks, UTF-8 collation, and stored-procedure validation. |
+| [3.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.1.md) | August 2022 | Fixed null `SqlBinary` **rowversion** values, .NET 6 Kerberos failures, and Microsoft Entra authentication null-reference failures. |
+| [3.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.1/3.1.0.md) | March 2022 | General availability release. |
 
 ### 3.0
 
@@ -318,8 +355,8 @@ System key store providers take precedence over providers registered on a connec
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [3.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.0/3.0.0.md) | June 2021 | General availability release. |
 | [3.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.0/3.0.1.md) | September 2021 | Fixed blocking Microsoft Entra connection opens, transaction promotion state, required encryption, retry recursion and deadlocks, and unusable connections. |
+| [3.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/3.0/3.0.0.md) | June 2021 | General availability release. |
 
 ### 2.1
 
@@ -338,14 +375,14 @@ Version 2.1 reached general availability in November 2020. The final patch was 2
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [2.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.0.md) | November 2020 | General availability release. |
-| [2.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.1.md) | December 2020 | Fixed system-assigned managed identity in Azure Functions, Unix Kerberos, and TCP keep-alive. |
-| [2.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.2.md) | March 2021 | Fixed Unix named instances, timeout wrong results, unsafe DTD processing, Kerberos SPNs, missing caching dependencies, tracing, and MARS headers. |
-| [2.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.3.md) | May 2021 | Prevented transaction data corruption with open result sets and fixed a `SinglePhaseCommit` and `TransactionEnded` race. |
-| [2.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.4.md) | September 2021 | Ensured connections fail when encryption is required and fixed connections entering an unusable state. |
-| [2.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.5.md) | August 2022 | Added stored-procedure `CommandText` length validation and fixed .NET 6 Kerberos authentication and `SqlTypeWorkarounds`. |
-| [2.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.6.md) | April 2023 | Fixed large-query TDS RPC failures in `SqlCommand.ExecuteReaderAsync`, default UTF-8 collation conflicts, and attention-send deadlocks. |
 | [2.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.7.md) | January 2024 | Fixed CVE-2024-0056 and certificate-chain validation. |
+| [2.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.6.md) | April 2023 | Fixed large-query TDS RPC failures in `SqlCommand.ExecuteReaderAsync`, default UTF-8 collation conflicts, and attention-send deadlocks. |
+| [2.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.5.md) | August 2022 | Added stored-procedure `CommandText` length validation and fixed .NET 6 Kerberos authentication and `SqlTypeWorkarounds`. |
+| [2.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.4.md) | September 2021 | Ensured connections fail when encryption is required and fixed connections entering an unusable state. |
+| [2.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.3.md) | May 2021 | Prevented transaction data corruption with open result sets and fixed a `SinglePhaseCommit` and `TransactionEnded` race. |
+| [2.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.2.md) | March 2021 | Fixed Unix named instances, timeout wrong results, unsafe DTD processing, Kerberos SPNs, missing caching dependencies, tracing, and MARS headers. |
+| [2.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.1.md) | December 2020 | Fixed system-assigned managed identity in Azure Functions, Unix Kerberos, and TCP keep-alive. |
+| [2.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.1/2.1.0.md) | November 2020 | General availability release. |
 
 ### 2.0
 
@@ -365,8 +402,8 @@ Version 2.0 reached general availability in June 2020. The final patch was 2.0.1
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [2.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.0/2.0.0.md) | June 2020 | General availability release. |
 | [2.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.0/2.0.1.md) | August 2020 | Added coexistence-friendly authentication configuration and fixed pooled token expiry, transient-fault handling, enclave caching, and native SNI prelogin errors. |
+| [2.0.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/2.0/2.0.0.md) | June 2020 | General availability release. |
 
 ### 1.1
 
@@ -382,11 +419,11 @@ Version 1.1 reached general availability in November 2019. The final patch was 1
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [1.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.0.md) | November 2019 | General availability release. |
-| [1.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.1.md) | February 2020 | Reverted asynchronous `SNIPacket` changes that caused deadlocks and corrected the SNI dependency range. |
-| [1.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.2.md) | April 2020 | Added usernames for Active Directory Interactive authentication and fixed password persistence and MARS TDS headers. |
-| [1.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.3.md) | May 2020 | Prevented aborted transactions from enlisting pooled connections and reverted the regressive MARS header fix. |
 | [1.1.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.4.md) | March 2021 | Corrected timeout-state wrong results and MARS header errors on .NET Framework 4.8 and later versions. |
+| [1.1.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.3.md) | May 2020 | Prevented aborted transactions from enlisting pooled connections and reverted the regressive MARS header fix. |
+| [1.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.2.md) | April 2020 | Added usernames for Active Directory Interactive authentication and fixed password persistence and MARS TDS headers. |
+| [1.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.1.md) | February 2020 | Reverted asynchronous `SNIPacket` changes that caused deadlocks and corrected the SNI dependency range. |
+| [1.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.1/1.1.0.md) | November 2019 | General availability release. |
 
 ### 1.0
 
@@ -404,9 +441,9 @@ Microsoft.Data.SqlClient 1.0 reached general availability in August 2019. The fi
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
-| [1.0.19239.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.0/1.0.19239.1.md) | August 2019 | General availability release. Fixed connection reuse after transaction failures, SNI publishing, globalization-invariant handling, and bulk-copy null widening. |
-| [1.0.19249.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.0/1.0.19249.1.md) | September 2019 | Fixed large multipacket data reads on Unix. |
 | [1.0.19269.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.0/1.0.19269.1.md) | September 2019 | Restored `SqlCommand.StatementCompleted`, added the missing `SqlConnectionStringBuilder.Authentication`, and reverted an incompatible `SqlAuthenticationParameters.Resource` API change. |
+| [1.0.19249.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.0/1.0.19249.1.md) | September 2019 | Fixed large multipacket data reads on Unix. |
+| [1.0.19239.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/1.0/1.0.19239.1.md) | August 2019 | General availability release. Fixed connection reuse after transaction failures, SNI publishing, globalization-invariant handling, and bulk-copy null widening. |
 
 For an application moving from the older provider, use [Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient](migrate-system-data-sql-client-to-microsoft-data-sql-client.md) instead of reading release notes alone.
 

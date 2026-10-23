@@ -6,6 +6,8 @@
     href: download-microsoft-sqlclient-data-provider.md
   - name: Connect and query
     href: get-started-sqlclient-driver.md
+  - name: Use in an ASP.NET Core app
+    href: quickstart-asp-net-core-sql-client.md
   - name: Namespace and compatibility
     href: introduction-microsoft-data-sqlclient-namespace.md
   - name: Migrate from System.Data.SqlClient

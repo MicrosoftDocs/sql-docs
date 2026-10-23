@@ -4,7 +4,7 @@ description: Find out about the backup compression algorithm option. See how it 
 author: adbadram
 ms.author: adbadram
 ms.reviewer: wiassaf, dinethi
-ms.date: 11/18/2025
+ms.date: 10/23/2026
 ms.service: sql
 ms.subservice: configuration
 ms.topic: how-to
@@ -40,9 +40,6 @@ You can use the `backup compression algorithm` option to specify the algorithm u
 - **ZSTD**: The backup compression algorithm that uses the faster and more effective Zstandard (ZSTD) compression algorithm. This algorithm is available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions.
 
 ## View the backup compression algorithm option
-
-> [!NOTE]  
-> There's currently a [known issue](../../sql-server/sql-server-2025-known-issues.md#issue-when-setting-the-backup-compression-algorithm-to-zstd) with setting the `backup compression algorithm` to ZSTD.
 
 1. In [!INCLUDE [ssmanstudiofull-md](../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE [ssDE](../../includes/ssde-md.md)].
 

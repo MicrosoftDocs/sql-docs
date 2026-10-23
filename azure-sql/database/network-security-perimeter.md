@@ -5,7 +5,7 @@ description: Overview of network security perimeter for Azure SQL Database
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/10/2026
+ms.date: 10/23/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: security
@@ -61,9 +61,9 @@ Not every Azure SQL Database feature interacts with a network security perimeter
 
 | Feature | Perimeter support | What you need to know |
 | --- | --- | --- |
-| [Active geo-replication](active-geo-replication-overview.md) | Supported | Every logical server in the geo-replication set needs both an inbound and an outbound rule to every other server, because a failover reverses the direction of data movement. Replication on an established link keeps running even if you later change the rules to disallow it. |
+| [Active geo-replication](active-geo-replication-overview.md) | Supported | In enforced mode, each logical server in a perimeter needs both an inbound and an outbound rule for every other server in the geo-replication set that isn't in its perimeter. Rules run in both directions because a geo-failover reverses the direction of data movement. Replication on an established link keeps running even if you later change the rules to disallow it. |
 | [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview) | Supported | The database connects outbound to Azure Event Hubs or Fabric Eventstream. In enforced mode, add an outbound rule that names the destination FQDN. Without that rule, you can't create a stream group, and an existing stream stops publishing and holds the transaction log open. |
-| [Database copy](database-copy.md) | Supported | In enforced mode, the source server needs an outbound rule and the target server needs an inbound rule, unless both servers are in the same perimeter or the copy stays on one server. You can't use Transact-SQL to copy to a different logical server once a perimeter is attached. |
+| [Database copy](database-copy.md) | Supported | In enforced mode, the source server needs an outbound rule and the target server needs an inbound rule, unless both servers are in the same perimeter or the copy stays on one server. When a logical server belongs to a perimeter, Transact-SQL isn't a supported way to copy to a different logical server. |
 | [Elastic jobs](elastic-jobs-overview.md) | Supported | The job agent's logical server needs an outbound rule to each target server. The perimeter is checked at run time, so a job can be created successfully and then fail during execution. |
 | [Elastic query](elastic-query-overview.md) | Supported within a single perimeter | The database that runs the query and the remote database must be in the same perimeter. Elastic query needs no perimeter configuration of its own. |
 | [Extended Events](xevent-db-diff-from-svr.md) | Supported | The `event_file` target and the functions that read event data connect outbound to Azure Storage. In enforced mode, use a managed identity, or add an outbound FQDN rule for the storage account when you use a SAS token. |

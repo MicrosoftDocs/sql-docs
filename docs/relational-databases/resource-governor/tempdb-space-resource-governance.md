@@ -1,8 +1,8 @@
 ---
 title: Tempdb Space Resource Governance
 description: Use Resource Governor to prevent runaway workloads from consuming a large amount of space in tempdb.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: dimitri-furman
+ms.author: dfurman
 ms.reviewer: dfurman
 ms.date: 10/23/2026
 ms.service: sql
@@ -120,6 +120,8 @@ The [sys.dm_db_session_space_usage](../system-dynamic-management-objects/sys-dm-
   - Doesn't track index allocation map (IAM) pages. For more information, see [Page and extent architecture guide](../pages-and-extents-architecture-guide.md).
 - As rows are deleted, or when a table, index, or partition is dropped or truncated, the database engine deallocates the data pages. The deallocation might occur synchronously as part of the statement, or it might be deferred and performed asynchronously by a system session. `sys.dm_db_session_space_usage` reports both the synchronous deallocations, and the queued deferred deallocations that might not have completed yet when you query this view. `sys.dm_resource_governor_workload_groups` reports these page deallocations as they occur, even if the session that caused these deallocations was closed and is no longer present in `sys.dm_db_session_space_usage`.
 
+For more information, see the [View an approximate session tempdb space usage](#view-an-approximate-session-tempdb-space-usage) example.
+
 ## Best practices for tempdb space resource governance
 
 Before configuring `tempdb` space resource governance, consider the following best practices:
@@ -186,6 +188,53 @@ CROSS APPLY (
     WHERE database_id = 2
         AND type_desc = 'ROWS'
 ) AS tf;
+```
+
+### View an approximate session tempdb space usage
+
+This example shows you how to find the top contributors to the `tempdb` space usage within a workload group.
+
+The query reports the `tempdb` user space usage by a session in megabytes, and also reports it as a percentage of the total `tempdb` space usage by a workload group. The reported usage is approximate. For more information, see [Differences with session-level space tracking](#differences-with-session-level-space-tracking).
+
+```sql
+WITH task_space AS
+(
+SELECT database_id,
+       session_id,
+       SUM(user_objects_alloc_page_count - user_objects_dealloc_page_count) AS user_net_pages
+FROM sys.dm_db_task_space_usage
+WHERE database_id = 2
+GROUP BY database_id, session_id
+),
+session_space AS
+(
+SELECT s.session_id,
+       s.user_objects_alloc_page_count - s.user_objects_dealloc_page_count 
+       - s.user_objects_deferred_dealloc_page_count + COALESCE(t.user_net_pages, 0)
+       AS user_net_pages
+FROM sys.dm_db_session_space_usage AS s
+LEFT JOIN task_space AS t
+ON t.database_id = s.database_id
+   AND
+   t.session_id = s.session_id
+WHERE s.database_id = 2
+)
+SELECT u.session_id,
+       s.login_time,
+       g.name AS workload_group_name,
+       s.login_name,
+       s.host_name,
+       s.program_name,
+       CAST(u.user_net_pages * 8.0 / 1024 AS decimal(19, 3)) AS user_tempdb_usage_mb,
+       CAST(u.user_net_pages * 8.0 * 100.0 / NULLIF(g.tempdb_data_space_kb, 0) AS decimal(19, 2))
+       AS approximate_group_usage_percent
+FROM session_space AS u
+INNER JOIN sys.dm_exec_sessions AS s
+ON s.session_id = u.session_id
+LEFT JOIN sys.dm_resource_governor_workload_groups AS g
+ON g.group_id = s.group_id
+WHERE s.is_user_process = 1
+ORDER BY user_tempdb_usage_mb DESC, u.session_id;
 ```
 
 ## Next step

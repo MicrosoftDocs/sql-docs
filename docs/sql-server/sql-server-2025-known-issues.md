@@ -3,7 +3,7 @@ title: SQL Server 2025 Known Issues
 description: Known issues, causes, and workarounds for SQL Server 2025 (17.x), covering upgrades, replication, PolyBase, session behavior, platform compatibility (Windows and Linux), backup compression, and other platform-specific limitations.
 author: adbadram
 ms.author: adbadram
-ms.date: 08/24/2026
+ms.date: 10/23/2026
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: troubleshooting-known-issue
@@ -27,7 +27,6 @@ The following issues are currently identified:
 - [Database mail on Linux](#database-mail-on-linux)
 - [SQLPS](#sqlps)
 - [Incorrect behavior of SESSION_CONTEXT in parallel plans](#incorrect-behavior-of-session_context-in-parallel-plans)
-- [Issue when setting the backup compression algorithm to ZSTD](#issue-when-setting-the-backup-compression-algorithm-to-zstd)
 - [Local ONNX models not supported on Linux operating systems](#local-onnx-models-not-supported-on-linux-operating-systems)
 - [PBKDF2 hashing algorithm can affect login performance](#pbkdf2-hashing-algorithm-can-affect-login-performance)
 - [Vector index](#vector-index)
@@ -109,19 +108,6 @@ The SQL Server Agent job `syspolicy_purge_history` reports a failure on step 3. 
 **Issue**: Queries that use the built-in `SESSION_CONTEXT` function might return incorrect results or trigger access violation (AV) dumps when executed in parallel query plans. This issue stems from the way the function interacts with parallel execution threads, particularly when the session is reset for reuse.
 
 **Workaround**: Don't run `SESSION_CONTEXT` in parallel. For more information, see the [Known issues](../t-sql/functions/session-context-transact-sql.md#known-issues) section in `SESSION_CONTEXT`.
-
-## Issue when setting the backup compression algorithm to ZSTD
-
-**Issue**: An error occurs when you attempt to set the [backup compression algorithm](../database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) to ZSTD.
-
-When specifying the ZSTD algorithm (`backup compression algorithm = 3`), the following error message returns:
-
-```output
-Msg 15129, Level 16, State 1
-Procedure sp_configure '3' is not a valid value for configuration option 'backup compression algorithm'.
-```
-
-**Workaround**: Use the new compression algorithm directly in the [BACKUP](../t-sql/statements/backup-transact-sql.md#compression) Transact-SQL command instead of setting the server configuration option.
 
 ## Local ONNX models not supported on Linux operating systems
 

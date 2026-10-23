@@ -4,7 +4,7 @@ description: Use Resource Governor to prevent runaway workloads from consuming a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman
-ms.date: 06/02/2026
+ms.date: 10/23/2026
 ms.service: sql
 ms.topic: concept-article
 ms.custom:
@@ -116,9 +116,9 @@ This section describes `tempdb` space resource governance in detail.
 The [sys.dm_db_session_space_usage](../system-dynamic-management-objects/sys-dm-db-session-space-usage-transact-sql.md) DMV provides `tempdb` space allocation and deallocation statistics for each session. Even if there's only one session in a workload group, space usage statistics from this DMV might not match exactly the statistics from the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) view, for the following reasons:
 
 - Unlike `sys.dm_resource_governor_workload_groups`, `sys.dm_db_session_space_usage`:
-    - Doesn't reflect `tempdb` space usage by the currently running tasks. Statistics in `sys.dm_db_session_space_usage` are updated when a task completes. Statistics in `sys.dm_resource_governor_workload_groups` are updated continuously.
+    - Doesn't reflect `tempdb` space usage by the currently running tasks. Statistics in `sys.dm_db_session_space_usage` are updated when a task completes. Statistics in `sys.dm_resource_governor_workload_groups` are updated continuously. To obtain the `tempdb` space usage by the in-progress tasks associated with a session, use [sys.dm_db_task_space_usage](../system-dynamic-management-objects/sys-dm-db-task-space-usage-transact-sql.md).
   - Doesn't track index allocation map (IAM) pages. For more information, see [Page and extent architecture guide](../pages-and-extents-architecture-guide.md).
-- After rows are deleted, or when a table, index, or partition is dropped or truncated, the database engine deallocates the data pages. The deallocation might be synchronous or performed by an asynchronous background process. `sys.dm_resource_governor_workload_groups` reflects these page deallocations as they occur, even if the session that caused these deallocations was closed and is no longer present in `sys.dm_db_session_space_usage`.
+- As rows are deleted, or when a table, index, or partition is dropped or truncated, the database engine deallocates the data pages. The deallocation might occur as part of the statement, or it might be deferred and performed later by a system session. `sys.dm_db_session_space_usage` reports queued deferred deallocations that might not have completed yet at the time when you query this view. `sys.dm_resource_governor_workload_groups` reports these page deallocations as they occur, even if the session that caused these deallocations was closed and is no longer present in `sys.dm_db_session_space_usage`.
 
 ## Best practices for tempdb space resource governance
 

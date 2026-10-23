@@ -406,6 +406,58 @@ The following table shows the **default regional limits** for supported subscrip
 > [!IMPORTANT]  
 > In case your vCore limit is 0, it means that default regional limit for your subscription type isn't set. You can also use quota increase request for getting subscription access in specific region following the same procedure - providing required vCore values.
 
+### Check vCore quota limit and usage with PowerShell
+
+Use the [Subscription Usages - Get](/rest/api/sql/subscription-usages/get) REST API to retrieve the current vCore quota limit and consumption for Azure SQL Managed Instance in a subscription and region. Query each hardware generation separately by specifying its usage name:
+
+| Hardware generation | Usage name |
+| --- | --- |
+| Standard-series (Gen5) | `SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota` |
+| Premium-series | `SubscriptionSQLManagedInstancePremiumSeriesVCoreQuota` |
+| Memory optimized premium-series | `SubscriptionSQLManagedInstancePremiumSeriesMemoryOptimizedVCoreQuota` |
+
+Run the following script in a PowerShell session with the [Az module installed](/powershell/azure/install-azure-powershell), or in [Azure Cloud Shell](/azure/cloud-shell/overview) using PowerShell. Your account needs permission to read subscription usage, such as the [Reader role](/azure/role-based-access-control/built-in-roles/general#reader) assigned at subscription scope.
+
+Replace `<subscription-id>` with your subscription ID, set `$location` to the Azure region name (for example, `eastus`), and set `$usageName` to one of the values in the table. If you're already signed in through Cloud Shell, omit `Connect-AzAccount`.
+
+```powershell
+$subscriptionId = "<subscription-id>"
+$location = "eastus"
+$usageName = "SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota"
+
+Connect-AzAccount -ErrorAction Stop | Out-Null
+Set-AzContext -SubscriptionId $subscriptionId -ErrorAction Stop | Out-Null
+
+$path = "/subscriptions/$subscriptionId/providers/Microsoft.Sql/locations/$location/usages/${usageName}?api-version=2025-01-01"
+$response = Invoke-AzRestMethod -Method GET -Path $path -ErrorAction Stop
+
+if ($response.StatusCode -ne 200) {
+    throw "Unable to retrieve quota usage. HTTP $($response.StatusCode): $($response.Content)"
+}
+
+$response.Content | ConvertFrom-Json -ErrorAction Stop | ConvertTo-Json -Depth 10
+```
+
+Example output (excerpt; values are illustrative):
+
+```json
+{
+  "name": "SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota",
+  "properties": {
+    "currentValue": 80,
+    "limit": 320,
+    "unit": "SubscriptionSQLManagedInstanceStandardSeriesVCoreQuota"
+  }
+}
+```
+
+In this example, `properties.currentValue` is the current quota consumption: **80 vCore units**. `properties.limit` is the current quota limit: **320 vCore units**. The remaining quota is `limit - currentValue`, or **240 vCore units**, for standard-series hardware in the specified subscription and region.
+
+As described earlier in this section, each General Purpose vCore consumes one vCore unit, and each Business Critical vCore consumes four vCore units. Repeat the request with a different `$usageName` or `$location` to check another hardware generation or region. To increase the limit, see [Request a quota increase](#request-a-quota-increase).
+
+> [!IMPORTANT]
+> The previously used `VCoreQuota` usage name, which represented a single regional quota shared across all hardware generations, is being deprecated in favor of hardware-generation-specific quotas. Use the usage names listed in the table above to retrieve the quota limit and consumption for each hardware generation.
+
 ## Request a quota increase
 
 If you need more instances in your current regions, send a support request to extend the quota using the Azure portal. For more information, see [Request quota increases for Azure SQL Database and SQL Managed Instance](../database/quota-increase-request.md).

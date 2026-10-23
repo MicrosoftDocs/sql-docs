@@ -4,7 +4,7 @@ description: Use active geo-replication to create readable secondary databases o
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer:  vanto
-ms.date: 10/21/2026
+ms.date: 10/23/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: high-availability
@@ -158,13 +158,23 @@ The perimeter checks access rules when you create a geo-replication link, and ag
 
 Active geo-replication works in both transition and enforced mode. In transition mode, the perimeter logs replication traffic without blocking it. Configure the access rules before you switch to enforced mode.
 
-In enforced mode, every logical server in the geo-replication set needs **both** an inbound and an outbound rule to **every other** server in the set. Rules run in both directions because a geo-failover reverses the direction of data movement, and any geo-secondary can become the new primary. A primary with four geo-secondaries therefore needs rules covering each pair.
+In enforced mode, the rules you need for each pair of servers in the geo-replication set depend on the topology:
+
+| Topology | Access rules required |
+| --- | --- |
+| Both servers are in the same perimeter | None. Access between resources in the same perimeter is always allowed. |
+| The servers are in different perimeters | An inbound and an outbound rule on each server, for the other server. |
+| Only one of the two servers is in a perimeter | An inbound and an outbound rule on that server, for the other server. |
+
+Where a pair needs rules, they run in both directions, because a geo-failover reverses the direction of data movement and any geo-secondary can become the new primary. Check every pair of servers in the set, not only the primary and each geo-secondary. For example, if a primary and its four geo-secondaries are each in a different perimeter, every server needs rules for the other four.
 
 Active geo-replication doesn't require a managed identity.
 
 ### Configure access rules for geo-replication
 
-1. [Associate every logical server in the geo-replication set with the perimeter](network-security-perimeter.md#get-started). A newly associated server starts in transition mode.
+The following steps are one example. They assume that each logical server is in its own perimeter. If two servers are in the same perimeter, they don't need access rules for each other.
+
+1. [Associate each logical server in the geo-replication set with its perimeter](network-security-perimeter.md#get-started). A newly associated server starts in transition mode.
 1. On each server's profile, add an outbound access rule for every partner server. Set **Destination type** to **FQDN** and use the partner's fully qualified domain name, such as `partnerserver.database.windows.net`.
 1. On each server's profile, add an inbound access rule for every partner server. Set **Source type** to one of these values:
    - **Subscription**, and use the partner's subscription ID.
@@ -189,7 +199,7 @@ Active geo-replication doesn't require a managed identity.
 | 48005 | Unable to drop the Network Security Perimeter association for server '*server*' because geo-replication partner servers within the same Network Security Perimeter would become noncompliant. |
 | 48006 | The operation could not be completed because not all Network Security Perimeter configurations between geo-replication partner servers are compliant. |
 
-The placeholders in these messages are replaced with logical server names. For any of these errors, confirm that every server in the geo-replication set has both inbound and outbound rules for every other server.
+The placeholders in these messages are replaced with logical server names. For any of these errors, check the access rules for each pair of servers, as described in [Supported configurations](#supported-configurations).
 
 <a id="keeping-credentials-and-firewall-rules-in-sync"></a>
 

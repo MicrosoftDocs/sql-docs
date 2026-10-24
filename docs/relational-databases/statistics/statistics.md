@@ -166,7 +166,7 @@ The `AUTO_UPDATE_STATISTICS` option applies to statistics objects created for in
 
 You can use the [sys.dm_db_stats_properties](../system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) to accurately track the number of rows changed in a table and decide if you want to update statistics manually.
 
-`AUTO_UPDATE_STATISTICS` is always `OFF` for memory-optimized tables.
+Starting with database compatibility level 130, `AUTO_UPDATE_STATISTICS` also applies to memory-optimized tables. Tables created under a lower compatibility level need one manual statistics update first. For more information, see [Statistics for memory-optimized tables](../in-memory-oltp/statistics-for-memory-optimized-tables.md).
 
 ### AUTO_UPDATE_STATISTICS_ASYNC
 

@@ -82,7 +82,7 @@ The Developer editions continue to support only one client for [SQL Server Distr
 | Maximum memory for buffer pool per instance of SQL Server Database Engine | Operating system maximum | 256&nbsp;GB | 1,410&nbsp;MB |
 | Maximum memory for columnstore segment cache per instance of SQL Server Database Engine | Unlimited memory | 32&nbsp;GB | 352&nbsp;MB |
 | Maximum memory-optimized data size per database in SQL Server Database Engine | Unlimited memory | 32&nbsp;GB | 352&nbsp;MB |
-| Maximum relational database size | 524&nbsp;PB | 524&nbsp;PB | 10&nbsp;GB |
+| Maximum relational database size | 524&nbsp;PB | 524&nbsp;PB | 50&nbsp;GB |
 
 <sup>1</sup> Enterprise edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute capacity limits by edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).
 

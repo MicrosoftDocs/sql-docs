@@ -4,7 +4,7 @@ description: Query Store can be configured to monitor and tuning workloads on se
 author: thesqlsith
 ms.author: derekw
 ms.reviewer: derekw, wiassaf, erinstellato
-ms.date: 10/23/2026
+ms.date: 10/26/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -33,16 +33,15 @@ The following table summarizes the availability and the enabled state of Query s
 
 | Platform | Available | Enabled by default |
 | --- | --- | --- |
-| [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | Yes<sup>1</sup> | Yes (always enabled) |
+| [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | Yes | Yes (always enabled) |
 | [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] | Yes | Yes (always enabled) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[AUTD](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#always-up-to-date-update-policy)</sup> | Yes | Yes (always enabled) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2025](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2025-update-policy)</sup> | Yes | No (can be enabled, per database) |
 | [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)]<sup>[2022](/azure/azure-sql/managed-instance/update-policy?view=azuresql-mi&preserve-view=true#sql-server-2022-update-policy)</sup> | No | No |
 | [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] | Yes | No (can be enabled, per database) |
-| [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | No<sup>2</sup> | No |
+| [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | No<sup>1</sup> | No |
 
-<sup>1</sup> Query Store for readable secondary replicas in the Hyperscale service tier of Azure SQL Database is coming soon.   
-<sup>2</sup> Query Store for readable secondaries remains in **limited** preview for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and is therefore **not** supported in production, and is disabled by default. To enable Query Store for readable secondaries in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, a trace flag 12606 is required to be enabled to the primary and all readable secondary replicas. Trace flag 12606 **is not** intended for production deployments that are based on [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [SQL Server 2022 release notes](../../sql-server/sql-server-2022-release-notes.md).
+<sup>1</sup> Query Store for readable secondary replicas remains in **limited** preview for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], and is therefore **not** supported in production, and is disabled by default. To enable Query Store for readable secondary replicas in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] only, you must enable trace flag 12606 on the primary and all readable secondary replicas. Trace flag 12606 **is not** intended for production deployments that are based on [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [SQL Server 2022 release notes](../../sql-server/sql-server-2022-release-notes.md).
 
 ## Supported high availability scenarios
 
@@ -52,6 +51,7 @@ The following table summarizes the availability and the enabled state of Query s
     - General purpose with [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview) or a [failover group](/azure//azure-sql/database/failover-group-sql-db) configuration (no built-in high availability replicas; requires geo-replication or failover group configuration for secondary support)
     - Premium (includes built-in high availability replicas; active geo-replication or failover groups also supported)
     - Business critical (includes built-in high availability replicas; active geo-replication or failover groups also supported)
+    - Hyperscale with one or more [secondary replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas)
       
 - For Azure SQL Managed Instance, Query Store for readable secondary replicas supports the following service tiers:
     - General purpose with a [failover group](/azure/azure-sql/managed-instance/failover-group-sql-mi) (no built-in high availability replicas; requires a failover group configuration for secondary support)

@@ -92,7 +92,7 @@ This section describes `tempdb` space resource governance in detail.
   would exceed the limit set for workload group 'workload-group-name'".
   ```
 
-    When a request is aborted with error 1138, the value in the `total_tempdb_data_limit_violation_count` column of the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view (DMV) is incremented by one, and the `tempdb_data_workload_group_limit_reached` extended event fires.
+    When a request is aborted with error 1138, the value in the `total_tempdb_data_limit_violation_count` column of the [sys.dm_resource_governor_workload_groups](../system-dynamic-management-objects/sys-dm-resource-governor-workload-groups-transact-sql.md) dynamic management view (DMV) can increase by more than one for a parallel request, and the `tempdb_data_workload_group_limit_reached` extended event fires.
 - Resource governor keeps track of all `tempdb` usage that can be attributed to a workload group, including temporary tables, variables (including table variables), table-valued parameters, nontemporary tables, cursors, and `tempdb` usage during query processing, such as spools, spills, worktables, and workfiles.
 
     Space consumption for global temporary tables and nontemporary tables in `tempdb` is accounted under the workload group that inserts the first row into the table, even if sessions in other workload groups add, modify, or remove rows in the same table.

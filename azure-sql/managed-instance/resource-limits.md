@@ -54,6 +54,8 @@ Hardware generations have different characteristics, as described in the followi
 > [!NOTE]  
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
+<a id="regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage"></a>
+
 ### Regional support for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage
 
 Support for the premium-series hardware with 16-TB storage has the same availability as support for the memory optimized premium-series hardware. To learn more, see [Regional supports for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage](region-availability.md#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage).

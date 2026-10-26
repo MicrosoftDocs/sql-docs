@@ -58,7 +58,7 @@ Keep the most relevant data in Query Store. The following table describes typica
 |**Custom**|[!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] introduced a custom capture mode under the `ALTER DATABASE ... SET QUERY_STORE` command. While Auto is default and recommended, if there is still any concern about the overhead Query Store might introduce, database administrators can use custom capture policies to further tune the Query Store capture behavior. For more information and recommendations, see [Custom capture policies](#custom-capture-policies) later in this article. For more information on this syntax, see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_mode--all--auto--custom--none-).|
 
 > [!NOTE]  
-> Cursors, queries inside stored procedures, and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
+> Queries inside stored procedures and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. In [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], cursors are also always captured. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], cursors are subject to the capture policy. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
 ## Keep the most relevant data in Query Store
 
@@ -79,7 +79,7 @@ When the CUSTOM Query Store Capture Mode is enabled, additional Query Store conf
 The **Query Store Capture Mode** specifies the query capture policy for Query Store.
 
 - **All**: Captures all queries. This option is the default in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)].
-- **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile, and runtime duration are internally determined. Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], this is the default option.
+- **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. For the thresholds in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, see [QUERY_CAPTURE_POLICY options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_policy_option_list--). Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], this is the default option.
 - **None**: Query Store stops capturing new queries.
 - **Custom**: Allows additional control and the capability to fine-tune the data collection policy. The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store.
 
@@ -244,12 +244,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 **Query Store Capture Mode**: Specifies the query capture policy for Query Store.
 
 - **All**: Captures all queries. This option is the default in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)].
-- **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile, and runtime duration are internally determined. Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], this is the default option.
+- **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. For the thresholds in [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] and later versions, see [QUERY_CAPTURE_POLICY options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_policy_option_list--). Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], this is the default option.
 - **None**: Query Store stops capturing new queries.
 - **Custom**: Allows additional control and the capability to fine-tune the data collection policy. The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store.
 
 > [!IMPORTANT]  
-> Cursors, queries inside stored procedures, and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
+> Queries inside stored procedures and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. In [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], cursors are also always captured. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], cursors are subject to the capture policy. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
  The following script sets QUERY_CAPTURE_MODE to AUTO:
 

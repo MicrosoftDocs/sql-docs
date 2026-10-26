@@ -22,19 +22,19 @@ ai-usage: ai-assisted
 > - [Azure SQL Database](../database/resource-limits-logical-server.md?view=azuresql-db&preserve-view=true)
 > - [Azure SQL Managed Instance](resource-limits.md?view=azuresql-mi&preserve-view=true)
 
-This article provides an overview of the technical characteristics and resource limits for Azure SQL Managed Instance, and provides information about how to request an increase to these limits.
+This article provides an overview of the technical characteristics and resource limits for Azure SQL Managed Instance. It also provides information about how to request an increase to these limits.
 
 > [!NOTE]
-> For differences in supported features and T-SQL statements see [Feature differences](../database/features-comparison.md) and [T-SQL statement support](transact-sql-tsql-differences-sql-server.md). For general differences between service tiers for Azure SQL Database and SQL Managed Instance review [General Purpose](../database/service-tiers-sql-database-vcore.md#general-purpose) and [Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical) service tiers.
+> For differences in supported features and T-SQL statements, see [Feature differences](../database/features-comparison.md) and [T-SQL statement support](transact-sql-tsql-differences-sql-server.md). For general differences between service tiers for Azure SQL Database and SQL Managed Instance, review [General Purpose](../database/service-tiers-sql-database-vcore.md#general-purpose) and [Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical) service tiers.
 
 ## Hardware configuration characteristics
 
 In this section:
 
-- [Regional supports for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage)
+- [Regional support for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage)
 - [In-memory OLTP available space](#in-memory-oltp-available-space)
 
-SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware generations.
+SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. You can deploy SQL Managed Instance on multiple hardware generations.
 
 Hardware generations have different characteristics, as described in the following table:
 
@@ -46,7 +46,7 @@ Hardware generations have different characteristics, as described in the followi
 | **Max In-Memory OLTP memory** | Instance limit: 0.8 - 1.65 GB per vCore | Instance limit: 1.1 - 2.3 GB per vCore | Instance limit: 2.2 - 4.5 GB per vCore |
 | **Max instance reserved storage** <sup>2</sup> | **General Purpose:** up to 32 TB<sup>4</sup><br />**Business Critical:** up to 4 TB | **General Purpose:** up to 32 TB<sup>4</sup><br />**Business Critical:** up to 16 TB<sup>3</sup> | **General Purpose:** up to 32 TB<sup>4</sup><br />**Business Critical:** up to 16 TB |
 
-<sup>1</sup> Deploying a 2-vCore instance is only possible inside an [instance pool](instance-pools-overview.md).   
+<sup>1</sup> You can only deploy a 2-vCore instance inside an [instance pool](instance-pools-overview.md).   
 <sup>2</sup> Dependent on [the number of vCores](#service-tier-characteristics).   
 <sup>3</sup> The [following regions](#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage) can provide 16 TB of storage, while other regions limit available storage to 5.5 TB.   
 <sup>4</sup> 16 TB for classic General Purpose. 32 TB only for [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md)
@@ -54,13 +54,13 @@ Hardware generations have different characteristics, as described in the followi
 > [!NOTE]  
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
-### Regional supports for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage
+### Regional support for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage
 
-Support for the premium-series hardware with 16-TB storage has the same availability as support for the memory optimized premium-series hardware. To learn more, review [Regional supports for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage](region-availability.md#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage).
+Support for the premium-series hardware with 16-TB storage has the same availability as support for the memory optimized premium-series hardware. To learn more, see [Regional supports for memory optimized premium-series hardware and for premium-series hardware with 16-TB storage](region-availability.md#regional-supports-for-memory-optimized-premium-series-hardware-and-for-premium-series-hardware-with-16-tb-storage).
 
 ### In-memory OLTP available space
 
-The amount of In-memory OLTP space in [Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical) service tier depends on the number of vCores and hardware configuration. The following table lists the limits of memory that can be used for In-memory OLTP objects.
+The amount of In-memory OLTP space in the [Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical) service tier depends on the number of vCores and the hardware configuration. The following table lists the limits of memory that you can use for In-memory OLTP objects.
 
 | vCores | Standard-series (Gen5) | Premium-series | Memory optimized premium-series |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 SQL Managed Instance has two [service tiers](service-tiers-managed-instance-vcore.md#compute-tiers): General Purpose and Business Critical. You can choose to use the upgraded [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md).
 
 > [!IMPORTANT]  
-> The Business Critical service tier provides an additional built-in copy of the SQL Managed Instance (secondary replica) that can be used for read-only workload. If you can separate read-write queries and read-only/analytic/reporting queries, you're getting twice the vCores and memory for the same price. The secondary replica might lag a few seconds behind the primary instance, so it's designed to offload reporting/analytic workloads that don't need exact current state of data. In the following table, **read-only queries** are the queries that are executed on secondary replica.
+> The Business Critical service tier provides an extra built-in copy of the SQL Managed Instance (secondary replica) that it uses for read-only workloads. If you separate read-write queries from read-only, analytic, or reporting queries, you get twice the vCores and memory for the same price. The secondary replica might lag a few seconds behind the primary instance, so it's designed to offload reporting and analytic workloads that don't need the exact current state of data. In the following table, **read-only queries** are the queries that run on the secondary replica.
 
 In this section:
 
@@ -263,16 +263,16 @@ The following table lists the max IOPS available in the Business Critical servic
 
 ### Data and log storage
 
-The following factors affect the amount of storage used for data and log files, and apply to General Purpose and Business Critical tiers.
+The following factors affect the amount of storage used for data and log files. These factors apply to both the General Purpose and Business Critical tiers.
 
 - In the General Purpose service tier, `tempdb` uses local SSD storage, and this storage cost is included in the vCore price.
-- In the Business Critical service tier, `tempdb` shares local SSD storage with data and log files, and `tempdb` storage cost is included in the vCore price.  You can size `tempdb` up to the currently available instance storage size.
-- The maximum storage size for a SQL Managed Instance must be specified in multiples of 32 GB.
+- In the Business Critical service tier, `tempdb` shares local SSD storage with data and log files, and the `tempdb` storage cost is included in the vCore price. You can size `tempdb` up to the currently available instance storage size.
+- You must specify the maximum storage size for a SQL Managed Instance in multiples of 32 GB.
 
 > [!IMPORTANT]  
-> In both service tiers, you're charged for the maximum storage size configured for a SQL managed instance.
+> In both service tiers, you pay for the maximum storage size configured for a SQL Managed Instance.
 
-To monitor total consumed instance storage size for SQL Managed Instance, use the *storage_space_used_mb* [metric](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances). To monitor the current allocated and used storage size of individual data and log files in a database using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
+To monitor total consumed instance storage size for SQL Managed Instance, use the *storage_space_used_mb* [metric](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances). To monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
 > [!TIP]  
 > Under some circumstances, you might need to shrink a database to reclaim unused space. For more information, see [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql).
@@ -283,7 +283,7 @@ Storage for database backups is allocated to support the [point-in-time restore 
 
 - **PITR**: In General Purpose and Business Critical tiers, individual database backups are copied to [read-access geo-redundant (RA-GRS) storage](/azure/storage/common/geo-redundant-design) automatically. The storage size increases dynamically as new backups are created. The storage is used by full, differential, and transaction log backups. The storage consumption depends on the rate of change of the database and the retention period configured for backups. You can configure a separate retention period for each database between 1 to 35 days for SQL Managed Instance. A backup storage amount equal to the configured maximum data size is provided at no extra charge.
 
-- **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in RA-GRS storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly backups. The configuration you choose determines how much storage is used for LTR backups. For more information, see [Long-term retention - Azure SQL Database and Azure SQL Managed Instance](../database/long-term-retention-overview.md).
+- **LTR**: You also have the option to configure long-term retention of full backups for up to 10 years. If you set up an LTR policy, these backups are stored in RA-GRS storage automatically, but you can control how often the backups are copied. To meet different compliance requirements, you can select different retention periods for weekly, monthly, and yearly backups. The configuration you choose determines how much storage is used for LTR backups. For more information, see [Long-term retention - Azure SQL Database and Azure SQL Managed Instance](../database/long-term-retention-overview.md).
 
 ### Additional characteristics considerations
 
@@ -310,11 +310,11 @@ The flexible memory feature is available in the following service tiers and depl
 - **[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for locally redundant instances and is currently in preview for zone-redundant instances. Zone-redundant Next-gen General Purpose instances require Azure Elastic SAN zone-redundant storage (ZRS), which isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
 - **[Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for the Business Critical service tier.
 
-You can change the amount of memory allocated to your SQL managed instance at any time for new and existing instances by using the Azure portal, or the REST API. The memory allocation change is applied to all databases in the instance and performs a failover of the instance as the final operation step. Check [management operations duration](management-operations-duration.md#management-operation-duration) to determine the estimated time for the operation to complete.
+You can change the amount of memory allocated to your SQL managed instance at any time for new and existing instances by using the Azure portal or the REST API. The memory allocation change applies to all databases in the instance and performs a failover of the instance as the final operation step. Check [management operations duration](management-operations-duration.md#management-operation-duration) to determine the estimated time for the operation to complete.
 
-Use the **Compute + storage** pane in the Azure portal to change the memory allocation, or the `properties.memorySizeInGB` value of the [Managed Instance - Create or Update](/rest/api/sql/managed-instances/create-or-update) REST API call starting with the **2024-08-01-preview** version. The memory allocation is specified in gigabytes (GB).
+Use the **Compute + storage** pane in the Azure portal to change the memory allocation, or the `properties.memorySizeInGB` value of the [Managed Instance - Create or Update](/rest/api/sql/managed-instances/create-or-update) REST API call starting with the **2024-08-01-preview** version. Specify the memory allocation in gigabytes (GB).
 
-When allocating memory, you can choose between a minimum and maximum value, and also determine the ratio of memory to vCores. The minimum and maximum values are determined by the number of vCores selected for the instance. The memory-to-vCore ratio is a percentage of the total memory allocated to the instance.
+When allocating memory, you can choose between a minimum and maximum value, and also determine the ratio of memory to vCores. The minimum and maximum values depend on the number of vCores you select for the instance. The memory-to-vCore ratio is a percentage of the total memory allocated to the instance.
 
 The following table shows the minimum and maximum memory values for the flexible memory feature:
 
@@ -339,22 +339,22 @@ The following table shows the minimum and maximum memory values for the flexible
 
 ### Pricing
 
-When using the flexible memory feature, consider the following:
-- Additional memory is charged per GB/hour
-- Billable memory is calculated by the following formula: `Billable memory = Total memory - default memory`.
+When you use the flexible memory feature, consider the following details:
+- You pay for extra memory by the GB per hour.
+- Billable memory uses this formula: `Billable memory = Total memory - default memory`.
 
-For example, if you have a pay-as-you-go 4 vCore instance with 40 GB of memory, you are charged for: 
+For example, if you use a pay-as-you-go 4 vCore instance with 40 GB of memory, you pay for:
   - 4 vCores
   - SQL license for 4 vCores 
   - 12 GB of billable memory (40 GB - (4*7) = 12 GB).
 
 ## Supported regions
 
-SQL Managed Instance can be created only in [supported regions](https://azure.microsoft.com/global-infrastructure/services/?products=sql-database&regions=all). To create a SQL Managed Instance in a region that is currently not supported, you can [send a support request via the Azure portal](../database/quota-increase-request.md).
+You can create SQL Managed Instance only in [supported regions](https://azure.microsoft.com/global-infrastructure/services/?products=sql-database&regions=all). To create a SQL Managed Instance in a region that's currently unsupported, [send a support request via the Azure portal](../database/quota-increase-request.md).
 
 ## Supported subscription types
 
-SQL Managed Instance currently supports deployment only on the following types of subscriptions:
+SQL Managed Instance currently supports deployment only on the following subscription types:
 
 - [Enterprise Agreement (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/)
 - [Pay-as-you-go](https://azure.microsoft.com/pricing/offers/ms-azr-0003p?cid=msft_learn)
@@ -372,12 +372,12 @@ SQL Managed Instance currently supports deployment only on the following types o
 > [!NOTE]  
 > For the latest information on region availability for subscriptions, first check [select a region](../capacity-errors-troubleshoot.md).
 
-Supported subscription types can contain a limited number of resources per region. SQL Managed Instance has one default limit per Azure region (that can be increased on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md)) depending on a type of subscription type:
+Supported subscription types can contain a limited number of resources per region. SQL Managed Instance has one default limit per Azure region (that you can increase on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md)) depending on the subscription type:
 
-- **vCore unit limit**: The maximum number of vCore units per hardware generation that can be deployed across all instances in a single region. One GP vCore uses one vCore unit and one BC vCore takes four vCore units. The total number of instances isn't limited as long as it's within the vCore unit limit.
+- **vCore unit limit**: The maximum number of vCore units per hardware generation that you can deploy across all instances in a single region. One GP vCore uses one vCore unit and one BC vCore takes four vCore units. The total number of instances isn't limited as long as it's within the vCore unit limit.
 
 > [!NOTE]  
-> These limits are default settings and not technical limitations. The limits can be increased on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md) if you need more instances in the current region. As an alternative, you can create new instances of SQL Managed Instance in another Azure region without sending support requests.
+> These limits are default settings and not technical limitations. You can increase the limits on-demand by creating a special [support request in the Azure portal](../database/quota-increase-request.md) if you need more instances in the current region. As an alternative, you can create new instances of SQL Managed Instance in another Azure region without sending support requests.
 
 The following table shows the **default regional limits** for supported subscription types (default limits can be extended using [a support request](#request-a-quota-increase)):
 
@@ -399,12 +399,14 @@ The following table shows the **default regional limits** for supported subscrip
 | Visual Studio Professional | 32 |
 | MSDN Platforms | 32 |
 
-<sup>1</sup> In planning deployments, please take into consideration that Business Critical (BC) service tier requires four (4) times more vCore capacity than General Purpose (GP) service tier. For example: 1 GP vCore = 1 vCore unit and 1 BC vCore = 4 vCore. To simplify your consumption analysis against the default limits, summarize the vCore units per hardware generation across all instances in the region where SQL Managed Instance is deployed and compare the results with the vCore unit limits for your subscription type. The **max number of vCore units** limit applies to each subscription per hardware generation in a region.
+<sup>1</sup> In planning deployments, take into consideration that Business Critical (BC) service tier requires four (4) times more vCore capacity than General Purpose (GP) service tier. For example: 1 GP vCore = 1 vCore unit and 1 BC vCore = 4 vCore. To simplify your consumption analysis against the default limits, summarize the vCore units per hardware generation across all instances in the region where SQL Managed Instance is deployed and compare the results with the vCore unit limits for your subscription type. The **max number of vCore units** limit applies to each subscription per hardware generation in a region.
 
 <sup>2</sup> Larger vCore limits are available in the following regions: Australia East, East US, East US 2, North Europe, South Central US, Southeast Asia, UK South, West Europe, West US 2.
 
 > [!IMPORTANT]  
-> In case your vCore limit is 0, it means that default regional limit for your subscription type isn't set. You can also use quota increase request for getting subscription access in specific region following the same procedure - providing required vCore values.
+> If your vCore limit is 0, it means that default regional limit for your subscription type isn't set. You can also use quota increase request for getting subscription access in specific region following the same procedure - providing required vCore values.
+>
+> Default regional vCore limits can be decreased or suspended in case of regional capacity constraints.
 
 ### Check vCore quota limit and usage with PowerShell
 
@@ -418,7 +420,7 @@ Use the [Subscription Usages - Get](/rest/api/sql/subscription-usages/get) REST 
 
 Run the following script in a PowerShell session with the [Az module installed](/powershell/azure/install-azure-powershell), or in [Azure Cloud Shell](/azure/cloud-shell/overview) using PowerShell. Your account needs permission to read subscription usage, such as the [Reader role](/azure/role-based-access-control/built-in-roles/general#reader) assigned at subscription scope.
 
-Replace `<subscription-id>` with your subscription ID, set `$location` to the Azure region name (for example, `eastus`), and set `$usageName` to one of the values in the table. If you're already signed in through Cloud Shell, omit `Connect-AzAccount`.
+Replace `<subscription-id>` with your subscription ID, set `$location` to the Azure region name (for example, `eastus`), and set `$usageName` to one of the values in the preceding table. If you're already signed in through Cloud Shell, omit `Connect-AzAccount`.
 
 ```powershell
 $subscriptionId = "<subscription-id>"
@@ -456,11 +458,11 @@ In this example, `properties.currentValue` is the current quota consumption: **8
 As described earlier in this section, each General Purpose vCore consumes one vCore unit, and each Business Critical vCore consumes four vCore units. Repeat the request with a different `$usageName` or `$location` to check another hardware generation or region. To increase the limit, see [Request a quota increase](#request-a-quota-increase).
 
 > [!IMPORTANT]
-> The previously used `VCoreQuota` usage name, which represented a single regional quota shared across all hardware generations, is being deprecated in favor of hardware-generation-specific quotas. Use the usage names listed in the table above to retrieve the quota limit and consumption for each hardware generation.
+> The previously used `VCoreQuota` usage name, which represented a single regional quota shared across all hardware generations, is being deprecated in favor of hardware-generation-specific quotas. Use the usage names listed in the preceding table to retrieve the quota limit and consumption for each hardware generation.
 
 ## Request a quota increase
 
-If you need more instances in your current regions, send a support request to extend the quota using the Azure portal. For more information, see [Request quota increases for Azure SQL Database and SQL Managed Instance](../database/quota-increase-request.md).
+If you need more instances in your current regions, send a support request to extend the quota by using the Azure portal. For more information, see [Request quota increases for Azure SQL Database and SQL Managed Instance](../database/quota-increase-request.md).
 
 > [!NOTE]
 > Starting August 2026, SQL Managed Instance quota request types changed. Subnet quotas no longer apply, and vCore quotas are now scoped per hardware generation. For more information, see [SQL Managed Instance quota request types](../database/quota-increase-request.md#sql-managed-instance-quota-request-types).

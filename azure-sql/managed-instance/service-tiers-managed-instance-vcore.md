@@ -92,7 +92,7 @@ The architectural model for the General Purpose service tier is based on a separ
 
 The following figure shows four nodes in standard architectural model with the separated compute and storage layers.
 
-:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/general-purpose-service-tier.png" alt-text="Diagram showing the separation of compute and storage.":::
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/general-purpose-service-tier.png" alt-text="Screenshot of a diagram showing the separation of compute and storage.":::
 
 In the architectural model for the General Purpose service tier, there are two layers:
 
@@ -117,7 +117,7 @@ The Business Critical service tier model is based on a cluster of database engin
 
 In the Business Critical model, compute and storage is integrated on each node. Replication of data between database engine processes on each node of a four-node cluster achieves high availability, with each node using locally attached SSD as data storage. 
 
-:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/business-critical-service-tier.png" alt-text="Diagram showing the cluster of database engine nodes.":::
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/business-critical-service-tier.png" alt-text="Screenshot of a diagram showing the cluster of database engine nodes.":::
 
 Both the SQL Server database engine process and underlying .mdf/.ldf files are placed on the same node with locally attached SSD storage providing low latency to your workload. High availability is implemented using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). 
 
@@ -137,8 +137,6 @@ The key reasons why you should choose Business Critical service tier instead of 
 -  **Workload with reporting and analytic queries** that can be redirected to the free-of-charge secondary read-only replica.
 - **Higher resiliency and faster recovery from failures**. In case there is system failure, the databases on the primary instance are taken offline, and one of the secondary replicas will immediately become the new read-write primary instance, ready to process queries.  There is no need for the database engine to analyze and redo transactions from the log file or load data into memory buffers.
 - **Advanced data corruption protection**. Since the Business Critical tier uses databases replicas behind the scenes, the service leverages automatic page repair available with [mirroring and availability groups](/sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring) to help mitigate data corruption. If a replica can't read a page due to a data integrity issue, a fresh copy of the page is retrieved from another replica, replacing the unreadable page without data loss or customer downtime. This functionality is available in  the General Purpose tier if the managed instance has geo-secondary replica.
-- **Higher availability** - The Business Critical tier in a multi-availability zone configuration provides resiliency to zonal failures and a higher availability SLA.
-- **Fast geo-recovery** - If a [failover group](failover-group-sql-mi.md) is configured, the Business Critical tier has a guaranteed Recovery Point Objective (RPO) of 5 seconds and Recovery Time Objective (RTO) of 30 seconds for 100% of deployed hours.
 
 When specifying service tier in templates or scripts, tier is provided by using its name. The following table applies:
 
@@ -169,7 +167,7 @@ For detailed information, see [Create a SQL Managed Instance](../managed-instanc
 
 On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select desired hardware:
 
-:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/configure-managed-instance.png" alt-text="Screenshot from the Azure portal showing where to configure SQL Managed Instance.":::
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/configure-managed-instance.png" alt-text="Screenshot of the Azure portal showing where to configure SQL Managed Instance.":::
 
 **To change hardware of an existing SQL Managed Instance**
 
@@ -177,7 +175,7 @@ On the **Basics** tab, select the **Configure database** link in the **Compute +
 
 From the SQL Managed Instance page, select **Compute + storage** under **Settings**:
 
-:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/change-managed-instance-hardware.png" alt-text="Screenshot from the Azure portal showing Compute + storage page for SQL managed instance." lightbox="../database/media/service-tiers-managed-instance-vcore/change-managed-instance-hardware.png":::
+:::image type="content" source="../database/media/service-tiers-managed-instance-vcore/change-managed-instance-hardware.png" alt-text="Screenshot of the Azure portal showing Compute + storage page for SQL managed instance." lightbox="../database/media/service-tiers-managed-instance-vcore/change-managed-instance-hardware.png":::
 
 On the **Compute + Storage** page, you can change your hardware under **Hardware generation** by using the sliders for vCores and Storage. 
 

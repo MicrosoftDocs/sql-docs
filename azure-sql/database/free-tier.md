@@ -187,6 +187,7 @@ Open the [Database Hub](https://powerbi.com/workloads/fdh/databaseHub), then fol
 The following considerations and limitations apply to Azure SQL Database free tier databases:
 
 - The free tier uses the same fully managed General Purpose infrastructure as a paid database, but it doesn't include a service-level agreement (SLA). Use it primarily for development and proof-of-concept scenarios.
+- The free tier databases automatically pause after 15 minutes of inactivity. The auto-pause delay is fixed and can't be changed, regardless of the selected behavior when the monthly free limit is reached.
 - Choose the behavior for when you reach the monthly free limit:
   - **Auto-pause the database until next month** stops charges, but the database is inaccessible until the allowance resets at the start of the next calendar month.
   - **Continue using database for additional charges** keeps the database online and bills overages at standard General Purpose serverless rates. You can't switch back to the auto-pause option.

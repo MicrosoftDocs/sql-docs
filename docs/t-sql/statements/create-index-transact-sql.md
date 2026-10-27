@@ -512,7 +512,7 @@ Specifies whether underlying tables and associated indexes are available for que
 
 - OFF
 
-  Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered, spatial, or XML index, or rebuilds or drops a nonclustered index, acquires a schema modification (`Sch-M`) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index initially acquires a shared (`S`) lock on the table. This prevents modifications of the underlying table definition, but allows reading and modifying the data in the table while the index build is in progress.
+  Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered, spatial, or XML index, or rebuilds or drops a nonclustered index, acquires a schema modification (`Sch-M`) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index acquires a shared (`S`) lock on the table. This allows reading the data in the table, but prevents modifications of the data and of the table definition while the index build is in progress.
 
 For more information, see [Perform index operations online](../../relational-databases/indexes/perform-index-operations-online.md) and [Guidelines for online index operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 

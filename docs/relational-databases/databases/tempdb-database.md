@@ -310,7 +310,7 @@ FROM sys.dm_exec_requests AS r
 CROSS APPLY sys.fn_PageResCracker(r.page_resource) AS prc
 CROSS APPLY sys.dm_db_page_info(prc.db_id, prc.file_id, prc.page_id, 'LIMITED') AS dpi
 WHERE dpi.database_id = 2
-      AND dpi.object_id IN (3, 9, 34, 40, 41, 54, 55, 60, 74, 75)
+      AND dpi.object_id IN (3, 5, 7, 9, 34, 40, 41, 54, 55, 60, 74, 75)
       AND UPPER(r.wait_type) LIKE N'PAGELATCH[_]%'
 GROUP BY dpi.object_id, dpi.database_id;
 ```

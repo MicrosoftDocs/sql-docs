@@ -282,7 +282,7 @@ There are specific but uncommon scenarios when one-time or periodic index mainte
 > For a low overhead alternative to the traditional index maintenance (index reorganize and rebuild), see [Automatic index compaction](automatic-index-compaction.md).
 
 > [!TIP]  
-> If you determine that the traditional index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This lets query workloads access tables while indexes are being rebuilt.
+> If you determine that the traditional index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This approach lets query workloads access tables while indexes are being rebuilt.
 >
 > Additionally, making the operation resumable lets you avoid restarting it from the beginning if it gets interrupted by a planned or unplanned database failover. Using resumable index operations is particularly important when indexes are large.
 

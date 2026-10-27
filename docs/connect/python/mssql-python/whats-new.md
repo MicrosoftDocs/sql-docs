@@ -43,7 +43,7 @@ On Linux, the conda package requires glibc 2.34 and later versions. On macOS, it
 
 You can now select a Rust-based ODBC provider named `mssql-odbc`. Microsoft ODBC Driver 18 (`msodbcsql18`) remains the default. Select the provider before the first connection with the `MSSQL_PYTHON_NATIVE_PROVIDER` environment variable or the `mssql_python.native_provider` attribute. Your application code doesn't change.
 
-For more information, see [Select the native ODBC provider](module-configuration.md#select-the-native-odbc-provider).
+For more information, see [Using the mssql-odbc driver (Preview)](mssql-odbc-provider.md).
 
 #### Dictionary-style row access with `row._mapping`
 

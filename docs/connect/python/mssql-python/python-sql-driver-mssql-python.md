@@ -176,7 +176,7 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 - **Native data type support**: [JSON, XML, spatial, sparse columns, datetimeoffset, and decimal/money](data-type-mappings.md) with precise handling.
 - **Apache Arrow integration**: [Zero-copy result sets](arrow-integration.md) for fast data interchange with pandas, Polars, and DuckDB.
 - **Async patterns**: Use the driver with `asyncio`-based applications and FastAPI through ThreadPoolExecutor workarounds. See [Async patterns](asynchronous-patterns.md) for integration patterns.
-- **TLS by default**: [TLS encryption and certificate validation](encryption-certificates.md) on by default with either [native ODBC provider](module-configuration.md#select-the-native-odbc-provider). TDS 8.0 encryption available when you set `Encrypt=strict`.
+- **TLS by default**: [TLS encryption and certificate validation](encryption-certificates.md) on by default with either [native ODBC provider](mssql-odbc-provider.md). TDS 8.0 encryption available when you set `Encrypt=strict`.
 
 ## Get started
 
@@ -261,6 +261,7 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | [Installation and connection troubleshooting](troubleshoot-installation-connection.md) | Resolve installation, connection, container, and CI issues. |
 | [Query, data, and operation troubleshooting](troubleshoot-query-data-and-operations.md) | Resolve query, data type, performance, transaction, and bulk copy issues. |
 | [Module configuration](module-configuration.md) | Module-level settings, logging hooks, and feature flags. |
+| [Using the mssql-odbc driver (Preview)](mssql-odbc-provider.md) | Opt in to the Rust-based ODBC provider, what works today, and known differences from ODBC Driver 18. |
 
 ## Migrate to mssql-python
 

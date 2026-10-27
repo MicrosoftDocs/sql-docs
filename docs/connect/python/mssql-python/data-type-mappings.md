@@ -4,7 +4,7 @@ description: Reference for how Python data types map to SQL Server types when us
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 08/28/2026
+ms.date: 10/21/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -78,6 +78,8 @@ When the driver retrieves data from SQL Server, the driver converts values to Py
 | **datetimeoffset** | `datetime.datetime` | Time zone-aware datetime. |
 | **uniqueidentifier** | `uuid.UUID` | Python UUID objects. |
 | **xml** | `str` | XML as text. |
+| **json** | `str` | JSON document as text. |
+| **vector** | `str` | Vector as a JSON array string. |
 | **geography**, **geometry** | `bytes` | Spatial types as binary. |
 | **hierarchyid** | `bytes` | Hierarchy data as binary. |
 | **sql_variant** | Varies | Resolved to the underlying base type. `sql_variant` columns use a streaming fetch path, which might have a slight performance impact compared to fixed-type columns. |
@@ -323,12 +325,10 @@ The following SQL Server types don't have native Python type mappings.
 
 | SQL Server type | Status |
 | ----------------- | -------- |
-| **json** | Not supported |
-| **vector** | Not supported |
 | **table** | Not supported (table-valued parameters) |
 
 > [!TIP]
-> Although the `json` SQL Server type isn't supported directly, you can store JSON data in `nvarchar(max)` columns and query it with SQL Server JSON functions (`JSON_VALUE`, `JSON_QUERY`, `OPENJSON`). For patterns and examples, see [JSON data](json-data.md).
+> The driver returns `json` and `vector` values as `str`. On servers without the native `json` type, store JSON data in `nvarchar(max)` columns and query it with SQL Server JSON functions (`JSON_VALUE`, `JSON_QUERY`, `OPENJSON`). For patterns and examples, see [JSON data](json-data.md).
 
 The following types return data as `bytes` but don't have native Python type mappings:
 

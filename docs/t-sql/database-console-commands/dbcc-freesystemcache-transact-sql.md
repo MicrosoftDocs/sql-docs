@@ -37,7 +37,7 @@ Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](
 
 ```syntaxsql
 DBCC FREESYSTEMCACHE
-    ( 'ALL' [ , pool_name ] )
+    ( { 'ALL' | 'cache_name' } [ , pool_name ] )
     [ WITH
     { [ MARK_IN_USE_FOR_REMOVAL ] , [ NO_INFOMSGS ]  }
     ]
@@ -45,11 +45,19 @@ DBCC FREESYSTEMCACHE
 
 ## Arguments
 
-#### ( 'ALL' [ , *pool_name* ] )
+#### ( { 'ALL' | '*cache_name*' } [ , *pool_name* ] )
 
 - ALL
 
   Specifies all supported caches.
+
+- *cache_name*
+
+  Specifies a single cache, such as `SQL Plans`, `Object Plans`, `TokenAndPermUserStore`, or `Temporary Tables & Table Variables`. Most, but not all, caches can be individually freed using this command. To list the cache names, run:
+
+  ```sql
+  SELECT name FROM sys.dm_os_memory_cache_counters;
+  ```
 
 - *pool_name*
 
@@ -58,8 +66,6 @@ DBCC FREESYSTEMCACHE
   ```sql
   SELECT name FROM sys.dm_resource_governor_resource_pools;
   ```
-
-Most, but not all, caches can be individually freed using this command.
 
 #### MARK_IN_USE_FOR_REMOVAL
 
@@ -71,7 +77,7 @@ Suppresses all informational messages.
 
 ## Remarks
 
-Running `DBCC FREESYSTEMCACHE` clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message:
+Running `DBCC FREESYSTEMCACHE ('ALL')` clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message:
 
 ```output
 SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.
@@ -109,6 +115,15 @@ The following example uses the MARK_IN_USE_FOR_REMOVAL clause to release entries
 
 ```sql
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;
+```
+
+### C. Release a single cache
+
+The first statement frees ad hoc and prepared plans from the `SQL Plans` cache. Stored procedure plans, in the `Object Plans` cache, are kept. The second statement frees the temporary tables cached in `tempdb`, without removing the plans that use them.
+
+```sql
+DBCC FREESYSTEMCACHE ('SQL Plans');
+DBCC FREESYSTEMCACHE ('Temporary Tables & Table Variables');
 ```
 
 ## Related content

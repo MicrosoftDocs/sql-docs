@@ -2,7 +2,7 @@
 title: "Release notes for Reporting Services 2017 and later"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
 ms.reviewer: petebro
-ms.date: 10/26/2026
+ms.date: 10/27/2026
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: release-notes
@@ -21,7 +21,7 @@ For the release notes for Report Viewer controls, see [Release notes for the Rep
 
 ## SQL Server 2022 Reporting Services
 
-## 16.0.9794.1244, 2026/10/26
+## 16.0.1120.8, 2026/10/27
 *(Product Version: 16.0.1120.8)*
 
 - Fixed an issue where cluster patching created duplicate SQL Server Agent jobs and prevented schedules from working.

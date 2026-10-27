@@ -264,7 +264,7 @@ SET QUERY_STORE = ON (
 
 Uses the same [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) and [sp_query_store_unforce_plan](../system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) stored procedures to operate on dispatcher or variant plans.
 
-If a query variant plan is forced, its associated dispatcher plan isn't forced.
+If you force a query variant plan, you don't force its associated dispatcher plan.
 If a dispatcher is forced, only variants from that dispatcher are considered eligible for use:
 
 - Previously forced variants from other dispatchers become inactive but retain the *forced* status until their dispatcher is forced again

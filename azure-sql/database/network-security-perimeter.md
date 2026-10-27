@@ -5,7 +5,7 @@ description: Overview of network security perimeter for Azure SQL Database
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, vanto
-ms.date: 10/23/2026
+ms.date: 10/27/2026
 ai-usage: ai-assisted
 ms.service: azure-sql-database
 ms.subservice: security
@@ -67,7 +67,6 @@ Not every Azure SQL Database feature interacts with a network security perimeter
 | [Elastic jobs](elastic-jobs-overview.md) | Supported | The job agent's logical server needs an outbound rule to each target server. The perimeter is checked at run time, so a job can be created successfully and then fail during execution. |
 | [Elastic query](elastic-query-overview.md) | Supported within a single perimeter | The database that runs the query and the remote database must be in the same perimeter. Elastic query needs no perimeter configuration of its own. |
 | [Extended Events](xevent-db-diff-from-svr.md) | Supported | The `event_file` target and the functions that read event data connect outbound to Azure Storage. In enforced mode, use a managed identity, or add an outbound FQDN rule for the storage account when you use a SAS token. |
-| [Import and export](database-export.md) | Supported | The database connects outbound to Azure Blob Storage. In enforced mode, add an outbound rule for the storage account unless it's in the same perimeter. The perimeter is checked when data transfers, not when the operation starts. The same requirements apply when you [import a BACPAC](database-import.md). |
 | [Long-term retention restore](long-term-retention-overview.md) | Supported | In enforced mode, a source server in a perimeter needs an outbound rule, and a target server in a perimeter needs an inbound rule. Neither needs a rule if both are in the same perimeter. After the source server is deleted, only the target side can be validated. |
 | [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md) | Not supported by design | Data Sync runs as a proxy service rather than an Azure resource, so it has no FQDN or IP address to write perimeter rules against. A perimeter blocks the network paths Data Sync requires in both transition and enforced mode. |
 

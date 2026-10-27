@@ -4,7 +4,7 @@ description: This article describes index maintenance concepts, and a recommende
 author: thesqlsith
 ms.author: derekw
 ms.reviewer: dfurman
-ms.date: 09/11/2026
+ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: how-to
@@ -108,9 +108,6 @@ You can reduce index fragmentation and increase page density by using one of the
 
 - Reorganize an index
 - Rebuild an index
-
-> [!TIP]  
-> For a low overhead alternative to index reorganize and rebuild, see [Automatic index compaction](automatic-index-compaction.md).
 
 For [partitioned](../partitions/partitioned-tables-and-indexes.md) indexes, you can use either of the following methods on all partitions or a single partition of an index.
 
@@ -282,7 +279,10 @@ There are specific but uncommon scenarios when one-time or periodic index mainte
   - [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage)
 
 > [!TIP]  
-> If you determine that index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This lets query workloads access tables while indexes are being rebuilt.
+> For a low overhead alternative to the traditional index maintenance (index reorganize and rebuild), see [Automatic index compaction](automatic-index-compaction.md).
+
+> [!TIP]  
+> If you determine that the traditional index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This lets query workloads access tables while indexes are being rebuilt.
 >
 > Additionally, making the operation resumable lets you avoid restarting it from the beginning if it gets interrupted by a planned or unplanned database failover. Using resumable index operations is particularly important when indexes are large.
 

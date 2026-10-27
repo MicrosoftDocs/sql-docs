@@ -580,7 +580,8 @@ This updates the SQL Server image for any new containers you create, but it does
 1. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. Make sure to use the specific tag for your SQL Server upgrade. The new container now uses a new version of SQL Server with your existing SQL Server data.
 
    > [!IMPORTANT]  
-   > Upgrade is only supported between release candidate previews and GA at this time.
+   > The new tag can be a later cumulative update of the same version of SQL Server, or a later major version.
+   > After an upgrade to a later major version, an older image can't start with the same data. Back up your databases before you upgrade.
 
 1. Verify your databases and data in the new container.
 

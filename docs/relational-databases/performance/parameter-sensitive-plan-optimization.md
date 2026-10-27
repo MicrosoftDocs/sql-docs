@@ -54,7 +54,7 @@ Evaluates cardinality of predicates based on runtime parameter values and route 
 
 #### Dispatcher plan
 
-A plan containing the dispatcher expression is cached for the original parameterized query, also known as the parent query. The dispatcher plan is essentially a collection of the predicates that were selected by the feature, with a few extra details. For each predicate that is selected some of the details that are included in the dispatcher plan are the *high* and *low* boundary values. These values are used to divide parameter values into different *buckets* or ranges. The dispatcher plan also contains the statistics that were used to calculate the boundary values.
+A plan containing the dispatcher expression is cached for the original parameterized query, also known as the parent query. The dispatcher plan is essentially a collection of the predicates that the feature selected, with a few extra details. For each selected predicate, the dispatcher plan includes the *high* and *low* boundary values. These values divide parameter values into different *buckets* or ranges. The dispatcher plan also contains the statistics that were used to calculate the boundary values.
 
 #### Query variant
 

@@ -24,7 +24,7 @@ For the release notes for Report Viewer controls, see [Release notes for the Rep
 ## 16.0.9794.1244, 2026/10/26
 *(Product Version: 16.0.1120.8)*
 
-- Fixed an issue where cluster patching could create duplicate SQL Server Agent jobs and prevent schedules from working.
+- Fixed an issue where cluster patching created duplicate SQL Server Agent jobs and prevented schedules from working.
 - Updated TLS protocol selection for email delivery and web requests to use operating system defaults.
 - Fixed an issue where saved parameter defaults appeared to revert for snapshot reports in the web portal.
 - Improved report definition loading.

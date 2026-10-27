@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 # SQL Server connection pooling with Microsoft.Data.SqlClient
 
-Microsoft.Data.SqlClient connection pooling reuses authenticated physical connections. `SqlConnection.Open` or `OpenAsync` checks a pool for a usable connection. `Close`, `Dispose`, or `DisposeAsync` resets and returns it. This approach avoids a network connection, authentication, and session setup for every operation.
+Microsoft.Data.SqlClient connection pooling reuses authenticated physical connections. `SqlConnection.Open` or `OpenAsync` checks a pool for a usable connection. `Close`, `Dispose`, or `DisposeAsync` returns it to the pool, and the pool resets the session state when the connection is reused. This approach avoids a network connection, authentication, and session setup for every operation.
 
 Pooling is enabled by default. Use this application pattern:
 

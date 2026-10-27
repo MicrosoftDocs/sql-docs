@@ -8,7 +8,7 @@ ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Database Engine events and errors
 
@@ -61,7 +61,7 @@ This article shows events and errors for [!INCLUDE [sssql22-md](../../includes/s
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb "
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb "
 This article shows events and errors for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [Fabric Data Warehouse](?view=fabric&preserve-view=true)

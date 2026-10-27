@@ -8,7 +8,7 @@ ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Database Engine events and errors (26000 to 27999)
 
@@ -66,7 +66,7 @@ This article shows events and errors (between the range 26,000 and 27,999) for [
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb "
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb "
 This article shows events and errors (between the range 26,000 and 27,999) for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [Fabric Data Warehouse](?view=fabric&preserve-view=true)
@@ -98,7 +98,7 @@ This article shows events and errors (between the range 26,000 and 27,999) for [
 [!INCLUDE [sql-server-2022-database-engine-events-and-errors-26000-27999](includes/sql-server-2022-database-engine-events-and-errors-26000-27999.md)]
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb "
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb "
 [!INCLUDE [sql-server-2025-database-engine-events-and-errors-26000-27999](includes/sql-server-2025-database-engine-events-and-errors-26000-27999.md)]
 ::: moniker-end
 

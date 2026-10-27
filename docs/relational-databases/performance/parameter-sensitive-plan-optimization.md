@@ -3,8 +3,8 @@ title: Parameter Sensitive Plan Optimization
 description: Learn about Parameter Sensitive Plan Optimization in the Query Store.
 author: thesqlsith
 ms.author: derekw
-ms.reviewer: derekw, wiassaf
-ms.date: 02/11/2026
+ms.reviewer: derekw, wiassaf, erinstellato
+ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -44,13 +44,17 @@ For eligible plans, the initial compilation produces a *dispatcher plan* that co
 
 ### Terminology
 
+#### Parent query
+
+The original parameterized query for which PSP optimization generates a dispatcher plan and query variants. Query variants are child queries of the parent query. Query Store can retain more than one dispatcher plan for the same parent query over time.
+
 #### Dispatcher expression
 
 Evaluates cardinality of predicates based on runtime parameter values and route execution to different query variants.
 
 #### Dispatcher plan
 
-A plan containing the dispatcher expression is cached for the original query. The dispatcher plan is essentially a collection of the predicates that were selected by the feature, with a few extra details. For each predicate that is selected some of the details that are included in the dispatcher plan are the *high* and *low* boundary values. These values are used to divide parameter values into different *buckets* or ranges. The dispatcher plan also contains the statistics that were used to calculate the boundary values.
+A plan containing the dispatcher expression is cached for the original parameterized query, also known as the parent query. The dispatcher plan is essentially a collection of the predicates that were selected by the feature, with a few extra details. For each predicate that is selected some of the details that are included in the dispatcher plan are the *high* and *low* boundary values. These values are used to divide parameter values into different *buckets* or ranges. The dispatcher plan also contains the statistics that were used to calculate the boundary values.
 
 #### Query variant
 
@@ -143,7 +147,7 @@ And, within the ShowPlan XML of a query variant (inside of the Dispatcher elemen
 
   - Support for data manipulation language (DML) statements such as DELETE, INSERT, MERGE, and UPDATE.
   - Expanded support for `tempdb`.
-  - Additional consideration given in scenarios where multiple eligible predicates exist on the same table.
+  - Support for selecting multiple eligible predicates from the same table, with at most one predicate selected per column.
   - Changes to the `query_with_parameter_sensitivity` extended event which included the interesting_predicate_count, max_skewness, psp_optimization_supported, and query_type fields before the changes in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and database compatibility *170*. But now include the interesting_predicate_count, interesting_predicate_details, psp_optimization_supported, and query_type fields. For more information see the [Extended Events](#extended-events) section.
   
 - The PSP optimization feature currently only works with equality predicates.
@@ -152,7 +156,8 @@ And, within the ShowPlan XML of a query variant (inside of the Dispatcher elemen
 
 - The [sys.query_store_plan](../system-catalog-views/sys-query-store-plan-transact-sql.md#sysquery_store_plan-transact-sql) Query Store system catalog view has been changed to differentiate between a normal compiled plan, a dispatcher plan, and a query variant plan. The new Query Store system catalog view, [sys.query_store_query_variant](../system-catalog-views/sys-query-store-query-variant.md#sysquery_store_query_variant-transact-sql), contains information about the parent-child relationships between the original parameterized queries (also known as parent queries), dispatcher plans, and their child query variants.
 
-- When there are multiple predicates that are part of the same table, PSP optimization selects the predicate that has the most data skew based on the underlying statistics histogram. For example, with `SELECT * FROM table WHERE column1 = @predicate1 AND column2 = @predicate2`, because both `column1 = @predicate1` and `column2 = @predicate2` are from the same table, `table1`, only the most skewed predicate will be evaluated by the feature. However, if the example query involves an operator such as a `UNION`, PSP evaluates more than one predicate. As an example, if a query has characteristics similar to `SELECT * FROM table WHERE column1 = @predicate UNION SELECT * FROM table WHERE column1 = @predicate`, PSP picks at most two predicates in this case, because the system treats this scenario as if they're two different tables. The same behavior can be observed from queries that self join via table aliases.
+- At database compatibility level 160, when there are multiple eligible predicates that are part of the same table reference, PSP optimization selects the predicate that has the most data skew based on the underlying statistics histogram. For example, with `SELECT * FROM table1 WHERE column1 = @predicate1 AND column2 = @predicate2`, only the most skewed predicate is selected because both predicates reference the same table. However, if the query references the table more than once, such as in separate branches of a `UNION` or through aliases in a self join, PSP optimization can select predicates from more than one table reference.
+- Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and database compatibility level 170, PSP optimization can select multiple eligible predicates from the same table. Only one predicate per column is selected, and the total number of predicates selected for the query remains limited to three. For example, with `SELECT * FROM table1 WHERE column1 = @predicate1 AND column2 = @predicate2`, both predicates can be selected if they meet the criteria for PSP optimization.
 
 - The ShowPlan XML for a query variant would look similar to the following example, where both predicates that were selected have their respective information added to the `PLAN PER VALUE PSP`-related hint.
 
@@ -210,15 +215,17 @@ And, within the ShowPlan XML of a query variant (inside of the Dispatcher elemen
 
   - For more information, see the *Increased Correlation Assumption for Multiple Predicates* section of the [Optimizing your query plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10)?redirectedfrom=MSDN) whitepaper. The newer CE model attempts to assume some correlation and less independence for the conjunction and disjunction of predicates. Using the legacy CE model can affect how selectivity of the predicates in a multi-column join scenario can be calculated. This action should only be considered for specific scenarios, and it isn't recommended to use the legacy CE model for most workloads.
 
-- PSP optimization currently compiles and executes each query variant as a new prepared statement, which is one of the reasons that the query variants *lose* their association with any parent modules' `object_id` if the dispatcher plan was based on a module (that is, stored procedure, trigger, function, view, and so on). As a prepared statement, the `object_id` isn't anything that can be mapped to an object in `sys.objects` directly but is essentially a calculated value based on an internal hash of the batch text. For more information, see the [Table Returned](../system-dynamic-management-objects/sys-dm-exec-plan-attributes-transact-sql.md#table-returned) section of the `sys.dm_exec_plan_attributes` DMV documentation.
+- PSP optimization compiles and executes each query variant as a separate prepared statement. Query variant plans can be cached and reused, so a new compilation isn't required for every execution. Because query variants are separate prepared statements, their plan cache `object_id` values don't identify the parent module if the parent query is part of a module (that is, stored procedure, trigger, function, and so on). For a prepared statement, the plan cache `object_id` is essentially a calculated value based on an internal hash of the batch text, rather than the ID of an object in `sys.objects`. For more information, see the [Table Returned](../system-dynamic-management-objects/sys-dm-exec-plan-attributes-transact-sql#table-returned) section of the `sys.dm_exec_plan_attributes` DMV documentation.
 
-  Query variant plans are placed in the plan cache object store (`CACHESTORE_OBJCP`) while dispatcher plans are placed in the SQL Plans cache store (`CACHESTORE_SQLCP`). The PSP feature will, however, store the `object_id` of a query variant's parent within the ObjectID attribute that is part of the PLAN PER VALUE hint that PSP adds to the ShowPlan XML if the parent query is part of a module and not dynamic or ad hoc T-SQL. Aggregate performance statistics for cached procedures, functions, and triggers can continue to be used for their respective purposes. More granular execution related statistics such as those found in views similar to the `sys.dm_exec_query_stats` DMV still contain data for query variants, however, the association between the `object_id` for query variants and objects within the `sys.objects` table don't currently align, without additional processing of the ShowPlan XML for each of the query variants in which more granular runtime statistics are required. The runtime and wait statistics information for query variants can be obtained from the Query Store without additional ShowPlan XML parsing techniques if the Query Store is enabled.
+    Query variant plans are placed in the SQL Plans cache store (`CACHESTORE_SQLCP`). The dispatcher plan remains part of the original batch or module's cached plan. If the parent query is part of a stored procedure or another module whose compiled plan is stored in the Object Plans cache store (`CACHESTORE_OBJCP`), the dispatcher plan is stored in `CACHESTORE_OBJCP`. If the parent query is part of a parameterized dynamic SQL or eligible ad hoc batch, the dispatcher plan is stored in `CACHESTORE_SQLCP`.
 
-- Since PSP query variants are executed as a new prepared statement, the `object_id` isn't automatically exposed in the various plan cache related `sys.dm_exec_*` DMVs without shredding the ShowPlan XML and applying text pattern matching techniques (that is, additional XQuery processing). Only PSP optimization dispatcher plans currently emit the appropriate parent object ID. The `object_id` is exposed within the Query Store, as Query Store allows for a more relational model than the plan cache hierarchy provides. For more information, see the Query Store system catalog view [sys.query_store_query_variant](../system-catalog-views/sys-query-store-query-variant.md#sysquery_store_query_variant-transact-sql).
+    The PSP feature stores the `object_id` of a query variant's parent module within the `ObjectID` attribute that is part of the `PLAN PER VALUE` hint in the ShowPlan XML. If the parent query is dynamic or ad hoc T-SQL, this attribute is `0`. Aggregate performance statistics for cached procedures, functions, and triggers can continue to be used for their respective purposes. More granular execution-related statistics, such as those found in the `sys.dm_exec_query_stats` DMV, still contain data for query variants. However, associating these statistics with a parent module requires additional processing of the ShowPlan XML, because the query variant's plan cache `object_id` doesn't directly identify the parent module. Runtime and wait statistics for query variants can be obtained from the Query Store without additional ShowPlan XML parsing if the Query Store is enabled.
+    
+- The parent module's object ID isn't directly exposed as the query variant's `object_id` in plan cache-related `sys.dm_exec_*` DMVs. The cached module plan containing the dispatcher retains the module's object ID. For query variants, the parent module's object ID can be obtained from the `ObjectID` attribute in the `PLAN PER VALUE` hint by processing the ShowPlan XML. Query Store provides a relational model for identifying these relationships. The [sys.query_store_query_variant](../system-catalog-views/sys-query-store-query-variant#sysquery_store_query_variant-transact-sql) catalog view identifies the original parameterized query with `parent_query_id`, the dispatcher plan with `dispatcher_plan_id`, and the child query with `query_variant_query_id`.
 
 ## Considerations
 
-- To enable PSP optimization, enable database compatibility level 160 for the database you're connected to when executing the query.
+- To enable PSP optimization, use database compatibility level 160 or higher for the database you're connected to when executing the query. The PSP optimization enhancements introduced in SQL Server 2025 (17.x) require database compatibility level 170 or higher.
 
 - For additional insights into the PSP optimization feature, we recommend that Query Store integration is enabled, by turning on the Query Store. The following example turns on the Query Store for a preexisting database called `MyNewDatabase`:
 
@@ -257,7 +264,7 @@ SET QUERY_STORE = ON (
 
 Uses the same [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) and [sp_query_store_unforce_plan](../system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) stored procedures to operate on dispatcher or variant plans.
 
-If a variant is forced, the parent dispatcher isn't forced.
+If a query variant plan is forced, its associated dispatcher plan isn't forced.
 If a dispatcher is forced, only variants from that dispatcher are considered eligible for use:
 
 - Previously forced variants from other dispatchers become inactive but retain the *forced* status until their dispatcher is forced again

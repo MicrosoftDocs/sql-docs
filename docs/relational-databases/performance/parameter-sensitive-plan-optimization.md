@@ -4,7 +4,7 @@ description: Learn about Parameter Sensitive Plan Optimization in the Query Stor
 author: thesqlsith
 ms.author: derekw
 ms.reviewer: derekw, wiassaf, erinstellato
-ms.date: 10/27/2026
+ms.date: 10/26/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article

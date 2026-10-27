@@ -4,7 +4,7 @@ description: Consult this MSSQL error code list to find explanations for error m
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
@@ -24,15 +24,20 @@ SELECT message_id AS Error,
         END,
     [text] AS [Description]
 FROM sys.messages
-WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1033 for US English */
+/* replace language_id code with the desired sys.syslanguages.msglangid.
+1033 is for US English */
+WHERE language_id = 1033 
 ORDER BY message_id;
 ```
 
-## SQL Server version
+## SQL Database Engine version
+
+Many error codes are shared across different platforms using the [SQL Database Engine](../../database-engine/sql-database-engine.md).
 
 ::: moniker range="=sql-server-2017 || =sql-server-linux-2017"
 This article shows events and errors for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
+- [Fabric Data Warehouse](?view=fabric&preserve-view=true)
 - [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
@@ -41,6 +46,7 @@ This article shows events and errors for [!INCLUDE [sssql17-md](../../includes/s
 ::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 This article shows events and errors for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
+- [Fabric Data Warehouse](?view=fabric&preserve-view=true)
 - [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
@@ -49,14 +55,25 @@ This article shows events and errors for [!INCLUDE [sssql19-md](../../includes/s
 ::: moniker range="=sql-server-ver16 || =sql-server-linux-ver16"
 This article shows events and errors for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
+- [Fabric Data Warehouse](?view=fabric&preserve-view=true)
 - [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb || =fabric"
+::: moniker range=">=sql-server-ver17 || >=sql-server-linux-ver17 || =azuresql || =azuresql-db || =azuresql-mi || =fabric-sqldb "
 This article shows events and errors for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
+- [Fabric Data Warehouse](?view=fabric&preserve-view=true)
+- [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
+- [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
+- [SQL Server 2017](?view=sql-server-2017&preserve-view=true)
+::: moniker-end
+
+::: moniker range="=fabric"
+This article shows events and errors for [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
+
+- [SQL Server 2025](?view=sql-server-ver17&preserve-view=true)
 - [SQL Server 2022](?view=sql-server-ver16&preserve-view=true)
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
 - [SQL Server 2017](?view=sql-server-2017&preserve-view=true)

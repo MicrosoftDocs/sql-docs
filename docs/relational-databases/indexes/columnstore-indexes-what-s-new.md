@@ -49,7 +49,7 @@ For feature availability in Azure SQL Managed Instance with a SQL Server [update
 | Tuple mover background merge support | No | No | Yes | Yes | Yes | Yes | Yes |
 | Ordered clustered columnstore indexes | No | No | No | Yes | Yes | Yes | Yes |
 | Ordered non-clustered columnstore indexes | No | No | No | No | Yes | Yes | No |
-| Online columnstore index create and rebuild | No | No | No | Yes | Yes | Yes | No |
+| Online columnstore index create and rebuild | No | Yes<sup>6</sup> | Yes | Yes | Yes | Yes | No |
 | Online ordered columnstore index create and rebuild | No | No | No | No | Yes | Yes | No |
 
 <sup>1</sup> For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions, columnstore indexes are available in all editions. For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in the Enterprise Edition.
@@ -57,6 +57,7 @@ For feature availability in Azure SQL Managed Instance with a SQL Server [update
 <sup>3</sup> The degree of parallelism (DOP) for [batch mode](../query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Web and Express Editions. This limitation refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 <sup>4</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.
 <sup>5</sup> Not supported in dedicated SQL pools but is supported in serverless SQL pool.
+<sup>6</sup> Nonclustered columnstore indexes only. Online create and rebuild of clustered columnstore indexes is available starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)].
 
 ## SQL Server 2025 (17.x)
 

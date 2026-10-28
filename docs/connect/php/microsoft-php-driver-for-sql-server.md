@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 09/21/2026
+ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -14,28 +14,30 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The Microsoft Drivers for PHP for SQL Server are PHP extensions that let you read and write data in the [Microsoft SQL Database Engine](../../database-engine/sql-database-engine.md) from PHP scripts. The package ships two drivers that wrap the same [Microsoft ODBC Driver for SQL Server](../odbc/microsoft-odbc-driver-for-sql-server.md) and share the same connection options, so you can pick the API that fits your codebase:
+The Microsoft Drivers for PHP for SQL Server are PHP extensions that you can use to read and write data in the [Microsoft SQL Database Engine](../../database-engine/sql-database-engine.md) from PHP scripts. The two extensions use the same [Microsoft ODBC Driver for SQL Server](../odbc/microsoft-odbc-driver-for-sql-server.md), but they offer different PHP APIs and driver-specific options:
 
 - **SQLSRV** exposes a procedural API (`sqlsrv_*` functions) tailored to SQL Server features.
-- **PDO_SQLSRV** implements the [PHP Data Objects (PDO)](https://www.php.net/manual/en/book.pdo.php) interface, so code that already uses PDO for other databases can target SQL Server with minimal changes.
+- **PDO_SQLSRV** implements the [PHP Data Objects (PDO)](https://www.php.net/manual/en/book.pdo.php) interface. You can keep the PDO calls in existing database code, but review its queries and driver-specific settings before switching databases.
 
-Both drivers connect to Azure SQL Database, SQL database in Microsoft Fabric, Azure SQL Managed Instance, and [all supported versions and editions](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility) of SQL Server (including Express editions). They use PHP streams to move large binary and character values without loading them entirely into memory.
+Both drivers connect to Azure SQL Database, SQL database in Microsoft Fabric, Azure SQL Managed Instance, and [all supported versions and editions](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility) of SQL Server, including Express editions. Both drivers accept PHP streams as input parameters. SQLSRV supports retrieving large binary and character values as streams. Don't assume PDO_SQLSRV has the same output-streaming behavior.
 
 ## Choose your starting point
 
 - To verify your installation and run a parameterized query by using SQLSRV or PDO_SQLSRV, start with [Quickstart: Connect and query with the Microsoft Drivers for PHP](getting-started-with-the-php-sql-driver.md).
 - To install the driver on Linux or macOS, start with the [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md) and [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md).
 - To connect to Azure SQL with passwordless authentication, start with [Connect using Microsoft Entra authentication](azure-active-directory.md) and [Connection options](connection-options.md).
-- To make an existing app resilient to transient failures, go to [Idle connection resiliency](connection-resiliency.md) and [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md).
+- To make an existing app resilient to transient failures, go to [Idle connection resiliency](connection-resiliency.md).
 - To decide between SQLSRV and PDO_SQLSRV, go to [Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md) and [Comparing execution functions](comparing-execution-functions.md).
 - To diagnose an install, connection, or query problem, go to [Troubleshooting](troubleshooting-php-sql-driver.md), [Handling errors and warnings](handling-errors-and-warnings.md), and [Logging activity](logging-activity.md).
 - To make an existing app faster, go to [Performance tuning](performance-tuning-php-sql-driver.md).
 
 ## Production baseline for Azure SQL
 
-Use this snippet as a starting point for a production-oriented Azure SQL connection with the PDO_SQLSRV driver. It reads the server and database from environment variables (Azure App Service app settings, for example), authenticates with a managed identity, enables Transport Layer Security (TLS) with server certificate validation, sets a login timeout that covers a cold-start failover, and sets `ConnectRetryCount` and `ConnectRetryInterval` for SQL Server idle connection resiliency. The application-level `connectWithRetry` and `queryWithRetry` helpers wrap both the initial connect and each statement with a bounded exponential backoff, and separate transient connection errors (which require a fresh connection) from transient query errors (which reuse the same connection).
+This PDO_SQLSRV example reads the server and database from environment variables and connects with a managed identity. It builds a data source name (DSN) and enables Transport Layer Security (TLS) with certificate validation. Read these values from trusted application configuration, not web request parameters. Run the program on a host with a managed-identity endpoint after granting the identity access to the database.
 
-Requires PHP 8.0 and later versions, the PDO_SQLSRV extension, and Microsoft ODBC Driver for SQL Server 17.3.1.1 and later versions for `Authentication=ActiveDirectoryMsi`. For the full list of supported `Authentication` values, see [Connect using Microsoft Entra authentication](azure-active-directory.md).
+The helper functions make up to three attempts to connect or run the read-only query when a listed error occurs. They wait longer between attempts, a retry pattern called *exponential backoff*. If a query error requires a new connection, the query helper throws the exception for the calling code to handle.
+
+Use a [supported PHP version](system-requirements-for-the-php-sql-driver.md), the PDO_SQLSRV extension, and Microsoft ODBC Driver 18 for SQL Server. For supported authentication values, see [Connect using Microsoft Entra authentication](azure-active-directory.md). Don't reuse the query helper for writes or multistatement transactions without designing an application-specific retry policy: an error doesn't always tell you whether a write committed.
 
 ```php
 <?php
@@ -51,6 +53,10 @@ const CONNECT_RETRY_SQLSTATE_PREFIX = '08';
 // throttling, mid-query failover, and "database not currently available"
 // codes that arrive with SQLSTATE HY000.
 const TRANSIENT_SERVER_ERROR_CODES = [1205, 1222, 40501, 40613, 40197, 10928, 10929, 49918];
+
+// This read helper retries only the listed errors on the same connection.
+// Other errors propagate; the caller must decide whether to reconnect.
+const RETRYABLE_READ_ERROR_CODES = [1205, 1222, 40501, 10928, 10929];
 
 /**
  * Open a connection, retrying transient failures with exponential backoff.
@@ -71,7 +77,7 @@ function connectWithRetry(string $dsn, array $options, int $maxAttempts = 3): PD
                 error_log(sprintf('connect failed on attempt %d/%d: %s', $attempt, $maxAttempts, $e->getMessage()));
                 throw $e;
             }
-            $delay = 2 ** ($attempt - 1); // 1, 2, 4 seconds
+            $delay = 2 ** ($attempt - 1);
             error_log(sprintf('connect attempt %d hit transient %s/%d; retrying in %d seconds', $attempt, $sqlstate, $driverCode, $delay));
             sleep($delay);
         }
@@ -80,11 +86,7 @@ function connectWithRetry(string $dsn, array $options, int $maxAttempts = 3): PD
 }
 
 /**
- * Run a parameterized query, retrying transient statement failures on the same
- * connection. Deadlocks (1205) roll back the transaction before the driver sees
- * the error, so rerunning a single statement is safe. If the statement was part
- * of a multistatement transaction, wrap the whole transaction in your own retry
- * loop so earlier statements replay too.
+ * Retry the standalone read-only query for errors that allow connection reuse.
  */
 function queryWithRetry(PDO $pdo, string $sql, array $params = [], int $maxAttempts = 3): PDOStatement
 {
@@ -95,7 +97,7 @@ function queryWithRetry(PDO $pdo, string $sql, array $params = [], int $maxAttem
             return $stmt;
         } catch (PDOException $e) {
             $driverCode = isset($e->errorInfo[1]) ? (int) $e->errorInfo[1] : 0;
-            $isTransient = in_array($driverCode, TRANSIENT_SERVER_ERROR_CODES, true);
+            $isTransient = in_array($driverCode, RETRYABLE_READ_ERROR_CODES, true);
             if (!$isTransient || $attempt === $maxAttempts) {
                 error_log(sprintf('query failed on attempt %d/%d: %s', $attempt, $maxAttempts, $e->getMessage()));
                 throw $e;
@@ -116,6 +118,7 @@ $database = getenv('SQL_DATABASE') ?: null;
 if ($server === null || $database === null) {
     throw new RuntimeException('Set SQL_SERVER and SQL_DATABASE in your application configuration.');
 }
+$databaseValue = '{' . str_replace('}', '}}', $database) . '}';
 
 $dsn = sprintf(
     'sqlsrv:Driver={ODBC Driver 18 for SQL Server};Server=%s;Database=%s;'
@@ -124,7 +127,7 @@ $dsn = sprintf(
     . 'ConnectRetryCount=5;ConnectRetryInterval=15;'
     . 'MultiSubnetFailover=true;',
     $server,
-    $database
+    $databaseValue
 );
 
 $options = [
@@ -135,17 +138,18 @@ $options = [
 ];
 
 $pdo = connectWithRetry($dsn, $options);
-$stmt = queryWithRetry($pdo, 'SELECT TOP (?) name FROM sys.databases ORDER BY name', [5]);
+$stmt = queryWithRetry($pdo, 'SELECT name FROM sys.databases WHERE database_id > ? ORDER BY name', [1]);
 foreach ($stmt as $row) {
     echo $row['name'], PHP_EOL;
 }
 ```
 
-This snippet is tuned for Azure SQL Database failover groups and Azure SQL Managed Instance.
+Use these settings for Azure SQL Database failover groups and Azure SQL Managed Instance.
 
-- `Driver={ODBC Driver 18 for SQL Server}` pins the ODBC 18 driver. If the host also has ODBC 17 installed, PDO_SQLSRV can bind to ODBC 17. Older 17.x builds reject newer `Authentication` values; for example, `Authentication=ActiveDirectoryMsi` requires ODBC 17.3.1.1 or a later version. See [Invalid value specified for connection string attribute 'Authentication'](troubleshooting-php-sql-driver.md#invalid-value-specified-for-connection-string-attribute-authentication).
-- `ConnectRetryCount` and `ConnectRetryInterval` are ODBC connection string keywords that enable SQL Server *idle connection resiliency*: the driver transparently reconnects a broken idle connection. That's distinct from the application-level `queryWithRetry`, which retries a *statement* that fails with a transient error such as a deadlock or query timeout. The two are complementary, so keep both. Make sure `LoginTimeout` is at least `ConnectRetryCount * ConnectRetryInterval` so the idle-reconnect path gets its full budget; the sample uses 90 seconds to cover 5 × 15 seconds of retries plus headroom for the initial login on a cold failover.
-- Complement the application-level `error_log()` calls with driver-side diagnostics. For PDO_SQLSRV, set `pdo_sqlsrv.log_severity` in `php.ini` (settable at initialization only); for SQLSRV, call `sqlsrv_configure("LogSubsystems", ...)` at runtime. For more information, see [Logging activity](logging-activity.md).
+- `Driver={ODBC Driver 18 for SQL Server}` selects ODBC Driver 18 explicitly rather than relying on driver discovery. Install it before running the example.
+- Set `SQL_DATABASE` to the actual database name. The program doubles closing braces and encloses the name in braces before placing it in the DSN. Escaping keeps special characters in the name from changing how the driver reads connection settings.
+- `ConnectRetryCount` and `ConnectRetryInterval` control ODBC *idle connection resiliency*. The statement's query timeout bounds recovery during execution. With the sample's 30-second query timeout, ODBC might stop before exhausting all five reconnect attempts. `LoginTimeout=90` controls connection establishment, not that recovery budget. The application-level helper retries selected server errors; it doesn't retry a query timeout or replay partially fetched results.
+- Enable driver logging alongside the program's `error_log()` calls. For PDO_SQLSRV, set `pdo_sqlsrv.log_severity` in `php.ini` or with `ini_set()` at runtime. For SQLSRV, configure `LogSeverity` and `LogSubsystems` with `sqlsrv_configure()`. For more information, see [Logging activity](logging-activity.md).
 
   ```ini
   ; php.ini - enable PDO_SQLSRV driver diagnostics alongside the application-level
@@ -155,13 +159,13 @@ This snippet is tuned for Azure SQL Database failover groups and Azure SQL Manag
   pdo_sqlsrv.log_severity = 1
   ```
 
-- For a **user-assigned** managed identity, pass the identity's ID as PDO's `$username` argument (`new PDO($dsn, $identityId, null, $options)`). Use the identity's **client ID** on [Azure App Service](/azure/app-service/overview-managed-identity) or [Azure Container Instance](/azure/container-instances/container-instances-managed-identity); otherwise, use its **object ID**. The PHP drivers inherit this behavior from the underlying Microsoft ODBC Driver for SQL Server; for more information, see [Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md#example-connection-strings). PDO_SQLSRV rejects `UID` inside the DSN itself, so use the constructor slot. Passing `null` as the user (as the sample does) selects the system-assigned managed identity of the Azure host. For SQLSRV (procedural), pass `UID` in the connection options array.
+- For a **user-assigned** managed identity, pass the identity's ID as PDO's `$username` argument (`new PDO($dsn, $identityId, null, $options)`). Use the identity's **client ID** on [Azure App Service](/azure/app-service/overview-managed-identity) or [Azure Container Instance](/azure/container-instances/container-instances-managed-identity); otherwise, use its **object ID**. The PHP drivers inherit this behavior from the underlying Microsoft ODBC Driver for SQL Server; for more information, see [Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md#example-connection-strings). Use the PDO constructor's username argument rather than embedding the identity in the DSN. Passing `null` as the user (as the sample does) selects the system-assigned managed identity of the Azure host. For SQLSRV (procedural), pass `UID` in the connection options array.
 - Set `MultiSubnetFailover=true` when you connect to a failover-group listener, availability group listener, or failover cluster instance endpoint. Setting it improves connection performance for both single-subnet and multi-subnet availability group listeners. For more information, see [Support for High Availability, disaster recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
-- For read scale-out or a readable secondary, add `ApplicationIntent=ReadOnly` to the Data Source Name (DSN).
-- For sovereign clouds where the certificate Subject Alternative Name (SAN) doesn't include the host you're connecting to, add `HostNameInCertificate` to the DSN (for example, `*.database.usgovcloudapi.net` for Azure Government).
-- The driver relies on the underlying Microsoft ODBC Driver for SQL Server for token acquisition. Managed identity, service principal, and access-token flows all go through ODBC. For more information, see [Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md).
-- For higher security and portability across environments, keep connection information outside your code. Store connection information in your application's configuration system, and use Azure Key Vault for sensitive values and centrally managed connection settings.
-- The equivalent SQLSRV connection uses `sqlsrv_connect($server, ['Database' => $database, 'Encrypt' => true, 'Authentication' => 'ActiveDirectoryMsi', /* ... */])` and returns a resource. The retry pattern is the same: catch a `false` return from `sqlsrv_connect`, inspect `sqlsrv_errors()` for SQLSTATE, and back off before retrying. For a worked example, see [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md).
+- For read scale-out or a readable secondary, add `ApplicationIntent=ReadOnly` to the DSN.
+- Use the endpoint supplied by your SQL service, including its cloud-specific domain. Investigate certificate-name mismatches rather than disabling certificate validation. Use `HostNameInCertificate` only when you know the expected certificate name for that endpoint.
+- ODBC acquires tokens for managed identity and service principal authentication. With `AccessToken`, your application acquires the token and passes it to the driver; ODBC doesn't acquire it for you. For more information, see [Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md).
+- Keep connection information outside your code. Store it in your application's configuration system, and use Azure Key Vault for secrets.
+- With SQLSRV, set connection options in the array passed to `sqlsrv_connect()`. Check for a `false` return and inspect `sqlsrv_errors()` before deciding whether to retry. Set statement timeouts separately with `QueryTimeout`. [Idle connection resiliency](connection-resiliency.md) demonstrates ODBC reconnection, not an application-level retry loop.
 - The retry helpers read `$e->errorInfo[1]` guarded by `isset()`. [`PDOException::$errorInfo`](https://www.php.net/manual/en/class.pdoexception.php) is declared as `?array` and defaults to `null`, so the defensive check falls back to a driver code of `0` and lets the SQLSTATE `08` prefix decide whether to retry.
 
 For more information about each part of this configuration, see:
@@ -176,13 +180,13 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 
 ## Key features
 
-- **Two APIs, one driver package**: Procedural SQLSRV for SQL Server-first code, or PDO_SQLSRV for portable PDO code.
+- **Two PHP APIs**: SQLSRV provides procedural functions. PDO_SQLSRV implements PDO. Install either extension or both.
 - **Wide platform support**: Runs on Windows, Linux, and macOS with supported PHP versions.
 - **Encrypted connections**: TLS-encrypted connections via `Encrypt=true`, with server certificate validation controlled by `TrustServerCertificate`.
-- **Microsoft Entra ID authentication**: Passwordless connections with managed identity, service principal, and access-token flows through the underlying Microsoft ODBC Driver for SQL Server.
-- **Always Encrypted**: Client-side encryption for sensitive columns, with optional secure enclaves for in-place operations.
+- **Microsoft Entra ID authentication**: Managed identity, service principal, and externally acquired access tokens through the underlying Microsoft ODBC Driver for SQL Server. Managed identity is passwordless; `ActiveDirectoryServicePrincipal` uses a client secret.
+- **Always Encrypted**: Encrypt sensitive columns on the client, with secure enclaves for supported operations on encrypted data.
 - **Connection resiliency**: Built-in idle connection retries with `ConnectRetryCount` and `ConnectRetryInterval`.
-- **PHP streams**: Read and write large binary and character values as streams instead of loading them into memory.
+- **PHP streams**: Send large binary and character values from stream parameters with either API. Use SQLSRV for streamed retrieval.
 - **Rich SQL Server data type support**: **datetimeoffset**, table-valued parameters, **nvarchar**, and Unicode with `PDO::SQLSRV_ENCODING_UTF8`.
 
 ## Get started
@@ -217,7 +221,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | --- | --- |
 | [Connect using Microsoft Entra authentication](azure-active-directory.md) | Managed identity, service principal, access token, and password flows. |
 | [Connect using SQL Server authentication](how-to-connect-using-sql-server-authentication.md) | Use a SQL login with a username and password. |
-| [Connect using Windows authentication](how-to-connect-using-windows-authentication.md) | Use Windows integrated authentication on domain-joined hosts. |
+| [Connect using Windows authentication](how-to-connect-using-windows-authentication.md) | Use integrated authentication on Windows or Kerberos on Linux and macOS. |
 
 ## Secure
 
@@ -231,14 +235,14 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 
 | Article | Description |
 | --- | --- |
-| [Programming guide](programming-guide-for-php-sql-driver.md) | End-to-end programming guide for both drivers. |
+| [Programming guide](programming-guide-for-php-sql-driver.md) | Find programming tasks for both drivers. |
 | [Comparing execution functions](comparing-execution-functions.md) | Choose the right execution function for your workload. |
 | [Direct and prepared statement execution (PDO_SQLSRV)](direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) | When to use direct execution versus prepared statements. |
 | [Retrieving data](retrieving-data.md) | Fetch rows, columns, and streaming values. |
 | [Updating data](updating-data-microsoft-drivers-for-php-for-sql-server.md) | Insert, update, and delete rows. |
 | [Perform parameterized queries](how-to-perform-parameterized-queries.md) | Bind parameters to protect against SQL injection. |
 | [Send data as a stream](how-to-send-data-as-a-stream.md) | Stream large binary and character values into SQL Server. |
-| [Perform transactions](how-to-perform-transactions.md) | Group statements into atomic transactions. |
+| [Perform transactions](how-to-perform-transactions.md) | Commit or roll back a group of statements together. |
 | [Use table-valued parameters](use-table-valued-parameters.md) | Pass a **TABLE** parameter to a stored procedure. |
 | [Specify a cursor type and select rows](specifying-a-cursor-type-and-selecting-rows.md) | Choose forward-only, static, dynamic, or keyset cursors. |
 
@@ -251,7 +255,7 @@ For the catalog of Azure SQL transient errors, see [Troubleshoot transient conne
 | [Default PHP data types](default-php-data-types.md) | Default PHP type for each SQL Server column type. |
 | [Specify SQL Server data types (SQLSRV)](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md) | Override the SQL Server type when binding parameters. |
 | [Specify PHP data types](how-to-specify-php-data-types.md) | Override the PHP type when fetching. |
-| [Send and retrieve UTF-8 data](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md) | Use `PDO::SQLSRV_ENCODING_UTF8` for Unicode round-trips. |
+| [Send and retrieve UTF-8 data](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md) | Set SQLSRV's `CharacterSet` option or PDO_SQLSRV's `PDO::SQLSRV_ATTR_ENCODING` attribute. |
 | [Send and retrieve ASCII data on Linux and macOS](how-to-send-and-retrieve-ascii-data-in-linux-mac.md) | Handle ASCII round-trips on non-Windows hosts. |
 | [Format decimals and money (SQLSRV)](formatting-decimals-sqlsrv-driver.md) | Format **decimal** and **money** columns with the SQLSRV driver. |
 | [Format decimals and money (PDO_SQLSRV)](formatting-decimals-pdo-sqlsrv-driver.md) | Format **decimal** and **money** columns with the PDO_SQLSRV driver. |

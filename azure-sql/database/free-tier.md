@@ -178,6 +178,19 @@ Open the [Database Hub](https://powerbi.com/workloads/fdh/databaseHub), then fol
 > me where to investigate its performance in the Azure portal or Visual Studio Code.
 > ```
 
+## Modernize your database with Hyperscale
+
+Start with the free tier to develop and validate your application, then move your existing database to [Hyperscale](service-tier-hyperscale.md) as your workload grows. You don't need to create a replacement database or move application data manually.
+
+The upgrade requires two separate updates:
+
+1. Remove the free offer and wait for the update to complete.
+1. Convert the database to Hyperscale.
+
+Allowing paid overages doesn't remove the free offer. Removal is permanent for this database, and paid General Purpose usage can accrue even if the subsequent Hyperscale conversion fails.
+
+For portal instructions, Azure CLI and PowerShell scripts, and an agent prompt, see [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md).
+
 <a id="tips-on-managing-vcore-seconds"></a>
 <a id="monthly-free-limits"></a>
 <a id="offer-limitations"></a>
@@ -187,10 +200,10 @@ Open the [Database Hub](https://powerbi.com/workloads/fdh/databaseHub), then fol
 The following considerations and limitations apply to Azure SQL Database free tier databases:
 
 - The free tier uses the same fully managed General Purpose infrastructure as a paid database, but it doesn't include a service-level agreement (SLA). Use it primarily for development and proof-of-concept scenarios.
-- The free tier databases automatically pause after 15 minutes of inactivity. The auto-pause delay is fixed and can't be changed, regardless of the selected behavior when the monthly free limit is reached.
 - Choose the behavior for when you reach the monthly free limit:
   - **Auto-pause the database until next month** stops charges, but the database is inaccessible until the allowance resets at the start of the next calendar month.
   - **Continue using database for additional charges** keeps the database online and bills overages at standard General Purpose serverless rates. You can't switch back to the auto-pause option.
+- The free tier databases automatically pause after 15 minutes of inactivity. The auto-pause delay is fixed and can't be changed, regardless of the selected behavior when the monthly free limit is reached.
 - Disconnect querying tools such as [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms), including the Object Explorer, when you're done. An open connection prevents auto-pause and continues to consume vCore seconds. If the database doesn't auto-pause, review [features that prevent auto-pause](serverless-tier-overview.md#review-interoperability-that-prevents-auto-pause).
 - You can apply the free tier only to a new database. You can't restore or convert an existing database to the free tier.
 - If you use **Advanced configuration**, the region selected for the first free tier database applies to all free tier databases in that subscription and can't be changed.

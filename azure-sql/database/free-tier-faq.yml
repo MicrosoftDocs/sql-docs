@@ -88,7 +88,7 @@ sections:
 
       - question: Can I upgrade to a larger or more powerful database?
         answer: |
-         Yes. At any time, you can upgrade the service tier or compute tier of the database. Select your database in the Azure portal, go to the **Compute and Storage** tab, then switch the **Free Database offer** options to **Continue using database with additional charges**. This option unlocks the ability to scale up to a larger General Purpose database. If you wish to change service tiers, you need to turn off the **Free database offer** before changing to Hyperscale or Business Critical service tiers. Once you convert a free tier database to a paid service tier, you can't revert to the free tier.
+         Yes. Select your database in the Azure portal and open **Compute + storage**. **Continue using database for additional charges** allows paid overages and scaling within General Purpose, but doesn't remove the free offer. To change to Hyperscale or Business Critical, first remove the **Free database offer** in a separate update and wait for completion. Then request the new service tier. Removal is permanent for this database, even if the subsequent tier conversion fails. For portal steps, Azure CLI and PowerShell scripts, and an agent prompt, see [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md).
 
       - question: Can I change the backup option to geo-redundant storage?
         answer: |

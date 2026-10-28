@@ -1,131 +1,259 @@
 ---
 title: Idle Connection Resiliency
-description: Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server.
+description: Learn what idle connection resiliency is, which connection keywords control it, and how it behaves in the Microsoft Drivers for PHP for SQL Server.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2021
+ms.date: 10/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
-# Idle Connection Resiliency
+# Idle connection resiliency
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Connection resiliency](../odbc/connection-resiliency.md) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to the database fails, connection resiliency allows the client to automatically try to reconnect. Connection resiliency is a property of the data source. Only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
-
-Connection resiliency is implemented with two connection keywords that can be added to connection strings: `ConnectRetryCount` and `ConnectRetryInterval`.
+[Connection resiliency](../odbc/connection-resiliency.md) lets the Microsoft ODBC Driver for SQL Server restore a broken *idle* connection when the server and session state support recovery. The PHP extensions pass `ConnectRetryCount` and `ConnectRetryInterval` to ODBC; they don't implement the reconnection protocol. The ODBC documentation lists support for SQL Server 2014 and later versions, Azure SQL Database, and SQL database in Microsoft Fabric. Don't infer Warehouse support from support for SQL database in Fabric.
 
 |Keyword|Values|Default|Description|
 |-|-|-|-|
-|`ConnectRetryCount`| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of `0` means that no reconnection will be attempted.|
-|`ConnectRetryInterval`| Integer between 1 and 60 (inclusive)|10| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait `ConnectRetryInterval` seconds before trying again. This keyword is ignored if `ConnectRetryCount` is equal to 0.
+|`ConnectRetryCount`| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. A value of `0` disables reconnection.|
+|`ConnectRetryInterval`| Integer between 1 and 60 (inclusive)|10| The number of seconds to wait between attempts. Ignored if `ConnectRetryCount` is `0`.|
 
-If the product of `ConnectRetryCount` multiplied by `ConnectRetryInterval` is larger than `LoginTimeout`, then the client will stop attempting to connect once `LoginTimeout` is reached; otherwise, it will continue to try to reconnect until `ConnectRetryCount` is reached.
+The statement's query timeout limits how long ODBC can spend recovering an idle connection during execution. Set `QueryTimeout` in SQLSRV statement options or `PDO::SQLSRV_ATTR_QUERY_TIMEOUT` for PDO_SQLSRV. `LoginTimeout` controls establishing a connection; increasing it doesn't extend the statement's recovery budget.
+
+Set the same retry keywords in a SQLSRV connection options array, such as `["ConnectRetryCount" => 2, "ConnectRetryInterval" => 5]`, or in a PDO_SQLSRV data source name (DSN), such as `ConnectRetryCount=2;ConnectRetryInterval=5`. These settings don't replay a failed transaction or retry the application's initial connection call.
+
+For application-level retry of transient errors that occur *while* a query is executing (which idle connection resiliency doesn't cover), see the retry pattern in [Microsoft Drivers for PHP for SQL Server](microsoft-php-driver-for-sql-server.md#production-baseline-for-azure-sql).
+
+## Choose the recovery policy
+
+Idle connection recovery preserves a recoverable session so the application can continue using its PHP connection handle. It isn't a general instruction to execute a command again.
+
+| Failure | Does idle connection resiliency handle it? | Application action |
+| --- | --- | --- |
+| The initial connection can't be established | No. There is no established session to restore. | Inspect the connection error. Retry only a transient failure with a bounded policy. |
+| An idle, recoverable connection breaks | ODBC can attempt recovery when the connection is used again. | Allow enough statement timeout for the intended recovery attempts; still handle a final failure. |
+| A statement fails during execution | Don't assume recovery or replay. | Inspect the error and determine whether the operation completed. Retry a read only if repeating it is acceptable to your application. |
+| A connection breaks during a transaction | Don't assume the transaction can continue. | Abandon the broken session and determine whether the transaction committed before deciding on another attempt. |
+| The client explicitly closes its PHP connection | No. Closing a handle is application cleanup, not an idle disconnect. | Open a new connection if more work is needed. |
+
+Keep recovery intervals and query deadlines consistent. For example, the programs use two reconnect attempts with a 5-second interval and a 30-second statement timeout. Connection attempts also take time; multiplying count by interval isn't a guaranteed total recovery duration. A final timeout still requires error handling.
 
 ## Remarks
 
-Connection resiliency applies when the connection is idle. Failures that occur while executing a transaction, for example, won't trigger reconnection attempts - they'll fail as would otherwise be expected. The following situations, known as non-recoverable session states, won't trigger reconnection attempts:
+Connection resiliency only applies when the connection is idle. A failure during a transaction doesn't trigger reconnection. The following session states also prevent reconnection:
 
-* Temporary tables
-* Global and local cursors
-* Transaction context and session level transaction locks
-* Application locks
-* EXECUTE AS/REVERT security context
-* OLE automation handles
-* Prepared XML handles
-* Trace flags
+* Temporary tables.
+* Global and local cursors.
+* Transaction context and session-level transaction locks.
+* Application locks.
+* `EXECUTE AS`/`REVERT` security context.
+* Object Linking and Embedding (OLE) automation handles.
+* Prepared Extensible Markup Language (XML) handles.
+* Trace flags.
 
 ## Example
 
-The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) sample database.
+Each program opens two connections to a test SQL Server instance. The second connection terminates the first session with `KILL`. A subsequent query on the first connection exercises ODBC's idle-connection recovery. The query uses inline rows, so no table setup is required. The programs release each statement before breaking the connection and verify both the recovered query's values and a changed server login time. A session ID alone isn't proof of recovery because SQL Server can reuse it.
 
-In this example, we specify a buffered cursor before breaking the connection. If we don't specify a buffered cursor, the connection wouldn't be reestablished because there would be an active server-side cursor. As such, the connection wouldn't be idle when broken. However, in that case we could call `sqlsrv_free_stmt()` before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
+> [!CAUTION]
+> Run this example only against a test instance. The login needs permission to terminate a session with [KILL](../../t-sql/language-elements/kill-transact-sql.md). The code terminates only the session it just opened. Don't substitute another application's session ID.
+
+Set `SQL_SERVER`, `SQL_DATABASE`, `SQL_USER`, and `SQL_PASSWORD` in the process environment. Configure a trusted server certificate whose name matches `SQL_SERVER`. This example uses SQL authentication to a test SQL Server instance. It isn't a Fabric or managed-identity authentication example.
+
+Store the actual database name, username, and password in the environment variables. Each program escapes these values once for the PHP driver's ODBC-style connection handling by doubling closing braces and enclosing each value in braces. Both connections reuse the escaped values.
+
+### SQLSRV
+
+Save the program as `recover-sqlsrv.php`, and run `php recover-sqlsrv.php`. The helper throws on SQLSRV failure; it doesn't retry any application statement.
 
 ```php
 <?php
-// This function breaks the connection by determining its session ID and killing it.
-// A separate connection is used to break the main connection because a session
-// cannot kill itself. The sleep() function ensures enough time has passed for KILL
-// to finish ending the session.
-function BreakConnection( $conn, $conn_break )
+function requireSqlsrv($result)
 {
-    $stmt1 = sqlsrv_query( $conn, "SELECT @@SPID" );
-    if ( sqlsrv_fetch( $stmt1 ) )
-    {
-        $spid=sqlsrv_get_field( $stmt1, 0 );
+    if ($result === false) {
+        throw new RuntimeException(print_r(sqlsrv_errors(), true));
     }
+    return $result;
+}
 
-    $stmt2 = sqlsrv_prepare( $conn_break, "KILL ".$spid );
-    sqlsrv_execute( $stmt2 );
+$config = [];
+foreach (['SQL_SERVER', 'SQL_DATABASE', 'SQL_USER', 'SQL_PASSWORD'] as $name) {
+    $value = getenv($name);
+    if ($value === false || $value === '') {
+        throw new RuntimeException("Set $name before running this example.");
+    }
+    $config[$name] = $value;
+}
+foreach (['SQL_DATABASE', 'SQL_USER', 'SQL_PASSWORD'] as $name) {
+    $config[$name] = '{' . str_replace('}', '}}', $config[$name]) . '}';
+}
+$connectionInfo = [
+    'Database' => $config['SQL_DATABASE'],
+    'UID' => $config['SQL_USER'],
+    'PWD' => $config['SQL_PASSWORD'],
+    'Encrypt' => true,
+    'TrustServerCertificate' => false,
+    'LoginTimeout' => 30,
+    'ConnectRetryCount' => 2,
+    'ConnectRetryInterval' => 5,
+];
+$conn = requireSqlsrv(sqlsrv_connect($config['SQL_SERVER'], $connectionInfo));
+$breaker = null;
+try {
+    $breaker = requireSqlsrv(sqlsrv_connect($config['SQL_SERVER'], $connectionInfo));
+    $sessionQuery = "SELECT @@SPID AS SessionId, "
+        . "CONVERT(varchar(33), login_time, 126) AS LoginTime "
+        . "FROM sys.dm_exec_sessions WHERE session_id = @@SPID";
+    $idStatement = requireSqlsrv(sqlsrv_query($conn, $sessionQuery));
+    $before = requireSqlsrv(sqlsrv_fetch_array($idStatement, SQLSRV_FETCH_ASSOC));
+    sqlsrv_free_stmt($idStatement);
+    if (!is_array($before) || !is_int($before['SessionId']) || $before['SessionId'] <= 0) {
+        throw new RuntimeException('Expected the current session identity.');
+    }
+    $spid = $before['SessionId'];
+
+    $query = 'SELECT id FROM (VALUES (1), (2), (3)) AS Demo(id) ORDER BY id';
+    $options = ['Scrollable' => SQLSRV_CURSOR_CLIENT_BUFFERED, 'QueryTimeout' => 30];
+    $stmt = requireSqlsrv(sqlsrv_query($conn, $query, [], $options));
+    if (requireSqlsrv(sqlsrv_num_rows($stmt)) !== 3) {
+        throw new RuntimeException('Expected three rows before the disconnect.');
+    }
+    sqlsrv_free_stmt($stmt);
+
+    // KILL doesn't accept a parameter marker; $spid is a checked server-returned integer.
+    $kill = requireSqlsrv(sqlsrv_query($breaker, 'KILL ' . $spid));
+    sqlsrv_free_stmt($kill);
+    // Allow the simulated disconnect to reach the client before the next query.
     sleep(1);
+
+    $stmt = requireSqlsrv(sqlsrv_query($conn, $query, [], $options));
+    $ids = [];
+    while (($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) !== null) {
+        $row = requireSqlsrv($row);
+        $ids[] = $row['id'];
+    }
+    if ($ids !== [1, 2, 3]) {
+        throw new RuntimeException('Unexpected recovered rows or PHP types.');
+    }
+    sqlsrv_free_stmt($stmt);
+
+    $idStatement = requireSqlsrv(sqlsrv_query($conn, $sessionQuery));
+    $after = requireSqlsrv(sqlsrv_fetch_array($idStatement, SQLSRV_FETCH_ASSOC));
+    sqlsrv_free_stmt($idStatement);
+    if (!is_array($after) || $after['LoginTime'] === $before['LoginTime']) {
+        throw new RuntimeException('Expected a new physical session.');
+    }
+    echo "Recovered connection: 3 matching rows; login time changed.\n";
+} finally {
+    if (is_resource($breaker)) {
+        sqlsrv_close($breaker);
+    }
+    sqlsrv_close($conn);
 }
-
-// Connect to the local server using Windows authentication and specify
-// AdventureWorks as the database in use. Specify values for
-// ConnectRetryCount and ConnectRetryInterval as well.
-$databaseName = 'AdventureWorks2022';
-$serverName = '(local)';
-$connectionInfo = array( "Database"=>$databaseName, "ConnectRetryCount"=>10, "ConnectRetryInterval"=>10 );
-
-$conn = sqlsrv_connect( $serverName, $connectionInfo );
-if( $conn === false)  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
-}
-
-// A separate connection that will be used to break the main connection $conn
-$conn_break = sqlsrv_connect( $serverName, array( "Database"=>$databaseName) );
-
-// Create a statement to retrieve the contents of a table
-$stmt1 = sqlsrv_query( $conn, "SELECT * FROM HumanResources.Employee",
-                       array(), array( "Scrollable"=>"buffered" ) );
-if( $stmt1 === false )
-{
-     echo "Error in statement 1.\n";
-     die( print_r( sqlsrv_errors(), true ));
-}
-else
-{
-    echo "Statement 1 successful.\n";
-    $rowcount = sqlsrv_num_rows( $stmt1 );
-    echo $rowcount." rows in result set.\n";
-}
-
-// Now break the connection $conn
-BreakConnection( $conn, $conn_break );
-
-// Create another statement. The connection will be reestablished.
-$stmt2 = sqlsrv_query( $conn, "SELECT * FROM HumanResources.Department",
-                       array(), array( "Scrollable"=>"buffered" ) );
-if( $stmt2 === false )
-{
-     echo "Error in statement 2.\n";
-     die( print_r( sqlsrv_errors(), true ));
-}
-else
-{
-    echo "Statement 2 successful.\n";
-    $rowcount = sqlsrv_num_rows( $stmt2 );
-    echo $rowcount." rows in result set.\n";
-}
-
-sqlsrv_close( $conn );
-sqlsrv_close( $conn_break );
-?>
 ```
 
-Expected output:
+### PDO_SQLSRV
+
+Save this separate program as `recover-pdo.php`, and run `php recover-pdo.php` with the same environment and permissions. It sets numeric fetching explicitly so the integer assertions match the SQLSRV program. PDO has no `sqlsrv_errors()` call; operation failures throw `PDOException` in exception mode.
+
+```php
+<?php
+$config = [];
+foreach (['SQL_SERVER', 'SQL_DATABASE', 'SQL_USER', 'SQL_PASSWORD'] as $name) {
+    $value = getenv($name);
+    if ($value === false || $value === '') {
+        throw new RuntimeException("Set $name before running this example.");
+    }
+    $config[$name] = $value;
+}
+foreach (['SQL_DATABASE', 'SQL_USER', 'SQL_PASSWORD'] as $name) {
+    $config[$name] = '{' . str_replace('}', '}}', $config[$name]) . '}';
+}
+$server = $config['SQL_SERVER'];
+$database = $config['SQL_DATABASE'];
+$dsn = "sqlsrv:Server=$server;Database=$database;Encrypt=true;"
+    . "TrustServerCertificate=false;LoginTimeout=30;"
+    . "ConnectRetryCount=2;ConnectRetryInterval=5";
+$attributes = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE => true,
+    PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 30,
+];
+$pdo = new PDO($dsn, $config['SQL_USER'], $config['SQL_PASSWORD'], $attributes);
+$breaker = null;
+$stmt = null;
+try {
+    $breaker = new PDO($dsn, $config['SQL_USER'], $config['SQL_PASSWORD'], $attributes);
+    $sessionQuery = "SELECT @@SPID AS SessionId, "
+        . "CONVERT(varchar(33), login_time, 126) AS LoginTime "
+        . "FROM sys.dm_exec_sessions WHERE session_id = @@SPID";
+    $stmt = $pdo->query($sessionQuery);
+    $before = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt = null;
+    if (!is_array($before) || !is_int($before['SessionId']) || $before['SessionId'] <= 0) {
+        throw new RuntimeException('Expected the current session identity.');
+    }
+    $spid = $before['SessionId'];
+    $query = 'SELECT id FROM (VALUES (1), (2), (3)) AS Demo(id) ORDER BY id';
+    $stmt = $pdo->query($query);
+    if ($stmt->fetchAll(PDO::FETCH_COLUMN) !== [1, 2, 3]) {
+        throw new RuntimeException('Unexpected initial rows or PHP types.');
+    }
+    $stmt = null;
+
+    // KILL requires a checked integer, not a parameter marker.
+    $stmt = $breaker->query('KILL ' . $spid);
+    $stmt = null;
+    sleep(1);
+
+    $stmt = $pdo->query($query);
+    if ($stmt->fetchAll(PDO::FETCH_COLUMN) !== [1, 2, 3]) {
+        throw new RuntimeException('Unexpected recovered rows or PHP types.');
+    }
+    $stmt = null;
+    $stmt = $pdo->query($sessionQuery);
+    $after = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!is_array($after) || $after['LoginTime'] === $before['LoginTime']) {
+        throw new RuntimeException('Expected a new physical session.');
+    }
+    echo "Recovered connection: 3 matching rows; login time changed.\n";
+} finally {
+    $stmt = null;
+    $breaker = null;
+    $pdo = null;
+}
+```
+
+Expected output from either program when ODBC restores the connection:
 
 ```output
-Statement 1 successful.
-290 rows in result set.
-Statement 2 successful.
-16 rows in result set.
+Recovered connection: 3 matching rows; login time changed.
 ```
+
+The test terminates a deliberately idle session. It doesn't test a network partition, service failover, active transaction recovery, write replay, or Azure throttling. Don't interpret a pass as proof that every interrupted application operation is safe to repeat.
+
+## Diagnose a failed recovery
+
+| Symptom | Check |
+| --- | --- |
+| `KILL` is denied | Use a permitted test identity or ask the administrator to perform the controlled test. Don't substitute another session ID. |
+| The first query already fails | Fix the connection, certificate, query, and permissions before testing recovery. |
+| The query after `KILL` fails | Check `ConnectRetryCount`, the query timeout, ODBC diagnostics, and whether the session state is recoverable. Don't hide the error with an unconditional retry. |
+| A temporary table disappears after opening a new connection | An application-created replacement connection isn't the old session. Redesign session-dependent work rather than assuming automatic state recreation. |
+| A write returns a connection error | Establish its outcome before retrying. The client error alone doesn't prove that the server rolled it back. |
+
+Keep diagnostics in protected logs. SQLSRV exposes an error collection that can contain more than one record; PDO supplies SQLSTATE and driver details through the exception. Record the operation and its timeout settings without recording passwords or tokens. For more information, see [Logging activity](logging-activity.md).
+
+## Target applicability
+
+ODBC and the SQL target perform the automatic reconnection. PHP passes settings and reports success or failure. It doesn't recreate temporary objects, restore your application's variables, or replay a transaction.
+
+The controlled programs use SQL Server and require permission to terminate their own test session through a second connection. Azure SQL Database and SQL database in Fabric have their own service permissions and authentication requirements. Don't treat those programs as drop-in tests for Azure SQL Managed Instance, Azure Synapse Analytics, or Warehouse in Fabric, or infer their recovery support from the fact that an ordinary connection succeeds. Check the selected service's recovery support before relying on it. Warehouse and SQL database in Fabric remain distinct targets.
 
 ## Related content
 
 - [Connection resiliency in the ODBC driver](../odbc/connection-resiliency.md)
+- [Microsoft Drivers for PHP for SQL Server: production baseline for Azure SQL](microsoft-php-driver-for-sql-server.md#production-baseline-for-azure-sql)

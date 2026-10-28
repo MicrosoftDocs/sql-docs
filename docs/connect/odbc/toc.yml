@@ -70,6 +70,8 @@
   items:
   - name: Connection encryption troubleshooting
     href: connection-troubleshooting.md
+  - name: ODBC diagnostics
+    href: diagnostics.md
   - name: Data access tracing (Linux and macOS)
     href: linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
   - name: Known issues (Linux and macOS)

@@ -2,7 +2,7 @@
 title: "Release notes for Reporting Services 2017 and later"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
 ms.reviewer: petebro
-ms.date: 05/28/2024
+ms.date: 10/26/2026
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: release-notes
@@ -20,6 +20,15 @@ This article describes changes in [!INCLUDE[ssnoversion](../includes/ssnoversion
 For the release notes for Report Viewer controls, see [Release notes for the Report Viewer controls for WebForms and WinForms of SSRS](application-integration/release-notes-ssrs-application-integration.md).
 
 ## SQL Server 2022 Reporting Services
+
+## 16.0.1120.8, 2026/10/27
+*(Product Version: 16.0.1120.8)*
+
+- Fixed an issue where cluster patching created duplicate SQL Server Agent jobs and prevented schedules from working.
+- Updated TLS protocol selection for email delivery and web requests to use operating system defaults.
+- Fixed an issue where saved parameter defaults appeared to revert for snapshot reports in the web portal.
+- Improved report definition loading.
+- Improved report viewer hyperlink handling.
 
 ## 16.0.1119.11, 2026/09/21
 *(Product Version: 16.0.1119.11)*

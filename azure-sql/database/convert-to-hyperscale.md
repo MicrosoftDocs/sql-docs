@@ -25,6 +25,8 @@ You can convert an existing database in Azure SQL Database to Hyperscale by usin
 
 - Direct conversion from the Basic service tier to Hyperscale isn't supported. To perform this conversion, first change the database to any service tier other than Basic (for example, General Purpose), and then proceed with the conversion to Hyperscale.
 
+- For a free tier database, remove the free offer in a separate update and wait for completion before requesting Hyperscale. Allowing paid overages doesn't remove the offer. Follow [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md) before using the conversion steps in this article.
+
 - Direct movement of a database from a zone-redundant elastic pool to a non–zone-redundant Hyperscale pool is not supported. To complete this transition, first remove the database from the elastic pool and convert it to a standalone database. Next, disable zone redundancy for the database. Once these steps are complete, the database can be added to a new or existing non–zone-redundant Hyperscale pool.
 
 - You can monitor the progress of the conversion with T-SQL. To run T-SQL commands on your Azure SQL Database, use [SQL Server Management Studio (SSMS)](https://aka.ms/ssms), the [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code), [sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility), or your favorite T-SQL querying tool.
@@ -71,7 +73,7 @@ The Azure portal enables you to convert to Hyperscale by modifying the service t
 1. Go to the database you want to convert in the Azure portal.
 1. In the left navigation bar, select **Compute + storage**.
 1. Select the **Service tier** dropdown list to expand the options for service tiers.
-    - If you were using the [Azure SQL Database free tier](free-tier.md), select the button to remove the **Free database offer**. Then you see the **Service tier** dropdown list.
+    - If you're using the [Azure SQL Database free tier](free-tier.md), first [remove the free offer and apply that change separately](free-tier-upgrade-to-hyperscale.md?tabs=azure-portal#upgrade-the-database). Wait for completion before selecting Hyperscale.
 1. Select **Hyperscale** from the dropdown list.
 1. Review the **Compute tier** and choose **Provisioned** or **Serverless**. 
 1. Review the **Cutover mode**, a choice specific to conversion to Hyperscale.

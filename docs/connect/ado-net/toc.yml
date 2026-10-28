@@ -20,18 +20,12 @@
   items:
   - name: Connect to a data source
     href: connecting-to-data-source.md
-  - name: Establish a connection
-    href: establishing-connection.md
-  - name: Connection events
-    href: connection-events.md
   - name: Connection strings
     href: connection-strings.md
   - name: Build connection strings
     href: connection-string-builders.md
   - name: Store connection strings
     href: connection-strings-and-configuration-files.md
-  - name: Connection string syntax
-    href: connection-string-syntax.md
   - name: Connection options
     href: connection-options.md
   - name: Connection pooling overview

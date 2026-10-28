@@ -66825,6 +66825,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/connect/ado-net/connection-string-syntax.md",
+      "redirect_url": "/sql/connect/ado-net/connection-strings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/ado-net/connection-events.md",
+      "redirect_url": "/sql/connect/ado-net/connecting-to-data-source",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/ado-net/establishing-connection.md",
+      "redirect_url": "/sql/connect/ado-net/connecting-to-data-source",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/ado-net/find-additional-sqlclient-driver-information.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false

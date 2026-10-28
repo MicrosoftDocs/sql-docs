@@ -173,12 +173,15 @@ If you use a database in database mirroring or log shipping, both databases are 
 
 ## Limitations
 
-The following operations are disallowed during initial database encryption, key change, or database decryption:
+The following operations can fail while an initial database encryption, key change, or database decryption scan is running:
 
 - Dropping a file from a filegroup in a database
 - Dropping a database
-- Taking a database offline
 - Detaching a database
+
+The following operations wait until the scan completes:
+
+- Taking a database offline
 - Transitioning a database or filegroup into a `READ ONLY` state
 
 The following operations are disallowed during the `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, and `ALTER DATABASE...SET ENCRYPTION` statements:

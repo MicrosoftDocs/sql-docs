@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 09/28/2026
+ms.date: 10/29/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -30,21 +30,21 @@ This article summarizes the documentation changes for new features and improveme
 The following table lists the features of Azure SQL Managed Instance that are currently in preview.
 
 > [!NOTE]  
-> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Managed Instance provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
+> To review the legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability, see the [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). Azure SQL Managed Instance provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | ---| --- |
 |[Approximate or fuzzy string matching](/sql/relational-databases/fuzzy-string-match/overview)| Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption.|
 | [Change event streaming](/sql/relational-databases/track-changes/change-event-streaming/overview) | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. |
-|[Database watcher for Azure SQL](../database-watcher-overview.md) | Database watcher is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement).|
-| [Flexible memory](resource-limits.md#flexible-memory) | Save on cost and better serve your workload needs by modifying the memory allocation for your SQL managed instance. Flexible memory remains in preview for zone-redundant Next-gen General Purpose instances on Premium-series hardware. |
+| [Database Hub in Microsoft Fabric](/fabric/database/hub/overview) | Database Hub gives database teams one place to detect, investigate, act on, and automate responses to issues across their database estate. Database Hub discovers the SQL managed instances you already have permission to access, prioritizes performance, security, utilization, and best practice findings, and lets you investigate real-time and historical telemetry without switching between portals. Database Hub is available with a Fabric Free license, so you don't need Fabric capacity or a separate license to get started. |
+| [Flexible memory](resource-limits.md#flexible-memory) | Save on cost and better serve your workload needs by modifying the memory allocation for your SQL managed instance. Flexible memory remains in preview for zone-redundant next-gen General Purpose instances on Premium-series hardware. |
 | [Link support for multiple availability group databases](managed-instance-link-extend-availability-group.md) | Extend an Always On availability group containing multiple databases between SQL Server and Azure SQL Managed Instance through one link. Start with an existing group or let SSMS create a single-node group for standalone databases. |
 |[Modernization Advisor](../virtual-machines/modernization-advisor.md) | Use the Modernization Advisor in the Azure portal to help you determine if migrating to Azure SQL Managed Instance from a SQL Server VM saves you money or optimizes performance. |
 |[SDK-style SQL project](/sql/tools/sql-database-projects/sql-database-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.|
 |[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker between instances of Azure SQL Managed Instance, and between SQL Server and Azure SQL Managed Instance. |
 |[Vector vector indexes and vector search](/sql/t-sql/data-types/vector-data-type?view=azuresqlmi-current&preserve-view=true) | [Vector index](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqlmi-current&preserve-view=true) and [vector search](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqlmi-current&preserve-view=true) features are in preview for instances with the **SQL Server 2025** [update policy](update-policy.md). For more information, see [Intelligent applications with Azure SQL Managed Instance](/sql/sql-server/ai/artificial-intelligence-intelligent-applications#vectors). |
 | [Query Store for readable secondary replicas](/sql/relational-databases/performance/query-store-for-secondary-replicas) | Query Store for readable secondary replicas enables Query Store insights for workloads that run on secondary replicas. When enabled, secondary replicas stream query execution information (such as runtime and wait statistics) to the primary replica, where the data is persisted in Query Store and made visible across all replicas. |
-| [Zone redundancy for Next-gen General Purpose](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) | Improve resilience to availability zone outages by enabling zone redundancy for a Next-gen General Purpose SQL managed instance. The preview also supports flexible memory for zone-redundant instances on Premium-series hardware. |
+| [Zone redundancy for next-gen General Purpose](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) | Improve resilience to availability zone outages by enabling zone redundancy for a next-gen General Purpose SQL managed instance. The preview also supports flexible memory for zone-redundant instances on Premium-series hardware. |
 
 ## General availability (GA)
 

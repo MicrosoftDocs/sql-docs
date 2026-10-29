@@ -84,6 +84,7 @@ When you enable `FAILED_LOGIN_GROUP`, audit events appear approximately every 10
 | `ResourceType` | `MANAGEDINSTANCES` |
 | `action_id_s` | `LGIF` |
 | `server_principal_name_s` | `AzureSQLConnectivityChecker` |
+| `application_name_s` | `AzureSQL-NetworkMonitoring` |
 | `client_ip_s` | IP address within the subnet range |
 
 ### Extended Events
@@ -97,6 +98,7 @@ Extended Event sessions that capture `sqlserver.error_reported` where `error_num
 | `severity` | `14` |
 | `state` | Variable (depends on authentication configuration) |
 | `message` | Variable (depends on authentication configuration) |
+| `sqlserver.client_app_name` | `AzureSQL-NetworkMonitoring` |
 | `sqlazure.is_azure_connection` | `True` |
 
 For example, if SQL authentication is disabled on the SQL managed instance, the state is `170` and the message indicates that Microsoft Entra-only authentication is enabled.

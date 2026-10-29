@@ -5,13 +5,14 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/01/2026
+ms.date: 10/29/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
 ms.custom:
   - ignite-2025
 monikerRange: "=azuresql || =azuresql-db"
+ai-usage: ai-assisted
 ---
 # What's new in Azure SQL Database?
 
@@ -34,7 +35,7 @@ For more announcements, discussion, and community content, see the [Azure SQL Da
 The following table lists the features of Azure SQL Database that are currently in preview.
 
 > [!NOTE]  
-> Features currently in preview are available under [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/), review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
+> To review the legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability, see [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).
 
 | Feature | Details |
 | --- | --- |
@@ -42,7 +43,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | **Approximate or fuzzy string matching** | Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption. [What is fuzzy string matching?](/sql/relational-databases/fuzzy-string-match/overview) |
 | **Availability metric** | Availability is now a metric in the Azure Monitor metrics. Driven by a variety of user connection failures, you can [monitor and configure alerts on Azure SQL Database Availability](monitoring-metrics-alerts.md#availability-metric). |
 | **Change event streaming** | Capture and publish row-level DML changes (inserts, updates, and deletes) on tracked tables in near real-time. Change event streaming publishes each change to Azure Event Hubs or Fabric Eventstream as a CloudEvent that includes the row's current schema, previous values, and new values, serialized as either native JSON or Avro Binary. For more information, see [What is change event streaming (preview)?](/sql/relational-databases/track-changes/change-event-streaming/overview). |
-| **Database watcher for Azure SQL** | [Database watcher](../database-watcher-overview.md) is a managed monitoring solution for database services in the Azure SQL family. Database watcher collects in-depth workload monitoring data to give you a detailed view of database performance, configuration, and health. Learn more about [database watcher](https://aka.ms/dbwatcher-preview-announcement). |
+| **Database Hub in Microsoft Fabric** | [Database Hub in Microsoft Fabric](/fabric/database/hub/overview) gives database teams one place to detect, investigate, act on, and automate responses to issues across their database estate. Database Hub discovers the Azure SQL databases you already have permission to access, prioritizes performance, security, utilization, and best practice findings, and lets you investigate real-time and historical telemetry without switching between portals. Database Hub is available with a Fabric Free license, so you don't need Fabric capacity or a separate license to get started. To collect performance data, see [Enable performance monitoring for Azure SQL Database](enable-performance-monitoring-sql-database.md). |
 | **Data Virtualization for Azure SQL Database** | Data virtualization, now in preview in Azure SQL Database, enables you to use all the power of Transact-SQL (T-SQL) and seamlessly query external data from Azure Data Lake Storage Gen2 or Azure Blob Storage. For more information, see [Data virtualization with Azure SQL Database (Preview)](data-virtualization-overview.md). |
 | **Elastic queries** | The [elastic queries](elastic-query-overview.md) feature allows for cross-database queries in Azure SQL Database. |
 | **Elastic transactions** | [Elastic transactions](elastic-transactions-overview.md) allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
@@ -68,7 +69,7 @@ The following table lists features of Azure SQL Database that became generally a
 | --- | --- | --- |
 | **Vector indexes and VECTOR_SEARCH** | September 2026 | DiskANN vector indexes and `VECTOR_SEARCH` are now generally available in Azure SQL Database, with full DML support, iterative filtering, the `SELECT TOP (N) WITH APPROXIMATE` syntax, and the `FORCE_ANN_ONLY` table hint. Earlier vector index versions and the `TOP_N` parameter are deprecated. For more information, see [CREATE VECTOR INDEX](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqldb-current&preserve-view=true) and [VECTOR_SEARCH](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqldb-current&preserve-view=true). For more information, see [Vector indexes and vector search general availability](https://aka.ms/azuresql-vectorindex-ga).|
 | **Azure SQL portal Query editor** | September 2026 | The [Azure portal Query editor](query-editor.md) is now generally available. The classic query editor portal experience remains in preview. New features for the query editor at GA: a **Cancel** button, resizable result set grid, stored procedure definitions, and automatic query saving.|
-| **Automatic index compaction** | September 2026 | [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction) helps you reduce the consumption of storage space, disk I/O, memory, and improve workload performance without investing time and effort into index maintenance jobs. |
+| **Automatic index compaction** | September 2026 | [Automatic index compaction](/sql/relational-databases/indexes/automatic-index-compaction) helps you reduce the consumption of storage space, disk I/O, and memory, and improve workload performance without investing time and effort into index maintenance jobs. |
 | **160 and 192 vCore for Hyperscale Premium-series** | September 2026 | The 160 and 192 vCore options for Hyperscale Premium-series are now generally available, for both single Hyperscale databases and Hyperscale elastic pools. For more information, see [160 and 192 vCore offering for Hyperscale Premium Series](https://aka.ms/PRMS192vCores). |
 |**Automatic backup immutability** | August 2026 | [Automatic backup immutability](../automatic-backup-immutability.md) protects the most recent seven days of point-in-time restore backups in Azure SQL Database. |
 | **Microsoft Entra server principals** | June 2026 | The ability to [create server principals (logins) for Microsoft Entra identities](authentication-azure-ad-logins.md) in Azure SQL Database is now generally available. |

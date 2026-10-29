@@ -3,7 +3,7 @@ title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)"
 description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 author: dimitri-furman
 ms.author: dfurman
-ms.date: "02/27/2023"
+ms.date: 10/29/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,7 +60,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|ID of the session that started the transaction.|  
 |**first_snapshot_sequence_num**|**bigint**|Lowest transaction sequence number of the transactions that were active when a snapshot was taken. On execution, a snapshot transaction takes a snapshot of all of the active transactions at that time. For nonsnapshot transactions, this column shows 0.|  
 |**max_version_chain_traversed**|**int**|Maximum length of the version chain that is traversed to find the transactionally consistent version.|  
-|**average_version_chain_traversed**|**real**|Average number of row versions in the version chains that are traversed.|  
+|**average_version_chain_traversed**|**float**|Average number of row versions in the version chains that are traversed.|  
 |**elapsed_time_seconds**|**bigint**|Elapsed time since the transaction obtained its transaction sequence number.|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   

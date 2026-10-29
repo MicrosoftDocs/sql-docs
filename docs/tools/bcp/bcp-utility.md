@@ -229,7 +229,7 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [**Batching and performance**](#batching-and-performance) | | | |
 | [-a *packet_size*](#-a-packet_size) | Yes | Yes | Yes |
 | [-b *batch_size*](#-b-batch_size) | Yes | Yes | Yes |
-| [-h"*hint* \[,...*n*\]"](#-h-hints---n) | Yes | No | No |
+| [-h"*hint* \[,...*n*\]"](#-h-hints---n) | Yes | Yes | No |
 | [-m *max_errors*](#-m-max_errors) | Yes | Yes | Yes |
 | [-F *first_row*](#-f-first_row) | Yes | Yes | Yes |
 | [-L *last_row*](#-l-last_row) | Yes | Yes | Yes |
@@ -499,8 +499,6 @@ The `-b` and the `-h "ROWS_PER_BATCH=<bb>"` hint are mutually exclusive. Use `-b
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -h "*hints* [, ... *n*]"
-
-**Applies to**: Windows only. Not supported on Linux and macOS.
 
 Specifies the hint or hints to use during a bulk import of data into a table or view.
 

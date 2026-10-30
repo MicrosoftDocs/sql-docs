@@ -9544,6 +9544,8 @@ items:
         href: sql-server/azure-arc/migration-inventory.md
       - name: Discover & assess
         href: sql-server/azure-arc/migration-assessment.md
+      - name: Migrate from Arc-registered (agentless) SQL Server instances
+        href: sql-server/azure-arc/migrate-from-arc-registered-agentless-sql-server-instances.md
       - name: Migrate to Azure SQL Managed Instance
         items:
         - name: Prepare MI link migration

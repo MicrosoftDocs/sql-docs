@@ -185,6 +185,8 @@
             href: database/authentication-aad-service-principal.md
           - name: Managed identity
             href: database/authentication-azure-ad-user-assigned-managed-identity.md
+          - name: Database-level managed identity
+            href: database/database-level-managed-identity.md
           - name: Microsoft Entra nonunique display names
             href: /sql/relational-databases/security/authentication-access/authentication-microsoft-entra-create-users-with-nonunique-names
           - name: Microsoft Entra server logins

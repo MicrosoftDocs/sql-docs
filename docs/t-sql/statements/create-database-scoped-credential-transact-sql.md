@@ -4,7 +4,7 @@ description: Creates a database credential used by the database to access to the
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf
-ms.date: 03/27/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -78,11 +78,15 @@ Specifies the name of the account to use when connecting outside the server.
 | --- | --- | --- | --- |
 | **Shared Access Signature (SAS)** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = 'SHARED ACCESS SIGNATURE', SECRET = 'secret';` | SQL Server 2022 and later, Azure SQL Managed Instance, Azure Synapse Analytics, Azure SQL Database | |
 | **Managed Identity** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = 'MANAGED IDENTITY';` | Azure SQL Database, Azure SQL Managed Instance, SQL Server 2025 with Azure Arc | To enable Azure Arc, see [Managed identity for SQL Server enabled by Azure Arc](../../sql-server/azure-arc/managed-identity.md) |
+| **Database-level managed identity** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = 'DATABASE MANAGED IDENTITY';` | Azure SQL Database <sup>2</sup> | Uses the user-assigned managed identity assigned to the database, instead of the identity shared by the logical server. See [Use database-level managed identity with Azure SQL Database](/azure/azure-sql/database/database-level-managed-identity) |
+| **Database-level federated client identity** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = 'DATABASE FEDERATED CLIENT IDENTITY';` | Azure SQL Database <sup>2</sup> | Authenticates to storage in another tenant, using the federated client identity configured on the database. See [Use database-level managed identity with Azure SQL Database](/azure/azure-sql/database/database-level-managed-identity) |
 | **Microsoft Entra pass-through authentication via User Identity** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = 'USER IDENTITY';` | [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] <sup>1</sup> | In Azure Synapse, see [User sign-in with Microsoft Entra pass-through authentication](/entra/identity/hybrid/connect/how-to-connect-pta) |
 | **S3 Access Key Basic authentication** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = 'S3 ACCESS KEY', SECRET = '<accesskey>:<secretkey>';` | SQL Server 2022 and later versions | |
 | **ODBC Data sources or Kerberos (MIT KDC)** | `CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<identity_name>', SECRET = '<secret>'`; | SQL Server 2019 and later versions | |
 
 <sup>1</sup> In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if you don't specify a database-scoped credential, the authentication method defaults to 'USER IDENTITY' and uses the Microsoft Entra ID user account as context.
+
+<sup>2</sup> Database-level managed identity is in preview. It applies to data virtualization in Azure SQL Database, and isn't supported in the `master` database.
 
 #### SECRET = '*secret*'
 

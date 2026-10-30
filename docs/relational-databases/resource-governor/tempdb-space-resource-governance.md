@@ -4,7 +4,7 @@ description: Use Resource Governor to prevent runaway workloads from consuming a
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: dfurman
-ms.date: 10/23/2026
+ms.date: 10/30/2026
 ms.service: sql
 ms.topic: concept-article
 ms.custom:
@@ -51,12 +51,12 @@ On a given [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance, 
 
 ### Percent limit configuration
 
-When you run the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement, percent limits take effect according to the following table:
+Percent limits require specific `tempdb` configuration, as described in the following table. When you run the `ALTER RESOURCE GOVERNOR RECONFIGURE` statement, percent limits only take effect when the requirements are satisfied:
 
-| Configuration | Description | Tempdb maximum size (100%) | Percent limit in effect |
+| Configuration | Settings | Tempdb maximum size (100%) | Percent limit in effect |
 | --- | --- | --- | --- |
-| - `GROUP_MAX_TEMPDB_DATA_MB` isn't set<br />- For all data files, `MAXSIZE` isn't `UNLIMITED`<br />- For all data files, `FILEGROWTH` isn't zero | `tempdb` data files can autogrow up to their maximum size | The sum of `MAXSIZE` values for all data files | Yes |
-| - `GROUP_MAX_TEMPDB_DATA_MB` isn't set<br />- For all data files, `MAXSIZE` is `UNLIMITED`<br />- For all data files, `FILEGROWTH` is zero | `tempdb` data files are pregrown to their intended sizes and can't grow further | The sum of `SIZE` values for all data files | Yes |
+| `tempdb` data files can autogrow up to their maximum size | - `GROUP_MAX_TEMPDB_DATA_MB` isn't set<br />- For all data files, `MAXSIZE` isn't `UNLIMITED`<br />- For all data files, `FILEGROWTH` isn't zero | The sum of `MAXSIZE` values for all data files | Yes |
+| `tempdb` data files are pregrown to their intended sizes and can't grow further | - `GROUP_MAX_TEMPDB_DATA_MB` isn't set<br />- For all data files, `MAXSIZE` is `UNLIMITED`<br />- For all data files, `FILEGROWTH` is zero | The sum of `SIZE` values for all data files | Yes |
 | All other configurations | | | No |
 
 To view your `tempdb` configuration, see the [View tempdb data file configuration](#view-tempdb-data-file-configuration) example.
@@ -75,9 +75,11 @@ When using percent limits, consider the following:
 
 > [!NOTE]
 > For a new [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance, data file `MAXSIZE` is `UNLIMITED` and `FILEGROWTH` is greater than zero, which means that percent limits aren't effective. To use percent limits, you must either:
+>
 > - Pregrow `tempdb` data files to their intended sizes and set `FILEGROWTH` to zero.
 > - Set the `MAXSIZE` of each data file to a limited value.
-> - For each `tempdb` data file volume, make sure that the sum of `MAXSIZE` values for files on the volume is less than or equal to the available disk space on the volume. For example, if a volume has 100 GB of free space and has two `tempdb` data files, make the `MAXSIZE` of each file 50 GB or less.
+>
+> For each `tempdb` data file volume, make sure that the sum of `MAXSIZE` values for files on the volume is less than or equal to the available disk space on the volume. For example, if a volume has 100 GB of free space and has two `tempdb` data files, make the `MAXSIZE` of each file 50 GB or less.
 
 ## How it works
 
@@ -213,7 +215,7 @@ SELECT s.session_id,
        - s.user_objects_deferred_dealloc_page_count + COALESCE(t.user_net_pages, 0)
        AS user_net_pages
 FROM sys.dm_db_session_space_usage AS s
-LEFT JOIN task_space AS t
+LEFT HASH JOIN task_space AS t
 ON t.database_id = s.database_id
    AND
    t.session_id = s.session_id

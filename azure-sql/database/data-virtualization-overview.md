@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 06/17/2025
+ms.date: 10/21/2026
 ms.service: azure-sql-database
 ms.topic: concept-article
 ---
@@ -86,6 +86,7 @@ Azure SQL Database supports the following authentication types:
 
 - Shared access signature (SAS)
 - Managed identity
+- Database-level managed identity (preview)
 - Microsoft Entra pass-through authentication via User Identity
 
 ### [Shared Access Signature](#tab/sas)
@@ -131,6 +132,8 @@ The Azure storage administrator must first grant permissions to the managed iden
     CREATE DATABASE SCOPED CREDENTIAL MyCredential
     WITH IDENTITY = 'Managed Identity';
     ```
+
+`IDENTITY = 'Managed Identity'` uses the identity of the logical server, which every database on that server shares. To give a single database its own identity instead, including access to storage in another tenant, use a database-level managed identity. For more information, see [Use database-level managed identity with Azure SQL Database](database-level-managed-identity.md).
 
 ### [User Identity](#tab/user-identity)
 
@@ -512,7 +515,7 @@ Issues with query execution are typically caused by Azure SQL Database not being
 - Currently, `CREATE EXTERNAL TABLE AS SELECT` is not available on Azure SQL Database.
 - [Row level security](/sql/relational-databases/security/row-level-security?view=azuresqldb-current&preserve-view=true) feature is not supported with external tables.
 - [Dynamic data masking](/sql/relational-databases/security/dynamic-data-masking?view=azuresqldb-current&preserve-view=true) rule can't be defined for a column in an external table.
-- Managed Identity does not support cross-tenant scenarios, if you Azure Storage Account is in a different tenant, Shared access signature is the supported method.
+- The logical server's managed identity (`IDENTITY = 'Managed Identity'`) doesn't support cross-tenant scenarios. If your Azure Storage account is in a different tenant, use a shared access signature or a [database-level managed identity](database-level-managed-identity.md) with `IDENTITY = 'DATABASE FEDERATED CLIENT IDENTITY'` (preview).
 
 ## Known issues
 

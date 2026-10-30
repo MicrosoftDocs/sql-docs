@@ -5,7 +5,7 @@ description: Learn about system assigned and user assigned managed identities in
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf
-ms.date: 03/05/2026
+ms.date: 10/21/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: security
@@ -315,6 +315,48 @@ To update the UMI settings for the server, you can also use the Azure Resource M
 > [!NOTE]  
 > You can't change the server administrator or password, or change the Microsoft Entra admin, by rerunning the provisioning command for the ARM template.
 
+## Get or set a managed identity for a database
+
+Azure SQL Database also supports assigning a user-assigned managed identity to an individual **database**, so the database authenticates to external resources with its own identity instead of the one shared by the logical server. Azure SQL Managed Instance doesn't support database-level identities.
+
+Use a database-level identity with:
+
+- [Database-level customer-managed keys for transparent data encryption](transparent-data-encryption-byok-database-level-overview.md).
+- [Database-level managed identity for data virtualization](database-level-managed-identity.md).
+
+> [!IMPORTANT]
+> A database can have only one user-assigned managed identity assigned at the database level, unlike a logical server, which can have several.
+
+### Set a database identity in the Azure portal
+
+1. Go to your **SQL database** resource.
+1. Under **Security**, select the **Identity** setting.
+1. Under **User-Assigned Managed Identity**, select **Add**.
+1. Select a subscription, select the managed identity, and then choose the **Add** button.
+1. Select **Save**.
+
+To use the identity across tenants, also set a **Federated client identity** on the same page.
+
+### Set a database identity by using the Azure CLI
+
+Use [az sql db update](/cli/azure/sql/db#az-sql-db-update) for an existing database, or [az sql db create](/cli/azure/sql/db#az-sql-db-create) when you create one:
+
+```azurecli
+az sql db update --resource-group "resourcegroupnamehere" --server "sql-logical-server-name-here" --name "databasenamehere" --assign-identity --user-assigned-identity-id $identityid
+```
+
+Add `--federated-client-id` to configure cross-tenant access.
+
+### Set a database identity by using PowerShell
+
+Use [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) for an existing database, or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) when you create one:
+
+```powershell
+Set-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId>
+```
+
+Add the `-FederatedClientId` parameter to configure cross-tenant access.
+
 ## Limitations and known issues
 
 - After you create a managed instance, the **Microsoft Entra admin** page for your managed instance in the Azure portal shows a warning: `Managed Instance needs permissions to access Microsoft Entra ID. Click here to grant "Read" permissions to your Managed Instance.` If you gave the UMI the appropriate permissions [discussed earlier in this article](#permissions), you can ignore this warning.
@@ -330,3 +372,4 @@ For information on Microsoft Entra ID authentication in Azure Synapse Analytics,
 - [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
 - [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
 - [Modifiable configuration reference for Azure SQL Database](modifiable-configuration-reference.md)
+- [Use database-level managed identity with Azure SQL Database](database-level-managed-identity.md)

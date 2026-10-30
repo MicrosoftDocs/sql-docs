@@ -4,7 +4,7 @@ description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: uc-msft
 ms.author: umajay
 ms.reviewer: hudequei, wiassaf
-ms.date: 01/27/2026
+ms.date: 09/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -968,14 +968,25 @@ WITH (
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
    ```
 
-1. Create the database scoped credential using a SAS token. You can also use a managed identity.
+1. Create the database scoped credential. Authenticate by using a shared access signature (SAS) token, the managed identity of the logical server, or a managed identity assigned to the database.
 
    ```sql
+   -- Option 1: shared access signature
    CREATE DATABASE SCOPED CREDENTIAL MyCredential
    WITH
        IDENTITY = 'SHARED ACCESS SIGNATURE',
        SECRET = '<KEY>'; --Removing leading '?'
+
+   -- Option 2: the managed identity of the logical server
+   CREATE DATABASE SCOPED CREDENTIAL MyCredential
+   WITH IDENTITY = 'MANAGED IDENTITY';
+
+   -- Option 3: the managed identity assigned to this database (preview)
+   CREATE DATABASE SCOPED CREDENTIAL MyCredential
+   WITH IDENTITY = 'DATABASE MANAGED IDENTITY';
    ```
+
+   A database-level identity scopes storage access to a single database, instead of sharing one identity across every database on the logical server. It also reaches storage in another tenant through `IDENTITY = 'DATABASE FEDERATED CLIENT IDENTITY'`. For more information, see [Use database-level managed identity with Azure SQL Database](/azure/azure-sql/database/database-level-managed-identity).
 
 1. Create the external data source using the credential.
 

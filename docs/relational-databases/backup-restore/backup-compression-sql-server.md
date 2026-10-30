@@ -44,7 +44,7 @@ This article describes the compression of [!INCLUDE[ssNoVersion](../../includes/
   
 ## ZSTD compression algorithm introduced in SQL Server 2025
 
-Starting with [!INCLUDE[sssql25-md](../../includes/sssql25-md.md)], a new compression algorithm, ZSTD, is available for backup compression. At its default level (`LOW`), this algorithm uses less CPU than the previous MS_XPRESS algorithm, and depending on the data, the backup can be smaller or larger than with MS_XPRESS. The `MEDIUM` and `HIGH` levels produce smaller backups, at a higher CPU cost. 
+Starting with [!INCLUDE[sssql25-md](../../includes/sssql25-md.md)], a new compression algorithm, ZSTD, is available for backup compression. At its default level (`LOW`), this algorithm uses less CPU than the previous MS_XPRESS algorithm, and depending on the data, the backup can be smaller or larger than with MS_XPRESS. The `MEDIUM` and `HIGH` levels can produce smaller backups than MS_XPRESS, depending on the data, at a higher CPU cost. 
 
 You can use the ZSTD algorithm for backup compression in one of the following ways:
 - By specifying the `WITH COMPRESSION (ALGORITHM = ZSTD)` option in the [BACKUP](../../t-sql/statements/backup-transact-sql.md#compression) Transact-SQL command for *a specific backup*. 

@@ -24,7 +24,7 @@ This article helps you prepare your environment for a [SQL Server VM migration](
 To migrate your SQL Server databases to SQL Server on Azure VMs through the Azure portal, you need the following prerequisites:
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- An instance of SQL Server [enabled by Azure Arc](overview.md) with the [latest version](release-notes.md) of the Azure extension for SQL Server. To upgrade your extension, see [Upgrade the extension](connect.md#upgrade-the-extension).
+- An instance of SQL Server [enabled by Azure Arc](overview.md) with the [latest version](release-notes.md) of the Azure extension for SQL Server or [registered with Azure Arc](migrate-from-arc-registered-agentless-sql-server-instances.md). To upgrade your extension, see [Upgrade the extension](connect.md#upgrade-the-extension).
 - You can choose to use an existing SQL Server on Azure VM, or you can provision a target SQL Server VM during the migration process. If you choose to use an existing SQL Server VM, it must be [registered with the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm).
 
 ## Supported SQL Server versions

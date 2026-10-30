@@ -62,7 +62,7 @@ Select the **Copilot** icon on the **Database migration** pane to open the Copil
 To use SQL Server migration in Azure Arc, you need the following prerequisites:
 
 - An active Azure subscription. If you don't have one, you can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- Your SQL Server instance must be [enabled by Azure Arc](overview.md) with the [latest version](release-notes.md) of the Azure extension for SQL Server. 
+- Your SQL Server instance must be [enabled by Azure Arc](overview.md) with the [latest version](release-notes.md) of the Azure extension for SQL Server or [registered with Azure Arc](migrate-from-arc-registered-agentless-sql-server-instances.md). For agentless instances, skip [Update the extension](#update-the-extension) and [Assess source instance](#assess-source-instance). Instead, open your SQL Server instance in the Azure portal, select **Migration** > **Database migration**, and continue with [Select target](#select-target).
 - Your source environment has been [prepared](migration-sql-vm-prepare.md) for migration.
 
 ## Update the extension
@@ -95,7 +95,7 @@ To assess the source instance, follow these steps:
 
 1. On the **Assessments** pane:
 
-   - Use **Run assessment** to start a new assessment if one wasn't run recently.
+   - Use **Run assessment** to start a new assessment if one didn't run recently. If you can't see the Assessment, because your SQL Server is Arc-registered, follow the steps mentioned in [Migrate from Arc-registered agentless SQL Server instances](migrate-from-arc-registered-agentless-sql-server-instances.md).
    - Use **View assessment details** in the **SQL Server on Azure VM** tile to learn more about your assessment results, including the readiness of your SQL Server instance to migrate to a SQL Server VM. You also learn about the recommended configuration for your target instance.
 
 ### Select target

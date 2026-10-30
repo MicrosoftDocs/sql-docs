@@ -26,7 +26,7 @@ You can try Azure SQL Managed Instance [for free](/azure/azure-sql/managed-insta
 
 Azure SQL Managed Instance is a fully managed lift-and-shift platform as a service (PaaS) target to run your SQL Server workloads on the Azure cloud platform. After your SQL Server instance is enabled by Azure Arc, you can assess your SQL Server data estate to identify an optimal SQL Managed Instance configuration. Then you can migrate your SQL Server databases to SQL Managed Instance directly from the Azure portal.
 
-When your SQL Server instance is enabled by Azure Arc, you can:
+When you enable your SQL Server instance by Azure Arc, you can:
 
 - Evaluate and assess whether your SQL Server instance is ready to migrate to SQL Managed Instance.
 - Identify potential migration issues, and learn how to mitigate them.
@@ -52,7 +52,7 @@ The following table summarizes the two methods built into the migration process:
 
 | | [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) | [Log Replay Service (LRS)](/azure/azure-sql/managed-instance/log-replay-service-overview) |
 | --- | --- | --- |
-| **Method** | Real time replication<br />:::image type="content" source="media/migrate-to-azure-sql-managed-instance/mi-link-migration-method.png" alt-text="Diagram showing Managed Instance link migration."::: | Continuous backup and restore<br />:::image type="content" source="media/migrate-to-azure-sql-managed-instance/lrs-migration-method.png" alt-text="Diagram showing Log Replay Service migration."::: |
+| **Method** | Real-time replication<br />:::image type="content" source="media/migrate-to-azure-sql-managed-instance/mi-link-migration-method.png" alt-text="Diagram showing Managed Instance link migration."::: | Continuous backup and restore<br />:::image type="content" source="media/migrate-to-azure-sql-managed-instance/lrs-migration-method.png" alt-text="Diagram showing Log Replay Service migration."::: |
 | **Underlying technology** | Distributed availability group | Log shipping |
 | **Description** | Most performant method with near real-time replication. Provides a read-only (R/O) database on the target, so you can query your data in near-real time during the migration to offload R/O workloads on the secondary, or check data during the migration. Best possible minimum downtime migration. | Most compatible migration method. Upload backups to an intermediary Azure blob storage account that the LRS service automatically restores to SQL Managed Instance continuously. No R/O database replica is available on the target. |
 | **Supported versions** | SQL Server 2016 and later on Windows Server 2016 and later | SQL Server 2012 and later on Windows Server 2012 and later |
@@ -64,7 +64,7 @@ For an in-depth comparison of the two migration methods, see [Compare Managed In
 
 ## Microsoft Copilot assisted migration
 
-Microsoft Copilot is built into the experience to assist you throughout the migration process. Interactively chatting with Microsoft Copilot searches through the Microsoft knowledgebase to help you along the way as you migrate to Azure.
+Microsoft Copilot is built into the experience to assist you throughout the migration process. When you interactively chat with Microsoft Copilot, it searches through the Microsoft knowledge base to help you as you migrate to Azure.
 
 Microsoft Copilot provides AI-powered assistance to help you make decisions or take actions at certain points with prompts such as:
 - How are assessments made?
@@ -82,16 +82,16 @@ Select the **Copilot** icon on the **Database migration** pane to open the Copil
 
 To use SQL Server migration in Azure Arc, you need the following prerequisites:
 
-- An active Azure subscription. If you don't have one, you can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- Your SQL Server instance must be [enabled by Azure Arc](overview.md) with the [latest version](release-notes.md) of the Azure extension for SQL Server.
+- An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- Your SQL Server instance must be [enabled by Azure Arc](overview.md) with the [latest version](release-notes.md) of the Azure extension for SQL Server or [registered with Azure Arc](migrate-from-arc-registered-agentless-sql-server-instances.md).
 
-Before you start the migration process, make sure that you've prepared your environment for your [chosen migration method](#integrated-migration-methods):
+Before you start the migration process, ensure that you prepare your environment for your [chosen migration method](#integrated-migration-methods):
 - Prepare for [Managed Instance link migration](migration-sql-mi-prepare-link.md).
 - Prepare for [LRS migration](migration-sql-mi-prepare-log-replay-service.md).
 
 ## Update the extension
 
-Before starting the migration, make sure you have the current version of the Azure extension for SQL Server installed on your SQL Server instance. The extension is updated independently of SQL Server, so having the latest version ensures you have all the latest features and fixes for migration.
+Before starting the migration, ensure you have the current version of the Azure extension for SQL Server installed on your SQL Server instance. The extension is updated independently of SQL Server, so having the latest version ensures you have all the latest features and fixes for migration.
 
 To update your extension, see [Update the extension](connect.md#upgrade-the-extension).
 
@@ -119,7 +119,7 @@ To assess the source instance, follow these steps:
 
 1. On the **Assessments** pane:
 
-   - Use **Run assessment** to start a new assessment if one wasn't run recently.
+   - Use **Run assessment** to start a new assessment if one didn't run recently.
    - Use **View assessment details** in the **Azure SQL MI** tile to learn more about your assessment results, including the readiness of your SQL Server instance to migrate to SQL Managed Instance. You also learn about the recommended service tier and configuration for your target instance.
 
 ### Select target
@@ -150,7 +150,7 @@ After your target is ready, start the migration process.
 
 #### [MI link migration](#tab/mi-link)
 
-Once you've prepared your environment for [Managed Instance link migration](migration-sql-mi-prepare-link.md), you can migrate your SQL Server databases to Azure SQL Managed Instance.
+Once you prepare your environment for [Managed Instance link migration](migration-sql-mi-prepare-link.md), you can migrate your SQL Server databases to Azure SQL Managed Instance.
 
 > [!NOTE]  
 > Creating each link can take up to 10 minutes. Use the [Activity log](migrate-to-azure-sql-managed-instance-troubleshoot.md#view-azure-activity-log-for-migration-issues) to track background changes during the link creation process.
@@ -166,24 +166,24 @@ Follow these steps to migrate your SQL Server databases to SQL Managed Instance 
 
    :::image type="content" source="media/migrate-to-azure-sql-managed-instance/select-source-database-link.png" alt-text="Screenshot of the select source databases page when you migrate your database with LRS in the Azure portal." lightbox="media/migrate-to-azure-sql-managed-instance/select-source-database-link.png":::
 
-   The Azure Extension for SQL Server version `1.1.3348.364` or later supports selecting up to 10 databases to migrate simultaneously. If your extension version is earlier, you can only select, and migrate, one database at a time.
+   The Azure Extension for SQL Server version `1.1.3348.364` or later supports selecting up to 10 databases to migrate simultaneously. If your extension version is earlier, you can only select and migrate one database at a time.
 
 1. On the **Settings** tab, provide the name of the MI link. The name of the availability group is autogenerated - customize it, only if you need to. You can also use **Test connection** to test the connection to the source SQL Server instance, though be aware that [false positives](migration-sql-mi-prepare-link.md#test-network-connectivity) can occur in some network configurations. Use **Next: Review + create** to proceed to the next page:
 
    :::image type="content" source="media/migrate-to-azure-sql-managed-instance/mi-link-settings.png" alt-text="Screenshot of link parameters on the settings page of a new data migration in the Azure portal.":::
 
-   You can also test the connection to the target SQL Managed Instance
+   You can also test the connection to the target SQL Managed Instance.
 
-1. On the **Review + create** tab, review the settings, and check for warnings. It's possible to start the migration with some warnings, but not others. Select **Start data migration** to migrate your data to your SQL Managed Instance target.
+1. On the **Review + create** tab, review the settings, and check for warnings. You can start the migration with some warnings, but not others. Select **Start data migration** to migrate your data to your SQL Managed Instance target.
 
 > [!NOTE]  
-> When you start the migration process by using the Managed Instance link migration method, the system grants [just-in-time permissions](configure-windows-accounts-agent.md#create-managed-instance-link-migration) for the entire workflow until creating the distributed availability group completes, at which point just-in-time permissions are removed.
+> When you start the migration process by using the Managed Instance link migration method, the system grants [just-in-time permissions](configure-windows-accounts-agent.md#create-managed-instance-link-migration) for the entire workflow until creating the distributed availability group finishes, at which point just-in-time permissions are removed.
 
 ### Monitor replication lag before cutover
 
-After you start your migration, you can monitor for replication lag between the primary and secondary replicas. A large discrepancy indicates that the secondary replica is having trouble keeping up with the primary replica, which is typically caused by slow network throughput in the link between the two instances, mismatched resource allocation between the two replicas, or by an excessively high workload on the primary replica.
+After you start your migration, monitor for replication lag between the primary and secondary replicas. A large discrepancy indicates that the secondary replica is having trouble keeping up with the primary replica. This problem typically occurs because of slow network throughput in the link between the two instances, mismatched resource allocation between the two replicas, or an excessively high workload on the primary replica.
 
-Monitoring replication lag is especially important when cutting over to the target SQL Managed Instance. Cutting over performs a planned failover which requires the secondary replica to be fully synchronized with the primary replica before the failover execute. If replication lag is high, the failover might take longer to complete, and in some cases, it might even fail.
+Monitoring replication lag is especially important when you cut over to the target SQL Managed Instance. Cutting over performs a planned failover which requires the secondary replica to be fully synchronized with the primary replica before the failover executes. If replication lag is high, the failover might take longer to complete. In some cases, it might even fail.
 
 On the **Database migration** pane, select **Monitor migrations** and then check the **Lag** column. Two dashes indicates there is no lag, while a time value indicates the amount of lag.
 

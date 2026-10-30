@@ -477,7 +477,7 @@ Use `ALTER SERVER CONFIGURATION` to set `PROCESS AFFINITY` for all the `NUMANODE
 
 #### Configure multiple `tempdb` data files
 
-Because a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux installation doesn't offer an option to configure multiple `tempdb` files, consider creating multiple `tempdb` data files after installation. For more information, see [Recommendations to reduce allocation contention in SQL Server tempdb database](/troubleshoot/sql/database-engine/performance/recommendations-reduce-allocation-contention).
+Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], a new installation of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Linux creates multiple `tempdb` data files based on the number of logical processors, up to eight files. Express edition creates a single `tempdb` data file, and an in-place upgrade from [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] keeps the existing `tempdb` data files. For [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], for an instance upgraded from [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and for Express edition, consider creating multiple `tempdb` data files after installation or upgrade. For more information, see [Recommendations to reduce allocation contention in SQL Server tempdb database](/troubleshoot/sql/database-engine/performance/recommendations-reduce-allocation-contention).
 
 ### Advanced configuration
 

@@ -1,6 +1,6 @@
 ---
 title: "DBCC FREESYSTEMCACHE (Transact-SQL)"
-description: "DBCC FREESYSTEMCACHE releases all unused cache entries from all caches."
+description: "DBCC FREESYSTEMCACHE releases all unused cache entries from all caches or from a specified cache."
 author: uc-msft
 ms.author: umajay
 ms.date: 12/05/2022
@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache or from a specified Resource Governor pool cache.
+Releases all unused cache entries from all caches or from a specified cache. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache, from a specified cache, or from a specified Resource Governor pool cache.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

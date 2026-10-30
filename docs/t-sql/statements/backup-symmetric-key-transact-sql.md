@@ -55,26 +55,40 @@ In order to back up the symmetric key to an Azure Blob storage, you need to:
 
 For more information, see [Tutorial: Use Azure Blob Storage with SQL Server](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server.md).
 
+## Remarks
+
+The symmetric key must be open in the current session before you back it up. To open the key, use [OPEN SYMMETRIC KEY](open-symmetric-key-transact-sql.md).
+
 ## Permissions
 
 Requires ALTER permission on the symmetric key. If adding encryption by a certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. If dropping encryption by a certificate or asymmetric key, requires CONTROL permission on the certificate or asymmetric key.
 
 ## Examples
 
-In the following example, the symmetric key is backed up to a file.
+In the following example, the symmetric key, encrypted by the certificate `symmetric_key_cert`, is opened and backed up to a file.
 
 ```sql
+OPEN SYMMETRIC KEY symmetric_key
+   DECRYPTION BY CERTIFICATE symmetric_key_cert;
+
 BACKUP SYMMETRIC KEY symmetric_key
    TO FILE = 'c:\temp_backups\keys\symmetric_key'
    ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+
+CLOSE SYMMETRIC KEY symmetric_key;
 ```
 
-In the following example, the symmetric key is backed up to an Azure Blob storage.
+In the following example, the symmetric key is opened and backed up to an Azure Blob storage.
 
 ```sql
+OPEN SYMMETRIC KEY symmetric_key
+   DECRYPTION BY CERTIFICATE symmetric_key_cert;
+
 BACKUP SYMMETRIC KEY symmetric_key
    TO URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/symmetric_key.bak'
-   ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4'
+   ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+
+CLOSE SYMMETRIC KEY symmetric_key;
 ```
 
 ## Related content

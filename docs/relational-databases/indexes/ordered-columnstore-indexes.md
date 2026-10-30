@@ -48,8 +48,8 @@ The following table describes the resulting order type when you create or rebuil
 
 | Prerequisites | Order type |
 | --- | --- |
-| `ONLINE = ON` and `MAXDOP = 1` | Full |
-| `ONLINE = OFF`, `MAXDOP = 1`, and the data to sort fully fits in the query workspace memory | Full |
+| Clustered columnstore index, `ONLINE = ON`, and `MAXDOP = 1` | Full |
+| `MAXDOP = 1`, and the data to sort fully fits in the query workspace memory | Full |
 | All other cases | Partial |
 
 In the first case when both `ONLINE = ON` and `MAXDOP = 1`, the sort isn't limited by the query workspace memory because an online build of an ordered columnstore index spills the data that doesn't fit in memory to the database where the index is built, or to `tempdb` in Azure SQL Database Hyperscale. This approach can make the index build process slower due to the additional I/O, and requires sufficient free space in the data files of that database. However, because the index build is performed online, queries can continue using the existing index while the new ordered index is being built.

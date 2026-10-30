@@ -229,7 +229,7 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [**Batching and performance**](#batching-and-performance) | | | |
 | [-a *packet_size*](#-a-packet_size) | Yes | Yes | Yes |
 | [-b *batch_size*](#-b-batch_size) | Yes | Yes | Yes |
-| [-h"*hint* \[,...*n*\]"](#-h-hints---n) | Yes | Yes | No |
+| [-h"*hint* \[,...*n*\]"](#-h-hints---n) | Yes | Yes <sup>3</sup> | No |
 | [-m *max_errors*](#-m-max_errors) | Yes | Yes | Yes |
 | [-F *first_row*](#-f-first_row) | Yes | Yes | Yes |
 | [-L *last_row*](#-l-last_row) | Yes | Yes | Yes |
@@ -250,7 +250,8 @@ The following table lists the command-line options available in **`bcp`**, and w
 | [-v](#-v) | Yes | Yes | Yes |
 
 <sup>1</sup> Requires **`bcp`** version 18 or later, which ships with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].  
-<sup>2</sup> Requires **`bcp`** version 18.6.1.1 or later for `-z` and `-z0`. The `-z1` option requires **`bcp`** version 18.7.1.1 or later.
+<sup>2</sup> Requires **`bcp`** version 18.6.1.1 or later for `-z` and `-z0`. The `-z1` option requires **`bcp`** version 18.7.1.1 or later.  
+<sup>3</sup> Linux only. Not supported on macOS.
 
 ### Object and transfer mode
 
@@ -499,6 +500,8 @@ The `-b` and the `-h "ROWS_PER_BATCH=<bb>"` hint are mutually exclusive. Use `-b
 ::: moniker range=">=sql-server-2017 || >=sql-server-linux-2017 || =azure-sqldw-latest || =azuresqldb-current || =fabric-sqldb"
 
 #### -h "*hints* [, ... *n*]"
+
+**Applies to**: Windows and Linux. Not supported on macOS.
 
 Specifies the hint or hints to use during a bulk import of data into a table or view.
 

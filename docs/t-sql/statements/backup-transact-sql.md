@@ -456,7 +456,7 @@ The ZSTD compression algorithm is available starting with [!INCLUDE [sssql25-md]
 
   **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
 
-  This is an optional parameter that specifies the compression level. Affects `ALGORITHM = MS_EXPRESS`, and, starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], `ALGORITHM = ZSTD`.
+  This is an optional parameter that specifies the compression level. Affects `ALGORITHM = MS_XPRESS`, and, starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], `ALGORITHM = ZSTD`.
 
   Acceptable values are:
 
@@ -468,7 +468,7 @@ The ZSTD compression algorithm is available starting with [!INCLUDE [sssql25-md]
 
   **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions.
 
-  `ZSTD` and `MS_EXPRESS` are software-level algorithms. `QAT_DEFLATE` is hardware-based algorithm requiring Intel&reg; QuickAssist Technology (QAT) for SQL Server. The default is `MS_XPRESS`.
+  `ZSTD` and `MS_XPRESS` are software-level algorithms. `QAT_DEFLATE` is hardware-based algorithm requiring Intel&reg; QuickAssist Technology (QAT) for SQL Server. The default is `MS_XPRESS`.
 
   To use the ZSTD compression algorithm introduced in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]:
 

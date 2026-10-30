@@ -65,20 +65,30 @@ Requires ALTER permission on the symmetric key. If adding encryption by a certif
 
 ## Examples
 
-In the following example, the symmetric key is backed up to a file.
+In the following example, the symmetric key, encrypted by the certificate `symmetric_key_cert`, is opened and backed up to a file.
 
 ```sql
+OPEN SYMMETRIC KEY symmetric_key
+   DECRYPTION BY CERTIFICATE symmetric_key_cert;
+
 BACKUP SYMMETRIC KEY symmetric_key
    TO FILE = 'c:\temp_backups\keys\symmetric_key'
    ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+
+CLOSE SYMMETRIC KEY symmetric_key;
 ```
 
-In the following example, the symmetric key is backed up to an Azure Blob storage.
+In the following example, the symmetric key is opened and backed up to an Azure Blob storage.
 
 ```sql
+OPEN SYMMETRIC KEY symmetric_key
+   DECRYPTION BY CERTIFICATE symmetric_key_cert;
+
 BACKUP SYMMETRIC KEY symmetric_key
    TO URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/symmetric_key.bak'
-   ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4'
+   ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+
+CLOSE SYMMETRIC KEY symmetric_key;
 ```
 
 ## Related content

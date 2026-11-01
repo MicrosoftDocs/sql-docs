@@ -54,6 +54,9 @@ Expression2
 ### A. Inserting element nodes into the document  
  The following example illustrates how to insert elements into a document. First, an XML document is assigned to a variable of **xml** type. Then, through several **insert** XML DML statements, the example illustrates how element nodes are inserted in the document. After each insert, the SELECT statement displays the result.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks;  
 GO  

@@ -304,19 +304,15 @@ Gail                  Westover             305-555-0100
 
 The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.
 
-```sql
-USE tempdb;
-GO
+Connect to a sample or test database, and then run the code sample.
 
+```sql
 IF EXISTS (
         SELECT TABLE_NAME
         FROM INFORMATION_SCHEMA.TABLES
         WHERE TABLE_NAME = 'mytbl2'
         )
     DROP TABLE mytbl2;
-GO
-
-USE tempdb;
 GO
 
 CREATE TABLE mytbl2 (c1 SYSNAME);

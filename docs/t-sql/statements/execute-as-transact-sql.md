@@ -141,15 +141,19 @@ This behavior is by design. Take it into account when you grant permissions that
   
 ###  <a name="_exampleA"></a> A. Using EXECUTE AS and REVERT to switch context  
  The following example creates a context execution stack using multiple principals. The `REVERT` statement is then used to reset the execution context to the previous caller. The `REVERT` statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
-  
+
+For this sample, in the `master` database, create new logins:
 
 ```sql
-USE AdventureWorks2022;  
-GO  
 --Create two temporary principals  
-CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';  
-CREATE LOGIN login2 WITH PASSWORD = 'Uor80$23b';  
+CREATE LOGIN login1 WITH PASSWORD = '<strong password>';  
+CREATE LOGIN login2 WITH PASSWORD = '<strong password>';  
 GO  
+```
+
+Then, connect to a desired test or sample database, such as `AdventureWorks2025`:
+
+```sql
 CREATE USER user1 FOR LOGIN login1;  
 CREATE USER user2 FOR LOGIN login2;  
 GO  
@@ -177,12 +181,17 @@ REVERT;
 SELECT SUSER_NAME(), USER_NAME();  
   
 --Remove temporary principals.  
-DROP LOGIN login1;  
-DROP LOGIN login2;  
 DROP USER user1;  
 DROP USER user2;  
 GO  
 ```  
+
+In the `master` database:
+
+```sql
+DROP LOGIN login1;
+DROP LOGIN login2;
+```
   
 ### B. Using the WITH COOKIE clause  
  The following example sets the execution context of a session to a specified user and specifies the WITH COOKIE INTO *@varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  

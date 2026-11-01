@@ -139,6 +139,11 @@ bcd
 
 The following example shows how to return the first 10 characters from each of a **text** and **image** data column in the `pub_info` table of the `pubs` database. The query returns **text** data as **varchar**, and **image** data as **varbinary**.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE pubs;
 GO
@@ -231,6 +236,11 @@ Barreto de Mattos    P
 ```
 
 The following example shows how to return the second, third, and fourth characters of the string constant `abcdef`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE ssawPDW;

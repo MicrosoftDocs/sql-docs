@@ -75,6 +75,9 @@ It's important that applications don't wait in a tight loop, checking for the **
 ## Examples  
 The following example returns the number of full-text indexed items in a full-text catalog named `Cat_Desc`.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

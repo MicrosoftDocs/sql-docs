@@ -45,6 +45,9 @@ dev_langs:
 ### A. Using @@NESTLEVEL in a procedure  
  The following example creates two procedures: one that calls the other, and one that displays the `@@NESTLEVEL` setting of each.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

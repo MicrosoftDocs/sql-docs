@@ -170,6 +170,11 @@ C:\Temp>sqlcmd
 
 This output means you connected to the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. **sqlcmd** is now ready to accept T-SQL statements and **sqlcmd** commands. The flashing underscore after the `1>` is the **sqlcmd** prompt. It marks the location at which the statements and commands you type are displayed. Now, type `USE AdventureWorks2025` and press **Enter**. Then, type `GO` and press **Enter**. The contents of the console are as follows:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```console
 sqlcmd
 USE AdventureWorks2025;
@@ -267,6 +272,11 @@ You can create database script files in different ways:
 ### A. Run a script by using sqlcmd
 
 Start Notepad, and type the following T-SQL statements:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2025;

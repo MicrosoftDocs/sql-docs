@@ -63,10 +63,9 @@ Although a unary plus can appear before any numeric expression, it performs no o
 
 The following example sets a variable to a positive value.
 
-```sql
-USE tempdb;
-GO
+Connect to a desired sample or test database to run these code samples.
 
+```sql
 DECLARE @MyNumber DECIMAL(10, 2);
 SET @MyNumber = + 123.45;
 
@@ -84,12 +83,9 @@ PositiveValue
 
 ### B. Use the unary plus operator with a negative value
 
-The following example shows using the unary plus with a negative expression and the [ABS](../functions/abs-transact-sql.md) function on the same negative expression. The unary plus doesn't affect the expression, but the `ABS()` function returns the positive value of the expression.
+The following example shows using the unary plus with a negative expression and the [ABS](../functions/abs-transact-sql.md) function on the same negative expression. The unary plus doesn't affect the expression, but the `ABS()` function returns the positive value of the expression. Connect to a desired sample or test database to run these code samples.
 
 ```sql
-USE tempdb;
-GO
-
 DECLARE @Num1 INT;
 SET @Num1 = -5;
 

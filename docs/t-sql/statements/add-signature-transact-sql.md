@@ -118,6 +118,9 @@ Requires `ALTER` permission on the object and `CONTROL` permission on the certif
 
 The following example signs the stored procedure `HumanResources.uspUpdateEmployeeLogin` with the certificate `HumanResourcesDP`.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 
@@ -130,7 +133,12 @@ GO
 
 The following example creates a new database and creates a certificate to use in the example. The example creates and signs a basic stored procedure and retrieves the signature BLOB from `sys.crypt_properties`. The signature is then dropped and added again. The example signs the procedure by using the `WITH SIGNATURE` syntax.
 
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended databases already exist, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements. Connect directly to the `master` and desired user databases separately.
+
 ```sql
+USE [master];
+GO
 CREATE DATABASE TestSignature;
 GO
 

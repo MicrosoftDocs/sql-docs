@@ -80,7 +80,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login from which the principal executing this query derives its right to revoke the permission.  
   
 ## Remarks  
- Permissions at the server scope can be revoked only when the current database is **master**.  
+ Permissions at the server scope can be revoked only when the current database is `master`.  
+
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], `GRANT`, `REVOKE`, and `DENY` of server level permissions aren't supported.
   
  Information about availability groups is visible in the [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view. Information about server permissions is visible in the [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) catalog view, and information about server principals is visible in the [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) catalog view.  
   
@@ -102,6 +104,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### A. Revoking VIEW DEFINITION permission on an availability group  
  The following example revokes `VIEW DEFINITION` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], `GRANT`, `REVOKE`, and `DENY` of server level permissions aren't supported.
+
 ```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  

@@ -196,6 +196,11 @@ Tool Design                  8.62        29.8462     23.5054     6
 
 This example returns the number of different titles that an employee of a specific company can hold.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE ssawPDW;
 SELECT COUNT_BIG(DISTINCT Title)

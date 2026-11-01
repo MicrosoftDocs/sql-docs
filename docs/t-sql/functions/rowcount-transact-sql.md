@@ -66,6 +66,9 @@ Natively compiled stored procedures preserve the previous `@@ROWCOUNT`. [!INCLUD
 
 The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

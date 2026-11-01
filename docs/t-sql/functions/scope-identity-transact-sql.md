@@ -54,9 +54,7 @@ SCOPE_IDENTITY()
 ### A. Using @@IDENTITY and SCOPE_IDENTITY with triggers  
  The following example creates two tables, `TZ` and `TY`, and an INSERT trigger on `TZ`. When a row is inserted to table `TZ`, the trigger (`Ztrig`) fires and inserts a row in `TY`.  
   
-```sql  
-USE tempdb;  
-GO  
+```sql
 CREATE TABLE TZ (  
    Z_id  INT IDENTITY(1,1)PRIMARY KEY,  
    Z_name VARCHAR(20) NOT NULL);  

@@ -83,6 +83,11 @@ The data type of the specified *scalar_expression*. `NULL` is returned if *scala
 
 The query uses the `LEAD` function to return the difference in sales quotas for a specific employee over subsequent years. Because there's no lead value available for the last row, the default of zero (0) is returned.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

@@ -117,6 +117,11 @@ FOR <output column for names of the pivot columns>
 
 The following code example produces a two-column table that has four rows.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -167,6 +172,11 @@ AverageCost                 5.0885      223.88      359.1082    NULL        949.
 ## Complex PIVOT example
 
 A common scenario where `PIVOT` can be useful is when you want to generate cross-tabulation reports to give a summary of the data. For example, suppose you want to query the `PurchaseOrderHeader` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to determine the number of purchase orders placed by certain employees. The following query provides this report, ordered by vendor.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

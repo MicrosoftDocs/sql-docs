@@ -41,9 +41,10 @@ ms.custom:
  Compile with ole32.lib oleaut32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
   
  Execute the third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
+
+ Connect to a sample or test database, and then run the code sample. In the C++ code, modify the `pwszProviderString` to provide your server and database name.
   
 ```sql
-use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
@@ -236,7 +237,7 @@ void wmain() {
    LPWSTR pwszDataSource = NULL;  
    LPWSTR pwszUserID = NULL;  
    LPWSTR pwszPassword = NULL;  
-   LPWSTR pwszProviderString = L"server=(local);trusted_connection=yes;";  
+   LPWSTR pwszProviderString = L"server=(local);database=<your database>;trusted_connection=yes;";  
   
    IDBInitialize * pIDBInitialize = NULL;  
    IDBCreateSession * pIDBCrtSess = NULL;  
@@ -474,9 +475,10 @@ void wmain() {
    CoUninitialize();  
 }  
 ```  
+
+Connect to a desired sample or test database and run the code sample to clean up the test database.
   
 ```sql
-use master  
 drop table fltest  
 ```  
   

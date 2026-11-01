@@ -71,6 +71,9 @@ IS_OBJECTSIGNED (
 ### A. Displaying extended properties on a database  
  The following example tests if the spt_fallback_db table in the **master** database is signed by the schema signing certificate.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+
 ```sql  
 USE master;  
 -- Declare a variable to hold a thumbprint and an object name  

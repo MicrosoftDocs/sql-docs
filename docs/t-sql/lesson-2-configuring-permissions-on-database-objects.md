@@ -56,6 +56,9 @@ By default, administrators on your computer have full access to [!INCLUDE[ssNoVe
 
 In a Query Editor window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows authenticates the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless the connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../includes/tsql-md.md)] statement.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], Windows logins are not supported. Use Microsoft Entra ID logins instead, for example, `CREATE USER [Mary@contoso.com] FROM EXTERNAL PROVIDER`. For more information, see [CREATE USER (Transact-SQL)](statements/create-user-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+
 ```sql
 CREATE LOGIN [computer_name\Mary]
     FROM WINDOWS
@@ -72,7 +75,7 @@ This authorizes a user name `Mary`, authenticated by your computer, to access th
 
 The `Mary` account now has access to this instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but doesn't have permission to access the databases. The account doesn't even have access to the default database `TestData` until you authorize the account as a database user.
 
-To grant `Mary` access, switch to the `TestData` database, and then use the CREATE USER statement to map the login to a user named `Mary`.
+To grant `Mary` access, switch to the `TestData` database, and then use the `CREATE USER` statement to map the login to a user named `Mary`.
 
 ### Create a user in a database
 

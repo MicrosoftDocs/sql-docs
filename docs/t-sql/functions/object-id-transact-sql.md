@@ -87,10 +87,9 @@ System functions can be used in the select list, in the `WHERE` clause, and anyw
 The following example returns the object ID for the `Production.WorkOrder` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE master;
+USE AdventureWorks2022;
 GO
-
-SELECT OBJECT_ID(N'AdventureWorks2022.Production.WorkOrder') AS 'Object ID';
+SELECT OBJECT_ID(N'Production.WorkOrder') AS 'Object ID';
 GO
 ```
 

@@ -25,6 +25,11 @@ This short lesson removes the objects that you created in Lesson 1 and Lesson 2,
 
 Before you delete objects, make sure you are in the correct database:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE TestData;
 GO
@@ -88,6 +93,11 @@ GO
 ## Remove database
 
 You can't remove the `TestData` database while you are in the database; therefore, first switch context to another database, and then use the `DROP` statement to remove the `TestData` database:
+
+  ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+  > [!NOTE]
+  > In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+  ::: moniker-end
 
   ```sql
   USE MASTER;

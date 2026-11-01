@@ -97,6 +97,11 @@ FETCH
 ### A. Using FETCH in a simple cursor  
  The following example declares a simple cursor for the rows in the `Person.Person` table with a last name that starts with `B`, and uses `FETCH NEXT` to step through the rows. The `FETCH` statements return the value for the column specified in `DECLARE CURSOR` as a single-row result set.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

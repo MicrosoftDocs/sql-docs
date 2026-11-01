@@ -329,6 +329,9 @@ If SET STOPLIST is specified, the user must have REFERENCES permission on the st
 
 The following example sets manual change tracking on the full-text index on the `JobCandidate` table.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

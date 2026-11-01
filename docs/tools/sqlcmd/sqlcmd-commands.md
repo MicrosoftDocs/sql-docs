@@ -326,6 +326,11 @@ Specify **sqlcmd** input files by using the `-i` option or the `:r` command. Spe
 
 Start **sqlcmd**. At the **sqlcmd** command prompt, type the query:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO
@@ -344,6 +349,11 @@ Changed database context to 'AdventureWorks2025'.
 **sqlcmd** prints a separator line that is a series of dash characters. The following output shows an example.
 
 Start **sqlcmd**. At the **sqlcmd** command prompt, type the query:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2025;

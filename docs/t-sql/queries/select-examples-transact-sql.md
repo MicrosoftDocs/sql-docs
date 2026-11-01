@@ -44,6 +44,11 @@ This article provides examples of using the [SELECT](select-transact-sql.md) sta
 
 The following example shows three code examples. The first code example returns all rows (no `WHERE` clause is specified) and all columns (using the `*`) from the `Product` table in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_1.sql":::
 
 This example returns all rows (no `WHERE` clause is specified), and only a subset of the columns (`Name`, `ProductNumber`, `ListPrice`) from the `Product` table in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Additionally, a column heading is added.
@@ -58,6 +63,11 @@ This example returns only the rows for `Product` that have a product line of `R`
 
 The following examples return all rows from the `Product` table. The first example returns total sales and the discounts for each product. In the second example, the total revenue is calculated for each product.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_4.sql":::
 
 This query calculates the revenue for each product in each sales order.
@@ -68,11 +78,21 @@ This query calculates the revenue for each product in each sales order.
 
 The following example uses `DISTINCT` to prevent the retrieval of duplicate titles.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_6.sql":::
 
 ## D. Create tables with SELECT INTO
 
 The following first example creates a temporary table named `#Bicycles` in `tempdb`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_7.sql":::
 
@@ -85,6 +105,11 @@ This second example creates the permanent table `NewProducts`.
 A correlated subquery is a query that depends on the outer query for its values. This query can be executed repeatedly, one time for each row that the outer query selects.
 
 The first example shows queries that are semantically equivalent to illustrate the difference between using the `EXISTS` keyword and the `IN` keyword. Both are examples of a valid subquery that retrieves one instance of each product name for which the product model is a long sleeve logo jersey, and the `ProductModelID` numbers match between the `Product` and `ProductModel` tables.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_9.sql":::
 
@@ -106,6 +131,11 @@ This example uses two correlated subqueries to find the names of employees who s
 
 The following example finds the total of each sales order in the database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_13.sql":::
 
 Because of the `GROUP BY` clause, the query returns only one row containing the sum of all sales for each sales order.
@@ -114,11 +144,21 @@ Because of the `GROUP BY` clause, the query returns only one row containing the 
 
 The following example finds the average price and the sum of year-to-date sales, grouped by product ID and special offer ID.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_14.sql":::
 
 ## H. Use GROUP BY and WHERE
 
 The following example puts the results into groups after retrieving only the rows with list prices greater than `$1000`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_15.sql":::
 
@@ -126,17 +166,32 @@ The following example puts the results into groups after retrieving only the row
 
 The following example groups by an expression. You can group by an expression if the expression doesn't include aggregate functions.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_16.sql":::
 
 ## J. Use GROUP BY with ORDER BY
 
 The following example finds the average price of each type of product and orders the results by average price.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_17.sql":::
 
 ## K. Use the HAVING clause
 
 The first example that follows shows a `HAVING` clause with an aggregate function. It groups the rows in the `SalesOrderDetail` table by product ID and eliminates products whose average order quantities are five or less. The second example shows a `HAVING` clause without aggregate functions.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_18.sql":::
 
@@ -158,11 +213,21 @@ ORDER BY SalesOrderID;
 
 The following example shows using `GROUP BY`, `HAVING`, `WHERE`, and `ORDER BY` clauses in one `SELECT` statement. It produces groups and summary values but does so after eliminating the products with prices over $25 and average order quantities under 5. It also organizes the results by `ProductID`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_19.sql":::
 
 ## M. Use HAVING with SUM and AVG
 
 The following example groups the `SalesOrderDetail` table by product ID and includes only those groups of products that have orders totaling more than `$1000000.00` and whose average order quantities are less than `3`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_20.sql":::
 
@@ -178,11 +243,21 @@ If you want to make sure the calculations for each product include at least 1,50
 
 The following example shows two ways to use the `INDEX` optimizer hint. The first example shows how to force the optimizer to use a nonclustered index to retrieve rows from a table. The second example forces a table scan by using an index of 0.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_23.sql":::
 
 ## M. Use OPTION and the GROUP hints
 
 The following example shows how the `OPTION (GROUP)` clause is used with a `GROUP BY` clause.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_24.sql":::
 
@@ -190,11 +265,21 @@ The following example shows how the `OPTION (GROUP)` clause is used with a `GROU
 
 The following example uses the `MERGE UNION` query hint.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_25.sql":::
 
 ## P. Use a UNION
 
 In the following example, the result set includes the contents of the `ProductModelID` and `Name` columns of both the `ProductModel` and `Gloves` tables.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_26.sql":::
 
@@ -202,11 +287,21 @@ In the following example, the result set includes the contents of the `ProductMo
 
 In the following example, the `INTO` clause in the second `SELECT` statement specifies that the table named `ProductResults` holds the final result set of the union of the designated columns of the `ProductModel` and `Gloves` tables. The `Gloves` table is created in the first `SELECT` statement.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_27.sql":::
 
 ## R. Use UNION of two SELECT statements with ORDER BY
 
 The order of certain parameters used with the `UNION` clause is important. The following example shows the incorrect and correct use of `UNION` in two `SELECT` statements where you rename a column in the output.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_28.sql":::
 
@@ -215,6 +310,11 @@ The order of certain parameters used with the `UNION` clause is important. The f
 The following examples use `UNION` to combine the results of three tables that all have the same five rows of data. The first example uses `UNION ALL` to show the duplicated records, and returns all 15 rows. The second example uses `UNION` without `ALL` to eliminate the duplicate rows from the combined results of the three `SELECT` statements, and returns five rows.
 
 The third example uses `ALL` with the first `UNION` and parentheses enclose the second `UNION` that isn't using `ALL`. The second `UNION` is processed first because it's in parentheses, and returns five rows because the `ALL` option isn't used and the duplicates are removed. These five rows are combined with the results of the first `SELECT` by using the `UNION ALL` keywords. This example doesn't remove the duplicates between the two sets of five rows. The final result has 10 rows.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 :::code language="sql" source="codesnippet/tsql/select-examples-transact_29.sql":::
 

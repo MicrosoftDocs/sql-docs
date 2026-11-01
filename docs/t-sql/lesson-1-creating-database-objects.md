@@ -81,6 +81,11 @@ For a list of data types and links for a description of each, see [Data types](d
 
 In a Query Editor window, type and execute the following code to change your connection to the `TestData` database.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE TestData
 GO

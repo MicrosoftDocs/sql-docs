@@ -132,10 +132,11 @@ Requires membership in the `public` role.
 
 ## Examples
 
-The following example shows the effect of rolling back a named transaction. After you create a table, the following statements start a named transaction, insert two rows, and then roll back the transaction named in the variable `@TransactionName`. Another statement outside of the named transaction inserts two rows. The query returns the results of the previous statements.
+The following example shows the effect of rolling back a named transaction. After you create a table, the following statements start a named transaction, insert two rows, and then roll back the transaction named in the variable `@TransactionName`. Another statement outside of the named transaction inserts two rows. 
+
+Connect to a desired sample or test database to run these code samples. The query returns the results of the previous statements.
 
 ```sql
-USE tempdb;
 CREATE TABLE ValueTable
 (
     value INT

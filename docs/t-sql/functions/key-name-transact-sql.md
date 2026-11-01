@@ -48,6 +48,9 @@ KEY_NAME ( ciphertext | key_guid )
 ### A. Displaying the name of a symmetric key using the key_guid  
  The **master** database contains a symmetric key named ##MS_ServiceMasterKey##. The following example gets the GUID of that key from the sys.symmetric_keys dynamic management view, assigns it to a variable, and then passes that variable to the KEY_NAME function to demonstrate how to return the name that corresponds to the GUID.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+
 ```sql  
 USE master;  
 GO  

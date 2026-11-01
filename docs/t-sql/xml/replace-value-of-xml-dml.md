@@ -160,6 +160,9 @@ This example replaces values in a manufacturing instructions document stored in 
 
 In the example, you first create a table (`T`) with a typed XML column in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. You then copy a manufacturing instructions XML instance from the `Instructions` column in the `ProductModel` table into table `T`. Insertions are then applied to XML in table `T`.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

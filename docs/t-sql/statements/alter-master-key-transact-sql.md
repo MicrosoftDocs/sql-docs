@@ -123,6 +123,11 @@ Requires CONTROL permission on the database. If the database master key is encry
 
 The following example creates a new database master key for `AdventureWorks` and reencrypts the keys below it in the encryption hierarchy. Replace `<password>` with a strong, unique password.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = '<password>';

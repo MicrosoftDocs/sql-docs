@@ -218,7 +218,14 @@ NULL                                NULL
 This example accepts the binary value as an encoded multibyte character consistent with the default codepage of the current database,
 subject to validation. Character conversion is more broadly supported and might be an alternative to working with encoding at a lower level.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database.
+::: moniker-end
+
 ```sql
+USE [master];
+GO
 CREATE DATABASE [multibyte-char-context] COLLATE Japanese_CI_AI;
 GO
 

@@ -470,9 +470,14 @@ In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], the **varchar(max
 
 Changes in database context last only until the end of the `EXECUTE` statement. For example, after the `EXECUTE` in this following statement is run, the database context is `master`.
 
-```sql
-USE master;
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available.
+::: moniker-end
 
+```sql
+USE [master];
+GO
 EXECUTE ('USE AdventureWorks2022; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');
 ```
 

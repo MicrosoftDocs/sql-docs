@@ -82,6 +82,9 @@ This example creates two tables: `employeeData` and `auditEmployeeData`. The `em
 
 With the `COLUMNS_UPDATED()` function, we can quickly test for any changes made to columns containing sensitive employee information. Using `COLUMNS_UPDATED()` this way works only when trying to detect changes to the first eight columns in the table.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

@@ -171,6 +171,11 @@ FILESTREAM-enabled databases support the following transaction isolation levels.
 
 The following example sets the `TRANSACTION ISOLATION LEVEL` for the session. For each [!INCLUDE [tsql](../../includes/tsql-md.md)] statement that follows, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] holds all of the shared locks until the end of the transaction.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

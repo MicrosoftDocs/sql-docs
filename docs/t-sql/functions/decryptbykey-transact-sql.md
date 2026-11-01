@@ -121,7 +121,11 @@ FROM Sales.CreditCard;
 
 The following example demonstrates that `DECRYPTBYKEY` must be executed in the context of the database that contains the key. The row isn't decrypted when `DECRYPTBYKEY` is executed in the `master` database; the result is `NULL`.
 
+Because of cross-database queries, this sample is not applicable to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+
 ```sql
+USE [master];
+GO
 -- Create the database
 CREATE DATABASE TestingDecryptByKey;
 GO

@@ -163,6 +163,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
  The following examples use a sequence named `CountBy1` in a schema named `Test`. Execute the following statement to create the `Test.CountBy1` sequence. Examples C and E use the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, so the `CountBy1` sequence is created in that database.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

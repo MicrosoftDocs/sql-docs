@@ -77,8 +77,13 @@ To create an XML SCHEMA COLLECTION requires at least one of the following sets o
 
 The following example creates the XML schema collection `ManuInstructionsSchemaCollection`. The collection has only one schema namespace.
 
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended databases already exist, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements. Connect directly to the `master` and desired user databases separately.
+
 ```sql
 -- Create a sample database in which to load the XML schema collection.
+USE [master];
+GO
 CREATE DATABASE SampleDB;
 GO
 

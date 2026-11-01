@@ -57,10 +57,9 @@ Returns the data type of *numeric_expression*, except that an unsigned **tinyint
 
 The following example sets a variable to a negative value.
 
-```sql
-USE tempdb;
-GO
+Connect to a desired sample or test database to run these code samples.
 
+```sql
 DECLARE @MyNumber DECIMAL(10, 2);
 SET @MyNumber = -123.45;
 
@@ -80,10 +79,9 @@ NegativeValue
 
 The following example changes a variable to a negative value.
 
-```sql
-USE tempdb;
-GO
+Connect to a desired sample or test database to run these code samples.
 
+```sql
 DECLARE @Num1 INT;
 SET @Num1 = 5;
 
@@ -102,8 +100,6 @@ VariableValue NegativeValue
 
 ## Examples: Azure Synapse Analytics
 
-[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
-
 ### C. Return the negative of a positive constant
 
 The following example returns the negative of a positive constant.
@@ -121,7 +117,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17
 ```
 
-The same result is returned as if the unary negative is applied to a value with unary [Unary operators - Positive](unary-operators-positive.md) applied.
+This result is the same as when you apply the unary negative to a value with unary [Unary operators - Positive](unary-operators-positive.md) applied.
 
 ```sql
 USE ssawPDW;

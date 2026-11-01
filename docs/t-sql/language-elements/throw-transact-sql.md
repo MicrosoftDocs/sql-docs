@@ -93,9 +93,9 @@ The record does not exist.
 
 The following example shows how to use the `THROW` statement to raise the last thrown exception again.
 
+Connect to a desired sample or test database to run these code samples.
+
 ```sql
-USE tempdb;
-GO
 CREATE TABLE dbo.TestRethrow
 (    ID INT PRIMARY KEY
 );

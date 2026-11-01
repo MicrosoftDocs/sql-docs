@@ -1385,6 +1385,11 @@ In this example, a transaction running under `SNAPSHOT` isolation reads data tha
 
 On session 1:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -1737,6 +1742,11 @@ GO
 When the isolation level is specified, the locking behavior for all queries and data manipulation language (DML) statements in the session operates at that isolation level. The isolation level remains in effect until the session terminates or until the isolation level is set to another level.
 
 The following example sets the `SERIALIZABLE` isolation level:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

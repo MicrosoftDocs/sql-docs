@@ -17,7 +17,7 @@ ms.topic: "reference"
   
 -   Sends table-valued parameter rows by using the pull model in the EmployeesRowset class. In the pull model, the consumer provides data on demand to the provider.  
   
--   Sends BLOBs as part of a table-valued parameter in the CPhotograph class.  
+-   Sends BLOBs as part of a table-valued parameter in the CPhotograph class.
   
 -   Uses custom parameter properties using ISSCommandWithParameters.  
   
@@ -36,10 +36,15 @@ ms.topic: "reference"
   
  The fifth ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates the database used by the sample.  
   
-```  
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended databases already exist, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements. Connect directly to the  `master` and desired user databases separately.
+
+```sql
+USE [master];
+GO
 create database testdb  
 go  
-use testdb  
+use [testdb];
 go  
 create table tblEmployees (  
 id int identity primary key,  
@@ -952,8 +957,9 @@ _Exit:
 }  
 ```  
   
-```  
-use master  
+```sql  
+use [master];
+GO
 IF EXISTS (SELECT name FROM master..sysdatabases WHERE name = 'testdb')  
     DROP DATABASE [testdb]  
 go  

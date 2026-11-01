@@ -52,8 +52,13 @@ However, there are some specific aspects that users should be aware of when usin
 The following simple example demonstrates using Query Store with in-memory OLTP in an end-to-end user scenario. In this example, we assume that a  database (`MemoryOLTP`) is enabled for in-memory OLTP.  
     For more information on prerequisites for memory-optimized tables, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
-```
-USE MemoryOLTP;
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql
+USE [MemoryOLTP];
 GO
 
 -- Create a simple memory-optimized table
@@ -65,7 +70,7 @@ WITH (MEMORY_OPTIMIZED=ON);
 GO
 
 -- Enable Query Store before native module compilation
-ALTER DATABASE MemoryOLTP SET QUERY_STORE = ON;
+ALTER DATABASE [MemoryOLTP] SET QUERY_STORE = ON;
 GO
 
 -- Create natively compiled stored procedure

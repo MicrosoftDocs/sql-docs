@@ -78,9 +78,12 @@ The visibility of the metadata in catalog views is limited to securables that ei
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
+    ```sql  
     -- If a plan guide named "Guide1" already exists in the AdventureWorks2022 database, delete it.  
-    USE AdventureWorks2022;  
+    USE [AdventureWorks2022];  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
        EXEC sp_control_plan_guide N'DROP', N'Guide1';  

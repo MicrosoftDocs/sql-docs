@@ -300,6 +300,11 @@ When you create multicolumn statistics, the order of the columns in the statisti
 
 To create densities that are useful for cardinality estimates, the columns in the query predicate must match one of the prefixes of columns in the statistics object definition. For example, the following example creates a multicolumn statistics object on the columns `LastName`, `MiddleName`, and `FirstName`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -524,6 +529,11 @@ To improve cardinality estimates for variables and functions, follow these guide
 - If a stored procedure contains a query that uses a passed-in parameter, avoid changing the parameter value within the stored procedure before using it in the query. The cardinality estimates for the query are based on the passed-in parameter value and not the updated value. To avoid changing the parameter value, you can rewrite the query to use two stored procedures.
 
   For example, the following stored procedure `Sales.GetRecentSales` changes the value of the parameter `@date` when `@date` is `NULL`.
+
+  ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+  > [!NOTE]
+  > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+  ::: moniker-end
 
   ```sql
   USE AdventureWorks2022;

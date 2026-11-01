@@ -28,6 +28,11 @@ A subquery is a query that is nested inside a `SELECT`, `INSERT`, `UPDATE`, or `
 
 A subquery can be used anywhere an expression is allowed. In this example, a subquery is used as a column expression named MaxUnitPrice in a `SELECT` statement.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -48,6 +53,11 @@ A subquery is also called an inner query or inner select, while the statement co
 Many [!INCLUDE [tsql](../../includes/tsql-md.md)] statements that include subqueries can be alternatively formulated as joins. Other questions can be posed only with subqueries. In [!INCLUDE [tsql](../../includes/tsql-md.md)], there's usually no performance difference between a statement that includes a subquery and a semantically equivalent version that doesn't. For architectural information on how SQL Server processes queries, see [SQL statement processing](../query-processing-architecture-guide.md#sql-statement-processing). However, in some cases where existence must be checked, a join yields better performance. Otherwise, the nested query must be processed for each result of the outer query to ensure elimination of duplicates. In such cases, a join approach would yield better results.
 
 The following example shows both a subquery `SELECT` and a join `SELECT` that return the same result set and execution plan:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;
@@ -122,6 +132,11 @@ A subquery is subject to the following restrictions:
 
 In the following example, the `BusinessEntityID` column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (`Sales.Store`). The reference to `CustomerID` in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the `Sales.Customer` table.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -162,6 +177,11 @@ It's never wrong to state the table name explicitly, and it's always possible to
 A subquery can itself include one or more subqueries. Any number of subqueries can be nested in a statement.
 
 The following query finds the names of employees who are also sales persons.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;
@@ -227,6 +247,11 @@ GO
 Many queries can be evaluated by executing the subquery once and substituting the resulting value or values into the `WHERE` clause of the outer query. In queries that include a correlated subquery (also known as a repeating subquery), the subquery depends on the outer query for its values. This means that the subquery is executed repeatedly, once for each row that might be selected by the outer query.
 
 This query retrieves one instance of each employee's first and last name for which the bonus in the `SalesPerson` table is 5000 and for which the employee identification numbers match in the `Employee` and `SalesPerson` tables.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;
@@ -301,6 +326,11 @@ Subqueries can be specified in many places:
 ### Subqueries with table aliases
 
 Many statements in which the subquery and the outer query refer to the same table can be stated as self-joins (joining a table to itself). For example, you can find addresses of employees from a particular state using a subquery:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

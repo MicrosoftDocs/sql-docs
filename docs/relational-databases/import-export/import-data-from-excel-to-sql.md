@@ -205,6 +205,11 @@ For more info about the Import Flat File Wizard, see [Import Flat File to SQL Wi
 
 As described previously in the [Prerequisites](#prerequisites) section, you have to export your Excel data as text before you can use `BULK INSERT` to import it. `BULK INSERT` can't read Excel files directly. With the `BULK INSERT` command, you can import a CSV file that is stored locally or in Azure Blob storage.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE ImportFromExcel;
 GO

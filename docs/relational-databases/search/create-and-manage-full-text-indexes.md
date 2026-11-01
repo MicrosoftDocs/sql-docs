@@ -123,6 +123,11 @@ This statement returns `1` if the index enforces uniqueness for the full-text ke
 
 The following example checks whether the `PK_Document_DocumentNode` index enforces uniqueness for the full-text key column:
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO

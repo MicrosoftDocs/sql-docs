@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 ## Syntax  
   
-```  
+```sql  
   
 sys.dm_exec_describe_first_result_set_for_object   
     ( @object_id , @include_browse_information )  
@@ -118,7 +118,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ### A. Returning metadata with and without browse information  
  The following example creates a stored procedure named TestProc2 that returns two result sets. Then the example demonstrates that **sys.dm_exec_describe_first_result_set** returns information about the first result set in the procedure, with and without the browse information.  
   
-```  
+```sql  
 CREATE PROC TestProc2  
 AS  
 SELECT object_id, name FROM sys.objects ;  
@@ -133,7 +133,12 @@ GO
 ### B. Combining the sys.dm_exec_describe_first_result_set_for_object function and a table or view  
  The following example uses both the sys.procedures system catalog view and the **sys.dm_exec_describe_first_result_set_for_object** function to display metadata for the result sets of all stored procedures in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
 USE AdventureWorks2022;  
 GO  
   

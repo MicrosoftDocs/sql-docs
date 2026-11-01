@@ -40,6 +40,11 @@ The sample [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md
 
 In a Query Editor window, run the following code to copy the table structure and data from the `Employee` table into a new table named `EmployeeDemo`. Since the original table already uses **hierarchyid**, this query essentially flattens the hierarchy to retrieve the manager of the employee. In subsequent parts of this lesson we will be reconstructing this hierarchy.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

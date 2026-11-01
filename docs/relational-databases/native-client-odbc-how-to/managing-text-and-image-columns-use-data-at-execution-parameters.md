@@ -45,7 +45,10 @@ helpviewer_keywords:
   
  Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the sample.  
   
-```  
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
+```sql  
 USE AdventureWorks2022;
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
@@ -207,7 +210,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')  
      DROP TABLE emp4  

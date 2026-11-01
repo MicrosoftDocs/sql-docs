@@ -108,6 +108,11 @@ If `sp_getapplock` is called multiple times for the same lock resource, but the 
 
 For example, in the following sequence of calls, the resource is held in `Exclusive` mode instead of in `Shared` mode.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO
@@ -176,6 +181,11 @@ Requires membership in the **public** fixed database role.
 ## Examples
 
 The following example places a shared lock, which is associated with the current transaction, on the resource `Form1` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2025;

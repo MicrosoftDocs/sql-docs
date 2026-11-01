@@ -94,6 +94,11 @@ The following information is available in the **Rebuild Indexes** dialog box:
 
 Execute the following Transact-SQL script. This example enables the `IX_Employee_OrganizationLevel_OrganizationNode` index on the `HumanResources.Employee` table.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

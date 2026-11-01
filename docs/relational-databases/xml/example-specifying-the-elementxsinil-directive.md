@@ -21,6 +21,9 @@ When you specify the ELEMENT directive to retrieve element-centric XML, if the c
 
 The following query constructs XML that includes an employee address. For `AddressLine2` and `City` columns, the column names specify the `ELEMENTXSINIL` directive. This generates the element for NULL values in the `AddressLine2` and `City` columns in the rowset.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

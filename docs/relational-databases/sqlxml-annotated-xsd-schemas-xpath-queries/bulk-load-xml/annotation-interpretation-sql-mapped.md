@@ -51,7 +51,12 @@ ms.custom: sfi-ropc-nochange
   
 1.  Create the following table in the **tempdb** database:  
   
-    ```  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE tempdb  
     CREATE TABLE Cust  
               (CustomerID     int         PRIMARY KEY,  
@@ -65,7 +70,7 @@ ms.custom: sfi-ropc-nochange
   
 3.  Save the following sample XML data as SampleXMLData.xml:  
   
-    ```  
+    ```xml
     <ROOT>  
       <Customers CustomerID="1111" CompanyName="Sean Chai"   
                  City="NY" HomePhone="111-1111" />  
@@ -76,7 +81,7 @@ ms.custom: sfi-ropc-nochange
   
 4.  To execute XML Bulk Load, save and execute this [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) example as Sample.vbs:  
 
-    ```  
+    ```vb
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
     objBL.ErrorLogFile = "c:\error.log"  
@@ -85,27 +90,27 @@ ms.custom: sfi-ropc-nochange
     set objBL=Nothing  
     ```  
   
- This is the equivalent XDR schema:  
-  
-```  
-<?xml version="1.0" ?>  
-<Schema xmlns="urn:schemas-microsoft-com:xml-data"   
-        xmlns:sql="urn:schemas-microsoft-com:xml-sql" >   
-   <ElementType name="ROOT" sql:is-constant="1">  
-      <element type="Customers" />  
-   </ElementType>  
-   <ElementType name="Customers" sql:relation="Cust"  
-                             sql:overflow-field="OverflowColumn" >  
-      <AttributeType name="CustomerID" />  
-      <AttributeType name="CompanyName"  />  
-      <AttributeType name="City"  />  
-      <AttributeType name="HomePhone" />  
-      <attribute type="CustomerID"  />  
-      <attribute type="CompanyName"  />  
-      <attribute type="City" />  
-      <attribute type="HomePhone" sql:map-field="0" />  
-   </ElementType>  
-</Schema>  
-```  
+    This is the equivalent XDR schema:  
+      
+    ```xml
+    <?xml version="1.0" ?>  
+    <Schema xmlns="urn:schemas-microsoft-com:xml-data"   
+            xmlns:sql="urn:schemas-microsoft-com:xml-sql" >   
+       <ElementType name="ROOT" sql:is-constant="1">  
+          <element type="Customers" />  
+       </ElementType>  
+       <ElementType name="Customers" sql:relation="Cust"  
+                                 sql:overflow-field="OverflowColumn" >  
+          <AttributeType name="CustomerID" />  
+          <AttributeType name="CompanyName"  />  
+          <AttributeType name="City"  />  
+          <AttributeType name="HomePhone" />  
+          <attribute type="CustomerID"  />  
+          <attribute type="CompanyName"  />  
+          <attribute type="City" />  
+          <attribute type="HomePhone" sql:map-field="0" />  
+       </ElementType>  
+    </Schema>  
+    ```  
   
   

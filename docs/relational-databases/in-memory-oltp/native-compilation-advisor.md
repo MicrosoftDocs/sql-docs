@@ -34,12 +34,18 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 ## Code Sample  
  The following sample shows an interpreted stored procedure and the *equivalent* stored procedure for native compilation. The sample assumes a directory called c:\data.  
-  
-> [!NOTE]  
->  As usual, the **FILEGROUP** element, and the **USE** mydatabase statement, apply to Microsoft SQL Server, but do not apply to Azure SQL Database.  
-  
-```sql  
-CREATE DATABASE Demo  
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. The `FILEGROUP` syntax does not apply to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]. 
+>
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database. Connect directly to the `master` and desired user databases separately.
+::: moniker-end
+
+```sql
+USE [master];
+GO
+CREATE DATABASE [Demo]  
 ON  
 PRIMARY(NAME = [Demo_data],  
 FILENAME = 'C:\DATA\Demo_data.mdf', size=500MB)  
@@ -50,7 +56,7 @@ LOG ON (name = [Demo_log], Filename='C:\DATA\Demo_log.ldf', size=500MB)
 COLLATE Latin1_General_100_BIN2;  
 go  
   
-USE Demo;  
+USE [Demo];  
 go  
   
 CREATE TABLE [dbo].[SalesOrders]  

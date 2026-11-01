@@ -58,11 +58,16 @@ Requires ALTER permission on the table or view.
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  Copy and paste the following example into the query window and select **Execute**.  
   
-    ```  
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     -- First, create two statistics named VendorCredit and CustomerTotal  

@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  You can use nested triggers to perform useful housekeeping functions such as storing a backup copy of rows affected by a previous trigger. For example, you can create a trigger on `PurchaseOrderDetail` that saves a backup copy of the `PurchaseOrderDetail` rows that the `delcascadetrig` trigger deleted. With the `delcascadetrig` trigger in effect, deleting `PurchaseOrderID` 1965 from `PurchaseOrderHeader` deletes the corresponding row or rows from `PurchaseOrderDetail`. To save the data, you can create a DELETE trigger on `PurchaseOrderDetail` that saves the deleted data into another separately created table, `del_save`. For example:  
   
-```  
+```sql  
 CREATE TRIGGER Purchasing.savedel  
    ON Purchasing.PurchaseOrderDetail  
 FOR DELETE  
@@ -73,7 +73,12 @@ AS
   
  A recursive UPDATE trigger can be used to keep the `NoOfReports` column up-to-date as new employee records are inserted. The INSERT trigger updates the `NoOfReports` column of the manager record, which recursively updates the `NoOfReports` column of other records up the management hierarchy.  
   
-```  
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
 USE AdventureWorks2022;  
 GO  
 -- Turn recursive triggers ON in the database.  

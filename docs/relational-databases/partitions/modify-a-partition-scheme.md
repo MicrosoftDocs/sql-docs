@@ -21,7 +21,7 @@ You can assign the NEXT USED property to an empty filegroup or to one that alrea
 
 ##  <a name="Restrictions"></a> Limitations
 
-Any filegroup affected by ALTER PARTITION SCHEME must be online.  
+Any filegroup affected by `ALTER PARTITION SCHEME` must be online.  
 
 Partitioning is fully supported in Azure SQL Database and SQL database in Fabric. All partitions must be placed on the `PRIMARY` filegroup because only the `PRIMARY` filegroup is provided in Azure SQL Database and SQL database in Fabric.
 
@@ -29,7 +29,7 @@ Table partitioning is available in dedicated SQL pools in Azure Synapse Analytic
   
 ## Permissions  
 
-The following permissions can be used to execute ALTER PARTITION SCHEME:  
+The following permissions can be used to execute `ALTER PARTITION SCHEME`:  
   
 -   ALTER ANY DATASPACE permission. This permission defaults to members of the **sysadmin** fixed server role and the **db_owner** and **db_ddladmin** fixed database roles.  
   
@@ -45,11 +45,11 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
   
 2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**.
+3. In SQL Server and [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)], copy and paste the following example into the query window and select **Execute** to create filegroups in a database. This step is not necessary in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
     > [!NOTE]
     > For simplicity, this code creates new filegroups but does not assign files to them. This  allows the demonstration of how to modify the partition scheme but is not a complete example of configuring a partitioned object. Find examples of creating partitioned tables and indexes in [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md).
-  
+
     ```sql
     USE AdventureWorks2022;  
     GO
@@ -69,7 +69,11 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
     ALTER DATABASE AdventureWorks2022  
     ADD FILEGROUP test5fg;  
     GO 
+    ```
 
+4. Next, create the partition function and partition scheme.
+
+    ```sql
     -- if the "myRangePF1" partition function and the "myRangePS1" partition scheme exist,  
     -- drop them from the AdventureWorks2022 database  
     IF EXISTS (SELECT * FROM sys.partition_functions  

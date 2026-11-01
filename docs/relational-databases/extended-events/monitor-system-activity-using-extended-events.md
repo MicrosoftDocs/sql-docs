@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 1.  In Query Editor, issue the following statements to create an event session and add two events. These events, checkpoint_begin and checkpoint_end, fire at the beginning and end of a database checkpoint.  
   
-    ```  
+    ```sql
     CREATE EVENT SESSION test0  
     ON SERVER  
     ADD EVENT sqlserver.checkpoint_begin,  
@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Add the bucketing target with 32 buckets to count the number of checkpoints based on the database ID.  
   
-    ```  
+    ```sql
     ALTER EVENT SESSION test0  
     ON SERVER  
     ADD TARGET package0.histogram  
@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 3.  Issue the following statements to add the ETW target. This will enable you to see the begin and end events, which is used to determine how long the checkpoint takes.  
   
-    ```  
+    ```sql
     ALTER EVENT SESSION test0  
     ON SERVER  
     ADD TARGET package0.etw_classic_sync_target  
@@ -59,7 +59,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 4.  Issue the following statements to start the session and begin event collection.  
   
-    ```  
+    ```sql
     ALTER EVENT SESSION test0  
     ON SERVER  
     STATE = start  
@@ -68,7 +68,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 5.  Issue the following statements to cause three events to fire.  
   
-    ```  
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `tempdb` and `master` databases separately. Run each batch of the code sample on the connection for the database named by its `USE` statement.
+    ::: moniker-end
+
+    ```sql
     USE tempdb  
           checkpoint  
     go  
@@ -80,7 +85,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 6.  Issue the following statements to view the event counts.  
   
-    ```  
+    ```sql
     SELECT CAST(xest.target_data AS xml) Bucketizer_Target_Data_in_XML  
     FROM sys.dm_xe_session_targets xest  
     JOIN sys.dm_xe_sessions xes ON xes.address = xest.event_session_address  
@@ -94,7 +99,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     > [!NOTE]  
     >  To get help for the **tracerpt** command, at the command prompt, enter `tracerpt /?`.  
   
-    ```  
+    ```console
     logman query -ets --- List the ETW sessions. This is optional.  
     logman update XE_DEFAULT_ETW_SESSION -fd -ets --- Flush the ETW log.  
     tracerpt %temp%\xeetw.etl -o xeetw.txt --- Dump the events so they can be seen.  
@@ -102,7 +107,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 8.  Issue the following statements to stop the event session and remove it from the server.  
 
-    ```  
+    ```sql
     ALTER EVENT SESSION test0  
     ON SERVER  
     STATE = STOP  

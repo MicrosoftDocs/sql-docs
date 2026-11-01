@@ -44,7 +44,10 @@ helpviewer_keywords:
   
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the stored procedure used by this sample.  
   
-```  
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
+```sql  
 USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TestParm')  
    DROP PROCEDURE TestParm  
@@ -177,7 +180,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2022;
 DROP PROCEDURE TestParm  
 GO  

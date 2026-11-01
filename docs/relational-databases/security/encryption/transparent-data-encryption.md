@@ -239,6 +239,11 @@ When TDE is turned on, the [!INCLUDE [ssde-md](../../../includes/ssde-md.md)] fo
 
 The transaction logs can be monitored using the [sys.dm_db_log_info](../../system-dynamic-management-objects/sys-dm-db-log-info-transact-sql.md) DMV, which also shows whether the log file is encrypted or not using the `vlf_encryptor_thumbprint` column that is available in Azure SQL, and [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and later versions. To find the encryption status of the log file using the `encryption_state` column in the `sys.dm_database_encryption_keys` view, here's a sample query:
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

@@ -19,6 +19,9 @@ helpviewer_keywords:
 
 If the column name specified is a wildcard character (\*), the content of that column is inserted as if there's no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

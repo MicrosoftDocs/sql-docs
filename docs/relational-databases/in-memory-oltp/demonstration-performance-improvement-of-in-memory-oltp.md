@@ -30,12 +30,12 @@ To see a more comprehensive demonstration of the potential performance improveme
   
 2.  Manually create a directory named **C:\data\\**. The sample Transact-SQL code expects the directory to pre-exist.  
   
-3.  Run the short T-SQL to create the database and its memory-optimized filegroup.  
-  
+3.  Run the short T-SQL to create the database and its memory-optimized filegroup. Azure SQL Database doesn't require creating this `FILEGROUP`.
+
 ```sql  
-go  
 CREATE DATABASE imoltp;    --  Transact-SQL  
 go  
+-- Azure SQL Database doesn't require creating this FILEGROUP.
   
 ALTER DATABASE imoltp ADD FILEGROUP [imoltp_mod]  
     CONTAINS MEMORY_OPTIMIZED_DATA;  
@@ -44,9 +44,6 @@ ALTER DATABASE imoltp ADD FILE
     (name = [imoltp_dir], filename= 'c:\data\imoltp_dir')  
     TO FILEGROUP imoltp_mod;  
 go  
-  
-USE imoltp;  
-go  
 ```  
   
 ### Step 1b: Prerequisite If Using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  
@@ -54,14 +51,12 @@ go
   
 1.  Decide which existing test database you'll use for the code example.  
   
-2.  If you decide to create a new test database, use the [Azure portal](https://portal.azure.com) to create a database named **imoltp**.  
-  
- If you would like instructions for using the Azure portal for this, see [Get Started with Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart).  
+2.  If you decide to create a new test database, use the [Azure portal](https://portal.azure.com) to create a database named `imoltp`. If you would like instructions for using the Azure portal for this, see [Get Started with Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart).  
   
 ### Step 2: Create Memory-Optimized Tables, and NCSProc  
  This step creates memory-optimized tables, and a natively compiled stored procedure (NCSProc). Do the following:  
   
-1.  Use SSMS.exe to connect to your new database.  
+1.  Use SSMS.exe to connect to your new `imoltp` database.  
   
 2.  Run the following T-SQL in your database.  
   

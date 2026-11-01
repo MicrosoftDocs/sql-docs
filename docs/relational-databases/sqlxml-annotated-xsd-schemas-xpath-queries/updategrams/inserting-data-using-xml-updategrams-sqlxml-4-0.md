@@ -297,11 +297,9 @@ The updategram specifies the `returnid` attribute. As a result, the GUID that is
 
 1. Copy the previous updategram and paste it into a text file. Save the file as `Updategram-GenerateGuid.xml`.
 
-1. Create these tables:
+1. Create sample tables. Connect to a desired sample or test database and run the rest of the code sample.
 
    ```sql
-   USE tempdb;
-
    CREATE TABLE Cust
    (
        CustID UNIQUEIDENTIFIER,
@@ -359,11 +357,9 @@ For more examples of updategrams that specify a mapping schema, see [Specifying 
 
 #### Test the updategram
 
-1. Create this table in the `tempdb` database:
+1. Create this table in the desired sample or test database.
 
    ```sql
-   USE tempdb;
-
    CREATE TABLE CustOrder
    (
        OrderID INT,
@@ -438,11 +434,9 @@ The updategram specifies `xsi:nil` for the `<fname>` element in the `<after>` bl
 
 #### Test the updategram
 
-1. Create the following table in the `tempdb` database:
+1. Create the following table in the desired sample or test database.
 
    ```sql
-   USE tempdb;
-
    CREATE TABLE Students
    (
        StudentID CHAR (6) NOT NULL,

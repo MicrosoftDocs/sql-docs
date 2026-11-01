@@ -183,6 +183,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 > [!NOTE]  
 >  This table has only five columns to make it easier to display and read. Declaring the sparse columns to be nullable is optional if the [ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) option is set. When SET ANSI_DEFAULTS is ON, SET ANSI_NULL_DFLT_ON is enabled. ANSI_DEFAULTS is ON by default for most connection providers. For more information, see [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md).
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

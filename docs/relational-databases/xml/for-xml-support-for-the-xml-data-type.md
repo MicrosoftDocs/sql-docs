@@ -22,6 +22,9 @@ If a `FOR XML` query specifies a column of **xml** type in the `SELECT` clause, 
 
 For example, the following query retrieves customer contact information such as the `BusinessEntityID`, `FirstName`, and `LastName` columns, and the telephone numbers from the `AdditionalContactInfo` column of **xml** type.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -138,6 +141,9 @@ FOR XML AUTO;
 - An instance of the **xml** type
 
 For example, the following user-defined function returns a table with a single column of **xml** type:
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
 
 ```sql
 USE AdventureWorks2022;

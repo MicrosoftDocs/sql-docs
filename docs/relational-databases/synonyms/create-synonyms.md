@@ -68,11 +68,11 @@ To create a synonym in a given schema, a user must have CREATE SYNONYM permissio
 3.  Copy and paste the following examples into the query window and select **Execute**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
- The following example creates a synonym for an existing table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The synonym is then used in subsequent examples.  
+ The following example creates a synonym for an existing table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The synonym is then used in subsequent examples. 
+
+ Connect to a sample or test database, and then run the code sample. These code samples use the `AdventureWorks2022` sample database.
   
 ```sql  
-USE tempdb;  
-GO  
 CREATE SYNONYM MyAddressType  
 FOR AdventureWorks2022.Person.AddressType;  
 GO  
@@ -81,8 +81,6 @@ GO
  The following example inserts a row into the base table that is referenced by the `MyAddressType` synonym.  
   
 ```sql  
-USE tempdb;  
-GO  
 INSERT INTO MyAddressType (Name)  
 VALUES ('Test');  
 GO  
@@ -91,8 +89,6 @@ GO
  The following example demonstrates how a synonym can be referenced in dynamic SQL.  
   
 ```sql  
-USE tempdb;  
-GO  
 EXECUTE ('SELECT Name FROM MyAddressType');  
 GO  
 ```  

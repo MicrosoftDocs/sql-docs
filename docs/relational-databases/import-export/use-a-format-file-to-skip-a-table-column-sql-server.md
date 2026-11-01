@@ -28,6 +28,11 @@ This article describes how to use a format file to skip importing a table column
 
 The examples in this article expect a table named `myTestSkipCol` under the `dbo` schema. You can create this table in a sample database such as `WideWorldImporters` or `AdventureWorks` or in any other database. Create this table as follows:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE WideWorldImporters;
 GO
@@ -127,6 +132,11 @@ The following examples are based on the `myTestSkipCol` sample table and the `my
 
 This example works by using either of the modified non-XML format files created as described in the preceding section. In this example, the modified format file is named `myTestSkipCol2.fmt`. To use `BULK INSERT` to bulk import the `myTestSkipCol2.dat` data file, in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), run the following code. Update the file system paths for the location of the sample files on your computer.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE WideWorldImporters;
 GO
@@ -205,6 +215,11 @@ With an XML format file, you can't skip a column when you import directly into a
 The following example creates the `v_myTestSkipCol` view on the `myTestSkipCol` table. This view skips the second table column, `Col2`. The example then uses `BULK INSERT` to import the `myTestSkipCol2.dat` data file into this view.
 
 In SSMS, run the following code. Update the file system paths for the location of the sample files on your computer.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE WideWorldImporters;

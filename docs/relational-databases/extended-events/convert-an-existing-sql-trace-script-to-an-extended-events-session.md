@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   If you have an existing SQL Trace script that you want to convert to an Extended Events session, you can use the procedures in this topic to create an equivalent Extended Events session. By using the information in the trace_xe_action_map and trace_xe_event_map system tables, you can collect the information that you must have to do the conversion.  
   
@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
     >  Trace ID 1 typically indicates the default trace.  
   
 ## To determine the Extended Events equivalents  
-  
+
 1.  To determine the equivalent Extended Events events and actions, run the following query, where *trace_id* is set to the value of the trace ID that you obtained in the previous procedure.  
   
     > [!NOTE]  

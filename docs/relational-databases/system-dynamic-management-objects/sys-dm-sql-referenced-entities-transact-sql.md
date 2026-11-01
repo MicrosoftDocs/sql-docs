@@ -44,7 +44,7 @@ Returns one row for each user-defined entity that is referenced by name in the d
 
 ## Syntax  
   
-```  
+```sql  
 sys.dm_sql_referenced_entities (  
     ' [ schema_name. ] referencing_entity_name ' ,
     ' <referencing_class> ' )  
@@ -145,6 +145,11 @@ sys.dm_sql_referenced_entities (
 ### A. Return entities that are referenced by a database-level DDL trigger  
  The following example returns the entities (tables and columns) that are referenced by the database-level DDL trigger `ddlDatabaseTriggerLog`.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

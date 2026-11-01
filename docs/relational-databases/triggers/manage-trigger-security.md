@@ -55,11 +55,11 @@ You can take the following measures to prevent trigger code from executing under
     ```
 
    > [!NOTE]  
-   > Only **sys.triggers** is available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] unless you are using [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)].
+   > The `sys.server_triggers` system object is not available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current"
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
 
 - Be aware of the DML and DDL triggers that exist in the database by querying the [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) catalog view. The following query returns all DML and database-level DDL triggers in the current database:
 

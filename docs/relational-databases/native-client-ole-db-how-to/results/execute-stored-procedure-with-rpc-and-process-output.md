@@ -48,6 +48,9 @@ helpviewer_keywords:
   
  Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the stored procedure used by the application.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  

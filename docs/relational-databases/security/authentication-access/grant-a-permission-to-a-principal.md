@@ -66,6 +66,11 @@ The grantor (or the principal specified with the AS option) must have either the
   
 1. Copy and paste the following example into the query window and select **Execute**. The following sample grants EXECUTE permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role called `Recruiting11`.
   
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
     ```sql
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   
     USE AdventureWorks2022;  

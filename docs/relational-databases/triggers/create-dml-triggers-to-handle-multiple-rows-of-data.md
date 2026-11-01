@@ -32,7 +32,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### A. Storing a running total for a single-row insert  
  The first version of the DML trigger works well for a single-row insert when a row of data is loaded into the `PurchaseOrderDetail` table. An INSERT statement fires the DML trigger, and the new row is loaded into the **inserted** table for the duration of the trigger execution. The `UPDATE` statement reads the `LineTotal` column value for the row and adds that value to the existing value in the `SubTotal` column in the `PurchaseOrderHeader` table. The `WHERE` clause makes sure that the updated row in the `PurchaseOrderDetail` table matches the `PurchaseOrderID` of the row in the **inserted** table.  
   
-```  
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
 -- Trigger is valid for single-row inserts.  
 USE AdventureWorks2022;  
 GO  
@@ -50,7 +55,7 @@ AFTER INSERT AS
   
  To correctly update the `PurchaseOrderHeader` table, the trigger must allow for the chance of multiple rows in the **inserted** table. You can do this by using the `SUM` function that calculates the total `LineTotal` for a group of rows in the **inserted** table for each `PurchaseOrderID`. The `SUM` function is included in a correlated subquery (the `SELECT` statement in parentheses). This subquery returns a single value for each `PurchaseOrderID` in the **inserted** table that matches or is correlated with a `PurchaseOrderID` in the `PurchaseOrderHeader` table.  
   
-```  
+```sql  
 -- Trigger is valid for multirow and single-row inserts.  
 USE AdventureWorks2022;  
 GO  
@@ -72,7 +77,7 @@ AFTER INSERT AS
 ### C. Storing a running total based on the type of insert  
  You can change the trigger to use the method optimal for the number of rows. For example, the `@@ROWCOUNT` function can be used in the logic of the trigger to distinguish between a single and a multirow insert.  
   
-```  
+```sql  
 -- Trigger valid for multirow and single row inserts  
 -- and optimal for single row inserts.  
 USE AdventureWorks2022;  

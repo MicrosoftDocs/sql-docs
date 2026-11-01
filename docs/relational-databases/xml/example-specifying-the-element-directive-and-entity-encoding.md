@@ -20,7 +20,12 @@ helpviewer_keywords:
 
 This example illustrates the difference between the **ELEMENT** and **XML** directives. The **ELEMENT** directive entitizes the data, but the **XML** directive doesn't. The `<Summary>` element is assigned XML, `<Summary>This is summary description</Summary>`, in the query.
 
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 Consider this query:
+
 
 ```sql
 USE AdventureWorks2022;
@@ -82,7 +87,7 @@ SELECT  2 as Tag,
         Name,
        (SELECT CatalogDescription.query('
             declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";
-			/pd:ProductDescription/pd:Summary'))
+            /pd:ProductDescription/pd:Summary'))
 FROM     Production.ProductModel
 WHERE    CatalogDescription is not null
 ORDER BY [ProductModel!1!ProdModelID],Tag

@@ -48,6 +48,11 @@ The search property list owner can grant `REFERENCE` or `CONTROL` permissions on
 
 The following example displays the ID and name of the search property lists in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO

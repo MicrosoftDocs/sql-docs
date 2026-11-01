@@ -71,12 +71,12 @@ The scenarios in the following examples illustrate how XML schema permissions wo
 
 The following example shows how to grant permissions so that a principal can create an XML schema collection. The example creates a sample database and a test user, `TestLogin1`. `TestLogin1` is then given `ALTER` permission on the relational schema and given `CREATE XML SCHEMA COLLECTION` permission on the database. With these permissions, `TestLogin1` succeeds in creating a sample XML schema collection.
 
+Connect directly to intended sample database and run the following code sample.
+
 ```sql
 SETUSER;
 GO
-USE master;
-GO
-CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1';
+CREATE LOGIN TestLogin1 WITH password='<strong password>';
 GO
 CREATE DATABASE SampleDBForSchemaPermissions;
 GO
@@ -114,8 +114,6 @@ GO
 -- Final cleanup
 SETUSER;
 GO
-USE master;
-GO
 DROP DATABASE SampleDBForSchemaPermissions;
 GO
 DROP LOGIN TestLogin1;
@@ -130,8 +128,6 @@ The example creates a test database and a login, `TestLogin1`. `TestLogin1` crea
 
 ```sql
 SETUSER
-GO
-USE master;
 GO
 CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1';
 GO
@@ -232,8 +228,6 @@ GO
 -- Final cleanup
 SETUSER;
 GO
-USE master;
-GO
 DROP DATABASE SampleDBForSchemaPermissions;
 GO
 DROP LOGIN TestLogin1;
@@ -247,9 +241,7 @@ A user must have ALTER permission to modify an existing XML schema collection in
 ```sql
 SETUSER;
 GO
-USE master;
-GO
-CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1';
+CREATE LOGIN TestLogin1 WITH password='<strong password>';
 GO
 CREATE DATABASE SampleDBForSchemaPermissions;
 GO
@@ -307,8 +299,6 @@ GO
 -- Final cleanup
 SETUSER;
 GO
-USE master;
-GO
 DROP DATABASE SampleDBForSchemaPermissions;
 GO
 DROP LOGIN TestLogin1;
@@ -332,9 +322,9 @@ This example does the following:
 - `TestLogin2` becomes the owner of the XML schema collection in `myOtherDBSchema`, without changing the relational schema of the XML schema collection.
 
 ```sql
-CREATE LOGIN TestLogin1 with password='SQLSvrPwd1';
+CREATE LOGIN TestLogin1 with password='<strong password>';
 GO
-CREATE LOGIN TestLogin2 with password='SQLSvrPwd2';
+CREATE LOGIN TestLogin2 with password='<strong password>';
 GO
 CREATE DATABASE SampleDBForSchemaPermissions;
 GO
@@ -425,8 +415,6 @@ GO
 -- Final cleanup
 SETUSER;
 GO
-USE master;
-GO
 DROP DATABASE SampleDBForSchemaPermissions;
 GO
 DROP LOGIN TestLogin1;
@@ -440,8 +428,6 @@ The following example shows how to grant VIEW DEFINITION permissions for an XML 
 
 ```sql
 SETUSER;
-GO
-USE master;
 GO
 IF EXISTS( SELECT * FROM sysdatabases WHERE name='permissionsDB' )
    DROP DATABASE permissionsDB;

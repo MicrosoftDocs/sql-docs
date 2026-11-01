@@ -44,6 +44,11 @@ The following example creates a table named `EmployeeOrg`, which includes employ
 
 1. In a Query Editor window, run the following code to create the `EmployeeOrg` table. Specifying the `OrgNode` column as the primary key with a clustered index creates a depth-first index:
 
+   ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+   > [!NOTE]
+   > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+   ::: moniker-end
+
    ```sql
    USE AdventureWorks2022;
    GO

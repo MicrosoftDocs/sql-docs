@@ -53,7 +53,15 @@ The examples in this topic are based on the sample table `myWidenative` and form
 ### Sample table
 
 The following script creates a test database, a table named `myWidenative` and populates the table with some initial values. Execute the following Transact-SQL:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database. Connect directly to the  `master` and desired user databases separately.
+::: moniker-end
+
 ```sql
+USE [master];
+GO
 CREATE DATABASE TestDatabase;
 GO
 

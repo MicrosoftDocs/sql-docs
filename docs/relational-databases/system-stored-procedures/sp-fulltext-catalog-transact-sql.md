@@ -94,6 +94,11 @@ The caller is required to be member of the **db_owner** role. Depending on the a
 
 This example creates an empty full-text catalog, `Cat_Desc`, in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

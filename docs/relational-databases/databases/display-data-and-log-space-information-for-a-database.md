@@ -51,6 +51,11 @@ Permission to run **sp_spaceused** is granted to the **public** role. Only membe
   
 1. Paste the following example into the query window and then select **Execute**. This example uses the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the entire database, including tables and indexes.  
   
+   ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+   > [!NOTE]
+   > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+   ::: moniker-end
+
    ```sql  
    USE AdventureWorks2022;  
    GO  

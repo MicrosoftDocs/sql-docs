@@ -70,6 +70,11 @@ A user with `CONTROL` database permissions, **db_owner** database role membershi
 
 As a best practice, test manual reseed for a specific database to understand the impact before turning on the automatic reseed functionality.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE <Mirrored database name>
 GO

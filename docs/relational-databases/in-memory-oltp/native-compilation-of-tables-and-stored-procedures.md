@@ -45,33 +45,35 @@ The [!INCLUDE [ssde-md](../../includes/ssde-md.md)] compiles DLLs for all tables
 
 When you create a memory-optimized table using the `CREATE TABLE` statement, the table information is written to the database metadata, and the table and index structures are created in memory. The table is then compiled to a DLL.
 
-The following sample script creates a database and a memory-optimized table. Make sure you set the `FILENAME` path to where your `DATA` subdirectory is.
+The following sample script creates a database and a memory-optimized table. On Microsoft SQL Server, to use memory-optimized features, your database must have a `FILEGROUP` that is declared with `MEMORY_OPTIMIZED_DATA`. Make sure you set the `FILENAME` path to where your `DATA` subdirectory is. Azure SQL Database doesn't require creating this `FILEGROUP`.
+
+Connect to your server's `master` database to create the new database.
 
 ```sql
-USE master;
+CREATE DATABASE [DbMemOpt3];
 GO
-
-CREATE DATABASE DbMemOpt3;
-GO
-
-ALTER DATABASE DbMemOpt3
+-- native-compilation-of-tables-and-stored-procedures.md
+-- Azure SQL Database doesn't require creating this FILEGROUP. 
+ALTER DATABASE [DbMemOpt3]
 ADD FILEGROUP DbMemOpt3_mod_memopt_1_fg
     CONTAINS MEMORY_OPTIMIZED_DATA;
 GO
 
 -- Change the FILENAME path to where your DATA subdirectory is located,
 -- keeping only the trailing portion '\DATA\DbMemOpt3_mod_memopt_1_fn'.
-ALTER DATABASE DbMemOpt3
+-- Azure SQL Database doesn't require this. 
+ALTER DATABASE [DbMemOpt3]
 ADD FILE (
     NAME = 'DbMemOpt3_mod_memopt_1_name',
     FILENAME = 'C:\DATA\DbMemOpt3_mod_memopt_1_fn'
 )
 TO FILEGROUP DbMemOpt3_mod_memopt_1_fg;
 GO
+```
 
-USE DbMemOpt3;
-GO
+Connect to your `DbMemOpt3` database to run the sample exercise.
 
+```sql
 CREATE TABLE dbo.t1
 (
     c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,

@@ -21,7 +21,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  The following GetContacts stored procedure returns **FirstName** and **LastName** of employees in the Person.Contact table in the AdventureWorks database.  
   
-```  
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
 USE AdventureWorks2022;
 CREATE PROCEDURE GetContacts @LastName varchar(20)  
 AS  
@@ -36,7 +41,7 @@ Go
 > [!NOTE]  
 >  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the connection string.  
   
-```  
+```csharp
 using System;  
 using Microsoft.Data.SqlXml;  
 using System.IO;  
@@ -80,7 +85,7 @@ public static int Main(String[] args)
   
 3.  Compile the code. To compile the code at the command prompt, use:  
   
-    ```  
+    ```console
     csc /reference:Microsoft.Data.SqlXML.dll DocSample.cs  
     ```  
   

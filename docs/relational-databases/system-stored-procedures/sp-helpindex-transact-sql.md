@@ -68,6 +68,11 @@ Requires membership in the **public** role.
 
 The following example reports on the types of indexes on the `Customer` table in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)].
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

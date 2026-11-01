@@ -217,6 +217,11 @@ All other expression types aren't foldable. In particular, the following types o
 
 Consider the following query:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO
@@ -584,6 +589,11 @@ When the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] executes any T-SQL stateme
 The [!INCLUDE [ssDE-md](../includes/ssde-md.md)] uses an efficient algorithm to find any existing execution plans for any specific T-SQL statement. In most systems, the minimal resources that this scan uses are less than the resources that are saved by reusing existing plans instead of compiling every T-SQL statement.
 
 The algorithms to match new T-SQL statements to existing, unused execution plans in the plan cache require that all object references be fully qualified. For example, assume that `Person` is the default schema for the user executing the following `SELECT` statements. While this example doesn't require that you fully qualify the `Person` table to execute, it means that the second statement doesn't match an existing plan, but the third statement does match:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2025;
@@ -1568,15 +1578,20 @@ The following example creates a test database containing a single table with sev
 > [!NOTE]  
 > This example inserts more than 1 million rows into the table. Running this example can take several minutes depending on your hardware. Before executing this example, verify that you have more than 1.5 GB of disk space available.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` and desired user databases separately. Run each batch of the code sample on the connection for the database named by its `USE` statement.
+::: moniker-end
+
 ```sql
 USE master;
 GO
 
 IF DB_ID(N'db_sales_test') IS NOT NULL
-    DROP DATABASE db_sales_test;
+    DROP DATABASE [db_sales_test];
 GO
 
-CREATE DATABASE db_sales_test;
+CREATE DATABASE [db_sales_test];
 GO
 
 USE db_sales_test;

@@ -9,7 +9,7 @@ ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Use Large CLR UDTs  in SQL Server Native Client (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance Synapse Analytics](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
   This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later.  
   
@@ -24,7 +24,7 @@ ms.topic: "reference"
   
  Execute the fourth ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the assembly to the master database.  
   
-```  
+```cpp
 // compile with: /target: library  
 using System;  
 using System.Data;  
@@ -97,8 +97,8 @@ public class LargeStringUDT : INullable, IBinarySerialize {
 }  
 ```  
   
-```  
-USE [MASTER]  
+```sql  
+USE [master];
 GO  
   
 CREATE ASSEMBLY LargeStringUDT  
@@ -466,8 +466,8 @@ int ProcessResultSet() {
 }  
 ```  
   
-```  
-USE [MASTER]  
+```sql  
+USE [master];
 IF EXISTS (SELECT * FROM sys.objects WHERE name = 'LargeStringUDTs')  
    DROP TABLE LargeStringUDTs  
 GO  

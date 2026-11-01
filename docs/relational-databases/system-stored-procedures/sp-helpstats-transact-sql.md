@@ -77,6 +77,11 @@ Requires membership in the **public** role.
 
 The following example creates single-column statistics for all eligible columns for all user tables in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by executing `sp_createstats`. Then, `sp_helpstats` is run to find the resultant statistics created on the `Customer` table.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

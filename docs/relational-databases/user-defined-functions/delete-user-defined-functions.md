@@ -54,6 +54,11 @@ Requires ALTER permission on the schema to which the function belongs, or CONTRO
 
    The following code sample creates a user-defined function:
 
+   ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+   > [!NOTE]
+   > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+   ::: moniker-end
+
    ```sql
    -- creates function called "Sales.ufn_SalesByStore"
    USE AdventureWorks2022;

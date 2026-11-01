@@ -100,7 +100,12 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 1.  Create this table in the **tempdb** database:  
   
-    ```  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE tempdb  
     CREATE TABLE Customer (  
                  CustomerID  varchar(5),  
@@ -110,14 +115,14 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Add this sample record:  
   
-    ```  
+    ```sql  
     INSERT INTO Customer (CustomerID, ContactName) VALUES   
                          ('C1', 'Andrew Fuller')  
     ```  
   
 3.  Copy the following XSD schema and paste it into Notepad. Save it as ConcurrencySampleSchema.xml:  
   
-    ```  
+    ```xml
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Customer" sql:relation="Customer" >  
@@ -142,7 +147,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 4.  Copy the following updategram code into Notepad and save it as ConcurrencySampleTemplate.xml in the same directory where you saved the schema created in the previous step. (Note the timestamp value below for LastUpdated will differ in your example Customer table, so copy the actual value for LastUpdated from the table and paste it into the updategram.)  
   
-    ```  
+    ```xml
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
     <updg:sync mapping-schema="SampleSchema.xml" >  
     <updg:before>  
@@ -158,26 +163,26 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 5.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
   
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+   For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- This is the equivalent XDR schema:  
-  
-```  
-<?xml version="1.0" ?>  
-<Schema xmlns="urn:schemas-microsoft-com:xml-data"  
-        xmlns:dt="urn:schemas-microsoft-com:datatypes"  
-        xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
-<ElementType name="Customer" sql:relation="Customer" >  
-    <AttributeType name="CustomerID" />  
-    <AttributeType name="ContactName" />  
-    <AttributeType name="LastUpdated"  dt:type="bin.hex"   
-                                       sql:datatype="timestamp" />  
-    <attribute type="CustomerID" />  
-    <attribute type="ContactName" />  
-    <attribute type="LastUpdated" />  
-</ElementType>  
-</Schema>  
-```  
+   This is the equivalent XDR schema:  
+      
+   ```xml
+    <?xml version="1.0" ?>  
+    <Schema xmlns="urn:schemas-microsoft-com:xml-data"  
+            xmlns:dt="urn:schemas-microsoft-com:datatypes"  
+            xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+    <ElementType name="Customer" sql:relation="Customer" >  
+        <AttributeType name="CustomerID" />  
+        <AttributeType name="ContactName" />  
+        <AttributeType name="LastUpdated"  dt:type="bin.hex"   
+                                           sql:datatype="timestamp" />  
+        <attribute type="CustomerID" />  
+        <attribute type="ContactName" />  
+        <attribute type="LastUpdated" />  
+    </ElementType>  
+    </Schema>  
+   ```  
   
 ## Related content
 

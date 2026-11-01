@@ -33,6 +33,11 @@ Permissions aren't required to run the [EXECUTE](../../t-sql/language-elements/e
 
 This example uses the `ufnGetSalesOrderStatusText` scalar-valued function that is available in most editions of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]. The purpose of the function is to return a text value for sales status from a given integer. Vary the example by passing integers 1 through 7 to the `@Status` parameter.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE [AdventureWorks2022]
 GO

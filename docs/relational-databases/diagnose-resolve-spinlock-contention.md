@@ -356,6 +356,8 @@ The first line of defense in tuning SQL Server workloads is always the standard 
 
 ## Appendix: Automate memory dump capture
 
+**Applies to**: SQL Server only.
+
 The following extended events script has proven to be useful to automate the collection of memory dumps when spinlock contention becomes significant. In some cases, memory dumps are required to perform a complete diagnosis of the problem or are requested by the Microsoft teams to perform in-depth analysis.
 
 The following SQL script can be used to automate the process of capturing memory dumps to help analyze spinlock contention:
@@ -544,6 +546,11 @@ END;
 ## Appendix: Capture spinlock statistics over time
 
 The following script can be used to look at spinlock statistics over a specific time period. Each time it runs it will return the delta between the current values and previous values collected.
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 /* Snapshot the current spinlock stats and store so that this can be compared over a time period

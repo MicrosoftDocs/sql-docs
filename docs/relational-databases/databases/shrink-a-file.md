@@ -125,6 +125,11 @@ Shrink operations in progress can block other queries on the database, and can b
 
 1. Copy and paste the following example into the query window and select **Execute**. This example uses [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
 
+ ::: moniker range="=azuresqldb-current"
+ > [!NOTE]
+ > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+ ::: moniker-end
+
  :::code language="sql" source="codesnippet/tsql/shrink-a-file_1.sql":::
 
 ## Related content

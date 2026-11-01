@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "dm_db_xtp_table_memory_stats"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +41,9 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
   
  System tables are returned only for users with VIEW DATABASE STATE permission.  
   
-### Permissions for SQL Server 2022 and later
+<a id="permissions-for-sql-server-2022-and-later"></a>
+
+### Permissions for SQL Server 2022 and later versions
 
 Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
@@ -63,6 +65,8 @@ FROM sys.dm_db_xtp_table_memory_stats;
 ```  
   
 ## User Scenario  
+
+ This sample exercise is not relevant to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], as taking a database offline and the Resource Governor are not available.
  
  First, set the max server memory to 4GB as a safety measure. You may want to consider a different value for your environment. 
   

@@ -35,7 +35,7 @@ Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md
   
 ## Syntax  
   
-```  
+```sql  
 sys.dm_exec_text_query_plan   
 (   
     plan_handle   
@@ -100,7 +100,9 @@ When an ad hoc query uses [simple](../query-processing-architecture-guide.md#sim
 ## Permissions  
  To execute **sys.dm_exec_text_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  
   
-### Permissions for SQL Server 2022 and later
+<a id="permissions-for-sql-server-2022-and-later"></a>
+
+### Permissions for SQL Server 2022 and later versions
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
@@ -110,13 +112,11 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
  If a [!INCLUDE[tsql](../../includes/tsql-md.md)] query or batch runs a long time on a particular connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], retrieve the execution plan for that query or batch to discover what is causing the delay. The following example shows how to retrieve the Showplan for a slow-running query or batch.  
   
 > [!NOTE]  
-> To run this example, replace the values for *session_id* and *plan_handle* with values specific to your server.  
+> To run this example, replace the values for `session_id` and `plan_handle` with values specific to your server.  
   
  First, retrieve the session ID (SPID) for the process that is executing the query or batch by using the `sp_who` stored procedure:  
   
 ```sql  
-USE master;  
-GO  
 EXEC sp_who;  
 GO  
 ```  
@@ -179,3 +179,4 @@ GO
 ## Related content
 
 - [sys.dm_exec_query_plan (Transact-SQL)](sys-dm-exec-query-plan-transact-sql.md)
+- [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md)

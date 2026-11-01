@@ -129,7 +129,12 @@ In Fabric Data Warehouse and the SQL analytics endpoint, you must have `SELECT` 
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     -- The following example displays all statistics information for the AK_Address_rowguid index of the Person.Address table.   
@@ -143,11 +148,11 @@ In Fabric Data Warehouse and the SQL analytics endpoint, you must have `SELECT` 
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  Copy and paste the following example into the query window and select **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;   
     GO  
     /*Gets the following information: name and ID of the statistics, whether the statistics were created automatically or by the user, whether the statistics were created with the NORECOMPUTE option, and whether the statistics have a filter and, if so, what that filter is.  
@@ -166,10 +171,12 @@ In Fabric Data Warehouse and the SQL analytics endpoint, you must have `SELECT` 
     GO  
     ```  
   
- For more information, see [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).  
-
-## Platform support
+ ## Platform support
 
 In Fabric Data Warehouse and the SQL analytics endpoint, `DBCC SHOW_STATISTICS` displays only histogram-based single-column statistics. For more information, see [Statistics in Fabric Data Warehouse](/fabric/data-warehouse/statistics).
-  
+
+## Related content
+
+- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)
+
   

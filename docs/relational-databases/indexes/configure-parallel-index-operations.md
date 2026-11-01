@@ -89,6 +89,11 @@ Requires `ALTER` permission on the table or view.
 
 1. Copy and paste the following example into the query window and select **Execute**. This code alters the `IX_ProductVendor_VendorID` index on the `Purchasing.ProductVendor` table so that, if the server has eight or more processors, the Database Engine limits the execution of the index operation to eight or fewer processors.
 
+   ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+   > [!NOTE]
+   > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+   ::: moniker-end
+
    ```sql
    USE AdventureWorks2022;
    GO

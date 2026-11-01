@@ -59,6 +59,11 @@ By default, members of the **sysadmin** fixed server role can execute this store
 
 The following example removes the `London` server from the group "Servers Maintaining Customer Information". You must connect to the jobs database specified when creating the job agent, in this case `ElasticJobs`.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 --Connect to the jobs database specified when creating the job agent
 USE ElasticJobs;

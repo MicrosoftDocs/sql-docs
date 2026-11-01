@@ -90,9 +90,18 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  This could lead to problems with a mismatch in collations between user-defined databases and system database objects. For example, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Latin1_General_CS_AS collation and you execute the following statements:  
   
-```sql  
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database.
+::: moniker-end
+
+```sql
+USE [master];
+GO
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  
+GO
 USE TestDB;  
+GO
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   

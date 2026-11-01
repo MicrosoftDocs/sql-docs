@@ -74,6 +74,11 @@ SELECT TOP ( number )
 ## Example 1
  The following code example shows a nearest neighbor query that can use a spatial index. The example uses the `Person.Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022  
 GO  
@@ -88,6 +93,11 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## Example 2
  The following code example shows a nearest neighbor query that cannot use a spatial index.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022  
 GO  

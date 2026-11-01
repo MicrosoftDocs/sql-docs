@@ -271,10 +271,14 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: Azure SQL Database free tier
-      href: database/free-tier.md
-    - name: Azure SQL Database free tier FAQ
-      href: database/free-tier-faq.yml
+    - name: Free tier
+      items:
+      - name: Deploy a free database
+        href: database/free-tier.md
+      - name: Frequently asked questions
+        href: database/free-tier-faq.yml
+      - name: Upgrade to Hyperscale
+        href: database/free-tier-upgrade-to-hyperscale.md
     - name: Intelligent applications and AI
       href: database/ai-artificial-intelligence-intelligent-applications.md
     - name: Copilot with Azure SQL Database
@@ -750,8 +754,6 @@
         href: database/manage-hyperscale-database.md
       - name: Convert to Hyperscale
         href: database/convert-to-hyperscale.md
-      - name: Upgrade a free tier database to Hyperscale
-        href: database/free-tier-upgrade-to-hyperscale.md
       - name: Reverse migrate from Hyperscale
         href: database/reverse-migrate-from-hyperscale.md
       - name: Create zone-redundant database

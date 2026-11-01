@@ -4,7 +4,7 @@ description: Guidance on how to deploy the Azure SQL Database free tier for up t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ivujic, reneamoso, amapatil, alpowers
-ms.date: 10/12/2026
+ms.date: 10/30/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: how-to
@@ -21,32 +21,14 @@ Try Azure SQL Database at no cost with the free tier. For each database, you get
 
 > [!TIP]
 > To get started and quickly create a new free Azure SQL Database, visit the [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub). In the **Create a database** pane, select the **Start free** link.
->
-> To create the same database from an agent or the command line, use [az sql db create](/cli/azure/sql/db#az-sql-db-create) with the free-limit parameters. The `--use-free-limit` parameter makes the database a free tier database. Without it, you get a regular billable serverless database.
->
-> ```agent
-> Create an Azure SQL Database on the free tier.
-> 1. Confirm the active Azure subscription and resource group. Verify that the logical
->    server exists, and create it with `az sql server create` if it doesn't.
-> 2. Create the database in that logical server with `az sql db create`, using the General Purpose, serverless
->    configuration and the free-limit parameters:
->    `--edition GeneralPurpose --family Gen5 --capacity 2 --compute-model Serverless
->     --use-free-limit true --free-limit-exhaustion-behavior AutoPause`
-> 3. Add a server firewall rule for the client IP address used to connect to the database.
-> 4. Use `AutoPause` to pause the database when the monthly free limits are reached, or
->    `BillOverUsage` to stay online and pay for usage beyond the free limits.
-> Format all commands for my current shell. Don't use Bash `\` line continuation in PowerShell.
-> Confirm the parameters against the official reference at
-> https://learn.microsoft.com/cli/azure/sql/db#az-sql-db-create before running the commands.
-> ```
 
-<a id="prerequisites"></a>
-
-## Create a database
+## Prerequisites
 
 You need an Azure account and subscription. Unlike the [previous Azure free account offer](free-sql-db-free-account-how-to-deploy.md), the free tier is available with most Azure subscription types. Microsoft Azure for Students Starter isn't supported.
 
-Create a free tier database with the Azure portal, Azure CLI, or Azure PowerShell.
+## Create a database
+
+Choose the Azure portal, Azure CLI, PowerShell, or an agent prompt to create a free tier database.
 
 # [Portal](#tab/azure-portal)
 
@@ -129,7 +111,54 @@ New-AzSqlServerFirewallRule -ResourceGroupName "<resource-group>" -ServerName "<
 
 Use `AutoPause` to pause at the monthly free limit, or `BillOverUsage` to continue with charges. For more information, see [Considerations and limitations](#considerations-and-limitations).
 
+# [Agent prompt](#tab/agent-prompt)
+
+Use an agent with Azure management tools and permission to create resources in your subscription. For example, follow the setup instructions for [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), open Copilot Chat in Visual Studio Code, and select **Agent**.
+
+Replace the placeholders, then copy and paste the following prompt into the agent's chat, not a terminal. Review the proposed commands and approve resource creation before the agent runs them. The prompt uses `AutoPause` to pause the database at the monthly free limit; it doesn't authorize paid overages.
+
+```prompt
+Create an Azure SQL Database <database-name> on the free tier, using logical
+server <server-name>, resource group <resource-group>, and subscription
+<subscription-id>.
+
+1. Confirm the subscription, resource group, region, database name, and whether
+   the logical server exists. Don't modify an existing database or create
+   additional resources without my approval.
+1. Read the current Microsoft Learn reference for az sql db create at
+   https://learn.microsoft.com/cli/azure/sql/db#az-sql-db-create.
+   Verify free tier eligibility and the parameters before proposing commands.
+1. Show me the planned resources, authentication method, firewall changes, and
+   any potential charges. Ask for my explicit approval before making changes.
+   Don't ask me to paste passwords or access tokens into chat.
+1. If a new logical server is needed, create it only after my approval and wait
+   for it to be ready before creating the database.
+1. Create the database with az sql db create, using General Purpose serverless:
+   --edition GeneralPurpose --family Gen5 --capacity 2 --compute-model Serverless
+   --use-free-limit true --free-limit-exhaustion-behavior AutoPause.
+   Don't omit --use-free-limit true. Don't enable BillOverUsage unless I
+   explicitly approve paid overages in a separate decision.
+1. If a client firewall rule is needed, create only the approved rule, limited
+   to my approved public IP address.
+1. Format commands for my shell. Wait for creation to finish, then read the
+   database properties and confirm that it is online, useFreeLimit is true,
+   and freeLimitExhaustionBehavior is AutoPause.
+1. If any step fails or the free tier configuration can't be verified, stop
+   and show the error, current resource state, and a safe next step. Don't
+   create a billable database as a fallback or claim success without verification.
+```
+
 ---
+
+## Verify the deployment
+
+After creation finishes, confirm that:
+
+- The database is online in the intended subscription, resource group, and logical server.
+- The database uses the free tier. In Azure CLI output, `useFreeLimit` is `true`.
+- The behavior at the monthly free limit matches your choice. The creation examples in this article use `AutoPause`; `BillOverUsage` enables paid overages.
+
+Use the database's **Overview** and **Compute + storage** pages in the Azure portal, [az sql db show](/cli/azure/sql/db#az-sql-db-show), or [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) to check the configuration.
 
 ## Query the database
 
@@ -155,41 +184,9 @@ On the **Metrics** tab, you can also [create an alert rule](/azure/azure-monitor
 
 ### Monitor with Database Hub (preview)
 
-[Database Hub in Microsoft Fabric](/fabric/database/hub/overview) (preview) gives you an estate-wide view of Azure SQL databases that you have permission to access. It's available with a Fabric Free license and doesn't require Fabric capacity. Your databases stay in their existing subscriptions, resource groups, and regions; you don't move data into Fabric.
+Optionally, use [Database Hub in Microsoft Fabric](/fabric/database/hub/overview) (preview) for an estate-wide view of Azure SQL databases that you have permission to access. It's available with a Fabric Free license and doesn't require Fabric capacity. Your databases remain in their existing Azure subscriptions.
 
-Use Database Hub to:
-
-- Find this database and your other Azure SQL databases across subscriptions and resource groups.
-- Review **What needs attention?** for issues and suggestions that require investigation.
-- Inspect CPU, memory, storage, I/O, and workload pressure after you enable performance monitoring.
-- Continue to the Azure portal or Visual Studio Code for configuration changes and query diagnostics.
-
-Open the [Database Hub](https://powerbi.com/workloads/fdh/databaseHub), then follow [Monitor a Microsoft SQL database](/fabric/database/hub/monitor-sql) for the guided workflow. To add performance data for this database, follow [Enable performance monitoring for Microsoft SQL](/fabric/database/hub/add-sql).
-
-> [!IMPORTANT]
-> Database Hub and Microsoft SQL performance monitoring are in preview. Review the linked documentation for current prerequisites, supported regions, and setup steps.
-
-> [!TIP]
-> Use the [Database Hub agent skills](https://github.com/microsoft/microsoft-sql/tree/main/plugins/microsoft-sql-fdh) to explore your SQL estate:
->
-> ```agent
-> Review my Azure SQL database estate in Database Hub. Identify databases that need
-> attention, summarize the issues and suggestions for my free tier database, and show
-> me where to investigate its performance in the Azure portal or Visual Studio Code.
-> ```
-
-## Modernize your database with Hyperscale
-
-Start with the free tier to develop and validate your application, then move your existing database to [Hyperscale](service-tier-hyperscale.md) as your workload grows. You don't need to create a replacement database or move application data manually.
-
-The upgrade requires two separate updates:
-
-1. Remove the free offer and wait for the update to complete.
-1. Convert the database to Hyperscale.
-
-Allowing paid overages doesn't remove the free offer. Removal is permanent for this database, and paid General Purpose usage can accrue even if the subsequent Hyperscale conversion fails.
-
-For portal instructions, Azure CLI and PowerShell scripts, and an agent prompt, see [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md).
+For setup and preview prerequisites, see [Monitor a Microsoft SQL database](/fabric/database/hub/monitor-sql). To add performance data, see [Enable performance monitoring for Microsoft SQL](/fabric/database/hub/add-sql).
 
 <a id="tips-on-managing-vcore-seconds"></a>
 <a id="monthly-free-limits"></a>
@@ -210,9 +207,18 @@ The following considerations and limitations apply to Azure SQL Database free ti
 
 For backup, scaling, copying, and feature compatibility details, see the [Azure SQL Database free tier FAQ](free-tier-faq.yml).
 
+<a id="modernize-your-database-with-hyperscale"></a>
+
+## Upgrade to Hyperscale
+
+As your workload grows, you can [upgrade your existing free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md). The guide covers prerequisites, separate updates to disable the free tier and convert the database, and verification.
+
+Allowing paid overages doesn't disable the free tier. Leaving the free tier is permanent for this database, and paid General Purpose usage can accrue even if the subsequent Hyperscale conversion fails. Review the upgrade guide before making changes.
+
 ## Related content
 
 - [Azure SQL Database free tier FAQ](free-tier-faq.yml)
+- [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md)
 - [Connect and query your database](connect-query-content-reference-guide.md)
 - [Serverless compute tier for Azure SQL Database](serverless-tier-overview.md)
 - [Microsoft SQL drivers and frameworks](/sql/connect/sql-connection-libraries/)

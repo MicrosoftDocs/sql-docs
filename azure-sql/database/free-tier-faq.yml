@@ -9,7 +9,7 @@ metadata:
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: amapatil, alpowers
-  ms.date: 10/12/2026
+  ms.date: 10/30/2026
   ai-usage: ai-assisted
   monikerRange: "=azuresql||=azuresql-db"
 
@@ -18,15 +18,17 @@ summary: This article answers frequently asked questions on [the Azure SQL Datab
 sections:
   - name: Free tier and eligibility
     questions:
-      - question: Is the free tier a limited-time offer?
+      - question: Is the free tier available for a limited time?
         answer: |
+         <a id="is-the-free-tier-a-limited-time-offer"></a>
+
          No. The free tier isn't time bound. It's a configuration of the General Purpose, serverless service tier, and the free monthly amounts renew for the lifetime of your subscription. The earlier, time-bound [Azure free account offer](free-sql-db-free-account-how-to-deploy.md) is a separate, older offer. [Azure SQL Managed Instance](../managed-instance/free-offer.md) has its own free offer, which is limited to the first 12 months after you create the instance.
 
       - question: How long can I use the free tier?
         answer: |
          <a id="how-long-can-i-use-the-free-offer"></a>
 
-         You can use the free tier for the lifetime of your Azure subscription, subject to monthly limits. It isn't a time-limited offer.
+         You can use the free tier for the lifetime of your Azure subscription, subject to monthly limits. The free tier isn't time limited.
 
          Monthly usage limits are: 100,000 vCore seconds, 32 GB of data storage, and 32 GB of backup storage per free tier database. Each subscription can include up to 10 databases, and the same limits apply to each database individually.
 
@@ -88,7 +90,7 @@ sections:
 
       - question: Can I upgrade to a larger or more powerful database?
         answer: |
-         Yes. Select your database in the Azure portal and open **Compute + storage**. **Continue using database for additional charges** allows paid overages and scaling within General Purpose, but doesn't remove the free offer. To change to Hyperscale or Business Critical, first remove the **Free database offer** in a separate update and wait for completion. Then request the new service tier. Removal is permanent for this database, even if the subsequent tier conversion fails. For portal steps, Azure CLI and PowerShell scripts, and an agent prompt, see [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md).
+         Yes. **Continue using database for additional charges** allows paid overages and scaling within General Purpose, but doesn't disable the free tier. Moving to Hyperscale or Business Critical requires permanently leaving the free tier first. Charges can accrue even if the subsequent conversion fails. For the procedure and verification steps, see [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md).
 
       - question: Can I change the backup option to geo-redundant storage?
         answer: |
@@ -96,13 +98,14 @@ sections:
 
       - question: How do I create a free tier database from the command line?
         answer: |
-         Use [az sql db create](/cli/azure/sql/db#az-sql-db-create) with the `--use-free-limit` parameter. Without that parameter, you create a regular billable serverless database. Set `--free-limit-exhaustion-behavior` to `AutoPause` or `BillOverUsage` to choose what happens when the monthly free limits are reached. For the full commands, see [Create a database](free-tier.md?tabs=azure-cli#create-a-database).
+         Use [az sql db create](/cli/azure/sql/db#az-sql-db-create) with the `--use-free-limit` parameter. Without that parameter, you create a regular billable serverless database. Set `--free-limit-exhaustion-behavior` to `AutoPause` to pause at the monthly free limit. Choose `BillOverUsage` only if you want to enable paid overages. For the full commands, see [Create a database](free-tier.md?tabs=azure-cli#create-a-database).
 
       - question: Can I monitor a free tier database in the Fabric Database Hub?
         answer: |
          Yes. [Database Hub in Microsoft Fabric](/fabric/database/hub/overview) (preview) discovers Azure SQL Database resources you already have permission to access, and supports performance monitoring for Azure SQL Database. Database Hub is available with a Fabric Free license, so you don't need Fabric capacity, a separate license, or any monitoring infrastructure. For more information, see [Monitor with Database Hub](free-tier.md#monitor-with-database-hub-preview).
 
 additionalContent: |
- ## Next step
+ ## Related content
  - [Azure SQL Database free tier](free-tier.md)
+ - [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md)
  - [Database Hub in Microsoft Fabric](/fabric/database/hub/overview)

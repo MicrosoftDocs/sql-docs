@@ -1,10 +1,10 @@
 ---
-title: Upgrade a Free Tier Database to Hyperscale
-description: Remove the Azure SQL Database free offer, then convert the existing database to Hyperscale with the Azure portal, Azure CLI, PowerShell, or an agent prompt.
+title: Upgrade a free tier database to Hyperscale
+description: Disable the Azure SQL Database free tier, then convert the existing database to Hyperscale with the Azure portal, Azure CLI, PowerShell, or an agent prompt.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: alpowers
-ms.date: 10/28/2026
+ms.date: 10/30/2026
 ms.service: azure-sql-database
 ms.topic: how-to
 ms.custom:
@@ -20,28 +20,30 @@ monikerRange: "=azuresql || =azuresql-db"
 
 To move an existing [Azure SQL Database free tier](free-tier.md) database to [Hyperscale](service-tier-hyperscale.md), perform two separate updates:
 
-1. Remove the free offer and wait for the update to complete. The database remains a General Purpose serverless database, without the free allowance.
+1. Disable the free tier and wait for the update to complete. The database remains a General Purpose serverless database, without the free allowance.
 1. Convert the database to Hyperscale and wait for conversion and cutover to complete.
 
-Don't combine free-offer removal and the Hyperscale configuration in one update. Confirm that the free offer is disabled before you request Hyperscale.
+Don't combine disabling the free tier and the Hyperscale configuration in one update. Confirm that the free tier is disabled before you request Hyperscale.
 
 > [!IMPORTANT]
-> Removing the free offer is permanent for this database. You can't reapply the offer, even if Hyperscale conversion fails or you later move back to General Purpose. Paid General Purpose usage can accrue after removal, and Hyperscale billing begins after cutover. Review [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/azure-sql-database/single/) before you proceed.
+> Leaving the free tier is permanent for this database. You can't return the database to the free tier, even if Hyperscale conversion fails or you later move back to General Purpose. Paid General Purpose usage can accrue after you disable the free tier, and Hyperscale billing begins after cutover. Review [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/azure-sql-database/single/) before you proceed.
 
-## Understand the free-offer settings
+<a id="understand-the-free-offer-settings"></a>
 
-The option to pay for overages isn't the same as removing the free offer.
+## Understand the free tier settings
+
+The option to pay for overages isn't the same as leaving the free tier. The Azure portal control is labeled **Free database offer**.
 
 | Setting | Effect |
 | --- | --- |
-| **Continue using database for additional charges**, or `BillOverUsage` for the free-limit exhaustion behavior. | Keeps the free offer and allows paid usage beyond the monthly allowance. This setting alone doesn't enable conversion to Hyperscale. |
+| **Continue using database for additional charges**, or `BillOverUsage` for the free-limit exhaustion behavior. | Keeps the free tier enabled and allows paid usage beyond the monthly allowance. This setting alone doesn't enable conversion to Hyperscale. |
 | Remove the **Free database offer**, `--use-free-limit false` in Azure CLI, or `-UseFreeLimit:$false` in PowerShell. | Removes the free allowance permanently. After this update completes, you can request a supported Hyperscale configuration in a separate update. |
 
 ## Prerequisites
 
 - Identify the subscription, resource group, logical server, and database that you want to upgrade.
 - Use an Azure identity with permission to read and update the database, such as the [SQL DB Contributor](/azure/role-based-access-control/built-in-roles/databases#sql-db-contributor) role at the appropriate scope.
-- Review [Hyperscale conversion prerequisites](convert-to-hyperscale.md#prerequisites) and [resource limits](resource-limits-vcore-single-databases.md). Confirm that your target configuration is available in the database's region before you remove the free offer.
+- Review [Hyperscale conversion prerequisites](convert-to-hyperscale.md#prerequisites) and [resource limits](resource-limits-vcore-single-databases.md). Confirm that your target configuration is available in the database's region before you disable the free tier.
 - Plan for a brief connectivity interruption at cutover. Ensure that your application [retries transient connection failures](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors).
 - For command-line steps, use a current [Azure CLI](/cli/azure/install-azure-cli) or [Az.Sql PowerShell module](/powershell/azure/install-az-ps) that supports the free-limit parameters.
 
@@ -55,14 +57,14 @@ Choose one method. Each method updates the existing database; you don't need to 
 
 # [Portal](#tab/azure-portal)
 
-First, remove the free offer without changing the service tier:
+First, disable the free tier without changing the service tier:
 
 1. Open your database in the [Azure portal](https://portal.azure.com).
 1. Select **Compute + storage**.
 1. Use the control to remove the **Free database offer**. Don't select **Hyperscale** in this update, and don't substitute the option to continue using the database for additional charges.
 1. Review the permanent removal and billing implications, and then select **Apply** to save the change while the database is still on General Purpose serverless.
 1. Wait for the update to complete. Check the portal notifications for success or failure.
-1. Reopen **Compute + storage** and confirm that the free offer is no longer applied. If you can't confirm removal, stop before changing the service tier. You can also check `useFreeLimit` with the Azure CLI example in this article.
+1. Reopen **Compute + storage** and confirm that the free tier is no longer enabled. If you can't confirm that it's disabled, stop before changing the service tier. You can also check `useFreeLimit` with the Azure CLI example in this article.
 
 Then, request Hyperscale in a separate update:
 
@@ -77,7 +79,7 @@ Then, request Hyperscale in a separate update:
 
 Run this example in Bash, such as Bash in [Azure Cloud Shell](/azure/cloud-shell/overview). For a local CLI session, sign in with `az login` first. The script uses Bash arrays and line continuations; don't paste it into PowerShell.
 
-Replace the placeholders before running the script. It asks for confirmation before removing the free offer. Don't add `--no-wait`: the second update must wait for the first update to finish.
+Replace the placeholders before running the script. The script asks for confirmation before disabling the free tier. Don't add `--no-wait`: the second update must wait for the first update to finish.
 
 ```azurecli-interactive
 set -euo pipefail
@@ -92,7 +94,7 @@ scope=(--subscription "$subscription" --resource-group "$resourceGroup"
 
 freeLimit=$(az sql db show "${scope[@]}" --query "to_string(useFreeLimit)" --output tsv)
 if [[ "$freeLimit" == "true" ]]; then
-    read -r -p "Permanently remove the free offer and enable paid billing? Type UPGRADE: " confirmation
+    read -r -p "Permanently leave the free tier and enable paid billing? Type UPGRADE: " confirmation
     if [[ "$confirmation" != "UPGRADE" ]]; then
         echo "Upgrade cancelled before making changes." >&2
         exit 1
@@ -100,13 +102,13 @@ if [[ "$freeLimit" == "true" ]]; then
 
     az sql db update "${scope[@]}" --use-free-limit false --output none
 elif [[ "$freeLimit" != "false" ]]; then
-    echo "Can't determine the free-offer state. No update submitted." >&2
+    echo "Can't determine the free tier state. No update submitted." >&2
     exit 1
 fi
 
 freeLimit=$(az sql db show "${scope[@]}" --query "to_string(useFreeLimit)" --output tsv)
 if [[ "$freeLimit" != "false" ]]; then
-    echo "Free-offer removal isn't confirmed. Hyperscale update not submitted." >&2
+    echo "Disabling the free tier isn't confirmed. Hyperscale update not submitted." >&2
     exit 1
 fi
 
@@ -127,13 +129,13 @@ az sql db show "${scope[@]}" \
     --output table
 ```
 
-The conversion uses automatic cutover. To control cutover timing instead, follow the [Azure CLI manual cutover steps](convert-to-hyperscale.md?tabs=azure-cli#convert-a-database-to-hyperscale), after removing the free offer.
+The conversion uses automatic cutover. To control cutover timing instead, follow the [Azure CLI manual cutover steps](convert-to-hyperscale.md?tabs=azure-cli#convert-a-database-to-hyperscale), after disabling the free tier.
 
 For parameter details, see [az sql db update](/cli/azure/sql/db#az-sql-db-update).
 
 # [PowerShell](#tab/azure-powershell)
 
-Sign in with `Connect-AzAccount`. Replace the placeholders before running this example in PowerShell. The script asks for confirmation before removing the free offer and stops on a failed cmdlet.
+Sign in with `Connect-AzAccount`. Replace the placeholders before running this example in PowerShell. The script asks for confirmation before disabling the free tier and stops on a failed cmdlet.
 
 `UseFreeLimit` is a switch parameter. Pass `-UseFreeLimit:$false` to disable it; omitting the parameter doesn't request removal.
 
@@ -154,19 +156,19 @@ $scope = @{
 
 $db = Get-AzSqlDatabase @scope
 if ($db.UseFreeLimit -eq $true) {
-    $confirmation = Read-Host "Permanently remove the free offer and enable paid billing? Type UPGRADE"
+    $confirmation = Read-Host "Permanently leave the free tier and enable paid billing? Type UPGRADE"
     if ($confirmation -cne "UPGRADE") {
         throw "Upgrade cancelled before making changes."
     }
 
     Set-AzSqlDatabase @scope -UseFreeLimit:$false | Out-Null
 } elseif ($db.UseFreeLimit -ne $false) {
-    throw "Can't determine the free-offer state. No update submitted."
+    throw "Can't determine the free tier state. No update submitted."
 }
 
 $db = Get-AzSqlDatabase @scope
 if ($db.UseFreeLimit -ne $false) {
-    throw "Free-offer removal isn't confirmed. Hyperscale update not submitted."
+    throw "Disabling the free tier isn't confirmed. Hyperscale update not submitted."
 }
 
 $target = @{
@@ -189,15 +191,17 @@ $db | Select-Object DatabaseName, Status, UseFreeLimit,
     CurrentServiceObjectiveName, RequestedServiceObjectiveName, HighAvailabilityReplicaCount
 ```
 
-Don't use `-AsJob` unless your automation explicitly waits for completion and checks the result before continuing. The conversion uses automatic cutover. For manual cutover, follow the [PowerShell manual cutover steps](convert-to-hyperscale.md?tabs=azure-powershell#convert-a-database-to-hyperscale), after removing the free offer.
+Don't use `-AsJob` unless your automation explicitly waits for completion and checks the result before continuing. The conversion uses automatic cutover. For manual cutover, follow the [PowerShell manual cutover steps](convert-to-hyperscale.md?tabs=azure-powershell#convert-a-database-to-hyperscale), after disabling the free tier.
 
 For parameter details, see [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase).
 
 # [Agent prompt](#tab/agent-prompt)
 
-Use an agent with Azure management tools and access to your subscription. A prompt doesn't grant permissions or bypass Azure SQL validation. Replace the placeholders and review the proposed commands before you approve execution.
+Use an agent with Azure management tools and the permissions listed in [Prerequisites](#prerequisites). For example, follow the setup instructions for [GitHub Copilot for Azure](/azure/developer/github-copilot-azure/get-started), open Copilot Chat in Visual Studio Code, and select **Agent**.
 
-```agent
+Replace the placeholders, then copy and paste the following prompt into the agent's chat, not a terminal. Review the proposed commands before you approve execution. A prompt doesn't grant permissions or bypass Azure SQL validation.
+
+```prompt
 Upgrade the existing Azure SQL Database <database-name> on logical server
 <server-name>, in resource group <resource-group> and subscription <subscription-id>,
 from the free tier to Hyperscale. Don't create a replacement database.
@@ -206,23 +210,24 @@ from the free tier to Hyperscale. Don't create a replacement database.
    Read the current Microsoft Learn references for az sql db update or
    Set-AzSqlDatabase. Check Hyperscale conversion prerequisites, regional
    availability, target sizing, replicas, auto-pause eligibility, and pricing.
-2. Show me the target configuration and estimated costs. Explain that removing
-   the free offer is permanent, and paid General Purpose usage can accrue even
+1. Show me the target configuration and estimated costs. Explain that leaving
+   the free tier is permanent, and paid General Purpose usage can accrue even
    if the subsequent Hyperscale conversion fails. Ask for my explicit approval
    before changing the database.
-3. If useFreeLimit is true, submit ONLY the free-offer removal update:
+1. If useFreeLimit is true, submit ONLY the update to disable the free tier:
    --use-free-limit false for Azure CLI, or -UseFreeLimit:$false for PowerShell.
-   Don't combine it with a service-tier change. BillOverUsage isn't removal.
-4. Wait for the update to finish successfully, then read the database again.
+   Don't combine it with a service-tier change. BillOverUsage doesn't disable
+   the free tier.
+1. Wait for the update to finish successfully, then read the database again.
    Stop if useFreeLimit isn't explicitly false. If it was already false,
-   don't try to reapply or remove the offer.
-5. Submit the approved Hyperscale configuration as a separate update.
+   don't try to reenable or disable the free tier.
+1. Submit the approved Hyperscale configuration as a separate update.
    Format commands for my shell. Wait for conversion and cutover to complete.
-6. Verify useFreeLimit is false and the CURRENT service objective matches the
+1. Verify useFreeLimit is false and the CURRENT service objective matches the
    approved Hyperscale configuration. Don't infer completion from the requested
    SKU or edition alone. Report the active configuration and operation outcome.
-7. If any step fails, stop and show the error, current database state, billing
-   implications, and a safe next step. Don't claim rollback restored the free offer.
+1. If any step fails, stop and show the error, current database state, billing
+   implications, and a safe next step. Don't claim rollback restored the free tier.
 ```
 
 ---
@@ -252,13 +257,13 @@ Expect one row with `edition` set to `Hyperscale` and `service_objective` matchi
 
 ## Troubleshoot an incomplete upgrade
 
-If free-offer removal fails, don't submit the Hyperscale update. Inspect the error, confirm permissions and the database state, and retry removal only after you resolve the cause.
+If disabling the free tier fails, don't submit the Hyperscale update. Inspect the error, confirm permissions and the database state, and retry that update only after you resolve the cause.
 
-If removal succeeds but conversion fails, the database remains outside the free offer and can incur charges. Read its current service objective and recent operations before retrying. Don't try to restore the free offer with `--use-free-limit true` or `-UseFreeLimit`.
+If disabling the free tier succeeds but conversion fails, the database remains outside the free tier and can incur charges. Read its current service objective and recent operations before retrying. Don't try to restore the free tier with `--use-free-limit true` or `-UseFreeLimit`.
 
 Use [az sql db op list](/cli/azure/sql/db/op#az-sql-db-op-list), [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity), or the portal's ongoing-operation details to inspect conversion progress and errors. If conversion is still running or waiting for manual cutover, complete or resolve that operation before submitting another conversion request.
 
-For eligible converted databases, [reverse migration from Hyperscale](reverse-migrate-from-hyperscale.md) can return the database to paid General Purpose. It doesn't restore the free offer.
+For eligible converted databases, [reverse migration from Hyperscale](reverse-migrate-from-hyperscale.md) can return the database to paid General Purpose. It doesn't restore the free tier.
 
 ## Related content
 

@@ -83,6 +83,24 @@
           href: database/transparent-data-encryption-byok-identity.md
         - name: Cross-tenant CMK
           href: database/transparent-data-encryption-byok-cross-tenant.md
+      - name: Ransomware recovery
+        items:
+        - name: Overview
+          href: database/ransomware-recovery-overview.md
+        - name: Step 0 - Protect
+          href: database/ransomware-recovery-protect.md
+        - name: Step 1 - Detect
+          href: database/ransomware-recovery-detect.md
+        - name: Step 2 - Contain
+          href: database/ransomware-recovery-contain.md
+        - name: Step 3 - Assess
+          href: database/ransomware-recovery-assess.md
+        - name: Step 4 - Restore
+          href: database/ransomware-recovery-restore.md
+        - name: Step 5 - Validate
+          href: database/ransomware-recovery-validate.md
+        - name: Step 6 - Harden
+          href: database/ransomware-recovery-harden.md
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
       items:

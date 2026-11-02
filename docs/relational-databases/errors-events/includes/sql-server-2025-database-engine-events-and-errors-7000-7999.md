@@ -7,505 +7,505 @@ ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
-| 7000 | 16 | No | OPENXML document handle parameter must be of data type int. |
-| 7001 | 16 | No | OPENXML flags parameter must be of data type int. |
-| 7002 | 16 | No | OPENXML XPath must be of a string data type, such as nvarchar. |
-| 7003 | 16 | No | Only one OPENXML column can be of type %ls. |
-| 7004 | 16 | No | OPENXML does not support retrieving schema from remote tables, as in '%.\*ls'. |
-| 7005 | 16 | No | OPENXML requires a metaproperty namespace to be declared if 'mp' is used for another namespace in sp_xml_preparedocument. |
-| 7006 | 16 | No | OPENXML encountered a problem identifying the metaproperty namespace prefix. Consider removing the namespace parameter from the corresponding sp_xml_preparedocument statement. |
-| 7007 | 16 | No | OPENXML encountered unknown metaproperty '%.\*ls'. |
-| 7008 | 16 | No | The OPENXML EDGETABLE is incompatible with the XMLTEXT OVERFLOW flag. |
-| 7009 | 16 | No | OPENXML allows only one metaproperty namespace prefix declaration in sp_xml_preparedocument. |
-| 7101 | 16 | No | You need an active user transaction in order to use text pointers for a table with the option "text in row" set to ON. |
-| 7102 | 20 | Yes | Internal Error: Text manager cannot continue with current statement. Run DBCC CHECKTABLE. |
-| 7104 | 16 | No | Offset or size of data type is not valid. Data type must be of type int or smallint. |
-| [7105](../mssqlserver-7105-database-engine-error.md) | 22 | Yes | The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE. |
-| 7106 | 16 | Yes | Internal error: An attempt was made to update a LOB data type using a read-only text pointer. |
-| 7107 | 16 | No | You can have only 1,024 in-row text pointers in one transaction |
-| 7108 | 22 | Yes | Database ID %d, page %S_PGID, slot %d, link number %d is invalid. Run DBCC CHECKTABLE. |
-| 7109 | 16 | Yes | The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE. |
-| 7116 | 16 | No | Offset %d is not in the range of available LOB data. |
-| 7117 | 16 | No | Error reading large object (LOB) data from the tabular data stream (TDS). |
-| 7118 | 16 | No | Only complete replacement is supported when assigning a large object (LOB) to itself. |
-| 7119 | 16 | No | Attempting to grow LOB beyond maximum allowed size of %I64d bytes. |
-| 7122 | 16 | No | Invalid text, ntext, or image pointer type. Must be binary(16). |
-| 7123 | 16 | No | Invalid text, ntext, or image pointer value %hs. |
-| 7124 | 16 | No | The offset and length specified in the READTEXT statement is greater than the actual data length of %ld. |
-| 7125 | 16 | No | The text, ntext, or image pointer value conflicts with the column name specified. |
-| 7133 | 16 | No | NULL textptr (text, ntext, or image pointer) passed to %ls function. |
-| 7134 | 16 | No | LOB Locator is not supported as text pointer when using UPDATETEXT/WRITETEXT to update/write a text column. |
-| 7135 | 16 | No | Deletion length %ld is not in the range of available text, ntext, or image data. |
-| 7137 | 16 | No | %s is not allowed because the column is being processed by a concurrent snapshot or is being replicated to a non-SQL Server Subscriber or Published in a publication allowing Data Transformation Services (DTS) or tracked by Change Data Capture. |
-| 7138 | 16 | No | The WRITETEXT statement is not allowed because the column is being replicated with Data Transformation Services (DTS) or tracked by Change Data Capture. |
-| 7139 | 16 | No | Length of LOB data (%I64d) to be replicated exceeds configured maximum %ld. Use the stored procedure sp_configure to increase the configured maximum value for max text repl size option, which defaults to 65536. A configured value of -1 indicates no limit, other that the limit imposed by the data type. |
-| 7140 | 16 | No | Cannot create additional orphans with the stored procedure sp_createorphan. Free up some of the orphan handles that you have created by inserting or deleting them. |
-| 7141 | 16 | No | Must create orphaned text inside a user transaction. |
-| 7143 | 16 | No | Invalid locator de-referenced. |
-| 7144 | 16 | No | A text/ntext/image column referenced by a persisted or indexed computed column cannot be updated |
-| 7151 | 16 | No | Insufficient buffer space to perform write operation. |
-| 7152 | 16 | No | READEXT, WRITETEXT, and UPDATETEXT statements cannot be used on tables that are referenced by an enabled security policy. |
-| 7201 | 17 | No | Could not execute procedure on remote server '%.\*ls' because SQL Server is not configured for remote access. Ask your system administrator to reconfigure SQL Server to allow remote access. |
-| 7202 | 11 | No | Could not find server '%.\*ls' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers. |
-| 7212 | 16 | No | Could not execute procedure '%.\*ls' on remote server '%.\*ls'. |
-| 7213 | 20 | Yes | The attempt by the provider to pass remote stored procedure parameters to remote server '%.\*ls' failed. Verify that the number of parameters, the order, and the values passed are correct. |
-| 7214 | 16 | Yes | Remote procedure time out of %d seconds exceeded. Remote procedure '%.\*ls' is canceled. |
-| 7215 | 16 | No | Could not execute statement on remote server '%.\*ls'. |
-| 7221 | 16 | No | Could not relay results of procedure '%.\*ls' from remote server '%.\*ls'. |
-| 7222 | 16 | No | Only a SQL Server provider is allowed on this instance. |
-| 7223 | 10 | No | Warning: Enabling 'remote proc trans' is not supported on this instance. Defaulting to disabled. |
-| 7224 | 16 | No | Enabling 'remote proc trans' is not supported on this instance. |
-| 7301 | 16 | No | Cannot obtain the required interface ("%ls") from OLE DB provider "%ls" for linked server "%ls". |
-| 7302 | 16 | No | Cannot create an instance of OLE DB provider "%ls" for linked server "%ls". |
-| 7303 | 16 | No | Cannot initialize the data source object of OLE DB provider "%ls" for linked server "%ls". |
-| 7304 | 16 | No | Cannot connect using OLE DB provider "%ls" to linked server "%ls". Verify the connection parameters or login credentials associated with this linked server. |
-| 7305 | 16 | No | Cannot create a statement object using OLE DB provider "%ls" for linked server "%ls". |
-| 7306 | 16 | No | Cannot open the table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7307 | 16 | No | Cannot obtain the data source of a session from OLE DB provider "%ls" for linked server "%ls". This action must be supported by the provider. |
-| [7308](../mssqlserver-7308-database-engine-error.md) | 16 | No | OLE DB provider '%ls' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode. |
-| 7310 | 16 | No | Cannot obtain the set of schema rowsets supported by OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
-| 7311 | 16 | No | Cannot obtain the schema rowset "%ls" for OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
-| 7312 | 16 | No | Invalid use of schema or catalog for OLE DB provider "%ls" for linked server "%ls". A four-part name was supplied, but the provider does not expose the necessary interfaces to use a catalog or schema. |
-| 7313 | 16 | No | An invalid schema or catalog was specified for the provider "%ls" for linked server "%ls". |
-| 7314 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" does not contain the table "%ls". The table either does not exist or the current user does not have permissions on that table. |
-| 7315 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" contains multiple tables that match the name "%ls". |
-| 7316 | 16 | No | Cannot use qualified table names (schema or catalog) with the OLE DB provider "%ls" for linked server "%ls" because it does not implement required functionality. |
-| 7317 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" returned an invalid schema definition. |
-| 7318 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" returned an invalid column definition for table "%ls". |
-| 7319 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" returned a "%ls" index "%ls" with the incorrect bookmark ordinal %d. |
-| 7320 | 16 | No | Cannot execute the query "%ls" against OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7321 | 16 | No | An error occurred while preparing the query "%ls" for execution against OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7322 | 16 | No | A failure occurred while giving parameter information to OLE DB provider "%ls" for linked server "%ls". |
-| 7323 | 16 | No | An error occurred while submitting the query text to OLE DB provider "%ls" for linked server "%ls". |
-| 7324 | 16 | No | A failure occurred while setting parameter properties with OLE DB provider "%ls" for linked server "%ls". |
-| 7325 | 16 | No | Objects exposing columns with CLR types are not allowed in distributed queries. Please use a pass-through query to access remote object '%ls'. |
-| 7326 | 16 | No | An error occurred while retrieving the query text from OLE DB provider "%ls" for linked server "%ls". |
-| 7327 | 16 | No | A failure occurred while retrieving parameter information to OLE DB provider "%ls" for linked server "%ls". |
-| 7330 | 16 | No | Cannot fetch a row from OLE DB provider "%ls" for linked server "%ls". |
-| 7331 | 16 | No | Rows from OLE DB provider "%ls" for linked server "%ls" cannot be released. |
-| 7332 | 16 | No | Cannot rescan the result set from OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7333 | 16 | No | Cannot fetch a row using a bookmark from OLE DB provider "%ls" for linked server "%ls". |
-| 7339 | 16 | No | OLE DB provider '%ls' for linked server '%ls' returned invalid data for column '%ls.%ls'. |
-| 7340 | 16 | No | Cannot create a column accessor for OLE DB provider "%ls" for linked server "%ls". |
-| 7341 | 16 | No | Cannot get the current row value of column "%ls.%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7342 | 16 | No | An unexpected NULL value was returned for column "%ls.%ls" from OLE DB provider "%ls" for linked server "%ls". This column cannot be NULL. |
-| 7343 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not %ls table "%ls". %ls |
-| 7344 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not %ls table "%ls" because of column "%ls". %ls |
-| 7345 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not delete from table "%ls". %ls |
-| 7346 | 16 | No | Cannot get the data of the row from the OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7347 | 16 | No | OLE DB provider '%ls' for linked server '%ls' returned data that does not match expected data length for column '%ls.%ls'. The (maximum) expected data length is %ls, while the returned data length is %ls. |
-| 7348 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not set the range for table "%ls". %ls. For possible cause of this issue, see the extended error message. |
-| 7349 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not set the range for table "%ls" because of column "%ls". %ls |
-| 7350 | 16 | No | Cannot get the column information from OLE DB provider "%ls" for linked server "%ls". |
-| 7351 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not map ordinals for one or more columns of object "%ls". |
-| 7352 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata. The object "%ls" was missing the expected column "%ls". |
-| 7353 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata. An extra column was supplied during execution that was not found at compile time. |
-| 7354 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied invalid metadata for column "%ls". %ls |
-| 7355 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The name was changed at execution time. |
-| 7356 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The column "%ls" (compile-time ordinal %ld) of object "%ls" was reported to have a "%ls" of %ld at compile time and %ld at run time. |
-| [7357](../mssqlserver-7357-database-engine-error.md) | 16 | No | Cannot process the object "%ls". The OLE DB provider "%ls" for linked server "%ls" indicates that either the object has no columns or the current user does not have permissions on that object. |
-| 7358 | 16 | No | Cannot execute the query. The OLE DB provider "%ls" for linked server "%ls" did not provide an appropriate interface to access the text, ntext, or image column "%ls.%ls". |
-| 7359 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported a change in schema version between compile time ("%ls") and run time ("%ls") for table "%ls". |
-| 7360 | 16 | No | Cannot get the length of a storage object from OLE DB provider "%ls" for linked server "%ls" for table "%ls", column "%ls". |
-| 7361 | 16 | No | Cannot read a storage object from OLE DB provider "%ls" for linked server "%ls", for table "%ls", column "%ls". |
-| 7362 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported different metadata at run time for table "%ls", column "%ls". |
-| 7365 | 16 | No | Cannot obtain optional metadata columns of columns rowset from OLE DB provider "%ls" for linked server "%ls". |
-| 7366 | 16 | No | Cannot obtain columns rowset from OLE DB provider "%ls" for linked server "%ls". |
-| 7367 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supports column level collation, but failed to provide the metadata column "%ls" at run time. |
-| 7368 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supports column level collation, but failed to provide collation data for column "%ls". |
-| 7369 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' provided invalid collation. LCID = %08x, Compflags = %08x, SortOrder = '%.\*ls'. |
-| 7370 | 16 | No | One or more properties could not be set on the query for OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7371 | 16 | No | The server option 'collation name' in linked server '%ls' for OLE DB provider '%ls' has collation id %08x which is not supported by SQL Server. |
-| 7372 | 16 | No | Cannot get properties from OLE DB provider "%ls" for linked server "%ls". |
-| 7373 | 16 | No | Cannot set the initialization properties for OLE DB provider "%ls" for linked server "%ls". |
-| 7374 | 16 | No | Cannot set the session properties for OLE DB provider "%ls" for linked server "%ls". |
-| 7375 | 16 | No | Cannot open index "%ls" on table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
-| 7376 | 16 | No | Could not enforce the remote join hint for this query. |
-| 7377 | 16 | No | Cannot specify an index hint for a remote data source. |
-| 7380 | 16 | No | Table-valued parameters are not allowed in remote calls between servers. |
-| 7390 | 16 | No | The requested operation could not be performed because OLE DB provider "%ls" for linked server "%ls" does not support the required transaction interface. |
-| [7391](../mssqlserver-7391-database-engine-error.md) | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
-| 7392 | 16 | No | Cannot start a transaction for OLE DB provider "%ls" for linked server "%ls". |
-| 7393 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error 0x%08X aborting the current transaction. |
-| 7394 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error committing the current transaction. |
-| 7395 | 16 | No | Unable to start a nested transaction for OLE DB provider "%ls" for linked server "%ls". A nested transaction was required because the XACT_ABORT option was set to OFF. |
-| 7396 | 16 | No | Varchar(max), nvarchar(max), varbinary(max) and large CLR type data types are not supported as return value or output parameter to remote queries. |
-| 7397 | 16 | No | Remote function returned varchar(max), nvarchar(max), varbinary(max) or large CLR type value which is not supported. |
-| 7398 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' reported an error committing the current inserts. |
-| [7399](../mssqlserver-7399-database-engine-error.md) | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
-| 7401 | 16 | Yes | The OLE DB provider "%ls" returned invalid literal prefix/suffix string. |
-| 7403 | 16 | Yes | The OLE DB provider "%ls" has not been registered. |
-| 7404 | 16 | Yes | The server could not load DCOM. |
-| 7405 | 16 | Yes | Heterogeneous queries require the ANSI_NULLS and ANSI_WARNINGS options to be set for the connection. This ensures consistent query semantics. Enable these options and then reissue your query. |
-| 7409 | 16 | Yes | Could not start distributed query using integrated login because the user is logged in using SQL Server authentication. Provide remote server login user ID and password in the connection string. |
-| 7410 | 16 | Yes | Remote access is not allowed for impersonated security context. |
-| 7411 | 16 | Yes | Server '%.\*ls' is not configured for %ls. |
-| 7412 | 16 | Yes | OLE DB provider "%ls" for linked server "%ls" returned message "%ls". |
-| 7413 | 16 | Yes | Could not connect to linked server '%ls' (OLE DB Provider '%ls'). Enable delegation or use a remote SQL Server login for the current user. |
-| 7414 | 16 | Yes | Invalid number of parameters. Rowset '%ls' expects %d parameter(s). |
-| 7415 | 16 | Yes | Ad hoc access to OLE DB provider '%ls' has been denied. You must access this provider through a linked server. |
-| 7416 | 16 | Yes | Access to the remote server is denied because no login-mapping exists. |
-| 7417 | 16 | Yes | GROUP BY ALL is not supported in queries that access remote tables if there is also a WHERE clause in the query. |
-| 7418 | 16 | Yes | Text, image, or ntext column was too large to send to the remote data source due to the storage interface used by the provider. |
-| 7419 | 16 | Yes | Lazy schema validation error. Linked server schema version has changed. Re-run the query. |
-| 7420 | 16 | Yes | Remote access is not supported for transaction isolation level "%ls". |
-| 7421 | 10 | Yes | Cannot fetch the rowset from OLE DB provider "%ls" for linked server "%ls". %ls. |
-| 7422 | 16 | Yes | OLE DB provider "%ls" for linked server "%ls" returned an invalid index definition for table "%ls". |
-| 7423 | 16 | Yes | The '%ls' OLE DB provider for the '%ls' linked server returned an invalid CLR type definition for the '%ls' table. |
-| 7424 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned "%ls" with data type "%ls", which should be type "%ls". |
-| 7425 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned an incorrect value for "%ls", which should be "%ls". |
-| 7426 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned "%ls" without "%ls" being supported. |
-| 7427 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned "%ls" for "%ls" during statistics gathering. |
-| 7428 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" supported the schema lock interface, but returned "%ls" for "%ls". |
-| 7429 | 10 | Yes | %hs SQL Server Remote Metadata Gather Time for Table %s.%s:%hs, CPU time = %lu ms, elapsed time = %lu ms. |
-| 7430 | 16 | Yes | Out-of-process use of OLE DB provider "%ls" with SQL Server is not supported. |
-| 7431 | 16 | Yes | Unable to delete OLE DB parameter properties. |
-| 7432 | 16 | Yes | Heterogeneous queries and use of OLEDB providers are not supported in fiber mode. |
-| 7433 | 10 | Yes | OLE DB provider '%ls' for linked server '%ls' returned truncated data for column '%ls.%ls'. The actual data length is %ls and truncated data length is %ls. |
-| 7435 | 16 | Yes | The OLE DB provider "%ls" for linked server "%ls" returned unexpected NULL pointer for string column "%ls.%ls". |
-| 7436 | 16 | Yes | The query processor could not produce a query plan because FORCESEEK or FORCESCAN hints on table or view '%.\*ls' cannot be used with remote data sources. Remove the hints and resubmit the query. |
-| 7437 | 16 | Yes | Linked servers cannot be used under impersonation without a mapping for the impersonated login. |
-| 7438 | 16 | Yes | The 32-bit OLE DB provider "%ls" cannot be loaded in-process on a 64-bit SQL Server. |
-| 7439 | 16 | No | Failed to read required information about %S_MSG pool %S_MSG. |
-| 7440 | 10 | No | Remote execution status: "%ls" . |
-| 7441 | 16 | Yes | Linked server query execution failed due to an internal error related to Microsoft Entra ID authentication. |
-| 7442 | 16 | Yes | Linked Server use self mode Microsoft Entra ID authentication functionality is disabled on the service side and therefore cannot be used. |
-| 7443 | 16 | Yes | Microsoft Entra ID use self mode authentication to linked server "%ls" failed because it is not part of any server trust group that contains the current server. For more information about joining servers into a server trust group, see [https://go.microsoft.com/fwlink/?linkid=2323200](https://go.microsoft.com/fwlink/?linkid=2323200). |
-| 7444 | 16 | Yes | Linked Server access token mode Microsoft Entra ID authentication functionality is disabled on the service side and therefore cannot be used. |
-| 7445 | 16 | Yes | A Microsoft Entra ID token for accessing linked server cannot be obtained. Error message: '%ls'. |
-| 7446 | 16 | Yes | Linked Server use MSI mode Microsoft Entra ID authentication functionality is disabled on the service side and therefore cannot be used. |
-| 7447 | 16 | Yes | Linked Server Microsoft Entra ID authentication using username and password is disabled on the service side and therefore cannot be used. |
-| 7448 | 16 | Yes | Linked Server login mapping with "useself" property set is not allowed when using Microsoft Entra ID '%ls' authentication mode. |
-| 7449 | 16 | Yes | Linked Server User-assigned MSI mode Microsoft Entra ID authentication functionality is not supported on the service side. Use system-assigned identity instead. |
-| 7450 | 16 | Yes | Querying linked server '%ls' failed. Either login for Linked Server Microsoft Entra ID '%ls' authentication mode does not exist or login's 'useself' attribute is set to true. |
-| 7451 | 16 | Yes | Retrieval of the MWC Token for Onelake/DFS access failed with error '%ls'. |
-| 7452 | 16 | Yes | Initialization of the MWC Token Cache failed. Lock Mode: %.\*ls. |
-| 7453 | 16 | Yes | Sending of statistics request failed with error '%lu'. |
-| 7454 | 16 | Yes | SQL internal communication failed with error '%ls'. |
-| 7455 | 16 | Yes | Service Master Key is not generated or access is lost so encryption/decryption of linked server passwords cannot be done. |
-| 7601 | 16 | No | Cannot use a CONTAINS or FREETEXT predicate on %S_MSG '%.\*ls' because it is not full-text indexed. |
-| 7602 | 16 | No | The full-text service (msftesql%ls%ls) is not available. The system administrator must start this service. |
-| 7603 | 10 | No | Inconsistent accent sensitivity of full-text catalog is detected. Full-text catalog for catalog ID '%d', database ID '%d' is reset. |
-| 7604 | 17 | No | Full-text operation failed due to a time out. |
-| 7605 | 16 | No | Failed to finish full-text operation. Filegroup '%.\*ls' is empty, read-only, or not online. |
-| 7606 | 17 | No | Could not find full-text index for database ID %d, table or indexed view ID %d. |
-| 7607 | 17 | No | Search on full-text catalog '%ls' for database ID %d, table or indexed view ID %d with search condition '%ls' failed with unknown result (0x%x). |
-| 7608 | 16 | No | An unknown full-text failure (0x%x) occurred during "%hs". |
-| 7609 | 17 | No | Full-Text Search is not installed, or a full-text component cannot be loaded. |
-| 7610 | 16 | No | Access is denied to "%.\*ls", or the path is invalid. |
-| 7611 | 10 | No | Warning: Request to start a population in full-text catalog '%ls' ignored because a population is currently active for this full-text catalog. |
-| 7612 | 16 | No | NULL or Invalid type of value specified for '%ls' parameter. |
-| 7613 | 16 | No | Cannot drop index '%.\*ls' because it enforces the full-text key for table or indexed view '%.\*ls'. |
-| 7614 | 16 | No | Cannot alter or drop column '%.\*ls' because it is enabled for Full-Text Search. |
-| 7615 | 16 | No | A CONTAINS or FREETEXT predicate can only operate on one table or indexed view. Qualify the use of \* with a table or indexed view name. |
-| 7616 | 16 | No | Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable full-text search for the database. The functionality to disable and enable full-text search for a database is deprecated. Please change your application. |
-| 7617 | 16 | No | Query does not reference the full-text indexed table or indexed view, or user does not have permission to perform this action. |
-| 7618 | 16 | No | Cannot use full-text search in master, tempdb, or model database. |
-| 7619 | 16 | No | The execution of a full-text query failed. "%ls" |
-| 7620 | 16 | No | The conversion to data type %ls failed for the full-text search key. |
-| 7621 | 16 | No | Invalid use of full-text predicate in the HAVING clause. |
-| 7622 | 17 | No | There is not sufficient disk space to complete this operation for the full-text catalog "%ls". |
-| 7623 | 10 | No | A default full-text catalog does not exist in database '%.\*ls' or user does not have permission to perform this action. |
-| 7624 | 16 | No | Full-text catalog '%ls' is in an unusable state. Drop and re-create this full-text catalog. |
-| 7625 | 16 | No | Full-text table or indexed view has more than one LCID among its full-text indexed columns. |
-| 7626 | 15 | No | The top_n_by_rank argument ('%d') must be greater than or equal to zero. |
-| 7627 | 16 | No | Cannot create the full-text catalog in the directory "%.\*ls" for the clustered server. Only directories on a disk in the cluster group of the server can be used. |
-| 7628 | 10 | No | Warning: No appropriate filter was found during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Some columns of the row were not indexed. |
-| 7629 | 17 | No | Cannot open or query the full-text default path registry key. The full-text default catalog path is invalid. |
-| 7630 | 15 | No | Syntax error near '%.\*ls' in the full-text search condition '%.\*ls'. |
-| 7631 | 10 | No | Warning: No appropriate wordbreaker was found during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Neutral wordbreaker was used for some columns of the row. |
-| 7632 | 15 | No | The value of the Weight argument must be between 0.0 and 1.0. |
-| 7633 | 16 | No | Couldn't complete full-text operation because full-text key for table or indexed view '%.\*ls' is offline. |
-| 7634 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Failed to index the row. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext. |
-| 7635 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Attempt will be made to reindex it. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext. |
-| 7636 | 10 | No | Warning: Request to start a full-text index population on table or indexed view '%.\*ls' is ignored because a population is currently active for this table or indexed view. |
-| 7637 | 16 | No | Database is not fully started up or it is not in an ONLINE state. Try the full-text DDL command again after database is started up and becomes ONLINE. |
-| 7638 | 10 | No | Warning: Request to stop change tracking has deleted all changes tracked on table or indexed view '%ls'. |
-| 7639 | 16 | No | Cannot use a full-text predicate on %S_MSG '%.\*ls' because it is not located on the local server. |
-| 7640 | 10 | No | Warning: Request to stop tracking changes on table or indexed view '%.\*ls' will not stop population currently in progress on the table or indexed view. |
-| 7641 | 16 | No | Full-Text catalog '%ls' does not exist in database '%.\*ls' or user does not have permission to perform this action. |
-| 7642 | 16 | No | A full-text catalog named '%ls' already exists in this database. Use a different name. |
-| 7643 | 16 | No | Cannot use a CONTAINS or FREETEXT predicate on %S_MSG '%.\*ls' because none of its columns are full-text indexed. |
-| 7644 | 16 | No | Full-text crawl manager has not been initialized. Any crawl started before the crawl manager was fully initialized will need to be restarted. Please restart SQL Server and retry the command. You should also check the error log to fix any failures that might have caused the crawl manager to fail. |
-| 7645 | 16 | No | Null or empty full-text predicate. |
-| 7646 | 16 | No | Fulltext predicate references columns from two different tables or indexed views '%.\*ls' and '%.\*ls' which is not allowed. |
-| 7647 | 10 | No | Warning: Configuration of full-text catalog at '%ls' could not be saved during detach database. |
-| 7648 | 10 | No | Warning: Failed to attach full-text catalog '%ls'. |
-| 7649 | 10 | No | Warning: Failed to dismount full-text catalog at '%ls'. |
-| 7650 | 10 | No | Warning: Failed to drop full-text catalog at '%ls'. |
-| 7651 | 10 | No | Warning: The ongoing population is necessary to ensure an up-to-date index. If needed, stop change tracking first, and then deactivate the full-text index population. |
-| 7652 | 16 | No | A full-text index for table or indexed view '%.\*ls' has already been created. |
-| 7653 | 16 | No | '%ls' is not a valid index to enforce a full-text search key. A full-text search key must be a unique, non-nullable, single-column index which is not offline, is not defined on a non-deterministic or imprecise nonpersisted computed column, does not have a filter, and has maximum size of %d bytes. Choose another index for the full-text key. |
-| 7654 | 16 | No | Unable to obtain the population status of the table or indexed view '%.\*ls'. |
-| 7655 | 16 | No | TYPE COLUMN option must be specified with column of image or varbinary(max) type. |
-| 7656 | 16 | No | Full-text index for table or indexed view '%.\*ls' cannot be populated because the database is in single-user access mode. |
-| 7657 | 10 | No | Warning: Table or indexed view '%.\*ls' has full-text indexed columns that are of type image, text, or ntext. Full-text change tracking cannot track WRITETEXT or UPDATETEXT operations performed on these columns. |
-| 7658 | 16 | No | Table or indexed view '%.\*ls' does not have a full-text index or user does not have permission to perform this action. |
-| 7659 | 16 | No | Cannot activate full-text search for table or indexed view '%.\*ls' because no columns have been enabled for full-text search. |
-| 7660 | 16 | No | Full-text search must be activated on table or indexed view '%.\*ls' before this operation can be performed. |
-| 7661 | 10 | No | Warning: Full-text change tracking is currently enabled for table or indexed view '%.\*ls'. |
-| 7662 | 10 | No | Warning: Full-text auto propagation is currently enabled for table or indexed view '%.\*ls'. |
-| 7663 | 16 | No | Option 'WITH NO POPULATION' should not be used when change tracking is enabled. |
-| 7664 | 16 | No | Full-text change tracking must be started on table or indexed view '%.\*ls' before the changes can be flushed. |
-| 7665 | 16 | No | Full Crawl must be executed on table or indexed view '%.\*ls'. Columns affecting the index have been added or dropped since the last index full population. |
-| 7666 | 16 | No | User does not have permission to perform this action. |
-| 7667 | 16 | No | Failed to create full-text catalog '%ls'. |
-| 7668 | 16 | No | Cannot drop full-text catalog '%ls' because it contains a full-text index. |
-| 7669 | 10 | No | Warning: Full-text index for table or indexed view '%.\*ls' cannot be populated because the database is in single-user access mode. Change tracking is stopped for this table or indexed view. |
-| 7670 | 16 | No | Column '%.\*ls' cannot be used for full-text search because it is not a character-based, XML, image or varbinary(max) type column or it is encrypted. |
-| 7671 | 16 | No | Column '%.\*ls' cannot be used as full-text type column for image column. It must be a character-based column with a size less or equal than %d characters. |
-| 7672 | 16 | No | A full-text index cannot be created on the table or indexed view because duplicate column '%.\*ls' is specified. |
-| 7673 | 10 | No | Warning: Full-text change tracking is currently disabled for table or indexed view '%.\*ls'. |
-| 7674 | 10 | No | Warning: The fulltext catalog '%.\*ls' is being dropped and is currently set as default. |
-| 7676 | 10 | No | Warning: Full-text auto propagation is on. Stop crawl request is ignored. |
-| 7677 | 16 | No | Column "%.\*ls" is not full-text indexed. |
-| 7678 | 16 | No | The following string is not defined as a language alias in syslanguages: %.\*ls. |
-| 7679 | 16 | No | Full-text index language of column "%.\*ls" is not a language supported by full-text search. |
-| 7680 | 16 | No | Default full-text index language is not a language supported by full-text search. |
-| 7681 | 10 | No | Warning: Directory '%ls' does not have a valid full-text catalog. Full-text catalog header file or attach state file either is missing or corrupted. The full-text catalog cannot be attached. |
-| 7682 | 10 | No | The component '%ls' reported error while indexing. Component path '%ls'. |
-| 7683 | 16 | No | Errors were encountered during full-text index population for table or indexed view '%ls', database '%ls' (table or indexed view ID '%d', database ID '%d'). Please see full-text crawl logs for details. |
-| 7684 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Failed to index the row. |
-| 7685 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Attempt will be made to reindex it. |
-| 7686 | 10 | No | Cannot use a CONTAINS, FREETEXT, CONTAINSTABLE or FREETEXTTABLE construct on table or indexed view '%.\*ls' because none of its columns are full-text indexed. Register at least one column for full-text search using ALTER FULLTEXT INDEX statement. |
-| 7687 | 16 | No | ALTER TABLE SWITCH statement failed because table '%.\*ls' and table '%.\*ls' have non-matching fulltext indexes. |
-| 7688 | 16 | No | ALTER TABLE SWITCH statement failed because there are active crawls on the fulltext index, wait until crawl completed or disable fulltext index. |
-| 7689 | 16 | No | Execution of a full-text operation failed. '%ls' |
-| 7690 | 16 | No | Full-text operation failed because database is read only. |
-| 7691 | 16 | No | Access is denied to full-text log path. Full-text logging is disabled for database '%ls', catalog '%ls' (database ID '%d', catalog ID '%d'). |
-| 7692 | 16 | No | Full-text catalog path '%.\*ls' exceeded %d character limit. |
-| 7693 | 16 | No | Full-text initialization failed to create a memory clerk. |
-| 7694 | 16 | No | Failed to pause catalog for backup. Backup was aborted. |
-| 7695 | 16 | No | Operation failed. Full-text catalog backup in progress. Retry after backup operation has completed. |
-| 7696 | 16 | No | Invalid locale ID was specified. Please verify that the locale ID is correct and corresponding language resource has been installed. |
-| 7697 | 10 | No | Warning: Full-text index on table or indexed view '%.\*ls' in database '%.\*ls' has been changed after full-text catalog files backup. A full population is required to bring full-text index to a consistent state. |
-| 7698 | 16 | No | GROUP BY ALL cannot be used in full text search queries. |
-| 7699 | 16 | No | TYPE COLUMN option is not allowed for column types other than image or varbinary(max). |
-| 7702 | 16 | No | Empty Partition function type-parameter-list is not allowed when defining a partition function. |
-| 7703 | 16 | No | Can not create RANGE partition function with multiple parameter types. |
-| 7704 | 16 | No | The type '%.\*ls' is not valid for this operation. |
-| 7705 | 16 | No | Could not implicitly convert range values type specified at ordinal %d to partition function parameter type. |
-| 7706 | 16 | No | Partition function '%ls' is being used by one or more partition schemes. |
-| 7707 | 16 | No | The associated partition function '%ls' generates more partitions than there are file groups mentioned in the scheme '%ls'. |
-| 7708 | 16 | No | Duplicate range boundary values are not allowed in partition function boundary values list. Partition boundary values at ordinal %d and %d are equal. |
-| 7709 | 10 | No | Warning: Range value list for partition function '%.\*ls' is not sorted by value. Mapping of partitions to filegroups during CREATE PARTITION SCHEME will use the sorted boundary values if the function '%.\*ls' is referenced in CREATE PARTITION SCHEME. |
-| 7710 | 10 | No | Warning: The partition scheme '%.\*ls' does not have any next used filegroup. Partition scheme has not been changed. |
-| [7711](../mssqlserver-7711-database-engine-error.md) | 16 | No | The %ls option was specified more than once for the table, or for at least one of its partitions if the table is partitioned. |
-| 7712 | 10 | No | Partition scheme '%.\*ls' has been created successfully. '%.\*ls' is marked as the next used filegroup in partition scheme '%.\*ls'. |
-| 7713 | 10 | No | %d filegroups specified after the next used filegroup are ignored. |
-| 7714 | 16 | No | Partition range value is missing. |
-| 7715 | 16 | No | The specified partition range value could not be found. |
-| 7716 | 16 | No | Can not create or alter a partition function to have zero partitions. |
-| 7717 | 16 | No | The partition scheme "%.\*ls" is currently being used to partition one or more tables. |
-| 7718 | 16 | No | Partition range value cannot be specified for hash partitioning. |
-| 7719 | 16 | No | CREATE/ALTER partition function failed as only a maximum of %d partitions can be created. |
-| 7720 | 16 | No | Data truncated when converting range values to the partition function parameter type. The range value at ordinal %d requires data truncation. |
-| 7721 | 16 | No | Duplicate range boundary values are not allowed in partition function boundary values list. The boundary value being added is already present at ordinal %d of the boundary value list. |
-| 7722 | 16 | No | Invalid partition number %I64d specified for %S_MSG '%.\*ls', partition number can range from 1 to %d. |
-| 7723 | 16 | No | Only a single filegroup can be specified while creating partition scheme using option ALL to specify all the filegroups. |
-| 7724 | 16 | No | Computed column cannot be used as a partition key if it is not persisted. Partition key column '%.\*ls' in table '%.\*ls' is not persisted. |
-| 7725 | 16 | No | Alter partition function statement failed. Cannot repartition table '%.\*ls' by altering partition function '%.\*ls' because its clustered index '%.\*ls' is disabled. |
-| 7726 | 16 | No | Partition column '%.\*ls' has data type %s which is different from the partition function '%.\*ls' parameter data type %s. |
-| 7727 | 16 | No | Collation of partition column '%.\*ls' does not match collation of corresponding parameter in partition function '%.\*ls'. |
-| 7728 | 16 | No | Invalid partition range: %d TO %d. Lower bound must not be greater than upper bound. |
-| 7729 | 16 | No | Cannot specify partition number in the %S_MSG %S_MSG statement as the %S_MSG '%.\*ls' is not partitioned. |
-| 7730 | 16 | No | Alter %S_MSG statement failed because partition number %d does not exist in %S_MSG '%.\*ls'. |
-| 7731 | 16 | No | Cannot specify partition number in Alter %S_MSG statement to rebuild or reorganize a partition of %S_MSG '%.\*ls'. |
-| 7732 | 16 | No | Cannot specify partition number in Alter index statement along with keyword ALL to rebuild partitions of table '%.\*ls' when the table does not have any regular indexes. |
-| 7733 | 16 | No | '%ls' statement failed. The %S_MSG '%.\*ls' is partitioned while %S_MSG '%.\*ls' is not partitioned. |
-| 7734 | 10 | No | The %S_MSG '%.\*ls' specified for the clustered index '%.\*ls' was used for table '%.\*ls' even though %S_MSG '%.\*ls' is specified for it. |
-| 7735 | 16 | No | Cannot specify partition number in alter %S_MSG statement to rebuild or reorganize a partition of %S_MSG '%.\*ls' as %S_MSG is not partitioned. |
-| 7736 | 16 | No | Partition function can only be created in Enterprise edition of SQL Server. Only Enterprise edition of SQL Server supports partitioning. |
-| 7737 | 16 | No | Filegroup %.\*ls is of a different filegroup type than the first filegroup in partition scheme %.\*ls |
-| 7738 | 16 | No | Cannot enable compression for object '%.\*ls'. Only SQL Server Enterprise Edition supports compression. |
-| 7739 | 16 | No | The partition scheme of table '%.\*ls' cannot be changed because there exists one or more incremental statistics on the table. |
-| 7740 | 16 | No | A partition ID for at least one row has been modified. |
-| 7741 | 16 | No | The %ls option can only be specified once for the table or partition. |
-| 7742 | 16 | No | Invalid partition range (%d to %d). Upper bound must be greater than lower bound. |
-| 7801 | 15 | No | The required parameter %.\*ls was not specified. |
-| 7802 | 16 | No | Functions that have a return type of "%.\*ls" are unsupported through SOAP invocation. |
-| 7803 | 15 | No | The clause %.\*ls can not be used in the %.\*ls statement. |
-| 7804 | 15 | No | %.\*ls and %.\*ls can not share the same value. |
-| 7805 | 16 | No | The parameter SITE can not be prefixed by a scheme such as 'http://'. Valid values for SITE include {'\*' \| '+' \| 'site_name'}. |
-| 7806 | 16 | No | The URL specified by endpoint '%.\*ls' is already registered to receive requests or is reserved for use by another service. |
-| 7807 | 16 | No | An error ('0x%x') occurred while attempting to register the endpoint '%.\*ls'. |
-| 7808 | 10 | No | The endpoint '%.\*ls' could not be unregistered. |
-| 7809 | 10 | No | Cannot find the object '%.\*ls', because it does not exist or you do not have permission. |
-| 7810 | 15 | No | The value '%d' is not within range for the '%.\*ls' parameter. |
-| 7811 | 16 | No | COMPUTE BY queries are not supported over SOAP. |
-| 7812 | 10 | Yes | The endpoint '%.\*ls' has been established in metadata, but HTTP listening has not been enabled because HTTP support did not start successfully. Verify that the operating system and the edition of SQL Server supports native HTTP access. Check the SQL Server error log for any errors that might have occurred while starting HTTP support. |
-| 7813 | 16 | No | The parameter PATH must be supplied in its canonical form. An acceptable PATH is '%.\*ls'. |
-| 7814 | 10 | No | The specified value '%.\*ls' already exists. |
-| 7815 | 10 | No | The specified value '%.\*ls' does not exist. |
-| 7816 | 15 | No | A duplicate parameter was specified, '%.\*ls'. |
-| 7817 | 16 | No | The Base64 encoded input data was malformed for the parameter "%.\*ls". |
-| 7818 | 16 | No | The request exceeds an internal limit. Simplify or reduce the size of the request. |
-| 7819 | 15 | No | The SOAP method object '%.\*ls' must be specified using a fully qualified three-part name. |
-| 7820 | 16 | No | SOAP namespaces beginning with '%.\*ls' are disallowed because they are reserved for system use. |
-| 7821 | 10 | No | Cannot find the database '%.\*ls', because it does not exist or you do not have permission. |
-| 7822 | 16 | No | An unexpected XML node "%.\*ls" (in the namespace "%.\*ls") was found in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
-| 7823 | 16 | No | The "%.\*ls" XML element (in the "%.\*ls" namespace) was expected in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
-| 7824 | 16 | No | The "%.\*ls" XML element (in the "%.\*ls" namespace) was expected as the topmost node of the SOAP request. |
-| 7825 | 16 | No | A SOAP method element was expected in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
-| 7826 | 16 | No | Unexpected character data was found in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
-| 7827 | 14 | No | The user does not have permission to reserve and unreserve HTTP namespaces. |
-| 7828 | 11 | No | The statement is not supported on this version of the operating system. Could not find Httpapi.dll in the path. |
-| 7829 | 11 | No | The statement is not supported on this version of the operating system. Could not find function entry point '%.\*ls' in Httpapi.dll. |
-| 7830 | 16 | No | Unable to complete the operation because of an unexpected error. |
-| 7831 | 16 | No | A reservation for this HTTP namespace (%.\*ls) already exists. |
-| 7832 | 16 | No | A reservation for this HTTP namespace (%.\*ls) does not exist. |
-| 7833 | 16 | No | The HTTP namespace (%.\*ls) is in an invalid format. Specify the namespace in its canonical form. |
-| 7834 | 10 | No | The reservation for the HTTP namespace (%.\*ls) has been deleted. If there are any endpoints associated with this namespace, they will continue to receive and process requests until the server is restarted. |
-| 7835 | 16 | Yes | Endpoint '%.\*ls' has been disabled because it is insecurely configured. For a more information, attempt to start the endpoint using the ALTER ENDPOINT statement. |
-| 7836 | 20 | No | A fatal error occurred while reading the input stream from the network. The maximum number of network packets in one request was exceeded. Try using bulk insert, increasing network packet size, or reducing the size of the request. The session will be terminated. |
-| 7847 | 16 | No | XML data was found in the parameter '%.\*ls' which is not an XML parameter. Please entitize any invalid XML character data in this parameter, or pass the parameter in typed as XSD:anyType or sqltypes:xml. |
-| 7848 | 15 | No | An invalid or unsupported localeId was specified for parameter "%.\*ls". |
-| 7849 | 15 | No | Invalid sqlCompareOptions were specified for parameter "%.\*ls". |
-| 7850 | 16 | No | The SQL Server Service account does not have permission to register the supplied URL on the endpoint '%.\*ls'. Use sp_reserve_http_namespace to explicitly reserve the URL namespace before you try to register the URL again. |
-| 7851 | 15 | No | The %.\*ls attribute must be specified on the %.\*ls element of the parameter "%.\*ls" because it is of type %.\*ls. |
-| 7852 | 15 | No | Parameter "%.\*ls": If the %.\*ls attribute appears on a parameter value node of type "%.\*ls" (in the namespace "%.\*ls"), it must refer to a CLR type. |
-| 7853 | 16 | No | The URL specified as the path ("%.\*ls") is not in an absolute format, and must begin with "%.\*ls". |
-| 7854 | 16 | No | The URL value specified for the "%.\*ls" parameter is too long. |
-| 7855 | 15 | No | Reading from HTTP input stream failed. |
-| 7856 | 16 | No | XML parameters do not support non-unicode element or attribute values. |
-| 7857 | 16 | No | Parameter "%.\*ls": Function or procedure parameters with improperly formatted or deprecated names are not supported through Native SOAP access. Refer to documentation for rules concerning the proper naming of parameters. |
-| 7858 | 16 | No | The "%.\*ls" XML element (in the "%.\*ls" namespace) in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request contained an invalid binary type. |
-| 7859 | 15 | No | Parameter "%.\*ls": Parameter collation cannot be specified on the "%.\*ls" node (in the namespace "%.\*ls"). |
-| 7860 | 15 | No | An endpoint's transport or content cannot be changed through the ALTER ENDPOINT statement. Use DROP ENDPOINT and execute the CREATE ENDPOINT statement to make these changes. |
-| 7861 | 15 | No | "%.\*ls" endpoints can only be of the "FOR %.\*ls" type. |
-| 7862 | 16 | No | An endpoint of the requested type already exists. Only one endpoint of this type is supported. Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
-| 7863 | 16 | No | The endpoint was not changed. The ALTER ENDPOINT statement did not contain any values to modify or update. |
-| 7864 | 16 | No | CREATE/ALTER ENDPOINT cannot be used to update the endpoint with this information. The Dedicated Administrator Connection endpoint is reserved and cannot be updated. |
-| 7865 | 16 | No | Web Services Description Language (WSDL) generation failed because the system was unable to query the metadata for the endpoint. |
-| 7866 | 16 | No | XML attribute and element values larger than 4000 characters are only allowed within the SOAP Body node. |
-| 7867 | 15 | No | An invalid sqlCollationVersion was specified for parameter "%.\*ls". |
-| 7868 | 15 | No | An invalid sqlSortId was specified for parameter "%.\*ls". |
-| 7869 | 16 | No | The endpoint name '%.\*ls' is reserved for used by SQL. Endpoint names cannot begin with '%.\*ls'. |
-| 7870 | 16 | No | The AFFINITY clause is not supported for endpoints of this type. |
-| 7871 | 16 | No | The clause "%.\*ls" is not valid for this endpoint type. |
-| 7872 | 16 | No | "%.\*ls" is not a parameter for procedure "%.\*ls", or it was supplied out of order. |
-| 7873 | 16 | No | The endpoint "%.\*ls" is a built-in endpoint and cannot be dropped. Use the protocol configuration utilities to ADD or DROP Transact-SQL endpoints. |
-| 7874 | 16 | No | An endpoint already exists with the bindings specified. Only one endpoint supported for a specific binding. Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
-| 7875 | 16 | No | An unexpected XML construct was found in the character data of the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
-| 7876 | 16 | No | The operation is not supported because current connection is made to contained availability group. Reconnect to SQL Instance and retry the operation. |
-| 7877 | 16 | No | Backup on secondary replica is not supported in the connection to contained availability group. Reconnect to SQL Instance and retry the operation. |
-| 7878 | 16 | No | This "%.\*ls ENDPOINT" statement is not supported on this edition of SQL Server. |
-| 7879 | 10 | No | SQL Server is waiting for %d remaining sessions and connections to close. If these sessions are not closed within a reasonable amount of time, "polite" shutdown will be aborted. This message may appear several times before SQL Server is shutdown. |
-| 7880 | 10 | No | SQL Server has successfully finished closing sessions and connections. |
-| 7881 | 10 | No | SQL Server was unable to close sessions and connections in a reasonable amount of time and is aborting "polite" shutdown. |
-| 7882 | 16 | No | OUTPUT was requested for parameter '%.\*ls', which is not supported for a WEBMETHOD with FORMAT=NONE. |
-| 7883 | 16 | No | User-defined functions cannot be used for a WEBMETHOD with FORMAT=NONE. |
-| 7884 | 20 | Yes | Violation of tabular data stream (TDS) protocol. This is most often caused by a previous exception on this task. The last exception on the task was error %d, severity %d, address 0x%p. This connection will be terminated. |
-| 7885 | 20 | Yes | Network error 0x%lx occurred while sending data to the client on process ID %d batch ID %d. A common cause for this error is if the client disconnected without reading the entire response from the server. This connection will be terminated. |
-| 7886 | 20 | Yes | A read operation on a large object failed while sending data to the client. A common cause for this is if the application is running in READ UNCOMMITTED isolation level. This connection will be terminated. |
-| 7887 | 20 | Yes | The IPv6 address specified is not supported. Only addresses that are in their numeric, canonical form are supported for listening. |
-| 7888 | 20 | Yes | The IPv6 address specified is not supported. The server may not be configured to allow for IPv6 connectivity, or the address may not be in a recognized IPv6 format. |
-| 7889 | 16 | No | The SOAP headers on the request have exceeded the size limits established for this endpoint. The endpoint owner may increase these limits via ALTER ENDPOINT. |
-| 7890 | 16 | No | An error occurred while attempting to register the endpoint '%.\*ls'. One or more of the ports specified in the CREATE ENDPOINT statement may be bound to another process. Attempt the statement again with a different port or use netstat to find the application currently using the port and resolve the conflict. |
-| 7891 | 10 | No | Creation of a TSQL endpoint will result in the revocation of any 'Public' connect permissions on the '%.\*ls' endpoint. If 'Public' access is desired on this endpoint, reapply this permission using 'GRANT CONNECT ON ENDPOINT::\[%.\*ls\] to \[public\]'. |
-| 7892 | 16 | No | Internal subset DTDs inside SOAP requests are not allowed. |
-| 7893 | 15 | No | Parameter '%.\*ls': Incompatible XML attributes were present. The '%.\*ls' attribute and the '%.\*ls' attribute may not both be present on a parameter value node of type '%.\*ls' (in the namespace '%.\*ls'). |
-| 7894 | 16 | Yes | Listening has not been started on the endpoint '%.\*ls' found in metadata. Endpoint operations are disabled on this edition of SQL Server. |
-| 7895 | 14 | No | Only a system administrator can specify a custom WSDL stored procedure on the endpoint. |
-| 7896 | 16 | No | The column or parameter '%.\*ls' uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier. |
-| 7897 | 10 | No | Creating and altering SOAP endpoints will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 7898 | 10 | Yes | SQL Server native SOAP support is now deprecated and will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 7899 | 16 | No | The return value uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier. |
-| [7901](../mssqlserver-7901-database-engine-error.md) | 16 | No | The repair statement was not processed. This level of repair is not supported when the database is in emergency mode. |
-| 7902 | 16 | No | Columnstore index '%.\*ls' on table '%.\*ls' has metadata mismatch on column id %d and rowgroup id %d. If this is a nonclustered columnstore index, drop it and recreate it. Otherwise, contact CSS. |
-| [7903](../mssqlserver-7903-database-engine-error.md) | 16 | No | Table error: The orphaned file "%.\*ls" was found in the FILESTREAM directory ID %.\*ls container ID %d for object ID %d, index ID %d, partition ID %I64d, column ID %d. |
-| [7904](../mssqlserver-7904-database-engine-error.md) | 16 | No | Table error: Cannot find the FILESTREAM file "%.\*ls" for column ID %d (column directory ID %.\*ls container ID %d) in object ID %d, index ID %d, partition ID %I64d, page ID %S_PGID, slot ID %d. |
-| [7905](../mssqlserver-7905-database-engine-error.md) | 16 | No | Database error: The directory "%.\*ls" is not a valid FILESTREAM directory in container ID %d. |
-| [7906](../mssqlserver-7906-database-engine-error.md) | 16 | No | Database error: The file "%.\*ls" is not a valid FILESTREAM file in container ID %d. |
-| [7907](../mssqlserver-7907-database-engine-error.md) | 16 | No | Table error: The directory "%.\*ls" under the rowset directory ID %.\*ls is not a valid FILESTREAM directory in container ID %d. |
-| [7908](../mssqlserver-7908-database-engine-error.md) | 16 | No | Table error: The file "%.\*ls" in the rowset directory ID %.\*ls is not a valid FILESTREAM file in container ID %d. |
-| 7909 | 20 | No | The emergency-mode repair failed.You must restore from backup. |
-| [7910](../mssqlserver-7910-database-engine-error.md) | 10 | No | Repair: The page %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
-| [7911](../mssqlserver-7911-database-engine-error.md) | 10 | No | Repair: The page %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
-| [7912](../mssqlserver-7912-database-engine-error.md) | 10 | No | Repair: The extent %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
-| [7913](../mssqlserver-7913-database-engine-error.md) | 10 | No | Repair: The extent %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
-| [7914](../mssqlserver-7914-database-engine-error.md) | 10 | No | Repair: %ls page at %S_PGID has been rebuilt. |
-| [7915](../mssqlserver-7915-database-engine-error.md) | 10 | No | Repair: IAM chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), has been truncated before page %S_PGID and will be rebuilt. |
-| [7916](../mssqlserver-7916-database-engine-error.md) | 10 | No | Repair: Deleted record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), on page %S_PGID, slot %d. Indexes will be rebuilt. |
-| 7917 | 10 | No | Repair: Converted forwarded record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), at page %S_PGID, slot %d to a data row. |
-| 7918 | 10 | No | Repair: Page %S_PGID next and %S_PGID previous pointers have been set to match each other in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
-| 7919 | 16 | No | Repair statement not processed. Database needs to be in single user mode. |
-| [7920](../mssqlserver-7920-database-engine-error.md) | 10 | No | Processed %ld entries in system catalog for database ID %d. |
-| 7921 | 16 | No | Repair statement not processed. Database cannot be a snapshot. |
-| 7922 | 16 | No | \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* |
-| [7923](../mssqlserver-7923-database-engine-error.md) | 10 | No | Table %.\*ls Object ID %ld. |
-| 7924 | 10 | No | Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). FirstIAM %S_PGID. Root %S_PGID. Dpages %I64d. |
-| 7925 | 10 | No | Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). %I64d pages used in %I64d dedicated extents. |
-| 7926 | 16 | No | Check statement aborted. The database could not be checked as a database snapshot could not be created and the database or table could not be locked. See Microsoft Knowledge Base article 928518 for details of when this behavior is expected and what workarounds exist. Also see previous errors for more details. |
-| 7927 | 10 | No | Total number of extents is %I64d. |
-| 7928 | 16 | No | The database snapshot for online checks could not be created. Either the reason is given in a previous error or one of the underlying volumes does not support sparse files or alternate streams. Attempting to get exclusive access to run checks offline. |
-| 7929 | 16 | No | Check statement aborted. Database contains deferred transactions. |
-| 7930 | 16 | No | Mirroring must be removed from the database for this DBCC command. |
-| [7931](../mssqlserver-7931-database-engine-error.md) | 16 | No | Database error: The FILESTREAM directory ID %.\*ls for a partition was seen two times. |
-| [7932](../mssqlserver-7932-database-engine-error.md) | 16 | No | Table error: The FILESTREAM directory ID %.\*ls for object ID %d, index ID %d, partition ID %I64d is in filegroup %d, but should be in filegroup %d. |
-| [7933](../mssqlserver-7933-database-engine-error.md) | 16 | No | Table error: A FILESTREAM directory ID %.\*ls exists for a partition, but the corresponding partition does not exist in the database. |
-| [7934](../mssqlserver-7934-database-engine-error.md) | 16 | No | DBCC CHECK cannot proceed on database %.\*ls because it is a Secondary Replica and either Snapshot creation failed or the WITH TABLOCK option was specified. Secondary Replica databases cannot be exclusively locked for DBCC CHECK. Reason may have been given in previous error. |
-| [7935](../mssqlserver-7935-database-engine-error.md) | 16 | No | Table error: A FILESTREAM directory ID %.\*ls exists for a column of object ID %d, index ID %d, partition ID %I64d, but that column does not exist in the partition. |
-| [7936](../mssqlserver-7936-database-engine-error.md) | 16 | No | Table error: The FILESTREAM directory ID %.\*ls exists for column ID %d of object ID %d, index ID %d, partition ID %I64d, but that column is not a FILESTREAM column. |
-| [7937](../mssqlserver-7937-database-engine-error.md) | 16 | No | Columnstore index has one or more missing column segments. Please run DBCC CHECKDB for more information. |
-| 7938 | 16 | No | Table error: object ID %d, index ID %d, partition ID %I64d processing encountered file name "%.\*ls" twice in the column directory %d container ID %d (for column ID %d). |
-| 7939 | 16 | No | Cannot detach database '%.\*ls' because it does not exist. |
-| 7940 | 16 | No | System databases master, model, msdb, and tempdb cannot be detached. |
-| 7941 | 16 | No | Table error: object ID %d, index ID %d, partition ID %I64d processing encountered file name "%.\*ls" twice in the column ID %d (for column directory %d container ID %d). |
-| 7942 | 10 | No | DBCC %ls scanning '%.\*ls' table... |
-| 7943 | 10 | No | Table: '%.\*ls' (%d); index ID: %d, database ID: %d |
-| 7944 | 10 | No | %ls level scan performed. |
-| 7945 | 10 | No | - Pages Scanned................................: %I64d |
-| 7946 | 10 | No | - Extents Scanned..............................: %I64d |
-| 7947 | 10 | No | - Extent Switches..............................: %I64d |
-| 7948 | 10 | No | - Avg. Pages per Extent........................: %3.1f |
-| 7949 | 10 | No | - Scan Density \[Best Count:Actual Count\].......: %4.2f%ls \[%I64d:%I64d\] |
-| 7950 | 10 | No | - Logical Scan Fragmentation ..................: %4.2f%ls |
-| 7951 | 10 | No | Warning: Could not complete filestream consistency checks due to an operating system error. Any consistency errors found in the filestream subsystem will be silenced. Please refer to other errors for more information. This condition is likely transient; try rerunning the command. |
-| 7952 | 10 | No | - Extent Scan Fragmentation ...................: %4.2f%ls |
-| 7953 | 10 | No | - Avg. Bytes Free per Page.....................: %3.1f |
-| 7954 | 10 | No | - Avg. Page Density (full).....................: %4.2f%ls |
-| 7955 | 16 | No | Invalid SPID %d specified. |
-| 7956 | 16 | No | Table error: The FILESTREAM file "%.\*ls" for column ID %d was found in column directory ID %.\*ls of container ID %d but should be in container ID %d in object ID %d, index ID %d, partition ID %I64d, page ID %S_PGID, slot ID %d. |
-| 7957 | 10 | No | Cannot display the specified SPID's buffer; in transition. |
-| 7958 | 16 | No | The specified SPID does not process input/output data streams. |
-| 7959 | 16 | No | Columnstore index has one or more missing dictionaries. Please run DBCC CHECKDB for more info. |
-| 7960 | 16 | No | An invalid server process identifier (SPID) %d or batch ID %d was specified. |
-| 7961 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) , page ID %S_PGID, row ID %d. Column '%.\*ls' is a var column with a NULL value and non-zero data length |
-| 7962 | 16 | No | Invalid BATCHID %d specified. |
-| 7963 | 16 | No | Database error: The file "%.\*ls" is not a valid FILESTREAM LOG file in container ID %d. |
-| 7964 | 10 | No | Repair: Deleted FILESTREAM file "%.\*ls" for column ID %d, for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) on page %S_PGID, slot %d. |
-| 7965 | 16 | No | Table error: Could not check object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) due to invalid allocation (IAM) page(s). |
-| 7966 | 10 | No | Warning: NO_INDEX option of %ls being used. Checks on non-system indexes will be skipped. |
-| 7967 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls' has a missing column segment on column id %d and rowgroup id %d. Restore the data from a backup. |
-| 7968 | 10 | No | Transaction information for database '%.\*ls'. |
-| 7969 | 16 | No | No active open transactions. |
-| 7970 | 10 | No | %hsOldest active transaction: |
-| 7971 | 10 | No | SPID (server process ID): %d%s |
-| 7972 | 10 | No | UID (user ID) : %d |
-| 7973 | 16 | No | Clustered column store index '%.\*ls' on table '%.\*ls' has erroneous content in its mapping index. |
-| 7974 | 10 | No | Name : %.\*ls |
-| 7975 | 10 | No | LSN : (%d:%d:%d) |
-| 7976 | 16 | No | Nonclustered columnstore index '%.\*ls' on table '%.\*ls' has a missing column segment on column id %d and rowgroup id %d. Drop and recreate the nonclustered columnstore index. |
-| 7977 | 10 | No | Start time : %.\*ls |
-| 7978 | 10 | No | SID : %.\*ls |
-| 7979 | 10 | No | %hsReplicated Transaction Information: |
-| 7980 | 10 | No | Oldest distributed LSN : (%d:%d:%d) |
-| 7981 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls', column '%.\*ls' has one or more values out of range for data type '%.\*ls'. Restore the data from a backup. |
-| 7982 | 10 | No | Oldest non-distributed LSN : (%d:%d:%d) |
-| 7983 | 14 | No | User '%.\*ls' does not have permission to run DBCC %ls for database '%.\*ls'. |
-| [7984](../mssqlserver-7984-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d. Page %S_PGID has unexpected page type %d. Check statement terminated due to unrepairable error. |
-| 7985 | 16 | No | System table pre-checks: Object ID %d. Could not read and latch page %S_PGID with latch type %s. Check statement terminated due to unrepairable error. |
-| [7986](../mssqlserver-7986-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d has cross-object chain linkage. Page %S_PGID points to %S_PGID in alloc unit ID %I64d (should be %I64d). Check statement terminated due to unrepairable error. |
-| [7987](../mssqlserver-7987-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d has chain linkage mismatch. %S_PGID-\>next = %S_PGID, but %S_PGID-\>prev = %S_PGID. Check statement terminated due to unrepairable error. |
-| [7988](../mssqlserver-7988-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d. Loop in data chain detected at %S_PGID. Check statement terminated due to unrepairable error. |
-| 7989 | 16 | No | Checking identity information: current identity value '%.\*hs'. |
-| 7991 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls' has a missing dictionary on column id %d and rowgroup id %d. Restore the data from a backup. |
-| 7992 | 16 | No | Cannot shrink 'read only' database '%.\*ls'. |
-| 7993 | 10 | No | Cannot shrink file '%d' in database '%.\*ls' to %u pages as it only contains %u pages. |
-| 7994 | 10 | No | DBCC CheckDatabase on resource database will be skipped because user '%.\*ls' does not have permission. |
-| [7995](../mssqlserver-7995-database-engine-error.md) | 16 | No | Database '%.\*ls': consistency errors in system catalogs prevent further DBCC %ls processing. |
-| 7996 | 16 | No | Extended stored procedures can only be created in the master database. |
-| 7997 | 16 | No | '%.\*ls' does not contain an identity column. |
-| 7998 | 16 | No | Checking identity information: current identity value '%.\*hs', current column value '%.\*hs'. |
-| 7999 | 16 | No | Could not find any index named '%.\*ls' for table '%.\*ls'. |
+| <a id="7000"></a> 7000 | 16 | No | OPENXML document handle parameter must be of data type int. |
+| <a id="7001"></a> 7001 | 16 | No | OPENXML flags parameter must be of data type int. |
+| <a id="7002"></a> 7002 | 16 | No | OPENXML XPath must be of a string data type, such as nvarchar. |
+| <a id="7003"></a> 7003 | 16 | No | Only one OPENXML column can be of type %ls. |
+| <a id="7004"></a> 7004 | 16 | No | OPENXML does not support retrieving schema from remote tables, as in '%.\*ls'. |
+| <a id="7005"></a> 7005 | 16 | No | OPENXML requires a metaproperty namespace to be declared if 'mp' is used for another namespace in sp_xml_preparedocument. |
+| <a id="7006"></a> 7006 | 16 | No | OPENXML encountered a problem identifying the metaproperty namespace prefix. Consider removing the namespace parameter from the corresponding sp_xml_preparedocument statement. |
+| <a id="7007"></a> 7007 | 16 | No | OPENXML encountered unknown metaproperty '%.\*ls'. |
+| <a id="7008"></a> 7008 | 16 | No | The OPENXML EDGETABLE is incompatible with the XMLTEXT OVERFLOW flag. |
+| <a id="7009"></a> 7009 | 16 | No | OPENXML allows only one metaproperty namespace prefix declaration in sp_xml_preparedocument. |
+| <a id="7101"></a> 7101 | 16 | No | You need an active user transaction in order to use text pointers for a table with the option "text in row" set to ON. |
+| <a id="7102"></a> 7102 | 20 | Yes | Internal Error: Text manager cannot continue with current statement. Run DBCC CHECKTABLE. |
+| <a id="7104"></a> 7104 | 16 | No | Offset or size of data type is not valid. Data type must be of type int or smallint. |
+| <a id="7105"></a> [7105](../mssqlserver-7105-database-engine-error.md) | 22 | Yes | The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE. |
+| <a id="7106"></a> 7106 | 16 | Yes | Internal error: An attempt was made to update a LOB data type using a read-only text pointer. |
+| <a id="7107"></a> 7107 | 16 | No | You can have only 1,024 in-row text pointers in one transaction |
+| <a id="7108"></a> 7108 | 22 | Yes | Database ID %d, page %S_PGID, slot %d, link number %d is invalid. Run DBCC CHECKTABLE. |
+| <a id="7109"></a> 7109 | 16 | Yes | The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE. |
+| <a id="7116"></a> 7116 | 16 | No | Offset %d is not in the range of available LOB data. |
+| <a id="7117"></a> 7117 | 16 | No | Error reading large object (LOB) data from the tabular data stream (TDS). |
+| <a id="7118"></a> 7118 | 16 | No | Only complete replacement is supported when assigning a large object (LOB) to itself. |
+| <a id="7119"></a> 7119 | 16 | No | Attempting to grow LOB beyond maximum allowed size of %I64d bytes. |
+| <a id="7122"></a> 7122 | 16 | No | Invalid text, ntext, or image pointer type. Must be binary(16). |
+| <a id="7123"></a> 7123 | 16 | No | Invalid text, ntext, or image pointer value %hs. |
+| <a id="7124"></a> 7124 | 16 | No | The offset and length specified in the READTEXT statement is greater than the actual data length of %ld. |
+| <a id="7125"></a> 7125 | 16 | No | The text, ntext, or image pointer value conflicts with the column name specified. |
+| <a id="7133"></a> 7133 | 16 | No | NULL textptr (text, ntext, or image pointer) passed to %ls function. |
+| <a id="7134"></a> 7134 | 16 | No | LOB Locator is not supported as text pointer when using UPDATETEXT/WRITETEXT to update/write a text column. |
+| <a id="7135"></a> 7135 | 16 | No | Deletion length %ld is not in the range of available text, ntext, or image data. |
+| <a id="7137"></a> 7137 | 16 | No | %s is not allowed because the column is being processed by a concurrent snapshot or is being replicated to a non-SQL Server Subscriber or Published in a publication allowing Data Transformation Services (DTS) or tracked by Change Data Capture. |
+| <a id="7138"></a> 7138 | 16 | No | The WRITETEXT statement is not allowed because the column is being replicated with Data Transformation Services (DTS) or tracked by Change Data Capture. |
+| <a id="7139"></a> 7139 | 16 | No | Length of LOB data (%I64d) to be replicated exceeds configured maximum %ld. Use the stored procedure sp_configure to increase the configured maximum value for max text repl size option, which defaults to 65536. A configured value of -1 indicates no limit, other that the limit imposed by the data type. |
+| <a id="7140"></a> 7140 | 16 | No | Cannot create additional orphans with the stored procedure sp_createorphan. Free up some of the orphan handles that you have created by inserting or deleting them. |
+| <a id="7141"></a> 7141 | 16 | No | Must create orphaned text inside a user transaction. |
+| <a id="7143"></a> 7143 | 16 | No | Invalid locator de-referenced. |
+| <a id="7144"></a> 7144 | 16 | No | A text/ntext/image column referenced by a persisted or indexed computed column cannot be updated |
+| <a id="7151"></a> 7151 | 16 | No | Insufficient buffer space to perform write operation. |
+| <a id="7152"></a> 7152 | 16 | No | READEXT, WRITETEXT, and UPDATETEXT statements cannot be used on tables that are referenced by an enabled security policy. |
+| <a id="7201"></a> 7201 | 17 | No | Could not execute procedure on remote server '%.\*ls' because SQL Server is not configured for remote access. Ask your system administrator to reconfigure SQL Server to allow remote access. |
+| <a id="7202"></a> 7202 | 11 | No | Could not find server '%.\*ls' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers. |
+| <a id="7212"></a> 7212 | 16 | No | Could not execute procedure '%.\*ls' on remote server '%.\*ls'. |
+| <a id="7213"></a> 7213 | 20 | Yes | The attempt by the provider to pass remote stored procedure parameters to remote server '%.\*ls' failed. Verify that the number of parameters, the order, and the values passed are correct. |
+| <a id="7214"></a> 7214 | 16 | Yes | Remote procedure time out of %d seconds exceeded. Remote procedure '%.\*ls' is canceled. |
+| <a id="7215"></a> 7215 | 16 | No | Could not execute statement on remote server '%.\*ls'. |
+| <a id="7221"></a> 7221 | 16 | No | Could not relay results of procedure '%.\*ls' from remote server '%.\*ls'. |
+| <a id="7222"></a> 7222 | 16 | No | Only a SQL Server provider is allowed on this instance. |
+| <a id="7223"></a> 7223 | 10 | No | Warning: Enabling 'remote proc trans' is not supported on this instance. Defaulting to disabled. |
+| <a id="7224"></a> 7224 | 16 | No | Enabling 'remote proc trans' is not supported on this instance. |
+| <a id="7301"></a> 7301 | 16 | No | Cannot obtain the required interface ("%ls") from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7302"></a> 7302 | 16 | No | Cannot create an instance of OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7303"></a> 7303 | 16 | No | Cannot initialize the data source object of OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7304"></a> 7304 | 16 | No | Cannot connect using OLE DB provider "%ls" to linked server "%ls". Verify the connection parameters or login credentials associated with this linked server. |
+| <a id="7305"></a> 7305 | 16 | No | Cannot create a statement object using OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7306"></a> 7306 | 16 | No | Cannot open the table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7307"></a> 7307 | 16 | No | Cannot obtain the data source of a session from OLE DB provider "%ls" for linked server "%ls". This action must be supported by the provider. |
+| <a id="7308"></a> [7308](../mssqlserver-7308-database-engine-error.md) | 16 | No | OLE DB provider '%ls' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode. |
+| <a id="7310"></a> 7310 | 16 | No | Cannot obtain the set of schema rowsets supported by OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
+| <a id="7311"></a> 7311 | 16 | No | Cannot obtain the schema rowset "%ls" for OLE DB provider "%ls" for linked server "%ls". The provider supports the interface, but returns a failure code when it is used. |
+| <a id="7312"></a> 7312 | 16 | No | Invalid use of schema or catalog for OLE DB provider "%ls" for linked server "%ls". A four-part name was supplied, but the provider does not expose the necessary interfaces to use a catalog or schema. |
+| <a id="7313"></a> 7313 | 16 | No | An invalid schema or catalog was specified for the provider "%ls" for linked server "%ls". |
+| <a id="7314"></a> 7314 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" does not contain the table "%ls". The table either does not exist or the current user does not have permissions on that table. |
+| <a id="7315"></a> 7315 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" contains multiple tables that match the name "%ls". |
+| <a id="7316"></a> 7316 | 16 | No | Cannot use qualified table names (schema or catalog) with the OLE DB provider "%ls" for linked server "%ls" because it does not implement required functionality. |
+| <a id="7317"></a> 7317 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" returned an invalid schema definition. |
+| <a id="7318"></a> 7318 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" returned an invalid column definition for table "%ls". |
+| <a id="7319"></a> 7319 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" returned a "%ls" index "%ls" with the incorrect bookmark ordinal %d. |
+| <a id="7320"></a> 7320 | 16 | No | Cannot execute the query "%ls" against OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7321"></a> 7321 | 16 | No | An error occurred while preparing the query "%ls" for execution against OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7322"></a> 7322 | 16 | No | A failure occurred while giving parameter information to OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7323"></a> 7323 | 16 | No | An error occurred while submitting the query text to OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7324"></a> 7324 | 16 | No | A failure occurred while setting parameter properties with OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7325"></a> 7325 | 16 | No | Objects exposing columns with CLR types are not allowed in distributed queries. Please use a pass-through query to access remote object '%ls'. |
+| <a id="7326"></a> 7326 | 16 | No | An error occurred while retrieving the query text from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7327"></a> 7327 | 16 | No | A failure occurred while retrieving parameter information to OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7330"></a> 7330 | 16 | No | Cannot fetch a row from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7331"></a> 7331 | 16 | No | Rows from OLE DB provider "%ls" for linked server "%ls" cannot be released. |
+| <a id="7332"></a> 7332 | 16 | No | Cannot rescan the result set from OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7333"></a> 7333 | 16 | No | Cannot fetch a row using a bookmark from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7339"></a> 7339 | 16 | No | OLE DB provider '%ls' for linked server '%ls' returned invalid data for column '%ls.%ls'. |
+| <a id="7340"></a> 7340 | 16 | No | Cannot create a column accessor for OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7341"></a> 7341 | 16 | No | Cannot get the current row value of column "%ls.%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7342"></a> 7342 | 16 | No | An unexpected NULL value was returned for column "%ls.%ls" from OLE DB provider "%ls" for linked server "%ls". This column cannot be NULL. |
+| <a id="7343"></a> 7343 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not %ls table "%ls". %ls |
+| <a id="7344"></a> 7344 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not %ls table "%ls" because of column "%ls". %ls |
+| <a id="7345"></a> 7345 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not delete from table "%ls". %ls |
+| <a id="7346"></a> 7346 | 16 | No | Cannot get the data of the row from the OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7347"></a> 7347 | 16 | No | OLE DB provider '%ls' for linked server '%ls' returned data that does not match expected data length for column '%ls.%ls'. The (maximum) expected data length is %ls, while the returned data length is %ls. |
+| <a id="7348"></a> 7348 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not set the range for table "%ls". %ls. For possible cause of this issue, see the extended error message. |
+| <a id="7349"></a> 7349 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not set the range for table "%ls" because of column "%ls". %ls |
+| <a id="7350"></a> 7350 | 16 | No | Cannot get the column information from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7351"></a> 7351 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" could not map ordinals for one or more columns of object "%ls". |
+| <a id="7352"></a> 7352 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata. The object "%ls" was missing the expected column "%ls". |
+| <a id="7353"></a> 7353 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata. An extra column was supplied during execution that was not found at compile time. |
+| <a id="7354"></a> 7354 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied invalid metadata for column "%ls". %ls |
+| <a id="7355"></a> 7355 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The name was changed at execution time. |
+| <a id="7356"></a> 7356 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supplied inconsistent metadata for a column. The column "%ls" (compile-time ordinal %ld) of object "%ls" was reported to have a "%ls" of %ld at compile time and %ld at run time. |
+| <a id="7357"></a> [7357](../mssqlserver-7357-database-engine-error.md) | 16 | No | Cannot process the object "%ls". The OLE DB provider "%ls" for linked server "%ls" indicates that either the object has no columns or the current user does not have permissions on that object. |
+| <a id="7358"></a> 7358 | 16 | No | Cannot execute the query. The OLE DB provider "%ls" for linked server "%ls" did not provide an appropriate interface to access the text, ntext, or image column "%ls.%ls". |
+| <a id="7359"></a> 7359 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported a change in schema version between compile time ("%ls") and run time ("%ls") for table "%ls". |
+| <a id="7360"></a> 7360 | 16 | No | Cannot get the length of a storage object from OLE DB provider "%ls" for linked server "%ls" for table "%ls", column "%ls". |
+| <a id="7361"></a> 7361 | 16 | No | Cannot read a storage object from OLE DB provider "%ls" for linked server "%ls", for table "%ls", column "%ls". |
+| <a id="7362"></a> 7362 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported different metadata at run time for table "%ls", column "%ls". |
+| <a id="7365"></a> 7365 | 16 | No | Cannot obtain optional metadata columns of columns rowset from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7366"></a> 7366 | 16 | No | Cannot obtain columns rowset from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7367"></a> 7367 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supports column level collation, but failed to provide the metadata column "%ls" at run time. |
+| <a id="7368"></a> 7368 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" supports column level collation, but failed to provide collation data for column "%ls". |
+| <a id="7369"></a> 7369 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' provided invalid collation. LCID = %08x, Compflags = %08x, SortOrder = '%.\*ls'. |
+| <a id="7370"></a> 7370 | 16 | No | One or more properties could not be set on the query for OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7371"></a> 7371 | 16 | No | The server option 'collation name' in linked server '%ls' for OLE DB provider '%ls' has collation id %08x which is not supported by SQL Server. |
+| <a id="7372"></a> 7372 | 16 | No | Cannot get properties from OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7373"></a> 7373 | 16 | No | Cannot set the initialization properties for OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7374"></a> 7374 | 16 | No | Cannot set the session properties for OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7375"></a> 7375 | 16 | No | Cannot open index "%ls" on table "%ls" from OLE DB provider "%ls" for linked server "%ls". %ls |
+| <a id="7376"></a> 7376 | 16 | No | Could not enforce the remote join hint for this query. |
+| <a id="7377"></a> 7377 | 16 | No | Cannot specify an index hint for a remote data source. |
+| <a id="7380"></a> 7380 | 16 | No | Table-valued parameters are not allowed in remote calls between servers. |
+| <a id="7390"></a> 7390 | 16 | No | The requested operation could not be performed because OLE DB provider "%ls" for linked server "%ls" does not support the required transaction interface. |
+| <a id="7391"></a> [7391](../mssqlserver-7391-database-engine-error.md) | 16 | No | The operation could not be performed because OLE DB provider "%ls" for linked server "%ls" was unable to begin a distributed transaction. |
+| <a id="7392"></a> 7392 | 16 | No | Cannot start a transaction for OLE DB provider "%ls" for linked server "%ls". |
+| <a id="7393"></a> 7393 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error 0x%08X aborting the current transaction. |
+| <a id="7394"></a> 7394 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error committing the current transaction. |
+| <a id="7395"></a> 7395 | 16 | No | Unable to start a nested transaction for OLE DB provider "%ls" for linked server "%ls". A nested transaction was required because the XACT_ABORT option was set to OFF. |
+| <a id="7396"></a> 7396 | 16 | No | Varchar(max), nvarchar(max), varbinary(max) and large CLR type data types are not supported as return value or output parameter to remote queries. |
+| <a id="7397"></a> 7397 | 16 | No | Remote function returned varchar(max), nvarchar(max), varbinary(max) or large CLR type value which is not supported. |
+| <a id="7398"></a> 7398 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' reported an error committing the current inserts. |
+| <a id="7399"></a> [7399](../mssqlserver-7399-database-engine-error.md) | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
+| <a id="7401"></a> 7401 | 16 | Yes | The OLE DB provider "%ls" returned invalid literal prefix/suffix string. |
+| <a id="7403"></a> 7403 | 16 | Yes | The OLE DB provider "%ls" has not been registered. |
+| <a id="7404"></a> 7404 | 16 | Yes | The server could not load DCOM. |
+| <a id="7405"></a> 7405 | 16 | Yes | Heterogeneous queries require the ANSI_NULLS and ANSI_WARNINGS options to be set for the connection. This ensures consistent query semantics. Enable these options and then reissue your query. |
+| <a id="7409"></a> 7409 | 16 | Yes | Could not start distributed query using integrated login because the user is logged in using SQL Server authentication. Provide remote server login user ID and password in the connection string. |
+| <a id="7410"></a> 7410 | 16 | Yes | Remote access is not allowed for impersonated security context. |
+| <a id="7411"></a> 7411 | 16 | Yes | Server '%.\*ls' is not configured for %ls. |
+| <a id="7412"></a> 7412 | 16 | Yes | OLE DB provider "%ls" for linked server "%ls" returned message "%ls". |
+| <a id="7413"></a> 7413 | 16 | Yes | Could not connect to linked server '%ls' (OLE DB Provider '%ls'). Enable delegation or use a remote SQL Server login for the current user. |
+| <a id="7414"></a> 7414 | 16 | Yes | Invalid number of parameters. Rowset '%ls' expects %d parameter(s). |
+| <a id="7415"></a> 7415 | 16 | Yes | Ad hoc access to OLE DB provider '%ls' has been denied. You must access this provider through a linked server. |
+| <a id="7416"></a> 7416 | 16 | Yes | Access to the remote server is denied because no login-mapping exists. |
+| <a id="7417"></a> 7417 | 16 | Yes | GROUP BY ALL is not supported in queries that access remote tables if there is also a WHERE clause in the query. |
+| <a id="7418"></a> 7418 | 16 | Yes | Text, image, or ntext column was too large to send to the remote data source due to the storage interface used by the provider. |
+| <a id="7419"></a> 7419 | 16 | Yes | Lazy schema validation error. Linked server schema version has changed. Re-run the query. |
+| <a id="7420"></a> 7420 | 16 | Yes | Remote access is not supported for transaction isolation level "%ls". |
+| <a id="7421"></a> 7421 | 10 | Yes | Cannot fetch the rowset from OLE DB provider "%ls" for linked server "%ls". %ls. |
+| <a id="7422"></a> 7422 | 16 | Yes | OLE DB provider "%ls" for linked server "%ls" returned an invalid index definition for table "%ls". |
+| <a id="7423"></a> 7423 | 16 | Yes | The '%ls' OLE DB provider for the '%ls' linked server returned an invalid CLR type definition for the '%ls' table. |
+| <a id="7424"></a> 7424 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned "%ls" with data type "%ls", which should be type "%ls". |
+| <a id="7425"></a> 7425 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned an incorrect value for "%ls", which should be "%ls". |
+| <a id="7426"></a> 7426 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned "%ls" without "%ls" being supported. |
+| <a id="7427"></a> 7427 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" returned "%ls" for "%ls" during statistics gathering. |
+| <a id="7428"></a> 7428 | 10 | Yes | OLE DB provider "%ls" for linked server "%ls" supported the schema lock interface, but returned "%ls" for "%ls". |
+| <a id="7429"></a> 7429 | 10 | Yes | %hs SQL Server Remote Metadata Gather Time for Table %s.%s:%hs, CPU time = %lu ms, elapsed time = %lu ms. |
+| <a id="7430"></a> 7430 | 16 | Yes | Out-of-process use of OLE DB provider "%ls" with SQL Server is not supported. |
+| <a id="7431"></a> 7431 | 16 | Yes | Unable to delete OLE DB parameter properties. |
+| <a id="7432"></a> 7432 | 16 | Yes | Heterogeneous queries and use of OLEDB providers are not supported in fiber mode. |
+| <a id="7433"></a> 7433 | 10 | Yes | OLE DB provider '%ls' for linked server '%ls' returned truncated data for column '%ls.%ls'. The actual data length is %ls and truncated data length is %ls. |
+| <a id="7435"></a> 7435 | 16 | Yes | The OLE DB provider "%ls" for linked server "%ls" returned unexpected NULL pointer for string column "%ls.%ls". |
+| <a id="7436"></a> 7436 | 16 | Yes | The query processor could not produce a query plan because FORCESEEK or FORCESCAN hints on table or view '%.\*ls' cannot be used with remote data sources. Remove the hints and resubmit the query. |
+| <a id="7437"></a> 7437 | 16 | Yes | Linked servers cannot be used under impersonation without a mapping for the impersonated login. |
+| <a id="7438"></a> 7438 | 16 | Yes | The 32-bit OLE DB provider "%ls" cannot be loaded in-process on a 64-bit SQL Server. |
+| <a id="7439"></a> 7439 | 16 | No | Failed to read required information about %S_MSG pool %S_MSG. |
+| <a id="7440"></a> 7440 | 10 | No | Remote execution status: "%ls" . |
+| <a id="7441"></a> 7441 | 16 | Yes | Linked server query execution failed due to an internal error related to Microsoft Entra ID authentication. |
+| <a id="7442"></a> 7442 | 16 | Yes | Linked Server use self mode Microsoft Entra ID authentication functionality is disabled on the service side and therefore cannot be used. |
+| <a id="7443"></a> 7443 | 16 | Yes | Microsoft Entra ID use self mode authentication to linked server "%ls" failed because it is not part of any server trust group that contains the current server. For more information about joining servers into a server trust group, see [https://go.microsoft.com/fwlink/?linkid=2323200](https://go.microsoft.com/fwlink/?linkid=2323200). |
+| <a id="7444"></a> 7444 | 16 | Yes | Linked Server access token mode Microsoft Entra ID authentication functionality is disabled on the service side and therefore cannot be used. |
+| <a id="7445"></a> 7445 | 16 | Yes | A Microsoft Entra ID token for accessing linked server cannot be obtained. Error message: '%ls'. |
+| <a id="7446"></a> 7446 | 16 | Yes | Linked Server use MSI mode Microsoft Entra ID authentication functionality is disabled on the service side and therefore cannot be used. |
+| <a id="7447"></a> 7447 | 16 | Yes | Linked Server Microsoft Entra ID authentication using username and password is disabled on the service side and therefore cannot be used. |
+| <a id="7448"></a> 7448 | 16 | Yes | Linked Server login mapping with "useself" property set is not allowed when using Microsoft Entra ID '%ls' authentication mode. |
+| <a id="7449"></a> 7449 | 16 | Yes | Linked Server User-assigned MSI mode Microsoft Entra ID authentication functionality is not supported on the service side. Use system-assigned identity instead. |
+| <a id="7450"></a> 7450 | 16 | Yes | Querying linked server '%ls' failed. Either login for Linked Server Microsoft Entra ID '%ls' authentication mode does not exist or login's 'useself' attribute is set to true. |
+| <a id="7451"></a> 7451 | 16 | Yes | Retrieval of the MWC Token for Onelake/DFS access failed with error '%ls'. |
+| <a id="7452"></a> 7452 | 16 | Yes | Initialization of the MWC Token Cache failed. Lock Mode: %.\*ls. |
+| <a id="7453"></a> 7453 | 16 | Yes | Sending of statistics request failed with error '%lu'. |
+| <a id="7454"></a> 7454 | 16 | Yes | SQL internal communication failed with error '%ls'. |
+| <a id="7455"></a> 7455 | 16 | Yes | Service Master Key is not generated or access is lost so encryption/decryption of linked server passwords cannot be done. |
+| <a id="7601"></a> 7601 | 16 | No | Cannot use a CONTAINS or FREETEXT predicate on %S_MSG '%.\*ls' because it is not full-text indexed. |
+| <a id="7602"></a> 7602 | 16 | No | The full-text service (msftesql%ls%ls) is not available. The system administrator must start this service. |
+| <a id="7603"></a> 7603 | 10 | No | Inconsistent accent sensitivity of full-text catalog is detected. Full-text catalog for catalog ID '%d', database ID '%d' is reset. |
+| <a id="7604"></a> 7604 | 17 | No | Full-text operation failed due to a time out. |
+| <a id="7605"></a> 7605 | 16 | No | Failed to finish full-text operation. Filegroup '%.\*ls' is empty, read-only, or not online. |
+| <a id="7606"></a> 7606 | 17 | No | Could not find full-text index for database ID %d, table or indexed view ID %d. |
+| <a id="7607"></a> 7607 | 17 | No | Search on full-text catalog '%ls' for database ID %d, table or indexed view ID %d with search condition '%ls' failed with unknown result (0x%x). |
+| <a id="7608"></a> 7608 | 16 | No | An unknown full-text failure (0x%x) occurred during "%hs". |
+| <a id="7609"></a> 7609 | 17 | No | Full-Text Search is not installed, or a full-text component cannot be loaded. |
+| <a id="7610"></a> 7610 | 16 | No | Access is denied to "%.\*ls", or the path is invalid. |
+| <a id="7611"></a> 7611 | 10 | No | Warning: Request to start a population in full-text catalog '%ls' ignored because a population is currently active for this full-text catalog. |
+| <a id="7612"></a> 7612 | 16 | No | NULL or Invalid type of value specified for '%ls' parameter. |
+| <a id="7613"></a> 7613 | 16 | No | Cannot drop index '%.\*ls' because it enforces the full-text key for table or indexed view '%.\*ls'. |
+| <a id="7614"></a> 7614 | 16 | No | Cannot alter or drop column '%.\*ls' because it is enabled for Full-Text Search. |
+| <a id="7615"></a> 7615 | 16 | No | A CONTAINS or FREETEXT predicate can only operate on one table or indexed view. Qualify the use of \* with a table or indexed view name. |
+| <a id="7616"></a> 7616 | 16 | No | Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable full-text search for the database. The functionality to disable and enable full-text search for a database is deprecated. Please change your application. |
+| <a id="7617"></a> 7617 | 16 | No | Query does not reference the full-text indexed table or indexed view, or user does not have permission to perform this action. |
+| <a id="7618"></a> 7618 | 16 | No | Cannot use full-text search in master, tempdb, or model database. |
+| <a id="7619"></a> 7619 | 16 | No | The execution of a full-text query failed. "%ls" |
+| <a id="7620"></a> 7620 | 16 | No | The conversion to data type %ls failed for the full-text search key. |
+| <a id="7621"></a> 7621 | 16 | No | Invalid use of full-text predicate in the HAVING clause. |
+| <a id="7622"></a> 7622 | 17 | No | There is not sufficient disk space to complete this operation for the full-text catalog "%ls". |
+| <a id="7623"></a> 7623 | 10 | No | A default full-text catalog does not exist in database '%.\*ls' or user does not have permission to perform this action. |
+| <a id="7624"></a> 7624 | 16 | No | Full-text catalog '%ls' is in an unusable state. Drop and re-create this full-text catalog. |
+| <a id="7625"></a> 7625 | 16 | No | Full-text table or indexed view has more than one LCID among its full-text indexed columns. |
+| <a id="7626"></a> 7626 | 15 | No | The top_n_by_rank argument ('%d') must be greater than or equal to zero. |
+| <a id="7627"></a> 7627 | 16 | No | Cannot create the full-text catalog in the directory "%.\*ls" for the clustered server. Only directories on a disk in the cluster group of the server can be used. |
+| <a id="7628"></a> 7628 | 10 | No | Warning: No appropriate filter was found during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Some columns of the row were not indexed. |
+| <a id="7629"></a> 7629 | 17 | No | Cannot open or query the full-text default path registry key. The full-text default catalog path is invalid. |
+| <a id="7630"></a> 7630 | 15 | No | Syntax error near '%.\*ls' in the full-text search condition '%.\*ls'. |
+| <a id="7631"></a> 7631 | 10 | No | Warning: No appropriate wordbreaker was found during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Neutral wordbreaker was used for some columns of the row. |
+| <a id="7632"></a> 7632 | 15 | No | The value of the Weight argument must be between 0.0 and 1.0. |
+| <a id="7633"></a> 7633 | 16 | No | Couldn't complete full-text operation because full-text key for table or indexed view '%.\*ls' is offline. |
+| <a id="7634"></a> 7634 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Failed to index the row. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext. |
+| <a id="7635"></a> 7635 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Attempt will be made to reindex it. If recently performed in-place upgrade to SQL2025, For help please see https://aka.ms/sqlfulltext. |
+| <a id="7636"></a> 7636 | 10 | No | Warning: Request to start a full-text index population on table or indexed view '%.\*ls' is ignored because a population is currently active for this table or indexed view. |
+| <a id="7637"></a> 7637 | 16 | No | Database is not fully started up or it is not in an ONLINE state. Try the full-text DDL command again after database is started up and becomes ONLINE. |
+| <a id="7638"></a> 7638 | 10 | No | Warning: Request to stop change tracking has deleted all changes tracked on table or indexed view '%ls'. |
+| <a id="7639"></a> 7639 | 16 | No | Cannot use a full-text predicate on %S_MSG '%.\*ls' because it is not located on the local server. |
+| <a id="7640"></a> 7640 | 10 | No | Warning: Request to stop tracking changes on table or indexed view '%.\*ls' will not stop population currently in progress on the table or indexed view. |
+| <a id="7641"></a> 7641 | 16 | No | Full-Text catalog '%ls' does not exist in database '%.\*ls' or user does not have permission to perform this action. |
+| <a id="7642"></a> 7642 | 16 | No | A full-text catalog named '%ls' already exists in this database. Use a different name. |
+| <a id="7643"></a> 7643 | 16 | No | Cannot use a CONTAINS or FREETEXT predicate on %S_MSG '%.\*ls' because none of its columns are full-text indexed. |
+| <a id="7644"></a> 7644 | 16 | No | Full-text crawl manager has not been initialized. Any crawl started before the crawl manager was fully initialized will need to be restarted. Please restart SQL Server and retry the command. You should also check the error log to fix any failures that might have caused the crawl manager to fail. |
+| <a id="7645"></a> 7645 | 16 | No | Null or empty full-text predicate. |
+| <a id="7646"></a> 7646 | 16 | No | Fulltext predicate references columns from two different tables or indexed views '%.\*ls' and '%.\*ls' which is not allowed. |
+| <a id="7647"></a> 7647 | 10 | No | Warning: Configuration of full-text catalog at '%ls' could not be saved during detach database. |
+| <a id="7648"></a> 7648 | 10 | No | Warning: Failed to attach full-text catalog '%ls'. |
+| <a id="7649"></a> 7649 | 10 | No | Warning: Failed to dismount full-text catalog at '%ls'. |
+| <a id="7650"></a> 7650 | 10 | No | Warning: Failed to drop full-text catalog at '%ls'. |
+| <a id="7651"></a> 7651 | 10 | No | Warning: The ongoing population is necessary to ensure an up-to-date index. If needed, stop change tracking first, and then deactivate the full-text index population. |
+| <a id="7652"></a> 7652 | 16 | No | A full-text index for table or indexed view '%.\*ls' has already been created. |
+| <a id="7653"></a> 7653 | 16 | No | '%ls' is not a valid index to enforce a full-text search key. A full-text search key must be a unique, non-nullable, single-column index which is not offline, is not defined on a non-deterministic or imprecise nonpersisted computed column, does not have a filter, and has maximum size of %d bytes. Choose another index for the full-text key. |
+| <a id="7654"></a> 7654 | 16 | No | Unable to obtain the population status of the table or indexed view '%.\*ls'. |
+| <a id="7655"></a> 7655 | 16 | No | TYPE COLUMN option must be specified with column of image or varbinary(max) type. |
+| <a id="7656"></a> 7656 | 16 | No | Full-text index for table or indexed view '%.\*ls' cannot be populated because the database is in single-user access mode. |
+| <a id="7657"></a> 7657 | 10 | No | Warning: Table or indexed view '%.\*ls' has full-text indexed columns that are of type image, text, or ntext. Full-text change tracking cannot track WRITETEXT or UPDATETEXT operations performed on these columns. |
+| <a id="7658"></a> 7658 | 16 | No | Table or indexed view '%.\*ls' does not have a full-text index or user does not have permission to perform this action. |
+| <a id="7659"></a> 7659 | 16 | No | Cannot activate full-text search for table or indexed view '%.\*ls' because no columns have been enabled for full-text search. |
+| <a id="7660"></a> 7660 | 16 | No | Full-text search must be activated on table or indexed view '%.\*ls' before this operation can be performed. |
+| <a id="7661"></a> 7661 | 10 | No | Warning: Full-text change tracking is currently enabled for table or indexed view '%.\*ls'. |
+| <a id="7662"></a> 7662 | 10 | No | Warning: Full-text auto propagation is currently enabled for table or indexed view '%.\*ls'. |
+| <a id="7663"></a> 7663 | 16 | No | Option 'WITH NO POPULATION' should not be used when change tracking is enabled. |
+| <a id="7664"></a> 7664 | 16 | No | Full-text change tracking must be started on table or indexed view '%.\*ls' before the changes can be flushed. |
+| <a id="7665"></a> 7665 | 16 | No | Full Crawl must be executed on table or indexed view '%.\*ls'. Columns affecting the index have been added or dropped since the last index full population. |
+| <a id="7666"></a> 7666 | 16 | No | User does not have permission to perform this action. |
+| <a id="7667"></a> 7667 | 16 | No | Failed to create full-text catalog '%ls'. |
+| <a id="7668"></a> 7668 | 16 | No | Cannot drop full-text catalog '%ls' because it contains a full-text index. |
+| <a id="7669"></a> 7669 | 10 | No | Warning: Full-text index for table or indexed view '%.\*ls' cannot be populated because the database is in single-user access mode. Change tracking is stopped for this table or indexed view. |
+| <a id="7670"></a> 7670 | 16 | No | Column '%.\*ls' cannot be used for full-text search because it is not a character-based, XML, image or varbinary(max) type column or it is encrypted. |
+| <a id="7671"></a> 7671 | 16 | No | Column '%.\*ls' cannot be used as full-text type column for image column. It must be a character-based column with a size less or equal than %d characters. |
+| <a id="7672"></a> 7672 | 16 | No | A full-text index cannot be created on the table or indexed view because duplicate column '%.\*ls' is specified. |
+| <a id="7673"></a> 7673 | 10 | No | Warning: Full-text change tracking is currently disabled for table or indexed view '%.\*ls'. |
+| <a id="7674"></a> 7674 | 10 | No | Warning: The fulltext catalog '%.\*ls' is being dropped and is currently set as default. |
+| <a id="7676"></a> 7676 | 10 | No | Warning: Full-text auto propagation is on. Stop crawl request is ignored. |
+| <a id="7677"></a> 7677 | 16 | No | Column "%.\*ls" is not full-text indexed. |
+| <a id="7678"></a> 7678 | 16 | No | The following string is not defined as a language alias in syslanguages: %.\*ls. |
+| <a id="7679"></a> 7679 | 16 | No | Full-text index language of column "%.\*ls" is not a language supported by full-text search. |
+| <a id="7680"></a> 7680 | 16 | No | Default full-text index language is not a language supported by full-text search. |
+| <a id="7681"></a> 7681 | 10 | No | Warning: Directory '%ls' does not have a valid full-text catalog. Full-text catalog header file or attach state file either is missing or corrupted. The full-text catalog cannot be attached. |
+| <a id="7682"></a> 7682 | 10 | No | The component '%ls' reported error while indexing. Component path '%ls'. |
+| <a id="7683"></a> 7683 | 16 | No | Errors were encountered during full-text index population for table or indexed view '%ls', database '%ls' (table or indexed view ID '%d', database ID '%d'). Please see full-text crawl logs for details. |
+| <a id="7684"></a> 7684 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Failed to index the row. |
+| <a id="7685"></a> 7685 | 10 | No | Error '%ls' occurred during full-text index population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d'), full-text key value '%ls'. Attempt will be made to reindex it. |
+| <a id="7686"></a> 7686 | 10 | No | Cannot use a CONTAINS, FREETEXT, CONTAINSTABLE or FREETEXTTABLE construct on table or indexed view '%.\*ls' because none of its columns are full-text indexed. Register at least one column for full-text search using ALTER FULLTEXT INDEX statement. |
+| <a id="7687"></a> 7687 | 16 | No | ALTER TABLE SWITCH statement failed because table '%.\*ls' and table '%.\*ls' have non-matching fulltext indexes. |
+| <a id="7688"></a> 7688 | 16 | No | ALTER TABLE SWITCH statement failed because there are active crawls on the fulltext index, wait until crawl completed or disable fulltext index. |
+| <a id="7689"></a> 7689 | 16 | No | Execution of a full-text operation failed. '%ls' |
+| <a id="7690"></a> 7690 | 16 | No | Full-text operation failed because database is read only. |
+| <a id="7691"></a> 7691 | 16 | No | Access is denied to full-text log path. Full-text logging is disabled for database '%ls', catalog '%ls' (database ID '%d', catalog ID '%d'). |
+| <a id="7692"></a> 7692 | 16 | No | Full-text catalog path '%.\*ls' exceeded %d character limit. |
+| <a id="7693"></a> 7693 | 16 | No | Full-text initialization failed to create a memory clerk. |
+| <a id="7694"></a> 7694 | 16 | No | Failed to pause catalog for backup. Backup was aborted. |
+| <a id="7695"></a> 7695 | 16 | No | Operation failed. Full-text catalog backup in progress. Retry after backup operation has completed. |
+| <a id="7696"></a> 7696 | 16 | No | Invalid locale ID was specified. Please verify that the locale ID is correct and corresponding language resource has been installed. |
+| <a id="7697"></a> 7697 | 10 | No | Warning: Full-text index on table or indexed view '%.\*ls' in database '%.\*ls' has been changed after full-text catalog files backup. A full population is required to bring full-text index to a consistent state. |
+| <a id="7698"></a> 7698 | 16 | No | GROUP BY ALL cannot be used in full text search queries. |
+| <a id="7699"></a> 7699 | 16 | No | TYPE COLUMN option is not allowed for column types other than image or varbinary(max). |
+| <a id="7702"></a> 7702 | 16 | No | Empty Partition function type-parameter-list is not allowed when defining a partition function. |
+| <a id="7703"></a> 7703 | 16 | No | Can not create RANGE partition function with multiple parameter types. |
+| <a id="7704"></a> 7704 | 16 | No | The type '%.\*ls' is not valid for this operation. |
+| <a id="7705"></a> 7705 | 16 | No | Could not implicitly convert range values type specified at ordinal %d to partition function parameter type. |
+| <a id="7706"></a> 7706 | 16 | No | Partition function '%ls' is being used by one or more partition schemes. |
+| <a id="7707"></a> 7707 | 16 | No | The associated partition function '%ls' generates more partitions than there are file groups mentioned in the scheme '%ls'. |
+| <a id="7708"></a> 7708 | 16 | No | Duplicate range boundary values are not allowed in partition function boundary values list. Partition boundary values at ordinal %d and %d are equal. |
+| <a id="7709"></a> 7709 | 10 | No | Warning: Range value list for partition function '%.\*ls' is not sorted by value. Mapping of partitions to filegroups during CREATE PARTITION SCHEME will use the sorted boundary values if the function '%.\*ls' is referenced in CREATE PARTITION SCHEME. |
+| <a id="7710"></a> 7710 | 10 | No | Warning: The partition scheme '%.\*ls' does not have any next used filegroup. Partition scheme has not been changed. |
+| <a id="7711"></a> [7711](../mssqlserver-7711-database-engine-error.md) | 16 | No | The %ls option was specified more than once for the table, or for at least one of its partitions if the table is partitioned. |
+| <a id="7712"></a> 7712 | 10 | No | Partition scheme '%.\*ls' has been created successfully. '%.\*ls' is marked as the next used filegroup in partition scheme '%.\*ls'. |
+| <a id="7713"></a> 7713 | 10 | No | %d filegroups specified after the next used filegroup are ignored. |
+| <a id="7714"></a> 7714 | 16 | No | Partition range value is missing. |
+| <a id="7715"></a> 7715 | 16 | No | The specified partition range value could not be found. |
+| <a id="7716"></a> 7716 | 16 | No | Can not create or alter a partition function to have zero partitions. |
+| <a id="7717"></a> 7717 | 16 | No | The partition scheme "%.\*ls" is currently being used to partition one or more tables. |
+| <a id="7718"></a> 7718 | 16 | No | Partition range value cannot be specified for hash partitioning. |
+| <a id="7719"></a> 7719 | 16 | No | CREATE/ALTER partition function failed as only a maximum of %d partitions can be created. |
+| <a id="7720"></a> 7720 | 16 | No | Data truncated when converting range values to the partition function parameter type. The range value at ordinal %d requires data truncation. |
+| <a id="7721"></a> 7721 | 16 | No | Duplicate range boundary values are not allowed in partition function boundary values list. The boundary value being added is already present at ordinal %d of the boundary value list. |
+| <a id="7722"></a> 7722 | 16 | No | Invalid partition number %I64d specified for %S_MSG '%.\*ls', partition number can range from 1 to %d. |
+| <a id="7723"></a> 7723 | 16 | No | Only a single filegroup can be specified while creating partition scheme using option ALL to specify all the filegroups. |
+| <a id="7724"></a> 7724 | 16 | No | Computed column cannot be used as a partition key if it is not persisted. Partition key column '%.\*ls' in table '%.\*ls' is not persisted. |
+| <a id="7725"></a> 7725 | 16 | No | Alter partition function statement failed. Cannot repartition table '%.\*ls' by altering partition function '%.\*ls' because its clustered index '%.\*ls' is disabled. |
+| <a id="7726"></a> 7726 | 16 | No | Partition column '%.\*ls' has data type %s which is different from the partition function '%.\*ls' parameter data type %s. |
+| <a id="7727"></a> 7727 | 16 | No | Collation of partition column '%.\*ls' does not match collation of corresponding parameter in partition function '%.\*ls'. |
+| <a id="7728"></a> 7728 | 16 | No | Invalid partition range: %d TO %d. Lower bound must not be greater than upper bound. |
+| <a id="7729"></a> 7729 | 16 | No | Cannot specify partition number in the %S_MSG %S_MSG statement as the %S_MSG '%.\*ls' is not partitioned. |
+| <a id="7730"></a> 7730 | 16 | No | Alter %S_MSG statement failed because partition number %d does not exist in %S_MSG '%.\*ls'. |
+| <a id="7731"></a> 7731 | 16 | No | Cannot specify partition number in Alter %S_MSG statement to rebuild or reorganize a partition of %S_MSG '%.\*ls'. |
+| <a id="7732"></a> 7732 | 16 | No | Cannot specify partition number in Alter index statement along with keyword ALL to rebuild partitions of table '%.\*ls' when the table does not have any regular indexes. |
+| <a id="7733"></a> 7733 | 16 | No | '%ls' statement failed. The %S_MSG '%.\*ls' is partitioned while %S_MSG '%.\*ls' is not partitioned. |
+| <a id="7734"></a> 7734 | 10 | No | The %S_MSG '%.\*ls' specified for the clustered index '%.\*ls' was used for table '%.\*ls' even though %S_MSG '%.\*ls' is specified for it. |
+| <a id="7735"></a> 7735 | 16 | No | Cannot specify partition number in alter %S_MSG statement to rebuild or reorganize a partition of %S_MSG '%.\*ls' as %S_MSG is not partitioned. |
+| <a id="7736"></a> 7736 | 16 | No | Partition function can only be created in Enterprise edition of SQL Server. Only Enterprise edition of SQL Server supports partitioning. |
+| <a id="7737"></a> 7737 | 16 | No | Filegroup %.\*ls is of a different filegroup type than the first filegroup in partition scheme %.\*ls |
+| <a id="7738"></a> 7738 | 16 | No | Cannot enable compression for object '%.\*ls'. Only SQL Server Enterprise Edition supports compression. |
+| <a id="7739"></a> 7739 | 16 | No | The partition scheme of table '%.\*ls' cannot be changed because there exists one or more incremental statistics on the table. |
+| <a id="7740"></a> 7740 | 16 | No | A partition ID for at least one row has been modified. |
+| <a id="7741"></a> 7741 | 16 | No | The %ls option can only be specified once for the table or partition. |
+| <a id="7742"></a> 7742 | 16 | No | Invalid partition range (%d to %d). Upper bound must be greater than lower bound. |
+| <a id="7801"></a> 7801 | 15 | No | The required parameter %.\*ls was not specified. |
+| <a id="7802"></a> 7802 | 16 | No | Functions that have a return type of "%.\*ls" are unsupported through SOAP invocation. |
+| <a id="7803"></a> 7803 | 15 | No | The clause %.\*ls can not be used in the %.\*ls statement. |
+| <a id="7804"></a> 7804 | 15 | No | %.\*ls and %.\*ls can not share the same value. |
+| <a id="7805"></a> 7805 | 16 | No | The parameter SITE can not be prefixed by a scheme such as 'http://'. Valid values for SITE include {'\*' \| '+' \| 'site_name'}. |
+| <a id="7806"></a> 7806 | 16 | No | The URL specified by endpoint '%.\*ls' is already registered to receive requests or is reserved for use by another service. |
+| <a id="7807"></a> 7807 | 16 | No | An error ('0x%x') occurred while attempting to register the endpoint '%.\*ls'. |
+| <a id="7808"></a> 7808 | 10 | No | The endpoint '%.\*ls' could not be unregistered. |
+| <a id="7809"></a> 7809 | 10 | No | Cannot find the object '%.\*ls', because it does not exist or you do not have permission. |
+| <a id="7810"></a> 7810 | 15 | No | The value '%d' is not within range for the '%.\*ls' parameter. |
+| <a id="7811"></a> 7811 | 16 | No | COMPUTE BY queries are not supported over SOAP. |
+| <a id="7812"></a> 7812 | 10 | Yes | The endpoint '%.\*ls' has been established in metadata, but HTTP listening has not been enabled because HTTP support did not start successfully. Verify that the operating system and the edition of SQL Server supports native HTTP access. Check the SQL Server error log for any errors that might have occurred while starting HTTP support. |
+| <a id="7813"></a> 7813 | 16 | No | The parameter PATH must be supplied in its canonical form. An acceptable PATH is '%.\*ls'. |
+| <a id="7814"></a> 7814 | 10 | No | The specified value '%.\*ls' already exists. |
+| <a id="7815"></a> 7815 | 10 | No | The specified value '%.\*ls' does not exist. |
+| <a id="7816"></a> 7816 | 15 | No | A duplicate parameter was specified, '%.\*ls'. |
+| <a id="7817"></a> 7817 | 16 | No | The Base64 encoded input data was malformed for the parameter "%.\*ls". |
+| <a id="7818"></a> 7818 | 16 | No | The request exceeds an internal limit. Simplify or reduce the size of the request. |
+| <a id="7819"></a> 7819 | 15 | No | The SOAP method object '%.\*ls' must be specified using a fully qualified three-part name. |
+| <a id="7820"></a> 7820 | 16 | No | SOAP namespaces beginning with '%.\*ls' are disallowed because they are reserved for system use. |
+| <a id="7821"></a> 7821 | 10 | No | Cannot find the database '%.\*ls', because it does not exist or you do not have permission. |
+| <a id="7822"></a> 7822 | 16 | No | An unexpected XML node "%.\*ls" (in the namespace "%.\*ls") was found in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
+| <a id="7823"></a> 7823 | 16 | No | The "%.\*ls" XML element (in the "%.\*ls" namespace) was expected in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
+| <a id="7824"></a> 7824 | 16 | No | The "%.\*ls" XML element (in the "%.\*ls" namespace) was expected as the topmost node of the SOAP request. |
+| <a id="7825"></a> 7825 | 16 | No | A SOAP method element was expected in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
+| <a id="7826"></a> 7826 | 16 | No | Unexpected character data was found in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
+| <a id="7827"></a> 7827 | 14 | No | The user does not have permission to reserve and unreserve HTTP namespaces. |
+| <a id="7828"></a> 7828 | 11 | No | The statement is not supported on this version of the operating system. Could not find Httpapi.dll in the path. |
+| <a id="7829"></a> 7829 | 11 | No | The statement is not supported on this version of the operating system. Could not find function entry point '%.\*ls' in Httpapi.dll. |
+| <a id="7830"></a> 7830 | 16 | No | Unable to complete the operation because of an unexpected error. |
+| <a id="7831"></a> 7831 | 16 | No | A reservation for this HTTP namespace (%.\*ls) already exists. |
+| <a id="7832"></a> 7832 | 16 | No | A reservation for this HTTP namespace (%.\*ls) does not exist. |
+| <a id="7833"></a> 7833 | 16 | No | The HTTP namespace (%.\*ls) is in an invalid format. Specify the namespace in its canonical form. |
+| <a id="7834"></a> 7834 | 10 | No | The reservation for the HTTP namespace (%.\*ls) has been deleted. If there are any endpoints associated with this namespace, they will continue to receive and process requests until the server is restarted. |
+| <a id="7835"></a> 7835 | 16 | Yes | Endpoint '%.\*ls' has been disabled because it is insecurely configured. For a more information, attempt to start the endpoint using the ALTER ENDPOINT statement. |
+| <a id="7836"></a> 7836 | 20 | No | A fatal error occurred while reading the input stream from the network. The maximum number of network packets in one request was exceeded. Try using bulk insert, increasing network packet size, or reducing the size of the request. The session will be terminated. |
+| <a id="7847"></a> 7847 | 16 | No | XML data was found in the parameter '%.\*ls' which is not an XML parameter. Please entitize any invalid XML character data in this parameter, or pass the parameter in typed as XSD:anyType or sqltypes:xml. |
+| <a id="7848"></a> 7848 | 15 | No | An invalid or unsupported localeId was specified for parameter "%.\*ls". |
+| <a id="7849"></a> 7849 | 15 | No | Invalid sqlCompareOptions were specified for parameter "%.\*ls". |
+| <a id="7850"></a> 7850 | 16 | No | The SQL Server Service account does not have permission to register the supplied URL on the endpoint '%.\*ls'. Use sp_reserve_http_namespace to explicitly reserve the URL namespace before you try to register the URL again. |
+| <a id="7851"></a> 7851 | 15 | No | The %.\*ls attribute must be specified on the %.\*ls element of the parameter "%.\*ls" because it is of type %.\*ls. |
+| <a id="7852"></a> 7852 | 15 | No | Parameter "%.\*ls": If the %.\*ls attribute appears on a parameter value node of type "%.\*ls" (in the namespace "%.\*ls"), it must refer to a CLR type. |
+| <a id="7853"></a> 7853 | 16 | No | The URL specified as the path ("%.\*ls") is not in an absolute format, and must begin with "%.\*ls". |
+| <a id="7854"></a> 7854 | 16 | No | The URL value specified for the "%.\*ls" parameter is too long. |
+| <a id="7855"></a> 7855 | 15 | No | Reading from HTTP input stream failed. |
+| <a id="7856"></a> 7856 | 16 | No | XML parameters do not support non-unicode element or attribute values. |
+| <a id="7857"></a> 7857 | 16 | No | Parameter "%.\*ls": Function or procedure parameters with improperly formatted or deprecated names are not supported through Native SOAP access. Refer to documentation for rules concerning the proper naming of parameters. |
+| <a id="7858"></a> 7858 | 16 | No | The "%.\*ls" XML element (in the "%.\*ls" namespace) in the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request contained an invalid binary type. |
+| <a id="7859"></a> 7859 | 15 | No | Parameter "%.\*ls": Parameter collation cannot be specified on the "%.\*ls" node (in the namespace "%.\*ls"). |
+| <a id="7860"></a> 7860 | 15 | No | An endpoint's transport or content cannot be changed through the ALTER ENDPOINT statement. Use DROP ENDPOINT and execute the CREATE ENDPOINT statement to make these changes. |
+| <a id="7861"></a> 7861 | 15 | No | "%.\*ls" endpoints can only be of the "FOR %.\*ls" type. |
+| <a id="7862"></a> 7862 | 16 | No | An endpoint of the requested type already exists. Only one endpoint of this type is supported. Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
+| <a id="7863"></a> 7863 | 16 | No | The endpoint was not changed. The ALTER ENDPOINT statement did not contain any values to modify or update. |
+| <a id="7864"></a> 7864 | 16 | No | CREATE/ALTER ENDPOINT cannot be used to update the endpoint with this information. The Dedicated Administrator Connection endpoint is reserved and cannot be updated. |
+| <a id="7865"></a> 7865 | 16 | No | Web Services Description Language (WSDL) generation failed because the system was unable to query the metadata for the endpoint. |
+| <a id="7866"></a> 7866 | 16 | No | XML attribute and element values larger than 4000 characters are only allowed within the SOAP Body node. |
+| <a id="7867"></a> 7867 | 15 | No | An invalid sqlCollationVersion was specified for parameter "%.\*ls". |
+| <a id="7868"></a> 7868 | 15 | No | An invalid sqlSortId was specified for parameter "%.\*ls". |
+| <a id="7869"></a> 7869 | 16 | No | The endpoint name '%.\*ls' is reserved for used by SQL. Endpoint names cannot begin with '%.\*ls'. |
+| <a id="7870"></a> 7870 | 16 | No | The AFFINITY clause is not supported for endpoints of this type. |
+| <a id="7871"></a> 7871 | 16 | No | The clause "%.\*ls" is not valid for this endpoint type. |
+| <a id="7872"></a> 7872 | 16 | No | "%.\*ls" is not a parameter for procedure "%.\*ls", or it was supplied out of order. |
+| <a id="7873"></a> 7873 | 16 | No | The endpoint "%.\*ls" is a built-in endpoint and cannot be dropped. Use the protocol configuration utilities to ADD or DROP Transact-SQL endpoints. |
+| <a id="7874"></a> 7874 | 16 | No | An endpoint already exists with the bindings specified. Only one endpoint supported for a specific binding. Use ALTER ENDPOINT or DROP the existing endpoint and execute the CREATE ENDPOINT statement. |
+| <a id="7875"></a> 7875 | 16 | No | An unexpected XML construct was found in the character data of the "%.\*ls" element (in the "%.\*ls" namespace) of the SOAP request. |
+| <a id="7876"></a> 7876 | 16 | No | The operation is not supported because current connection is made to contained availability group. Reconnect to SQL Instance and retry the operation. |
+| <a id="7877"></a> 7877 | 16 | No | Backup on secondary replica is not supported in the connection to contained availability group. Reconnect to SQL Instance and retry the operation. |
+| <a id="7878"></a> 7878 | 16 | No | This "%.\*ls ENDPOINT" statement is not supported on this edition of SQL Server. |
+| <a id="7879"></a> 7879 | 10 | No | SQL Server is waiting for %d remaining sessions and connections to close. If these sessions are not closed within a reasonable amount of time, "polite" shutdown will be aborted. This message may appear several times before SQL Server is shutdown. |
+| <a id="7880"></a> 7880 | 10 | No | SQL Server has successfully finished closing sessions and connections. |
+| <a id="7881"></a> 7881 | 10 | No | SQL Server was unable to close sessions and connections in a reasonable amount of time and is aborting "polite" shutdown. |
+| <a id="7882"></a> 7882 | 16 | No | OUTPUT was requested for parameter '%.\*ls', which is not supported for a WEBMETHOD with FORMAT=NONE. |
+| <a id="7883"></a> 7883 | 16 | No | User-defined functions cannot be used for a WEBMETHOD with FORMAT=NONE. |
+| <a id="7884"></a> 7884 | 20 | Yes | Violation of tabular data stream (TDS) protocol. This is most often caused by a previous exception on this task. The last exception on the task was error %d, severity %d, address 0x%p. This connection will be terminated. |
+| <a id="7885"></a> 7885 | 20 | Yes | Network error 0x%lx occurred while sending data to the client on process ID %d batch ID %d. A common cause for this error is if the client disconnected without reading the entire response from the server. This connection will be terminated. |
+| <a id="7886"></a> 7886 | 20 | Yes | A read operation on a large object failed while sending data to the client. A common cause for this is if the application is running in READ UNCOMMITTED isolation level. This connection will be terminated. |
+| <a id="7887"></a> 7887 | 20 | Yes | The IPv6 address specified is not supported. Only addresses that are in their numeric, canonical form are supported for listening. |
+| <a id="7888"></a> 7888 | 20 | Yes | The IPv6 address specified is not supported. The server may not be configured to allow for IPv6 connectivity, or the address may not be in a recognized IPv6 format. |
+| <a id="7889"></a> 7889 | 16 | No | The SOAP headers on the request have exceeded the size limits established for this endpoint. The endpoint owner may increase these limits via ALTER ENDPOINT. |
+| <a id="7890"></a> 7890 | 16 | No | An error occurred while attempting to register the endpoint '%.\*ls'. One or more of the ports specified in the CREATE ENDPOINT statement may be bound to another process. Attempt the statement again with a different port or use netstat to find the application currently using the port and resolve the conflict. |
+| <a id="7891"></a> 7891 | 10 | No | Creation of a TSQL endpoint will result in the revocation of any 'Public' connect permissions on the '%.\*ls' endpoint. If 'Public' access is desired on this endpoint, reapply this permission using 'GRANT CONNECT ON ENDPOINT::\[%.\*ls\] to \[public\]'. |
+| <a id="7892"></a> 7892 | 16 | No | Internal subset DTDs inside SOAP requests are not allowed. |
+| <a id="7893"></a> 7893 | 15 | No | Parameter '%.\*ls': Incompatible XML attributes were present. The '%.\*ls' attribute and the '%.\*ls' attribute may not both be present on a parameter value node of type '%.\*ls' (in the namespace '%.\*ls'). |
+| <a id="7894"></a> 7894 | 16 | Yes | Listening has not been started on the endpoint '%.\*ls' found in metadata. Endpoint operations are disabled on this edition of SQL Server. |
+| <a id="7895"></a> 7895 | 14 | No | Only a system administrator can specify a custom WSDL stored procedure on the endpoint. |
+| <a id="7896"></a> 7896 | 16 | No | The column or parameter '%.\*ls' uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier. |
+| <a id="7897"></a> 7897 | 10 | No | Creating and altering SOAP endpoints will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="7898"></a> 7898 | 10 | Yes | SQL Server native SOAP support is now deprecated and will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="7899"></a> 7899 | 16 | No | The return value uses a data type not supported by SOAP. SOAP only supports data types supported in SQL Server 2005 or earlier. |
+| <a id="7901"></a> [7901](../mssqlserver-7901-database-engine-error.md) | 16 | No | The repair statement was not processed. This level of repair is not supported when the database is in emergency mode. |
+| <a id="7902"></a> 7902 | 16 | No | Columnstore index '%.\*ls' on table '%.\*ls' has metadata mismatch on column id %d and rowgroup id %d. If this is a nonclustered columnstore index, drop it and recreate it. Otherwise, contact CSS. |
+| <a id="7903"></a> [7903](../mssqlserver-7903-database-engine-error.md) | 16 | No | Table error: The orphaned file "%.\*ls" was found in the FILESTREAM directory ID %.\*ls container ID %d for object ID %d, index ID %d, partition ID %I64d, column ID %d. |
+| <a id="7904"></a> [7904](../mssqlserver-7904-database-engine-error.md) | 16 | No | Table error: Cannot find the FILESTREAM file "%.\*ls" for column ID %d (column directory ID %.\*ls container ID %d) in object ID %d, index ID %d, partition ID %I64d, page ID %S_PGID, slot ID %d. |
+| <a id="7905"></a> [7905](../mssqlserver-7905-database-engine-error.md) | 16 | No | Database error: The directory "%.\*ls" is not a valid FILESTREAM directory in container ID %d. |
+| <a id="7906"></a> [7906](../mssqlserver-7906-database-engine-error.md) | 16 | No | Database error: The file "%.\*ls" is not a valid FILESTREAM file in container ID %d. |
+| <a id="7907"></a> [7907](../mssqlserver-7907-database-engine-error.md) | 16 | No | Table error: The directory "%.\*ls" under the rowset directory ID %.\*ls is not a valid FILESTREAM directory in container ID %d. |
+| <a id="7908"></a> [7908](../mssqlserver-7908-database-engine-error.md) | 16 | No | Table error: The file "%.\*ls" in the rowset directory ID %.\*ls is not a valid FILESTREAM file in container ID %d. |
+| <a id="7909"></a> 7909 | 20 | No | The emergency-mode repair failed.You must restore from backup. |
+| <a id="7910"></a> [7910](../mssqlserver-7910-database-engine-error.md) | 10 | No | Repair: The page %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
+| <a id="7911"></a> [7911](../mssqlserver-7911-database-engine-error.md) | 10 | No | Repair: The page %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
+| <a id="7912"></a> [7912](../mssqlserver-7912-database-engine-error.md) | 10 | No | Repair: The extent %S_PGID has been allocated to object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
+| <a id="7913"></a> [7913](../mssqlserver-7913-database-engine-error.md) | 10 | No | Repair: The extent %S_PGID has been deallocated from object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
+| <a id="7914"></a> [7914](../mssqlserver-7914-database-engine-error.md) | 10 | No | Repair: %ls page at %S_PGID has been rebuilt. |
+| <a id="7915"></a> [7915](../mssqlserver-7915-database-engine-error.md) | 10 | No | Repair: IAM chain for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), has been truncated before page %S_PGID and will be rebuilt. |
+| <a id="7916"></a> [7916](../mssqlserver-7916-database-engine-error.md) | 10 | No | Repair: Deleted record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), on page %S_PGID, slot %d. Indexes will be rebuilt. |
+| <a id="7917"></a> 7917 | 10 | No | Repair: Converted forwarded record for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls), at page %S_PGID, slot %d to a data row. |
+| <a id="7918"></a> 7918 | 10 | No | Repair: Page %S_PGID next and %S_PGID previous pointers have been set to match each other in object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). |
+| <a id="7919"></a> 7919 | 16 | No | Repair statement not processed. Database needs to be in single user mode. |
+| <a id="7920"></a> [7920](../mssqlserver-7920-database-engine-error.md) | 10 | No | Processed %ld entries in system catalog for database ID %d. |
+| <a id="7921"></a> 7921 | 16 | No | Repair statement not processed. Database cannot be a snapshot. |
+| <a id="7922"></a> 7922 | 16 | No | \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* |
+| <a id="7923"></a> [7923](../mssqlserver-7923-database-engine-error.md) | 10 | No | Table %.\*ls Object ID %ld. |
+| <a id="7924"></a> 7924 | 10 | No | Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). FirstIAM %S_PGID. Root %S_PGID. Dpages %I64d. |
+| <a id="7925"></a> 7925 | 10 | No | Index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). %I64d pages used in %I64d dedicated extents. |
+| <a id="7926"></a> 7926 | 16 | No | Check statement aborted. The database could not be checked as a database snapshot could not be created and the database or table could not be locked. See Microsoft Knowledge Base article 928518 for details of when this behavior is expected and what workarounds exist. Also see previous errors for more details. |
+| <a id="7927"></a> 7927 | 10 | No | Total number of extents is %I64d. |
+| <a id="7928"></a> 7928 | 16 | No | The database snapshot for online checks could not be created. Either the reason is given in a previous error or one of the underlying volumes does not support sparse files or alternate streams. Attempting to get exclusive access to run checks offline. |
+| <a id="7929"></a> 7929 | 16 | No | Check statement aborted. Database contains deferred transactions. |
+| <a id="7930"></a> 7930 | 16 | No | Mirroring must be removed from the database for this DBCC command. |
+| <a id="7931"></a> [7931](../mssqlserver-7931-database-engine-error.md) | 16 | No | Database error: The FILESTREAM directory ID %.\*ls for a partition was seen two times. |
+| <a id="7932"></a> [7932](../mssqlserver-7932-database-engine-error.md) | 16 | No | Table error: The FILESTREAM directory ID %.\*ls for object ID %d, index ID %d, partition ID %I64d is in filegroup %d, but should be in filegroup %d. |
+| <a id="7933"></a> [7933](../mssqlserver-7933-database-engine-error.md) | 16 | No | Table error: A FILESTREAM directory ID %.\*ls exists for a partition, but the corresponding partition does not exist in the database. |
+| <a id="7934"></a> [7934](../mssqlserver-7934-database-engine-error.md) | 16 | No | DBCC CHECK cannot proceed on database %.\*ls because it is a Secondary Replica and either Snapshot creation failed or the WITH TABLOCK option was specified. Secondary Replica databases cannot be exclusively locked for DBCC CHECK. Reason may have been given in previous error. |
+| <a id="7935"></a> [7935](../mssqlserver-7935-database-engine-error.md) | 16 | No | Table error: A FILESTREAM directory ID %.\*ls exists for a column of object ID %d, index ID %d, partition ID %I64d, but that column does not exist in the partition. |
+| <a id="7936"></a> [7936](../mssqlserver-7936-database-engine-error.md) | 16 | No | Table error: The FILESTREAM directory ID %.\*ls exists for column ID %d of object ID %d, index ID %d, partition ID %I64d, but that column is not a FILESTREAM column. |
+| <a id="7937"></a> [7937](../mssqlserver-7937-database-engine-error.md) | 16 | No | Columnstore index has one or more missing column segments. Please run DBCC CHECKDB for more information. |
+| <a id="7938"></a> 7938 | 16 | No | Table error: object ID %d, index ID %d, partition ID %I64d processing encountered file name "%.\*ls" twice in the column directory %d container ID %d (for column ID %d). |
+| <a id="7939"></a> 7939 | 16 | No | Cannot detach database '%.\*ls' because it does not exist. |
+| <a id="7940"></a> 7940 | 16 | No | System databases master, model, msdb, and tempdb cannot be detached. |
+| <a id="7941"></a> 7941 | 16 | No | Table error: object ID %d, index ID %d, partition ID %I64d processing encountered file name "%.\*ls" twice in the column ID %d (for column directory %d container ID %d). |
+| <a id="7942"></a> 7942 | 10 | No | DBCC %ls scanning '%.\*ls' table... |
+| <a id="7943"></a> 7943 | 10 | No | Table: '%.\*ls' (%d); index ID: %d, database ID: %d |
+| <a id="7944"></a> 7944 | 10 | No | %ls level scan performed. |
+| <a id="7945"></a> 7945 | 10 | No | - Pages Scanned................................: %I64d |
+| <a id="7946"></a> 7946 | 10 | No | - Extents Scanned..............................: %I64d |
+| <a id="7947"></a> 7947 | 10 | No | - Extent Switches..............................: %I64d |
+| <a id="7948"></a> 7948 | 10 | No | - Avg. Pages per Extent........................: %3.1f |
+| <a id="7949"></a> 7949 | 10 | No | - Scan Density \[Best Count:Actual Count\].......: %4.2f%ls \[%I64d:%I64d\] |
+| <a id="7950"></a> 7950 | 10 | No | - Logical Scan Fragmentation ..................: %4.2f%ls |
+| <a id="7951"></a> 7951 | 10 | No | Warning: Could not complete filestream consistency checks due to an operating system error. Any consistency errors found in the filestream subsystem will be silenced. Please refer to other errors for more information. This condition is likely transient; try rerunning the command. |
+| <a id="7952"></a> 7952 | 10 | No | - Extent Scan Fragmentation ...................: %4.2f%ls |
+| <a id="7953"></a> 7953 | 10 | No | - Avg. Bytes Free per Page.....................: %3.1f |
+| <a id="7954"></a> 7954 | 10 | No | - Avg. Page Density (full).....................: %4.2f%ls |
+| <a id="7955"></a> 7955 | 16 | No | Invalid SPID %d specified. |
+| <a id="7956"></a> 7956 | 16 | No | Table error: The FILESTREAM file "%.\*ls" for column ID %d was found in column directory ID %.\*ls of container ID %d but should be in container ID %d in object ID %d, index ID %d, partition ID %I64d, page ID %S_PGID, slot ID %d. |
+| <a id="7957"></a> 7957 | 10 | No | Cannot display the specified SPID's buffer; in transition. |
+| <a id="7958"></a> 7958 | 16 | No | The specified SPID does not process input/output data streams. |
+| <a id="7959"></a> 7959 | 16 | No | Columnstore index has one or more missing dictionaries. Please run DBCC CHECKDB for more info. |
+| <a id="7960"></a> 7960 | 16 | No | An invalid server process identifier (SPID) %d or batch ID %d was specified. |
+| <a id="7961"></a> 7961 | 16 | No | Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) , page ID %S_PGID, row ID %d. Column '%.\*ls' is a var column with a NULL value and non-zero data length |
+| <a id="7962"></a> 7962 | 16 | No | Invalid BATCHID %d specified. |
+| <a id="7963"></a> 7963 | 16 | No | Database error: The file "%.\*ls" is not a valid FILESTREAM LOG file in container ID %d. |
+| <a id="7964"></a> 7964 | 10 | No | Repair: Deleted FILESTREAM file "%.\*ls" for column ID %d, for object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) on page %S_PGID, slot %d. |
+| <a id="7965"></a> 7965 | 16 | No | Table error: Could not check object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls) due to invalid allocation (IAM) page(s). |
+| <a id="7966"></a> 7966 | 10 | No | Warning: NO_INDEX option of %ls being used. Checks on non-system indexes will be skipped. |
+| <a id="7967"></a> 7967 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls' has a missing column segment on column id %d and rowgroup id %d. Restore the data from a backup. |
+| <a id="7968"></a> 7968 | 10 | No | Transaction information for database '%.\*ls'. |
+| <a id="7969"></a> 7969 | 16 | No | No active open transactions. |
+| <a id="7970"></a> 7970 | 10 | No | %hsOldest active transaction: |
+| <a id="7971"></a> 7971 | 10 | No | SPID (server process ID): %d%s |
+| <a id="7972"></a> 7972 | 10 | No | UID (user ID) : %d |
+| <a id="7973"></a> 7973 | 16 | No | Clustered column store index '%.\*ls' on table '%.\*ls' has erroneous content in its mapping index. |
+| <a id="7974"></a> 7974 | 10 | No | Name : %.\*ls |
+| <a id="7975"></a> 7975 | 10 | No | LSN : (%d:%d:%d) |
+| <a id="7976"></a> 7976 | 16 | No | Nonclustered columnstore index '%.\*ls' on table '%.\*ls' has a missing column segment on column id %d and rowgroup id %d. Drop and recreate the nonclustered columnstore index. |
+| <a id="7977"></a> 7977 | 10 | No | Start time : %.\*ls |
+| <a id="7978"></a> 7978 | 10 | No | SID : %.\*ls |
+| <a id="7979"></a> 7979 | 10 | No | %hsReplicated Transaction Information: |
+| <a id="7980"></a> 7980 | 10 | No | Oldest distributed LSN : (%d:%d:%d) |
+| <a id="7981"></a> 7981 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls', column '%.\*ls' has one or more values out of range for data type '%.\*ls'. Restore the data from a backup. |
+| <a id="7982"></a> 7982 | 10 | No | Oldest non-distributed LSN : (%d:%d:%d) |
+| <a id="7983"></a> 7983 | 14 | No | User '%.\*ls' does not have permission to run DBCC %ls for database '%.\*ls'. |
+| <a id="7984"></a> [7984](../mssqlserver-7984-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d. Page %S_PGID has unexpected page type %d. Check statement terminated due to unrepairable error. |
+| <a id="7985"></a> 7985 | 16 | No | System table pre-checks: Object ID %d. Could not read and latch page %S_PGID with latch type %s. Check statement terminated due to unrepairable error. |
+| <a id="7986"></a> [7986](../mssqlserver-7986-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d has cross-object chain linkage. Page %S_PGID points to %S_PGID in alloc unit ID %I64d (should be %I64d). Check statement terminated due to unrepairable error. |
+| <a id="7987"></a> [7987](../mssqlserver-7987-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d has chain linkage mismatch. %S_PGID-\>next = %S_PGID, but %S_PGID-\>prev = %S_PGID. Check statement terminated due to unrepairable error. |
+| <a id="7988"></a> [7988](../mssqlserver-7988-database-engine-error.md) | 16 | No | System table pre-checks: Object ID %d. Loop in data chain detected at %S_PGID. Check statement terminated due to unrepairable error. |
+| <a id="7989"></a> 7989 | 16 | No | Checking identity information: current identity value '%.\*hs'. |
+| <a id="7991"></a> 7991 | 16 | No | Clustered columnstore index '%.\*ls' on table '%.\*ls' has a missing dictionary on column id %d and rowgroup id %d. Restore the data from a backup. |
+| <a id="7992"></a> 7992 | 16 | No | Cannot shrink 'read only' database '%.\*ls'. |
+| <a id="7993"></a> 7993 | 10 | No | Cannot shrink file '%d' in database '%.\*ls' to %u pages as it only contains %u pages. |
+| <a id="7994"></a> 7994 | 10 | No | DBCC CheckDatabase on resource database will be skipped because user '%.\*ls' does not have permission. |
+| <a id="7995"></a> [7995](../mssqlserver-7995-database-engine-error.md) | 16 | No | Database '%.\*ls': consistency errors in system catalogs prevent further DBCC %ls processing. |
+| <a id="7996"></a> 7996 | 16 | No | Extended stored procedures can only be created in the master database. |
+| <a id="7997"></a> 7997 | 16 | No | '%.\*ls' does not contain an identity column. |
+| <a id="7998"></a> 7998 | 16 | No | Checking identity information: current identity value '%.\*hs', current column value '%.\*hs'. |
+| <a id="7999"></a> 7999 | 16 | No | Could not find any index named '%.\*ls' for table '%.\*ls'. |

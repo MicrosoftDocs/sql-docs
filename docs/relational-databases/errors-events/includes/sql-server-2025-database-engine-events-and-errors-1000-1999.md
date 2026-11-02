@@ -7,483 +7,483 @@ ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
-| 1001 | 16 | No | Line %d: Length or precision specification %d is invalid. |
-| 1002 | 16 | No | Line %d: Specified scale %d is invalid. |
-| 1003 | 15 | No | Line %d: %ls clause allowed only for %ls. |
-| 1004 | 16 | No | Invalid column prefix '%.\*ls': No table name specified |
-| 1005 | 15 | No | Line %d: Invalid procedure number (%d). Must be between 1 and 32767. |
-| 1006 | 15 | No | CREATE TRIGGER contains no statements. |
-| 1007 | 15 | No | The %S_MSG '%.\*ls' is out of the range for numeric representation (maximum precision 38). |
-| 1008 | 15 | No | The SELECT item identified by the ORDER BY number %d contains a variable as part of the expression identifying a column position. Variables are only allowed when ordering by an expression referencing a column name. |
-| 1009 | 16 | No | The keyword DEFAULT is not allowed in DBCC commands. |
-| 1010 | 15 | No | Invalid escape character '%.\*ls'. |
-| 1011 | 15 | No | The correlation name '%.\*ls' is specified multiple times in a FROM clause. |
-| 1012 | 15 | No | The correlation name '%.\*ls' has the same exposed name as table '%.\*ls'. |
-| 1013 | 15 | No | The objects "%.\*ls" and "%.\*ls" in the FROM clause have the same exposed names. Use correlation names to distinguish them. |
-| 1014 | 15 | No | A TOP or FETCH clause contains an invalid value. |
-| 1015 | 15 | No | An aggregate cannot appear in an ON clause unless it is in a subquery contained in a HAVING clause or select list, and the column being aggregated is an outer reference. |
-| 1016 | 15 | No | Outer join operators cannot be specified in a query containing joined tables. |
-| 1017 | 15 | No | The %ls hint cannot be specified more than once. |
-| 1018 | 15 | No | Incorrect syntax near '%.\*ls'. If this is intended as a part of a table hint, A WITH keyword and parenthesis are now required. See SQL Server Books Online for proper syntax. |
-| 1019 | 15 | No | Invalid column list after object name in GRANT/REVOKE statement. |
-| 1020 | 15 | No | Sub-entity lists (such as column or security expressions) cannot be specified for entity-level permissions. |
-| 1021 | 10 | No | FIPS Warning: Line %d has the non-ANSI statement '%ls'. |
-| 1022 | 10 | No | FIPS Warning: Line %d has the non-ANSI clause '%ls'. |
-| 1023 | 15 | No | Invalid parameter %d specified for %ls. |
-| 1024 | 10 | No | FIPS Warning: Line %d has the non-ANSI function '%ls'. |
-| 1025 | 10 | No | FIPS Warning: The length of identifier '%.\*ls' exceeds 18. |
-| 1026 | 16 | No | GOTO cannot be used to jump into a TRY or CATCH scope. |
-| 1027 | 15 | No | Too many expressions are specified in a CUBE in the GROUP BY clause. The maximum number is %d. |
-| 1028 | 15 | No | The CUBE, ROLLUP, and GROUPING SETS constructs are not allowed in a GROUP BY ALL clause. |
-| 1029 | 15 | No | Browse mode is invalid for subqueries and derived tables. |
-| 1030 | 16 | No | Only constants are allowed here. Time literal is not permitted because it refers to the current date. |
-| 1031 | 15 | No | Percent values must be between 0 and 100. |
-| 1032 | 16 | No | Cannot use the column prefix '%.\*ls'. This must match the object in the UPDATE clause '%.\*ls'. |
-| 1033 | 16 | No | The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified. |
-| 1034 | 15 | No | Syntax error: Duplicate specification of the action "%.\*s" in the trigger declaration. |
-| 1035 | 15 | No | Incorrect syntax near '%.\*ls', expected '%.\*ls'. |
-| 1036 | 15 | No | File option %hs is required in this CREATE/ALTER DATABASE statement. |
-| 1037 | 15 | No | The CASCADE, WITH GRANT or AS options cannot be specified with statement permissions. |
-| 1038 | 15 | No | An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or \[\] are not allowed. Change the alias to a valid name. |
-| 1039 | 16 | No | Option '%.\*ls' is specified more than once. |
-| 1040 | 15 | No | The value %d used with MAX_OUTSTANDING_IO_PER_VOLUME is not valid; MAX_OUTSTANDING_IO_PER_VOLUME must be greater than 0 and less than or equal to %d. |
-| 1041 | 15 | No | Option %.\*ls is not allowed for a LOG file. |
-| 1042 | 15 | No | Conflicting %ls optimizer hints specified. |
-| 1043 | 16 | No | '%.\*ls' is not yet implemented. |
-| 1044 | 15 | No | Cannot use an existing function name to specify a stored procedure name. |
-| 1045 | 15 | No | Aggregates are not allowed in this context. Only scalar expressions are allowed. |
-| 1046 | 15 | No | Subqueries are not allowed in this context. Only scalar expressions are allowed. |
-| 1047 | 15 | No | Conflicting locking hints specified. |
-| 1048 | 15 | No | Conflicting cursor options %ls and %ls. |
-| 1049 | 15 | No | Mixing old and new syntax to specify cursor options is not allowed. |
-| 1050 | 15 | No | This syntax is only allowed for parameterized queries. |
-| 1051 | 15 | No | Cursor parameters in a stored procedure must be declared with OUTPUT and VARYING options, and they must be specified in the order CURSOR VARYING OUTPUT. |
-| 1052 | 15 | No | Conflicting %ls options "%ls" and "%ls". |
-| 1053 | 15 | No | For DROP STATISTICS, you must provide both the object (table or view) name and the statistics name, in the form "objectname.statisticsname". |
-| 1054 | 15 | No | Syntax '%ls' is not allowed in schema-bound objects. |
-| 1055 | 15 | No | '%.\*ls' is an invalid name because it contains a NULL character or an invalid unicode character. |
-| 1056 | 15 | No | The number of elements in the select list exceeds the maximum allowed number of %d elements. |
-| 1057 | 15 | No | The IDENTITY function cannot be used with a SELECT INTO statement containing a UNION, INTERSECT or EXCEPT operator. |
-| 1058 | 15 | No | Cannot specify both READ_ONLY and FOR READ ONLY on a cursor declaration. |
-| 1059 | 15 | No | Cannot set or reset the 'parseonly' option within a procedure or function. |
-| 1060 | 15 | No | The number of rows provided for a TOP or FETCH clauses row count parameter must be an integer. |
-| 1061 | 16 | No | The text/ntext/image constants are not yet implemented. |
-| 1062 | 16 | No | The TOP N WITH TIES clause is not allowed without a corresponding ORDER BY clause. |
-| 1063 | 16 | No | A filegroup cannot be added using ALTER DATABASE ADD FILE. Use ALTER DATABASE ADD FILEGROUP. |
-| 1064 | 16 | No | A filegroup cannot be used with log files. |
-| 1065 | 15 | No | The NOLOCK and READUNCOMMITTED lock hints are not allowed for target tables of INSERT, UPDATE, DELETE or MERGE statements. |
-| 1066 | 10 | No | Warning. Line %d: The option '%ls' is obsolete and has no effect. |
-| 1067 | 15 | No | The SET SHOWPLAN statements must be the only statements in the batch. |
-| 1068 | 16 | No | Only one list of index hints per table is allowed. |
-| 1069 | 16 | No | Index hints are only allowed in a FROM or OPTION clause. |
-| 1070 | 15 | No | CREATE INDEX option '%.\*ls' is no longer supported. |
-| 1071 | 16 | No | Cannot specify a JOIN algorithm with a remote JOIN. |
-| 1072 | 16 | No | A REMOTE hint can only be specified with an INNER JOIN clause. |
-| 1073 | 15 | No | '%.\*ls' is not a recognized cursor option for cursor %.\*ls. |
-| 1074 | 15 | No | Creation of temporary functions is not allowed. |
-| 1075 | 15 | No | RETURN statements in scalar valued functions must include an argument. |
-| 1076 | 15 | No | Function '%s' requires at least %d argument(s). |
-| 1077 | 15 | No | INSERT into an identity column not allowed on table variables. |
-| 1078 | 15 | No | '%.\*ls %.\*ls' is not a recognized option. |
-| 1079 | 15 | No | A variable cannot be used to specify a search condition in a fulltext predicate when accessed through a cursor. |
-| 1080 | 15 | No | The integer value %.\*ls is out of range. |
-| 1081 | 16 | No | %s does not allow specifying the database name as a prefix to the assembly name. |
-| 1082 | 15 | No | "%.\*ls" does not support synchronous trigger registration. |
-| 1083 | 15 | No | OWNER is not a valid option for EXECUTE AS in the context of server and database level triggers. |
-| 1084 | 15 | No | '%.\*ls' is an invalid event type. |
-| 1085 | 15 | No | '%.\*ls' event type does not support event notifications. |
-| 1086 | 16 | No | The FOR XML and FOR JSON clauses are invalid in views, inline functions, derived tables, and subqueries when they contain a set operator. To work around, wrap the SELECT containing a set operator using derived table or common table expression or view and apply FOR XML or FOR JSON on top of it. |
-| 1087 | 15 | No | Must declare the table variable "%.\*ls". |
-| 1088 | 15 | No | Cannot find the object "%.\*ls" because it does not exist or you do not have permissions. |
-| 1089 | 15 | No | The SET FMTONLY OFF statement must be the last statement in the batch. |
-| 1090 | 15 | No | Invalid default for parameter %d. |
-| 1091 | 15 | No | The option "%ls" is not valid for this function. |
-| 1092 | 16 | No | In this context %d statistics name(s) cannot be specified for option '%ls'. |
-| 1093 | 16 | No | "%.\*ls" is not a valid broker name. |
-| 1094 | 15 | No | Cannot specify a schema name as a prefix to the trigger name for database and server level triggers. |
-| 1095 | 15 | No | "%.\*ls" has already been specified as an event type. |
-| 1096 | 15 | No | Default parameter values for CLR types, nvarchar(max), varbinary(max), xml and encrypted types are not supported. |
-| 1097 | 15 | No | Cannot use If UPDATE within this CREATE TRIGGER statement. |
-| 1098 | 15 | No | The specified event type(s) is/are not valid on the specified target object. |
-| 1099 | 15 | No | The ON clause is not valid for this statement. |
-| [1101](../mssqlserver-1101-database-engine-error.md) | 17 | Yes | Could not allocate a new page for database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
-| 1102 | 22 | Yes | IAM page %S_PGID for object ID %ld is incorrect. The %S_MSG ID on page is %ld; should be %ld. |
-| 1104 | 17 | No | Tempdb ran out of space during spilling. Create space by dropping objects and/or rewrite the query to consume fewer rows. If the issue still persists, consider upgrading to a higher service level objective. |
-| [1105](../mssqlserver-1105-database-engine-error.md) | 17 | Yes | Could not allocate space for object '%.\*ls'%.\*ls in database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
-| 1119 | 16 | No | Removing IAM page %S_PGID failed because someone else is using the object that this IAM page belongs to. |
-| 1121 | 17 | No | Space allocator cannot allocate page in database %d. |
-| 1122 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Address 0x%x is not aligned. |
-| 1123 | 14 | No | Table error: Page %S_PGID. Unexpected page type %d. |
-| 1124 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Slot %d, offset 0x%x is invalid. |
-| 1125 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Slot %d, row extends into free space at 0x%x. |
-| 1126 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Slot %d, offset 0x%x overlaps with the prior row. |
-| 1127 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Values are %ld and %ld. |
-| 1128 | 14 | No | Table error: Page (%d:%d), row %d. Test (%.\*ls) failed. Values are %ld and %ld. |
-| 1129 | 16 | No | Could not cleanup deferred deallocations from filegroup '%.\*ls'. |
-| 1130 | 10 | Yes | Error while allocating extent for a worktable. Extent %S_PGID in tempdb may have been lost. |
-| 1131 | 10 | Yes | Failed to truncate AppendOnlyStorageUnit 0x%p. Will retry next time. This is an informational message only. No user action is required. |
-| 1132 | 16 | Yes | The elastic pool has reached its storage limit. The storage usage for the elastic pool cannot exceed (%d) MBs. |
-| 1133 | 17 | Yes | The managed instance has reached its storage limit. The storage usage for the managed instance cannot exceed (%d) MBs. |
-| 1134 | 17 | Yes | Cannot restore database with data file size larger than max allowed data file size of (%d) MB on Azure SQL. |
-| 1135 | 17 | Yes | Cannot restore database with log file size larger than max allowed log file size of (%d) MB on Azure SQL. |
-| 1136 | 17 | Yes | The tempdb has reached its storage service limit. The storage usage of the tempdb on the current tier cannot exceed (%d) MBs. |
-| 1137 | 17 | Yes | The number of database files for Next-Gen General Purpose instances cannot exceed (%d). |
-| 1138 | 17 | No | Could not allocate a new page for database 'tempdb' because that would exceed the limit set for workload group '%ls', group_id %d. |
-| 1202 | 16 | No | The database-principal '%.\*ls' does not exist or user is not a member. |
-| [1203](../mssqlserver-1203-database-engine-error.md) | 20 | Yes | Process ID %d attempted to unlock a resource it does not own: %.\*ls. Retry the transaction, because this error may be caused by a timing condition. If the problem persists, contact the database administrator. |
-| [1204](../mssqlserver-1204-database-engine-error.md) | 19 | Yes | The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions. |
-| [1205](../mssqlserver-1205-database-engine-error.md) | 13 | No | Transaction (Process ID %d) was deadlocked on %.\*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction. |
-| 1206 | 18 | No | The Microsoft Distributed Transaction Coordinator (MS DTC) has cancelled the distributed transaction. |
-| 1207 | 10 | Yes | Can't allocate %u locks on startup, reverting to %u and turning on dynamic lock allocation. Maximum allowed memory usage at startup is %I64u KB. |
-| 1208 | 21 | Yes | Could not allocate initial %u lock blocks during startup. Can not start the server. |
-| 1209 | 21 | Yes | Could not allocate initial %u lock owner blocks during startup. Can not start the server. |
-| 1210 | 21 | Yes | Unable to allocate lock owner block during lock migration. Server halted. |
-| 1212 | 10 | Yes | Lock not logged: %-30ls Mode: %s |
-| 1213 | 21 | Yes | Error spawning Lock Monitor thread: %ls |
-| 1214 | 17 | Yes | Internal Error. There are too many parallel transactions. |
-| 1215 | 16 | No | A conflicting ABORT_AFTER_WAIT = BLOCKERS request is waiting for existing transactions to roll back. This request cannot be executed. Please retry when the previous request is completed. |
-| 1216 | 16 | No | The DDL statement with ABORT_AFTER_WAIT = BLOCKERS option cannot be completed due to a conflicting system task. The request can abort only user transactions. Please wait for the system task to complete and retry. |
-| 1217 | 10 | Yes | Process ID %d was killed by an ABORT_AFTER_WAIT = BLOCKERS DDL statement on database_id = %d, object_id = %d. |
-| 1218 | 10 | Yes | An ABORT_AFTER_WAIT = BLOCKERS lock request was issued on database_id = %d, object_id = %d. All blocking user sessions will be killed. |
-| 1219 | 16 | No | Your session has been disconnected because of a high priority DDL operation. |
-| 1220 | 17 | No | No more lock classes available from transaction. |
-| 1221 | 20 | Yes | The Database Engine is attempting to release a group of locks that are not currently held by the transaction. Retry the transaction. If the problem persists, contact your support provider. |
-| [1222](../mssqlserver-1222-database-engine-error.md) | 16 | No | Lock request time out period exceeded. |
-| 1223 | 16 | No | Cannot release the application lock (Database Principal: '%.\*ls', Resource: '%.\*ls') because it is not currently held. |
-| 1224 | 16 | No | An invalid application lock resource was passed to %ls. |
-| 1225 | 16 | No | An invalid application lock mode was passed to %ls. |
-| 1226 | 16 | No | An invalid application lock owner was passed to %ls. |
-| 1227 | 16 | No | An invalid application lock time-out was passed to %ls. |
-| 1228 | 16 | No | An invalid parameter "%ls" was passed to the application lock function or procedure. |
-| 1230 | 16 | No | An invalid database principal was passed to %ls. |
-| 1231 | 10 | Yes | Transaction (Process ID %d) was blocked/deadlocked but failed the attempt to generate blocked process/deadlock report. |
-| 1232 | 16 | No | Failed to acquire lock with lock manager service, it could be due to many reasons including transient service failure. |
-| [1401](../mssqlserver-1401-database-engine-error.md) | 21 | Yes | Startup of the database-mirroring master thread routine failed for the following reason: %ls. Correct the cause of this error, and restart the SQL Server service. |
-| 1402 | 20 | Yes | Witness did not find an entry for database mirroring GUID {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. A configuration mismatch exists. Retry the command, or reset the witness from one of the database mirroring partners. |
-| 1403 | 16 | Yes | The witness for the mirroring session received error response %d (state %d) from server instance %.\*ls for database %.\*ls. For more information about the error, refer to the error log on this server instance and the partner server instance. |
-| 1404 | 16 | No | The command failed because the database mirror is busy. Reissue the command later. |
-| 1405 | 16 | No | The database "%.\*ls" is already enabled for database mirroring. |
-| [1406](../mssqlserver-1406-database-engine-error.md) | 16 | No | Unable to force service safely. Remove database mirroring and recover database "%.\*ls" to gain access. |
-| 1407 | 16 | No | The remote copy of database "%.\*ls" is not related to the local copy of the database. |
-| 1408 | 16 | No | The remote copy of database "%.\*ls" is not recovered far enough to enable database mirroring or to join it to the availability group. You need to apply missing log records to the remote database by restoring the current log backups from the principal/primary database. |
-| 1409 | 16 | No | Database "%.\*ls" requires database logs to be restored either on the future mirror database before you can enable database mirroring or on a secondary availability database before you can join it to the availability group. Restore current log backups from the principal database or primary database. |
-| 1410 | 16 | No | The remote copy of database "%.\*ls" is already enabled for database mirroring. |
-| 1411 | 16 | No | The remote copy of database "%.\*ls" has not had enough log backups applied to roll forward all of its files to a common point in time. |
-| 1412 | 16 | No | The remote copy of database "%.\*ls" has not been rolled forward to a point in time that is encompassed in the local copy of the database log. |
-| 1413 | 16 | Yes | Communications to the remote server instance '%.\*ls' failed before database mirroring was fully started. The ALTER DATABASE command failed. Retry the command when the remote database is started. |
-| 1414 | 16 | No | The database is being closed before database mirroring is fully initialized. The ALTER DATABASE command failed. |
-| 1415 | 16 | No | The database mirroring operation for database "%.\*ls" failed. The requested operation could not be performed. |
-| 1416 | 16 | No | Database "%.\*ls" is not configured for database mirroring. |
-| 1417 | 16 | No | Database mirroring has been disabled by the administrator for database "%.\*ls". |
-| [1418](../mssqlserver-1418-database-engine-error.md) | 16 | No | The server network address "%.\*ls" can not be reached or does not exist. Check the network address name and that the ports for the local and remote endpoints are operational. |
-| 1419 | 16 | No | The remote copy of database "%.\*ls" cannot be opened. Check the database name and ensure that it is in the restoring state, and then reissue the command. |
-| 1420 | 16 | No | Database mirroring was unable to obtain the network hostname. Operating system error %ls encountered. Verify the network configuration. |
-| 1421 | 16 | Yes | Communications to the remote server instance '%.\*ls' failed to complete before its timeout. The ALTER DATABASE command may have not completed. Retry the command. |
-| 1422 | 16 | No | The mirror server instance is not caught up to the recent changes to database "%.\*ls". Unable to fail over. |
-| 1423 | 16 | No | The property name is not supported. |
-| 1424 | 16 | No | The remote server instance has a more recent value for the property '%.\*ls'. Property value not changed. |
-| 1425 | 16 | No | The property value is invalid for '%.\*ls'. Property value not changed. |
-| 1426 | 16 | No | To issue ALTER DATABASE SET WITNESS, all three server instances must be interconnected, and the mirror database must be caught up. When these conditions are met, reissue the command. |
-| 1427 | 16 | No | The server instance '%.\*ls' could not act as the witness. The ALTER DATABASE SET WITNESS command failed. |
-| 1428 | 16 | No | The request is refused because the responding server instance is not in a state to service the request. |
-| 1429 | 16 | No | The witness server instance name must be distinct from both of the server instances that manage the database. The ALTER DATABASE SET WITNESS command failed. |
-| 1430 | 16 | No | Database '%.\*ls' is in an unstable state for removing database mirroring, so recovery may fail. Verify the data after recovery. |
-| 1431 | 16 | No | Neither the partner nor the witness server instance for database "%.\*ls" is available. Reissue the command when at least one of the instances becomes available. |
-| 1432 | 10 | No | Database mirroring is attempting to repair physical page %S_PGID in database "%.\*ls" by requesting a copy from the partner. |
-| 1433 | 16 | No | All three server instances did not remain interconnected for the duration of the ALTER DATABASE SET WITNESS command. There may be no witness associated with the database. Verify the status and when necessary repeat the command. |
-| 1434 | 16 | Yes | Invalid or unexpected database mirroring %ls message of type %d was received from server %ls, database %.\*ls. |
-| 1435 | 16 | Yes | %ls received unexpected database mirroring error response: status %u, severity %u, state %u, string %.\*ls. |
-| 1436 | 16 | No | The Service Broker ID for the remote copy of database "%.\*ls" does not match the ID on the principal server. |
-| 1437 | 16 | Yes | Could not post message '%ls' from server instance '%ls' because there is insufficient memory. Reduce non-essential memory load or increase system memory. |
-| 1438 | 16 | Yes | The server instance %ls rejected configure request; read its error log file for more information. The reason %u, and state %u, can be of use for diagnostics by Microsoft. This is a transient error hence retrying the request is likely to succeed. Correct the cause if any and retry. |
-| 1439 | 16 | No | There is currently no witness associated with database "%.\*ls". |
-| 1440 | 10 | Yes | Database mirroring is active with database '%.\*ls' as the principal copy. This is an informational message only. No user action is required. |
-| 1441 | 10 | Yes | Database mirroring is active with database '%.\*ls' as the mirror copy. This is an informational message only. No user action is required. |
-| 1442 | 10 | Yes | Database mirroring is inactive for database '%.\*ls'. This is an informational message only. No user action is required. |
-| 1443 | 10 | Yes | Database mirroring has been terminated for database '%.\*ls'. This is an informational message only. No user action is required. |
-| 1444 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as a mirror database, which cannot be recovered. This is an informational message only. No user action is required. |
-| 1445 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as an inaccessible database mirroring database. A problem exists with the mirroring session. The session either lacks a quorum or the communications links are broken because of problems with links, endpoint configuration, or permissions (for the server account or security certificate). To gain access to the database, figure out what has changed in the session configuration and undo the change. |
-| 1446 | 10 | No | The "%.\*ls" server instance is already acting as the witness. |
-| 1447 | 16 | No | ALTER DATABASE "%.\*ls" command cannot be executed until both partner server instances are up, running, and connected. Start the partner and reissue the command. |
-| 1448 | 16 | No | The remote copy of database "%.\*ls" does not exist. Check the database name and reissue the command. |
-| 1449 | 16 | No | ALTER DATABASE command failed due to an invalid server connection string. |
-| 1450 | 16 | No | The ALTER DATABASE command failed because the worker thread cannot be created. |
-| 1451 | 16 | No | Database mirroring information was not found in the system table. |
-| 1452 | 16 | No | The partner server instance name must be distinct from the server instance that manages the database. The ALTER DATABASE SET PARTNER command failed. |
-| 1453 | 17 | Yes | '%.\*ls', the remote mirroring partner for database '%.\*ls', encountered error %d, status %d, severity %d. Database mirroring has been suspended. Resolve the error on the remote server and resume mirroring, or remove mirroring and re-establish the mirror server instance. |
-| 1454 | 17 | Yes | Database mirroring will be suspended. Server instance '%.\*ls' encountered error %d, state %d, severity %d when it was acting as a mirroring partner for database '%.\*ls'. The database mirroring partners might try to recover automatically from the error and resume the mirroring session. For more information, view the error log for additional error messages. |
-| 1455 | 16 | No | The database mirroring service cannot be forced for database "%.\*ls" because the database is not in the correct state to become the principal database. |
-| 1456 | 16 | Yes | The ALTER DATABASE command could not be sent to the remote server instance '%.\*ls'. The database mirroring configuration was not changed. Verify that the server is connected, and try again. |
-| [1457](../mssqlserver-1457-database-engine-error.md) | 23 | Yes | Synchronization of the mirror database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The ALTER DATABASE command failed. Ensure that the principal database, if available, is back up and online, and then reconnect the mirror server instance and allow the mirror database to finish synchronizing. |
-| [1458](../mssqlserver-1458-database-engine-error.md) | 17 | Yes | The principal copy of the '%.\*ls' database encountered error %d, status %d, severity %d while sending page %S_PGID to the mirror. Database mirroring has been suspended. Try to resolve the error condition, and resume mirroring. |
-| 1459 | 24 | Yes | An error occurred while accessing the database mirroring metadata. Drop mirroring (ALTER DATABASE database_name SET PARTNER OFF) and reconfigure it. |
-| 1460 | 16 | No | The database "%.\*ls" is already configured for database mirroring on the remote server. Drop database mirroring on the remote server to establish a new partner. |
-| [1461](../mssqlserver-1461-database-engine-error.md) | 10 | No | Database mirroring successfully repaired physical page %S_PGID in database "%.\*ls" by obtaining a copy from the partner. |
-| [1462](../mssqlserver-1462-database-engine-error.md) | 16 | No | Database mirroring is disabled due to a failed redo operation. Unable to resume. |
-| 1463 | 16 | No | Database mirroring is not available in the edition of this SQL Server instance. See books online for more details on feature support in different SQL Server editions. |
-| 1464 | 16 | No | Database "%.\*ls" is not in a recovering state which is required for a mirror database or secondary database. The remote database must be restored using WITH NORECOVERY. |
-| 1465 | 16 | No | Database "%.\*ls" database is not in full recovery mode on each of the server instances. The full recovery model is required for a database to participate in database mirroring or in an availability group. |
-| 1466 | 16 | No | Database "%.\*ls" is read-only on one of the server instances which is incompatible with participating in database mirroring or in an availability group. Set the database to read-write mode, and retry the operation. |
-| 1467 | 16 | No | Database "%.\*ls" database is in emergency or suspect mode on one of the partners which is incompatible with participating in database mirroring or in an availability group. |
-| 1468 | 16 | No | The operation cannot be performed on database "%.\*ls" because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group. |
-| 1469 | 16 | No | Database "%.\*ls" is an auto-close database on one of the partners which is incompatible with participating in database mirroring or in an availability group. |
-| 1470 | 16 | No | The alter database for this partner config values may only be initiated on the current principal server for database "%.\*ls". |
-| 1471 | 16 | No | The database mirroring connection terminated. Out of memory sending message for database "%.\*ls". |
-| 1472 | 16 | No | The database mirroring connection terminated. Communications error sending message for database "%.\*ls". |
-| 1473 | 16 | No | This SQL Server edition does not allow changing the safety level. ALTER DATABASE command failed. |
-| 1474 | 16 | No | Database mirroring connection error %d '%.\*ls' for '%.\*ls'. |
-| 1475 | 16 | No | Database "%.\*ls" might contain bulk logged changes that have not been backed up. Take a log backup on the principal database or primary database. Then restore this backup either on the mirror database to enable database mirroring or on every secondary database to enable you to join it to the availability group. |
-| 1476 | 16 | No | Database mirroring timeout value %d exceeds the maximum value 32767. |
-| 1477 | 16 | No | The database mirroring safety level must be FULL to manually failover database "%.\*ls". Set safety level to FULL and retry. |
-| 1478 | 16 | No | The mirror database, "%.\*ls", has insufficient transaction log data to preserve the log backup chain of the principal database. This may happen if a log backup from the principal database has not been taken or has not been restored on the mirror database. |
-| 1479 | 16 | No | The mirroring connection to "%.\*ls" has timed out for database "%.\*ls" after %d seconds without a response. Check the service and network connections. |
-| 1480 | 10 | No | The %S_MSG database "%.\*ls" is changing roles from "%ls" to "%ls" because the mirroring session or availability group failed over due to %S_MSG. This is an informational message only. No user action is required. |
-| 1481 | 10 | No | Database mirroring could not repair physical page %S_PGID in database "%.\*ls". The mirroring partner could not be contacted or did not provide a copy of the page. Possible reasons include a lack of network connectivity or that the copy of the page kept by the partner is also corrupted. To learn whether the partners are currently connected, view the mirroring_state_desc column of the sys.database_mirroring catalog view. If they are connected, for information about why the partner could not provide a copy of the page, examine its error log entries from around the time when this message was reported. Try to resolve the error and resume mirroring. |
-| 1482 | 10 | No | Database mirroring failed to get snapshot synchronization lock. |
-| 1483 | 10 | No | State information for database '%.\*ls' - Hardened Lsn: '%S_LSN' Commit LSN: '%S_LSN' Commit Time: '%S_DATE' |
-| 1484 | 16 | No | Database Mirroring cannot be enabled for database '%.\*ls' because the database has Accelerated Database Recovery enabled, or because there are still versions in Persisted Version Store. If Accelerated Database Recovery is disabled, execute sys.sp_persistent_version_cleanup to clean Persistent Version Store. |
-| 1485 | 10 | No | Database mirroring has been enabled on this instance of SQL Server. |
-| 1486 | 10 | No | Database Mirroring Transport is disabled in the endpoint configuration. |
-| 1487 | 10 | No | Database mirroring is starting %d parallel redo thread(s) with database '%.\*ls' as the mirror copy. This is an informational message only. No user action is required. |
-| 1488 | 16 | No | Database "%.\*ls" database is in single user mode which is incompatible with participating in database mirroring or in an availability group. Set database to multi-user mode, and retry the operation. |
-| 1489 | 10 | No | Database Mirroring is disabled on this server due to error %d. Check the errorlog and configuration for more information. |
-| 1490 | 16 | No | The remote copy of database "%.\*ls" has not been restored to a log backup that includes all filestream data files. |
-| 1491 | 16 | No | Enabling Database Mirroring is not allowed when REMOTE_DATA_ARCHIVE is already enabled on database '%.\*ls'. |
-| 1492 | 16 | No | Enabling Database Mirroring is not allowed when Change Feed is enabled on database '%.\*ls'. |
-| 1493 | 16 | No | Database Mirroring cannot be set for database '%.\*ls' because the database has the LEDGER = ON option or contains ledger tables. |
-| 1494 | 16 | No | Enabling Database Mirroring is not allowed when Change Event Streaming is enabled on database '%.\*ls'. |
-| 1499 | 16 | Yes | Database mirroring error: status %u, severity %u, state %u, string %.\*ls. |
-| 1501 | 20 | Yes | Sort failure. Contact Technical Support. |
-| [1505](../mssqlserver-1505-database-engine-error.md) | 16 | No | The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.\*ls' and the index name '%.\*ls'. The duplicate key value is %ls. |
-| 1509 | 20 | Yes | Row comparison failed during sort because of an unknown data type on a key column. Metadata might be corrupt. Contact Technical Support. |
-| 1510 | 17 | No | Sort failed. Out of space or locks in database '%.\*ls'. |
-| 1511 | 20 | Yes | Sort cannot be reconciled with transaction log. |
-| 1522 | 20 | Yes | Sort operation failed during an index build. The overwriting of the allocation page in database '%.\*ls' was prevented by terminating the sort. Run DBCC CHECKDB to check for allocation and consistency errors. It may be necessary restore the database from backup. |
-| 1523 | 20 | Yes | Sort failure. The incorrect extent could not be deallocated. Contact Technical Support. |
-| 1532 | 20 | Yes | New sort run starting on page %S_PGID found an extent not marked as shared. Retry the transaction. If the problem persists, contact Technical Support. |
-| 1533 | 20 | Yes | Cannot share extent %S_PGID. The correct extents could not be identified. Retry the transaction. |
-| 1534 | 20 | Yes | Extent %S_PGID not found in shared extent directory. Retry the transaction. If the problem persists, contact Technical Support. |
-| 1535 | 20 | Yes | Cannot share extent %S_PGID. Shared extent directory is full. Retry the transaction. If the problem persists, contact Technical Support. |
-| 1537 | 20 | Yes | Cannot suspend a sort that is not in row input phase. |
-| 1538 | 20 | Yes | Cannot insert a row into a sort when the sort is not in row input phase. |
-| 1540 | 16 | No | Cannot sort a row of size %d, which is greater than the allowable maximum of %d. Consider resubmitting the query using the ROBUST PLAN hint. |
-| 1541 | 16 | No | Sort failure. A defective CLR type comparison function is suspected. |
-| 1542 | 10 | Yes | BobMgr::GetBuf: Sort Big Output Buffer write not complete after %d seconds. |
-| 1543 | 10 | Yes | SQL Server encountered: '%ls' resulting from an attempt to read the following: sort run page %S_PGID, in file '%ls', in database with ID %d. Sort is retrying the read. |
-| 1701 | 16 | No | Creating or altering table '%.\*ls' failed because the minimum row size would be %d, including %d bytes of internal overhead. This exceeds the maximum allowable table row size of %d bytes. |
-| 1702 | 16 | No | CREATE TABLE failed because column '%.\*ls' in table '%.\*ls' exceeds the maximum of %d columns. |
-| 1706 | 16 | No | The system table '%.\*ls' can only be created or altered during an upgrade. |
-| 1707 | 16 | No | Cannot specify TEXTIMAGE_ON filegroup for a partitioned table. |
-| 1708 | 10 | No | Warning: The table "%.\*ls" has been created, but its maximum row size exceeds the allowed maximum of %d bytes. INSERT or UPDATE to this table will fail if the resulting row exceeds the size limit. |
-| 1709 | 16 | No | Cannot use TEXTIMAGE_ON when a table has no text, ntext, image, varchar(max), nvarchar(max), non-FILESTREAM varbinary(max), xml or large CLR type columns. |
-| 1710 | 10 | No | Cannot use alias type with rule or default bound to it as a column type in table variable or return table definition in table valued function. Type '%.\*ls' has a %S_MSG bound to it. |
-| 1711 | 16 | No | Cannot define PRIMARY KEY constraint on column '%.\*ls' in table '%.\*ls'. The computed column has to be persisted and not nullable. |
-| 1712 | 16 | No | Online index operations can only be performed in Enterprise edition of SQL Server or Azure SQL Edge. |
-| 1713 | 16 | No | Cannot execute %ls on/using table '%.\*ls' since the table is the target table or part of cascading actions of a currently executing trigger. |
-| 1714 | 16 | No | Alter table failed because unique column IDs have been exhausted for table '%.\*ls'. |
-| 1715 | 16 | No | Foreign key '%.\*ls' creation failed. Only NO ACTION referential update action is allowed for referencing computed column '%.\*ls'. |
-| 1716 | 16 | No | FILESTREAM_ON cannot be specified when a table has no FILESTREAM columns. Remove the FILESTREAM_ON clause from the statement, or add a FILESTREAM column to the table. |
-| 1717 | 16 | No | FILESTREAM_ON cannot be specified together with a partition scheme in the ON clause. |
-| 1718 | 16 | No | Change tracking must be enabled on database '%.\*ls' before it can be enabled on table '%.\*ls'. |
-| 1719 | 16 | No | FILESTREAM data cannot be placed on an empty filegroup. |
-| 1720 | 16 | No | Cannot drop FILESTREAM filegroup or partition scheme since table '%.\*ls' has FILESTREAM columns. |
-| 1721 | 16 | No | Altering table '%.\*ls' failed because the row size using vardecimal storage format exceeds the maximum allowed table row size of %d bytes. |
-| 1722 | 16 | No | Cannot %S_MSG %S_MSG '%.\*ls' since a partition scheme is not specified for FILESTREAM data. |
-| 1723 | 16 | No | Cannot %S_MSG %S_MSG '%.\*ls' since a partition scheme was specified for FILESTREAM data but not for the table. |
-| 1724 | 16 | No | Filegroup '%.\*ls' is not a FILESTREAM filegroup or partition scheme of FILESTREAM filegroups. |
-| 1725 | 16 | No | Cannot add FILESTREAM column to %S_MSG '%.\*ls' because an INSTEAD OF trigger exists on the %S_MSG. |
-| 1726 | 16 | No | Cannot add FILESTREAM filegroup or partition scheme since table '%.\*ls' has a FILESTREAM filegroup or partition scheme already. |
-| 1727 | 16 | No | Cannot create non-clustered index '%.\*ls' on table '%.\*ls' with the FILESTREAM_ON clause. |
-| 1728 | 16 | No | Cannot create index '%.\*ls' on table '%.\*ls' because the computed column '%.\*ls' uses a FILESTREAM column. |
-| 1729 | 16 | No | Cannot create table '%.\*ls' because the partitioning column '%.\*ls' uses a FILESTREAM column. |
-| 1730 | 16 | No | Creating or altering compressed table '%.\*ls' failed because the uncompressed row size would be %d, including %d bytes of internal overhead. This exceeds the maximum allowable table row size of %d bytes. |
-| 1731 | 16 | No | Cannot create the sparse column '%.\*ls' in the table '%.\*ls' because an option or data type specified is not valid. A sparse column must be nullable and cannot have the ROWGUIDCOL, IDENTITY, or FILESTREAM properties. A sparse column cannot be of the following data types: text, ntext, image, geometry, geography, or user-defined type. |
-| 1732 | 16 | No | Cannot create the sparse column set '%.\*ls' in the table '%.\*ls' because a table cannot have more than one sparse column set. Modify the statement so that only one column is specified as COLUMN_SET FOR ALL_SPARSE_COLUMNS. |
-| 1733 | 16 | No | Cannot create the sparse column set '%.\*ls' in the table '%.\*ls' because a sparse column set must be a nullable xml column. Modify the column definition to allow null values. |
-| 1734 | 16 | No | Cannot create the sparse column set '%.\*ls' in the table '%.\*ls' because the table already contains one or more sparse columns. A sparse column set cannot be added to a table if the table contains a sparse column. |
-| 1735 | 16 | No | Duplicate range-partitioning function specified for the table being created. Remove one of the range-partitioning function specifications and resubmit the request. |
-| 1736 | 16 | No | The column '%.\*ls' in the table '%.\*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a a CHECK constraint or computed column definition. |
-| 1737 | 16 | No | Duplicate distribution clause specified for the table being created. Remove one of the distribution clauses and resubmit the request. |
-| 1738 | 10 | No | Cannot create table '%.\*ls' with only a column set column and without any non-computed columns in the table. |
-| 1739 | 16 | No | ALTER TABLE failed because the table has %d variable length columns (including columns that have been dropped but require cleanup). This exceeds the maximum number of columns supported. Execute ALTER TABLE with the REBUILD option, then retry the original ALTER TABLE statement. |
-| 1740 | 16 | No | Cannot encrypt the sparse column '%.\*ls' in the '%.\*ls' table because the table contains a sparse column set. |
-| 1741 | 16 | No | Cannot create the sparse column set '%.\*ls' in the '%.\*ls' table because the table contains one or more encrypted sparse columns. |
-| 1750 | 10 | No | Could not create constraint or index. See previous errors. |
-| 1752 | 16 | No | Column '%.\*ls' in table '%.\*ls' is invalid for creating a default constraint. |
-| 1753 | 16 | No | Column '%.\*ls.%.\*ls' is not the same length or scale as referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. Columns participating in a foreign key relationship must be defined with the same length and scale. |
-| 1754 | 16 | No | Defaults cannot be created on columns with an IDENTITY attribute. Table '%.\*ls', column '%.\*ls'. |
-| 1755 | 16 | No | Defaults cannot be created on columns of data type timestamp. Table '%.\*ls', column '%.\*ls'. |
-| 1756 | 10 | No | Skipping FOREIGN KEY constraint '%.\*ls' definition for temporary table. FOREIGN KEY constraints are not enforced on local or global temporary tables. |
-| 1757 | 16 | No | Column '%.\*ls.%.\*ls' is not of same collation as referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. |
-| 1758 | 16 | No | Only a single constraint can be added or dropped online with no other operations in the same statement. |
-| 1759 | 16 | No | Computed column '%.\*ls' in table '%.\*ls' is not allowed to be used in another computed-column definition. |
-| 1760 | 16 | No | Constraints of type %ls cannot be created on columns of type %ls. |
-| 1761 | 16 | No | Cannot create the foreign key "%.\*ls" with the SET NULL referential action, because one or more referencing columns are not nullable. |
-| 1762 | 16 | No | Cannot create the foreign key "%.\*ls" with the SET DEFAULT referential action, because one or more referencing not-nullable columns lack a default constraint. |
-| 1763 | 16 | No | Cross-database foreign key references are not supported. Foreign key '%.\*ls'. |
-| 1764 | 16 | No | Computed Column '%.\*ls' in table '%.\*ls' is invalid for use in '%ls' because it is not persisted. |
-| 1765 | 16 | No | Foreign key '%.\*ls' creation failed. Only NO ACTION and CASCADE referential delete actions are allowed for referencing computed column '%.\*ls'. |
-| 1766 | 16 | No | Foreign key references to temporary tables are not supported. Foreign key '%.\*ls'. |
-| 1767 | 16 | No | Foreign key '%.\*ls' references invalid table '%.\*ls'. |
-| 1768 | 16 | No | Foreign key '%.\*ls' references object '%.\*ls' which is not a user table. |
-| 1769 | 16 | No | Foreign key '%.\*ls' references invalid column '%.\*ls' in referencing table '%.\*ls'. |
-| 1770 | 16 | No | Foreign key '%.\*ls' references invalid column '%.\*ls' in referenced table '%.\*ls'. |
-| 1771 | 16 | No | Cannot create foreign key '%.\*ls' because it references object '%.\*ls' whose clustered index '%.\*ls' is disabled. |
-| 1772 | 16 | No | Foreign key '%.\*ls' is not valid. A system table cannot be used in a foreign key definition. |
-| 1773 | 16 | No | Foreign key '%.\*ls' has implicit reference to object '%.\*ls' which does not have a primary key defined on it. |
-| 1774 | 16 | No | The number of columns in the referencing column list for foreign key '%.\*ls' does not match those of the primary key in the referenced table '%.\*ls'. |
-| 1775 | 16 | No | Cannot create foreign key '%.\*ls' because it references object '%.\*ls' whose PRIMARY KEY index '%.\*ls' is disabled. |
-| 1776 | 16 | No | There are no primary or candidate keys in the referenced table '%.\*ls' that match the referencing column list in the foreign key '%.\*ls'. |
-| 1778 | 16 | No | Column '%.\*ls.%.\*ls' is not the same data type as referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. |
-| 1779 | 16 | No | Table '%.\*ls' already has a primary key defined on it. |
-| 1781 | 16 | No | Column already has a DEFAULT bound to it. |
-| 1782 | 16 | No | Cannot drop index '%.\*ls' since a partition scheme is not specified for base data. |
-| 1784 | 16 | No | Cannot create the foreign key '%.\*ls' because the referenced column '%.\*ls.%.\*ls' is a non-persisted computed column. |
-| [1785](../mssqlserver-1785-database-engine-error.md) | 16 | No | Introducing FOREIGN KEY constraint '%.\*ls' on table '%.\*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints. |
-| 1786 | 16 | No | Either column '%.\*ls.%.\*ls' or referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls' is a timestamp column. This data type cannot be used with cascading referential integrity constraints. |
-| 1787 | 16 | No | Cannot define foreign key constraint '%.\*ls' with cascaded DELETE or UPDATE on table '%.\*ls' because the table has an INSTEAD OF DELETE or UPDATE TRIGGER defined on it. |
-| 1788 | 16 | No | Cascading foreign key '%.\*ls' cannot be created where the referencing column '%.\*ls.%.\*ls' is an identity column. |
-| 1789 | 16 | No | Cannot use CHECKSUM(\*) in a computed column, constraint, default definition, or INSERT statement. |
-| 1790 | 16 | No | The name of a user-defined table type cannot start with a number (#) sign. |
-| 1791 | 16 | No | A DEFAULT constraint cannot be created on the column '%.\*ls' in the table '%.\*ls' because the column is a sparse column or sparse column set. Sparse columns or sparse column sets cannot have a DEFAULT constraint. |
-| 1792 | 16 | No | Alter table '%.\*ls' failed because the added fixed column might cause existing data to go beyond the maximum allowable table row size of %d bytes. |
-| 1801 | 16 | No | Database '%.\*ls' already exists. Choose a different database name. |
-| 1802 | 16 | No | CREATE DATABASE failed. Some file names listed could not be created. Check related errors. |
-| [1803](../mssqlserver-1803-database-engine-error.md) | 17 | No | The CREATE DATABASE statement failed. The primary file must be at least %d MB to accommodate a copy of the model database. |
-| 1806 | 16 | No | CREATE DATABASE failed. The default collation of database '%.\*ls' cannot be set to '%.\*ls'. |
-| [1807](../mssqlserver-1807-database-engine-error.md) | 17 | No | Could not obtain exclusive lock on database '%.\*ls'. Retry the operation later. |
-| 1809 | 10 | No | To achieve optimal performance, update all statistics on the '%.\*ls' database by running sp_updatestats. |
-| 1810 | 16 | No | The model database must be updatable before a new database can be created. |
-| 1812 | 16 | No | CREATE DATABASE failed. COLLATE clause cannot be used with the FOR ATTACH option. |
-| 1813 | 16 | No | Could not open new database '%.\*ls'. CREATE DATABASE is aborted. |
-| 1814 | 10 | Yes | Could not create tempdb. You may not have enough disk space available. Free additional disk space by deleting other files on the tempdb drive and then restart SQL Server. Check for additional errors in the operating system error log that may indicate why the tempdb files could not be initialized. |
-| 1815 | 16 | No | The %ls property cannot be used with database snapshot files. |
-| 1816 | 16 | No | Database snapshot on the system database %.\*ls is not allowed. |
-| 1817 | 16 | No | Only the owner of database "%.\*s" or the system administrator can create a database snapshot on it. |
-| 1818 | 16 | No | Primary log file '%ls' is missing and the database was not cleanly shut down so it cannot be rebuilt. |
-| 1819 | 10 | No | Could not create default log file because the name was too long. |
-| 1821 | 16 | No | Cannot create a database snapshot on another database snapshot. |
-| 1822 | 16 | No | The database must be online to have a database snapshot. |
-| 1823 | 16 | No | A database snapshot cannot be created because it failed to start. |
-| 1824 | 16 | No | Cannot attach a database that was being restored. |
-| 1825 | 16 | No | Filegroups and collations cannot be specified for database snapshots. |
-| 1826 | 16 | No | User-defined filegroups are not allowed on "%ls". |
-| 1827 | 16 | No | CREATE DATABASE or ALTER DATABASE failed because the resulting cumulative database size would exceed your licensed limit of %I64d MB per %S_MSG. |
-| 1828 | 16 | No | The logical file name "%.\*ls" is already in use. Choose a different name. |
-| 1829 | 16 | No | The FOR ATTACH option requires that at least the primary file be specified. |
-| 1830 | 16 | No | The files '%ls' and '%ls' are both primary files. A database can only have one primary file. |
-| 1831 | 16 | No | File ONLINE/OFFLINE syntax cannot be used with CREATE DATABASE. |
-| 1832 | 20 | No | Cannot attach the file '%.\*ls' as database '%.\*ls'.%.\*ls |
-| 1833 | 16 | No | File '%ls' cannot be reused until after the next BACKUP LOG operation. If the database is participating in an availability group, a dropped file can be reused only after the truncation LSN of the primary availability replica has passed the drop LSN of the file and a subsequent BACKUP LOG operation has completed. |
-| 1834 | 16 | No | The file '%ls' cannot be overwritten. It is being used by database '%.\*ls'. |
-| 1835 | 16 | No | Unable to create/attach any new database because the number of existing databases has reached the maximum number allowed: %d. |
-| 1836 | 10 | No | Cannot create the default files because the name that was supplied is too long. |
-| 1837 | 16 | No | The file name "%ls" is too long to create an alternate stream name. |
-| 1838 | 10 | No | Offline database file(s) have been overwritten while being reverted to online state from a database snapshot. The reverted file might contain invalid pages. Please run database consistency checks to assess the data integrity. |
-| 1839 | 16 | No | Could not create default data files because the name '%ls' is a reserved device name. |
-| 1841 | 16 | No | CREATE DATABASE failed. CONTAINMENT clause cannot be used with the FOR ATTACH option. |
-| 1842 | 16 | No | The file size, max size cannot be greater than 2147483647 in units of a page size. The file growth cannot be greater than 2147483647 in units of both page size and percentage. |
-| 1843 | 10 | Yes | Reverting database '%ls' to the point in time of database snapshot '%ls' with split point LSN %.\*ls (0x%ls). This is an informational message only. No user action is required. |
-| 1844 | 16 | No | %ls is not supported on %ls. |
-| 1845 | 16 | No | Cannot find SQL Volume Shadow Copy Service (VSS) Writer in writer metadata document provided by VSS while creating auto-recovered VSS snapshot for online DBCC check. |
-| 1846 | 16 | No | Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check. |
-| 1847 | 16 | No | The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots. |
-| 1848 | 16 | No | Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check. |
-| 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files. |
-| 1850 | 16 | No | Cannot attach database '%.\*ls' because the file name '%.\*ls' is valid on more than one brick. |
-| 1851 | 16 | No | File name '%.\*ls' as relative path is too long after prefixed with default path '%ls'. |
-| 1852 | 21 | No | Error occurred when shrinking the physical file. Please check ERRORLOG for more detail. |
-| 1853 | 16 | No | The logical database file '%.\*ls' cannot be found. Specify the full path for the file. |
-| 1854 | 16 | No | The original file name '%.\*ls' for logical database file '%.\*ls' is too long to be combined with the full path to the new primary data file location. |
-| 1855 | 16 | No | System table sysfiles1 is corrupted. |
-| 1856 | 16 | No | Cannot attach file '%.\*ls' as database '%.\*ls' because this database name is already attached with file '%.\*ls' |
-| 1857 | 16 | No | Cannot attach file '%.\*ls' as database '%.\*ls' because this file is already in use for database '%.\*ls' |
-| 1858 | 16 | No | Could not create snapshot database because user database is still in recovery. |
-| 1859 | 16 | No | Create database is not allowed in the model database context. Switch context to other database with USE statement and retry. |
-| 1860 | 16 | No | Task has been aborted, but %S_MSG of the %S_MSG '%.\*ls' may continue in the background. Please check whether the %S_MSG has finished successfully. |
-| 1900 | 16 | No | Cannot create a clustered index with a predicate clause. Filtered clustered indexes are not supported. |
-| 1901 | 16 | No | Cannot create index or statistics '%.\*ls' on view '%.\*ls' because key column '%.\*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there. |
-| 1902 | 16 | No | Cannot create more than one clustered index on %S_MSG '%.\*ls'. Drop the existing clustered index '%.\*ls' before creating another. |
-| [1904](../mssqlserver-1904-database-engine-error.md) | 16 | No | The %S_MSG '%.\*ls' on table '%.\*ls' has %d columns in the key list. The maximum limit for %S_MSG key column list is %d. |
-| 1907 | 16 | No | Cannot recreate index '%.\*ls'. The new index definition does not match the constraint being enforced by the existing index. |
-| 1908 | 16 | No | Column '%.\*ls' is partitioning column of the index '%.\*ls'. Partition columns for a unique index must be a subset of the index key. |
-| 1909 | 16 | No | Cannot use duplicate column names in %S_MSG. Column name '%.\*ls' listed more than once. |
-| 1910 | 16 | No | Could not create %S_MSG '%.\*ls' because it exceeds the maximum of %d allowed per table or view. |
-| 1911 | 16 | No | Column name '%.\*ls' does not exist in the target table, index or view. |
-| 1912 | 16 | No | Could not proceed with index DDL operation on %S_MSG '%.\*ls' because it conflicts with another concurrent operation that is already in progress on the object. The concurrent operation could be an online index operation on the same object or another concurrent operation that moves index pages like DBCC SHRINKFILE. |
-| 1913 | 16 | No | The operation failed because an index or statistics with name '%.\*ls' already exists on %S_MSG '%.\*ls'. |
-| 1914 | 16 | No | Index cannot be created on object '%.\*ls' because the object is not a user table or view. |
-| 1915 | 16 | No | Cannot alter a non-unique index with ignore_dup_key index option. Index '%.\*ls' is non-unique. |
-| 1916 | 16 | No | CREATE INDEX options %ls and %ls are mutually exclusive. |
-| 1917 | 16 | No | Cannot create, rebuild or drop an index on a local temporary table online. Perform the index operation offline. |
-| 1919 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as a key column in an index. |
-| 1921 | 16 | No | Invalid %S_MSG '%.\*ls' specified. |
-| 1922 | 16 | No | Filegroup '%.\*ls' has no files assigned to it. Tables, indexes, and large object columns cannot be created on this filegroup. Use ALTER DATABASE to add one or more files to the filegroup. |
-| 1924 | 16 | No | Filegroup '%.\*ls' is read-only. |
-| 1925 | 16 | No | Cannot convert a clustered index to a nonclustered index by using the DROP_EXISTING option. To change the index type from clustered to nonclustered, delete the clustered index, and then create a nonclustered index by using two separate statements. |
-| 1926 | 16 | No | Cannot create a clustered index because nonclustered index ID %d is on a read-only filegroup. |
-| 1927 | 16 | No | There are already statistics on table '%.\*ls' named '%.\*ls'. |
-| 1929 | 16 | No | Statistics cannot be created on object '%.\*ls' because the object is not a user table or view. |
-| 1930 | 16 | No | Cannot convert a nonclustered index to a clustered index because a foreign key constraint references the index. Remove the foreign key constraint and then retry the operation. |
-| 1931 | 16 | No | The SQL statement cannot be executed because filegroup '%.\*ls' is offline. Use the sys.database_files or sys.master_files catalog view to determine the state of the files in this filegroup and then restore the offline file(s) from backup. |
-| 1932 | 16 | No | Cannot create a clustered index because nonclustered index ID %d is on an offline filegroup. |
-| 1934 | 16 | No | %ls failed because the following SET options have incorrect settings: '%.\*ls'. Verify that SET options are correct for use with %S_MSG. |
-| 1935 | 16 | No | Cannot create index. Object '%.\*ls' was created with the following SET options off: '%.\*ls'. |
-| 1937 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because it references another view '%.\*ls'. Consider expanding referenced view's definition by hand in indexed view definition. |
-| 1938 | 16 | No | Index cannot be created on view '%.\*ls' because the underlying object '%.\*ls' has a different owner. |
-| 1939 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because the view is not schema bound. |
-| 1940 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It does not have a unique clustered index. |
-| 1941 | 16 | No | Cannot create nonunique clustered index on view '%.\*ls' because only unique clustered indexes are allowed. Consider creating unique clustered index instead. |
-| 1942 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains text, ntext, image, FILESTREAM or xml columns. |
-| 1943 | 16 | No | The index "%.\*ls" on table "%.\*ls" cannot be reorganized because page level locking is disabled. |
-| 1944 | 16 | No | Index '%.\*ls' was not created because the index key size is at least %d bytes. The %S_MSG index key size cannot exceed %d bytes. If the index key includes implicit key columns, the index key size cannot exceed %d bytes. |
-| 1945 | 10 | No | Warning! The maximum key length for a %S_MSG index is %d bytes. The index '%.\*ls' has maximum length of %d bytes. For some combination of large values, the insert/update operation will fail. |
-| 1946 | 16 | No | Operation failed. The index entry of length %d bytes for the index '%.\*ls' exceeds the maximum length of %d bytes for %S_MSG indexes. |
-| 1947 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains a self join on "%.\*ls". |
-| 1949 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The function '%s' yields nondeterministic results. Use a deterministic system function, or modify the user-defined function to return deterministic results. |
-| 1950 | 16 | No | Index on view '%.\*ls' cannot be created because the view contains an imprecise expression in a GROUP BY clause |
-| 1951 | 16 | No | Index on view '%.\*ls' cannot be created because the view contains an imprecise expression in the WHERE clause. |
-| 1952 | 16 | No | Index on view '%.\*ls' cannot be created because the view contains an imprecise expression in a join. |
-| 1953 | 16 | No | Index on view '%.\*ls' cannot be created because some arguments are missing in a built-in function. |
-| 1956 | 16 | No | Cannot create %S_MSG on the '%.\*ls' view because it uses the nondeterministic user-defined function '%.\*ls'. Remove the reference to the function, or make it deterministic. |
-| 1957 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because view uses imprecise user-defined function '%.\*ls'. Consider removing reference to function or altering it to be precise. |
-| 1959 | 16 | No | Cannot create an index on a view or computed column because the compatibility level of this database is less than 80. Use sp_dbcmptlevel to raise the compatibility level of the database. |
-| 1961 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The collation cast expression with collation name '%.\*ls' is non-deterministic because it is dependent on the operating system. |
-| 1962 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because column '%.\*ls' that is referenced by the view in the WHERE or GROUP BY clause is imprecise. Consider eliminating the column from the view, or altering the column to be precise. |
-| 1963 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains a convert that is imprecise or non-deterministic. |
-| 1964 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains an imprecise constant. |
-| 1965 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains an imprecise arithmetic operator. |
-| 1966 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The view contains an imprecise aggregate operator. |
-| 1967 | 16 | No | Cannot create a new clustered index on a view online. |
-| 1968 | 16 | No | Cannot convert a nonclustered index to a clustered index online using DROP_EXISTING option. |
-| 1969 | 16 | No | Default FILESTREAM filegroup is not available in database '%.\*ls'. |
-| 1970 | 10 | No | Warning: Online index operation on table '%.\*ls' will proceed but concurrent access to the table may be limited due to residual lock on the table from a previous operation in the same transaction. |
-| 1971 | 16 | No | Cannot disable index '%.\*ls' on table '%.\*ls'. Permission denied to disable foreign key '%.\*ls' on table '%.\*ls' that uses this index. |
-| 1972 | 16 | No | Cannot disable clustered index '%.\*ls' on table '%.\*ls'. Permission denied to alter the referencing view '%.\*ls' while disabling its clustered index. |
-| 1973 | 16 | No | Cannot perform the specified operation on disabled index '%.\*ls' on %S_MSG '%.\*ls'. |
-| 1974 | 16 | No | Cannot perform the specified operation on %S_MSG '%.\*ls' because its clustered index '%.\*ls' is disabled. |
-| 1975 | 16 | No | Index '%.\*ls' row length exceeds the maximum permissible length of '%d' bytes. |
-| 1976 | 16 | No | Cannot create index or statistics '%.\*ls' on view '%.\*ls' because cannot verify key column '%.\*ls' is precise and deterministic. Consider removing column from index or statistics key, marking column persisted in base table if it is computed, or using non-CLR-derived column in key. |
-| 1977 | 16 | No | Could not create %S_MSG '%.\*ls' on table '%.\*ls'. Only XML Index can be created on XML column '%.\*ls'. |
-| 1978 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as a key column in an index or statistics. |
-| 1979 | 16 | No | Cannot use index option ignore_dup_key to alter index '%.\*ls' as it enforces a primary or unique constraint. |
-| 1980 | 16 | No | Index cannot be created on computed column '%.\*ls' of table '%.\*ls' because the underlying object '%.\*ls' has a different owner. |
-| 1981 | 10 | No | Warning: The maximum length of the row exceeds the permissible limit of %d bytes. For some combination of large values, the insert/update operation will fail. |
-| 1982 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because the view references non-deterministic or imprecise member function '%.\*ls' on CLR type '%.\*ls'. Consider removing reference to the function or altering the function to behave in a deterministic way. Do not declare a CLR function that behaves non-deterministically to have IsDeterministic=true, because that can lead to index corruption. See Books Online for details. |
-| 1983 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The function '%s' yields imprecise results. Use a precise system function, or modify the user-defined function to return precise results. |
-| 1984 | 16 | No | Index '%.\*ls' cannot be created or rebuilt. The specified row length for this index using the vardecimal storage format exceeds the maximum allowed length of '%d' bytes. |
-| 1985 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains one or more XML data type methods. |
-| 1986 | 10 | No | Cannot replace non-hypothetical index '%.\*ls' with a hypothetical index using the DROP_EXISTING option. |
-| 1987 | 16 | No | Cannot %S_MSG %S_MSG '%.\*ls' on %S_MSG '%.\*ls' because its %S_MSG is disabled. |
-| 1988 | 16 | No | Cannot rebuild clustered index '%.\*ls' online because it is disabled. |
-| 1989 | 16 | No | Cannot enable foreign key constraint '%.\*ls' as index '%.\*ls' on referenced key is disabled. |
-| 1990 | 16 | No | Cannot define an index on a view with ignore_dup_key index option. Remove ignore_dup_key option and verify that view definition does not allow duplicates, or do not index view. |
-| 1991 | 16 | No | Cannot disable clustered index '%.\*ls' on table '%.\*ls'. Permission denied to disable foreign key '%.\*ls' on table '%.\*ls' that references this table. |
-| 1992 | 10 | No | Warning: Foreign key '%.\*ls' on table '%.\*ls' referencing table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
-| 1993 | 16 | No | Cannot partition an index on a table variable or return table definition in table valued function. |
-| 1994 | 16 | No | Cannot create or update statistics on view "%.\*ls" because both FULLSCAN and NORECOMPUTE options are required. |
-| 1995 | 16 | No | Cannot rebuild hypothetical index '%.\*ls' online. |
-| 1996 | 16 | No | Could not create index enforcing primary key constraint '%.\*ls' using DROP_EXISTING option because table has an XML or spatial index. Drop the XML or spatial index, create the primary key constraint, and recreate the XML or spatial index. |
-| 1997 | 16 | No | Could not convert the XML or spatial index '%.\*ls' to a relational index by using the DROP_EXISTING option. Drop the XML or spatial index and create a relational index with the same name. |
-| 1998 | 10 | No | Warning: Clustered index '%.\*ls' on view '%.\*ls' referencing table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
-| 1999 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as included column in an index. |
+| <a id="1001"></a> 1001 | 16 | No | Line %d: Length or precision specification %d is invalid. |
+| <a id="1002"></a> 1002 | 16 | No | Line %d: Specified scale %d is invalid. |
+| <a id="1003"></a> 1003 | 15 | No | Line %d: %ls clause allowed only for %ls. |
+| <a id="1004"></a> 1004 | 16 | No | Invalid column prefix '%.\*ls': No table name specified |
+| <a id="1005"></a> 1005 | 15 | No | Line %d: Invalid procedure number (%d). Must be between 1 and 32767. |
+| <a id="1006"></a> 1006 | 15 | No | CREATE TRIGGER contains no statements. |
+| <a id="1007"></a> 1007 | 15 | No | The %S_MSG '%.\*ls' is out of the range for numeric representation (maximum precision 38). |
+| <a id="1008"></a> 1008 | 15 | No | The SELECT item identified by the ORDER BY number %d contains a variable as part of the expression identifying a column position. Variables are only allowed when ordering by an expression referencing a column name. |
+| <a id="1009"></a> 1009 | 16 | No | The keyword DEFAULT is not allowed in DBCC commands. |
+| <a id="1010"></a> 1010 | 15 | No | Invalid escape character '%.\*ls'. |
+| <a id="1011"></a> 1011 | 15 | No | The correlation name '%.\*ls' is specified multiple times in a FROM clause. |
+| <a id="1012"></a> 1012 | 15 | No | The correlation name '%.\*ls' has the same exposed name as table '%.\*ls'. |
+| <a id="1013"></a> 1013 | 15 | No | The objects "%.\*ls" and "%.\*ls" in the FROM clause have the same exposed names. Use correlation names to distinguish them. |
+| <a id="1014"></a> 1014 | 15 | No | A TOP or FETCH clause contains an invalid value. |
+| <a id="1015"></a> 1015 | 15 | No | An aggregate cannot appear in an ON clause unless it is in a subquery contained in a HAVING clause or select list, and the column being aggregated is an outer reference. |
+| <a id="1016"></a> 1016 | 15 | No | Outer join operators cannot be specified in a query containing joined tables. |
+| <a id="1017"></a> 1017 | 15 | No | The %ls hint cannot be specified more than once. |
+| <a id="1018"></a> 1018 | 15 | No | Incorrect syntax near '%.\*ls'. If this is intended as a part of a table hint, A WITH keyword and parenthesis are now required. See SQL Server Books Online for proper syntax. |
+| <a id="1019"></a> 1019 | 15 | No | Invalid column list after object name in GRANT/REVOKE statement. |
+| <a id="1020"></a> 1020 | 15 | No | Sub-entity lists (such as column or security expressions) cannot be specified for entity-level permissions. |
+| <a id="1021"></a> 1021 | 10 | No | FIPS Warning: Line %d has the non-ANSI statement '%ls'. |
+| <a id="1022"></a> 1022 | 10 | No | FIPS Warning: Line %d has the non-ANSI clause '%ls'. |
+| <a id="1023"></a> 1023 | 15 | No | Invalid parameter %d specified for %ls. |
+| <a id="1024"></a> 1024 | 10 | No | FIPS Warning: Line %d has the non-ANSI function '%ls'. |
+| <a id="1025"></a> 1025 | 10 | No | FIPS Warning: The length of identifier '%.\*ls' exceeds 18. |
+| <a id="1026"></a> 1026 | 16 | No | GOTO cannot be used to jump into a TRY or CATCH scope. |
+| <a id="1027"></a> 1027 | 15 | No | Too many expressions are specified in a CUBE in the GROUP BY clause. The maximum number is %d. |
+| <a id="1028"></a> 1028 | 15 | No | The CUBE, ROLLUP, and GROUPING SETS constructs are not allowed in a GROUP BY ALL clause. |
+| <a id="1029"></a> 1029 | 15 | No | Browse mode is invalid for subqueries and derived tables. |
+| <a id="1030"></a> 1030 | 16 | No | Only constants are allowed here. Time literal is not permitted because it refers to the current date. |
+| <a id="1031"></a> 1031 | 15 | No | Percent values must be between 0 and 100. |
+| <a id="1032"></a> 1032 | 16 | No | Cannot use the column prefix '%.\*ls'. This must match the object in the UPDATE clause '%.\*ls'. |
+| <a id="1033"></a> 1033 | 16 | No | The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified. |
+| <a id="1034"></a> 1034 | 15 | No | Syntax error: Duplicate specification of the action "%.\*s" in the trigger declaration. |
+| <a id="1035"></a> 1035 | 15 | No | Incorrect syntax near '%.\*ls', expected '%.\*ls'. |
+| <a id="1036"></a> 1036 | 15 | No | File option %hs is required in this CREATE/ALTER DATABASE statement. |
+| <a id="1037"></a> 1037 | 15 | No | The CASCADE, WITH GRANT or AS options cannot be specified with statement permissions. |
+| <a id="1038"></a> 1038 | 15 | No | An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or \[\] are not allowed. Change the alias to a valid name. |
+| <a id="1039"></a> 1039 | 16 | No | Option '%.\*ls' is specified more than once. |
+| <a id="1040"></a> 1040 | 15 | No | The value %d used with MAX_OUTSTANDING_IO_PER_VOLUME is not valid; MAX_OUTSTANDING_IO_PER_VOLUME must be greater than 0 and less than or equal to %d. |
+| <a id="1041"></a> 1041 | 15 | No | Option %.\*ls is not allowed for a LOG file. |
+| <a id="1042"></a> 1042 | 15 | No | Conflicting %ls optimizer hints specified. |
+| <a id="1043"></a> 1043 | 16 | No | '%.\*ls' is not yet implemented. |
+| <a id="1044"></a> 1044 | 15 | No | Cannot use an existing function name to specify a stored procedure name. |
+| <a id="1045"></a> 1045 | 15 | No | Aggregates are not allowed in this context. Only scalar expressions are allowed. |
+| <a id="1046"></a> 1046 | 15 | No | Subqueries are not allowed in this context. Only scalar expressions are allowed. |
+| <a id="1047"></a> 1047 | 15 | No | Conflicting locking hints specified. |
+| <a id="1048"></a> 1048 | 15 | No | Conflicting cursor options %ls and %ls. |
+| <a id="1049"></a> 1049 | 15 | No | Mixing old and new syntax to specify cursor options is not allowed. |
+| <a id="1050"></a> 1050 | 15 | No | This syntax is only allowed for parameterized queries. |
+| <a id="1051"></a> 1051 | 15 | No | Cursor parameters in a stored procedure must be declared with OUTPUT and VARYING options, and they must be specified in the order CURSOR VARYING OUTPUT. |
+| <a id="1052"></a> 1052 | 15 | No | Conflicting %ls options "%ls" and "%ls". |
+| <a id="1053"></a> 1053 | 15 | No | For DROP STATISTICS, you must provide both the object (table or view) name and the statistics name, in the form "objectname.statisticsname". |
+| <a id="1054"></a> 1054 | 15 | No | Syntax '%ls' is not allowed in schema-bound objects. |
+| <a id="1055"></a> 1055 | 15 | No | '%.\*ls' is an invalid name because it contains a NULL character or an invalid unicode character. |
+| <a id="1056"></a> 1056 | 15 | No | The number of elements in the select list exceeds the maximum allowed number of %d elements. |
+| <a id="1057"></a> 1057 | 15 | No | The IDENTITY function cannot be used with a SELECT INTO statement containing a UNION, INTERSECT or EXCEPT operator. |
+| <a id="1058"></a> 1058 | 15 | No | Cannot specify both READ_ONLY and FOR READ ONLY on a cursor declaration. |
+| <a id="1059"></a> 1059 | 15 | No | Cannot set or reset the 'parseonly' option within a procedure or function. |
+| <a id="1060"></a> 1060 | 15 | No | The number of rows provided for a TOP or FETCH clauses row count parameter must be an integer. |
+| <a id="1061"></a> 1061 | 16 | No | The text/ntext/image constants are not yet implemented. |
+| <a id="1062"></a> 1062 | 16 | No | The TOP N WITH TIES clause is not allowed without a corresponding ORDER BY clause. |
+| <a id="1063"></a> 1063 | 16 | No | A filegroup cannot be added using ALTER DATABASE ADD FILE. Use ALTER DATABASE ADD FILEGROUP. |
+| <a id="1064"></a> 1064 | 16 | No | A filegroup cannot be used with log files. |
+| <a id="1065"></a> 1065 | 15 | No | The NOLOCK and READUNCOMMITTED lock hints are not allowed for target tables of INSERT, UPDATE, DELETE or MERGE statements. |
+| <a id="1066"></a> 1066 | 10 | No | Warning. Line %d: The option '%ls' is obsolete and has no effect. |
+| <a id="1067"></a> 1067 | 15 | No | The SET SHOWPLAN statements must be the only statements in the batch. |
+| <a id="1068"></a> 1068 | 16 | No | Only one list of index hints per table is allowed. |
+| <a id="1069"></a> 1069 | 16 | No | Index hints are only allowed in a FROM or OPTION clause. |
+| <a id="1070"></a> 1070 | 15 | No | CREATE INDEX option '%.\*ls' is no longer supported. |
+| <a id="1071"></a> 1071 | 16 | No | Cannot specify a JOIN algorithm with a remote JOIN. |
+| <a id="1072"></a> 1072 | 16 | No | A REMOTE hint can only be specified with an INNER JOIN clause. |
+| <a id="1073"></a> 1073 | 15 | No | '%.\*ls' is not a recognized cursor option for cursor %.\*ls. |
+| <a id="1074"></a> 1074 | 15 | No | Creation of temporary functions is not allowed. |
+| <a id="1075"></a> 1075 | 15 | No | RETURN statements in scalar valued functions must include an argument. |
+| <a id="1076"></a> 1076 | 15 | No | Function '%s' requires at least %d argument(s). |
+| <a id="1077"></a> 1077 | 15 | No | INSERT into an identity column not allowed on table variables. |
+| <a id="1078"></a> 1078 | 15 | No | '%.\*ls %.\*ls' is not a recognized option. |
+| <a id="1079"></a> 1079 | 15 | No | A variable cannot be used to specify a search condition in a fulltext predicate when accessed through a cursor. |
+| <a id="1080"></a> 1080 | 15 | No | The integer value %.\*ls is out of range. |
+| <a id="1081"></a> 1081 | 16 | No | %s does not allow specifying the database name as a prefix to the assembly name. |
+| <a id="1082"></a> 1082 | 15 | No | "%.\*ls" does not support synchronous trigger registration. |
+| <a id="1083"></a> 1083 | 15 | No | OWNER is not a valid option for EXECUTE AS in the context of server and database level triggers. |
+| <a id="1084"></a> 1084 | 15 | No | '%.\*ls' is an invalid event type. |
+| <a id="1085"></a> 1085 | 15 | No | '%.\*ls' event type does not support event notifications. |
+| <a id="1086"></a> 1086 | 16 | No | The FOR XML and FOR JSON clauses are invalid in views, inline functions, derived tables, and subqueries when they contain a set operator. To work around, wrap the SELECT containing a set operator using derived table or common table expression or view and apply FOR XML or FOR JSON on top of it. |
+| <a id="1087"></a> 1087 | 15 | No | Must declare the table variable "%.\*ls". |
+| <a id="1088"></a> 1088 | 15 | No | Cannot find the object "%.\*ls" because it does not exist or you do not have permissions. |
+| <a id="1089"></a> 1089 | 15 | No | The SET FMTONLY OFF statement must be the last statement in the batch. |
+| <a id="1090"></a> 1090 | 15 | No | Invalid default for parameter %d. |
+| <a id="1091"></a> 1091 | 15 | No | The option "%ls" is not valid for this function. |
+| <a id="1092"></a> 1092 | 16 | No | In this context %d statistics name(s) cannot be specified for option '%ls'. |
+| <a id="1093"></a> 1093 | 16 | No | "%.\*ls" is not a valid broker name. |
+| <a id="1094"></a> 1094 | 15 | No | Cannot specify a schema name as a prefix to the trigger name for database and server level triggers. |
+| <a id="1095"></a> 1095 | 15 | No | "%.\*ls" has already been specified as an event type. |
+| <a id="1096"></a> 1096 | 15 | No | Default parameter values for CLR types, nvarchar(max), varbinary(max), xml and encrypted types are not supported. |
+| <a id="1097"></a> 1097 | 15 | No | Cannot use If UPDATE within this CREATE TRIGGER statement. |
+| <a id="1098"></a> 1098 | 15 | No | The specified event type(s) is/are not valid on the specified target object. |
+| <a id="1099"></a> 1099 | 15 | No | The ON clause is not valid for this statement. |
+| <a id="1101"></a> [1101](../mssqlserver-1101-database-engine-error.md) | 17 | Yes | Could not allocate a new page for database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
+| <a id="1102"></a> 1102 | 22 | Yes | IAM page %S_PGID for object ID %ld is incorrect. The %S_MSG ID on page is %ld; should be %ld. |
+| <a id="1104"></a> 1104 | 17 | No | Tempdb ran out of space during spilling. Create space by dropping objects and/or rewrite the query to consume fewer rows. If the issue still persists, consider upgrading to a higher service level objective. |
+| <a id="1105"></a> [1105](../mssqlserver-1105-database-engine-error.md) | 17 | Yes | Could not allocate space for object '%.\*ls'%.\*ls in database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. |
+| <a id="1119"></a> 1119 | 16 | No | Removing IAM page %S_PGID failed because someone else is using the object that this IAM page belongs to. |
+| <a id="1121"></a> 1121 | 17 | No | Space allocator cannot allocate page in database %d. |
+| <a id="1122"></a> 1122 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Address 0x%x is not aligned. |
+| <a id="1123"></a> 1123 | 14 | No | Table error: Page %S_PGID. Unexpected page type %d. |
+| <a id="1124"></a> 1124 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Slot %d, offset 0x%x is invalid. |
+| <a id="1125"></a> 1125 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Slot %d, row extends into free space at 0x%x. |
+| <a id="1126"></a> 1126 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Slot %d, offset 0x%x overlaps with the prior row. |
+| <a id="1127"></a> 1127 | 14 | No | Table error: Page %S_PGID. Test (%ls) failed. Values are %ld and %ld. |
+| <a id="1128"></a> 1128 | 14 | No | Table error: Page (%d:%d), row %d. Test (%.\*ls) failed. Values are %ld and %ld. |
+| <a id="1129"></a> 1129 | 16 | No | Could not cleanup deferred deallocations from filegroup '%.\*ls'. |
+| <a id="1130"></a> 1130 | 10 | Yes | Error while allocating extent for a worktable. Extent %S_PGID in tempdb may have been lost. |
+| <a id="1131"></a> 1131 | 10 | Yes | Failed to truncate AppendOnlyStorageUnit 0x%p. Will retry next time. This is an informational message only. No user action is required. |
+| <a id="1132"></a> 1132 | 16 | Yes | The elastic pool has reached its storage limit. The storage usage for the elastic pool cannot exceed (%d) MBs. |
+| <a id="1133"></a> 1133 | 17 | Yes | The managed instance has reached its storage limit. The storage usage for the managed instance cannot exceed (%d) MBs. |
+| <a id="1134"></a> 1134 | 17 | Yes | Cannot restore database with data file size larger than max allowed data file size of (%d) MB on Azure SQL. |
+| <a id="1135"></a> 1135 | 17 | Yes | Cannot restore database with log file size larger than max allowed log file size of (%d) MB on Azure SQL. |
+| <a id="1136"></a> 1136 | 17 | Yes | The tempdb has reached its storage service limit. The storage usage of the tempdb on the current tier cannot exceed (%d) MBs. |
+| <a id="1137"></a> 1137 | 17 | Yes | The number of database files for Next-Gen General Purpose instances cannot exceed (%d). |
+| <a id="1138"></a> 1138 | 17 | No | Could not allocate a new page for database 'tempdb' because that would exceed the limit set for workload group '%ls', group_id %d. |
+| <a id="1202"></a> 1202 | 16 | No | The database-principal '%.\*ls' does not exist or user is not a member. |
+| <a id="1203"></a> [1203](../mssqlserver-1203-database-engine-error.md) | 20 | Yes | Process ID %d attempted to unlock a resource it does not own: %.\*ls. Retry the transaction, because this error may be caused by a timing condition. If the problem persists, contact the database administrator. |
+| <a id="1204"></a> [1204](../mssqlserver-1204-database-engine-error.md) | 19 | Yes | The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions. |
+| <a id="1205"></a> [1205](../mssqlserver-1205-database-engine-error.md) | 13 | No | Transaction (Process ID %d) was deadlocked on %.\*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction. |
+| <a id="1206"></a> 1206 | 18 | No | The Microsoft Distributed Transaction Coordinator (MS DTC) has cancelled the distributed transaction. |
+| <a id="1207"></a> 1207 | 10 | Yes | Can't allocate %u locks on startup, reverting to %u and turning on dynamic lock allocation. Maximum allowed memory usage at startup is %I64u KB. |
+| <a id="1208"></a> 1208 | 21 | Yes | Could not allocate initial %u lock blocks during startup. Can not start the server. |
+| <a id="1209"></a> 1209 | 21 | Yes | Could not allocate initial %u lock owner blocks during startup. Can not start the server. |
+| <a id="1210"></a> 1210 | 21 | Yes | Unable to allocate lock owner block during lock migration. Server halted. |
+| <a id="1212"></a> 1212 | 10 | Yes | Lock not logged: %-30ls Mode: %s |
+| <a id="1213"></a> 1213 | 21 | Yes | Error spawning Lock Monitor thread: %ls |
+| <a id="1214"></a> 1214 | 17 | Yes | Internal Error. There are too many parallel transactions. |
+| <a id="1215"></a> 1215 | 16 | No | A conflicting ABORT_AFTER_WAIT = BLOCKERS request is waiting for existing transactions to roll back. This request cannot be executed. Please retry when the previous request is completed. |
+| <a id="1216"></a> 1216 | 16 | No | The DDL statement with ABORT_AFTER_WAIT = BLOCKERS option cannot be completed due to a conflicting system task. The request can abort only user transactions. Please wait for the system task to complete and retry. |
+| <a id="1217"></a> 1217 | 10 | Yes | Process ID %d was killed by an ABORT_AFTER_WAIT = BLOCKERS DDL statement on database_id = %d, object_id = %d. |
+| <a id="1218"></a> 1218 | 10 | Yes | An ABORT_AFTER_WAIT = BLOCKERS lock request was issued on database_id = %d, object_id = %d. All blocking user sessions will be killed. |
+| <a id="1219"></a> 1219 | 16 | No | Your session has been disconnected because of a high priority DDL operation. |
+| <a id="1220"></a> 1220 | 17 | No | No more lock classes available from transaction. |
+| <a id="1221"></a> 1221 | 20 | Yes | The Database Engine is attempting to release a group of locks that are not currently held by the transaction. Retry the transaction. If the problem persists, contact your support provider. |
+| <a id="1222"></a> [1222](../mssqlserver-1222-database-engine-error.md) | 16 | No | Lock request time out period exceeded. |
+| <a id="1223"></a> 1223 | 16 | No | Cannot release the application lock (Database Principal: '%.\*ls', Resource: '%.\*ls') because it is not currently held. |
+| <a id="1224"></a> 1224 | 16 | No | An invalid application lock resource was passed to %ls. |
+| <a id="1225"></a> 1225 | 16 | No | An invalid application lock mode was passed to %ls. |
+| <a id="1226"></a> 1226 | 16 | No | An invalid application lock owner was passed to %ls. |
+| <a id="1227"></a> 1227 | 16 | No | An invalid application lock time-out was passed to %ls. |
+| <a id="1228"></a> 1228 | 16 | No | An invalid parameter "%ls" was passed to the application lock function or procedure. |
+| <a id="1230"></a> 1230 | 16 | No | An invalid database principal was passed to %ls. |
+| <a id="1231"></a> 1231 | 10 | Yes | Transaction (Process ID %d) was blocked/deadlocked but failed the attempt to generate blocked process/deadlock report. |
+| <a id="1232"></a> 1232 | 16 | No | Failed to acquire lock with lock manager service, it could be due to many reasons including transient service failure. |
+| <a id="1401"></a> [1401](../mssqlserver-1401-database-engine-error.md) | 21 | Yes | Startup of the database-mirroring master thread routine failed for the following reason: %ls. Correct the cause of this error, and restart the SQL Server service. |
+| <a id="1402"></a> 1402 | 20 | Yes | Witness did not find an entry for database mirroring GUID {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. A configuration mismatch exists. Retry the command, or reset the witness from one of the database mirroring partners. |
+| <a id="1403"></a> 1403 | 16 | Yes | The witness for the mirroring session received error response %d (state %d) from server instance %.\*ls for database %.\*ls. For more information about the error, refer to the error log on this server instance and the partner server instance. |
+| <a id="1404"></a> 1404 | 16 | No | The command failed because the database mirror is busy. Reissue the command later. |
+| <a id="1405"></a> 1405 | 16 | No | The database "%.\*ls" is already enabled for database mirroring. |
+| <a id="1406"></a> [1406](../mssqlserver-1406-database-engine-error.md) | 16 | No | Unable to force service safely. Remove database mirroring and recover database "%.\*ls" to gain access. |
+| <a id="1407"></a> 1407 | 16 | No | The remote copy of database "%.\*ls" is not related to the local copy of the database. |
+| <a id="1408"></a> 1408 | 16 | No | The remote copy of database "%.\*ls" is not recovered far enough to enable database mirroring or to join it to the availability group. You need to apply missing log records to the remote database by restoring the current log backups from the principal/primary database. |
+| <a id="1409"></a> 1409 | 16 | No | Database "%.\*ls" requires database logs to be restored either on the future mirror database before you can enable database mirroring or on a secondary availability database before you can join it to the availability group. Restore current log backups from the principal database or primary database. |
+| <a id="1410"></a> 1410 | 16 | No | The remote copy of database "%.\*ls" is already enabled for database mirroring. |
+| <a id="1411"></a> 1411 | 16 | No | The remote copy of database "%.\*ls" has not had enough log backups applied to roll forward all of its files to a common point in time. |
+| <a id="1412"></a> 1412 | 16 | No | The remote copy of database "%.\*ls" has not been rolled forward to a point in time that is encompassed in the local copy of the database log. |
+| <a id="1413"></a> 1413 | 16 | Yes | Communications to the remote server instance '%.\*ls' failed before database mirroring was fully started. The ALTER DATABASE command failed. Retry the command when the remote database is started. |
+| <a id="1414"></a> 1414 | 16 | No | The database is being closed before database mirroring is fully initialized. The ALTER DATABASE command failed. |
+| <a id="1415"></a> 1415 | 16 | No | The database mirroring operation for database "%.\*ls" failed. The requested operation could not be performed. |
+| <a id="1416"></a> 1416 | 16 | No | Database "%.\*ls" is not configured for database mirroring. |
+| <a id="1417"></a> 1417 | 16 | No | Database mirroring has been disabled by the administrator for database "%.\*ls". |
+| <a id="1418"></a> [1418](../mssqlserver-1418-database-engine-error.md) | 16 | No | The server network address "%.\*ls" can not be reached or does not exist. Check the network address name and that the ports for the local and remote endpoints are operational. |
+| <a id="1419"></a> 1419 | 16 | No | The remote copy of database "%.\*ls" cannot be opened. Check the database name and ensure that it is in the restoring state, and then reissue the command. |
+| <a id="1420"></a> 1420 | 16 | No | Database mirroring was unable to obtain the network hostname. Operating system error %ls encountered. Verify the network configuration. |
+| <a id="1421"></a> 1421 | 16 | Yes | Communications to the remote server instance '%.\*ls' failed to complete before its timeout. The ALTER DATABASE command may have not completed. Retry the command. |
+| <a id="1422"></a> 1422 | 16 | No | The mirror server instance is not caught up to the recent changes to database "%.\*ls". Unable to fail over. |
+| <a id="1423"></a> 1423 | 16 | No | The property name is not supported. |
+| <a id="1424"></a> 1424 | 16 | No | The remote server instance has a more recent value for the property '%.\*ls'. Property value not changed. |
+| <a id="1425"></a> 1425 | 16 | No | The property value is invalid for '%.\*ls'. Property value not changed. |
+| <a id="1426"></a> 1426 | 16 | No | To issue ALTER DATABASE SET WITNESS, all three server instances must be interconnected, and the mirror database must be caught up. When these conditions are met, reissue the command. |
+| <a id="1427"></a> 1427 | 16 | No | The server instance '%.\*ls' could not act as the witness. The ALTER DATABASE SET WITNESS command failed. |
+| <a id="1428"></a> 1428 | 16 | No | The request is refused because the responding server instance is not in a state to service the request. |
+| <a id="1429"></a> 1429 | 16 | No | The witness server instance name must be distinct from both of the server instances that manage the database. The ALTER DATABASE SET WITNESS command failed. |
+| <a id="1430"></a> 1430 | 16 | No | Database '%.\*ls' is in an unstable state for removing database mirroring, so recovery may fail. Verify the data after recovery. |
+| <a id="1431"></a> 1431 | 16 | No | Neither the partner nor the witness server instance for database "%.\*ls" is available. Reissue the command when at least one of the instances becomes available. |
+| <a id="1432"></a> 1432 | 10 | No | Database mirroring is attempting to repair physical page %S_PGID in database "%.\*ls" by requesting a copy from the partner. |
+| <a id="1433"></a> 1433 | 16 | No | All three server instances did not remain interconnected for the duration of the ALTER DATABASE SET WITNESS command. There may be no witness associated with the database. Verify the status and when necessary repeat the command. |
+| <a id="1434"></a> 1434 | 16 | Yes | Invalid or unexpected database mirroring %ls message of type %d was received from server %ls, database %.\*ls. |
+| <a id="1435"></a> 1435 | 16 | Yes | %ls received unexpected database mirroring error response: status %u, severity %u, state %u, string %.\*ls. |
+| <a id="1436"></a> 1436 | 16 | No | The Service Broker ID for the remote copy of database "%.\*ls" does not match the ID on the principal server. |
+| <a id="1437"></a> 1437 | 16 | Yes | Could not post message '%ls' from server instance '%ls' because there is insufficient memory. Reduce non-essential memory load or increase system memory. |
+| <a id="1438"></a> 1438 | 16 | Yes | The server instance %ls rejected configure request; read its error log file for more information. The reason %u, and state %u, can be of use for diagnostics by Microsoft. This is a transient error hence retrying the request is likely to succeed. Correct the cause if any and retry. |
+| <a id="1439"></a> 1439 | 16 | No | There is currently no witness associated with database "%.\*ls". |
+| <a id="1440"></a> 1440 | 10 | Yes | Database mirroring is active with database '%.\*ls' as the principal copy. This is an informational message only. No user action is required. |
+| <a id="1441"></a> 1441 | 10 | Yes | Database mirroring is active with database '%.\*ls' as the mirror copy. This is an informational message only. No user action is required. |
+| <a id="1442"></a> 1442 | 10 | Yes | Database mirroring is inactive for database '%.\*ls'. This is an informational message only. No user action is required. |
+| <a id="1443"></a> 1443 | 10 | Yes | Database mirroring has been terminated for database '%.\*ls'. This is an informational message only. No user action is required. |
+| <a id="1444"></a> 1444 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as a mirror database, which cannot be recovered. This is an informational message only. No user action is required. |
+| <a id="1445"></a> 1445 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as an inaccessible database mirroring database. A problem exists with the mirroring session. The session either lacks a quorum or the communications links are broken because of problems with links, endpoint configuration, or permissions (for the server account or security certificate). To gain access to the database, figure out what has changed in the session configuration and undo the change. |
+| <a id="1446"></a> 1446 | 10 | No | The "%.\*ls" server instance is already acting as the witness. |
+| <a id="1447"></a> 1447 | 16 | No | ALTER DATABASE "%.\*ls" command cannot be executed until both partner server instances are up, running, and connected. Start the partner and reissue the command. |
+| <a id="1448"></a> 1448 | 16 | No | The remote copy of database "%.\*ls" does not exist. Check the database name and reissue the command. |
+| <a id="1449"></a> 1449 | 16 | No | ALTER DATABASE command failed due to an invalid server connection string. |
+| <a id="1450"></a> 1450 | 16 | No | The ALTER DATABASE command failed because the worker thread cannot be created. |
+| <a id="1451"></a> 1451 | 16 | No | Database mirroring information was not found in the system table. |
+| <a id="1452"></a> 1452 | 16 | No | The partner server instance name must be distinct from the server instance that manages the database. The ALTER DATABASE SET PARTNER command failed. |
+| <a id="1453"></a> 1453 | 17 | Yes | '%.\*ls', the remote mirroring partner for database '%.\*ls', encountered error %d, status %d, severity %d. Database mirroring has been suspended. Resolve the error on the remote server and resume mirroring, or remove mirroring and re-establish the mirror server instance. |
+| <a id="1454"></a> 1454 | 17 | Yes | Database mirroring will be suspended. Server instance '%.\*ls' encountered error %d, state %d, severity %d when it was acting as a mirroring partner for database '%.\*ls'. The database mirroring partners might try to recover automatically from the error and resume the mirroring session. For more information, view the error log for additional error messages. |
+| <a id="1455"></a> 1455 | 16 | No | The database mirroring service cannot be forced for database "%.\*ls" because the database is not in the correct state to become the principal database. |
+| <a id="1456"></a> 1456 | 16 | Yes | The ALTER DATABASE command could not be sent to the remote server instance '%.\*ls'. The database mirroring configuration was not changed. Verify that the server is connected, and try again. |
+| <a id="1457"></a> [1457](../mssqlserver-1457-database-engine-error.md) | 23 | Yes | Synchronization of the mirror database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The ALTER DATABASE command failed. Ensure that the principal database, if available, is back up and online, and then reconnect the mirror server instance and allow the mirror database to finish synchronizing. |
+| <a id="1458"></a> [1458](../mssqlserver-1458-database-engine-error.md) | 17 | Yes | The principal copy of the '%.\*ls' database encountered error %d, status %d, severity %d while sending page %S_PGID to the mirror. Database mirroring has been suspended. Try to resolve the error condition, and resume mirroring. |
+| <a id="1459"></a> 1459 | 24 | Yes | An error occurred while accessing the database mirroring metadata. Drop mirroring (ALTER DATABASE database_name SET PARTNER OFF) and reconfigure it. |
+| <a id="1460"></a> 1460 | 16 | No | The database "%.\*ls" is already configured for database mirroring on the remote server. Drop database mirroring on the remote server to establish a new partner. |
+| <a id="1461"></a> [1461](../mssqlserver-1461-database-engine-error.md) | 10 | No | Database mirroring successfully repaired physical page %S_PGID in database "%.\*ls" by obtaining a copy from the partner. |
+| <a id="1462"></a> [1462](../mssqlserver-1462-database-engine-error.md) | 16 | No | Database mirroring is disabled due to a failed redo operation. Unable to resume. |
+| <a id="1463"></a> 1463 | 16 | No | Database mirroring is not available in the edition of this SQL Server instance. See books online for more details on feature support in different SQL Server editions. |
+| <a id="1464"></a> 1464 | 16 | No | Database "%.\*ls" is not in a recovering state which is required for a mirror database or secondary database. The remote database must be restored using WITH NORECOVERY. |
+| <a id="1465"></a> 1465 | 16 | No | Database "%.\*ls" database is not in full recovery mode on each of the server instances. The full recovery model is required for a database to participate in database mirroring or in an availability group. |
+| <a id="1466"></a> 1466 | 16 | No | Database "%.\*ls" is read-only on one of the server instances which is incompatible with participating in database mirroring or in an availability group. Set the database to read-write mode, and retry the operation. |
+| <a id="1467"></a> 1467 | 16 | No | Database "%.\*ls" database is in emergency or suspect mode on one of the partners which is incompatible with participating in database mirroring or in an availability group. |
+| <a id="1468"></a> 1468 | 16 | No | The operation cannot be performed on database "%.\*ls" because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group. |
+| <a id="1469"></a> 1469 | 16 | No | Database "%.\*ls" is an auto-close database on one of the partners which is incompatible with participating in database mirroring or in an availability group. |
+| <a id="1470"></a> 1470 | 16 | No | The alter database for this partner config values may only be initiated on the current principal server for database "%.\*ls". |
+| <a id="1471"></a> 1471 | 16 | No | The database mirroring connection terminated. Out of memory sending message for database "%.\*ls". |
+| <a id="1472"></a> 1472 | 16 | No | The database mirroring connection terminated. Communications error sending message for database "%.\*ls". |
+| <a id="1473"></a> 1473 | 16 | No | This SQL Server edition does not allow changing the safety level. ALTER DATABASE command failed. |
+| <a id="1474"></a> 1474 | 16 | No | Database mirroring connection error %d '%.\*ls' for '%.\*ls'. |
+| <a id="1475"></a> 1475 | 16 | No | Database "%.\*ls" might contain bulk logged changes that have not been backed up. Take a log backup on the principal database or primary database. Then restore this backup either on the mirror database to enable database mirroring or on every secondary database to enable you to join it to the availability group. |
+| <a id="1476"></a> 1476 | 16 | No | Database mirroring timeout value %d exceeds the maximum value 32767. |
+| <a id="1477"></a> 1477 | 16 | No | The database mirroring safety level must be FULL to manually failover database "%.\*ls". Set safety level to FULL and retry. |
+| <a id="1478"></a> 1478 | 16 | No | The mirror database, "%.\*ls", has insufficient transaction log data to preserve the log backup chain of the principal database. This may happen if a log backup from the principal database has not been taken or has not been restored on the mirror database. |
+| <a id="1479"></a> 1479 | 16 | No | The mirroring connection to "%.\*ls" has timed out for database "%.\*ls" after %d seconds without a response. Check the service and network connections. |
+| <a id="1480"></a> 1480 | 10 | No | The %S_MSG database "%.\*ls" is changing roles from "%ls" to "%ls" because the mirroring session or availability group failed over due to %S_MSG. This is an informational message only. No user action is required. |
+| <a id="1481"></a> 1481 | 10 | No | Database mirroring could not repair physical page %S_PGID in database "%.\*ls". The mirroring partner could not be contacted or did not provide a copy of the page. Possible reasons include a lack of network connectivity or that the copy of the page kept by the partner is also corrupted. To learn whether the partners are currently connected, view the mirroring_state_desc column of the sys.database_mirroring catalog view. If they are connected, for information about why the partner could not provide a copy of the page, examine its error log entries from around the time when this message was reported. Try to resolve the error and resume mirroring. |
+| <a id="1482"></a> 1482 | 10 | No | Database mirroring failed to get snapshot synchronization lock. |
+| <a id="1483"></a> 1483 | 10 | No | State information for database '%.\*ls' - Hardened Lsn: '%S_LSN' Commit LSN: '%S_LSN' Commit Time: '%S_DATE' |
+| <a id="1484"></a> 1484 | 16 | No | Database Mirroring cannot be enabled for database '%.\*ls' because the database has Accelerated Database Recovery enabled, or because there are still versions in Persisted Version Store. If Accelerated Database Recovery is disabled, execute sys.sp_persistent_version_cleanup to clean Persistent Version Store. |
+| <a id="1485"></a> 1485 | 10 | No | Database mirroring has been enabled on this instance of SQL Server. |
+| <a id="1486"></a> 1486 | 10 | No | Database Mirroring Transport is disabled in the endpoint configuration. |
+| <a id="1487"></a> 1487 | 10 | No | Database mirroring is starting %d parallel redo thread(s) with database '%.\*ls' as the mirror copy. This is an informational message only. No user action is required. |
+| <a id="1488"></a> 1488 | 16 | No | Database "%.\*ls" database is in single user mode which is incompatible with participating in database mirroring or in an availability group. Set database to multi-user mode, and retry the operation. |
+| <a id="1489"></a> 1489 | 10 | No | Database Mirroring is disabled on this server due to error %d. Check the errorlog and configuration for more information. |
+| <a id="1490"></a> 1490 | 16 | No | The remote copy of database "%.\*ls" has not been restored to a log backup that includes all filestream data files. |
+| <a id="1491"></a> 1491 | 16 | No | Enabling Database Mirroring is not allowed when REMOTE_DATA_ARCHIVE is already enabled on database '%.\*ls'. |
+| <a id="1492"></a> 1492 | 16 | No | Enabling Database Mirroring is not allowed when Change Feed is enabled on database '%.\*ls'. |
+| <a id="1493"></a> 1493 | 16 | No | Database Mirroring cannot be set for database '%.\*ls' because the database has the LEDGER = ON option or contains ledger tables. |
+| <a id="1494"></a> 1494 | 16 | No | Enabling Database Mirroring is not allowed when Change Event Streaming is enabled on database '%.\*ls'. |
+| <a id="1499"></a> 1499 | 16 | Yes | Database mirroring error: status %u, severity %u, state %u, string %.\*ls. |
+| <a id="1501"></a> 1501 | 20 | Yes | Sort failure. Contact Technical Support. |
+| <a id="1505"></a> [1505](../mssqlserver-1505-database-engine-error.md) | 16 | No | The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.\*ls' and the index name '%.\*ls'. The duplicate key value is %ls. |
+| <a id="1509"></a> 1509 | 20 | Yes | Row comparison failed during sort because of an unknown data type on a key column. Metadata might be corrupt. Contact Technical Support. |
+| <a id="1510"></a> 1510 | 17 | No | Sort failed. Out of space or locks in database '%.\*ls'. |
+| <a id="1511"></a> 1511 | 20 | Yes | Sort cannot be reconciled with transaction log. |
+| <a id="1522"></a> 1522 | 20 | Yes | Sort operation failed during an index build. The overwriting of the allocation page in database '%.\*ls' was prevented by terminating the sort. Run DBCC CHECKDB to check for allocation and consistency errors. It may be necessary restore the database from backup. |
+| <a id="1523"></a> 1523 | 20 | Yes | Sort failure. The incorrect extent could not be deallocated. Contact Technical Support. |
+| <a id="1532"></a> 1532 | 20 | Yes | New sort run starting on page %S_PGID found an extent not marked as shared. Retry the transaction. If the problem persists, contact Technical Support. |
+| <a id="1533"></a> 1533 | 20 | Yes | Cannot share extent %S_PGID. The correct extents could not be identified. Retry the transaction. |
+| <a id="1534"></a> 1534 | 20 | Yes | Extent %S_PGID not found in shared extent directory. Retry the transaction. If the problem persists, contact Technical Support. |
+| <a id="1535"></a> 1535 | 20 | Yes | Cannot share extent %S_PGID. Shared extent directory is full. Retry the transaction. If the problem persists, contact Technical Support. |
+| <a id="1537"></a> 1537 | 20 | Yes | Cannot suspend a sort that is not in row input phase. |
+| <a id="1538"></a> 1538 | 20 | Yes | Cannot insert a row into a sort when the sort is not in row input phase. |
+| <a id="1540"></a> 1540 | 16 | No | Cannot sort a row of size %d, which is greater than the allowable maximum of %d. Consider resubmitting the query using the ROBUST PLAN hint. |
+| <a id="1541"></a> 1541 | 16 | No | Sort failure. A defective CLR type comparison function is suspected. |
+| <a id="1542"></a> 1542 | 10 | Yes | BobMgr::GetBuf: Sort Big Output Buffer write not complete after %d seconds. |
+| <a id="1543"></a> 1543 | 10 | Yes | SQL Server encountered: '%ls' resulting from an attempt to read the following: sort run page %S_PGID, in file '%ls', in database with ID %d. Sort is retrying the read. |
+| <a id="1701"></a> 1701 | 16 | No | Creating or altering table '%.\*ls' failed because the minimum row size would be %d, including %d bytes of internal overhead. This exceeds the maximum allowable table row size of %d bytes. |
+| <a id="1702"></a> 1702 | 16 | No | CREATE TABLE failed because column '%.\*ls' in table '%.\*ls' exceeds the maximum of %d columns. |
+| <a id="1706"></a> 1706 | 16 | No | The system table '%.\*ls' can only be created or altered during an upgrade. |
+| <a id="1707"></a> 1707 | 16 | No | Cannot specify TEXTIMAGE_ON filegroup for a partitioned table. |
+| <a id="1708"></a> 1708 | 10 | No | Warning: The table "%.\*ls" has been created, but its maximum row size exceeds the allowed maximum of %d bytes. INSERT or UPDATE to this table will fail if the resulting row exceeds the size limit. |
+| <a id="1709"></a> 1709 | 16 | No | Cannot use TEXTIMAGE_ON when a table has no text, ntext, image, varchar(max), nvarchar(max), non-FILESTREAM varbinary(max), xml or large CLR type columns. |
+| <a id="1710"></a> 1710 | 10 | No | Cannot use alias type with rule or default bound to it as a column type in table variable or return table definition in table valued function. Type '%.\*ls' has a %S_MSG bound to it. |
+| <a id="1711"></a> 1711 | 16 | No | Cannot define PRIMARY KEY constraint on column '%.\*ls' in table '%.\*ls'. The computed column has to be persisted and not nullable. |
+| <a id="1712"></a> 1712 | 16 | No | Online index operations can only be performed in Enterprise edition of SQL Server or Azure SQL Edge. |
+| <a id="1713"></a> 1713 | 16 | No | Cannot execute %ls on/using table '%.\*ls' since the table is the target table or part of cascading actions of a currently executing trigger. |
+| <a id="1714"></a> 1714 | 16 | No | Alter table failed because unique column IDs have been exhausted for table '%.\*ls'. |
+| <a id="1715"></a> 1715 | 16 | No | Foreign key '%.\*ls' creation failed. Only NO ACTION referential update action is allowed for referencing computed column '%.\*ls'. |
+| <a id="1716"></a> 1716 | 16 | No | FILESTREAM_ON cannot be specified when a table has no FILESTREAM columns. Remove the FILESTREAM_ON clause from the statement, or add a FILESTREAM column to the table. |
+| <a id="1717"></a> 1717 | 16 | No | FILESTREAM_ON cannot be specified together with a partition scheme in the ON clause. |
+| <a id="1718"></a> 1718 | 16 | No | Change tracking must be enabled on database '%.\*ls' before it can be enabled on table '%.\*ls'. |
+| <a id="1719"></a> 1719 | 16 | No | FILESTREAM data cannot be placed on an empty filegroup. |
+| <a id="1720"></a> 1720 | 16 | No | Cannot drop FILESTREAM filegroup or partition scheme since table '%.\*ls' has FILESTREAM columns. |
+| <a id="1721"></a> 1721 | 16 | No | Altering table '%.\*ls' failed because the row size using vardecimal storage format exceeds the maximum allowed table row size of %d bytes. |
+| <a id="1722"></a> 1722 | 16 | No | Cannot %S_MSG %S_MSG '%.\*ls' since a partition scheme is not specified for FILESTREAM data. |
+| <a id="1723"></a> 1723 | 16 | No | Cannot %S_MSG %S_MSG '%.\*ls' since a partition scheme was specified for FILESTREAM data but not for the table. |
+| <a id="1724"></a> 1724 | 16 | No | Filegroup '%.\*ls' is not a FILESTREAM filegroup or partition scheme of FILESTREAM filegroups. |
+| <a id="1725"></a> 1725 | 16 | No | Cannot add FILESTREAM column to %S_MSG '%.\*ls' because an INSTEAD OF trigger exists on the %S_MSG. |
+| <a id="1726"></a> 1726 | 16 | No | Cannot add FILESTREAM filegroup or partition scheme since table '%.\*ls' has a FILESTREAM filegroup or partition scheme already. |
+| <a id="1727"></a> 1727 | 16 | No | Cannot create non-clustered index '%.\*ls' on table '%.\*ls' with the FILESTREAM_ON clause. |
+| <a id="1728"></a> 1728 | 16 | No | Cannot create index '%.\*ls' on table '%.\*ls' because the computed column '%.\*ls' uses a FILESTREAM column. |
+| <a id="1729"></a> 1729 | 16 | No | Cannot create table '%.\*ls' because the partitioning column '%.\*ls' uses a FILESTREAM column. |
+| <a id="1730"></a> 1730 | 16 | No | Creating or altering compressed table '%.\*ls' failed because the uncompressed row size would be %d, including %d bytes of internal overhead. This exceeds the maximum allowable table row size of %d bytes. |
+| <a id="1731"></a> 1731 | 16 | No | Cannot create the sparse column '%.\*ls' in the table '%.\*ls' because an option or data type specified is not valid. A sparse column must be nullable and cannot have the ROWGUIDCOL, IDENTITY, or FILESTREAM properties. A sparse column cannot be of the following data types: text, ntext, image, geometry, geography, or user-defined type. |
+| <a id="1732"></a> 1732 | 16 | No | Cannot create the sparse column set '%.\*ls' in the table '%.\*ls' because a table cannot have more than one sparse column set. Modify the statement so that only one column is specified as COLUMN_SET FOR ALL_SPARSE_COLUMNS. |
+| <a id="1733"></a> 1733 | 16 | No | Cannot create the sparse column set '%.\*ls' in the table '%.\*ls' because a sparse column set must be a nullable xml column. Modify the column definition to allow null values. |
+| <a id="1734"></a> 1734 | 16 | No | Cannot create the sparse column set '%.\*ls' in the table '%.\*ls' because the table already contains one or more sparse columns. A sparse column set cannot be added to a table if the table contains a sparse column. |
+| <a id="1735"></a> 1735 | 16 | No | Duplicate range-partitioning function specified for the table being created. Remove one of the range-partitioning function specifications and resubmit the request. |
+| <a id="1736"></a> 1736 | 16 | No | The column '%.\*ls' in the table '%.\*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a a CHECK constraint or computed column definition. |
+| <a id="1737"></a> 1737 | 16 | No | Duplicate distribution clause specified for the table being created. Remove one of the distribution clauses and resubmit the request. |
+| <a id="1738"></a> 1738 | 10 | No | Cannot create table '%.\*ls' with only a column set column and without any non-computed columns in the table. |
+| <a id="1739"></a> 1739 | 16 | No | ALTER TABLE failed because the table has %d variable length columns (including columns that have been dropped but require cleanup). This exceeds the maximum number of columns supported. Execute ALTER TABLE with the REBUILD option, then retry the original ALTER TABLE statement. |
+| <a id="1740"></a> 1740 | 16 | No | Cannot encrypt the sparse column '%.\*ls' in the '%.\*ls' table because the table contains a sparse column set. |
+| <a id="1741"></a> 1741 | 16 | No | Cannot create the sparse column set '%.\*ls' in the '%.\*ls' table because the table contains one or more encrypted sparse columns. |
+| <a id="1750"></a> 1750 | 10 | No | Could not create constraint or index. See previous errors. |
+| <a id="1752"></a> 1752 | 16 | No | Column '%.\*ls' in table '%.\*ls' is invalid for creating a default constraint. |
+| <a id="1753"></a> 1753 | 16 | No | Column '%.\*ls.%.\*ls' is not the same length or scale as referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. Columns participating in a foreign key relationship must be defined with the same length and scale. |
+| <a id="1754"></a> 1754 | 16 | No | Defaults cannot be created on columns with an IDENTITY attribute. Table '%.\*ls', column '%.\*ls'. |
+| <a id="1755"></a> 1755 | 16 | No | Defaults cannot be created on columns of data type timestamp. Table '%.\*ls', column '%.\*ls'. |
+| <a id="1756"></a> 1756 | 10 | No | Skipping FOREIGN KEY constraint '%.\*ls' definition for temporary table. FOREIGN KEY constraints are not enforced on local or global temporary tables. |
+| <a id="1757"></a> 1757 | 16 | No | Column '%.\*ls.%.\*ls' is not of same collation as referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. |
+| <a id="1758"></a> 1758 | 16 | No | Only a single constraint can be added or dropped online with no other operations in the same statement. |
+| <a id="1759"></a> 1759 | 16 | No | Computed column '%.\*ls' in table '%.\*ls' is not allowed to be used in another computed-column definition. |
+| <a id="1760"></a> 1760 | 16 | No | Constraints of type %ls cannot be created on columns of type %ls. |
+| <a id="1761"></a> 1761 | 16 | No | Cannot create the foreign key "%.\*ls" with the SET NULL referential action, because one or more referencing columns are not nullable. |
+| <a id="1762"></a> 1762 | 16 | No | Cannot create the foreign key "%.\*ls" with the SET DEFAULT referential action, because one or more referencing not-nullable columns lack a default constraint. |
+| <a id="1763"></a> 1763 | 16 | No | Cross-database foreign key references are not supported. Foreign key '%.\*ls'. |
+| <a id="1764"></a> 1764 | 16 | No | Computed Column '%.\*ls' in table '%.\*ls' is invalid for use in '%ls' because it is not persisted. |
+| <a id="1765"></a> 1765 | 16 | No | Foreign key '%.\*ls' creation failed. Only NO ACTION and CASCADE referential delete actions are allowed for referencing computed column '%.\*ls'. |
+| <a id="1766"></a> 1766 | 16 | No | Foreign key references to temporary tables are not supported. Foreign key '%.\*ls'. |
+| <a id="1767"></a> 1767 | 16 | No | Foreign key '%.\*ls' references invalid table '%.\*ls'. |
+| <a id="1768"></a> 1768 | 16 | No | Foreign key '%.\*ls' references object '%.\*ls' which is not a user table. |
+| <a id="1769"></a> 1769 | 16 | No | Foreign key '%.\*ls' references invalid column '%.\*ls' in referencing table '%.\*ls'. |
+| <a id="1770"></a> 1770 | 16 | No | Foreign key '%.\*ls' references invalid column '%.\*ls' in referenced table '%.\*ls'. |
+| <a id="1771"></a> 1771 | 16 | No | Cannot create foreign key '%.\*ls' because it references object '%.\*ls' whose clustered index '%.\*ls' is disabled. |
+| <a id="1772"></a> 1772 | 16 | No | Foreign key '%.\*ls' is not valid. A system table cannot be used in a foreign key definition. |
+| <a id="1773"></a> 1773 | 16 | No | Foreign key '%.\*ls' has implicit reference to object '%.\*ls' which does not have a primary key defined on it. |
+| <a id="1774"></a> 1774 | 16 | No | The number of columns in the referencing column list for foreign key '%.\*ls' does not match those of the primary key in the referenced table '%.\*ls'. |
+| <a id="1775"></a> 1775 | 16 | No | Cannot create foreign key '%.\*ls' because it references object '%.\*ls' whose PRIMARY KEY index '%.\*ls' is disabled. |
+| <a id="1776"></a> 1776 | 16 | No | There are no primary or candidate keys in the referenced table '%.\*ls' that match the referencing column list in the foreign key '%.\*ls'. |
+| <a id="1778"></a> 1778 | 16 | No | Column '%.\*ls.%.\*ls' is not the same data type as referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. |
+| <a id="1779"></a> 1779 | 16 | No | Table '%.\*ls' already has a primary key defined on it. |
+| <a id="1781"></a> 1781 | 16 | No | Column already has a DEFAULT bound to it. |
+| <a id="1782"></a> 1782 | 16 | No | Cannot drop index '%.\*ls' since a partition scheme is not specified for base data. |
+| <a id="1784"></a> 1784 | 16 | No | Cannot create the foreign key '%.\*ls' because the referenced column '%.\*ls.%.\*ls' is a non-persisted computed column. |
+| <a id="1785"></a> [1785](../mssqlserver-1785-database-engine-error.md) | 16 | No | Introducing FOREIGN KEY constraint '%.\*ls' on table '%.\*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints. |
+| <a id="1786"></a> 1786 | 16 | No | Either column '%.\*ls.%.\*ls' or referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls' is a timestamp column. This data type cannot be used with cascading referential integrity constraints. |
+| <a id="1787"></a> 1787 | 16 | No | Cannot define foreign key constraint '%.\*ls' with cascaded DELETE or UPDATE on table '%.\*ls' because the table has an INSTEAD OF DELETE or UPDATE TRIGGER defined on it. |
+| <a id="1788"></a> 1788 | 16 | No | Cascading foreign key '%.\*ls' cannot be created where the referencing column '%.\*ls.%.\*ls' is an identity column. |
+| <a id="1789"></a> 1789 | 16 | No | Cannot use CHECKSUM(\*) in a computed column, constraint, default definition, or INSERT statement. |
+| <a id="1790"></a> 1790 | 16 | No | The name of a user-defined table type cannot start with a number (#) sign. |
+| <a id="1791"></a> 1791 | 16 | No | A DEFAULT constraint cannot be created on the column '%.\*ls' in the table '%.\*ls' because the column is a sparse column or sparse column set. Sparse columns or sparse column sets cannot have a DEFAULT constraint. |
+| <a id="1792"></a> 1792 | 16 | No | Alter table '%.\*ls' failed because the added fixed column might cause existing data to go beyond the maximum allowable table row size of %d bytes. |
+| <a id="1801"></a> 1801 | 16 | No | Database '%.\*ls' already exists. Choose a different database name. |
+| <a id="1802"></a> 1802 | 16 | No | CREATE DATABASE failed. Some file names listed could not be created. Check related errors. |
+| <a id="1803"></a> [1803](../mssqlserver-1803-database-engine-error.md) | 17 | No | The CREATE DATABASE statement failed. The primary file must be at least %d MB to accommodate a copy of the model database. |
+| <a id="1806"></a> 1806 | 16 | No | CREATE DATABASE failed. The default collation of database '%.\*ls' cannot be set to '%.\*ls'. |
+| <a id="1807"></a> [1807](../mssqlserver-1807-database-engine-error.md) | 17 | No | Could not obtain exclusive lock on database '%.\*ls'. Retry the operation later. |
+| <a id="1809"></a> 1809 | 10 | No | To achieve optimal performance, update all statistics on the '%.\*ls' database by running sp_updatestats. |
+| <a id="1810"></a> 1810 | 16 | No | The model database must be updatable before a new database can be created. |
+| <a id="1812"></a> 1812 | 16 | No | CREATE DATABASE failed. COLLATE clause cannot be used with the FOR ATTACH option. |
+| <a id="1813"></a> 1813 | 16 | No | Could not open new database '%.\*ls'. CREATE DATABASE is aborted. |
+| <a id="1814"></a> 1814 | 10 | Yes | Could not create tempdb. You may not have enough disk space available. Free additional disk space by deleting other files on the tempdb drive and then restart SQL Server. Check for additional errors in the operating system error log that may indicate why the tempdb files could not be initialized. |
+| <a id="1815"></a> 1815 | 16 | No | The %ls property cannot be used with database snapshot files. |
+| <a id="1816"></a> 1816 | 16 | No | Database snapshot on the system database %.\*ls is not allowed. |
+| <a id="1817"></a> 1817 | 16 | No | Only the owner of database "%.\*s" or the system administrator can create a database snapshot on it. |
+| <a id="1818"></a> 1818 | 16 | No | Primary log file '%ls' is missing and the database was not cleanly shut down so it cannot be rebuilt. |
+| <a id="1819"></a> 1819 | 10 | No | Could not create default log file because the name was too long. |
+| <a id="1821"></a> 1821 | 16 | No | Cannot create a database snapshot on another database snapshot. |
+| <a id="1822"></a> 1822 | 16 | No | The database must be online to have a database snapshot. |
+| <a id="1823"></a> 1823 | 16 | No | A database snapshot cannot be created because it failed to start. |
+| <a id="1824"></a> 1824 | 16 | No | Cannot attach a database that was being restored. |
+| <a id="1825"></a> 1825 | 16 | No | Filegroups and collations cannot be specified for database snapshots. |
+| <a id="1826"></a> 1826 | 16 | No | User-defined filegroups are not allowed on "%ls". |
+| <a id="1827"></a> 1827 | 16 | No | CREATE DATABASE or ALTER DATABASE failed because the resulting cumulative database size would exceed your licensed limit of %I64d MB per %S_MSG. |
+| <a id="1828"></a> 1828 | 16 | No | The logical file name "%.\*ls" is already in use. Choose a different name. |
+| <a id="1829"></a> 1829 | 16 | No | The FOR ATTACH option requires that at least the primary file be specified. |
+| <a id="1830"></a> 1830 | 16 | No | The files '%ls' and '%ls' are both primary files. A database can only have one primary file. |
+| <a id="1831"></a> 1831 | 16 | No | File ONLINE/OFFLINE syntax cannot be used with CREATE DATABASE. |
+| <a id="1832"></a> 1832 | 20 | No | Cannot attach the file '%.\*ls' as database '%.\*ls'.%.\*ls |
+| <a id="1833"></a> 1833 | 16 | No | File '%ls' cannot be reused until after the next BACKUP LOG operation. If the database is participating in an availability group, a dropped file can be reused only after the truncation LSN of the primary availability replica has passed the drop LSN of the file and a subsequent BACKUP LOG operation has completed. |
+| <a id="1834"></a> 1834 | 16 | No | The file '%ls' cannot be overwritten. It is being used by database '%.\*ls'. |
+| <a id="1835"></a> 1835 | 16 | No | Unable to create/attach any new database because the number of existing databases has reached the maximum number allowed: %d. |
+| <a id="1836"></a> 1836 | 10 | No | Cannot create the default files because the name that was supplied is too long. |
+| <a id="1837"></a> 1837 | 16 | No | The file name "%ls" is too long to create an alternate stream name. |
+| <a id="1838"></a> 1838 | 10 | No | Offline database file(s) have been overwritten while being reverted to online state from a database snapshot. The reverted file might contain invalid pages. Please run database consistency checks to assess the data integrity. |
+| <a id="1839"></a> 1839 | 16 | No | Could not create default data files because the name '%ls' is a reserved device name. |
+| <a id="1841"></a> 1841 | 16 | No | CREATE DATABASE failed. CONTAINMENT clause cannot be used with the FOR ATTACH option. |
+| <a id="1842"></a> 1842 | 16 | No | The file size, max size cannot be greater than 2147483647 in units of a page size. The file growth cannot be greater than 2147483647 in units of both page size and percentage. |
+| <a id="1843"></a> 1843 | 10 | Yes | Reverting database '%ls' to the point in time of database snapshot '%ls' with split point LSN %.\*ls (0x%ls). This is an informational message only. No user action is required. |
+| <a id="1844"></a> 1844 | 16 | No | %ls is not supported on %ls. |
+| <a id="1845"></a> 1845 | 16 | No | Cannot find SQL Volume Shadow Copy Service (VSS) Writer in writer metadata document provided by VSS while creating auto-recovered VSS snapshot for online DBCC check. |
+| <a id="1846"></a> 1846 | 16 | No | Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check. |
+| <a id="1847"></a> 1847 | 16 | No | The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots. |
+| <a id="1848"></a> 1848 | 16 | No | Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check. |
+| <a id="1849"></a> 1849 | 16 | No | CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files. |
+| <a id="1850"></a> 1850 | 16 | No | Cannot attach database '%.\*ls' because the file name '%.\*ls' is valid on more than one brick. |
+| <a id="1851"></a> 1851 | 16 | No | File name '%.\*ls' as relative path is too long after prefixed with default path '%ls'. |
+| <a id="1852"></a> 1852 | 21 | No | Error occurred when shrinking the physical file. Please check ERRORLOG for more detail. |
+| <a id="1853"></a> 1853 | 16 | No | The logical database file '%.\*ls' cannot be found. Specify the full path for the file. |
+| <a id="1854"></a> 1854 | 16 | No | The original file name '%.\*ls' for logical database file '%.\*ls' is too long to be combined with the full path to the new primary data file location. |
+| <a id="1855"></a> 1855 | 16 | No | System table sysfiles1 is corrupted. |
+| <a id="1856"></a> 1856 | 16 | No | Cannot attach file '%.\*ls' as database '%.\*ls' because this database name is already attached with file '%.\*ls' |
+| <a id="1857"></a> 1857 | 16 | No | Cannot attach file '%.\*ls' as database '%.\*ls' because this file is already in use for database '%.\*ls' |
+| <a id="1858"></a> 1858 | 16 | No | Could not create snapshot database because user database is still in recovery. |
+| <a id="1859"></a> 1859 | 16 | No | Create database is not allowed in the model database context. Switch context to other database with USE statement and retry. |
+| <a id="1860"></a> 1860 | 16 | No | Task has been aborted, but %S_MSG of the %S_MSG '%.\*ls' may continue in the background. Please check whether the %S_MSG has finished successfully. |
+| <a id="1900"></a> 1900 | 16 | No | Cannot create a clustered index with a predicate clause. Filtered clustered indexes are not supported. |
+| <a id="1901"></a> 1901 | 16 | No | Cannot create index or statistics '%.\*ls' on view '%.\*ls' because key column '%.\*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there. |
+| <a id="1902"></a> 1902 | 16 | No | Cannot create more than one clustered index on %S_MSG '%.\*ls'. Drop the existing clustered index '%.\*ls' before creating another. |
+| <a id="1904"></a> [1904](../mssqlserver-1904-database-engine-error.md) | 16 | No | The %S_MSG '%.\*ls' on table '%.\*ls' has %d columns in the key list. The maximum limit for %S_MSG key column list is %d. |
+| <a id="1907"></a> 1907 | 16 | No | Cannot recreate index '%.\*ls'. The new index definition does not match the constraint being enforced by the existing index. |
+| <a id="1908"></a> 1908 | 16 | No | Column '%.\*ls' is partitioning column of the index '%.\*ls'. Partition columns for a unique index must be a subset of the index key. |
+| <a id="1909"></a> 1909 | 16 | No | Cannot use duplicate column names in %S_MSG. Column name '%.\*ls' listed more than once. |
+| <a id="1910"></a> 1910 | 16 | No | Could not create %S_MSG '%.\*ls' because it exceeds the maximum of %d allowed per table or view. |
+| <a id="1911"></a> 1911 | 16 | No | Column name '%.\*ls' does not exist in the target table, index or view. |
+| <a id="1912"></a> 1912 | 16 | No | Could not proceed with index DDL operation on %S_MSG '%.\*ls' because it conflicts with another concurrent operation that is already in progress on the object. The concurrent operation could be an online index operation on the same object or another concurrent operation that moves index pages like DBCC SHRINKFILE. |
+| <a id="1913"></a> 1913 | 16 | No | The operation failed because an index or statistics with name '%.\*ls' already exists on %S_MSG '%.\*ls'. |
+| <a id="1914"></a> 1914 | 16 | No | Index cannot be created on object '%.\*ls' because the object is not a user table or view. |
+| <a id="1915"></a> 1915 | 16 | No | Cannot alter a non-unique index with ignore_dup_key index option. Index '%.\*ls' is non-unique. |
+| <a id="1916"></a> 1916 | 16 | No | CREATE INDEX options %ls and %ls are mutually exclusive. |
+| <a id="1917"></a> 1917 | 16 | No | Cannot create, rebuild or drop an index on a local temporary table online. Perform the index operation offline. |
+| <a id="1919"></a> 1919 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as a key column in an index. |
+| <a id="1921"></a> 1921 | 16 | No | Invalid %S_MSG '%.\*ls' specified. |
+| <a id="1922"></a> 1922 | 16 | No | Filegroup '%.\*ls' has no files assigned to it. Tables, indexes, and large object columns cannot be created on this filegroup. Use ALTER DATABASE to add one or more files to the filegroup. |
+| <a id="1924"></a> 1924 | 16 | No | Filegroup '%.\*ls' is read-only. |
+| <a id="1925"></a> 1925 | 16 | No | Cannot convert a clustered index to a nonclustered index by using the DROP_EXISTING option. To change the index type from clustered to nonclustered, delete the clustered index, and then create a nonclustered index by using two separate statements. |
+| <a id="1926"></a> 1926 | 16 | No | Cannot create a clustered index because nonclustered index ID %d is on a read-only filegroup. |
+| <a id="1927"></a> 1927 | 16 | No | There are already statistics on table '%.\*ls' named '%.\*ls'. |
+| <a id="1929"></a> 1929 | 16 | No | Statistics cannot be created on object '%.\*ls' because the object is not a user table or view. |
+| <a id="1930"></a> 1930 | 16 | No | Cannot convert a nonclustered index to a clustered index because a foreign key constraint references the index. Remove the foreign key constraint and then retry the operation. |
+| <a id="1931"></a> 1931 | 16 | No | The SQL statement cannot be executed because filegroup '%.\*ls' is offline. Use the sys.database_files or sys.master_files catalog view to determine the state of the files in this filegroup and then restore the offline file(s) from backup. |
+| <a id="1932"></a> 1932 | 16 | No | Cannot create a clustered index because nonclustered index ID %d is on an offline filegroup. |
+| <a id="1934"></a> 1934 | 16 | No | %ls failed because the following SET options have incorrect settings: '%.\*ls'. Verify that SET options are correct for use with %S_MSG. |
+| <a id="1935"></a> 1935 | 16 | No | Cannot create index. Object '%.\*ls' was created with the following SET options off: '%.\*ls'. |
+| <a id="1937"></a> 1937 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because it references another view '%.\*ls'. Consider expanding referenced view's definition by hand in indexed view definition. |
+| <a id="1938"></a> 1938 | 16 | No | Index cannot be created on view '%.\*ls' because the underlying object '%.\*ls' has a different owner. |
+| <a id="1939"></a> 1939 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because the view is not schema bound. |
+| <a id="1940"></a> 1940 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It does not have a unique clustered index. |
+| <a id="1941"></a> 1941 | 16 | No | Cannot create nonunique clustered index on view '%.\*ls' because only unique clustered indexes are allowed. Consider creating unique clustered index instead. |
+| <a id="1942"></a> 1942 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains text, ntext, image, FILESTREAM or xml columns. |
+| <a id="1943"></a> 1943 | 16 | No | The index "%.\*ls" on table "%.\*ls" cannot be reorganized because page level locking is disabled. |
+| <a id="1944"></a> 1944 | 16 | No | Index '%.\*ls' was not created because the index key size is at least %d bytes. The %S_MSG index key size cannot exceed %d bytes. If the index key includes implicit key columns, the index key size cannot exceed %d bytes. |
+| <a id="1945"></a> 1945 | 10 | No | Warning! The maximum key length for a %S_MSG index is %d bytes. The index '%.\*ls' has maximum length of %d bytes. For some combination of large values, the insert/update operation will fail. |
+| <a id="1946"></a> 1946 | 16 | No | Operation failed. The index entry of length %d bytes for the index '%.\*ls' exceeds the maximum length of %d bytes for %S_MSG indexes. |
+| <a id="1947"></a> 1947 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains a self join on "%.\*ls". |
+| <a id="1949"></a> 1949 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The function '%s' yields nondeterministic results. Use a deterministic system function, or modify the user-defined function to return deterministic results. |
+| <a id="1950"></a> 1950 | 16 | No | Index on view '%.\*ls' cannot be created because the view contains an imprecise expression in a GROUP BY clause |
+| <a id="1951"></a> 1951 | 16 | No | Index on view '%.\*ls' cannot be created because the view contains an imprecise expression in the WHERE clause. |
+| <a id="1952"></a> 1952 | 16 | No | Index on view '%.\*ls' cannot be created because the view contains an imprecise expression in a join. |
+| <a id="1953"></a> 1953 | 16 | No | Index on view '%.\*ls' cannot be created because some arguments are missing in a built-in function. |
+| <a id="1956"></a> 1956 | 16 | No | Cannot create %S_MSG on the '%.\*ls' view because it uses the nondeterministic user-defined function '%.\*ls'. Remove the reference to the function, or make it deterministic. |
+| <a id="1957"></a> 1957 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because view uses imprecise user-defined function '%.\*ls'. Consider removing reference to function or altering it to be precise. |
+| <a id="1959"></a> 1959 | 16 | No | Cannot create an index on a view or computed column because the compatibility level of this database is less than 80. Use sp_dbcmptlevel to raise the compatibility level of the database. |
+| <a id="1961"></a> 1961 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The collation cast expression with collation name '%.\*ls' is non-deterministic because it is dependent on the operating system. |
+| <a id="1962"></a> 1962 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because column '%.\*ls' that is referenced by the view in the WHERE or GROUP BY clause is imprecise. Consider eliminating the column from the view, or altering the column to be precise. |
+| <a id="1963"></a> 1963 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains a convert that is imprecise or non-deterministic. |
+| <a id="1964"></a> 1964 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains an imprecise constant. |
+| <a id="1965"></a> 1965 | 16 | No | Cannot create %S_MSG on view "%.\*ls". The view contains an imprecise arithmetic operator. |
+| <a id="1966"></a> 1966 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The view contains an imprecise aggregate operator. |
+| <a id="1967"></a> 1967 | 16 | No | Cannot create a new clustered index on a view online. |
+| <a id="1968"></a> 1968 | 16 | No | Cannot convert a nonclustered index to a clustered index online using DROP_EXISTING option. |
+| <a id="1969"></a> 1969 | 16 | No | Default FILESTREAM filegroup is not available in database '%.\*ls'. |
+| <a id="1970"></a> 1970 | 10 | No | Warning: Online index operation on table '%.\*ls' will proceed but concurrent access to the table may be limited due to residual lock on the table from a previous operation in the same transaction. |
+| <a id="1971"></a> 1971 | 16 | No | Cannot disable index '%.\*ls' on table '%.\*ls'. Permission denied to disable foreign key '%.\*ls' on table '%.\*ls' that uses this index. |
+| <a id="1972"></a> 1972 | 16 | No | Cannot disable clustered index '%.\*ls' on table '%.\*ls'. Permission denied to alter the referencing view '%.\*ls' while disabling its clustered index. |
+| <a id="1973"></a> 1973 | 16 | No | Cannot perform the specified operation on disabled index '%.\*ls' on %S_MSG '%.\*ls'. |
+| <a id="1974"></a> 1974 | 16 | No | Cannot perform the specified operation on %S_MSG '%.\*ls' because its clustered index '%.\*ls' is disabled. |
+| <a id="1975"></a> 1975 | 16 | No | Index '%.\*ls' row length exceeds the maximum permissible length of '%d' bytes. |
+| <a id="1976"></a> 1976 | 16 | No | Cannot create index or statistics '%.\*ls' on view '%.\*ls' because cannot verify key column '%.\*ls' is precise and deterministic. Consider removing column from index or statistics key, marking column persisted in base table if it is computed, or using non-CLR-derived column in key. |
+| <a id="1977"></a> 1977 | 16 | No | Could not create %S_MSG '%.\*ls' on table '%.\*ls'. Only XML Index can be created on XML column '%.\*ls'. |
+| <a id="1978"></a> 1978 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as a key column in an index or statistics. |
+| <a id="1979"></a> 1979 | 16 | No | Cannot use index option ignore_dup_key to alter index '%.\*ls' as it enforces a primary or unique constraint. |
+| <a id="1980"></a> 1980 | 16 | No | Index cannot be created on computed column '%.\*ls' of table '%.\*ls' because the underlying object '%.\*ls' has a different owner. |
+| <a id="1981"></a> 1981 | 10 | No | Warning: The maximum length of the row exceeds the permissible limit of %d bytes. For some combination of large values, the insert/update operation will fail. |
+| <a id="1982"></a> 1982 | 16 | No | Cannot create %S_MSG on view '%.\*ls' because the view references non-deterministic or imprecise member function '%.\*ls' on CLR type '%.\*ls'. Consider removing reference to the function or altering the function to behave in a deterministic way. Do not declare a CLR function that behaves non-deterministically to have IsDeterministic=true, because that can lead to index corruption. See Books Online for details. |
+| <a id="1983"></a> 1983 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. The function '%s' yields imprecise results. Use a precise system function, or modify the user-defined function to return precise results. |
+| <a id="1984"></a> 1984 | 16 | No | Index '%.\*ls' cannot be created or rebuilt. The specified row length for this index using the vardecimal storage format exceeds the maximum allowed length of '%d' bytes. |
+| <a id="1985"></a> 1985 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains one or more XML data type methods. |
+| <a id="1986"></a> 1986 | 10 | No | Cannot replace non-hypothetical index '%.\*ls' with a hypothetical index using the DROP_EXISTING option. |
+| <a id="1987"></a> 1987 | 16 | No | Cannot %S_MSG %S_MSG '%.\*ls' on %S_MSG '%.\*ls' because its %S_MSG is disabled. |
+| <a id="1988"></a> 1988 | 16 | No | Cannot rebuild clustered index '%.\*ls' online because it is disabled. |
+| <a id="1989"></a> 1989 | 16 | No | Cannot enable foreign key constraint '%.\*ls' as index '%.\*ls' on referenced key is disabled. |
+| <a id="1990"></a> 1990 | 16 | No | Cannot define an index on a view with ignore_dup_key index option. Remove ignore_dup_key option and verify that view definition does not allow duplicates, or do not index view. |
+| <a id="1991"></a> 1991 | 16 | No | Cannot disable clustered index '%.\*ls' on table '%.\*ls'. Permission denied to disable foreign key '%.\*ls' on table '%.\*ls' that references this table. |
+| <a id="1992"></a> 1992 | 10 | No | Warning: Foreign key '%.\*ls' on table '%.\*ls' referencing table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
+| <a id="1993"></a> 1993 | 16 | No | Cannot partition an index on a table variable or return table definition in table valued function. |
+| <a id="1994"></a> 1994 | 16 | No | Cannot create or update statistics on view "%.\*ls" because both FULLSCAN and NORECOMPUTE options are required. |
+| <a id="1995"></a> 1995 | 16 | No | Cannot rebuild hypothetical index '%.\*ls' online. |
+| <a id="1996"></a> 1996 | 16 | No | Could not create index enforcing primary key constraint '%.\*ls' using DROP_EXISTING option because table has an XML or spatial index. Drop the XML or spatial index, create the primary key constraint, and recreate the XML or spatial index. |
+| <a id="1997"></a> 1997 | 16 | No | Could not convert the XML or spatial index '%.\*ls' to a relational index by using the DROP_EXISTING option. Drop the XML or spatial index and create a relational index with the same name. |
+| <a id="1998"></a> 1998 | 10 | No | Warning: Clustered index '%.\*ls' on view '%.\*ls' referencing table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
+| <a id="1999"></a> 1999 | 16 | No | Column '%.\*ls' in table '%.\*ls' is of a type that is invalid for use as included column in an index. |

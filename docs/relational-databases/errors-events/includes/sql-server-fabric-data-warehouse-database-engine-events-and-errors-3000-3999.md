@@ -7,584 +7,584 @@ ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
-| 3001 | 16 | No | obsolete |
-| 3002 | 16 | No | Cannot BACKUP or RESTORE a database snapshot. |
-| 3003 | 10 | No | This BACKUP WITH DIFFERENTIAL will be based on more than one file backup. All those file backups must be restored before attempting to restore this differential backup. |
-| 3004 | 16 | No | The primary filegroup cannot be backed up as a file backup because the database is using the SIMPLE recovery model. Consider taking a partial backup by specifying READ_WRITE_FILEGROUPS. |
-| 3005 | 10 | No | The differential partial backup is including a read-only filegroup, '%ls'. This filegroup was read-write when the base partial backup was created, but was later changed to read-only access. We recommend that you create a separate file backup of the '%ls' filegroup now, and then create a new partial backup to provide a new base for later differential partial backups. |
-| 3006 | 16 | No | The differential backup is not allowed because it would be based on more than one base backup. Multi-based differential backups are not allowed in the simple recovery model, and are never allowed for partial differential backups. |
-| 3007 | 16 | No | The backup of the file or filegroup "%ls" is not permitted because it is not online. Container state: "%ls" (%d). Restore status: %d. BACKUP can be performed by using the FILEGROUP or FILE clauses to restrict the selection to include only online data. |
-| 3008 | 16 | No | The specified device type is not supported for backup mirroring. |
-| 3009 | 16 | No | Could not insert a backup or restore history/detail record in the msdb database. This may indicate a problem with the msdb database. The backup/restore operation was still successful. |
-| 3010 | 16 | No | Invalid backup mirror specification. All mirrors must have the same number of members. |
-| 3011 | 16 | No | All backup devices must be of the same general class (for example, DISK and TAPE). |
-| 3012 | 17 | No | VDI ran out of buffer when SQL Server attempted to send differential information to SQL Writer. |
-| [3013](../mssqlserver-3013-database-engine-error.md) | 16 | No | %hs is terminating abnormally. |
-| 3014 | 10 | No | %hs successfully processed %I64d pages in %d.%03d seconds (%d.%03d MB/sec). |
-| 3015 | 10 | No | %hs is not yet implemented. |
-| 3016 | 16 | No | Backup of file '%ls' is not permitted because it contains pages subject to an online restore sequence. Complete the restore sequence before taking the backup, or restrict the backup to exclude this file. |
-| 3017 | 16 | No | The restart-checkpoint file '%ls' could not be opened. Operating system error '%ls'. Correct the problem, or reissue the command without RESTART. |
-| 3018 | 10 | No | The restart-checkpoint file '%ls' was not found. The RESTORE command will continue from the beginning as if RESTART had not been specified. |
-| 3019 | 16 | No | The restart-checkpoint file '%ls' is from a previous interrupted RESTORE operation and is inconsistent with the current RESTORE command. The restart command must use the same syntax as the interrupted command, with the addition of the RESTART clause. Alternatively, reissue the current statement without the RESTART clause. |
-| 3021 | 16 | No | Cannot perform a backup or restore operation within a transaction. |
-| 3022 | 10 | No | This backup is a file backup of read-write data from a database that uses the simple recovery model. This is only appropriate if you plan to set the filegroup to read-only followed by a differential file backup. Consult Books Online for more information on managing read-only data for the simple recovery model. In particular, consider how partial backups are used. |
-| [3023](../mssqlserver-3023-database-engine-error.md) | 16 | No | Backup, file manipulation operations (such as ALTER DATABASE ADD FILE) and encryption changes on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed. |
-| 3024 | 16 | No | You can only perform a full backup of the master database. Use BACKUP DATABASE to back up the entire master database. |
-| 3025 | 16 | No | Missing database name. Reissue the statement specifying a valid database name. |
-| 3027 | 16 | No | The filegroup "%.\*ls" is not part of database "%.\*ls". |
-| 3028 | 10 | No | The restart-checkpoint file '%ls' was corrupted and is being ignored. The RESTORE command will continue from the beginning as if RESTART had not been specified. |
-| 3030 | 16 | No | Value of '%ls' must be less than or equal to value of '%ls'. Change the values and reissue the BACKUP statement. |
-| 3031 | 16 | No | Option '%ls' conflicts with option(s) '%ls'. Remove the conflicting option and reissue the statement. |
-| 3032 | 16 | No | One or more of the options (%ls) are not supported for this statement. Review the documentation for supported options. |
-| 3033 | 16 | No | BACKUP DATABASE cannot be used on a database opened in emergency mode. |
-| 3034 | 16 | No | No files were selected to be processed. You may have selected one or more filegroups that have no members. |
-| 3035 | 16 | No | Cannot perform a differential backup for database "%ls", because a current database backup does not exist. Perform a full database backup by reissuing BACKUP DATABASE, omitting the WITH DIFFERENTIAL option. |
-| 3036 | 16 | No | The database "%ls" is in warm-standby state (set by executing RESTORE WITH STANDBY) and cannot be backed up until the entire restore sequence is completed. |
-| 3038 | 16 | No | The file name "%ls" is invalid as a backup device name. Reissue the BACKUP statement with a valid file name. |
-| 3039 | 16 | No | Cannot perform a differential backup for file '%ls' because a current file backup does not exist. Reissue BACKUP DATABASE omitting the WITH DIFFERENTIAL option. |
-| 3040 | 10 | No | An error occurred while informing replication of the backup. The backup will continue, but the replication environment should be inspected. |
-| 3041 | 16 | Yes | BACKUP failed to complete the command %.\*ls. Check the backup application log for detailed messages. |
-| 3042 | 10 | No | BACKUP WITH CONTINUE_AFTER_ERROR successfully generated a backup of the damaged database. Refer to the SQL Server error log for information about the errors that were encountered. |
-| [3043](../mssqlserver-3043-database-engine-error.md) | 16 | No | BACKUP '%ls' detected an error on page (%d:%d) in file '%ls'. |
-| 3044 | 16 | No | Invalid zero-length device name. Reissue the BACKUP statement with a valid device name. |
-| 3045 | 16 | No | BACKUP or RESTORE requires the NTFS file system for FILESTREAM and full-text support. The path "%.\*ls" is not usable. |
-| 3046 | 16 | No | Inconsistent metadata has been encountered. The only possible backup operation is a tail-log backup using the WITH CONTINUE_AFTER_ERROR or NO_TRUNCATE option. |
-| 3047 | 16 | No | The BackupDirectory registry key is not configured correctly. This key should specify the root path where disk backup files are stored when full path names are not provided. This path is also used to locate restart checkpoint files for RESTORE. |
-| 3048 | 16 | No | BACKUP LOG WITH TRUNCATE_ONLY cannot operate on database '%ls' because it is configured for database mirroring. |
-| 3049 | 16 | No | BACKUP detected corruption in the database log. Check the errorlog for more information. |
-| 3050 | 16 | No | SQL Server could not send the differential information for database file '%ls' of database '%ls\\%ls' to the backup application because the differential information is too large to fit in memory, and an attempt to use a temporary file has failed. |
-| 3051 | 16 | No | BACKUP LOG was unable to maintain mirroring consistency for database '%ls'. Database mirroring has been suspended. |
-| 3052 | 16 | No | BACKUP LOG was unable to log updates for for database '%ls'. Subsequent log backups will be required to advance the backup point from %S_LSN to %S_LSN after log space is made available for logging them. |
-| 3053 | 16 | No | BACKUP '%ls' detected an error on a page in file '%ls'. |
-| 3054 | 16 | No | Differential file backups can include only read-only data for databases using the simple recovery model. Consider taking a partial backup by specifying READ_WRITE_FILEGROUPS. |
-| 3055 | 16 | No | Backup destination "%.\*ls" supports a FILESTREAM filegroup. This filegroup cannot be used as a backup destination. Rerun the BACKUP statement with a valid backup destination. |
-| [3056](../mssqlserver-3056-database-engine-error.md) | 16 | No | The backup operation has detected an unexpected file in a FILESTREAM container. The backup operation will continue and include file '%ls'. |
-| 3057 | 16 | No | Invalid device name. The length of the device name provided exceeds supported limit (maximum length is:%d). Reissue the BACKUP statement with a valid device name. |
-| 3058 | 10 | No | File or device name exceeds the supported limit (maximum length is:%d) and will be truncated: %.\*ls. |
-| 3059 | 16 | No | This BACKUP or RESTORE command is not supported on a database mirror or secondary replica. |
-| 3060 | 10 | No | The restart-checkpoint file '%ls' was corrupted. The restored database can not be recovered. Restart the RESTORE sequence. |
-| 3061 | 16 | No | The restart-checkpoint file '%ls' could not be opened. Operating system error '%ls'. Make the file available and retry the operation or, restart the RESTORE sequence. |
-| 3062 | 16 | No | Cannot backup from a HADRON secondary because it is not in Synchronizing or Synchronized state. |
-| 3063 | 16 | No | Write to backup block blob device %ls failed. Device has reached its limit of allowed blocks. |
-| 3064 | 16 | No | Write to backup block blob detected out of order write at offset %ld, last block offset was at %ld. |
-| 3065 | 16 | No | Attempt to commit the block list for a block blob failed. Blob Name is "%.\*ls". Storage Errorcode %ld. |
-| 3066 | 16 | No | Could not find the database file referenced by the file snapshot %.\*ls. Please make sure that the URL points to a valid snapshot on a database file. |
-| 3067 | 16 | No | Failed while trying to delete file snapshot %.\*ls. Error code %ld. |
-| 3068 | 16 | No | Invalid file snapshot URL. Please make sure that the URL is correctly formed. |
-| 3069 | 16 | No | Striping a backup set across multiple devices is not permitted for file snapshot backups. |
-| 3070 | 16 | No | Specifying the WITH options FORMAT and FILE_SNAPSHOT is not permitted. |
-| 3071 | 16 | No | The database %.\*ls is configured for file snapshot point in time restore, log backups are not permitted. |
-| 3072 | 16 | No | Backup encryption is incompatible with file snapshot backup if TDE is not enabled on the database. |
-| 3073 | 16 | No | The option WITH FILE_SNAPSHOT is only permitted if all database files are in Azure Storage. |
-| 3074 | 16 | No | Failed while getting attributes for the file snapshot %.\*ls. Error code %ld. |
-| 3075 | 16 | No | Device name '%.\*ls' is not a valid MOVE target when restoring from a File Snapshot Backup. |
-| 3076 | 16 | No | File Snapshot Backup is only permitted with a single backup device and no additional mirrored devices. |
-| 3077 | 10 | No | File snapshot %.\*ls not found. |
-| 3078 | 16 | No | The file name "%ls" is invalid as a backup device name for the specified device type. Reissue the BACKUP statement with a valid file name and device type. |
-| 3079 | 16 | No | Could not find the blob file %.\*ls. Please make sure that the file name points to a valid blob file. |
-| 3080 | 16 | No | Invalid Backup Path. The length of the default backup path provided exceeds supported limit (maximum length is: %d). Correct the default backup path. |
-| 3081 | 16 | No | %.\*ls '%.\*ls' was previously suspended for snapshot backup. |
-| 3082 | 16 | No | %.\*ls '%.\*ls' is not suspended for snapshot backup. |
-| 3083 | 10 | No | Database '%.\*ls' acquired suspend locks in session %d. |
-| 3084 | 10 | No | Database '%.\*ls' released suspend locks in session %d. |
-| 3085 | 16 | No | Database '%.\*ls' did not acquire the necessary suspend locks to freeze the database. |
-| 3086 | 10 | No | %.\*ls '%.\*ls' successfully suspended for snapshot backup in session %d. |
-| 3087 | 10 | No | %.\*ls '%.\*ls' originally suspended for snapshot backup in session %d successfully resumed in session %d. |
-| 3088 | 16 | No | %.\*ls '%.\*ls' with dbid %d failed to resume in session %d. |
-| 3089 | 10 | No | %.\*ls '%.\*ls' cancelled current resume operation as another resume operation is already in progress. |
-| 3090 | 16 | No | %.\*ls '%.\*ls' snapshot backup in progress. |
-| 3091 | 16 | No | Database '%.\*ls' is not allowed to be suspended for snapshot backup. |
-| 3092 | 16 | No | Database '%.\*ls' is specified multiple times in the group snapshot backup statement. |
-| 3093 | 16 | No | Database count changed while performing snapshot backup. (Expected: %d, Actual: %d). |
-| 3094 | 16 | No | Server '%.\*ls' has no user databases to suspend for snapshot backup. |
-| 3095 | 16 | No | The backup cannot be performed because 'ENCRYPTION' was requested after the media was formatted with an incompatible structure. To append to this media set, either omit 'ENCRYPTION' or create a new media set by using WITH FORMAT in your BACKUP statement. If you use WITH FORMAT on an existing media set, all its backup sets will be overwritten. |
-| 3096 | 16 | No | The Certificate specified for backup encryption has expired. |
-| 3097 | 16 | No | The Backup cannot be performed because the existing media set is formatted with an incompatible version. |
-| 3098 | 16 | No | The backup cannot be performed because '%ls' was requested after the media was formatted with an incompatible structure. To append to this media set, either omit '%ls' or specify '%ls'. Alternatively, you can create a new media set by using WITH FORMAT in your BACKUP statement. If you use WITH FORMAT on an existing media set, all its backup sets will be overwritten. |
-| 3099 | 16 | No | Backup Encryption options were specified, Backup Encryption support has not been enabled on this version. |
-| 3101 | 16 | No | Exclusive access could not be obtained because the database is in use. |
-| 3102 | 16 | No | %ls cannot process database '%ls' because it is in use by this session. It is recommended that the master database be used when performing this operation. |
-| 3103 | 16 | No | A partial restore sequence cannot be initiated by this command. To initiate a partial restore sequence, use the WITH PARTIAL clause of the RESTORE statement and provide a backup set which includes a full copy of at least the primary data file. The WITH PARTIAL clause of the RESTORE statement may not be used for any other purpose. |
-| 3104 | 16 | No | RESTORE cannot operate on database '%ls' because it is configured for database mirroring or has joined an availability group. If you intend to restore the database, use ALTER DATABASE to remove mirroring or to remove the database from its availability group. |
-| 3105 | 16 | No | RESTORE cannot restore any more pages into file '%ls' because the maximum number of pages (%d) are already being restored. Either complete the restore sequence for the existing pages, or use RESTORE FILE to restore all pages in the file. |
-| 3106 | 16 | No | The filegroup "%ls" is ambiguous. The identity in the backup set does not match the filegroup that is currently defined in the online database. To force the use of the filegroup in the backup set, take the database offline and then reissue the RESTORE command. |
-| 3107 | 16 | No | The file "%ls" is ambiguous. The identity in the backup set does not match the file that is currently defined in the online database. To force the use of the file in the backup set, take the database offline and then reissue the RESTORE command. |
-| 3108 | 16 | No | To restore the master database, the server must be running in single-user mode. For information on starting in single-user mode, see "How to: Start an Instance of SQL Server (sqlservr.exe)" in Books Online. |
-| 3109 | 16 | No | Master can only be restored and fully recovered in a single step using a full database backup. Options such as NORECOVERY, STANDBY, and STOPAT are not supported. |
-| 3110 | 14 | No | User does not have permission to RESTORE database '%.\*ls'. |
-| 3111 | 16 | No | Page %S_PGID is a control page which cannot be restored in isolation. To repair this page, the entire file must be restored. |
-| 3112 | 16 | No | Cannot restore any database other than master when the server is in single user mode. |
-| 3113 | 16 | No | Invalid data was detected. |
-| 3115 | 16 | No | The database is using the simple recovery model. It is not possible to restore a subset of the read-write data. |
-| 3116 | 16 | No | The supplied backup is not on the same recovery path as the database, and is ineligible for use for an online file restore. |
-| 3117 | 16 | No | The log or differential backup cannot be restored because no files are ready to rollforward. |
-| 3118 | 16 | No | The database "%ls" does not exist. RESTORE can only create a database when restoring either a full backup or a file backup of the primary file. |
-| 3119 | 16 | No | Problems were identified while planning for the RESTORE statement. Previous messages provide details. |
-| 3120 | 16 | No | This backup set will not be restored because all data has already been restored to a point beyond the time covered by this backup set. |
-| 3121 | 16 | No | The file "%ls" is on a recovery path that is inconsistent with application of this backup set. RESTORE cannot continue. |
-| 3122 | 16 | No | File initialization failed. RESTORE cannot continue. |
-| 3123 | 16 | No | Invalid database name '%.\*ls' specified for backup or restore operation. |
-| 3125 | 16 | No | The database is using the simple recovery model. The data in the backup it is not consistent with the current state of the database. Restoring more data is required before recovery is possible. Either restore a full file backup taken since the data was marked read-only, or restore the most recent base backup for the target data followed by a differential file backup. |
-| 3127 | 16 | Yes | The file '%.\*ls' of restored database '%ls' is being left in the defunct state because the database is using the simple recovery model and the file is marked for read-write access. Therefore, only read-only files can be recovered by piecemeal restore. |
-| 3128 | 16 | No | File '%ls' has an unsupported page size (%d). |
-| 3129 | 16 | No | The contents of the file "%ls" are not consistent with a transition into the restore sequence. A restore from a backup set may be required. |
-| 3130 | 10 | No | The filegroup "%ls" is selected. At the time of backup it was known by the name "%ls"'. RESTORE will continue operating upon the renamed filegroup. |
-| 3131 | 10 | No | The file "%ls" is selected. At the time of backup it was known by the name "%ls". RESTORE will continue operating upon the renamed file. |
-| 3132 | 16 | No | The media set has %d media families but only %d are provided. All members must be provided. |
-| 3133 | 16 | No | The volume on device "%ls" is sequence number %d of media family %d, but sequence number %d of media family %d is expected. Check that the device specifications and loaded media are correct. |
-| 3134 | 10 | Yes | The differential base attribute for file '%ls' of database '%ls' has been reset because the file has been restored from a backup taken on a conflicting recovery path. The restore was allowed because the file was read-only and was consistent with the current status of the database. Any future differential backup of this file will require a new differential base. |
-| 3135 | 16 | No | The backup set in file '%ls' was created by %hs and cannot be used for this restore operation. |
-| 3136 | 16 | No | This differential backup cannot be restored because the database has not been restored to the correct earlier state. |
-| 3137 | 16 | No | Database cannot be reverted. Either the primary or the snapshot names are improperly specified, all other snapshots have not been dropped, or there are missing files. |
-| 3138 | 16 | No | The database cannot be reverted because FILESTREAM BLOBs are present. |
-| 3139 | 16 | No | Restore to snapshot is not allowed with the master database. |
-| 3140 | 16 | No | Could not adjust the space allocation for file '%ls'. |
-| 3141 | 16 | No | The database to be restored was named '%ls'. Reissue the statement using the WITH REPLACE option to overwrite the '%ls' database. |
-| 3142 | 16 | No | File "%ls" cannot be restored over the existing "%ls". Reissue the RESTORE statement using WITH REPLACE to overwrite pre-existing files, or WITH MOVE to identify an alternate location. |
-| 3143 | 16 | No | The data set on device '%ls' is not a SQL Server backup set. |
-| 3144 | 16 | No | File '%.\*ls' was not backed up in file %d on device '%ls'. The file cannot be restored from this backup set. |
-| 3145 | 16 | No | The STOPAT option is not supported for databases that use the SIMPLE recovery model. |
-| 3147 | 16 | No | Backup and restore operations are not allowed on database tempdb. |
-| 3148 | 16 | No | This RESTORE statement is invalid in the current context. The 'Recover Data Only' option is only defined for secondary filegroups when the database is in an online state. When the database is in an offline state filegroups cannot be specified. |
-| 3149 | 16 | No | The file or filegroup "%ls" is not in a valid state for the "Recover Data Only" option to be used. Only secondary files in the OFFLINE or RECOVERY_PENDING state can be processed. |
-| 3150 | 10 | No | The master database has been successfully restored. Shutting down SQL Server. |
-| [3151](../mssqlserver-3151-database-engine-error.md) | 21 | Yes | Failed to restore master database. Shutting down SQL Server. Check the error logs, and rebuild the master database. For more information about how to rebuild the master database, see SQL Server Books Online. |
-| 3153 | 16 | No | The database is already fully recovered. |
-| 3154 | 16 | No | The backup set holds a backup of a database other than the existing '%ls' database. |
-| 3155 | 16 | No | The RESTORE operation cannot proceed because one or more files have been added or dropped from the database since the backup set was created. |
-| [3156](../mssqlserver-3156-database-engine-error.md) | 16 | No | File '%ls' cannot be restored to '%ls'. Use WITH MOVE to identify a valid location for the file. |
-| [3159](../mssqlserver-3159-database-engine-error.md) | 16 | No | The tail of the log for the database "%ls" has not been backed up. Use BACKUP LOG WITH NORECOVERY to backup the log if it contains work you do not want to lose. Use the WITH REPLACE or WITH STOPAT clause of the RESTORE statement to just overwrite the contents of the log. |
-| 3161 | 16 | No | The primary file is unavailable. It must be restored or otherwise made available. |
-| 3163 | 16 | No | The transaction log was damaged. All data files must be restored before RESTORE LOG can be attempted. |
-| 3165 | 16 | No | Database '%ls' was restored, however an error was encountered while replication was being restored/removed. The database has been left offline. See the topic MSSQL_ENG003165 in SQL Server Books Online. |
-| 3166 | 16 | No | RESTORE DATABASE could not drop database '%ls'. Drop the database and then reissue the RESTORE DATABASE statement. |
-| 3167 | 16 | No | RESTORE could not start database '%ls'. |
-| [3168](../mssqlserver-3168-database-engine-error.md) | 16 | No | The backup of the system database on the device %ls cannot be restored because it was created by a different version of the server (%ls) than this server (%ls). |
-| [3169](../mssqlserver-3169-database-engine-error.md) | 16 | No | The database was backed up on a server running database version %d. That version is incompatible with this server, which supports version %d. Either restore the database on a server that supports the backup, or use a backup that is compatible with this server. |
-| 3170 | 16 | No | The STANDBY filename is invalid. |
-| 3171 | 16 | No | File %ls is defunct and cannot be restored into the online database. |
-| 3172 | 16 | No | Filegroup %ls is defunct and cannot be restored into the online database. |
-| 3173 | 16 | No | The STOPAT clause provided with this RESTORE statement indicates that the tail of the log contains changes that must be backed up to reach the target point in time. The tail of the log for the database "%ls" has not been backed up. Use BACKUP LOG WITH NORECOVERY to back up the log, or use the WITH REPLACE clause in your RESTORE statement to overwrite the tail of the log. |
-| 3174 | 16 | No | The file '%ls' cannot be moved by this RESTORE operation. |
-| 3175 | 10 | No | RESTORE FILEGROUP="%ls" was specified, but not all of its files are present in the backup set. File "%ls" is missing. RESTORE will continue, but if you want all files to be restored, you must restore other backup sets. |
-| [3176](../mssqlserver-3176-database-engine-error.md) | 16 | No | File '%ls' is claimed by '%ls'(%d) and '%ls'(%d). The WITH MOVE clause can be used to relocate one or more files. |
-| 3178 | 16 | No | File %ls is not in the correct state to have this differential backup applied to it. |
-| 3179 | 16 | No | The system database cannot be moved by RESTORE. |
-| 3180 | 16 | No | This backup cannot be restored using WITH STANDBY because a database upgrade is needed. Reissue the RESTORE without WITH STANDBY. |
-| [3181](../mssqlserver-3181-database-engine-error.md) | 10 | No | Attempting to restore this backup may encounter storage space problems. Subsequent messages will provide details. |
-| 3182 | 16 | No | The backup set cannot be restored because the database was damaged when the backup occurred. Salvage attempts may exploit WITH CONTINUE_AFTER_ERROR. |
-| [3183](../mssqlserver-3183-database-engine-error.md) | 16 | No | RESTORE detected an error on page (%d:%d) in database "%ls" as read from the backup set. |
-| 3184 | 10 | No | RESTORE WITH CONTINUE_AFTER_ERROR was successful but some damage was encountered. Inconsistencies in the database are possible. |
-| 3185 | 16 | No | RESTORE cannot apply this backup set because the database is suspect. Restore a backup set that repairs the damage. |
-| 3186 | 16 | No | The backup set has been damaged. RESTORE will not attempt to apply this backup set. |
-| 3187 | 16 | No | RESTORE WITH CHECKSUM cannot be specified because the backup set does not contain checksum information. |
-| 3188 | 10 | No | The backup set was written with damaged data by a BACKUP WITH CONTINUE_AFTER_ERROR. |
-| 3189 | 16 | No | Damage to the backup set was detected. |
-| 3190 | 16 | No | Filegroup '%ls' cannot be restored because it does not exist in the backup set. |
-| 3191 | 16 | No | Restore cannot continue because file '%ls' cannot be written. Ensure that all files in the database are writable. |
-| 3192 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data that is unavailable. Either use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
-| 3193 | 16 | No | Restore Log operations are not permitted for a Log Backup with FILE_SNAPSHOT if bulk operations were present during the backup period. The Restore can be accomplished by issuing Restore Database from this archive. |
-| 3194 | 16 | No | Page %S_PGID is beyond the end of the file. Only pages that are in the current range of the file can be restored. |
-| 3195 | 16 | No | Page %S_PGID cannot be restored from this backup set. RESTORE PAGE can only be used from full backup sets or from the first log or differential backup taken since the file was added to the database. |
-| 3196 | 16 | No | RESTORE master WITH SNAPSHOT is not supported. To restore master from a snapshot backup, stop the service and copy the data and log file. |
-| 3197 | 10 | Yes | I/O is frozen on database %ls. No user action is required. However, if I/O is not resumed promptly, you could cancel the backup. |
-| 3198 | 10 | Yes | I/O was resumed on database %ls. No user action is required. |
-| 3199 | 16 | No | RESTORE requires MAXTRANSFERSIZE=%u but %u was specified. |
-| [3201](../mssqlserver-3201-database-engine-error.md) | 16 | No | Cannot open backup device '%ls'. Operating system error %ls. |
-| 3202 | 16 | No | Write on "%ls" failed: %ls |
-| 3203 | 16 | No | Read on "%ls" failed: %ls |
-| 3204 | 16 | No | The backup or restore was aborted. |
-| 3205 | 16 | No | Too many backup devices specified for backup or restore; only %d are allowed. |
-| 3206 | 16 | No | Backup device '%.\*ls' does not exist. To view existing backup devices, use the sys.backup_devices catalog view. To create a new backup device use either sp_addumpdevice or SQL Server Management Studio. |
-| 3207 | 16 | No | Backup or restore requires at least one backup device. Rerun your statement specifying a backup device. |
-| 3208 | 16 | No | Unexpected end of file while reading beginning of backup set. Confirm that the media contains a valid SQL Server backup set, and see the console error log for more details. |
-| 3209 | 16 | No | Operation is not supported on user instances. |
-| 3210 | 16 | No | The mirror member in drive "%ls" is inconsistent with the mirror member in drive "%ls". |
-| 3211 | 10 | No | %d percent processed. |
-| 3212 | 16 | No | The mirror device "%ls" and the mirror device "%ls" have different device specifications. |
-| 3213 | 16 | No | Unable to unload one or more tapes. See the error log for details. |
-| 3214 | 16 | No | Too many backup mirrors are specified. Only %d are allowed. |
-| 3215 | 16 | No | Use WITH FORMAT to create a new mirrored backup set. |
-| 3216 | 16 | No | RESTORE REWINDONLY is only applicable to tape devices. |
-| 3217 | 16 | No | Invalid value specified for %ls parameter. |
-| 3218 | 16 | No | Backup mirroring is not available in this edition of SQL Server. See Books Online for more details on feature support in different SQL Server editions. |
-| 3219 | 16 | No | The file or filegroup "%.\*ls" cannot be selected for this operation. |
-| 3220 | 16 | No | The specified URL points to a Block Blob. Backup and Restore operations on Block Blobs are not supported when WITH CREDENTIAL syntax is used. |
-| 3221 | 16 | No | The ReadFileEx system function executed on file '%ls' only read %d bytes, expected %d. |
-| 3222 | 16 | No | The WriteFileEx system function executed on file '%ls' only wrote %d bytes, expected %d. |
-| 3223 | 16 | No | Backup To URL failed to write status messages to the operating system error log. |
-| 3224 | 16 | No | Cannot create worker thread. |
-| 3225 | 16 | No | Use of WITH CREDENTIAL syntax is not valid for credentials containing a Shared Access Signature. |
-| 3226 | 16 | No | Failed to create snapshot for file "%ls". |
-| 3227 | 16 | No | The backup media on "%ls" is part of media family %d which has already been processed on "%ls". Ensure that backup devices are correctly specified. For tape devices, ensure that the correct volumes are loaded. |
-| 3228 | 16 | No | Writing snapshot metadata to backup set for file "%ls" failed due to invalid format. |
-| 3229 | 16 | No | Request for device '%ls' timed out. |
-| 3230 | 16 | No | Operation on device '%ls' exceeded retry count. |
-| 3231 | 16 | No | The media loaded on "%ls" is formatted to support %d media families, but %d media families are expected according to the backup device specification. |
-| 3232 | 16 | No | The volume mounted on "%ls" does not have the expected backup set identity. The volume may be obsolete due to a more recent overwrite of this media family. In that case, locate the correct volume with sequence number %d of media family %d. |
-| 3233 | 16 | No | Invalid Identity Specified for the S3 Credential. Credential Identity should be S3 Access Key. |
-| 3234 | 16 | No | Logical file '%.\*ls' is not part of database '%ls'. Use RESTORE FILELISTONLY to list the logical file names. |
-| 3235 | 16 | No | The file "%.\*ls" is not part of database "%ls". You can only list files that are members of this database. |
-| 3236 | 16 | No | Write to S3 object storage device %ls failed. Device has reached its limit of %d allowed parts. |
-| 3238 | 16 | No | The Estimate for the Backup size exceeds the maximum allowed file size on the remote endpoint. |
-| 3239 | 16 | No | The backup set on device '%ls' uses a feature of the Microsoft Tape Format not supported by SQL Server. |
-| 3240 | 16 | No | Backup to mirrored media sets requires all mirrors to append. Provide all members of the set, or reformat a new media set. |
-| 3241 | 16 | No | The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family. |
-| 3242 | 16 | No | The file on device '%ls' is not a valid Microsoft Tape Format backup set. |
-| 3243 | 16 | No | The media family on device '%ls' was created using Microsoft Tape Format version %d.%d. SQL Server supports version %d.%d. |
-| 3244 | 16 | No | Descriptor block size exceeds %d bytes. Use a shorter name and/or description string and retry the operation. |
-| 3245 | 16 | No | Could not convert a string to or from Unicode, %ls. |
-| 3246 | 16 | No | The media family on device '%ls' is marked as nonappendable. Reissue the statement using the INIT option to overwrite the media. |
-| 3247 | 16 | No | The volume on device '%ls' has the wrong media sequence number (%d). Remove it and insert volume %d. |
-| 3249 | 16 | No | The volume on device '%ls' is a continuation volume for the backup set. Remove it and insert the volume holding the start of the backup set. |
-| 3250 | 16 | No | The value '%d' is not within range for the %ls parameter. |
-| 3251 | 10 | No | The media family on device '%ls' is complete. The device is now being reused for one of the remaining families. |
-| 3252 | 16 | No | Failed to copy snapshot with name '%ls', timestamp '%ls' to destination '%ls'. Error returned '%ls'. |
-| 3253 | 16 | No | The block size parameter must supply a value that is a power of 2. |
-| 3254 | 16 | No | The volume on device '%ls' is empty. |
-| 3255 | 16 | No | The data set on device '%ls' is a SQL Server backup set not compatible with this version of SQL Server. |
-| 3256 | 16 | No | The backup set on device '%ls' was terminated while it was being created and is incomplete. RESTORE sequence is terminated abnormally. |
-| 3257 | 16 | No | There is insufficient free space on disk volume '%ls' to create the database. The database requires %I64u additional free bytes, while only %I64u bytes are available. |
-| 3258 | 16 | No | The volume on the device "%ls" is not part of the media set that is currently being processed. Ensure that the backup devices are loaded with the correct media. |
-| 3259 | 16 | No | Failed to copy blob with name '%ls', to destination '%ls'. Error returned '%ls'. |
-| [3260](../mssqlserver-3260-database-engine-error.md) | 16 | No | An internal buffer has become full. |
-| 3261 | 16 | No | SQL Server cannot use the virtual device configuration. |
-| 3262 | 10 | No | The backup set on file %d is valid. |
-| 3263 | 16 | No | Cannot use the volume on device '%ls' as a continuation volume. It is sequence number %d of family %d for the current media set. Insert a new volume, or sequence number %d of family %d for the current set. |
-| 3264 | 16 | No | The operation did not proceed far enough to allow RESTART. Reissue the statement without the RESTART qualifier. |
-| 3265 | 16 | No | The login has insufficient authority. Membership of the sysadmin role is required to use VIRTUAL_DEVICE with BACKUP or RESTORE. |
-| 3266 | 16 | Yes | The backup data at the end of "%ls" is incorrectly formatted. Backup sets on the media might be damaged and unusable. To determine the backup sets on the media, use RESTORE HEADERONLY. To determine the usability of the backup sets, run RESTORE VERIFYONLY. If all of the backup sets are incomplete, reformat the media using BACKUP WITH FORMAT, which destroys all the backup sets. |
-| 3267 | 16 | No | Insufficient resources to create UMS scheduler. |
-| 3268 | 16 | No | Cannot use the backup file '%ls' because it was originally formatted with sector size %d and is now on a device with sector size %d. |
-| 3269 | 16 | No | Cannot restore the file '%ls' because it was originally written with sector size %d; '%ls' is now on a device with sector size %d. |
-| 3270 | 16 | No | An internal consistency error has occurred. This error is similar to an assert. Contact technical support for assistance. |
-| [3271](../mssqlserver-3271-database-engine-error.md) | 16 | No | A nonrecoverable I/O error occurred on file "%ls:" %ls. |
-| 3272 | 16 | No | The '%ls' device has a hardware sector size of %d, but the block size parameter specifies an incompatible override value of %d. Reissue the statement using a compatible block size. |
-| 3273 | 16 | No | The ambiguity for master has be detected. please specify PHYSMASTER or replicatedmaster database explicitly in action '%ls'. |
-| 3276 | 16 | No | WITH SNAPSHOT can be used only if the backup set was created WITH SNAPSHOT. |
-| 3277 | 16 | No | WITH SNAPSHOT must be used with only one device. |
-| 3278 | 16 | No | Failed to encrypt string %ls |
-| 3279 | 16 | No | Access is denied due to a password failure |
-| 3280 | 16 | No | Backups on raw devices are not supported. '%ls' is a raw device. |
-| 3281 | 10 | No | Released and initiated rewind on '%ls'. |
-| 3283 | 16 | No | The file "%ls" failed to initialize correctly. Examine the error logs for more details. |
-| 3284 | 16 | No | Filemark on device '%ls' is not aligned. Re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
-| 3285 | 10 | No | Filemark on device '%ls' appears not to be aligned. The restore operation will proceed using less efficient I/O. To avoid this, re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
-| 3286 | 16 | No | Backup failed because there is a mismatch in file metadata for file %d. |
-| 3287 | 16 | No | The file ID %d on device '%ls' is incorrectly formed and can not be read. |
-| 3288 | 16 | No | Credential name %.\*ls does not exist or user does not have permission to access it. |
-| 3289 | 16 | No | A Backup device of type URL was specified without a Credential, Backup/Restore operation cannot proceed. |
-| 3290 | 16 | No | Backup to URL received an exception from the remote endpoint. Exception Message: %.\*ls |
-| 3291 | 16 | No | URL device type was specified, and a disallowed option %ls was specified. |
-| 3292 | 16 | No | A failure occurred while attempting to execute Backup or Restore with a URL device specified. Consult the operating system error log for details. |
-| 3293 | 16 | No | An error occurred while Backup/Restore to URL was initializing. Error message: %.\*ls. |
-| 3294 | 16 | No | Use of the URL device type is limited to a single device during Backup and Restore operations. |
-| 3295 | 16 | No | Backup To URL error: Exclusive access to the file %.\*ls could not be obtained. |
-| 3296 | 16 | No | The file %.\*ls exists on the remote endpoint, and WITH FORMAT was not specified. Backup cannot proceed. |
-| 3297 | 16 | No | The URL provided does not meet specified requirements. The URL must be either resolvable as an absolute or relative URI, has or can be composed as an HTTP or HTTPS scheme, and cannot contain a query component. |
-| 3298 | 16 | No | Backup/Restore to URL device error: %.\*ls. |
-| 3299 | 16 | No | BackupToUrl initiated. |
-| 3301 | 21 | Yes | The transaction log contains a record (logop %d) that is not valid. The log has been corrupted. Restore the database from a full backup, or repair the database. |
-| 3302 | 21 | Yes | Redoing of logged operations in database '%.\*ls' failed to reach end of log at log record ID %S_LSN. This indicates corruption around log record ID %S_LSN. Restore the database from a full backup, or repair the database. |
-| 3303 | 10 | Yes | Remote harden of transaction '%.\*ls' (ID 0x%016I64x %ls) started at %S_DATE in database '%ls' at LSN %S_LSN failed. |
-| [3313](../mssqlserver-3313-database-engine-error.md) | 21 | Yes | During redoing of a logged operation in database '%.\*ls' (page %S_PGID if any), an error occurred at log record ID %S_LSN. Typically, the specific failure is previously logged as an error in the operating system error log. Restore the database from a full backup, or repair the database. |
-| [3314](../mssqlserver-3314-database-engine-error.md) | 21 | Yes | During undoing of a logged operation in database '%.\*ls' (page %S_PGID if any), an error occurred at log record ID %S_LSN. Typically, the specific failure is logged previously as an error in the operating system error log. Restore the database or file from a backup, or repair the database. |
-| 3315 | 21 | Yes | During rollback, the following process did not hold an expected lock: process %d with mode %d at level %d for row %S_RID in database '%.\*ls' under transaction %S_XID. Restore a backup of the database, or repair the database. |
-| 3316 | 21 | Yes | During undo of a logged operation in database '%.\*ls', an error occurred at log record ID %S_LSN. The row was not found. Restore the database from a full backup, or repair the database. |
-| 3317 | 21 | Yes | Async crash recovery failed for database '%.\*ls' (database ID %d). Failed to enqueue log block to the parallel redo cache during the MIN_REDO pass due to a memory allocation failure. |
-| 3401 | 10 | Yes | Errors occurred during recovery while rolling back a transaction. The transaction was deferred. Restore the bad page or file, and re-run recovery. |
-| 3402 | 10 | Yes | The database '%ls' is marked %ls and is in a state that does not allow recovery to be run. |
-| 3403 | 10 | Yes | Recovering only master database because traceflag 3608 was specified. This is an informational message only. No user action is required. |
-| 3404 | 10 | Yes | Failed to check for new installation or a renamed server at startup. The logic for this check has failed unexpectedly. Run setup again, or fix the problematic registry key. |
-| 3406 | 10 | Yes | %d transactions rolled forward in database '%.\*ls' (%d:%d). This is an informational message only. No user action is required. |
-| 3407 | 10 | Yes | %d transactions rolled back in database '%.\*ls' (%d:%d). This is an informational message only. No user action is required. |
-| 3408 | 10 | Yes | Recovery is complete. This is an informational message only. No user action is required. |
-| 3409 | 16 | Yes | Performance counter shared memory setup failed with error %d. Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions. |
-| 3410 | 10 | Yes | Data in filegroup %s is offline, and deferred transactions exist. Use RESTORE to recover the filegroup, or drop the filegroup if you never intend to recover it. Log truncation cannot occur until this condition is resolved. |
-| 3411 | 21 | Yes | Configuration block version %d is not a valid version number. SQL Server is exiting. Restore the master database or reinstall. |
-| 3412 | 10 | Yes | Warning: The server instance was started using minimal configuration startup option (-f). Starting an instance of SQL Server with minimal configuration places the server in single-user mode automatically. After the server has been started with minimal configuration, you should change the appropriate server option value or values, stop, and then restart the server. |
-| [3413](../mssqlserver-3413-database-engine-error.md) | 21 | Yes | Database ID %d. Could not mark database as suspect. Getnext NC scan on sys.databases.database_id failed. Refer to previous errors in the error log to identify the cause and correct any associated problems. |
-| [3414](../mssqlserver-3414-database-engine-error.md) | 10 | Yes | An error occurred during recovery, preventing the database '%ls' (%d:%d) from restarting. Diagnose the recovery errors and fix them, or restore from a known good backup. If errors are not corrected or expected, contact Technical Support. |
-| 3415 | 16 | Yes | Database '%.\*ls' cannot be upgraded because it is read-only, has read-only files or the user does not have permissions to modify some of the files. Make the database or files writeable, and rerun recovery. |
-| 3416 | 16 | Yes | The server contains read-only files that must be made writable before the server can be recollated. |
-| [3417](../mssqlserver-3417-database-engine-error.md) | 21 | Yes | Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information, see [https://go.microsoft.com/fwlink/?linkid=2322220](https://go.microsoft.com/fwlink/?linkid=2322220). |
-| 3418 | 10 | Yes | Recovery is unable to defer error %d. Errors can only be deferred in databases using the full recovery model and an active backup log chain. |
-| 3419 | 16 | Yes | Recovery for database '%.\*ls' is being skipped because it requires an upgrade but is marked for Standby. Use RESTORE DATABASE WITH NORECOVERY to take the database back to a Restoring state and continue the restore sequence. |
-| 3420 | 21 | Yes | Database snapshot '%ls' has failed an IO operation and is marked suspect. It must be dropped and recreated. |
-| 3421 | 10 | Yes | Recovery completed for database %ls (database ID %d) in %I64d second(s) (analysis %I64d ms, redo %I64d ms, undo %I64d ms \[system undo %I64d ms, regular undo %I64d ms\].) ADR-enabled=%d, Is primary=%d, OL-Enabled=%d. This is an informational message only. No user action is required. |
-| 3422 | 10 | Yes | Database %ls was shutdown due to error %d in routine '%hs'. Restart for non-snapshot databases will be attempted after all connections to the database are aborted. |
-| 3423 | 10 | Yes | Info: The server instance was started using multiuser, minimal configuration startup option (-M). |
-| 3429 | 10 | Yes | Recovery could not determine the outcome of a cross-database transaction %S_XID, named '%.\*ls', in database '%.\*ls' (database ID %d:%d). The coordinating database (database ID %d:%d) was unavailable. The transaction was assumed to be committed. If the transaction was not committed, you can retry recovery when the coordinating database is available. |
-| [3431](../mssqlserver-3431-database-engine-error.md) | 21 | Yes | Could not recover database '%.\*ls' (database ID %d) because of unresolved transaction outcomes. Microsoft Distributed Transaction Coordinator (MS DTC) transactions were prepared, but MS DTC was unable to determine the resolution. To resolve, either fix MS DTC, restore from a full backup, or repair the database. |
-| 3434 | 20 | Yes | Cannot change sort order or locale. An unexpected failure occurred while trying to reindex the server to a new collation. SQL Server is shutting down. Restart SQL Server to continue with the sort order unchanged. Diagnose and correct previous errors and then retry the operation. |
-| [3437](../mssqlserver-3437-database-engine-error.md) | 21 | Yes | An error occurred while recovering database '%.\*ls'. Unable to connect to Microsoft Distributed Transaction Coordinator (MS DTC) to check the completion status of transaction %S_XID. Fix MS DTC, and run recovery again. |
-| 3441 | 21 | Yes | During startup of warm standby database '%.\*ls' (database ID %d), its standby file ('%ls') was inaccessible to the RESTORE statement. The operating system error was '%ls'. Diagnose the operating system error, correct the problem, and retry startup. |
-| 3443 | 21 | Yes | Database '%ls' (database ID %d:%d) was marked for standby or read-only use, but has been modified. The RESTORE LOG statement cannot be performed. Restore the database from a backup. |
-| 3445 | 21 | Yes | File '%ls' is not a valid undo file for database '%.\*ls (database ID %d). Verify the file path, and specify the correct file. |
-| 3446 | 16 | No | Primary log file is not available for database '%ls' (%d:%d). The log cannot be backed up. |
-| 3447 | 16 | No | Could not activate or scan all of the log files for database '%.\*ls'. |
-| 3448 | 21 | Yes | Rollback encountered a page with a log sequence number (LSN) less than the original log record LSN. Could not undo log record %S_LSN, for transaction ID %S_XID, on page %S_PGID, database '%ls' (%d:%d). Page information: LSN = %S_LSN, type = %ld. Log information: OpCode = %ld, context %ld. Restore or repair the database. |
-| 3449 | 21 | Yes | SQL Server must shut down in order to recover a database (database ID %d). The database is either a user database that could not be shut down or a system database. Restart SQL Server. If the database fails to recover after another startup, repair or restore the database. |
-| 3450 | 10 | Yes | Recovery of database '%.\*ls' (%d) is %d%% complete (approximately %d seconds remain). Phase %d of 3. This is an informational message only. No user action is required. |
-| [3452](../mssqlserver-3452-database-engine-error.md) | 10 | Yes | Recovery of database '%.\*ls' (%d) detected possible identity value inconsistency in table ID %d. Run DBCC CHECKIDENT ('%.\*ls'). |
-| 3453 | 16 | No | This version cannot redo any index creation or non-logged operation done by SQL Server 7.0. Further roll forward is not possible. |
-| 3454 | 10 | Yes | Recovery is writing a checkpoint in database '%.\*ls' (%d). This is an informational message only. No user action is required. |
-| [3456](../mssqlserver-3456-database-engine-error.md) | 21 | Yes | Could not redo log record %S_LSN, for transaction ID %S_XID, on page %S_PGID, allocation unit %I64d, database '%.\*ls' (database ID %d). Page: LSN = %S_LSN, allocation unit = %I64d, type = %ld. Log: OpCode = %ld, context %ld, PrevPageLSN: %S_LSN. Restore from a backup of the database, or repair the database. |
-| 3457 | 21 | Yes | Transactional file system resource manager '%.\*ls' failed to recover. For more information, see the accompanying error message, which determines the appropriate user action. |
-| 3458 | 16 | No | Recovery cannot scan database "%.\*ls" for dropped allocation units because an unexpected error has occurred. These allocation units cannot be cleaned up. |
-| 3459 | 16 | No | Recovery of database "%.\*ls" failed to redo a file add for file "%.\*ls". Please delete the file and retry. |
-| 3460 | 21 | Yes | Failed to shutdown a database (database ID %d) that contains memory-optimized data. Restart SQL Server to bring the database to a consistent state. If the database fails to recover after restart, repair or restore the database. |
-| 3461 | 21 | Yes | Failed to wait for XTP %ls to complete during recovery. |
-| 3462 | 10 | Yes | Redo observed a higher LSN on the PFS page %S_PGID for transaction ID %S_XID, database '%.\*ls' (database ID %d). Redo LSN: %S_LSN, Page: LSN = %S_LSN, PrevPageLSN: %S_LSN. This can happen in the presence of concurrent PFS updates. No user action is required. |
-| 3463 | 21 | Yes | An error occurred while recovering database '%.\*ls'. Transaction outcome could not be resolved. |
-| 3464 | 16 | Yes | An error occurred while resolving the deferred transaction. Transaction outcome: %d, IsDeferred: %ls. |
-| 3465 | 16 | Yes | An error occurred while resolving the deferred transaction. Transaction not found. |
-| 3466 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data or keys in the enclave that is unavailable. Either use sp_enclave_send_keys to send keys to the enclave, or use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
-| 3467 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data or keys in the enclave that is unavailable. For keys, since there is no enclave configured, SQL may resolve deferred transactions by invalidating indexes on encrypted columns; please check the error log.For the data, either use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
-| 3468 | 21 | Yes | An error occurred while attempting to apply a log record. This could indicate log or database corruption. Additional messages in the SQL Server error log may provide more detail. |
-| 3469 | 21 | No | Restore failed due to items not being found in the expected restore pipeline queues. |
-| 3470 | 16 | No | The recovery of the database "%.\*ls" could not redo the file size change for file "%.\*ls" because of the missing connection. |
-| 3471 | 21 | No | The database "%.\*ls" could not proceed to recovery due to failure (code 0x%08x) of entering the cluster mode: %ls. |
-| 3472 | 21 | No | The database '%.\*ls' could not complete startup due to GXM catchup failure (0x%08x). |
-| 3473 | 21 | No | The database "%.\*ls" could not complete recovery due to GXM recovered notification failure (code 0x%08x): %ls. |
-| 3505 | 14 | No | Only the owner of database "%.\*ls" or someone with relevant permissions can run the CHECKPOINT statement. |
-| 3604 | 10 | No | Duplicate key was ignored. |
-| 3605 | 16 | No | Schema verification failed for database '%.\*ls'. |
-| 3606 | 10 | No | Arithmetic overflow occurred. |
-| 3607 | 10 | No | Division by zero occurred. |
-| 3608 | 16 | No | Cannot allocate a GUID for the token. |
-| 3609 | 16 | No | The transaction ended in the trigger. The batch has been aborted. |
-| 3611 | 10 | No | %hs SQL Server Execution Times:%hs CPU time not measured under fiber mode, elapsed time = %lu ms. |
-| 3612 | 10 | No | %hs SQL Server Execution Times:%hs CPU time = %lu ms, elapsed time = %lu ms. |
-| 3613 | 10 | No | SQL Server parse and compile time: %hs CPU time = %lu ms, elapsed time = %lu ms. |
-| 3614 | 10 | No | Batch Statistics: Overall Duration = %f ms, CPU time = %f ms, Total logical reads = %lu, physical reads = %lu, remote reads = %lu, logical writes = %lu, Compile CPU time = %f ms, Login time = %lu ms, Total Waits = %f ms, Log Bytes = %I64u, SQLHandle = %hs |
-| 3615 | 10 | No | Table '%.\*ls'. Scan count %d, logical reads %d, physical reads %d, page server reads %d, read-ahead reads %d, page server read-ahead reads %d, lob logical reads %d, lob physical reads %d, lob page server reads %d, lob read-ahead reads %d, lob page server read-ahead reads %d. |
-| 3616 | 16 | No | An error was raised during trigger execution. The batch has been aborted and the user transaction, if any, has been rolled back. |
-| [3619](../mssqlserver-3619-database-engine-error.md) | 10 | Yes | Could not write a checkpoint record in database %ls because the log is out of space. Contact the database administrator to truncate the log or allocate more space to the database log files. |
-| 3620 | 10 | Yes | Automatic checkpointing is disabled in database '%.\*ls' because the log is out of space. Automatic checkpointing will be enabled when the database owner successfully checkpoints the database. Contact the database owner to either truncate the log file or add more disk space to the log. Then retry the CHECKPOINT statement. |
-| 3621 | 10 | No | The statement has been terminated. |
-| 3622 | 10 | No | Warning: An invalid floating point operation occurred. |
-| 3623 | 16 | No | An invalid floating point operation occurred. |
-| [3624](../mssqlserver-3624-database-engine-error.md) | 20 | Yes | A system assertion check has failed. Check the SQL Server error log for details. Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running DBCC CHECKDB. If you agreed to send dumps to Microsoft during setup, a mini dump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a Hotfix from Technical Support. |
-| 3625 | 20 | Yes | '%hs' is not yet implemented. |
-| 3627 | 17 | Yes | New parallel operation cannot be started due to too many parallel operations executing at this time. Use the "max worker threads" configuration option to increase the number of allowable threads, or reduce the number of parallel operations running on the system. |
-| 3628 | 24 | Yes | The Database Engine received a floating point exception from the operating system while processing a user request. Try the transaction again. If the problem persists, contact your system administrator. |
-| 3633 | 16 | Yes | The operating system returned the error '%ls' while attempting '%ls' on '%ls' at '%hs'(%d). |
-| 3634 | 16 | Yes | The operating system returned the error '%ls' while attempting '%ls' on '%ls'. |
-| 3635 | 16 | Yes | An error occurred while processing '%ls' metadata for database id %d, file id %d, and transaction='%.\*ls'. Additional Context='%ls'. Location='%hs'(%d). Retry the operation; if the problem persists, contact the database administrator to review locking and memory configurations. Review the application for possible deadlock conflicts. |
-| 3636 | 16 | No | An error occurred while processing '%ls' metadata for database id %d file id %d. |
-| 3637 | 16 | No | A parallel operation cannot be started from a DAC connection. |
-| 3641 | 10 | No | Total logical reads %lu, physical reads %lu, remote reads %lu, writes %lu. |
-| 3642 | 10 | No | Table '%.\*ls'. Segment reads %u, segment skipped %u. |
-| 3643 | 16 | No | The operation elapsed time exceeded the maximum time specified for this operation. The execution has been stopped. |
-| 3644 | 10 | No | Prefaulter task failed for file %ls with error %d. |
-| 3645 | 10 | No | Batch Connectivity Statistics: Packets Read Time = %f ms, Packets Read Time Before Exec = %f ms, Packets Write Time = %f ms, Packets Write Time Before Exec = %f ms, TCP_INFO_v1 = %ls |
-| 3646 | 16 | No | Thrown by a utility function documented with "fails by throwing an exception that caller MUST catch." Users should not see this error. |
-| 3647 | 16 | No | The operation is blocked by delayed database version upgrade. The execution hasn't started. |
-| 3648 | 10 | No | %hsObject '%.\*ls'. Tempdb versions read %lu, in-row PVS versions read %lu, off-row PVS versions read %lu, online index PVS versions read %lu. |
-| 3696 | 16 | No | Internal error while preparing GUID. |
-| 3697 | 10 | No | Batch Waits Statistics: %ls |
-| 3701 | 11 | No | Cannot %S_MSG the %S_MSG '%.\*ls', because it does not exist or you do not have permission. |
-| 3702 | 16 | No | Cannot drop database "%.\*ls" because it is currently in use. |
-| 3703 | 16 | No | Cannot detach the %S_MSG '%.\*ls' because it is currently in use. |
-| 3705 | 16 | No | Cannot use DROP %ls with '%.\*ls' because '%.\*ls' is a %S_MSG. Use %ls. |
-| 3706 | 16 | No | Cannot %S_MSG a database snapshot. |
-| 3707 | 16 | No | Cannot detach a suspect or recovery pending database. It must be repaired or dropped. |
-| 3708 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is a system %S_MSG. |
-| 3709 | 16 | No | Cannot %S_MSG the database while the database snapshot "%.\*ls" refers to it. Drop that database first. |
-| 3710 | 16 | No | Cannot detach an opened database when the server is in minimally configured mode. |
-| 3716 | 16 | No | The %S_MSG '%.\*ls' cannot be dropped because it is bound to one or more %S_MSG. |
-| 3717 | 16 | No | Cannot drop a default constraint by DROP DEFAULT statement. Use ALTER TABLE to drop a constraint default. |
-| 3718 | 11 | No | Could not drop index '%.\*ls' because the table or clustered index entry cannot be found in the sysindexes system table. |
-| 3721 | 16 | No | Type '%.\*ls' cannot be renamed because it is being referenced by object '%.\*ls'. |
-| 3722 | 16 | No | Task has been aborted, but %S_MSG of the %S_MSG '%.\*ls' may continue in the background. Please check whether the %S_MSG has finished successfully. |
-| 3723 | 16 | No | An explicit DROP INDEX is not allowed on index '%.\*ls'. It is being used for %ls constraint enforcement. |
-| 3724 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for replication. |
-| 3725 | 16 | No | The constraint '%.\*ls' is being referenced by table '%.\*ls', foreign key constraint '%.\*ls'. |
-| 3726 | 16 | No | Could not drop object '%.\*ls' because it is referenced by a FOREIGN KEY constraint. |
-| 3727 | 10 | No | Could not drop constraint. See previous errors. |
-| 3728 | 16 | No | '%.\*ls' is not a constraint. |
-| 3729 | 16 | No | Cannot %ls '%.\*ls' because it is being referenced by object '%.\*ls'. |
-| 3730 | 16 | No | Cannot drop the default constraint '%.\*ls' while it is being used by a foreign key as SET DEFAULT referential action. |
-| 3732 | 16 | No | Cannot drop type '%.\*ls' because it is being referenced by object '%.\*ls'. There may be other objects that reference this type. |
-| 3733 | 16 | No | Constraint '%.\*ls' does not belong to table '%.\*ls'. |
-| 3734 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has an XML or spatial index. |
-| 3735 | 16 | No | The primary key constraint '%.\*ls' on table '%.\*ls' cannot be dropped because change tracking is enabled on the table. Change tracking requires a primary key constraint on the table. Disable change tracking before dropping the constraint. |
-| 3736 | 16 | No | Cannot drop the %S_MSG '%.\*ls' because it is being used for distribution. |
-| 3737 | 16 | No | Could not delete file '%ls'. See the SQL Server error log for more information. |
-| 3738 | 10 | No | Deleting database file '%ls'. |
-| 3739 | 11 | No | Cannot %ls the index '%.\*ls' because it is not a statistics collection. |
-| 3740 | 16 | No | Cannot drop the %S_MSG '%.\*ls' because at least part of the table resides on a read-only filegroup. |
-| 3741 | 16 | No | Cannot drop the %S_MSG '%.\*ls' because at least part of the table resides on an offline filegroup. |
-| 3743 | 16 | No | The database '%.\*ls' is enabled for database mirroring. Database mirroring must be removed before you drop the database. |
-| 3744 | 16 | No | Only a single clause is allowed in a statement where an index is dropped online. |
-| 3745 | 16 | No | Only a clustered index can be dropped online. |
-| 3746 | 16 | No | Cannot drop the clustered index of view '%.\*ls' because the view is being used for replication. |
-| 3747 | 16 | No | Cannot drop a clustered index created on a view using drop clustered index clause. Clustered index '%.\*ls' is created on view '%.\*ls'. |
-| 3748 | 16 | No | Cannot drop non-clustered index '%.\*ls' using drop clustered index clause. |
-| 3749 | 16 | No | Cannot drop XML Index '%.\*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead. |
-| 3750 | 10 | No | Warning: Index '%.\*ls' on %S_MSG '%.\*ls' was disabled as a result of disabling the clustered index on the %S_MSG. |
-| 3751 | 16 | No | Cannot use SP_DROPEXTENDEDPROC or DBCC DROPEXTENDEDPROC with '%.\*ls' because '%.\*ls' is a %S_MSG. Use %ls. |
-| 3752 | 16 | No | The database '%.\*ls' is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group. |
-| 3754 | 16 | No | TRUNCATE TABLE statement failed. Index '%.\*ls' uses partition function '%.\*ls', but table '%.\*ls' uses non-equivalent partition function '%.\*ls'. Index and table must use an equivalent partition function. |
-| 3755 | 16 | No | Cannot drop a database with file snapshots on it. Please detach the database instead of dropping or delete the file snapshots and retry the drop. |
-| 3756 | 16 | No | TRUNCATE TABLE statement failed. Index '%.\*ls' is not partitioned, but table '%.\*ls' uses partition function '%.\*ls'. Index and table must use an equivalent partition function. |
-| 3757 | 16 | No | WAIT_AT_LOW_PRIORITY clause is not permitted without ONLINE = ON option, for drop clustered %S_MSG '%.\*ls' on Table '%.\*ls'. |
-| 3758 | 16 | No | Multiple %S_MSG cannot be dropped when WAIT_AT_LOW_PRIORITY clause is specified. |
-| 3759 | 16 | No | %.\*ls constraint '%.\*ls' cannot be dropped when WAIT_AT_LOW_PRIORITY clause is used. |
-| 3760 | 16 | No | Cannot drop index '%.\*ls' on view '%.\*ls' that has SNAPSHOT_MATERIALIZATION. |
-| 3761 | 16 | No | Could not delete SBS backed file '%ls'. See the SQL Server error log for more information. |
-| 3762 | 16 | No | Cannot drop database '%.\*ls' because of temporary unavailability. Please try again later. |
-| 3763 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for Change Feed. |
-| 3764 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for Change Data Capture. |
-| 3765 | 16 | No | Could not delete native shuffle storage '%ls'. See the SQL Server error log for more information. |
-| 3766 | 16 | No | Cannot drop %S_MSG '%.\*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead. |
-| 3767 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has a JSON index. |
-| 3768 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has a vector index. |
-| 3769 | 16 | No | Could not drop the clustered index '%.\*ls' because the table has a vector index. |
-| 3770 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has a semantic index. |
-| 3771 | 16 | No | Could not drop the clustered index '%.\*ls' because the table has a semantic index. |
-| 3800 | 16 | No | Column name '%.\*ls' is not sufficiently different from the names of other columns in the table '%.\*ls'. |
-| 3801 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" may be impacted by the collation upgrade. Run DBCC CHECKTABLE. |
-| 3802 | 10 | No | Warning: The constraint "%.\*ls" on "%.\*ls"."%.\*ls" may be impacted by the collation upgrade. Disable and enable WITH CHECK. |
-| 3803 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" is disabled because the implementation of the checksum function has changed. |
-| 3804 | 10 | No | Warning: The check constraint "%.\*ls" on table "%.\*ls"."%.\*ls" is disabled because the implementation of the checksum function has changed. |
-| 3805 | 10 | No | Warning: Index "%.\*ls" on table "%.\*ls"."%.\*ls" might be corrupted because it references computed column "%.\*ls" containing a non-deterministic conversion from string to date. Run DBCC CHECKTABLE to verify index. Consider using explicit CONVERT with deterministic date style such as 121. Computed column indexes referencing non-deterministic expressions can't be created in 90 compatibility mode. See Books Online topic "Creating Indexes on Computed Columns" for more information. |
-| 3806 | 10 | No | Warning: Indexed view "%.\*ls"."%.\*ls" might be corrupted because it contains a non-deterministic conversion from string to date. Run DBCC CHECKTABLE to verify view. Consider using explicit CONVERT with deterministic date style such as 121. Indexed views referencing non-deterministic expressions can't be created in 90 compatibility mode. See Books Online topic "Creating Indexed Views" for more information. |
-| 3807 | 17 | No | Create failed because all available identifiers have been exhausted. |
-| 3808 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" is disabled because the index is defined on a view with ignore_dup_key index option. Drop the index and, if possible, recreate it without ignore_dup_key option. You may need to change the logical structure of the view to ensure all rows are unique. |
-| 3809 | 16 | No | Upgrade of database "%.\*ls" failed because index "%.\*ls" on object ID %d has the same name as that of another index on the same table. |
-| 3810 | 10 | No | Event notification "%.\*ls" on assembly is dropped. |
-| 3811 | 10 | No | Event notification "%.\*ls" on service queue is dropped as broker instance is not specified. |
-| 3812 | 10 | No | Event notification "%.\*ls" on object is dropped. |
-| 3813 | 16 | No | Upgrade of login '%.\*ls' failed because its name or sid is a duplicate of another login or server role. |
-| 3814 | 16 | No | Local login mapped to remote login '%.\*ls' on server '%.\*ls' is invalid. Drop and recreate the remote login before upgrade. |
-| 3815 | 16 | No | Local login mapped to linked login '%.\*ls' on server '%.\*ls' is invalid. Drop and recreate the linked login before upgrade. |
-| 3816 | 16 | No | Upgrade of login '%.\*ls' failed because its password hash is invalid. Update the login password before upgrade. |
-| 3817 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" was disabled because the implementation of "%.\*ls" have changed. |
-| 3819 | 10 | No | Warning: The check constraint "%.\*ls" on "%.\*ls"."%.\*ls" was disabled and set as not trusted because the implementation of "%.\*ls" have changed. |
-| 3821 | 10 | No | Warning: The foreign key constraint "%.\*ls" on "%.\*ls"."%.\*ls" was disabled because the implementation of '%.\*ls' have changed. |
-| 3822 | 10 | No | Warning: The heap "%.\*ls"."%.\*ls" has persisted computed columns that depends on a geometry or geography methods and may contain out-of-date information. Because of this, DBCC may report inconsistencies on this table. The persisted computed columns depending on geometry or geography methods should be unpersisted and persisted again to refresh the data. |
-| 3823 | 10 | No | Warning: The object "%.\*ls"."%.\*ls" could not be bound and was ignored during upgrade. Consider reviewing and correcting its definition. |
-| 3827 | 10 | No | Warning: The table "%.\*ls"."%.\*ls" is unavailable because it contains a persisted computed column that depends on "%.\*ls", the implementation of which has changed. Rebuild the table offline and reconstruct the persisted computed column. |
-| 3830 | 10 | No | Metadata cache coherency check for database ID(%d) did not find any inconsistency. |
-| 3851 | 10 | No | An invalid row (%ls) was found in the system table sys.%ls%ls. |
-| 3852 | 10 | No | Row (%ls) in sys.%ls%ls does not have a matching row (%ls) in sys.%ls%ls. |
-| 3853 | 10 | No | Attribute (%ls) of row (%ls) in sys.%ls%ls does not have a matching row (%ls) in sys.%ls%ls. |
-| 3854 | 10 | No | Attribute (%ls) of row (%ls) in sys.%ls%ls has a matching row (%ls) in sys.%ls%ls that is invalid. |
-| 3855 | 10 | No | Attribute (%ls) exists without a row (%ls) in sys.%ls%ls. |
-| 3856 | 10 | No | Attribute (%ls) exists but should not for row (%ls) in sys.%ls%ls. |
-| 3857 | 10 | No | The attribute (%ls) is required but is missing for row (%ls) in sys.%ls%ls. |
-| 3858 | 10 | No | The attribute (%ls) of row (%ls) in sys.%ls%ls has an invalid value. |
-| [3859](../mssqlserver-3859-database-engine-error.md) | 10 | No | Warning: The system catalog was updated directly in database ID %d, most recently at %S_DATE. |
-| 3860 | 10 | No | Cannot upgrade database ID 32767. This ID value is reserved for SQL Server internal use. |
-| 3862 | 10 | No | CLR type '%.\*ls'.'%.\*ls' is disabled because the on disk format for this CLR type has been changed. Use DROP TYPE to remove this disabled type. |
-| 3864 | 23 | Yes | Could not find an entry for index with ID %d on object with ID %d in database with ID %d. Possible schema corruption. Run DBCC CHECKDB. |
-| 3865 | 16 | No | The operation on object '%.\*ls' is blocked. The object is a FileTable system defined object and user modifications are not allowed. |
-| 3866 | 10 | Yes | The operation on FileTable system defined object '%.\*ls' was allowed because of traceflag settings. To prevent this informational message from appearing in the error log, use DBCC TRACEOFF to turn off the trace flag. |
-| 3867 | 10 | No | The FileTable object '%.\*ls' contains system defined constraints that cannot be modified as long as the FILETABLE_NAMESPACE option is enabled on the table. Only user defined constraints have been updated. |
-| 3868 | 10 | No | Failed to start tempdb metadata memory-optimized mode. Continuing tempdb startup in SQL mode. Please run ALTER SERVER CONFIGURATION TEMPDB METADATA MEMORY_OPTIMIZED ON once again and restart to retry. |
-| 3869 | 10 | No | The desired memory-optimized configuration is already set. No further action is necessary. |
-| 3870 | 10 | No | The tempdb metadata memory-optimized configuration has been set to '%S_MSG'. Restart SQL server for the new setting to take effect. |
-| 3871 | 10 | No | Tempdb started with memory-optimized metadata. |
-| 3872 | 10 | No | The hybrid buffer pool memory-optimized configuration has been set to '%S_MSG'. Restart SQL server for the new setting to take effect. |
-| 3873 | 10 | No | Hybrid buffer pool started with memory-optimized metadata. |
-| 3874 | 16 | No | Resource pool '%.\*ls' does not exist or resource governor has not been reconfigured. |
-| 3875 | 16 | No | Internal resource pool cannot be used for tempdb |
-| 3876 | 16 | No | Resource pool setting for tempdb failed. Retry with a valid pool. |
-| 3878 | 10 | No | The tiered memory memory-optimized configuration has been set to '%S_MSG'. Restart SQL server for the new setting to take effect. |
-| 3879 | 10 | No | Tiered memory for buffer pool started with memory-optimized metadata. |
-| 3901 | 16 | No | The transaction name must be specified when it is used with the mark option. |
-| 3902 | 16 | No | The COMMIT TRANSACTION request has no corresponding BEGIN TRANSACTION. |
-| 3903 | 16 | No | The ROLLBACK TRANSACTION request has no corresponding BEGIN TRANSACTION. |
-| 3904 | 21 | No | Cannot unsplit logical page %S_PGID in object '%.\*ls', in database '%.\*ls'. Both pages together contain more data than will fit on one page. |
-| 3905 | 16 | No | The number of nested transactions has reached the maximum allowed value of 4294967296. |
-| 3906 | 16 | No | Failed to update database "%.\*ls" because the database is read-only. |
-| 3907 | 16 | No | Transaction aborted when accessing a versioned row in table '%.\*ls' in database '%.\*ls'. Requested row version was not found in Persistent Version Store. The database might be out of space. |
-| 3908 | 16 | No | Could not run BEGIN TRANSACTION in database '%.\*ls' because the database is in emergency mode or is damaged and must be restarted. |
-| 3909 | 16 | No | Session binding token is invalid. |
-| 3910 | 16 | No | Transaction context in use by another session. |
-| 3911 | 16 | Yes | Persistent Version Store is full. New versions cannot be added. Transactions that need to access Persistent Version Store might be rolled back. Increase the maximum database size or make space available in the database. |
-| 3912 | 16 | No | Cannot bind using an XP token while the server is not in an XP call. |
-| 3913 | 16 | Yes | TDS reset connection protocol error. Client driver requested both ResetConnectionKeepLocalXact and ResetConnectionKeepDTCXact at the same time. This is not expected in server. |
-| 3914 | 16 | No | The data type "%s" is invalid for transaction names or savepoint names. Allowed data types are char, varchar, nchar, varchar(max), nvarchar, and nvarchar(max). |
-| 3915 | 16 | No | Cannot use the ROLLBACK statement within an INSERT-EXEC statement. |
-| 3916 | 16 | No | Cannot use the COMMIT statement within an INSERT-EXEC statement unless BEGIN TRANSACTION is used first. |
-| 3917 | 16 | No | Session is bound to a transaction context that is in use. Other statements in the batch were ignored. |
-| 3918 | 16 | No | The statement or function must be executed in the context of a user transaction. |
-| 3919 | 16 | No | Cannot enlist in the transaction because the transaction has already been committed or rolled back. |
-| 3920 | 10 | No | The WITH MARK option only applies to the first BEGIN TRAN WITH MARK statement. The option is ignored. |
-| 3921 | 16 | No | Cannot get a transaction token if there is no transaction active. Reissue the statement after a transaction has been started |
-| 3922 | 16 | No | Cannot enlist in the transaction because the transaction does not exist. |
-| 3923 | 10 | No | Cannot use transaction marks on database '%.\*ls' with bulk-logged operations that have not been backed up. The mark is ignored. |
-| 3924 | 10 | No | The session was enlisted in an active user transaction while trying to bind to a new transaction. The session has defected from the previous user transaction. |
-| 3925 | 16 | No | Invalid transaction mark name. The 'LSN:' prefix is reserved. |
-| 3926 | 10 | No | The transaction active in this session has been committed or aborted by another session. |
-| 3927 | 10 | No | The session had an active transaction when it tried to enlist in a Distributed Transaction Coordinator transaction. |
-| 3928 | 16 | No | The marked transaction "%.\*ls" failed. A timeout occurred while attempting to place a mark in the log by committing the marked transaction. This can be caused by contention with Microsoft Distributed Transaction Coordinator (MS DTC) transactions or other local marked transaction that have prepared, but not committed or aborted. Try the operation again and if the error persists, determine the source of the contention. |
-| 3929 | 16 | No | No distributed or bound transaction is allowed in single user database. |
-| 3930 | 16 | No | The current transaction cannot be committed and cannot support operations that write to the log file. Roll back the transaction. |
-| 3931 | 16 | No | The current transaction cannot be committed and cannot be rolled back to a savepoint. Roll back the entire transaction. |
-| 3932 | 16 | No | The save point name "%.\*ls" that was provided is too long. The maximum allowed length is %d characters. |
-| 3933 | 16 | No | Cannot promote the transaction to a distributed transaction because there is an active save point in this transaction. |
-| 3934 | 14 | No | The current user cannot use this FILESTREAM transaction context. To obtain a valid FILESTREAM transaction context, use GET_FILESTREAM_TRANSACTION_CONTEXT. |
-| 3935 | 16 | No | A FILESTREAM transaction context could not be initialized. This might be caused by a resource shortage. Retry the operation. Error code: 0x%x. |
-| 3936 | 16 | No | The transaction could not be committed because an error occurred while trying to flush FILESTREAM data to disk. A file may have been open at commit time or a disk I/O error may have occurred. '%.\*ls' was one of the one or more files involved. ErrorCode: 0x%x. |
-| [3937](../mssqlserver-3937-database-engine-error.md) | 16 | No | While rolling back a transaction, an error occurred while trying to deliver a rollback notification to the FILESTREAM filter driver. Error code: 0x%0x. |
-| 3938 | 18 | No | The transaction has been stopped because it conflicted with the execution of a FILESTREAM close operation using the same transaction. The transaction will be rolled back. |
-| 3939 | 16 | No | An uncommittable transaction was detected at the beginning of the batch. The transaction was rolled back. This was caused by an error that occurred during the processing of a FILESTREAM request in the context of this transaction. |
-| 3940 | 16 | No | Failed to acquire necessary locks during commit and the transaction was rolled back. |
-| 3941 | 16 | No | The transaction cannot modify an object that is published for replication or has Change Data Capture enabled because the transaction started before replication or Change Data Capture was enabled on the database. Retry the transaction. |
-| 3947 | 10 | No | The transaction was aborted because the secondary compute failed to catch up redo. Retry the transaction. |
-| 3948 | 16 | No | The transaction was terminated because of the availability replica config/state change or because ghost records are being deleted on the primary and the secondary availability replica that might be needed by queries running under snapshot isolation. Retry the transaction. |
-| 3949 | 16 | No | Transaction aborted when accessing versioned row in table '%.\*ls' in database '%.\*ls'. Requested versioned row was not found because the readable secondary access is not allowed for the operation that attempted to create the version. This might be timing related, so try the query again later. |
-| 3950 | 16 | No | Version store scan timed out when attempting to read the next row. Please try the statement again later when the system is not as busy. |
-| 3951 | 16 | No | Transaction failed in database '%.\*ls' because the statement was run under snapshot isolation but the transaction did not start in snapshot isolation. You cannot change the isolation level of the transaction to snapshot after the transaction has started unless the transaction was originally started under snapshot isolation level. |
-| 3952 | 16 | No | Snapshot isolation transaction failed accessing database '%.\*ls' because snapshot isolation is not allowed in this database. Use ALTER DATABASE to allow snapshot isolation. |
-| 3953 | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the database was not recovered when the current transaction was started. Retry the transaction after the database has recovered. |
-| 3954 | 16 | No | Snapshot isolation transaction failed to start in database '%.\*ls' because the ALTER DATABASE command that disallows snapshot isolation had started before this transaction began. The database is in transition to OFF state. You will either need to change the isolation level of the transaction or re-enable the snapshot isolation in the database. |
-| 3955 | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the recovery was skipped for this database. You must recover the database before you can run a transaction under snapshot isolation. |
-| 3956 | 16 | No | Snapshot isolation transaction failed to start in database '%.\*ls' because the ALTER DATABASE command which enables snapshot isolation for this database has not finished yet. The database is in transition to pending ON state. You must wait until the ALTER DATABASE Command completes successfully. |
-| 3957 | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the database did not allow snapshot isolation when the current transaction started. It may help to retry the transaction. |
-| 3958 | 16 | No | Transaction aborted when accessing versioned row in table '%.\*ls' in database '%.\*ls'. Requested versioned row was not found. Your tempdb is probably out of space. Please refer to BOL on how to configure tempdb for versioning. |
-| 3959 | 10 | Yes | Version store is full. New version(s) could not be added. A transaction that needs to access the version store may be rolled back. Please refer to BOL on how to configure tempdb for versioning. |
-| 3960 | 16 | No | Snapshot isolation transaction aborted due to update conflict. You cannot use snapshot isolation to access table '%.\*ls' directly or indirectly in database '%.\*ls' to update, delete, or insert the row that has been modified or deleted by another transaction. Retry the transaction or change the isolation level for the update/delete statement. |
-| [3961](../mssqlserver-3961-database-engine-error.md) | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is disallowed because the metadata is not versioned. A concurrent update to metadata can lead to inconsistency if mixed with snapshot isolation. |
-| 3962 | 16 | No | Bind to another transaction while executing SQL Server internal query is not supported. Check your logon trigger definition and remove any sp_bindsession usage if any. If this error is not happening during logon trigger execution, contact production support team. |
-| 3963 | 16 | No | Transaction failed in database '%.\*ls' because distributed transactions are not supported under snapshot isolation. |
-| 3964 | 16 | No | Transaction failed because this DDL statement is not allowed inside a snapshot isolation transaction. Since metadata is not versioned, a metadata change can lead to inconsistency if mixed within snapshot isolation. |
-| 3965 | 16 | No | The PROMOTE TRANSACTION request failed because there is no local transaction active. |
-| 3966 | 17 | No | Transaction is rolled back when accessing version store. It was earlier marked as victim when the version store was shrunk due to insufficient space in tempdb. This transaction was marked as a victim earlier because it may need the row version(s) that have already been removed to make space in tempdb. Retry the transaction |
-| 3967 | 17 | Yes | Insufficient space in tempdb to hold row versions. Need to shrink the version store to free up some space in tempdb. Transaction (id=%I64d xsn=%I64d spid=%d elapsed_time=%d) has been marked as victim and it will be rolled back if it accesses the version store. If the problem persists, the likely cause is improperly sized tempdb or long running transactions. Please refer to BOL on how to configure tempdb for versioning. |
-| 3968 | 10 | No | Snapshot isolation or read committed snapshot is not available in database '%.\*ls' because SQL Server was started with one or more undocumented trace flags that prevent enabling database for versioning. Transaction started with snapshot isolation will fail and a query running under read committed snapshot will succeed but will resort back to lock based read committed. |
-| 3969 | 16 | No | Distributed transaction is not supported while running SQL Server internal query. Check your logon trigger definition and remove any distributed transaction usage if any. If this error is not happening during logon trigger execution, contact production support team. |
-| 3970 | 16 | No | This operation conflicts with another pending operation on this transaction. The operation failed. |
-| 3971 | 16 | No | The server failed to resume the transaction. Desc:%I64x. |
-| 3972 | 20 | Yes | Incoming Tabular Data Stream (TDS) protocol is incorrect. Transaction Manager event has wrong length. Event type: %d. Expected length: %d. Actual length: %d. |
-| 3973 | 16 | No | The database is currently being used by another thread under the same workspace in exclusive mode. The operation failed. |
-| 3974 | 16 | No | The number of databases in exclusive mode usage under a workspace is limited. Because the limit has been exceeded, the operation failed. |
-| 3975 | 16 | No | The varchar(max) data type is not supported for sp_getbindtoken. The batch has been aborted. |
-| 3976 | 16 | No | The transaction name has the odd length %d. The batch has been aborted. |
-| 3977 | 16 | No | The savepoint name cannot be NULL. The batch has been aborted. |
-| 3978 | 16 | No | Beginning a new transaction after rollback to save point is not allowed. |
-| 3979 | 16 | No | The TM request is longer than expected. The request is not processed. |
-| 3980 | 16 | No | The request failed to run because the batch is aborted, this can be caused by abort signal sent from client, or another request is running in the same session, which makes the session busy. |
-| 3981 | 16 | No | The transaction operation cannot be performed because there are pending requests working on this transaction. |
-| 3982 | 16 | No | New transaction is not allowed to be started while DTC or bound transaction is active. |
-| 3983 | 16 | No | The operation failed because the session is not single threaded. |
-| 3984 | 16 | No | Cannot acquire a database lock during a transaction change. |
-| 3985 | 16 | No | An error occurred during the changing of transaction context. This is usually caused by low memory in the system. Try to free up more memory. |
-| 3986 | 19 | No | The transaction timestamps ran out. Restart the server. |
-| 3987 | 10 | No | SNAPSHOT ISOLATION is always enabled in this database. |
-| [3988](../mssqlserver-3988-database-engine-error.md) | 16 | No | New transaction is not allowed because there are other threads running in the session. |
-| [3989](../mssqlserver-3989-database-engine-error.md) | 16 | No | New request is not allowed to start because it should come with valid transaction descriptor. |
-| 3990 | 16 | No | Transaction is not allowed to commit inside of a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting. |
-| 3991 | 16 | No | The context transaction which was active before entering user defined routine, trigger or aggregate "%.\*ls" has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting. |
-| 3992 | 16 | No | Transaction count has been changed from %d to %d inside of user defined routine, trigger or aggregate "%.\*ls". This is not allowed and user transaction will be rolled back. Change application logic to enforce strict transaction nesting. |
-| 3993 | 16 | No | The user transaction that has been started in user defined routine, trigger or aggregate "%.\*ls" is not ended upon exiting from it. This is not allowed and the transaction will be rolled back. Change application logic to enforce strict transaction nesting. |
-| 3994 | 16 | No | User defined routine, trigger or aggregate tried to rollback a transaction that is not started in that CLR level. An exception will be thrown to prevent execution of rest of the user defined routine, trigger or aggregate. |
-| 3995 | 16 | No | Unknown transaction isolation level %d, valid value range is 0 to 5. |
-| 3996 | 16 | No | Snapshot isolation level is not supported for distributed transaction. Use another isolation level or do not use distributed transaction. |
-| 3997 | 16 | No | A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back. |
-| 3998 | 16 | No | Uncommittable transaction is detected at the end of the batch. The transaction is rolled back. |
-| 3999 | 17 | Yes | Failed to flush the commit table to disk in dbid %d due to error %d. Check the errorlog for more information. |
+| <a id="3001"></a> 3001 | 16 | No | obsolete |
+| <a id="3002"></a> 3002 | 16 | No | Cannot BACKUP or RESTORE a database snapshot. |
+| <a id="3003"></a> 3003 | 10 | No | This BACKUP WITH DIFFERENTIAL will be based on more than one file backup. All those file backups must be restored before attempting to restore this differential backup. |
+| <a id="3004"></a> 3004 | 16 | No | The primary filegroup cannot be backed up as a file backup because the database is using the SIMPLE recovery model. Consider taking a partial backup by specifying READ_WRITE_FILEGROUPS. |
+| <a id="3005"></a> 3005 | 10 | No | The differential partial backup is including a read-only filegroup, '%ls'. This filegroup was read-write when the base partial backup was created, but was later changed to read-only access. We recommend that you create a separate file backup of the '%ls' filegroup now, and then create a new partial backup to provide a new base for later differential partial backups. |
+| <a id="3006"></a> 3006 | 16 | No | The differential backup is not allowed because it would be based on more than one base backup. Multi-based differential backups are not allowed in the simple recovery model, and are never allowed for partial differential backups. |
+| <a id="3007"></a> 3007 | 16 | No | The backup of the file or filegroup "%ls" is not permitted because it is not online. Container state: "%ls" (%d). Restore status: %d. BACKUP can be performed by using the FILEGROUP or FILE clauses to restrict the selection to include only online data. |
+| <a id="3008"></a> 3008 | 16 | No | The specified device type is not supported for backup mirroring. |
+| <a id="3009"></a> 3009 | 16 | No | Could not insert a backup or restore history/detail record in the msdb database. This may indicate a problem with the msdb database. The backup/restore operation was still successful. |
+| <a id="3010"></a> 3010 | 16 | No | Invalid backup mirror specification. All mirrors must have the same number of members. |
+| <a id="3011"></a> 3011 | 16 | No | All backup devices must be of the same general class (for example, DISK and TAPE). |
+| <a id="3012"></a> 3012 | 17 | No | VDI ran out of buffer when SQL Server attempted to send differential information to SQL Writer. |
+| <a id="3013"></a> [3013](../mssqlserver-3013-database-engine-error.md) | 16 | No | %hs is terminating abnormally. |
+| <a id="3014"></a> 3014 | 10 | No | %hs successfully processed %I64d pages in %d.%03d seconds (%d.%03d MB/sec). |
+| <a id="3015"></a> 3015 | 10 | No | %hs is not yet implemented. |
+| <a id="3016"></a> 3016 | 16 | No | Backup of file '%ls' is not permitted because it contains pages subject to an online restore sequence. Complete the restore sequence before taking the backup, or restrict the backup to exclude this file. |
+| <a id="3017"></a> 3017 | 16 | No | The restart-checkpoint file '%ls' could not be opened. Operating system error '%ls'. Correct the problem, or reissue the command without RESTART. |
+| <a id="3018"></a> 3018 | 10 | No | The restart-checkpoint file '%ls' was not found. The RESTORE command will continue from the beginning as if RESTART had not been specified. |
+| <a id="3019"></a> 3019 | 16 | No | The restart-checkpoint file '%ls' is from a previous interrupted RESTORE operation and is inconsistent with the current RESTORE command. The restart command must use the same syntax as the interrupted command, with the addition of the RESTART clause. Alternatively, reissue the current statement without the RESTART clause. |
+| <a id="3021"></a> 3021 | 16 | No | Cannot perform a backup or restore operation within a transaction. |
+| <a id="3022"></a> 3022 | 10 | No | This backup is a file backup of read-write data from a database that uses the simple recovery model. This is only appropriate if you plan to set the filegroup to read-only followed by a differential file backup. Consult Books Online for more information on managing read-only data for the simple recovery model. In particular, consider how partial backups are used. |
+| <a id="3023"></a> [3023](../mssqlserver-3023-database-engine-error.md) | 16 | No | Backup, file manipulation operations (such as ALTER DATABASE ADD FILE) and encryption changes on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed. |
+| <a id="3024"></a> 3024 | 16 | No | You can only perform a full backup of the master database. Use BACKUP DATABASE to back up the entire master database. |
+| <a id="3025"></a> 3025 | 16 | No | Missing database name. Reissue the statement specifying a valid database name. |
+| <a id="3027"></a> 3027 | 16 | No | The filegroup "%.\*ls" is not part of database "%.\*ls". |
+| <a id="3028"></a> 3028 | 10 | No | The restart-checkpoint file '%ls' was corrupted and is being ignored. The RESTORE command will continue from the beginning as if RESTART had not been specified. |
+| <a id="3030"></a> 3030 | 16 | No | Value of '%ls' must be less than or equal to value of '%ls'. Change the values and reissue the BACKUP statement. |
+| <a id="3031"></a> 3031 | 16 | No | Option '%ls' conflicts with option(s) '%ls'. Remove the conflicting option and reissue the statement. |
+| <a id="3032"></a> 3032 | 16 | No | One or more of the options (%ls) are not supported for this statement. Review the documentation for supported options. |
+| <a id="3033"></a> 3033 | 16 | No | BACKUP DATABASE cannot be used on a database opened in emergency mode. |
+| <a id="3034"></a> 3034 | 16 | No | No files were selected to be processed. You may have selected one or more filegroups that have no members. |
+| <a id="3035"></a> 3035 | 16 | No | Cannot perform a differential backup for database "%ls", because a current database backup does not exist. Perform a full database backup by reissuing BACKUP DATABASE, omitting the WITH DIFFERENTIAL option. |
+| <a id="3036"></a> 3036 | 16 | No | The database "%ls" is in warm-standby state (set by executing RESTORE WITH STANDBY) and cannot be backed up until the entire restore sequence is completed. |
+| <a id="3038"></a> 3038 | 16 | No | The file name "%ls" is invalid as a backup device name. Reissue the BACKUP statement with a valid file name. |
+| <a id="3039"></a> 3039 | 16 | No | Cannot perform a differential backup for file '%ls' because a current file backup does not exist. Reissue BACKUP DATABASE omitting the WITH DIFFERENTIAL option. |
+| <a id="3040"></a> 3040 | 10 | No | An error occurred while informing replication of the backup. The backup will continue, but the replication environment should be inspected. |
+| <a id="3041"></a> 3041 | 16 | Yes | BACKUP failed to complete the command %.\*ls. Check the backup application log for detailed messages. |
+| <a id="3042"></a> 3042 | 10 | No | BACKUP WITH CONTINUE_AFTER_ERROR successfully generated a backup of the damaged database. Refer to the SQL Server error log for information about the errors that were encountered. |
+| <a id="3043"></a> [3043](../mssqlserver-3043-database-engine-error.md) | 16 | No | BACKUP '%ls' detected an error on page (%d:%d) in file '%ls'. |
+| <a id="3044"></a> 3044 | 16 | No | Invalid zero-length device name. Reissue the BACKUP statement with a valid device name. |
+| <a id="3045"></a> 3045 | 16 | No | BACKUP or RESTORE requires the NTFS file system for FILESTREAM and full-text support. The path "%.\*ls" is not usable. |
+| <a id="3046"></a> 3046 | 16 | No | Inconsistent metadata has been encountered. The only possible backup operation is a tail-log backup using the WITH CONTINUE_AFTER_ERROR or NO_TRUNCATE option. |
+| <a id="3047"></a> 3047 | 16 | No | The BackupDirectory registry key is not configured correctly. This key should specify the root path where disk backup files are stored when full path names are not provided. This path is also used to locate restart checkpoint files for RESTORE. |
+| <a id="3048"></a> 3048 | 16 | No | BACKUP LOG WITH TRUNCATE_ONLY cannot operate on database '%ls' because it is configured for database mirroring. |
+| <a id="3049"></a> 3049 | 16 | No | BACKUP detected corruption in the database log. Check the errorlog for more information. |
+| <a id="3050"></a> 3050 | 16 | No | SQL Server could not send the differential information for database file '%ls' of database '%ls\\%ls' to the backup application because the differential information is too large to fit in memory, and an attempt to use a temporary file has failed. |
+| <a id="3051"></a> 3051 | 16 | No | BACKUP LOG was unable to maintain mirroring consistency for database '%ls'. Database mirroring has been suspended. |
+| <a id="3052"></a> 3052 | 16 | No | BACKUP LOG was unable to log updates for for database '%ls'. Subsequent log backups will be required to advance the backup point from %S_LSN to %S_LSN after log space is made available for logging them. |
+| <a id="3053"></a> 3053 | 16 | No | BACKUP '%ls' detected an error on a page in file '%ls'. |
+| <a id="3054"></a> 3054 | 16 | No | Differential file backups can include only read-only data for databases using the simple recovery model. Consider taking a partial backup by specifying READ_WRITE_FILEGROUPS. |
+| <a id="3055"></a> 3055 | 16 | No | Backup destination "%.\*ls" supports a FILESTREAM filegroup. This filegroup cannot be used as a backup destination. Rerun the BACKUP statement with a valid backup destination. |
+| <a id="3056"></a> [3056](../mssqlserver-3056-database-engine-error.md) | 16 | No | The backup operation has detected an unexpected file in a FILESTREAM container. The backup operation will continue and include file '%ls'. |
+| <a id="3057"></a> 3057 | 16 | No | Invalid device name. The length of the device name provided exceeds supported limit (maximum length is:%d). Reissue the BACKUP statement with a valid device name. |
+| <a id="3058"></a> 3058 | 10 | No | File or device name exceeds the supported limit (maximum length is:%d) and will be truncated: %.\*ls. |
+| <a id="3059"></a> 3059 | 16 | No | This BACKUP or RESTORE command is not supported on a database mirror or secondary replica. |
+| <a id="3060"></a> 3060 | 10 | No | The restart-checkpoint file '%ls' was corrupted. The restored database can not be recovered. Restart the RESTORE sequence. |
+| <a id="3061"></a> 3061 | 16 | No | The restart-checkpoint file '%ls' could not be opened. Operating system error '%ls'. Make the file available and retry the operation or, restart the RESTORE sequence. |
+| <a id="3062"></a> 3062 | 16 | No | Cannot backup from a HADRON secondary because it is not in Synchronizing or Synchronized state. |
+| <a id="3063"></a> 3063 | 16 | No | Write to backup block blob device %ls failed. Device has reached its limit of allowed blocks. |
+| <a id="3064"></a> 3064 | 16 | No | Write to backup block blob detected out of order write at offset %ld, last block offset was at %ld. |
+| <a id="3065"></a> 3065 | 16 | No | Attempt to commit the block list for a block blob failed. Blob Name is "%.\*ls". Storage Errorcode %ld. |
+| <a id="3066"></a> 3066 | 16 | No | Could not find the database file referenced by the file snapshot %.\*ls. Please make sure that the URL points to a valid snapshot on a database file. |
+| <a id="3067"></a> 3067 | 16 | No | Failed while trying to delete file snapshot %.\*ls. Error code %ld. |
+| <a id="3068"></a> 3068 | 16 | No | Invalid file snapshot URL. Please make sure that the URL is correctly formed. |
+| <a id="3069"></a> 3069 | 16 | No | Striping a backup set across multiple devices is not permitted for file snapshot backups. |
+| <a id="3070"></a> 3070 | 16 | No | Specifying the WITH options FORMAT and FILE_SNAPSHOT is not permitted. |
+| <a id="3071"></a> 3071 | 16 | No | The database %.\*ls is configured for file snapshot point in time restore, log backups are not permitted. |
+| <a id="3072"></a> 3072 | 16 | No | Backup encryption is incompatible with file snapshot backup if TDE is not enabled on the database. |
+| <a id="3073"></a> 3073 | 16 | No | The option WITH FILE_SNAPSHOT is only permitted if all database files are in Azure Storage. |
+| <a id="3074"></a> 3074 | 16 | No | Failed while getting attributes for the file snapshot %.\*ls. Error code %ld. |
+| <a id="3075"></a> 3075 | 16 | No | Device name '%.\*ls' is not a valid MOVE target when restoring from a File Snapshot Backup. |
+| <a id="3076"></a> 3076 | 16 | No | File Snapshot Backup is only permitted with a single backup device and no additional mirrored devices. |
+| <a id="3077"></a> 3077 | 10 | No | File snapshot %.\*ls not found. |
+| <a id="3078"></a> 3078 | 16 | No | The file name "%ls" is invalid as a backup device name for the specified device type. Reissue the BACKUP statement with a valid file name and device type. |
+| <a id="3079"></a> 3079 | 16 | No | Could not find the blob file %.\*ls. Please make sure that the file name points to a valid blob file. |
+| <a id="3080"></a> 3080 | 16 | No | Invalid Backup Path. The length of the default backup path provided exceeds supported limit (maximum length is: %d). Correct the default backup path. |
+| <a id="3081"></a> 3081 | 16 | No | %.\*ls '%.\*ls' was previously suspended for snapshot backup. |
+| <a id="3082"></a> 3082 | 16 | No | %.\*ls '%.\*ls' is not suspended for snapshot backup. |
+| <a id="3083"></a> 3083 | 10 | No | Database '%.\*ls' acquired suspend locks in session %d. |
+| <a id="3084"></a> 3084 | 10 | No | Database '%.\*ls' released suspend locks in session %d. |
+| <a id="3085"></a> 3085 | 16 | No | Database '%.\*ls' did not acquire the necessary suspend locks to freeze the database. |
+| <a id="3086"></a> 3086 | 10 | No | %.\*ls '%.\*ls' successfully suspended for snapshot backup in session %d. |
+| <a id="3087"></a> 3087 | 10 | No | %.\*ls '%.\*ls' originally suspended for snapshot backup in session %d successfully resumed in session %d. |
+| <a id="3088"></a> 3088 | 16 | No | %.\*ls '%.\*ls' with dbid %d failed to resume in session %d. |
+| <a id="3089"></a> 3089 | 10 | No | %.\*ls '%.\*ls' cancelled current resume operation as another resume operation is already in progress. |
+| <a id="3090"></a> 3090 | 16 | No | %.\*ls '%.\*ls' snapshot backup in progress. |
+| <a id="3091"></a> 3091 | 16 | No | Database '%.\*ls' is not allowed to be suspended for snapshot backup. |
+| <a id="3092"></a> 3092 | 16 | No | Database '%.\*ls' is specified multiple times in the group snapshot backup statement. |
+| <a id="3093"></a> 3093 | 16 | No | Database count changed while performing snapshot backup. (Expected: %d, Actual: %d). |
+| <a id="3094"></a> 3094 | 16 | No | Server '%.\*ls' has no user databases to suspend for snapshot backup. |
+| <a id="3095"></a> 3095 | 16 | No | The backup cannot be performed because 'ENCRYPTION' was requested after the media was formatted with an incompatible structure. To append to this media set, either omit 'ENCRYPTION' or create a new media set by using WITH FORMAT in your BACKUP statement. If you use WITH FORMAT on an existing media set, all its backup sets will be overwritten. |
+| <a id="3096"></a> 3096 | 16 | No | The Certificate specified for backup encryption has expired. |
+| <a id="3097"></a> 3097 | 16 | No | The Backup cannot be performed because the existing media set is formatted with an incompatible version. |
+| <a id="3098"></a> 3098 | 16 | No | The backup cannot be performed because '%ls' was requested after the media was formatted with an incompatible structure. To append to this media set, either omit '%ls' or specify '%ls'. Alternatively, you can create a new media set by using WITH FORMAT in your BACKUP statement. If you use WITH FORMAT on an existing media set, all its backup sets will be overwritten. |
+| <a id="3099"></a> 3099 | 16 | No | Backup Encryption options were specified, Backup Encryption support has not been enabled on this version. |
+| <a id="3101"></a> 3101 | 16 | No | Exclusive access could not be obtained because the database is in use. |
+| <a id="3102"></a> 3102 | 16 | No | %ls cannot process database '%ls' because it is in use by this session. It is recommended that the master database be used when performing this operation. |
+| <a id="3103"></a> 3103 | 16 | No | A partial restore sequence cannot be initiated by this command. To initiate a partial restore sequence, use the WITH PARTIAL clause of the RESTORE statement and provide a backup set which includes a full copy of at least the primary data file. The WITH PARTIAL clause of the RESTORE statement may not be used for any other purpose. |
+| <a id="3104"></a> 3104 | 16 | No | RESTORE cannot operate on database '%ls' because it is configured for database mirroring or has joined an availability group. If you intend to restore the database, use ALTER DATABASE to remove mirroring or to remove the database from its availability group. |
+| <a id="3105"></a> 3105 | 16 | No | RESTORE cannot restore any more pages into file '%ls' because the maximum number of pages (%d) are already being restored. Either complete the restore sequence for the existing pages, or use RESTORE FILE to restore all pages in the file. |
+| <a id="3106"></a> 3106 | 16 | No | The filegroup "%ls" is ambiguous. The identity in the backup set does not match the filegroup that is currently defined in the online database. To force the use of the filegroup in the backup set, take the database offline and then reissue the RESTORE command. |
+| <a id="3107"></a> 3107 | 16 | No | The file "%ls" is ambiguous. The identity in the backup set does not match the file that is currently defined in the online database. To force the use of the file in the backup set, take the database offline and then reissue the RESTORE command. |
+| <a id="3108"></a> 3108 | 16 | No | To restore the master database, the server must be running in single-user mode. For information on starting in single-user mode, see "How to: Start an Instance of SQL Server (sqlservr.exe)" in Books Online. |
+| <a id="3109"></a> 3109 | 16 | No | Master can only be restored and fully recovered in a single step using a full database backup. Options such as NORECOVERY, STANDBY, and STOPAT are not supported. |
+| <a id="3110"></a> 3110 | 14 | No | User does not have permission to RESTORE database '%.\*ls'. |
+| <a id="3111"></a> 3111 | 16 | No | Page %S_PGID is a control page which cannot be restored in isolation. To repair this page, the entire file must be restored. |
+| <a id="3112"></a> 3112 | 16 | No | Cannot restore any database other than master when the server is in single user mode. |
+| <a id="3113"></a> 3113 | 16 | No | Invalid data was detected. |
+| <a id="3115"></a> 3115 | 16 | No | The database is using the simple recovery model. It is not possible to restore a subset of the read-write data. |
+| <a id="3116"></a> 3116 | 16 | No | The supplied backup is not on the same recovery path as the database, and is ineligible for use for an online file restore. |
+| <a id="3117"></a> 3117 | 16 | No | The log or differential backup cannot be restored because no files are ready to rollforward. |
+| <a id="3118"></a> 3118 | 16 | No | The database "%ls" does not exist. RESTORE can only create a database when restoring either a full backup or a file backup of the primary file. |
+| <a id="3119"></a> 3119 | 16 | No | Problems were identified while planning for the RESTORE statement. Previous messages provide details. |
+| <a id="3120"></a> 3120 | 16 | No | This backup set will not be restored because all data has already been restored to a point beyond the time covered by this backup set. |
+| <a id="3121"></a> 3121 | 16 | No | The file "%ls" is on a recovery path that is inconsistent with application of this backup set. RESTORE cannot continue. |
+| <a id="3122"></a> 3122 | 16 | No | File initialization failed. RESTORE cannot continue. |
+| <a id="3123"></a> 3123 | 16 | No | Invalid database name '%.\*ls' specified for backup or restore operation. |
+| <a id="3125"></a> 3125 | 16 | No | The database is using the simple recovery model. The data in the backup it is not consistent with the current state of the database. Restoring more data is required before recovery is possible. Either restore a full file backup taken since the data was marked read-only, or restore the most recent base backup for the target data followed by a differential file backup. |
+| <a id="3127"></a> 3127 | 16 | Yes | The file '%.\*ls' of restored database '%ls' is being left in the defunct state because the database is using the simple recovery model and the file is marked for read-write access. Therefore, only read-only files can be recovered by piecemeal restore. |
+| <a id="3128"></a> 3128 | 16 | No | File '%ls' has an unsupported page size (%d). |
+| <a id="3129"></a> 3129 | 16 | No | The contents of the file "%ls" are not consistent with a transition into the restore sequence. A restore from a backup set may be required. |
+| <a id="3130"></a> 3130 | 10 | No | The filegroup "%ls" is selected. At the time of backup it was known by the name "%ls"'. RESTORE will continue operating upon the renamed filegroup. |
+| <a id="3131"></a> 3131 | 10 | No | The file "%ls" is selected. At the time of backup it was known by the name "%ls". RESTORE will continue operating upon the renamed file. |
+| <a id="3132"></a> 3132 | 16 | No | The media set has %d media families but only %d are provided. All members must be provided. |
+| <a id="3133"></a> 3133 | 16 | No | The volume on device "%ls" is sequence number %d of media family %d, but sequence number %d of media family %d is expected. Check that the device specifications and loaded media are correct. |
+| <a id="3134"></a> 3134 | 10 | Yes | The differential base attribute for file '%ls' of database '%ls' has been reset because the file has been restored from a backup taken on a conflicting recovery path. The restore was allowed because the file was read-only and was consistent with the current status of the database. Any future differential backup of this file will require a new differential base. |
+| <a id="3135"></a> 3135 | 16 | No | The backup set in file '%ls' was created by %hs and cannot be used for this restore operation. |
+| <a id="3136"></a> 3136 | 16 | No | This differential backup cannot be restored because the database has not been restored to the correct earlier state. |
+| <a id="3137"></a> 3137 | 16 | No | Database cannot be reverted. Either the primary or the snapshot names are improperly specified, all other snapshots have not been dropped, or there are missing files. |
+| <a id="3138"></a> 3138 | 16 | No | The database cannot be reverted because FILESTREAM BLOBs are present. |
+| <a id="3139"></a> 3139 | 16 | No | Restore to snapshot is not allowed with the master database. |
+| <a id="3140"></a> 3140 | 16 | No | Could not adjust the space allocation for file '%ls'. |
+| <a id="3141"></a> 3141 | 16 | No | The database to be restored was named '%ls'. Reissue the statement using the WITH REPLACE option to overwrite the '%ls' database. |
+| <a id="3142"></a> 3142 | 16 | No | File "%ls" cannot be restored over the existing "%ls". Reissue the RESTORE statement using WITH REPLACE to overwrite pre-existing files, or WITH MOVE to identify an alternate location. |
+| <a id="3143"></a> 3143 | 16 | No | The data set on device '%ls' is not a SQL Server backup set. |
+| <a id="3144"></a> 3144 | 16 | No | File '%.\*ls' was not backed up in file %d on device '%ls'. The file cannot be restored from this backup set. |
+| <a id="3145"></a> 3145 | 16 | No | The STOPAT option is not supported for databases that use the SIMPLE recovery model. |
+| <a id="3147"></a> 3147 | 16 | No | Backup and restore operations are not allowed on database tempdb. |
+| <a id="3148"></a> 3148 | 16 | No | This RESTORE statement is invalid in the current context. The 'Recover Data Only' option is only defined for secondary filegroups when the database is in an online state. When the database is in an offline state filegroups cannot be specified. |
+| <a id="3149"></a> 3149 | 16 | No | The file or filegroup "%ls" is not in a valid state for the "Recover Data Only" option to be used. Only secondary files in the OFFLINE or RECOVERY_PENDING state can be processed. |
+| <a id="3150"></a> 3150 | 10 | No | The master database has been successfully restored. Shutting down SQL Server. |
+| <a id="3151"></a> [3151](../mssqlserver-3151-database-engine-error.md) | 21 | Yes | Failed to restore master database. Shutting down SQL Server. Check the error logs, and rebuild the master database. For more information about how to rebuild the master database, see SQL Server Books Online. |
+| <a id="3153"></a> 3153 | 16 | No | The database is already fully recovered. |
+| <a id="3154"></a> 3154 | 16 | No | The backup set holds a backup of a database other than the existing '%ls' database. |
+| <a id="3155"></a> 3155 | 16 | No | The RESTORE operation cannot proceed because one or more files have been added or dropped from the database since the backup set was created. |
+| <a id="3156"></a> [3156](../mssqlserver-3156-database-engine-error.md) | 16 | No | File '%ls' cannot be restored to '%ls'. Use WITH MOVE to identify a valid location for the file. |
+| <a id="3159"></a> [3159](../mssqlserver-3159-database-engine-error.md) | 16 | No | The tail of the log for the database "%ls" has not been backed up. Use BACKUP LOG WITH NORECOVERY to backup the log if it contains work you do not want to lose. Use the WITH REPLACE or WITH STOPAT clause of the RESTORE statement to just overwrite the contents of the log. |
+| <a id="3161"></a> 3161 | 16 | No | The primary file is unavailable. It must be restored or otherwise made available. |
+| <a id="3163"></a> 3163 | 16 | No | The transaction log was damaged. All data files must be restored before RESTORE LOG can be attempted. |
+| <a id="3165"></a> 3165 | 16 | No | Database '%ls' was restored, however an error was encountered while replication was being restored/removed. The database has been left offline. See the topic MSSQL_ENG003165 in SQL Server Books Online. |
+| <a id="3166"></a> 3166 | 16 | No | RESTORE DATABASE could not drop database '%ls'. Drop the database and then reissue the RESTORE DATABASE statement. |
+| <a id="3167"></a> 3167 | 16 | No | RESTORE could not start database '%ls'. |
+| <a id="3168"></a> [3168](../mssqlserver-3168-database-engine-error.md) | 16 | No | The backup of the system database on the device %ls cannot be restored because it was created by a different version of the server (%ls) than this server (%ls). |
+| <a id="3169"></a> [3169](../mssqlserver-3169-database-engine-error.md) | 16 | No | The database was backed up on a server running database version %d. That version is incompatible with this server, which supports version %d. Either restore the database on a server that supports the backup, or use a backup that is compatible with this server. |
+| <a id="3170"></a> 3170 | 16 | No | The STANDBY filename is invalid. |
+| <a id="3171"></a> 3171 | 16 | No | File %ls is defunct and cannot be restored into the online database. |
+| <a id="3172"></a> 3172 | 16 | No | Filegroup %ls is defunct and cannot be restored into the online database. |
+| <a id="3173"></a> 3173 | 16 | No | The STOPAT clause provided with this RESTORE statement indicates that the tail of the log contains changes that must be backed up to reach the target point in time. The tail of the log for the database "%ls" has not been backed up. Use BACKUP LOG WITH NORECOVERY to back up the log, or use the WITH REPLACE clause in your RESTORE statement to overwrite the tail of the log. |
+| <a id="3174"></a> 3174 | 16 | No | The file '%ls' cannot be moved by this RESTORE operation. |
+| <a id="3175"></a> 3175 | 10 | No | RESTORE FILEGROUP="%ls" was specified, but not all of its files are present in the backup set. File "%ls" is missing. RESTORE will continue, but if you want all files to be restored, you must restore other backup sets. |
+| <a id="3176"></a> [3176](../mssqlserver-3176-database-engine-error.md) | 16 | No | File '%ls' is claimed by '%ls'(%d) and '%ls'(%d). The WITH MOVE clause can be used to relocate one or more files. |
+| <a id="3178"></a> 3178 | 16 | No | File %ls is not in the correct state to have this differential backup applied to it. |
+| <a id="3179"></a> 3179 | 16 | No | The system database cannot be moved by RESTORE. |
+| <a id="3180"></a> 3180 | 16 | No | This backup cannot be restored using WITH STANDBY because a database upgrade is needed. Reissue the RESTORE without WITH STANDBY. |
+| <a id="3181"></a> [3181](../mssqlserver-3181-database-engine-error.md) | 10 | No | Attempting to restore this backup may encounter storage space problems. Subsequent messages will provide details. |
+| <a id="3182"></a> 3182 | 16 | No | The backup set cannot be restored because the database was damaged when the backup occurred. Salvage attempts may exploit WITH CONTINUE_AFTER_ERROR. |
+| <a id="3183"></a> [3183](../mssqlserver-3183-database-engine-error.md) | 16 | No | RESTORE detected an error on page (%d:%d) in database "%ls" as read from the backup set. |
+| <a id="3184"></a> 3184 | 10 | No | RESTORE WITH CONTINUE_AFTER_ERROR was successful but some damage was encountered. Inconsistencies in the database are possible. |
+| <a id="3185"></a> 3185 | 16 | No | RESTORE cannot apply this backup set because the database is suspect. Restore a backup set that repairs the damage. |
+| <a id="3186"></a> 3186 | 16 | No | The backup set has been damaged. RESTORE will not attempt to apply this backup set. |
+| <a id="3187"></a> 3187 | 16 | No | RESTORE WITH CHECKSUM cannot be specified because the backup set does not contain checksum information. |
+| <a id="3188"></a> 3188 | 10 | No | The backup set was written with damaged data by a BACKUP WITH CONTINUE_AFTER_ERROR. |
+| <a id="3189"></a> 3189 | 16 | No | Damage to the backup set was detected. |
+| <a id="3190"></a> 3190 | 16 | No | Filegroup '%ls' cannot be restored because it does not exist in the backup set. |
+| <a id="3191"></a> 3191 | 16 | No | Restore cannot continue because file '%ls' cannot be written. Ensure that all files in the database are writable. |
+| <a id="3192"></a> 3192 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data that is unavailable. Either use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
+| <a id="3193"></a> 3193 | 16 | No | Restore Log operations are not permitted for a Log Backup with FILE_SNAPSHOT if bulk operations were present during the backup period. The Restore can be accomplished by issuing Restore Database from this archive. |
+| <a id="3194"></a> 3194 | 16 | No | Page %S_PGID is beyond the end of the file. Only pages that are in the current range of the file can be restored. |
+| <a id="3195"></a> 3195 | 16 | No | Page %S_PGID cannot be restored from this backup set. RESTORE PAGE can only be used from full backup sets or from the first log or differential backup taken since the file was added to the database. |
+| <a id="3196"></a> 3196 | 16 | No | RESTORE master WITH SNAPSHOT is not supported. To restore master from a snapshot backup, stop the service and copy the data and log file. |
+| <a id="3197"></a> 3197 | 10 | Yes | I/O is frozen on database %ls. No user action is required. However, if I/O is not resumed promptly, you could cancel the backup. |
+| <a id="3198"></a> 3198 | 10 | Yes | I/O was resumed on database %ls. No user action is required. |
+| <a id="3199"></a> 3199 | 16 | No | RESTORE requires MAXTRANSFERSIZE=%u but %u was specified. |
+| <a id="3201"></a> [3201](../mssqlserver-3201-database-engine-error.md) | 16 | No | Cannot open backup device '%ls'. Operating system error %ls. |
+| <a id="3202"></a> 3202 | 16 | No | Write on "%ls" failed: %ls |
+| <a id="3203"></a> 3203 | 16 | No | Read on "%ls" failed: %ls |
+| <a id="3204"></a> 3204 | 16 | No | The backup or restore was aborted. |
+| <a id="3205"></a> 3205 | 16 | No | Too many backup devices specified for backup or restore; only %d are allowed. |
+| <a id="3206"></a> 3206 | 16 | No | Backup device '%.\*ls' does not exist. To view existing backup devices, use the sys.backup_devices catalog view. To create a new backup device use either sp_addumpdevice or SQL Server Management Studio. |
+| <a id="3207"></a> 3207 | 16 | No | Backup or restore requires at least one backup device. Rerun your statement specifying a backup device. |
+| <a id="3208"></a> 3208 | 16 | No | Unexpected end of file while reading beginning of backup set. Confirm that the media contains a valid SQL Server backup set, and see the console error log for more details. |
+| <a id="3209"></a> 3209 | 16 | No | Operation is not supported on user instances. |
+| <a id="3210"></a> 3210 | 16 | No | The mirror member in drive "%ls" is inconsistent with the mirror member in drive "%ls". |
+| <a id="3211"></a> 3211 | 10 | No | %d percent processed. |
+| <a id="3212"></a> 3212 | 16 | No | The mirror device "%ls" and the mirror device "%ls" have different device specifications. |
+| <a id="3213"></a> 3213 | 16 | No | Unable to unload one or more tapes. See the error log for details. |
+| <a id="3214"></a> 3214 | 16 | No | Too many backup mirrors are specified. Only %d are allowed. |
+| <a id="3215"></a> 3215 | 16 | No | Use WITH FORMAT to create a new mirrored backup set. |
+| <a id="3216"></a> 3216 | 16 | No | RESTORE REWINDONLY is only applicable to tape devices. |
+| <a id="3217"></a> 3217 | 16 | No | Invalid value specified for %ls parameter. |
+| <a id="3218"></a> 3218 | 16 | No | Backup mirroring is not available in this edition of SQL Server. See Books Online for more details on feature support in different SQL Server editions. |
+| <a id="3219"></a> 3219 | 16 | No | The file or filegroup "%.\*ls" cannot be selected for this operation. |
+| <a id="3220"></a> 3220 | 16 | No | The specified URL points to a Block Blob. Backup and Restore operations on Block Blobs are not supported when WITH CREDENTIAL syntax is used. |
+| <a id="3221"></a> 3221 | 16 | No | The ReadFileEx system function executed on file '%ls' only read %d bytes, expected %d. |
+| <a id="3222"></a> 3222 | 16 | No | The WriteFileEx system function executed on file '%ls' only wrote %d bytes, expected %d. |
+| <a id="3223"></a> 3223 | 16 | No | Backup To URL failed to write status messages to the operating system error log. |
+| <a id="3224"></a> 3224 | 16 | No | Cannot create worker thread. |
+| <a id="3225"></a> 3225 | 16 | No | Use of WITH CREDENTIAL syntax is not valid for credentials containing a Shared Access Signature. |
+| <a id="3226"></a> 3226 | 16 | No | Failed to create snapshot for file "%ls". |
+| <a id="3227"></a> 3227 | 16 | No | The backup media on "%ls" is part of media family %d which has already been processed on "%ls". Ensure that backup devices are correctly specified. For tape devices, ensure that the correct volumes are loaded. |
+| <a id="3228"></a> 3228 | 16 | No | Writing snapshot metadata to backup set for file "%ls" failed due to invalid format. |
+| <a id="3229"></a> 3229 | 16 | No | Request for device '%ls' timed out. |
+| <a id="3230"></a> 3230 | 16 | No | Operation on device '%ls' exceeded retry count. |
+| <a id="3231"></a> 3231 | 16 | No | The media loaded on "%ls" is formatted to support %d media families, but %d media families are expected according to the backup device specification. |
+| <a id="3232"></a> 3232 | 16 | No | The volume mounted on "%ls" does not have the expected backup set identity. The volume may be obsolete due to a more recent overwrite of this media family. In that case, locate the correct volume with sequence number %d of media family %d. |
+| <a id="3233"></a> 3233 | 16 | No | Invalid Identity Specified for the S3 Credential. Credential Identity should be S3 Access Key. |
+| <a id="3234"></a> 3234 | 16 | No | Logical file '%.\*ls' is not part of database '%ls'. Use RESTORE FILELISTONLY to list the logical file names. |
+| <a id="3235"></a> 3235 | 16 | No | The file "%.\*ls" is not part of database "%ls". You can only list files that are members of this database. |
+| <a id="3236"></a> 3236 | 16 | No | Write to S3 object storage device %ls failed. Device has reached its limit of %d allowed parts. |
+| <a id="3238"></a> 3238 | 16 | No | The Estimate for the Backup size exceeds the maximum allowed file size on the remote endpoint. |
+| <a id="3239"></a> 3239 | 16 | No | The backup set on device '%ls' uses a feature of the Microsoft Tape Format not supported by SQL Server. |
+| <a id="3240"></a> 3240 | 16 | No | Backup to mirrored media sets requires all mirrors to append. Provide all members of the set, or reformat a new media set. |
+| <a id="3241"></a> 3241 | 16 | No | The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family. |
+| <a id="3242"></a> 3242 | 16 | No | The file on device '%ls' is not a valid Microsoft Tape Format backup set. |
+| <a id="3243"></a> 3243 | 16 | No | The media family on device '%ls' was created using Microsoft Tape Format version %d.%d. SQL Server supports version %d.%d. |
+| <a id="3244"></a> 3244 | 16 | No | Descriptor block size exceeds %d bytes. Use a shorter name and/or description string and retry the operation. |
+| <a id="3245"></a> 3245 | 16 | No | Could not convert a string to or from Unicode, %ls. |
+| <a id="3246"></a> 3246 | 16 | No | The media family on device '%ls' is marked as nonappendable. Reissue the statement using the INIT option to overwrite the media. |
+| <a id="3247"></a> 3247 | 16 | No | The volume on device '%ls' has the wrong media sequence number (%d). Remove it and insert volume %d. |
+| <a id="3249"></a> 3249 | 16 | No | The volume on device '%ls' is a continuation volume for the backup set. Remove it and insert the volume holding the start of the backup set. |
+| <a id="3250"></a> 3250 | 16 | No | The value '%d' is not within range for the %ls parameter. |
+| <a id="3251"></a> 3251 | 10 | No | The media family on device '%ls' is complete. The device is now being reused for one of the remaining families. |
+| <a id="3252"></a> 3252 | 16 | No | Failed to copy snapshot with name '%ls', timestamp '%ls' to destination '%ls'. Error returned '%ls'. |
+| <a id="3253"></a> 3253 | 16 | No | The block size parameter must supply a value that is a power of 2. |
+| <a id="3254"></a> 3254 | 16 | No | The volume on device '%ls' is empty. |
+| <a id="3255"></a> 3255 | 16 | No | The data set on device '%ls' is a SQL Server backup set not compatible with this version of SQL Server. |
+| <a id="3256"></a> 3256 | 16 | No | The backup set on device '%ls' was terminated while it was being created and is incomplete. RESTORE sequence is terminated abnormally. |
+| <a id="3257"></a> 3257 | 16 | No | There is insufficient free space on disk volume '%ls' to create the database. The database requires %I64u additional free bytes, while only %I64u bytes are available. |
+| <a id="3258"></a> 3258 | 16 | No | The volume on the device "%ls" is not part of the media set that is currently being processed. Ensure that the backup devices are loaded with the correct media. |
+| <a id="3259"></a> 3259 | 16 | No | Failed to copy blob with name '%ls', to destination '%ls'. Error returned '%ls'. |
+| <a id="3260"></a> [3260](../mssqlserver-3260-database-engine-error.md) | 16 | No | An internal buffer has become full. |
+| <a id="3261"></a> 3261 | 16 | No | SQL Server cannot use the virtual device configuration. |
+| <a id="3262"></a> 3262 | 10 | No | The backup set on file %d is valid. |
+| <a id="3263"></a> 3263 | 16 | No | Cannot use the volume on device '%ls' as a continuation volume. It is sequence number %d of family %d for the current media set. Insert a new volume, or sequence number %d of family %d for the current set. |
+| <a id="3264"></a> 3264 | 16 | No | The operation did not proceed far enough to allow RESTART. Reissue the statement without the RESTART qualifier. |
+| <a id="3265"></a> 3265 | 16 | No | The login has insufficient authority. Membership of the sysadmin role is required to use VIRTUAL_DEVICE with BACKUP or RESTORE. |
+| <a id="3266"></a> 3266 | 16 | Yes | The backup data at the end of "%ls" is incorrectly formatted. Backup sets on the media might be damaged and unusable. To determine the backup sets on the media, use RESTORE HEADERONLY. To determine the usability of the backup sets, run RESTORE VERIFYONLY. If all of the backup sets are incomplete, reformat the media using BACKUP WITH FORMAT, which destroys all the backup sets. |
+| <a id="3267"></a> 3267 | 16 | No | Insufficient resources to create UMS scheduler. |
+| <a id="3268"></a> 3268 | 16 | No | Cannot use the backup file '%ls' because it was originally formatted with sector size %d and is now on a device with sector size %d. |
+| <a id="3269"></a> 3269 | 16 | No | Cannot restore the file '%ls' because it was originally written with sector size %d; '%ls' is now on a device with sector size %d. |
+| <a id="3270"></a> 3270 | 16 | No | An internal consistency error has occurred. This error is similar to an assert. Contact technical support for assistance. |
+| <a id="3271"></a> [3271](../mssqlserver-3271-database-engine-error.md) | 16 | No | A nonrecoverable I/O error occurred on file "%ls:" %ls. |
+| <a id="3272"></a> 3272 | 16 | No | The '%ls' device has a hardware sector size of %d, but the block size parameter specifies an incompatible override value of %d. Reissue the statement using a compatible block size. |
+| <a id="3273"></a> 3273 | 16 | No | The ambiguity for master has be detected. please specify PHYSMASTER or replicatedmaster database explicitly in action '%ls'. |
+| <a id="3276"></a> 3276 | 16 | No | WITH SNAPSHOT can be used only if the backup set was created WITH SNAPSHOT. |
+| <a id="3277"></a> 3277 | 16 | No | WITH SNAPSHOT must be used with only one device. |
+| <a id="3278"></a> 3278 | 16 | No | Failed to encrypt string %ls |
+| <a id="3279"></a> 3279 | 16 | No | Access is denied due to a password failure |
+| <a id="3280"></a> 3280 | 16 | No | Backups on raw devices are not supported. '%ls' is a raw device. |
+| <a id="3281"></a> 3281 | 10 | No | Released and initiated rewind on '%ls'. |
+| <a id="3283"></a> 3283 | 16 | No | The file "%ls" failed to initialize correctly. Examine the error logs for more details. |
+| <a id="3284"></a> 3284 | 16 | No | Filemark on device '%ls' is not aligned. Re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
+| <a id="3285"></a> 3285 | 10 | No | Filemark on device '%ls' appears not to be aligned. The restore operation will proceed using less efficient I/O. To avoid this, re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value. |
+| <a id="3286"></a> 3286 | 16 | No | Backup failed because there is a mismatch in file metadata for file %d. |
+| <a id="3287"></a> 3287 | 16 | No | The file ID %d on device '%ls' is incorrectly formed and can not be read. |
+| <a id="3288"></a> 3288 | 16 | No | Credential name %.\*ls does not exist or user does not have permission to access it. |
+| <a id="3289"></a> 3289 | 16 | No | A Backup device of type URL was specified without a Credential, Backup/Restore operation cannot proceed. |
+| <a id="3290"></a> 3290 | 16 | No | Backup to URL received an exception from the remote endpoint. Exception Message: %.\*ls |
+| <a id="3291"></a> 3291 | 16 | No | URL device type was specified, and a disallowed option %ls was specified. |
+| <a id="3292"></a> 3292 | 16 | No | A failure occurred while attempting to execute Backup or Restore with a URL device specified. Consult the operating system error log for details. |
+| <a id="3293"></a> 3293 | 16 | No | An error occurred while Backup/Restore to URL was initializing. Error message: %.\*ls. |
+| <a id="3294"></a> 3294 | 16 | No | Use of the URL device type is limited to a single device during Backup and Restore operations. |
+| <a id="3295"></a> 3295 | 16 | No | Backup To URL error: Exclusive access to the file %.\*ls could not be obtained. |
+| <a id="3296"></a> 3296 | 16 | No | The file %.\*ls exists on the remote endpoint, and WITH FORMAT was not specified. Backup cannot proceed. |
+| <a id="3297"></a> 3297 | 16 | No | The URL provided does not meet specified requirements. The URL must be either resolvable as an absolute or relative URI, has or can be composed as an HTTP or HTTPS scheme, and cannot contain a query component. |
+| <a id="3298"></a> 3298 | 16 | No | Backup/Restore to URL device error: %.\*ls. |
+| <a id="3299"></a> 3299 | 16 | No | BackupToUrl initiated. |
+| <a id="3301"></a> 3301 | 21 | Yes | The transaction log contains a record (logop %d) that is not valid. The log has been corrupted. Restore the database from a full backup, or repair the database. |
+| <a id="3302"></a> 3302 | 21 | Yes | Redoing of logged operations in database '%.\*ls' failed to reach end of log at log record ID %S_LSN. This indicates corruption around log record ID %S_LSN. Restore the database from a full backup, or repair the database. |
+| <a id="3303"></a> 3303 | 10 | Yes | Remote harden of transaction '%.\*ls' (ID 0x%016I64x %ls) started at %S_DATE in database '%ls' at LSN %S_LSN failed. |
+| <a id="3313"></a> [3313](../mssqlserver-3313-database-engine-error.md) | 21 | Yes | During redoing of a logged operation in database '%.\*ls' (page %S_PGID if any), an error occurred at log record ID %S_LSN. Typically, the specific failure is previously logged as an error in the operating system error log. Restore the database from a full backup, or repair the database. |
+| <a id="3314"></a> [3314](../mssqlserver-3314-database-engine-error.md) | 21 | Yes | During undoing of a logged operation in database '%.\*ls' (page %S_PGID if any), an error occurred at log record ID %S_LSN. Typically, the specific failure is logged previously as an error in the operating system error log. Restore the database or file from a backup, or repair the database. |
+| <a id="3315"></a> 3315 | 21 | Yes | During rollback, the following process did not hold an expected lock: process %d with mode %d at level %d for row %S_RID in database '%.\*ls' under transaction %S_XID. Restore a backup of the database, or repair the database. |
+| <a id="3316"></a> 3316 | 21 | Yes | During undo of a logged operation in database '%.\*ls', an error occurred at log record ID %S_LSN. The row was not found. Restore the database from a full backup, or repair the database. |
+| <a id="3317"></a> 3317 | 21 | Yes | Async crash recovery failed for database '%.\*ls' (database ID %d). Failed to enqueue log block to the parallel redo cache during the MIN_REDO pass due to a memory allocation failure. |
+| <a id="3401"></a> 3401 | 10 | Yes | Errors occurred during recovery while rolling back a transaction. The transaction was deferred. Restore the bad page or file, and re-run recovery. |
+| <a id="3402"></a> 3402 | 10 | Yes | The database '%ls' is marked %ls and is in a state that does not allow recovery to be run. |
+| <a id="3403"></a> 3403 | 10 | Yes | Recovering only master database because traceflag 3608 was specified. This is an informational message only. No user action is required. |
+| <a id="3404"></a> 3404 | 10 | Yes | Failed to check for new installation or a renamed server at startup. The logic for this check has failed unexpectedly. Run setup again, or fix the problematic registry key. |
+| <a id="3406"></a> 3406 | 10 | Yes | %d transactions rolled forward in database '%.\*ls' (%d:%d). This is an informational message only. No user action is required. |
+| <a id="3407"></a> 3407 | 10 | Yes | %d transactions rolled back in database '%.\*ls' (%d:%d). This is an informational message only. No user action is required. |
+| <a id="3408"></a> 3408 | 10 | Yes | Recovery is complete. This is an informational message only. No user action is required. |
+| <a id="3409"></a> 3409 | 16 | Yes | Performance counter shared memory setup failed with error %d. Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions. |
+| <a id="3410"></a> 3410 | 10 | Yes | Data in filegroup %s is offline, and deferred transactions exist. Use RESTORE to recover the filegroup, or drop the filegroup if you never intend to recover it. Log truncation cannot occur until this condition is resolved. |
+| <a id="3411"></a> 3411 | 21 | Yes | Configuration block version %d is not a valid version number. SQL Server is exiting. Restore the master database or reinstall. |
+| <a id="3412"></a> 3412 | 10 | Yes | Warning: The server instance was started using minimal configuration startup option (-f). Starting an instance of SQL Server with minimal configuration places the server in single-user mode automatically. After the server has been started with minimal configuration, you should change the appropriate server option value or values, stop, and then restart the server. |
+| <a id="3413"></a> [3413](../mssqlserver-3413-database-engine-error.md) | 21 | Yes | Database ID %d. Could not mark database as suspect. Getnext NC scan on sys.databases.database_id failed. Refer to previous errors in the error log to identify the cause and correct any associated problems. |
+| <a id="3414"></a> [3414](../mssqlserver-3414-database-engine-error.md) | 10 | Yes | An error occurred during recovery, preventing the database '%ls' (%d:%d) from restarting. Diagnose the recovery errors and fix them, or restore from a known good backup. If errors are not corrected or expected, contact Technical Support. |
+| <a id="3415"></a> 3415 | 16 | Yes | Database '%.\*ls' cannot be upgraded because it is read-only, has read-only files or the user does not have permissions to modify some of the files. Make the database or files writeable, and rerun recovery. |
+| <a id="3416"></a> 3416 | 16 | Yes | The server contains read-only files that must be made writable before the server can be recollated. |
+| <a id="3417"></a> [3417](../mssqlserver-3417-database-engine-error.md) | 21 | Yes | Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information, see [https://go.microsoft.com/fwlink/?linkid=2322220](https://go.microsoft.com/fwlink/?linkid=2322220). |
+| <a id="3418"></a> 3418 | 10 | Yes | Recovery is unable to defer error %d. Errors can only be deferred in databases using the full recovery model and an active backup log chain. |
+| <a id="3419"></a> 3419 | 16 | Yes | Recovery for database '%.\*ls' is being skipped because it requires an upgrade but is marked for Standby. Use RESTORE DATABASE WITH NORECOVERY to take the database back to a Restoring state and continue the restore sequence. |
+| <a id="3420"></a> 3420 | 21 | Yes | Database snapshot '%ls' has failed an IO operation and is marked suspect. It must be dropped and recreated. |
+| <a id="3421"></a> 3421 | 10 | Yes | Recovery completed for database %ls (database ID %d) in %I64d second(s) (analysis %I64d ms, redo %I64d ms, undo %I64d ms \[system undo %I64d ms, regular undo %I64d ms\].) ADR-enabled=%d, Is primary=%d, OL-Enabled=%d. This is an informational message only. No user action is required. |
+| <a id="3422"></a> 3422 | 10 | Yes | Database %ls was shutdown due to error %d in routine '%hs'. Restart for non-snapshot databases will be attempted after all connections to the database are aborted. |
+| <a id="3423"></a> 3423 | 10 | Yes | Info: The server instance was started using multiuser, minimal configuration startup option (-M). |
+| <a id="3429"></a> 3429 | 10 | Yes | Recovery could not determine the outcome of a cross-database transaction %S_XID, named '%.\*ls', in database '%.\*ls' (database ID %d:%d). The coordinating database (database ID %d:%d) was unavailable. The transaction was assumed to be committed. If the transaction was not committed, you can retry recovery when the coordinating database is available. |
+| <a id="3431"></a> [3431](../mssqlserver-3431-database-engine-error.md) | 21 | Yes | Could not recover database '%.\*ls' (database ID %d) because of unresolved transaction outcomes. Microsoft Distributed Transaction Coordinator (MS DTC) transactions were prepared, but MS DTC was unable to determine the resolution. To resolve, either fix MS DTC, restore from a full backup, or repair the database. |
+| <a id="3434"></a> 3434 | 20 | Yes | Cannot change sort order or locale. An unexpected failure occurred while trying to reindex the server to a new collation. SQL Server is shutting down. Restart SQL Server to continue with the sort order unchanged. Diagnose and correct previous errors and then retry the operation. |
+| <a id="3437"></a> [3437](../mssqlserver-3437-database-engine-error.md) | 21 | Yes | An error occurred while recovering database '%.\*ls'. Unable to connect to Microsoft Distributed Transaction Coordinator (MS DTC) to check the completion status of transaction %S_XID. Fix MS DTC, and run recovery again. |
+| <a id="3441"></a> 3441 | 21 | Yes | During startup of warm standby database '%.\*ls' (database ID %d), its standby file ('%ls') was inaccessible to the RESTORE statement. The operating system error was '%ls'. Diagnose the operating system error, correct the problem, and retry startup. |
+| <a id="3443"></a> 3443 | 21 | Yes | Database '%ls' (database ID %d:%d) was marked for standby or read-only use, but has been modified. The RESTORE LOG statement cannot be performed. Restore the database from a backup. |
+| <a id="3445"></a> 3445 | 21 | Yes | File '%ls' is not a valid undo file for database '%.\*ls (database ID %d). Verify the file path, and specify the correct file. |
+| <a id="3446"></a> 3446 | 16 | No | Primary log file is not available for database '%ls' (%d:%d). The log cannot be backed up. |
+| <a id="3447"></a> 3447 | 16 | No | Could not activate or scan all of the log files for database '%.\*ls'. |
+| <a id="3448"></a> 3448 | 21 | Yes | Rollback encountered a page with a log sequence number (LSN) less than the original log record LSN. Could not undo log record %S_LSN, for transaction ID %S_XID, on page %S_PGID, database '%ls' (%d:%d). Page information: LSN = %S_LSN, type = %ld. Log information: OpCode = %ld, context %ld. Restore or repair the database. |
+| <a id="3449"></a> 3449 | 21 | Yes | SQL Server must shut down in order to recover a database (database ID %d). The database is either a user database that could not be shut down or a system database. Restart SQL Server. If the database fails to recover after another startup, repair or restore the database. |
+| <a id="3450"></a> 3450 | 10 | Yes | Recovery of database '%.\*ls' (%d) is %d%% complete (approximately %d seconds remain). Phase %d of 3. This is an informational message only. No user action is required. |
+| <a id="3452"></a> [3452](../mssqlserver-3452-database-engine-error.md) | 10 | Yes | Recovery of database '%.\*ls' (%d) detected possible identity value inconsistency in table ID %d. Run DBCC CHECKIDENT ('%.\*ls'). |
+| <a id="3453"></a> 3453 | 16 | No | This version cannot redo any index creation or non-logged operation done by SQL Server 7.0. Further roll forward is not possible. |
+| <a id="3454"></a> 3454 | 10 | Yes | Recovery is writing a checkpoint in database '%.\*ls' (%d). This is an informational message only. No user action is required. |
+| <a id="3456"></a> [3456](../mssqlserver-3456-database-engine-error.md) | 21 | Yes | Could not redo log record %S_LSN, for transaction ID %S_XID, on page %S_PGID, allocation unit %I64d, database '%.\*ls' (database ID %d). Page: LSN = %S_LSN, allocation unit = %I64d, type = %ld. Log: OpCode = %ld, context %ld, PrevPageLSN: %S_LSN. Restore from a backup of the database, or repair the database. |
+| <a id="3457"></a> 3457 | 21 | Yes | Transactional file system resource manager '%.\*ls' failed to recover. For more information, see the accompanying error message, which determines the appropriate user action. |
+| <a id="3458"></a> 3458 | 16 | No | Recovery cannot scan database "%.\*ls" for dropped allocation units because an unexpected error has occurred. These allocation units cannot be cleaned up. |
+| <a id="3459"></a> 3459 | 16 | No | Recovery of database "%.\*ls" failed to redo a file add for file "%.\*ls". Please delete the file and retry. |
+| <a id="3460"></a> 3460 | 21 | Yes | Failed to shutdown a database (database ID %d) that contains memory-optimized data. Restart SQL Server to bring the database to a consistent state. If the database fails to recover after restart, repair or restore the database. |
+| <a id="3461"></a> 3461 | 21 | Yes | Failed to wait for XTP %ls to complete during recovery. |
+| <a id="3462"></a> 3462 | 10 | Yes | Redo observed a higher LSN on the PFS page %S_PGID for transaction ID %S_XID, database '%.\*ls' (database ID %d). Redo LSN: %S_LSN, Page: LSN = %S_LSN, PrevPageLSN: %S_LSN. This can happen in the presence of concurrent PFS updates. No user action is required. |
+| <a id="3463"></a> 3463 | 21 | Yes | An error occurred while recovering database '%.\*ls'. Transaction outcome could not be resolved. |
+| <a id="3464"></a> 3464 | 16 | Yes | An error occurred while resolving the deferred transaction. Transaction outcome: %d, IsDeferred: %ls. |
+| <a id="3465"></a> 3465 | 16 | Yes | An error occurred while resolving the deferred transaction. Transaction not found. |
+| <a id="3466"></a> 3466 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data or keys in the enclave that is unavailable. Either use sp_enclave_send_keys to send keys to the enclave, or use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
+| <a id="3467"></a> 3467 | 10 | No | Restore was successful but deferred transactions remain. These transactions cannot be resolved because there are data or keys in the enclave that is unavailable. For keys, since there is no enclave configured, SQL may resolve deferred transactions by invalidating indexes on encrypted columns; please check the error log.For the data, either use RESTORE to make that data available or drop the filegroups if you never need this data again. Dropping the filegroup results in a defunct filegroup. |
+| <a id="3468"></a> 3468 | 21 | Yes | An error occurred while attempting to apply a log record. This could indicate log or database corruption. Additional messages in the SQL Server error log may provide more detail. |
+| <a id="3469"></a> 3469 | 21 | No | Restore failed due to items not being found in the expected restore pipeline queues. |
+| <a id="3470"></a> 3470 | 16 | No | The recovery of the database "%.\*ls" could not redo the file size change for file "%.\*ls" because of the missing connection. |
+| <a id="3471"></a> 3471 | 21 | No | The database "%.\*ls" could not proceed to recovery due to failure (code 0x%08x) of entering the cluster mode: %ls. |
+| <a id="3472"></a> 3472 | 21 | No | The database '%.\*ls' could not complete startup due to GXM catchup failure (0x%08x). |
+| <a id="3473"></a> 3473 | 21 | No | The database "%.\*ls" could not complete recovery due to GXM recovered notification failure (code 0x%08x): %ls. |
+| <a id="3505"></a> 3505 | 14 | No | Only the owner of database "%.\*ls" or someone with relevant permissions can run the CHECKPOINT statement. |
+| <a id="3604"></a> 3604 | 10 | No | Duplicate key was ignored. |
+| <a id="3605"></a> 3605 | 16 | No | Schema verification failed for database '%.\*ls'. |
+| <a id="3606"></a> 3606 | 10 | No | Arithmetic overflow occurred. |
+| <a id="3607"></a> 3607 | 10 | No | Division by zero occurred. |
+| <a id="3608"></a> 3608 | 16 | No | Cannot allocate a GUID for the token. |
+| <a id="3609"></a> 3609 | 16 | No | The transaction ended in the trigger. The batch has been aborted. |
+| <a id="3611"></a> 3611 | 10 | No | %hs SQL Server Execution Times:%hs CPU time not measured under fiber mode, elapsed time = %lu ms. |
+| <a id="3612"></a> 3612 | 10 | No | %hs SQL Server Execution Times:%hs CPU time = %lu ms, elapsed time = %lu ms. |
+| <a id="3613"></a> 3613 | 10 | No | SQL Server parse and compile time: %hs CPU time = %lu ms, elapsed time = %lu ms. |
+| <a id="3614"></a> 3614 | 10 | No | Batch Statistics: Overall Duration = %f ms, CPU time = %f ms, Total logical reads = %lu, physical reads = %lu, remote reads = %lu, logical writes = %lu, Compile CPU time = %f ms, Login time = %lu ms, Total Waits = %f ms, Log Bytes = %I64u, SQLHandle = %hs |
+| <a id="3615"></a> 3615 | 10 | No | Table '%.\*ls'. Scan count %d, logical reads %d, physical reads %d, page server reads %d, read-ahead reads %d, page server read-ahead reads %d, lob logical reads %d, lob physical reads %d, lob page server reads %d, lob read-ahead reads %d, lob page server read-ahead reads %d. |
+| <a id="3616"></a> 3616 | 16 | No | An error was raised during trigger execution. The batch has been aborted and the user transaction, if any, has been rolled back. |
+| <a id="3619"></a> [3619](../mssqlserver-3619-database-engine-error.md) | 10 | Yes | Could not write a checkpoint record in database %ls because the log is out of space. Contact the database administrator to truncate the log or allocate more space to the database log files. |
+| <a id="3620"></a> 3620 | 10 | Yes | Automatic checkpointing is disabled in database '%.\*ls' because the log is out of space. Automatic checkpointing will be enabled when the database owner successfully checkpoints the database. Contact the database owner to either truncate the log file or add more disk space to the log. Then retry the CHECKPOINT statement. |
+| <a id="3621"></a> 3621 | 10 | No | The statement has been terminated. |
+| <a id="3622"></a> 3622 | 10 | No | Warning: An invalid floating point operation occurred. |
+| <a id="3623"></a> 3623 | 16 | No | An invalid floating point operation occurred. |
+| <a id="3624"></a> [3624](../mssqlserver-3624-database-engine-error.md) | 20 | Yes | A system assertion check has failed. Check the SQL Server error log for details. Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running DBCC CHECKDB. If you agreed to send dumps to Microsoft during setup, a mini dump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a Hotfix from Technical Support. |
+| <a id="3625"></a> 3625 | 20 | Yes | '%hs' is not yet implemented. |
+| <a id="3627"></a> 3627 | 17 | Yes | New parallel operation cannot be started due to too many parallel operations executing at this time. Use the "max worker threads" configuration option to increase the number of allowable threads, or reduce the number of parallel operations running on the system. |
+| <a id="3628"></a> 3628 | 24 | Yes | The Database Engine received a floating point exception from the operating system while processing a user request. Try the transaction again. If the problem persists, contact your system administrator. |
+| <a id="3633"></a> 3633 | 16 | Yes | The operating system returned the error '%ls' while attempting '%ls' on '%ls' at '%hs'(%d). |
+| <a id="3634"></a> 3634 | 16 | Yes | The operating system returned the error '%ls' while attempting '%ls' on '%ls'. |
+| <a id="3635"></a> 3635 | 16 | Yes | An error occurred while processing '%ls' metadata for database id %d, file id %d, and transaction='%.\*ls'. Additional Context='%ls'. Location='%hs'(%d). Retry the operation; if the problem persists, contact the database administrator to review locking and memory configurations. Review the application for possible deadlock conflicts. |
+| <a id="3636"></a> 3636 | 16 | No | An error occurred while processing '%ls' metadata for database id %d file id %d. |
+| <a id="3637"></a> 3637 | 16 | No | A parallel operation cannot be started from a DAC connection. |
+| <a id="3641"></a> 3641 | 10 | No | Total logical reads %lu, physical reads %lu, remote reads %lu, writes %lu. |
+| <a id="3642"></a> 3642 | 10 | No | Table '%.\*ls'. Segment reads %u, segment skipped %u. |
+| <a id="3643"></a> 3643 | 16 | No | The operation elapsed time exceeded the maximum time specified for this operation. The execution has been stopped. |
+| <a id="3644"></a> 3644 | 10 | No | Prefaulter task failed for file %ls with error %d. |
+| <a id="3645"></a> 3645 | 10 | No | Batch Connectivity Statistics: Packets Read Time = %f ms, Packets Read Time Before Exec = %f ms, Packets Write Time = %f ms, Packets Write Time Before Exec = %f ms, TCP_INFO_v1 = %ls |
+| <a id="3646"></a> 3646 | 16 | No | Thrown by a utility function documented with "fails by throwing an exception that caller MUST catch." Users should not see this error. |
+| <a id="3647"></a> 3647 | 16 | No | The operation is blocked by delayed database version upgrade. The execution hasn't started. |
+| <a id="3648"></a> 3648 | 10 | No | %hsObject '%.\*ls'. Tempdb versions read %lu, in-row PVS versions read %lu, off-row PVS versions read %lu, online index PVS versions read %lu. |
+| <a id="3696"></a> 3696 | 16 | No | Internal error while preparing GUID. |
+| <a id="3697"></a> 3697 | 10 | No | Batch Waits Statistics: %ls |
+| <a id="3701"></a> 3701 | 11 | No | Cannot %S_MSG the %S_MSG '%.\*ls', because it does not exist or you do not have permission. |
+| <a id="3702"></a> 3702 | 16 | No | Cannot drop database "%.\*ls" because it is currently in use. |
+| <a id="3703"></a> 3703 | 16 | No | Cannot detach the %S_MSG '%.\*ls' because it is currently in use. |
+| <a id="3705"></a> 3705 | 16 | No | Cannot use DROP %ls with '%.\*ls' because '%.\*ls' is a %S_MSG. Use %ls. |
+| <a id="3706"></a> 3706 | 16 | No | Cannot %S_MSG a database snapshot. |
+| <a id="3707"></a> 3707 | 16 | No | Cannot detach a suspect or recovery pending database. It must be repaired or dropped. |
+| <a id="3708"></a> 3708 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is a system %S_MSG. |
+| <a id="3709"></a> 3709 | 16 | No | Cannot %S_MSG the database while the database snapshot "%.\*ls" refers to it. Drop that database first. |
+| <a id="3710"></a> 3710 | 16 | No | Cannot detach an opened database when the server is in minimally configured mode. |
+| <a id="3716"></a> 3716 | 16 | No | The %S_MSG '%.\*ls' cannot be dropped because it is bound to one or more %S_MSG. |
+| <a id="3717"></a> 3717 | 16 | No | Cannot drop a default constraint by DROP DEFAULT statement. Use ALTER TABLE to drop a constraint default. |
+| <a id="3718"></a> 3718 | 11 | No | Could not drop index '%.\*ls' because the table or clustered index entry cannot be found in the sysindexes system table. |
+| <a id="3721"></a> 3721 | 16 | No | Type '%.\*ls' cannot be renamed because it is being referenced by object '%.\*ls'. |
+| <a id="3722"></a> 3722 | 16 | No | Task has been aborted, but %S_MSG of the %S_MSG '%.\*ls' may continue in the background. Please check whether the %S_MSG has finished successfully. |
+| <a id="3723"></a> 3723 | 16 | No | An explicit DROP INDEX is not allowed on index '%.\*ls'. It is being used for %ls constraint enforcement. |
+| <a id="3724"></a> 3724 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for replication. |
+| <a id="3725"></a> 3725 | 16 | No | The constraint '%.\*ls' is being referenced by table '%.\*ls', foreign key constraint '%.\*ls'. |
+| <a id="3726"></a> 3726 | 16 | No | Could not drop object '%.\*ls' because it is referenced by a FOREIGN KEY constraint. |
+| <a id="3727"></a> 3727 | 10 | No | Could not drop constraint. See previous errors. |
+| <a id="3728"></a> 3728 | 16 | No | '%.\*ls' is not a constraint. |
+| <a id="3729"></a> 3729 | 16 | No | Cannot %ls '%.\*ls' because it is being referenced by object '%.\*ls'. |
+| <a id="3730"></a> 3730 | 16 | No | Cannot drop the default constraint '%.\*ls' while it is being used by a foreign key as SET DEFAULT referential action. |
+| <a id="3732"></a> 3732 | 16 | No | Cannot drop type '%.\*ls' because it is being referenced by object '%.\*ls'. There may be other objects that reference this type. |
+| <a id="3733"></a> 3733 | 16 | No | Constraint '%.\*ls' does not belong to table '%.\*ls'. |
+| <a id="3734"></a> 3734 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has an XML or spatial index. |
+| <a id="3735"></a> 3735 | 16 | No | The primary key constraint '%.\*ls' on table '%.\*ls' cannot be dropped because change tracking is enabled on the table. Change tracking requires a primary key constraint on the table. Disable change tracking before dropping the constraint. |
+| <a id="3736"></a> 3736 | 16 | No | Cannot drop the %S_MSG '%.\*ls' because it is being used for distribution. |
+| <a id="3737"></a> 3737 | 16 | No | Could not delete file '%ls'. See the SQL Server error log for more information. |
+| <a id="3738"></a> 3738 | 10 | No | Deleting database file '%ls'. |
+| <a id="3739"></a> 3739 | 11 | No | Cannot %ls the index '%.\*ls' because it is not a statistics collection. |
+| <a id="3740"></a> 3740 | 16 | No | Cannot drop the %S_MSG '%.\*ls' because at least part of the table resides on a read-only filegroup. |
+| <a id="3741"></a> 3741 | 16 | No | Cannot drop the %S_MSG '%.\*ls' because at least part of the table resides on an offline filegroup. |
+| <a id="3743"></a> 3743 | 16 | No | The database '%.\*ls' is enabled for database mirroring. Database mirroring must be removed before you drop the database. |
+| <a id="3744"></a> 3744 | 16 | No | Only a single clause is allowed in a statement where an index is dropped online. |
+| <a id="3745"></a> 3745 | 16 | No | Only a clustered index can be dropped online. |
+| <a id="3746"></a> 3746 | 16 | No | Cannot drop the clustered index of view '%.\*ls' because the view is being used for replication. |
+| <a id="3747"></a> 3747 | 16 | No | Cannot drop a clustered index created on a view using drop clustered index clause. Clustered index '%.\*ls' is created on view '%.\*ls'. |
+| <a id="3748"></a> 3748 | 16 | No | Cannot drop non-clustered index '%.\*ls' using drop clustered index clause. |
+| <a id="3749"></a> 3749 | 16 | No | Cannot drop XML Index '%.\*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead. |
+| <a id="3750"></a> 3750 | 10 | No | Warning: Index '%.\*ls' on %S_MSG '%.\*ls' was disabled as a result of disabling the clustered index on the %S_MSG. |
+| <a id="3751"></a> 3751 | 16 | No | Cannot use SP_DROPEXTENDEDPROC or DBCC DROPEXTENDEDPROC with '%.\*ls' because '%.\*ls' is a %S_MSG. Use %ls. |
+| <a id="3752"></a> 3752 | 16 | No | The database '%.\*ls' is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group. |
+| <a id="3754"></a> 3754 | 16 | No | TRUNCATE TABLE statement failed. Index '%.\*ls' uses partition function '%.\*ls', but table '%.\*ls' uses non-equivalent partition function '%.\*ls'. Index and table must use an equivalent partition function. |
+| <a id="3755"></a> 3755 | 16 | No | Cannot drop a database with file snapshots on it. Please detach the database instead of dropping or delete the file snapshots and retry the drop. |
+| <a id="3756"></a> 3756 | 16 | No | TRUNCATE TABLE statement failed. Index '%.\*ls' is not partitioned, but table '%.\*ls' uses partition function '%.\*ls'. Index and table must use an equivalent partition function. |
+| <a id="3757"></a> 3757 | 16 | No | WAIT_AT_LOW_PRIORITY clause is not permitted without ONLINE = ON option, for drop clustered %S_MSG '%.\*ls' on Table '%.\*ls'. |
+| <a id="3758"></a> 3758 | 16 | No | Multiple %S_MSG cannot be dropped when WAIT_AT_LOW_PRIORITY clause is specified. |
+| <a id="3759"></a> 3759 | 16 | No | %.\*ls constraint '%.\*ls' cannot be dropped when WAIT_AT_LOW_PRIORITY clause is used. |
+| <a id="3760"></a> 3760 | 16 | No | Cannot drop index '%.\*ls' on view '%.\*ls' that has SNAPSHOT_MATERIALIZATION. |
+| <a id="3761"></a> 3761 | 16 | No | Could not delete SBS backed file '%ls'. See the SQL Server error log for more information. |
+| <a id="3762"></a> 3762 | 16 | No | Cannot drop database '%.\*ls' because of temporary unavailability. Please try again later. |
+| <a id="3763"></a> 3763 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for Change Feed. |
+| <a id="3764"></a> 3764 | 16 | No | Cannot %S_MSG the %S_MSG '%.\*ls' because it is being used for Change Data Capture. |
+| <a id="3765"></a> 3765 | 16 | No | Could not delete native shuffle storage '%ls'. See the SQL Server error log for more information. |
+| <a id="3766"></a> 3766 | 16 | No | Cannot drop %S_MSG '%.\*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead. |
+| <a id="3767"></a> 3767 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has a JSON index. |
+| <a id="3768"></a> 3768 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has a vector index. |
+| <a id="3769"></a> 3769 | 16 | No | Could not drop the clustered index '%.\*ls' because the table has a vector index. |
+| <a id="3770"></a> 3770 | 16 | No | Could not drop the primary key constraint '%.\*ls' because the table has a semantic index. |
+| <a id="3771"></a> 3771 | 16 | No | Could not drop the clustered index '%.\*ls' because the table has a semantic index. |
+| <a id="3800"></a> 3800 | 16 | No | Column name '%.\*ls' is not sufficiently different from the names of other columns in the table '%.\*ls'. |
+| <a id="3801"></a> 3801 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" may be impacted by the collation upgrade. Run DBCC CHECKTABLE. |
+| <a id="3802"></a> 3802 | 10 | No | Warning: The constraint "%.\*ls" on "%.\*ls"."%.\*ls" may be impacted by the collation upgrade. Disable and enable WITH CHECK. |
+| <a id="3803"></a> 3803 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" is disabled because the implementation of the checksum function has changed. |
+| <a id="3804"></a> 3804 | 10 | No | Warning: The check constraint "%.\*ls" on table "%.\*ls"."%.\*ls" is disabled because the implementation of the checksum function has changed. |
+| <a id="3805"></a> 3805 | 10 | No | Warning: Index "%.\*ls" on table "%.\*ls"."%.\*ls" might be corrupted because it references computed column "%.\*ls" containing a non-deterministic conversion from string to date. Run DBCC CHECKTABLE to verify index. Consider using explicit CONVERT with deterministic date style such as 121. Computed column indexes referencing non-deterministic expressions can't be created in 90 compatibility mode. See Books Online topic "Creating Indexes on Computed Columns" for more information. |
+| <a id="3806"></a> 3806 | 10 | No | Warning: Indexed view "%.\*ls"."%.\*ls" might be corrupted because it contains a non-deterministic conversion from string to date. Run DBCC CHECKTABLE to verify view. Consider using explicit CONVERT with deterministic date style such as 121. Indexed views referencing non-deterministic expressions can't be created in 90 compatibility mode. See Books Online topic "Creating Indexed Views" for more information. |
+| <a id="3807"></a> 3807 | 17 | No | Create failed because all available identifiers have been exhausted. |
+| <a id="3808"></a> 3808 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" is disabled because the index is defined on a view with ignore_dup_key index option. Drop the index and, if possible, recreate it without ignore_dup_key option. You may need to change the logical structure of the view to ensure all rows are unique. |
+| <a id="3809"></a> 3809 | 16 | No | Upgrade of database "%.\*ls" failed because index "%.\*ls" on object ID %d has the same name as that of another index on the same table. |
+| <a id="3810"></a> 3810 | 10 | No | Event notification "%.\*ls" on assembly is dropped. |
+| <a id="3811"></a> 3811 | 10 | No | Event notification "%.\*ls" on service queue is dropped as broker instance is not specified. |
+| <a id="3812"></a> 3812 | 10 | No | Event notification "%.\*ls" on object is dropped. |
+| <a id="3813"></a> 3813 | 16 | No | Upgrade of login '%.\*ls' failed because its name or sid is a duplicate of another login or server role. |
+| <a id="3814"></a> 3814 | 16 | No | Local login mapped to remote login '%.\*ls' on server '%.\*ls' is invalid. Drop and recreate the remote login before upgrade. |
+| <a id="3815"></a> 3815 | 16 | No | Local login mapped to linked login '%.\*ls' on server '%.\*ls' is invalid. Drop and recreate the linked login before upgrade. |
+| <a id="3816"></a> 3816 | 16 | No | Upgrade of login '%.\*ls' failed because its password hash is invalid. Update the login password before upgrade. |
+| <a id="3817"></a> 3817 | 10 | No | Warning: The index "%.\*ls" on "%.\*ls"."%.\*ls" was disabled because the implementation of "%.\*ls" have changed. |
+| <a id="3819"></a> 3819 | 10 | No | Warning: The check constraint "%.\*ls" on "%.\*ls"."%.\*ls" was disabled and set as not trusted because the implementation of "%.\*ls" have changed. |
+| <a id="3821"></a> 3821 | 10 | No | Warning: The foreign key constraint "%.\*ls" on "%.\*ls"."%.\*ls" was disabled because the implementation of '%.\*ls' have changed. |
+| <a id="3822"></a> 3822 | 10 | No | Warning: The heap "%.\*ls"."%.\*ls" has persisted computed columns that depends on a geometry or geography methods and may contain out-of-date information. Because of this, DBCC may report inconsistencies on this table. The persisted computed columns depending on geometry or geography methods should be unpersisted and persisted again to refresh the data. |
+| <a id="3823"></a> 3823 | 10 | No | Warning: The object "%.\*ls"."%.\*ls" could not be bound and was ignored during upgrade. Consider reviewing and correcting its definition. |
+| <a id="3827"></a> 3827 | 10 | No | Warning: The table "%.\*ls"."%.\*ls" is unavailable because it contains a persisted computed column that depends on "%.\*ls", the implementation of which has changed. Rebuild the table offline and reconstruct the persisted computed column. |
+| <a id="3830"></a> 3830 | 10 | No | Metadata cache coherency check for database ID(%d) did not find any inconsistency. |
+| <a id="3851"></a> 3851 | 10 | No | An invalid row (%ls) was found in the system table sys.%ls%ls. |
+| <a id="3852"></a> 3852 | 10 | No | Row (%ls) in sys.%ls%ls does not have a matching row (%ls) in sys.%ls%ls. |
+| <a id="3853"></a> 3853 | 10 | No | Attribute (%ls) of row (%ls) in sys.%ls%ls does not have a matching row (%ls) in sys.%ls%ls. |
+| <a id="3854"></a> 3854 | 10 | No | Attribute (%ls) of row (%ls) in sys.%ls%ls has a matching row (%ls) in sys.%ls%ls that is invalid. |
+| <a id="3855"></a> 3855 | 10 | No | Attribute (%ls) exists without a row (%ls) in sys.%ls%ls. |
+| <a id="3856"></a> 3856 | 10 | No | Attribute (%ls) exists but should not for row (%ls) in sys.%ls%ls. |
+| <a id="3857"></a> 3857 | 10 | No | The attribute (%ls) is required but is missing for row (%ls) in sys.%ls%ls. |
+| <a id="3858"></a> 3858 | 10 | No | The attribute (%ls) of row (%ls) in sys.%ls%ls has an invalid value. |
+| <a id="3859"></a> [3859](../mssqlserver-3859-database-engine-error.md) | 10 | No | Warning: The system catalog was updated directly in database ID %d, most recently at %S_DATE. |
+| <a id="3860"></a> 3860 | 10 | No | Cannot upgrade database ID 32767. This ID value is reserved for SQL Server internal use. |
+| <a id="3862"></a> 3862 | 10 | No | CLR type '%.\*ls'.'%.\*ls' is disabled because the on disk format for this CLR type has been changed. Use DROP TYPE to remove this disabled type. |
+| <a id="3864"></a> 3864 | 23 | Yes | Could not find an entry for index with ID %d on object with ID %d in database with ID %d. Possible schema corruption. Run DBCC CHECKDB. |
+| <a id="3865"></a> 3865 | 16 | No | The operation on object '%.\*ls' is blocked. The object is a FileTable system defined object and user modifications are not allowed. |
+| <a id="3866"></a> 3866 | 10 | Yes | The operation on FileTable system defined object '%.\*ls' was allowed because of traceflag settings. To prevent this informational message from appearing in the error log, use DBCC TRACEOFF to turn off the trace flag. |
+| <a id="3867"></a> 3867 | 10 | No | The FileTable object '%.\*ls' contains system defined constraints that cannot be modified as long as the FILETABLE_NAMESPACE option is enabled on the table. Only user defined constraints have been updated. |
+| <a id="3868"></a> 3868 | 10 | No | Failed to start tempdb metadata memory-optimized mode. Continuing tempdb startup in SQL mode. Please run ALTER SERVER CONFIGURATION TEMPDB METADATA MEMORY_OPTIMIZED ON once again and restart to retry. |
+| <a id="3869"></a> 3869 | 10 | No | The desired memory-optimized configuration is already set. No further action is necessary. |
+| <a id="3870"></a> 3870 | 10 | No | The tempdb metadata memory-optimized configuration has been set to '%S_MSG'. Restart SQL server for the new setting to take effect. |
+| <a id="3871"></a> 3871 | 10 | No | Tempdb started with memory-optimized metadata. |
+| <a id="3872"></a> 3872 | 10 | No | The hybrid buffer pool memory-optimized configuration has been set to '%S_MSG'. Restart SQL server for the new setting to take effect. |
+| <a id="3873"></a> 3873 | 10 | No | Hybrid buffer pool started with memory-optimized metadata. |
+| <a id="3874"></a> 3874 | 16 | No | Resource pool '%.\*ls' does not exist or resource governor has not been reconfigured. |
+| <a id="3875"></a> 3875 | 16 | No | Internal resource pool cannot be used for tempdb |
+| <a id="3876"></a> 3876 | 16 | No | Resource pool setting for tempdb failed. Retry with a valid pool. |
+| <a id="3878"></a> 3878 | 10 | No | The tiered memory memory-optimized configuration has been set to '%S_MSG'. Restart SQL server for the new setting to take effect. |
+| <a id="3879"></a> 3879 | 10 | No | Tiered memory for buffer pool started with memory-optimized metadata. |
+| <a id="3901"></a> 3901 | 16 | No | The transaction name must be specified when it is used with the mark option. |
+| <a id="3902"></a> 3902 | 16 | No | The COMMIT TRANSACTION request has no corresponding BEGIN TRANSACTION. |
+| <a id="3903"></a> 3903 | 16 | No | The ROLLBACK TRANSACTION request has no corresponding BEGIN TRANSACTION. |
+| <a id="3904"></a> 3904 | 21 | No | Cannot unsplit logical page %S_PGID in object '%.\*ls', in database '%.\*ls'. Both pages together contain more data than will fit on one page. |
+| <a id="3905"></a> 3905 | 16 | No | The number of nested transactions has reached the maximum allowed value of 4294967296. |
+| <a id="3906"></a> 3906 | 16 | No | Failed to update database "%.\*ls" because the database is read-only. |
+| <a id="3907"></a> 3907 | 16 | No | Transaction aborted when accessing a versioned row in table '%.\*ls' in database '%.\*ls'. Requested row version was not found in Persistent Version Store. The database might be out of space. |
+| <a id="3908"></a> 3908 | 16 | No | Could not run BEGIN TRANSACTION in database '%.\*ls' because the database is in emergency mode or is damaged and must be restarted. |
+| <a id="3909"></a> 3909 | 16 | No | Session binding token is invalid. |
+| <a id="3910"></a> 3910 | 16 | No | Transaction context in use by another session. |
+| <a id="3911"></a> 3911 | 16 | Yes | Persistent Version Store is full. New versions cannot be added. Transactions that need to access Persistent Version Store might be rolled back. Increase the maximum database size or make space available in the database. |
+| <a id="3912"></a> 3912 | 16 | No | Cannot bind using an XP token while the server is not in an XP call. |
+| <a id="3913"></a> 3913 | 16 | Yes | TDS reset connection protocol error. Client driver requested both ResetConnectionKeepLocalXact and ResetConnectionKeepDTCXact at the same time. This is not expected in server. |
+| <a id="3914"></a> 3914 | 16 | No | The data type "%s" is invalid for transaction names or savepoint names. Allowed data types are char, varchar, nchar, varchar(max), nvarchar, and nvarchar(max). |
+| <a id="3915"></a> 3915 | 16 | No | Cannot use the ROLLBACK statement within an INSERT-EXEC statement. |
+| <a id="3916"></a> 3916 | 16 | No | Cannot use the COMMIT statement within an INSERT-EXEC statement unless BEGIN TRANSACTION is used first. |
+| <a id="3917"></a> 3917 | 16 | No | Session is bound to a transaction context that is in use. Other statements in the batch were ignored. |
+| <a id="3918"></a> 3918 | 16 | No | The statement or function must be executed in the context of a user transaction. |
+| <a id="3919"></a> 3919 | 16 | No | Cannot enlist in the transaction because the transaction has already been committed or rolled back. |
+| <a id="3920"></a> 3920 | 10 | No | The WITH MARK option only applies to the first BEGIN TRAN WITH MARK statement. The option is ignored. |
+| <a id="3921"></a> 3921 | 16 | No | Cannot get a transaction token if there is no transaction active. Reissue the statement after a transaction has been started |
+| <a id="3922"></a> 3922 | 16 | No | Cannot enlist in the transaction because the transaction does not exist. |
+| <a id="3923"></a> 3923 | 10 | No | Cannot use transaction marks on database '%.\*ls' with bulk-logged operations that have not been backed up. The mark is ignored. |
+| <a id="3924"></a> 3924 | 10 | No | The session was enlisted in an active user transaction while trying to bind to a new transaction. The session has defected from the previous user transaction. |
+| <a id="3925"></a> 3925 | 16 | No | Invalid transaction mark name. The 'LSN:' prefix is reserved. |
+| <a id="3926"></a> 3926 | 10 | No | The transaction active in this session has been committed or aborted by another session. |
+| <a id="3927"></a> 3927 | 10 | No | The session had an active transaction when it tried to enlist in a Distributed Transaction Coordinator transaction. |
+| <a id="3928"></a> 3928 | 16 | No | The marked transaction "%.\*ls" failed. A timeout occurred while attempting to place a mark in the log by committing the marked transaction. This can be caused by contention with Microsoft Distributed Transaction Coordinator (MS DTC) transactions or other local marked transaction that have prepared, but not committed or aborted. Try the operation again and if the error persists, determine the source of the contention. |
+| <a id="3929"></a> 3929 | 16 | No | No distributed or bound transaction is allowed in single user database. |
+| <a id="3930"></a> 3930 | 16 | No | The current transaction cannot be committed and cannot support operations that write to the log file. Roll back the transaction. |
+| <a id="3931"></a> 3931 | 16 | No | The current transaction cannot be committed and cannot be rolled back to a savepoint. Roll back the entire transaction. |
+| <a id="3932"></a> 3932 | 16 | No | The save point name "%.\*ls" that was provided is too long. The maximum allowed length is %d characters. |
+| <a id="3933"></a> 3933 | 16 | No | Cannot promote the transaction to a distributed transaction because there is an active save point in this transaction. |
+| <a id="3934"></a> 3934 | 14 | No | The current user cannot use this FILESTREAM transaction context. To obtain a valid FILESTREAM transaction context, use GET_FILESTREAM_TRANSACTION_CONTEXT. |
+| <a id="3935"></a> 3935 | 16 | No | A FILESTREAM transaction context could not be initialized. This might be caused by a resource shortage. Retry the operation. Error code: 0x%x. |
+| <a id="3936"></a> 3936 | 16 | No | The transaction could not be committed because an error occurred while trying to flush FILESTREAM data to disk. A file may have been open at commit time or a disk I/O error may have occurred. '%.\*ls' was one of the one or more files involved. ErrorCode: 0x%x. |
+| <a id="3937"></a> [3937](../mssqlserver-3937-database-engine-error.md) | 16 | No | While rolling back a transaction, an error occurred while trying to deliver a rollback notification to the FILESTREAM filter driver. Error code: 0x%0x. |
+| <a id="3938"></a> 3938 | 18 | No | The transaction has been stopped because it conflicted with the execution of a FILESTREAM close operation using the same transaction. The transaction will be rolled back. |
+| <a id="3939"></a> 3939 | 16 | No | An uncommittable transaction was detected at the beginning of the batch. The transaction was rolled back. This was caused by an error that occurred during the processing of a FILESTREAM request in the context of this transaction. |
+| <a id="3940"></a> 3940 | 16 | No | Failed to acquire necessary locks during commit and the transaction was rolled back. |
+| <a id="3941"></a> 3941 | 16 | No | The transaction cannot modify an object that is published for replication or has Change Data Capture enabled because the transaction started before replication or Change Data Capture was enabled on the database. Retry the transaction. |
+| <a id="3947"></a> 3947 | 10 | No | The transaction was aborted because the secondary compute failed to catch up redo. Retry the transaction. |
+| <a id="3948"></a> 3948 | 16 | No | The transaction was terminated because of the availability replica config/state change or because ghost records are being deleted on the primary and the secondary availability replica that might be needed by queries running under snapshot isolation. Retry the transaction. |
+| <a id="3949"></a> 3949 | 16 | No | Transaction aborted when accessing versioned row in table '%.\*ls' in database '%.\*ls'. Requested versioned row was not found because the readable secondary access is not allowed for the operation that attempted to create the version. This might be timing related, so try the query again later. |
+| <a id="3950"></a> 3950 | 16 | No | Version store scan timed out when attempting to read the next row. Please try the statement again later when the system is not as busy. |
+| <a id="3951"></a> 3951 | 16 | No | Transaction failed in database '%.\*ls' because the statement was run under snapshot isolation but the transaction did not start in snapshot isolation. You cannot change the isolation level of the transaction to snapshot after the transaction has started unless the transaction was originally started under snapshot isolation level. |
+| <a id="3952"></a> 3952 | 16 | No | Snapshot isolation transaction failed accessing database '%.\*ls' because snapshot isolation is not allowed in this database. Use ALTER DATABASE to allow snapshot isolation. |
+| <a id="3953"></a> 3953 | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the database was not recovered when the current transaction was started. Retry the transaction after the database has recovered. |
+| <a id="3954"></a> 3954 | 16 | No | Snapshot isolation transaction failed to start in database '%.\*ls' because the ALTER DATABASE command that disallows snapshot isolation had started before this transaction began. The database is in transition to OFF state. You will either need to change the isolation level of the transaction or re-enable the snapshot isolation in the database. |
+| <a id="3955"></a> 3955 | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the recovery was skipped for this database. You must recover the database before you can run a transaction under snapshot isolation. |
+| <a id="3956"></a> 3956 | 16 | No | Snapshot isolation transaction failed to start in database '%.\*ls' because the ALTER DATABASE command which enables snapshot isolation for this database has not finished yet. The database is in transition to pending ON state. You must wait until the ALTER DATABASE Command completes successfully. |
+| <a id="3957"></a> 3957 | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the database did not allow snapshot isolation when the current transaction started. It may help to retry the transaction. |
+| <a id="3958"></a> 3958 | 16 | No | Transaction aborted when accessing versioned row in table '%.\*ls' in database '%.\*ls'. Requested versioned row was not found. Your tempdb is probably out of space. Please refer to BOL on how to configure tempdb for versioning. |
+| <a id="3959"></a> 3959 | 10 | Yes | Version store is full. New version(s) could not be added. A transaction that needs to access the version store may be rolled back. Please refer to BOL on how to configure tempdb for versioning. |
+| <a id="3960"></a> 3960 | 16 | No | Snapshot isolation transaction aborted due to update conflict. You cannot use snapshot isolation to access table '%.\*ls' directly or indirectly in database '%.\*ls' to update, delete, or insert the row that has been modified or deleted by another transaction. Retry the transaction or change the isolation level for the update/delete statement. |
+| <a id="3961"></a> [3961](../mssqlserver-3961-database-engine-error.md) | 16 | No | Snapshot isolation transaction failed in database '%.\*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is disallowed because the metadata is not versioned. A concurrent update to metadata can lead to inconsistency if mixed with snapshot isolation. |
+| <a id="3962"></a> 3962 | 16 | No | Bind to another transaction while executing SQL Server internal query is not supported. Check your logon trigger definition and remove any sp_bindsession usage if any. If this error is not happening during logon trigger execution, contact production support team. |
+| <a id="3963"></a> 3963 | 16 | No | Transaction failed in database '%.\*ls' because distributed transactions are not supported under snapshot isolation. |
+| <a id="3964"></a> 3964 | 16 | No | Transaction failed because this DDL statement is not allowed inside a snapshot isolation transaction. Since metadata is not versioned, a metadata change can lead to inconsistency if mixed within snapshot isolation. |
+| <a id="3965"></a> 3965 | 16 | No | The PROMOTE TRANSACTION request failed because there is no local transaction active. |
+| <a id="3966"></a> 3966 | 17 | No | Transaction is rolled back when accessing version store. It was earlier marked as victim when the version store was shrunk due to insufficient space in tempdb. This transaction was marked as a victim earlier because it may need the row version(s) that have already been removed to make space in tempdb. Retry the transaction |
+| <a id="3967"></a> 3967 | 17 | Yes | Insufficient space in tempdb to hold row versions. Need to shrink the version store to free up some space in tempdb. Transaction (id=%I64d xsn=%I64d spid=%d elapsed_time=%d) has been marked as victim and it will be rolled back if it accesses the version store. If the problem persists, the likely cause is improperly sized tempdb or long running transactions. Please refer to BOL on how to configure tempdb for versioning. |
+| <a id="3968"></a> 3968 | 10 | No | Snapshot isolation or read committed snapshot is not available in database '%.\*ls' because SQL Server was started with one or more undocumented trace flags that prevent enabling database for versioning. Transaction started with snapshot isolation will fail and a query running under read committed snapshot will succeed but will resort back to lock based read committed. |
+| <a id="3969"></a> 3969 | 16 | No | Distributed transaction is not supported while running SQL Server internal query. Check your logon trigger definition and remove any distributed transaction usage if any. If this error is not happening during logon trigger execution, contact production support team. |
+| <a id="3970"></a> 3970 | 16 | No | This operation conflicts with another pending operation on this transaction. The operation failed. |
+| <a id="3971"></a> 3971 | 16 | No | The server failed to resume the transaction. Desc:%I64x. |
+| <a id="3972"></a> 3972 | 20 | Yes | Incoming Tabular Data Stream (TDS) protocol is incorrect. Transaction Manager event has wrong length. Event type: %d. Expected length: %d. Actual length: %d. |
+| <a id="3973"></a> 3973 | 16 | No | The database is currently being used by another thread under the same workspace in exclusive mode. The operation failed. |
+| <a id="3974"></a> 3974 | 16 | No | The number of databases in exclusive mode usage under a workspace is limited. Because the limit has been exceeded, the operation failed. |
+| <a id="3975"></a> 3975 | 16 | No | The varchar(max) data type is not supported for sp_getbindtoken. The batch has been aborted. |
+| <a id="3976"></a> 3976 | 16 | No | The transaction name has the odd length %d. The batch has been aborted. |
+| <a id="3977"></a> 3977 | 16 | No | The savepoint name cannot be NULL. The batch has been aborted. |
+| <a id="3978"></a> 3978 | 16 | No | Beginning a new transaction after rollback to save point is not allowed. |
+| <a id="3979"></a> 3979 | 16 | No | The TM request is longer than expected. The request is not processed. |
+| <a id="3980"></a> 3980 | 16 | No | The request failed to run because the batch is aborted, this can be caused by abort signal sent from client, or another request is running in the same session, which makes the session busy. |
+| <a id="3981"></a> 3981 | 16 | No | The transaction operation cannot be performed because there are pending requests working on this transaction. |
+| <a id="3982"></a> 3982 | 16 | No | New transaction is not allowed to be started while DTC or bound transaction is active. |
+| <a id="3983"></a> 3983 | 16 | No | The operation failed because the session is not single threaded. |
+| <a id="3984"></a> 3984 | 16 | No | Cannot acquire a database lock during a transaction change. |
+| <a id="3985"></a> 3985 | 16 | No | An error occurred during the changing of transaction context. This is usually caused by low memory in the system. Try to free up more memory. |
+| <a id="3986"></a> 3986 | 19 | No | The transaction timestamps ran out. Restart the server. |
+| <a id="3987"></a> 3987 | 10 | No | SNAPSHOT ISOLATION is always enabled in this database. |
+| <a id="3988"></a> [3988](../mssqlserver-3988-database-engine-error.md) | 16 | No | New transaction is not allowed because there are other threads running in the session. |
+| <a id="3989"></a> [3989](../mssqlserver-3989-database-engine-error.md) | 16 | No | New request is not allowed to start because it should come with valid transaction descriptor. |
+| <a id="3990"></a> 3990 | 16 | No | Transaction is not allowed to commit inside of a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting. |
+| <a id="3991"></a> 3991 | 16 | No | The context transaction which was active before entering user defined routine, trigger or aggregate "%.\*ls" has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting. |
+| <a id="3992"></a> 3992 | 16 | No | Transaction count has been changed from %d to %d inside of user defined routine, trigger or aggregate "%.\*ls". This is not allowed and user transaction will be rolled back. Change application logic to enforce strict transaction nesting. |
+| <a id="3993"></a> 3993 | 16 | No | The user transaction that has been started in user defined routine, trigger or aggregate "%.\*ls" is not ended upon exiting from it. This is not allowed and the transaction will be rolled back. Change application logic to enforce strict transaction nesting. |
+| <a id="3994"></a> 3994 | 16 | No | User defined routine, trigger or aggregate tried to rollback a transaction that is not started in that CLR level. An exception will be thrown to prevent execution of rest of the user defined routine, trigger or aggregate. |
+| <a id="3995"></a> 3995 | 16 | No | Unknown transaction isolation level %d, valid value range is 0 to 5. |
+| <a id="3996"></a> 3996 | 16 | No | Snapshot isolation level is not supported for distributed transaction. Use another isolation level or do not use distributed transaction. |
+| <a id="3997"></a> 3997 | 16 | No | A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back. |
+| <a id="3998"></a> 3998 | 16 | No | Uncommittable transaction is detected at the end of the batch. The transaction is rolled back. |
+| <a id="3999"></a> 3999 | 17 | Yes | Failed to flush the commit table to disk in dbid %d due to error %d. Check the errorlog for more information. |

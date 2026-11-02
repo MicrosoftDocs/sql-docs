@@ -10,2505 +10,2505 @@ ms.topic: include
 
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
-| 31001 | 16 | No | The session '%s' already exists. Use a different session name. |
-| 31002 | 16 | No | This operation can be performed only by the owner of the session. |
-| 31003 | 16 | No | User does not have enough permissions to tune one or more of the databases specified. |
-| 31004 | 16 | No | Could not create DTA directory for saving tuning option file when invoking DTA for auto indexing. |
-| 31005 | 16 | No | Could not create DTA tuning option file when invoking DTA for auto indexing. |
-| 31006 | 16 | No | Could not write DTA tuning option to file when invoking DTA for auto indexing. |
-| 31007 | 16 | No | Could not create a DTA job when invoking DTA for auto indexing. |
-| 31008 | 16 | No | Could not retrieve limit and job state information from DTA job object when invoking DTA for auto indexing. |
-| 31009 | 16 | No | Could not set limits on DTA job object when invoking DTA for auto indexing. |
-| 31010 | 16 | No | Could not create a DTA process when invoking DTA for auto indexing. |
-| 31011 | 16 | No | Could not terminate DTA process after it fails to be assigned to DTA job object when invoking DTA for auto indexing. |
-| 31012 | 16 | No | Could not resume DTA process to start tuning when invoking DTA for auto indexing. |
-| 31013 | 16 | No | Invalid tuning option specified for auto indexing. |
-| 31014 | 16 | No | Could not terminate DTA job when cancelling DTA tuning for auto indexing. |
-| 31015 | 16 | No | Could not delete DTA tuning options file when cancelling DTA tuning for auto indexing. |
-| 31016 | 16 | No | Could not cleanup hypothetical indexes and statistics when cancelling DTA tuning for auto indexing. |
-| 31017 | 16 | No | DTA tuning for auto indexing is only supported on Azure DB. |
-| 31018 | 16 | No | Could not get winfab temp directory when performing DTA tuning related task. |
-| 31019 | 16 | No | Could not create GUID when performing DTA tuning related task. |
-| 31020 | 16 | No | String operation failed. |
-| 31021 | 16 | No | Could not get winfab log directory when performing DTA tuning related task. |
-| 31022 | 16 | No | Could not get winfab data package directory when performing DTA tuning related task. |
-| 31201 | 16 | No | Property-scoped full-text queries cannot be specified on the specified table because its full-text index is not configured for property searching. To support property-scoped searches, the full-text index must be associated with a search property list and repopulated. The Transact-SQL syntax for this is: ALTER FULLTEXT INDEX ON \<table_name\> SET SEARCH PROPERTY LIST \<property_list_name\>;. |
-| 31202 | 10 | No | Reconfiguring the search property list of the full-text index has truncated the existing data in the index. Until the full-text index has been fully repopulated, full-text queries will return partial results. The ALTER FULLTEXT INDEX \<table_name\> SET SEARCH PROPERTY LIST ...; statement automatically issues a full population, but if the ALTER FULLTEXT INDEX statement specified the WITH NO POPULATION clause, you must run a full population on the full-text index using ALTER FULLTEXT INDEX ON \<table_name\> START FULL POPULATION;. This is a warning. |
-| 31203 | 10 | No | Warning Master Merge operation was not done for dbid %d, objid %d, so querying index will be slow. Please run alter fulltext catalog reorganize. |
-| 31204 | 16 | No | Operation %ls is not supported on the %ls platform. |
-| 31205 | 16 | No | The import population for database %ls (id: %d), catalog id: %d is being cancelled because of a fatal error ('%ls'). Fix the errors that are logged in the full-text crawl log. Then resume the import either by detaching the database and re-attaching it, or by taking the database offline and bringing it back online. If the error is not recoverable, rebuild the full-text catalog. |
-| 31206 | 16 | No | Failed to schedule asynchronous resume fulltext crawl task for database id %d with error %d. |
-| 31207 | 16 | No | Invalid value for Full-Text index version is specified. Valid values are 1 or 2. |
-| 31208 | 16 | No | A fulltext fragment table is missing. |
-| 31209 | 16 | No | Cannot create a full-text index on table or indexed view '%.\*ls.%.\*ls' because a previous full-text index drop is still being cleaned up. Try again later. |
-| 31210 | 16 | No | Cannot execute ALTER FULLTEXT INDEX on table or indexed view '%.\*ls' because an online full-text index rebuild is in progress. Wait for the rebuild to complete or stop the population before retrying the operation. |
-| 31601 | 16 | No | The size of the provided %ls is %u bytes, which exceeds the maximum allowed size of %u bytes. |
-| 31602 | 10 | No | Received param '%.\*ls' successfully. |
-| 31603 | 10 | No | Received param '%d' successfully. |
-| 31604 | 16 | No | The value '%d' is not within range for the '%.\*ls' parameter. |
-| 31605 | 16 | No | The specified method '%.\*ls' is not supported. |
-| 31606 | 16 | No | Serializing payload value failed |
-| 31607 | 16 | No | The external endpoint FQDN is not in the list of Outbound Firewall Rules on the server. Please add it to the list of Outbound Firewall Rules on your server and retry the operation. |
-| 31608 | 16 | No | An error occurred, failed to communicate with the external rest endpoint. HRESULT: 0x%x. |
-| 31609 | 16 | No | An error occurred, failed to parse url. HRESULT: 0x%x. |
-| 31610 | 16 | No | Accessing the external endpoint is only allowed via HTTPS. |
-| 31611 | 16 | No | The response's headers size exceeds the maximum allowed size of %u bytes. |
-| 31612 | 16 | No | Connections to the domain %ls are not allowed. |
-| 31613 | 16 | No | The length of the provided %ls after percent-encoding exceeds the maximum allowed length of %u bytes. |
-| 31614 | 16 | No | Only alphanumeric characters, hyphens, underscores, and dots are allowed in the hostname or in the fully qualified domain name. |
-| 31615 | 16 | No | The %ls cannot contain nested structures. Please check the formatting of the JSON and try again with a flat structure. |
-| 31616 | 10 | No | Warning: header '%ls' was overwritten by a system-defined value. |
-| 31617 | 16 | No | The %ls contains invalid characters. Only printable US ASCII characters are allowed. |
-| 31618 | 16 | No | The %ls contains an empty key. |
-| 31619 | 16 | No | The %ls could not be parsed. jsonError = %d. |
-| 31620 | 16 | No | The %ls is not a json object datatype. |
-| 31621 | 16 | No | One of the %ls values could not be parsed. |
-| 31622 | 16 | No | An unexpected error occurred while validating that the connection to the hostname is allowed. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323727](https://go.microsoft.com/fwlink/?linkid=2323727). |
-| 31624 | 16 | No | Connection to the external endpoint IP is not allowed. URL contains a hostname that is resolved to a blocked IP. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323727](https://go.microsoft.com/fwlink/?linkid=2323727). |
-| 31625 | 16 | No | DNS resolution of the hostname has failed with windows sockets error %d. |
-| 31627 | 16 | No | An out of memory exception has occurred during external endpoint invocation. |
-| 31628 | 16 | No | The database scoped credential '%.\*ls' has an invalid identity '%.\*ls' for use with an external rest endpoint. |
-| 31629 | 16 | No | The external rest endpoint execution exceeded the timeout value. |
-| 31630 | 16 | No | The database scoped credential '%.\*ls' cannot be used to invoke an external rest endpoint. |
-| 31631 | 16 | No | An error has occurred while waiting for the external rest endpoint result: %d. |
-| 31632 | 16 | No | The request's headers size exceeds the maximum allowed size of %u bytes. |
-| 31633 | 16 | No | The length of the provided %ls exceeds the maximum allowed length of %u bytes. |
-| 31634 | 16 | No | The %ls must contain a '%ls' for use with managed identity. |
-| 31635 | 16 | No | The %ls's '%ls' value must be a %ls for use with managed identity. |
-| 31636 | 16 | No | Error retrieving the managed identity access token for the resource id '%ls'. JWTErrorState = %d. '%ls' |
-| 31637 | 16 | No | Connections to the domain %ls are not allowed using a credential object with the identity 'SHARED ACCESS SIGNATURE'. |
-| 31638 | 16 | No | The specified '%.\*ls' value is not supported in the @headers parameter. |
-| 31639 | 16 | No | The specified '%ls' value is not supported in the @credential secret. |
-| 31640 | 16 | No | The %.\*ls XML string could not be parsed. %.\*ls. |
-| 31641 | 16 | No | The charset value of the response's Content-Type header is not supported. |
-| 31642 | 16 | No | The value of one of the key-value pairs in the %ls is empty. |
-| 31643 | 16 | No | '%ls' is disabled on this instance of SQL Server. Use sp_configure 'external rest endpoint enabled' to enable it. |
-| 31644 | 16 | No | Server Managed Identity is disabled for this instance of SQL Server. Use sp_configure 'allow server scoped db credentials' to enable it. For more information, see [https://go.microsoft.com/fwlink/?linkid=2325611](https://go.microsoft.com/fwlink/?linkid=2325611). |
-| 31701 | 16 | No | Parameter '%ls' must be specified. This parameter cannot be NULL. |
-| 31703 | 17 | No | Missing JSON key %.\*ls |
-| 31704 | 17 | No | Unable to parse JSON |
-| 31705 | 17 | No | Failed to run AI function with error %d %ls |
-| 31706 | 17 | No | Requested entities count does not match response: sent %d, received %d |
-| 31707 | 17 | No | Failed to generate a request ID with HRESULT %d |
-| 31708 | 17 | No | Failed to write to a blob handle with HRESULT %d |
-| 31709 | 17 | No | Failed to read from a blob handle with HRESULT %d |
-| 31710 | 17 | No | Failed to lock bytes of a blob handle |
-| 31711 | 17 | No | AI service response is inconsistent |
-| 31712 | 17 | No | Request failed with retriable error |
-| 31713 | 17 | No | Bad URL argument %.\*ls |
-| 31714 | 16 | No | AI function returned following error: %s |
-| 31715 | 17 | No | JSON value type ID is %d but %d expected |
-| 31716 | 16 | No | The model parameter '%.\*ls' is required for invocation. |
-| 31717 | 16 | No | Extensibility function is not allowed in system database. |
-| 31718 | 17 | No | An internal error has occurred. Please retry the operation. If the issue persists, contact support for assistance. |
-| 31719 | 16 | No | The API_FORMAT '%.\*ls' is not supported. For more information, see [https://go.microsoft.com/fwlink/?linkid=2325940](https://go.microsoft.com/fwlink/?linkid=2325940). |
-| 31720 | 17 | No | Fabric functions service response is inconsistent. |
-| 31721 | 17 | No | Failed to run Fabric function with error %d %ls. |
-| 31723 | 17 | No | Failed to fetch service endpoint. |
-| 31724 | 16 | No | Type %ls is not supported by Fabric functions. |
-| 31725 | 16 | No | Failed to run Fabric function with error %d %ls. |
-| 31726 | 16 | No | Invalid Fabric function '%.\*ls' argument count: '%d' given vs '%d' expected. |
-| 31727 | 16 | No | Fabric function '%.\*ls' is not found in '%.\*ls' function set. |
-| 31728 | 16 | No | Function set '%.\*ls' is not found. |
-| 31729 | 16 | No | Type '%ls' does not convert to '%ls' for argument '%ls' of function '%ls'. |
-| 31730 | 16 | No | The Fabric Function argument type '%ls' is not supported. |
-| 31731 | 16 | No | The provided JSON parameters (e.g., '%.\*ls') are not allowed. |
-| 31732 | 16 | No | '%.\*ls' must be a valid JSON object. |
-| 31733 | 16 | No | The '%ls' with Local ONNX provider is not enabled. |
-| 31734 | 16 | No | The value '%I64d' is not within range for the %ls parameter. |
-| 31735 | 16 | No | The JSON value for the JSON key '%ls' must be '%.\*ls' type. |
-| 31736 | 17 | No | An error occurred during the execution of the function. |
-| 31737 | 16 | No | The size of the provided %ls would be at least %u bytes after converting to UTF-8, which exceeds the maximum allowed size of %u bytes. |
-| 31738 | 17 | No | Initialization of the '%ls' process with session ID '%ls' failed with HRESULT 0x%08x. |
-| 31739 | 17 | No | Generating embeddings from '%ls' process with session ID '%ls' failed with HRESULT 0x%08x. |
-| 31740 | 17 | No | An internal error has occurred in AI runtime with session ID '%ls'. Retry the operation, if the issue persists, contact support for assistance. |
-| 31741 | 10 | No | SQL type '%ls' is implicitly converted to Fabric function's type '%ls' for argument '%ls'. |
-| 31742 | 17 | No | Unrecoverable HTTP error %d %ls occured. |
-| 31743 | 16 | No | Language '%ls' is not supported. |
-| 31744 | 16 | No | The JSON path for embeddings could not be found in the response. |
-| 31745 | 16 | No | The HTTP response does not contain valid JSON. |
-| 31746 | 16 | No | Label '%.\*ls' is empty, which is not allowed. |
-| 31747 | 16 | No | Label '%.\*ls' exceeds the maximum allowed length of %d bytes. |
-| 31748 | 16 | No | The (CREATE \| CREATE OR ALTER \| ALTER) FUNCTION statement cannot reference external functions whose parameters or return types are of type None. |
-| 31749 | 16 | No | Function set is not found. |
-| 31750 | 16 | No | Incorrect value '%ls' provided for type '%ls'. |
-| 31751 | 10 | No | The AI function '%ls' failed to process the input text '%.\*ls'. Error %d: %ls. |
-| 31752 | 10 | No | The AI function '%ls' failed to process an input row after multiple retry attempts. Error %d: %ls. |
-| 31753 | 10 | No | The AI function '%ls' failed to process an input row. Error %d: %ls. |
-| 31754 | 10 | No | Fabric Function '%.\*ls' does not have batch mode value defined, the invocation will be serialized. |
-| 31755 | 16 | No | '%ls' requires an external model of type '%ls'. |
-| 31756 | 16 | No | The '%ls' function with Local ONNX provider is not supported in batch mode. |
-| 31757 | 16 | No | The '%ls' function with RETURNING JSON is not supported in batch mode. |
-| 31758 | 16 | No | sp_ai_request returned an invalid result: %.\*ls |
-| 31759 | 16 | No | An empty key was found in the JSON object for '%.\*ls'. |
-| 31760 | 16 | No | The function set is not ready for the use. Please, validate that last publising completed successfully. |
-| 31761 | 16 | No | The function set is being deployed. Please, wait for the deployment to complete before using the function set. |
-| 31762 | 16 | No | Cannot use function set because its' deployment failed with error: '%.\*ls' |
-| 31763 | 16 | No | The function set runtime is unsupported. |
-| 31764 | 16 | No | The function set has unpublished package: '%.\*ls' |
-| 31765 | 16 | No | Fabric function '%.\*ls' is not available for use as its' state is not 'OK'. Validate that the function can be invoked in User Data Functions. |
-| 31766 | 16 | No | The Fabric function metadata contains more than the maximum supported number of %d parameters. |
-| 31767 | 16 | No | The Fabric function metadata contains invalid parameter metadata at parameter %d. Parameter names must be unique, contain between 1 and %d characters, and cannot contain ':' or ';'. Parameter data types cannot contain ':' or ';'. |
-| 31768 | 16 | No | The Fabric function batch size must be an integer from 0 through %d. |
-| 31769 | 16 | No | The Fabric function catalog metadata contains invalid parameter information. Recreate the function. |
-| 31770 | 16 | No | The principal must have write permissions to execute external functions. |
-| 31771 | 16 | No | The AI functions configuration is not a valid JSON object. |
-| 31772 | 16 | No | '%.\*ls' is not a recognized AI functions configuration setting. |
-| 31773 | 16 | No | The AI functions configuration setting '%.\*ls' requires a value of type %.\*ls. |
-| 31774 | 16 | No | The AI functions configuration setting '%.\*ls' exceeds its maximum length of %d characters. |
-| 31775 | 16 | No | The AI functions configuration setting '%.\*ls' value is out of bounds. |
-| 31776 | 16 | No | The AI functions configuration JSON document exceeds the maximum allowed length of %d characters. |
-| 31777 | 16 | No | The session context key '%.\*ls' is reserved for the AI functions configuration and cannot be set directly. |
-| 31778 | 16 | No | The AI functions configuration setting '%.\*ls' cannot be an empty string. |
-| 31779 | 16 | No | The AI service rejected the AI functions configuration of this session with error %d: %ls Review the settings applied with sp_aifunc_default_conf. |
-| 31780 | 17 | No | Failure occurred during authorization: %.\*ls %.\*ls (RootActivityId: %.\*ls) |
-| 31801 | 17 | No | Incorrect JSON |
-| 31802 | 17 | No | JSON value casted to incorrect type |
-| 31803 | 17 | No | Missing JSON key '%ls' |
-| 32001 | 10 | No | Log shipping backup log job for %s. |
-| 32002 | 10 | No | Log shipping copy job for %s:%s. |
-| 32003 | 10 | No | Log shipping restore log job for %s:%s. |
-| 32004 | 10 | No | Log shipping backup log job step. |
-| 32005 | 10 | No | Log shipping copy job step. |
-| 32006 | 10 | No | Log shipping restore log job step. |
-| 32007 | 16 | No | Database %s is not ONLINE. |
-| 32008 | 10 | No | Database %s is not ONLINE. The backup job will not be performed until this database is brought online. |
-| 32009 | 16 | No | A log shipping primary entry already exists for database %s. |
-| 32010 | 16 | No | Database %s does not exist as log shipping primary. |
-| 32011 | 16 | No | Primary Database %s has active log shipping secondary database(s). Drop the secondary database(s) first. |
-| 32012 | 16 | No | Secondary %s.%s already exists for primary %s. |
-| 32013 | 16 | No | A log shipping entry already exists for secondary database %s. |
-| 32014 | 16 | No | Database %s does not exist as log shipping secondary. |
-| 32015 | 16 | No | The primary database %s cannot have SIMPLE recovery for log shipping to work properly. |
-| 32016 | 16 | No | The specified agent_id %s or agent_type %d do not form a valid pair for log shipping monitoring processing. |
-| 32017 | 16 | No | Log shipping is supported on Enterprise, Enterprise Developer, Standard, and Standard Developer editions of SQL Server. The edition of this instance is %s. |
-| 32018 | 16 | No | Log shipping is not installed on this instance. |
-| 32019 | 10 | No | Log shipping alert job. |
-| 32020 | 10 | No | Log shipping alert job step. |
-| 32021 | 10 | No | Log shipping alert job schedule. |
-| 32022 | 16 | No | Cannot add a log shipping job with name %s. A job with same name already exists in the system and this job does not belong to log shipping category. |
-| 32023 | 16 | No | An entry for primary server %s, primary database %s does not exist on this secondary. Register the primary first. |
-| 32024 | 16 | No | An entry for primary server %s, primary database %s already exists. |
-| 32025 | 16 | No | Primary Server %s, Database %s has active log shipping secondary database(s) on the secondary. Drop the secondary database(s) first. |
-| 32026 | 10 | No | Log shipping Primary Server Alert. |
-| 32027 | 10 | No | Log shipping Secondary Server Alert. |
-| 32028 | 16 | No | Invalid value = %d for parameter @threshold_alert was specified. |
-| 32029 | 10 | No | Log shipping backup agent \[%s\] has verified log backup file '%s.wrk' and renamed it as '%s.trn'. This is an informational message only. No user action is required. |
-| 32030 | 10 | No | Could not query monitor information for log shipping primary %s.%s from monitor server %s. |
-| 32031 | 10 | No | Could not query monitor information for log shipping secondary %s.%s from monitor server %s. |
-| 32032 | 16 | No | Invalid value '%d' for update period. Update period should be between 1 and 120 minutes. |
-| 32033 | 16 | No | The update job for the database mirroring monitor already exists. To change the update period, use sys.sp_dbmmonitorchangemonitoring |
-| 32034 | 16 | No | An internal error occurred when setting up the database mirroring monitoring job. |
-| 32035 | 16 | No | An internal error occurred when modifying the database mirroring monitoring job. |
-| 32036 | 16 | No | Parameter(s) out of range. |
-| 32037 | 16 | No | The units for the update period for the database mirroring monitor job have been changed. |
-| 32038 | 16 | No | An internal error has occurred in the database mirroring monitor. |
-| 32039 | 16 | No | The database '%s' is not being mirrored. No update of the base table was done. |
-| [32040](../mssqlserver-32040-database-engine-error.md) | 16 | No | The alert for 'oldest unsent transaction' has been raised. The current value of '%d' surpasses the threshold '%d'. |
-| 32041 | 16 | No | The database mirroring monitor base tables have not been created. Please run sys.sp_dbmmonitorupdate to create them. |
-| [32042](../mssqlserver-32042-database-engine-error.md) | 16 | No | The alert for 'unsent log' has been raised. The current value of '%d' surpasses the threshold '%d'. |
-| [32043](../mssqlserver-32043-database-engine-error.md) | 16 | No | The alert for 'unrestored log' has been raised. The current value of '%d' surpasses the threshold '%d'. |
-| [32044](../mssqlserver-32044-database-engine-error.md) | 16 | No | The alert for 'mirror commit overhead' has been raised. The current value of '%d' surpasses the threshold '%d'. |
-| 32045 | 16 | No | '%s' must be executed in msdb. |
-| 32046 | 16 | No | Only members of the sysadmin fixed server role or the 'dbm_monitor' role in msdb can perform this operation. |
-| 32047 | 15 | No | Database Mirroring Monitor Job |
-| 32048 | 15 | No | Database Mirroring Monitor Schedule |
-| 32049 | 16 | No | The database mirroring monitoring job does not exist. Run sp_dbmmonitoraddmonitoring to setup the job. |
-| 32050 | 16 | No | Alerts cannot be created on the system databases, master, msdb, model or tempdb. |
-| 32051 | 10 | No | System administrator privilege is required to update the base table. The base table was not updated. |
-| 32052 | 16 | No | Parameter '%s' cannot be null or empty. Specify a value for the named parameter and retry the operation. |
-| 32053 | 16 | No | The server name, given by '@@servername', is currently null. |
-| 32054 | 16 | No | There was an error establishing a link to the remote monitor server. |
-| 32055 | 16 | No | There was an error configuring the remote monitor server. |
-| 32056 | 17 | No | The SQL Server failed to create full-text FTData directory. This might be because FulltextDefaultPath is invalid or SQL Server service account does not have permission. Full-text may fail until this issue is resolved. Restart SQL Server after the issue is fixed. |
-| 32057 | 16 | No | There was an error configuring the log shipping backup server. The primary_server_with_port_override is set to '%s'. It is only valid on a contained availability group |
-| 33001 | 16 | No | Cannot drop the option because the option is not specified on %S_MSG. |
-| 33002 | 16 | No | Access to %ls %ls is blocked because the signature is not valid. |
-| 33003 | 16 | No | DDL statement is not allowed. |
-| 33004 | 16 | No | The password of login '%.\*ls' is invalid. A new password should be set for this login without specifying the old password. |
-| 33005 | 16 | No | Cannot find the certificate or asymmetric key from the file %.\*ls. ErrorCode: 0x%x. |
-| 33006 | 16 | No | WITH SIGNATURE option cannot be specified on database. |
-| 33007 | 16 | No | Cannot encrypt symmetric key with itself. |
-| 33008 | 16 | No | Cannot grant, deny, or revoke %.\*ls permission on INFORMATION_SCHEMA or SYS %S_MSG. |
-| 33009 | 16 | No | The database owner SID recorded in the master database differs from the database owner SID recorded in database '%.\*ls'. You should correct this situation by resetting the owner of database '%.\*ls' using the ALTER AUTHORIZATION statement. |
-| 33010 | 16 | No | The MUST_CHANGE option cannot be specified together with the HASHED option. |
-| 33011 | 16 | No | The %S_MSG private key cannot be dropped because one or more entities are encrypted by it. |
-| 33012 | 10 | No | Cannot %S_MSG signature %S_MSG %S_MSG '%.\*ls'. Signature already exists or cannot be added. |
-| 33013 | 16 | No | A %S_MSG by %S_MSG '%.\*s' does not exist. |
-| 33014 | 16 | No | Cannot countersign '%.\*s'. Only modules can be countersigned. |
-| 33015 | 16 | No | The database principal is referenced by a %S_MSG in the database, and cannot be dropped. |
-| 33016 | 16 | No | The user cannot be remapped to a login. Remapping can only be done for users that were mapped to Windows or SQL logins. |
-| 33017 | 16 | No | Cannot remap a user of one type to a login of a different type. For example, a SQL user must be mapped to a SQL login; it cannot be remapped to a Windows login. |
-| 33018 | 16 | No | Cannot remap user to login '%.\*s', because the login is already mapped to a user in the database. |
-| 33019 | 16 | No | Cannot create implicit user for the special login '%.\*s'. |
-| 33020 | 16 | No | A HASHED password cannot be set for a login that has CHECK_POLICY turned on. |
-| 33021 | 16 | Yes | Failed to generate a user instance of SQL Server. Only local user accounts, interactive users accounts, service accounts, or batch accounts can generate a user instance. The connection will be closed.%.\*ls |
-| 33022 | 16 | No | Cannot obtain cryptographic provider properties. Provider error code: %d. |
-| 33023 | 16 | No | The %S_MSG is too long. Maximum allowed length is %d bytes. |
-| 33024 | 16 | No | Cryptographic provider %S_MSG '%ls' in dll is different from the guid recorded in system catalog for provider with id %d. |
-| 33025 | 16 | No | Invalid cryptographic provider property: %S_MSG. |
-| 33026 | 16 | No | Cryptographic provider with guid '%ls' already exists. |
-| [33027](../mssqlserver-33027-database-engine-error.md) | 16 | No | Cannot load library '%.\*ls'. See errorlog for more information. |
-| [33028](../mssqlserver-33028-database-engine-error.md) | 16 | No | Cannot open session for %S_MSG '%.\*ls'. Provider error code: %d. (%S_MSG) |
-| 33029 | 16 | No | Cannot initialize cryptographic provider. Provider error code: %d. (%S_MSG) |
-| 33030 | 16 | No | Cryptographic provider is not available. |
-| 33031 | 16 | No | Cryptographic provider '%.\*ls' is in disabled. |
-| 33032 | 16 | Yes | SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'. |
-| 33033 | 16 | No | Specified key type or option '%S_MSG' is not supported by the provider. |
-| 33034 | 16 | No | Cannot specify algorithm for existing key. |
-| 33035 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider error code: %d. (%S_MSG) |
-| 33036 | 10 | No | Cannot drop the key with thumbprint '%.\*ls' in the provider. |
-| 33037 | 16 | No | Cannot export %S_MSG from the provider. Provider error code: %d. (%S_MSG) |
-| 33038 | 16 | No | Operation is not supported by cryptographic provider key. |
-| 33039 | 16 | No | Invalid algorithm '%.\*ls'. Provider error code: %d. (%S_MSG) |
-| 33040 | 16 | No | Cryptographic provider key cannot be encrypted by password or other key. |
-| 33041 | 16 | Yes | Cannot create login token for existing authenticators. If dbo is a windows user make sure that its windows account information is accessible to SQL Server. |
-| 33042 | 16 | No | Cannot add %S_MSG because it is already mapped to a login. |
-| 33043 | 16 | No | Cannot add %S_MSG '%.\*ls' because there is already %S_MSG specified for the login. |
-| 33044 | 16 | No | Cannot drop %S_MSG because there is %S_MSG referencing this provider. |
-| 33045 | 16 | No | Cannot drop %S_MSG because it is not mapped to this login. |
-| 33046 | 16 | No | Server principal '%.\*ls' has no credential associated with %S_MSG '%.\*ls'. |
-| 33047 | 16 | No | Fail to obtain or decrypt secret for %S_MSG '%.\*ls'. |
-| 33048 | 16 | No | Cannot use %S_MSG under non-primary security context. |
-| 33049 | 16 | No | Key with %S_MSG '%.\*ls' does not exist in the provider or access is denied. Provider error code: %d. (%S_MSG) |
-| 33050 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider does not allow specifying key names. |
-| 33051 | 16 | No | Invalid algorithm id: %d. Provider error code: %d. (%S_MSG) |
-| 33052 | 16 | No | Cryptographic provider key cannot be a temporary key. |
-| 33053 | 16 | No | Extensible Key Management is disabled or not supported on this edition of SQL Server. Use sp_configure 'EKM provider enabled' to enable it. |
-| 33054 | 16 | No | Extensible key management is not supported in this edition of SQL Server. |
-| 33055 | 16 | No | Exception happened when calling cryptographic provider '%.\*ls' in the API '%.\*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx. |
-| 33056 | 16 | No | Cannot impersonate login '%.\*ls' to access %S_MSG '%.\*ls'. |
-| 33057 | 10 | No | Cryptographic provider is now disabled. However users who have an open cryptographic session with the provider can still use it. Restart the server to disable the provider for all users. |
-| 33058 | 10 | No | Cryptographic provider is now dropped. However users who have an open cryptographic session with the provider can still use it. Restart the server to drop the provider for all users. |
-| 33059 | 16 | No | An error occurred while trying to flush all running audit sessions. Some events may be lost. |
-| 33060 | 16 | No | The format of supplied parameter sid is invalid. The sid might be incorrect or the sid might describe the wrong type of user. |
-| 33061 | 16 | No | The specified RETENTION_DAYS value is greater than the maximum value allowed. The retention days value must be less than %d days. |
-| 33062 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is too short. The password must be at least %d characters. |
-| 33063 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is too long. The password must be at most %d characters. |
-| 33064 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is not complex enough. The password must be at least %d characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. |
-| 33065 | 10 | No | An error occurred while configuring the password policy: HRESULT 0x%x, state %d. To skip configuring the password policy, use trace flag -T4634 during startup. This will cause SQL Server to run using a minimal password policy. |
-| 33066 | 10 | No | An error occurred while configuring the password policy: NTSTATUS 0x%x, state %d. To skip configuring the password policy, use trace flag -T4634 during startup. This will cause SQL Server to run using a minimal password policy. |
-| 33067 | 16 | No | Secret provided can not contain more than 120 characters. Please provide a valid credential. |
-| 33068 | 16 | No | Cannot load cryptographic provider '%.\*ls' because another EKM provider is already loaded in this process. Only one third-party EKM provider or one Azure Key Vault (AKV) provider can be active at a time. DROP the existing provider before loading another one. |
-| 33069 | 16 | No | CREATE CERTIFICATE statement cannot mix file and binary modes. Rewrite the statement using only the FILE or the BINARY keyword. |
-| 33070 | 16 | No | The specified maximum size limit for the audit log file is less than the minimum value allowed. The maximum size limit must be at least 2 MB. |
-| 33071 | 16 | No | This command requires %S_MSG to be disabled. Disable the %S_MSG and rerun this command. |
-| 33072 | 16 | No | The audit log file path is invalid. |
-| 33073 | 16 | No | Cannot find %S_MSG '%.\*ls' or you do not have the required permissions. |
-| 33074 | 16 | No | Cannot %S_MSG a %S_MSG %S_MSG from a user database. This operation must be performed in the master database. |
-| 33075 | 16 | No | Granular auditing is not available in this edition of SQL Server. For more information about feature support in the editions of SQL Server, see SQL Server Books Online. |
-| 33076 | 16 | No | The specified maximum size limit is greater than the maximum value allowed. The maximum size limit must be less than 16777215 TB. |
-| 33077 | 16 | No | RESERVE_DISK_SPACE cannot be specified when setting MAXSIZE = UNLIMITED. Either reduce MAXSIZE or do not specify RESERVE_DISK_SPACE. |
-| 33078 | 16 | No | The containment setting in the master database does not match the property of the database files. Use ALTER DATABASE to reset the containment property. |
-| 33079 | 16 | No | Cannot bind a default or rule to the CLR type '%s' because an existing sparse column uses this data type. Modify the data type of the sparse column or remove the sparse designation of the column. |
-| 33080 | 10 | No | Cryptographic provider library '%.\*ls' loaded into memory. This is an informational message only. No user action is required. |
-| [33081](../mssqlserver-33081-database-engine-error.md) | 10 | No | Failed to verify Authenticode signature on DLL '%.\*ls'. |
-| 33082 | 16 | No | Cannot find Cryptographic provider library with guid '%ls'. |
-| 33083 | 16 | No | Cannot create %S_MSG for %S_MSG '%ls' because it is not supported by the extensible key management provider '%ls'. |
-| 33084 | 16 | No | The OPEN SYMMETRIC KEY statement cannot reference a symmetric key created from an Extensible Key Management (EKM) provider. Symmetric keys created from an EKM provider are opened automatically for principals who can successfully authenticate with the cryptographic provider. |
-| [33085](../mssqlserver-33085-database-engine-error.md) | 10 | No | One or more methods cannot be found in cryptographic provider library '%.\*ls'. |
-| 33086 | 10 | No | SQL Server Audit failed to record %ls action. |
-| 33087 | 16 | No | %S_MSG property of the key returned by EKM provider doesn't match the expected value |
-| 33088 | 16 | No | The algorithm: %.\*ls is not supported for EKM operations by SQL Server |
-| 33089 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%S_MSG) |
-| 33090 | 10 | No | Attempting to load library '%.\*ls' into memory. This is an informational message only. No user action is required. |
-| 33091 | 10 | No | Warning: The certificate used for encrypting the database encryption key has not been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key or you will not be able to open the database. |
-| 33092 | 10 | No | Failed to verify the Authenticode signature of '%.\*ls'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support. |
-| 33093 | 16 | No | The Windows user or group '%s' is local or built-in. Use a Windows domain user or domain group. |
-| 33094 | 10 | No | An error occurred during Service Master Key %S_MSG |
-| 33095 | 10 | No | Service Master Key could not be decrypted using one of its encryptions. See sys.key_encryptions for details. |
-| 33096 | 10 | No | A generic failure occurred during Service Master Key encryption or decryption. |
-| 33097 | 10 | No | Processing BrickId: %d with MasterDb.PrimaryPru.FragId %d |
-| 33098 | 10 | No | Initializing SMK for brickId: %d |
-| 33099 | 16 | No | You cannot add server-scoped catalog views, system stored procedures, or extended stored procedures to a database audit specification in a user database. Instead add them to a database audit specification in the master database. |
-| 33101 | 16 | No | Cannot use %S_MSG '%.\*ls', because its private key is not present or it is not protected by the database master key. SQL Server requires the ability to automatically access the private key of the %S_MSG used for this operation. |
-| 33102 | 16 | No | Cannot encrypt a system database. Database encryption operations cannot be performed for 'master', 'model', 'tempdb', 'msdb', or 'resource' databases. |
-| 33103 | 16 | No | A database encryption key already exists for this database. |
-| 33104 | 16 | No | A database encryption key does not exist for this database. |
-| 33105 | 16 | No | Cannot drop the database encryption key because it is currently in use. Database encryption needs to be turned off to be able to drop the database encryption key. |
-| 33106 | 16 | No | Cannot change database encryption state because no database encryption key is set. |
-| 33107 | 16 | No | Cannot enable database encryption because it is already enabled. |
-| 33108 | 16 | No | Cannot disable database encryption because it is already disabled. |
-| 33109 | 16 | No | Cannot %S_MSG database encryption while an encryption, decryption, or key change scan is in progress. |
-| 33110 | 16 | No | Cannot change database encryption key while an encryption, decryption, or key change scan is in progress. |
-| 33111 | 16 | No | Cannot find server %S_MSG with thumbprint '%.\*ls'. |
-| 33112 | 10 | No | Beginning database encryption scan for database '%.\*ls'. |
-| 33113 | 10 | No | Database encryption scan for database '%.\*ls' is complete. |
-| 33114 | 10 | No | Database encryption scan for database '%.\*ls' was aborted. Reissue ALTER DB to resume the scan. |
-| 33115 | 16 | No | CREATE/ALTER/DROP DATABASE ENCRYPTION KEY failed because a lock could not be placed on the database. Try again later. |
-| 33116 | 16 | No | CREATE/ALTER/DROP DATABASE ENCRYPTION KEY failed because a lock could not be placed on database '%.\*ls'. Try again later. |
-| 33117 | 16 | No | Transparent Data Encryption is not available in the edition of this SQL Server instance. See books online for more details on feature support in different SQL Server editions. |
-| 33118 | 16 | No | Cannot enable or modify database encryption on a database that is read-only, has read-only files or is not recovered. |
-| 33119 | 16 | No | Cannot modify filegroup read-only/read-write state while an encryption transition is in progress. |
-| 33120 | 16 | No | In order to encrypt the database encryption key with an %S_MSG, please use an %S_MSG that resides on an extensible key management provider. |
-| 33121 | 16 | No | The %S_MSG '%ls' does not have a login associated with it. Create a login and credential for this key to automatically access the extensible key management provider '%ls'. |
-| 33122 | 16 | No | This command requires a database encryption scan on database '%.\*ls'. However, the database has changes from previous encryption scans that are pending log backup. Take a log backup and retry the command. |
-| 33123 | 16 | No | Cannot drop or alter the database encryption key since it is currently in use on a mirror or secondary availability replica. Retry the command after all the previous reencryption scans have propagated to the mirror or secondary availability replicas or after availability relationship has been disabled. |
-| 33124 | 10 | No | Database encryption scan for database '%.\*ls' cannot complete since one or more files are offline. Bring the files online to run the scan to completion. |
-| 33125 | 10 | No | Can not create login token because there are too many secondary principals. The maximum number of allowed secondary principals allowed is %lu. To fix this, remove the login from a server role. |
-| 33126 | 10 | No | Database encryption key is corrupted and cannot be read. |
-| 33127 | 16 | No | The %S_MSG cannot be dropped because it is used by one or more databases to encrypt a Database Encryption Key. |
-| [33128](../mssqlserver-33128-database-engine-error.md) | 16 | No | Encryption failed. Key uses deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this key switch to a lower db compatibility level. |
-| [33129](../mssqlserver-33129-database-engine-error.md) | 16 | No | Cannot use ALTER LOGIN with the ENABLE or DISABLE argument for a Windows or Entra group. GRANT or REVOKE the CONNECT SQL permission instead. |
-| 33130 | 16 | No | Principal '%ls' could not be found or this principal type is not supported. |
-| 33131 | 16 | No | Principal '%ls' has a duplicate display name in Microsoft Entra ID. Make the display name unique or use WITH OBJECT_ID to specify the expected principal. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323825](https://go.microsoft.com/fwlink/?linkid=2323825). |
-| 33132 | 16 | No | This principal type is not supported in Azure SQL Database. |
-| 33133 | 16 | No | Your subscription is not enabled for Integrated Authentication. |
-| 33134 | 16 | No | Principal '%ls' could not be resolved. Error message: '%ls' |
-| 33135 | 16 | No | Altering the name of a Windows principal is not supported through this form of execution. For more information about this, see SQL Server Books Online. |
-| 33136 | 16 | No | The operation could not be completed at this time. Please try again later. |
-| 33137 | 16 | No | The tenant '%.\*ls' cannot be found. |
-| 33139 | 16 | No | This subscription does not support Integrated Authentication. |
-| 33140 | 16 | No | The login '%.\*ls' could not be created because a login is already associated with certificate '%.\*ls'. |
-| 33141 | 10 | No | The credential created might not be able to decrypt the database master key. Please ensure a database master key exists for this database and is encrypted by the same password used in the stored procedure. |
-| 33142 | 16 | No | Updating the tenantId for Azure SQL Server was not successful. |
-| 33143 | 16 | No | The account admin of the subscription does not belong to this tenant. |
-| 33144 | 16 | No | Cannot change the schema of a temporary object. |
-| 33145 | 16 | No | Cannot update database encryption key protector while protector change is already in progress. |
-| 33146 | 10 | No | The database '%.\*ls' is offline. The credential was created but SQL Server is unable to determine if the credential can decrypt the database master key. |
-| 33147 | 20 | Yes | Federated Authentication Feature data used in login record to open a connection is structurally or semantically invalid; the connection has been closed. Please contact the vendor of the client library.%.\*ls. |
-| 33148 | 16 | No | The user name for a windows login has to be identical to the login name. |
-| 33149 | 16 | Yes | Dropping a credential '%.\*ls' which could still be used by Managed Backup. |
-| 33150 | 16 | Yes | Warning: Can not check whether the credential '%.\*ls' is used by managed backup, because %ls. Please check whether the credential is used by managed backup. |
-| 33151 | 16 | No | The user name for a user with password cannot be identical to the name of the server admin or the dbo of the database. |
-| 33152 | 16 | No | Valid values of the database compatibility level are %d or %d. |
-| 33153 | 16 | No | Valid values of the database compatibility level are %d, %d, or %d. |
-| 33154 | 20 | Yes | Client sent an invalid token when server was expecting federated authentication token. And it was not a disconnect event. |
-| 33155 | 20 | Yes | A disconnect event was raised when server is waiting for Federated Authentication token. This could be due to client close or server timeout expired. |
-| 33156 | 20 | Yes | A Federated Authentication token was sent by the client when the server is not expecting it. So server will close the connection due to TDS non-conformance. |
-| 33157 | 16 | No | Cryptographic providers are not supported on database credentials. |
-| 33158 | 16 | No | Database credentials are not supported in master database. |
-| 33159 | 16 | No | Principal '%ls' could not be created. Only connections established with Active Directory accounts can create other Active Directory users. |
-| 33160 | 10 | No | Unable to verify Authenticode signatures due to error code %d. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support. |
-| 33161 | 15 | No | Database master keys without password are not supported in this version of SQL Server. |
-| 33162 | 16 | No | TYPE and SID options have to be used along with each other, in this version of SQL Server. |
-| 33163 | 16 | No | The value specified for TYPE option is not supported in this version of SQL Server. Allowed values are E (EXTERNAL_USER) and X (EXTERNAL_GROUP) |
-| 33164 | 16 | No | Cannot drop the credential '%.\*ls' because it is used by an external data source. |
-| 33165 | 16 | No | Cannot drop the external %ls '%.\*ls' because it is used by an external %ls. |
-| 33166 | 16 | No | dbManager permission check failed. |
-| 33167 | 16 | No | This command is not supported for Microsoft Entra ID authenticated users. Execute this command as a SQL authenticated user. |
-| 33168 | 16 | No | TYPE option cannot be used along with FOR/FROM LOGIN, CERTIFICATE, ASYMMETRIC KEY, EXTERNAL PROVIDER, WITHOUT LOGIN or WITH PASSWORD, in this version of SQL Server. |
-| 33169 | 16 | No | User name cannot have backslash character, when using the TYPE option. |
-| 33170 | 16 | No | SID option cannot be used along with FOR/FROM LOGIN, CERTIFICATE, ASYMMETRIC KEY, EXTERNAL PROVIDER, WITHOUT LOGIN or WITH PASSWORD, in this version of SQL Server. |
-| 33171 | 16 | No | Only active directory users can impersonate other active directory users. |
-| 33172 | 16 | No | Encrypting Secret for Database '%.\*ls' and Credential '%.\*ls' failed. |
-| 33173 | 16 | No | Assigning value for output parameter @credentialSecret failed because the parameter size is less than the required size %u. Please provide a larger size. |
-| 33174 | 16 | No | Cannot get credential '%.\*ls' because it is not referenced by any external data source. |
-| 33175 | 16 | No | Encryption operation failed. Key used for encryption has deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this key switch to a lower db compatibility level. |
-| 33176 | 16 | No | Signing operation failed. Key uses deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this key switch to a lower db compatibility level. |
-| 33177 | 16 | No | Hash operation failed. Hash Function uses deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this hash algorithm switch to a lower db compatibility level. |
-| 33178 | 16 | No | Encryption key length is over the currently supported maximum length of %d. |
-| 33179 | 10 | No | Searching for '%.\*ls' only searches "'%.\*ls'" for SQL Server authentication logins. |
-| 33180 | 10 | No | Searching for "'%.\*ls'" only searches for Azure Active Directory users. To search for a SQL Server authentication login, add the server name at the end. For example \[%.\*ls@%.\*ls\]. |
-| 33181 | 16 | No | The new owner cannot be Azure Active Directory group. |
-| 33182 | 16 | No | The command must be executed on the target database '%.\*ls'. |
-| 33183 | 16 | No | The Azure Key Vault client encountered an error with message '%s'. |
-| 33184 | 16 | No | An error occurred while obtaining information for the Azure Key Vault client with message '%s'. |
-| 33185 | 16 | No | An error occurred while attempting to copy the encrypted DEK from the DBTable. |
-| 33186 | 16 | No | Cannot alter the credential '%.\*ls' because it is being used by an active audit session ('%.\*ls'). |
-| 33187 | 16 | Yes | Internal enclave error. Enclave failed to decrypt a column value or parameter - invalid authentication tag. For more information, contact Customer Support Services. |
-| 33189 | 16 | Yes | Internal enclave error: Enclave is out of session resources. For more information, contact Customer Support Services. |
-| 33190 | 16 | Yes | Internal enclave error. Enclave attestation information requested for an unsupported enclave type. For more information, contact Customer Support Services. |
-| 33191 | 16 | Yes | Enclave host encountered a runtime error: out of priority queue space. |
-| 33192 | 16 | Yes | Internal enclave error. Enclave raised an exception (major = %d, minor = %d). See error log for more information. For more information, contact Customer Support Services. |
-| 33194 | 16 | Yes | Internal enclave error. The enclave bcrypt method %hs failed with status 0x%x. For more information, contact Customer Support Services. |
-| 33195 | 17 | No | Internal enclave error. Enclave was provided with an invalid session handle. For more information, contact Customer Support Services. |
-| 33196 | 16 | Yes | VBS enclave attestation failed due to an error in Windows Management Instrumentation (WMI). API: '%ls', Return code: '0x%08x'. For more information, contact Customer Support Services. |
-| 33197 | 16 | No | The value specified for TYPE option is not supported in this version of SQL Server. Allowed values are E (EXTERNAL_USER) and X (EXTERNAL_GROUP). |
-| 33198 | 16 | No | TYPE and SID options have to be used along with each other, in this version of SQL Server. |
-| 33199 | 16 | No | Only Active Directory logins can impersonate other Active Directory logins. |
-| 33201 | 17 | No | An error occurred in reading from the audit file or file-pattern: '%s'. The SQL service account may not have Read permission on the files, or the pattern may be returning one or more corrupt files. |
-| 33202 | 17 | No | SQL Server Audit could not write to file '%s'. |
-| 33203 | 17 | No | SQL Server Audit could not write to the event log. |
-| 33204 | 17 | No | SQL Server Audit could not write to the security log. |
-| 33205 | 10 | No | Audit event: %s. |
-| 33206 | 17 | No | SQL Server Audit failed to create the audit file '%s'. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
-| 33207 | 17 | No | SQL Server Audit failed to access the event log. Make sure that the SQL service account has the required permissions to the access the event log. |
-| 33208 | 17 | No | SQL Server Audit failed to access the security log. Make sure that the SQL service account has the required permissions to access the security log. |
-| 33209 | 10 | No | Audit '%.\*ls' has been changed to ON_FAILURE=CONTINUE because the server was started by using the -m flag. because the server was started with the -m flag. |
-| 33210 | 10 | No | SQL Server Audit failed to start, and the server is being shut down. To troubleshoot this issue, use the -m flag (Single User Mode) to bypass Audit-generated shutdowns when the server is starting. |
-| 33211 | 15 | No | A list of subentities, such as columns, cannot be specified for entity-level audits. |
-| 33212 | 15 | No | There is an invalid column list after the object name in the AUDIT SPECIFICATION statement. |
-| 33213 | 16 | No | All actions in an audit specification statement must be at the same scope. |
-| 33214 | 17 | No | The operation cannot be performed because SQL Server Audit has not been started. |
-| 33215 | 10 | No | One or more audits failed to start. Refer to previous errors in the error log to identify the cause, and correct the problems associated with each error. |
-| 33216 | 10 | No | SQL Server was started using the -f flag. SQL Server Audit is disabled. This is an informational message. No user action is required. |
-| 33217 | 10 | No | SQL Server Audit is starting the audits. This is an informational message. No user action is required. |
-| 33218 | 10 | No | SQL Server Audit has started the audits. This is an informational message. No user action is required. |
-| 33219 | 10 | No | The server was stopped because SQL Server Audit '%.\*ls' is configured to shut down on failure. To troubleshoot this issue, use the -m flag (Single User Mode) to bypass Audit-generated shutdowns when the server is starting. |
-| 33220 | 16 | No | Audit actions at the server scope can only be granted when the current database is master. |
-| 33221 | 16 | No | You can only create audit actions on objects in the current database. |
-| 33222 | 10 | No | Audit '%.\*ls' failed to %S_MSG . For more information, see the SQL Server error log. You can also query sys.dm_os_ring_buffers where ring_buffer_type = 'RING_BUFFER_XE_LOG'. |
-| 33223 | 16 | No | ALTER SERVER AUDIT requires the STATE option to be specified without using any other options. |
-| 33224 | 16 | No | The specified pattern did not return any files or does not represent a valid file share. Verify the pattern parameter and rerun the command. |
-| 33225 | 16 | No | The specified values for initial_file_name and audit_record_offset do not represent a valid location within the audit file set. Verify the file name and offset location, and then rerun the command. |
-| 33226 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls' at offset %I64d. |
-| 33227 | 16 | No | The specified value for QUEUE_DELAY is not valid. Specify either 0 or 1000 and higher. |
-| 33228 | 16 | No | You cannot configure SQL Server Audit to shutdown the server because you do not have the permission to shut down the server. Contact your system administrator. |
-| 33229 | 16 | No | Changes to an audit specification must be done while the audit specification is disabled. |
-| 33230 | 16 | No | An audit specification for audit '%.\*ls' already exists. |
-| 33231 | 16 | No | You can only specify securable classes DATABASE, SCHEMA, or OBJECT in AUDIT SPECIFICATION statements. |
-| 33232 | 16 | No | You may not add a role to Sysadmin. |
-| 33233 | 16 | No | You can only create a user with a password in a contained database. |
-| 33234 | 16 | No | The parameter %s cannot be provided for users that cannot authenticate in a database. |
-| 33235 | 16 | No | The parameter %s cannot be provided for users that cannot authenticate in a database. Remove the WITHOUT LOGIN or PASSWORD clause. |
-| 33236 | 16 | No | The default language parameter can only be provided for users in a contained database. |
-| 33237 | 16 | No | Cannot use parameter %s for Windows users or groups. |
-| 33238 | 16 | No | MAX_FILES and MAX_ROLLOVER_FILES options cannot be specified together. |
-| 33239 | 16 | No | An error occurred while auditing this operation. Fix the error in the audit and then retry this operation. |
-| 33240 | 16 | No | A failure occurred during initializing of an Audit. See the errorlog for details. |
-| 33241 | 16 | Yes | Failed to configure user instance on startup. Error updating the idle timeout. |
-| 33242 | 16 | No | When providing a sid, the user must be a user without login or a user with password. |
-| 33243 | 16 | Yes | Failed to generate a user instance of SQL Server due to a failure in setting access control list on the user instance's process. The connection will be closed.%.\*ls |
-| 33244 | 17 | No | SQL Server Audit failed to create an audit file related to the audit '%s' in the directory '%s'. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
-| 33245 | 17 | No | SQL Server Audit failed to write to an audit file related to the audit '%s' in the directory '%s'. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
-| 33246 | 17 | No | SQL Server Audit failed to access the MDS file log. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
-| 33247 | 17 | No | SQL Server Audit could not write to the MDS local file (Error Code: %d). |
-| 33248 | 16 | No | The specified value for QUEUE_DELAY is not valid for MDS log target. Specify value higher than 0. |
-| 33249 | 16 | No | Cannot drop the credential '%.\*ls' because it is being used. |
-| 33250 | 16 | No | Failed to allocate memory for caching credential '%.\*ls' which is used by a database file. |
-| 33251 | 16 | No | A credential conflicting with '%.\*ls' already exists in credential cache in memory. Use alter step to change the secret. Drop and re-create to change the credential name. |
-| 33252 | 16 | No | This CREATE AUDIT request exceeds the maximum number of audits that can be created per database. |
-| 33253 | 16 | No | Failed to modify the identity field of the credential '%.\*ls' because the credential is used by an active database file. |
-| 33254 | 16 | No | This operation cannot be performed in the master database. |
-| 33255 | 16 | No | Audit specification '%.\*ls' can only be bound to a %S_MSG audit. |
-| 33256 | 16 | No | The audit store location or the audit store URL has been configured for this database audit. |
-| 33257 | 16 | No | Cannot drop an audit store URL that is not configured for this database audit. |
-| 33258 | 16 | No | Invalid value for procedure "%.\*ls", parameter "%.\*ls". |
-| 33259 | 15 | No | Invalid security policy name '%.\*ls'. |
-| 33260 | 16 | No | The predicate was not added to the security policy '%.\*ls' because there are no available predicate IDs. Drop and recreate the security policy. |
-| 33261 | 16 | No | The security policy '%.\*ls' does not contain a predicate on table '%.\*ls'. |
-| 33262 | 16 | No | A %S_MSG predicate for the same operation has already been defined on table '%.\*ls' in the security policy '%.\*ls'. |
-| 33263 | 16 | No | Security predicates can only be added to user tables and schema bound views. '%.\*ls' is not a user table or a schema bound view. |
-| 33264 | 16 | No | The security policy '%.\*ls' cannot be enabled with a predicate on table '%.\*ls'. Table '%.\*ls' is already referenced by the enabled security policy '%.\*ls'. |
-| 33265 | 16 | No | The security policy '%.\*ls' cannot have a predicate on table '%.\*ls' because this table is referenced by the indexed view '%.\*ls'. |
-| 33266 | 16 | No | The index on the view '%.\*ls' cannot be created because the view is referencing table '%.\*ls' that is referenced by a security policy. |
-| 33267 | 16 | No | Security predicates cannot reference memory optimized tables. Table '%.\*ls' is memory optimized. |
-| 33268 | 16 | No | Cannot find the object "%.\*ls" because it does not exist or you do not have permissions. |
-| 33269 | 16 | No | Security predicates are not allowed on temporary objects. Object names that begin with '#' denote temporary objects. |
-| 33270 | 16 | No | Cannot find the object "%.\*ls" or this object is not an inline table-valued function. |
-| 33271 | 16 | No | Cannot alter '%.\*ls' because it is not a security policy. |
-| 33272 | 16 | No | Unable to load the security predicate for table "%.\*ls". |
-| 33273 | 16 | No | Security predicates cannot be added on FileTables. '%.\*ls' is a FileTable. |
-| 33274 | 16 | No | The version was not created for the key '%.\*ls' because there are no available version IDs. Drop and recreate the key. |
-| 33275 | 16 | No | The encrypted value for this column encryption key cannot be dropped. Each column encryption key must have at least one encrypted value. |
-| 33277 | 16 | No | Encryption scheme mismatch for columns/variables %.\*ls. The encryption scheme for the columns/variables is %ls and the expression near line '%d' expects it to be %ls. |
-| 33278 | 16 | No | Cannot assign the same encryption scheme to two expressions at line '%d'. The encryption scheme of the first expression is %ls and the encryption scheme of the second expression is %ls. Other columns/variables with the same encryption scheme as the first expression are: %.\*ls. Other columns/variables with the same encryption scheme as the second expression are: %.\*ls. |
-| 33279 | 16 | No | Cannot remove the credential '%.\*ls/%.\*ls' because it is being used. |
-| 33280 | 16 | No | Cannot create or alter encrypted column '%.\*ls' because data type '%ls' is not supported for encryption. |
-| 33281 | 16 | No | Column '%.\*ls.%.\*ls' has a different encryption scheme than referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. |
-| 33282 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted using a randomized encryption type and is therefore not valid for use as a key column in a constraint, index, or statistics. |
-| 33283 | 16 | No | '%S_MSG' clause is unsupported for encrypted columns. |
-| 33284 | 16 | No | The encrypted column '%.\*ls.%.\*ls' cannot be used as a partition key column. |
-| 33285 | 16 | No | Cannot set default constraint on encrypted column '%.\*ls.%.\*ls'. Default constraints are unsupported on encrypted columns. |
-| 33286 | 16 | No | Cannot encrypt column '%.\*ls', because it is of a user-defined type. |
-| 33287 | 16 | No | Cannot drop column encryption key '%.\*ls' because the key is referenced by column '%.\*ls.%.\*ls'. |
-| 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an existing encrypted value before adding the new one. |
-| 33289 | 16 | No | Cannot create or alter encrypted column '%.\*ls'. Character strings that do not use a \*_BIN2 collation cannot be encrypted using deterministic encryption. |
-| 33290 | 16 | No | There is no column encryption key value associated with the column master key '%.\*ls'. |
-| 33291 | 16 | No | There is already a column encryption key value associated with the column master key '%.\*ls'. |
-| 33292 | 16 | No | The encryption algorithm '%.\*ls' is not supported. Please specify a valid encryption algorithm. |
-| 33293 | 16 | No | Cannot find the %S_MSG "%.\*ls" because it does not exist or you do not have permissions. |
-| 33294 | 16 | No | Some parameters or columns of the batch require to be encrypted, but the corresponding column encryption key cannot be found. Use sp_refresh_parameter_encryption to refresh the module parameters metadata. |
-| 33296 | 16 | No | Cannot create table '%.\*ls' since it references a column encryption key from a different database. |
-| 33297 | 16 | No | Cannot create %S_MSG. The %S_MSG cannot be empty. |
-| 33298 | 16 | Yes | The encryption scheme for one or more unused parameters could not be analyzed because the parameters were removed during query optimization. Remove unused parameters from the query and try again. |
-| 33299 | 16 | No | Encryption scheme mismatch for columns/variables %.\*ls. The encryption scheme for the columns/variables is %ls and the expression near line '%d' expects it to be %ls (or weaker). |
-| 33301 | 16 | No | The %ls that is specified for conversation priority '%.\*ls' is not valid. The value must be between 1 and %d characters long. |
-| 33302 | 16 | No | The %ls that is specified for conversation priority '%.\*ls' is not valid. The value must be between 1 and 10. |
-| 33303 | 16 | No | A conversation priority already exists in the database with either the name '%.\*ls' or the properties %ls='%ls', %ls='%ls', and %ls='%.\*ls'. Either use a unique name or a unique set of properties. |
-| 33304 | 16 | No | The transmission queue row with conversation handle '%ls' and message sequence number %d references a missing multicast message body row with reference %d. |
-| 33305 | 16 | No | The multicast message body row with reference %d should have reference count value of %d. |
-| 33306 | 16 | No | The unreferenced message with reference %d has been deleted from the message body table. |
-| 33307 | 16 | No | The message with reference %d has been updated to a reference count of %d in the message body table. |
-| 33308 | 10 | No | The queue %d in database %d has activation enabled and contains unlocked messages but no RECEIVE has been executed for %u seconds. |
-| 33309 | 10 | No | Cannot start cluster endpoint because the default %S_MSG endpoint configuration has not been loaded yet. |
-| 33310 | 16 | No | Local cluster name can be set only once. |
-| 33311 | 10 | No | The wait for connect request completion failed. |
-| 33312 | 10 | No | The wait for querying proxy routes failed or was aborted. |
-| 33313 | 16 | No | An out of memory condition has occurred in the Service Broker transport layer. A service broker connection is closed due to this condition. |
-| 33314 | 16 | No | The supplied whitelist is invalid. |
-| 33315 | 16 | No | The redirected endpointurl is Invalid |
-| 33316 | 16 | No | Failed to reset encryption while performing redirection. |
-| 33317 | 16 | No | The redirect response contains invalid redirect string |
-| 33318 | 16 | No | The redirect request contains invalid string or redirect handler failed to handle the request |
-| 33319 | 16 | No | The redirector returned lookup failure |
-| 33320 | 16 | No | Tried to send redirect request but the redirect string is empty |
-| 33321 | 16 | No | The other end does not support redirection |
-| 33322 | 16 | No | The redirect message is corrupted |
-| 33323 | 16 | No | The endpoint is closing because the connection was redirected |
-| 33324 | 16 | No | Failed to parse the redirect info string |
-| 33325 | 16 | No | Failed to construct new endpoint after redirection |
-| 33326 | 16 | No | Forwarder disconnected during redirection |
-| 33327 | 16 | No | Failed to parse the specified connection string |
-| 33328 | 16 | No | Redirector lookup failed with error code: %x |
-| 33329 | 16 | No | XdbHost encountered error code: %x during socket duplication |
-| 33330 | 16 | No | XdbHost returned an error during socket duplication |
-| 33331 | 16 | No | DBCC CLEANUPCONVERSATIONS is not allowed on this server. |
-| 33332 | 16 | No | DBCC CLEANUPCONVERSATIONS cannot be executed through MARS connection. |
-| 33333 | 10 | No | The connection had a send posted for over %d seconds. The connection is suspected hung and is being closed. |
-| 33334 | 10 | No | Error while setting up ssl channel. Error code: (%d, %d, %d) |
-| 33335 | 10 | No | The connection has been flow controlled in the %d seconds (%d times, where threshold is %d). Min required transfer rate is %d Kbps. Actual transfer rate is %d Kbps. The connection is extensively flow controlled and is being closed. |
-| 33336 | 10 | No | The connection has been flow controlled in the last %d seconds for a period of %d seconds. The connection is extensively flow controlled and is being closed. |
-| 33337 | 10 | No | SQL MI SSB Dialog Timer delete action occurred during dispatch or registration. |
-| 33338 | 10 | No | UCS transport default sending capacity is overridden with the value of %d. Override source: %.\*ls. This is an informational message only. No user action is required. |
-| 33339 | 16 | No | The message type may not be NULL. A variable containing a valid message type name is allowed. |
-| 33401 | 16 | No | FILESTREAM database options cannot be set on system databases such as '%.\*ls'. |
-| 33402 | 16 | No | An invalid directory name '%.\*ls' was specified. Use a valid operating system directory name. |
-| 33403 | 16 | No | The case-sensitive or binary collation '%.\*ls' cannot be used with the COLLATE_FILENAME option. Change the collation to a case-insensitive collation type. |
-| 33404 | 16 | No | The database default collation '%.\*ls' is case sensitive and cannot be used to create a FileTable. Specify a case insensitive collation with the COLLATE_FILENAME option. |
-| 33405 | 16 | No | An error occurred during the %S_MSG %S_MSG operation on a FileTable object. (HRESULT = '0x%08x'). |
-| 33406 | 16 | No | An invalid filename, '%.\*ls', caused a FileTable check constraint error. Use a valid operating system filename. |
-| 33407 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator cannot indicate a root row. Correct the path locator or use the default value. |
-| 33408 | 16 | No | The operation caused a FileTable check constraint error. A directory entry cannot have a data stream associated with the row. Remove the blob data or clear the is_directory flag. |
-| 33409 | 16 | No | The operation caused a FileTable check constraint error. A file entry cannot have a NULL value for the data stream associated with the row. Insert file data or use 0x to insert a zero length file. |
-| 33410 | 16 | No | An invalid path locator caused a FileTable check constraint error. The parent of a row's path locator must be a directory, not a file. Correct the path locator to refer to a parent that is a directory. |
-| 33411 | 16 | No | The option '%.\*ls' is only valid when used on a FileTable. Remove the option from the statement. |
-| 33412 | 16 | No | The option '%.\*ls' is not valid when used with the '%.\*ls' syntax. Remove the option from the statement. |
-| 33413 | 16 | No | The option '%.\*ls' can only be specified once in a statement. Remove the duplicate option from the statement. |
-| 33414 | 16 | No | FileTable objects require the FILESTREAM database option DIRECTORY_NAME to be non-NULL. To create a FileTable in the database '%.\*ls', set the DIRECTORY_NAME option to a non-NULL value using ALTER DATABASE. Or, to set the DIRECTORY_NAME option to NULL, in the database '%.\*ls' disable or drop the existing FileTables. |
-| 33415 | 16 | No | FILESTREAM DIRECTORY_NAME '%.\*s' attempting to be set on database '%.\*s' is not unique in this SQL Server instance. Provide a unique value for the database option FILESTREAM DIRECTORY_NAME to enable non-transacted access. |
-| 33416 | 10 | No | When the FILESTREAM database option NON_TRANSACTED_ACCESS is set to FULL and the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION options are on, T-SQL and transactional read access to FILESTREAM data in the context of a FILETABLE is blocked. |
-| 33417 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator has a level of %d, which is deeper than the limit of %d supported by FileTable. Reduce the depth of the directory hierarchy. |
-| 33418 | 16 | No | FILETABLE_DIRECTORY '%.\*s' attempting to be set on table '%.\*s' is not unique in the database '%.\*s'. Provide a unique value for the option FILETABLE_DIRECTORY to this operation. |
-| 33419 | 16 | No | Function %ls is only valid on the varbinary(max) FILESTREAM column in a FileTable. |
-| 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifier. |
-| 33421 | 16 | No | The object name '%.\*s' is not a valid FileTable object. |
-| 33422 | 16 | No | The column '%.\*s' cannot be added to table '%.\*s' as it is a FileTable. Adding columns to the fixed schema of a FileTable object is not permitted. |
-| 33423 | 16 | No | Invalid FileTable path name or format. |
-| 33424 | 16 | No | Invalid computer host name in the FileTable path. |
-| 33425 | 16 | No | Invalid share name in the FileTable path. |
-| 33426 | 16 | No | INSERT, UPDATE, DELETE, or MERGE to FileTable '%.\*ls' is not allowed inside a trigger on a FileTable. |
-| 33427 | 16 | No | Function %ls is not allowed on the deleted table inside a trigger. |
-| 33428 | 14 | No | User does not have permission to kill non-transacted FILESTREAM handles in database ID %d. |
-| 33429 | 16 | No | The non-transacted FILESTREAM handle %d does not exist. |
-| 33430 | 10 | No | Killed %d non-transactional FILESTREAM handles from database ID %d. |
-| 33431 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator has a length of %d, which is longer than the limit of %d allowed for depth %d. Reduce the length of the path locator. |
-| 33433 | 10 | No | Unable to perform the Filetable lost update recovery for database id %d. |
-| 33434 | 16 | No | The current state of the database '%.\*s' is not compatible with the specified FILESTREAM non-transacted access level. The database may be read only, single user or set to emergency state. |
-| 33435 | 16 | No | Cannot publish the FileTable '%ls' for replication. Replication is not supported for FileTable objects. |
-| 33436 | 16 | No | Cannot enable Change Data Capture on the FileTable '%ls'. Change Data Capture is not supported for FileTable objects. |
-| 33437 | 16 | No | Cannot publish the logbased view '%ls' for replication. Replication is not supported for logbased views that depend on FileTable objects. |
-| 33438 | 16 | No | Cannot enable Change Tracking on the FileTable '%.\*ls'. Change Tracking is not supported for FileTable objects. |
-| 33439 | 16 | No | Cannot use IGNORE_CONSTRAINTS hint when inserting into FileTable '%.\*ls', unless FILETABLE_NAMESPACE is disabled. |
-| 33440 | 16 | No | When inserting into FileTable '%.\*ls' using BCP or BULK INSERT, either CHECK_CONSTRAINTS option needs to be on, or FILETABLE_NAMESPACE needs to be disabled on the table. |
-| 33441 | 16 | No | The FileTable '%.\*s' cannot be partitioned. Partitioning is not supported on FileTable objects. |
-| 33442 | 16 | No | The handle ID %d is opened against the server root share and cannot be killed. The lifetime of the handle is controlled by the client who originally opened it. |
-| 33443 | 16 | No | The database '%.\*s' cannot be enabled for both FILESTREAM non-transacted access and Database Mirroring. |
-| 33444 | 16 | No | The database '%.\*s' cannot be enabled for both FILESTREAM non-transacted access and HADR. |
-| 33445 | 16 | No | The database '%.\*s' is a readable secondary database in an availability group and cannot be enabled for FILESTREAM non-transacted access. |
-| 33446 | 16 | No | The FILESTREAM database configuration cannot be changed for database '%.\*s'. The database is either a mirror database in Database Mirroring, or is in a secondary replica of an Always On availability group. Connect to the server instance that hosts the primary database replica, and retry the operation. |
-| 33447 | 16 | No | Cannot access file_stream column in FileTable '%.\*ls', because FileTable doesn't support row versioning. Either set transaction level to something other than READ COMMITTED SNAPSHOT or SNAPSHOT, or use READCOMMITTEDLOCK table hint. |
-| 33448 | 16 | No | Cannot disable clustered index '%.\*ls' on FileTable '%.\*ls' because the FILETABLE_NAMESPACE is enabled. |
-| 33449 | 10 | No | FILESTREAM File I/O access is enabled, but no listener for the availability group is created. A FILESTREAM PathName will be unable to refer to a virtual network name (VNN) and, instead, will need to refer to a physical Windows Server Failover Clustering (WSFC) node. This might limit the usability of FILESTREAM File I/0 access after an availability group failover. Therefore, we recommend that you create a listener for each availability group. For information about how to create an availability group listener, see SQL Server Books Online. |
-| 33450 | 10 | No | FILESTREAM File I/O access is enabled. One or more availability groups ('%ls') currently do not have a listener. A FILESTREAM PathName will be unable to refer to a virtual network name (VNN) and, instead, will need to refer to a physical Windows Server Failover Clustering (WSFC) node. This might limit the usability of FILESTREAM File I/0 access after an availability group failover. Therefore, we recommend that you create a listener for each availability group. For information about how to create an availability group listener, see SQL Server Books Online. |
-| 33451 | 16 | No | Cannot enable Change Feed on the FileTable '%ls'. Change Feed is not supported for FileTable objects. |
-| 33501 | 16 | No | Security predicates cannot be added on tables that contain filestream data. Column '%.\*ls' on table '%.\*ls' contains filestream data. |
-| 33502 | 16 | No | The column '%.\*ls' could not be added to table '%.\*ls' because the column contains filestream data and the table is referenced by one or more security policies. Filestream columns are not allowed on tables that are referenced by security policies. |
-| 33503 | 16 | No | BLOCK predicates can only be added to user tables. '%.\*ls' is not a user table. |
-| 33504 | 16 | No | The attempted operation failed because the target object '%.\*ls' has a block predicate that conflicts with this operation. If the operation is performed on a view, the block predicate might be enforced on the underlying table. Modify the operation to target only the rows that are allowed by the block predicate. |
-| 33505 | 16 | No | Partitioned view '%.\*ls' is not updatable because table '%.\*ls' has an enabled security policy that defines block predicates for this table. |
-| 33506 | 16 | No | Only natively compiled inline table-valued functions can be used for security predicates on memory optimized tables. Table '%.\*ls' is memory optimized, but function '%.\*ls' is not natively compiled. Recreate the function using WITH NATIVE_COMPILATION. |
-| 33507 | 16 | No | Function '%ls' cannot be used in the definition of BLOCK security predicates. Modify the BLOCK security predicates for this table or view to not use this function. |
-| 33508 | 16 | No | Column '%.\*ls' cannot be passed as a parameter for a BLOCK security predicate because the column definition contains an expression using a window function. Modify the BLOCK security predicates for this view to not use this column. |
-| 33509 | 16 | No | Column '%.\*ls' cannot be passed as a parameter for an AFTER UPDATE or AFTER INSERT BLOCK security predicate for this view because it refers to a base table that is not being modified in this statement. Modify the AFTER INSERT and AFTER UPDATE BLOCK security predicates for this view to not use this column. |
-| 33510 | 16 | No | BLOCK security predicates cannot reference history tables. Table '%.\*ls' is a temporal or ledger history table. |
-| 33511 | 16 | No | Table '%.\*ls' is memory optimized. Only security policies with schema binding enabled may specify security predicates for memory optimized tables. Create a new security policy with schema binding enabled. |
-| 33512 | 16 | No | Binding for the non-schema bound security predicate on object '%.\*ls' failed with one or more errors, indicating the schema of the predicate function has changed. Update or drop the affected security predicates. |
-| 33513 | 16 | No | Binding for the non-schema bound security predicate on object '%.\*ls' failed, because the predicate function is not an inline table-valued function. Only inline table-valued functions can be used for security predicates. |
-| 33514 | 16 | No | Incorrect encryption metadata was received from the client. The error occurred during the invocation of the batch and therefore the client can refresh the encryption metadata by calling sp_describe_parameter_encryption and retry. |
-| 33515 | 16 | No | The parameter "%.\*ls" does not have the same encryption information as the one it was created with. Use sp_refresh_parameter_encryption to refresh the parameter encryption information for the module. |
-| 33516 | 16 | No | The object '%.\*ls' is referenced by the security policy '%.\*ls'. The currently installed edition of SQL Server does not support security policies. Either drop the security policy or upgrade the instance of SQL Server to a version that supports security policies. |
-| 33517 | 16 | No | The column '%.\*ls' of the object '%.\*ls' is encrypted. The currently installed edition of SQL Server does not support encrypted columns. Either remove the encryption from the column or upgrade the instance of SQL Server to a version that supports encrypted columns. |
-| 33518 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, or %d. |
-| 33519 | 16 | No | An external data source conflicting with '%.\*ls' already exists in EDS cache in memory. Use alter step to change the location or credential. Drop and re-create to change the EDS name. |
-| 33520 | 16 | No | Failed to allocate memory for caching external data source '%.\*ls' which is used by a database file. |
-| 33521 | 16 | No | Cannot drop the external data source '%.\*ls' because it is being used. |
-| 33522 | 16 | No | Cannot remove the external data source '%.\*ls' because it is being used. |
-| 33523 | 16 | No | Cryptographic failure due to insufficient memory. |
-| 33524 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to database '%.\*ls' to access its audit logs. |
-| 33525 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to server '%.\*ls' to access its audit logs. |
-| 33526 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls', as it does not conform to the auditing blob naming convention. |
-| 33527 | 16 | No | Error occurred while initializing the security functions lookup table. This might be because the installation of SQL Server is corrupted and a required file is missing. |
-| 33528 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, %d, or %d. |
-| 33529 | 16 | No | The audit filter predicate exceeds the maximum allowed length of %d characters. |
-| 33530 | 16 | No | The combined length of audit name and blob storage container name exceeds the maximum allowed length (by %d character(s)). Please use shorter audit or container name. |
-| 33531 | 16 | No | The specified value for QUEUE_DELAY is not valid with asynchronous log target. Specify value higher than 0. |
-| 33532 | 16 | No | Invalid value given for parameter PATH. Please specify a valid blob container path with the following format : https://\<storageName\>.blob.core.windows.net/\<containerName\> |
-| 33533 | 16 | No | SHUTDOWN on failure option is not supported in this version of SQL Server. |
-| 33534 | 16 | Yes | Internal enclave error. Enclave loading failed: invalid path. For more information, contact Customer Support Services. |
-| 33535 | 16 | Yes | Internal enclave error: Enclave call failed for method '%s'. For more information, contact Customer Support Services. |
-| 33536 | 16 | No | VBS enclave attestation failed. Attestation status: '%ls', substatus: '%ls'. For more information, see '[https://go.microsoft.com/fwlink/?linkid=2099553](https://go.microsoft.com/fwlink/?linkid=2099553)'. |
-| 33537 | 16 | Yes | Internal enclave error. Enclave attestation error: enclave platform returned unexpected output. For more information, contact Customer Support Services. |
-| 33538 | 16 | No | The credentials of blob storage container '%.\*ls' are invalid. |
-| 33539 | 16 | No | The blob storage '%.\*ls' was not found. Verify your storage account name. |
-| 33540 | 16 | No | Invalid audit or database names, please use valid URL characters. |
-| 33541 | 16 | No | The credentials of blob storage container '%.\*ls' was not found. |
-| 33542 | 16 | No | Unsupported operation near line '%d'; operations on encrypted columns with string data types require a \*_BIN2 or a \*_UTF8 collation. However, the column or the variable uses the '%.\*ls' collation. |
-| 33543 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to encrypt, decrypt or re-encrypt the column in-place using a secure enclave, but the current and/or the target column encryption key for the column is not enclave-enabled. |
-| 33544 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to change the encryption scheme of the column and one or more of the following column properties: collation (to a different code page), data type. Such changes cannot be combined in a single statement. Try using multiple statements. |
-| 33545 | 16 | No | The statement requires a secure enclave, but the enclave is not available for the target database - see [https://go.microsoft.com/fwlink/?linkid=2005337](https://go.microsoft.com/fwlink/?linkid=2005337) for more details. |
-| 33546 | 16 | No | The statement triggers enclave computations, but a column encryption key, needed for the computations, has not been found inside the enclave. Check that: (1) column encryption and enclave computations are enabled on connection, (2) driver is enclave-enabled. For additional reasons see: [https://go.microsoft.com/fwlink/?linkid=2086681](https://go.microsoft.com/fwlink/?linkid=2086681). |
-| 33547 | 16 | No | Enclave comparator cache failed to initialize during enclave load. |
-| 33548 | 16 | Yes | Internal enclave error: Enclave out of memory. For more information, contact Customer Support Services. |
-| 33549 | 16 | Yes | Internal enclave error: OSF Serialization error. For more information, contact Customer Support Services. |
-| 33550 | 16 | Yes | Internal enclave error: Invalid data format. For more information, contact Customer Support Services. |
-| 33551 | 16 | Yes | Internal enclave error: Nonce checking in secure channel failed. For more information, contact Customer Support Services. |
-| 33552 | 16 | Yes | Internal enclave error. Enclave shutdown due to a critical error. For more information, contact Customer Support Services. |
-| 33553 | 16 | No | A failure occurred during initialization of an Audit to External Monitor target. See the errorlog for details. |
-| 33554 | 16 | Yes | Encountered error 0x%08lx while waiting for encryption scan completion consensus. See the errorlog for details. |
-| 33555 | 16 | Yes | Unable to find the user-specified certificate \[Cert Hash(sha1) "%hs"\] in the certificate store of the local computer. Please verify that certificate exists. |
-| 33556 | 16 | Yes | Invalid character in the thumbprint \[Cert Hash(sha1) "%hs"\]. Please provide a certificate with a valid thumbprint. |
-| 33557 | 16 | Yes | Invalid thumbprint length \[Cert Hash(sha1) "%hs"\]. Please provide a certificate with a valid thumbprint. |
-| 33558 | 16 | No | Encryption scan can not be resumed because no encryption scan is in progress. |
-| 33559 | 16 | No | Specified workload group does not exist. Retry with a valid workload group. |
-| 33560 | 10 | No | TDE scan for database id \[%d\] was initiated on %S_DATE (UTC). The encryption scan will resume soon. |
-| 33561 | 16 | No | Encryption scan can not be suspended because no encryption scan is in progress. |
-| 33562 | 16 | No | TDE encryption scan state cannot be updated for database id \[%d\]. |
-| 33563 | 10 | No | TDE scan for database id \[%d\] was aborted on %S_DATE (UTC). The encryption scan will resume soon. |
-| 33564 | 10 | No | TDE scan for database id \[%d\] was suspended on %S_DATE (UTC). To resume scan, run "ALTER DATABASE \[%.\*s\] SET ENCRYPTION RESUME". |
-| 33565 | 16 | Yes | Found the certificate \[Cert Hash(sha1) "%hs"\] in the %S_MSG store but the SQL Server service account does not have access to it. |
-| 33566 | 16 | Yes | Found the certificate \[Cert Hash(sha1) "%hs"\] in the %S_MSG store but it does not have a private key. Please verify and use a valid certificate. |
-| 33567 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted using a randomized encryption type and is therefore not valid for use as a key column in a clustered index, constraint, or statistics. |
-| 33568 | 16 | Yes | Internal enclave error: Structured exception within the enclave with status %d. For more information, contact Customer Support Services. |
-| 33569 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted with randomized encryption using a collation that is neither \*_BIN2 nor \*_UTF8, and is therefore not valid for use as a key column in an index. |
-| 33570 | 10 | No | Specified workload group does not exist. Switching to default workload group for TDE encryption scan. |
-| 33571 | 16 | No | Cannot create server audit with GUID '%s' in this version of SQL Server: Please specify another GUID value. |
-| 33572 | 16 | No | Encrypted index recovery: %ls %d |
-| 33573 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted using randomized encryption with a non enclave-enabled column encryption key and is therefore not valid for use as a key column in a constraint, index, or statistics. |
-| 33574 | 16 | No | Specifying a private key file or binary is not allowed when importing or exporting a certificate using the PFX format. |
-| 33575 | 16 | No | WITH PRIVATE KEY must be specified when importing or exporting a certificate using the PFX format. |
-| 33576 | 16 | No | Invalid certificate encoding FORMAT value provided. The supported values are 'DER' and 'PFX'. |
-| 33577 | 16 | No | The specified PFX file or the binary literal cannot be imported as it contains multiple certificates. |
-| 33578 | 16 | No | The specified file or the binary literal is not supported as it does not contain a private key. |
-| 33579 | 16 | No | Cannot drop a value for the column encryption key '%.\*ls'; dropping the value makes the key enclave disabled, and one or more objects that are schema-bound to column '%.\*ls' depend on it. |
-| 33580 | 16 | No | Operation supported by enclaves invoked on data encrypted with randomized encryption where the keys are not enclave-enabled. Please clear the proc cache. |
-| 33581 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to encrypt, decrypt or re-encrypt the column in-place using a secure enclave, but this is not supported for memory-optimized tables. |
-| 33582 | 16 | No | Cannot create the module. Executing the module requires keys in a secure enclave, but this is not supported for memory-optimized tables. |
-| 33583 | 16 | No | Could not find a Microsoft Entra ID principal mapping to Windows principal '%ls'. |
-| 33584 | 16 | No | Found multiple Microsoft Entra ID principals mapping to Windows principal '%ls'. |
-| 33585 | 16 | No | Windows principal '%ls' does not map to provided Microsoft Entra ID principal '%ls', please use a different Microsoft Entra ID principal. |
-| 33586 | 10 | No | Warning: Index or statistic '%.\*ls.%.\*ls' has an enclave-enabled key column, however Accelerated Database Recovery is not enabled for database '%.\*ls'. Enabling Accelerated Database Recovery is strongly recommended to increase database availability during recovery. |
-| 33587 | 16 | No | Security predicates cannot be added to external table '%.\*ls' because it does not contain a credential. |
-| 33588 | 16 | No | Invalid encryption algorithm. Always Encrypted with secure enclaves requires data to be encrypted with the AEAD_AES_256_CBC_HMAC_SHA_256 algorithm. |
-| 33589 | 17 | No | Internal enclave error. Enclave was provided with an invalid expression handle. For more information, contact Customer Support Services. |
-| 33590 | 10 | No | Database encryption scan for database '%.\*ls' was suspended. Reissue ALTER DB to resume the scan. |
-| 33591 | 16 | No | ALGORITHM has an invalid value. The allowed values are '%ls', '%ls'. |
-| 33592 | 16 | No | The underlying operating system does not support encrypting private keys using '%ls'. Consider using '%ls'. |
-| 33593 | 16 | No | Specifying ALGORITHM is not allowed when exporting a certificate using the DER format. |
-| 33594 | 16 | No | ALGORITHM must be specified when exporting a certificate using the PFX format. The supported algorithms are '%ls', '%ls'. |
-| 33595 | 16 | No | The session context key '%s' is too long. Maximum allowed length of session context key is %d characters. |
-| 33596 | 16 | No | Maximum number of session context keys used for audit specification has been exceeded. The maximum allowed number of keys is %d. |
-| 33597 | 16 | No | Operator Audit option is not supported for this target type, use EXTERNAL_MONITOR target. |
-| 33598 | 16 | No | The private key password is invalid, or the file was encrypted with an algorithm not supported by the underlying operating system. |
-| 33599 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, ... or %d. |
-| 33801 | 16 | No | Cannot bulk load file split because either secret or file_properties option is missing. |
-| 34001 | 16 | No | Dialog with queue 'syspolicy_event_queue' has encountered an error: %s. |
-| 34002 | 16 | No | Dialog with queue 'syspolicy_event_queue' has ended. |
-| 34003 | 16 | No | Error number %d was encountered while processing an event. The error message is: %s. |
-| 34004 | 16 | No | Execution mode %d is not a valid execution mode. |
-| 34010 | 16 | No | %s '%s' already exists in the database. |
-| 34011 | 16 | No | Specified value for property %s cannot be used with execution mode %d. |
-| 34012 | 16 | No | Cannot delete %s referenced by a %s. |
-| 34013 | 16 | No | %s '%s' is referenced by a '%s'. Cannot add another reference. |
-| 34014 | 16 | No | Facet does not exist. |
-| 34015 | 16 | No | Policy group %s does not exist. |
-| 34016 | 16 | No | Invalid target filer: %s. Only filters that restrict the first level below the Server node are allowed. |
-| 34017 | 16 | No | Automated policies cannot reference conditions that contain script. |
-| 34018 | 16 | No | Target type "%s" is not a valid target type. |
-| 34019 | 16 | No | Object "%s" is invalid. |
-| 34020 | 16 | No | Configuration option "%s" is unknown. |
-| 34021 | 16 | No | Invalid value type for configuration option "%s". Expecting "%s". |
-| 34022 | 16 | No | Policy automation is turned off. |
-| 34050 | 16 | No | %ls |
-| 34051 | 16 | No | %ls |
-| 34052 | 16 | No | %ls |
-| 34053 | 16 | No | %ls |
-| 34054 | 16 | No | Policy Management cannot be enabled on this edition of SQL Server. |
-| 34101 | 20 | Yes | An error was encountered during object serialization operation. Examine the state to find out more details about this error. |
-| 34102 | 16 | Yes | An object in serialized stream has version %u but maximum supported version of this class is %u. |
-| 34103 | 16 | Yes | Error in formatter during serialize/deserialize. Required to process %d elements but processed only %d elements. |
-| 34104 | 16 | No | An error was encountered during object serialization operation. The object that failed serialization is %hs. |
-| 35001 | 16 | No | Parent Server Group does not exist. |
-| 35002 | 16 | No | Server type and parent Server Group type are not the same |
-| 35003 | 16 | No | Cannot move node to one of its children |
-| 35004 | 16 | No | Could not find server group |
-| 35005 | 16 | No | An invalid value NULL was passed in for @server_group_id. |
-| 35006 | 16 | No | An invalid value NULL was passed in for @server_id. |
-| 35007 | 16 | No | Could not find shared registered server. |
-| 35008 | 16 | No | Cannot delete system shared server groups. |
-| 35009 | 16 | No | An invalid value NULL was passed in for @server_type. |
-| 35010 | 16 | No | An invalid value %d was passed in for parameter @server_type. |
-| 35011 | 16 | No | The @server_name parameter cannot be a relative name. |
-| 35012 | 16 | No | You cannot add a shared registered server with the same name as the Configuration Server. |
-| 35100 | 16 | No | Error number %d in the THROW statement is outside the valid range. Specify an error number in the valid range of 50000 to 2147483647. |
-| 35101 | 16 | No | One of the SET options FMTONLY or NOEXEC was changes from ON to OFF in a TRY...CATCH block. |
-| 35102 | 16 | No | Error related to '%ls' where one of participants is Azure SQL Managed Instance. |
-| 35103 | 16 | No | '%ls' feature where one of participants is Azure SQL Managed Instance is disabled. |
-| 35104 | 16 | No | Deprecated feature '%ls' with Azure SQL Managed Instance as a participant is not supported in this version of SQL Server. |
-| 35200 | 16 | No | Failed to add database '%.\*ls' to availability group '%.\*ls'. The specified availability group is created with basic functionality and supports %d database. |
-| 35201 | 10 | No | A connection timeout has occurred while attempting to establish a connection to availability replica '%ls' with id \[%ls\]. Either a networking or firewall issue exists, or the endpoint address provided for the replica is not the database mirroring endpoint of the host server instance. |
-| 35202 | 10 | No | A connection for availability group '%ls' from availability replica '%ls' with id \[%ls\] to '%ls' with id \[%ls\] has been successfully established. This is an informational message only. No user action is required. |
-| 35203 | 16 | No | Unable to establish a connection between instance '%ls' with id \[%ls\] and '%ls' with id \[%ls\] due to a transport version mismatch. |
-| 35204 | 10 | No | The connection between server instances '%ls' with id \[%ls\] and '%ls' with id \[%ls\] has been disabled because the database mirroring endpoint was either disabled or stopped. Restart the endpoint by using the ALTER ENDPOINT Transact-SQL statement with STATE = STARTED. |
-| 35205 | 16 | No | Could not start the Always On Availability Groups transport manager. This failure probably occurred because a low memory condition existed when the message dispatcher started up. If so, other internal tasks might also have experienced errors. Check the SQL Server error log and the Windows error log for additional error messages. If a low memory condition exists, investigate and correct its cause. |
-| 35206 | 10 | No | A connection timeout has occurred on a previously established connection to availability replica '%ls' with id \[%ls\]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role. |
-| 35207 | 16 | No | Connection attempt on availability group id '%ls' from replica id '%ls' to replica id '%ls' failed because of error %d, severity %d, state %d. |
-| 35208 | 16 | No | Availability group DDL operations are permitted only when you are using the master database. Run the 'USE master' statement, and retry your availability group DDL statement. |
-| 35209 | 16 | No | The %ls operation failed for availability replica '%.\*ls', because the backup priority value is outside the valid range. The valid range is between %d and %d, inclusive. Set the backup priority to a value within this range, and retry the operation. |
-| 35210 | 16 | No | Failed to modify options for availability replica '%.\*ls' in availability group '%.\*ls'. The specified availability group does not contain an availability replica with specified name. Verify that availability group name and availability replica name are correct, then retry the operation. |
-| 35211 | 16 | No | The %ls operation is not allowed. The operation attempted to change the configuration of availability replica '%.\*ls' to the asynchronous-commit availability mode with automatic failover, which is an invalid configuration. Either change the failover mode to manual or the availability mode to synchronous commit, and retry the operation. |
-| 35212 | 16 | No | The %ls operation is not allowed by the current availability group configuration. This operation would exceed the maximum number of %d synchronous-commit availability replicas in availability group '%.\*ls'. Change one of the existing synchronous-commit replicas to the asynchronous-commit availability mode, and retry the operation. |
-| 35213 | 16 | No | The %ls operation is not allowed by the current availability group configuration. This operation would exceed the maximum number of %d automatic failover targets in availability group '%.\*ls'. Change one of the existing synchronous-commit replicas to the manual failover mode, and retry the operation. |
-| 35214 | 16 | No | The %ls operation failed for availability replica '%.\*ls'. The minimum value for session timeout is %d. Retry the operation specifying a valid session-timeout value. |
-| 35215 | 16 | No | The %ls operation is not allowed on availability replica '%.\*ls', because automatic failover mode is an invalid configuration on a SQL Server Failover Cluster Instance. Retry the operation by specifying manual failover mode. |
-| 35216 | 16 | No | An error occurred while adding or removing a log truncation holdup to build secondary replica from primary availability database '%.\*ls'. Primary database is temporarily offline due to restart or other transient condition. Retry the operation. |
-| 35217 | 16 | No | The thread pool for Always On Availability Groups was unable to start a new worker thread because there are not enough available worker threads. This may degrade Always On Availability Groups performance. Use the "max worker threads" configuration option to increase number of allowable threads. |
-| 35218 | 16 | No | An error occurred while trying to set the initial Backup LSN of database '%.\*ls'. Primary database is temporarily offline due to restart or other transient condition. Retry the operation. |
-| 35220 | 16 | No | Could not process the operation. Always On Availability Groups replica manager is waiting for the host computer to start a Windows Server Failover Clustering (WSFC) cluster and join it. Either the local computer is not a cluster node, or the local cluster node is not online. If the computer is a cluster node, wait for it to join the cluster. If the computer is not a cluster node, add the computer to a WSFC cluster. Then, retry the operation. |
-| 35221 | 16 | No | Could not process the operation. Always On Availability Groups replica manager is disabled on this instance of SQL Server. Enable Always On Availability Groups, by using the SQL Server Configuration Manager. Then, restart the SQL Server service, and retry the currently operation. For information about how to enable and disable Always On Availability Groups, see SQL Server Books Online. |
-| 35222 | 16 | No | Could not process the operation. Always On Availability Groups does not have permissions to access the Windows Server Failover Clustering (WSFC) cluster. Disable and re-enable Always On Availability Groups by using the SQL Server Configuration Manager. Then, restart the SQL Server service, and retry the currently operation. For information about how to enable and disable Always On Availability Groups, see SQL Server Books Online. |
-| 35223 | 16 | No | Cannot add %d availability replica(s) to availability group '%.\*ls'. The availability group already contains %d replica(s), and the maximum number of replicas supported in an availability group is %d. |
-| 35224 | 16 | No | Could not process the operation. Always On Availability Groups failed to load the required Windows Server Failover Clustering (WSFC) library. Verify that the computer is a node in a WSFC cluster. You will need to restart the SQL Server instance to reload the required library functions. |
-| 35225 | 16 | No | Could not process the operation. The instance of SQL Server is running under WOW64 (Windows 32-bit on Windows 64-bit), which does not support Always On Availability Groups. Reinstall SQL Server in the native 64-bit edition, and re-enable Always On Availability Groups. Then, restart the SQL Server service, and retry the operation. For information about how to enable and disable Always On Availability Groups, see SQL Server Books Online. |
-| 35226 | 16 | No | Could not process the operation. Always On Availability Groups has not started because the instance of SQL Server is not running as a service. Restart the server instance as a service, and retry the operation. |
-| 35228 | 16 | No | The attempt to set the failure condition level for availability group '%.\*ls' failed. The specified level value is out of the valid range \[%u, %u\]. Reenter the command specifying a valid failure condition level value. |
-| 35229 | 16 | No | The attempt to set the health check timeout value for availability group '%.\*ls' failed. The specified timeout value is less than %u milliseconds. Reenter the command specifying a valid health check timeout value. |
-| 35230 | 16 | No | The specified computer name is either an empty string or is longer than %d Unicode characters. Reenter the command specifying a valid computer name. |
-| 35231 | 16 | No | The specified server instance name, '%ls', is invalid. Reenter the command specifying a valid instance name. |
-| 35232 | 16 | No | The specified endpoint URL '%.\*ls' is invalid. Reenter the command specifying the correct URL. For information about specifying the endpoint URL for an availability replica, see SQL Server Books Online. |
-| 35233 | 16 | No | Cannot create an availability group containing %d availability replica(s). The maximum number of availability replicas in an availability group %ls is %d. Reenter your CREATE AVAILABILITY GROUP command specifying fewer availability replicas. |
-| 35234 | 16 | No | Database name '%ls' was specified more than once. Reenter the command, specifying each database name only once. |
-| 35235 | 16 | No | The system name '%ls' was specified more than once in the REPLICA ON clause of this command. Reenter the command, specifying a different instance of SQL Server for each replica. |
-| 35236 | 15 | No | The endpoint URL was not specified for the availability replica hosted by server instance '%.\*ls'. Reenter the command, specifying the endpoint URL of this instance of SQL Server. |
-| 35237 | 16 | No | None of the specified replicas for availability group %.\*ls maps to the instance of SQL Server to which you are connected. Reenter the command, specifying this server instance to host one of the replicas. This replica will be the initial primary replica. |
-| 35238 | 16 | No | Database '%.\*ls' cannot be added to availability group '%.\*ls'. The database does not exist on this SQL Server instance. Verify that the database name is correct, then retry the operation. |
-| 35239 | 16 | No | The ALTER DATABASE \<database-name\> SET HADR SUSPEND (or SET HADR RESUME) statement failed on database '%.\*ls' of availability group '%.\*ls''. Either the availability group does not contain the specified database, or the database has not joined the availability group, or the database has not yet started. Reenter the command after the database is online and has joined the availability group. |
-| 35240 | 16 | No | Database '%.\*ls' cannot be joined to or unjoined from availability group '%.\*ls'. This operation is not supported on the primary replica of the availability group. |
-| 35242 | 16 | No | Cannot complete this ALTER DATABASE \<database-name\> SET HADR operation on database '%.\*ls'. The database is not joined to an availability group. After the database has joined the availability group, retry the command. |
-| 35243 | 16 | No | Failed to set resource property '%.\*ls' for availability group '%.\*ls'. The operation encountered SQL Server error %d. When the cause of the error has been resolved, retry the ALTER AVAILABILITY GROUP command later. |
-| 35244 | 16 | No | Database '%.\*ls' cannot be added to availability group '%.\*ls'. The database is currently joined to another availability group. Verify that the database name is correct and that the database is not joined to an availability group, then retry the operation. |
-| 35246 | 16 | No | Failed to create the availability group. A SQL Server instance name could not be validated because the dynamic link library (DLL) file '%ls' could not be located (Windows System Error %d). Verify that the specified server instance exists. If it exists, the DLL file might be missing from the server instance. |
-| 35247 | 16 | No | Failed to create the availability group. A SQL Server instance name could not be validated because the dynamic link library (DLL) file '%ls' could not be loaded (Windows System Error %d). |
-| 35248 | 16 | No | The %ls operation is not allowed by the current availability group configuration. The required_synchronized_secondaries_to_commit %d is greater than the %d possible secondary synchronous-commit availability replicas in availability group '%.\*ls'. Change one of the existing asynchronous-commit replicas to the synchronous-commit availability mode, and retry the operation. |
-| 35249 | 16 | No | An attempt to add or join a system database, '%.\*ls', to an availability group failed. Specify only user databases for this operation. |
-| [35250](../mssqlserver-35250-database-engine-error.md) | 16 | No | The connection to the primary replica is not active. The command cannot be processed. |
-| 35251 | 16 | No | This command can be run only on the primary replica. Connect to the primary replica, and retry the command. |
-| 35252 | 16 | No | The command can only be run on a secondary database. Connect to the correct secondary replica, and retry the command. |
-| 35253 | 16 | No | Database "%.\*ls" is not in the correct state to become the primary database. The log must be restored from the previous primary replica to bring the database out of the reinitializing state. |
-| 35254 | 16 | Yes | An error occurred while accessing the availability group metadata. Remove this database or replica from the availability group, and reconfigure the availability group to add the database or replica again. For more information, see the ALTER AVAILABILITY GROUP Transact-SQL statement in SQL Server Books Online. |
-| 35255 | 16 | No | An attempt to start database '%.\*ls' failed because the database is already started and online. |
-| 35256 | 16 | No | The session timeout value was exceeded while waiting for a response from the other availability replica in the session. That replica or the network might be down, or the command might be misconfigured. If the partner is running and visible over the network, retry the command using correctly configured partner-connection parameters. |
-| 35257 | 16 | No | Always On Availability Groups Send Error (Error code 0x%X, "NOT OK") was returned when sending a message for database ID %d. If the partner is running and visible over the network, retry the command using correctly configured partner-connection parameters. |
-| 35258 | 16 | No | Error in the hadron simulator. |
-| 35259 | 16 | No | Database '%.\*ls' is already participating in a different availability group. |
-| 35260 | 16 | No | During an attempted database recovery, an availability database manager was not found for database id %d with availability group ID %d and group database ID %ls. Recovery was terminated. The most likely cause of this error is that the availability group manager is not running, but the cause could be a metadata error. Ensure that the availability group manager and the WSFC cluster are started, and retry the recovery operation. |
-| 35261 | 16 | No | Attempt to perform an Always On Availability Groups operation on a system database, '%ls', failed. System databases are not supported by Always On Availability Groups. |
-| 35262 | 10 | Yes | Skipping the default startup of database '%.\*ls' because the database belongs to an availability group (Group ID: %d). The database will be started by the availability group. This is an informational message only. No user action is required. |
-| 35263 | 16 | No | During the undo phase, a function call (%ls) to the primary replica returned an unexpected status (Code: %d). Check for a possible cause in the SQL Server error log for the primary replica. If an error occurred on the primary database, you might need to suspend the secondary database, fix the issue on the primary database, and then resume the database. |
-| 35264 | 10 | No | Always On Availability Groups data movement for database '%.\*ls' has been suspended for the following reason: "%S_MSG" (Source ID %d; Source string: '%.\*ls'). To resume data movement on the database, you will need to resume the database manually. For information about how to resume an availability database, see SQL Server Books Online. |
-| 35265 | 10 | No | Always On Availability Groups data movement for database '%.\*ls' has been resumed. This is an informational message only. No user action is required. |
-| 35266 | 10 | No | Always On Availability Groups connection with %S_MSG database established for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. |
-| [35267](../mssqlserver-35267-database-engine-error.md) | 10 | No | Always On Availability Groups connection with %S_MSG database terminated for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. For more information, see [https://go.microsoft.com/fwlink/?linkid=2322143](https://go.microsoft.com/fwlink/?linkid=2322143). |
-| 35268 | 16 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will enter the RESTORING state. To complete recovery and bring the database online, use current log backups from the primary database to restore the log records past LSN %S_LSN. Alternatively, drop this secondary database, and prepare a new one by restoring a full database backup of the primary database followed by all subsequent log backups. |
-| 35269 | 21 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will be marked SUSPECT. To return the database to a consistent state, restore it from a clean database backup followed by all subsequent log backups. |
-| 35270 | 10 | No | Received a corrupt FileStream transport message. The '%ls' message section is invalid. |
-| 35271 | 16 | No | The availability database %ls in availability group %ls failed to complete a reconfiguration. Refer to the error code for more details. If this condition persists, contact the system administrator. |
-| 35272 | 16 | No | Either invalid parameters were supplied for sys.sp_availability_group_command_internal or user does not have permissions to execute this procedure. |
-| 35273 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as an inaccessible availability database. The session with the primary replica was interrupted while reverting the database to the common recovery point. Either the WSFC node lacks quorum or the communications links are broken because of problems with links, endpoint configuration, or permissions (for the server account or security certificate). To gain access to the database, you need to determine what has changed in the session configuration and undo the change. |
-| 35274 | 10 | Yes | Recovery for availability database '%ls' is pending until the secondary replica receives additional transaction log from the primary before it complete and come online. Ensure that the server instance that hosts the primary replica is running. |
-| 35275 | 16 | Yes | A previous RESTORE WITH CONTINUE_AFTER_ERROR operation or being removed while in the SUSPECT state from an availability group left the '%.\*ls' database in a potentially damaged state. The database cannot be joined while in this state. Restore the database, and retry the join operation. |
-| 35276 | 17 | Yes | Failed to allocate and schedule an Always On Availability Groups task for database '%ls'. Manual intervention may be required to resume synchronization of the database. If the problem persists, you might need to restart the local instance of SQL Server. |
-| 35277 | 16 | No | Automatic failover is not supported for distributed availability group replica. |
-| 35278 | 16 | No | Availability database '%.\*ls', which is in the secondary role, is being restarted to resynchronize with the current primary database. This is an informational message only. No user action is required. |
-| 35279 | 16 | Yes | The attempt to join database '%.\*ls' to the availability group was rejected by the primary database with error '%d'. For more information, see the SQL Server error log for the primary replica. |
-| 35280 | 16 | No | Database '%.\*ls' cannot be added to availability group '%.\*ls'. The database is already joined to the specified availability group. Verify that the database name is correct and that the database is not joined to an availability group, then retry the operation. |
-| 35281 | 16 | No | Database '%.\*ls' cannot be removed from availability group '%.\*ls'. The database is not joined to the specified availability group. Verify that the database name and the availability group name are correct, then retry the operation. |
-| 35282 | 16 | No | Availability replica '%.\*ls' cannot be added to availability group '%.\*ls'. The availability group already contains an availability replica with the specified name. Verify that the availability replica name and the availability group name are correct, then retry the operation. |
-| 35283 | 16 | No | Availability replica '%.\*ls' cannot be removed from availability group '%.\*ls'. The availability group does not contain an availability replica with the specified name. Verify that the availability replica name is correct, then retry the operation. |
-| 35284 | 16 | No | Availability replica '%.\*ls' cannot be removed from availability group '%.\*ls', because this replica is on the local instance of SQL Server. If the local availability replica is a secondary replica, connect to the server instance that is currently hosting the primary replica, and re-run the command. |
-| 35285 | 10 | No | The recovery LSN %S_LSN was identified for the database with ID %d. This is an informational message only. No user action is required. |
-| 35286 | 16 | No | Using the recovery LSN %S_LSN stored in the metadata for the database with ID %d. This is an informational message only. No user action is required. |
-| 35287 | 16 | No | Always On Availability Groups transport for availability database "%.\*ls" failed to decompress the log block whose LSN is %S_LSN. This error can be caused by a corrupt network packet or a compression version mismatch. The database replica has been put into the SUSPENDED state. Resume the availability database. If the error keeps reoccurring, investigate the root cause. |
-| 35288 | 16 | No | Always On Availability Groups log apply for availability database "%.\*ls" has received an out-of-order log block. The expected LSN was %S_LSN. The received LSN was %S_LSN. The database replica has been put into the SUSPENDED state. Resume the availability database. If the error reoccurs, contact Customer Support Services. |
-| 35289 | 16 | No | Failed to send request for file '%.\*ls' to the '%.\*ls' primary database for the local secondary database. Resuming the database will be retried automatically. |
-| 35290 | 16 | No | Failed to wait for completion of file requests from the '%.\*ls' primary database for the local secondary database. Resuming the database will be retried automatically. |
-| 35291 | 10 | No | Failed to acquire exclusive access to the extended recovery fork stack (error %d). If the problem persists, you might need to restart the instance of SQL Server. |
-| 35292 | 16 | No | An internal error occurred when performing an operation on extended recovery forks. This is an informational message only. No user action is required. |
-| 35293 | 16 | No | Error in retrieving extended recovery forks from the primary replica. The extended-recovery-fork stack changed while being retrieved by the secondary replica. Retry the operation. |
-| 35294 | 16 | No | %ls backup for database "%.\*ls" on a secondary replica failed because a synchronization point could not be established on the primary database. Either locks could not be acquired on the primary database or the database is not operating as part of the availability replica. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
-| 35295 | 16 | No | Log backup for database "%.\*ls" on a secondary replica failed because the last backup LSN (0x%ls) from the primary database is greater than the current local redo LSN (0x%ls). No log records need to be backed up at this time. Retry the log-backup operation later. |
-| 35296 | 16 | No | Log backup for database "%.\*ls" on secondary replica failed because the new backup information could not be committed on primary database. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
-| 35297 | 10 | No | %ls backup for database "%.\*ls" on secondary replica created backup files successfully but could not ensure that a backup point has been committed on the primary. This is an informational message only. Preserve this log backup along with the other log backups of this database. |
-| 35298 | 10 | No | The backup on the secondary database "%.\*ls" was terminated, but a terminate backup message could not be sent to the primary replica. This is an informational message only. The primary replica should detect this error and clean up its backup history accordingly. |
-| 35299 | 10 | Yes | Nonqualified transactions are being rolled back in database %.\*ls for an Always On Availability Groups state change. Estimated rollback completion: %d%%. This is an informational message only. No user action is required. |
-| 35301 | 15 | No | The statement failed because a columnstore index cannot be unique. Create the columnstore index without the UNIQUE keyword or create a unique index without the COLUMNSTORE keyword. |
-| 35302 | 15 | No | The statement failed because specifying sort order (ASC or DESC) is not allowed when creating a columnstore index. Create the columnstore index without specifying a sort order. |
-| 35303 | 15 | No | The statement failed because a nonclustered index cannot be created on a table that has a clustered columnstore index. Consider replacing the clustered columnstore index with a nonclustered columnstore index. |
-| 35304 | 15 | No | The statement failed because a clustered columnstore index cannot be created on a table that has a nonclustered index. Consider dropping all nonclustered indexes and trying again. |
-| 35305 | 15 | No | The statement failed because a clustered columnstore index cannot be created on a view. Consider creating a nonclustered columnstore index on the view, creating a clustered columnstore index on the base table or creating an index without the COLUMNSTORE keyword on the view. |
-| 35306 | 15 | No | The statement failed because a columnstore index cannot be specified using INDEX specification at the column level. |
-| 35307 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a computed column. Columnstore index cannot include a computed column implicitly or explicitly. |
-| 35308 | 15 | No | The statement failed because a columnstore index cannot be a filtered index. Consider creating a columnstore index without the predicate filter. |
-| 35309 | 15 | No | The statement failed because a columnstore index cannot be created on a sparse column. Consider creating a nonclustered columnstore index on a subset of columns that does not include any sparse columns. |
-| 35310 | 15 | No | The statement failed because columnstore indexes are not allowed on table types and table variables. Remove the column store index specification from the table type or table variable declaration. |
-| 35311 | 15 | No | The statement failed because a columnstore index cannot have included columns. Create the columnstore index on the desired columns without specifying any included columns. |
-| 35312 | 15 | No | The statement failed because a columnstore index cannot be created on a column with filestream data. Consider creating a nonclustered columnstore index on a subset of columns that does not include any columns with filestream data. |
-| 35313 | 15 | No | The statement failed because specifying FILESTREAM_ON is not allowed when creating a columnstore index. Consider creating a columnstore index on columns without filestream data and omit the FILESTREAM_ON specification. |
-| 35314 | 15 | No | The statement failed because a columnstore index cannot be created on a column set. Consider creating a nonclustered columnstore index on a subset of columns in the table that does not contain a column set or any sparse columns. |
-| 35315 | 15 | No | The statement failed because a columnstore index cannot be created in this edition of SQL Server. See Books Online for more details on feature support in different SQL Server editions. |
-| 35316 | 15 | No | The statement failed because a columnstore index must be partition-aligned with the base table. Create the columnstore index using the same partition function and same (or equivalent) partition scheme as the base table. If the base table is not partitioned, create a nonpartitioned columnstore index. |
-| 35317 | 15 | No | The statement failed because specifying %S_MSG is not allowed when creating a columnstore index. Consider creating a columnstore index without specifying %S_MSG. |
-| 35318 | 15 | No | The statement failed because the %S_MSG option is not allowed when creating a columnstore index. Create the columnstore index without specifying the %S_MSG option. |
-| 35319 | 15 | No | The table option DATA_COMPRESSION is not allowed when a table specifies a clustered column store index. |
-| 35320 | 15 | No | Column store indexes are not allowed on tables for which the durability option SCHEMA_ONLY is specified. |
-| 35321 | 16 | No | Table '%.\*ls' uses a clustered columnstore index. Columnstore indexes are not supported in this service tier of the database. See Books Online for more details on feature support in different service tiers of Azure SQL Database. |
-| 35322 | 16 | No | The statement failed because a nonclustered index and the underlying clustered columnstore index must be partition-aligned. Consider creating the nonclustered index using the same partition function and same (or equivalent) partition scheme as the clustered columnstore index. |
-| 35323 | 16 | No | The statement failed because adding multiple generated value type columns (such as identity and uniqueidentifier types) at once is not supported for columnstore index. Consider adding the generated columns separately. |
-| 35324 | 15 | No | The statement failed because specifying SORT_IN_TEMPDB is not allowed when creating a columnstore index without ORDER. Consider creating a columnstore index without specifying SORT_IN_TEMPDB, or use it with ORDER clause. |
-| 35325 | 15 | No | The statement failed because the definition of a column belonging to clustered columnstore index cannot be changed. Consider dropping the columnstore index, altering the column, then creating a new columnstore index. |
-| 35326 | 15 | No | The statement failed because a nonclustered columnstore index cannot be reorganized. Reorganization of a nonclustered columnstore index is not necessary. |
-| 35327 | 15 | No | ALTER INDEX REBUILD statement failed because specifying %S_MSG is not allowed when rebuilding a columnstore index. Rebuild the columnstore index without specifying %S_MSG. |
-| 35328 | 15 | No | ALTER INDEX REBUILD statement failed because the %S_MSG option is not allowed when rebuilding a columnstore index. Rebuild the columnstore index without specifying the %S_MSG option. |
-| 35329 | 15 | No | The statement failed because specifying ORDER is not allowed when creating the rowstore index '%.\*ls' on table '%.\*ls'. Consider creating the rowstore index without specifying ORDER. |
-| 35330 | 16 | No | %S_MSG statement failed because data cannot be updated in a table that has a nonclustered columnstore index. Consider disabling the columnstore index before issuing the %S_MSG statement, and then rebuilding the columnstore index after %S_MSG has completed. |
-| 35331 | 16 | No | Cannot use duplicate column names in the ORDER column list. Column name '%.\*ls' appears more than once. |
-| 35332 | 16 | No | Cannot ORDER on more than %d columns. |
-| 35333 | 16 | No | ORDER failed because columnstore index '%.\*ls' on table '%.\*ls.%.\*ls' is already ordered. |
-| 35334 | 15 | No | DBCC DBREINDEX failed because specifying FILLFACTOR is not allowed when creating or rebuilding a columnstore index. Rebuild the columnstore index without specifying FILLFACTOR. |
-| 35335 | 15 | No | The statement failed because specifying a key list is not allowed when creating a clustered columnstore index. Create the clustered columnstore index without specifying a key list. |
-| 35336 | 15 | No | The statement failed because specifying key list is missing when creating an index. Create the index with specifying key list . |
-| 35337 | 16 | No | UPDATE STATISTICS failed because statistics cannot be updated on a columnstore index. UPDATE STATISTICS is valid only when used with the STATS_STREAM option. |
-| 35338 | 16 | No | Clustered columnstore index is not supported. |
-| 35339 | 16 | No | Multiple columnstore indexes are not supported. |
-| 35340 | 16 | No | LOB columns are disabled in columnstore. |
-| 35341 | 16 | No | The statement failed. A columnstore index cannot include a decimal or numeric data type with a precision greater than 18. Reduce the precision or omit column '%.\*ls'. |
-| 35342 | 15 | No | The statement failed because specifying ORDER is not a valid option for creating the non-clustered columnstore index '%.\*ls' on table '%.\*ls'. Consider creating the non-clustered columnstore index without specifying ORDER, or create a clustered columnstore index. |
-| 35343 | 15 | No | The statement failed. Column '%.\*ls' has a data type that cannot participate in a columnstore index. |
-| 35344 | 16 | No | MERGE clause of ALTER PARTITION statement failed because two nonempty partitions containing a columnstore index cannot be merged. Consider an ALTER TABLE SWITCH operation from one of the nonempty partitions on table '%.\*ls' to a temporary staging table and then re-attempt the ALTER PARTITION MERGE operation. Once completed, use ALTER TABLE SWITCH to move the staging table partition back to the original source table. |
-| 35345 | 16 | No | MERGE clause of ALTER PARTITION statement failed because two partitions on different filegroups cannot be merged if either partition contains columnstore index data. Consider dropping the columnstore index on table '%.\*ls' before issuing the ALTER PARTITION statement, then rebuilding the columnstore index after ALTER PARTITION is complete. |
-| 35346 | 16 | No | SPLIT clause of ALTER PARTITION statement failed because the partition is not empty. Only empty partitions can be split in when a columnstore index exists on the table. Consider an ALTER TABLE SWITCH operation from one of the nonempty partitions on table '%.\*ls' to a temporary staging table and then re-attempt the ALTER PARTITION SPLIT operation. Once completed, use ALTER TABLE SWITCH to move the staging table partition back to the original source table. |
-| 35347 | 16 | No | The stored procedure 'sp_tableoption' failed because a table with a columnstore index cannot be altered to use vardecimal storage format. Consider dropping the columnstore index. |
-| 35348 | 16 | No | The statement failed because table '%.\*ls' uses vardecimal storage format. A columnstore index cannot be created on a table using vardecimal storage. Consider rebuilding the table without vardecimal storage. |
-| 35349 | 16 | No | TRUNCATE TABLE statement failed because table '%.\*ls' has a columnstore index on it. A table with a columnstore index cannot be truncated. Consider dropping the columnstore index then truncating the table. |
-| 35350 | 16 | No | The statement failed because a columnstore index on a partitioned table must be partition-aligned with the base table. Consider dropping the columnstore index before creating a new clustered index. |
-| 35351 | 16 | No | DROP INDEX statement failed because a columnstore index on a partitioned table must be partition-aligned with the base table (heap). Consider dropping the columnstore index before dropping a clustered index. |
-| 35352 | 16 | No | %S_MSG statement failed because the operation cannot be performed online on a table with a columnstore index. Perform the operation without specifying the ONLINE option or drop (or disable) the columnstore index before performing the operation using the ONLINE option. |
-| 35353 | 16 | No | %s cannot be enabled on a table with a clustered columnstore index. Consider dropping clustered columnstore index '%s' on table '%s'. |
-| 35354 | 16 | No | The statement failed because a clustered columnstore index cannot be created on a table enabled for %S_MSG. Consider disabling %S_MSG and then creating the clustered columnstore index. |
-| 35355 | 16 | No | The statement failed. Column '%.\*ls' is either a primary key or a partitioning key that must be included, but a columnstore index cannot include a decimal or numeric data type with a precision greater than 18. Consider reducing the precision to 18. |
-| 35356 | 16 | No | This operation is not supported on nonclustered columnstore indexes built in earlier versions of SQL Server. Consider rebuilding the index. |
-| 35357 | 16 | No | The statement failed because a secondary dictionary reached the maximum size limit. Consider dropping the columnstore index, altering the column, then creating a new columnstore index. |
-| 35358 | 16 | No | CREATE TRIGGER on table '%.\*ls' failed because you cannot create a trigger on a table with a clustered columnstore index. Consider enforcing the logic of the trigger in some other way, or if you must use a trigger, use a heap or B-tree index instead. |
-| 35359 | 16 | No | The statement failed because a table with a clustered columnstore index cannot have triggers. Consider removing all triggers from the table and then creating the clustered columnstore index. |
-| 35360 | 16 | No | Referential constraint '%.\*ls' cannot be created because the %S_MSG table '%.\*ls' has a clustered columnstore index. |
-| 35361 | 16 | No | The statement failed. A clustered columnstore index cannot be created over referencing column '%.\*ls' on table '%.\*ls'. |
-| 35362 | 16 | No | Tuple mover stvf skipped rowset in DW mode |
-| 35363 | 16 | No | The statement failed because clustered columnstore indexes are not supported in system databases. |
-| 35364 | 16 | No | ALTER INDEX statement option COMPRESSION_DELAY can only be used with columnstore indexes. |
-| 35365 | 22 | No | The compression block header at offset %ld is invalid. |
-| 35366 | 22 | No | The columnstore blob Xpress header is invalid. |
-| 35367 | 22 | No | The columnstore blob Xpress object header is invalid. |
-| 35368 | 17 | No | Internal DDL Operation Error: The DDL encountered an unexpected error %d during execution (HRESULT = 0x%x). |
-| 35369 | 16 | No | GETCHECKSUM can not be used for a table which has a clustered columnstore index. |
-| 35370 | 16 | No | Cursors are not supported on a table which has a clustered columnstore index. |
-| 35371 | 16 | No | SNAPSHOT isolation level is not supported on a table which has a clustered columnstore index. |
-| 35372 | 16 | No | You cannot create more than one clustered index on %S_MSG '%.\*ls'. Consider creating a new clustered index using 'with (drop_existing = on)' option. |
-| 35373 | 16 | No | ALTER INDEX REORGANIZE statement failed on a clustered columnstore index with error %d. See previous error messages for more details. |
-| 35374 | 16 | No | Columnstore archive decompression failed with error %d. |
-| 35375 | 16 | No | ALTER INDEX REORGANIZE statement option COMPRESS_ALL_ROW_GROUPS can only be used with clustered columnstore indexes. |
-| 35376 | 16 | No | Tuple mover stvf got passed invalid arguments |
-| 35377 | 22 | No | During migration to rowgroup consolidation, distribution type extended property must be set on the CCI table. |
-| 35378 | 16 | No | Row groups stvf got passed invalid arguments |
-| 35379 | 16 | No | Internal error occurred while flushing delete buffer database id %d, table id %d, index id %d, partition number %d. Additional messages in the SQL Server error log may provide more details. |
-| 35380 | 16 | No | The non-clustered columnstore index '%.\*ls' on table '%.\*ls' cannot be reorganized due to an active snapshot transaction. |
-| 35381 | 22 | No | The columnstore blob dictionary header is invalid. |
-| 35382 | 16 | No | The specified COMPRESSION_DELAY option value %d is invalid. The valid range for disk-based table is between (0, 10080) minutes and for memory-optimized table is 0 or between (60, 10080) minutes. |
-| 35383 | 16 | No | The use of user-defined functions is not allowed in default constraints when adding columns to a columnstore index. |
-| 35384 | 16 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a lob column. Non clustered index with lob column as included column cannot co-exist with clustered columnstore index. |
-| 35385 | 16 | No | DROP ORDER failed because columnstore index '%.\*ls' on table '%.\*ls.%.\*ls' is not ordered. |
-| 35386 | 17 | No | Unable to allocate %I64d KB for columnstore compression because it exceeds the remaining memory from total allocated for current resource class and DWU. Please rerun query at a higher resource class, and also consider increasing DWU. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323728](https://go.microsoft.com/fwlink/?linkid=2323728). |
-| 35387 | 17 | No | Tempdb ran out of space during spilling. Verify that data is evenly distributed and/or rewrite the query to consume fewer rows. If the issue still persists, consider upgrading to a higher service level objective. |
-| 35388 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a persisted computed column. Adding persisted computed columns to an existing clustered columnstore index is not supported. |
-| 35389 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a computed column of a LOB type. Columnstore indexes cannot include computed columns of LOB types. |
-| 35390 | 16 | No | Computed columns in columnstore indexes are temporarily disabled. Please rewrite your query to exclude computed columns. |
-| 35391 | 16 | No | Could not build or rebuild clustered columnstore index '%.\*ls' online, because the table has secondary indexes. Please perform the operation offline, or remove the secondary indexes and try again. |
-| 35392 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a computed column. Nonclustered index with computed column as key or included column cannot be created on a table that has a clustered columnstore index. |
-| 35393 | 16 | No | Columnstore tuple mover unit tests can't be run under master database. |
-| 35394 | 16 | No | Transaction %d reached %I64u log used bytes and %I64d reserved log bytes. In order to minimize log usage %d suboptimal rowgroups were created, which is not allowed since it compromises index quality. Please re-run query at a higher resource class, and also consider increasing DWU. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323728](https://go.microsoft.com/fwlink/?linkid=2323728). |
-| 35395 | 16 | No | Transaction %d reached %I64u log used bytes and %I64d reserved log bytes. In order to minimize log usage, %d suboptimal rowgroups were created, which is not allowed since it compromises index quality. Please re-run the query with more memory (change your Resource Governor settings or upgrade to a higher SLO) or target fewer partitions in the load if your target table is partitioned. |
-| 35396 | 17 | No | Effective DOP of %u is too high for columnstore compression on table id %d because each thread only has %I64d KB for compression. Please retry using the MAXDOP hint to use a lower DOP. |
-| 35397 | 16 | No | %S_MSG statement failed because the operation cannot be performed resumably on a table with a columnstore index. Perform the operation without specifying the RESUMABLE option or drop (or disable) the columnstore index before performing the operation using the RESUMABLE option. |
-| 35398 | 16 | No | Columnstore index operation failed. Please contact Microsoft customer support. |
-| 35399 | 16 | No | Could not create columnstore index '%.\*ls' on table '%.\*ls' since data type of column '%.\*ls' is not supported in the ORDER list. |
-| 35400 | 16 | No | Columnstore tuple mover is unable to acquire lock. |
-| 35401 | 10 | No | ONLINE |
-| 35402 | 10 | No | ALLOW_ROW_LOCKS |
-| 35403 | 10 | No | ALLOW_PAGE_LOCKS |
-| 35404 | 16 | No | sequence |
-| 35405 | 10 | No | decryption |
-| 35406 | 10 | No | creation |
-| 35409 | 10 | No | Replication |
-| 35410 | 10 | No | Change Tracking |
-| 35411 | 10 | No | Change Data Capture |
-| 35412 | 16 | No | CloudDB Async Transport |
-| 35413 | 16 | No | CloudDB Async Transport Forwarder |
-| 35415 | 10 | No | mirrored |
-| 35417 | 10 | No | primary |
-| 35418 | 10 | No | secondary |
-| 35419 | 16 | No | feature |
-| 35420 | 16 | No | operation |
-| 35421 | 16 | No | statement |
-| 35422 | 16 | No | index option |
-| 35423 | 16 | No | table option |
-| 35424 | 16 | No | operator |
-| 35425 | 16 | No | value |
-| 35426 | 16 | No | system column |
-| 35427 | 16 | No | set option |
-| 35428 | 16 | No | query hint |
-| 35429 | 16 | No | transaction isolation level |
-| 35430 | 16 | No | in-memory index |
-| 35431 | 10 | No | SCHEDULER |
-| 35432 | 10 | No | NUMANODE |
-| 35435 | 16 | No | system database |
-| 35439 | 10 | No | it is a system database. |
-| 35440 | 10 | No | it acts as a distribution database |
-| 35441 | 10 | No | an internal error occurred |
-| 35442 | 10 | No | it is involved in a mirroring session. Turn off the mirroring session and try again |
-| 35443 | 10 | No | it is not in SIMPLE recovery mode. Change the recovery model to SIMPLE and try again |
-| 35444 | 10 | No | it is a database snapshot |
-| 35445 | 10 | No | it is a not currently enabled |
-| 35446 | 16 | No | clause |
-| 35447 | 10 | No | Cluster Proxy |
-| 35448 | 10 | No | partition |
-| 35449 | 16 | No | signing algorithm |
-| 35450 | 16 | No | table |
-| 35451 | 16 | No | join hint |
-| 35452 | 10 | No | Database unavailable |
-| 35453 | 10 | No | it is a system database. Make sure to target a user database. If you want temporary clustered columnstore tables, consider creating a regular user database for them |
-| 35454 | 10 | No | a transaction is currently active. Execute sp_db_enable_clustered_columnstores by itself |
-| 35455 | 10 | No | an internal error occurred |
-| 35456 | 10 | No | it is involved in a mirroring pair. Consider disabling mirroring, changing the setting, then re-establishing mirroring |
-| 35457 | 10 | No | it is a database snapshot |
-| 35458 | 10 | No | it is part of an Always On availability group. Consider removing the database from the availability group, changing the setting, and then adding the database back to the availability group |
-| 35459 | 10 | No | it is a replication distribution database. Make sure to target a regular user database |
-| 35460 | 10 | No | it is not using the SIMPLE recovery model. Consider temporarily changing to the simple recovery model, then downgrading, then switching back |
-| 35461 | 10 | No | it contains one or more clustered columnstore indexes. Consider dropping these indexes or creating clustered B-tree indexes instead, and trying again |
-| 35462 | 10 | No | referencing |
-| 35463 | 10 | No | referenced |
-| 35464 | 10 | No | Columnstore indexes are not supported in the current SQL Server edition. See SQL Server Books Online for supported editions |
-| 35465 | 17 | No | Unable to allocate the recovery thread |
-| 35466 | 16 | No | Exception in the recovery thread |
-| 35467 | 16 | No | Already linked to a partition host |
-| 35468 | 16 | No | Partition DB marked as suspect |
-| 35469 | 16 | No | Failed to get Partition DB attributes |
-| 35470 | 16 | No | Partition Host |
-| 35471 | 10 | No | Partition metadata not found |
-| 35472 | 15 | No | memory optimized tables |
-| 35473 | 15 | No | natively compiled modules |
-| 35474 | 15 | No | indexes on memory optimized tables |
-| 35475 | 15 | No | hash indexes |
-| 35476 | 15 | No | transactions that access memory optimized tables or natively compiled modules |
-| 35477 | 15 | No | databases that have a MEMORY_OPTIMIZED_DATA filegroup |
-| 35478 | 16 | No | truncate |
-| 35479 | 16 | No | start |
-| 35480 | 16 | No | stop |
-| 35481 | 15 | No | memory optimized table types |
-| 35482 | 16 | No | clustered |
-| 35483 | 16 | No | nonclustered |
-| 35484 | 16 | No | BUCKET_COUNT |
-| 35485 | 16 | No | security policy |
-| 35486 | 15 | No | memory optimized tables that have a column store index |
-| 35487 | 10 | No | Global Transactions |
-| 35488 | 15 | No | natively compiled triggers |
-| 35489 | 16 | No | Upgrade of Hekaton database |
-| 35490 | 16 | No | memory optimized tables that have max length columns |
-| 35491 | 16 | No | max length columns in natively compiled modules |
-| 35492 | 16 | No | column definition |
-| 35493 | 16 | No | enabled |
-| 35494 | 16 | No | disabled |
-| 35495 | 15 | No | memory optimized table |
-| 35496 | 15 | No | natively compiled module |
-| 35497 | 15 | No | module |
-| 35498 | 16 | No | external data source |
-| 35499 | 16 | No | OUTPUT clauses in natively compiled modules |
-| 35501 | 15 | No | schemas that contain natively compiled modules |
-| 35502 | 15 | No | change_tracking_hardened_cleanup_version() |
-| 35503 | 15 | No | safe_cleanup_version() |
-| 35504 | 16 | No | server encryption protector |
-| 35505 | 15 | No | RESUMABLE |
-| 35506 | 15 | No | MAX_DURATION |
-| 35507 | 10 | No | Storage |
-| 35508 | 10 | No | RESUME |
-| 35509 | 10 | No | PAUSE |
-| 35510 | 10 | No | ABORT |
-| 35511 | 10 | No | ABORT |
-| 35512 | 10 | No | allow_enclave_computations |
-| 35513 | 10 | No | compute |
-| 35514 | 10 | No | local computer |
-| 35515 | 10 | No | current user |
-| 35516 | 10 | No | query_capture_policy |
-| 35517 | 10 | No | execution_count |
-| 35518 | 10 | No | total_compile_cpu_time_ms |
-| 35519 | 10 | No | total_execution_cpu_time_ms |
-| 35520 | 10 | No | OPTIMIZE_FOR_SEQUENTIAL_KEY |
-| 35521 | 10 | No | stale_capture_policy_threshold |
-| 35522 | 10 | No | day |
-| 35523 | 10 | No | TRIPLE_DES_3KEY |
-| 35524 | 10 | No | AES_256 |
-| 35525 | 10 | No | STATISTICS_ONLY |
-| 35526 | 10 | No | striped_metadata |
-| 35527 | 10 | No | rbio_connection |
-| 35528 | 10 | No | unable to read page due to invalid FCB |
-| 35529 | 10 | No | certificate id |
-| 35530 | 10 | No | opening |
-| 35531 | 10 | No | closing |
-| 35532 | 10 | No | certificate name |
-| 35533 | 10 | No | norm function failed |
-| 35534 | 10 | No | string_split |
-| 35535 | 10 | No | unpack_int |
-| 35536 | 10 | No | vector index |
-| 35537 | 10 | No | JSON index |
-| 35538 | 10 | No | columnstore index |
-| 35539 | 15 | No | vector base type |
-| 35540 | 10 | No | external model |
-| 35541 | 10 | No | ai_generate_chunks |
-| 35542 | 10 | No | Drop and re-create the distributed availability group with SQL Managed Instance. |
-| 35543 | 10 | No | Stored procedure called on invalid distributed availability group type or on non-existing distributed availability group. |
-| 35544 | 10 | No | Empty internal distributed availability group. |
-| 35545 | 10 | No | Internal distributed availability group naming inconsistency. |
-| 35546 | 10 | No | An internal distributed availability group detected with more than one associated availability database. |
-| 35547 | 10 | No | Use sys.sp_milink_repair on the distributed availability group. |
-| 35548 | 16 | No | column level security |
-| 35549 | 16 | No | dynamic data masking |
-| 35550 | 10 | No | Semantic index |
-| 35551 | 10 | No | QUALIFY |
-| 35552 | 15 | No | VECTOR type argument. Expected DENSE or SPARSE |
-| 35553 | 16 | No | a required vector index feature switch (TRUNCATE support or vector index state) is disabled |
-| 35554 | 16 | No | the vector index version is earlier than 3 |
-| 35555 | 15 | No | the database default collation or a column/parameter still uses this collation. Remove all references to that collation before disabling the feature |
-| 36001 | 16 | No | %s '%s' already exists in the database. |
-| 36002 | 16 | No | instance_id already exists in the database. |
-| 36003 | 16 | No | %s '%s' already exists for the given DAC instance. |
-| 36004 | 16 | No | DacInstance with the specified instance_id does not exist. |
-| 36005 | 16 | No | Dac root - database %s does not exist. |
-| 36006 | 16 | No | Dac Policy with the specified policy id already exists in the parts table. |
-| 36007 | 16 | No | Dac Part the policy refers to, does not exist. |
-| 36008 | 16 | No | Dac Policy refers to a non-existent Policy. |
-| 36009 | 16 | No | %s '%s' already exists in the Dac Parts. |
-| 36010 | 16 | No | The caller must be a member of the dbcreator fixed server role to perform this action. |
-| 36011 | 16 | No | The caller must be sysadmin or the creator of the history entry being updated. |
-| 36012 | 10 | No | Unable to execute T-SQL within procedure due to SQL Server limitation.\nPlease execute following T-SQL in database '%s' context after this procedure finishes:\n%s |
-| 37001 | 16 | No | This operation is not allowed since there are dependent objects pending installation. |
-| 37002 | 16 | No | Cannot find the database '%s', because it does not exist or you do not have permission to access it. |
-| 37003 | 16 | No | This operation is not allowed because a utility control point already exists on this instance of SQL Server. |
-| 37004 | 16 | No | The specified instance of SQL Server cannot be used as a utility control point because the feature is not enabled in SQL Server '%s'. |
-| 37005 | 16 | No | The specified instance of SQL Server cannot be managed by a utility control point because the feature is not enabled in SQL Server '%s'. |
-| 37006 | 16 | No | Cannot perform the operation because the specified instance of SQL Server is not enrolled in a SQL Server utility. |
-| 37007 | 16 | No | An error occurred during upload to the SQL Server utility control point. |
-| 37008 | 16 | No | The operation cannot continue. To remove the SQL Server utility control point, the user must be a member of the sysadmin role. |
-| 37009 | 16 | No | The operation cannot continue. The specified instance of SQL Server is not a SQL Server utility control point. |
-| 37010 | 16 | No | The operation cannot continue. The SQL Server utility control point has managed instances of SQL Server enrolled. |
-| 37101 | 16 | No | Server '%.\*ls' does not contain elastic job account: '%.\*ls'. |
-| 37102 | 16 | No | Elastic job account '%.\*ls' does not contain the resource of type '%.\*ls' named '%.\*ls'. |
-| 37103 | 16 | No | Internal job account error occurred : '%.\*ls'. |
-| 37104 | 16 | No | A job account already exists for subscription '%.\*ls' for the selected region. |
-| 37105 | 16 | No | The job account '%.\*ls' on server '%.\*ls' already exists. |
-| 37106 | 16 | No | The database '%.\*ls' on server '%.\*ls' is in use by job account '%.\*ls'. The database cannot be deleted or renamed while associated with a job account. |
-| 37107 | 16 | No | The database '%.\*ls' on server '%.\*ls' has service level objective '%.\*ls' which is not supported for use as a job account database. |
-| 37108 | 16 | No | A job account could not be linked to database '%.\*ls' on server '%.\*ls' because it is a geo-secondary database. |
-| 37109 | 16 | No | Database '%ls' on server '%ls' is already linked to another job account. |
-| 37201 | 16 | No | An instance pool could not be found with name '%.\*ls'. |
-| 37202 | 16 | No | An instance pool with name '%.\*ls' is busy with another ongoing operation. |
-| 37203 | 16 | No | An instance pool with name '%.\*ls' is not empty. |
-| 37204 | 16 | No | An instance pool with name '%.\*ls' does not have enough vCore capacity for given request. |
-| 37301 | 16 | Yes | Internal enclave error. The enclave symcrypt method %ls failed with status 0x%08x. For more information, contact Customer Support Services. |
-| 37302 | 16 | Yes | %ls. Internal error. API: '%ls'. Return code: '0x%08x'. For more information, contact Customer Support Services. |
-| 37303 | 16 | Yes | Internal error occurred while obtaining an authentication token for external service. Authentication method: %ls, status: 0x%08x. |
-| 37304 | 16 | No | Cannot initialize %ls enclave for column encryption - the operating system does not support the enclave type. |
-| 37305 | 16 | Yes | Invalid enclave configuration: %ls. |
-| 37306 | 16 | Yes | Internal enclave error: Cannot initialize the %ls enclave. Error: 0x%08x. For more information, contact Customer Support Services. |
-| 37307 | 16 | Yes | Internal enclave error: Cannot initialize the %ls enclave. Load method: %ls. For more information, contact Customer Support Services. |
-| 37308 | 10 | Yes | Loaded %ls enclave for Always Encrypted. |
-| 37309 | 16 | Yes | Enclave attestation failed due to an error in Intel Data Center Attestation Primitives (DCAP) SGX API: '%ls'. Return code: '0x%08x'. For more information, contact Customer Support Services. |
-| 37310 | 16 | Yes | %ls. Error while parsing URL. URL: '%ls'. Return code: '0x%08x'. |
-| 37311 | 16 | Yes | %ls. The URL has an invalid scheme name. URL: '%ls'. The supported schemes are: '%ls'. |
-| 37312 | 16 | Yes | %ls. The service URL specified by the client is not reachable. URL: '%ls'. Return code: '0x%08x'. Check your networking configuration. |
-| 37313 | 16 | Yes | Enclave attestation failed. The attestation service returned an empty response. Attestation URL: '%ls'. Verify the attestation policy. If the policy is correct, contact Customer Support Services. |
-| 37314 | 16 | Yes | VBS enclave attestation failed due to an error in Windows Management Instrumentation (WMI). API: '%ls', Return code: '0x%08x'. Check the Host Guardian Service is running. For more information, contact Customer Support Services. |
-| 37315 | 16 | Yes | Credential object named '0x%08x', configured for external authentication, does not exist. |
-| 37316 | 16 | Yes | Authentication bearer service failed to return a valid challenge. Verify URL '%ls' is correct. Return code: '0x%08x'. |
-| 37317 | 16 | Yes | Failed to look up '%ls' for '%ls'. |
-| 37318 | 16 | Yes | Unable to acquire an authentication token for resource_id '%ls' with URL '%ls'. Return code: '0x%08x' Correlation Id: '%ls'. For more information, contact Customer Support Services. |
-| 37319 | 16 | Yes | Failed to obtain an authentication token for URL '%ls', Return code: '0x%08x', CorrelationId: %ls. |
-| 37320 | 16 | Yes | Authentication for URL '%ls' failed due to an invalid client id or an invalid secret. Return code: '0x%08x' Correlation Id: '%ls' |
-| 37321 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Return code: '0x%08x'. |
-| 37322 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
-| 37323 | 16 | Yes | Authentication bearer service failed to return a valid challenge. Verify URL '%ls' is correct. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
-| 37324 | 16 | Yes | %ls. Service returned Error code: '%ls'. Error message: '%ls'. Service URL: '%ls'. Return code: '0x%08x'. Verify the service policy. For more information see: '%ls'. |
-| 37325 | 16 | Yes | Enclave attestation failed due to an error in Azure Data Center Attestation Primitives (DCAP) Client. Validate Azure DCAP Client is installed and configured properly. Return code: '0x%08x'. For more information, contact Customer Support Services. |
-| 37326 | 16 | Yes | Service failed due to an authorization failure. Verify the server or instance has the required permissions to access service at URL '%ls'. |
-| 37327 | 16 | Yes | Maximum number of concurrent DBCC commands running in the enclave has been reached. The maximum number of concurrent DBCC queries is %d. Try rerunning the query. |
-| 37328 | 10 | Yes | Configuring Always Encrypted enclave in %ls mode. |
-| 37329 | 10 | Yes | %ls enclave lost due to internal error. For more information, contact Customer Support Services. |
-| 37330 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Authentication method: %ls, Return code: '0x%08x'. Validate that Azure Active Directory Identity as been assigned to this server. For more information, contact Customer Support Services |
-| 37331 | 16 | No | DevOps login, '%s', can not be created as another non-devops server principal with name or object ID already exists. |
-| 37332 | 16 | No | DevOps user, '%.\*ls', can not be created as another non-devops database principal with name or object ID already exists. |
-| 37333 | 16 | Yes | The server encountered an unexpected exception. API:'%ls' Return code: '0x%08x'. For more information, contact Customer Support Services. |
-| 37334 | 16 | Yes | Internal error occurred while obtaining an authentication token for an external service. Authentication method: %ls, Status: 0x%08x, CorrelationId: %ls. |
-| 37335 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Authentication method: %ls, Return code: '0x%08x', CorrelationId: %ls. Validate that Azure Active Directory Identity as been assigned to this server. For more information, contact Customer Support Services |
-| 37336 | 17 | Yes | Failed to flush the Ledger Transactions table to disk in database with ID %d due to error %d. Check the errorlog for more information. |
-| 37337 | 16 | Yes | Failed to retrieve the information about the latest transaction persisted in sys.db_ledger_transactions in database with ID %d due to error %d. Check the errorlog for more information. |
-| 37338 | 16 | No | Error occurred while generating the hash for a ledger transaction. Return code: '%d'. |
-| 37339 | 16 | No | Error occurred while generating a hash for the MERKLE_TREE_AGG aggregate function. Return code: '%d'. |
-| 37340 | 16 | Yes | Failed to generate the Ledger Blocks in the database with ID %d due to error %d. Check the errorlog for more information. |
-| 37341 | 16 | No | A Microsoft Entra ID Administrator is not enabled for this server. Please set up a Microsoft Entra ID Administrator on this server and try again. |
-| 37342 | 16 | No | The logical server Microsoft Entra tenant ID does not match the given DevOps Microsoft Entra tenant ID. |
-| 37343 | 16 | No | Unexpected data type for encrypted column while generating ledger hash. |
-| 37344 | 16 | No | CREATE TABLE failed because column '%.\*ls' in table '%.\*ls' exceeds the maximum of %d columns allowed for ledger tables. |
-| 37345 | 16 | No | Table cannot have more than one 'GENERATED ALWAYS AS %ls' column. |
-| 37346 | 16 | No | 'GENERATED ALWAYS AS %ls' column '%.\*ls' has invalid data type. |
-| 37347 | 16 | No | 'GENERATED ALWAYS AS %ls' column '%.\*ls' cannot be nullable. |
-| 37348 | 16 | No | 'GENERATED ALWAYS AS %ls' column '%.\*ls' can only be nullable. |
-| 37349 | 16 | No | LEDGER = ON cannot be specified with SYSTEM_VERSIONING = OFF and APPEND_ONLY = OFF. |
-| 37350 | 16 | No | LEDGER = ON cannot be specified with SYSTEM_VERSIONING = ON and APPEND_ONLY = ON. |
-| 37351 | 16 | No | LEDGER = ON cannot be specified with PERIOD FOR SYSTEM_TIME and APPEND_ONLY = ON. |
-| 37352 | 16 | No | APPEND_ONLY = ON cannot be specified with generated always end columns. |
-| 37353 | 16 | No | Server identity does not have the Microsoft Entra Directory Readers permission. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323204](https://go.microsoft.com/fwlink/?linkid=2323204). |
-| 37354 | 16 | No | LEDGER = ON cannot be specified with system versioning retention period. |
-| 37355 | 16 | No | An existing History Table cannot be specified with LEDGER=ON. |
-| 37356 | 16 | No | System Versioning cannot be altered for Ledger Tables. |
-| 37357 | 17 | No | SQL Audit could not write to '%s'. Make sure that SAS key is valid or Managed Identity has permissions to access the storage. This is an informative message. This error doesn't affect SQL availability. |
-| 37358 | 17 | No | SQL Audit failed to create the audit file for the audit '%s' at '%s'. Make sure that SAS key is valid or Managed Identity has permissions to access the storage. This is an informative message. This error doesn't affect SQL availability. |
-| 37359 | 16 | No | Updates are not allowed for the append only Ledger table '%.\*ls'. |
-| 37360 | 16 | No | %S_MSG is not allowed on Ledger tables. |
-| 37361 | 16 | No | Cannot update ledger history table '%.\*ls'. |
-| 37362 | 16 | No | LEDGER = ON cannot be specified on a table with a column set column. |
-| 37363 | 16 | No | Copy operation for the database '%.\*ls' on the server '%.\*ls' cannot be started because both source and target SLOs need to be DC series. Source DB SLO: '%.\*ls' , Partner DB SLO: '%.\*ls' |
-| 37364 | 16 | No | A transaction cannot update more than %d ledger tables. |
-| 37365 | 16 | No | The '%s' parameter provided for ledger verification cannot be null. |
-| 37366 | 16 | No | The hash computed from sys.database_ledger_transactions for block %I64d does not match the hash persisted in sys.database_ledger_blocks. |
-| 37367 | 16 | No | The computed hash does not match the previous block hash persisted in sys.database_ledger_blocks for block %I64d. |
-| 37368 | 16 | No | The hash of block %I64d in the database ledger does not match the hash provided in the digest for this block. |
-| 37369 | 16 | No | Invalid input for parameter '@digests' provided for ledger verification. The value should be a valid JSON document that contains values for the 'block_id' and 'hash' of each digest. |
-| 37370 | 10 | No | Ledger verification successfully verified up to block %I64d. |
-| 37371 | 16 | No | The computed hash from '%s' and the associated history table does not match the hash persisted in sys.database_ledger_transactions for transaction %I64d. |
-| 37372 | 16 | No | Invalid table ID '%d' is present in database ledger table sys.database_ledger_transactions. |
-| 37373 | 16 | No | Error occurred while initializing hash algorithm at startup. Return code: '%d'. |
-| 37374 | 16 | No | Creation of Ledger view failed due to error %d. |
-| 37375 | 16 | No | Cannot add PRIMARY KEY, UNIQUE KEY or CHECK constraint to the ledger history table '%.\*ls'. |
-| 37376 | 16 | No | Foreign key '%.\*ls' is not valid. A ledger history table cannot be used in a foreign key definition. |
-| 37377 | 16 | No | Foreign key '%.\*ls' is not valid. An append only ledger table cannot be the referencing table of a foreign key constraint with cascading actions. |
-| 37378 | 16 | No | Ledger tables cannot be created on system databases. |
-| 37379 | 16 | No | Ledger tables cannot contain columns of XML, sql_variant, filestream, json, vector or user-defined types. Any computed columns cannot be timestamp columns. |
-| 37380 | 16 | No | Cannot create UNIQUE index on ledger history table '%.\*ls'. |
-| 37381 | 16 | No | Cannot create a trigger on a system-versioned ledger table '%.\*ls'. |
-| 37382 | 16 | No | Switching partition failed on table '%.\*ls' because it is not a supported operation on ledger tables or their corresponding history table. |
-| 37383 | 16 | No | Enabling Change Tracking for ledger history table '%.\*ls' is not allowed. |
-| 37384 | 16 | No | Table '%.\*ls' is a FileTable. LEDGER = ON cannot be used on FileTables. |
-| 37385 | 16 | No | LEDGER = ON is not allowed for table variables. |
-| 37386 | 16 | No | Cannot drop object '%.\*ls' because it is a ledger history table or a ledger view. |
-| 37387 | 16 | No | Only nullable columns without a default value WITH VALUES can be added to ledger tables. |
-| 37388 | 16 | No | Column '%.\*ls' in table '%.\*ls' cannot be dropped because it is already a dropped ledger column. |
-| 37389 | 16 | No | Cannot ALTER VIEW '%.\*ls' because it is a ledger view. |
-| 37390 | 16 | No | System-time PERIOD cannot be added to table '%.\*ls' because it is a ledger table. |
-| 37391 | 16 | No | ALTER TABLE ALTER COLUMN failed for table '%.\*ls' because it is a ledger table and the operation would need to modify existing data that is immutable. |
-| 37392 | 16 | No | Ledger verification failed. |
-| 37393 | 16 | No | The default ledger view name is constructed as \<table_name\>_Ledger, which exceeds the maximum length of %d characters. Specify a ledger table name that is %d characters or less, or specify a user-defined ledger view name that is %d characters or less. |
-| 37394 | 16 | No | Cannot create index on view '%.\*ls' because it is a ledger view. The indexes should be created on the ledger table or its history table. |
-| 37395 | 16 | No | View '%.\*ls' is not updatable because it is a ledger view. |
-| 37396 | 16 | No | Query cannot be executed, access token is expired. Please login with a new access token and execute query again. |
-| 37397 | 16 | No | Error storing Babylon policy for DBID %d. Major error: %d, Minor error: %d, State: %d |
-| 37398 | 21 | No | Fatal error: Unable to pull policies for %d consecutive attempts. |
-| 37399 | 16 | No | TYPE, SID, Default Database, Default Language, Password option not allowed for External logins |
-| 37401 | 16 | Yes | Error refreshing the external access control policy from metadata. Error code %d. |
-| 37402 | 16 | No | Setting LEDGER to ON failed because ledger view '%.\*ls' is not specified in two-part name format. |
-| 37403 | 16 | No | Error in parsing the external json policy element/event with error message %s. |
-| 37404 | 16 | Yes | Service returned an empty response. URL: '%ls'. |
-| 37405 | 16 | Yes | Exception in fetching the external policy. URL: '%ls'. Major error code: %d, Minor error code: %d, State: %d |
-| 37406 | 16 | Yes | Error occurred while obtaining an authentication token for external service %ls; no authentication method is configured. |
-| 37407 | 16 | No | Error in external policy SDK with error message %s. |
-| 37408 | 16 | No | The ledger digest storage cannot be configured on secondary databases. |
-| 37409 | 16 | No | The provided Ledger storage target type '%s' is invalid. |
-| 37410 | 16 | No | The provided ledger storage path '%s' is invalid. |
-| 37411 | 16 | No | Uploading ledger digests is being enabled or disabled for database '%s'. Please wait for the previous request to complete. |
-| 37412 | 16 | Yes | %ls operation failed for %ls. Error code: %d. |
-| 37413 | 16 | Yes | Failed to generate a digest in the database with ID %d due to error %d. Check the errorlog for more information. |
-| 37414 | 16 | No | Failed to retrieve digest information from path '%ls' due to error %d. Verify that the provided path exists and the required permissions have been granted to the SQL service. |
-| 37415 | 16 | No | Invalid path specified for a ledger digest URL. Verify that the provided paths are valid. |
-| 37416 | 16 | No | Fulltext indexes are not allowed on ledger tables. |
-| 37417 | 16 | No | Uploading ledger digest failed for database with id %d due to error %d. |
-| 37418 | 16 | No | No digests were found based on the input locations and block IDs. |
-| 37419 | 16 | No | Unable to %S_MSG audit because %S_MSG contains question mark. |
-| 37420 | 16 | No | LEDGER = OFF cannot be specified for tables in databases that were created with LEDGER = ON. |
-| 37421 | 16 | Yes | Error occurred while reading external policy endpoint. |
-| 37422 | 16 | Yes | Error occurred while reading STS Url. |
-| 37423 | 16 | Yes | Error occurred while fetching the external access policies. Please check if Managed System Identity is enabled on the server. |
-| 37424 | 16 | Yes | Error fetching the external policy resource endpoint. |
-| 37425 | 16 | No | Error occurred while trying to record the ledger table history operation of the ledger table '%.\*ls'. |
-| 37426 | 16 | No | Error occurred while trying to record the ledger column history operation of the column '%.\*ls' in ledger table '%.\*ls'. |
-| 37427 | 16 | No | Cannot alter, drop, or rename object '%.\*ls' because it is a ledger dropped object. |
-| 37428 | 16 | No | Cannot rename ledger object '%.\*ls' because it is not a supported operation. |
-| 37429 | 16 | No | Cannot rename column '%.\*ls' of ledger object '%.\*ls' because it is not a supported operation. |
-| 37430 | 16 | No | Cannot alter schema of dropped ledger object '%.\*ls' because it is not a supported operation. |
-| 37431 | 16 | No | Encountered failure while initializing Confidential Ledger Adapter with URL %ls and error code %ld. |
-| 37432 | 16 | No | Encountered failure while initializing Confidential Ledger Data Iterator with URL %ls and error code %ld. |
-| 37433 | 16 | Yes | %ls. The attestation URL specified by the client is not reachable. URL: '%ls'. Return code: '0x%08x'. Check your networking configuration. |
-| 37434 | 16 | No | Invalid input for parameter '@locations' provided for ledger verification. The value should be a valid JSON document that contains values for the 'path', 'last_digest_block_id' and 'is_current' of each location. |
-| 37435 | 16 | No | Invalid input for parameter '@table_name' provided for ledger verification. The specified value cannot contain a server or database name and must point to an existing ledger table. |
-| 37436 | 16 | Yes | Ledger verification failed due to error %d. |
-| 37437 | 16 | No | Uploading ledger digests is currently not supported for this resource type. |
-| 37438 | 16 | No | Ledger verification for table '%.\*ls' failed because its clustered index is disabled. |
-| 37439 | 16 | No | The statement failed because a nonclustered index cannot be created on table '%.\*ls' that is a ledger table and has a clustered columnstore index. |
-| 37440 | 16 | No | Cannot update dropped ledger table '%.\*ls'. |
-| 37441 | 16 | No | The statement failed because a clustered columnstore index cannot be created on table '%.\*ls' that is a ledger table and has a nonclustered index. |
-| 37442 | 16 | No | Ledger verification was aborted by the user. |
-| 37443 | 16 | No | The use of replication is not supported with ledger table '%s' |
-| 37444 | 16 | No | Enabling Change Data Capture for ledger history table '%ls' is not allowed. |
-| 37445 | 16 | No | The specified digestStorageEndpoint is invalid. It must be an Azure blob storage or Azure Confidential Ledger endpoint. |
-| 37446 | 16 | No | Changing the ledger property is not supported for this resource type. |
-| 37447 | 16 | No | The certificate '%.\*ls' has been already added as a trusted issuer for DNS name '%.\*ls' |
-| 37448 | 16 | No | The certificate '%.\*ls' cannot be removed from the trusted issuers for the DNS name '%.\*ls' because it hasn't been added as a trusted issuer for the DNS name '%.\*ls'. |
-| 37449 | 10 | No | Warning: The certificate chain of the certificate specified could not be validated at this time. This may cause issues with the certificate-based authentication in the future. Please check your organization's policy and settings for online and/or offline validation of a certificate chain. |
-| 37450 | 16 | No | The certificate '%.\*ls' cannot be added as a trusted issuer for a DNS name because it is not allowed to sign certificates |
-| 37451 | 16 | No | DNS name provided exceeds maximum length of %d characters. |
-| 37452 | 16 | No | Error while trying to invoke external policy pull task. |
-| 37453 | 16 | No | '%ls' is not a valid option for the @type parameter. Enter 'update' or 'reload'. |
-| 37454 | 10 | No | Encountered Internal Error while calling %ls. Error code %ld, State %ld. |
-| 37455 | 16 | No | Server identity does not have permissions to access MS Graph. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323824](https://go.microsoft.com/fwlink/?linkid=2323824). |
-| 37456 | 16 | No | Ownership change is not supported for external tables governed by OneLake Security. |
-| 37457 | 16 | No | DDL statement executed on the database is not allowed because Azure Active Directory only authentication is enabled on the server. |
-| 37458 | 16 | No | Posted digest is not globally committed in Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
-| 37459 | 16 | No | Encountered Internal Error while calling Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
-| 37460 | 16 | No | Failed to parse response from Identity Service. Ledger URL '%ls' and error code %ld. |
-| 37461 | 16 | No | Encountered error while trying to retrieve a Microsoft Entra ID token to call Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
-| 37462 | 16 | No | Encountered error while trying to retrieve Network Certificate from Identity Service. Ledger URL '%ls' and error code %ld. |
-| 37463 | 16 | No | Service Principal or Managed Identity is not authorized to call Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
-| 37464 | 10 | Yes | Microsoft Entra ID authentication is enabled. This is an informational message only; no user action is required. |
-| 37465 | 16 | No | Server identity does not have the required permissions to access the MS graph. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323434](https://go.microsoft.com/fwlink/?linkid=2323434). |
-| 37466 | 16 | No | Endpoint is required. |
-| 37467 | 20 | No | The server encountered an unexpected exception. |
-| 37468 | 16 | No | The source and target table names provided as parameters to 'sp_copy_data_in_batches' must be valid table names and cannot be null or empty. |
-| 37469 | 16 | No | The source and target table names provided as parameters to 'sp_copy_data_in_batches' cannot contain a database or server name. |
-| 37470 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' must be user tables. |
-| 37471 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot be memory optimized tables. |
-| 37472 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot be the source of merge or transactional replication or have change tracking or change data capture enabled. |
-| 37473 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have an XML, spatial, JSON or fulltext index. |
-| 37474 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have a disabled clustered index. |
-| 37475 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any non-clustered indexes or statistics other than the ones for the clustered index. |
-| 37476 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot have a column set column. |
-| 37477 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot have any security policies. |
-| 37478 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot be graph node or edge tables. |
-| 37479 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any indexed views referencing it. |
-| 37480 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' must be empty. |
-| 37481 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any INSERT trigger. |
-| 37482 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' must be using the same partition function and partitioning columns. |
-| 37483 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' must have the same number of columns when excluding the TRANSACTION ID and SEQUENCE NUMBER generated always columns. |
-| 37484 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' at ordinal %d in table '%.\*ls' has a different name than the column '%.\*ls' at the same ordinal in table '%.\*ls' (excluding the TRANSACTION ID and SEQUENCE NUMBER generated always columns). |
-| 37485 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' has data type %s in source table '%.\*ls' which is different from its type %s in target table '%.\*ls'. |
-| 37486 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' does not have the same collation, nullability, sparse, ANSI_PADDING, vardecimal, identity or generated always attribute, CLR type or schema collection in tables '%.\*ls' and '%.\*ls'. |
-| 37487 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' in table '%.\*ls' is computed column but the same column in '%.\*ls' is not computed or they do not have the same persistent attribute . |
-| 37488 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot contain columns of data type text, ntext, image or with the ROWGUIDCOL or FILESTREAM attributes. |
-| 37489 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any RULE constraints. |
-| 37490 | 16 | No | 'sp_copy_data_in_batches' failed because computed column '%.\*ls' defined as '%.\*ls' in table '%.\*ls' is different from the same column in table '%.\*ls' defined as '%.\*ls'. |
-| 37491 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have clustered columnstore index. |
-| 37492 | 16 | No | The source and target tables provided as parameters to 'sp_copy_data_in_batches' cannot be temporary tables. |
-| 37493 | 16 | Yes | Internal enclave error: Cannot initialize the %ls enclave. Load method: %ls. Last Error: 0x%08x. For more information, contact Customer Support Services. |
-| 37494 | 16 | Yes | Authentication bearer service failed to return a valid challenge. Verify URL '%ls' is correct and reachable. Return code: '0x%08x'. Please check network connectivity and firewall setup, then retry the operation |
-| 37495 | 10 | Yes | Ledger verification to detect inconsistencies for index '%.\*ls' (database ID %d) failed due to exception %d, state %d. |
-| 37496 | 10 | Yes | Ledger verification detected inconsistencies for index '%.\*ls' (database ID %d). There are %ld rows that are inconsistent between the table and the index. |
-| 37497 | 16 | Yes | Internal parsing error: Fail to parse the service URL '%ls'. Failure method: %ls. Return code: '0x%08x'. For more information, contact Customer Support Services. |
-| 37498 | 16 | No | Snapshot isolation must be enabled on the database when sp_verify_database_ledger is executed. |
-| 37499 | 10 | Yes | Ledger verification detected an inconsistency in the definition of ledger view '%.\*ls' for the ledger table '%.\*ls'. |
-| 37501 | 16 | No | A value cannot be given for the column '%.\*ls' on ledger table '%.\*ls' because it is a dropped ledger column. |
-| 37502 | 16 | No | The column '%.\*ls' on ledger table '%.\*ls' cannot be dropped because it is a TRANSACTION_ID or SEQUENCE_NUMBER GENERATED ALWAYS column. |
-| 37503 | 16 | No | The column '%.\*ls' on ledger table '%.\*ls' cannot be dropped because it is an identity or computed column. |
-| 37504 | 10 | No | Failed to convert string to guid when fetching tenantID fabric property %.\*ls' |
-| 37505 | 20 | No | A secondary of secondary database (chaining) cannot be created because automatic upload of ledger digests has been configured for this database. |
-| 37506 | 20 | No | Automatic upload of ledger digests cannot be enabled because this database is configured with secondaries of secondaries (chaining). |
-| 37507 | 16 | No | CertPFX using AES encryption is not supported on the current operating system. |
-| 37508 | 16 | No | Unable to locate PFXExportCertStoreEx API in crypt32.dll, needed for CertPFX using AES encryption ErrorCode: %d. |
-| 37509 | 16 | No | Unable to locate PFXExportCertStoreEx API in securityapi.dll, needed for CertPFX using AES encryption ErrorCode: %d. |
-| 37510 | 16 | No | Unable to determine the blob length needed to export the PFX certificate. ErrorCode: %d. |
-| 37511 | 16 | No | Unable to export the PFX certificate. ErrorCode: %d. |
-| 37512 | 16 | No | The column '%.\*ls' on ledger table '%.\*ls' is a sequence number generated always column and cannot be referenced by computed columns, check constraints, filtered index or statistics expressions. |
-| 37513 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains references to sequence number generated always columns. |
-| 37514 | 16 | No | Cannot bind a rule to a temporal or ledger history table. |
-| 37515 | 16 | No | Cannot bind a rule to a sequence number generated always column. |
-| 37516 | 16 | No | Server response exceeded the buffer size. Ledger URL '%ls' and error code %ld. |
-| 37517 | 16 | Yes | Internal error occurred while obtaining ARC resource information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
-| 37518 | 16 | Yes | Internal error occurred while obtaining ARC resource information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
-| 37519 | 16 | Yes | Internal error occurred while obtaining ARC resource information from IMDS endpoint. Return code: '0x%08x'. |
-| 37520 | 16 | Yes | Error retrieving IMDS endpoint. |
-| 37521 | 16 | No | Geo-replication cannot be stopped because the database has Ledger Digest Uploads enabled. Disable Ledger Digest Uploads and retry the operation. |
-| 37522 | 16 | No | The Geo-primary database cannot be dropped because the database has Ledger Digest Uploads enabled. Disable Ledger Digest Uploads and retry the operation. |
-| 37523 | 16 | No | The Azure Confidential Ledger server identity check failed. Ledger URL '%ls' and error code %ld. |
-| 37524 | 10 | Yes | IMDS resource information. Subscription ID: %ls, Resource Group: %ls, Name: %ls. |
-| 37525 | 10 | Yes | Command '%.\*ls' is not supported as Azure Active Directory is not configured for this instance. |
-| 37526 | 16 | No | A ledger table cannot be created while database mirroring is enabled. |
-| 37527 | 16 | Yes | Database '%.\*ls'cannot be started as a primary replica because it might be missing ledger transactions for which digests have already been generated. Failover back to the original primary or restore more log from the primary to apply the latest transactions. |
-| 37528 | 16 | No | Vardecimal cannot be enabled on table '%.\*ls' because it is a ledger table or a ledger history table. |
-| 37529 | 16 | No | Bound transactions are not supported with ledger tables. |
-| 37530 | 16 | No | Failed to set the ledger digest storage endpoint to '%ls' due to error %d. Verify that the provided Azure Storage account exists, it contains a container named '%ls' and is accessible from the machine hosting this instance of SQL Server. Confirm that there is a credential object with a valid Shared Access Signature for this container. |
-| 37531 | 16 | No | Failed to set the ledger digest storage endpoint to '%ls'. Verify that you have created a credential object to provide SQL Server access to the '%ls' container in this Azure Storage account. |
-| 37532 | 16 | No | Ledger table '%.\*ls' cannot contain check constraints, filtered indexes and statistics or computed columns that reference columns using a multi-part identifier. |
-| 37533 | 16 | No | Computed column '%.\*ls' cannot be added to ledger table '%.\*ls'. Ledger tables do not support computed columns that use CLR functions or types. |
-| 37534 | 16 | No | Error while trying to read database information from master metadata. Transaction is not active anymore. |
-| 37535 | 16 | No | Principal name with object id '%ls' must begin with the original principal name followed by a user-defined suffix to differentiate between the names. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323825](https://go.microsoft.com/fwlink/?linkid=2323825). |
-| 37536 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
-| 37537 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
-| 37538 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Return code: '0x%08x'. |
-| 37539 | 16 | No | Uploading ledger digest failed for database with id %d due to outbound firewall rules. |
-| 37540 | 16 | No | The provided ledger digest storage location is not in the list of Outbound Firewall Rules on the server. Please add this to the list of Outbound Firewall Rules on your server and retry the operation. |
-| 37541 | 16 | No | Provider '%ls' is no longer supported. Please use MSOLEDBSQL provider instead. ([https://go.microsoft.com/fwlink/?linkid=2206241&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2206241&clcid=0x409)) |
-| 37542 | 16 | Yes | The operation could not be completed because attempts to connect to Azure Key Vault (AKV) were denied by the configured Network Security Perimeter. Key vault uri: '%ls'. |
-| 37543 | 10 | No | The trust of the certificate imported could not be verified with the Certificate Authority (CA) or verified through the Internet. Most likely the host operating system where SQL Server is hosted is missing the latest root certificate updates, or access to the Internet. In case this certificate is used for authentication when partner server rotates the certificate, the authentication will fail unless the issue has been resolved on the host OS. Please ensure that the host OS has the latest root certificate updates, or access to the Internet to reach out to remote CA. Error code: 0x%lx. |
-| 37544 | 16 | No | The length of the AAD bearer token exceeded the maximum allowed length. Ledger URL '%ls' and error code %ld. |
-| 37545 | 16 | No | '%ls' is not a valid object id for '%ls' or you do not have permission. |
-| 37546 | 16 | No | Can only specify object_id when creating user from external provider. |
-| 37547 | 16 | No | The user attempting to perform this operation does not have permission as it is currently logged in as a member of an Azure Active Directory (AAD) group but does not have an associated database user account. A user account is necessary when creating an object to assign ownership of that object. To resolve this error, either create an Azure AD user from external provider, or alter the AAD group to assign the DEFAULT_SCHEMA as dbo, then rerun the statement. |
-| 37548 | 16 | No | The user attempting to perform this operation does not have permission as it is currently logged in as a member of an Azure Active Directory (AAD) group but does not have an associated database user account. A user account is necessary when setting the ownership of an object. To resolve this error, create an Azure AD user from external provider, then rerun the statement. |
-| 37549 | 16 | No | Cannot open session for %S_MSG '%.\*ls'. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37550 | 16 | No | Cannot initialize cryptographic provider. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37551 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37552 | 16 | No | Cannot export %S_MSG from the provider. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37553 | 16 | No | Invalid algorithm '%.\*ls'. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37554 | 16 | No | Key with %S_MSG '%.\*ls' does not exist in the provider or access is denied. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37555 | 16 | No | Invalid algorithm id: %d. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37556 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
-| 37557 | 16 | No | A server principal with the object ID '%ls' already exists with the name '%ls'. |
-| 37558 | 16 | No | A login with the object ID '%ls' already has an account with the user name '%ls'. |
-| 37559 | 16 | No | Object_id is not a valid option |
-| 37560 | 16 | No | Encryption scan cannot be suspended because it is already in suspended state. |
-| 37561 | 16 | No | Database encryption key cannot be altered because the database is not encrypted. |
-| 37562 | 16 | No | When key change is in progress, only suspend and resume operations are allowed. |
-| 37563 | 16 | Yes | The primary managed identity is not selected for this SQL Server instance. If the SQL Server instance is in an Azure VM, enable the managed identity of the VM to use Microsoft Entra authentication. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323210](https://go.microsoft.com/fwlink/?linkid=2323210). If the SQL Server instance is not in an Azure VM, connect it to Azure Arc. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323209](https://go.microsoft.com/fwlink/?linkid=2323209). |
-| 37564 | 10 | Yes | The managed identity with Client_ID/Application_ID '%ls', is the primary identity assigned for this server. |
-| 37565 | 16 | Yes | Microsoft Graph is currently experiencing a high volume of requests. Please wait for %d seconds and try again. |
-| 37566 | 16 | No | Operations on customer managed key '%s' are not allowed because the key has been disabled in Azure Key Vault '%s'. Please enable the key. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37567 | 16 | No | Operations on customer managed key '%s' are not allowed in Azure Key Vault '%s'. Please allow the following operations on the key: "get", "wrapKey", "unwrapKey". For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37568 | 16 | No | One of required operations on customer managed key '%s' is not allowed for currently chosen RBAC role of the managed instance '%s' identity on Azure Key Vault '%s'. Please change to a RBAC role permitting the following permissions on the key vault: "get", "wrapKey", "unwrapKey". For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting |
-| 37569 | 16 | No | Connection to Azure Key Vault '%s' was forbidden by Azure Key Vault firewall policy. Please review the Azure Key Vault firewall policy to enable connections from Managed Instance '%s'. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37570 | 16 | No | One of required operations on customer managed key '%s' on Azure Key Vault '%s' is not allowed for currently set key vault policy used by managed instance '%s' identity. Please use a policy permitting the following permissions on the key vault: "get", "wrapKey", "unwrapKey". For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37571 | 16 | No | Azure Key Vault '%s' operation requested by Managed Instance '%s' failed due to insufficient permissions (inner error code: '%s'). For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37572 | 16 | No | Customer managed key '%s' was not found in Azure Key Vault '%s'. If it was recently deleted, recovery could be possible if 'soft-delete' protection is enabled on the key vault. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37573 | 16 | No | Connection to Azure Key Vault '%s' could not be established. Please review network settings for Managed Instance '%s'. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37574 | 16 | No | Azure Key Vault URI '%s' could not be resolved. Please ensure the key vault URI is valid and that your network settings for Managed Instance '%s' are not blocking access to Azure Public DNS. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
-| 37575 | 17 | No | SQL Server Audit \[%ls\] could not write to the Otel (OpenTelemetry) Audit Target (Error Code: %d). |
-| 37576 | 16 | No | The current version of SQL Server Connector for Microsoft Azure Key Vault does not support managed identity. Upgrade the SQL Server Connector to the latest version and try again. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323730](https://go.microsoft.com/fwlink/?linkid=2323730). |
-| 37577 | 16 | No | Current scenario is blocked for Fabric DW. |
-| 37578 | 16 | No | An internal error has occurred. Please retry the operation. If the issue persists, contact support for assistance. |
-| 37579 | 16 | No | The security policy '%.\*ls' cannot reference tables with vector indexes. Table '%.\*ls' has a vector index. |
-| 37580 | 16 | No | Principal '%.\*ls' not found during implicit user creation, error detail: '%.\*ls'. |
-| 37581 | 16 | No | Principal '%.\*ls' had ambiguous match during implicit user creation, error detail: '%.\*ls'. |
-| 37582 | 16 | No | Implicit user creation failed for principal '%.\*ls' due to system error '%.\*ls'. |
-| 37583 | 16 | No | An internal error occurred during %S_MSG %S_MSG. Please retry the operation. Error code: %d. |
-| 37584 | 16 | Yes | An internal error occurred while performing a cryptography operation. Operation: '%ls', status: 0x%08x. |
-| 37585 | 16 | No | Datawarehouse session internal error. If the issue persists, contact support for assistance. |
-| 37586 | 16 | No | Invalid AES key length %u. |
-| 37587 | 16 | No | Federated Managed Identity '%.\*ls' cannot be created because a database principal with the same name already exists. |
-| 37588 | 16 | No | The field '%ls' or more specified in the REQUIRED_FIELDS audit option are invalid. |
-| 37589 | 10 | Yes | An internal VSM attestation service log while performing enclave attestation operation. Log Source: %d, message: '%ls'. |
-| 37590 | 16 | No | The system table '%s' cannot be used because it is not a valid Microsoft system table. |
-| 37591 | 16 | No | A duplicate field-name '%ls' specified in the REQUIRED_FIELDS audit option. |
-| 37592 | 16 | No | REQUIRED_FIELDS audit option cannot be an empty string. |
-| 37593 | 16 | No | The REQUIRED_FIELDS audit option exceeds the maximum allowed length of %d characters. |
-| 37594 | 16 | No | The REQUIRED_FIELDS audit option is only supported for EXTERNAL_MONITOR target. |
-| 37595 | 16 | No | The maximum number of HTTP redirect hops was exceeded while calling Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
-| 37596 | 16 | No | The HTTP redirect target failed security validation while calling Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
-| 37597 | 16 | No | User security synchronization failed due to system error '%.\*ls'. |
-| 37598 | 16 | Yes | \[%ls\]: Exception: Error: %d, State: %d. |
-| 37599 | 16 | No | The number of column encryption keys sent by the client for enclave computations exceeds the maximum allowed limit of %d. |
-| 37601 | 17 | Yes | \[Auditing\]\[%ls\] Could not allocate memory for %ls. |
-| 37602 | 16 | Yes | \[Auditing\]\[%ls\] Error while reading AuditPolicy from WinFab property. \[ErrorCode: %d\]. |
-| 37603 | 16 | Yes | \[Auditing\]\[%ls\] The 'State' in AuditPolicy is 'UNKNOWN'. \[ErrorCode: %d\]. |
-| 37604 | 16 | Yes | \[Auditing\]\[%ls\] Error while constructing AuditQueryParameters from AuditPolicy. \[ErrorCode: %d\]. |
-| 37605 | 16 | Yes | \[Auditing\]\[%ls\] Could not configure auditing to %ls. DetailedMessage: \[%ls\]. \[Error: %d\]. |
-| 37606 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Error while trying to get Audit Policy (%ls) from WinFab properties \[ErrorCode: %d\]. |
-| 37607 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Property '\[%ls\]' under Namespace '\[%ls\]' failed to retrieve. \[Error: %d\]. |
-| 37608 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Xpath \[%ls\] for WinFab Property '\[%ls\]' under Namespace '\[%ls\]' failed to retrieve. \[Error: %d\]. |
-| 37609 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Property '\[%ls\]' under Namespace '\[%ls\]' has invalid value \[Len: %lu\] \[Error: %d\]. |
-| 37610 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Property '\[%ls\]' under Namespace '\[%ls\]' is empty or null \[Len: %lu\] \[Error: %d\]. |
-| 37611 | 16 | Yes | \[Auditing\]\[%ls\] Could not combine paths. DetailedMessage: \[%ls\]. \[path1: %ls\] \[path2: %ls\] \[separator: %lc\] \[Error: %d\]. |
-| 37612 | 16 | Yes | \[Auditing\]\[%ls\] Error: One or more of 'baseStr', 'searchStr' is nullptr. \[baseStr: %ls\] \[searchStr: %ls\] \[Error: %d\]. |
-| 37613 | 16 | Yes | \[Auditing\]\[%ls\] Error: Length of 'searchStr' is zero \[Error: %d\]. |
-| 37614 | 16 | Yes | \[Auditing\]\[%ls\] Could not inject query parameter. \[Parameter: %ls\] \[Value: %ls\] \[ErrorCode: %d\]. |
-| 37615 | 16 | Yes | \[Auditing\]\[%ls\] Could not get query template. \[auditQueryType: %ls\] \[ErrorCode: %d\]. |
-| 37616 | 16 | Yes | \[Auditing\]\[%ls\] Could not inject parameters into audit query template. \[auditQueryType: %ls\] \[ErrorCode: %d\]. |
-| 37617 | 16 | Yes | \[Auditing\]\[%ls\] Error occurred while constructing %ls \[ErrorCode: %d\]. |
-| 37618 | 16 | Yes | \[Auditing\]\[%ls\] Could not generate audit query to execute. \[auditQueryType: %ls\] \[ErrorCode: %d\]. |
-| 37619 | 16 | Yes | An unexpected error occurred. Please try again after some time. If the error persists, please contact Customer Support. |
-| 37620 | 16 | Yes | StartTimeFilter is not in a supported format. Please either use DEFAULT or a UTC based timestamp in this format - 'YYYY-MM-DDThh:mm:ssZ'. For example - '2020-12-31T15:30:00Z'. |
-| 37621 | 16 | Yes | EndTimeFilter is not in a supported format. Please either use DEFAULT or a UTC based timestamp in this format - 'YYYY-MM-DDThh:mm:ssZ'. For example - '2020-12-31T15:30:00Z'. |
-| 37622 | 16 | No | The batch length (%d wchars) exceeds the maximum length supported by audit logging (%d wchars). Reduce the batch size and retry. |
-| 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
-| 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
-| 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |
-| 39002 | 16 | No | SQL failed to boot extensibility for error code 0x%lx. |
-| 39003 | 10 | No | SQL successfully boots extensibility. |
-| 39004 | 16 | No | A '%.\*s' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x%x. External script request id is %ls. |
-| 39005 | 10 | No | STDOUT messages from external script: %.\*ls%.\*ls |
-| 39006 | 10 | No | External script execution status: %.\*ls. |
-| 39007 | 16 | No | The specified language '%.\*ls' does not exist or you do not have permission. |
-| 39008 | 16 | No | Invalid parameter name '%ls' specified for Procedure. This clashes with internal parameters. |
-| 39009 | 16 | No | Output parameter in external script execution is not yet supported. |
-| 39010 | 16 | No | External script execution for '%.\*s' script encountered an unexpected error (HRESULT = 0x%x) for request id: %ls. |
-| 39011 | 16 | No | SQL Server was unable to communicate with the LaunchPad service for request id: %ls. Verify the configuration of the service. |
-| 39012 | 16 | No | Unable to communicate with the runtime for '%.\*s' script for request id: %ls. Check the requirements of '%.\*s' runtime. |
-| 39013 | 16 | No | SQL Server encountered error 0x%x while communicating with the '%.\*s' runtime for request id: %ls. Check the configuration of the '%.\*s' runtime. |
-| 39014 | 16 | No | Parallelism in external script execution is not yet supported. |
-| 39015 | 16 | No | SELECT INTO statement is not supported for input data query to 'sp_execute_external_script' stored procedure. |
-| 39016 | 16 | No | The parameterized external script expects the parameter '%.\*ls', which was not supplied. |
-| 39017 | 16 | No | Input data query returns column #%d of type '%ls' which is not supported by the runtime for '%.\*s' script. Unsupported types are binary, varbinary, timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
-| 39018 | 16 | No | Parameter '%.\*ls' uses a data type that is not supported by the runtime for '%.\*s' script. Unsupported types are timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
-| 39019 | 10 | No | An external script error occurred: %.\*ls%.\*ls |
-| 39020 | 16 | No | Feature 'Advanced Analytics Extensions' is not installed. Consult Books Online for more information on this feature. |
-| 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Check the configuration of the '%.\*s' runtime. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323008](https://go.microsoft.com/fwlink/?linkid=2323008). |
-| 39022 | 10 | No | STDERR messages from external script: %.\*ls%.\*ls |
-| 39023 | 16 | No | 'sp_execute_external_script' is disabled on this instance of SQL Server. Use sp_configure 'external scripts enabled' to enable it. |
-| 39024 | 16 | No | Parallel execution of 'sp_execute_external_script' failed. Specify WITH RESULT SETS clause with output schema. |
-| 39025 | 16 | No | External script execution failed as extensibility environment is not ready yet. Retry the operation when the server is fully started. |
-| 39026 | 16 | No | The parameter name 'r_rowsPerRead' is specified multiple times in 'sp_execute_external_script' call. The name 'r_rowsPerRead' is reserved for specifying streaming behavior only. External script request id is %ls. |
-| 39027 | 16 | No | Parameter '%.\*ls' was specified multiple times to sp_execute_external_script stored procedure. |
-| 39029 | 16 | No | The external language '%.\*ls' returned error messages: '%.\*ls'. |
-| 39030 | 16 | No | Variable '%.\*ls' has unsupported data type for parameter exchange in EXEC EXTERNAL LANGUAGE statement. |
-| 39031 | 16 | No | Cannot parse the output schema of the built-in function '%ls'. |
-| 39032 | 16 | No | The function %ls expects parameters in the form of 'name = value'. |
-| 39033 | 16 | No | The parameter name '%.\*ls' has already been declared. Parameter names must be unique in %ls function call. |
-| 39034 | 16 | No | The parameter '%.\*ls' in %ls contains a definition that doesn't match the supplied arguments. |
-| 39035 | 16 | No | The function %ls has too many arguments supplied. |
-| 39036 | 16 | No | The function %ls expects parameter '%.\*ls' which was not supplied. |
-| 39037 | 16 | No | The function %ls contains a parameter '%.\*ls' that has an invalid type. |
-| 39038 | 16 | No | The function %ls expects parameter '%.\*ls' of type ntext/nchar/nvarchar. |
-| 39039 | 16 | No | Error converting the parameter value for '%.\*ls' to '%.\*ls'. |
-| 39040 | 16 | No | The function '%ls' does not support SQL identifier or variable for '%.\*ls'. |
-| 39041 | 16 | No | The parameter '%.\*ls' has an invalid definition. |
-| 39042 | 16 | No | %s EXTERNAL LIBRARY failed because the library source parameter %d is not a valid expression. |
-| 39043 | 16 | No | %s EXTERNAL LIBRARY failed because filename '%.\*ls' is too long. |
-| 39044 | 16 | No | %s EXTERNAL LIBRARY failed because it could not open the physical file '%.\*ls': %ls. |
-| 39045 | 16 | No | %s EXTERNAL LIBRARY failed because it could not read from the physical file '%.\*ls': %ls. |
-| 39046 | 16 | No | CREATE EXTERNAL LIBRARY failed because the user "%.\*ls" specified in the authorization clause does not exist. |
-| 39047 | 16 | No | External library '%.\*ls' already exists for owner '%.\*ls' in database '%.\*ls'. |
-| 39048 | 16 | No | Failed to %s external library '%ls': %ls. |
-| 39049 | 10 | No | Messages from 'PREDICT' engine: %.\*ls%.\*ls |
-| 39050 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. Out of memory. |
-| 39051 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. Model is corrupt or invalid. |
-| 39052 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. Model type is unsupported. |
-| 39053 | 16 | No | The function PREDICT expects parameter 'RUNTIME' of type ntext/nchar/nvarchar. |
-| 39054 | 16 | No | The 'RUNTIME' parameter is invalid. |
-| 39055 | 16 | No | %ls can only be called in combination with the OUTER APPLY clause. |
-| 39056 | 16 | No | Could not parse the list of columns to be passed to %ls. Only simple column references are accepted. |
-| 39057 | 16 | No | The value provided for the '%.\*ls' parameter is too large. |
-| 39058 | 16 | No | The parameter '%.\*ls' has a type that is not supported. |
-| 39092 | 16 | No | Initialization of native scoring libraries failed with HRESULT 0x%x. |
-| 39093 | 16 | No | 'PREDICT' function does not take parameters of varchar(max), nvarchar(max) or varbinary(max) type except for 'MODEL' parameter. |
-| 39094 | 16 | No | 'PREDICT' function only supports models smaller than 100 MB. |
-| 39096 | 16 | No | Execution failed because its WITH clause specified different output columns from what 'PREDICT' function tries to return. The schema returned by 'PREDICT' function is '%ls'. |
-| 39097 | 16 | No | Input data column #%d is of type '%ls' which is not supported by '%ls' function. Unsupported types are binary, varbinary, timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. |
-| 39098 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. |
-| 39099 | 16 | No | Feature or option 'PREDICT' is not yet implemented. Please consult Books Online for more information on this feature or option. |
-| 39101 | 16 | No | '%.\*ls' failed because it is not supported in the edition of this SQL Server instance. |
-| 39102 | 16 | No | Duplicate column names are not allowed in '%.\*ls'. Column name '%.\*ls' is a duplicate. |
-| 39103 | 16 | No | Parameter '@input_data_1_order_by_columns' is not allowed without parameter '@input_data_1_partition_by_columns'. |
-| 39104 | 16 | No | Column '%.\*ls' in '%.\*ls' is not defined in the SELECT clause of '@input_data_1' parameter. |
-| 39105 | 16 | No | Invalid syntax for parameter '@input_data_1_partition_by_columns'. Specify a list of comma separated columns. |
-| 39106 | 16 | No | Invalid syntax for parameter '@input_data_1_order_by_columns'. Specify a list of comma separated columns and an optional argument for sorting order \<ASC\|DESC\>. |
-| 39107 | 16 | No | Columns in parameters '@input_data_1_partition_by_columns' and '@input_data_1_order_by_columns' must be unique. Column name '%.\*ls' appears in both parameters. |
-| 39108 | 16 | No | Maximum number of concurrent external script users has been reached. Limit is %d. Please retry the operation. External script request id is %ls. |
-| 39109 | 16 | No | The combined total number of columns given in parameters '@input_data_1_partition_by_columns' and '@input_data_1_order_by_columns' exceeds the maximum %d. |
-| 39110 | 16 | No | Maximum number of concurrent external script queries for this user has been reached. Limit is %d. Please retry the operation. External script request id is %ls. |
-| 39111 | 16 | No | The SQL Server Machine Learning Services End-User License Agreement (EULA) has not been accepted. |
-| 39112 | 15 | No | Duplicate file specification supplied for platform '%.\*ls'. |
-| 39113 | 15 | No | Number of file specifications exceeds the maximum of %d. |
-| 39114 | 15 | No | CREATE EXTERNAL LIBRARY statement failed because of duplicate file specification. Only one file specification per platform is allowed in a CREATE EXTERNAL LIBRARY statement. |
-| 39115 | 16 | No | ALTER EXTERNAL LIBRARY statement failed because the content for platform '%.\*ls' does not exist or is not correctly defined in the external library. |
-| 39116 | 16 | No | ALTER EXTERNAL LIBRARY REMOVE PLATFORM statement failed because an external library requires at least one file specification to be defined. |
-| 39117 | 16 | No | %.\*ls EXTERNAL LANGUAGE statement failed because the parameter '%s' is not a valid expression. |
-| 39118 | 16 | No | %s EXTERNAL LANGUAGE statement failed because the specified file path '%.\*ls' is too long. Maximum length of file path is %d characters. |
-| 39119 | 16 | No | %s EXTERNAL LANGUAGE failed because it could not open the physical file '%.\*ls': %ls. |
-| 39120 | 16 | No | %s EXTERNAL LANGUAGE statement failed because it could not read from the physical file '%.\*ls': %ls. |
-| 39121 | 16 | No | CREATE EXTERNAL LANGUAGE statement failed because the user "%.\*ls" specified in the authorization clause does not exist or have permission. |
-| 39122 | 16 | No | CREATE statement failed. External language '%.\*ls' already exists. |
-| 39123 | 16 | No | %.\*ls EXTERNAL LANGUAGE statement failed because the parameter '%s' is not specified. |
-| 39124 | 16 | No | '%.\*ls' platform information doesn't exist for the language '%.\*ls'. |
-| 39125 | 16 | No | ALTER EXTERNAL LANGUAGE statement failed because of duplicate file specification. Only one file specification per platform is allowed. |
-| 39126 | 16 | No | ALTER EXTERNAL LANGUAGE REMOVE PLATFORM statement failed because an external language requires at least one file specification to be defined. |
-| 39127 | 16 | No | External script execution for '%.\*s' script ran out of resources. External script request id is: %s. |
-| 39128 | 16 | No | External language runtime for '%s' could not be provisioned. Error code 0x%08x. |
-| 39129 | 16 | No | Cannot drop external language '%.\*ls' because it is being referenced by external library '%.\*ls'. |
-| 39130 | 16 | No | %.\*ls statement failed. Language '%s' already exists. |
-| 39131 | 16 | No | %.\*ls statement failed. System language '%s' can't be altered or removed. |
-| 39132 | 16 | No | The parameter '@r_rowsPerRead' is invalid. Parameter '@r_rowsPerRead' must be a positive integer. |
-| 39133 | 16 | No | CREATE/ALTER EXTERNAL LANGUAGE statement failed. The environment variables string is invalid. |
-| 39134 | 16 | No | The procedure '%s' cannot be executed because it is not supported in Azure SQL Edge. |
-| 39135 | 16 | No | Service environment '%s' is not ready. |
-| 39136 | 10 | No | Error sending a message to the service. |
-| 39137 | 10 | No | Error initialization external services framework. |
-| 39138 | 16 | No | Request to drop streaming job '%s' failed because the job is currently running. Stop the job before dropping. |
-| 39139 | 16 | No | Request to stop streaming job '%s' failed because the job is not currently running. |
-| 39140 | 16 | No | Request to create streaming job '%s' failed. The streaming job query cannot be null or empty. |
-| 39141 | 16 | No | External data source '%s' with location prefix '%s' is not supported as input for streaming. |
-| 39142 | 16 | No | External data source '%s' with location prefix '%s' is not supported as output for streaming. |
-| 39143 | 16 | No | External data source '%s' with location prefix '%s' is not supported for streaming. |
-| 39144 | 16 | No | External data source '%s' has an invalid location for streaming. |
-| 39145 | 16 | No | External stream '%s' has an invalid location. |
-| 39146 | 16 | No | External stream '%s' has invalid properties. |
-| 39147 | 16 | No | Kafka datasource '%s' should specify a value for PARTITIONS in the properties field. |
-| 39148 | 16 | No | External file format '%s' type is not supported for streaming. |
-| 39149 | 16 | No | External file format '%s' encoding is not supported for streaming. |
-| 39150 | 16 | No | Error while processing streaming job: '%s'. |
-| 39151 | 16 | No | Transient error communicating with the streaming runtime. Please retry the operation. |
-| 39152 | 16 | No | Transient error communicating with the streaming runtime due to unfinished stop streaming job operation. Please retry the operation. |
-| 39153 | 16 | No | Error while launching mssql-flight-server with HRESULT 0x%x |
-| 39154 | 16 | No | Error while stopping mssql-flight-server with HRESULT 0x%x |
-| 39155 | 16 | No | The maximum acceptable number of columns is %d while %ld number of columns are in the schema. |
-| 39156 | 16 | No | External libraries are not permitted for language '%.\*ls'. |
-| 39157 | 16 | No | Cannot modify or drop system-defined external language '%.\*ls'. |
-| 39158 | 16 | No | First-party extensibility features are not enabled on this instance of SQL Server. Contact your system administrator. |
-| 39159 | 16 | No | %ls requires at least %d parameters. |
-| 39160 | 16 | No | Parameter '%ls' must not be NULL for stored procedure %ls. |
-| 39161 | 16 | No | Stored procedure %ls is not enabled on this instance of SQL Server. |
-| 39162 | 16 | No | Parameter '%ls' must not exceed %u characters. |
-| 39163 | 16 | No | Parameter '%ls' must be an inline (non-LOB) Unicode string. |
-| 39164 | 16 | No | '%.\*ls' is not a recognized first-party language for stored procedure %ls. |
-| 39165 | 16 | No | The value supplied for parameter '%ls' of stored procedure %ls is not valid JSON. |
-| 39166 | 16 | No | The JSON supplied to stored procedure %ls is not valid: %ls. |
-| 39167 | 16 | No | '%ls' is not a supported data type in the JSON supplied to stored procedure %ls. |
-| 39168 | 16 | No | The JSON supplied to stored procedure %ls specifies too many parameters; the maximum is %d but %ld were supplied. |
-| 39169 | 16 | No | The JSON supplied to stored procedure %ls specifies too many columns; the maximum is %d but %ld were supplied. |
-| 39170 | 16 | No | Parameter '%ls' of stored procedure %ls must be declared with the OUTPUT keyword. |
-| 39171 | 16 | No | Parameter '%ls' must be a Unicode (nvarchar or nvarchar(max)) string. |
-| 39172 | 16 | No | An extension request for '%.\*s' failed with HRESULT 0x%x. Request ID is %ls. |
-| 39173 | 16 | No | Stored procedure %ls returned a result set with an invalid schema. |
-| 40000 | 16 | No | Replicated tables support only local (non-DTC) two-phase commit involving the master database. |
-| 40001 | 16 | No | Secondary kill was initiated during commit. |
-| 40002 | 16 | No | Replicated row is not found. |
-| 40003 | 16 | No | Unexpected operation in replicated message. |
-| 40004 | 16 | No | Column count does not match. |
-| 40005 | 16 | No | Duplicated transaction id. |
-| 40006 | 16 | No | Unknown transaction id. |
-| 40007 | 16 | No | Invalid nesting level. |
-| 40008 | 16 | No | Replication target database is not found. |
-| 40009 | 16 | No | Transaction state locally does not match the expected state. |
-| 40010 | 16 | No | Replicated transactions across databases are not allowed. |
-| 40011 | 16 | No | Replicated target table %ld is not found. |
-| 40012 | 16 | No | Replicated target index %ld on table %ld is not found. |
-| 40013 | 16 | No | Replicated target schema %.\*ls is not found. |
-| 40014 | 16 | No | Multiple databases can not be used in the same transaction. |
-| 40015 | 16 | No | This functionality is not supported on replicated tables. |
-| 40016 | 16 | No | The partitioning key column '%.\*ls' must be one of the keys of '%.\*ls.%.\*ls.%.\*ls' index. |
-| 40017 | 16 | No | Partition key can not be changed. |
-| 40018 | 16 | No | Partition key value is outside of the valid partition key range. |
-| 40019 | 16 | No | The partition key column '%.\*ls' of table '%.\*ls.%.\*ls' is nullable or does not match the partition key type defined in the table group. |
-| 40020 | 16 | No | The database is in transition and transactions are being terminated. |
-| 40021 | 16 | No | The low and high keys specified for the partition are invalid. Low must be less than high. |
-| 40022 | 16 | No | A partition with overlapping key ranges already exists. |
-| 40023 | 16 | No | The name %s is too long. |
-| 40024 | 16 | No | The last committed CSN (%d, %I64d) was not found in the log. The last seen CSN was (%d, %I64d). |
-| 40025 | 16 | No | The transaction was aborted during commit due to a database state transition. |
-| 40028 | 16 | No | The tablegroup name '%.\*ls.%.\*ls' is not valid. |
-| 40029 | 16 | No | Replicated tables can have at most %d columns. |
-| 40030 | 16 | No | Can not perform replica operation because the replica does not exist in local partition map. |
-| 40031 | 16 | No | The partition key column for table '%.\*ls.%.\*ls' is undefined. |
-| 40032 | 16 | No | Unsupported use of LOB in online index build. |
-| 40033 | 16 | No | Attempted CSN epoch switch is not allowed. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40034 | 16 | No | CSN being added must be equal last CSN+1. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40035 | 16 | No | CSN being added must be equal or greater than the last CSN. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40036 | 16 | No | Can not perform replica operation because this node is not the secondary for this partition. |
-| 40037 | 16 | No | The epoch being started must not have been used. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40038 | 16 | No | Can not get ack to roll back replication message. |
-| 40039 | 16 | No | Can not get ack to commit replication message. |
-| 40040 | 16 | No | Failed to initiate VDI Client for physical seeding. |
-| 40041 | 16 | No | Corrupted column status. |
-| 40042 | 16 | No | Corrupted column length. |
-| 40043 | 16 | No | Corrupted variable data. Actual remaining bytes is %d, expected %d bytes. |
-| 40044 | 16 | No | Corrupted fixed size data. Actual remaining bytes %d, expected %d bytes. |
-| 40045 | 16 | No | Message version mismatch. Actual version is %d and the expected is %d. |
-| 40046 | 16 | No | The minimum required message version %d for message type %d is unsupported. |
-| 40047 | 16 | No | Invalid use of parent transaction. |
-| 40048 | 16 | No | Corrupted fragmented row flow sequence. |
-| 40049 | 16 | No | Corrupted fragmented row. |
-| 40050 | 16 | No | Corrupted LOB row. |
-| 40051 | 16 | No | Use of UPDATETEXT on replicated tables is not supported. |
-| 40052 | 16 | No | Parallel queries are not supported on replicated tables. |
-| 40053 | 16 | No | Attempt to replicate a non-replicated system table %ld. |
-| 40054 | 16 | No | Tables without a clustered index are not supported in this version of SQL Server. Please create a clustered index and try again. |
-| 40056 | 16 | No | Master, tempdb, model and mssqlsystemresource databases can not be replicated. |
-| 40057 | 16 | No | Table is not enabled for replication. |
-| 40058 | 16 | No | Unsupported replicated table usage option. Refer to the state to identify the cause. |
-| 40060 | 16 | No | Attempt to replicate out of partition already locked for internal use. |
-| 40061 | 16 | No | Unknown rowset id. |
-| 40062 | 16 | No | Incorrect replica role transition. |
-| 40063 | 16 | No | Replica is not found. |
-| 40064 | 16 | No | Attempt to add a CSN to an invalid CSN vector. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40065 | 16 | No | CSN vector can be reinitialized only with initial or invalid CSN. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40066 | 16 | No | Transport destination is not found. |
-| 40067 | 16 | No | Corrupted row sequence. |
-| 40068 | 16 | No | Idempotent mode has been used on an unknown transaction. |
-| 40069 | 16 | No | Could not obtain rowset interface. |
-| 40070 | 16 | No | CSN mismatch detected. The local CSN is (%d,%I64d), the remote CSN is (%d,%I64d). |
-| 40071 | 16 | No | This partition does not have enough valid secondaries to start a DML transaction. The needed count is %ld, the current counts are %ld (main quorum) and %ld (transient quorum). |
-| 40072 | 16 | No | Corrupted rowset metadata sequence. |
-| 40073 | 16 | No | Partitioned tables are not supported. |
-| 40074 | 16 | No | Partition key is not found is the target rowset or is nullable or not part of index keys. |
-| 40075 | 16 | No | Column schema mismatch for rowset %ls.%ls.%ls column %ld. |
-| 40076 | 16 | No | Too few columns from remote rowset %ls.%ls.%ls. |
-| 40077 | 16 | No | Remote rowset %ls.%ls.%ls column %ld is not found locally. |
-| 40078 | 16 | No | The persisted queue logging has failed. |
-| 40079 | 16 | No | A non-null variable length value is received for a column that is shorter locally. |
-| 40080 | 16 | No | Corrupted (too long) packed row. |
-| 40081 | 16 | No | Cardinality of index should not be less then zero. |
-| 40082 | 16 | No | Induced exception for testing purposes. |
-| 40083 | 16 | No | Corrupted CSN vector. |
-| 40084 | 16 | No | Multiple modifications to CSN vector in the same transaction are not supported. |
-| 40085 | 16 | No | The primary partition has lost the quorum. New transactions can not start. |
-| 40086 | 16 | No | Primary hit an error with this secondary. |
-| 40087 | 16 | No | Replica with the specified version is not found. |
-| 40088 | 16 | No | CSN being set is outside the CSN epoch range. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40089 | 16 | No | The index configuration for table %ld index %ld does not match the source. |
-| 40090 | 16 | No | The primary partition is in transition and the transaction can not commit. |
-| 40091 | 16 | No | Truncation CSN is mismatched. The truncation CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
-| 40092 | 16 | No | This index %ld state for table %ld does not match the source. |
-| 40093 | 16 | No | Replication background task hit a lock timeout. User transactions will be killed and the operation will be retried. |
-| 40094 | 16 | No | Incompatible key metadata change. The scan can not be resumed. |
-| 40095 | 13 | No | Replication transaction (Process ID %d) was deadlocked on %.\*ls resources with another process and has been chosen as the deadlock victim. The operation will be retried. |
-| 40096 | 16 | No | Critical replication task could not start. State is %d. |
-| 40097 | 16 | No | The begin transaction message was not found when scanning persisted replication queue. |
-| 40098 | 16 | No | Mismatched partition id found in the transaction log. |
-| 40099 | 16 | No | Invalid nested transaction count found in the transaction log. |
-| 40101 | 16 | No | The partition does not have persisted queues enabled. |
-| 40102 | 16 | No | The partition can not have persisted queues modified in this state. |
-| 40103 | 16 | No | The partition can not be changed inside a persisted object. |
-| 40104 | 16 | No | Only sysadmin can execute this stored procedure '%.\*ls'. |
-| 40105 | 16 | No | The local partition map for database %.\*ls is starting up in reduced functionality mode because of log full. Pending partition deletes will not be processed until the log is truncated. |
-| 40106 | 16 | No | The schema scope set in the session is not the current schema scope for the current partition. Please rerun your query. |
-| 40108 | 16 | No | The filtered replica is not a subset of the primary replica. This is only possible for table groups without a partition key. |
-| 40109 | 16 | No | Number of parameters specified for procedure or function %.\*ls is incorrect. |
-| 40110 | 16 | Yes | Cannot scope database %s for sp_cloud_scope_database spec proc because it is already set up as a partition database. |
-| 40111 | 16 | Yes | Unable to delete partition DB id %d. |
-| 40126 | 16 | Yes | The partition database was not found during pending schema scope cleanup, deleting partition metadata only (%d, %s). |
-| 40127 | 16 | Yes | %S_MSG database '%.\*ls' link up with the %S_MSG database %d encountered the error: %S_MSG. |
-| 40128 | 16 | Yes | Cannot pair database '%.\*ls' with fabric because it is not a partition host. |
-| 40129 | 16 | Yes | %S_MSG database link up with the %S_MSG database '%.\*ls' encountered the error: %ls. |
-| 40130 | 16 | No | Replication quorum parameter is %d. It should be \>= 1 and \<= 32. |
-| 40131 | 16 | No | Partition key type '%.\*ls' is not supported. Only BIGINT, UNIQUEIDENTIFIER, and VARBINARY(n) (0\<n\<=512) datatypes are supported currently. |
-| 40132 | 16 | No | Before dropping a table group, you have to delete all the partitions. |
-| 40133 | 15 | No | This operation is not supported in this version of SQL Server. |
-| 40134 | 16 | No | get_new_rowversion() can only be used in an active transaction. |
-| 40135 | 15 | No | This system metadata view is not supported. |
-| 40136 | 15 | No | Could not disable versioning because the database is not in single user mode. |
-| 40137 | 15 | No | Could not refresh options for all scoped databases. |
-| 40138 | 16 | No | Query references entities from multiple partitions. |
-| 40139 | 16 | No | The data node does not host a replica of the requested partition. |
-| 40140 | 16 | No | Set partition failed since a different partition already was set in the current transaction. Cross partition operations within a node are not reliable or supported. |
-| 40141 | 16 | No | Partition has to be set using sp_set_partition before executing this query. |
-| 40142 | 16 | No | Accessing a different partition in the same transaction is not allowed. |
-| 40143 | 16 | No | The replica that the data node hosts for the requested partition is not primary. |
-| 40144 | 16 | No | Cannot find the object "%.\*ls" because it does not exist or you do not have permissions. |
-| 40145 | 16 | No | Database is not found. |
-| 40146 | 16 | No | Table group object is not found. |
-| 40147 | 16 | No | Stored procedure '%.\*ls' is only for CloudDB. |
-| 40148 | 16 | No | The existing persisted queue snapshot CSN (%d, %I64d) at %S_LSN is greater than the requested snapshot CSN (%d, %I64d) at %S_LSN. |
-| 40149 | 16 | No | The database does not host any partitions. |
-| 40150 | 16 | No | Downgrading the severity of error %d, severity %d, state %d because it would cause the server to be shutdown on a non-critical error. |
-| 40151 | 16 | No | Partition is in transactionally inconsistent state. |
-| 40152 | 16 | No | Partition delete expects no context transaction. |
-| 40153 | 16 | No | The current database has been shutdown. The current database has been switched to master. |
-| 40154 | 16 | No | Cannot use sp_cloud_add_partition or sp_cloud_delete_partition within a transaction when Partition DB are enabled. |
-| 40155 | 16 | Yes | Invalid arguments provided to sp_cloud_add_partition spec proc (%s). |
-| 40156 | 16 | Yes | Drop is not allowed on the %S_MSG database '%.\*ls' as it contains partitions. Drop the partition before the operation. |
-| 40157 | 16 | No | Too many secondaries. At most 32 are currently supported. |
-| 40158 | 16 | No | Could not change database collation for database id %d. |
-| 40159 | 16 | No | Database scoping cannot be run inside a transaction. |
-| 40160 | 16 | No | Heartbeat message version mismatch. Actual version is %d and the expected is %d. |
-| 40161 | 16 | No | Invalid partition type. Only 1 or 2 is supported. |
-| 40162 | 16 | No | The replica that the data node hosts for the requested partition is not transactionally consistent. |
-| 40163 | 16 | No | Become nothing expects no context transaction. |
-| 40164 | 16 | No | Idempotent flush expects no context transaction. |
-| 40165 | 16 | No | Prepare for full commit expects no context transaction. |
-| 40166 | 16 | No | A CloudDB reconfiguration is going on and all new user transactions are aborted. |
-| 40167 | 21 | Yes | A paired CloudDB fabric node failed and database %d must be shutdown. |
-| 40168 | 16 | No | SILO_TO_PDB: Partition copy is disabled in M1. |
-| 40169 | 16 | No | Waiting for database copy sync with %s.%s has failed. Please make sure the database is in the CATCH_UP state and try again later. |
-| 40170 | 16 | No | Catchup of secondary at %s:%s:%s:%d has failed. |
-| 40171 | 16 | No | Table group name (single part name) should not be longer than nvarchar(64). |
-| 40172 | 16 | No | The partition is not in a state that allows deletion. |
-| 40173 | 16 | No | This requested operation can not performed as this partition is in delete process. |
-| 40174 | 16 | No | The partition is in transition and transactions are being terminated. |
-| 40175 | 16 | No | Add a secondary with wait can not be used in a transaction. |
-| 40176 | 16 | No | Rename a partition can not be used in a transaction. |
-| 40177 | 16 | No | The new table group does not match the existing table group for the renaming partition. |
-| 40178 | 16 | No | A partition with same name already exists. |
-| 40179 | 16 | Yes | Fabric-database ('%.\*ls') cannot be paired, the server is not ready to pair. |
-| 40180 | 16 | Yes | Fabric-database ('%.\*ls') cannot be paired, the database is already paired. |
-| 40181 | 16 | Yes | Fabric-database ('%.\*ls') cannot be paired, the supplied mutex ('%.\*ls') could not be opened. Error code: %d |
-| 40182 | 16 | Yes | The schema scope %ld being created is not empty. |
-| 40183 | 16 | Yes | Could not create database side pairing mutex for database ('%.\*ls'). Error code: %d |
-| 40184 | 16 | No | Login failed. A system operation is in progress, and the database is not accepting user connections. |
-| 40185 | 16 | No | Secondary failure report expects no context transaction. |
-| 40186 | 16 | No | The data node does not host a replica of the requested partition with the requested version. |
-| 40187 | 16 | No | The metadata record for the partition does not exist. |
-| 40188 | 16 | No | Failed to update database "%.\*ls" because it is switched to read-only to enforce disaster recovery RPO. |
-| 40189 | 16 | No | The resource quota for the current database has been exceeded and this request has been aborted. Please rerun your request in the next quota window. %s |
-| 40190 | 16 | No | A context transaction is required. |
-| 40191 | 16 | Yes | Cannot create partition DB (%s). |
-| 40192 | 16 | No | Catchup of secondary at %s:%s:%s:%d has been cancelled. |
-| 40193 | 16 | No | The maximum allowed number of database is already paired. |
-| 40194 | 16 | No | Table %s has a partition key already. Explicitly specifying a new partition key is not allowed. Please use "Alter table". |
-| 40195 | 16 | No | %ls FOR SID command is not supported in this version of SQL Server. |
-| 40196 | 16 | No | A varbinary can not be longer than max length specified. |
-| 40197 | 16 | No | The service has encountered an error processing your request. Please try again. Error code %d. |
-| 40198 | 16 | No | Only a primary replica can be configured as a forwarder. |
-| 40199 | 16 | No | There should be no context transaction when entering the forwarder pending state. |
-| 40201 | 16 | No | Destination server name is too long. |
-| 40202 | 16 | No | Corrupted composite message. |
-| 40203 | 16 | No | Could not register AsyncTransport endpoint. |
-| 40204 | 16 | No | Dispatch sequence number maintenance failure |
-| 40205 | 16 | No | Maximum transport queue size reached. |
-| 40206 | 16 | No | Heartbeat lease time is less than the heartbeat worker interval. |
-| 40207 | 16 | No | Async transport test failed. |
-| 40208 | 16 | No | Corrupted received message format. |
-| 40209 | 17 | No | Duplicate destination id. |
-| 40210 | 16 | No | Cluster name has not been set. |
-| 40301 | 16 | No | Invalid lock mode or resource received in lock request. |
-| 40302 | 16 | No | Invalid identity value. |
-| 40303 | 16 | No | Enter idempotent sequence. |
-| 40304 | 16 | No | Target object %ld is not found. |
-| 40305 | 16 | No | The current object is not a relation. |
-| 40306 | 16 | No | Cannot create an index %ld on object %ld. |
-| 40307 | 16 | No | Cannot find index %ld on object %ld. |
-| 40308 | 16 | No | Metadata replication protocol error. |
-| 40309 | 16 | No | Partition %ld is not found |
-| 40310 | 16 | No | Converting a clustered index into a heap is not supported. |
-| 40311 | 16 | No | Switching out partitions not supported. |
-| 40312 | 16 | No | Inconsistent index build state. |
-| 40313 | 16 | No | Not all rowsets could be deleted. |
-| 40314 | 16 | No | Identity column not found on object %ld. |
-| 40401 | 16 | No | Requires a Microsoft Entra ID login for managing T-SQL streaming jobs. |
-| 40402 | 16 | No | Error creating the streaming job request with service auth issue. |
-| 40403 | 16 | No | Error creating the streaming job request. |
-| 40404 | 16 | No | Error sending the streaming job request. |
-| 40405 | 16 | No | T-SQL streaming is not supported. |
-| 40406 | 16 | No | The sysadmin role is required for operations on T-SQL streaming jobs. |
-| 40407 | 16 | No | The database scoped credential '%.\*ls' has a secret with more than 200 characters. Long secret value is not supported in Synapse T-SQL Streaming. |
-| 40408 | 16 | No | '%.\*ls' is not a supported Azure region for Synapse T-SQL streaming. |
-| 40409 | 16 | No | Request to update streaming job '%s' failed. The query statement cannot be updated when the job is running. |
-| 40410 | 16 | No | Request to update streaming job '%s' failed. Query statement update and online scaling cannot be done at the same time or both not set. |
-| 40411 | 16 | No | Request to scale streaming job '%s' failed. The job cannot be scaled when not running. |
-| 40412 | 16 | No | Request to stop streaming job '%s' failed. The job is in Created state and not running. |
-| 40501 | 20 | No | The service is currently busy. Retry the request after 10 seconds. Incident ID: %ls. Code: %d |
-| 40502 | 16 | No | Duplicate group id settings specified. |
-| 40503 | 16 | No | Database field %ls contains invalid value '%.\*ls'. Expected data type %ls. |
-| 40504 | 16 | No | Switching Databases is not supported. Use a new connection to connect to a different Database. |
-| 40505 | 16 | No | Incorrect user credentials. |
-| 40506 | 16 | No | Specified SID is invalid for this version of SQL Server. |
-| 40507 | 16 | No | '%.\*ls' cannot be invoked with parameters in this version of SQL Server. |
-| 40508 | 16 | No | USE statement is not supported to switch between databases. Use a new connection to connect to a different database. |
-| 40509 | 16 | No | Upgrade of SAWA v1 database fails. Check the metadata of the database before re-running the upgrade. |
-| 40510 | 16 | No | Statement '%.\*ls' is not supported in this version of SQL Server. |
-| 40511 | 16 | No | Built-in function '%.\*ls' is not supported in this version of SQL Server. |
-| 40512 | 16 | No | Deprecated feature '%ls' is not supported in this version of SQL Server. |
-| 40513 | 16 | No | Server variable '%.\*ls' is not supported in this version of SQL Server. |
-| 40514 | 16 | No | '%ls' is not supported in this version of SQL Server. |
-| 40515 | 16 | No | Reference to database and/or server name in '%.\*ls' is not supported in this version of SQL Server. |
-| 40516 | 16 | No | Global temp objects are not supported in this version of SQL Server. |
-| 40517 | 16 | No | Keyword or statement option '%.\*ls' is not supported in this version of SQL Server. |
-| 40518 | 16 | No | DBCC command '%.\*ls' is not supported in this version of SQL Server. |
-| 40519 | 16 | No | Invalid value '%.\*ls' of login field in gateway magic syntax. |
-| 40520 | 16 | No | Securable class '%S_MSG' not supported in this version of SQL Server. |
-| 40521 | 16 | No | Securable class '%S_MSG' not supported in the server scope in this version of SQL Server. |
-| 40522 | 16 | No | Database principal '%.\*ls' type is not supported in this version of SQL Server. |
-| 40523 | 16 | No | Implicit user '%.\*ls' creation is not supported in this version of SQL Server. Explicitly create the user before using it. |
-| 40524 | 16 | No | Data type '%.\*ls' is not supported in this version of SQL Server. |
-| 40525 | 16 | No | 'WITH %ls' is not supported in this version of SQL Server. |
-| 40526 | 16 | No | '%.\*ls' rowset provider not supported in this version of SQL Server. |
-| 40527 | 16 | No | Linked servers are not supported in this version of SQL Server. |
-| 40528 | 16 | No | Users cannot be mapped to Windows logins in this version of SQL Server. |
-| 40529 | 16 | No | Built-in function '%.\*ls' in impersonation context is not supported in this version of SQL Server. |
-| 40530 | 16 | No | The %.\*ls statement must be the only statement in the batch. |
-| 40531 | 11 | No | Server name cannot be determined. It must appear as the first segment of the server's dns name (servername.%.\*ls). Some libraries do not send the server name, in which case the server name must be included as part of the user name (username@servername). In addition, if both formats are used, the server names must match. |
-| 40532 | 11 | No | Cannot open server "%.\*ls" requested by the login. The login failed. |
-| 40533 | 16 | No | Server '%.\*ls' already exists. |
-| 40534 | 16 | No | A valid SID is already associated with the database owner. |
-| 40535 | 16 | No | Properties for schema scope '%.\*ls' already exist. |
-| 40536 | 16 | No | '%ls' is not supported in this service tier of the database. See Books Online for more details on feature support in different service tiers of Azure SQL Database. |
-| 40537 | 16 | No | User '%.\*ls' not found in the database. |
-| 40538 | 16 | No | A valid URL beginning with 'https://' is required as value for any filepath specified. |
-| 40539 | 16 | No | Azure Storage credential '%.\*ls' was not found. |
-| 40540 | 16 | No | Transaction was aborted as database is moved to read-only mode. This is a temporary situation and please retry the operation. |
-| 40541 | 16 | No | Procedure cannot be called from inside a partition. |
-| 40542 | 16 | No | Incorrect number of parameters specified for procedure. |
-| 40543 | 16 | No | Invalid %S_MSG name specified. Length should be between 1 and %d. |
-| 40544 | 20 | No | The database '%.\*ls' has reached its size quota. Partition or delete data, drop indexes, or consult the documentation for possible resolutions. |
-| 40545 | 20 | No | The service is experiencing a problem that is currently under investigation. Incident ID: %ls. Code: %d |
-| 40546 | 16 | No | Cannot create UCS task pool |
-| 40548 | 16 | No | Granting CONNECT permission to the guest user in database '%.\*ls' is not permitted. |
-| 40549 | 16 | No | Session is terminated because you have a long running transaction. Try shortening your transaction. |
-| 40550 | 16 | No | The session has been terminated because it has acquired too many locks. Try reading or modifying fewer rows in a single transaction. |
-| 40551 | 16 | No | The session has been terminated because of excessive tempdb usage. Try modifying your query to reduce tempdb space usage. |
-| 40552 | 16 | No | The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. |
-| 40553 | 16 | No | The session has been terminated because of excessive memory usage. Try modifying your query to process fewer rows. |
-| 40554 | 10 | No | Exiting because of XEvent %ls. |
-| 40555 | 16 | No | '%ls' is not supported for this database. See Books Online for more details on feature support in different service tiers of Azure SQL Database. |
-| 40558 | 16 | No | Error - cannot perform checkpoint on a partition database before loading partition information. |
-| 40559 | 16 | No | File based statement options are not supported in this version of SQL Server. |
-| 40560 | 16 | No | Specified invalid LSN: '%.\*ls' for database '%.\*ls' while publishing external actor LSN progress. |
-| 40561 | 16 | No | Database copy failed. Either the source or target database does not exist. |
-| 40562 | 16 | No | Database copy failed. The source database has been dropped. |
-| 40563 | 16 | No | Database copy failed. The target database has been dropped. |
-| 40564 | 16 | No | Database copy failed. Database copy failed due to an internal error. Please drop target database and try again.\</value\> |
-| 40565 | 16 | No | Database copy failed. No more than 1 concurrent database copy from the same source is allowed. Please drop target database and try again later. |
-| 40566 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again. |
-| 40567 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again. |
-| 40568 | 16 | No | Database copy failed. Either the source or the target database has become unavailable. Please drop target database and try again. |
-| 40569 | 16 | No | Database copy failed. Target database has become unavailable. Please drop target database and try again. |
-| 40570 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again later. |
-| 40571 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again later. |
-| 40572 | 16 | No | Cannot obtain primary partition lock for CloudDB auto partition upgrade. |
-| 40573 | 16 | No | Cannot upgrade CloudDB auto partitions in database '%.\*ls' because the physical database is read only. |
-| 40574 | 16 | No | Permissions for system stored procedures, server scoped catalog views, and extended stored procedures cannot be changed in this version of SQL Server. |
-| 40576 | 16 | No | Table DDL on non-temporary tables is not supported in a filtered connection. |
-| 40578 | 16 | No | Statement '%.\*ls' is not supported in a filtered connection. |
-| 40581 | 16 | No | Logically filtered secondaries are only supported if the secondary is a forwarder. |
-| 40584 | 16 | No | Value '%.\*ls' for option '%.\*ls' is not supported in this version of SQL Server. |
-| 40585 | 16 | No | Can not perform replica operation because this node is not the forwarder for this partition. |
-| 40586 | 16 | No | Replicas with deferred commit enabled cannot be a member of a quorum. |
-| 40587 | 16 | No | Deferred commit is only supported with forwarder replicas. |
-| 40588 | 16 | No | Cannot create partition worker pool |
-| 40589 | 16 | No | Replicas that are not enabled for deferred commit cannot specify RPO. |
-| 40590 | 16 | No | The Gpm is in rebuild and cannot be accessed as it is not yet consistent. |
-| 40591 | 16 | No | Extended event configuration could not be initialized. The error is %ls. |
-| 40592 | 16 | No | Extended event session '%ls' could not be created or altered. XE Error %d.%d state:%d. |
-| 40593 | 16 | No | Extended event session '%ls' returned error '%ls'. |
-| 40594 | 16 | No | Extended event session '%ls' has been started. |
-| 40595 | 16 | No | Extended event session '%ls' has been altered. |
-| 40596 | 16 | No | Extended event session '%ls' has been stopped. |
-| 40597 | 16 | No | Keyword or statement option '%.\*ls' is not supported for External Logins. |
-| 40598 | 16 | No | '%s' clause is not supported in this version of Synapse SQL. |
-| 40599 | 16 | No | This type of KILL is not supported in Azure SQL Database; Only 'KILL session ID \[WITH STATUSONLY\]' and 'KILL UOW' are supported. |
-| 40601 | 16 | No | Server Admin user already exists. |
-| 40602 | 16 | No | Could not create login. Please try again later. |
-| 40603 | 16 | No | Cannot execute procedure because current user is not Gateway. |
-| 40604 | 16 | No | Could not %.\*ls because it would exceed the quota of the server. |
-| 40605 | 16 | No | There is no route from the source cluster '%ls' to the target cluster '%ls'. |
-| 40606 | 16 | No | Databases cannot be attached in this version of SQL Server. |
-| 40607 | 16 | No | Windows logins are not supported in this version of SQL Server. |
-| 40608 | 10 | No | This session has been assigned a tracing ID of '%.\*ls'. Provide this tracing ID to customer support when you need assistance. |
-| 40609 | 16 | No | '%.\*ls' is not a valid IPv4 address. |
-| 40610 | 16 | No | The IP address that starts with '%.\*ls' is too long. Maximum length is %d. |
-| 40611 | 16 | No | Azure SQL Database supports a maximum of 256 firewall rules. |
-| 40612 | 16 | No | Spec proc was executed against a silo that cannot be upgraded to include firewall objects. |
-| 40613 | 17 | No | Database '%.\*ls' on server '%.\*ls' is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID of '%.\*ls'. |
-| 40614 | 16 | No | Start IP address of firewall rule cannot exceed End IP address. |
-| 40615 | 16 | No | Cannot open server '%.\*ls' requested by the login. Client with IP address '%.\*ls' is not allowed to access the server. To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range. It may take up to five minutes for this change to take effect. |
-| 40616 | 16 | No | '%.\*ls' is not a valid login name in this version of SQL Server. |
-| 40617 | 16 | No | The firewall rule name that starts with '%.\*ls' is too long. Maximum length is %d. |
-| 40618 | 16 | No | The firewall rule name cannot be empty. |
-| 40619 | 16 | No | The edition '%.\*ls' does not support the database data max size '%.\*ls'. |
-| 40620 | 16 | No | The login failed for user "%.\*ls". The password change failed. Password change during login is not supported in this version of SQL Server. |
-| 40621 | 16 | No | metric type |
-| 40622 | 16 | No | metric data |
-| 40623 | 20 | No | Reauthentication failed for login "%.\*ls". Within the past reauthentication interval, the login has become invalid due to a password change, a dropped login, or other cause. Please retry login. |
-| 40624 | 16 | No | Operation is not allowed because server '%.\*ls' is disabled. |
-| 40625 | 17 | No | Provisioning (creating, altering, or dropping) Azure SQL Database servers and databases is currently disabled. This most frequently occurs for brief periods during system maintenance. |
-| 40626 | 20 | No | The ALTER DATABASE command is in process. Please wait at least five minutes before logging into database '%.\*ls', in order for the command to complete. Some system catalogs may be out of date until the command completes. If you have altered the database name, use the NEW database name for future activity. |
-| 40627 | 20 | No | Operation on server '%.\*ls' and database '%.\*ls' is in progress. Please wait a few minutes before trying again. |
-| 40628 | 16 | No | Failed to update database '%.\*ls' because the database is read-only. Please contact your Azure service owner. There may be billing related issues with your Azure account. |
-| 40629 | 16 | No | An edition could not be determined from maxsize '%.\*ls'. Specify a valid maxsize value. |
-| 40630 | 16 | No | Password validation failed. The password does not meet policy requirements because it is too short. |
-| 40631 | 16 | No | The password that you specified is too long. The password should have no more than %d characters. |
-| 40632 | 16 | No | Password validation failed. The password does not meet policy requirements because it is not complex enough. |
-| 40633 | 16 | No | '%.\*ls' is not a valid database edition in this version of SQL Server. |
-| 40634 | 16 | No | This stored procedure can only be executed in the master database. |
-| 40635 | 16 | No | Client with IP address "%.\*ls" is temporarily blocked. |
-| 40636 | 16 | No | Cannot use reserved database name '%.\*ls' in this operation. |
-| 40637 | 17 | No | Database copy is currently disabled. |
-| 40638 | 16 | No | Invalid subscription id '%.\*ls'. Subscription does not exist. |
-| 40639 | 16 | No | Request does not conform to schema: %.\*ls. |
-| 40640 | 20 | No | The server encountered an unexpected exception. |
-| 40641 | 16 | No | Location '%.\*ls' cannot be found. |
-| 40642 | 17 | No | The server is currently too busy. Please try again later. |
-| 40643 | 16 | No | The specified x-ms-version header value is invalid. |
-| 40644 | 14 | No | Failed to authorize access to the specified subscription. |
-| 40645 | 16 | No | Servername "%.\*ls" cannot be empty or null. It can only be made up of lowercase letters 'a'-'z', the numbers 0-9 and the hyphen. The hyphen may not lead or trail in the name. |
-| 40646 | 16 | No | Subscription ID cannot be empty. |
-| 40647 | 16 | No | Subscription '%.\*ls' does not have the server '%.\*ls'. |
-| 40648 | 17 | No | Too many requests have been performed. Please retry later. |
-| 40649 | 16 | No | Invalid content-type is specified. Only application/xml is supported. |
-| 40650 | 16 | No | Subscription '%.\*ls' is not ready for the operation because another operation is currently in progress. Please wait a few minutes and then try the operation again. |
-| 40651 | 16 | No | Failed to create server because the subscription '%.\*ls' is disabled. |
-| 40652 | 16 | No | Cannot move or create server. Subscription '%.\*ls' will exceed server quota. |
-| 40653 | 16 | No | Could not find database '%.\*ls' at time '%.\*ls' that can be restored. |
-| 40654 | 16 | No | Specified subregion '%.\*ls' is invalid. |
-| 40655 | 16 | No | Database 'master' cannot be restored. |
-| 40656 | 16 | No | Quota for maximum number of concurrent restores has been exceeded. |
-| 40657 | 16 | No | Restore is not enabled on the server. |
-| 40658 | 16 | No | Quota for number of restores has been exceeded. |
-| 40659 | 16 | No | Could not successfully restore database because the maximum duration for processing a restore has elapsed. |
-| 40660 | 16 | No | Could not successfully restore database. This request has been assigned a tracing ID of '%.\*ls'. Provide this tracing ID to customer support when you need assistance. |
-| 40661 | 16 | No | Restore has been cancelled by a system administrator. |
-| 40662 | 16 | No | An internal error was encountered when processing the restore request. This request has been assigned a tracing ID of '%.\*ls'. Provide this tracing ID to customer support when you need assistance. |
-| 40663 | 16 | No | Database '%.\*ls' is currently being restored and cannot be dropped. Please wait for restore to complete. |
-| 40664 | 16 | No | Database 'master' cannot be copied. |
-| 40665 | 16 | No | '%.\*ls' is not a supported collation. |
-| 40666 | 16 | No | '%.\*ls' is a unicode-only collation and cannot be a default collation for a database. |
-| 40667 | 15 | No | Specifying a LOGIN is not allowed in a federation member. |
-| 40668 | 16 | No | '%.\*ls' is not a valid user name or you do not have permission. |
-| 40669 | 17 | No | Location '%.\*ls' is not accepting creation of new Azure SQL Database servers at this time. |
-| 40670 | 16 | No | The http header 'ocp-resourceprovider-registered-uri' is missing from the request or is invalid. To continue, provide a valid value for the header. |
-| 40671 | 17 | No | Unable to '%.\*ls' '%.\*ls' on server '%.\*ls'. Please retry the connection later. |
-| 40672 | 16 | No | The service objective assignment for a database cannot be changed more than once per %d hour(s). Please retry the operation %d hour(s) after the last service objective assignment completed for this database. |
-| 40673 | 16 | No | The service objective assignment for the database has failed. Please contact Microsoft customer support and provide the server name, database name and activity ID. |
-| 40674 | 16 | No | Service objective creation or assignment is not permitted for this subscription. |
-| 40675 | 16 | No | The service is currently too busy. Please try again later. |
-| 40676 | 16 | No | System databases cannot be %ls. |
-| 40677 | 16 | No | The operation for the request uri '%.\*ls' was not found. To continue, please provide a valid request uri. |
-| 40678 | 16 | No | Invalid value for header '%.\*ls'. The header must contain a single valid GUID. |
-| 40679 | 16 | No | The operation cannot be performed since the database '%ls' is not in a replication relationship. |
-| 40680 | 16 | No | The operation cannot be performed since the database '%ls' is in a replication relationship. |
-| 40681 | 16 | No | The operation cannot be performed since the database '%ls' is a replication target. |
-| 40682 | 16 | No | Failed to update database '%.\*ls' because the database is a replication target. |
-| 40683 | 16 | No | The operation cannot be performed since the database '%ls' is not a replication target. |
-| 40684 | 16 | No | A seeding operation is already in progress for database '%ls'. |
-| 40685 | 16 | No | A terminate geo relationship operation is already in progress for database '%ls'. Please wait for this operation to finish. |
-| 40686 | 16 | No | The operation is currently not supported. |
-| 40687 | 16 | No | The operation cannot be performed on the database '%.\*ls' in its current state. |
-| 40688 | 16 | No | The databases '%ls' in server '%ls' and '%ls' in server '%ls' are already in a replication relation. |
-| 40689 | 16 | No | Replication limit reached. The database '%ls' cannot have more than %d replication relationships. |
-| 40690 | 16 | No | The operation cannot be performed since the replication source and target databases have different names. The source and target databases must have the same name. |
-| 40691 | 16 | No | Replication target cannot be created in the same server as source. |
-| 40692 | 16 | No | The alter database '%ls' failed to initiate because there are operations pending on the database. After the pending operations are complete, try again. |
-| 40693 | 16 | No | The current operation cannot be initiated while a replication operation is in progress. You can rename the database only after the replication operation has stopped. |
-| 40694 | 16 | No | The seeding operation cannot be initiated on a replication target database. |
-| 40695 | 16 | No | The operation cannot be performed since the database is currently a Federation root or member database. |
-| 40696 | 16 | No | sp_wait_for_database_copy_sync failed because the current database is not the primary database involved in a replication relationship with the specified target server '%s' and database '%s'. |
-| 40697 | 16 | No | Login failed for user '%.\*ls'. |
-| 40698 | 16 | No | '%.\*ls' cannot be performed on a free database. |
-| 40699 | 16 | No | You cannot create a user with password in this version of SQL Server |
-| 40700 | 16 | No | Hardware generation '%.\*ls' is currently unavailable in Azure SQL Database. Please create a SQL Database support request to resolve. |
-| 40701 | 16 | No | XML format used for specifying rules is invalid. %.\*ls. |
-| 40702 | 16 | No | Failed to parse XML rules. |
-| 40703 | 16 | No | Invalid attribute name '%.\*ls' in %.\*ls. |
-| 40704 | 16 | No | Invalid element name '%.\*ls' in %.\*ls. |
-| 40705 | 16 | No | Invalid Feature type '%.\*ls' in %.\*ls. |
-| 40706 | 16 | No | Feature name '%.\*ls' does not exist. |
-| 40707 | 16 | No | Invalid index value '%.\*ls' in %.\*ls. |
-| 40708 | 16 | No | Invalid param count '%.\*ls' in %.\*ls. |
-| 40709 | 16 | No | operator attribute is missing in %.\*ls. |
-| 40711 | 16 | No | Rule name '%.\*ls' does not exist. |
-| 40712 | 16 | No | Invalid usage of %.\*ls. |
-| 40713 | 16 | No | Invalid values supplied for \<parameter\> element in %.\*ls. |
-| 40714 | 16 | No | Out of memory. |
-| 40715 | 16 | No | Invalid operator type %.\*ls in %.\*ls. |
-| 40716 | 16 | No | Invalid input type %.\*ls in %.\*ls. |
-| 40717 | 16 | No | index attribute is missing in %.\*ls. |
-| 40718 | 16 | No | one of inputtype, isnull and format attributes is required in %.\*ls. |
-| 40719 | 16 | No | Failed to get %s lock on %s rules. |
-| 40720 | 16 | No | Rule name '%.\*ls' already exists. |
-| 40721 | 16 | No | Only one of inputtype, isnull and format attributes is required in %.\*ls. |
-| 40722 | 16 | No | Failed to clear proc cache. |
-| 40723 | 16 | No | Rule name cannot exceed more than %d characters. |
-| 40724 | 16 | No | Unexpected Operator attribute in %.\*ls. |
-| 40801 | 16 | No | Operation ALTER USER WITH LOGIN failed. User provided login does not match the login in the federation root database for the user provided username. |
-| 40802 | 16 | No | A service objective assignment on server '%.\*ls' and database '%.\*ls' is already in progress. Please wait until the service objective assignment state for the database is marked as 'Completed'. |
-| 40803 | 16 | No | The server '%.\*ls' has reached its quota of (%d) premium databases. |
-| 40804 | 16 | No | The specified service objective '%.\*ls' is invalid. |
-| 40805 | 16 | No | The service objective assignment for the database has failed. Please contact Microsoft customer support and provide the activity ID. |
-| 40806 | 16 | No | The request to retrieve subscription information has timed out. Please try again later. |
-| 40807 | 16 | No | Could not retrieve subscription information for subscription id: %.\*ls, after %d attempts. Please try again later. |
-| 40808 | 16 | No | The edition '%.\*ls' does not support the service objective '%.\*ls'. |
-| 40809 | 16 | No | No rows found in sys.dm_operation_status table for database '%.\*ls' and operation '%.\*ls'. |
-| 40810 | 16 | No | More than one row found in sys.dm_operation_status table for database '%.\*ls' and operation '%.\*ls'. |
-| 40811 | 16 | No | Operation '%.\*ls' for database '%.\*ls' cannot be cancelled as it has already completed. |
-| 40812 | 16 | No | Database '%.\*ls' cannot be dropped as create operation is in progress. The create operation will be cancelled. |
-| 40813 | 16 | No | Could not set database as writable because the database is Premium (suspended). |
-| 40814 | 16 | No | Could not change database edition to or from Premium for a Federation root. |
-| 40815 | 16 | No | Could not change database edition to or from Premium for a Federation member. |
-| 40816 | 16 | No | Could not change database edition to Premium for a database in a replication relationship. |
-| 40817 | 16 | No | Could not change database edition from Premium for a database in a replication relationship. |
-| 40818 | 16 | No | The replication operation on database '%ls' failed because there are alter operations pending on the database. Try again after the pending operations have completed. |
-| 40820 | 16 | No | The server has reached its quota of (%d) premium databases. |
-| 40821 | 16 | No | Federations are not supported on a Premium database. |
-| 40822 | 16 | No | This feature is not available for the selected database's edition (%ls). |
-| 40823 | 16 | No | Invalid proxy override option supplied. |
-| 40824 | 16 | No | ProxyOverrideSupport feature switch is not turned ON. |
-| 40825 | 16 | No | Unable to complete request now. Please try again later. |
-| 40826 | 16 | No | %ls is not available for %ls service tier. |
-| 40827 | 16 | No | The operation is not supported for your subscription offer type. |
-| 40838 | 16 | No | Replication relationship limit reached. The database '%ls' cannot have more than one non-readable secondary. |
-| 40839 | 16 | No | Connection to a non-readable secondary database is not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409)' for more information. |
-| 40840 | 16 | No | Target region '%ls' is not a DR paired Azure region. See '[http://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409)' for more information. |
-| 40841 | 16 | No | Friendly termination of a non-readable replication relationship is not supported. |
-| 40842 | 16 | No | Termination of the non-readable replication relationship for database '%ls' is currently not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409)' for more information |
-| 40843 | 16 | No | Non-readable secondary is not supported for database copy. |
-| 40844 | 16 | No | Database '%ls' on Server '%ls' is a '%ls' edition database in an elastic pool and cannot have a replication relationship. |
-| 40845 | 16 | No | Server DNS Alias name '%.\*ls' may only contain a single '@' when used to denote a SQL Server alias. |
-| 40846 | 16 | No | DNS alias '%.\*ls' cannot be moved between DNS zones. Target server '%.\*ls' is in a DNS zone ('%.\*ls') that is different from the current server's '%.\*ls' DNS zone ('%.\*ls'). |
-| 40847 | 16 | No | Could not perform the operation because server would exceed the allowed Database Throughput Unit quota of %d. |
-| 40848 | 16 | No | The source database '%ls'.'%ls' cannot have higher performance level than the target database '%ls'.'%ls'. Upgrade the performance level on the target before upgrading source. |
-| 40849 | 16 | No | The target database '%ls'.'%ls' cannot have lower performance level than the source database '%ls'.'%ls'. Downgrade the performance level on the source before downgrading target. |
-| 40850 | 16 | No | Could not change database edition from '%ls' to Standard for database '%ls' in a replication relationship. |
-| 40851 | 16 | No | Could not change database edition from '%ls' to Basic for database '%ls' in a replication relationship. |
-| 40852 | 16 | No | Cannot open database '%.\*ls' on server '%.\*ls' requested by the login. Access to the database is only allowed using a security-enabled connection string. |
-| 40853 | 16 | No | A recovery request for a database that is currently in an elastic pool must include either a target elastic pool name or a target service objective. |
-| 40854 | 16 | No | Partner server '%ls' is not compatible with server '%ls.' |
-| 40855 | 16 | No | The operation cannot be performed since the database '%ls' is not in '%ls' state on the replication relationship. |
-| 40856 | 16 | No | Could not change database edition for database '%ls' in a replication relationship. |
-| 40857 | 16 | No | Elastic pool not found for server: '%ls', elastic pool name: '%ls'. |
-| 40858 | 16 | No | Elastic pool '%ls' already exists in server: '%ls' |
-| 40859 | 16 | No | Elastic pool does not support database edition '%ls'. |
-| 40860 | 16 | No | Elastic pool '%ls' and service level objective '%ls' combination is invalid. |
-| 40861 | 16 | No | The database edition '%ls' cannot be different than the elastic pool service tier which is '%ls'. |
-| 40862 | 16 | No | Elastic pool name must be specified if the elastic pool service objective is specified. |
-| 40863 | 16 | No | Connections to this database are no longer allowed. |
-| 40864 | 16 | No | The DTUs for the elastic pool must be at least (%d) DTUs for service tier '%.\*ls'. |
-| 40865 | 16 | No | The DTUs for the elastic pool cannot exceed (%d) DTUs for service tier '%.\*ls'. |
-| 40866 | 16 | No | Max size (%d) is not valid. Please specify a valid max size. |
-| 40867 | 16 | No | The DTU max per database must be at least (%d) for service tier '%.\*ls'. |
-| 40868 | 16 | No | The DTU max per database cannot exceed (%d) for service tier '%.\*ls'. |
-| 40869 | 16 | No | The DTU max per database (%d) for the elastic pool does not belong to the specified values for service tier '%.\*ls'. |
-| 40870 | 16 | No | The DTU min per database cannot exceed (%d) for service tier '%.\*ls'. |
-| 40871 | 16 | No | The DTU min per database (%d) for the elastic pool does not belong to the allowed values for service tier '%.\*ls'. |
-| 40872 | 16 | No | DTU value (%d) is not valid. Please specify a valid dtu value. |
-| 40873 | 16 | No | The number of databases (%d) and DTU min per database (%d) cannot exceed the DTUs of the elastic pool (%d). |
-| 40874 | 16 | No | The DTUs (%d) for the elastic pool does not belong to the specified values for service tier '%.\*ls'. |
-| 40875 | 16 | No | The elastic pool storage limit in gigabytes cannot exceed (%d) in service tier '%.\*ls'. |
-| 40876 | 16 | No | Elastic pools are not available in this region. |
-| 40877 | 16 | No | The elastic pool is not empty. |
-| 40878 | 16 | No | The elastic pool storage limit in gigabytes must be at least (%d) for service tier '%.\*ls'. |
-| 40879 | 16 | No | The elastic pool storage limit in gigabytes (%d) does not belong to the allowed values for service tier '%.\*ls'. |
-| 40880 | 16 | No | The DTUs (%d) for the elastic pool and the storage limit in gigabytes (%d) are inconsistent for service tier '%.\*ls'. |
-| 40881 | 16 | No | The elastic pool '%.\*ls' has reached its database count limit. The database count for the elastic pool cannot exceed (%d) for service tier '%.\*ls'. |
-| 40882 | 16 | No | Can not change SLO from DataWarehouse edition to other SQL DB editions and vice versa. |
-| 40883 | 16 | No | The service level objective '%.\*ls' specified is invalid. It must be a slo supported by DataWarehouse edition. |
-| 40884 | 16 | No | New service level objective '%.\*ls' has (%d) physical databases and it is not compatible with current service level objective which has (%d) physical databases. |
-| 40885 | 16 | No | Failed to deactivate database. |
-| 40886 | 16 | No | Failed to change service level objective for database. |
-| 40887 | 16 | No | Failed to activate database. |
-| 40888 | 16 | No | Update service level objective for database feature is disabled. |
-| 40889 | 16 | No | The storage limit for the elastic pool '%.\*ls' does not provide sufficient storage space for its databases. Please increase the storage limit or move databases out of the pool. |
-| 40890 | 16 | No | The elastic pool is busy with another operation. |
-| 40891 | 16 | No | The DTU min per database (%d) cannot exceed the DTU max per database (%d). |
-| 40892 | 16 | No | Cannot connect to database when it is paused. |
-| 40893 | 16 | No | The database copy link from '%s.%s' to '%s.%s' was not successfully created or was deleted before the data copy link operation completed. |
-| 40894 | 16 | No | The database copy link from '%s.%s' to '%s.%s' is not in the catchup state after the data copy link operation completed. |
-| 40895 | 16 | No | The database copy link from '%s.%s' to '%s.%s' was not successfully deleted before completion of copy. |
-| 40896 | 16 | No | The database copy link from '%s.%s' to ID %s was not successfully dropped. |
-| 40897 | 16 | No | The elastic pool storage limit in megabytes must be at least (%d) for service tier '%.\*ls'. |
-| 40898 | 16 | No | The elastic pool storage limit in megabytes (%d) does not belong to the allowed values for service tier '%.\*ls'. |
-| 40899 | 16 | No | The DTUs (%d) for the elastic pool and the storage limit in megabytes (%d) are inconsistent for service tier '%.\*ls'. |
-| 40900 | 16 | No | The service tier for an elastic pool cannot be changed. |
-| 40901 | 16 | No | The elastic pool storage limit in megabytes cannot exceed (%d) in service tier '%.\*ls'. |
-| 40902 | 16 | No | Amount of pool storage cannot be specified when creating a Premium elastic pool. |
-| 40903 | 20 | No | The server '%.\*ls' is currently busy. Please wait a few minutes before trying again. |
-| 40904 | 16 | No | Could not perform the operation because server would exceed the allowed Database Edition %s quota of %d. |
-| 40905 | 16 | No | Location '%.\*ls' is not accepting creation of new Azure SQL Database Servers of version '%.\*ls' at this time. This location only supports the following server versions: '%.\*ls'. Please retry using a supported server version. |
-| 40906 | 16 | No | A service objective change cannot start for database %s on server %s while it is also running for database %s on server %s. |
-| 40907 | 16 | No | Servers involved in a Disaster Recovery Configuration cannot reside in the same location |
-| 40908 | 16 | No | A Disaster Recovery Configuration already exists for '%.\*ls' and '%.\*ls' |
-| 40909 | 16 | No | A Disaster Recovery Configuration does not exist for '%.\*ls' and '%.\*ls' |
-| 40910 | 16 | No | A Disaster Recovery Configuration does not exist for server '%.\*ls' and virtual endpoint '%.\*ls' |
-| 40911 | 16 | No | Server '%.\*ls' is not the secondary in the Disaster Recovery Configuration and cannot initiate a failover |
-| 40912 | 16 | No | The value for custom backup retention in days must be between %d and %d |
-| 40913 | 16 | No | Azure SQL Database supports a maximum of %d Virtual Network firewall rules. |
-| 40914 | 16 | No | Cannot open server '%.\*ls' requested by the login. Client is not allowed to access the server. |
-| 40915 | 16 | No | Secondary server for a Failover Group cannot reside in the same region as primary server. Please provide a name of server that is in different Azure region than primary server. |
-| 40916 | 16 | No | The Failover Group '%.\*ls' already exists on server '%.\*ls' |
-| 40917 | 16 | No | The Failover Group '%.\*ls' does not exist on server '%.\*ls' |
-| 40918 | 16 | No | The Failover Group '%.\*ls' is busy with another operation and cannot perform the '%.\*ls' operation. Please try again later |
-| 40919 | 16 | No | The server '%.\*ls' is currently the primary server in the Failover Group and cannot initiate failover |
-| 40920 | 16 | No | The database '%.\*ls' is already included in another Failover Group |
-| 40921 | 16 | No | The operation to add database '%.\*ls' to Failover Group is in progress, please wait for this operation to finish |
-| 40922 | 16 | No | The operation to remove database '%.\*ls' from Failover Group is in progress, please wait for this operation to finish |
-| 40923 | 16 | No | The database '%.\*ls' is a secondary in an existing geo-replication relationship and cannot be added to the Failover Group |
-| 40924 | 16 | No | The operation cannot be performed due to multiple errors: '%.\*ls' Please correct them and retry operation. |
-| 40925 | 16 | No | Can not connect to the database in its current state. |
-| 40926 | 16 | No | The operation cannot be performed because the geo-replication link is part of a Failover Group. You must remove the database from the group in order to individually terminate or failover. |
-| 40927 | 16 | No | The endpoint '%.\*ls' is already in use. Use a different Failover Group name. |
-| 40928 | 16 | No | Create or update Failover Group operation successfully completed; however, some of the databases could not be added to or removed from Failover Group: '%.\*ls' |
-| 40929 | 16 | No | The source database '%ls.%ls' cannot have higher edition than the target database '%ls.%ls'. Upgrade the edition on the target before upgrading source. |
-| 40930 | 16 | No | The target database '%ls.%ls' cannot have lower edition than the source database '%ls.%ls'. Downgrade the edition on the source before downgrading target. |
-| 40931 | 16 | No | Failover Group name '%.\*ls' cannot be empty or null. It can only be made up of lowercase letters 'a'-'z', the numbers 0-9 and the hyphen. The hyphen may not lead or trail in the name. |
-| 40932 | 16 | No | The elastic pool cannot change its service tier since one or more of its databases use memory-optimized objects. |
-| 40933 | 16 | No | The edition '%.\*ls' does not support the database tempdb max size '%.\*ls'. |
-| 40934 | 16 | No | Server DNS Alias name '%.\*ls' cannot be empty or null. It can only be made up of lowercase letters 'a'-'z', the numbers 0-9 and the hyphen. The hyphen may not lead or trail in the name. |
-| 40935 | 16 | No | The endpoint '%.\*ls' is already in use. Use a different Server DNS Alias name. |
-| 40936 | 16 | No | The Server DNS Alias '%.\*ls' already exists for the server '%.\*ls'. Please use different Server DNS Alias name. |
-| 40937 | 16 | No | The Server DNS Alias '%.\*ls' does not exist for the server '%.\*ls'. Please provide valid Server DNS Alias name. |
-| 40938 | 16 | No | The Server DNS Alias '%.\*ls' is busy with another operation and cannot perform the '%.\*ls' operation. Please try again later. |
-| 40939 | 16 | No | The scale operation from service level objective '%.\*ls' to new service level objective '%.\*ls' is not supported. Please file a support ticket. |
-| 40940 | 16 | No | The elastic pool '%.\*ls' cannot be updated because one of its databases is performing a copy or geo-replication failover operation. |
-| 40941 | 16 | No | Copy operation for the database '%.\*ls' on the server '%.\*ls' cannot be started because the elastic pool '%.\*ls' is currently being updated. |
-| 40942 | 16 | No | A service objective assignment operation cannot be performed because copy or failover operation for the database '%.\*ls' on the server '%.\*ls' is in progress. |
-| 40943 | 16 | No | A Failover Group cannot be created on the server '%.\*ls' because the Table Auditing feature is enabled for this server. |
-| 40944 | 16 | No | The database '%.\*ls' on the server '%.\*ls' cannot be added to a Failover Group because the Table Auditing or Security Enabled Access feature is turned on for this database. |
-| 40945 | 16 | No | The Table Auditing feature cannot be turned on for a server that contains Failover Groups. Please try Blob Auditing instead. |
-| 40946 | 16 | No | The Table Auditing or Security Enabled Access feature cannot be turned on for a database that is part of a Failover Group. |
-| 40947 | 16 | No | The Table Auditing or Security Enabled Access feature cannot be turned on for a database that is located on a server with a Server DNS Alias. |
-| 40948 | 16 | No | A Server DNS Alias cannot be created for the server '%.\*ls' because the Table Auditing feature is enabled for this server. |
-| 40949 | 16 | No | A Server DNS Alias cannot be created for the server '%.\*ls' because the database '%.\*ls' has the Table Auditing or Security Enabled Access feature enabled. |
-| 40950 | 16 | No | The DNS Alias '%.\*ls' already exists for the elastic pool '%.\*ls' on server '%.\*ls'. |
-| 40951 | 16 | No | The DNS Alias '%.\*ls' does not exist for the elastic pool '%.\*ls' on server '%.\*ls'. |
-| 40952 | 16 | No | A Server DNS Alias cannot be created because server '%.\*ls' would exceed the allowed Server DNS Aliases quota of %d. |
-| 40953 | 16 | No | A Failover Group cannot be created because server '%.\*ls' would exceed the allowed Failover Groups quota of %d. |
-| 40954 | 16 | No | The Table Auditing feature cannot be turned on for a server that contains Server Dns Aliases. Please try Blob Auditing instead. |
-| 40955 | 16 | No | The operation cannot be performed due to insufficient file space in the elastic pool. The operation requires (%d) MBs file space and there are (%d) MBs file space available. Unused file space must be reclaimed before retrying the operation. Please refer to the following article for details on reclaiming unused file space: [https://go.microsoft.com/fwlink/?linkid=864775](https://go.microsoft.com/fwlink/?linkid=864775). |
-| 40956 | 16 | No | The Server Disaster Recovery Configuration feature is deprecated. Please use Failover Group instead. |
-| 40957 | 16 | No | The DTU min per database must be at least (%d) for service tier '%.\*ls'. |
-| 40958 | 16 | No | The VCore max per database must be at least (%d) for service tier '%.\*ls'. |
-| 40959 | 16 | No | The VCore max per database cannot exceed (%d) for service tier '%.\*ls'. |
-| 40960 | 16 | No | The VCore max per database (%d) for the elastic pool does not belong to the specified values for service tier '%.\*ls'. |
-| 40961 | 16 | No | The VCore min per database cannot exceed (%d) for service tier '%.\*ls'. |
-| 40962 | 16 | No | The VCore min per database must be at least (%d) for service tier '%.\*ls'. |
-| 40963 | 16 | No | The VCore min per database (%d) for the elastic pool does not belong to the allowed values for service tier '%.\*ls'. |
-| 40964 | 16 | No | The VCore min per database (%d) cannot exceed the VCore max per database (%d). |
-| 40965 | 16 | No | The service level objective '%.\*ls' does not support the license type '%.\*ls'. |
-| 40966 | 16 | No | No service objective was found for capacity '%d' in edition '%.\*ls' |
-| 40967 | 16 | No | More than one service objective was found for capacity '%d' in edition '%.\*ls' |
-| 40968 | 16 | No | Operation results in exceeding quota limits of %d. Maximum allowed: %d. |
-| 40969 | 16 | No | Cannot open server '%.\*ls' requested by the login. Client is not allowed to access the server. |
-| 40970 | 16 | No | Can not change from '%.\*ls' edition to '%.\*ls' edition. |
-| 40971 | 16 | No | Cannot open Failover Group "%.\*ls" requested by the login. The login failed. |
-| 40972 | 16 | No | Database copy limit per database reached. The database '%ls' cannot have more than %d concurrent database copies. |
-| 40973 | 16 | No | Can not drop database because a failover operation is in progress on the failover group. |
-| 40974 | 16 | No | Partner region specified does not match region of partner managed instance. |
-| 40975 | 16 | No | Partner managed instance's DNS Zone does not match the DNS Zone of the source managed instance. |
-| 40976 | 16 | No | Instance Failover Group cannot be created because partner managed server "%.\*ls" is not empty or does not have secondaries for all databases in the primary instance "%.\*ls" . |
-| 40977 | 16 | No | '%.\*ls' is not a supported timezone. |
-| 40978 | 16 | No | Instance failover group cannot be created because the reserved storage size on the secondary instance is different from the reserved storage size on the primary instance. |
-| 40979 | 16 | No | Database is unavailable because it is paused. Server '%.\*ls', Database '%.\*ls'. Please resume before trying to access the database again. |
-| 40980 | 16 | No | Partner managed server's managed server/failover group has been dropped. |
-| 40981 | 16 | No | Database '%.\*ls' is not accessible due to Azure Key Vault critical error. |
-| 40982 | 16 | No | Instance failover group cannot be created because the secondary instance has user databases. |
-| 40983 | 16 | No | Replication to the partner managed instance could not be established. Verify that connectivity between the Virtual Networks of the primary and secondary managed servers has been established. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323826](https://go.microsoft.com/fwlink/?linkid=2323826). |
-| 40984 | 16 | No | Restore and GeoRestore target cannot be free database. |
-| 40985 | 16 | No | Restore and GeoRestore are not supported for free database. |
-| 40986 | 16 | No | Source database '%.\*ls' dropped on '%.\*ls' does not exist on server '%.\*ls' within the supported recovery period. |
-| 40987 | 16 | No | Source database '%.\*ls' does not exist on server '%.\*ls' within the supported recovery period. If restoring a dropped database, please specify its deletion date. |
-| 40988 | 16 | No | The Hyperscale edition recovery requires both source and target databases to use Hyperscale service level objective. |
-| 40989 | 16 | No | The Hyperscale edition Point-In-Time restore requires both source and target databases to use Hyperscale service level objective. |
-| 40990 | 16 | No | Specifying an elastic pool and/or changing the service level objective or edition is not supported for '%.\*ls' edition. |
-| 40991 | 16 | No | Changing geo-backup policy is not supported for %s tier of SQL Data Warehouse. |
-| 40992 | 16 | No | Cannot perform this operation when the database is paused. |
-| 40993 | 16 | No | Enabling long-term retention (LTR) for a serverless database is not supported if auto-pause is enabled. |
-| 40994 | 16 | No | Enabling auto-pause for a serverless database is not supported if long-term retention (LTR) is enabled. |
-| 40995 | 16 | No | Enabling geo-replication for a serverless database is not supported if auto-pause is enabled. |
-| 40996 | 16 | No | Enabling auto-pause for a serverless database is not supported if geo-replication is enabled. |
-| 40997 | 16 | No | Elastic pool '%ls' does not exist in server '%ls'. Please make sure that the elastic pool name is entered correctly. Please contact Microsoft support if further assistance is needed. |
-| 40998 | 16 | No | The edition '%.\*ls' does not support '%.\*ls' bytes as the database data max size. For more details, see \<\>. |
-| 40999 | 16 | No | '%ls' is not a valid service level objective for elastic pool '%ls'. |
-| 41000 | 16 | No | Failed to obtain the local Windows Server Failover Clustering (WSFC) handle (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41001 | 16 | No | Failed to obtain local computer name (Error code %d). The supplied buffer may be too small, or there is a system error. For information about this error code, see "System Error Codes" in the operating system documentation. |
-| 41002 | 16 | No | Failed to obtain the local Windows Server Failover Clustering (WSFC) node handle (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41003 | 16 | No | Failed to obtain the local Windows Server Failover Clustering (WSFC) node ID (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41004 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) group handle for cluster group with name or ID '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name or ID is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41005 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) resource handle for cluster resource with name or ID '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource name or ID is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41006 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) group with name '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41007 | 16 | No | The Windows Server Failover Clustering (WSFC) group control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41008 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) resource with name '%s' and type '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource name or type is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41009 | 16 | No | The Windows Server Failover Clustering (WSFC) resource control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41010 | 16 | No | Failed to bring the Windows Server Failover Clustering (WSFC) group online (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41011 | 16 | No | Failed to take the Windows Server Failover Clustering (WSFC) group offline (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41012 | 16 | No | The Windows Server Failover Clustering (WSFC) node control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41013 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) resource enumeration handle (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41014 | 16 | No | Failed to enumerate the Windows Server Failover Clustering (WSFC) resources (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource enumeration handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41015 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) node handle (Error code %d) for node '%.\*ls'. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster node name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41016 | 16 | No | Failed to remove a node from the possible owner list of a Windows Server Failover Clustering (WSFC) resource (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource or node handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41017 | 16 | No | Failed to add a node to the possible owner list of a Windows Server Failover Clustering (WSFC) resource (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource or node handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41018 | 16 | No | Failed to move a Windows Server Failover Clustering (WSFC) group to the local node (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group or node handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41019 | 16 | No | Failed to drop a Windows Server Failover Clustering (WSFC) group with name or ID '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name or ID is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41020 | 16 | No | Failed to find a String property (property name '%s') of the Windows Server Failover Clustering (WSFC) resource with name or ID '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41021 | 16 | No | Failed to find a DWORD property (property name '%s') of the Windows Server Failover Clustering (WSFC) resource with ID '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41022 | 16 | No | Failed to create a Windows Server Failover Clustering (WSFC) notification port with notification filter %d and notification key %d (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41023 | 16 | No | The Windows Server Failover Clustering (WSFC) change handle is invalid because a WSFC notification port has not been created or has been closed. Create a new WSFC notification port and retry the operation. |
-| 41024 | 16 | No | Failed to register additional Windows Server Failover Clustering (WSFC) change notifications with notification filter %d and notification key %d (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41025 | 16 | No | Failed to receive Windows Server Failover Clustering (WSFC) change notifications (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41026 | 10 | No | Failed to create the Windows Server Failover Clustering (WSFC) group with name '%ls'. The WSFC group with the specified name already exists. Retry the operation with a group name that is unique in the cluster. |
-| 41027 | 16 | No | Failed to start the Windows Server Failover Clustering (WSFC) change listener (SQLOS error code %d). SQL Server may not have sufficient resources to start the WSFC change listener. If the condition persists, the SQL Server instance may need to be restarted. |
-| 41028 | 16 | No | Failed to open Windows Server Failover Clustering (WSFC) registry root key (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41029 | 16 | No | Failed to open the Windows Server Failover Clustering (WSFC) resource registry key '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| [41030](../mssqlserver-41030-database-engine-error.md) | 16 | No | Failed to open the Windows Server Failover Clustering registry subkey '%.\*ls' (Error code %d). The parent key is %sthe cluster root key. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41031 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) registry subkey '%.\*ls' (Error code %d). The parent key is %sthe cluster root key. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41032 | 16 | No | Failed to delete the Windows Server Failover Clustering (WSFC) registry subkey '%.\*ls' (Error code %d). The parent key is %sthe cluster root key. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41033 | 16 | No | Failed to retrieve the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41034 | 16 | No | Failed to set the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41035 | 16 | No | Failed to enumerate Windows Server Failover Clustering (WSFC) registry value (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41036 | 16 | No | Failed to delete the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41037 | 16 | No | Failed to obtain a Windows Server Failover Clustering (WSFC) object enumeration handle for objects of type %d (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41038 | 16 | No | Failed to enumerate Windows Server Failover Clustering (WSFC) objects (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster object enumeration handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41039 | 16 | No | An availability group replica already exists on the node '%.\*ls'. Each node can contain only one replica of an availability group. Please choose another node to host the new replica. |
-| 41040 | 16 | No | Failed to remove the availability group replica '%.\*ls' from availability group '%.\*ls'. The availability group does not contain a replica with the specified name. Verify the availability group and replica names and then retry the operation. |
-| 41041 | 16 | No | SQL Server instance to cluster node map entry cannot be found for the SQL Server instance '%.\*ls' and group ID '%.\*ls'. The specified SQL Server instance name is invalid, or the corresponding registry entry does not exist. Verify the SQL Server instance name and retry the operation. |
-| 41042 | 16 | No | The availability group '%.\*ls' already exists. This error could be caused by a previous failed CREATE AVAILABILITY GROUP or DROP AVAILABILITY GROUP operation. If the availability group name you specified is correct, try dropping the availability group and then retry CREATE AVAILABILITY GROUP operation. |
-| 41043 | 16 | No | For availability group '%.\*ls', the value of the name-to-ID map entry is invalid. The binary value should contain a resource ID, a group ID, and their corresponding lengths in characters. The availability group name may be incorrect, or the availability group configuration data may be corrupt. If this error persists, you may need to drop and recreate the availability group. |
-| 41044 | 16 | No | Availability group name to ID map entry for availability group '%.\*ls' cannot be found. The availability group name may be incorrect. If this is a WSFC availability group, the availability group may not exist in this Windows Server Failover Cluster. Verify the availability group exists and that the availability group name is correct and then retry the operation. |
-| 41045 | 16 | No | Cannot add database '%.\*ls' to the availability group '%.\*ls', because there is already a database with the same name in the availability group. Please verify that the database and availability group names specified are correct. |
-| 41046 | 16 | No | Cannot add replica '%.\*ls' to the availability group '%.\*ls', because there is already a replica with the same name in the availability group. Please verify the replica and availability group names specified are correct. |
-| 41047 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) node state for the local WSFC node (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41048 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering service has become unavailable. This is an informational message only. No user action is required. |
-| 41049 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering node is no longer online. This is an informational message only. No user action is required. |
-| 41050 | 10 | Yes | Always On Availability Groups: Waiting for local Windows Server Failover Clustering service to start. This is an informational message only. No user action is required. |
-| 41051 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering service started. This is an informational message only. No user action is required. |
-| 41052 | 10 | Yes | Always On Availability Groups: Waiting for local Windows Server Failover Clustering node to start. This is an informational message only. No user action is required. |
-| 41053 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering node started. This is an informational message only. No user action is required. |
-| 41054 | 10 | Yes | Always On Availability Groups: Waiting for local Windows Server Failover Clustering node to come online. This is an informational message only. No user action is required. |
-| 41055 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering node is online. This is an informational message only. No user action is required. |
-| 41056 | 16 | No | Availability replica '%.\*ls' of availability group '%.\*ls' cannot be brought online on this SQL Server instance. Another replica of the same availability group is already online on the node. Each node can host only one replica of an availability group, regardless of the number of SQL Server instances on the node. Use the ALTER AVAILABILITY GROUP command to correct the availability group configuration. Then, if the other replica is no longer being hosted on this node, restart this instance of SQL Server to bring the local replica of the availability group online. |
-| 41057 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) resource with name '%ls'. The WSFC resource with the specified name already exists. Retry the operation with a resource name that is unique in the cluster. |
-| 41058 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is starting. This is an informational message only. No user action is required. |
-| 41059 | 10 | No | Always On Availability Groups: Availability group '%.\*ls' was removed while the availability replica on this instance of SQL Server was offline. The local replica will be removed now. This is an informational message only. No user action is required. |
-| 41060 | 16 | No | The Cyclic Redundancy Check (CRC) value generated for the retrieved availability group configuration data does not match that stored with the data for the availability group with ID '%.\*ls'. If this is a WSFC availability group, the availability group data in the WSFC store may have been modified outside SQL Server, or the data is corrupt. If the error persists, you may need to drop and recreate the availability group. |
-| 41061 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is stopping. This is an informational message only. No user action is required. |
-| 41062 | 16 | No | The ID of availability group '%.\*ls' in local data store is inconsistent with that in the Windows Server Failover Clustering (WSFC) data store. The availability group may have been dropped and recreated while the SQL Server instance was offline, or while the WSFC node was down. To resolve this error, drop the availability group and then recreate it. |
-| 41063 | 16 | No | Windows Server Failover Clustering (WSFC) detected that the availability group resource with ID '%.\*ls' was online when the availability group was not actually online. The attempt to synchronize the WSFC resource state with the availability group state failed (Error code: %d). For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41064 | 16 | No | Failed to set local node as sole preferred owner for the Windows Server Failover Clustering (WSFC) group with ID '%.\*ls' (Error code: %d). The WSFC group might be in state that cannot accept the request. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41065 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) resource (ID: '%.\*ls') online at this time. The WSFC resource is not in a state that can accept the request. Wait for the WSFC resource to enter a terminal state, and retry the operation. For information about this error, see error code 5023 in "System Error Codes" in the Windows Development documentation. |
-| 41066 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) resource (ID '%.\*ls') online (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the WSFC resource may not be in a state that could accept the request. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41067 | 16 | No | Cannot drop the Windows Server Failover Clustering (WSFC) group (ID or name '%.\*ls') at this time. The WSFC group is not in a state that could accept the request. Please wait for the WSFC group to enter a terminal state and then retry the operation. For information about this error, see error code 5023 in "System Error Codes" in the Windows Development documentation. |
-| 41068 | 16 | No | Failed to enumerate the Windows Server Failover Clustering (WSFC) registry key (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41069 | 16 | No | The existence of availability group data for the availability group '%.\*ls' in the Windows Server Failover Clustering (WSFC) store could not be determined. The local WSFC node may be down, or a previous CREATE AVAILABILITY GROUP or DROP AVAILABILITY GROUP operation has failed. Please use DROP AVAILABILITY GROUP command to clean up previously failed operations. Verify that the local WSFC node is up before retrying the operation. |
-| 41070 | 16 | No | Configuration data for the availability group with Windows Server Failover Clustering (WSFC) resource ID '%.\*ls' is not found in the WSFC data store. The availability group may have been dropped, or a previous CREATE AVAILABILITY GROUP or DROP AVAILABILITY GROUP operation has failed. Please use DROP AVAILABILITY GROUP command to clean up previously failed operations before retrying the current operation. |
-| 41071 | 16 | No | Cannot read the persisted configuration of Always On availability group with corresponding resource ID '%.\*ls'. The persisted configuration is written by a higher-version SQL Server that hosts the primary availability replica. Upgrade the local SQL Server instance to allow the local availability replica to become a secondary replica. |
-| 41072 | 16 | No | The ID of availability group '%.\*ls' in local data store does not exist in the Windows Server Failover Clustering (WSFC) data store. The availability group may have been dropped but the current WSFC node was not notified. To resolve this error, try to recreate the availability group. |
-| 41073 | 16 | No | The database '%.\*ls' cannot be removed from availability group '%.\*ls'. This database does not belong to the availability group. |
-| 41074 | 10 | No | Always On Availability Group: The local replica of availability group '%.\*ls' is preparing to transition to the primary role. This is an informational message only. No user action is required. |
-| 41075 | 10 | No | Always On Availability Group: The local replica of availability group '%.\*ls' is preparing to transition to the resolving role. This is an informational message only. No user action is required. |
-| 41076 | 10 | No | Always On Availability Group: Availability group '%.\*ls' is going offline because it is being removed. This is an informational message only. No user action is required. |
-| 41077 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) group (ID '%.\*ls') online at this time. The WSFC group is not in a state that could accept the request. Please wait for the WSFC group to enter a terminal state and then retry the operation. For information about this error, see error code 5023 in "System Error Codes" in the Windows Development documentation. |
-| 41078 | 16 | No | Failed to delete the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls', because a registry entry with the specified name does not exist. Check that the registry value name is correct, and retry the operation. |
-| 41079 | 16 | No | Cannot drop the Windows Server Failover Clustering (WSFC) group (ID or name '%.\*ls'), because the WSFC group does not exist. Specify a valid WSFC group ID or name and retry the operation. For information about this error, see error code 5013 in "System Error Codes" in the Windows Development documentation. |
-| 41080 | 16 | No | Failed to delete SQL Server instance name to Windows Server Failover Clustering node name map entry for the local availability replica of availability group '%.\*ls'. The operation encountered SQL Server error %d and has been terminated. Refer to the SQL Server error log for details about this SQL Server error and corrective actions. |
-| 41081 | 16 | No | Failed to destroy the Windows Server Failover Clustering group corresponding to availability group '%.\*ls'. The operation encountered SQL Server error %d and has been terminated. Refer to the SQL Server error log for details about this SQL Server error and corrective actions. |
-| 41082 | 16 | No | Failed to obtain the name of local Windows Server Failover Cluster (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41083 | 16 | No | Failed to obtain the cluster quorum resource (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41084 | 16 | No | The Windows Server Failover Clustering (WSFC) cluster control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41085 | 16 | No | Failed to find a DWORD property (property name '%s') of the Windows Server Failover Clustering (WSFC) (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
-| 41086 | 16 | No | Failed to retrieve the Paxos tag from the Windows Server Failover Clustering (WSFC) registry hive. The WSFC registry hive might be corrupt. Verify whether the 'HKLM\Cluster\PaxosTag' registry value exists in the WSFC registry hive. |
-| 41087 | 16 | No | Error in parsing the Paxos tag from the Windows Server Failover Clustering (WSFC) registry hive. The WSFC registry hive might be corrupt. Verify whether the 'HKLM\Cluster\PaxosTag' is in the format outlined in the Microsoft Knowledge Base article KB 947713 ("The implications of using the /forcequorum switch to start the Cluster service in Windows Server 2008"). |
-| 41088 | 16 | No | Failed to determine if the Windows Server Failover Clustering (WSFC) service is in Force Quorum state. The prerequisite hotfix, KB 2494036, might not yet be installed on your Windows Server 2008/Windows Server 2008 R2 systems. For more information, see Microsoft Knowledge Base article KB 2494036 ("A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2"). |
-| 41089 | 10 | Yes | Always On Availability Groups startup has been cancelled, because SQL Server is shutting down. This is an informational message only. No user action is required. |
-| 41090 | 10 | No | Failed to update Replica status due to exception %d. |
-| 41091 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline because either the lease expired or lease renewal failed. This is an informational message only. No user action is required. |
-| 41092 | 10 | No | Always On Availability Groups: The availability replica manager is going offline because %ls. This is an informational message only. No user action is required. |
-| 41093 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline because the corresponding resource in the Windows Server Failover Clustering (WSFC) cluster is no longer online. This is an informational message only. No user action is required. |
-| 41094 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is restarting because the existing primary replica restarted or the availability group failed over to a new primary replica. This is an informational message only. No user action is required. |
-| 41095 | 10 | No | Always On Availability Groups: Explicitly transitioning the state of the Windows Server Failover Clustering (WSFC) resource that corresponds to availability group '%.\*ls' to Failed. The resource state is not consistent with the availability group state in the instance of SQL Server. The WSFC resource state indicates that the local availability replica is the primary replica, but the local replica is not in the primary role. This is an informational message only. No user action is required. |
-| 41096 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is being removed. The instance of SQL Server failed to validate the integrity of the availability group configuration in the Windows Server Failover Clustering (WSFC) store. This is expected if the availability group has been removed from another instance of SQL Server. This is an informational message only. No user action is required. |
-| 41097 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline. This replica failed to read the persisted configuration because of a version mismatch. This is an informational message only. No user action is required. |
-| 41098 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is restarting, because it failed to read the persisted configuration. This is an informational message only. No user action is required. |
-| 41099 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline. This replica failed to read the persisted configuration, and it has exhausted the maximum for restart attempts. This is an informational message only. No user action is required. |
-| 41100 | 16 | No | The availability group '%.\*ls' and/or its local availability replica does not exist. Verify that the specified availability group name is correct, and that the local availability replica has joined the availability group, then retry the operation. |
-| 41101 | 16 | No | The availability group with Windows Server Failover Clustering resource ID '%.\*ls' and/or its local availability replica does not exist. Verify that the specified availability resource ID is correct, and that the local availability replica has joined the availability group, then retry the operation. |
-| 41102 | 10 | No | Failed to persist configuration data of availability group '%.\*ls'. The local availability replica either is not the primary replica or is shutting down. |
-| 41103 | 10 | No | Startup of the Always On Availability Replica Manager has been terminated, because the 'FixQuorum' property of Windows Server Failover Clustering (WSFC) is not present. The prerequisite Hotfix, KB 2494036, might not yet be installed on your Windows Server 2008/Windows Server 2008 R2 systems. For more information, see Microsoft Knowledge Base article KB 2494036 ("A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2"). |
-| 41104 | 16 | No | Failover of the availability group '%.\*ls' to the local replica failed because the availability group resource did not come online due to a previous error. To identify that error, check the SQL Server error log, cluster logs and system event logs. For information about how to view events and logs for a Windows Server Failover Clustering (WSFC) cluster, see Windows Server documentation. |
-| 41105 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) resource with name '%s' and type '%s'. The resource type is not registered in the WSFC cluster. The WSFC cluster many have been destroyed and created again. To register the resource type in the WSFC cluster, disable and then enable Always On Availability Groups in the SQL Server Configuration Manager. |
-| 41106 | 16 | No | Cannot create an availability replica for availability group '%.\*ls'. An availability replica of the specified availability group already exists on this instance of SQL Server. Verify that the specified availability group name is correct and unique, then retry the operation. To remove the existing availability replica, run DROP AVAILABILITY GROUP command. |
-| 41107 | 16 | No | Availability group '%.\*ls' failed to create necessary events for the WSFC Lease mechanism. Windows returned error code (%d) when obtaining handles for Lease events. Resolve the windows error and retry the availability group operation. |
-| 41108 | 16 | No | An error occurred while removing availability group '%.\*ls'. The DROP AVAILABILITY GROUP command removed the availability group configuration from the local metadata. However, the attempt to remove this configuration from the Windows Server Failover Clustering (WSFC) cluster failed because the Always On Availability Groups manager is not online (SQL Server error: %d). To remove the availability group configuration from the WSFC cluster, re-enter the command. |
-| 41109 | 17 | No | Could not enqueue a task (SQL OS error: 0x%x) for process actions for the availability group '%.\*ls'. Most likely, the instance of SQL Server is low on resources. Check the SQL Server error log to determine the cause of the failure. Retry the operation later, and if this condition persists, contact your database administrator. |
-| 41110 | 10 | No | Always On Availability Groups: The availability replica manager is starting. This is an informational message only. No user action is required. |
-| 41111 | 10 | No | Always On Availability Groups: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required. |
-| 41112 | 16 | No | A Windows Server Failover Clustering (WSFC) API required by availability groups has not been loaded. Always On Availability Groups replica manager is not enabled on the local instance SQL Server. If the server instance is running an edition of SQL Server that supports Always On Availability Groups, you can enable the it by using the SQL Server Configuration Manager. |
-| 41113 | 16 | No | Cannot failover availability group '%.\*ls' to this instance of SQL Server because a failover command is already pending on the local replica of this availability group. Wait for the pending failover command to complete before issuing another command on the local replica of this availability group. |
-| 41114 | 16 | No | Cannot create an availability group named '%.\*ls' because it already exists in a system table. |
-| 41115 | 16 | No | Cannot create the availability group named '%.\*ls' because its availability group ID (ID: '%.\*ls') already exists in a system table. |
-| 41116 | 16 | No | Cannot create an availability group named '%.\*ls' with replica ID '%.\*ls' because this ID already exists in a system table. |
-| 41117 | 16 | No | Cannot map local database ID %d to the availability database ID '%.\*ls' within availability group '%.\*ls'. This database is already mapped to an availability group. |
-| 41118 | 16 | No | Cannot map database ID %d to the availability database ID '%.\*ls' within availability group '%.\*ls'. Another local database, (ID %d). is already mapped to this availability database. |
-| 41119 | 16 | No | Could not find the availability group ID %d in the system table. |
-| 41120 | 16 | No | Failed to start task to process a down notification for the local Windows Server Failover Clustering (WSFC) node (SQL OS error: %d). Possible causes are no worker threads are available or there is insufficient memory. Check the state of the local WSFC node. If this problem persists, you might need to restart the instance of SQL Server. |
-| 41121 | 10 | No | The local availability replica of availability group '%.\*ls' cannot accept signal '%s' in its current replica role, '%s', and state (configuration is %s in Windows Server Failover Clustering store, local availability replica has %s joined). The availability replica signal is invalid given the current replica role. When the signal is permitted based on the current role of the local availability replica, retry the operation. |
-| 41122 | 16 | No | Cannot failover availability group '%.\*ls' to this instance of SQL Server. The local availability replica is already the primary replica of the availability group. To failover this availability group to another instance of SQL Server, run the failover command on that instance of SQL Server. If local instance of SQL Server is intended to host the primary replica of the availability group, then no action is required. |
-| 41123 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) group (ID '%.\*ls') online at this time. The WSFC group is moving to another node. Please wait for the WSFC group to complete the move operation and then retry the command. For information about this error, see error code 5908 in "System Error Codes" in the Windows Development documentation. |
-| 41124 | 16 | No | The availability replica for availability group '%.\*ls' on this instance of SQL Server cannot become the primary replica because the availability group is being dropped. |
-| 41125 | 16 | No | The availability replica for availability group '%.\*ls' on this instance of SQL Server cannot become the primary replica because the WSFC cluster was started in Force Quorum mode. Consider performing a forced manual failover (with possible data loss). |
-| 41126 | 16 | No | Operation on the local availability replica of availability group '%.\*ls' failed. The local copy of the availability group configuration does not exist or has not been initialized. Verify that the availability group exists and that the local copy of the configuration is initialized, and retry the operation. |
-| 41127 | 16 | No | Attempt to set database mapping state where the local database id %d is not mapped to any availability group. |
-| 41128 | 16 | No | Failed to perform database operation '%s' on database '%.\*ls' (ID %d) in availability group '%.\*ls'. The database might be in an incorrect state for the operation. If the problem persists, you may need to restart the SQL Server instance. |
-| 41129 | 16 | No | Failed to schedule or execute database operation '%s' on database '%.\*ls' (Database ID: %d) in availability group '%.\*ls' (SQL OS error: %d). The instance of SQL Server may have insufficient resources to carry out the database operation. If the problem persists, you might need to restart the server instance. |
-| 41130 | 16 | No | Operation '%s' on a database '%.\*ls' (Database ID: %d) in availability group '%.\*ls' failed with SQL Server error %d (Error details: "%.\*ls"). The operation has been rolled back. See previous error messages in the SQL Server error log for more details. If the problem persists, you might need to restart the instance of SQL Server. |
-| 41131 | 10 | No | Failed to bring availability group '%.\*ls' online. The operation timed out. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online. Then verify that the availability group resource exists in the WSFC cluster. If the problem persists, you might need to drop the availability group and create it again. |
-| 41132 | 16 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'. The specified database does not belong to the availability group. Verify the names of the database and the availability group, and retry the command specifying the correct names. |
-| 41133 | 10 | No | Cannot remove database '%.\*ls' from availability group '%.\*ls'. Either the database does not belong to the availability group, or the database has not joined the group. Verify the database and availability group names, and retry the command. |
-| 41134 | 16 | No | Cannot bring the availability group '%.\*ls' online. The local instance was not the previous primary replica when the availability group went offline, not all databases are synchronized, and no force failover command was issued on the local availability replica. To designate the local availability replica as the primary replica of the availability group, run the force failover command on this instance of SQL Server. |
-| 41135 | 10 | No | Startup of Always On Availability Groups replica manager failed due to SQL Server error %d. To determine the cause of this error, check the SQL Server error log for the preceding error. |
-| 41136 | 16 | No | Failed to join the availability replica to availability group '%.\*ls' because the group is not online. Either bring the availability group online, or drop and recreate it. Then retry the join operation. |
-| 41137 | 10 | No | Abandoning a database operation '%ls' on availability database '%.\*ls' of availability group '%.\*ls'. The sequence number of local availability replica has changed (Previous sequence number: %u, current sequence number: %u). This is an informational message only. No user action is required. |
-| 41138 | 17 | No | Cannot accept Always On Availability Groups operation operation on database '%.\*ls' of availability group '%.\*ls'. The database is currently processing another operation that might change the database state. Retry the operation later. If the condition persists, contact the database administrator. |
-| 41139 | 10 | No | Failed to set database information for availability group %.\*ls. The local availability replica is not the primary replica, or it is shutting down. This is an informational message only. No user action is required. |
-| 41140 | 16 | No | Availability group '%.\*ls' cannot process the ALTER AVAILABILITY GROUP command, because the local availability replica is not the primary replica. Connect to the server instance that is currently hosting the primary replica of this availability group, and rerun the command. |
-| 41141 | 16 | No | Failed to set availability group database information for availability group %.\*ls. The local availability replica is not the primary, or is shutting down. This is an informational message only. No user action is required. |
-| 41142 | 16 | No | The availability replica for availability group '%.\*ls' on this instance of SQL Server cannot become the primary replica. One or more databases are not synchronized or have not joined the availability group. If the availability replica uses the asynchronous-commit mode, consider performing a forced manual failover (with possible data loss). Otherwise, once all local secondary databases are joined and synchronized, you can perform a planned manual failover to this secondary replica (without data loss). For more information, see SQL Server Books Online. |
-| 41143 | 16 | No | Cannot process the operation. The local replica of availability Group '%.\*ls' is in a failed state. A previous operation to read or update persisted configuration data for the availability group has failed. To recover from this failure, either restart the local Windows Server Failover Clustering (WSFC) service or restart the local instance of SQL Server. |
-| 41144 | 16 | No | The local availability replica of availability group '%.\*ls' is in a failed state. The replica failed to read or update the persisted configuration data (SQL Server error: %d). To recover from this failure, either restart the local Windows Server Failover Clustering (WSFC) service or restart the local instance of SQL Server. |
-| 41145 | 10 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'. The database has already joined the availability group. This is an informational message. No user action is required. |
-| 41146 | 16 | No | Failed to bring Availability Group '%.\*ls' online. If this is a WSFC availability group, the Windows Server Failover Clustering (WSFC) service may not be running, or it may not be accessible in its current state. Please verify the local WSFC node is up and then retry the operation. Otherwise, contact your primary source provider. |
-| 41147 | 10 | No | Always On Availability Groups was not started because %ls. This is an informational message. No user action is required. |
-| 41148 | 16 | No | Cannot add or join database '%.\*ls' to availability group '%.\*ls'. The database does not exist on this instance of SQL Server. Verify the database name and that the database exists on the server instance. Then retry the operation, specifying the correct database name. |
-| 41149 | 16 | No | Operation on the availability group '%.\*ls' has been cancelled or terminated, either because of a connection timeout or cancellation by user. This is an informational message. No user action is required. |
-| 41150 | 16 | No | Failed to take availability group '%.\*ls' offline. If this is a WSFC availability group, the Windows Server Failover Clustering (WSFC) service may not be running, or it may not be accessible in its current state. Verify the local WSFC node is up and then retry the operation. Otherwise, contact your primary support provider. |
-| 41151 | 16 | No | Error accessing the Availability Groups manager. The local Availability Groups manager has not been initialized. Wait until the Availability Groups manager is in a state that allows access, and retry the operation. |
-| 41152 | 16 | No | Failed to create availability group '%.\*ls'. The operation encountered SQL Server error %d and has been rolled back. Check the SQL Server error log for more details. When the cause of the error has been resolved, retry CREATE AVAILABILITY GROUP command. |
-| 41153 | 16 | No | Failed to create availability group '%.\*ls'. The operation encountered SQL Server error %d. An attempt to roll back the operation failed. Check the SQL Server error log for more details. Then execute the DROP AVAILABILITY GROUP command to clean up any metadata that might remain from the failed attempt to create the availability group. |
-| 41154 | 16 | No | Cannot failover availability group '%.\*ls' to this SQL Server instance. The availability group is still being created. Verify that the specified availability group name is correct. Wait for CREATE AVAILABILITY GROUP command to finish, then retry the operation. |
-| 41155 | 16 | No | Cannot failover availability group '%.\*ls' to this instance of SQL Server. The availability group is being dropped. Verify that the specified availability group name is correct. The availability group may need to be recreated if the drop operation was unintentional. |
-| 41156 | 16 | No | Cannot drop availability group '%.\*ls' from this instance of SQL Server. The availability group is either being dropped, or the local availability replica is being removed from the availability group. Verify that the specified availability group name is correct. Wait for the current operation to complete, then retry the command if necessary. |
-| 41157 | 16 | No | Cannot remove the local availability replica from availability group '%.\*ls' from this instance of SQL Server. The availability group is either being dropped, or the local availability replica is being disjoined. Verify that the specified availability group name is correct. Wait for the current operation to complete, then retry the command if necessary. |
-| 41158 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'. The operation encountered SQL Server error %d and has been rolled back. Check the SQL Server error log for more details. When the cause of the error has been resolved, retry the ALTER AVAILABILITY GROUP JOIN command. |
-| 41159 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'. The operation encountered SQL Server error %d. An attempt to roll back the operation failed. Check SQL Server error log for more details. Run DROP AVAILABILITY GROUP command to clean up any metadata that might remain from the availability group. |
-| 41160 | 16 | No | Failed to designate the local availability replica of availability group '%.\*ls' as the primary replica. The operation encountered SQL Server error %d and has been terminated. Check the preceding error and the SQL Server error log for more details about the error and corrective actions. |
-| 41161 | 16 | No | Failed to validate the Cyclic Redundancy Check (CRC) of the configuration of availability group '%.\*ls'. The operation encountered SQL Server error %d, and the availability group has been taken offline to protect its configuration and the consistency of its joined databases. Check the SQL Server error log for more details. If configuration data corruption occurred, the availability group might need to be dropped and recreated. |
-| 41162 | 16 | No | Failed to validate sequence number of the configuration of availability group '%.\*ls'. The in-memory sequence number does not match the persisted sequence number. The availability group and/or the local availability replica will be restarted automatically. No user action is required at this time. |
-| 41163 | 16 | No | An error occurred while waiting for the local availability replica of availability group '%.\*ls' to transition to the primary role. The operation encountered SQL OS error %d and has been terminated. Verify that the availability group is in the correct state for the command. If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct state for the command. Then retry the command. |
-| 41164 | 16 | No | An error occurred while waiting for the local availability replica of availability group '%.\*ls' to transition to the resolving role. The operation encountered SQL OS error %d and has been terminated. Verify that the availability group is in the correct state for the command. If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct state for the command. Then retry the command. |
-| 41165 | 16 | No | A timeout error occurred while waiting to access the local availability replica of availability group '%.\*ls'. The availability replica is currently being accessed by another operation. Wait for the in-progress operation to complete, and then retry the command. |
-| 41166 | 16 | No | An error occurred while waiting to access the local availability replica of availability group '%.\*ls'. The operation encountered SQL OS error %d, and has been terminated. Verify that the local availability replica is in the correct state, and then retry the command. |
-| 41167 | 16 | No | An error occurred while attempting to access availability replica '%.\*ls' in availability group '%.\*ls'. The availability replica is not found in the availability group configuration. Verify that the availability group and availability replica names are correct, then retry the command. |
-| 41168 | 16 | No | An error occurred while attempting to access availability replica with ID '%.\*ls' in availability group '%.\*ls'. The availability replica is not found in the availability group configuration. Verify that the availability group name and availability replica ID are correct, then retry the command. |
-| 41169 | 16 | No | An error occurred while attempting to access the availability group database with ID '%.\*ls' in availability group '%.\*ls'. The availability database is not found in the availability group configuration. Verify that the availability group name and availability database ID are correct, then retry the command. |
-| 41170 | 10 | No | Post-online processing for availability group '%.\*ls' has been terminated. Either post-online processing has already completed, the local availability replica is no longer the primary replica, or the availability group is being dropped. This is an informational message. No user action is required. |
-| 41171 | 16 | No | Failed to create availability group '%.\*ls', because a Windows Server Failover Cluster (WSFC) group with the specified name already exists. The operation has been rolled back successfully. To retry creating an availability group, either remove or rename the existing WSFC group, or retry the operation specifying a different availability group name. |
-| 41172 | 16 | No | An error occurred while dropping availability group '%.\*ls'. The operation encountered SQL OS error %d, and has been terminated. Verify that the specified availability group name is correct, and then retry the command. |
-| 41173 | 16 | No | An error occurred while removing the local availability replica from availability group '%.\*ls'. The operation encountered SQL OS error %d, and has been terminated. Verify that the specified availability group name is correct, and then retry the command. |
-| 41174 | 10 | No | Failed to start the task of the Windows Server Failover Clustering (WSFC) event notification worker (SQL OS error: %d). If the problem persists, you might need to restart the instance of SQL Server. |
-| 41175 | 10 | No | Failed to stop the task of WSFC event notification worker (SQL OS error: %d). If the problem persists, you might need to restart the instance of SQL Server. |
-| 41176 | 10 | No | Failed to acquire exclusive access to local availability group configuration data (SQL OS error: %d). If the problem persists, you might need to restart the instance of SQL Server. |
-| 41177 | 16 | No | The availability replica of the specified availability group '%.\*ls' is being dropped. Wait for the completion of the drop command and retry the operation later. |
-| 41178 | 16 | No | Cannot drop availability group '%.\*ls' from this SQL Server instance. The availability group is currently being created. Verify that the specified availability group name is correct. Wait for the current operation to complete, then retry the command if necessary. |
-| 41179 | 16 | No | Cannot remove the local availability replica from availability group '%.\*ls' from this instance of SQL Server. The availability group is currently being created. Verify that the specified availability group name is correct. Wait for the current operation to complete, and then retry the command if necessary. |
-| 41180 | 16 | No | Attempt to access non-existent or uninitialized availability group with ID '%.\*ls'. This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required. |
-| 41181 | 16 | No | The local availability replica of availability group '%.\*ls' did not become primary. A concurrent operation may have changed the state of the availability group in Windows Server Failover Cluster. Verify that the availability group state in Windows Server Failover Cluster is correct, then retry the operation. |
-| 41182 | 16 | No | Failed to set the local availability replica of availability group '%.\*ls' as joined in Windows Server Failover Clustering (WSFC) database. Either the local availability replica is no longer the primary, or the WSFC service is not accessible. Verify that the local WSFC node is online, and that the local availability replica is the primary replica. Then retry the operation. |
-| 41183 | 16 | No | Failed to modify availability replica options for availability group '%.\*ls'. Before the availability group configuration could be updated, the operation encountered SQL Server error %d. The operation has been rolled back. Refer to the SQL Server error log for more information. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online, and retry the command. Otherwise, contact your primary support provider. |
-| 41184 | 16 | No | Failed to modify availability replica options for availability group '%.\*ls'. The availability group configuration has been updated. However, the operation encountered SQL Server error %d while applying the new configuration to the local availability replica. The operation has been terminated. Refer to the SQL Server error log for more information. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online. Use the ALTER AVAILABILITY GROUP command to undo the changes made to the availability group configuration. |
-| 41185 | 10 | No | The replica option specified in ALTER AVAILABILITY GROUP '%.\*ls' MODIFY DDL is the same as the current availability group configuration. No changes have been made. |
-| 41186 | 16 | No | Availability group '%.\*ls' cannot process an ALTER AVAILABILITY GROUP command at this time. The availability group is still being created. Verify that the specified availability group name is correct. Wait for CREATE AVAILABILITY GROUP command to finish, and then retry the operation. |
-| 41187 | 16 | No | Availability group '%.\*ls' cannot process an ALTER AVAILABILITY GROUP command at this time. The availability group is being dropped. Verify that the specified availability group name is correct. The availability group may need to be recreated if it was dropped unintentionally. |
-| 41188 | 16 | No | Availability group '%.\*ls' failed to process %s-%s command. The operation encountered SQL Server error %d before the availability group configuration could be updated, and has been rolled back. Refer to the SQL Server error log for details. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online, and then retry the command. Otherwise, contact your primary support provider. |
-| 41189 | 16 | No | Availability group '%.\*ls' failed to process the %s-%s command. The availability group configuration has been updated. However, the operation encountered SQL Server error %d while applying the new configuration to the local availability replica, and has been terminated. Refer to the SQL Server error log for details . If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online. Use an ALTER AVAILABILITY GROUP command to undo the changes to the availability group configuration. |
-| 41190 | 16 | No | Availability group '%.\*ls' failed to process %s-%s command. The local availability replica is not in a state that could process the command. Verify that the availability group is online and that the local availability replica is the primary replica, then retry the command. |
-| 41191 | 16 | No | The local availability replica of availability group '%.\*ls' cannot become the primary replica. The last-known primary availability replica is of a higher version than the local availability replica. Upgrade the local instance of SQL Server to the same or later version as the server instance that is hosting the current primary availability replica, and then retry the command. |
-| 41192 | 17 | No | Creating and scheduling a worker task for Always On Availability Groups failed due to lack of resources (SQL OS error %d). Processing of new actions might be delayed or stalled until the resource limits are resolved. Reduce the memory or thread count on the instance of SQL Server to allow new threads to get scheduled. If new tasks are scheduled the problem might resolve itself. However, if the problem persists, you might need to restart the local instance of SQL Server. |
-| 41193 | 10 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'. The database is in the process of being removed from the availability group. When the remove-database operation completes, the database will no longer be joined to the availability group. Then retry the join-database command. |
-| 41194 | 16 | No | An error occurred while waiting for the local availability replica for availability group '%.\*ls' to complete post-online work. The operation encountered SQL OS error %d and has been terminated. Verify that the availability group is in the correct state for the command. If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct states for the command. Then retry the command. |
-| 41195 | 16 | No | Cannot failover availability group '%.\*ls' from instance of SQL Server. The local availability replica is already the secondary replica of the availability group. Run the failaway command on primary instance of SQL Server. If local instance of SQL Server is intended to host the secondary replica of the availability group, then no action is required. |
-| 41196 | 16 | No | Failed to create availability group '%.\*ls', because a Windows Server Failover Cluster (WSFC) group with the specified name already exists. An attempt to roll back the operation failed. Check the SQL Server error log for more details. To manually clean up the partially created availability group, run the DROP AVAILABILITY GROUP command. Reenter your CREATE AVAILABILITY GROUP command specifying a unique availability group name. |
-| 41197 | 15 | No | The FAILOVER_MODE option has not been specified for the replica '%.\*ls'. Reenter the command, specifying a failover mode for the replica. |
-| 41198 | 15 | No | The AVAILABILITY_MODE option has not been specified for the replica '%.\*ls'. Reenter the command, specifying an availability mode for the replica. |
-| 41199 | 16 | No | The specified command is invalid because the Always On Availability Groups %ls feature is not supported by this edition of SQL Server. For information about features supported by the editions of SQL Server, see SQL Server Books Online. |
-| 41201 | 16 | No | The SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE and SEMANTICSIMILARITYDETAILSTABLE functions do not support remote data sources. |
-| 41202 | 16 | No | The source table '%.\*ls' specified in the SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE or SEMANTICSIMILARITYDETAILSTABLE function doesn't have a full-text index that uses the STATISTICAL_SEMANTICS option. A full-text index using the STATISTICAL_SEMANTICS option is required to use this function. |
-| 41203 | 16 | No | The column '%.\*ls' specified in the SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE or SEMANTICSIMILARITYDETAILSTABLE function is not full-text indexed with the STATISTICAL_SEMANTICS option. The column must be full-text indexed using the STATISTICAL_SEMANTICS option to be used in this function. |
-| 41204 | 16 | No | The source_key parameter is required in the SEMANTICSIMILARITYTABLE function. |
-| 41205 | 10 | No | Error %d occurred during semantic index population for table or indexed view '%.\*ls' (table or indexed view ID %d, database ID %d, document ID %d) |
-| 41206 | 10 | No | An ALTER FULLTEXT INDEX statement cannot remove the 'STATISTICAL_SEMANTICS' option from the last column in the index that has the option set when a "WITH NO POPULATION" clause is specified. Remove the "WITH NO POPULATION" clause. |
-| 41207 | 10 | No | A locale ID that is not supported was specified for a column with 'STATISTICAL_SEMANTICS'. Please verify that the locale ID is correct and that the corresponding language statistics has been installed. |
-| 41208 | 10 | No | Warning: The population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') encountered a document with full-text key value '%ls' that specifies a language not supported for semantic indexing. Some columns of the row will not be part of the semantic index. |
-| 41209 | 10 | No | A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated. |
-| 41210 | 10 | No | The semantic language statistics database is not accessible or not valid. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated. |
-| 41211 | 16 | No | A semantic language statistics database is already registered. |
-| 41212 | 16 | No | No semantic language statistics database is registered. |
-| 41213 | 16 | No | The database '%.\*ls' does not exist or the database format is not valid. Provide a valid semantic language statistics database name. |
-| 41214 | 16 | No | An error occurred while trying to register the semantic language statistics database. |
-| 41215 | 16 | No | The SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE and SEMANTICSIMILARITYDETAILSTABLE functions do not support update or insert. |
-| 41216 | 16 | No | The SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE and SEMANTICSIMILARITYDETAILSTABLE functions do not support common table expressions. |
-| 41300 | 16 | No | The current transaction cannot be committed and cannot support read or write operations. Roll back the transaction. |
-| [41301](../mssqlserver-41301-database-engine-error.md) | 17 | No | A transaction dependency failure occurred, and the current transaction can no longer commit. Please retry the transaction. |
-| [41302](../mssqlserver-41302-database-engine-error.md) | 16 | No | The current transaction attempted to update a record that has been updated since this transaction started. The transaction was aborted. |
-| 41303 | 16 | No | The bucket count for a hash index must be a positive integer not exceeding %d. |
-| 41304 | 10 | No | The current value of option '%.\*ls' for table '%.\*ls', index '%.\*ls' is %d. |
-| [41305](../mssqlserver-41305-database-engine-error.md) | 17 | No | The current transaction failed to commit due to a repeatable read validation failure. |
-| 41306 | 16 | No | The nesting limit of %d for conditional blocks and exception blocks, for natively compiled modules, has been exceeded. Please simplify the module. |
-| [41307](../mssqlserver-41307-database-engine-error.md) | 10 | No | Warning: The row size limit of %d bytes for memory optimized tables has been exceeded and will not work on subscribers running SQL Server 2014 or earlier. Please simplify the table definition. |
-| 41308 | 21 | No | The database ID %d already exists. |
-| 41309 | 16 | No | Unable to load the compiled DLL for database ID %d. |
-| 41310 | 16 | No | A file with an invalid format was detected. Check the SQL Server error log for more details. |
-| 41311 | 16 | No | File error during C code generation. The error code was %d. |
-| 41312 | 16 | No | Unable to call into the C compiler. GetLastError = %d. |
-| 41313 | 16 | No | The C compiler encountered a failure. The exit code was %d. |
-| 41314 | 16 | No | Conversion of default value for parameter '%.\*ls' failed. Unable to create stored procedure '%.\*ls'. |
-| 41315 | 16 | No | Checkpoint operation failed in database '%.\*ls'. |
-| 41316 | 16 | No | Restore operation failed for database '%.\*ls' with internal error code '0x%08lx'. |
-| 41317 | 16 | No | A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master. |
-| 41318 | 16 | No | Memory optimized tables and natively compiled modules cannot be accessed from within SQLCLR stored procedures. |
-| 41319 | 16 | No | A maximum of %d predicates are allowed in the WHERE clauses of queries in natively compiled modules. |
-| 41320 | 16 | No | EXECUTE AS clause is required, and EXECUTE AS CALLER is not supported, with natively compiled modules. |
-| 41321 | 16 | No | The memory optimized table '%.\*ls' with DURABILITY=SCHEMA_AND_DATA must have a primary key. |
-| 41322 | 16 | No | MAT/PIT export/import encountered a failure for memory optimized table or natively compiled module with object ID %d in database ID %d. The error code was 0x%x. |
-| 41323 | 16 | No | The table type '%ls' is not a memory optimized table type and cannot be used in a natively compiled module. |
-| 41324 | 16 | No | The memory optimized table variable '%.\*ls' cannot be used in a batch with a 'USE' statement. |
-| [41325](../mssqlserver-41325-database-engine-error.md) | 17 | No | The current transaction failed to commit due to a serializable validation failure. |
-| 41326 | 16 | No | Memory optimized tables cannot be created in system databases. |
-| 41327 | 16 | No | The memory optimized table '%.\*ls' must have at least one index or a primary key. |
-| 41328 | 16 | No | A floating point operation has overflowed. |
-| 41329 | 16 | No | Unsupported operation following a transaction dependency failure. Parameters and variables cannot be accessed in the CATCH block and the CATCH block must raise an exception following a dependency failure. |
-| 41330 | 16 | No | Create database operation failed for database '%.\*ls'. |
-| 41331 | 17 | No | The transaction encountered an out-of-memory condition while rolling back to a savepoint, and therefore cannot be committed. Roll back the transaction. |
-| [41332](../mssqlserver-41332-database-engine-error.md) | 16 | No | Memory optimized tables and natively compiled modules cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT. |
-| [41333](../mssqlserver-41333-database-engine-error.md) | 16 | No | The following transactions must access memory optimized tables and natively compiled modules under snapshot isolation: RepeatableRead transactions, Serializable transactions, and transactions that access tables that are not memory optimized in RepeatableRead or Serializable isolation. |
-| 41334 | 16 | No | The code generation directory cannot be created or set up correctly. |
-| 41335 | 16 | No | Modifying the collation of a database is not allowed when the database contains memory optimized tables or natively compiled modules. |
-| 41336 | 16 | No | Unable to clean up all files that are needed for compilation. |
-| 41337 | 16 | No | Cannot create %S_MSG. To create %S_MSG, the database must have a MEMORY_OPTIMIZED_FILEGROUP that is online and has at least one container. |
-| 41338 | 16 | No | An invalid version of a data file was detected. Check the SQL Server error log for more details. |
-| 41339 | 16 | No | The table '%.\*ls' has been created or altered after the start of the current transaction. The transaction was aborted. Please retry the transaction. |
-| 41340 | 16 | No | The transaction executed too many insert, update, or delete statements in memory optimized tables. The transaction was terminated. |
-| 41341 | 16 | No | Table '%.\*ls' is not yet available on the secondary replica. |
-| 41343 | 16 | No | In-Memory OLTP hot switch to primary replica for database '%.\*ls' failed. |
-| 41344 | 16 | No | RESTORE DATABASE WITH PARTIAL requires the MEMORY_OPTIMIZED_DATA filegroup if the backup contains a MEMORY_OPTIMIZED_DATA filegroup. |
-| 41345 | 16 | No | The key size limit of %d bytes for nonclustered indexes on memory optimized tables has been exceeded. Please simplify the index definition. |
-| 41346 | 16 | No | CREATE and UPDATE STATISTICS for memory optimized tables do not support the WHERE clause. |
-| 41347 | 16 | No | A BACKUP or RESTORE DATABASE statement that includes the primary filegroup must include the MEMORY_OPTIMIZED_DATA filegroup, and vice versa. |
-| 41348 | 16 | No | MEMORY_OPTIMIZED_DATA filegroups cannot be used with the FILESTREAM_ON clause. Specify a FILESTREAM filegroup. |
-| [41349](../mssqlserver-41349-database-engine-error.md) | 10 | No | Warning: Encryption was enabled for a database that contains one or more memory optimized tables with durability SCHEMA_AND_DATA. The data in these memory optimized tables will not be encrypted. |
-| [41350](../mssqlserver-41350-database-engine-error.md) | 10 | No | Warning: A memory optimized table with durability SCHEMA_AND_DATA was created in a database that is enabled for encryption. The data in the memory optimized table will not be encrypted. |
-| 41351 | 16 | No | An error occurred while processing the log. The log version is unsupported. |
-| 41352 | 16 | No | The operation on database ID %d cannot complete because the database is in use. |
-| 41353 | 16 | No | The operation on database ID %d cannot complete because the database is being dropped or being taken offline. |
-| 41354 | 21 | Yes | The XTP background checkpoint thread encountered an unrecoverable error ('%ls') for database '%.\*ls'. The checkpoint process is terminating so that the thread can clean up its resources. This is an informational message only. No user action is required. |
-| 41355 | 21 | Yes | An XTP checkpoint operation encountered an error ('%ls') while processing log record ID %S_LSN for database '%.\*ls'. Checkpoint processing has terminated. |
-| 41356 | 16 | No | Filegroups with MEMORY_OPTIMIZED_DATA can only be created in 64-bit installations of SQL Server. |
-| 41357 | 16 | No | Tables with MEMORY_OPTIMIZED=ON can only be created in 64-bit installations of SQL Server. |
-| 41358 | 16 | No | Stored procedures with NATIVE_COMPILATION can only be created in 64-bit installations of SQL Server. |
-| [41359](../mssqlserver-41359-database-engine-error.md) | 16 | No | A query that accesses memory optimized tables using the READ COMMITTED isolation level, cannot access disk based tables when the database option READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT). |
-| 41360 | 16 | No | Default MEMORY_OPTIMIZED_DATA filegroup is not available in database '%.\*ls'. |
-| 41361 | 16 | No | The READ_ONLY property of a MEMORY_OPTIMIZED_DATA filegroup cannot be modified. |
-| 41362 | 16 | No | FILESTREAM container '%.\*ls' cannot be added. Either the server is out of memory or the container path is too long. |
-| 41363 | 16 | No | Only the owner of database '%.\*ls' or users with valid permission can execute the stored procedure '%.\*ls'. |
-| 41364 | 16 | No | Stored procedure '%.\*ls' can only be executed on a database that has an online MEMORY_OPTIMIZED_DATA filegroup. |
-| [41365](../mssqlserver-41365-database-engine-error.md) | 16 | No | Merge request for transaction range \[%ld, %ld\] on database '%.\*ls' was not scheduled. The checkpoint files represented by the range either cannot be merged, or the checkpoint files are already part of an existing merge operation. |
-| 41366 | 16 | No | Merge operation failed because the requested transaction id range is invalid. |
-| 41367 | 16 | No | Failed to complete merge operation for transaction range \[%ld, %ld\] for database '%.\*ls'. Error was 0x%08x. |
-| [41368](../mssqlserver-41368-database-engine-error.md) | 16 | No | Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT). |
-| 41369 | 16 | No | Merge operations cannot be requested on a secondary replica. |
-| 41370 | 16 | No | Resource pool '%.\*ls' does not exist or resource governor has not been reconfigured. |
-| 41371 | 16 | No | Binding to a resource pool is not supported for system database '%.\*ls'. This operation can only be performed on a user database. |
-| 41372 | 16 | No | Database '%.\*ls' is currently bound to a resource pool. A database must be unbound before creating a new binding. |
-| 41373 | 16 | No | Database '%.\*ls' cannot be explicitly bound to the resource pool '%.\*ls'. A database can only be bound to a user resource pool. |
-| 41374 | 16 | No | Database '%.\*ls' does not have a binding to a resource pool. |
-| 41375 | 16 | No | A binding has been created. Take database '%.\*ls' offline and then bring it back online to begin using resource pool '%.\*ls'. |
-| 41376 | 16 | No | Only members of the fixed sysadmin role can execute the stored procedure '%ls'. |
-| 41377 | 16 | No | The natively compiled module with database ID %ld and object ID %ld has not been executed. Query execution statistics collection can only be enabled if the module has been executed at least once since creation or last database restart. |
-| 41378 | 16 | No | Both @database_id and @xtp_object_id should be specified to enable or retrieve status of query level statistics collection for a procedure. |
-| 41379 | 16 | No | Restore operation failed for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. Close other applications to increase the available memory, ensure that both SQL Server memory configuration and resource pool memory limits are correct and try again. See '[http://go.microsoft.com/fwlink/?LinkID=507574](https://go.microsoft.com/fwlink/?LinkID=507574)' for more information. |
-| 41380 | 21 | No | Databases with a MEMORY_OPTIMIZED_DATA filegroup are only supported in 64-bit editions of SQL Server. |
-| 41381 | 21 | No | The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions. |
-| 41382 | 16 | No | Failure adding a container to a MEMORY_OPTIMIZED_DATA filegroup. Possible causes include the server being out of memory and the container path being too long. |
-| 41383 | 16 | No | An internal error occurred while running the DMV query. This was likely caused by concurrent DDL operations. Please retry the query. |
-| 41384 | 16 | No | Database '%.\*ls' has exceeded the maximum number of XTP checkpoint files, and can no longer support write operations in durable memory-optimized tables. For more information, contact Customer Support Services. |
-| 41385 | 16 | No | A memory-optimized table cannot be enabled for Change Data Capture (CDC). |
-| 41386 | 16 | No | Filegroups with MEMORY_OPTIMIZED_DATA, memory-optimized tables and natively compiled modules are not supported when lightweight pooling is enabled. Disable lightweight pooling in order to use memory-optimized features. |
-| 41387 | 10 | No | Disallowing XTP page allocations for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. See '[http://go.microsoft.com/fwlink/?LinkId=510837](https://go.microsoft.com/fwlink/?LinkId=510837)' for more information. |
-| 41388 | 16 | No | An upgrade operation failed for database '%.\*ls'. Check the error log for additional details. |
-| 41389 | 16 | No | Failed to create a backup file collection snapshot necessary for backup of database '%.\*ls'. Check the error log for additional details. |
-| 41390 | 16 | No | Failed to get checkpoint file information necessary for backup of database '%.\*ls'. Check the error log for additional details. |
-| 41391 | 23 | No | Backup of database '%.\*ls' detected a missing MEMORY_OPTIMIZED_DATA file with ID '%.\*ls'. |
-| 41392 | 16 | No | Cannot ALTER a natively compiled module into a non-native module. Include WITH NATIVE_COMPILATION or drop and recreate the module. |
-| 41393 | 16 | No | Cannot ALTER a non-native module into a natively compiled module. Omit WITH NATIVE_COMPILATION or drop and recreate the module. |
-| 41394 | 16 | No | TEXTSIZE must be a number between -1 and 2147483647. |
-| 41395 | 10 | No | Rebuilding the log file is not supported for databases containing memory-optimized tables. |
-| [41396](../mssqlserver-41396-database-engine-error.md) | 16 | No | The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information. |
-| 41397 | 16 | No | The TOP operator can return a maximum of %d sorted rows. %d was requested. Reduce the number of rows selected or simplify the query. |
-| 41398 | 16 | No | The TOP operator can return a maximum of %d rows; %d was requested. |
-| [41399](../mssqlserver-41399-database-engine-error.md) | 16 | No | The sort operation is too complex. Consult SQL Server Books Online for more information. |
+| <a id="31001"></a> 31001 | 16 | No | The session '%s' already exists. Use a different session name. |
+| <a id="31002"></a> 31002 | 16 | No | This operation can be performed only by the owner of the session. |
+| <a id="31003"></a> 31003 | 16 | No | User does not have enough permissions to tune one or more of the databases specified. |
+| <a id="31004"></a> 31004 | 16 | No | Could not create DTA directory for saving tuning option file when invoking DTA for auto indexing. |
+| <a id="31005"></a> 31005 | 16 | No | Could not create DTA tuning option file when invoking DTA for auto indexing. |
+| <a id="31006"></a> 31006 | 16 | No | Could not write DTA tuning option to file when invoking DTA for auto indexing. |
+| <a id="31007"></a> 31007 | 16 | No | Could not create a DTA job when invoking DTA for auto indexing. |
+| <a id="31008"></a> 31008 | 16 | No | Could not retrieve limit and job state information from DTA job object when invoking DTA for auto indexing. |
+| <a id="31009"></a> 31009 | 16 | No | Could not set limits on DTA job object when invoking DTA for auto indexing. |
+| <a id="31010"></a> 31010 | 16 | No | Could not create a DTA process when invoking DTA for auto indexing. |
+| <a id="31011"></a> 31011 | 16 | No | Could not terminate DTA process after it fails to be assigned to DTA job object when invoking DTA for auto indexing. |
+| <a id="31012"></a> 31012 | 16 | No | Could not resume DTA process to start tuning when invoking DTA for auto indexing. |
+| <a id="31013"></a> 31013 | 16 | No | Invalid tuning option specified for auto indexing. |
+| <a id="31014"></a> 31014 | 16 | No | Could not terminate DTA job when cancelling DTA tuning for auto indexing. |
+| <a id="31015"></a> 31015 | 16 | No | Could not delete DTA tuning options file when cancelling DTA tuning for auto indexing. |
+| <a id="31016"></a> 31016 | 16 | No | Could not cleanup hypothetical indexes and statistics when cancelling DTA tuning for auto indexing. |
+| <a id="31017"></a> 31017 | 16 | No | DTA tuning for auto indexing is only supported on Azure DB. |
+| <a id="31018"></a> 31018 | 16 | No | Could not get winfab temp directory when performing DTA tuning related task. |
+| <a id="31019"></a> 31019 | 16 | No | Could not create GUID when performing DTA tuning related task. |
+| <a id="31020"></a> 31020 | 16 | No | String operation failed. |
+| <a id="31021"></a> 31021 | 16 | No | Could not get winfab log directory when performing DTA tuning related task. |
+| <a id="31022"></a> 31022 | 16 | No | Could not get winfab data package directory when performing DTA tuning related task. |
+| <a id="31201"></a> 31201 | 16 | No | Property-scoped full-text queries cannot be specified on the specified table because its full-text index is not configured for property searching. To support property-scoped searches, the full-text index must be associated with a search property list and repopulated. The Transact-SQL syntax for this is: ALTER FULLTEXT INDEX ON \<table_name\> SET SEARCH PROPERTY LIST \<property_list_name\>;. |
+| <a id="31202"></a> 31202 | 10 | No | Reconfiguring the search property list of the full-text index has truncated the existing data in the index. Until the full-text index has been fully repopulated, full-text queries will return partial results. The ALTER FULLTEXT INDEX \<table_name\> SET SEARCH PROPERTY LIST ...; statement automatically issues a full population, but if the ALTER FULLTEXT INDEX statement specified the WITH NO POPULATION clause, you must run a full population on the full-text index using ALTER FULLTEXT INDEX ON \<table_name\> START FULL POPULATION;. This is a warning. |
+| <a id="31203"></a> 31203 | 10 | No | Warning Master Merge operation was not done for dbid %d, objid %d, so querying index will be slow. Please run alter fulltext catalog reorganize. |
+| <a id="31204"></a> 31204 | 16 | No | Operation %ls is not supported on the %ls platform. |
+| <a id="31205"></a> 31205 | 16 | No | The import population for database %ls (id: %d), catalog id: %d is being cancelled because of a fatal error ('%ls'). Fix the errors that are logged in the full-text crawl log. Then resume the import either by detaching the database and re-attaching it, or by taking the database offline and bringing it back online. If the error is not recoverable, rebuild the full-text catalog. |
+| <a id="31206"></a> 31206 | 16 | No | Failed to schedule asynchronous resume fulltext crawl task for database id %d with error %d. |
+| <a id="31207"></a> 31207 | 16 | No | Invalid value for Full-Text index version is specified. Valid values are 1 or 2. |
+| <a id="31208"></a> 31208 | 16 | No | A fulltext fragment table is missing. |
+| <a id="31209"></a> 31209 | 16 | No | Cannot create a full-text index on table or indexed view '%.\*ls.%.\*ls' because a previous full-text index drop is still being cleaned up. Try again later. |
+| <a id="31210"></a> 31210 | 16 | No | Cannot execute ALTER FULLTEXT INDEX on table or indexed view '%.\*ls' because an online full-text index rebuild is in progress. Wait for the rebuild to complete or stop the population before retrying the operation. |
+| <a id="31601"></a> 31601 | 16 | No | The size of the provided %ls is %u bytes, which exceeds the maximum allowed size of %u bytes. |
+| <a id="31602"></a> 31602 | 10 | No | Received param '%.\*ls' successfully. |
+| <a id="31603"></a> 31603 | 10 | No | Received param '%d' successfully. |
+| <a id="31604"></a> 31604 | 16 | No | The value '%d' is not within range for the '%.\*ls' parameter. |
+| <a id="31605"></a> 31605 | 16 | No | The specified method '%.\*ls' is not supported. |
+| <a id="31606"></a> 31606 | 16 | No | Serializing payload value failed |
+| <a id="31607"></a> 31607 | 16 | No | The external endpoint FQDN is not in the list of Outbound Firewall Rules on the server. Please add it to the list of Outbound Firewall Rules on your server and retry the operation. |
+| <a id="31608"></a> 31608 | 16 | No | An error occurred, failed to communicate with the external rest endpoint. HRESULT: 0x%x. |
+| <a id="31609"></a> 31609 | 16 | No | An error occurred, failed to parse url. HRESULT: 0x%x. |
+| <a id="31610"></a> 31610 | 16 | No | Accessing the external endpoint is only allowed via HTTPS. |
+| <a id="31611"></a> 31611 | 16 | No | The response's headers size exceeds the maximum allowed size of %u bytes. |
+| <a id="31612"></a> 31612 | 16 | No | Connections to the domain %ls are not allowed. |
+| <a id="31613"></a> 31613 | 16 | No | The length of the provided %ls after percent-encoding exceeds the maximum allowed length of %u bytes. |
+| <a id="31614"></a> 31614 | 16 | No | Only alphanumeric characters, hyphens, underscores, and dots are allowed in the hostname or in the fully qualified domain name. |
+| <a id="31615"></a> 31615 | 16 | No | The %ls cannot contain nested structures. Please check the formatting of the JSON and try again with a flat structure. |
+| <a id="31616"></a> 31616 | 10 | No | Warning: header '%ls' was overwritten by a system-defined value. |
+| <a id="31617"></a> 31617 | 16 | No | The %ls contains invalid characters. Only printable US ASCII characters are allowed. |
+| <a id="31618"></a> 31618 | 16 | No | The %ls contains an empty key. |
+| <a id="31619"></a> 31619 | 16 | No | The %ls could not be parsed. jsonError = %d. |
+| <a id="31620"></a> 31620 | 16 | No | The %ls is not a json object datatype. |
+| <a id="31621"></a> 31621 | 16 | No | One of the %ls values could not be parsed. |
+| <a id="31622"></a> 31622 | 16 | No | An unexpected error occurred while validating that the connection to the hostname is allowed. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323727](https://go.microsoft.com/fwlink/?linkid=2323727). |
+| <a id="31624"></a> 31624 | 16 | No | Connection to the external endpoint IP is not allowed. URL contains a hostname that is resolved to a blocked IP. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323727](https://go.microsoft.com/fwlink/?linkid=2323727). |
+| <a id="31625"></a> 31625 | 16 | No | DNS resolution of the hostname has failed with windows sockets error %d. |
+| <a id="31627"></a> 31627 | 16 | No | An out of memory exception has occurred during external endpoint invocation. |
+| <a id="31628"></a> 31628 | 16 | No | The database scoped credential '%.\*ls' has an invalid identity '%.\*ls' for use with an external rest endpoint. |
+| <a id="31629"></a> 31629 | 16 | No | The external rest endpoint execution exceeded the timeout value. |
+| <a id="31630"></a> 31630 | 16 | No | The database scoped credential '%.\*ls' cannot be used to invoke an external rest endpoint. |
+| <a id="31631"></a> 31631 | 16 | No | An error has occurred while waiting for the external rest endpoint result: %d. |
+| <a id="31632"></a> 31632 | 16 | No | The request's headers size exceeds the maximum allowed size of %u bytes. |
+| <a id="31633"></a> 31633 | 16 | No | The length of the provided %ls exceeds the maximum allowed length of %u bytes. |
+| <a id="31634"></a> 31634 | 16 | No | The %ls must contain a '%ls' for use with managed identity. |
+| <a id="31635"></a> 31635 | 16 | No | The %ls's '%ls' value must be a %ls for use with managed identity. |
+| <a id="31636"></a> 31636 | 16 | No | Error retrieving the managed identity access token for the resource id '%ls'. JWTErrorState = %d. '%ls' |
+| <a id="31637"></a> 31637 | 16 | No | Connections to the domain %ls are not allowed using a credential object with the identity 'SHARED ACCESS SIGNATURE'. |
+| <a id="31638"></a> 31638 | 16 | No | The specified '%.\*ls' value is not supported in the @headers parameter. |
+| <a id="31639"></a> 31639 | 16 | No | The specified '%ls' value is not supported in the @credential secret. |
+| <a id="31640"></a> 31640 | 16 | No | The %.\*ls XML string could not be parsed. %.\*ls. |
+| <a id="31641"></a> 31641 | 16 | No | The charset value of the response's Content-Type header is not supported. |
+| <a id="31642"></a> 31642 | 16 | No | The value of one of the key-value pairs in the %ls is empty. |
+| <a id="31643"></a> 31643 | 16 | No | '%ls' is disabled on this instance of SQL Server. Use sp_configure 'external rest endpoint enabled' to enable it. |
+| <a id="31644"></a> 31644 | 16 | No | Server Managed Identity is disabled for this instance of SQL Server. Use sp_configure 'allow server scoped db credentials' to enable it. For more information, see [https://go.microsoft.com/fwlink/?linkid=2325611](https://go.microsoft.com/fwlink/?linkid=2325611). |
+| <a id="31701"></a> 31701 | 16 | No | Parameter '%ls' must be specified. This parameter cannot be NULL. |
+| <a id="31703"></a> 31703 | 17 | No | Missing JSON key %.\*ls |
+| <a id="31704"></a> 31704 | 17 | No | Unable to parse JSON |
+| <a id="31705"></a> 31705 | 17 | No | Failed to run AI function with error %d %ls |
+| <a id="31706"></a> 31706 | 17 | No | Requested entities count does not match response: sent %d, received %d |
+| <a id="31707"></a> 31707 | 17 | No | Failed to generate a request ID with HRESULT %d |
+| <a id="31708"></a> 31708 | 17 | No | Failed to write to a blob handle with HRESULT %d |
+| <a id="31709"></a> 31709 | 17 | No | Failed to read from a blob handle with HRESULT %d |
+| <a id="31710"></a> 31710 | 17 | No | Failed to lock bytes of a blob handle |
+| <a id="31711"></a> 31711 | 17 | No | AI service response is inconsistent |
+| <a id="31712"></a> 31712 | 17 | No | Request failed with retriable error |
+| <a id="31713"></a> 31713 | 17 | No | Bad URL argument %.\*ls |
+| <a id="31714"></a> 31714 | 16 | No | AI function returned following error: %s |
+| <a id="31715"></a> 31715 | 17 | No | JSON value type ID is %d but %d expected |
+| <a id="31716"></a> 31716 | 16 | No | The model parameter '%.\*ls' is required for invocation. |
+| <a id="31717"></a> 31717 | 16 | No | Extensibility function is not allowed in system database. |
+| <a id="31718"></a> 31718 | 17 | No | An internal error has occurred. Please retry the operation. If the issue persists, contact support for assistance. |
+| <a id="31719"></a> 31719 | 16 | No | The API_FORMAT '%.\*ls' is not supported. For more information, see [https://go.microsoft.com/fwlink/?linkid=2325940](https://go.microsoft.com/fwlink/?linkid=2325940). |
+| <a id="31720"></a> 31720 | 17 | No | Fabric functions service response is inconsistent. |
+| <a id="31721"></a> 31721 | 17 | No | Failed to run Fabric function with error %d %ls. |
+| <a id="31723"></a> 31723 | 17 | No | Failed to fetch service endpoint. |
+| <a id="31724"></a> 31724 | 16 | No | Type %ls is not supported by Fabric functions. |
+| <a id="31725"></a> 31725 | 16 | No | Failed to run Fabric function with error %d %ls. |
+| <a id="31726"></a> 31726 | 16 | No | Invalid Fabric function '%.\*ls' argument count: '%d' given vs '%d' expected. |
+| <a id="31727"></a> 31727 | 16 | No | Fabric function '%.\*ls' is not found in '%.\*ls' function set. |
+| <a id="31728"></a> 31728 | 16 | No | Function set '%.\*ls' is not found. |
+| <a id="31729"></a> 31729 | 16 | No | Type '%ls' does not convert to '%ls' for argument '%ls' of function '%ls'. |
+| <a id="31730"></a> 31730 | 16 | No | The Fabric Function argument type '%ls' is not supported. |
+| <a id="31731"></a> 31731 | 16 | No | The provided JSON parameters (e.g., '%.\*ls') are not allowed. |
+| <a id="31732"></a> 31732 | 16 | No | '%.\*ls' must be a valid JSON object. |
+| <a id="31733"></a> 31733 | 16 | No | The '%ls' with Local ONNX provider is not enabled. |
+| <a id="31734"></a> 31734 | 16 | No | The value '%I64d' is not within range for the %ls parameter. |
+| <a id="31735"></a> 31735 | 16 | No | The JSON value for the JSON key '%ls' must be '%.\*ls' type. |
+| <a id="31736"></a> 31736 | 17 | No | An error occurred during the execution of the function. |
+| <a id="31737"></a> 31737 | 16 | No | The size of the provided %ls would be at least %u bytes after converting to UTF-8, which exceeds the maximum allowed size of %u bytes. |
+| <a id="31738"></a> 31738 | 17 | No | Initialization of the '%ls' process with session ID '%ls' failed with HRESULT 0x%08x. |
+| <a id="31739"></a> 31739 | 17 | No | Generating embeddings from '%ls' process with session ID '%ls' failed with HRESULT 0x%08x. |
+| <a id="31740"></a> 31740 | 17 | No | An internal error has occurred in AI runtime with session ID '%ls'. Retry the operation, if the issue persists, contact support for assistance. |
+| <a id="31741"></a> 31741 | 10 | No | SQL type '%ls' is implicitly converted to Fabric function's type '%ls' for argument '%ls'. |
+| <a id="31742"></a> 31742 | 17 | No | Unrecoverable HTTP error %d %ls occured. |
+| <a id="31743"></a> 31743 | 16 | No | Language '%ls' is not supported. |
+| <a id="31744"></a> 31744 | 16 | No | The JSON path for embeddings could not be found in the response. |
+| <a id="31745"></a> 31745 | 16 | No | The HTTP response does not contain valid JSON. |
+| <a id="31746"></a> 31746 | 16 | No | Label '%.\*ls' is empty, which is not allowed. |
+| <a id="31747"></a> 31747 | 16 | No | Label '%.\*ls' exceeds the maximum allowed length of %d bytes. |
+| <a id="31748"></a> 31748 | 16 | No | The (CREATE \| CREATE OR ALTER \| ALTER) FUNCTION statement cannot reference external functions whose parameters or return types are of type None. |
+| <a id="31749"></a> 31749 | 16 | No | Function set is not found. |
+| <a id="31750"></a> 31750 | 16 | No | Incorrect value '%ls' provided for type '%ls'. |
+| <a id="31751"></a> 31751 | 10 | No | The AI function '%ls' failed to process the input text '%.\*ls'. Error %d: %ls. |
+| <a id="31752"></a> 31752 | 10 | No | The AI function '%ls' failed to process an input row after multiple retry attempts. Error %d: %ls. |
+| <a id="31753"></a> 31753 | 10 | No | The AI function '%ls' failed to process an input row. Error %d: %ls. |
+| <a id="31754"></a> 31754 | 10 | No | Fabric Function '%.\*ls' does not have batch mode value defined, the invocation will be serialized. |
+| <a id="31755"></a> 31755 | 16 | No | '%ls' requires an external model of type '%ls'. |
+| <a id="31756"></a> 31756 | 16 | No | The '%ls' function with Local ONNX provider is not supported in batch mode. |
+| <a id="31757"></a> 31757 | 16 | No | The '%ls' function with RETURNING JSON is not supported in batch mode. |
+| <a id="31758"></a> 31758 | 16 | No | sp_ai_request returned an invalid result: %.\*ls |
+| <a id="31759"></a> 31759 | 16 | No | An empty key was found in the JSON object for '%.\*ls'. |
+| <a id="31760"></a> 31760 | 16 | No | The function set is not ready for the use. Please, validate that last publising completed successfully. |
+| <a id="31761"></a> 31761 | 16 | No | The function set is being deployed. Please, wait for the deployment to complete before using the function set. |
+| <a id="31762"></a> 31762 | 16 | No | Cannot use function set because its' deployment failed with error: '%.\*ls' |
+| <a id="31763"></a> 31763 | 16 | No | The function set runtime is unsupported. |
+| <a id="31764"></a> 31764 | 16 | No | The function set has unpublished package: '%.\*ls' |
+| <a id="31765"></a> 31765 | 16 | No | Fabric function '%.\*ls' is not available for use as its' state is not 'OK'. Validate that the function can be invoked in User Data Functions. |
+| <a id="31766"></a> 31766 | 16 | No | The Fabric function metadata contains more than the maximum supported number of %d parameters. |
+| <a id="31767"></a> 31767 | 16 | No | The Fabric function metadata contains invalid parameter metadata at parameter %d. Parameter names must be unique, contain between 1 and %d characters, and cannot contain ':' or ';'. Parameter data types cannot contain ':' or ';'. |
+| <a id="31768"></a> 31768 | 16 | No | The Fabric function batch size must be an integer from 0 through %d. |
+| <a id="31769"></a> 31769 | 16 | No | The Fabric function catalog metadata contains invalid parameter information. Recreate the function. |
+| <a id="31770"></a> 31770 | 16 | No | The principal must have write permissions to execute external functions. |
+| <a id="31771"></a> 31771 | 16 | No | The AI functions configuration is not a valid JSON object. |
+| <a id="31772"></a> 31772 | 16 | No | '%.\*ls' is not a recognized AI functions configuration setting. |
+| <a id="31773"></a> 31773 | 16 | No | The AI functions configuration setting '%.\*ls' requires a value of type %.\*ls. |
+| <a id="31774"></a> 31774 | 16 | No | The AI functions configuration setting '%.\*ls' exceeds its maximum length of %d characters. |
+| <a id="31775"></a> 31775 | 16 | No | The AI functions configuration setting '%.\*ls' value is out of bounds. |
+| <a id="31776"></a> 31776 | 16 | No | The AI functions configuration JSON document exceeds the maximum allowed length of %d characters. |
+| <a id="31777"></a> 31777 | 16 | No | The session context key '%.\*ls' is reserved for the AI functions configuration and cannot be set directly. |
+| <a id="31778"></a> 31778 | 16 | No | The AI functions configuration setting '%.\*ls' cannot be an empty string. |
+| <a id="31779"></a> 31779 | 16 | No | The AI service rejected the AI functions configuration of this session with error %d: %ls Review the settings applied with sp_aifunc_default_conf. |
+| <a id="31780"></a> 31780 | 17 | No | Failure occurred during authorization: %.\*ls %.\*ls (RootActivityId: %.\*ls) |
+| <a id="31801"></a> 31801 | 17 | No | Incorrect JSON |
+| <a id="31802"></a> 31802 | 17 | No | JSON value casted to incorrect type |
+| <a id="31803"></a> 31803 | 17 | No | Missing JSON key '%ls' |
+| <a id="32001"></a> 32001 | 10 | No | Log shipping backup log job for %s. |
+| <a id="32002"></a> 32002 | 10 | No | Log shipping copy job for %s:%s. |
+| <a id="32003"></a> 32003 | 10 | No | Log shipping restore log job for %s:%s. |
+| <a id="32004"></a> 32004 | 10 | No | Log shipping backup log job step. |
+| <a id="32005"></a> 32005 | 10 | No | Log shipping copy job step. |
+| <a id="32006"></a> 32006 | 10 | No | Log shipping restore log job step. |
+| <a id="32007"></a> 32007 | 16 | No | Database %s is not ONLINE. |
+| <a id="32008"></a> 32008 | 10 | No | Database %s is not ONLINE. The backup job will not be performed until this database is brought online. |
+| <a id="32009"></a> 32009 | 16 | No | A log shipping primary entry already exists for database %s. |
+| <a id="32010"></a> 32010 | 16 | No | Database %s does not exist as log shipping primary. |
+| <a id="32011"></a> 32011 | 16 | No | Primary Database %s has active log shipping secondary database(s). Drop the secondary database(s) first. |
+| <a id="32012"></a> 32012 | 16 | No | Secondary %s.%s already exists for primary %s. |
+| <a id="32013"></a> 32013 | 16 | No | A log shipping entry already exists for secondary database %s. |
+| <a id="32014"></a> 32014 | 16 | No | Database %s does not exist as log shipping secondary. |
+| <a id="32015"></a> 32015 | 16 | No | The primary database %s cannot have SIMPLE recovery for log shipping to work properly. |
+| <a id="32016"></a> 32016 | 16 | No | The specified agent_id %s or agent_type %d do not form a valid pair for log shipping monitoring processing. |
+| <a id="32017"></a> 32017 | 16 | No | Log shipping is supported on Enterprise, Enterprise Developer, Standard, and Standard Developer editions of SQL Server. The edition of this instance is %s. |
+| <a id="32018"></a> 32018 | 16 | No | Log shipping is not installed on this instance. |
+| <a id="32019"></a> 32019 | 10 | No | Log shipping alert job. |
+| <a id="32020"></a> 32020 | 10 | No | Log shipping alert job step. |
+| <a id="32021"></a> 32021 | 10 | No | Log shipping alert job schedule. |
+| <a id="32022"></a> 32022 | 16 | No | Cannot add a log shipping job with name %s. A job with same name already exists in the system and this job does not belong to log shipping category. |
+| <a id="32023"></a> 32023 | 16 | No | An entry for primary server %s, primary database %s does not exist on this secondary. Register the primary first. |
+| <a id="32024"></a> 32024 | 16 | No | An entry for primary server %s, primary database %s already exists. |
+| <a id="32025"></a> 32025 | 16 | No | Primary Server %s, Database %s has active log shipping secondary database(s) on the secondary. Drop the secondary database(s) first. |
+| <a id="32026"></a> 32026 | 10 | No | Log shipping Primary Server Alert. |
+| <a id="32027"></a> 32027 | 10 | No | Log shipping Secondary Server Alert. |
+| <a id="32028"></a> 32028 | 16 | No | Invalid value = %d for parameter @threshold_alert was specified. |
+| <a id="32029"></a> 32029 | 10 | No | Log shipping backup agent \[%s\] has verified log backup file '%s.wrk' and renamed it as '%s.trn'. This is an informational message only. No user action is required. |
+| <a id="32030"></a> 32030 | 10 | No | Could not query monitor information for log shipping primary %s.%s from monitor server %s. |
+| <a id="32031"></a> 32031 | 10 | No | Could not query monitor information for log shipping secondary %s.%s from monitor server %s. |
+| <a id="32032"></a> 32032 | 16 | No | Invalid value '%d' for update period. Update period should be between 1 and 120 minutes. |
+| <a id="32033"></a> 32033 | 16 | No | The update job for the database mirroring monitor already exists. To change the update period, use sys.sp_dbmmonitorchangemonitoring |
+| <a id="32034"></a> 32034 | 16 | No | An internal error occurred when setting up the database mirroring monitoring job. |
+| <a id="32035"></a> 32035 | 16 | No | An internal error occurred when modifying the database mirroring monitoring job. |
+| <a id="32036"></a> 32036 | 16 | No | Parameter(s) out of range. |
+| <a id="32037"></a> 32037 | 16 | No | The units for the update period for the database mirroring monitor job have been changed. |
+| <a id="32038"></a> 32038 | 16 | No | An internal error has occurred in the database mirroring monitor. |
+| <a id="32039"></a> 32039 | 16 | No | The database '%s' is not being mirrored. No update of the base table was done. |
+| <a id="32040"></a> [32040](../mssqlserver-32040-database-engine-error.md) | 16 | No | The alert for 'oldest unsent transaction' has been raised. The current value of '%d' surpasses the threshold '%d'. |
+| <a id="32041"></a> 32041 | 16 | No | The database mirroring monitor base tables have not been created. Please run sys.sp_dbmmonitorupdate to create them. |
+| <a id="32042"></a> [32042](../mssqlserver-32042-database-engine-error.md) | 16 | No | The alert for 'unsent log' has been raised. The current value of '%d' surpasses the threshold '%d'. |
+| <a id="32043"></a> [32043](../mssqlserver-32043-database-engine-error.md) | 16 | No | The alert for 'unrestored log' has been raised. The current value of '%d' surpasses the threshold '%d'. |
+| <a id="32044"></a> [32044](../mssqlserver-32044-database-engine-error.md) | 16 | No | The alert for 'mirror commit overhead' has been raised. The current value of '%d' surpasses the threshold '%d'. |
+| <a id="32045"></a> 32045 | 16 | No | '%s' must be executed in msdb. |
+| <a id="32046"></a> 32046 | 16 | No | Only members of the sysadmin fixed server role or the 'dbm_monitor' role in msdb can perform this operation. |
+| <a id="32047"></a> 32047 | 15 | No | Database Mirroring Monitor Job |
+| <a id="32048"></a> 32048 | 15 | No | Database Mirroring Monitor Schedule |
+| <a id="32049"></a> 32049 | 16 | No | The database mirroring monitoring job does not exist. Run sp_dbmmonitoraddmonitoring to setup the job. |
+| <a id="32050"></a> 32050 | 16 | No | Alerts cannot be created on the system databases, master, msdb, model or tempdb. |
+| <a id="32051"></a> 32051 | 10 | No | System administrator privilege is required to update the base table. The base table was not updated. |
+| <a id="32052"></a> 32052 | 16 | No | Parameter '%s' cannot be null or empty. Specify a value for the named parameter and retry the operation. |
+| <a id="32053"></a> 32053 | 16 | No | The server name, given by '@@servername', is currently null. |
+| <a id="32054"></a> 32054 | 16 | No | There was an error establishing a link to the remote monitor server. |
+| <a id="32055"></a> 32055 | 16 | No | There was an error configuring the remote monitor server. |
+| <a id="32056"></a> 32056 | 17 | No | The SQL Server failed to create full-text FTData directory. This might be because FulltextDefaultPath is invalid or SQL Server service account does not have permission. Full-text may fail until this issue is resolved. Restart SQL Server after the issue is fixed. |
+| <a id="32057"></a> 32057 | 16 | No | There was an error configuring the log shipping backup server. The primary_server_with_port_override is set to '%s'. It is only valid on a contained availability group |
+| <a id="33001"></a> 33001 | 16 | No | Cannot drop the option because the option is not specified on %S_MSG. |
+| <a id="33002"></a> 33002 | 16 | No | Access to %ls %ls is blocked because the signature is not valid. |
+| <a id="33003"></a> 33003 | 16 | No | DDL statement is not allowed. |
+| <a id="33004"></a> 33004 | 16 | No | The password of login '%.\*ls' is invalid. A new password should be set for this login without specifying the old password. |
+| <a id="33005"></a> 33005 | 16 | No | Cannot find the certificate or asymmetric key from the file %.\*ls. ErrorCode: 0x%x. |
+| <a id="33006"></a> 33006 | 16 | No | WITH SIGNATURE option cannot be specified on database. |
+| <a id="33007"></a> 33007 | 16 | No | Cannot encrypt symmetric key with itself. |
+| <a id="33008"></a> 33008 | 16 | No | Cannot grant, deny, or revoke %.\*ls permission on INFORMATION_SCHEMA or SYS %S_MSG. |
+| <a id="33009"></a> 33009 | 16 | No | The database owner SID recorded in the master database differs from the database owner SID recorded in database '%.\*ls'. You should correct this situation by resetting the owner of database '%.\*ls' using the ALTER AUTHORIZATION statement. |
+| <a id="33010"></a> 33010 | 16 | No | The MUST_CHANGE option cannot be specified together with the HASHED option. |
+| <a id="33011"></a> 33011 | 16 | No | The %S_MSG private key cannot be dropped because one or more entities are encrypted by it. |
+| <a id="33012"></a> 33012 | 10 | No | Cannot %S_MSG signature %S_MSG %S_MSG '%.\*ls'. Signature already exists or cannot be added. |
+| <a id="33013"></a> 33013 | 16 | No | A %S_MSG by %S_MSG '%.\*s' does not exist. |
+| <a id="33014"></a> 33014 | 16 | No | Cannot countersign '%.\*s'. Only modules can be countersigned. |
+| <a id="33015"></a> 33015 | 16 | No | The database principal is referenced by a %S_MSG in the database, and cannot be dropped. |
+| <a id="33016"></a> 33016 | 16 | No | The user cannot be remapped to a login. Remapping can only be done for users that were mapped to Windows or SQL logins. |
+| <a id="33017"></a> 33017 | 16 | No | Cannot remap a user of one type to a login of a different type. For example, a SQL user must be mapped to a SQL login; it cannot be remapped to a Windows login. |
+| <a id="33018"></a> 33018 | 16 | No | Cannot remap user to login '%.\*s', because the login is already mapped to a user in the database. |
+| <a id="33019"></a> 33019 | 16 | No | Cannot create implicit user for the special login '%.\*s'. |
+| <a id="33020"></a> 33020 | 16 | No | A HASHED password cannot be set for a login that has CHECK_POLICY turned on. |
+| <a id="33021"></a> 33021 | 16 | Yes | Failed to generate a user instance of SQL Server. Only local user accounts, interactive users accounts, service accounts, or batch accounts can generate a user instance. The connection will be closed.%.\*ls |
+| <a id="33022"></a> 33022 | 16 | No | Cannot obtain cryptographic provider properties. Provider error code: %d. |
+| <a id="33023"></a> 33023 | 16 | No | The %S_MSG is too long. Maximum allowed length is %d bytes. |
+| <a id="33024"></a> 33024 | 16 | No | Cryptographic provider %S_MSG '%ls' in dll is different from the guid recorded in system catalog for provider with id %d. |
+| <a id="33025"></a> 33025 | 16 | No | Invalid cryptographic provider property: %S_MSG. |
+| <a id="33026"></a> 33026 | 16 | No | Cryptographic provider with guid '%ls' already exists. |
+| <a id="33027"></a> [33027](../mssqlserver-33027-database-engine-error.md) | 16 | No | Cannot load library '%.\*ls'. See errorlog for more information. |
+| <a id="33028"></a> [33028](../mssqlserver-33028-database-engine-error.md) | 16 | No | Cannot open session for %S_MSG '%.\*ls'. Provider error code: %d. (%S_MSG) |
+| <a id="33029"></a> 33029 | 16 | No | Cannot initialize cryptographic provider. Provider error code: %d. (%S_MSG) |
+| <a id="33030"></a> 33030 | 16 | No | Cryptographic provider is not available. |
+| <a id="33031"></a> 33031 | 16 | No | Cryptographic provider '%.\*ls' is in disabled. |
+| <a id="33032"></a> 33032 | 16 | Yes | SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'. |
+| <a id="33033"></a> 33033 | 16 | No | Specified key type or option '%S_MSG' is not supported by the provider. |
+| <a id="33034"></a> 33034 | 16 | No | Cannot specify algorithm for existing key. |
+| <a id="33035"></a> 33035 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider error code: %d. (%S_MSG) |
+| <a id="33036"></a> 33036 | 10 | No | Cannot drop the key with thumbprint '%.\*ls' in the provider. |
+| <a id="33037"></a> 33037 | 16 | No | Cannot export %S_MSG from the provider. Provider error code: %d. (%S_MSG) |
+| <a id="33038"></a> 33038 | 16 | No | Operation is not supported by cryptographic provider key. |
+| <a id="33039"></a> 33039 | 16 | No | Invalid algorithm '%.\*ls'. Provider error code: %d. (%S_MSG) |
+| <a id="33040"></a> 33040 | 16 | No | Cryptographic provider key cannot be encrypted by password or other key. |
+| <a id="33041"></a> 33041 | 16 | Yes | Cannot create login token for existing authenticators. If dbo is a windows user make sure that its windows account information is accessible to SQL Server. |
+| <a id="33042"></a> 33042 | 16 | No | Cannot add %S_MSG because it is already mapped to a login. |
+| <a id="33043"></a> 33043 | 16 | No | Cannot add %S_MSG '%.\*ls' because there is already %S_MSG specified for the login. |
+| <a id="33044"></a> 33044 | 16 | No | Cannot drop %S_MSG because there is %S_MSG referencing this provider. |
+| <a id="33045"></a> 33045 | 16 | No | Cannot drop %S_MSG because it is not mapped to this login. |
+| <a id="33046"></a> 33046 | 16 | No | Server principal '%.\*ls' has no credential associated with %S_MSG '%.\*ls'. |
+| <a id="33047"></a> 33047 | 16 | No | Fail to obtain or decrypt secret for %S_MSG '%.\*ls'. |
+| <a id="33048"></a> 33048 | 16 | No | Cannot use %S_MSG under non-primary security context. |
+| <a id="33049"></a> 33049 | 16 | No | Key with %S_MSG '%.\*ls' does not exist in the provider or access is denied. Provider error code: %d. (%S_MSG) |
+| <a id="33050"></a> 33050 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider does not allow specifying key names. |
+| <a id="33051"></a> 33051 | 16 | No | Invalid algorithm id: %d. Provider error code: %d. (%S_MSG) |
+| <a id="33052"></a> 33052 | 16 | No | Cryptographic provider key cannot be a temporary key. |
+| <a id="33053"></a> 33053 | 16 | No | Extensible Key Management is disabled or not supported on this edition of SQL Server. Use sp_configure 'EKM provider enabled' to enable it. |
+| <a id="33054"></a> 33054 | 16 | No | Extensible key management is not supported in this edition of SQL Server. |
+| <a id="33055"></a> 33055 | 16 | No | Exception happened when calling cryptographic provider '%.\*ls' in the API '%.\*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx. |
+| <a id="33056"></a> 33056 | 16 | No | Cannot impersonate login '%.\*ls' to access %S_MSG '%.\*ls'. |
+| <a id="33057"></a> 33057 | 10 | No | Cryptographic provider is now disabled. However users who have an open cryptographic session with the provider can still use it. Restart the server to disable the provider for all users. |
+| <a id="33058"></a> 33058 | 10 | No | Cryptographic provider is now dropped. However users who have an open cryptographic session with the provider can still use it. Restart the server to drop the provider for all users. |
+| <a id="33059"></a> 33059 | 16 | No | An error occurred while trying to flush all running audit sessions. Some events may be lost. |
+| <a id="33060"></a> 33060 | 16 | No | The format of supplied parameter sid is invalid. The sid might be incorrect or the sid might describe the wrong type of user. |
+| <a id="33061"></a> 33061 | 16 | No | The specified RETENTION_DAYS value is greater than the maximum value allowed. The retention days value must be less than %d days. |
+| <a id="33062"></a> 33062 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is too short. The password must be at least %d characters. |
+| <a id="33063"></a> 33063 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is too long. The password must be at most %d characters. |
+| <a id="33064"></a> 33064 | 16 | No | Password validation failed. The password does not meet SQL Server password policy requirements because it is not complex enough. The password must be at least %d characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. |
+| <a id="33065"></a> 33065 | 10 | No | An error occurred while configuring the password policy: HRESULT 0x%x, state %d. To skip configuring the password policy, use trace flag -T4634 during startup. This will cause SQL Server to run using a minimal password policy. |
+| <a id="33066"></a> 33066 | 10 | No | An error occurred while configuring the password policy: NTSTATUS 0x%x, state %d. To skip configuring the password policy, use trace flag -T4634 during startup. This will cause SQL Server to run using a minimal password policy. |
+| <a id="33067"></a> 33067 | 16 | No | Secret provided can not contain more than 120 characters. Please provide a valid credential. |
+| <a id="33068"></a> 33068 | 16 | No | Cannot load cryptographic provider '%.\*ls' because another EKM provider is already loaded in this process. Only one third-party EKM provider or one Azure Key Vault (AKV) provider can be active at a time. DROP the existing provider before loading another one. |
+| <a id="33069"></a> 33069 | 16 | No | CREATE CERTIFICATE statement cannot mix file and binary modes. Rewrite the statement using only the FILE or the BINARY keyword. |
+| <a id="33070"></a> 33070 | 16 | No | The specified maximum size limit for the audit log file is less than the minimum value allowed. The maximum size limit must be at least 2 MB. |
+| <a id="33071"></a> 33071 | 16 | No | This command requires %S_MSG to be disabled. Disable the %S_MSG and rerun this command. |
+| <a id="33072"></a> 33072 | 16 | No | The audit log file path is invalid. |
+| <a id="33073"></a> 33073 | 16 | No | Cannot find %S_MSG '%.\*ls' or you do not have the required permissions. |
+| <a id="33074"></a> 33074 | 16 | No | Cannot %S_MSG a %S_MSG %S_MSG from a user database. This operation must be performed in the master database. |
+| <a id="33075"></a> 33075 | 16 | No | Granular auditing is not available in this edition of SQL Server. For more information about feature support in the editions of SQL Server, see SQL Server Books Online. |
+| <a id="33076"></a> 33076 | 16 | No | The specified maximum size limit is greater than the maximum value allowed. The maximum size limit must be less than 16777215 TB. |
+| <a id="33077"></a> 33077 | 16 | No | RESERVE_DISK_SPACE cannot be specified when setting MAXSIZE = UNLIMITED. Either reduce MAXSIZE or do not specify RESERVE_DISK_SPACE. |
+| <a id="33078"></a> 33078 | 16 | No | The containment setting in the master database does not match the property of the database files. Use ALTER DATABASE to reset the containment property. |
+| <a id="33079"></a> 33079 | 16 | No | Cannot bind a default or rule to the CLR type '%s' because an existing sparse column uses this data type. Modify the data type of the sparse column or remove the sparse designation of the column. |
+| <a id="33080"></a> 33080 | 10 | No | Cryptographic provider library '%.\*ls' loaded into memory. This is an informational message only. No user action is required. |
+| <a id="33081"></a> [33081](../mssqlserver-33081-database-engine-error.md) | 10 | No | Failed to verify Authenticode signature on DLL '%.\*ls'. |
+| <a id="33082"></a> 33082 | 16 | No | Cannot find Cryptographic provider library with guid '%ls'. |
+| <a id="33083"></a> 33083 | 16 | No | Cannot create %S_MSG for %S_MSG '%ls' because it is not supported by the extensible key management provider '%ls'. |
+| <a id="33084"></a> 33084 | 16 | No | The OPEN SYMMETRIC KEY statement cannot reference a symmetric key created from an Extensible Key Management (EKM) provider. Symmetric keys created from an EKM provider are opened automatically for principals who can successfully authenticate with the cryptographic provider. |
+| <a id="33085"></a> [33085](../mssqlserver-33085-database-engine-error.md) | 10 | No | One or more methods cannot be found in cryptographic provider library '%.\*ls'. |
+| <a id="33086"></a> 33086 | 10 | No | SQL Server Audit failed to record %ls action. |
+| <a id="33087"></a> 33087 | 16 | No | %S_MSG property of the key returned by EKM provider doesn't match the expected value |
+| <a id="33088"></a> 33088 | 16 | No | The algorithm: %.\*ls is not supported for EKM operations by SQL Server |
+| <a id="33089"></a> 33089 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%S_MSG) |
+| <a id="33090"></a> 33090 | 10 | No | Attempting to load library '%.\*ls' into memory. This is an informational message only. No user action is required. |
+| <a id="33091"></a> 33091 | 10 | No | Warning: The certificate used for encrypting the database encryption key has not been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key or you will not be able to open the database. |
+| <a id="33092"></a> 33092 | 10 | No | Failed to verify the Authenticode signature of '%.\*ls'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support. |
+| <a id="33093"></a> 33093 | 16 | No | The Windows user or group '%s' is local or built-in. Use a Windows domain user or domain group. |
+| <a id="33094"></a> 33094 | 10 | No | An error occurred during Service Master Key %S_MSG |
+| <a id="33095"></a> 33095 | 10 | No | Service Master Key could not be decrypted using one of its encryptions. See sys.key_encryptions for details. |
+| <a id="33096"></a> 33096 | 10 | No | A generic failure occurred during Service Master Key encryption or decryption. |
+| <a id="33097"></a> 33097 | 10 | No | Processing BrickId: %d with MasterDb.PrimaryPru.FragId %d |
+| <a id="33098"></a> 33098 | 10 | No | Initializing SMK for brickId: %d |
+| <a id="33099"></a> 33099 | 16 | No | You cannot add server-scoped catalog views, system stored procedures, or extended stored procedures to a database audit specification in a user database. Instead add them to a database audit specification in the master database. |
+| <a id="33101"></a> 33101 | 16 | No | Cannot use %S_MSG '%.\*ls', because its private key is not present or it is not protected by the database master key. SQL Server requires the ability to automatically access the private key of the %S_MSG used for this operation. |
+| <a id="33102"></a> 33102 | 16 | No | Cannot encrypt a system database. Database encryption operations cannot be performed for 'master', 'model', 'tempdb', 'msdb', or 'resource' databases. |
+| <a id="33103"></a> 33103 | 16 | No | A database encryption key already exists for this database. |
+| <a id="33104"></a> 33104 | 16 | No | A database encryption key does not exist for this database. |
+| <a id="33105"></a> 33105 | 16 | No | Cannot drop the database encryption key because it is currently in use. Database encryption needs to be turned off to be able to drop the database encryption key. |
+| <a id="33106"></a> 33106 | 16 | No | Cannot change database encryption state because no database encryption key is set. |
+| <a id="33107"></a> 33107 | 16 | No | Cannot enable database encryption because it is already enabled. |
+| <a id="33108"></a> 33108 | 16 | No | Cannot disable database encryption because it is already disabled. |
+| <a id="33109"></a> 33109 | 16 | No | Cannot %S_MSG database encryption while an encryption, decryption, or key change scan is in progress. |
+| <a id="33110"></a> 33110 | 16 | No | Cannot change database encryption key while an encryption, decryption, or key change scan is in progress. |
+| <a id="33111"></a> 33111 | 16 | No | Cannot find server %S_MSG with thumbprint '%.\*ls'. |
+| <a id="33112"></a> 33112 | 10 | No | Beginning database encryption scan for database '%.\*ls'. |
+| <a id="33113"></a> 33113 | 10 | No | Database encryption scan for database '%.\*ls' is complete. |
+| <a id="33114"></a> 33114 | 10 | No | Database encryption scan for database '%.\*ls' was aborted. Reissue ALTER DB to resume the scan. |
+| <a id="33115"></a> 33115 | 16 | No | CREATE/ALTER/DROP DATABASE ENCRYPTION KEY failed because a lock could not be placed on the database. Try again later. |
+| <a id="33116"></a> 33116 | 16 | No | CREATE/ALTER/DROP DATABASE ENCRYPTION KEY failed because a lock could not be placed on database '%.\*ls'. Try again later. |
+| <a id="33117"></a> 33117 | 16 | No | Transparent Data Encryption is not available in the edition of this SQL Server instance. See books online for more details on feature support in different SQL Server editions. |
+| <a id="33118"></a> 33118 | 16 | No | Cannot enable or modify database encryption on a database that is read-only, has read-only files or is not recovered. |
+| <a id="33119"></a> 33119 | 16 | No | Cannot modify filegroup read-only/read-write state while an encryption transition is in progress. |
+| <a id="33120"></a> 33120 | 16 | No | In order to encrypt the database encryption key with an %S_MSG, please use an %S_MSG that resides on an extensible key management provider. |
+| <a id="33121"></a> 33121 | 16 | No | The %S_MSG '%ls' does not have a login associated with it. Create a login and credential for this key to automatically access the extensible key management provider '%ls'. |
+| <a id="33122"></a> 33122 | 16 | No | This command requires a database encryption scan on database '%.\*ls'. However, the database has changes from previous encryption scans that are pending log backup. Take a log backup and retry the command. |
+| <a id="33123"></a> 33123 | 16 | No | Cannot drop or alter the database encryption key since it is currently in use on a mirror or secondary availability replica. Retry the command after all the previous reencryption scans have propagated to the mirror or secondary availability replicas or after availability relationship has been disabled. |
+| <a id="33124"></a> 33124 | 10 | No | Database encryption scan for database '%.\*ls' cannot complete since one or more files are offline. Bring the files online to run the scan to completion. |
+| <a id="33125"></a> 33125 | 10 | No | Can not create login token because there are too many secondary principals. The maximum number of allowed secondary principals allowed is %lu. To fix this, remove the login from a server role. |
+| <a id="33126"></a> 33126 | 10 | No | Database encryption key is corrupted and cannot be read. |
+| <a id="33127"></a> 33127 | 16 | No | The %S_MSG cannot be dropped because it is used by one or more databases to encrypt a Database Encryption Key. |
+| <a id="33128"></a> [33128](../mssqlserver-33128-database-engine-error.md) | 16 | No | Encryption failed. Key uses deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this key switch to a lower db compatibility level. |
+| <a id="33129"></a> [33129](../mssqlserver-33129-database-engine-error.md) | 16 | No | Cannot use ALTER LOGIN with the ENABLE or DISABLE argument for a Windows or Entra group. GRANT or REVOKE the CONNECT SQL permission instead. |
+| <a id="33130"></a> 33130 | 16 | No | Principal '%ls' could not be found or this principal type is not supported. |
+| <a id="33131"></a> 33131 | 16 | No | Principal '%ls' has a duplicate display name in Microsoft Entra ID. Make the display name unique or use WITH OBJECT_ID to specify the expected principal. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323825](https://go.microsoft.com/fwlink/?linkid=2323825). |
+| <a id="33132"></a> 33132 | 16 | No | This principal type is not supported in Azure SQL Database. |
+| <a id="33133"></a> 33133 | 16 | No | Your subscription is not enabled for Integrated Authentication. |
+| <a id="33134"></a> 33134 | 16 | No | Principal '%ls' could not be resolved. Error message: '%ls' |
+| <a id="33135"></a> 33135 | 16 | No | Altering the name of a Windows principal is not supported through this form of execution. For more information about this, see SQL Server Books Online. |
+| <a id="33136"></a> 33136 | 16 | No | The operation could not be completed at this time. Please try again later. |
+| <a id="33137"></a> 33137 | 16 | No | The tenant '%.\*ls' cannot be found. |
+| <a id="33139"></a> 33139 | 16 | No | This subscription does not support Integrated Authentication. |
+| <a id="33140"></a> 33140 | 16 | No | The login '%.\*ls' could not be created because a login is already associated with certificate '%.\*ls'. |
+| <a id="33141"></a> 33141 | 10 | No | The credential created might not be able to decrypt the database master key. Please ensure a database master key exists for this database and is encrypted by the same password used in the stored procedure. |
+| <a id="33142"></a> 33142 | 16 | No | Updating the tenantId for Azure SQL Server was not successful. |
+| <a id="33143"></a> 33143 | 16 | No | The account admin of the subscription does not belong to this tenant. |
+| <a id="33144"></a> 33144 | 16 | No | Cannot change the schema of a temporary object. |
+| <a id="33145"></a> 33145 | 16 | No | Cannot update database encryption key protector while protector change is already in progress. |
+| <a id="33146"></a> 33146 | 10 | No | The database '%.\*ls' is offline. The credential was created but SQL Server is unable to determine if the credential can decrypt the database master key. |
+| <a id="33147"></a> 33147 | 20 | Yes | Federated Authentication Feature data used in login record to open a connection is structurally or semantically invalid; the connection has been closed. Please contact the vendor of the client library.%.\*ls. |
+| <a id="33148"></a> 33148 | 16 | No | The user name for a windows login has to be identical to the login name. |
+| <a id="33149"></a> 33149 | 16 | Yes | Dropping a credential '%.\*ls' which could still be used by Managed Backup. |
+| <a id="33150"></a> 33150 | 16 | Yes | Warning: Can not check whether the credential '%.\*ls' is used by managed backup, because %ls. Please check whether the credential is used by managed backup. |
+| <a id="33151"></a> 33151 | 16 | No | The user name for a user with password cannot be identical to the name of the server admin or the dbo of the database. |
+| <a id="33152"></a> 33152 | 16 | No | Valid values of the database compatibility level are %d or %d. |
+| <a id="33153"></a> 33153 | 16 | No | Valid values of the database compatibility level are %d, %d, or %d. |
+| <a id="33154"></a> 33154 | 20 | Yes | Client sent an invalid token when server was expecting federated authentication token. And it was not a disconnect event. |
+| <a id="33155"></a> 33155 | 20 | Yes | A disconnect event was raised when server is waiting for Federated Authentication token. This could be due to client close or server timeout expired. |
+| <a id="33156"></a> 33156 | 20 | Yes | A Federated Authentication token was sent by the client when the server is not expecting it. So server will close the connection due to TDS non-conformance. |
+| <a id="33157"></a> 33157 | 16 | No | Cryptographic providers are not supported on database credentials. |
+| <a id="33158"></a> 33158 | 16 | No | Database credentials are not supported in master database. |
+| <a id="33159"></a> 33159 | 16 | No | Principal '%ls' could not be created. Only connections established with Active Directory accounts can create other Active Directory users. |
+| <a id="33160"></a> 33160 | 10 | No | Unable to verify Authenticode signatures due to error code %d. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support. |
+| <a id="33161"></a> 33161 | 15 | No | Database master keys without password are not supported in this version of SQL Server. |
+| <a id="33162"></a> 33162 | 16 | No | TYPE and SID options have to be used along with each other, in this version of SQL Server. |
+| <a id="33163"></a> 33163 | 16 | No | The value specified for TYPE option is not supported in this version of SQL Server. Allowed values are E (EXTERNAL_USER) and X (EXTERNAL_GROUP) |
+| <a id="33164"></a> 33164 | 16 | No | Cannot drop the credential '%.\*ls' because it is used by an external data source. |
+| <a id="33165"></a> 33165 | 16 | No | Cannot drop the external %ls '%.\*ls' because it is used by an external %ls. |
+| <a id="33166"></a> 33166 | 16 | No | dbManager permission check failed. |
+| <a id="33167"></a> 33167 | 16 | No | This command is not supported for Microsoft Entra ID authenticated users. Execute this command as a SQL authenticated user. |
+| <a id="33168"></a> 33168 | 16 | No | TYPE option cannot be used along with FOR/FROM LOGIN, CERTIFICATE, ASYMMETRIC KEY, EXTERNAL PROVIDER, WITHOUT LOGIN or WITH PASSWORD, in this version of SQL Server. |
+| <a id="33169"></a> 33169 | 16 | No | User name cannot have backslash character, when using the TYPE option. |
+| <a id="33170"></a> 33170 | 16 | No | SID option cannot be used along with FOR/FROM LOGIN, CERTIFICATE, ASYMMETRIC KEY, EXTERNAL PROVIDER, WITHOUT LOGIN or WITH PASSWORD, in this version of SQL Server. |
+| <a id="33171"></a> 33171 | 16 | No | Only active directory users can impersonate other active directory users. |
+| <a id="33172"></a> 33172 | 16 | No | Encrypting Secret for Database '%.\*ls' and Credential '%.\*ls' failed. |
+| <a id="33173"></a> 33173 | 16 | No | Assigning value for output parameter @credentialSecret failed because the parameter size is less than the required size %u. Please provide a larger size. |
+| <a id="33174"></a> 33174 | 16 | No | Cannot get credential '%.\*ls' because it is not referenced by any external data source. |
+| <a id="33175"></a> 33175 | 16 | No | Encryption operation failed. Key used for encryption has deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this key switch to a lower db compatibility level. |
+| <a id="33176"></a> 33176 | 16 | No | Signing operation failed. Key uses deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this key switch to a lower db compatibility level. |
+| <a id="33177"></a> 33177 | 16 | No | Hash operation failed. Hash Function uses deprecated algorithm '%.\*ls' which is no longer supported at this db compatibility level. If you still need to use this hash algorithm switch to a lower db compatibility level. |
+| <a id="33178"></a> 33178 | 16 | No | Encryption key length is over the currently supported maximum length of %d. |
+| <a id="33179"></a> 33179 | 10 | No | Searching for '%.\*ls' only searches "'%.\*ls'" for SQL Server authentication logins. |
+| <a id="33180"></a> 33180 | 10 | No | Searching for "'%.\*ls'" only searches for Azure Active Directory users. To search for a SQL Server authentication login, add the server name at the end. For example \[%.\*ls@%.\*ls\]. |
+| <a id="33181"></a> 33181 | 16 | No | The new owner cannot be Azure Active Directory group. |
+| <a id="33182"></a> 33182 | 16 | No | The command must be executed on the target database '%.\*ls'. |
+| <a id="33183"></a> 33183 | 16 | No | The Azure Key Vault client encountered an error with message '%s'. |
+| <a id="33184"></a> 33184 | 16 | No | An error occurred while obtaining information for the Azure Key Vault client with message '%s'. |
+| <a id="33185"></a> 33185 | 16 | No | An error occurred while attempting to copy the encrypted DEK from the DBTable. |
+| <a id="33186"></a> 33186 | 16 | No | Cannot alter the credential '%.\*ls' because it is being used by an active audit session ('%.\*ls'). |
+| <a id="33187"></a> 33187 | 16 | Yes | Internal enclave error. Enclave failed to decrypt a column value or parameter - invalid authentication tag. For more information, contact Customer Support Services. |
+| <a id="33189"></a> 33189 | 16 | Yes | Internal enclave error: Enclave is out of session resources. For more information, contact Customer Support Services. |
+| <a id="33190"></a> 33190 | 16 | Yes | Internal enclave error. Enclave attestation information requested for an unsupported enclave type. For more information, contact Customer Support Services. |
+| <a id="33191"></a> 33191 | 16 | Yes | Enclave host encountered a runtime error: out of priority queue space. |
+| <a id="33192"></a> 33192 | 16 | Yes | Internal enclave error. Enclave raised an exception (major = %d, minor = %d). See error log for more information. For more information, contact Customer Support Services. |
+| <a id="33194"></a> 33194 | 16 | Yes | Internal enclave error. The enclave bcrypt method %hs failed with status 0x%x. For more information, contact Customer Support Services. |
+| <a id="33195"></a> 33195 | 17 | No | Internal enclave error. Enclave was provided with an invalid session handle. For more information, contact Customer Support Services. |
+| <a id="33196"></a> 33196 | 16 | Yes | VBS enclave attestation failed due to an error in Windows Management Instrumentation (WMI). API: '%ls', Return code: '0x%08x'. For more information, contact Customer Support Services. |
+| <a id="33197"></a> 33197 | 16 | No | The value specified for TYPE option is not supported in this version of SQL Server. Allowed values are E (EXTERNAL_USER) and X (EXTERNAL_GROUP). |
+| <a id="33198"></a> 33198 | 16 | No | TYPE and SID options have to be used along with each other, in this version of SQL Server. |
+| <a id="33199"></a> 33199 | 16 | No | Only Active Directory logins can impersonate other Active Directory logins. |
+| <a id="33201"></a> 33201 | 17 | No | An error occurred in reading from the audit file or file-pattern: '%s'. The SQL service account may not have Read permission on the files, or the pattern may be returning one or more corrupt files. |
+| <a id="33202"></a> 33202 | 17 | No | SQL Server Audit could not write to file '%s'. |
+| <a id="33203"></a> 33203 | 17 | No | SQL Server Audit could not write to the event log. |
+| <a id="33204"></a> 33204 | 17 | No | SQL Server Audit could not write to the security log. |
+| <a id="33205"></a> 33205 | 10 | No | Audit event: %s. |
+| <a id="33206"></a> 33206 | 17 | No | SQL Server Audit failed to create the audit file '%s'. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
+| <a id="33207"></a> 33207 | 17 | No | SQL Server Audit failed to access the event log. Make sure that the SQL service account has the required permissions to the access the event log. |
+| <a id="33208"></a> 33208 | 17 | No | SQL Server Audit failed to access the security log. Make sure that the SQL service account has the required permissions to access the security log. |
+| <a id="33209"></a> 33209 | 10 | No | Audit '%.\*ls' has been changed to ON_FAILURE=CONTINUE because the server was started by using the -m flag. because the server was started with the -m flag. |
+| <a id="33210"></a> 33210 | 10 | No | SQL Server Audit failed to start, and the server is being shut down. To troubleshoot this issue, use the -m flag (Single User Mode) to bypass Audit-generated shutdowns when the server is starting. |
+| <a id="33211"></a> 33211 | 15 | No | A list of subentities, such as columns, cannot be specified for entity-level audits. |
+| <a id="33212"></a> 33212 | 15 | No | There is an invalid column list after the object name in the AUDIT SPECIFICATION statement. |
+| <a id="33213"></a> 33213 | 16 | No | All actions in an audit specification statement must be at the same scope. |
+| <a id="33214"></a> 33214 | 17 | No | The operation cannot be performed because SQL Server Audit has not been started. |
+| <a id="33215"></a> 33215 | 10 | No | One or more audits failed to start. Refer to previous errors in the error log to identify the cause, and correct the problems associated with each error. |
+| <a id="33216"></a> 33216 | 10 | No | SQL Server was started using the -f flag. SQL Server Audit is disabled. This is an informational message. No user action is required. |
+| <a id="33217"></a> 33217 | 10 | No | SQL Server Audit is starting the audits. This is an informational message. No user action is required. |
+| <a id="33218"></a> 33218 | 10 | No | SQL Server Audit has started the audits. This is an informational message. No user action is required. |
+| <a id="33219"></a> 33219 | 10 | No | The server was stopped because SQL Server Audit '%.\*ls' is configured to shut down on failure. To troubleshoot this issue, use the -m flag (Single User Mode) to bypass Audit-generated shutdowns when the server is starting. |
+| <a id="33220"></a> 33220 | 16 | No | Audit actions at the server scope can only be granted when the current database is master. |
+| <a id="33221"></a> 33221 | 16 | No | You can only create audit actions on objects in the current database. |
+| <a id="33222"></a> 33222 | 10 | No | Audit '%.\*ls' failed to %S_MSG . For more information, see the SQL Server error log. You can also query sys.dm_os_ring_buffers where ring_buffer_type = 'RING_BUFFER_XE_LOG'. |
+| <a id="33223"></a> 33223 | 16 | No | ALTER SERVER AUDIT requires the STATE option to be specified without using any other options. |
+| <a id="33224"></a> 33224 | 16 | No | The specified pattern did not return any files or does not represent a valid file share. Verify the pattern parameter and rerun the command. |
+| <a id="33225"></a> 33225 | 16 | No | The specified values for initial_file_name and audit_record_offset do not represent a valid location within the audit file set. Verify the file name and offset location, and then rerun the command. |
+| <a id="33226"></a> 33226 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls' at offset %I64d. |
+| <a id="33227"></a> 33227 | 16 | No | The specified value for QUEUE_DELAY is not valid. Specify either 0 or 1000 and higher. |
+| <a id="33228"></a> 33228 | 16 | No | You cannot configure SQL Server Audit to shutdown the server because you do not have the permission to shut down the server. Contact your system administrator. |
+| <a id="33229"></a> 33229 | 16 | No | Changes to an audit specification must be done while the audit specification is disabled. |
+| <a id="33230"></a> 33230 | 16 | No | An audit specification for audit '%.\*ls' already exists. |
+| <a id="33231"></a> 33231 | 16 | No | You can only specify securable classes DATABASE, SCHEMA, or OBJECT in AUDIT SPECIFICATION statements. |
+| <a id="33232"></a> 33232 | 16 | No | You may not add a role to Sysadmin. |
+| <a id="33233"></a> 33233 | 16 | No | You can only create a user with a password in a contained database. |
+| <a id="33234"></a> 33234 | 16 | No | The parameter %s cannot be provided for users that cannot authenticate in a database. |
+| <a id="33235"></a> 33235 | 16 | No | The parameter %s cannot be provided for users that cannot authenticate in a database. Remove the WITHOUT LOGIN or PASSWORD clause. |
+| <a id="33236"></a> 33236 | 16 | No | The default language parameter can only be provided for users in a contained database. |
+| <a id="33237"></a> 33237 | 16 | No | Cannot use parameter %s for Windows users or groups. |
+| <a id="33238"></a> 33238 | 16 | No | MAX_FILES and MAX_ROLLOVER_FILES options cannot be specified together. |
+| <a id="33239"></a> 33239 | 16 | No | An error occurred while auditing this operation. Fix the error in the audit and then retry this operation. |
+| <a id="33240"></a> 33240 | 16 | No | A failure occurred during initializing of an Audit. See the errorlog for details. |
+| <a id="33241"></a> 33241 | 16 | Yes | Failed to configure user instance on startup. Error updating the idle timeout. |
+| <a id="33242"></a> 33242 | 16 | No | When providing a sid, the user must be a user without login or a user with password. |
+| <a id="33243"></a> 33243 | 16 | Yes | Failed to generate a user instance of SQL Server due to a failure in setting access control list on the user instance's process. The connection will be closed.%.\*ls |
+| <a id="33244"></a> 33244 | 17 | No | SQL Server Audit failed to create an audit file related to the audit '%s' in the directory '%s'. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
+| <a id="33245"></a> 33245 | 17 | No | SQL Server Audit failed to write to an audit file related to the audit '%s' in the directory '%s'. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
+| <a id="33246"></a> 33246 | 17 | No | SQL Server Audit failed to access the MDS file log. Make sure that the disk is not full and that the SQL Server service account has the required permissions to create and write to the file. |
+| <a id="33247"></a> 33247 | 17 | No | SQL Server Audit could not write to the MDS local file (Error Code: %d). |
+| <a id="33248"></a> 33248 | 16 | No | The specified value for QUEUE_DELAY is not valid for MDS log target. Specify value higher than 0. |
+| <a id="33249"></a> 33249 | 16 | No | Cannot drop the credential '%.\*ls' because it is being used. |
+| <a id="33250"></a> 33250 | 16 | No | Failed to allocate memory for caching credential '%.\*ls' which is used by a database file. |
+| <a id="33251"></a> 33251 | 16 | No | A credential conflicting with '%.\*ls' already exists in credential cache in memory. Use alter step to change the secret. Drop and re-create to change the credential name. |
+| <a id="33252"></a> 33252 | 16 | No | This CREATE AUDIT request exceeds the maximum number of audits that can be created per database. |
+| <a id="33253"></a> 33253 | 16 | No | Failed to modify the identity field of the credential '%.\*ls' because the credential is used by an active database file. |
+| <a id="33254"></a> 33254 | 16 | No | This operation cannot be performed in the master database. |
+| <a id="33255"></a> 33255 | 16 | No | Audit specification '%.\*ls' can only be bound to a %S_MSG audit. |
+| <a id="33256"></a> 33256 | 16 | No | The audit store location or the audit store URL has been configured for this database audit. |
+| <a id="33257"></a> 33257 | 16 | No | Cannot drop an audit store URL that is not configured for this database audit. |
+| <a id="33258"></a> 33258 | 16 | No | Invalid value for procedure "%.\*ls", parameter "%.\*ls". |
+| <a id="33259"></a> 33259 | 15 | No | Invalid security policy name '%.\*ls'. |
+| <a id="33260"></a> 33260 | 16 | No | The predicate was not added to the security policy '%.\*ls' because there are no available predicate IDs. Drop and recreate the security policy. |
+| <a id="33261"></a> 33261 | 16 | No | The security policy '%.\*ls' does not contain a predicate on table '%.\*ls'. |
+| <a id="33262"></a> 33262 | 16 | No | A %S_MSG predicate for the same operation has already been defined on table '%.\*ls' in the security policy '%.\*ls'. |
+| <a id="33263"></a> 33263 | 16 | No | Security predicates can only be added to user tables and schema bound views. '%.\*ls' is not a user table or a schema bound view. |
+| <a id="33264"></a> 33264 | 16 | No | The security policy '%.\*ls' cannot be enabled with a predicate on table '%.\*ls'. Table '%.\*ls' is already referenced by the enabled security policy '%.\*ls'. |
+| <a id="33265"></a> 33265 | 16 | No | The security policy '%.\*ls' cannot have a predicate on table '%.\*ls' because this table is referenced by the indexed view '%.\*ls'. |
+| <a id="33266"></a> 33266 | 16 | No | The index on the view '%.\*ls' cannot be created because the view is referencing table '%.\*ls' that is referenced by a security policy. |
+| <a id="33267"></a> 33267 | 16 | No | Security predicates cannot reference memory optimized tables. Table '%.\*ls' is memory optimized. |
+| <a id="33268"></a> 33268 | 16 | No | Cannot find the object "%.\*ls" because it does not exist or you do not have permissions. |
+| <a id="33269"></a> 33269 | 16 | No | Security predicates are not allowed on temporary objects. Object names that begin with '#' denote temporary objects. |
+| <a id="33270"></a> 33270 | 16 | No | Cannot find the object "%.\*ls" or this object is not an inline table-valued function. |
+| <a id="33271"></a> 33271 | 16 | No | Cannot alter '%.\*ls' because it is not a security policy. |
+| <a id="33272"></a> 33272 | 16 | No | Unable to load the security predicate for table "%.\*ls". |
+| <a id="33273"></a> 33273 | 16 | No | Security predicates cannot be added on FileTables. '%.\*ls' is a FileTable. |
+| <a id="33274"></a> 33274 | 16 | No | The version was not created for the key '%.\*ls' because there are no available version IDs. Drop and recreate the key. |
+| <a id="33275"></a> 33275 | 16 | No | The encrypted value for this column encryption key cannot be dropped. Each column encryption key must have at least one encrypted value. |
+| <a id="33277"></a> 33277 | 16 | No | Encryption scheme mismatch for columns/variables %.\*ls. The encryption scheme for the columns/variables is %ls and the expression near line '%d' expects it to be %ls. |
+| <a id="33278"></a> 33278 | 16 | No | Cannot assign the same encryption scheme to two expressions at line '%d'. The encryption scheme of the first expression is %ls and the encryption scheme of the second expression is %ls. Other columns/variables with the same encryption scheme as the first expression are: %.\*ls. Other columns/variables with the same encryption scheme as the second expression are: %.\*ls. |
+| <a id="33279"></a> 33279 | 16 | No | Cannot remove the credential '%.\*ls/%.\*ls' because it is being used. |
+| <a id="33280"></a> 33280 | 16 | No | Cannot create or alter encrypted column '%.\*ls' because data type '%ls' is not supported for encryption. |
+| <a id="33281"></a> 33281 | 16 | No | Column '%.\*ls.%.\*ls' has a different encryption scheme than referencing column '%.\*ls.%.\*ls' in foreign key '%.\*ls'. |
+| <a id="33282"></a> 33282 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted using a randomized encryption type and is therefore not valid for use as a key column in a constraint, index, or statistics. |
+| <a id="33283"></a> 33283 | 16 | No | '%S_MSG' clause is unsupported for encrypted columns. |
+| <a id="33284"></a> 33284 | 16 | No | The encrypted column '%.\*ls.%.\*ls' cannot be used as a partition key column. |
+| <a id="33285"></a> 33285 | 16 | No | Cannot set default constraint on encrypted column '%.\*ls.%.\*ls'. Default constraints are unsupported on encrypted columns. |
+| <a id="33286"></a> 33286 | 16 | No | Cannot encrypt column '%.\*ls', because it is of a user-defined type. |
+| <a id="33287"></a> 33287 | 16 | No | Cannot drop column encryption key '%.\*ls' because the key is referenced by column '%.\*ls.%.\*ls'. |
+| <a id="33288"></a> 33288 | 16 | No | The encrypted value for the column encryption key cannot be added. There can be no more than two encrypted values for each column encryption key. Drop an existing encrypted value before adding the new one. |
+| <a id="33289"></a> 33289 | 16 | No | Cannot create or alter encrypted column '%.\*ls'. Character strings that do not use a \*_BIN2 collation cannot be encrypted using deterministic encryption. |
+| <a id="33290"></a> 33290 | 16 | No | There is no column encryption key value associated with the column master key '%.\*ls'. |
+| <a id="33291"></a> 33291 | 16 | No | There is already a column encryption key value associated with the column master key '%.\*ls'. |
+| <a id="33292"></a> 33292 | 16 | No | The encryption algorithm '%.\*ls' is not supported. Please specify a valid encryption algorithm. |
+| <a id="33293"></a> 33293 | 16 | No | Cannot find the %S_MSG "%.\*ls" because it does not exist or you do not have permissions. |
+| <a id="33294"></a> 33294 | 16 | No | Some parameters or columns of the batch require to be encrypted, but the corresponding column encryption key cannot be found. Use sp_refresh_parameter_encryption to refresh the module parameters metadata. |
+| <a id="33296"></a> 33296 | 16 | No | Cannot create table '%.\*ls' since it references a column encryption key from a different database. |
+| <a id="33297"></a> 33297 | 16 | No | Cannot create %S_MSG. The %S_MSG cannot be empty. |
+| <a id="33298"></a> 33298 | 16 | Yes | The encryption scheme for one or more unused parameters could not be analyzed because the parameters were removed during query optimization. Remove unused parameters from the query and try again. |
+| <a id="33299"></a> 33299 | 16 | No | Encryption scheme mismatch for columns/variables %.\*ls. The encryption scheme for the columns/variables is %ls and the expression near line '%d' expects it to be %ls (or weaker). |
+| <a id="33301"></a> 33301 | 16 | No | The %ls that is specified for conversation priority '%.\*ls' is not valid. The value must be between 1 and %d characters long. |
+| <a id="33302"></a> 33302 | 16 | No | The %ls that is specified for conversation priority '%.\*ls' is not valid. The value must be between 1 and 10. |
+| <a id="33303"></a> 33303 | 16 | No | A conversation priority already exists in the database with either the name '%.\*ls' or the properties %ls='%ls', %ls='%ls', and %ls='%.\*ls'. Either use a unique name or a unique set of properties. |
+| <a id="33304"></a> 33304 | 16 | No | The transmission queue row with conversation handle '%ls' and message sequence number %d references a missing multicast message body row with reference %d. |
+| <a id="33305"></a> 33305 | 16 | No | The multicast message body row with reference %d should have reference count value of %d. |
+| <a id="33306"></a> 33306 | 16 | No | The unreferenced message with reference %d has been deleted from the message body table. |
+| <a id="33307"></a> 33307 | 16 | No | The message with reference %d has been updated to a reference count of %d in the message body table. |
+| <a id="33308"></a> 33308 | 10 | No | The queue %d in database %d has activation enabled and contains unlocked messages but no RECEIVE has been executed for %u seconds. |
+| <a id="33309"></a> 33309 | 10 | No | Cannot start cluster endpoint because the default %S_MSG endpoint configuration has not been loaded yet. |
+| <a id="33310"></a> 33310 | 16 | No | Local cluster name can be set only once. |
+| <a id="33311"></a> 33311 | 10 | No | The wait for connect request completion failed. |
+| <a id="33312"></a> 33312 | 10 | No | The wait for querying proxy routes failed or was aborted. |
+| <a id="33313"></a> 33313 | 16 | No | An out of memory condition has occurred in the Service Broker transport layer. A service broker connection is closed due to this condition. |
+| <a id="33314"></a> 33314 | 16 | No | The supplied whitelist is invalid. |
+| <a id="33315"></a> 33315 | 16 | No | The redirected endpointurl is Invalid |
+| <a id="33316"></a> 33316 | 16 | No | Failed to reset encryption while performing redirection. |
+| <a id="33317"></a> 33317 | 16 | No | The redirect response contains invalid redirect string |
+| <a id="33318"></a> 33318 | 16 | No | The redirect request contains invalid string or redirect handler failed to handle the request |
+| <a id="33319"></a> 33319 | 16 | No | The redirector returned lookup failure |
+| <a id="33320"></a> 33320 | 16 | No | Tried to send redirect request but the redirect string is empty |
+| <a id="33321"></a> 33321 | 16 | No | The other end does not support redirection |
+| <a id="33322"></a> 33322 | 16 | No | The redirect message is corrupted |
+| <a id="33323"></a> 33323 | 16 | No | The endpoint is closing because the connection was redirected |
+| <a id="33324"></a> 33324 | 16 | No | Failed to parse the redirect info string |
+| <a id="33325"></a> 33325 | 16 | No | Failed to construct new endpoint after redirection |
+| <a id="33326"></a> 33326 | 16 | No | Forwarder disconnected during redirection |
+| <a id="33327"></a> 33327 | 16 | No | Failed to parse the specified connection string |
+| <a id="33328"></a> 33328 | 16 | No | Redirector lookup failed with error code: %x |
+| <a id="33329"></a> 33329 | 16 | No | XdbHost encountered error code: %x during socket duplication |
+| <a id="33330"></a> 33330 | 16 | No | XdbHost returned an error during socket duplication |
+| <a id="33331"></a> 33331 | 16 | No | DBCC CLEANUPCONVERSATIONS is not allowed on this server. |
+| <a id="33332"></a> 33332 | 16 | No | DBCC CLEANUPCONVERSATIONS cannot be executed through MARS connection. |
+| <a id="33333"></a> 33333 | 10 | No | The connection had a send posted for over %d seconds. The connection is suspected hung and is being closed. |
+| <a id="33334"></a> 33334 | 10 | No | Error while setting up ssl channel. Error code: (%d, %d, %d) |
+| <a id="33335"></a> 33335 | 10 | No | The connection has been flow controlled in the %d seconds (%d times, where threshold is %d). Min required transfer rate is %d Kbps. Actual transfer rate is %d Kbps. The connection is extensively flow controlled and is being closed. |
+| <a id="33336"></a> 33336 | 10 | No | The connection has been flow controlled in the last %d seconds for a period of %d seconds. The connection is extensively flow controlled and is being closed. |
+| <a id="33337"></a> 33337 | 10 | No | SQL MI SSB Dialog Timer delete action occurred during dispatch or registration. |
+| <a id="33338"></a> 33338 | 10 | No | UCS transport default sending capacity is overridden with the value of %d. Override source: %.\*ls. This is an informational message only. No user action is required. |
+| <a id="33339"></a> 33339 | 16 | No | The message type may not be NULL. A variable containing a valid message type name is allowed. |
+| <a id="33401"></a> 33401 | 16 | No | FILESTREAM database options cannot be set on system databases such as '%.\*ls'. |
+| <a id="33402"></a> 33402 | 16 | No | An invalid directory name '%.\*ls' was specified. Use a valid operating system directory name. |
+| <a id="33403"></a> 33403 | 16 | No | The case-sensitive or binary collation '%.\*ls' cannot be used with the COLLATE_FILENAME option. Change the collation to a case-insensitive collation type. |
+| <a id="33404"></a> 33404 | 16 | No | The database default collation '%.\*ls' is case sensitive and cannot be used to create a FileTable. Specify a case insensitive collation with the COLLATE_FILENAME option. |
+| <a id="33405"></a> 33405 | 16 | No | An error occurred during the %S_MSG %S_MSG operation on a FileTable object. (HRESULT = '0x%08x'). |
+| <a id="33406"></a> 33406 | 16 | No | An invalid filename, '%.\*ls', caused a FileTable check constraint error. Use a valid operating system filename. |
+| <a id="33407"></a> 33407 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator cannot indicate a root row. Correct the path locator or use the default value. |
+| <a id="33408"></a> 33408 | 16 | No | The operation caused a FileTable check constraint error. A directory entry cannot have a data stream associated with the row. Remove the blob data or clear the is_directory flag. |
+| <a id="33409"></a> 33409 | 16 | No | The operation caused a FileTable check constraint error. A file entry cannot have a NULL value for the data stream associated with the row. Insert file data or use 0x to insert a zero length file. |
+| <a id="33410"></a> 33410 | 16 | No | An invalid path locator caused a FileTable check constraint error. The parent of a row's path locator must be a directory, not a file. Correct the path locator to refer to a parent that is a directory. |
+| <a id="33411"></a> 33411 | 16 | No | The option '%.\*ls' is only valid when used on a FileTable. Remove the option from the statement. |
+| <a id="33412"></a> 33412 | 16 | No | The option '%.\*ls' is not valid when used with the '%.\*ls' syntax. Remove the option from the statement. |
+| <a id="33413"></a> 33413 | 16 | No | The option '%.\*ls' can only be specified once in a statement. Remove the duplicate option from the statement. |
+| <a id="33414"></a> 33414 | 16 | No | FileTable objects require the FILESTREAM database option DIRECTORY_NAME to be non-NULL. To create a FileTable in the database '%.\*ls', set the DIRECTORY_NAME option to a non-NULL value using ALTER DATABASE. Or, to set the DIRECTORY_NAME option to NULL, in the database '%.\*ls' disable or drop the existing FileTables. |
+| <a id="33415"></a> 33415 | 16 | No | FILESTREAM DIRECTORY_NAME '%.\*s' attempting to be set on database '%.\*s' is not unique in this SQL Server instance. Provide a unique value for the database option FILESTREAM DIRECTORY_NAME to enable non-transacted access. |
+| <a id="33416"></a> 33416 | 10 | No | When the FILESTREAM database option NON_TRANSACTED_ACCESS is set to FULL and the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION options are on, T-SQL and transactional read access to FILESTREAM data in the context of a FILETABLE is blocked. |
+| <a id="33417"></a> 33417 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator has a level of %d, which is deeper than the limit of %d supported by FileTable. Reduce the depth of the directory hierarchy. |
+| <a id="33418"></a> 33418 | 16 | No | FILETABLE_DIRECTORY '%.\*s' attempting to be set on table '%.\*s' is not unique in the database '%.\*s'. Provide a unique value for the option FILETABLE_DIRECTORY to this operation. |
+| <a id="33419"></a> 33419 | 16 | No | Function %ls is only valid on the varbinary(max) FILESTREAM column in a FileTable. |
+| <a id="33420"></a> 33420 | 16 | No | Unable to process object '%.\*s' because it is a three-part or four-part name. Specifying the server or database is not supported in the object identifier. |
+| <a id="33421"></a> 33421 | 16 | No | The object name '%.\*s' is not a valid FileTable object. |
+| <a id="33422"></a> 33422 | 16 | No | The column '%.\*s' cannot be added to table '%.\*s' as it is a FileTable. Adding columns to the fixed schema of a FileTable object is not permitted. |
+| <a id="33423"></a> 33423 | 16 | No | Invalid FileTable path name or format. |
+| <a id="33424"></a> 33424 | 16 | No | Invalid computer host name in the FileTable path. |
+| <a id="33425"></a> 33425 | 16 | No | Invalid share name in the FileTable path. |
+| <a id="33426"></a> 33426 | 16 | No | INSERT, UPDATE, DELETE, or MERGE to FileTable '%.\*ls' is not allowed inside a trigger on a FileTable. |
+| <a id="33427"></a> 33427 | 16 | No | Function %ls is not allowed on the deleted table inside a trigger. |
+| <a id="33428"></a> 33428 | 14 | No | User does not have permission to kill non-transacted FILESTREAM handles in database ID %d. |
+| <a id="33429"></a> 33429 | 16 | No | The non-transacted FILESTREAM handle %d does not exist. |
+| <a id="33430"></a> 33430 | 10 | No | Killed %d non-transactional FILESTREAM handles from database ID %d. |
+| <a id="33431"></a> 33431 | 16 | No | An invalid path locator caused a FileTable check constraint error. The path locator has a length of %d, which is longer than the limit of %d allowed for depth %d. Reduce the length of the path locator. |
+| <a id="33433"></a> 33433 | 10 | No | Unable to perform the Filetable lost update recovery for database id %d. |
+| <a id="33434"></a> 33434 | 16 | No | The current state of the database '%.\*s' is not compatible with the specified FILESTREAM non-transacted access level. The database may be read only, single user or set to emergency state. |
+| <a id="33435"></a> 33435 | 16 | No | Cannot publish the FileTable '%ls' for replication. Replication is not supported for FileTable objects. |
+| <a id="33436"></a> 33436 | 16 | No | Cannot enable Change Data Capture on the FileTable '%ls'. Change Data Capture is not supported for FileTable objects. |
+| <a id="33437"></a> 33437 | 16 | No | Cannot publish the logbased view '%ls' for replication. Replication is not supported for logbased views that depend on FileTable objects. |
+| <a id="33438"></a> 33438 | 16 | No | Cannot enable Change Tracking on the FileTable '%.\*ls'. Change Tracking is not supported for FileTable objects. |
+| <a id="33439"></a> 33439 | 16 | No | Cannot use IGNORE_CONSTRAINTS hint when inserting into FileTable '%.\*ls', unless FILETABLE_NAMESPACE is disabled. |
+| <a id="33440"></a> 33440 | 16 | No | When inserting into FileTable '%.\*ls' using BCP or BULK INSERT, either CHECK_CONSTRAINTS option needs to be on, or FILETABLE_NAMESPACE needs to be disabled on the table. |
+| <a id="33441"></a> 33441 | 16 | No | The FileTable '%.\*s' cannot be partitioned. Partitioning is not supported on FileTable objects. |
+| <a id="33442"></a> 33442 | 16 | No | The handle ID %d is opened against the server root share and cannot be killed. The lifetime of the handle is controlled by the client who originally opened it. |
+| <a id="33443"></a> 33443 | 16 | No | The database '%.\*s' cannot be enabled for both FILESTREAM non-transacted access and Database Mirroring. |
+| <a id="33444"></a> 33444 | 16 | No | The database '%.\*s' cannot be enabled for both FILESTREAM non-transacted access and HADR. |
+| <a id="33445"></a> 33445 | 16 | No | The database '%.\*s' is a readable secondary database in an availability group and cannot be enabled for FILESTREAM non-transacted access. |
+| <a id="33446"></a> 33446 | 16 | No | The FILESTREAM database configuration cannot be changed for database '%.\*s'. The database is either a mirror database in Database Mirroring, or is in a secondary replica of an Always On availability group. Connect to the server instance that hosts the primary database replica, and retry the operation. |
+| <a id="33447"></a> 33447 | 16 | No | Cannot access file_stream column in FileTable '%.\*ls', because FileTable doesn't support row versioning. Either set transaction level to something other than READ COMMITTED SNAPSHOT or SNAPSHOT, or use READCOMMITTEDLOCK table hint. |
+| <a id="33448"></a> 33448 | 16 | No | Cannot disable clustered index '%.\*ls' on FileTable '%.\*ls' because the FILETABLE_NAMESPACE is enabled. |
+| <a id="33449"></a> 33449 | 10 | No | FILESTREAM File I/O access is enabled, but no listener for the availability group is created. A FILESTREAM PathName will be unable to refer to a virtual network name (VNN) and, instead, will need to refer to a physical Windows Server Failover Clustering (WSFC) node. This might limit the usability of FILESTREAM File I/0 access after an availability group failover. Therefore, we recommend that you create a listener for each availability group. For information about how to create an availability group listener, see SQL Server Books Online. |
+| <a id="33450"></a> 33450 | 10 | No | FILESTREAM File I/O access is enabled. One or more availability groups ('%ls') currently do not have a listener. A FILESTREAM PathName will be unable to refer to a virtual network name (VNN) and, instead, will need to refer to a physical Windows Server Failover Clustering (WSFC) node. This might limit the usability of FILESTREAM File I/0 access after an availability group failover. Therefore, we recommend that you create a listener for each availability group. For information about how to create an availability group listener, see SQL Server Books Online. |
+| <a id="33451"></a> 33451 | 16 | No | Cannot enable Change Feed on the FileTable '%ls'. Change Feed is not supported for FileTable objects. |
+| <a id="33501"></a> 33501 | 16 | No | Security predicates cannot be added on tables that contain filestream data. Column '%.\*ls' on table '%.\*ls' contains filestream data. |
+| <a id="33502"></a> 33502 | 16 | No | The column '%.\*ls' could not be added to table '%.\*ls' because the column contains filestream data and the table is referenced by one or more security policies. Filestream columns are not allowed on tables that are referenced by security policies. |
+| <a id="33503"></a> 33503 | 16 | No | BLOCK predicates can only be added to user tables. '%.\*ls' is not a user table. |
+| <a id="33504"></a> 33504 | 16 | No | The attempted operation failed because the target object '%.\*ls' has a block predicate that conflicts with this operation. If the operation is performed on a view, the block predicate might be enforced on the underlying table. Modify the operation to target only the rows that are allowed by the block predicate. |
+| <a id="33505"></a> 33505 | 16 | No | Partitioned view '%.\*ls' is not updatable because table '%.\*ls' has an enabled security policy that defines block predicates for this table. |
+| <a id="33506"></a> 33506 | 16 | No | Only natively compiled inline table-valued functions can be used for security predicates on memory optimized tables. Table '%.\*ls' is memory optimized, but function '%.\*ls' is not natively compiled. Recreate the function using WITH NATIVE_COMPILATION. |
+| <a id="33507"></a> 33507 | 16 | No | Function '%ls' cannot be used in the definition of BLOCK security predicates. Modify the BLOCK security predicates for this table or view to not use this function. |
+| <a id="33508"></a> 33508 | 16 | No | Column '%.\*ls' cannot be passed as a parameter for a BLOCK security predicate because the column definition contains an expression using a window function. Modify the BLOCK security predicates for this view to not use this column. |
+| <a id="33509"></a> 33509 | 16 | No | Column '%.\*ls' cannot be passed as a parameter for an AFTER UPDATE or AFTER INSERT BLOCK security predicate for this view because it refers to a base table that is not being modified in this statement. Modify the AFTER INSERT and AFTER UPDATE BLOCK security predicates for this view to not use this column. |
+| <a id="33510"></a> 33510 | 16 | No | BLOCK security predicates cannot reference history tables. Table '%.\*ls' is a temporal or ledger history table. |
+| <a id="33511"></a> 33511 | 16 | No | Table '%.\*ls' is memory optimized. Only security policies with schema binding enabled may specify security predicates for memory optimized tables. Create a new security policy with schema binding enabled. |
+| <a id="33512"></a> 33512 | 16 | No | Binding for the non-schema bound security predicate on object '%.\*ls' failed with one or more errors, indicating the schema of the predicate function has changed. Update or drop the affected security predicates. |
+| <a id="33513"></a> 33513 | 16 | No | Binding for the non-schema bound security predicate on object '%.\*ls' failed, because the predicate function is not an inline table-valued function. Only inline table-valued functions can be used for security predicates. |
+| <a id="33514"></a> 33514 | 16 | No | Incorrect encryption metadata was received from the client. The error occurred during the invocation of the batch and therefore the client can refresh the encryption metadata by calling sp_describe_parameter_encryption and retry. |
+| <a id="33515"></a> 33515 | 16 | No | The parameter "%.\*ls" does not have the same encryption information as the one it was created with. Use sp_refresh_parameter_encryption to refresh the parameter encryption information for the module. |
+| <a id="33516"></a> 33516 | 16 | No | The object '%.\*ls' is referenced by the security policy '%.\*ls'. The currently installed edition of SQL Server does not support security policies. Either drop the security policy or upgrade the instance of SQL Server to a version that supports security policies. |
+| <a id="33517"></a> 33517 | 16 | No | The column '%.\*ls' of the object '%.\*ls' is encrypted. The currently installed edition of SQL Server does not support encrypted columns. Either remove the encryption from the column or upgrade the instance of SQL Server to a version that supports encrypted columns. |
+| <a id="33518"></a> 33518 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, or %d. |
+| <a id="33519"></a> 33519 | 16 | No | An external data source conflicting with '%.\*ls' already exists in EDS cache in memory. Use alter step to change the location or credential. Drop and re-create to change the EDS name. |
+| <a id="33520"></a> 33520 | 16 | No | Failed to allocate memory for caching external data source '%.\*ls' which is used by a database file. |
+| <a id="33521"></a> 33521 | 16 | No | Cannot drop the external data source '%.\*ls' because it is being used. |
+| <a id="33522"></a> 33522 | 16 | No | Cannot remove the external data source '%.\*ls' because it is being used. |
+| <a id="33523"></a> 33523 | 16 | No | Cryptographic failure due to insufficient memory. |
+| <a id="33524"></a> 33524 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to database '%.\*ls' to access its audit logs. |
+| <a id="33525"></a> 33525 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls'. You must be connected to server '%.\*ls' to access its audit logs. |
+| <a id="33526"></a> 33526 | 10 | No | The fn_get_audit_file function is skipping records from '%.\*ls', as it does not conform to the auditing blob naming convention. |
+| <a id="33527"></a> 33527 | 16 | No | Error occurred while initializing the security functions lookup table. This might be because the installation of SQL Server is corrupted and a required file is missing. |
+| <a id="33528"></a> 33528 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, %d, or %d. |
+| <a id="33529"></a> 33529 | 16 | No | The audit filter predicate exceeds the maximum allowed length of %d characters. |
+| <a id="33530"></a> 33530 | 16 | No | The combined length of audit name and blob storage container name exceeds the maximum allowed length (by %d character(s)). Please use shorter audit or container name. |
+| <a id="33531"></a> 33531 | 16 | No | The specified value for QUEUE_DELAY is not valid with asynchronous log target. Specify value higher than 0. |
+| <a id="33532"></a> 33532 | 16 | No | Invalid value given for parameter PATH. Please specify a valid blob container path with the following format : https://\<storageName\>.blob.core.windows.net/\<containerName\> |
+| <a id="33533"></a> 33533 | 16 | No | SHUTDOWN on failure option is not supported in this version of SQL Server. |
+| <a id="33534"></a> 33534 | 16 | Yes | Internal enclave error. Enclave loading failed: invalid path. For more information, contact Customer Support Services. |
+| <a id="33535"></a> 33535 | 16 | Yes | Internal enclave error: Enclave call failed for method '%s'. For more information, contact Customer Support Services. |
+| <a id="33536"></a> 33536 | 16 | No | VBS enclave attestation failed. Attestation status: '%ls', substatus: '%ls'. For more information, see '[https://go.microsoft.com/fwlink/?linkid=2099553](https://go.microsoft.com/fwlink/?linkid=2099553)'. |
+| <a id="33537"></a> 33537 | 16 | Yes | Internal enclave error. Enclave attestation error: enclave platform returned unexpected output. For more information, contact Customer Support Services. |
+| <a id="33538"></a> 33538 | 16 | No | The credentials of blob storage container '%.\*ls' are invalid. |
+| <a id="33539"></a> 33539 | 16 | No | The blob storage '%.\*ls' was not found. Verify your storage account name. |
+| <a id="33540"></a> 33540 | 16 | No | Invalid audit or database names, please use valid URL characters. |
+| <a id="33541"></a> 33541 | 16 | No | The credentials of blob storage container '%.\*ls' was not found. |
+| <a id="33542"></a> 33542 | 16 | No | Unsupported operation near line '%d'; operations on encrypted columns with string data types require a \*_BIN2 or a \*_UTF8 collation. However, the column or the variable uses the '%.\*ls' collation. |
+| <a id="33543"></a> 33543 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to encrypt, decrypt or re-encrypt the column in-place using a secure enclave, but the current and/or the target column encryption key for the column is not enclave-enabled. |
+| <a id="33544"></a> 33544 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to change the encryption scheme of the column and one or more of the following column properties: collation (to a different code page), data type. Such changes cannot be combined in a single statement. Try using multiple statements. |
+| <a id="33545"></a> 33545 | 16 | No | The statement requires a secure enclave, but the enclave is not available for the target database - see [https://go.microsoft.com/fwlink/?linkid=2005337](https://go.microsoft.com/fwlink/?linkid=2005337) for more details. |
+| <a id="33546"></a> 33546 | 16 | No | The statement triggers enclave computations, but a column encryption key, needed for the computations, has not been found inside the enclave. Check that: (1) column encryption and enclave computations are enabled on connection, (2) driver is enclave-enabled. For additional reasons see: [https://go.microsoft.com/fwlink/?linkid=2086681](https://go.microsoft.com/fwlink/?linkid=2086681). |
+| <a id="33547"></a> 33547 | 16 | No | Enclave comparator cache failed to initialize during enclave load. |
+| <a id="33548"></a> 33548 | 16 | Yes | Internal enclave error: Enclave out of memory. For more information, contact Customer Support Services. |
+| <a id="33549"></a> 33549 | 16 | Yes | Internal enclave error: OSF Serialization error. For more information, contact Customer Support Services. |
+| <a id="33550"></a> 33550 | 16 | Yes | Internal enclave error: Invalid data format. For more information, contact Customer Support Services. |
+| <a id="33551"></a> 33551 | 16 | Yes | Internal enclave error: Nonce checking in secure channel failed. For more information, contact Customer Support Services. |
+| <a id="33552"></a> 33552 | 16 | Yes | Internal enclave error. Enclave shutdown due to a critical error. For more information, contact Customer Support Services. |
+| <a id="33553"></a> 33553 | 16 | No | A failure occurred during initialization of an Audit to External Monitor target. See the errorlog for details. |
+| <a id="33554"></a> 33554 | 16 | Yes | Encountered error 0x%08lx while waiting for encryption scan completion consensus. See the errorlog for details. |
+| <a id="33555"></a> 33555 | 16 | Yes | Unable to find the user-specified certificate \[Cert Hash(sha1) "%hs"\] in the certificate store of the local computer. Please verify that certificate exists. |
+| <a id="33556"></a> 33556 | 16 | Yes | Invalid character in the thumbprint \[Cert Hash(sha1) "%hs"\]. Please provide a certificate with a valid thumbprint. |
+| <a id="33557"></a> 33557 | 16 | Yes | Invalid thumbprint length \[Cert Hash(sha1) "%hs"\]. Please provide a certificate with a valid thumbprint. |
+| <a id="33558"></a> 33558 | 16 | No | Encryption scan can not be resumed because no encryption scan is in progress. |
+| <a id="33559"></a> 33559 | 16 | No | Specified workload group does not exist. Retry with a valid workload group. |
+| <a id="33560"></a> 33560 | 10 | No | TDE scan for database id \[%d\] was initiated on %S_DATE (UTC). The encryption scan will resume soon. |
+| <a id="33561"></a> 33561 | 16 | No | Encryption scan can not be suspended because no encryption scan is in progress. |
+| <a id="33562"></a> 33562 | 16 | No | TDE encryption scan state cannot be updated for database id \[%d\]. |
+| <a id="33563"></a> 33563 | 10 | No | TDE scan for database id \[%d\] was aborted on %S_DATE (UTC). The encryption scan will resume soon. |
+| <a id="33564"></a> 33564 | 10 | No | TDE scan for database id \[%d\] was suspended on %S_DATE (UTC). To resume scan, run "ALTER DATABASE \[%.\*s\] SET ENCRYPTION RESUME". |
+| <a id="33565"></a> 33565 | 16 | Yes | Found the certificate \[Cert Hash(sha1) "%hs"\] in the %S_MSG store but the SQL Server service account does not have access to it. |
+| <a id="33566"></a> 33566 | 16 | Yes | Found the certificate \[Cert Hash(sha1) "%hs"\] in the %S_MSG store but it does not have a private key. Please verify and use a valid certificate. |
+| <a id="33567"></a> 33567 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted using a randomized encryption type and is therefore not valid for use as a key column in a clustered index, constraint, or statistics. |
+| <a id="33568"></a> 33568 | 16 | Yes | Internal enclave error: Structured exception within the enclave with status %d. For more information, contact Customer Support Services. |
+| <a id="33569"></a> 33569 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted with randomized encryption using a collation that is neither \*_BIN2 nor \*_UTF8, and is therefore not valid for use as a key column in an index. |
+| <a id="33570"></a> 33570 | 10 | No | Specified workload group does not exist. Switching to default workload group for TDE encryption scan. |
+| <a id="33571"></a> 33571 | 16 | No | Cannot create server audit with GUID '%s' in this version of SQL Server: Please specify another GUID value. |
+| <a id="33572"></a> 33572 | 16 | No | Encrypted index recovery: %ls %d |
+| <a id="33573"></a> 33573 | 16 | No | Column '%.\*ls.%.\*ls' is encrypted using randomized encryption with a non enclave-enabled column encryption key and is therefore not valid for use as a key column in a constraint, index, or statistics. |
+| <a id="33574"></a> 33574 | 16 | No | Specifying a private key file or binary is not allowed when importing or exporting a certificate using the PFX format. |
+| <a id="33575"></a> 33575 | 16 | No | WITH PRIVATE KEY must be specified when importing or exporting a certificate using the PFX format. |
+| <a id="33576"></a> 33576 | 16 | No | Invalid certificate encoding FORMAT value provided. The supported values are 'DER' and 'PFX'. |
+| <a id="33577"></a> 33577 | 16 | No | The specified PFX file or the binary literal cannot be imported as it contains multiple certificates. |
+| <a id="33578"></a> 33578 | 16 | No | The specified file or the binary literal is not supported as it does not contain a private key. |
+| <a id="33579"></a> 33579 | 16 | No | Cannot drop a value for the column encryption key '%.\*ls'; dropping the value makes the key enclave disabled, and one or more objects that are schema-bound to column '%.\*ls' depend on it. |
+| <a id="33580"></a> 33580 | 16 | No | Operation supported by enclaves invoked on data encrypted with randomized encryption where the keys are not enclave-enabled. Please clear the proc cache. |
+| <a id="33581"></a> 33581 | 16 | No | Cannot alter column '%.\*ls'. The statement attempts to encrypt, decrypt or re-encrypt the column in-place using a secure enclave, but this is not supported for memory-optimized tables. |
+| <a id="33582"></a> 33582 | 16 | No | Cannot create the module. Executing the module requires keys in a secure enclave, but this is not supported for memory-optimized tables. |
+| <a id="33583"></a> 33583 | 16 | No | Could not find a Microsoft Entra ID principal mapping to Windows principal '%ls'. |
+| <a id="33584"></a> 33584 | 16 | No | Found multiple Microsoft Entra ID principals mapping to Windows principal '%ls'. |
+| <a id="33585"></a> 33585 | 16 | No | Windows principal '%ls' does not map to provided Microsoft Entra ID principal '%ls', please use a different Microsoft Entra ID principal. |
+| <a id="33586"></a> 33586 | 10 | No | Warning: Index or statistic '%.\*ls.%.\*ls' has an enclave-enabled key column, however Accelerated Database Recovery is not enabled for database '%.\*ls'. Enabling Accelerated Database Recovery is strongly recommended to increase database availability during recovery. |
+| <a id="33587"></a> 33587 | 16 | No | Security predicates cannot be added to external table '%.\*ls' because it does not contain a credential. |
+| <a id="33588"></a> 33588 | 16 | No | Invalid encryption algorithm. Always Encrypted with secure enclaves requires data to be encrypted with the AEAD_AES_256_CBC_HMAC_SHA_256 algorithm. |
+| <a id="33589"></a> 33589 | 17 | No | Internal enclave error. Enclave was provided with an invalid expression handle. For more information, contact Customer Support Services. |
+| <a id="33590"></a> 33590 | 10 | No | Database encryption scan for database '%.\*ls' was suspended. Reissue ALTER DB to resume the scan. |
+| <a id="33591"></a> 33591 | 16 | No | ALGORITHM has an invalid value. The allowed values are '%ls', '%ls'. |
+| <a id="33592"></a> 33592 | 16 | No | The underlying operating system does not support encrypting private keys using '%ls'. Consider using '%ls'. |
+| <a id="33593"></a> 33593 | 16 | No | Specifying ALGORITHM is not allowed when exporting a certificate using the DER format. |
+| <a id="33594"></a> 33594 | 16 | No | ALGORITHM must be specified when exporting a certificate using the PFX format. The supported algorithms are '%ls', '%ls'. |
+| <a id="33595"></a> 33595 | 16 | No | The session context key '%s' is too long. Maximum allowed length of session context key is %d characters. |
+| <a id="33596"></a> 33596 | 16 | No | Maximum number of session context keys used for audit specification has been exceeded. The maximum allowed number of keys is %d. |
+| <a id="33597"></a> 33597 | 16 | No | Operator Audit option is not supported for this target type, use EXTERNAL_MONITOR target. |
+| <a id="33598"></a> 33598 | 16 | No | The private key password is invalid, or the file was encrypted with an algorithm not supported by the underlying operating system. |
+| <a id="33599"></a> 33599 | 16 | No | Valid values of the database compatibility level are %d, %d, %d, ... or %d. |
+| <a id="33801"></a> 33801 | 16 | No | Cannot bulk load file split because either secret or file_properties option is missing. |
+| <a id="34001"></a> 34001 | 16 | No | Dialog with queue 'syspolicy_event_queue' has encountered an error: %s. |
+| <a id="34002"></a> 34002 | 16 | No | Dialog with queue 'syspolicy_event_queue' has ended. |
+| <a id="34003"></a> 34003 | 16 | No | Error number %d was encountered while processing an event. The error message is: %s. |
+| <a id="34004"></a> 34004 | 16 | No | Execution mode %d is not a valid execution mode. |
+| <a id="34010"></a> 34010 | 16 | No | %s '%s' already exists in the database. |
+| <a id="34011"></a> 34011 | 16 | No | Specified value for property %s cannot be used with execution mode %d. |
+| <a id="34012"></a> 34012 | 16 | No | Cannot delete %s referenced by a %s. |
+| <a id="34013"></a> 34013 | 16 | No | %s '%s' is referenced by a '%s'. Cannot add another reference. |
+| <a id="34014"></a> 34014 | 16 | No | Facet does not exist. |
+| <a id="34015"></a> 34015 | 16 | No | Policy group %s does not exist. |
+| <a id="34016"></a> 34016 | 16 | No | Invalid target filer: %s. Only filters that restrict the first level below the Server node are allowed. |
+| <a id="34017"></a> 34017 | 16 | No | Automated policies cannot reference conditions that contain script. |
+| <a id="34018"></a> 34018 | 16 | No | Target type "%s" is not a valid target type. |
+| <a id="34019"></a> 34019 | 16 | No | Object "%s" is invalid. |
+| <a id="34020"></a> 34020 | 16 | No | Configuration option "%s" is unknown. |
+| <a id="34021"></a> 34021 | 16 | No | Invalid value type for configuration option "%s". Expecting "%s". |
+| <a id="34022"></a> 34022 | 16 | No | Policy automation is turned off. |
+| <a id="34050"></a> 34050 | 16 | No | %ls |
+| <a id="34051"></a> 34051 | 16 | No | %ls |
+| <a id="34052"></a> 34052 | 16 | No | %ls |
+| <a id="34053"></a> 34053 | 16 | No | %ls |
+| <a id="34054"></a> 34054 | 16 | No | Policy Management cannot be enabled on this edition of SQL Server. |
+| <a id="34101"></a> 34101 | 20 | Yes | An error was encountered during object serialization operation. Examine the state to find out more details about this error. |
+| <a id="34102"></a> 34102 | 16 | Yes | An object in serialized stream has version %u but maximum supported version of this class is %u. |
+| <a id="34103"></a> 34103 | 16 | Yes | Error in formatter during serialize/deserialize. Required to process %d elements but processed only %d elements. |
+| <a id="34104"></a> 34104 | 16 | No | An error was encountered during object serialization operation. The object that failed serialization is %hs. |
+| <a id="35001"></a> 35001 | 16 | No | Parent Server Group does not exist. |
+| <a id="35002"></a> 35002 | 16 | No | Server type and parent Server Group type are not the same |
+| <a id="35003"></a> 35003 | 16 | No | Cannot move node to one of its children |
+| <a id="35004"></a> 35004 | 16 | No | Could not find server group |
+| <a id="35005"></a> 35005 | 16 | No | An invalid value NULL was passed in for @server_group_id. |
+| <a id="35006"></a> 35006 | 16 | No | An invalid value NULL was passed in for @server_id. |
+| <a id="35007"></a> 35007 | 16 | No | Could not find shared registered server. |
+| <a id="35008"></a> 35008 | 16 | No | Cannot delete system shared server groups. |
+| <a id="35009"></a> 35009 | 16 | No | An invalid value NULL was passed in for @server_type. |
+| <a id="35010"></a> 35010 | 16 | No | An invalid value %d was passed in for parameter @server_type. |
+| <a id="35011"></a> 35011 | 16 | No | The @server_name parameter cannot be a relative name. |
+| <a id="35012"></a> 35012 | 16 | No | You cannot add a shared registered server with the same name as the Configuration Server. |
+| <a id="35100"></a> 35100 | 16 | No | Error number %d in the THROW statement is outside the valid range. Specify an error number in the valid range of 50000 to 2147483647. |
+| <a id="35101"></a> 35101 | 16 | No | One of the SET options FMTONLY or NOEXEC was changes from ON to OFF in a TRY...CATCH block. |
+| <a id="35102"></a> 35102 | 16 | No | Error related to '%ls' where one of participants is Azure SQL Managed Instance. |
+| <a id="35103"></a> 35103 | 16 | No | '%ls' feature where one of participants is Azure SQL Managed Instance is disabled. |
+| <a id="35104"></a> 35104 | 16 | No | Deprecated feature '%ls' with Azure SQL Managed Instance as a participant is not supported in this version of SQL Server. |
+| <a id="35200"></a> 35200 | 16 | No | Failed to add database '%.\*ls' to availability group '%.\*ls'. The specified availability group is created with basic functionality and supports %d database. |
+| <a id="35201"></a> 35201 | 10 | No | A connection timeout has occurred while attempting to establish a connection to availability replica '%ls' with id \[%ls\]. Either a networking or firewall issue exists, or the endpoint address provided for the replica is not the database mirroring endpoint of the host server instance. |
+| <a id="35202"></a> 35202 | 10 | No | A connection for availability group '%ls' from availability replica '%ls' with id \[%ls\] to '%ls' with id \[%ls\] has been successfully established. This is an informational message only. No user action is required. |
+| <a id="35203"></a> 35203 | 16 | No | Unable to establish a connection between instance '%ls' with id \[%ls\] and '%ls' with id \[%ls\] due to a transport version mismatch. |
+| <a id="35204"></a> 35204 | 10 | No | The connection between server instances '%ls' with id \[%ls\] and '%ls' with id \[%ls\] has been disabled because the database mirroring endpoint was either disabled or stopped. Restart the endpoint by using the ALTER ENDPOINT Transact-SQL statement with STATE = STARTED. |
+| <a id="35205"></a> 35205 | 16 | No | Could not start the Always On Availability Groups transport manager. This failure probably occurred because a low memory condition existed when the message dispatcher started up. If so, other internal tasks might also have experienced errors. Check the SQL Server error log and the Windows error log for additional error messages. If a low memory condition exists, investigate and correct its cause. |
+| <a id="35206"></a> 35206 | 10 | No | A connection timeout has occurred on a previously established connection to availability replica '%ls' with id \[%ls\]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role. |
+| <a id="35207"></a> 35207 | 16 | No | Connection attempt on availability group id '%ls' from replica id '%ls' to replica id '%ls' failed because of error %d, severity %d, state %d. |
+| <a id="35208"></a> 35208 | 16 | No | Availability group DDL operations are permitted only when you are using the master database. Run the 'USE master' statement, and retry your availability group DDL statement. |
+| <a id="35209"></a> 35209 | 16 | No | The %ls operation failed for availability replica '%.\*ls', because the backup priority value is outside the valid range. The valid range is between %d and %d, inclusive. Set the backup priority to a value within this range, and retry the operation. |
+| <a id="35210"></a> 35210 | 16 | No | Failed to modify options for availability replica '%.\*ls' in availability group '%.\*ls'. The specified availability group does not contain an availability replica with specified name. Verify that availability group name and availability replica name are correct, then retry the operation. |
+| <a id="35211"></a> 35211 | 16 | No | The %ls operation is not allowed. The operation attempted to change the configuration of availability replica '%.\*ls' to the asynchronous-commit availability mode with automatic failover, which is an invalid configuration. Either change the failover mode to manual or the availability mode to synchronous commit, and retry the operation. |
+| <a id="35212"></a> 35212 | 16 | No | The %ls operation is not allowed by the current availability group configuration. This operation would exceed the maximum number of %d synchronous-commit availability replicas in availability group '%.\*ls'. Change one of the existing synchronous-commit replicas to the asynchronous-commit availability mode, and retry the operation. |
+| <a id="35213"></a> 35213 | 16 | No | The %ls operation is not allowed by the current availability group configuration. This operation would exceed the maximum number of %d automatic failover targets in availability group '%.\*ls'. Change one of the existing synchronous-commit replicas to the manual failover mode, and retry the operation. |
+| <a id="35214"></a> 35214 | 16 | No | The %ls operation failed for availability replica '%.\*ls'. The minimum value for session timeout is %d. Retry the operation specifying a valid session-timeout value. |
+| <a id="35215"></a> 35215 | 16 | No | The %ls operation is not allowed on availability replica '%.\*ls', because automatic failover mode is an invalid configuration on a SQL Server Failover Cluster Instance. Retry the operation by specifying manual failover mode. |
+| <a id="35216"></a> 35216 | 16 | No | An error occurred while adding or removing a log truncation holdup to build secondary replica from primary availability database '%.\*ls'. Primary database is temporarily offline due to restart or other transient condition. Retry the operation. |
+| <a id="35217"></a> 35217 | 16 | No | The thread pool for Always On Availability Groups was unable to start a new worker thread because there are not enough available worker threads. This may degrade Always On Availability Groups performance. Use the "max worker threads" configuration option to increase number of allowable threads. |
+| <a id="35218"></a> 35218 | 16 | No | An error occurred while trying to set the initial Backup LSN of database '%.\*ls'. Primary database is temporarily offline due to restart or other transient condition. Retry the operation. |
+| <a id="35220"></a> 35220 | 16 | No | Could not process the operation. Always On Availability Groups replica manager is waiting for the host computer to start a Windows Server Failover Clustering (WSFC) cluster and join it. Either the local computer is not a cluster node, or the local cluster node is not online. If the computer is a cluster node, wait for it to join the cluster. If the computer is not a cluster node, add the computer to a WSFC cluster. Then, retry the operation. |
+| <a id="35221"></a> 35221 | 16 | No | Could not process the operation. Always On Availability Groups replica manager is disabled on this instance of SQL Server. Enable Always On Availability Groups, by using the SQL Server Configuration Manager. Then, restart the SQL Server service, and retry the currently operation. For information about how to enable and disable Always On Availability Groups, see SQL Server Books Online. |
+| <a id="35222"></a> 35222 | 16 | No | Could not process the operation. Always On Availability Groups does not have permissions to access the Windows Server Failover Clustering (WSFC) cluster. Disable and re-enable Always On Availability Groups by using the SQL Server Configuration Manager. Then, restart the SQL Server service, and retry the currently operation. For information about how to enable and disable Always On Availability Groups, see SQL Server Books Online. |
+| <a id="35223"></a> 35223 | 16 | No | Cannot add %d availability replica(s) to availability group '%.\*ls'. The availability group already contains %d replica(s), and the maximum number of replicas supported in an availability group is %d. |
+| <a id="35224"></a> 35224 | 16 | No | Could not process the operation. Always On Availability Groups failed to load the required Windows Server Failover Clustering (WSFC) library. Verify that the computer is a node in a WSFC cluster. You will need to restart the SQL Server instance to reload the required library functions. |
+| <a id="35225"></a> 35225 | 16 | No | Could not process the operation. The instance of SQL Server is running under WOW64 (Windows 32-bit on Windows 64-bit), which does not support Always On Availability Groups. Reinstall SQL Server in the native 64-bit edition, and re-enable Always On Availability Groups. Then, restart the SQL Server service, and retry the operation. For information about how to enable and disable Always On Availability Groups, see SQL Server Books Online. |
+| <a id="35226"></a> 35226 | 16 | No | Could not process the operation. Always On Availability Groups has not started because the instance of SQL Server is not running as a service. Restart the server instance as a service, and retry the operation. |
+| <a id="35228"></a> 35228 | 16 | No | The attempt to set the failure condition level for availability group '%.\*ls' failed. The specified level value is out of the valid range \[%u, %u\]. Reenter the command specifying a valid failure condition level value. |
+| <a id="35229"></a> 35229 | 16 | No | The attempt to set the health check timeout value for availability group '%.\*ls' failed. The specified timeout value is less than %u milliseconds. Reenter the command specifying a valid health check timeout value. |
+| <a id="35230"></a> 35230 | 16 | No | The specified computer name is either an empty string or is longer than %d Unicode characters. Reenter the command specifying a valid computer name. |
+| <a id="35231"></a> 35231 | 16 | No | The specified server instance name, '%ls', is invalid. Reenter the command specifying a valid instance name. |
+| <a id="35232"></a> 35232 | 16 | No | The specified endpoint URL '%.\*ls' is invalid. Reenter the command specifying the correct URL. For information about specifying the endpoint URL for an availability replica, see SQL Server Books Online. |
+| <a id="35233"></a> 35233 | 16 | No | Cannot create an availability group containing %d availability replica(s). The maximum number of availability replicas in an availability group %ls is %d. Reenter your CREATE AVAILABILITY GROUP command specifying fewer availability replicas. |
+| <a id="35234"></a> 35234 | 16 | No | Database name '%ls' was specified more than once. Reenter the command, specifying each database name only once. |
+| <a id="35235"></a> 35235 | 16 | No | The system name '%ls' was specified more than once in the REPLICA ON clause of this command. Reenter the command, specifying a different instance of SQL Server for each replica. |
+| <a id="35236"></a> 35236 | 15 | No | The endpoint URL was not specified for the availability replica hosted by server instance '%.\*ls'. Reenter the command, specifying the endpoint URL of this instance of SQL Server. |
+| <a id="35237"></a> 35237 | 16 | No | None of the specified replicas for availability group %.\*ls maps to the instance of SQL Server to which you are connected. Reenter the command, specifying this server instance to host one of the replicas. This replica will be the initial primary replica. |
+| <a id="35238"></a> 35238 | 16 | No | Database '%.\*ls' cannot be added to availability group '%.\*ls'. The database does not exist on this SQL Server instance. Verify that the database name is correct, then retry the operation. |
+| <a id="35239"></a> 35239 | 16 | No | The ALTER DATABASE \<database-name\> SET HADR SUSPEND (or SET HADR RESUME) statement failed on database '%.\*ls' of availability group '%.\*ls''. Either the availability group does not contain the specified database, or the database has not joined the availability group, or the database has not yet started. Reenter the command after the database is online and has joined the availability group. |
+| <a id="35240"></a> 35240 | 16 | No | Database '%.\*ls' cannot be joined to or unjoined from availability group '%.\*ls'. This operation is not supported on the primary replica of the availability group. |
+| <a id="35242"></a> 35242 | 16 | No | Cannot complete this ALTER DATABASE \<database-name\> SET HADR operation on database '%.\*ls'. The database is not joined to an availability group. After the database has joined the availability group, retry the command. |
+| <a id="35243"></a> 35243 | 16 | No | Failed to set resource property '%.\*ls' for availability group '%.\*ls'. The operation encountered SQL Server error %d. When the cause of the error has been resolved, retry the ALTER AVAILABILITY GROUP command later. |
+| <a id="35244"></a> 35244 | 16 | No | Database '%.\*ls' cannot be added to availability group '%.\*ls'. The database is currently joined to another availability group. Verify that the database name is correct and that the database is not joined to an availability group, then retry the operation. |
+| <a id="35246"></a> 35246 | 16 | No | Failed to create the availability group. A SQL Server instance name could not be validated because the dynamic link library (DLL) file '%ls' could not be located (Windows System Error %d). Verify that the specified server instance exists. If it exists, the DLL file might be missing from the server instance. |
+| <a id="35247"></a> 35247 | 16 | No | Failed to create the availability group. A SQL Server instance name could not be validated because the dynamic link library (DLL) file '%ls' could not be loaded (Windows System Error %d). |
+| <a id="35248"></a> 35248 | 16 | No | The %ls operation is not allowed by the current availability group configuration. The required_synchronized_secondaries_to_commit %d is greater than the %d possible secondary synchronous-commit availability replicas in availability group '%.\*ls'. Change one of the existing asynchronous-commit replicas to the synchronous-commit availability mode, and retry the operation. |
+| <a id="35249"></a> 35249 | 16 | No | An attempt to add or join a system database, '%.\*ls', to an availability group failed. Specify only user databases for this operation. |
+| <a id="35250"></a> [35250](../mssqlserver-35250-database-engine-error.md) | 16 | No | The connection to the primary replica is not active. The command cannot be processed. |
+| <a id="35251"></a> 35251 | 16 | No | This command can be run only on the primary replica. Connect to the primary replica, and retry the command. |
+| <a id="35252"></a> 35252 | 16 | No | The command can only be run on a secondary database. Connect to the correct secondary replica, and retry the command. |
+| <a id="35253"></a> 35253 | 16 | No | Database "%.\*ls" is not in the correct state to become the primary database. The log must be restored from the previous primary replica to bring the database out of the reinitializing state. |
+| <a id="35254"></a> 35254 | 16 | Yes | An error occurred while accessing the availability group metadata. Remove this database or replica from the availability group, and reconfigure the availability group to add the database or replica again. For more information, see the ALTER AVAILABILITY GROUP Transact-SQL statement in SQL Server Books Online. |
+| <a id="35255"></a> 35255 | 16 | No | An attempt to start database '%.\*ls' failed because the database is already started and online. |
+| <a id="35256"></a> 35256 | 16 | No | The session timeout value was exceeded while waiting for a response from the other availability replica in the session. That replica or the network might be down, or the command might be misconfigured. If the partner is running and visible over the network, retry the command using correctly configured partner-connection parameters. |
+| <a id="35257"></a> 35257 | 16 | No | Always On Availability Groups Send Error (Error code 0x%X, "NOT OK") was returned when sending a message for database ID %d. If the partner is running and visible over the network, retry the command using correctly configured partner-connection parameters. |
+| <a id="35258"></a> 35258 | 16 | No | Error in the hadron simulator. |
+| <a id="35259"></a> 35259 | 16 | No | Database '%.\*ls' is already participating in a different availability group. |
+| <a id="35260"></a> 35260 | 16 | No | During an attempted database recovery, an availability database manager was not found for database id %d with availability group ID %d and group database ID %ls. Recovery was terminated. The most likely cause of this error is that the availability group manager is not running, but the cause could be a metadata error. Ensure that the availability group manager and the WSFC cluster are started, and retry the recovery operation. |
+| <a id="35261"></a> 35261 | 16 | No | Attempt to perform an Always On Availability Groups operation on a system database, '%ls', failed. System databases are not supported by Always On Availability Groups. |
+| <a id="35262"></a> 35262 | 10 | Yes | Skipping the default startup of database '%.\*ls' because the database belongs to an availability group (Group ID: %d). The database will be started by the availability group. This is an informational message only. No user action is required. |
+| <a id="35263"></a> 35263 | 16 | No | During the undo phase, a function call (%ls) to the primary replica returned an unexpected status (Code: %d). Check for a possible cause in the SQL Server error log for the primary replica. If an error occurred on the primary database, you might need to suspend the secondary database, fix the issue on the primary database, and then resume the database. |
+| <a id="35264"></a> 35264 | 10 | No | Always On Availability Groups data movement for database '%.\*ls' has been suspended for the following reason: "%S_MSG" (Source ID %d; Source string: '%.\*ls'). To resume data movement on the database, you will need to resume the database manually. For information about how to resume an availability database, see SQL Server Books Online. |
+| <a id="35265"></a> 35265 | 10 | No | Always On Availability Groups data movement for database '%.\*ls' has been resumed. This is an informational message only. No user action is required. |
+| <a id="35266"></a> 35266 | 10 | No | Always On Availability Groups connection with %S_MSG database established for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. |
+| <a id="35267"></a> [35267](../mssqlserver-35267-database-engine-error.md) | 10 | No | Always On Availability Groups connection with %S_MSG database terminated for %S_MSG database '%.\*ls' on the availability replica '%.\*ls' with Replica ID: {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. This is an informational message only. No user action is required. For more information, see [https://go.microsoft.com/fwlink/?linkid=2322143](https://go.microsoft.com/fwlink/?linkid=2322143). |
+| <a id="35268"></a> 35268 | 16 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will enter the RESTORING state. To complete recovery and bring the database online, use current log backups from the primary database to restore the log records past LSN %S_LSN. Alternatively, drop this secondary database, and prepare a new one by restoring a full database backup of the primary database followed by all subsequent log backups. |
+| <a id="35269"></a> 35269 | 21 | Yes | Synchronization of a secondary database, '%.\*ls', was interrupted, leaving the database in an inconsistent state. The database will be marked SUSPECT. To return the database to a consistent state, restore it from a clean database backup followed by all subsequent log backups. |
+| <a id="35270"></a> 35270 | 10 | No | Received a corrupt FileStream transport message. The '%ls' message section is invalid. |
+| <a id="35271"></a> 35271 | 16 | No | The availability database %ls in availability group %ls failed to complete a reconfiguration. Refer to the error code for more details. If this condition persists, contact the system administrator. |
+| <a id="35272"></a> 35272 | 16 | No | Either invalid parameters were supplied for sys.sp_availability_group_command_internal or user does not have permissions to execute this procedure. |
+| <a id="35273"></a> 35273 | 10 | Yes | Bypassing recovery for database '%ls' because it is marked as an inaccessible availability database. The session with the primary replica was interrupted while reverting the database to the common recovery point. Either the WSFC node lacks quorum or the communications links are broken because of problems with links, endpoint configuration, or permissions (for the server account or security certificate). To gain access to the database, you need to determine what has changed in the session configuration and undo the change. |
+| <a id="35274"></a> 35274 | 10 | Yes | Recovery for availability database '%ls' is pending until the secondary replica receives additional transaction log from the primary before it complete and come online. Ensure that the server instance that hosts the primary replica is running. |
+| <a id="35275"></a> 35275 | 16 | Yes | A previous RESTORE WITH CONTINUE_AFTER_ERROR operation or being removed while in the SUSPECT state from an availability group left the '%.\*ls' database in a potentially damaged state. The database cannot be joined while in this state. Restore the database, and retry the join operation. |
+| <a id="35276"></a> 35276 | 17 | Yes | Failed to allocate and schedule an Always On Availability Groups task for database '%ls'. Manual intervention may be required to resume synchronization of the database. If the problem persists, you might need to restart the local instance of SQL Server. |
+| <a id="35277"></a> 35277 | 16 | No | Automatic failover is not supported for distributed availability group replica. |
+| <a id="35278"></a> 35278 | 16 | No | Availability database '%.\*ls', which is in the secondary role, is being restarted to resynchronize with the current primary database. This is an informational message only. No user action is required. |
+| <a id="35279"></a> 35279 | 16 | Yes | The attempt to join database '%.\*ls' to the availability group was rejected by the primary database with error '%d'. For more information, see the SQL Server error log for the primary replica. |
+| <a id="35280"></a> 35280 | 16 | No | Database '%.\*ls' cannot be added to availability group '%.\*ls'. The database is already joined to the specified availability group. Verify that the database name is correct and that the database is not joined to an availability group, then retry the operation. |
+| <a id="35281"></a> 35281 | 16 | No | Database '%.\*ls' cannot be removed from availability group '%.\*ls'. The database is not joined to the specified availability group. Verify that the database name and the availability group name are correct, then retry the operation. |
+| <a id="35282"></a> 35282 | 16 | No | Availability replica '%.\*ls' cannot be added to availability group '%.\*ls'. The availability group already contains an availability replica with the specified name. Verify that the availability replica name and the availability group name are correct, then retry the operation. |
+| <a id="35283"></a> 35283 | 16 | No | Availability replica '%.\*ls' cannot be removed from availability group '%.\*ls'. The availability group does not contain an availability replica with the specified name. Verify that the availability replica name is correct, then retry the operation. |
+| <a id="35284"></a> 35284 | 16 | No | Availability replica '%.\*ls' cannot be removed from availability group '%.\*ls', because this replica is on the local instance of SQL Server. If the local availability replica is a secondary replica, connect to the server instance that is currently hosting the primary replica, and re-run the command. |
+| <a id="35285"></a> 35285 | 10 | No | The recovery LSN %S_LSN was identified for the database with ID %d. This is an informational message only. No user action is required. |
+| <a id="35286"></a> 35286 | 16 | No | Using the recovery LSN %S_LSN stored in the metadata for the database with ID %d. This is an informational message only. No user action is required. |
+| <a id="35287"></a> 35287 | 16 | No | Always On Availability Groups transport for availability database "%.\*ls" failed to decompress the log block whose LSN is %S_LSN. This error can be caused by a corrupt network packet or a compression version mismatch. The database replica has been put into the SUSPENDED state. Resume the availability database. If the error keeps reoccurring, investigate the root cause. |
+| <a id="35288"></a> 35288 | 16 | No | Always On Availability Groups log apply for availability database "%.\*ls" has received an out-of-order log block. The expected LSN was %S_LSN. The received LSN was %S_LSN. The database replica has been put into the SUSPENDED state. Resume the availability database. If the error reoccurs, contact Customer Support Services. |
+| <a id="35289"></a> 35289 | 16 | No | Failed to send request for file '%.\*ls' to the '%.\*ls' primary database for the local secondary database. Resuming the database will be retried automatically. |
+| <a id="35290"></a> 35290 | 16 | No | Failed to wait for completion of file requests from the '%.\*ls' primary database for the local secondary database. Resuming the database will be retried automatically. |
+| <a id="35291"></a> 35291 | 10 | No | Failed to acquire exclusive access to the extended recovery fork stack (error %d). If the problem persists, you might need to restart the instance of SQL Server. |
+| <a id="35292"></a> 35292 | 16 | No | An internal error occurred when performing an operation on extended recovery forks. This is an informational message only. No user action is required. |
+| <a id="35293"></a> 35293 | 16 | No | Error in retrieving extended recovery forks from the primary replica. The extended-recovery-fork stack changed while being retrieved by the secondary replica. Retry the operation. |
+| <a id="35294"></a> 35294 | 16 | No | %ls backup for database "%.\*ls" on a secondary replica failed because a synchronization point could not be established on the primary database. Either locks could not be acquired on the primary database or the database is not operating as part of the availability replica. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
+| <a id="35295"></a> 35295 | 16 | No | Log backup for database "%.\*ls" on a secondary replica failed because the last backup LSN (0x%ls) from the primary database is greater than the current local redo LSN (0x%ls). No log records need to be backed up at this time. Retry the log-backup operation later. |
+| <a id="35296"></a> 35296 | 16 | No | Log backup for database "%.\*ls" on secondary replica failed because the new backup information could not be committed on primary database. Check the database status in the SQL Server error log of the server instance that is hosting the current primary replica. If the primary database is participating in the availability group, retry the operation. |
+| <a id="35297"></a> 35297 | 10 | No | %ls backup for database "%.\*ls" on secondary replica created backup files successfully but could not ensure that a backup point has been committed on the primary. This is an informational message only. Preserve this log backup along with the other log backups of this database. |
+| <a id="35298"></a> 35298 | 10 | No | The backup on the secondary database "%.\*ls" was terminated, but a terminate backup message could not be sent to the primary replica. This is an informational message only. The primary replica should detect this error and clean up its backup history accordingly. |
+| <a id="35299"></a> 35299 | 10 | Yes | Nonqualified transactions are being rolled back in database %.\*ls for an Always On Availability Groups state change. Estimated rollback completion: %d%%. This is an informational message only. No user action is required. |
+| <a id="35301"></a> 35301 | 15 | No | The statement failed because a columnstore index cannot be unique. Create the columnstore index without the UNIQUE keyword or create a unique index without the COLUMNSTORE keyword. |
+| <a id="35302"></a> 35302 | 15 | No | The statement failed because specifying sort order (ASC or DESC) is not allowed when creating a columnstore index. Create the columnstore index without specifying a sort order. |
+| <a id="35303"></a> 35303 | 15 | No | The statement failed because a nonclustered index cannot be created on a table that has a clustered columnstore index. Consider replacing the clustered columnstore index with a nonclustered columnstore index. |
+| <a id="35304"></a> 35304 | 15 | No | The statement failed because a clustered columnstore index cannot be created on a table that has a nonclustered index. Consider dropping all nonclustered indexes and trying again. |
+| <a id="35305"></a> 35305 | 15 | No | The statement failed because a clustered columnstore index cannot be created on a view. Consider creating a nonclustered columnstore index on the view, creating a clustered columnstore index on the base table or creating an index without the COLUMNSTORE keyword on the view. |
+| <a id="35306"></a> 35306 | 15 | No | The statement failed because a columnstore index cannot be specified using INDEX specification at the column level. |
+| <a id="35307"></a> 35307 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a computed column. Columnstore index cannot include a computed column implicitly or explicitly. |
+| <a id="35308"></a> 35308 | 15 | No | The statement failed because a columnstore index cannot be a filtered index. Consider creating a columnstore index without the predicate filter. |
+| <a id="35309"></a> 35309 | 15 | No | The statement failed because a columnstore index cannot be created on a sparse column. Consider creating a nonclustered columnstore index on a subset of columns that does not include any sparse columns. |
+| <a id="35310"></a> 35310 | 15 | No | The statement failed because columnstore indexes are not allowed on table types and table variables. Remove the column store index specification from the table type or table variable declaration. |
+| <a id="35311"></a> 35311 | 15 | No | The statement failed because a columnstore index cannot have included columns. Create the columnstore index on the desired columns without specifying any included columns. |
+| <a id="35312"></a> 35312 | 15 | No | The statement failed because a columnstore index cannot be created on a column with filestream data. Consider creating a nonclustered columnstore index on a subset of columns that does not include any columns with filestream data. |
+| <a id="35313"></a> 35313 | 15 | No | The statement failed because specifying FILESTREAM_ON is not allowed when creating a columnstore index. Consider creating a columnstore index on columns without filestream data and omit the FILESTREAM_ON specification. |
+| <a id="35314"></a> 35314 | 15 | No | The statement failed because a columnstore index cannot be created on a column set. Consider creating a nonclustered columnstore index on a subset of columns in the table that does not contain a column set or any sparse columns. |
+| <a id="35315"></a> 35315 | 15 | No | The statement failed because a columnstore index cannot be created in this edition of SQL Server. See Books Online for more details on feature support in different SQL Server editions. |
+| <a id="35316"></a> 35316 | 15 | No | The statement failed because a columnstore index must be partition-aligned with the base table. Create the columnstore index using the same partition function and same (or equivalent) partition scheme as the base table. If the base table is not partitioned, create a nonpartitioned columnstore index. |
+| <a id="35317"></a> 35317 | 15 | No | The statement failed because specifying %S_MSG is not allowed when creating a columnstore index. Consider creating a columnstore index without specifying %S_MSG. |
+| <a id="35318"></a> 35318 | 15 | No | The statement failed because the %S_MSG option is not allowed when creating a columnstore index. Create the columnstore index without specifying the %S_MSG option. |
+| <a id="35319"></a> 35319 | 15 | No | The table option DATA_COMPRESSION is not allowed when a table specifies a clustered column store index. |
+| <a id="35320"></a> 35320 | 15 | No | Column store indexes are not allowed on tables for which the durability option SCHEMA_ONLY is specified. |
+| <a id="35321"></a> 35321 | 16 | No | Table '%.\*ls' uses a clustered columnstore index. Columnstore indexes are not supported in this service tier of the database. See Books Online for more details on feature support in different service tiers of Azure SQL Database. |
+| <a id="35322"></a> 35322 | 16 | No | The statement failed because a nonclustered index and the underlying clustered columnstore index must be partition-aligned. Consider creating the nonclustered index using the same partition function and same (or equivalent) partition scheme as the clustered columnstore index. |
+| <a id="35323"></a> 35323 | 16 | No | The statement failed because adding multiple generated value type columns (such as identity and uniqueidentifier types) at once is not supported for columnstore index. Consider adding the generated columns separately. |
+| <a id="35324"></a> 35324 | 15 | No | The statement failed because specifying SORT_IN_TEMPDB is not allowed when creating a columnstore index without ORDER. Consider creating a columnstore index without specifying SORT_IN_TEMPDB, or use it with ORDER clause. |
+| <a id="35325"></a> 35325 | 15 | No | The statement failed because the definition of a column belonging to clustered columnstore index cannot be changed. Consider dropping the columnstore index, altering the column, then creating a new columnstore index. |
+| <a id="35326"></a> 35326 | 15 | No | The statement failed because a nonclustered columnstore index cannot be reorganized. Reorganization of a nonclustered columnstore index is not necessary. |
+| <a id="35327"></a> 35327 | 15 | No | ALTER INDEX REBUILD statement failed because specifying %S_MSG is not allowed when rebuilding a columnstore index. Rebuild the columnstore index without specifying %S_MSG. |
+| <a id="35328"></a> 35328 | 15 | No | ALTER INDEX REBUILD statement failed because the %S_MSG option is not allowed when rebuilding a columnstore index. Rebuild the columnstore index without specifying the %S_MSG option. |
+| <a id="35329"></a> 35329 | 15 | No | The statement failed because specifying ORDER is not allowed when creating the rowstore index '%.\*ls' on table '%.\*ls'. Consider creating the rowstore index without specifying ORDER. |
+| <a id="35330"></a> 35330 | 16 | No | %S_MSG statement failed because data cannot be updated in a table that has a nonclustered columnstore index. Consider disabling the columnstore index before issuing the %S_MSG statement, and then rebuilding the columnstore index after %S_MSG has completed. |
+| <a id="35331"></a> 35331 | 16 | No | Cannot use duplicate column names in the ORDER column list. Column name '%.\*ls' appears more than once. |
+| <a id="35332"></a> 35332 | 16 | No | Cannot ORDER on more than %d columns. |
+| <a id="35333"></a> 35333 | 16 | No | ORDER failed because columnstore index '%.\*ls' on table '%.\*ls.%.\*ls' is already ordered. |
+| <a id="35334"></a> 35334 | 15 | No | DBCC DBREINDEX failed because specifying FILLFACTOR is not allowed when creating or rebuilding a columnstore index. Rebuild the columnstore index without specifying FILLFACTOR. |
+| <a id="35335"></a> 35335 | 15 | No | The statement failed because specifying a key list is not allowed when creating a clustered columnstore index. Create the clustered columnstore index without specifying a key list. |
+| <a id="35336"></a> 35336 | 15 | No | The statement failed because specifying key list is missing when creating an index. Create the index with specifying key list . |
+| <a id="35337"></a> 35337 | 16 | No | UPDATE STATISTICS failed because statistics cannot be updated on a columnstore index. UPDATE STATISTICS is valid only when used with the STATS_STREAM option. |
+| <a id="35338"></a> 35338 | 16 | No | Clustered columnstore index is not supported. |
+| <a id="35339"></a> 35339 | 16 | No | Multiple columnstore indexes are not supported. |
+| <a id="35340"></a> 35340 | 16 | No | LOB columns are disabled in columnstore. |
+| <a id="35341"></a> 35341 | 16 | No | The statement failed. A columnstore index cannot include a decimal or numeric data type with a precision greater than 18. Reduce the precision or omit column '%.\*ls'. |
+| <a id="35342"></a> 35342 | 15 | No | The statement failed because specifying ORDER is not a valid option for creating the non-clustered columnstore index '%.\*ls' on table '%.\*ls'. Consider creating the non-clustered columnstore index without specifying ORDER, or create a clustered columnstore index. |
+| <a id="35343"></a> 35343 | 15 | No | The statement failed. Column '%.\*ls' has a data type that cannot participate in a columnstore index. |
+| <a id="35344"></a> 35344 | 16 | No | MERGE clause of ALTER PARTITION statement failed because two nonempty partitions containing a columnstore index cannot be merged. Consider an ALTER TABLE SWITCH operation from one of the nonempty partitions on table '%.\*ls' to a temporary staging table and then re-attempt the ALTER PARTITION MERGE operation. Once completed, use ALTER TABLE SWITCH to move the staging table partition back to the original source table. |
+| <a id="35345"></a> 35345 | 16 | No | MERGE clause of ALTER PARTITION statement failed because two partitions on different filegroups cannot be merged if either partition contains columnstore index data. Consider dropping the columnstore index on table '%.\*ls' before issuing the ALTER PARTITION statement, then rebuilding the columnstore index after ALTER PARTITION is complete. |
+| <a id="35346"></a> 35346 | 16 | No | SPLIT clause of ALTER PARTITION statement failed because the partition is not empty. Only empty partitions can be split in when a columnstore index exists on the table. Consider an ALTER TABLE SWITCH operation from one of the nonempty partitions on table '%.\*ls' to a temporary staging table and then re-attempt the ALTER PARTITION SPLIT operation. Once completed, use ALTER TABLE SWITCH to move the staging table partition back to the original source table. |
+| <a id="35347"></a> 35347 | 16 | No | The stored procedure 'sp_tableoption' failed because a table with a columnstore index cannot be altered to use vardecimal storage format. Consider dropping the columnstore index. |
+| <a id="35348"></a> 35348 | 16 | No | The statement failed because table '%.\*ls' uses vardecimal storage format. A columnstore index cannot be created on a table using vardecimal storage. Consider rebuilding the table without vardecimal storage. |
+| <a id="35349"></a> 35349 | 16 | No | TRUNCATE TABLE statement failed because table '%.\*ls' has a columnstore index on it. A table with a columnstore index cannot be truncated. Consider dropping the columnstore index then truncating the table. |
+| <a id="35350"></a> 35350 | 16 | No | The statement failed because a columnstore index on a partitioned table must be partition-aligned with the base table. Consider dropping the columnstore index before creating a new clustered index. |
+| <a id="35351"></a> 35351 | 16 | No | DROP INDEX statement failed because a columnstore index on a partitioned table must be partition-aligned with the base table (heap). Consider dropping the columnstore index before dropping a clustered index. |
+| <a id="35352"></a> 35352 | 16 | No | %S_MSG statement failed because the operation cannot be performed online on a table with a columnstore index. Perform the operation without specifying the ONLINE option or drop (or disable) the columnstore index before performing the operation using the ONLINE option. |
+| <a id="35353"></a> 35353 | 16 | No | %s cannot be enabled on a table with a clustered columnstore index. Consider dropping clustered columnstore index '%s' on table '%s'. |
+| <a id="35354"></a> 35354 | 16 | No | The statement failed because a clustered columnstore index cannot be created on a table enabled for %S_MSG. Consider disabling %S_MSG and then creating the clustered columnstore index. |
+| <a id="35355"></a> 35355 | 16 | No | The statement failed. Column '%.\*ls' is either a primary key or a partitioning key that must be included, but a columnstore index cannot include a decimal or numeric data type with a precision greater than 18. Consider reducing the precision to 18. |
+| <a id="35356"></a> 35356 | 16 | No | This operation is not supported on nonclustered columnstore indexes built in earlier versions of SQL Server. Consider rebuilding the index. |
+| <a id="35357"></a> 35357 | 16 | No | The statement failed because a secondary dictionary reached the maximum size limit. Consider dropping the columnstore index, altering the column, then creating a new columnstore index. |
+| <a id="35358"></a> 35358 | 16 | No | CREATE TRIGGER on table '%.\*ls' failed because you cannot create a trigger on a table with a clustered columnstore index. Consider enforcing the logic of the trigger in some other way, or if you must use a trigger, use a heap or B-tree index instead. |
+| <a id="35359"></a> 35359 | 16 | No | The statement failed because a table with a clustered columnstore index cannot have triggers. Consider removing all triggers from the table and then creating the clustered columnstore index. |
+| <a id="35360"></a> 35360 | 16 | No | Referential constraint '%.\*ls' cannot be created because the %S_MSG table '%.\*ls' has a clustered columnstore index. |
+| <a id="35361"></a> 35361 | 16 | No | The statement failed. A clustered columnstore index cannot be created over referencing column '%.\*ls' on table '%.\*ls'. |
+| <a id="35362"></a> 35362 | 16 | No | Tuple mover stvf skipped rowset in DW mode |
+| <a id="35363"></a> 35363 | 16 | No | The statement failed because clustered columnstore indexes are not supported in system databases. |
+| <a id="35364"></a> 35364 | 16 | No | ALTER INDEX statement option COMPRESSION_DELAY can only be used with columnstore indexes. |
+| <a id="35365"></a> 35365 | 22 | No | The compression block header at offset %ld is invalid. |
+| <a id="35366"></a> 35366 | 22 | No | The columnstore blob Xpress header is invalid. |
+| <a id="35367"></a> 35367 | 22 | No | The columnstore blob Xpress object header is invalid. |
+| <a id="35368"></a> 35368 | 17 | No | Internal DDL Operation Error: The DDL encountered an unexpected error %d during execution (HRESULT = 0x%x). |
+| <a id="35369"></a> 35369 | 16 | No | GETCHECKSUM can not be used for a table which has a clustered columnstore index. |
+| <a id="35370"></a> 35370 | 16 | No | Cursors are not supported on a table which has a clustered columnstore index. |
+| <a id="35371"></a> 35371 | 16 | No | SNAPSHOT isolation level is not supported on a table which has a clustered columnstore index. |
+| <a id="35372"></a> 35372 | 16 | No | You cannot create more than one clustered index on %S_MSG '%.\*ls'. Consider creating a new clustered index using 'with (drop_existing = on)' option. |
+| <a id="35373"></a> 35373 | 16 | No | ALTER INDEX REORGANIZE statement failed on a clustered columnstore index with error %d. See previous error messages for more details. |
+| <a id="35374"></a> 35374 | 16 | No | Columnstore archive decompression failed with error %d. |
+| <a id="35375"></a> 35375 | 16 | No | ALTER INDEX REORGANIZE statement option COMPRESS_ALL_ROW_GROUPS can only be used with clustered columnstore indexes. |
+| <a id="35376"></a> 35376 | 16 | No | Tuple mover stvf got passed invalid arguments |
+| <a id="35377"></a> 35377 | 22 | No | During migration to rowgroup consolidation, distribution type extended property must be set on the CCI table. |
+| <a id="35378"></a> 35378 | 16 | No | Row groups stvf got passed invalid arguments |
+| <a id="35379"></a> 35379 | 16 | No | Internal error occurred while flushing delete buffer database id %d, table id %d, index id %d, partition number %d. Additional messages in the SQL Server error log may provide more details. |
+| <a id="35380"></a> 35380 | 16 | No | The non-clustered columnstore index '%.\*ls' on table '%.\*ls' cannot be reorganized due to an active snapshot transaction. |
+| <a id="35381"></a> 35381 | 22 | No | The columnstore blob dictionary header is invalid. |
+| <a id="35382"></a> 35382 | 16 | No | The specified COMPRESSION_DELAY option value %d is invalid. The valid range for disk-based table is between (0, 10080) minutes and for memory-optimized table is 0 or between (60, 10080) minutes. |
+| <a id="35383"></a> 35383 | 16 | No | The use of user-defined functions is not allowed in default constraints when adding columns to a columnstore index. |
+| <a id="35384"></a> 35384 | 16 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a lob column. Non clustered index with lob column as included column cannot co-exist with clustered columnstore index. |
+| <a id="35385"></a> 35385 | 16 | No | DROP ORDER failed because columnstore index '%.\*ls' on table '%.\*ls.%.\*ls' is not ordered. |
+| <a id="35386"></a> 35386 | 17 | No | Unable to allocate %I64d KB for columnstore compression because it exceeds the remaining memory from total allocated for current resource class and DWU. Please rerun query at a higher resource class, and also consider increasing DWU. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323728](https://go.microsoft.com/fwlink/?linkid=2323728). |
+| <a id="35387"></a> 35387 | 17 | No | Tempdb ran out of space during spilling. Verify that data is evenly distributed and/or rewrite the query to consume fewer rows. If the issue still persists, consider upgrading to a higher service level objective. |
+| <a id="35388"></a> 35388 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a persisted computed column. Adding persisted computed columns to an existing clustered columnstore index is not supported. |
+| <a id="35389"></a> 35389 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a computed column of a LOB type. Columnstore indexes cannot include computed columns of LOB types. |
+| <a id="35390"></a> 35390 | 16 | No | Computed columns in columnstore indexes are temporarily disabled. Please rewrite your query to exclude computed columns. |
+| <a id="35391"></a> 35391 | 16 | No | Could not build or rebuild clustered columnstore index '%.\*ls' online, because the table has secondary indexes. Please perform the operation offline, or remove the secondary indexes and try again. |
+| <a id="35392"></a> 35392 | 15 | No | The statement failed because column '%.\*ls' on table '%.\*ls' is a computed column. Nonclustered index with computed column as key or included column cannot be created on a table that has a clustered columnstore index. |
+| <a id="35393"></a> 35393 | 16 | No | Columnstore tuple mover unit tests can't be run under master database. |
+| <a id="35394"></a> 35394 | 16 | No | Transaction %d reached %I64u log used bytes and %I64d reserved log bytes. In order to minimize log usage %d suboptimal rowgroups were created, which is not allowed since it compromises index quality. Please re-run query at a higher resource class, and also consider increasing DWU. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323728](https://go.microsoft.com/fwlink/?linkid=2323728). |
+| <a id="35395"></a> 35395 | 16 | No | Transaction %d reached %I64u log used bytes and %I64d reserved log bytes. In order to minimize log usage, %d suboptimal rowgroups were created, which is not allowed since it compromises index quality. Please re-run the query with more memory (change your Resource Governor settings or upgrade to a higher SLO) or target fewer partitions in the load if your target table is partitioned. |
+| <a id="35396"></a> 35396 | 17 | No | Effective DOP of %u is too high for columnstore compression on table id %d because each thread only has %I64d KB for compression. Please retry using the MAXDOP hint to use a lower DOP. |
+| <a id="35397"></a> 35397 | 16 | No | %S_MSG statement failed because the operation cannot be performed resumably on a table with a columnstore index. Perform the operation without specifying the RESUMABLE option or drop (or disable) the columnstore index before performing the operation using the RESUMABLE option. |
+| <a id="35398"></a> 35398 | 16 | No | Columnstore index operation failed. Please contact Microsoft customer support. |
+| <a id="35399"></a> 35399 | 16 | No | Could not create columnstore index '%.\*ls' on table '%.\*ls' since data type of column '%.\*ls' is not supported in the ORDER list. |
+| <a id="35400"></a> 35400 | 16 | No | Columnstore tuple mover is unable to acquire lock. |
+| <a id="35401"></a> 35401 | 10 | No | ONLINE |
+| <a id="35402"></a> 35402 | 10 | No | ALLOW_ROW_LOCKS |
+| <a id="35403"></a> 35403 | 10 | No | ALLOW_PAGE_LOCKS |
+| <a id="35404"></a> 35404 | 16 | No | sequence |
+| <a id="35405"></a> 35405 | 10 | No | decryption |
+| <a id="35406"></a> 35406 | 10 | No | creation |
+| <a id="35409"></a> 35409 | 10 | No | Replication |
+| <a id="35410"></a> 35410 | 10 | No | Change Tracking |
+| <a id="35411"></a> 35411 | 10 | No | Change Data Capture |
+| <a id="35412"></a> 35412 | 16 | No | CloudDB Async Transport |
+| <a id="35413"></a> 35413 | 16 | No | CloudDB Async Transport Forwarder |
+| <a id="35415"></a> 35415 | 10 | No | mirrored |
+| <a id="35417"></a> 35417 | 10 | No | primary |
+| <a id="35418"></a> 35418 | 10 | No | secondary |
+| <a id="35419"></a> 35419 | 16 | No | feature |
+| <a id="35420"></a> 35420 | 16 | No | operation |
+| <a id="35421"></a> 35421 | 16 | No | statement |
+| <a id="35422"></a> 35422 | 16 | No | index option |
+| <a id="35423"></a> 35423 | 16 | No | table option |
+| <a id="35424"></a> 35424 | 16 | No | operator |
+| <a id="35425"></a> 35425 | 16 | No | value |
+| <a id="35426"></a> 35426 | 16 | No | system column |
+| <a id="35427"></a> 35427 | 16 | No | set option |
+| <a id="35428"></a> 35428 | 16 | No | query hint |
+| <a id="35429"></a> 35429 | 16 | No | transaction isolation level |
+| <a id="35430"></a> 35430 | 16 | No | in-memory index |
+| <a id="35431"></a> 35431 | 10 | No | SCHEDULER |
+| <a id="35432"></a> 35432 | 10 | No | NUMANODE |
+| <a id="35435"></a> 35435 | 16 | No | system database |
+| <a id="35439"></a> 35439 | 10 | No | it is a system database. |
+| <a id="35440"></a> 35440 | 10 | No | it acts as a distribution database |
+| <a id="35441"></a> 35441 | 10 | No | an internal error occurred |
+| <a id="35442"></a> 35442 | 10 | No | it is involved in a mirroring session. Turn off the mirroring session and try again |
+| <a id="35443"></a> 35443 | 10 | No | it is not in SIMPLE recovery mode. Change the recovery model to SIMPLE and try again |
+| <a id="35444"></a> 35444 | 10 | No | it is a database snapshot |
+| <a id="35445"></a> 35445 | 10 | No | it is a not currently enabled |
+| <a id="35446"></a> 35446 | 16 | No | clause |
+| <a id="35447"></a> 35447 | 10 | No | Cluster Proxy |
+| <a id="35448"></a> 35448 | 10 | No | partition |
+| <a id="35449"></a> 35449 | 16 | No | signing algorithm |
+| <a id="35450"></a> 35450 | 16 | No | table |
+| <a id="35451"></a> 35451 | 16 | No | join hint |
+| <a id="35452"></a> 35452 | 10 | No | Database unavailable |
+| <a id="35453"></a> 35453 | 10 | No | it is a system database. Make sure to target a user database. If you want temporary clustered columnstore tables, consider creating a regular user database for them |
+| <a id="35454"></a> 35454 | 10 | No | a transaction is currently active. Execute sp_db_enable_clustered_columnstores by itself |
+| <a id="35455"></a> 35455 | 10 | No | an internal error occurred |
+| <a id="35456"></a> 35456 | 10 | No | it is involved in a mirroring pair. Consider disabling mirroring, changing the setting, then re-establishing mirroring |
+| <a id="35457"></a> 35457 | 10 | No | it is a database snapshot |
+| <a id="35458"></a> 35458 | 10 | No | it is part of an Always On availability group. Consider removing the database from the availability group, changing the setting, and then adding the database back to the availability group |
+| <a id="35459"></a> 35459 | 10 | No | it is a replication distribution database. Make sure to target a regular user database |
+| <a id="35460"></a> 35460 | 10 | No | it is not using the SIMPLE recovery model. Consider temporarily changing to the simple recovery model, then downgrading, then switching back |
+| <a id="35461"></a> 35461 | 10 | No | it contains one or more clustered columnstore indexes. Consider dropping these indexes or creating clustered B-tree indexes instead, and trying again |
+| <a id="35462"></a> 35462 | 10 | No | referencing |
+| <a id="35463"></a> 35463 | 10 | No | referenced |
+| <a id="35464"></a> 35464 | 10 | No | Columnstore indexes are not supported in the current SQL Server edition. See SQL Server Books Online for supported editions |
+| <a id="35465"></a> 35465 | 17 | No | Unable to allocate the recovery thread |
+| <a id="35466"></a> 35466 | 16 | No | Exception in the recovery thread |
+| <a id="35467"></a> 35467 | 16 | No | Already linked to a partition host |
+| <a id="35468"></a> 35468 | 16 | No | Partition DB marked as suspect |
+| <a id="35469"></a> 35469 | 16 | No | Failed to get Partition DB attributes |
+| <a id="35470"></a> 35470 | 16 | No | Partition Host |
+| <a id="35471"></a> 35471 | 10 | No | Partition metadata not found |
+| <a id="35472"></a> 35472 | 15 | No | memory optimized tables |
+| <a id="35473"></a> 35473 | 15 | No | natively compiled modules |
+| <a id="35474"></a> 35474 | 15 | No | indexes on memory optimized tables |
+| <a id="35475"></a> 35475 | 15 | No | hash indexes |
+| <a id="35476"></a> 35476 | 15 | No | transactions that access memory optimized tables or natively compiled modules |
+| <a id="35477"></a> 35477 | 15 | No | databases that have a MEMORY_OPTIMIZED_DATA filegroup |
+| <a id="35478"></a> 35478 | 16 | No | truncate |
+| <a id="35479"></a> 35479 | 16 | No | start |
+| <a id="35480"></a> 35480 | 16 | No | stop |
+| <a id="35481"></a> 35481 | 15 | No | memory optimized table types |
+| <a id="35482"></a> 35482 | 16 | No | clustered |
+| <a id="35483"></a> 35483 | 16 | No | nonclustered |
+| <a id="35484"></a> 35484 | 16 | No | BUCKET_COUNT |
+| <a id="35485"></a> 35485 | 16 | No | security policy |
+| <a id="35486"></a> 35486 | 15 | No | memory optimized tables that have a column store index |
+| <a id="35487"></a> 35487 | 10 | No | Global Transactions |
+| <a id="35488"></a> 35488 | 15 | No | natively compiled triggers |
+| <a id="35489"></a> 35489 | 16 | No | Upgrade of Hekaton database |
+| <a id="35490"></a> 35490 | 16 | No | memory optimized tables that have max length columns |
+| <a id="35491"></a> 35491 | 16 | No | max length columns in natively compiled modules |
+| <a id="35492"></a> 35492 | 16 | No | column definition |
+| <a id="35493"></a> 35493 | 16 | No | enabled |
+| <a id="35494"></a> 35494 | 16 | No | disabled |
+| <a id="35495"></a> 35495 | 15 | No | memory optimized table |
+| <a id="35496"></a> 35496 | 15 | No | natively compiled module |
+| <a id="35497"></a> 35497 | 15 | No | module |
+| <a id="35498"></a> 35498 | 16 | No | external data source |
+| <a id="35499"></a> 35499 | 16 | No | OUTPUT clauses in natively compiled modules |
+| <a id="35501"></a> 35501 | 15 | No | schemas that contain natively compiled modules |
+| <a id="35502"></a> 35502 | 15 | No | change_tracking_hardened_cleanup_version() |
+| <a id="35503"></a> 35503 | 15 | No | safe_cleanup_version() |
+| <a id="35504"></a> 35504 | 16 | No | server encryption protector |
+| <a id="35505"></a> 35505 | 15 | No | RESUMABLE |
+| <a id="35506"></a> 35506 | 15 | No | MAX_DURATION |
+| <a id="35507"></a> 35507 | 10 | No | Storage |
+| <a id="35508"></a> 35508 | 10 | No | RESUME |
+| <a id="35509"></a> 35509 | 10 | No | PAUSE |
+| <a id="35510"></a> 35510 | 10 | No | ABORT |
+| <a id="35511"></a> 35511 | 10 | No | ABORT |
+| <a id="35512"></a> 35512 | 10 | No | allow_enclave_computations |
+| <a id="35513"></a> 35513 | 10 | No | compute |
+| <a id="35514"></a> 35514 | 10 | No | local computer |
+| <a id="35515"></a> 35515 | 10 | No | current user |
+| <a id="35516"></a> 35516 | 10 | No | query_capture_policy |
+| <a id="35517"></a> 35517 | 10 | No | execution_count |
+| <a id="35518"></a> 35518 | 10 | No | total_compile_cpu_time_ms |
+| <a id="35519"></a> 35519 | 10 | No | total_execution_cpu_time_ms |
+| <a id="35520"></a> 35520 | 10 | No | OPTIMIZE_FOR_SEQUENTIAL_KEY |
+| <a id="35521"></a> 35521 | 10 | No | stale_capture_policy_threshold |
+| <a id="35522"></a> 35522 | 10 | No | day |
+| <a id="35523"></a> 35523 | 10 | No | TRIPLE_DES_3KEY |
+| <a id="35524"></a> 35524 | 10 | No | AES_256 |
+| <a id="35525"></a> 35525 | 10 | No | STATISTICS_ONLY |
+| <a id="35526"></a> 35526 | 10 | No | striped_metadata |
+| <a id="35527"></a> 35527 | 10 | No | rbio_connection |
+| <a id="35528"></a> 35528 | 10 | No | unable to read page due to invalid FCB |
+| <a id="35529"></a> 35529 | 10 | No | certificate id |
+| <a id="35530"></a> 35530 | 10 | No | opening |
+| <a id="35531"></a> 35531 | 10 | No | closing |
+| <a id="35532"></a> 35532 | 10 | No | certificate name |
+| <a id="35533"></a> 35533 | 10 | No | norm function failed |
+| <a id="35534"></a> 35534 | 10 | No | string_split |
+| <a id="35535"></a> 35535 | 10 | No | unpack_int |
+| <a id="35536"></a> 35536 | 10 | No | vector index |
+| <a id="35537"></a> 35537 | 10 | No | JSON index |
+| <a id="35538"></a> 35538 | 10 | No | columnstore index |
+| <a id="35539"></a> 35539 | 15 | No | vector base type |
+| <a id="35540"></a> 35540 | 10 | No | external model |
+| <a id="35541"></a> 35541 | 10 | No | ai_generate_chunks |
+| <a id="35542"></a> 35542 | 10 | No | Drop and re-create the distributed availability group with SQL Managed Instance. |
+| <a id="35543"></a> 35543 | 10 | No | Stored procedure called on invalid distributed availability group type or on non-existing distributed availability group. |
+| <a id="35544"></a> 35544 | 10 | No | Empty internal distributed availability group. |
+| <a id="35545"></a> 35545 | 10 | No | Internal distributed availability group naming inconsistency. |
+| <a id="35546"></a> 35546 | 10 | No | An internal distributed availability group detected with more than one associated availability database. |
+| <a id="35547"></a> 35547 | 10 | No | Use sys.sp_milink_repair on the distributed availability group. |
+| <a id="35548"></a> 35548 | 16 | No | column level security |
+| <a id="35549"></a> 35549 | 16 | No | dynamic data masking |
+| <a id="35550"></a> 35550 | 10 | No | Semantic index |
+| <a id="35551"></a> 35551 | 10 | No | QUALIFY |
+| <a id="35552"></a> 35552 | 15 | No | VECTOR type argument. Expected DENSE or SPARSE |
+| <a id="35553"></a> 35553 | 16 | No | a required vector index feature switch (TRUNCATE support or vector index state) is disabled |
+| <a id="35554"></a> 35554 | 16 | No | the vector index version is earlier than 3 |
+| <a id="35555"></a> 35555 | 15 | No | the database default collation or a column/parameter still uses this collation. Remove all references to that collation before disabling the feature |
+| <a id="36001"></a> 36001 | 16 | No | %s '%s' already exists in the database. |
+| <a id="36002"></a> 36002 | 16 | No | instance_id already exists in the database. |
+| <a id="36003"></a> 36003 | 16 | No | %s '%s' already exists for the given DAC instance. |
+| <a id="36004"></a> 36004 | 16 | No | DacInstance with the specified instance_id does not exist. |
+| <a id="36005"></a> 36005 | 16 | No | Dac root - database %s does not exist. |
+| <a id="36006"></a> 36006 | 16 | No | Dac Policy with the specified policy id already exists in the parts table. |
+| <a id="36007"></a> 36007 | 16 | No | Dac Part the policy refers to, does not exist. |
+| <a id="36008"></a> 36008 | 16 | No | Dac Policy refers to a non-existent Policy. |
+| <a id="36009"></a> 36009 | 16 | No | %s '%s' already exists in the Dac Parts. |
+| <a id="36010"></a> 36010 | 16 | No | The caller must be a member of the dbcreator fixed server role to perform this action. |
+| <a id="36011"></a> 36011 | 16 | No | The caller must be sysadmin or the creator of the history entry being updated. |
+| <a id="36012"></a> 36012 | 10 | No | Unable to execute T-SQL within procedure due to SQL Server limitation.\nPlease execute following T-SQL in database '%s' context after this procedure finishes:\n%s |
+| <a id="37001"></a> 37001 | 16 | No | This operation is not allowed since there are dependent objects pending installation. |
+| <a id="37002"></a> 37002 | 16 | No | Cannot find the database '%s', because it does not exist or you do not have permission to access it. |
+| <a id="37003"></a> 37003 | 16 | No | This operation is not allowed because a utility control point already exists on this instance of SQL Server. |
+| <a id="37004"></a> 37004 | 16 | No | The specified instance of SQL Server cannot be used as a utility control point because the feature is not enabled in SQL Server '%s'. |
+| <a id="37005"></a> 37005 | 16 | No | The specified instance of SQL Server cannot be managed by a utility control point because the feature is not enabled in SQL Server '%s'. |
+| <a id="37006"></a> 37006 | 16 | No | Cannot perform the operation because the specified instance of SQL Server is not enrolled in a SQL Server utility. |
+| <a id="37007"></a> 37007 | 16 | No | An error occurred during upload to the SQL Server utility control point. |
+| <a id="37008"></a> 37008 | 16 | No | The operation cannot continue. To remove the SQL Server utility control point, the user must be a member of the sysadmin role. |
+| <a id="37009"></a> 37009 | 16 | No | The operation cannot continue. The specified instance of SQL Server is not a SQL Server utility control point. |
+| <a id="37010"></a> 37010 | 16 | No | The operation cannot continue. The SQL Server utility control point has managed instances of SQL Server enrolled. |
+| <a id="37101"></a> 37101 | 16 | No | Server '%.\*ls' does not contain elastic job account: '%.\*ls'. |
+| <a id="37102"></a> 37102 | 16 | No | Elastic job account '%.\*ls' does not contain the resource of type '%.\*ls' named '%.\*ls'. |
+| <a id="37103"></a> 37103 | 16 | No | Internal job account error occurred : '%.\*ls'. |
+| <a id="37104"></a> 37104 | 16 | No | A job account already exists for subscription '%.\*ls' for the selected region. |
+| <a id="37105"></a> 37105 | 16 | No | The job account '%.\*ls' on server '%.\*ls' already exists. |
+| <a id="37106"></a> 37106 | 16 | No | The database '%.\*ls' on server '%.\*ls' is in use by job account '%.\*ls'. The database cannot be deleted or renamed while associated with a job account. |
+| <a id="37107"></a> 37107 | 16 | No | The database '%.\*ls' on server '%.\*ls' has service level objective '%.\*ls' which is not supported for use as a job account database. |
+| <a id="37108"></a> 37108 | 16 | No | A job account could not be linked to database '%.\*ls' on server '%.\*ls' because it is a geo-secondary database. |
+| <a id="37109"></a> 37109 | 16 | No | Database '%ls' on server '%ls' is already linked to another job account. |
+| <a id="37201"></a> 37201 | 16 | No | An instance pool could not be found with name '%.\*ls'. |
+| <a id="37202"></a> 37202 | 16 | No | An instance pool with name '%.\*ls' is busy with another ongoing operation. |
+| <a id="37203"></a> 37203 | 16 | No | An instance pool with name '%.\*ls' is not empty. |
+| <a id="37204"></a> 37204 | 16 | No | An instance pool with name '%.\*ls' does not have enough vCore capacity for given request. |
+| <a id="37301"></a> 37301 | 16 | Yes | Internal enclave error. The enclave symcrypt method %ls failed with status 0x%08x. For more information, contact Customer Support Services. |
+| <a id="37302"></a> 37302 | 16 | Yes | %ls. Internal error. API: '%ls'. Return code: '0x%08x'. For more information, contact Customer Support Services. |
+| <a id="37303"></a> 37303 | 16 | Yes | Internal error occurred while obtaining an authentication token for external service. Authentication method: %ls, status: 0x%08x. |
+| <a id="37304"></a> 37304 | 16 | No | Cannot initialize %ls enclave for column encryption - the operating system does not support the enclave type. |
+| <a id="37305"></a> 37305 | 16 | Yes | Invalid enclave configuration: %ls. |
+| <a id="37306"></a> 37306 | 16 | Yes | Internal enclave error: Cannot initialize the %ls enclave. Error: 0x%08x. For more information, contact Customer Support Services. |
+| <a id="37307"></a> 37307 | 16 | Yes | Internal enclave error: Cannot initialize the %ls enclave. Load method: %ls. For more information, contact Customer Support Services. |
+| <a id="37308"></a> 37308 | 10 | Yes | Loaded %ls enclave for Always Encrypted. |
+| <a id="37309"></a> 37309 | 16 | Yes | Enclave attestation failed due to an error in Intel Data Center Attestation Primitives (DCAP) SGX API: '%ls'. Return code: '0x%08x'. For more information, contact Customer Support Services. |
+| <a id="37310"></a> 37310 | 16 | Yes | %ls. Error while parsing URL. URL: '%ls'. Return code: '0x%08x'. |
+| <a id="37311"></a> 37311 | 16 | Yes | %ls. The URL has an invalid scheme name. URL: '%ls'. The supported schemes are: '%ls'. |
+| <a id="37312"></a> 37312 | 16 | Yes | %ls. The service URL specified by the client is not reachable. URL: '%ls'. Return code: '0x%08x'. Check your networking configuration. |
+| <a id="37313"></a> 37313 | 16 | Yes | Enclave attestation failed. The attestation service returned an empty response. Attestation URL: '%ls'. Verify the attestation policy. If the policy is correct, contact Customer Support Services. |
+| <a id="37314"></a> 37314 | 16 | Yes | VBS enclave attestation failed due to an error in Windows Management Instrumentation (WMI). API: '%ls', Return code: '0x%08x'. Check the Host Guardian Service is running. For more information, contact Customer Support Services. |
+| <a id="37315"></a> 37315 | 16 | Yes | Credential object named '0x%08x', configured for external authentication, does not exist. |
+| <a id="37316"></a> 37316 | 16 | Yes | Authentication bearer service failed to return a valid challenge. Verify URL '%ls' is correct. Return code: '0x%08x'. |
+| <a id="37317"></a> 37317 | 16 | Yes | Failed to look up '%ls' for '%ls'. |
+| <a id="37318"></a> 37318 | 16 | Yes | Unable to acquire an authentication token for resource_id '%ls' with URL '%ls'. Return code: '0x%08x' Correlation Id: '%ls'. For more information, contact Customer Support Services. |
+| <a id="37319"></a> 37319 | 16 | Yes | Failed to obtain an authentication token for URL '%ls', Return code: '0x%08x', CorrelationId: %ls. |
+| <a id="37320"></a> 37320 | 16 | Yes | Authentication for URL '%ls' failed due to an invalid client id or an invalid secret. Return code: '0x%08x' Correlation Id: '%ls' |
+| <a id="37321"></a> 37321 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Return code: '0x%08x'. |
+| <a id="37322"></a> 37322 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
+| <a id="37323"></a> 37323 | 16 | Yes | Authentication bearer service failed to return a valid challenge. Verify URL '%ls' is correct. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
+| <a id="37324"></a> 37324 | 16 | Yes | %ls. Service returned Error code: '%ls'. Error message: '%ls'. Service URL: '%ls'. Return code: '0x%08x'. Verify the service policy. For more information see: '%ls'. |
+| <a id="37325"></a> 37325 | 16 | Yes | Enclave attestation failed due to an error in Azure Data Center Attestation Primitives (DCAP) Client. Validate Azure DCAP Client is installed and configured properly. Return code: '0x%08x'. For more information, contact Customer Support Services. |
+| <a id="37326"></a> 37326 | 16 | Yes | Service failed due to an authorization failure. Verify the server or instance has the required permissions to access service at URL '%ls'. |
+| <a id="37327"></a> 37327 | 16 | Yes | Maximum number of concurrent DBCC commands running in the enclave has been reached. The maximum number of concurrent DBCC queries is %d. Try rerunning the query. |
+| <a id="37328"></a> 37328 | 10 | Yes | Configuring Always Encrypted enclave in %ls mode. |
+| <a id="37329"></a> 37329 | 10 | Yes | %ls enclave lost due to internal error. For more information, contact Customer Support Services. |
+| <a id="37330"></a> 37330 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Authentication method: %ls, Return code: '0x%08x'. Validate that Azure Active Directory Identity as been assigned to this server. For more information, contact Customer Support Services |
+| <a id="37331"></a> 37331 | 16 | No | DevOps login, '%s', can not be created as another non-devops server principal with name or object ID already exists. |
+| <a id="37332"></a> 37332 | 16 | No | DevOps user, '%.\*ls', can not be created as another non-devops database principal with name or object ID already exists. |
+| <a id="37333"></a> 37333 | 16 | Yes | The server encountered an unexpected exception. API:'%ls' Return code: '0x%08x'. For more information, contact Customer Support Services. |
+| <a id="37334"></a> 37334 | 16 | Yes | Internal error occurred while obtaining an authentication token for an external service. Authentication method: %ls, Status: 0x%08x, CorrelationId: %ls. |
+| <a id="37335"></a> 37335 | 16 | Yes | Failed to acquire a token using a managed service identity. Make sure managed identities are enabled on the machine hosting SQL Server. Authentication method: %ls, Return code: '0x%08x', CorrelationId: %ls. Validate that Azure Active Directory Identity as been assigned to this server. For more information, contact Customer Support Services |
+| <a id="37336"></a> 37336 | 17 | Yes | Failed to flush the Ledger Transactions table to disk in database with ID %d due to error %d. Check the errorlog for more information. |
+| <a id="37337"></a> 37337 | 16 | Yes | Failed to retrieve the information about the latest transaction persisted in sys.db_ledger_transactions in database with ID %d due to error %d. Check the errorlog for more information. |
+| <a id="37338"></a> 37338 | 16 | No | Error occurred while generating the hash for a ledger transaction. Return code: '%d'. |
+| <a id="37339"></a> 37339 | 16 | No | Error occurred while generating a hash for the MERKLE_TREE_AGG aggregate function. Return code: '%d'. |
+| <a id="37340"></a> 37340 | 16 | Yes | Failed to generate the Ledger Blocks in the database with ID %d due to error %d. Check the errorlog for more information. |
+| <a id="37341"></a> 37341 | 16 | No | A Microsoft Entra ID Administrator is not enabled for this server. Please set up a Microsoft Entra ID Administrator on this server and try again. |
+| <a id="37342"></a> 37342 | 16 | No | The logical server Microsoft Entra tenant ID does not match the given DevOps Microsoft Entra tenant ID. |
+| <a id="37343"></a> 37343 | 16 | No | Unexpected data type for encrypted column while generating ledger hash. |
+| <a id="37344"></a> 37344 | 16 | No | CREATE TABLE failed because column '%.\*ls' in table '%.\*ls' exceeds the maximum of %d columns allowed for ledger tables. |
+| <a id="37345"></a> 37345 | 16 | No | Table cannot have more than one 'GENERATED ALWAYS AS %ls' column. |
+| <a id="37346"></a> 37346 | 16 | No | 'GENERATED ALWAYS AS %ls' column '%.\*ls' has invalid data type. |
+| <a id="37347"></a> 37347 | 16 | No | 'GENERATED ALWAYS AS %ls' column '%.\*ls' cannot be nullable. |
+| <a id="37348"></a> 37348 | 16 | No | 'GENERATED ALWAYS AS %ls' column '%.\*ls' can only be nullable. |
+| <a id="37349"></a> 37349 | 16 | No | LEDGER = ON cannot be specified with SYSTEM_VERSIONING = OFF and APPEND_ONLY = OFF. |
+| <a id="37350"></a> 37350 | 16 | No | LEDGER = ON cannot be specified with SYSTEM_VERSIONING = ON and APPEND_ONLY = ON. |
+| <a id="37351"></a> 37351 | 16 | No | LEDGER = ON cannot be specified with PERIOD FOR SYSTEM_TIME and APPEND_ONLY = ON. |
+| <a id="37352"></a> 37352 | 16 | No | APPEND_ONLY = ON cannot be specified with generated always end columns. |
+| <a id="37353"></a> 37353 | 16 | No | Server identity does not have the Microsoft Entra Directory Readers permission. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323204](https://go.microsoft.com/fwlink/?linkid=2323204). |
+| <a id="37354"></a> 37354 | 16 | No | LEDGER = ON cannot be specified with system versioning retention period. |
+| <a id="37355"></a> 37355 | 16 | No | An existing History Table cannot be specified with LEDGER=ON. |
+| <a id="37356"></a> 37356 | 16 | No | System Versioning cannot be altered for Ledger Tables. |
+| <a id="37357"></a> 37357 | 17 | No | SQL Audit could not write to '%s'. Make sure that SAS key is valid or Managed Identity has permissions to access the storage. This is an informative message. This error doesn't affect SQL availability. |
+| <a id="37358"></a> 37358 | 17 | No | SQL Audit failed to create the audit file for the audit '%s' at '%s'. Make sure that SAS key is valid or Managed Identity has permissions to access the storage. This is an informative message. This error doesn't affect SQL availability. |
+| <a id="37359"></a> 37359 | 16 | No | Updates are not allowed for the append only Ledger table '%.\*ls'. |
+| <a id="37360"></a> 37360 | 16 | No | %S_MSG is not allowed on Ledger tables. |
+| <a id="37361"></a> 37361 | 16 | No | Cannot update ledger history table '%.\*ls'. |
+| <a id="37362"></a> 37362 | 16 | No | LEDGER = ON cannot be specified on a table with a column set column. |
+| <a id="37363"></a> 37363 | 16 | No | Copy operation for the database '%.\*ls' on the server '%.\*ls' cannot be started because both source and target SLOs need to be DC series. Source DB SLO: '%.\*ls' , Partner DB SLO: '%.\*ls' |
+| <a id="37364"></a> 37364 | 16 | No | A transaction cannot update more than %d ledger tables. |
+| <a id="37365"></a> 37365 | 16 | No | The '%s' parameter provided for ledger verification cannot be null. |
+| <a id="37366"></a> 37366 | 16 | No | The hash computed from sys.database_ledger_transactions for block %I64d does not match the hash persisted in sys.database_ledger_blocks. |
+| <a id="37367"></a> 37367 | 16 | No | The computed hash does not match the previous block hash persisted in sys.database_ledger_blocks for block %I64d. |
+| <a id="37368"></a> 37368 | 16 | No | The hash of block %I64d in the database ledger does not match the hash provided in the digest for this block. |
+| <a id="37369"></a> 37369 | 16 | No | Invalid input for parameter '@digests' provided for ledger verification. The value should be a valid JSON document that contains values for the 'block_id' and 'hash' of each digest. |
+| <a id="37370"></a> 37370 | 10 | No | Ledger verification successfully verified up to block %I64d. |
+| <a id="37371"></a> 37371 | 16 | No | The computed hash from '%s' and the associated history table does not match the hash persisted in sys.database_ledger_transactions for transaction %I64d. |
+| <a id="37372"></a> 37372 | 16 | No | Invalid table ID '%d' is present in database ledger table sys.database_ledger_transactions. |
+| <a id="37373"></a> 37373 | 16 | No | Error occurred while initializing hash algorithm at startup. Return code: '%d'. |
+| <a id="37374"></a> 37374 | 16 | No | Creation of Ledger view failed due to error %d. |
+| <a id="37375"></a> 37375 | 16 | No | Cannot add PRIMARY KEY, UNIQUE KEY or CHECK constraint to the ledger history table '%.\*ls'. |
+| <a id="37376"></a> 37376 | 16 | No | Foreign key '%.\*ls' is not valid. A ledger history table cannot be used in a foreign key definition. |
+| <a id="37377"></a> 37377 | 16 | No | Foreign key '%.\*ls' is not valid. An append only ledger table cannot be the referencing table of a foreign key constraint with cascading actions. |
+| <a id="37378"></a> 37378 | 16 | No | Ledger tables cannot be created on system databases. |
+| <a id="37379"></a> 37379 | 16 | No | Ledger tables cannot contain columns of XML, sql_variant, filestream, json, vector or user-defined types. Any computed columns cannot be timestamp columns. |
+| <a id="37380"></a> 37380 | 16 | No | Cannot create UNIQUE index on ledger history table '%.\*ls'. |
+| <a id="37381"></a> 37381 | 16 | No | Cannot create a trigger on a system-versioned ledger table '%.\*ls'. |
+| <a id="37382"></a> 37382 | 16 | No | Switching partition failed on table '%.\*ls' because it is not a supported operation on ledger tables or their corresponding history table. |
+| <a id="37383"></a> 37383 | 16 | No | Enabling Change Tracking for ledger history table '%.\*ls' is not allowed. |
+| <a id="37384"></a> 37384 | 16 | No | Table '%.\*ls' is a FileTable. LEDGER = ON cannot be used on FileTables. |
+| <a id="37385"></a> 37385 | 16 | No | LEDGER = ON is not allowed for table variables. |
+| <a id="37386"></a> 37386 | 16 | No | Cannot drop object '%.\*ls' because it is a ledger history table or a ledger view. |
+| <a id="37387"></a> 37387 | 16 | No | Only nullable columns without a default value WITH VALUES can be added to ledger tables. |
+| <a id="37388"></a> 37388 | 16 | No | Column '%.\*ls' in table '%.\*ls' cannot be dropped because it is already a dropped ledger column. |
+| <a id="37389"></a> 37389 | 16 | No | Cannot ALTER VIEW '%.\*ls' because it is a ledger view. |
+| <a id="37390"></a> 37390 | 16 | No | System-time PERIOD cannot be added to table '%.\*ls' because it is a ledger table. |
+| <a id="37391"></a> 37391 | 16 | No | ALTER TABLE ALTER COLUMN failed for table '%.\*ls' because it is a ledger table and the operation would need to modify existing data that is immutable. |
+| <a id="37392"></a> 37392 | 16 | No | Ledger verification failed. |
+| <a id="37393"></a> 37393 | 16 | No | The default ledger view name is constructed as \<table_name\>_Ledger, which exceeds the maximum length of %d characters. Specify a ledger table name that is %d characters or less, or specify a user-defined ledger view name that is %d characters or less. |
+| <a id="37394"></a> 37394 | 16 | No | Cannot create index on view '%.\*ls' because it is a ledger view. The indexes should be created on the ledger table or its history table. |
+| <a id="37395"></a> 37395 | 16 | No | View '%.\*ls' is not updatable because it is a ledger view. |
+| <a id="37396"></a> 37396 | 16 | No | Query cannot be executed, access token is expired. Please login with a new access token and execute query again. |
+| <a id="37397"></a> 37397 | 16 | No | Error storing Babylon policy for DBID %d. Major error: %d, Minor error: %d, State: %d |
+| <a id="37398"></a> 37398 | 21 | No | Fatal error: Unable to pull policies for %d consecutive attempts. |
+| <a id="37399"></a> 37399 | 16 | No | TYPE, SID, Default Database, Default Language, Password option not allowed for External logins |
+| <a id="37401"></a> 37401 | 16 | Yes | Error refreshing the external access control policy from metadata. Error code %d. |
+| <a id="37402"></a> 37402 | 16 | No | Setting LEDGER to ON failed because ledger view '%.\*ls' is not specified in two-part name format. |
+| <a id="37403"></a> 37403 | 16 | No | Error in parsing the external json policy element/event with error message %s. |
+| <a id="37404"></a> 37404 | 16 | Yes | Service returned an empty response. URL: '%ls'. |
+| <a id="37405"></a> 37405 | 16 | Yes | Exception in fetching the external policy. URL: '%ls'. Major error code: %d, Minor error code: %d, State: %d |
+| <a id="37406"></a> 37406 | 16 | Yes | Error occurred while obtaining an authentication token for external service %ls; no authentication method is configured. |
+| <a id="37407"></a> 37407 | 16 | No | Error in external policy SDK with error message %s. |
+| <a id="37408"></a> 37408 | 16 | No | The ledger digest storage cannot be configured on secondary databases. |
+| <a id="37409"></a> 37409 | 16 | No | The provided Ledger storage target type '%s' is invalid. |
+| <a id="37410"></a> 37410 | 16 | No | The provided ledger storage path '%s' is invalid. |
+| <a id="37411"></a> 37411 | 16 | No | Uploading ledger digests is being enabled or disabled for database '%s'. Please wait for the previous request to complete. |
+| <a id="37412"></a> 37412 | 16 | Yes | %ls operation failed for %ls. Error code: %d. |
+| <a id="37413"></a> 37413 | 16 | Yes | Failed to generate a digest in the database with ID %d due to error %d. Check the errorlog for more information. |
+| <a id="37414"></a> 37414 | 16 | No | Failed to retrieve digest information from path '%ls' due to error %d. Verify that the provided path exists and the required permissions have been granted to the SQL service. |
+| <a id="37415"></a> 37415 | 16 | No | Invalid path specified for a ledger digest URL. Verify that the provided paths are valid. |
+| <a id="37416"></a> 37416 | 16 | No | Fulltext indexes are not allowed on ledger tables. |
+| <a id="37417"></a> 37417 | 16 | No | Uploading ledger digest failed for database with id %d due to error %d. |
+| <a id="37418"></a> 37418 | 16 | No | No digests were found based on the input locations and block IDs. |
+| <a id="37419"></a> 37419 | 16 | No | Unable to %S_MSG audit because %S_MSG contains question mark. |
+| <a id="37420"></a> 37420 | 16 | No | LEDGER = OFF cannot be specified for tables in databases that were created with LEDGER = ON. |
+| <a id="37421"></a> 37421 | 16 | Yes | Error occurred while reading external policy endpoint. |
+| <a id="37422"></a> 37422 | 16 | Yes | Error occurred while reading STS Url. |
+| <a id="37423"></a> 37423 | 16 | Yes | Error occurred while fetching the external access policies. Please check if Managed System Identity is enabled on the server. |
+| <a id="37424"></a> 37424 | 16 | Yes | Error fetching the external policy resource endpoint. |
+| <a id="37425"></a> 37425 | 16 | No | Error occurred while trying to record the ledger table history operation of the ledger table '%.\*ls'. |
+| <a id="37426"></a> 37426 | 16 | No | Error occurred while trying to record the ledger column history operation of the column '%.\*ls' in ledger table '%.\*ls'. |
+| <a id="37427"></a> 37427 | 16 | No | Cannot alter, drop, or rename object '%.\*ls' because it is a ledger dropped object. |
+| <a id="37428"></a> 37428 | 16 | No | Cannot rename ledger object '%.\*ls' because it is not a supported operation. |
+| <a id="37429"></a> 37429 | 16 | No | Cannot rename column '%.\*ls' of ledger object '%.\*ls' because it is not a supported operation. |
+| <a id="37430"></a> 37430 | 16 | No | Cannot alter schema of dropped ledger object '%.\*ls' because it is not a supported operation. |
+| <a id="37431"></a> 37431 | 16 | No | Encountered failure while initializing Confidential Ledger Adapter with URL %ls and error code %ld. |
+| <a id="37432"></a> 37432 | 16 | No | Encountered failure while initializing Confidential Ledger Data Iterator with URL %ls and error code %ld. |
+| <a id="37433"></a> 37433 | 16 | Yes | %ls. The attestation URL specified by the client is not reachable. URL: '%ls'. Return code: '0x%08x'. Check your networking configuration. |
+| <a id="37434"></a> 37434 | 16 | No | Invalid input for parameter '@locations' provided for ledger verification. The value should be a valid JSON document that contains values for the 'path', 'last_digest_block_id' and 'is_current' of each location. |
+| <a id="37435"></a> 37435 | 16 | No | Invalid input for parameter '@table_name' provided for ledger verification. The specified value cannot contain a server or database name and must point to an existing ledger table. |
+| <a id="37436"></a> 37436 | 16 | Yes | Ledger verification failed due to error %d. |
+| <a id="37437"></a> 37437 | 16 | No | Uploading ledger digests is currently not supported for this resource type. |
+| <a id="37438"></a> 37438 | 16 | No | Ledger verification for table '%.\*ls' failed because its clustered index is disabled. |
+| <a id="37439"></a> 37439 | 16 | No | The statement failed because a nonclustered index cannot be created on table '%.\*ls' that is a ledger table and has a clustered columnstore index. |
+| <a id="37440"></a> 37440 | 16 | No | Cannot update dropped ledger table '%.\*ls'. |
+| <a id="37441"></a> 37441 | 16 | No | The statement failed because a clustered columnstore index cannot be created on table '%.\*ls' that is a ledger table and has a nonclustered index. |
+| <a id="37442"></a> 37442 | 16 | No | Ledger verification was aborted by the user. |
+| <a id="37443"></a> 37443 | 16 | No | The use of replication is not supported with ledger table '%s' |
+| <a id="37444"></a> 37444 | 16 | No | Enabling Change Data Capture for ledger history table '%ls' is not allowed. |
+| <a id="37445"></a> 37445 | 16 | No | The specified digestStorageEndpoint is invalid. It must be an Azure blob storage or Azure Confidential Ledger endpoint. |
+| <a id="37446"></a> 37446 | 16 | No | Changing the ledger property is not supported for this resource type. |
+| <a id="37447"></a> 37447 | 16 | No | The certificate '%.\*ls' has been already added as a trusted issuer for DNS name '%.\*ls' |
+| <a id="37448"></a> 37448 | 16 | No | The certificate '%.\*ls' cannot be removed from the trusted issuers for the DNS name '%.\*ls' because it hasn't been added as a trusted issuer for the DNS name '%.\*ls'. |
+| <a id="37449"></a> 37449 | 10 | No | Warning: The certificate chain of the certificate specified could not be validated at this time. This may cause issues with the certificate-based authentication in the future. Please check your organization's policy and settings for online and/or offline validation of a certificate chain. |
+| <a id="37450"></a> 37450 | 16 | No | The certificate '%.\*ls' cannot be added as a trusted issuer for a DNS name because it is not allowed to sign certificates |
+| <a id="37451"></a> 37451 | 16 | No | DNS name provided exceeds maximum length of %d characters. |
+| <a id="37452"></a> 37452 | 16 | No | Error while trying to invoke external policy pull task. |
+| <a id="37453"></a> 37453 | 16 | No | '%ls' is not a valid option for the @type parameter. Enter 'update' or 'reload'. |
+| <a id="37454"></a> 37454 | 10 | No | Encountered Internal Error while calling %ls. Error code %ld, State %ld. |
+| <a id="37455"></a> 37455 | 16 | No | Server identity does not have permissions to access MS Graph. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323824](https://go.microsoft.com/fwlink/?linkid=2323824). |
+| <a id="37456"></a> 37456 | 16 | No | Ownership change is not supported for external tables governed by OneLake Security. |
+| <a id="37457"></a> 37457 | 16 | No | DDL statement executed on the database is not allowed because Azure Active Directory only authentication is enabled on the server. |
+| <a id="37458"></a> 37458 | 16 | No | Posted digest is not globally committed in Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
+| <a id="37459"></a> 37459 | 16 | No | Encountered Internal Error while calling Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
+| <a id="37460"></a> 37460 | 16 | No | Failed to parse response from Identity Service. Ledger URL '%ls' and error code %ld. |
+| <a id="37461"></a> 37461 | 16 | No | Encountered error while trying to retrieve a Microsoft Entra ID token to call Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
+| <a id="37462"></a> 37462 | 16 | No | Encountered error while trying to retrieve Network Certificate from Identity Service. Ledger URL '%ls' and error code %ld. |
+| <a id="37463"></a> 37463 | 16 | No | Service Principal or Managed Identity is not authorized to call Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
+| <a id="37464"></a> 37464 | 10 | Yes | Microsoft Entra ID authentication is enabled. This is an informational message only; no user action is required. |
+| <a id="37465"></a> 37465 | 16 | No | Server identity does not have the required permissions to access the MS graph. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323434](https://go.microsoft.com/fwlink/?linkid=2323434). |
+| <a id="37466"></a> 37466 | 16 | No | Endpoint is required. |
+| <a id="37467"></a> 37467 | 20 | No | The server encountered an unexpected exception. |
+| <a id="37468"></a> 37468 | 16 | No | The source and target table names provided as parameters to 'sp_copy_data_in_batches' must be valid table names and cannot be null or empty. |
+| <a id="37469"></a> 37469 | 16 | No | The source and target table names provided as parameters to 'sp_copy_data_in_batches' cannot contain a database or server name. |
+| <a id="37470"></a> 37470 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' must be user tables. |
+| <a id="37471"></a> 37471 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot be memory optimized tables. |
+| <a id="37472"></a> 37472 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot be the source of merge or transactional replication or have change tracking or change data capture enabled. |
+| <a id="37473"></a> 37473 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have an XML, spatial, JSON or fulltext index. |
+| <a id="37474"></a> 37474 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have a disabled clustered index. |
+| <a id="37475"></a> 37475 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any non-clustered indexes or statistics other than the ones for the clustered index. |
+| <a id="37476"></a> 37476 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot have a column set column. |
+| <a id="37477"></a> 37477 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot have any security policies. |
+| <a id="37478"></a> 37478 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot be graph node or edge tables. |
+| <a id="37479"></a> 37479 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any indexed views referencing it. |
+| <a id="37480"></a> 37480 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' must be empty. |
+| <a id="37481"></a> 37481 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any INSERT trigger. |
+| <a id="37482"></a> 37482 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' must be using the same partition function and partitioning columns. |
+| <a id="37483"></a> 37483 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' must have the same number of columns when excluding the TRANSACTION ID and SEQUENCE NUMBER generated always columns. |
+| <a id="37484"></a> 37484 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' at ordinal %d in table '%.\*ls' has a different name than the column '%.\*ls' at the same ordinal in table '%.\*ls' (excluding the TRANSACTION ID and SEQUENCE NUMBER generated always columns). |
+| <a id="37485"></a> 37485 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' has data type %s in source table '%.\*ls' which is different from its type %s in target table '%.\*ls'. |
+| <a id="37486"></a> 37486 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' does not have the same collation, nullability, sparse, ANSI_PADDING, vardecimal, identity or generated always attribute, CLR type or schema collection in tables '%.\*ls' and '%.\*ls'. |
+| <a id="37487"></a> 37487 | 16 | No | 'sp_copy_data_in_batches' failed because column '%.\*ls' in table '%.\*ls' is computed column but the same column in '%.\*ls' is not computed or they do not have the same persistent attribute . |
+| <a id="37488"></a> 37488 | 16 | No | The source and target tables provided to 'sp_copy_data_in_batches' cannot contain columns of data type text, ntext, image or with the ROWGUIDCOL or FILESTREAM attributes. |
+| <a id="37489"></a> 37489 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have any RULE constraints. |
+| <a id="37490"></a> 37490 | 16 | No | 'sp_copy_data_in_batches' failed because computed column '%.\*ls' defined as '%.\*ls' in table '%.\*ls' is different from the same column in table '%.\*ls' defined as '%.\*ls'. |
+| <a id="37491"></a> 37491 | 16 | No | The target table '%.\*ls' provided to 'sp_copy_data_in_batches' cannot have clustered columnstore index. |
+| <a id="37492"></a> 37492 | 16 | No | The source and target tables provided as parameters to 'sp_copy_data_in_batches' cannot be temporary tables. |
+| <a id="37493"></a> 37493 | 16 | Yes | Internal enclave error: Cannot initialize the %ls enclave. Load method: %ls. Last Error: 0x%08x. For more information, contact Customer Support Services. |
+| <a id="37494"></a> 37494 | 16 | Yes | Authentication bearer service failed to return a valid challenge. Verify URL '%ls' is correct and reachable. Return code: '0x%08x'. Please check network connectivity and firewall setup, then retry the operation |
+| <a id="37495"></a> 37495 | 10 | Yes | Ledger verification to detect inconsistencies for index '%.\*ls' (database ID %d) failed due to exception %d, state %d. |
+| <a id="37496"></a> 37496 | 10 | Yes | Ledger verification detected inconsistencies for index '%.\*ls' (database ID %d). There are %ld rows that are inconsistent between the table and the index. |
+| <a id="37497"></a> 37497 | 16 | Yes | Internal parsing error: Fail to parse the service URL '%ls'. Failure method: %ls. Return code: '0x%08x'. For more information, contact Customer Support Services. |
+| <a id="37498"></a> 37498 | 16 | No | Snapshot isolation must be enabled on the database when sp_verify_database_ledger is executed. |
+| <a id="37499"></a> 37499 | 10 | Yes | Ledger verification detected an inconsistency in the definition of ledger view '%.\*ls' for the ledger table '%.\*ls'. |
+| <a id="37501"></a> 37501 | 16 | No | A value cannot be given for the column '%.\*ls' on ledger table '%.\*ls' because it is a dropped ledger column. |
+| <a id="37502"></a> 37502 | 16 | No | The column '%.\*ls' on ledger table '%.\*ls' cannot be dropped because it is a TRANSACTION_ID or SEQUENCE_NUMBER GENERATED ALWAYS column. |
+| <a id="37503"></a> 37503 | 16 | No | The column '%.\*ls' on ledger table '%.\*ls' cannot be dropped because it is an identity or computed column. |
+| <a id="37504"></a> 37504 | 10 | No | Failed to convert string to guid when fetching tenantID fabric property %.\*ls' |
+| <a id="37505"></a> 37505 | 20 | No | A secondary of secondary database (chaining) cannot be created because automatic upload of ledger digests has been configured for this database. |
+| <a id="37506"></a> 37506 | 20 | No | Automatic upload of ledger digests cannot be enabled because this database is configured with secondaries of secondaries (chaining). |
+| <a id="37507"></a> 37507 | 16 | No | CertPFX using AES encryption is not supported on the current operating system. |
+| <a id="37508"></a> 37508 | 16 | No | Unable to locate PFXExportCertStoreEx API in crypt32.dll, needed for CertPFX using AES encryption ErrorCode: %d. |
+| <a id="37509"></a> 37509 | 16 | No | Unable to locate PFXExportCertStoreEx API in securityapi.dll, needed for CertPFX using AES encryption ErrorCode: %d. |
+| <a id="37510"></a> 37510 | 16 | No | Unable to determine the blob length needed to export the PFX certificate. ErrorCode: %d. |
+| <a id="37511"></a> 37511 | 16 | No | Unable to export the PFX certificate. ErrorCode: %d. |
+| <a id="37512"></a> 37512 | 16 | No | The column '%.\*ls' on ledger table '%.\*ls' is a sequence number generated always column and cannot be referenced by computed columns, check constraints, filtered index or statistics expressions. |
+| <a id="37513"></a> 37513 | 16 | No | Cannot create %S_MSG on view '%.\*ls'. It contains references to sequence number generated always columns. |
+| <a id="37514"></a> 37514 | 16 | No | Cannot bind a rule to a temporal or ledger history table. |
+| <a id="37515"></a> 37515 | 16 | No | Cannot bind a rule to a sequence number generated always column. |
+| <a id="37516"></a> 37516 | 16 | No | Server response exceeded the buffer size. Ledger URL '%ls' and error code %ld. |
+| <a id="37517"></a> 37517 | 16 | Yes | Internal error occurred while obtaining ARC resource information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
+| <a id="37518"></a> 37518 | 16 | Yes | Internal error occurred while obtaining ARC resource information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
+| <a id="37519"></a> 37519 | 16 | Yes | Internal error occurred while obtaining ARC resource information from IMDS endpoint. Return code: '0x%08x'. |
+| <a id="37520"></a> 37520 | 16 | Yes | Error retrieving IMDS endpoint. |
+| <a id="37521"></a> 37521 | 16 | No | Geo-replication cannot be stopped because the database has Ledger Digest Uploads enabled. Disable Ledger Digest Uploads and retry the operation. |
+| <a id="37522"></a> 37522 | 16 | No | The Geo-primary database cannot be dropped because the database has Ledger Digest Uploads enabled. Disable Ledger Digest Uploads and retry the operation. |
+| <a id="37523"></a> 37523 | 16 | No | The Azure Confidential Ledger server identity check failed. Ledger URL '%ls' and error code %ld. |
+| <a id="37524"></a> 37524 | 10 | Yes | IMDS resource information. Subscription ID: %ls, Resource Group: %ls, Name: %ls. |
+| <a id="37525"></a> 37525 | 10 | Yes | Command '%.\*ls' is not supported as Azure Active Directory is not configured for this instance. |
+| <a id="37526"></a> 37526 | 16 | No | A ledger table cannot be created while database mirroring is enabled. |
+| <a id="37527"></a> 37527 | 16 | Yes | Database '%.\*ls'cannot be started as a primary replica because it might be missing ledger transactions for which digests have already been generated. Failover back to the original primary or restore more log from the primary to apply the latest transactions. |
+| <a id="37528"></a> 37528 | 16 | No | Vardecimal cannot be enabled on table '%.\*ls' because it is a ledger table or a ledger history table. |
+| <a id="37529"></a> 37529 | 16 | No | Bound transactions are not supported with ledger tables. |
+| <a id="37530"></a> 37530 | 16 | No | Failed to set the ledger digest storage endpoint to '%ls' due to error %d. Verify that the provided Azure Storage account exists, it contains a container named '%ls' and is accessible from the machine hosting this instance of SQL Server. Confirm that there is a credential object with a valid Shared Access Signature for this container. |
+| <a id="37531"></a> 37531 | 16 | No | Failed to set the ledger digest storage endpoint to '%ls'. Verify that you have created a credential object to provide SQL Server access to the '%ls' container in this Azure Storage account. |
+| <a id="37532"></a> 37532 | 16 | No | Ledger table '%.\*ls' cannot contain check constraints, filtered indexes and statistics or computed columns that reference columns using a multi-part identifier. |
+| <a id="37533"></a> 37533 | 16 | No | Computed column '%.\*ls' cannot be added to ledger table '%.\*ls'. Ledger tables do not support computed columns that use CLR functions or types. |
+| <a id="37534"></a> 37534 | 16 | No | Error while trying to read database information from master metadata. Transaction is not active anymore. |
+| <a id="37535"></a> 37535 | 16 | No | Principal name with object id '%ls' must begin with the original principal name followed by a user-defined suffix to differentiate between the names. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323825](https://go.microsoft.com/fwlink/?linkid=2323825). |
+| <a id="37536"></a> 37536 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Substate: '%ls', status: 0x%08x. |
+| <a id="37537"></a> 37537 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Error code: '%ls'. Error message: '%ls'. Return code: '0x%08x'. |
+| <a id="37538"></a> 37538 | 16 | Yes | Internal error occurred while obtaining version information from IMDS endpoint. Return code: '0x%08x'. |
+| <a id="37539"></a> 37539 | 16 | No | Uploading ledger digest failed for database with id %d due to outbound firewall rules. |
+| <a id="37540"></a> 37540 | 16 | No | The provided ledger digest storage location is not in the list of Outbound Firewall Rules on the server. Please add this to the list of Outbound Firewall Rules on your server and retry the operation. |
+| <a id="37541"></a> 37541 | 16 | No | Provider '%ls' is no longer supported. Please use MSOLEDBSQL provider instead. ([https://go.microsoft.com/fwlink/?linkid=2206241&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2206241&clcid=0x409)) |
+| <a id="37542"></a> 37542 | 16 | Yes | The operation could not be completed because attempts to connect to Azure Key Vault (AKV) were denied by the configured Network Security Perimeter. Key vault uri: '%ls'. |
+| <a id="37543"></a> 37543 | 10 | No | The trust of the certificate imported could not be verified with the Certificate Authority (CA) or verified through the Internet. Most likely the host operating system where SQL Server is hosted is missing the latest root certificate updates, or access to the Internet. In case this certificate is used for authentication when partner server rotates the certificate, the authentication will fail unless the issue has been resolved on the host OS. Please ensure that the host OS has the latest root certificate updates, or access to the Internet to reach out to remote CA. Error code: 0x%lx. |
+| <a id="37544"></a> 37544 | 16 | No | The length of the AAD bearer token exceeded the maximum allowed length. Ledger URL '%ls' and error code %ld. |
+| <a id="37545"></a> 37545 | 16 | No | '%ls' is not a valid object id for '%ls' or you do not have permission. |
+| <a id="37546"></a> 37546 | 16 | No | Can only specify object_id when creating user from external provider. |
+| <a id="37547"></a> 37547 | 16 | No | The user attempting to perform this operation does not have permission as it is currently logged in as a member of an Azure Active Directory (AAD) group but does not have an associated database user account. A user account is necessary when creating an object to assign ownership of that object. To resolve this error, either create an Azure AD user from external provider, or alter the AAD group to assign the DEFAULT_SCHEMA as dbo, then rerun the statement. |
+| <a id="37548"></a> 37548 | 16 | No | The user attempting to perform this operation does not have permission as it is currently logged in as a member of an Azure Active Directory (AAD) group but does not have an associated database user account. A user account is necessary when setting the ownership of an object. To resolve this error, create an Azure AD user from external provider, then rerun the statement. |
+| <a id="37549"></a> 37549 | 16 | No | Cannot open session for %S_MSG '%.\*ls'. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37550"></a> 37550 | 16 | No | Cannot initialize cryptographic provider. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37551"></a> 37551 | 16 | No | Cannot create key '%.\*ls' in the provider. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37552"></a> 37552 | 16 | No | Cannot export %S_MSG from the provider. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37553"></a> 37553 | 16 | No | Invalid algorithm '%.\*ls'. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37554"></a> 37554 | 16 | No | Key with %S_MSG '%.\*ls' does not exist in the provider or access is denied. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37555"></a> 37555 | 16 | No | Invalid algorithm id: %d. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37556"></a> 37556 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
+| <a id="37557"></a> 37557 | 16 | No | A server principal with the object ID '%ls' already exists with the name '%ls'. |
+| <a id="37558"></a> 37558 | 16 | No | A login with the object ID '%ls' already has an account with the user name '%ls'. |
+| <a id="37559"></a> 37559 | 16 | No | Object_id is not a valid option |
+| <a id="37560"></a> 37560 | 16 | No | Encryption scan cannot be suspended because it is already in suspended state. |
+| <a id="37561"></a> 37561 | 16 | No | Database encryption key cannot be altered because the database is not encrypted. |
+| <a id="37562"></a> 37562 | 16 | No | When key change is in progress, only suspend and resume operations are allowed. |
+| <a id="37563"></a> 37563 | 16 | Yes | The primary managed identity is not selected for this SQL Server instance. If the SQL Server instance is in an Azure VM, enable the managed identity of the VM to use Microsoft Entra authentication. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323210](https://go.microsoft.com/fwlink/?linkid=2323210). If the SQL Server instance is not in an Azure VM, connect it to Azure Arc. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323209](https://go.microsoft.com/fwlink/?linkid=2323209). |
+| <a id="37564"></a> 37564 | 10 | Yes | The managed identity with Client_ID/Application_ID '%ls', is the primary identity assigned for this server. |
+| <a id="37565"></a> 37565 | 16 | Yes | Microsoft Graph is currently experiencing a high volume of requests. Please wait for %d seconds and try again. |
+| <a id="37566"></a> 37566 | 16 | No | Operations on customer managed key '%s' are not allowed because the key has been disabled in Azure Key Vault '%s'. Please enable the key. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37567"></a> 37567 | 16 | No | Operations on customer managed key '%s' are not allowed in Azure Key Vault '%s'. Please allow the following operations on the key: "get", "wrapKey", "unwrapKey". For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37568"></a> 37568 | 16 | No | One of required operations on customer managed key '%s' is not allowed for currently chosen RBAC role of the managed instance '%s' identity on Azure Key Vault '%s'. Please change to a RBAC role permitting the following permissions on the key vault: "get", "wrapKey", "unwrapKey". For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting |
+| <a id="37569"></a> 37569 | 16 | No | Connection to Azure Key Vault '%s' was forbidden by Azure Key Vault firewall policy. Please review the Azure Key Vault firewall policy to enable connections from Managed Instance '%s'. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37570"></a> 37570 | 16 | No | One of required operations on customer managed key '%s' on Azure Key Vault '%s' is not allowed for currently set key vault policy used by managed instance '%s' identity. Please use a policy permitting the following permissions on the key vault: "get", "wrapKey", "unwrapKey". For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37571"></a> 37571 | 16 | No | Azure Key Vault '%s' operation requested by Managed Instance '%s' failed due to insufficient permissions (inner error code: '%s'). For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37572"></a> 37572 | 16 | No | Customer managed key '%s' was not found in Azure Key Vault '%s'. If it was recently deleted, recovery could be possible if 'soft-delete' protection is enabled on the key vault. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37573"></a> 37573 | 16 | No | Connection to Azure Key Vault '%s' could not be established. Please review network settings for Managed Instance '%s'. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37574"></a> 37574 | 16 | No | Azure Key Vault URI '%s' could not be resolved. Please ensure the key vault URI is valid and that your network settings for Managed Instance '%s' are not blocking access to Azure Public DNS. For help resolving this issue, please see https://aka.ms/sqlmi-tde-troubleshooting. |
+| <a id="37575"></a> 37575 | 17 | No | SQL Server Audit \[%ls\] could not write to the Otel (OpenTelemetry) Audit Target (Error Code: %d). |
+| <a id="37576"></a> 37576 | 16 | No | The current version of SQL Server Connector for Microsoft Azure Key Vault does not support managed identity. Upgrade the SQL Server Connector to the latest version and try again. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323730](https://go.microsoft.com/fwlink/?linkid=2323730). |
+| <a id="37577"></a> 37577 | 16 | No | Current scenario is blocked for Fabric DW. |
+| <a id="37578"></a> 37578 | 16 | No | An internal error has occurred. Please retry the operation. If the issue persists, contact support for assistance. |
+| <a id="37579"></a> 37579 | 16 | No | The security policy '%.\*ls' cannot reference tables with vector indexes. Table '%.\*ls' has a vector index. |
+| <a id="37580"></a> 37580 | 16 | No | Principal '%.\*ls' not found during implicit user creation, error detail: '%.\*ls'. |
+| <a id="37581"></a> 37581 | 16 | No | Principal '%.\*ls' had ambiguous match during implicit user creation, error detail: '%.\*ls'. |
+| <a id="37582"></a> 37582 | 16 | No | Implicit user creation failed for principal '%.\*ls' due to system error '%.\*ls'. |
+| <a id="37583"></a> 37583 | 16 | No | An internal error occurred during %S_MSG %S_MSG. Please retry the operation. Error code: %d. |
+| <a id="37584"></a> 37584 | 16 | Yes | An internal error occurred while performing a cryptography operation. Operation: '%ls', status: 0x%08x. |
+| <a id="37585"></a> 37585 | 16 | No | Datawarehouse session internal error. If the issue persists, contact support for assistance. |
+| <a id="37586"></a> 37586 | 16 | No | Invalid AES key length %u. |
+| <a id="37587"></a> 37587 | 16 | No | Federated Managed Identity '%.\*ls' cannot be created because a database principal with the same name already exists. |
+| <a id="37588"></a> 37588 | 16 | No | The field '%ls' or more specified in the REQUIRED_FIELDS audit option are invalid. |
+| <a id="37589"></a> 37589 | 10 | Yes | An internal VSM attestation service log while performing enclave attestation operation. Log Source: %d, message: '%ls'. |
+| <a id="37590"></a> 37590 | 16 | No | The system table '%s' cannot be used because it is not a valid Microsoft system table. |
+| <a id="37591"></a> 37591 | 16 | No | A duplicate field-name '%ls' specified in the REQUIRED_FIELDS audit option. |
+| <a id="37592"></a> 37592 | 16 | No | REQUIRED_FIELDS audit option cannot be an empty string. |
+| <a id="37593"></a> 37593 | 16 | No | The REQUIRED_FIELDS audit option exceeds the maximum allowed length of %d characters. |
+| <a id="37594"></a> 37594 | 16 | No | The REQUIRED_FIELDS audit option is only supported for EXTERNAL_MONITOR target. |
+| <a id="37595"></a> 37595 | 16 | No | The maximum number of HTTP redirect hops was exceeded while calling Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
+| <a id="37596"></a> 37596 | 16 | No | The HTTP redirect target failed security validation while calling Azure Confidential Ledger. Ledger URL '%ls' and error code %ld. |
+| <a id="37597"></a> 37597 | 16 | No | User security synchronization failed due to system error '%.\*ls'. |
+| <a id="37598"></a> 37598 | 16 | Yes | \[%ls\]: Exception: Error: %d, State: %d. |
+| <a id="37599"></a> 37599 | 16 | No | The number of column encryption keys sent by the client for enclave computations exceeds the maximum allowed limit of %d. |
+| <a id="37601"></a> 37601 | 17 | Yes | \[Auditing\]\[%ls\] Could not allocate memory for %ls. |
+| <a id="37602"></a> 37602 | 16 | Yes | \[Auditing\]\[%ls\] Error while reading AuditPolicy from WinFab property. \[ErrorCode: %d\]. |
+| <a id="37603"></a> 37603 | 16 | Yes | \[Auditing\]\[%ls\] The 'State' in AuditPolicy is 'UNKNOWN'. \[ErrorCode: %d\]. |
+| <a id="37604"></a> 37604 | 16 | Yes | \[Auditing\]\[%ls\] Error while constructing AuditQueryParameters from AuditPolicy. \[ErrorCode: %d\]. |
+| <a id="37605"></a> 37605 | 16 | Yes | \[Auditing\]\[%ls\] Could not configure auditing to %ls. DetailedMessage: \[%ls\]. \[Error: %d\]. |
+| <a id="37606"></a> 37606 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Error while trying to get Audit Policy (%ls) from WinFab properties \[ErrorCode: %d\]. |
+| <a id="37607"></a> 37607 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Property '\[%ls\]' under Namespace '\[%ls\]' failed to retrieve. \[Error: %d\]. |
+| <a id="37608"></a> 37608 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Xpath \[%ls\] for WinFab Property '\[%ls\]' under Namespace '\[%ls\]' failed to retrieve. \[Error: %d\]. |
+| <a id="37609"></a> 37609 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Property '\[%ls\]' under Namespace '\[%ls\]' has invalid value \[Len: %lu\] \[Error: %d\]. |
+| <a id="37610"></a> 37610 | 16 | Yes | \[Auditing\]\[%ls\]\[Informational\] Property '\[%ls\]' under Namespace '\[%ls\]' is empty or null \[Len: %lu\] \[Error: %d\]. |
+| <a id="37611"></a> 37611 | 16 | Yes | \[Auditing\]\[%ls\] Could not combine paths. DetailedMessage: \[%ls\]. \[path1: %ls\] \[path2: %ls\] \[separator: %lc\] \[Error: %d\]. |
+| <a id="37612"></a> 37612 | 16 | Yes | \[Auditing\]\[%ls\] Error: One or more of 'baseStr', 'searchStr' is nullptr. \[baseStr: %ls\] \[searchStr: %ls\] \[Error: %d\]. |
+| <a id="37613"></a> 37613 | 16 | Yes | \[Auditing\]\[%ls\] Error: Length of 'searchStr' is zero \[Error: %d\]. |
+| <a id="37614"></a> 37614 | 16 | Yes | \[Auditing\]\[%ls\] Could not inject query parameter. \[Parameter: %ls\] \[Value: %ls\] \[ErrorCode: %d\]. |
+| <a id="37615"></a> 37615 | 16 | Yes | \[Auditing\]\[%ls\] Could not get query template. \[auditQueryType: %ls\] \[ErrorCode: %d\]. |
+| <a id="37616"></a> 37616 | 16 | Yes | \[Auditing\]\[%ls\] Could not inject parameters into audit query template. \[auditQueryType: %ls\] \[ErrorCode: %d\]. |
+| <a id="37617"></a> 37617 | 16 | Yes | \[Auditing\]\[%ls\] Error occurred while constructing %ls \[ErrorCode: %d\]. |
+| <a id="37618"></a> 37618 | 16 | Yes | \[Auditing\]\[%ls\] Could not generate audit query to execute. \[auditQueryType: %ls\] \[ErrorCode: %d\]. |
+| <a id="37619"></a> 37619 | 16 | Yes | An unexpected error occurred. Please try again after some time. If the error persists, please contact Customer Support. |
+| <a id="37620"></a> 37620 | 16 | Yes | StartTimeFilter is not in a supported format. Please either use DEFAULT or a UTC based timestamp in this format - 'YYYY-MM-DDThh:mm:ssZ'. For example - '2020-12-31T15:30:00Z'. |
+| <a id="37621"></a> 37621 | 16 | Yes | EndTimeFilter is not in a supported format. Please either use DEFAULT or a UTC based timestamp in this format - 'YYYY-MM-DDThh:mm:ssZ'. For example - '2020-12-31T15:30:00Z'. |
+| <a id="37622"></a> 37622 | 16 | No | The batch length (%d wchars) exceeds the maximum length supported by audit logging (%d wchars). Reduce the batch size and retry. |
+| <a id="38001"></a> 38001 | 16 | No | Cannot find the file id %d in the database '%s'. |
+| <a id="38002"></a> 38002 | 16 | No | Only users having %s permission can execute this stored procedure. |
+| <a id="39001"></a> 39001 | 16 | No | Only SELECT statement is supported for input data query to 'sp_execute_external_script' stored procedure. |
+| <a id="39002"></a> 39002 | 16 | No | SQL failed to boot extensibility for error code 0x%lx. |
+| <a id="39003"></a> 39003 | 10 | No | SQL successfully boots extensibility. |
+| <a id="39004"></a> 39004 | 16 | No | A '%.\*s' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x%x. External script request id is %ls. |
+| <a id="39005"></a> 39005 | 10 | No | STDOUT messages from external script: %.\*ls%.\*ls |
+| <a id="39006"></a> 39006 | 10 | No | External script execution status: %.\*ls. |
+| <a id="39007"></a> 39007 | 16 | No | The specified language '%.\*ls' does not exist or you do not have permission. |
+| <a id="39008"></a> 39008 | 16 | No | Invalid parameter name '%ls' specified for Procedure. This clashes with internal parameters. |
+| <a id="39009"></a> 39009 | 16 | No | Output parameter in external script execution is not yet supported. |
+| <a id="39010"></a> 39010 | 16 | No | External script execution for '%.\*s' script encountered an unexpected error (HRESULT = 0x%x) for request id: %ls. |
+| <a id="39011"></a> 39011 | 16 | No | SQL Server was unable to communicate with the LaunchPad service for request id: %ls. Verify the configuration of the service. |
+| <a id="39012"></a> 39012 | 16 | No | Unable to communicate with the runtime for '%.\*s' script for request id: %ls. Check the requirements of '%.\*s' runtime. |
+| <a id="39013"></a> 39013 | 16 | No | SQL Server encountered error 0x%x while communicating with the '%.\*s' runtime for request id: %ls. Check the configuration of the '%.\*s' runtime. |
+| <a id="39014"></a> 39014 | 16 | No | Parallelism in external script execution is not yet supported. |
+| <a id="39015"></a> 39015 | 16 | No | SELECT INTO statement is not supported for input data query to 'sp_execute_external_script' stored procedure. |
+| <a id="39016"></a> 39016 | 16 | No | The parameterized external script expects the parameter '%.\*ls', which was not supplied. |
+| <a id="39017"></a> 39017 | 16 | No | Input data query returns column #%d of type '%ls' which is not supported by the runtime for '%.\*s' script. Unsupported types are binary, varbinary, timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
+| <a id="39018"></a> 39018 | 16 | No | Parameter '%.\*ls' uses a data type that is not supported by the runtime for '%.\*s' script. Unsupported types are timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. External script request id is %ls. |
+| <a id="39019"></a> 39019 | 10 | No | An external script error occurred: %.\*ls%.\*ls |
+| <a id="39020"></a> 39020 | 16 | No | Feature 'Advanced Analytics Extensions' is not installed. Consult Books Online for more information on this feature. |
+| <a id="39021"></a> 39021 | 16 | No | Unable to launch runtime for '%.\*s' script for request id: %ls. Check the configuration of the '%.\*s' runtime. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323008](https://go.microsoft.com/fwlink/?linkid=2323008). |
+| <a id="39022"></a> 39022 | 10 | No | STDERR messages from external script: %.\*ls%.\*ls |
+| <a id="39023"></a> 39023 | 16 | No | 'sp_execute_external_script' is disabled on this instance of SQL Server. Use sp_configure 'external scripts enabled' to enable it. |
+| <a id="39024"></a> 39024 | 16 | No | Parallel execution of 'sp_execute_external_script' failed. Specify WITH RESULT SETS clause with output schema. |
+| <a id="39025"></a> 39025 | 16 | No | External script execution failed as extensibility environment is not ready yet. Retry the operation when the server is fully started. |
+| <a id="39026"></a> 39026 | 16 | No | The parameter name 'r_rowsPerRead' is specified multiple times in 'sp_execute_external_script' call. The name 'r_rowsPerRead' is reserved for specifying streaming behavior only. External script request id is %ls. |
+| <a id="39027"></a> 39027 | 16 | No | Parameter '%.\*ls' was specified multiple times to sp_execute_external_script stored procedure. |
+| <a id="39029"></a> 39029 | 16 | No | The external language '%.\*ls' returned error messages: '%.\*ls'. |
+| <a id="39030"></a> 39030 | 16 | No | Variable '%.\*ls' has unsupported data type for parameter exchange in EXEC EXTERNAL LANGUAGE statement. |
+| <a id="39031"></a> 39031 | 16 | No | Cannot parse the output schema of the built-in function '%ls'. |
+| <a id="39032"></a> 39032 | 16 | No | The function %ls expects parameters in the form of 'name = value'. |
+| <a id="39033"></a> 39033 | 16 | No | The parameter name '%.\*ls' has already been declared. Parameter names must be unique in %ls function call. |
+| <a id="39034"></a> 39034 | 16 | No | The parameter '%.\*ls' in %ls contains a definition that doesn't match the supplied arguments. |
+| <a id="39035"></a> 39035 | 16 | No | The function %ls has too many arguments supplied. |
+| <a id="39036"></a> 39036 | 16 | No | The function %ls expects parameter '%.\*ls' which was not supplied. |
+| <a id="39037"></a> 39037 | 16 | No | The function %ls contains a parameter '%.\*ls' that has an invalid type. |
+| <a id="39038"></a> 39038 | 16 | No | The function %ls expects parameter '%.\*ls' of type ntext/nchar/nvarchar. |
+| <a id="39039"></a> 39039 | 16 | No | Error converting the parameter value for '%.\*ls' to '%.\*ls'. |
+| <a id="39040"></a> 39040 | 16 | No | The function '%ls' does not support SQL identifier or variable for '%.\*ls'. |
+| <a id="39041"></a> 39041 | 16 | No | The parameter '%.\*ls' has an invalid definition. |
+| <a id="39042"></a> 39042 | 16 | No | %s EXTERNAL LIBRARY failed because the library source parameter %d is not a valid expression. |
+| <a id="39043"></a> 39043 | 16 | No | %s EXTERNAL LIBRARY failed because filename '%.\*ls' is too long. |
+| <a id="39044"></a> 39044 | 16 | No | %s EXTERNAL LIBRARY failed because it could not open the physical file '%.\*ls': %ls. |
+| <a id="39045"></a> 39045 | 16 | No | %s EXTERNAL LIBRARY failed because it could not read from the physical file '%.\*ls': %ls. |
+| <a id="39046"></a> 39046 | 16 | No | CREATE EXTERNAL LIBRARY failed because the user "%.\*ls" specified in the authorization clause does not exist. |
+| <a id="39047"></a> 39047 | 16 | No | External library '%.\*ls' already exists for owner '%.\*ls' in database '%.\*ls'. |
+| <a id="39048"></a> 39048 | 16 | No | Failed to %s external library '%ls': %ls. |
+| <a id="39049"></a> 39049 | 10 | No | Messages from 'PREDICT' engine: %.\*ls%.\*ls |
+| <a id="39050"></a> 39050 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. Out of memory. |
+| <a id="39051"></a> 39051 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. Model is corrupt or invalid. |
+| <a id="39052"></a> 39052 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. Model type is unsupported. |
+| <a id="39053"></a> 39053 | 16 | No | The function PREDICT expects parameter 'RUNTIME' of type ntext/nchar/nvarchar. |
+| <a id="39054"></a> 39054 | 16 | No | The 'RUNTIME' parameter is invalid. |
+| <a id="39055"></a> 39055 | 16 | No | %ls can only be called in combination with the OUTER APPLY clause. |
+| <a id="39056"></a> 39056 | 16 | No | Could not parse the list of columns to be passed to %ls. Only simple column references are accepted. |
+| <a id="39057"></a> 39057 | 16 | No | The value provided for the '%.\*ls' parameter is too large. |
+| <a id="39058"></a> 39058 | 16 | No | The parameter '%.\*ls' has a type that is not supported. |
+| <a id="39092"></a> 39092 | 16 | No | Initialization of native scoring libraries failed with HRESULT 0x%x. |
+| <a id="39093"></a> 39093 | 16 | No | 'PREDICT' function does not take parameters of varchar(max), nvarchar(max) or varbinary(max) type except for 'MODEL' parameter. |
+| <a id="39094"></a> 39094 | 16 | No | 'PREDICT' function only supports models smaller than 100 MB. |
+| <a id="39096"></a> 39096 | 16 | No | Execution failed because its WITH clause specified different output columns from what 'PREDICT' function tries to return. The schema returned by 'PREDICT' function is '%ls'. |
+| <a id="39097"></a> 39097 | 16 | No | Input data column #%d is of type '%ls' which is not supported by '%ls' function. Unsupported types are binary, varbinary, timestamp, datetime2, datetimeoffset, time, text, ntext, image, hierarchyid, xml, sql_variant and user-defined type. |
+| <a id="39098"></a> 39098 | 16 | No | Error occurred during execution of the built-in function 'PREDICT' with HRESULT 0x%x. |
+| <a id="39099"></a> 39099 | 16 | No | Feature or option 'PREDICT' is not yet implemented. Please consult Books Online for more information on this feature or option. |
+| <a id="39101"></a> 39101 | 16 | No | '%.\*ls' failed because it is not supported in the edition of this SQL Server instance. |
+| <a id="39102"></a> 39102 | 16 | No | Duplicate column names are not allowed in '%.\*ls'. Column name '%.\*ls' is a duplicate. |
+| <a id="39103"></a> 39103 | 16 | No | Parameter '@input_data_1_order_by_columns' is not allowed without parameter '@input_data_1_partition_by_columns'. |
+| <a id="39104"></a> 39104 | 16 | No | Column '%.\*ls' in '%.\*ls' is not defined in the SELECT clause of '@input_data_1' parameter. |
+| <a id="39105"></a> 39105 | 16 | No | Invalid syntax for parameter '@input_data_1_partition_by_columns'. Specify a list of comma separated columns. |
+| <a id="39106"></a> 39106 | 16 | No | Invalid syntax for parameter '@input_data_1_order_by_columns'. Specify a list of comma separated columns and an optional argument for sorting order \<ASC\|DESC\>. |
+| <a id="39107"></a> 39107 | 16 | No | Columns in parameters '@input_data_1_partition_by_columns' and '@input_data_1_order_by_columns' must be unique. Column name '%.\*ls' appears in both parameters. |
+| <a id="39108"></a> 39108 | 16 | No | Maximum number of concurrent external script users has been reached. Limit is %d. Please retry the operation. External script request id is %ls. |
+| <a id="39109"></a> 39109 | 16 | No | The combined total number of columns given in parameters '@input_data_1_partition_by_columns' and '@input_data_1_order_by_columns' exceeds the maximum %d. |
+| <a id="39110"></a> 39110 | 16 | No | Maximum number of concurrent external script queries for this user has been reached. Limit is %d. Please retry the operation. External script request id is %ls. |
+| <a id="39111"></a> 39111 | 16 | No | The SQL Server Machine Learning Services End-User License Agreement (EULA) has not been accepted. |
+| <a id="39112"></a> 39112 | 15 | No | Duplicate file specification supplied for platform '%.\*ls'. |
+| <a id="39113"></a> 39113 | 15 | No | Number of file specifications exceeds the maximum of %d. |
+| <a id="39114"></a> 39114 | 15 | No | CREATE EXTERNAL LIBRARY statement failed because of duplicate file specification. Only one file specification per platform is allowed in a CREATE EXTERNAL LIBRARY statement. |
+| <a id="39115"></a> 39115 | 16 | No | ALTER EXTERNAL LIBRARY statement failed because the content for platform '%.\*ls' does not exist or is not correctly defined in the external library. |
+| <a id="39116"></a> 39116 | 16 | No | ALTER EXTERNAL LIBRARY REMOVE PLATFORM statement failed because an external library requires at least one file specification to be defined. |
+| <a id="39117"></a> 39117 | 16 | No | %.\*ls EXTERNAL LANGUAGE statement failed because the parameter '%s' is not a valid expression. |
+| <a id="39118"></a> 39118 | 16 | No | %s EXTERNAL LANGUAGE statement failed because the specified file path '%.\*ls' is too long. Maximum length of file path is %d characters. |
+| <a id="39119"></a> 39119 | 16 | No | %s EXTERNAL LANGUAGE failed because it could not open the physical file '%.\*ls': %ls. |
+| <a id="39120"></a> 39120 | 16 | No | %s EXTERNAL LANGUAGE statement failed because it could not read from the physical file '%.\*ls': %ls. |
+| <a id="39121"></a> 39121 | 16 | No | CREATE EXTERNAL LANGUAGE statement failed because the user "%.\*ls" specified in the authorization clause does not exist or have permission. |
+| <a id="39122"></a> 39122 | 16 | No | CREATE statement failed. External language '%.\*ls' already exists. |
+| <a id="39123"></a> 39123 | 16 | No | %.\*ls EXTERNAL LANGUAGE statement failed because the parameter '%s' is not specified. |
+| <a id="39124"></a> 39124 | 16 | No | '%.\*ls' platform information doesn't exist for the language '%.\*ls'. |
+| <a id="39125"></a> 39125 | 16 | No | ALTER EXTERNAL LANGUAGE statement failed because of duplicate file specification. Only one file specification per platform is allowed. |
+| <a id="39126"></a> 39126 | 16 | No | ALTER EXTERNAL LANGUAGE REMOVE PLATFORM statement failed because an external language requires at least one file specification to be defined. |
+| <a id="39127"></a> 39127 | 16 | No | External script execution for '%.\*s' script ran out of resources. External script request id is: %s. |
+| <a id="39128"></a> 39128 | 16 | No | External language runtime for '%s' could not be provisioned. Error code 0x%08x. |
+| <a id="39129"></a> 39129 | 16 | No | Cannot drop external language '%.\*ls' because it is being referenced by external library '%.\*ls'. |
+| <a id="39130"></a> 39130 | 16 | No | %.\*ls statement failed. Language '%s' already exists. |
+| <a id="39131"></a> 39131 | 16 | No | %.\*ls statement failed. System language '%s' can't be altered or removed. |
+| <a id="39132"></a> 39132 | 16 | No | The parameter '@r_rowsPerRead' is invalid. Parameter '@r_rowsPerRead' must be a positive integer. |
+| <a id="39133"></a> 39133 | 16 | No | CREATE/ALTER EXTERNAL LANGUAGE statement failed. The environment variables string is invalid. |
+| <a id="39134"></a> 39134 | 16 | No | The procedure '%s' cannot be executed because it is not supported in Azure SQL Edge. |
+| <a id="39135"></a> 39135 | 16 | No | Service environment '%s' is not ready. |
+| <a id="39136"></a> 39136 | 10 | No | Error sending a message to the service. |
+| <a id="39137"></a> 39137 | 10 | No | Error initialization external services framework. |
+| <a id="39138"></a> 39138 | 16 | No | Request to drop streaming job '%s' failed because the job is currently running. Stop the job before dropping. |
+| <a id="39139"></a> 39139 | 16 | No | Request to stop streaming job '%s' failed because the job is not currently running. |
+| <a id="39140"></a> 39140 | 16 | No | Request to create streaming job '%s' failed. The streaming job query cannot be null or empty. |
+| <a id="39141"></a> 39141 | 16 | No | External data source '%s' with location prefix '%s' is not supported as input for streaming. |
+| <a id="39142"></a> 39142 | 16 | No | External data source '%s' with location prefix '%s' is not supported as output for streaming. |
+| <a id="39143"></a> 39143 | 16 | No | External data source '%s' with location prefix '%s' is not supported for streaming. |
+| <a id="39144"></a> 39144 | 16 | No | External data source '%s' has an invalid location for streaming. |
+| <a id="39145"></a> 39145 | 16 | No | External stream '%s' has an invalid location. |
+| <a id="39146"></a> 39146 | 16 | No | External stream '%s' has invalid properties. |
+| <a id="39147"></a> 39147 | 16 | No | Kafka datasource '%s' should specify a value for PARTITIONS in the properties field. |
+| <a id="39148"></a> 39148 | 16 | No | External file format '%s' type is not supported for streaming. |
+| <a id="39149"></a> 39149 | 16 | No | External file format '%s' encoding is not supported for streaming. |
+| <a id="39150"></a> 39150 | 16 | No | Error while processing streaming job: '%s'. |
+| <a id="39151"></a> 39151 | 16 | No | Transient error communicating with the streaming runtime. Please retry the operation. |
+| <a id="39152"></a> 39152 | 16 | No | Transient error communicating with the streaming runtime due to unfinished stop streaming job operation. Please retry the operation. |
+| <a id="39153"></a> 39153 | 16 | No | Error while launching mssql-flight-server with HRESULT 0x%x |
+| <a id="39154"></a> 39154 | 16 | No | Error while stopping mssql-flight-server with HRESULT 0x%x |
+| <a id="39155"></a> 39155 | 16 | No | The maximum acceptable number of columns is %d while %ld number of columns are in the schema. |
+| <a id="39156"></a> 39156 | 16 | No | External libraries are not permitted for language '%.\*ls'. |
+| <a id="39157"></a> 39157 | 16 | No | Cannot modify or drop system-defined external language '%.\*ls'. |
+| <a id="39158"></a> 39158 | 16 | No | First-party extensibility features are not enabled on this instance of SQL Server. Contact your system administrator. |
+| <a id="39159"></a> 39159 | 16 | No | %ls requires at least %d parameters. |
+| <a id="39160"></a> 39160 | 16 | No | Parameter '%ls' must not be NULL for stored procedure %ls. |
+| <a id="39161"></a> 39161 | 16 | No | Stored procedure %ls is not enabled on this instance of SQL Server. |
+| <a id="39162"></a> 39162 | 16 | No | Parameter '%ls' must not exceed %u characters. |
+| <a id="39163"></a> 39163 | 16 | No | Parameter '%ls' must be an inline (non-LOB) Unicode string. |
+| <a id="39164"></a> 39164 | 16 | No | '%.\*ls' is not a recognized first-party language for stored procedure %ls. |
+| <a id="39165"></a> 39165 | 16 | No | The value supplied for parameter '%ls' of stored procedure %ls is not valid JSON. |
+| <a id="39166"></a> 39166 | 16 | No | The JSON supplied to stored procedure %ls is not valid: %ls. |
+| <a id="39167"></a> 39167 | 16 | No | '%ls' is not a supported data type in the JSON supplied to stored procedure %ls. |
+| <a id="39168"></a> 39168 | 16 | No | The JSON supplied to stored procedure %ls specifies too many parameters; the maximum is %d but %ld were supplied. |
+| <a id="39169"></a> 39169 | 16 | No | The JSON supplied to stored procedure %ls specifies too many columns; the maximum is %d but %ld were supplied. |
+| <a id="39170"></a> 39170 | 16 | No | Parameter '%ls' of stored procedure %ls must be declared with the OUTPUT keyword. |
+| <a id="39171"></a> 39171 | 16 | No | Parameter '%ls' must be a Unicode (nvarchar or nvarchar(max)) string. |
+| <a id="39172"></a> 39172 | 16 | No | An extension request for '%.\*s' failed with HRESULT 0x%x. Request ID is %ls. |
+| <a id="39173"></a> 39173 | 16 | No | Stored procedure %ls returned a result set with an invalid schema. |
+| <a id="40000"></a> 40000 | 16 | No | Replicated tables support only local (non-DTC) two-phase commit involving the master database. |
+| <a id="40001"></a> 40001 | 16 | No | Secondary kill was initiated during commit. |
+| <a id="40002"></a> 40002 | 16 | No | Replicated row is not found. |
+| <a id="40003"></a> 40003 | 16 | No | Unexpected operation in replicated message. |
+| <a id="40004"></a> 40004 | 16 | No | Column count does not match. |
+| <a id="40005"></a> 40005 | 16 | No | Duplicated transaction id. |
+| <a id="40006"></a> 40006 | 16 | No | Unknown transaction id. |
+| <a id="40007"></a> 40007 | 16 | No | Invalid nesting level. |
+| <a id="40008"></a> 40008 | 16 | No | Replication target database is not found. |
+| <a id="40009"></a> 40009 | 16 | No | Transaction state locally does not match the expected state. |
+| <a id="40010"></a> 40010 | 16 | No | Replicated transactions across databases are not allowed. |
+| <a id="40011"></a> 40011 | 16 | No | Replicated target table %ld is not found. |
+| <a id="40012"></a> 40012 | 16 | No | Replicated target index %ld on table %ld is not found. |
+| <a id="40013"></a> 40013 | 16 | No | Replicated target schema %.\*ls is not found. |
+| <a id="40014"></a> 40014 | 16 | No | Multiple databases can not be used in the same transaction. |
+| <a id="40015"></a> 40015 | 16 | No | This functionality is not supported on replicated tables. |
+| <a id="40016"></a> 40016 | 16 | No | The partitioning key column '%.\*ls' must be one of the keys of '%.\*ls.%.\*ls.%.\*ls' index. |
+| <a id="40017"></a> 40017 | 16 | No | Partition key can not be changed. |
+| <a id="40018"></a> 40018 | 16 | No | Partition key value is outside of the valid partition key range. |
+| <a id="40019"></a> 40019 | 16 | No | The partition key column '%.\*ls' of table '%.\*ls.%.\*ls' is nullable or does not match the partition key type defined in the table group. |
+| <a id="40020"></a> 40020 | 16 | No | The database is in transition and transactions are being terminated. |
+| <a id="40021"></a> 40021 | 16 | No | The low and high keys specified for the partition are invalid. Low must be less than high. |
+| <a id="40022"></a> 40022 | 16 | No | A partition with overlapping key ranges already exists. |
+| <a id="40023"></a> 40023 | 16 | No | The name %s is too long. |
+| <a id="40024"></a> 40024 | 16 | No | The last committed CSN (%d, %I64d) was not found in the log. The last seen CSN was (%d, %I64d). |
+| <a id="40025"></a> 40025 | 16 | No | The transaction was aborted during commit due to a database state transition. |
+| <a id="40028"></a> 40028 | 16 | No | The tablegroup name '%.\*ls.%.\*ls' is not valid. |
+| <a id="40029"></a> 40029 | 16 | No | Replicated tables can have at most %d columns. |
+| <a id="40030"></a> 40030 | 16 | No | Can not perform replica operation because the replica does not exist in local partition map. |
+| <a id="40031"></a> 40031 | 16 | No | The partition key column for table '%.\*ls.%.\*ls' is undefined. |
+| <a id="40032"></a> 40032 | 16 | No | Unsupported use of LOB in online index build. |
+| <a id="40033"></a> 40033 | 16 | No | Attempted CSN epoch switch is not allowed. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40034"></a> 40034 | 16 | No | CSN being added must be equal last CSN+1. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40035"></a> 40035 | 16 | No | CSN being added must be equal or greater than the last CSN. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40036"></a> 40036 | 16 | No | Can not perform replica operation because this node is not the secondary for this partition. |
+| <a id="40037"></a> 40037 | 16 | No | The epoch being started must not have been used. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40038"></a> 40038 | 16 | No | Can not get ack to roll back replication message. |
+| <a id="40039"></a> 40039 | 16 | No | Can not get ack to commit replication message. |
+| <a id="40040"></a> 40040 | 16 | No | Failed to initiate VDI Client for physical seeding. |
+| <a id="40041"></a> 40041 | 16 | No | Corrupted column status. |
+| <a id="40042"></a> 40042 | 16 | No | Corrupted column length. |
+| <a id="40043"></a> 40043 | 16 | No | Corrupted variable data. Actual remaining bytes is %d, expected %d bytes. |
+| <a id="40044"></a> 40044 | 16 | No | Corrupted fixed size data. Actual remaining bytes %d, expected %d bytes. |
+| <a id="40045"></a> 40045 | 16 | No | Message version mismatch. Actual version is %d and the expected is %d. |
+| <a id="40046"></a> 40046 | 16 | No | The minimum required message version %d for message type %d is unsupported. |
+| <a id="40047"></a> 40047 | 16 | No | Invalid use of parent transaction. |
+| <a id="40048"></a> 40048 | 16 | No | Corrupted fragmented row flow sequence. |
+| <a id="40049"></a> 40049 | 16 | No | Corrupted fragmented row. |
+| <a id="40050"></a> 40050 | 16 | No | Corrupted LOB row. |
+| <a id="40051"></a> 40051 | 16 | No | Use of UPDATETEXT on replicated tables is not supported. |
+| <a id="40052"></a> 40052 | 16 | No | Parallel queries are not supported on replicated tables. |
+| <a id="40053"></a> 40053 | 16 | No | Attempt to replicate a non-replicated system table %ld. |
+| <a id="40054"></a> 40054 | 16 | No | Tables without a clustered index are not supported in this version of SQL Server. Please create a clustered index and try again. |
+| <a id="40056"></a> 40056 | 16 | No | Master, tempdb, model and mssqlsystemresource databases can not be replicated. |
+| <a id="40057"></a> 40057 | 16 | No | Table is not enabled for replication. |
+| <a id="40058"></a> 40058 | 16 | No | Unsupported replicated table usage option. Refer to the state to identify the cause. |
+| <a id="40060"></a> 40060 | 16 | No | Attempt to replicate out of partition already locked for internal use. |
+| <a id="40061"></a> 40061 | 16 | No | Unknown rowset id. |
+| <a id="40062"></a> 40062 | 16 | No | Incorrect replica role transition. |
+| <a id="40063"></a> 40063 | 16 | No | Replica is not found. |
+| <a id="40064"></a> 40064 | 16 | No | Attempt to add a CSN to an invalid CSN vector. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40065"></a> 40065 | 16 | No | CSN vector can be reinitialized only with initial or invalid CSN. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40066"></a> 40066 | 16 | No | Transport destination is not found. |
+| <a id="40067"></a> 40067 | 16 | No | Corrupted row sequence. |
+| <a id="40068"></a> 40068 | 16 | No | Idempotent mode has been used on an unknown transaction. |
+| <a id="40069"></a> 40069 | 16 | No | Could not obtain rowset interface. |
+| <a id="40070"></a> 40070 | 16 | No | CSN mismatch detected. The local CSN is (%d,%I64d), the remote CSN is (%d,%I64d). |
+| <a id="40071"></a> 40071 | 16 | No | This partition does not have enough valid secondaries to start a DML transaction. The needed count is %ld, the current counts are %ld (main quorum) and %ld (transient quorum). |
+| <a id="40072"></a> 40072 | 16 | No | Corrupted rowset metadata sequence. |
+| <a id="40073"></a> 40073 | 16 | No | Partitioned tables are not supported. |
+| <a id="40074"></a> 40074 | 16 | No | Partition key is not found is the target rowset or is nullable or not part of index keys. |
+| <a id="40075"></a> 40075 | 16 | No | Column schema mismatch for rowset %ls.%ls.%ls column %ld. |
+| <a id="40076"></a> 40076 | 16 | No | Too few columns from remote rowset %ls.%ls.%ls. |
+| <a id="40077"></a> 40077 | 16 | No | Remote rowset %ls.%ls.%ls column %ld is not found locally. |
+| <a id="40078"></a> 40078 | 16 | No | The persisted queue logging has failed. |
+| <a id="40079"></a> 40079 | 16 | No | A non-null variable length value is received for a column that is shorter locally. |
+| <a id="40080"></a> 40080 | 16 | No | Corrupted (too long) packed row. |
+| <a id="40081"></a> 40081 | 16 | No | Cardinality of index should not be less then zero. |
+| <a id="40082"></a> 40082 | 16 | No | Induced exception for testing purposes. |
+| <a id="40083"></a> 40083 | 16 | No | Corrupted CSN vector. |
+| <a id="40084"></a> 40084 | 16 | No | Multiple modifications to CSN vector in the same transaction are not supported. |
+| <a id="40085"></a> 40085 | 16 | No | The primary partition has lost the quorum. New transactions can not start. |
+| <a id="40086"></a> 40086 | 16 | No | Primary hit an error with this secondary. |
+| <a id="40087"></a> 40087 | 16 | No | Replica with the specified version is not found. |
+| <a id="40088"></a> 40088 | 16 | No | CSN being set is outside the CSN epoch range. The new CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40089"></a> 40089 | 16 | No | The index configuration for table %ld index %ld does not match the source. |
+| <a id="40090"></a> 40090 | 16 | No | The primary partition is in transition and the transaction can not commit. |
+| <a id="40091"></a> 40091 | 16 | No | Truncation CSN is mismatched. The truncation CSN is (%d,%I64d), the current CSN is (%d,%I64d). |
+| <a id="40092"></a> 40092 | 16 | No | This index %ld state for table %ld does not match the source. |
+| <a id="40093"></a> 40093 | 16 | No | Replication background task hit a lock timeout. User transactions will be killed and the operation will be retried. |
+| <a id="40094"></a> 40094 | 16 | No | Incompatible key metadata change. The scan can not be resumed. |
+| <a id="40095"></a> 40095 | 13 | No | Replication transaction (Process ID %d) was deadlocked on %.\*ls resources with another process and has been chosen as the deadlock victim. The operation will be retried. |
+| <a id="40096"></a> 40096 | 16 | No | Critical replication task could not start. State is %d. |
+| <a id="40097"></a> 40097 | 16 | No | The begin transaction message was not found when scanning persisted replication queue. |
+| <a id="40098"></a> 40098 | 16 | No | Mismatched partition id found in the transaction log. |
+| <a id="40099"></a> 40099 | 16 | No | Invalid nested transaction count found in the transaction log. |
+| <a id="40101"></a> 40101 | 16 | No | The partition does not have persisted queues enabled. |
+| <a id="40102"></a> 40102 | 16 | No | The partition can not have persisted queues modified in this state. |
+| <a id="40103"></a> 40103 | 16 | No | The partition can not be changed inside a persisted object. |
+| <a id="40104"></a> 40104 | 16 | No | Only sysadmin can execute this stored procedure '%.\*ls'. |
+| <a id="40105"></a> 40105 | 16 | No | The local partition map for database %.\*ls is starting up in reduced functionality mode because of log full. Pending partition deletes will not be processed until the log is truncated. |
+| <a id="40106"></a> 40106 | 16 | No | The schema scope set in the session is not the current schema scope for the current partition. Please rerun your query. |
+| <a id="40108"></a> 40108 | 16 | No | The filtered replica is not a subset of the primary replica. This is only possible for table groups without a partition key. |
+| <a id="40109"></a> 40109 | 16 | No | Number of parameters specified for procedure or function %.\*ls is incorrect. |
+| <a id="40110"></a> 40110 | 16 | Yes | Cannot scope database %s for sp_cloud_scope_database spec proc because it is already set up as a partition database. |
+| <a id="40111"></a> 40111 | 16 | Yes | Unable to delete partition DB id %d. |
+| <a id="40126"></a> 40126 | 16 | Yes | The partition database was not found during pending schema scope cleanup, deleting partition metadata only (%d, %s). |
+| <a id="40127"></a> 40127 | 16 | Yes | %S_MSG database '%.\*ls' link up with the %S_MSG database %d encountered the error: %S_MSG. |
+| <a id="40128"></a> 40128 | 16 | Yes | Cannot pair database '%.\*ls' with fabric because it is not a partition host. |
+| <a id="40129"></a> 40129 | 16 | Yes | %S_MSG database link up with the %S_MSG database '%.\*ls' encountered the error: %ls. |
+| <a id="40130"></a> 40130 | 16 | No | Replication quorum parameter is %d. It should be \>= 1 and \<= 32. |
+| <a id="40131"></a> 40131 | 16 | No | Partition key type '%.\*ls' is not supported. Only BIGINT, UNIQUEIDENTIFIER, and VARBINARY(n) (0\<n\<=512) datatypes are supported currently. |
+| <a id="40132"></a> 40132 | 16 | No | Before dropping a table group, you have to delete all the partitions. |
+| <a id="40133"></a> 40133 | 15 | No | This operation is not supported in this version of SQL Server. |
+| <a id="40134"></a> 40134 | 16 | No | get_new_rowversion() can only be used in an active transaction. |
+| <a id="40135"></a> 40135 | 15 | No | This system metadata view is not supported. |
+| <a id="40136"></a> 40136 | 15 | No | Could not disable versioning because the database is not in single user mode. |
+| <a id="40137"></a> 40137 | 15 | No | Could not refresh options for all scoped databases. |
+| <a id="40138"></a> 40138 | 16 | No | Query references entities from multiple partitions. |
+| <a id="40139"></a> 40139 | 16 | No | The data node does not host a replica of the requested partition. |
+| <a id="40140"></a> 40140 | 16 | No | Set partition failed since a different partition already was set in the current transaction. Cross partition operations within a node are not reliable or supported. |
+| <a id="40141"></a> 40141 | 16 | No | Partition has to be set using sp_set_partition before executing this query. |
+| <a id="40142"></a> 40142 | 16 | No | Accessing a different partition in the same transaction is not allowed. |
+| <a id="40143"></a> 40143 | 16 | No | The replica that the data node hosts for the requested partition is not primary. |
+| <a id="40144"></a> 40144 | 16 | No | Cannot find the object "%.\*ls" because it does not exist or you do not have permissions. |
+| <a id="40145"></a> 40145 | 16 | No | Database is not found. |
+| <a id="40146"></a> 40146 | 16 | No | Table group object is not found. |
+| <a id="40147"></a> 40147 | 16 | No | Stored procedure '%.\*ls' is only for CloudDB. |
+| <a id="40148"></a> 40148 | 16 | No | The existing persisted queue snapshot CSN (%d, %I64d) at %S_LSN is greater than the requested snapshot CSN (%d, %I64d) at %S_LSN. |
+| <a id="40149"></a> 40149 | 16 | No | The database does not host any partitions. |
+| <a id="40150"></a> 40150 | 16 | No | Downgrading the severity of error %d, severity %d, state %d because it would cause the server to be shutdown on a non-critical error. |
+| <a id="40151"></a> 40151 | 16 | No | Partition is in transactionally inconsistent state. |
+| <a id="40152"></a> 40152 | 16 | No | Partition delete expects no context transaction. |
+| <a id="40153"></a> 40153 | 16 | No | The current database has been shutdown. The current database has been switched to master. |
+| <a id="40154"></a> 40154 | 16 | No | Cannot use sp_cloud_add_partition or sp_cloud_delete_partition within a transaction when Partition DB are enabled. |
+| <a id="40155"></a> 40155 | 16 | Yes | Invalid arguments provided to sp_cloud_add_partition spec proc (%s). |
+| <a id="40156"></a> 40156 | 16 | Yes | Drop is not allowed on the %S_MSG database '%.\*ls' as it contains partitions. Drop the partition before the operation. |
+| <a id="40157"></a> 40157 | 16 | No | Too many secondaries. At most 32 are currently supported. |
+| <a id="40158"></a> 40158 | 16 | No | Could not change database collation for database id %d. |
+| <a id="40159"></a> 40159 | 16 | No | Database scoping cannot be run inside a transaction. |
+| <a id="40160"></a> 40160 | 16 | No | Heartbeat message version mismatch. Actual version is %d and the expected is %d. |
+| <a id="40161"></a> 40161 | 16 | No | Invalid partition type. Only 1 or 2 is supported. |
+| <a id="40162"></a> 40162 | 16 | No | The replica that the data node hosts for the requested partition is not transactionally consistent. |
+| <a id="40163"></a> 40163 | 16 | No | Become nothing expects no context transaction. |
+| <a id="40164"></a> 40164 | 16 | No | Idempotent flush expects no context transaction. |
+| <a id="40165"></a> 40165 | 16 | No | Prepare for full commit expects no context transaction. |
+| <a id="40166"></a> 40166 | 16 | No | A CloudDB reconfiguration is going on and all new user transactions are aborted. |
+| <a id="40167"></a> 40167 | 21 | Yes | A paired CloudDB fabric node failed and database %d must be shutdown. |
+| <a id="40168"></a> 40168 | 16 | No | SILO_TO_PDB: Partition copy is disabled in M1. |
+| <a id="40169"></a> 40169 | 16 | No | Waiting for database copy sync with %s.%s has failed. Please make sure the database is in the CATCH_UP state and try again later. |
+| <a id="40170"></a> 40170 | 16 | No | Catchup of secondary at %s:%s:%s:%d has failed. |
+| <a id="40171"></a> 40171 | 16 | No | Table group name (single part name) should not be longer than nvarchar(64). |
+| <a id="40172"></a> 40172 | 16 | No | The partition is not in a state that allows deletion. |
+| <a id="40173"></a> 40173 | 16 | No | This requested operation can not performed as this partition is in delete process. |
+| <a id="40174"></a> 40174 | 16 | No | The partition is in transition and transactions are being terminated. |
+| <a id="40175"></a> 40175 | 16 | No | Add a secondary with wait can not be used in a transaction. |
+| <a id="40176"></a> 40176 | 16 | No | Rename a partition can not be used in a transaction. |
+| <a id="40177"></a> 40177 | 16 | No | The new table group does not match the existing table group for the renaming partition. |
+| <a id="40178"></a> 40178 | 16 | No | A partition with same name already exists. |
+| <a id="40179"></a> 40179 | 16 | Yes | Fabric-database ('%.\*ls') cannot be paired, the server is not ready to pair. |
+| <a id="40180"></a> 40180 | 16 | Yes | Fabric-database ('%.\*ls') cannot be paired, the database is already paired. |
+| <a id="40181"></a> 40181 | 16 | Yes | Fabric-database ('%.\*ls') cannot be paired, the supplied mutex ('%.\*ls') could not be opened. Error code: %d |
+| <a id="40182"></a> 40182 | 16 | Yes | The schema scope %ld being created is not empty. |
+| <a id="40183"></a> 40183 | 16 | Yes | Could not create database side pairing mutex for database ('%.\*ls'). Error code: %d |
+| <a id="40184"></a> 40184 | 16 | No | Login failed. A system operation is in progress, and the database is not accepting user connections. |
+| <a id="40185"></a> 40185 | 16 | No | Secondary failure report expects no context transaction. |
+| <a id="40186"></a> 40186 | 16 | No | The data node does not host a replica of the requested partition with the requested version. |
+| <a id="40187"></a> 40187 | 16 | No | The metadata record for the partition does not exist. |
+| <a id="40188"></a> 40188 | 16 | No | Failed to update database "%.\*ls" because it is switched to read-only to enforce disaster recovery RPO. |
+| <a id="40189"></a> 40189 | 16 | No | The resource quota for the current database has been exceeded and this request has been aborted. Please rerun your request in the next quota window. %s |
+| <a id="40190"></a> 40190 | 16 | No | A context transaction is required. |
+| <a id="40191"></a> 40191 | 16 | Yes | Cannot create partition DB (%s). |
+| <a id="40192"></a> 40192 | 16 | No | Catchup of secondary at %s:%s:%s:%d has been cancelled. |
+| <a id="40193"></a> 40193 | 16 | No | The maximum allowed number of database is already paired. |
+| <a id="40194"></a> 40194 | 16 | No | Table %s has a partition key already. Explicitly specifying a new partition key is not allowed. Please use "Alter table". |
+| <a id="40195"></a> 40195 | 16 | No | %ls FOR SID command is not supported in this version of SQL Server. |
+| <a id="40196"></a> 40196 | 16 | No | A varbinary can not be longer than max length specified. |
+| <a id="40197"></a> 40197 | 16 | No | The service has encountered an error processing your request. Please try again. Error code %d. |
+| <a id="40198"></a> 40198 | 16 | No | Only a primary replica can be configured as a forwarder. |
+| <a id="40199"></a> 40199 | 16 | No | There should be no context transaction when entering the forwarder pending state. |
+| <a id="40201"></a> 40201 | 16 | No | Destination server name is too long. |
+| <a id="40202"></a> 40202 | 16 | No | Corrupted composite message. |
+| <a id="40203"></a> 40203 | 16 | No | Could not register AsyncTransport endpoint. |
+| <a id="40204"></a> 40204 | 16 | No | Dispatch sequence number maintenance failure |
+| <a id="40205"></a> 40205 | 16 | No | Maximum transport queue size reached. |
+| <a id="40206"></a> 40206 | 16 | No | Heartbeat lease time is less than the heartbeat worker interval. |
+| <a id="40207"></a> 40207 | 16 | No | Async transport test failed. |
+| <a id="40208"></a> 40208 | 16 | No | Corrupted received message format. |
+| <a id="40209"></a> 40209 | 17 | No | Duplicate destination id. |
+| <a id="40210"></a> 40210 | 16 | No | Cluster name has not been set. |
+| <a id="40301"></a> 40301 | 16 | No | Invalid lock mode or resource received in lock request. |
+| <a id="40302"></a> 40302 | 16 | No | Invalid identity value. |
+| <a id="40303"></a> 40303 | 16 | No | Enter idempotent sequence. |
+| <a id="40304"></a> 40304 | 16 | No | Target object %ld is not found. |
+| <a id="40305"></a> 40305 | 16 | No | The current object is not a relation. |
+| <a id="40306"></a> 40306 | 16 | No | Cannot create an index %ld on object %ld. |
+| <a id="40307"></a> 40307 | 16 | No | Cannot find index %ld on object %ld. |
+| <a id="40308"></a> 40308 | 16 | No | Metadata replication protocol error. |
+| <a id="40309"></a> 40309 | 16 | No | Partition %ld is not found |
+| <a id="40310"></a> 40310 | 16 | No | Converting a clustered index into a heap is not supported. |
+| <a id="40311"></a> 40311 | 16 | No | Switching out partitions not supported. |
+| <a id="40312"></a> 40312 | 16 | No | Inconsistent index build state. |
+| <a id="40313"></a> 40313 | 16 | No | Not all rowsets could be deleted. |
+| <a id="40314"></a> 40314 | 16 | No | Identity column not found on object %ld. |
+| <a id="40401"></a> 40401 | 16 | No | Requires a Microsoft Entra ID login for managing T-SQL streaming jobs. |
+| <a id="40402"></a> 40402 | 16 | No | Error creating the streaming job request with service auth issue. |
+| <a id="40403"></a> 40403 | 16 | No | Error creating the streaming job request. |
+| <a id="40404"></a> 40404 | 16 | No | Error sending the streaming job request. |
+| <a id="40405"></a> 40405 | 16 | No | T-SQL streaming is not supported. |
+| <a id="40406"></a> 40406 | 16 | No | The sysadmin role is required for operations on T-SQL streaming jobs. |
+| <a id="40407"></a> 40407 | 16 | No | The database scoped credential '%.\*ls' has a secret with more than 200 characters. Long secret value is not supported in Synapse T-SQL Streaming. |
+| <a id="40408"></a> 40408 | 16 | No | '%.\*ls' is not a supported Azure region for Synapse T-SQL streaming. |
+| <a id="40409"></a> 40409 | 16 | No | Request to update streaming job '%s' failed. The query statement cannot be updated when the job is running. |
+| <a id="40410"></a> 40410 | 16 | No | Request to update streaming job '%s' failed. Query statement update and online scaling cannot be done at the same time or both not set. |
+| <a id="40411"></a> 40411 | 16 | No | Request to scale streaming job '%s' failed. The job cannot be scaled when not running. |
+| <a id="40412"></a> 40412 | 16 | No | Request to stop streaming job '%s' failed. The job is in Created state and not running. |
+| <a id="40501"></a> 40501 | 20 | No | The service is currently busy. Retry the request after 10 seconds. Incident ID: %ls. Code: %d |
+| <a id="40502"></a> 40502 | 16 | No | Duplicate group id settings specified. |
+| <a id="40503"></a> 40503 | 16 | No | Database field %ls contains invalid value '%.\*ls'. Expected data type %ls. |
+| <a id="40504"></a> 40504 | 16 | No | Switching Databases is not supported. Use a new connection to connect to a different Database. |
+| <a id="40505"></a> 40505 | 16 | No | Incorrect user credentials. |
+| <a id="40506"></a> 40506 | 16 | No | Specified SID is invalid for this version of SQL Server. |
+| <a id="40507"></a> 40507 | 16 | No | '%.\*ls' cannot be invoked with parameters in this version of SQL Server. |
+| <a id="40508"></a> 40508 | 16 | No | USE statement is not supported to switch between databases. Use a new connection to connect to a different database. |
+| <a id="40509"></a> 40509 | 16 | No | Upgrade of SAWA v1 database fails. Check the metadata of the database before re-running the upgrade. |
+| <a id="40510"></a> 40510 | 16 | No | Statement '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40511"></a> 40511 | 16 | No | Built-in function '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40512"></a> 40512 | 16 | No | Deprecated feature '%ls' is not supported in this version of SQL Server. |
+| <a id="40513"></a> 40513 | 16 | No | Server variable '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40514"></a> 40514 | 16 | No | '%ls' is not supported in this version of SQL Server. |
+| <a id="40515"></a> 40515 | 16 | No | Reference to database and/or server name in '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40516"></a> 40516 | 16 | No | Global temp objects are not supported in this version of SQL Server. |
+| <a id="40517"></a> 40517 | 16 | No | Keyword or statement option '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40518"></a> 40518 | 16 | No | DBCC command '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40519"></a> 40519 | 16 | No | Invalid value '%.\*ls' of login field in gateway magic syntax. |
+| <a id="40520"></a> 40520 | 16 | No | Securable class '%S_MSG' not supported in this version of SQL Server. |
+| <a id="40521"></a> 40521 | 16 | No | Securable class '%S_MSG' not supported in the server scope in this version of SQL Server. |
+| <a id="40522"></a> 40522 | 16 | No | Database principal '%.\*ls' type is not supported in this version of SQL Server. |
+| <a id="40523"></a> 40523 | 16 | No | Implicit user '%.\*ls' creation is not supported in this version of SQL Server. Explicitly create the user before using it. |
+| <a id="40524"></a> 40524 | 16 | No | Data type '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40525"></a> 40525 | 16 | No | 'WITH %ls' is not supported in this version of SQL Server. |
+| <a id="40526"></a> 40526 | 16 | No | '%.\*ls' rowset provider not supported in this version of SQL Server. |
+| <a id="40527"></a> 40527 | 16 | No | Linked servers are not supported in this version of SQL Server. |
+| <a id="40528"></a> 40528 | 16 | No | Users cannot be mapped to Windows logins in this version of SQL Server. |
+| <a id="40529"></a> 40529 | 16 | No | Built-in function '%.\*ls' in impersonation context is not supported in this version of SQL Server. |
+| <a id="40530"></a> 40530 | 16 | No | The %.\*ls statement must be the only statement in the batch. |
+| <a id="40531"></a> 40531 | 11 | No | Server name cannot be determined. It must appear as the first segment of the server's dns name (servername.%.\*ls). Some libraries do not send the server name, in which case the server name must be included as part of the user name (username@servername). In addition, if both formats are used, the server names must match. |
+| <a id="40532"></a> 40532 | 11 | No | Cannot open server "%.\*ls" requested by the login. The login failed. |
+| <a id="40533"></a> 40533 | 16 | No | Server '%.\*ls' already exists. |
+| <a id="40534"></a> 40534 | 16 | No | A valid SID is already associated with the database owner. |
+| <a id="40535"></a> 40535 | 16 | No | Properties for schema scope '%.\*ls' already exist. |
+| <a id="40536"></a> 40536 | 16 | No | '%ls' is not supported in this service tier of the database. See Books Online for more details on feature support in different service tiers of Azure SQL Database. |
+| <a id="40537"></a> 40537 | 16 | No | User '%.\*ls' not found in the database. |
+| <a id="40538"></a> 40538 | 16 | No | A valid URL beginning with 'https://' is required as value for any filepath specified. |
+| <a id="40539"></a> 40539 | 16 | No | Azure Storage credential '%.\*ls' was not found. |
+| <a id="40540"></a> 40540 | 16 | No | Transaction was aborted as database is moved to read-only mode. This is a temporary situation and please retry the operation. |
+| <a id="40541"></a> 40541 | 16 | No | Procedure cannot be called from inside a partition. |
+| <a id="40542"></a> 40542 | 16 | No | Incorrect number of parameters specified for procedure. |
+| <a id="40543"></a> 40543 | 16 | No | Invalid %S_MSG name specified. Length should be between 1 and %d. |
+| <a id="40544"></a> 40544 | 20 | No | The database '%.\*ls' has reached its size quota. Partition or delete data, drop indexes, or consult the documentation for possible resolutions. |
+| <a id="40545"></a> 40545 | 20 | No | The service is experiencing a problem that is currently under investigation. Incident ID: %ls. Code: %d |
+| <a id="40546"></a> 40546 | 16 | No | Cannot create UCS task pool |
+| <a id="40548"></a> 40548 | 16 | No | Granting CONNECT permission to the guest user in database '%.\*ls' is not permitted. |
+| <a id="40549"></a> 40549 | 16 | No | Session is terminated because you have a long running transaction. Try shortening your transaction. |
+| <a id="40550"></a> 40550 | 16 | No | The session has been terminated because it has acquired too many locks. Try reading or modifying fewer rows in a single transaction. |
+| <a id="40551"></a> 40551 | 16 | No | The session has been terminated because of excessive tempdb usage. Try modifying your query to reduce tempdb space usage. |
+| <a id="40552"></a> 40552 | 16 | No | The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. |
+| <a id="40553"></a> 40553 | 16 | No | The session has been terminated because of excessive memory usage. Try modifying your query to process fewer rows. |
+| <a id="40554"></a> 40554 | 10 | No | Exiting because of XEvent %ls. |
+| <a id="40555"></a> 40555 | 16 | No | '%ls' is not supported for this database. See Books Online for more details on feature support in different service tiers of Azure SQL Database. |
+| <a id="40558"></a> 40558 | 16 | No | Error - cannot perform checkpoint on a partition database before loading partition information. |
+| <a id="40559"></a> 40559 | 16 | No | File based statement options are not supported in this version of SQL Server. |
+| <a id="40560"></a> 40560 | 16 | No | Specified invalid LSN: '%.\*ls' for database '%.\*ls' while publishing external actor LSN progress. |
+| <a id="40561"></a> 40561 | 16 | No | Database copy failed. Either the source or target database does not exist. |
+| <a id="40562"></a> 40562 | 16 | No | Database copy failed. The source database has been dropped. |
+| <a id="40563"></a> 40563 | 16 | No | Database copy failed. The target database has been dropped. |
+| <a id="40564"></a> 40564 | 16 | No | Database copy failed. Database copy failed due to an internal error. Please drop target database and try again.\</value\> |
+| <a id="40565"></a> 40565 | 16 | No | Database copy failed. No more than 1 concurrent database copy from the same source is allowed. Please drop target database and try again later. |
+| <a id="40566"></a> 40566 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again. |
+| <a id="40567"></a> 40567 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again. |
+| <a id="40568"></a> 40568 | 16 | No | Database copy failed. Either the source or the target database has become unavailable. Please drop target database and try again. |
+| <a id="40569"></a> 40569 | 16 | No | Database copy failed. Target database has become unavailable. Please drop target database and try again. |
+| <a id="40570"></a> 40570 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again later. |
+| <a id="40571"></a> 40571 | 16 | No | Database copy failed due to an internal error. Please drop target database and try again later. |
+| <a id="40572"></a> 40572 | 16 | No | Cannot obtain primary partition lock for CloudDB auto partition upgrade. |
+| <a id="40573"></a> 40573 | 16 | No | Cannot upgrade CloudDB auto partitions in database '%.\*ls' because the physical database is read only. |
+| <a id="40574"></a> 40574 | 16 | No | Permissions for system stored procedures, server scoped catalog views, and extended stored procedures cannot be changed in this version of SQL Server. |
+| <a id="40576"></a> 40576 | 16 | No | Table DDL on non-temporary tables is not supported in a filtered connection. |
+| <a id="40578"></a> 40578 | 16 | No | Statement '%.\*ls' is not supported in a filtered connection. |
+| <a id="40581"></a> 40581 | 16 | No | Logically filtered secondaries are only supported if the secondary is a forwarder. |
+| <a id="40584"></a> 40584 | 16 | No | Value '%.\*ls' for option '%.\*ls' is not supported in this version of SQL Server. |
+| <a id="40585"></a> 40585 | 16 | No | Can not perform replica operation because this node is not the forwarder for this partition. |
+| <a id="40586"></a> 40586 | 16 | No | Replicas with deferred commit enabled cannot be a member of a quorum. |
+| <a id="40587"></a> 40587 | 16 | No | Deferred commit is only supported with forwarder replicas. |
+| <a id="40588"></a> 40588 | 16 | No | Cannot create partition worker pool |
+| <a id="40589"></a> 40589 | 16 | No | Replicas that are not enabled for deferred commit cannot specify RPO. |
+| <a id="40590"></a> 40590 | 16 | No | The Gpm is in rebuild and cannot be accessed as it is not yet consistent. |
+| <a id="40591"></a> 40591 | 16 | No | Extended event configuration could not be initialized. The error is %ls. |
+| <a id="40592"></a> 40592 | 16 | No | Extended event session '%ls' could not be created or altered. XE Error %d.%d state:%d. |
+| <a id="40593"></a> 40593 | 16 | No | Extended event session '%ls' returned error '%ls'. |
+| <a id="40594"></a> 40594 | 16 | No | Extended event session '%ls' has been started. |
+| <a id="40595"></a> 40595 | 16 | No | Extended event session '%ls' has been altered. |
+| <a id="40596"></a> 40596 | 16 | No | Extended event session '%ls' has been stopped. |
+| <a id="40597"></a> 40597 | 16 | No | Keyword or statement option '%.\*ls' is not supported for External Logins. |
+| <a id="40598"></a> 40598 | 16 | No | '%s' clause is not supported in this version of Synapse SQL. |
+| <a id="40599"></a> 40599 | 16 | No | This type of KILL is not supported in Azure SQL Database; Only 'KILL session ID \[WITH STATUSONLY\]' and 'KILL UOW' are supported. |
+| <a id="40601"></a> 40601 | 16 | No | Server Admin user already exists. |
+| <a id="40602"></a> 40602 | 16 | No | Could not create login. Please try again later. |
+| <a id="40603"></a> 40603 | 16 | No | Cannot execute procedure because current user is not Gateway. |
+| <a id="40604"></a> 40604 | 16 | No | Could not %.\*ls because it would exceed the quota of the server. |
+| <a id="40605"></a> 40605 | 16 | No | There is no route from the source cluster '%ls' to the target cluster '%ls'. |
+| <a id="40606"></a> 40606 | 16 | No | Databases cannot be attached in this version of SQL Server. |
+| <a id="40607"></a> 40607 | 16 | No | Windows logins are not supported in this version of SQL Server. |
+| <a id="40608"></a> 40608 | 10 | No | This session has been assigned a tracing ID of '%.\*ls'. Provide this tracing ID to customer support when you need assistance. |
+| <a id="40609"></a> 40609 | 16 | No | '%.\*ls' is not a valid IPv4 address. |
+| <a id="40610"></a> 40610 | 16 | No | The IP address that starts with '%.\*ls' is too long. Maximum length is %d. |
+| <a id="40611"></a> 40611 | 16 | No | Azure SQL Database supports a maximum of 256 firewall rules. |
+| <a id="40612"></a> 40612 | 16 | No | Spec proc was executed against a silo that cannot be upgraded to include firewall objects. |
+| <a id="40613"></a> 40613 | 17 | No | Database '%.\*ls' on server '%.\*ls' is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID of '%.\*ls'. |
+| <a id="40614"></a> 40614 | 16 | No | Start IP address of firewall rule cannot exceed End IP address. |
+| <a id="40615"></a> 40615 | 16 | No | Cannot open server '%.\*ls' requested by the login. Client with IP address '%.\*ls' is not allowed to access the server. To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range. It may take up to five minutes for this change to take effect. |
+| <a id="40616"></a> 40616 | 16 | No | '%.\*ls' is not a valid login name in this version of SQL Server. |
+| <a id="40617"></a> 40617 | 16 | No | The firewall rule name that starts with '%.\*ls' is too long. Maximum length is %d. |
+| <a id="40618"></a> 40618 | 16 | No | The firewall rule name cannot be empty. |
+| <a id="40619"></a> 40619 | 16 | No | The edition '%.\*ls' does not support the database data max size '%.\*ls'. |
+| <a id="40620"></a> 40620 | 16 | No | The login failed for user "%.\*ls". The password change failed. Password change during login is not supported in this version of SQL Server. |
+| <a id="40621"></a> 40621 | 16 | No | metric type |
+| <a id="40622"></a> 40622 | 16 | No | metric data |
+| <a id="40623"></a> 40623 | 20 | No | Reauthentication failed for login "%.\*ls". Within the past reauthentication interval, the login has become invalid due to a password change, a dropped login, or other cause. Please retry login. |
+| <a id="40624"></a> 40624 | 16 | No | Operation is not allowed because server '%.\*ls' is disabled. |
+| <a id="40625"></a> 40625 | 17 | No | Provisioning (creating, altering, or dropping) Azure SQL Database servers and databases is currently disabled. This most frequently occurs for brief periods during system maintenance. |
+| <a id="40626"></a> 40626 | 20 | No | The ALTER DATABASE command is in process. Please wait at least five minutes before logging into database '%.\*ls', in order for the command to complete. Some system catalogs may be out of date until the command completes. If you have altered the database name, use the NEW database name for future activity. |
+| <a id="40627"></a> 40627 | 20 | No | Operation on server '%.\*ls' and database '%.\*ls' is in progress. Please wait a few minutes before trying again. |
+| <a id="40628"></a> 40628 | 16 | No | Failed to update database '%.\*ls' because the database is read-only. Please contact your Azure service owner. There may be billing related issues with your Azure account. |
+| <a id="40629"></a> 40629 | 16 | No | An edition could not be determined from maxsize '%.\*ls'. Specify a valid maxsize value. |
+| <a id="40630"></a> 40630 | 16 | No | Password validation failed. The password does not meet policy requirements because it is too short. |
+| <a id="40631"></a> 40631 | 16 | No | The password that you specified is too long. The password should have no more than %d characters. |
+| <a id="40632"></a> 40632 | 16 | No | Password validation failed. The password does not meet policy requirements because it is not complex enough. |
+| <a id="40633"></a> 40633 | 16 | No | '%.\*ls' is not a valid database edition in this version of SQL Server. |
+| <a id="40634"></a> 40634 | 16 | No | This stored procedure can only be executed in the master database. |
+| <a id="40635"></a> 40635 | 16 | No | Client with IP address "%.\*ls" is temporarily blocked. |
+| <a id="40636"></a> 40636 | 16 | No | Cannot use reserved database name '%.\*ls' in this operation. |
+| <a id="40637"></a> 40637 | 17 | No | Database copy is currently disabled. |
+| <a id="40638"></a> 40638 | 16 | No | Invalid subscription id '%.\*ls'. Subscription does not exist. |
+| <a id="40639"></a> 40639 | 16 | No | Request does not conform to schema: %.\*ls. |
+| <a id="40640"></a> 40640 | 20 | No | The server encountered an unexpected exception. |
+| <a id="40641"></a> 40641 | 16 | No | Location '%.\*ls' cannot be found. |
+| <a id="40642"></a> 40642 | 17 | No | The server is currently too busy. Please try again later. |
+| <a id="40643"></a> 40643 | 16 | No | The specified x-ms-version header value is invalid. |
+| <a id="40644"></a> 40644 | 14 | No | Failed to authorize access to the specified subscription. |
+| <a id="40645"></a> 40645 | 16 | No | Servername "%.\*ls" cannot be empty or null. It can only be made up of lowercase letters 'a'-'z', the numbers 0-9 and the hyphen. The hyphen may not lead or trail in the name. |
+| <a id="40646"></a> 40646 | 16 | No | Subscription ID cannot be empty. |
+| <a id="40647"></a> 40647 | 16 | No | Subscription '%.\*ls' does not have the server '%.\*ls'. |
+| <a id="40648"></a> 40648 | 17 | No | Too many requests have been performed. Please retry later. |
+| <a id="40649"></a> 40649 | 16 | No | Invalid content-type is specified. Only application/xml is supported. |
+| <a id="40650"></a> 40650 | 16 | No | Subscription '%.\*ls' is not ready for the operation because another operation is currently in progress. Please wait a few minutes and then try the operation again. |
+| <a id="40651"></a> 40651 | 16 | No | Failed to create server because the subscription '%.\*ls' is disabled. |
+| <a id="40652"></a> 40652 | 16 | No | Cannot move or create server. Subscription '%.\*ls' will exceed server quota. |
+| <a id="40653"></a> 40653 | 16 | No | Could not find database '%.\*ls' at time '%.\*ls' that can be restored. |
+| <a id="40654"></a> 40654 | 16 | No | Specified subregion '%.\*ls' is invalid. |
+| <a id="40655"></a> 40655 | 16 | No | Database 'master' cannot be restored. |
+| <a id="40656"></a> 40656 | 16 | No | Quota for maximum number of concurrent restores has been exceeded. |
+| <a id="40657"></a> 40657 | 16 | No | Restore is not enabled on the server. |
+| <a id="40658"></a> 40658 | 16 | No | Quota for number of restores has been exceeded. |
+| <a id="40659"></a> 40659 | 16 | No | Could not successfully restore database because the maximum duration for processing a restore has elapsed. |
+| <a id="40660"></a> 40660 | 16 | No | Could not successfully restore database. This request has been assigned a tracing ID of '%.\*ls'. Provide this tracing ID to customer support when you need assistance. |
+| <a id="40661"></a> 40661 | 16 | No | Restore has been cancelled by a system administrator. |
+| <a id="40662"></a> 40662 | 16 | No | An internal error was encountered when processing the restore request. This request has been assigned a tracing ID of '%.\*ls'. Provide this tracing ID to customer support when you need assistance. |
+| <a id="40663"></a> 40663 | 16 | No | Database '%.\*ls' is currently being restored and cannot be dropped. Please wait for restore to complete. |
+| <a id="40664"></a> 40664 | 16 | No | Database 'master' cannot be copied. |
+| <a id="40665"></a> 40665 | 16 | No | '%.\*ls' is not a supported collation. |
+| <a id="40666"></a> 40666 | 16 | No | '%.\*ls' is a unicode-only collation and cannot be a default collation for a database. |
+| <a id="40667"></a> 40667 | 15 | No | Specifying a LOGIN is not allowed in a federation member. |
+| <a id="40668"></a> 40668 | 16 | No | '%.\*ls' is not a valid user name or you do not have permission. |
+| <a id="40669"></a> 40669 | 17 | No | Location '%.\*ls' is not accepting creation of new Azure SQL Database servers at this time. |
+| <a id="40670"></a> 40670 | 16 | No | The http header 'ocp-resourceprovider-registered-uri' is missing from the request or is invalid. To continue, provide a valid value for the header. |
+| <a id="40671"></a> 40671 | 17 | No | Unable to '%.\*ls' '%.\*ls' on server '%.\*ls'. Please retry the connection later. |
+| <a id="40672"></a> 40672 | 16 | No | The service objective assignment for a database cannot be changed more than once per %d hour(s). Please retry the operation %d hour(s) after the last service objective assignment completed for this database. |
+| <a id="40673"></a> 40673 | 16 | No | The service objective assignment for the database has failed. Please contact Microsoft customer support and provide the server name, database name and activity ID. |
+| <a id="40674"></a> 40674 | 16 | No | Service objective creation or assignment is not permitted for this subscription. |
+| <a id="40675"></a> 40675 | 16 | No | The service is currently too busy. Please try again later. |
+| <a id="40676"></a> 40676 | 16 | No | System databases cannot be %ls. |
+| <a id="40677"></a> 40677 | 16 | No | The operation for the request uri '%.\*ls' was not found. To continue, please provide a valid request uri. |
+| <a id="40678"></a> 40678 | 16 | No | Invalid value for header '%.\*ls'. The header must contain a single valid GUID. |
+| <a id="40679"></a> 40679 | 16 | No | The operation cannot be performed since the database '%ls' is not in a replication relationship. |
+| <a id="40680"></a> 40680 | 16 | No | The operation cannot be performed since the database '%ls' is in a replication relationship. |
+| <a id="40681"></a> 40681 | 16 | No | The operation cannot be performed since the database '%ls' is a replication target. |
+| <a id="40682"></a> 40682 | 16 | No | Failed to update database '%.\*ls' because the database is a replication target. |
+| <a id="40683"></a> 40683 | 16 | No | The operation cannot be performed since the database '%ls' is not a replication target. |
+| <a id="40684"></a> 40684 | 16 | No | A seeding operation is already in progress for database '%ls'. |
+| <a id="40685"></a> 40685 | 16 | No | A terminate geo relationship operation is already in progress for database '%ls'. Please wait for this operation to finish. |
+| <a id="40686"></a> 40686 | 16 | No | The operation is currently not supported. |
+| <a id="40687"></a> 40687 | 16 | No | The operation cannot be performed on the database '%.\*ls' in its current state. |
+| <a id="40688"></a> 40688 | 16 | No | The databases '%ls' in server '%ls' and '%ls' in server '%ls' are already in a replication relation. |
+| <a id="40689"></a> 40689 | 16 | No | Replication limit reached. The database '%ls' cannot have more than %d replication relationships. |
+| <a id="40690"></a> 40690 | 16 | No | The operation cannot be performed since the replication source and target databases have different names. The source and target databases must have the same name. |
+| <a id="40691"></a> 40691 | 16 | No | Replication target cannot be created in the same server as source. |
+| <a id="40692"></a> 40692 | 16 | No | The alter database '%ls' failed to initiate because there are operations pending on the database. After the pending operations are complete, try again. |
+| <a id="40693"></a> 40693 | 16 | No | The current operation cannot be initiated while a replication operation is in progress. You can rename the database only after the replication operation has stopped. |
+| <a id="40694"></a> 40694 | 16 | No | The seeding operation cannot be initiated on a replication target database. |
+| <a id="40695"></a> 40695 | 16 | No | The operation cannot be performed since the database is currently a Federation root or member database. |
+| <a id="40696"></a> 40696 | 16 | No | sp_wait_for_database_copy_sync failed because the current database is not the primary database involved in a replication relationship with the specified target server '%s' and database '%s'. |
+| <a id="40697"></a> 40697 | 16 | No | Login failed for user '%.\*ls'. |
+| <a id="40698"></a> 40698 | 16 | No | '%.\*ls' cannot be performed on a free database. |
+| <a id="40699"></a> 40699 | 16 | No | You cannot create a user with password in this version of SQL Server |
+| <a id="40700"></a> 40700 | 16 | No | Hardware generation '%.\*ls' is currently unavailable in Azure SQL Database. Please create a SQL Database support request to resolve. |
+| <a id="40701"></a> 40701 | 16 | No | XML format used for specifying rules is invalid. %.\*ls. |
+| <a id="40702"></a> 40702 | 16 | No | Failed to parse XML rules. |
+| <a id="40703"></a> 40703 | 16 | No | Invalid attribute name '%.\*ls' in %.\*ls. |
+| <a id="40704"></a> 40704 | 16 | No | Invalid element name '%.\*ls' in %.\*ls. |
+| <a id="40705"></a> 40705 | 16 | No | Invalid Feature type '%.\*ls' in %.\*ls. |
+| <a id="40706"></a> 40706 | 16 | No | Feature name '%.\*ls' does not exist. |
+| <a id="40707"></a> 40707 | 16 | No | Invalid index value '%.\*ls' in %.\*ls. |
+| <a id="40708"></a> 40708 | 16 | No | Invalid param count '%.\*ls' in %.\*ls. |
+| <a id="40709"></a> 40709 | 16 | No | operator attribute is missing in %.\*ls. |
+| <a id="40711"></a> 40711 | 16 | No | Rule name '%.\*ls' does not exist. |
+| <a id="40712"></a> 40712 | 16 | No | Invalid usage of %.\*ls. |
+| <a id="40713"></a> 40713 | 16 | No | Invalid values supplied for \<parameter\> element in %.\*ls. |
+| <a id="40714"></a> 40714 | 16 | No | Out of memory. |
+| <a id="40715"></a> 40715 | 16 | No | Invalid operator type %.\*ls in %.\*ls. |
+| <a id="40716"></a> 40716 | 16 | No | Invalid input type %.\*ls in %.\*ls. |
+| <a id="40717"></a> 40717 | 16 | No | index attribute is missing in %.\*ls. |
+| <a id="40718"></a> 40718 | 16 | No | one of inputtype, isnull and format attributes is required in %.\*ls. |
+| <a id="40719"></a> 40719 | 16 | No | Failed to get %s lock on %s rules. |
+| <a id="40720"></a> 40720 | 16 | No | Rule name '%.\*ls' already exists. |
+| <a id="40721"></a> 40721 | 16 | No | Only one of inputtype, isnull and format attributes is required in %.\*ls. |
+| <a id="40722"></a> 40722 | 16 | No | Failed to clear proc cache. |
+| <a id="40723"></a> 40723 | 16 | No | Rule name cannot exceed more than %d characters. |
+| <a id="40724"></a> 40724 | 16 | No | Unexpected Operator attribute in %.\*ls. |
+| <a id="40801"></a> 40801 | 16 | No | Operation ALTER USER WITH LOGIN failed. User provided login does not match the login in the federation root database for the user provided username. |
+| <a id="40802"></a> 40802 | 16 | No | A service objective assignment on server '%.\*ls' and database '%.\*ls' is already in progress. Please wait until the service objective assignment state for the database is marked as 'Completed'. |
+| <a id="40803"></a> 40803 | 16 | No | The server '%.\*ls' has reached its quota of (%d) premium databases. |
+| <a id="40804"></a> 40804 | 16 | No | The specified service objective '%.\*ls' is invalid. |
+| <a id="40805"></a> 40805 | 16 | No | The service objective assignment for the database has failed. Please contact Microsoft customer support and provide the activity ID. |
+| <a id="40806"></a> 40806 | 16 | No | The request to retrieve subscription information has timed out. Please try again later. |
+| <a id="40807"></a> 40807 | 16 | No | Could not retrieve subscription information for subscription id: %.\*ls, after %d attempts. Please try again later. |
+| <a id="40808"></a> 40808 | 16 | No | The edition '%.\*ls' does not support the service objective '%.\*ls'. |
+| <a id="40809"></a> 40809 | 16 | No | No rows found in sys.dm_operation_status table for database '%.\*ls' and operation '%.\*ls'. |
+| <a id="40810"></a> 40810 | 16 | No | More than one row found in sys.dm_operation_status table for database '%.\*ls' and operation '%.\*ls'. |
+| <a id="40811"></a> 40811 | 16 | No | Operation '%.\*ls' for database '%.\*ls' cannot be cancelled as it has already completed. |
+| <a id="40812"></a> 40812 | 16 | No | Database '%.\*ls' cannot be dropped as create operation is in progress. The create operation will be cancelled. |
+| <a id="40813"></a> 40813 | 16 | No | Could not set database as writable because the database is Premium (suspended). |
+| <a id="40814"></a> 40814 | 16 | No | Could not change database edition to or from Premium for a Federation root. |
+| <a id="40815"></a> 40815 | 16 | No | Could not change database edition to or from Premium for a Federation member. |
+| <a id="40816"></a> 40816 | 16 | No | Could not change database edition to Premium for a database in a replication relationship. |
+| <a id="40817"></a> 40817 | 16 | No | Could not change database edition from Premium for a database in a replication relationship. |
+| <a id="40818"></a> 40818 | 16 | No | The replication operation on database '%ls' failed because there are alter operations pending on the database. Try again after the pending operations have completed. |
+| <a id="40820"></a> 40820 | 16 | No | The server has reached its quota of (%d) premium databases. |
+| <a id="40821"></a> 40821 | 16 | No | Federations are not supported on a Premium database. |
+| <a id="40822"></a> 40822 | 16 | No | This feature is not available for the selected database's edition (%ls). |
+| <a id="40823"></a> 40823 | 16 | No | Invalid proxy override option supplied. |
+| <a id="40824"></a> 40824 | 16 | No | ProxyOverrideSupport feature switch is not turned ON. |
+| <a id="40825"></a> 40825 | 16 | No | Unable to complete request now. Please try again later. |
+| <a id="40826"></a> 40826 | 16 | No | %ls is not available for %ls service tier. |
+| <a id="40827"></a> 40827 | 16 | No | The operation is not supported for your subscription offer type. |
+| <a id="40838"></a> 40838 | 16 | No | Replication relationship limit reached. The database '%ls' cannot have more than one non-readable secondary. |
+| <a id="40839"></a> 40839 | 16 | No | Connection to a non-readable secondary database is not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402429&clcid=0x409)' for more information. |
+| <a id="40840"></a> 40840 | 16 | No | Target region '%ls' is not a DR paired Azure region. See '[http://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402430&clcid=0x409)' for more information. |
+| <a id="40841"></a> 40841 | 16 | No | Friendly termination of a non-readable replication relationship is not supported. |
+| <a id="40842"></a> 40842 | 16 | No | Termination of the non-readable replication relationship for database '%ls' is currently not allowed. See '[http://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=402431&clcid=0x409)' for more information |
+| <a id="40843"></a> 40843 | 16 | No | Non-readable secondary is not supported for database copy. |
+| <a id="40844"></a> 40844 | 16 | No | Database '%ls' on Server '%ls' is a '%ls' edition database in an elastic pool and cannot have a replication relationship. |
+| <a id="40845"></a> 40845 | 16 | No | Server DNS Alias name '%.\*ls' may only contain a single '@' when used to denote a SQL Server alias. |
+| <a id="40846"></a> 40846 | 16 | No | DNS alias '%.\*ls' cannot be moved between DNS zones. Target server '%.\*ls' is in a DNS zone ('%.\*ls') that is different from the current server's '%.\*ls' DNS zone ('%.\*ls'). |
+| <a id="40847"></a> 40847 | 16 | No | Could not perform the operation because server would exceed the allowed Database Throughput Unit quota of %d. |
+| <a id="40848"></a> 40848 | 16 | No | The source database '%ls'.'%ls' cannot have higher performance level than the target database '%ls'.'%ls'. Upgrade the performance level on the target before upgrading source. |
+| <a id="40849"></a> 40849 | 16 | No | The target database '%ls'.'%ls' cannot have lower performance level than the source database '%ls'.'%ls'. Downgrade the performance level on the source before downgrading target. |
+| <a id="40850"></a> 40850 | 16 | No | Could not change database edition from '%ls' to Standard for database '%ls' in a replication relationship. |
+| <a id="40851"></a> 40851 | 16 | No | Could not change database edition from '%ls' to Basic for database '%ls' in a replication relationship. |
+| <a id="40852"></a> 40852 | 16 | No | Cannot open database '%.\*ls' on server '%.\*ls' requested by the login. Access to the database is only allowed using a security-enabled connection string. |
+| <a id="40853"></a> 40853 | 16 | No | A recovery request for a database that is currently in an elastic pool must include either a target elastic pool name or a target service objective. |
+| <a id="40854"></a> 40854 | 16 | No | Partner server '%ls' is not compatible with server '%ls.' |
+| <a id="40855"></a> 40855 | 16 | No | The operation cannot be performed since the database '%ls' is not in '%ls' state on the replication relationship. |
+| <a id="40856"></a> 40856 | 16 | No | Could not change database edition for database '%ls' in a replication relationship. |
+| <a id="40857"></a> 40857 | 16 | No | Elastic pool not found for server: '%ls', elastic pool name: '%ls'. |
+| <a id="40858"></a> 40858 | 16 | No | Elastic pool '%ls' already exists in server: '%ls' |
+| <a id="40859"></a> 40859 | 16 | No | Elastic pool does not support database edition '%ls'. |
+| <a id="40860"></a> 40860 | 16 | No | Elastic pool '%ls' and service level objective '%ls' combination is invalid. |
+| <a id="40861"></a> 40861 | 16 | No | The database edition '%ls' cannot be different than the elastic pool service tier which is '%ls'. |
+| <a id="40862"></a> 40862 | 16 | No | Elastic pool name must be specified if the elastic pool service objective is specified. |
+| <a id="40863"></a> 40863 | 16 | No | Connections to this database are no longer allowed. |
+| <a id="40864"></a> 40864 | 16 | No | The DTUs for the elastic pool must be at least (%d) DTUs for service tier '%.\*ls'. |
+| <a id="40865"></a> 40865 | 16 | No | The DTUs for the elastic pool cannot exceed (%d) DTUs for service tier '%.\*ls'. |
+| <a id="40866"></a> 40866 | 16 | No | Max size (%d) is not valid. Please specify a valid max size. |
+| <a id="40867"></a> 40867 | 16 | No | The DTU max per database must be at least (%d) for service tier '%.\*ls'. |
+| <a id="40868"></a> 40868 | 16 | No | The DTU max per database cannot exceed (%d) for service tier '%.\*ls'. |
+| <a id="40869"></a> 40869 | 16 | No | The DTU max per database (%d) for the elastic pool does not belong to the specified values for service tier '%.\*ls'. |
+| <a id="40870"></a> 40870 | 16 | No | The DTU min per database cannot exceed (%d) for service tier '%.\*ls'. |
+| <a id="40871"></a> 40871 | 16 | No | The DTU min per database (%d) for the elastic pool does not belong to the allowed values for service tier '%.\*ls'. |
+| <a id="40872"></a> 40872 | 16 | No | DTU value (%d) is not valid. Please specify a valid dtu value. |
+| <a id="40873"></a> 40873 | 16 | No | The number of databases (%d) and DTU min per database (%d) cannot exceed the DTUs of the elastic pool (%d). |
+| <a id="40874"></a> 40874 | 16 | No | The DTUs (%d) for the elastic pool does not belong to the specified values for service tier '%.\*ls'. |
+| <a id="40875"></a> 40875 | 16 | No | The elastic pool storage limit in gigabytes cannot exceed (%d) in service tier '%.\*ls'. |
+| <a id="40876"></a> 40876 | 16 | No | Elastic pools are not available in this region. |
+| <a id="40877"></a> 40877 | 16 | No | The elastic pool is not empty. |
+| <a id="40878"></a> 40878 | 16 | No | The elastic pool storage limit in gigabytes must be at least (%d) for service tier '%.\*ls'. |
+| <a id="40879"></a> 40879 | 16 | No | The elastic pool storage limit in gigabytes (%d) does not belong to the allowed values for service tier '%.\*ls'. |
+| <a id="40880"></a> 40880 | 16 | No | The DTUs (%d) for the elastic pool and the storage limit in gigabytes (%d) are inconsistent for service tier '%.\*ls'. |
+| <a id="40881"></a> 40881 | 16 | No | The elastic pool '%.\*ls' has reached its database count limit. The database count for the elastic pool cannot exceed (%d) for service tier '%.\*ls'. |
+| <a id="40882"></a> 40882 | 16 | No | Can not change SLO from DataWarehouse edition to other SQL DB editions and vice versa. |
+| <a id="40883"></a> 40883 | 16 | No | The service level objective '%.\*ls' specified is invalid. It must be a slo supported by DataWarehouse edition. |
+| <a id="40884"></a> 40884 | 16 | No | New service level objective '%.\*ls' has (%d) physical databases and it is not compatible with current service level objective which has (%d) physical databases. |
+| <a id="40885"></a> 40885 | 16 | No | Failed to deactivate database. |
+| <a id="40886"></a> 40886 | 16 | No | Failed to change service level objective for database. |
+| <a id="40887"></a> 40887 | 16 | No | Failed to activate database. |
+| <a id="40888"></a> 40888 | 16 | No | Update service level objective for database feature is disabled. |
+| <a id="40889"></a> 40889 | 16 | No | The storage limit for the elastic pool '%.\*ls' does not provide sufficient storage space for its databases. Please increase the storage limit or move databases out of the pool. |
+| <a id="40890"></a> 40890 | 16 | No | The elastic pool is busy with another operation. |
+| <a id="40891"></a> 40891 | 16 | No | The DTU min per database (%d) cannot exceed the DTU max per database (%d). |
+| <a id="40892"></a> 40892 | 16 | No | Cannot connect to database when it is paused. |
+| <a id="40893"></a> 40893 | 16 | No | The database copy link from '%s.%s' to '%s.%s' was not successfully created or was deleted before the data copy link operation completed. |
+| <a id="40894"></a> 40894 | 16 | No | The database copy link from '%s.%s' to '%s.%s' is not in the catchup state after the data copy link operation completed. |
+| <a id="40895"></a> 40895 | 16 | No | The database copy link from '%s.%s' to '%s.%s' was not successfully deleted before completion of copy. |
+| <a id="40896"></a> 40896 | 16 | No | The database copy link from '%s.%s' to ID %s was not successfully dropped. |
+| <a id="40897"></a> 40897 | 16 | No | The elastic pool storage limit in megabytes must be at least (%d) for service tier '%.\*ls'. |
+| <a id="40898"></a> 40898 | 16 | No | The elastic pool storage limit in megabytes (%d) does not belong to the allowed values for service tier '%.\*ls'. |
+| <a id="40899"></a> 40899 | 16 | No | The DTUs (%d) for the elastic pool and the storage limit in megabytes (%d) are inconsistent for service tier '%.\*ls'. |
+| <a id="40900"></a> 40900 | 16 | No | The service tier for an elastic pool cannot be changed. |
+| <a id="40901"></a> 40901 | 16 | No | The elastic pool storage limit in megabytes cannot exceed (%d) in service tier '%.\*ls'. |
+| <a id="40902"></a> 40902 | 16 | No | Amount of pool storage cannot be specified when creating a Premium elastic pool. |
+| <a id="40903"></a> 40903 | 20 | No | The server '%.\*ls' is currently busy. Please wait a few minutes before trying again. |
+| <a id="40904"></a> 40904 | 16 | No | Could not perform the operation because server would exceed the allowed Database Edition %s quota of %d. |
+| <a id="40905"></a> 40905 | 16 | No | Location '%.\*ls' is not accepting creation of new Azure SQL Database Servers of version '%.\*ls' at this time. This location only supports the following server versions: '%.\*ls'. Please retry using a supported server version. |
+| <a id="40906"></a> 40906 | 16 | No | A service objective change cannot start for database %s on server %s while it is also running for database %s on server %s. |
+| <a id="40907"></a> 40907 | 16 | No | Servers involved in a Disaster Recovery Configuration cannot reside in the same location |
+| <a id="40908"></a> 40908 | 16 | No | A Disaster Recovery Configuration already exists for '%.\*ls' and '%.\*ls' |
+| <a id="40909"></a> 40909 | 16 | No | A Disaster Recovery Configuration does not exist for '%.\*ls' and '%.\*ls' |
+| <a id="40910"></a> 40910 | 16 | No | A Disaster Recovery Configuration does not exist for server '%.\*ls' and virtual endpoint '%.\*ls' |
+| <a id="40911"></a> 40911 | 16 | No | Server '%.\*ls' is not the secondary in the Disaster Recovery Configuration and cannot initiate a failover |
+| <a id="40912"></a> 40912 | 16 | No | The value for custom backup retention in days must be between %d and %d |
+| <a id="40913"></a> 40913 | 16 | No | Azure SQL Database supports a maximum of %d Virtual Network firewall rules. |
+| <a id="40914"></a> 40914 | 16 | No | Cannot open server '%.\*ls' requested by the login. Client is not allowed to access the server. |
+| <a id="40915"></a> 40915 | 16 | No | Secondary server for a Failover Group cannot reside in the same region as primary server. Please provide a name of server that is in different Azure region than primary server. |
+| <a id="40916"></a> 40916 | 16 | No | The Failover Group '%.\*ls' already exists on server '%.\*ls' |
+| <a id="40917"></a> 40917 | 16 | No | The Failover Group '%.\*ls' does not exist on server '%.\*ls' |
+| <a id="40918"></a> 40918 | 16 | No | The Failover Group '%.\*ls' is busy with another operation and cannot perform the '%.\*ls' operation. Please try again later |
+| <a id="40919"></a> 40919 | 16 | No | The server '%.\*ls' is currently the primary server in the Failover Group and cannot initiate failover |
+| <a id="40920"></a> 40920 | 16 | No | The database '%.\*ls' is already included in another Failover Group |
+| <a id="40921"></a> 40921 | 16 | No | The operation to add database '%.\*ls' to Failover Group is in progress, please wait for this operation to finish |
+| <a id="40922"></a> 40922 | 16 | No | The operation to remove database '%.\*ls' from Failover Group is in progress, please wait for this operation to finish |
+| <a id="40923"></a> 40923 | 16 | No | The database '%.\*ls' is a secondary in an existing geo-replication relationship and cannot be added to the Failover Group |
+| <a id="40924"></a> 40924 | 16 | No | The operation cannot be performed due to multiple errors: '%.\*ls' Please correct them and retry operation. |
+| <a id="40925"></a> 40925 | 16 | No | Can not connect to the database in its current state. |
+| <a id="40926"></a> 40926 | 16 | No | The operation cannot be performed because the geo-replication link is part of a Failover Group. You must remove the database from the group in order to individually terminate or failover. |
+| <a id="40927"></a> 40927 | 16 | No | The endpoint '%.\*ls' is already in use. Use a different Failover Group name. |
+| <a id="40928"></a> 40928 | 16 | No | Create or update Failover Group operation successfully completed; however, some of the databases could not be added to or removed from Failover Group: '%.\*ls' |
+| <a id="40929"></a> 40929 | 16 | No | The source database '%ls.%ls' cannot have higher edition than the target database '%ls.%ls'. Upgrade the edition on the target before upgrading source. |
+| <a id="40930"></a> 40930 | 16 | No | The target database '%ls.%ls' cannot have lower edition than the source database '%ls.%ls'. Downgrade the edition on the source before downgrading target. |
+| <a id="40931"></a> 40931 | 16 | No | Failover Group name '%.\*ls' cannot be empty or null. It can only be made up of lowercase letters 'a'-'z', the numbers 0-9 and the hyphen. The hyphen may not lead or trail in the name. |
+| <a id="40932"></a> 40932 | 16 | No | The elastic pool cannot change its service tier since one or more of its databases use memory-optimized objects. |
+| <a id="40933"></a> 40933 | 16 | No | The edition '%.\*ls' does not support the database tempdb max size '%.\*ls'. |
+| <a id="40934"></a> 40934 | 16 | No | Server DNS Alias name '%.\*ls' cannot be empty or null. It can only be made up of lowercase letters 'a'-'z', the numbers 0-9 and the hyphen. The hyphen may not lead or trail in the name. |
+| <a id="40935"></a> 40935 | 16 | No | The endpoint '%.\*ls' is already in use. Use a different Server DNS Alias name. |
+| <a id="40936"></a> 40936 | 16 | No | The Server DNS Alias '%.\*ls' already exists for the server '%.\*ls'. Please use different Server DNS Alias name. |
+| <a id="40937"></a> 40937 | 16 | No | The Server DNS Alias '%.\*ls' does not exist for the server '%.\*ls'. Please provide valid Server DNS Alias name. |
+| <a id="40938"></a> 40938 | 16 | No | The Server DNS Alias '%.\*ls' is busy with another operation and cannot perform the '%.\*ls' operation. Please try again later. |
+| <a id="40939"></a> 40939 | 16 | No | The scale operation from service level objective '%.\*ls' to new service level objective '%.\*ls' is not supported. Please file a support ticket. |
+| <a id="40940"></a> 40940 | 16 | No | The elastic pool '%.\*ls' cannot be updated because one of its databases is performing a copy or geo-replication failover operation. |
+| <a id="40941"></a> 40941 | 16 | No | Copy operation for the database '%.\*ls' on the server '%.\*ls' cannot be started because the elastic pool '%.\*ls' is currently being updated. |
+| <a id="40942"></a> 40942 | 16 | No | A service objective assignment operation cannot be performed because copy or failover operation for the database '%.\*ls' on the server '%.\*ls' is in progress. |
+| <a id="40943"></a> 40943 | 16 | No | A Failover Group cannot be created on the server '%.\*ls' because the Table Auditing feature is enabled for this server. |
+| <a id="40944"></a> 40944 | 16 | No | The database '%.\*ls' on the server '%.\*ls' cannot be added to a Failover Group because the Table Auditing or Security Enabled Access feature is turned on for this database. |
+| <a id="40945"></a> 40945 | 16 | No | The Table Auditing feature cannot be turned on for a server that contains Failover Groups. Please try Blob Auditing instead. |
+| <a id="40946"></a> 40946 | 16 | No | The Table Auditing or Security Enabled Access feature cannot be turned on for a database that is part of a Failover Group. |
+| <a id="40947"></a> 40947 | 16 | No | The Table Auditing or Security Enabled Access feature cannot be turned on for a database that is located on a server with a Server DNS Alias. |
+| <a id="40948"></a> 40948 | 16 | No | A Server DNS Alias cannot be created for the server '%.\*ls' because the Table Auditing feature is enabled for this server. |
+| <a id="40949"></a> 40949 | 16 | No | A Server DNS Alias cannot be created for the server '%.\*ls' because the database '%.\*ls' has the Table Auditing or Security Enabled Access feature enabled. |
+| <a id="40950"></a> 40950 | 16 | No | The DNS Alias '%.\*ls' already exists for the elastic pool '%.\*ls' on server '%.\*ls'. |
+| <a id="40951"></a> 40951 | 16 | No | The DNS Alias '%.\*ls' does not exist for the elastic pool '%.\*ls' on server '%.\*ls'. |
+| <a id="40952"></a> 40952 | 16 | No | A Server DNS Alias cannot be created because server '%.\*ls' would exceed the allowed Server DNS Aliases quota of %d. |
+| <a id="40953"></a> 40953 | 16 | No | A Failover Group cannot be created because server '%.\*ls' would exceed the allowed Failover Groups quota of %d. |
+| <a id="40954"></a> 40954 | 16 | No | The Table Auditing feature cannot be turned on for a server that contains Server Dns Aliases. Please try Blob Auditing instead. |
+| <a id="40955"></a> 40955 | 16 | No | The operation cannot be performed due to insufficient file space in the elastic pool. The operation requires (%d) MBs file space and there are (%d) MBs file space available. Unused file space must be reclaimed before retrying the operation. Please refer to the following article for details on reclaiming unused file space: [https://go.microsoft.com/fwlink/?linkid=864775](https://go.microsoft.com/fwlink/?linkid=864775). |
+| <a id="40956"></a> 40956 | 16 | No | The Server Disaster Recovery Configuration feature is deprecated. Please use Failover Group instead. |
+| <a id="40957"></a> 40957 | 16 | No | The DTU min per database must be at least (%d) for service tier '%.\*ls'. |
+| <a id="40958"></a> 40958 | 16 | No | The VCore max per database must be at least (%d) for service tier '%.\*ls'. |
+| <a id="40959"></a> 40959 | 16 | No | The VCore max per database cannot exceed (%d) for service tier '%.\*ls'. |
+| <a id="40960"></a> 40960 | 16 | No | The VCore max per database (%d) for the elastic pool does not belong to the specified values for service tier '%.\*ls'. |
+| <a id="40961"></a> 40961 | 16 | No | The VCore min per database cannot exceed (%d) for service tier '%.\*ls'. |
+| <a id="40962"></a> 40962 | 16 | No | The VCore min per database must be at least (%d) for service tier '%.\*ls'. |
+| <a id="40963"></a> 40963 | 16 | No | The VCore min per database (%d) for the elastic pool does not belong to the allowed values for service tier '%.\*ls'. |
+| <a id="40964"></a> 40964 | 16 | No | The VCore min per database (%d) cannot exceed the VCore max per database (%d). |
+| <a id="40965"></a> 40965 | 16 | No | The service level objective '%.\*ls' does not support the license type '%.\*ls'. |
+| <a id="40966"></a> 40966 | 16 | No | No service objective was found for capacity '%d' in edition '%.\*ls' |
+| <a id="40967"></a> 40967 | 16 | No | More than one service objective was found for capacity '%d' in edition '%.\*ls' |
+| <a id="40968"></a> 40968 | 16 | No | Operation results in exceeding quota limits of %d. Maximum allowed: %d. |
+| <a id="40969"></a> 40969 | 16 | No | Cannot open server '%.\*ls' requested by the login. Client is not allowed to access the server. |
+| <a id="40970"></a> 40970 | 16 | No | Can not change from '%.\*ls' edition to '%.\*ls' edition. |
+| <a id="40971"></a> 40971 | 16 | No | Cannot open Failover Group "%.\*ls" requested by the login. The login failed. |
+| <a id="40972"></a> 40972 | 16 | No | Database copy limit per database reached. The database '%ls' cannot have more than %d concurrent database copies. |
+| <a id="40973"></a> 40973 | 16 | No | Can not drop database because a failover operation is in progress on the failover group. |
+| <a id="40974"></a> 40974 | 16 | No | Partner region specified does not match region of partner managed instance. |
+| <a id="40975"></a> 40975 | 16 | No | Partner managed instance's DNS Zone does not match the DNS Zone of the source managed instance. |
+| <a id="40976"></a> 40976 | 16 | No | Instance Failover Group cannot be created because partner managed server "%.\*ls" is not empty or does not have secondaries for all databases in the primary instance "%.\*ls" . |
+| <a id="40977"></a> 40977 | 16 | No | '%.\*ls' is not a supported timezone. |
+| <a id="40978"></a> 40978 | 16 | No | Instance failover group cannot be created because the reserved storage size on the secondary instance is different from the reserved storage size on the primary instance. |
+| <a id="40979"></a> 40979 | 16 | No | Database is unavailable because it is paused. Server '%.\*ls', Database '%.\*ls'. Please resume before trying to access the database again. |
+| <a id="40980"></a> 40980 | 16 | No | Partner managed server's managed server/failover group has been dropped. |
+| <a id="40981"></a> 40981 | 16 | No | Database '%.\*ls' is not accessible due to Azure Key Vault critical error. |
+| <a id="40982"></a> 40982 | 16 | No | Instance failover group cannot be created because the secondary instance has user databases. |
+| <a id="40983"></a> 40983 | 16 | No | Replication to the partner managed instance could not be established. Verify that connectivity between the Virtual Networks of the primary and secondary managed servers has been established. For more information, see [https://go.microsoft.com/fwlink/?linkid=2323826](https://go.microsoft.com/fwlink/?linkid=2323826). |
+| <a id="40984"></a> 40984 | 16 | No | Restore and GeoRestore target cannot be free database. |
+| <a id="40985"></a> 40985 | 16 | No | Restore and GeoRestore are not supported for free database. |
+| <a id="40986"></a> 40986 | 16 | No | Source database '%.\*ls' dropped on '%.\*ls' does not exist on server '%.\*ls' within the supported recovery period. |
+| <a id="40987"></a> 40987 | 16 | No | Source database '%.\*ls' does not exist on server '%.\*ls' within the supported recovery period. If restoring a dropped database, please specify its deletion date. |
+| <a id="40988"></a> 40988 | 16 | No | The Hyperscale edition recovery requires both source and target databases to use Hyperscale service level objective. |
+| <a id="40989"></a> 40989 | 16 | No | The Hyperscale edition Point-In-Time restore requires both source and target databases to use Hyperscale service level objective. |
+| <a id="40990"></a> 40990 | 16 | No | Specifying an elastic pool and/or changing the service level objective or edition is not supported for '%.\*ls' edition. |
+| <a id="40991"></a> 40991 | 16 | No | Changing geo-backup policy is not supported for %s tier of SQL Data Warehouse. |
+| <a id="40992"></a> 40992 | 16 | No | Cannot perform this operation when the database is paused. |
+| <a id="40993"></a> 40993 | 16 | No | Enabling long-term retention (LTR) for a serverless database is not supported if auto-pause is enabled. |
+| <a id="40994"></a> 40994 | 16 | No | Enabling auto-pause for a serverless database is not supported if long-term retention (LTR) is enabled. |
+| <a id="40995"></a> 40995 | 16 | No | Enabling geo-replication for a serverless database is not supported if auto-pause is enabled. |
+| <a id="40996"></a> 40996 | 16 | No | Enabling auto-pause for a serverless database is not supported if geo-replication is enabled. |
+| <a id="40997"></a> 40997 | 16 | No | Elastic pool '%ls' does not exist in server '%ls'. Please make sure that the elastic pool name is entered correctly. Please contact Microsoft support if further assistance is needed. |
+| <a id="40998"></a> 40998 | 16 | No | The edition '%.\*ls' does not support '%.\*ls' bytes as the database data max size. For more details, see \<\>. |
+| <a id="40999"></a> 40999 | 16 | No | '%ls' is not a valid service level objective for elastic pool '%ls'. |
+| <a id="41000"></a> 41000 | 16 | No | Failed to obtain the local Windows Server Failover Clustering (WSFC) handle (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41001"></a> 41001 | 16 | No | Failed to obtain local computer name (Error code %d). The supplied buffer may be too small, or there is a system error. For information about this error code, see "System Error Codes" in the operating system documentation. |
+| <a id="41002"></a> 41002 | 16 | No | Failed to obtain the local Windows Server Failover Clustering (WSFC) node handle (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41003"></a> 41003 | 16 | No | Failed to obtain the local Windows Server Failover Clustering (WSFC) node ID (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41004"></a> 41004 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) group handle for cluster group with name or ID '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name or ID is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41005"></a> 41005 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) resource handle for cluster resource with name or ID '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource name or ID is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41006"></a> 41006 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) group with name '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41007"></a> 41007 | 16 | No | The Windows Server Failover Clustering (WSFC) group control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41008"></a> 41008 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) resource with name '%s' and type '%s' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource name or type is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41009"></a> 41009 | 16 | No | The Windows Server Failover Clustering (WSFC) resource control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41010"></a> 41010 | 16 | No | Failed to bring the Windows Server Failover Clustering (WSFC) group online (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41011"></a> 41011 | 16 | No | Failed to take the Windows Server Failover Clustering (WSFC) group offline (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41012"></a> 41012 | 16 | No | The Windows Server Failover Clustering (WSFC) node control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41013"></a> 41013 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) resource enumeration handle (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41014"></a> 41014 | 16 | No | Failed to enumerate the Windows Server Failover Clustering (WSFC) resources (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource enumeration handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41015"></a> 41015 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) node handle (Error code %d) for node '%.\*ls'. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster node name is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41016"></a> 41016 | 16 | No | Failed to remove a node from the possible owner list of a Windows Server Failover Clustering (WSFC) resource (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource or node handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41017"></a> 41017 | 16 | No | Failed to add a node to the possible owner list of a Windows Server Failover Clustering (WSFC) resource (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster resource or node handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41018"></a> 41018 | 16 | No | Failed to move a Windows Server Failover Clustering (WSFC) group to the local node (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group or node handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41019"></a> 41019 | 16 | No | Failed to drop a Windows Server Failover Clustering (WSFC) group with name or ID '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster group name or ID is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41020"></a> 41020 | 16 | No | Failed to find a String property (property name '%s') of the Windows Server Failover Clustering (WSFC) resource with name or ID '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41021"></a> 41021 | 16 | No | Failed to find a DWORD property (property name '%s') of the Windows Server Failover Clustering (WSFC) resource with ID '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41022"></a> 41022 | 16 | No | Failed to create a Windows Server Failover Clustering (WSFC) notification port with notification filter %d and notification key %d (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41023"></a> 41023 | 16 | No | The Windows Server Failover Clustering (WSFC) change handle is invalid because a WSFC notification port has not been created or has been closed. Create a new WSFC notification port and retry the operation. |
+| <a id="41024"></a> 41024 | 16 | No | Failed to register additional Windows Server Failover Clustering (WSFC) change notifications with notification filter %d and notification key %d (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41025"></a> 41025 | 16 | No | Failed to receive Windows Server Failover Clustering (WSFC) change notifications (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41026"></a> 41026 | 10 | No | Failed to create the Windows Server Failover Clustering (WSFC) group with name '%ls'. The WSFC group with the specified name already exists. Retry the operation with a group name that is unique in the cluster. |
+| <a id="41027"></a> 41027 | 16 | No | Failed to start the Windows Server Failover Clustering (WSFC) change listener (SQLOS error code %d). SQL Server may not have sufficient resources to start the WSFC change listener. If the condition persists, the SQL Server instance may need to be restarted. |
+| <a id="41028"></a> 41028 | 16 | No | Failed to open Windows Server Failover Clustering (WSFC) registry root key (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41029"></a> 41029 | 16 | No | Failed to open the Windows Server Failover Clustering (WSFC) resource registry key '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41030"></a> [41030](../mssqlserver-41030-database-engine-error.md) | 16 | No | Failed to open the Windows Server Failover Clustering registry subkey '%.\*ls' (Error code %d). The parent key is %sthe cluster root key. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41031"></a> 41031 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) registry subkey '%.\*ls' (Error code %d). The parent key is %sthe cluster root key. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41032"></a> 41032 | 16 | No | Failed to delete the Windows Server Failover Clustering (WSFC) registry subkey '%.\*ls' (Error code %d). The parent key is %sthe cluster root key. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41033"></a> 41033 | 16 | No | Failed to retrieve the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41034"></a> 41034 | 16 | No | Failed to set the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41035"></a> 41035 | 16 | No | Failed to enumerate Windows Server Failover Clustering (WSFC) registry value (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41036"></a> 41036 | 16 | No | Failed to delete the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls' (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41037"></a> 41037 | 16 | No | Failed to obtain a Windows Server Failover Clustering (WSFC) object enumeration handle for objects of type %d (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41038"></a> 41038 | 16 | No | Failed to enumerate Windows Server Failover Clustering (WSFC) objects (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified cluster object enumeration handle is invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41039"></a> 41039 | 16 | No | An availability group replica already exists on the node '%.\*ls'. Each node can contain only one replica of an availability group. Please choose another node to host the new replica. |
+| <a id="41040"></a> 41040 | 16 | No | Failed to remove the availability group replica '%.\*ls' from availability group '%.\*ls'. The availability group does not contain a replica with the specified name. Verify the availability group and replica names and then retry the operation. |
+| <a id="41041"></a> 41041 | 16 | No | SQL Server instance to cluster node map entry cannot be found for the SQL Server instance '%.\*ls' and group ID '%.\*ls'. The specified SQL Server instance name is invalid, or the corresponding registry entry does not exist. Verify the SQL Server instance name and retry the operation. |
+| <a id="41042"></a> 41042 | 16 | No | The availability group '%.\*ls' already exists. This error could be caused by a previous failed CREATE AVAILABILITY GROUP or DROP AVAILABILITY GROUP operation. If the availability group name you specified is correct, try dropping the availability group and then retry CREATE AVAILABILITY GROUP operation. |
+| <a id="41043"></a> 41043 | 16 | No | For availability group '%.\*ls', the value of the name-to-ID map entry is invalid. The binary value should contain a resource ID, a group ID, and their corresponding lengths in characters. The availability group name may be incorrect, or the availability group configuration data may be corrupt. If this error persists, you may need to drop and recreate the availability group. |
+| <a id="41044"></a> 41044 | 16 | No | Availability group name to ID map entry for availability group '%.\*ls' cannot be found. The availability group name may be incorrect. If this is a WSFC availability group, the availability group may not exist in this Windows Server Failover Cluster. Verify the availability group exists and that the availability group name is correct and then retry the operation. |
+| <a id="41045"></a> 41045 | 16 | No | Cannot add database '%.\*ls' to the availability group '%.\*ls', because there is already a database with the same name in the availability group. Please verify that the database and availability group names specified are correct. |
+| <a id="41046"></a> 41046 | 16 | No | Cannot add replica '%.\*ls' to the availability group '%.\*ls', because there is already a replica with the same name in the availability group. Please verify the replica and availability group names specified are correct. |
+| <a id="41047"></a> 41047 | 16 | No | Failed to obtain the Windows Server Failover Clustering (WSFC) node state for the local WSFC node (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41048"></a> 41048 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering service has become unavailable. This is an informational message only. No user action is required. |
+| <a id="41049"></a> 41049 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering node is no longer online. This is an informational message only. No user action is required. |
+| <a id="41050"></a> 41050 | 10 | Yes | Always On Availability Groups: Waiting for local Windows Server Failover Clustering service to start. This is an informational message only. No user action is required. |
+| <a id="41051"></a> 41051 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering service started. This is an informational message only. No user action is required. |
+| <a id="41052"></a> 41052 | 10 | Yes | Always On Availability Groups: Waiting for local Windows Server Failover Clustering node to start. This is an informational message only. No user action is required. |
+| <a id="41053"></a> 41053 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering node started. This is an informational message only. No user action is required. |
+| <a id="41054"></a> 41054 | 10 | Yes | Always On Availability Groups: Waiting for local Windows Server Failover Clustering node to come online. This is an informational message only. No user action is required. |
+| <a id="41055"></a> 41055 | 10 | Yes | Always On Availability Groups: Local Windows Server Failover Clustering node is online. This is an informational message only. No user action is required. |
+| <a id="41056"></a> 41056 | 16 | No | Availability replica '%.\*ls' of availability group '%.\*ls' cannot be brought online on this SQL Server instance. Another replica of the same availability group is already online on the node. Each node can host only one replica of an availability group, regardless of the number of SQL Server instances on the node. Use the ALTER AVAILABILITY GROUP command to correct the availability group configuration. Then, if the other replica is no longer being hosted on this node, restart this instance of SQL Server to bring the local replica of the availability group online. |
+| <a id="41057"></a> 41057 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) resource with name '%ls'. The WSFC resource with the specified name already exists. Retry the operation with a resource name that is unique in the cluster. |
+| <a id="41058"></a> 41058 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is starting. This is an informational message only. No user action is required. |
+| <a id="41059"></a> 41059 | 10 | No | Always On Availability Groups: Availability group '%.\*ls' was removed while the availability replica on this instance of SQL Server was offline. The local replica will be removed now. This is an informational message only. No user action is required. |
+| <a id="41060"></a> 41060 | 16 | No | The Cyclic Redundancy Check (CRC) value generated for the retrieved availability group configuration data does not match that stored with the data for the availability group with ID '%.\*ls'. If this is a WSFC availability group, the availability group data in the WSFC store may have been modified outside SQL Server, or the data is corrupt. If the error persists, you may need to drop and recreate the availability group. |
+| <a id="41061"></a> 41061 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is stopping. This is an informational message only. No user action is required. |
+| <a id="41062"></a> 41062 | 16 | No | The ID of availability group '%.\*ls' in local data store is inconsistent with that in the Windows Server Failover Clustering (WSFC) data store. The availability group may have been dropped and recreated while the SQL Server instance was offline, or while the WSFC node was down. To resolve this error, drop the availability group and then recreate it. |
+| <a id="41063"></a> 41063 | 16 | No | Windows Server Failover Clustering (WSFC) detected that the availability group resource with ID '%.\*ls' was online when the availability group was not actually online. The attempt to synchronize the WSFC resource state with the availability group state failed (Error code: %d). For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41064"></a> 41064 | 16 | No | Failed to set local node as sole preferred owner for the Windows Server Failover Clustering (WSFC) group with ID '%.\*ls' (Error code: %d). The WSFC group might be in state that cannot accept the request. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41065"></a> 41065 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) resource (ID: '%.\*ls') online at this time. The WSFC resource is not in a state that can accept the request. Wait for the WSFC resource to enter a terminal state, and retry the operation. For information about this error, see error code 5023 in "System Error Codes" in the Windows Development documentation. |
+| <a id="41066"></a> 41066 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) resource (ID '%.\*ls') online (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the WSFC resource may not be in a state that could accept the request. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41067"></a> 41067 | 16 | No | Cannot drop the Windows Server Failover Clustering (WSFC) group (ID or name '%.\*ls') at this time. The WSFC group is not in a state that could accept the request. Please wait for the WSFC group to enter a terminal state and then retry the operation. For information about this error, see error code 5023 in "System Error Codes" in the Windows Development documentation. |
+| <a id="41068"></a> 41068 | 16 | No | Failed to enumerate the Windows Server Failover Clustering (WSFC) registry key (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41069"></a> 41069 | 16 | No | The existence of availability group data for the availability group '%.\*ls' in the Windows Server Failover Clustering (WSFC) store could not be determined. The local WSFC node may be down, or a previous CREATE AVAILABILITY GROUP or DROP AVAILABILITY GROUP operation has failed. Please use DROP AVAILABILITY GROUP command to clean up previously failed operations. Verify that the local WSFC node is up before retrying the operation. |
+| <a id="41070"></a> 41070 | 16 | No | Configuration data for the availability group with Windows Server Failover Clustering (WSFC) resource ID '%.\*ls' is not found in the WSFC data store. The availability group may have been dropped, or a previous CREATE AVAILABILITY GROUP or DROP AVAILABILITY GROUP operation has failed. Please use DROP AVAILABILITY GROUP command to clean up previously failed operations before retrying the current operation. |
+| <a id="41071"></a> 41071 | 16 | No | Cannot read the persisted configuration of Always On availability group with corresponding resource ID '%.\*ls'. The persisted configuration is written by a higher-version SQL Server that hosts the primary availability replica. Upgrade the local SQL Server instance to allow the local availability replica to become a secondary replica. |
+| <a id="41072"></a> 41072 | 16 | No | The ID of availability group '%.\*ls' in local data store does not exist in the Windows Server Failover Clustering (WSFC) data store. The availability group may have been dropped but the current WSFC node was not notified. To resolve this error, try to recreate the availability group. |
+| <a id="41073"></a> 41073 | 16 | No | The database '%.\*ls' cannot be removed from availability group '%.\*ls'. This database does not belong to the availability group. |
+| <a id="41074"></a> 41074 | 10 | No | Always On Availability Group: The local replica of availability group '%.\*ls' is preparing to transition to the primary role. This is an informational message only. No user action is required. |
+| <a id="41075"></a> 41075 | 10 | No | Always On Availability Group: The local replica of availability group '%.\*ls' is preparing to transition to the resolving role. This is an informational message only. No user action is required. |
+| <a id="41076"></a> 41076 | 10 | No | Always On Availability Group: Availability group '%.\*ls' is going offline because it is being removed. This is an informational message only. No user action is required. |
+| <a id="41077"></a> 41077 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) group (ID '%.\*ls') online at this time. The WSFC group is not in a state that could accept the request. Please wait for the WSFC group to enter a terminal state and then retry the operation. For information about this error, see error code 5023 in "System Error Codes" in the Windows Development documentation. |
+| <a id="41078"></a> 41078 | 16 | No | Failed to delete the Windows Server Failover Clustering (WSFC) registry value corresponding to name '%.\*ls', because a registry entry with the specified name does not exist. Check that the registry value name is correct, and retry the operation. |
+| <a id="41079"></a> 41079 | 16 | No | Cannot drop the Windows Server Failover Clustering (WSFC) group (ID or name '%.\*ls'), because the WSFC group does not exist. Specify a valid WSFC group ID or name and retry the operation. For information about this error, see error code 5013 in "System Error Codes" in the Windows Development documentation. |
+| <a id="41080"></a> 41080 | 16 | No | Failed to delete SQL Server instance name to Windows Server Failover Clustering node name map entry for the local availability replica of availability group '%.\*ls'. The operation encountered SQL Server error %d and has been terminated. Refer to the SQL Server error log for details about this SQL Server error and corrective actions. |
+| <a id="41081"></a> 41081 | 16 | No | Failed to destroy the Windows Server Failover Clustering group corresponding to availability group '%.\*ls'. The operation encountered SQL Server error %d and has been terminated. Refer to the SQL Server error log for details about this SQL Server error and corrective actions. |
+| <a id="41082"></a> 41082 | 16 | No | Failed to obtain the name of local Windows Server Failover Cluster (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41083"></a> 41083 | 16 | No | Failed to obtain the cluster quorum resource (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41084"></a> 41084 | 16 | No | The Windows Server Failover Clustering (WSFC) cluster control API returned error code %d. If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41085"></a> 41085 | 16 | No | Failed to find a DWORD property (property name '%s') of the Windows Server Failover Clustering (WSFC) (Error code %d). If this is a WSFC availability group, the WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. Otherwise, contact your primary support provider. For information about this error code, see "System Error Codes" in the Windows Development documentation. |
+| <a id="41086"></a> 41086 | 16 | No | Failed to retrieve the Paxos tag from the Windows Server Failover Clustering (WSFC) registry hive. The WSFC registry hive might be corrupt. Verify whether the 'HKLM\Cluster\PaxosTag' registry value exists in the WSFC registry hive. |
+| <a id="41087"></a> 41087 | 16 | No | Error in parsing the Paxos tag from the Windows Server Failover Clustering (WSFC) registry hive. The WSFC registry hive might be corrupt. Verify whether the 'HKLM\Cluster\PaxosTag' is in the format outlined in the Microsoft Knowledge Base article KB 947713 ("The implications of using the /forcequorum switch to start the Cluster service in Windows Server 2008"). |
+| <a id="41088"></a> 41088 | 16 | No | Failed to determine if the Windows Server Failover Clustering (WSFC) service is in Force Quorum state. The prerequisite hotfix, KB 2494036, might not yet be installed on your Windows Server 2008/Windows Server 2008 R2 systems. For more information, see Microsoft Knowledge Base article KB 2494036 ("A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2"). |
+| <a id="41089"></a> 41089 | 10 | Yes | Always On Availability Groups startup has been cancelled, because SQL Server is shutting down. This is an informational message only. No user action is required. |
+| <a id="41090"></a> 41090 | 10 | No | Failed to update Replica status due to exception %d. |
+| <a id="41091"></a> 41091 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline because either the lease expired or lease renewal failed. This is an informational message only. No user action is required. |
+| <a id="41092"></a> 41092 | 10 | No | Always On Availability Groups: The availability replica manager is going offline because %ls. This is an informational message only. No user action is required. |
+| <a id="41093"></a> 41093 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline because the corresponding resource in the Windows Server Failover Clustering (WSFC) cluster is no longer online. This is an informational message only. No user action is required. |
+| <a id="41094"></a> 41094 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is restarting because the existing primary replica restarted or the availability group failed over to a new primary replica. This is an informational message only. No user action is required. |
+| <a id="41095"></a> 41095 | 10 | No | Always On Availability Groups: Explicitly transitioning the state of the Windows Server Failover Clustering (WSFC) resource that corresponds to availability group '%.\*ls' to Failed. The resource state is not consistent with the availability group state in the instance of SQL Server. The WSFC resource state indicates that the local availability replica is the primary replica, but the local replica is not in the primary role. This is an informational message only. No user action is required. |
+| <a id="41096"></a> 41096 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is being removed. The instance of SQL Server failed to validate the integrity of the availability group configuration in the Windows Server Failover Clustering (WSFC) store. This is expected if the availability group has been removed from another instance of SQL Server. This is an informational message only. No user action is required. |
+| <a id="41097"></a> 41097 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline. This replica failed to read the persisted configuration because of a version mismatch. This is an informational message only. No user action is required. |
+| <a id="41098"></a> 41098 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is restarting, because it failed to read the persisted configuration. This is an informational message only. No user action is required. |
+| <a id="41099"></a> 41099 | 10 | No | Always On Availability Groups: The local replica of availability group '%.\*ls' is going offline. This replica failed to read the persisted configuration, and it has exhausted the maximum for restart attempts. This is an informational message only. No user action is required. |
+| <a id="41100"></a> 41100 | 16 | No | The availability group '%.\*ls' and/or its local availability replica does not exist. Verify that the specified availability group name is correct, and that the local availability replica has joined the availability group, then retry the operation. |
+| <a id="41101"></a> 41101 | 16 | No | The availability group with Windows Server Failover Clustering resource ID '%.\*ls' and/or its local availability replica does not exist. Verify that the specified availability resource ID is correct, and that the local availability replica has joined the availability group, then retry the operation. |
+| <a id="41102"></a> 41102 | 10 | No | Failed to persist configuration data of availability group '%.\*ls'. The local availability replica either is not the primary replica or is shutting down. |
+| <a id="41103"></a> 41103 | 10 | No | Startup of the Always On Availability Replica Manager has been terminated, because the 'FixQuorum' property of Windows Server Failover Clustering (WSFC) is not present. The prerequisite Hotfix, KB 2494036, might not yet be installed on your Windows Server 2008/Windows Server 2008 R2 systems. For more information, see Microsoft Knowledge Base article KB 2494036 ("A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2"). |
+| <a id="41104"></a> 41104 | 16 | No | Failover of the availability group '%.\*ls' to the local replica failed because the availability group resource did not come online due to a previous error. To identify that error, check the SQL Server error log, cluster logs and system event logs. For information about how to view events and logs for a Windows Server Failover Clustering (WSFC) cluster, see Windows Server documentation. |
+| <a id="41105"></a> 41105 | 16 | No | Failed to create the Windows Server Failover Clustering (WSFC) resource with name '%s' and type '%s'. The resource type is not registered in the WSFC cluster. The WSFC cluster many have been destroyed and created again. To register the resource type in the WSFC cluster, disable and then enable Always On Availability Groups in the SQL Server Configuration Manager. |
+| <a id="41106"></a> 41106 | 16 | No | Cannot create an availability replica for availability group '%.\*ls'. An availability replica of the specified availability group already exists on this instance of SQL Server. Verify that the specified availability group name is correct and unique, then retry the operation. To remove the existing availability replica, run DROP AVAILABILITY GROUP command. |
+| <a id="41107"></a> 41107 | 16 | No | Availability group '%.\*ls' failed to create necessary events for the WSFC Lease mechanism. Windows returned error code (%d) when obtaining handles for Lease events. Resolve the windows error and retry the availability group operation. |
+| <a id="41108"></a> 41108 | 16 | No | An error occurred while removing availability group '%.\*ls'. The DROP AVAILABILITY GROUP command removed the availability group configuration from the local metadata. However, the attempt to remove this configuration from the Windows Server Failover Clustering (WSFC) cluster failed because the Always On Availability Groups manager is not online (SQL Server error: %d). To remove the availability group configuration from the WSFC cluster, re-enter the command. |
+| <a id="41109"></a> 41109 | 17 | No | Could not enqueue a task (SQL OS error: 0x%x) for process actions for the availability group '%.\*ls'. Most likely, the instance of SQL Server is low on resources. Check the SQL Server error log to determine the cause of the failure. Retry the operation later, and if this condition persists, contact your database administrator. |
+| <a id="41110"></a> 41110 | 10 | No | Always On Availability Groups: The availability replica manager is starting. This is an informational message only. No user action is required. |
+| <a id="41111"></a> 41111 | 10 | No | Always On Availability Groups: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required. |
+| <a id="41112"></a> 41112 | 16 | No | A Windows Server Failover Clustering (WSFC) API required by availability groups has not been loaded. Always On Availability Groups replica manager is not enabled on the local instance SQL Server. If the server instance is running an edition of SQL Server that supports Always On Availability Groups, you can enable the it by using the SQL Server Configuration Manager. |
+| <a id="41113"></a> 41113 | 16 | No | Cannot failover availability group '%.\*ls' to this instance of SQL Server because a failover command is already pending on the local replica of this availability group. Wait for the pending failover command to complete before issuing another command on the local replica of this availability group. |
+| <a id="41114"></a> 41114 | 16 | No | Cannot create an availability group named '%.\*ls' because it already exists in a system table. |
+| <a id="41115"></a> 41115 | 16 | No | Cannot create the availability group named '%.\*ls' because its availability group ID (ID: '%.\*ls') already exists in a system table. |
+| <a id="41116"></a> 41116 | 16 | No | Cannot create an availability group named '%.\*ls' with replica ID '%.\*ls' because this ID already exists in a system table. |
+| <a id="41117"></a> 41117 | 16 | No | Cannot map local database ID %d to the availability database ID '%.\*ls' within availability group '%.\*ls'. This database is already mapped to an availability group. |
+| <a id="41118"></a> 41118 | 16 | No | Cannot map database ID %d to the availability database ID '%.\*ls' within availability group '%.\*ls'. Another local database, (ID %d). is already mapped to this availability database. |
+| <a id="41119"></a> 41119 | 16 | No | Could not find the availability group ID %d in the system table. |
+| <a id="41120"></a> 41120 | 16 | No | Failed to start task to process a down notification for the local Windows Server Failover Clustering (WSFC) node (SQL OS error: %d). Possible causes are no worker threads are available or there is insufficient memory. Check the state of the local WSFC node. If this problem persists, you might need to restart the instance of SQL Server. |
+| <a id="41121"></a> 41121 | 10 | No | The local availability replica of availability group '%.\*ls' cannot accept signal '%s' in its current replica role, '%s', and state (configuration is %s in Windows Server Failover Clustering store, local availability replica has %s joined). The availability replica signal is invalid given the current replica role. When the signal is permitted based on the current role of the local availability replica, retry the operation. |
+| <a id="41122"></a> 41122 | 16 | No | Cannot failover availability group '%.\*ls' to this instance of SQL Server. The local availability replica is already the primary replica of the availability group. To failover this availability group to another instance of SQL Server, run the failover command on that instance of SQL Server. If local instance of SQL Server is intended to host the primary replica of the availability group, then no action is required. |
+| <a id="41123"></a> 41123 | 16 | No | Cannot bring the Windows Server Failover Clustering (WSFC) group (ID '%.\*ls') online at this time. The WSFC group is moving to another node. Please wait for the WSFC group to complete the move operation and then retry the command. For information about this error, see error code 5908 in "System Error Codes" in the Windows Development documentation. |
+| <a id="41124"></a> 41124 | 16 | No | The availability replica for availability group '%.\*ls' on this instance of SQL Server cannot become the primary replica because the availability group is being dropped. |
+| <a id="41125"></a> 41125 | 16 | No | The availability replica for availability group '%.\*ls' on this instance of SQL Server cannot become the primary replica because the WSFC cluster was started in Force Quorum mode. Consider performing a forced manual failover (with possible data loss). |
+| <a id="41126"></a> 41126 | 16 | No | Operation on the local availability replica of availability group '%.\*ls' failed. The local copy of the availability group configuration does not exist or has not been initialized. Verify that the availability group exists and that the local copy of the configuration is initialized, and retry the operation. |
+| <a id="41127"></a> 41127 | 16 | No | Attempt to set database mapping state where the local database id %d is not mapped to any availability group. |
+| <a id="41128"></a> 41128 | 16 | No | Failed to perform database operation '%s' on database '%.\*ls' (ID %d) in availability group '%.\*ls'. The database might be in an incorrect state for the operation. If the problem persists, you may need to restart the SQL Server instance. |
+| <a id="41129"></a> 41129 | 16 | No | Failed to schedule or execute database operation '%s' on database '%.\*ls' (Database ID: %d) in availability group '%.\*ls' (SQL OS error: %d). The instance of SQL Server may have insufficient resources to carry out the database operation. If the problem persists, you might need to restart the server instance. |
+| <a id="41130"></a> 41130 | 16 | No | Operation '%s' on a database '%.\*ls' (Database ID: %d) in availability group '%.\*ls' failed with SQL Server error %d (Error details: "%.\*ls"). The operation has been rolled back. See previous error messages in the SQL Server error log for more details. If the problem persists, you might need to restart the instance of SQL Server. |
+| <a id="41131"></a> 41131 | 10 | No | Failed to bring availability group '%.\*ls' online. The operation timed out. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online. Then verify that the availability group resource exists in the WSFC cluster. If the problem persists, you might need to drop the availability group and create it again. |
+| <a id="41132"></a> 41132 | 16 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'. The specified database does not belong to the availability group. Verify the names of the database and the availability group, and retry the command specifying the correct names. |
+| <a id="41133"></a> 41133 | 10 | No | Cannot remove database '%.\*ls' from availability group '%.\*ls'. Either the database does not belong to the availability group, or the database has not joined the group. Verify the database and availability group names, and retry the command. |
+| <a id="41134"></a> 41134 | 16 | No | Cannot bring the availability group '%.\*ls' online. The local instance was not the previous primary replica when the availability group went offline, not all databases are synchronized, and no force failover command was issued on the local availability replica. To designate the local availability replica as the primary replica of the availability group, run the force failover command on this instance of SQL Server. |
+| <a id="41135"></a> 41135 | 10 | No | Startup of Always On Availability Groups replica manager failed due to SQL Server error %d. To determine the cause of this error, check the SQL Server error log for the preceding error. |
+| <a id="41136"></a> 41136 | 16 | No | Failed to join the availability replica to availability group '%.\*ls' because the group is not online. Either bring the availability group online, or drop and recreate it. Then retry the join operation. |
+| <a id="41137"></a> 41137 | 10 | No | Abandoning a database operation '%ls' on availability database '%.\*ls' of availability group '%.\*ls'. The sequence number of local availability replica has changed (Previous sequence number: %u, current sequence number: %u). This is an informational message only. No user action is required. |
+| <a id="41138"></a> 41138 | 17 | No | Cannot accept Always On Availability Groups operation operation on database '%.\*ls' of availability group '%.\*ls'. The database is currently processing another operation that might change the database state. Retry the operation later. If the condition persists, contact the database administrator. |
+| <a id="41139"></a> 41139 | 10 | No | Failed to set database information for availability group %.\*ls. The local availability replica is not the primary replica, or it is shutting down. This is an informational message only. No user action is required. |
+| <a id="41140"></a> 41140 | 16 | No | Availability group '%.\*ls' cannot process the ALTER AVAILABILITY GROUP command, because the local availability replica is not the primary replica. Connect to the server instance that is currently hosting the primary replica of this availability group, and rerun the command. |
+| <a id="41141"></a> 41141 | 16 | No | Failed to set availability group database information for availability group %.\*ls. The local availability replica is not the primary, or is shutting down. This is an informational message only. No user action is required. |
+| <a id="41142"></a> 41142 | 16 | No | The availability replica for availability group '%.\*ls' on this instance of SQL Server cannot become the primary replica. One or more databases are not synchronized or have not joined the availability group. If the availability replica uses the asynchronous-commit mode, consider performing a forced manual failover (with possible data loss). Otherwise, once all local secondary databases are joined and synchronized, you can perform a planned manual failover to this secondary replica (without data loss). For more information, see SQL Server Books Online. |
+| <a id="41143"></a> 41143 | 16 | No | Cannot process the operation. The local replica of availability Group '%.\*ls' is in a failed state. A previous operation to read or update persisted configuration data for the availability group has failed. To recover from this failure, either restart the local Windows Server Failover Clustering (WSFC) service or restart the local instance of SQL Server. |
+| <a id="41144"></a> 41144 | 16 | No | The local availability replica of availability group '%.\*ls' is in a failed state. The replica failed to read or update the persisted configuration data (SQL Server error: %d). To recover from this failure, either restart the local Windows Server Failover Clustering (WSFC) service or restart the local instance of SQL Server. |
+| <a id="41145"></a> 41145 | 10 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'. The database has already joined the availability group. This is an informational message. No user action is required. |
+| <a id="41146"></a> 41146 | 16 | No | Failed to bring Availability Group '%.\*ls' online. If this is a WSFC availability group, the Windows Server Failover Clustering (WSFC) service may not be running, or it may not be accessible in its current state. Please verify the local WSFC node is up and then retry the operation. Otherwise, contact your primary source provider. |
+| <a id="41147"></a> 41147 | 10 | No | Always On Availability Groups was not started because %ls. This is an informational message. No user action is required. |
+| <a id="41148"></a> 41148 | 16 | No | Cannot add or join database '%.\*ls' to availability group '%.\*ls'. The database does not exist on this instance of SQL Server. Verify the database name and that the database exists on the server instance. Then retry the operation, specifying the correct database name. |
+| <a id="41149"></a> 41149 | 16 | No | Operation on the availability group '%.\*ls' has been cancelled or terminated, either because of a connection timeout or cancellation by user. This is an informational message. No user action is required. |
+| <a id="41150"></a> 41150 | 16 | No | Failed to take availability group '%.\*ls' offline. If this is a WSFC availability group, the Windows Server Failover Clustering (WSFC) service may not be running, or it may not be accessible in its current state. Verify the local WSFC node is up and then retry the operation. Otherwise, contact your primary support provider. |
+| <a id="41151"></a> 41151 | 16 | No | Error accessing the Availability Groups manager. The local Availability Groups manager has not been initialized. Wait until the Availability Groups manager is in a state that allows access, and retry the operation. |
+| <a id="41152"></a> 41152 | 16 | No | Failed to create availability group '%.\*ls'. The operation encountered SQL Server error %d and has been rolled back. Check the SQL Server error log for more details. When the cause of the error has been resolved, retry CREATE AVAILABILITY GROUP command. |
+| <a id="41153"></a> 41153 | 16 | No | Failed to create availability group '%.\*ls'. The operation encountered SQL Server error %d. An attempt to roll back the operation failed. Check the SQL Server error log for more details. Then execute the DROP AVAILABILITY GROUP command to clean up any metadata that might remain from the failed attempt to create the availability group. |
+| <a id="41154"></a> 41154 | 16 | No | Cannot failover availability group '%.\*ls' to this SQL Server instance. The availability group is still being created. Verify that the specified availability group name is correct. Wait for CREATE AVAILABILITY GROUP command to finish, then retry the operation. |
+| <a id="41155"></a> 41155 | 16 | No | Cannot failover availability group '%.\*ls' to this instance of SQL Server. The availability group is being dropped. Verify that the specified availability group name is correct. The availability group may need to be recreated if the drop operation was unintentional. |
+| <a id="41156"></a> 41156 | 16 | No | Cannot drop availability group '%.\*ls' from this instance of SQL Server. The availability group is either being dropped, or the local availability replica is being removed from the availability group. Verify that the specified availability group name is correct. Wait for the current operation to complete, then retry the command if necessary. |
+| <a id="41157"></a> 41157 | 16 | No | Cannot remove the local availability replica from availability group '%.\*ls' from this instance of SQL Server. The availability group is either being dropped, or the local availability replica is being disjoined. Verify that the specified availability group name is correct. Wait for the current operation to complete, then retry the command if necessary. |
+| <a id="41158"></a> 41158 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'. The operation encountered SQL Server error %d and has been rolled back. Check the SQL Server error log for more details. When the cause of the error has been resolved, retry the ALTER AVAILABILITY GROUP JOIN command. |
+| <a id="41159"></a> 41159 | 16 | No | Failed to join local availability replica to availability group '%.\*ls'. The operation encountered SQL Server error %d. An attempt to roll back the operation failed. Check SQL Server error log for more details. Run DROP AVAILABILITY GROUP command to clean up any metadata that might remain from the availability group. |
+| <a id="41160"></a> 41160 | 16 | No | Failed to designate the local availability replica of availability group '%.\*ls' as the primary replica. The operation encountered SQL Server error %d and has been terminated. Check the preceding error and the SQL Server error log for more details about the error and corrective actions. |
+| <a id="41161"></a> 41161 | 16 | No | Failed to validate the Cyclic Redundancy Check (CRC) of the configuration of availability group '%.\*ls'. The operation encountered SQL Server error %d, and the availability group has been taken offline to protect its configuration and the consistency of its joined databases. Check the SQL Server error log for more details. If configuration data corruption occurred, the availability group might need to be dropped and recreated. |
+| <a id="41162"></a> 41162 | 16 | No | Failed to validate sequence number of the configuration of availability group '%.\*ls'. The in-memory sequence number does not match the persisted sequence number. The availability group and/or the local availability replica will be restarted automatically. No user action is required at this time. |
+| <a id="41163"></a> 41163 | 16 | No | An error occurred while waiting for the local availability replica of availability group '%.\*ls' to transition to the primary role. The operation encountered SQL OS error %d and has been terminated. Verify that the availability group is in the correct state for the command. If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct state for the command. Then retry the command. |
+| <a id="41164"></a> 41164 | 16 | No | An error occurred while waiting for the local availability replica of availability group '%.\*ls' to transition to the resolving role. The operation encountered SQL OS error %d and has been terminated. Verify that the availability group is in the correct state for the command. If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct state for the command. Then retry the command. |
+| <a id="41165"></a> 41165 | 16 | No | A timeout error occurred while waiting to access the local availability replica of availability group '%.\*ls'. The availability replica is currently being accessed by another operation. Wait for the in-progress operation to complete, and then retry the command. |
+| <a id="41166"></a> 41166 | 16 | No | An error occurred while waiting to access the local availability replica of availability group '%.\*ls'. The operation encountered SQL OS error %d, and has been terminated. Verify that the local availability replica is in the correct state, and then retry the command. |
+| <a id="41167"></a> 41167 | 16 | No | An error occurred while attempting to access availability replica '%.\*ls' in availability group '%.\*ls'. The availability replica is not found in the availability group configuration. Verify that the availability group and availability replica names are correct, then retry the command. |
+| <a id="41168"></a> 41168 | 16 | No | An error occurred while attempting to access availability replica with ID '%.\*ls' in availability group '%.\*ls'. The availability replica is not found in the availability group configuration. Verify that the availability group name and availability replica ID are correct, then retry the command. |
+| <a id="41169"></a> 41169 | 16 | No | An error occurred while attempting to access the availability group database with ID '%.\*ls' in availability group '%.\*ls'. The availability database is not found in the availability group configuration. Verify that the availability group name and availability database ID are correct, then retry the command. |
+| <a id="41170"></a> 41170 | 10 | No | Post-online processing for availability group '%.\*ls' has been terminated. Either post-online processing has already completed, the local availability replica is no longer the primary replica, or the availability group is being dropped. This is an informational message. No user action is required. |
+| <a id="41171"></a> 41171 | 16 | No | Failed to create availability group '%.\*ls', because a Windows Server Failover Cluster (WSFC) group with the specified name already exists. The operation has been rolled back successfully. To retry creating an availability group, either remove or rename the existing WSFC group, or retry the operation specifying a different availability group name. |
+| <a id="41172"></a> 41172 | 16 | No | An error occurred while dropping availability group '%.\*ls'. The operation encountered SQL OS error %d, and has been terminated. Verify that the specified availability group name is correct, and then retry the command. |
+| <a id="41173"></a> 41173 | 16 | No | An error occurred while removing the local availability replica from availability group '%.\*ls'. The operation encountered SQL OS error %d, and has been terminated. Verify that the specified availability group name is correct, and then retry the command. |
+| <a id="41174"></a> 41174 | 10 | No | Failed to start the task of the Windows Server Failover Clustering (WSFC) event notification worker (SQL OS error: %d). If the problem persists, you might need to restart the instance of SQL Server. |
+| <a id="41175"></a> 41175 | 10 | No | Failed to stop the task of WSFC event notification worker (SQL OS error: %d). If the problem persists, you might need to restart the instance of SQL Server. |
+| <a id="41176"></a> 41176 | 10 | No | Failed to acquire exclusive access to local availability group configuration data (SQL OS error: %d). If the problem persists, you might need to restart the instance of SQL Server. |
+| <a id="41177"></a> 41177 | 16 | No | The availability replica of the specified availability group '%.\*ls' is being dropped. Wait for the completion of the drop command and retry the operation later. |
+| <a id="41178"></a> 41178 | 16 | No | Cannot drop availability group '%.\*ls' from this SQL Server instance. The availability group is currently being created. Verify that the specified availability group name is correct. Wait for the current operation to complete, then retry the command if necessary. |
+| <a id="41179"></a> 41179 | 16 | No | Cannot remove the local availability replica from availability group '%.\*ls' from this instance of SQL Server. The availability group is currently being created. Verify that the specified availability group name is correct. Wait for the current operation to complete, and then retry the command if necessary. |
+| <a id="41180"></a> 41180 | 16 | No | Attempt to access non-existent or uninitialized availability group with ID '%.\*ls'. This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required. |
+| <a id="41181"></a> 41181 | 16 | No | The local availability replica of availability group '%.\*ls' did not become primary. A concurrent operation may have changed the state of the availability group in Windows Server Failover Cluster. Verify that the availability group state in Windows Server Failover Cluster is correct, then retry the operation. |
+| <a id="41182"></a> 41182 | 16 | No | Failed to set the local availability replica of availability group '%.\*ls' as joined in Windows Server Failover Clustering (WSFC) database. Either the local availability replica is no longer the primary, or the WSFC service is not accessible. Verify that the local WSFC node is online, and that the local availability replica is the primary replica. Then retry the operation. |
+| <a id="41183"></a> 41183 | 16 | No | Failed to modify availability replica options for availability group '%.\*ls'. Before the availability group configuration could be updated, the operation encountered SQL Server error %d. The operation has been rolled back. Refer to the SQL Server error log for more information. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online, and retry the command. Otherwise, contact your primary support provider. |
+| <a id="41184"></a> 41184 | 16 | No | Failed to modify availability replica options for availability group '%.\*ls'. The availability group configuration has been updated. However, the operation encountered SQL Server error %d while applying the new configuration to the local availability replica. The operation has been terminated. Refer to the SQL Server error log for more information. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online. Use the ALTER AVAILABILITY GROUP command to undo the changes made to the availability group configuration. |
+| <a id="41185"></a> 41185 | 10 | No | The replica option specified in ALTER AVAILABILITY GROUP '%.\*ls' MODIFY DDL is the same as the current availability group configuration. No changes have been made. |
+| <a id="41186"></a> 41186 | 16 | No | Availability group '%.\*ls' cannot process an ALTER AVAILABILITY GROUP command at this time. The availability group is still being created. Verify that the specified availability group name is correct. Wait for CREATE AVAILABILITY GROUP command to finish, and then retry the operation. |
+| <a id="41187"></a> 41187 | 16 | No | Availability group '%.\*ls' cannot process an ALTER AVAILABILITY GROUP command at this time. The availability group is being dropped. Verify that the specified availability group name is correct. The availability group may need to be recreated if it was dropped unintentionally. |
+| <a id="41188"></a> 41188 | 16 | No | Availability group '%.\*ls' failed to process %s-%s command. The operation encountered SQL Server error %d before the availability group configuration could be updated, and has been rolled back. Refer to the SQL Server error log for details. If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online, and then retry the command. Otherwise, contact your primary support provider. |
+| <a id="41189"></a> 41189 | 16 | No | Availability group '%.\*ls' failed to process the %s-%s command. The availability group configuration has been updated. However, the operation encountered SQL Server error %d while applying the new configuration to the local availability replica, and has been terminated. Refer to the SQL Server error log for details . If this is a Windows Server Failover Clustering (WSFC) availability group, verify that the local WSFC node is online. Use an ALTER AVAILABILITY GROUP command to undo the changes to the availability group configuration. |
+| <a id="41190"></a> 41190 | 16 | No | Availability group '%.\*ls' failed to process %s-%s command. The local availability replica is not in a state that could process the command. Verify that the availability group is online and that the local availability replica is the primary replica, then retry the command. |
+| <a id="41191"></a> 41191 | 16 | No | The local availability replica of availability group '%.\*ls' cannot become the primary replica. The last-known primary availability replica is of a higher version than the local availability replica. Upgrade the local instance of SQL Server to the same or later version as the server instance that is hosting the current primary availability replica, and then retry the command. |
+| <a id="41192"></a> 41192 | 17 | No | Creating and scheduling a worker task for Always On Availability Groups failed due to lack of resources (SQL OS error %d). Processing of new actions might be delayed or stalled until the resource limits are resolved. Reduce the memory or thread count on the instance of SQL Server to allow new threads to get scheduled. If new tasks are scheduled the problem might resolve itself. However, if the problem persists, you might need to restart the local instance of SQL Server. |
+| <a id="41193"></a> 41193 | 10 | No | Cannot join database '%.\*ls' to availability group '%.\*ls'. The database is in the process of being removed from the availability group. When the remove-database operation completes, the database will no longer be joined to the availability group. Then retry the join-database command. |
+| <a id="41194"></a> 41194 | 16 | No | An error occurred while waiting for the local availability replica for availability group '%.\*ls' to complete post-online work. The operation encountered SQL OS error %d and has been terminated. Verify that the availability group is in the correct state for the command. If this is a Windows Server Failover Clustering (WSFC) availability group, also verify that the WSFC cluster is in the correct states for the command. Then retry the command. |
+| <a id="41195"></a> 41195 | 16 | No | Cannot failover availability group '%.\*ls' from instance of SQL Server. The local availability replica is already the secondary replica of the availability group. Run the failaway command on primary instance of SQL Server. If local instance of SQL Server is intended to host the secondary replica of the availability group, then no action is required. |
+| <a id="41196"></a> 41196 | 16 | No | Failed to create availability group '%.\*ls', because a Windows Server Failover Cluster (WSFC) group with the specified name already exists. An attempt to roll back the operation failed. Check the SQL Server error log for more details. To manually clean up the partially created availability group, run the DROP AVAILABILITY GROUP command. Reenter your CREATE AVAILABILITY GROUP command specifying a unique availability group name. |
+| <a id="41197"></a> 41197 | 15 | No | The FAILOVER_MODE option has not been specified for the replica '%.\*ls'. Reenter the command, specifying a failover mode for the replica. |
+| <a id="41198"></a> 41198 | 15 | No | The AVAILABILITY_MODE option has not been specified for the replica '%.\*ls'. Reenter the command, specifying an availability mode for the replica. |
+| <a id="41199"></a> 41199 | 16 | No | The specified command is invalid because the Always On Availability Groups %ls feature is not supported by this edition of SQL Server. For information about features supported by the editions of SQL Server, see SQL Server Books Online. |
+| <a id="41201"></a> 41201 | 16 | No | The SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE and SEMANTICSIMILARITYDETAILSTABLE functions do not support remote data sources. |
+| <a id="41202"></a> 41202 | 16 | No | The source table '%.\*ls' specified in the SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE or SEMANTICSIMILARITYDETAILSTABLE function doesn't have a full-text index that uses the STATISTICAL_SEMANTICS option. A full-text index using the STATISTICAL_SEMANTICS option is required to use this function. |
+| <a id="41203"></a> 41203 | 16 | No | The column '%.\*ls' specified in the SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE or SEMANTICSIMILARITYDETAILSTABLE function is not full-text indexed with the STATISTICAL_SEMANTICS option. The column must be full-text indexed using the STATISTICAL_SEMANTICS option to be used in this function. |
+| <a id="41204"></a> 41204 | 16 | No | The source_key parameter is required in the SEMANTICSIMILARITYTABLE function. |
+| <a id="41205"></a> 41205 | 10 | No | Error %d occurred during semantic index population for table or indexed view '%.\*ls' (table or indexed view ID %d, database ID %d, document ID %d) |
+| <a id="41206"></a> 41206 | 10 | No | An ALTER FULLTEXT INDEX statement cannot remove the 'STATISTICAL_SEMANTICS' option from the last column in the index that has the option set when a "WITH NO POPULATION" clause is specified. Remove the "WITH NO POPULATION" clause. |
+| <a id="41207"></a> 41207 | 10 | No | A locale ID that is not supported was specified for a column with 'STATISTICAL_SEMANTICS'. Please verify that the locale ID is correct and that the corresponding language statistics has been installed. |
+| <a id="41208"></a> 41208 | 10 | No | Warning: The population for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') encountered a document with full-text key value '%ls' that specifies a language not supported for semantic indexing. Some columns of the row will not be part of the semantic index. |
+| <a id="41209"></a> 41209 | 10 | No | A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated. |
+| <a id="41210"></a> 41210 | 10 | No | The semantic language statistics database is not accessible or not valid. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated. |
+| <a id="41211"></a> 41211 | 16 | No | A semantic language statistics database is already registered. |
+| <a id="41212"></a> 41212 | 16 | No | No semantic language statistics database is registered. |
+| <a id="41213"></a> 41213 | 16 | No | The database '%.\*ls' does not exist or the database format is not valid. Provide a valid semantic language statistics database name. |
+| <a id="41214"></a> 41214 | 16 | No | An error occurred while trying to register the semantic language statistics database. |
+| <a id="41215"></a> 41215 | 16 | No | The SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE and SEMANTICSIMILARITYDETAILSTABLE functions do not support update or insert. |
+| <a id="41216"></a> 41216 | 16 | No | The SEMANTICSIMILARITYTABLE, SEMANTICKEYPHRASETABLE and SEMANTICSIMILARITYDETAILSTABLE functions do not support common table expressions. |
+| <a id="41300"></a> 41300 | 16 | No | The current transaction cannot be committed and cannot support read or write operations. Roll back the transaction. |
+| <a id="41301"></a> [41301](../mssqlserver-41301-database-engine-error.md) | 17 | No | A transaction dependency failure occurred, and the current transaction can no longer commit. Please retry the transaction. |
+| <a id="41302"></a> [41302](../mssqlserver-41302-database-engine-error.md) | 16 | No | The current transaction attempted to update a record that has been updated since this transaction started. The transaction was aborted. |
+| <a id="41303"></a> 41303 | 16 | No | The bucket count for a hash index must be a positive integer not exceeding %d. |
+| <a id="41304"></a> 41304 | 10 | No | The current value of option '%.\*ls' for table '%.\*ls', index '%.\*ls' is %d. |
+| <a id="41305"></a> [41305](../mssqlserver-41305-database-engine-error.md) | 17 | No | The current transaction failed to commit due to a repeatable read validation failure. |
+| <a id="41306"></a> 41306 | 16 | No | The nesting limit of %d for conditional blocks and exception blocks, for natively compiled modules, has been exceeded. Please simplify the module. |
+| <a id="41307"></a> [41307](../mssqlserver-41307-database-engine-error.md) | 10 | No | Warning: The row size limit of %d bytes for memory optimized tables has been exceeded and will not work on subscribers running SQL Server 2014 or earlier. Please simplify the table definition. |
+| <a id="41308"></a> 41308 | 21 | No | The database ID %d already exists. |
+| <a id="41309"></a> 41309 | 16 | No | Unable to load the compiled DLL for database ID %d. |
+| <a id="41310"></a> 41310 | 16 | No | A file with an invalid format was detected. Check the SQL Server error log for more details. |
+| <a id="41311"></a> 41311 | 16 | No | File error during C code generation. The error code was %d. |
+| <a id="41312"></a> 41312 | 16 | No | Unable to call into the C compiler. GetLastError = %d. |
+| <a id="41313"></a> 41313 | 16 | No | The C compiler encountered a failure. The exit code was %d. |
+| <a id="41314"></a> 41314 | 16 | No | Conversion of default value for parameter '%.\*ls' failed. Unable to create stored procedure '%.\*ls'. |
+| <a id="41315"></a> 41315 | 16 | No | Checkpoint operation failed in database '%.\*ls'. |
+| <a id="41316"></a> 41316 | 16 | No | Restore operation failed for database '%.\*ls' with internal error code '0x%08lx'. |
+| <a id="41317"></a> 41317 | 16 | No | A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master. |
+| <a id="41318"></a> 41318 | 16 | No | Memory optimized tables and natively compiled modules cannot be accessed from within SQLCLR stored procedures. |
+| <a id="41319"></a> 41319 | 16 | No | A maximum of %d predicates are allowed in the WHERE clauses of queries in natively compiled modules. |
+| <a id="41320"></a> 41320 | 16 | No | EXECUTE AS clause is required, and EXECUTE AS CALLER is not supported, with natively compiled modules. |
+| <a id="41321"></a> 41321 | 16 | No | The memory optimized table '%.\*ls' with DURABILITY=SCHEMA_AND_DATA must have a primary key. |
+| <a id="41322"></a> 41322 | 16 | No | MAT/PIT export/import encountered a failure for memory optimized table or natively compiled module with object ID %d in database ID %d. The error code was 0x%x. |
+| <a id="41323"></a> 41323 | 16 | No | The table type '%ls' is not a memory optimized table type and cannot be used in a natively compiled module. |
+| <a id="41324"></a> 41324 | 16 | No | The memory optimized table variable '%.\*ls' cannot be used in a batch with a 'USE' statement. |
+| <a id="41325"></a> [41325](../mssqlserver-41325-database-engine-error.md) | 17 | No | The current transaction failed to commit due to a serializable validation failure. |
+| <a id="41326"></a> 41326 | 16 | No | Memory optimized tables cannot be created in system databases. |
+| <a id="41327"></a> 41327 | 16 | No | The memory optimized table '%.\*ls' must have at least one index or a primary key. |
+| <a id="41328"></a> 41328 | 16 | No | A floating point operation has overflowed. |
+| <a id="41329"></a> 41329 | 16 | No | Unsupported operation following a transaction dependency failure. Parameters and variables cannot be accessed in the CATCH block and the CATCH block must raise an exception following a dependency failure. |
+| <a id="41330"></a> 41330 | 16 | No | Create database operation failed for database '%.\*ls'. |
+| <a id="41331"></a> 41331 | 17 | No | The transaction encountered an out-of-memory condition while rolling back to a savepoint, and therefore cannot be committed. Roll back the transaction. |
+| <a id="41332"></a> [41332](../mssqlserver-41332-database-engine-error.md) | 16 | No | Memory optimized tables and natively compiled modules cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT. |
+| <a id="41333"></a> [41333](../mssqlserver-41333-database-engine-error.md) | 16 | No | The following transactions must access memory optimized tables and natively compiled modules under snapshot isolation: RepeatableRead transactions, Serializable transactions, and transactions that access tables that are not memory optimized in RepeatableRead or Serializable isolation. |
+| <a id="41334"></a> 41334 | 16 | No | The code generation directory cannot be created or set up correctly. |
+| <a id="41335"></a> 41335 | 16 | No | Modifying the collation of a database is not allowed when the database contains memory optimized tables or natively compiled modules. |
+| <a id="41336"></a> 41336 | 16 | No | Unable to clean up all files that are needed for compilation. |
+| <a id="41337"></a> 41337 | 16 | No | Cannot create %S_MSG. To create %S_MSG, the database must have a MEMORY_OPTIMIZED_FILEGROUP that is online and has at least one container. |
+| <a id="41338"></a> 41338 | 16 | No | An invalid version of a data file was detected. Check the SQL Server error log for more details. |
+| <a id="41339"></a> 41339 | 16 | No | The table '%.\*ls' has been created or altered after the start of the current transaction. The transaction was aborted. Please retry the transaction. |
+| <a id="41340"></a> 41340 | 16 | No | The transaction executed too many insert, update, or delete statements in memory optimized tables. The transaction was terminated. |
+| <a id="41341"></a> 41341 | 16 | No | Table '%.\*ls' is not yet available on the secondary replica. |
+| <a id="41343"></a> 41343 | 16 | No | In-Memory OLTP hot switch to primary replica for database '%.\*ls' failed. |
+| <a id="41344"></a> 41344 | 16 | No | RESTORE DATABASE WITH PARTIAL requires the MEMORY_OPTIMIZED_DATA filegroup if the backup contains a MEMORY_OPTIMIZED_DATA filegroup. |
+| <a id="41345"></a> 41345 | 16 | No | The key size limit of %d bytes for nonclustered indexes on memory optimized tables has been exceeded. Please simplify the index definition. |
+| <a id="41346"></a> 41346 | 16 | No | CREATE and UPDATE STATISTICS for memory optimized tables do not support the WHERE clause. |
+| <a id="41347"></a> 41347 | 16 | No | A BACKUP or RESTORE DATABASE statement that includes the primary filegroup must include the MEMORY_OPTIMIZED_DATA filegroup, and vice versa. |
+| <a id="41348"></a> 41348 | 16 | No | MEMORY_OPTIMIZED_DATA filegroups cannot be used with the FILESTREAM_ON clause. Specify a FILESTREAM filegroup. |
+| <a id="41349"></a> [41349](../mssqlserver-41349-database-engine-error.md) | 10 | No | Warning: Encryption was enabled for a database that contains one or more memory optimized tables with durability SCHEMA_AND_DATA. The data in these memory optimized tables will not be encrypted. |
+| <a id="41350"></a> [41350](../mssqlserver-41350-database-engine-error.md) | 10 | No | Warning: A memory optimized table with durability SCHEMA_AND_DATA was created in a database that is enabled for encryption. The data in the memory optimized table will not be encrypted. |
+| <a id="41351"></a> 41351 | 16 | No | An error occurred while processing the log. The log version is unsupported. |
+| <a id="41352"></a> 41352 | 16 | No | The operation on database ID %d cannot complete because the database is in use. |
+| <a id="41353"></a> 41353 | 16 | No | The operation on database ID %d cannot complete because the database is being dropped or being taken offline. |
+| <a id="41354"></a> 41354 | 21 | Yes | The XTP background checkpoint thread encountered an unrecoverable error ('%ls') for database '%.\*ls'. The checkpoint process is terminating so that the thread can clean up its resources. This is an informational message only. No user action is required. |
+| <a id="41355"></a> 41355 | 21 | Yes | An XTP checkpoint operation encountered an error ('%ls') while processing log record ID %S_LSN for database '%.\*ls'. Checkpoint processing has terminated. |
+| <a id="41356"></a> 41356 | 16 | No | Filegroups with MEMORY_OPTIMIZED_DATA can only be created in 64-bit installations of SQL Server. |
+| <a id="41357"></a> 41357 | 16 | No | Tables with MEMORY_OPTIMIZED=ON can only be created in 64-bit installations of SQL Server. |
+| <a id="41358"></a> 41358 | 16 | No | Stored procedures with NATIVE_COMPILATION can only be created in 64-bit installations of SQL Server. |
+| <a id="41359"></a> [41359](../mssqlserver-41359-database-engine-error.md) | 16 | No | A query that accesses memory optimized tables using the READ COMMITTED isolation level, cannot access disk based tables when the database option READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT). |
+| <a id="41360"></a> 41360 | 16 | No | Default MEMORY_OPTIMIZED_DATA filegroup is not available in database '%.\*ls'. |
+| <a id="41361"></a> 41361 | 16 | No | The READ_ONLY property of a MEMORY_OPTIMIZED_DATA filegroup cannot be modified. |
+| <a id="41362"></a> 41362 | 16 | No | FILESTREAM container '%.\*ls' cannot be added. Either the server is out of memory or the container path is too long. |
+| <a id="41363"></a> 41363 | 16 | No | Only the owner of database '%.\*ls' or users with valid permission can execute the stored procedure '%.\*ls'. |
+| <a id="41364"></a> 41364 | 16 | No | Stored procedure '%.\*ls' can only be executed on a database that has an online MEMORY_OPTIMIZED_DATA filegroup. |
+| <a id="41365"></a> [41365](../mssqlserver-41365-database-engine-error.md) | 16 | No | Merge request for transaction range \[%ld, %ld\] on database '%.\*ls' was not scheduled. The checkpoint files represented by the range either cannot be merged, or the checkpoint files are already part of an existing merge operation. |
+| <a id="41366"></a> 41366 | 16 | No | Merge operation failed because the requested transaction id range is invalid. |
+| <a id="41367"></a> 41367 | 16 | No | Failed to complete merge operation for transaction range \[%ld, %ld\] for database '%.\*ls'. Error was 0x%08x. |
+| <a id="41368"></a> [41368](../mssqlserver-41368-database-engine-error.md) | 16 | No | Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT). |
+| <a id="41369"></a> 41369 | 16 | No | Merge operations cannot be requested on a secondary replica. |
+| <a id="41370"></a> 41370 | 16 | No | Resource pool '%.\*ls' does not exist or resource governor has not been reconfigured. |
+| <a id="41371"></a> 41371 | 16 | No | Binding to a resource pool is not supported for system database '%.\*ls'. This operation can only be performed on a user database. |
+| <a id="41372"></a> 41372 | 16 | No | Database '%.\*ls' is currently bound to a resource pool. A database must be unbound before creating a new binding. |
+| <a id="41373"></a> 41373 | 16 | No | Database '%.\*ls' cannot be explicitly bound to the resource pool '%.\*ls'. A database can only be bound to a user resource pool. |
+| <a id="41374"></a> 41374 | 16 | No | Database '%.\*ls' does not have a binding to a resource pool. |
+| <a id="41375"></a> 41375 | 16 | No | A binding has been created. Take database '%.\*ls' offline and then bring it back online to begin using resource pool '%.\*ls'. |
+| <a id="41376"></a> 41376 | 16 | No | Only members of the fixed sysadmin role can execute the stored procedure '%ls'. |
+| <a id="41377"></a> 41377 | 16 | No | The natively compiled module with database ID %ld and object ID %ld has not been executed. Query execution statistics collection can only be enabled if the module has been executed at least once since creation or last database restart. |
+| <a id="41378"></a> 41378 | 16 | No | Both @database_id and @xtp_object_id should be specified to enable or retrieve status of query level statistics collection for a procedure. |
+| <a id="41379"></a> 41379 | 16 | No | Restore operation failed for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. Close other applications to increase the available memory, ensure that both SQL Server memory configuration and resource pool memory limits are correct and try again. See '[http://go.microsoft.com/fwlink/?LinkID=507574](https://go.microsoft.com/fwlink/?LinkID=507574)' for more information. |
+| <a id="41380"></a> 41380 | 21 | No | Databases with a MEMORY_OPTIMIZED_DATA filegroup are only supported in 64-bit editions of SQL Server. |
+| <a id="41381"></a> 41381 | 21 | No | The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions. |
+| <a id="41382"></a> 41382 | 16 | No | Failure adding a container to a MEMORY_OPTIMIZED_DATA filegroup. Possible causes include the server being out of memory and the container path being too long. |
+| <a id="41383"></a> 41383 | 16 | No | An internal error occurred while running the DMV query. This was likely caused by concurrent DDL operations. Please retry the query. |
+| <a id="41384"></a> 41384 | 16 | No | Database '%.\*ls' has exceeded the maximum number of XTP checkpoint files, and can no longer support write operations in durable memory-optimized tables. For more information, contact Customer Support Services. |
+| <a id="41385"></a> 41385 | 16 | No | A memory-optimized table cannot be enabled for Change Data Capture (CDC). |
+| <a id="41386"></a> 41386 | 16 | No | Filegroups with MEMORY_OPTIMIZED_DATA, memory-optimized tables and natively compiled modules are not supported when lightweight pooling is enabled. Disable lightweight pooling in order to use memory-optimized features. |
+| <a id="41387"></a> 41387 | 10 | No | Disallowing XTP page allocations for database '%.\*ls' due to insufficient memory in the resource pool '%ls'. See '[http://go.microsoft.com/fwlink/?LinkId=510837](https://go.microsoft.com/fwlink/?LinkId=510837)' for more information. |
+| <a id="41388"></a> 41388 | 16 | No | An upgrade operation failed for database '%.\*ls'. Check the error log for additional details. |
+| <a id="41389"></a> 41389 | 16 | No | Failed to create a backup file collection snapshot necessary for backup of database '%.\*ls'. Check the error log for additional details. |
+| <a id="41390"></a> 41390 | 16 | No | Failed to get checkpoint file information necessary for backup of database '%.\*ls'. Check the error log for additional details. |
+| <a id="41391"></a> 41391 | 23 | No | Backup of database '%.\*ls' detected a missing MEMORY_OPTIMIZED_DATA file with ID '%.\*ls'. |
+| <a id="41392"></a> 41392 | 16 | No | Cannot ALTER a natively compiled module into a non-native module. Include WITH NATIVE_COMPILATION or drop and recreate the module. |
+| <a id="41393"></a> 41393 | 16 | No | Cannot ALTER a non-native module into a natively compiled module. Omit WITH NATIVE_COMPILATION or drop and recreate the module. |
+| <a id="41394"></a> 41394 | 16 | No | TEXTSIZE must be a number between -1 and 2147483647. |
+| <a id="41395"></a> 41395 | 10 | No | Rebuilding the log file is not supported for databases containing memory-optimized tables. |
+| <a id="41396"></a> [41396](../mssqlserver-41396-database-engine-error.md) | 16 | No | The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information. |
+| <a id="41397"></a> 41397 | 16 | No | The TOP operator can return a maximum of %d sorted rows. %d was requested. Reduce the number of rows selected or simplify the query. |
+| <a id="41398"></a> 41398 | 16 | No | The TOP operator can return a maximum of %d rows; %d was requested. |
+| <a id="41399"></a> [41399](../mssqlserver-41399-database-engine-error.md) | 16 | No | The sort operation is too complex. Consult SQL Server Books Online for more information. |

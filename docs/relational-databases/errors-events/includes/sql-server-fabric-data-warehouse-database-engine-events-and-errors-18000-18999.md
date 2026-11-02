@@ -7,276 +7,276 @@ ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
-| 18002 | 20 | Yes | Exception happened when running extended stored procedure '%.\*ls' in the library '%.\*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx. To generate a minidump, create an xevent session using the dump routine event with the create dump action. |
-| 18052 | 16 | No | Error: %d, Severity: %d, State: %d. |
-| [18053](../mssqlserver-18053-database-engine-error.md) | 16 | No | Error: %d, Severity: %d, State: %d. (Params:%ls). The error is printed in terse mode because there was error during formatting. Tracing, ETW, notifications etc are skipped. |
-| 18054 | 16 | Yes | Error %d, severity %d, state %d was raised, but no message with that error number was found in sys.messages. If error is larger than 50000, make sure the user-defined message is added using sp_addmessage. |
-| 18055 | 20 | Yes | Exception %d, %d occurred when the server tried to reset connection %d. Because the server cannot recover from the failure to reset the connection, the connection has been dropped. Please contact Microsoft technical support. |
-| 18056 | 20 | Yes | The client was unable to reuse a session with SPID %d, which had been reset for connection pooling. The failure ID is %d. This error may have been caused by an earlier operation failing. Check the error logs for failed operations immediately before this error message. |
-| 18057 | 20 | Yes | Error: Failed to set up execution context. |
-| 18058 | 17 | Yes | Failed to load format string for error %d, language id %d. Operating system error: %s. Check that the resource file matches SQL Server executable, and resource file in localized directory matches the file under English directory. Also check memory usage. |
-| 18059 | 16 | Yes | The connection has been dropped because the principal that opened it subsequently assumed a new security context, and then tried to reset the connection under its impersonated security context. This scenario is not supported. See "Impersonation Overview" in Books Online. |
-| 18060 | 16 | Yes | Failed to format string for error %d, language id %d. This may be caused by low memory in server, or error happening while formatting the message. |
-| 18061 | 20 | Yes | The client was unable to join a session with SPID %d. This error may have been caused by an earlier operation failing or a change in permissions since the session was established. Check the error logs for failed operations immediately before this error message. |
-| 18062 | 18 | No | Transaction priority: cleared a stale session execution-context (SETLS) pointer on SPID %d during connection context teardown. This is an internal self-heal and requires no action. |
-| 18100 | 10 | Yes | Process ID %d was killed by hostname %.\*ls, host process ID %d. |
-| 18113 | 10 | Yes | SQL Server shutdown after verifying system indexes. |
-| 18124 | 10 | Yes | The default collation was successfully changed. |
-| 18126 | 10 | Yes | Engine failed to load configuration for error detection, default configuration was applied. |
-| 18127 | 10 | Yes | Engine is marking DB %d \[%.\*ls\] as SUSPECT in cloud DB mode due to error %d, severity %d, state %d. |
-| 18204 | 16 | Yes | %s: Backup device '%s' failed to %s. Operating system error %s. |
-| [18210](../mssqlserver-18210-database-engine-error.md) | 16 | Yes | %s: %s failure on backup device '%s'. Operating system error %s. |
-| 18225 | 10 | Yes | Tape '%s' (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required |
-| 18226 | 10 | Yes | Tape mount is being requested on drive '%s'. Expected volume has (Family ID %d, sequence %d). |
-| 18227 | 10 | Yes | Unnamed tape (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required. |
-| 18228 | 10 | Yes | Tape mount request on drive '%s' is cancelled. This is an informational message only. No user action is required. |
-| 18257 | 10 | Yes | %s: Device or media does not support %s. To access this feature, use a different device or media. |
-| [18264](../mssqlserver-18264-database-engine-error.md) | 10 | Yes | Database backed up. Database: %s, creation date(time): %s(%s), pages dumped: %I64d, first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
-| 18265 | 10 | Yes | Log was backed up. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
-| 18266 | 10 | Yes | Database file was backed up. Database: %s, creation date(time): %s(%s), file list: (%s), pages dumped: %I64d, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
-| 18267 | 10 | Yes | Database was restored: Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). Informational message. No user action required. |
-| 18268 | 10 | Yes | Log was restored. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
-| 18269 | 10 | Yes | Database file was restored. Database: %s, creation date(time): %s(%s), file list: (%s), number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
-| 18270 | 10 | Yes | Database differential changes were backed up. Database: %s, creation date(time): %s(%s), pages dumped: %I64d, first LSN: %s, last LSN: %s, full backup LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
-| 18271 | 10 | Yes | Database changes were restored. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
-| 18272 | 16 | Yes | During restore restart, an I/O error occurred on checkpoint file '%s' (operating system error %s). The statement is proceeding but cannot be restarted. Ensure that a valid storage location exists for the checkpoint file. |
-| 18273 | 16 | Yes | Could not clear '%s' bitmap in database '%s' because of error %d. As a result, the differential or bulk-logged bitmap overstates the amount of change that will occur with the next differential or log backup. This discrepancy might slow down later differential or log backup operations and cause the backup sets to be larger than necessary. Typically, the cause of this error is insufficient resources. Investigate the failure and resolve the cause. If the error occurred on a data backup, consider taking a data backup to create a new base for future differential backups. |
-| 18274 | 10 | Yes | Tape '%s' was dismounted from drive '%s'. This is an informational message. No user action is required. |
-| 18275 | 10 | Yes | Unnamed tape was dismounted from drive '%s'. This is an informational message. No user action is required. |
-| 18276 | 10 | Yes | Database file differential changes were backed up. Database: %s, creation date(time): %s(%s), file list: (%s), pages dumped: %I64d, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
-| 18277 | 10 | Yes | Database file changes were restored. Database: %s, creation date(time): %s(%s), file list: (%s), number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
-| 18279 | 16 | Yes | During a RESTORE operation, an I/O error occurred on checkpoint file '%s' (operating system error %s). Ensure that a valid storage location exists for the checkpoint file and try the operation again. |
-| 18280 | 16 | Yes | The file %s is being removed from the database, but is not being removed from the filesystem because file snapshots are still associated with the file. |
-| 18300 | 10 | No | Reason: Infrastructure error occurred. Check for previous errors. |
-| 18301 | 10 | No | Reason: Could not find a login matching the name provided. |
-| 18302 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. |
-| 18303 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. |
-| 18304 | 10 | No | Reason: Could not find a login matching the name provided. |
-| 18305 | 10 | No | Reason: Attempting to use an NT account name with SQL Server Authentication. |
-| 18306 | 10 | No | Reason: An error occurred while evaluating the password. |
-| 18307 | 10 | No | Reason: Password did not match that for the login provided. |
-| 18308 | 10 | No | Reason: Invalid password provided. |
-| 18309 | 10 | No | Reason: Password validation failed with an infrastructure error. Check for previous errors. |
-| 18310 | 10 | No | Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. |
-| 18311 | 10 | No | Reason: Login-based server access validation failed with an infrastructure error. Check for previous errors. |
-| 18312 | 10 | No | Reason: SQL Server service is paused. No new connections can be accepted at this time. |
-| 18313 | 10 | No | Reason: Interface for login to SQL Server is not supported. |
-| 18314 | 10 | No | Reason: Failed to open the specified database. |
-| 18315 | 10 | No | Reason: Failed to open the database for this login. |
-| 18316 | 10 | No | Reason: Unable to determine the initial language and date format. |
-| 18317 | 10 | No | Reason: The user must change the password, but it cannot be changed with the current connection settings. |
-| 18318 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. |
-| 18319 | 10 | No | Reason: Simulation of a failure while redoing login on the connection. |
-| 18320 | 10 | No | Reason: SQL Server service is paused. Login could not be revalidated at this time. |
-| 18321 | 10 | No | Reason: Reinitialization of security context failed while revalidating the login on the connection. |
-| 18322 | 10 | No | Reason: Access to server validation failed while revalidating the login on the connection. |
-| 18323 | 10 | No | Reason: Failed to open the specified database while revalidating the login on the connection. |
-| 18324 | 10 | No | Reason: Failed to create the user instance while revalidating the login on the connection. |
-| 18325 | 10 | No | Reason: Failed to attach the specified database while revalidating the login on the connection. |
-| 18326 | 10 | No | Reason: Failed to open the database for this login while revalidating the login on the connection. |
-| 18327 | 10 | No | Reason: Failed to determine the language and date format while revalidating the login on the connection. |
-| 18328 | 10 | No | Reason: An exception was raised while revalidating the login on the connection. Check for previous errors. |
-| 18329 | 10 | No | Reason: Simulation of a failure while reauthenticating login. |
-| 18330 | 10 | No | Reason: SQL Server service is paused. Login cannot be reauthenticated at this time. |
-| 18331 | 10 | No | Reason: Failed to reinitialize security context while reauthenticating login. |
-| 18332 | 10 | No | Reason: Failed to access server for validation while reauthenticating login. |
-| 18333 | 10 | No | Reason: Failed to open the specified database while reauthenticating login. |
-| 18334 | 10 | No | Reason: An error occurred while reauthenticating login. Check for previous errors. |
-| 18335 | 10 | No | Reason: Could not retrieve database name or map database to an item. |
-| 18336 | 10 | No | Reason: Cannot connect with a login that does not specify a share. |
-| 18337 | 10 | No | Reason: Failed to open the explicitly specified database '%.\*ls'. |
-| 18338 | 10 | No | Reason: Unable to determine the database name from the specified file name. |
-| 18339 | 10 | No | Reason: Failed to open the database '%.\*ls' specified in the login properties. |
-| 18340 | 10 | No | Reason: Failed to store database name and collation. Check for previous errors. |
-| 18341 | 10 | No | . Reason: Current collation did not match the database's collation during connection reset. |
-| 18342 | 10 | No | Reason: Failed to send an environment change notification to a log shipping partner node. |
-| 18343 | 10 | No | Reason: Failed to retrieve database name or map database to an item while revalidating the login on the connection. |
-| 18344 | 10 | No | Reason: Connection with a login which does not specify a share is not allowed while revalidating the login on the connection. |
-| 18345 | 10 | No | Reason: Failed to open the database '%.\*ls' configured in the login object while revalidating the login on the connection. |
-| 18346 | 10 | No | Reason: Failed to determine database name from a given file name while revalidating the login on the connection. |
-| 18347 | 10 | No | Reason: Failed to open the database '%.\*ls' specified in the login properties while revalidating the login on the connection. |
-| 18348 | 10 | No | Reason: Failed to store database name and collation while revalidating the login on the connection. Check for previous errors. |
-| 18349 | 10 | No | Reason: Current collation did not match the database's collation during connection reset. |
-| 18350 | 10 | No | Reason: Failed to send an environment change notification to a log shipping partner node while revalidating the login. |
-| 18351 | 10 | No | Reason: Client impersonation failed. |
-| 18352 | 10 | No | Reason: Failed to revert impersonation to self. |
-| 18353 | 10 | No | Reason: Failed to get security token information. |
-| 18354 | 10 | No | Reason: Failed to duplicate of security token. |
-| 18355 | 10 | No | Reason: Failed attempted retry of a process token validation. |
-| 18356 | 10 | No | Reason: An error occurred while attempting to change password. |
-| 18357 | 10 | No | Reason: An attempt to login using SQL authentication failed. Server is configured for Integrated authentication only. |
-| 18358 | 10 | No | Reason: Could not find a user matching the name provided. \[Database: '%.\*ls'\] |
-| 18359 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. \[Database: '%.\*ls'\] |
-| 18360 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. \[Database: '%.\*ls'\] |
-| 18361 | 10 | No | Reason: Could not find a user matching the name provided. \[Database: '%.\*ls'\] |
-| 18362 | 10 | No | Reason: Attempting to use an invalid user type with SQL Server Authentication. \[Database: '%.\*ls'\] |
-| 18363 | 10 | No | Reason: An error occurred while evaluating the password. \[Database: '%.\*ls'\] |
-| 18364 | 10 | No | Reason: Password did not match that for the user provided. \[Database: '%.\*ls'\] |
-| 18365 | 10 | No | Reason: Invalid password provided. \[Database: '%.\*ls'\] |
-| 18366 | 10 | No | Reason: Password validation failed with an infrastructure error. Check for previous errors. \[Database: '%.\*ls'\] |
-| 18367 | 10 | No | Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. \[Database: '%.\*ls'\] |
-| 18368 | 10 | No | Reason: Login-based server access validation failed with an infrastructure error. Check for previous errors. \[Database: '%.\*ls'\] |
-| 18369 | 10 | No | attach |
-| 18370 | 10 | No | restore |
-| 18371 | 10 | No | Reason: The password hash is from an unsupported version of SQL Server. Reset the password or recreate the login. |
-| 18372 | 10 | No | Reason: An error occurred while obtaining a routing environment change notification. |
-| 18373 | 10 | No | Reason: Database could not accept user connections at this time. |
-| 18374 | 10 | Yes | Reason: An error occurred while recovering the Identity_Insert session state requested by the recovery login. |
-| 18375 | 10 | Yes | Reason: Failed to open the database '%.\*ls' configured in the session recovery object while recovering the connection. |
-| 18376 | 10 | Yes | Reason: Failed to open the database '%.\*ls' configured in the session recovery object while revalidating the login on the recovered connection. |
-| 18377 | 10 | No | Reason: The current collation did not match the database's collation as indicated by session recovery object in login. |
-| 18378 | 10 | Yes | Reason: An error occurred while recovering the @@identity session state requested by the recovery login. |
-| 18379 | 10 | No | Reason: The account is currently locked out. The system administrator can unlock it. |
-| 18380 | 10 | No | Reason: The certificate is invalid or expired. |
-| 18381 | 10 | No | Reason: The logical master database was not found. |
-| 18382 | 10 | No | Reason: Unable to retrieve client IP Address. |
-| 18383 | 10 | No | Reason: The client was blocked by the firewall. |
-| 18384 | 10 | No | Reason: Unable to open the logical master database. |
-| 18385 | 10 | No | Reason: Unable to connect to logical master database. |
-| 18386 | 10 | No | Reason: Remote authentication failed. |
-| 18387 | 10 | No | Reason: The DosGuard had an error while checking a connection. |
-| 18388 | 10 | No | Reason: The DosGuard rejected the connection. |
-| 18389 | 10 | No | Reason: Unable to retrieve server firewall rules. |
-| 18390 | 10 | No | Reason: An unknown error occurred while attempting to authenticate the user. |
-| 18391 | 10 | No | Reason: The login to SQL Azure DB failed due to empty username. |
-| 18392 | 10 | No | Reason: The login to SQL Azure DB failed due to empty password. |
-| 18393 | 10 | No | Reason: The login to SQL Azure DB failed due to empty password when using PreTDS7 client. |
-| 18394 | 10 | No | Reason: Opening the database requested by the user failed unexpectedly. |
-| 18395 | 10 | No | Reason: Authentication was successful, but database was not found on this logical server. |
-| 18396 | 10 | No | Reason: Authentication was successful, but database could not be found on current instance. |
-| 18397 | 10 | No | Reason: Unable to retrieve database firewall rules. |
-| 18398 | 10 | No | Reason: Catch exception from FindLogin during contained database authentication. |
-| 18399 | 10 | No | Reason: Unsecured connection to the database is disallowed. The secured connection string should be used instead. \[Database: '%.\*ls'\] |
-| 18400 | 16 | Yes | The background checkpoint thread has encountered an unrecoverable error. The checkpoint process is terminating so that the thread can clean up its resources. This is an informational message only. No user action is required. |
-| 18401 | 14 | Yes | Login failed for user '%.\*ls'. Reason: Server is in script upgrade mode. Only administrator can connect at this time.%.\*ls |
-| 18451 | 14 | Yes | Login failed for user '%.\*ls'. Only administrators may connect at this time.%.\*ls |
-| [18452](../mssqlserver-18452-database-engine-error.md) | 14 | Yes | Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.%.\*ls |
-| 18453 | 10 | Yes | Login succeeded for user '%.\*ls'. Connection made using Integrated authentication.%.\*ls |
-| 18454 | 10 | Yes | Login succeeded for user '%.\*ls'. Connection made using SQL Server authentication.%.\*ls |
-| 18455 | 10 | Yes | Login succeeded for user '%.\*ls'.%.\*ls |
-| [18456](../mssqlserver-18456-database-engine-error.md) | 14 | Yes | Login failed for user '%.\*ls'.%.\*ls%.\*ls |
-| 18458 | 14 | Yes | Login failed. The number of simultaneous users already equals the %d registered licenses for this server. To increase the maximum number of simultaneous users, obtain additional licenses and then register them through the Licensing item in Control Panel.%.\*ls |
-| 18459 | 14 | Yes | Login failed. The workstation licensing limit for SQL Server access has already been reached.%.\*ls |
-| 18460 | 14 | Yes | Login failed. The number of simultaneous users has already reached the limit of %d licenses for this '%ls' server. Additional licenses should be obtained and installed or you should upgrade to a full version.%.\*ls |
-| 18461 | 14 | Yes | Login failed for user '%.\*ls'. Reason: Server is in single user mode. Only one administrator can connect at this time.%.\*ls |
-| 18462 | 14 | No | The login failed for user "%.\*ls". The password change failed. The password for the user is too recent to change. %.\*ls |
-| 18463 | 14 | No | The login failed for user "%.\*ls". The password change failed. The password cannot be used at this time. %.\*ls |
-| 18464 | 14 | No | Login failed for user '%.\*ls'. Reason: Password change failed. The password does not meet operating system policy requirements because it is too short.%.\*ls |
-| 18465 | 14 | No | Login failed for user '%.\*ls'. Reason: Password change failed. The password does not meet operating system policy requirements because it is too long.%.\*ls |
-| 18466 | 14 | No | Login failed for user '%.\*ls'. Reason: Password change failed. The password does not meet operating system policy requirements because it is not complex enough.%.\*ls |
-| 18467 | 14 | No | The login failed for user "%.\*ls". The password change failed. The password does not meet the requirements of the password filter DLL. %.\*ls |
-| 18468 | 14 | No | The login failed for user "%.\*ls". The password change failed. An unexpected error occurred during password validation. %.\*ls |
-| 18469 | 10 | No | \[CLIENT: %.\*s%.\*ls\] |
-| 18470 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The account is disabled.%.\*ls |
-| 18471 | 14 | No | The login failed for user "%.\*ls". The password change failed. The user does not have permission to change the password. %.\*ls |
-| [18482](../mssqlserver-18482-database-engine-error.md) | 16 | Yes | Could not connect to server '%.\*ls' because '%.\*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.\*ls. |
-| [18483](../mssqlserver-18483-database-engine-error.md) | 16 | Yes | Could not connect to server '%.\*ls' because '%.\*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.\*ls. |
-| 18485 | 16 | Yes | Could not connect to server '%.\*ls' because it is not configured to accept remote logins. Use the remote access configuration option to allow remote logins.%.\*ls |
-| 18486 | 14 | Yes | Login failed for user '%.\*ls' because the account is currently locked out. The system administrator can unlock it. %.\*ls |
-| 18487 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The password of the account has expired.%.\*ls |
-| 18488 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The password of the account must be changed.%.\*ls |
-| 18489 | 10 | No | The dedicated administrator connection is in use by "%.\*ls" on "%.\*ls".%.\*ls |
-| 18491 | 16 | Yes | SQL Server could not start because of an invalid serial number. The serial number information retrieved at startup appears invalid. To proceed, reinstall SQL Server. |
-| 18492 | 16 | Yes | SQL Server cannot start because the license agreement for this '%ls' version of SQL Server is invalid. The server is exiting. To proceed, reinstall SQL Server with a valid license. |
-| 18493 | 16 | Yes | The user instance login flag is not supported on this version of SQL Server. The connection will be closed.%.\*ls |
-| 18494 | 16 | Yes | The user instance login flag is not allowed when connecting to a user instance of SQL Server. The connection will be closed.%.\*ls |
-| 18495 | 16 | Yes | The user instance login flag cannot be used along with an attach database file name. The connection will be closed.%.\*ls |
-| 18496 | 10 | Yes | System Manufacturer: '%ls', System Model: '%ls'. |
-| 18497 | 10 | No | \[SERVER: %.\*s%.\*ls\] |
-| 18498 | 17 | No | Local time zone manager initialization failed. To identify the error, check the SQL Server error log. |
-| 18596 | 16 | No | %.\*ls cannot start because your system is low on memory. |
-| 18597 | 16 | No | Your %.\*ls installation is either corrupt or has been tampered with (%hs). Please uninstall then re-run setup to correct this problem |
-| 18598 | 16 | No | %.\*ls could not find the default instance (%.\*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem. |
-| 18599 | 16 | No | %.\*ls could not find the specified named instance (%.\*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem. |
-| 18749 | 16 | No | MaxCmdsInTran parameter for log reader cannot be set with CDC enabled on the db |
-| 18750 | 16 | No | %ls: The parameter '%ls' is not valid. |
-| 18751 | 16 | No | %ls procedure was called with the wrong number of parameters. |
-| [18752](../mssqlserver-18752-database-engine-error.md) | 16 | No | Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection with session ID %I64d over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure. |
-| 18755 | 16 | No | Could not allocate memory for replication. Verify that SQL Server has sufficient memory for all operations. |
-| 18756 | 16 | No | Could not retrieve replication information for table %d. Verify that the table has a primary key, and then rerun the Log Reader Agent. |
-| 18757 | 16 | No | Unable to execute procedure. The database is not published. Execute the procedure in a database that is published for replication. |
-| 18760 | 16 | No | Invalid %ls statement for article %d. Verify that the stored procedures that propagate changes to Subscribers use the appropriate call syntax, and then rerun the Log Reader Agent. Use sp_helparticle and sp_changearticle to view and change the call syntax. |
-| 18761 | 16 | No | Commit record at {%08lx:%08lx:%04lx} has already been distributed. |
-| 18762 | 16 | No | Invalid begin LSN {%08lx:%08lx:%04lx} for commit record {%08lx:%08lx:%04lx}. Check DBTABLE. |
-| 18763 | 16 | No | Commit record {%08lx:%08lx:%04lx} reports oldest active LSN as (0:0:0). |
-| 18764 | 16 | No | Execution of filter stored procedure %d failed. See the SQL Server errorlog for more information. |
-| 18765 | 16 | No | The "%s" log sequence number (LSN) that was specified for the replication log scan is invalid. |
-| 18766 | 16 | No | The replbeginlsn field in the DBTABLE is invalid. |
-| 18767 | 16 | No | The specified begin LSN {%08lx:%08lx:%04lx} for replication log scan occurs before replbeginlsn {%08lx:%08lx:%04lx}. |
-| 18768 | 16 | No | The specified LSN {%08lx:%08lx:%04lx} for repldone log scan occurs before the current start of replication in the log {%08lx:%08lx:%04lx}. |
-| 18769 | 16 | No | The specified LSN {%08lx:%08lx:%04lx} for repldone log scan is not a replicated commit record. |
-| 18770 | 16 | No | The specified LSN {%08lx:%08lx:%04lx} for repldone log scan is not present in the transaction log. |
-| 18771 | 16 | No | Invalid storage type %d specified writing variant of type %d. |
-| 18772 | 16 | No | Invalid server data type (%d) specified in repl type lookup. |
-| 18773 | 16 | No | Could not locate text information records for the column "%.\*ls", ID %d during command construction. |
-| 18774 | 16 | No | The stored procedure %s must be executed within a transaction. |
-| 18775 | 16 | No | The Log Reader Agent encountered an unexpected log record of type %u encountered while processing DML operation. |
-| 18776 | 16 | No | An error occurred while waiting on the article cache access event. |
-| 18777 | 16 | No | %s: Error initializing MSMQ components |
-| 18778 | 16 | No | %s: Error opening Microsoft Message Queue %s |
-| 18780 | 16 | No | You have specified a value for the @dts_package_password parameter. You must also specify a value for the @dts_package_name parameter. |
-| 18781 | 16 | No | The value specified for the @backupdevicetype parameter is not valid. The value must be 'logical', 'disk', 'tape' or 'url'. |
-| 18782 | 16 | No | Could not locate backup header information for database '%s' in the specified backup device. Specify a backup device that contains a backup of the Publisher database. |
-| 18783 | 16 | No | The subscription setup script path has been truncated, because the snapshot folder directory path is too long. Reconfigure the Distributor to use a shorter path for this Publisher, and then retry the operation. |
-| 18784 | 16 | No | The alternate snapshot folder path generated by replication has been truncated. Reconfigure the publication to use a shorter alternate snapshot folder path, and then retry the operation. |
-| 18786 | 16 | No | The specified publication does not allow subscriptions to be initialized from a backup. To allow initialization from a backup, use sp_changepublication: set 'allow_initialize_from_backup' to 'true'. |
-| 18787 | 16 | No | Snapshot publications cannot use the option to initialize a subscription from a backup. This option is only supported for transactional publications. |
-| 18788 | 16 | No | Column data not found as scan task has been aborted. |
-| 18790 | 16 | No | Cannot enable the option to initialize a subscription from a backup. This is not supported for non-SQL Server Publishers; it is only supported for transactional publications from SQL Server Publishers. |
-| 18791 | 16 | No | The conditions for reading the log record of type %d have not be met. |
-| 18795 | 16 | No | The valid new types of a log based indexed view article are 'indexed view logbased', 'indexed view logbased manualfilter', 'indexed view logbased manualview', and 'indexed view logbased manualboth' only. |
-| 18796 | 16 | No | The valid new types of a log based table article are 'logbased', 'logbased manualfilter', 'logbased manualview', and 'logbased manualboth' only. |
-| 18799 | 16 | No | Only users who are members of the following roles can perform this operation: sysadmin fixed server role; dbowner or dbcreator fixed database role in the current database. |
-| 18801 | 16 | No | Unable to allocate memory for replication schema version node. |
-| 18802 | 16 | No | Cannot insert a new schema change into the systranschemas system table. HRESULT = '0x%x'. If the problem persists, contact Customer Support Services. |
-| 18803 | 16 | No | The topic %.\*ls is not a supported help topic. To see the list of supported topics, execute the stored procedure sp_replhelp N'helptopics'. |
-| 18804 | 16 | No | Peer-to-peer replication has been enabled, and the Log Reader Agent was unable to find an Extended-Originator-Record (EOR) for a transaction that did not originate at this server. Contact Customer Support Services. |
-| 18805 | 16 | No | The Log-Scan Process failed to construct a replicated command from log sequence number (LSN) {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
-| 18806 | 16 | No | Cannot initialize the replication resource. Ensure that SQL Server has sufficient memory. If the problem persists, restart SQL Server. |
-| 18807 | 16 | No | Cannot find an object ID for the replication system table '%s'. Verify that the system table exists and is accessible by querying it directly. If it does exist, stop and restart the Log Reader Agent; if it does not exist, drop and reconfigure replication. |
-| 18808 | 16 | No | Article information is not valid. Stop the Log Reader Agent, execute the stored procedure sp_replflush, and then restart the Log Reader Agent. |
-| 18809 | 16 | No | END_UPDATE log record {%08lx:%08lx:%04lx} encountered without matching BEGIN_UPDATE. |
-| 18810 | 16 | No | Cannot restart the scan on table '%s'. HRESULT = '0x%x'. Stop and restart the Log Reader Agent. If the problem persists, contact Customer Support Services. |
-| 18811 | 16 | No | Invalid %s log record. |
-| 18812 | 16 | No | Can not lock the database object in article cache. |
-| 18815 | 16 | No | Expecting %I64d bytes of data, but only %I64d were found in the transaction log. For more information, contact Customer Support Services. |
-| 18817 | 16 | No | Text information block not valid. Contact Customer Support Services. |
-| 18818 | 16 | No | Failed to scan to log sequence number (LSN) {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
-| 18819 | 16 | No | Failed to lock the current log record at log sequence number (LSN) {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
-| 18821 | 16 | No | The rowset does not contain any column with offset %d. Back up the publication database and contact Customer Support Services. |
-| 18823 | 16 | No | Invalid value %d for %s. |
-| 18826 | 16 | No | Failed to delete rows from the systranschemas table. HRESULT = '0x%x'. The rows will be deleted the next time replication executes the stored procedure sp_replcmds. |
-| 18827 | 16 | No | The Log Reader Agent scanned to the end of the log before processing all transactions in the hash table. %d transactions in the hash table, %d transactions processed, end of log LSN {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
-| 18828 | 16 | No | Invalid filter procedure definition. |
-| 18829 | 16 | No | Failed to scan to the delete log record of an update base on log sequence number (LSN) {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
-| 18830 | 16 | No | A bounded update was logged within the range of another bounded update within the same transaction. First BEGIN_UPDATE {%08lx:%08lx:%04lx}, current BEGIN_UPDATE {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
-| 18832 | 16 | No | The Log Reader Agent scanned to the end of the log while processing a bounded update. BEGIN_UPDATE LSN {%08lx:%08lx:%04lx}, END_UPDATE LSN {%08lx:%08lx:%04lx}, current LSN {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
-| 18834 | 16 | No | An unexpected Text Information Begin (TIB) log record was encountered while processing the TIB for offset %ld. Last TIB processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d). Contact Customer Support Services. |
-| 18835 | 16 | No | Encountered an unexpected Text Information End (TIE) log record. Last Text Information Begin (TIB) processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d), text collection state %d. Contact product support. |
-| 18836 | 16 | No | %s, ti: {RowsetId %I64d, {TextTimeStamp %I64d, {RowId {PageId %ld, FileId %u}, SlotId %d}}, coloffset %ld, textInfoFlags 0x%x, textSize %I64d, offset %I64d, oldSize %I64d, newSize %I64d}. |
-| 18837 | 16 | No | Cannot find rowset ID %I64d in the current schema. Stop and restart the Log Reader Agent. If the problem persists, reinitialize all subscriptions to the publication. |
-| 18838 | 16 | No | The Log Reader Agent encountered a NULL command that is not valid. Restart the agent if it has stopped. If the problem persists, reinitialize all subscriptions to the publication. |
-| 18840 | 16 | No | Cannot locate database information in the article cache. Stop and restart SQL Server and the Log Reader Agent. If the problem persists, back up the publication database, and then contact Customer Support Services. |
-| 18842 | 16 | No | Failed to retrieve the oldest active log sequence number (LSN) from a commit record. Stop and restart SQL Server and the Log Reader Agent. If the problem persists, reinitialize all subscriptions to the publication. |
-| 18843 | 16 | No | Failed to allocate or reallocate buffer for replication command, old size %d, new size %d. |
-| 18844 | 16 | No | Invalid compensation range: begin {%08lx:%08lx:%04lx}, end {%08lx:%08lx:%04lx}. Reinitialize all subscriptions to the publication. |
-| 18845 | 16 | No | Cannot retrieve the rowset ID from log records generated from a text pointer based operation. Reinitialize all subscriptions to the publication. |
-| 18846 | 16 | No | Possible inconsistent state in the distribution database: dist_backup_lsn {%08lx:%08lx:%04lx}, dist_last_lsn {%08lx:%08lx:%04lx}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. |
-| 18847 | 16 | No | Cannot retrieve the peer-to-peer database information. Contact Customer Support Services. |
-| 18849 | 16 | No | Failed to evaluate the filter procedure or computed column. Cannot find the column offset information for column ID %d, rowsetId %I64d. Stop and restart the Log Reader Agent. If the problem persists, back up the publication database and then contact Customer Support Services. |
-| 18850 | 16 | No | Unexpected %s log record encountered, last FILESTREAMInfo node processed : {%d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, %d, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, {%08lx:%08lx:%04lx}} |
-| 18851 | 16 | No | Failed to %s the replication context for TxF: {%I64d, %.\*ls, %ld, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %I64d, %.\*ls, {%08lx:%08lx:%04lx}}. If the problem persists, contact product support. |
-| 18852 | 16 | No | Failed to read the TXF_REPLICATION_RECORD_WRITE structure. Last error returned '%ld'. If the problem persists, contact Customer Support Services. |
-| 18853 | 10 | No | Replication is skipping schema version logging because the systranschemas table is not present in database '%d'. This is an informational message only. No user action is required. |
-| 18854 | 16 | No | One or more subscriptions have been marked inactive. Drop and re-create all subscriptions for this node that are failing with this error. |
-| 18855 | 11 | No | Can not rename the database name because it is published or it is a distribution database used by replication. |
-| 18856 | 16 | No | Agent '%s' is retrying after an error. %d retries attempted. See agent job history in the Jobs folder for more details. |
-| 18857 | 16 | No | The subscription to this publication is not active yet. No user action is required. |
-| 18858 | 16 | No | Could not read data from replication table '%s'. If retrying does not fix the issue, drop and reconfigure replication. |
-| 18859 | 16 | No | Provided value for %ls parameter is invalid. Allowed values are %ls. |
-| 18860 | 16 | No | No RE Schema information found in cache for the table id %ld and transaction id %I64d. |
-| 18861 | 16 | No | RE Schema node could not be created in memory after 5 retries for Table id %ld and transaction id %I64d. |
-| 18896 | 16 | No | Failed to compare delete and insert log record for column ID %ld with table ID %ld |
-| 18897 | 16 | No | Access Denied. |
-| 18898 | 16 | No | Change Data Capture cannot be enabled for database '%s' because table '%s' already exists and is not a valid Microsoft system table. Drop the table and retry the operation. |
-| 18899 | 16 | No | Change Data Capture was not enabled for database '%s' because the required unique clustered index 'uncsystranschemas' on table 'dbo.systranschemas' is missing or invalid. Create or rebuild the index with 'startlsn' as its only key column and retry the operation. |
+| <a id="18002"></a> 18002 | 20 | Yes | Exception happened when running extended stored procedure '%.\*ls' in the library '%.\*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx. To generate a minidump, create an xevent session using the dump routine event with the create dump action. |
+| <a id="18052"></a> 18052 | 16 | No | Error: %d, Severity: %d, State: %d. |
+| <a id="18053"></a> [18053](../mssqlserver-18053-database-engine-error.md) | 16 | No | Error: %d, Severity: %d, State: %d. (Params:%ls). The error is printed in terse mode because there was error during formatting. Tracing, ETW, notifications etc are skipped. |
+| <a id="18054"></a> 18054 | 16 | Yes | Error %d, severity %d, state %d was raised, but no message with that error number was found in sys.messages. If error is larger than 50000, make sure the user-defined message is added using sp_addmessage. |
+| <a id="18055"></a> 18055 | 20 | Yes | Exception %d, %d occurred when the server tried to reset connection %d. Because the server cannot recover from the failure to reset the connection, the connection has been dropped. Please contact Microsoft technical support. |
+| <a id="18056"></a> 18056 | 20 | Yes | The client was unable to reuse a session with SPID %d, which had been reset for connection pooling. The failure ID is %d. This error may have been caused by an earlier operation failing. Check the error logs for failed operations immediately before this error message. |
+| <a id="18057"></a> 18057 | 20 | Yes | Error: Failed to set up execution context. |
+| <a id="18058"></a> 18058 | 17 | Yes | Failed to load format string for error %d, language id %d. Operating system error: %s. Check that the resource file matches SQL Server executable, and resource file in localized directory matches the file under English directory. Also check memory usage. |
+| <a id="18059"></a> 18059 | 16 | Yes | The connection has been dropped because the principal that opened it subsequently assumed a new security context, and then tried to reset the connection under its impersonated security context. This scenario is not supported. See "Impersonation Overview" in Books Online. |
+| <a id="18060"></a> 18060 | 16 | Yes | Failed to format string for error %d, language id %d. This may be caused by low memory in server, or error happening while formatting the message. |
+| <a id="18061"></a> 18061 | 20 | Yes | The client was unable to join a session with SPID %d. This error may have been caused by an earlier operation failing or a change in permissions since the session was established. Check the error logs for failed operations immediately before this error message. |
+| <a id="18062"></a> 18062 | 18 | No | Transaction priority: cleared a stale session execution-context (SETLS) pointer on SPID %d during connection context teardown. This is an internal self-heal and requires no action. |
+| <a id="18100"></a> 18100 | 10 | Yes | Process ID %d was killed by hostname %.\*ls, host process ID %d. |
+| <a id="18113"></a> 18113 | 10 | Yes | SQL Server shutdown after verifying system indexes. |
+| <a id="18124"></a> 18124 | 10 | Yes | The default collation was successfully changed. |
+| <a id="18126"></a> 18126 | 10 | Yes | Engine failed to load configuration for error detection, default configuration was applied. |
+| <a id="18127"></a> 18127 | 10 | Yes | Engine is marking DB %d \[%.\*ls\] as SUSPECT in cloud DB mode due to error %d, severity %d, state %d. |
+| <a id="18204"></a> 18204 | 16 | Yes | %s: Backup device '%s' failed to %s. Operating system error %s. |
+| <a id="18210"></a> [18210](../mssqlserver-18210-database-engine-error.md) | 16 | Yes | %s: %s failure on backup device '%s'. Operating system error %s. |
+| <a id="18225"></a> 18225 | 10 | Yes | Tape '%s' (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required |
+| <a id="18226"></a> 18226 | 10 | Yes | Tape mount is being requested on drive '%s'. Expected volume has (Family ID %d, sequence %d). |
+| <a id="18227"></a> 18227 | 10 | Yes | Unnamed tape (family ID %d, sequence %d, media_set_guid %s) is mounted on tape drive '%s'. This is an informational message only. No user action required. |
+| <a id="18228"></a> 18228 | 10 | Yes | Tape mount request on drive '%s' is cancelled. This is an informational message only. No user action is required. |
+| <a id="18257"></a> 18257 | 10 | Yes | %s: Device or media does not support %s. To access this feature, use a different device or media. |
+| <a id="18264"></a> [18264](../mssqlserver-18264-database-engine-error.md) | 10 | Yes | Database backed up. Database: %s, creation date(time): %s(%s), pages dumped: %I64d, first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
+| <a id="18265"></a> 18265 | 10 | Yes | Log was backed up. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
+| <a id="18266"></a> 18266 | 10 | Yes | Database file was backed up. Database: %s, creation date(time): %s(%s), file list: (%s), pages dumped: %I64d, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
+| <a id="18267"></a> 18267 | 10 | Yes | Database was restored: Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). Informational message. No user action required. |
+| <a id="18268"></a> 18268 | 10 | Yes | Log was restored. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
+| <a id="18269"></a> 18269 | 10 | Yes | Database file was restored. Database: %s, creation date(time): %s(%s), file list: (%s), number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
+| <a id="18270"></a> 18270 | 10 | Yes | Database differential changes were backed up. Database: %s, creation date(time): %s(%s), pages dumped: %I64d, first LSN: %s, last LSN: %s, full backup LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
+| <a id="18271"></a> 18271 | 10 | Yes | Database changes were restored. Database: %s, creation date(time): %s(%s), first LSN: %s, last LSN: %s, number of dump devices: %d, device information: (%s). This is an informational message. No user action is required. |
+| <a id="18272"></a> 18272 | 16 | Yes | During restore restart, an I/O error occurred on checkpoint file '%s' (operating system error %s). The statement is proceeding but cannot be restarted. Ensure that a valid storage location exists for the checkpoint file. |
+| <a id="18273"></a> 18273 | 16 | Yes | Could not clear '%s' bitmap in database '%s' because of error %d. As a result, the differential or bulk-logged bitmap overstates the amount of change that will occur with the next differential or log backup. This discrepancy might slow down later differential or log backup operations and cause the backup sets to be larger than necessary. Typically, the cause of this error is insufficient resources. Investigate the failure and resolve the cause. If the error occurred on a data backup, consider taking a data backup to create a new base for future differential backups. |
+| <a id="18274"></a> 18274 | 10 | Yes | Tape '%s' was dismounted from drive '%s'. This is an informational message. No user action is required. |
+| <a id="18275"></a> 18275 | 10 | Yes | Unnamed tape was dismounted from drive '%s'. This is an informational message. No user action is required. |
+| <a id="18276"></a> 18276 | 10 | Yes | Database file differential changes were backed up. Database: %s, creation date(time): %s(%s), file list: (%s), pages dumped: %I64d, number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
+| <a id="18277"></a> 18277 | 10 | Yes | Database file changes were restored. Database: %s, creation date(time): %s(%s), file list: (%s), number of dump devices: %d, device information: (%s). This is an informational message only. No user action is required. |
+| <a id="18279"></a> 18279 | 16 | Yes | During a RESTORE operation, an I/O error occurred on checkpoint file '%s' (operating system error %s). Ensure that a valid storage location exists for the checkpoint file and try the operation again. |
+| <a id="18280"></a> 18280 | 16 | Yes | The file %s is being removed from the database, but is not being removed from the filesystem because file snapshots are still associated with the file. |
+| <a id="18300"></a> 18300 | 10 | No | Reason: Infrastructure error occurred. Check for previous errors. |
+| <a id="18301"></a> 18301 | 10 | No | Reason: Could not find a login matching the name provided. |
+| <a id="18302"></a> 18302 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. |
+| <a id="18303"></a> 18303 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. |
+| <a id="18304"></a> 18304 | 10 | No | Reason: Could not find a login matching the name provided. |
+| <a id="18305"></a> 18305 | 10 | No | Reason: Attempting to use an NT account name with SQL Server Authentication. |
+| <a id="18306"></a> 18306 | 10 | No | Reason: An error occurred while evaluating the password. |
+| <a id="18307"></a> 18307 | 10 | No | Reason: Password did not match that for the login provided. |
+| <a id="18308"></a> 18308 | 10 | No | Reason: Invalid password provided. |
+| <a id="18309"></a> 18309 | 10 | No | Reason: Password validation failed with an infrastructure error. Check for previous errors. |
+| <a id="18310"></a> 18310 | 10 | No | Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. |
+| <a id="18311"></a> 18311 | 10 | No | Reason: Login-based server access validation failed with an infrastructure error. Check for previous errors. |
+| <a id="18312"></a> 18312 | 10 | No | Reason: SQL Server service is paused. No new connections can be accepted at this time. |
+| <a id="18313"></a> 18313 | 10 | No | Reason: Interface for login to SQL Server is not supported. |
+| <a id="18314"></a> 18314 | 10 | No | Reason: Failed to open the specified database. |
+| <a id="18315"></a> 18315 | 10 | No | Reason: Failed to open the database for this login. |
+| <a id="18316"></a> 18316 | 10 | No | Reason: Unable to determine the initial language and date format. |
+| <a id="18317"></a> 18317 | 10 | No | Reason: The user must change the password, but it cannot be changed with the current connection settings. |
+| <a id="18318"></a> 18318 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. |
+| <a id="18319"></a> 18319 | 10 | No | Reason: Simulation of a failure while redoing login on the connection. |
+| <a id="18320"></a> 18320 | 10 | No | Reason: SQL Server service is paused. Login could not be revalidated at this time. |
+| <a id="18321"></a> 18321 | 10 | No | Reason: Reinitialization of security context failed while revalidating the login on the connection. |
+| <a id="18322"></a> 18322 | 10 | No | Reason: Access to server validation failed while revalidating the login on the connection. |
+| <a id="18323"></a> 18323 | 10 | No | Reason: Failed to open the specified database while revalidating the login on the connection. |
+| <a id="18324"></a> 18324 | 10 | No | Reason: Failed to create the user instance while revalidating the login on the connection. |
+| <a id="18325"></a> 18325 | 10 | No | Reason: Failed to attach the specified database while revalidating the login on the connection. |
+| <a id="18326"></a> 18326 | 10 | No | Reason: Failed to open the database for this login while revalidating the login on the connection. |
+| <a id="18327"></a> 18327 | 10 | No | Reason: Failed to determine the language and date format while revalidating the login on the connection. |
+| <a id="18328"></a> 18328 | 10 | No | Reason: An exception was raised while revalidating the login on the connection. Check for previous errors. |
+| <a id="18329"></a> 18329 | 10 | No | Reason: Simulation of a failure while reauthenticating login. |
+| <a id="18330"></a> 18330 | 10 | No | Reason: SQL Server service is paused. Login cannot be reauthenticated at this time. |
+| <a id="18331"></a> 18331 | 10 | No | Reason: Failed to reinitialize security context while reauthenticating login. |
+| <a id="18332"></a> 18332 | 10 | No | Reason: Failed to access server for validation while reauthenticating login. |
+| <a id="18333"></a> 18333 | 10 | No | Reason: Failed to open the specified database while reauthenticating login. |
+| <a id="18334"></a> 18334 | 10 | No | Reason: An error occurred while reauthenticating login. Check for previous errors. |
+| <a id="18335"></a> 18335 | 10 | No | Reason: Could not retrieve database name or map database to an item. |
+| <a id="18336"></a> 18336 | 10 | No | Reason: Cannot connect with a login that does not specify a share. |
+| <a id="18337"></a> 18337 | 10 | No | Reason: Failed to open the explicitly specified database '%.\*ls'. |
+| <a id="18338"></a> 18338 | 10 | No | Reason: Unable to determine the database name from the specified file name. |
+| <a id="18339"></a> 18339 | 10 | No | Reason: Failed to open the database '%.\*ls' specified in the login properties. |
+| <a id="18340"></a> 18340 | 10 | No | Reason: Failed to store database name and collation. Check for previous errors. |
+| <a id="18341"></a> 18341 | 10 | No | . Reason: Current collation did not match the database's collation during connection reset. |
+| <a id="18342"></a> 18342 | 10 | No | Reason: Failed to send an environment change notification to a log shipping partner node. |
+| <a id="18343"></a> 18343 | 10 | No | Reason: Failed to retrieve database name or map database to an item while revalidating the login on the connection. |
+| <a id="18344"></a> 18344 | 10 | No | Reason: Connection with a login which does not specify a share is not allowed while revalidating the login on the connection. |
+| <a id="18345"></a> 18345 | 10 | No | Reason: Failed to open the database '%.\*ls' configured in the login object while revalidating the login on the connection. |
+| <a id="18346"></a> 18346 | 10 | No | Reason: Failed to determine database name from a given file name while revalidating the login on the connection. |
+| <a id="18347"></a> 18347 | 10 | No | Reason: Failed to open the database '%.\*ls' specified in the login properties while revalidating the login on the connection. |
+| <a id="18348"></a> 18348 | 10 | No | Reason: Failed to store database name and collation while revalidating the login on the connection. Check for previous errors. |
+| <a id="18349"></a> 18349 | 10 | No | Reason: Current collation did not match the database's collation during connection reset. |
+| <a id="18350"></a> 18350 | 10 | No | Reason: Failed to send an environment change notification to a log shipping partner node while revalidating the login. |
+| <a id="18351"></a> 18351 | 10 | No | Reason: Client impersonation failed. |
+| <a id="18352"></a> 18352 | 10 | No | Reason: Failed to revert impersonation to self. |
+| <a id="18353"></a> 18353 | 10 | No | Reason: Failed to get security token information. |
+| <a id="18354"></a> 18354 | 10 | No | Reason: Failed to duplicate of security token. |
+| <a id="18355"></a> 18355 | 10 | No | Reason: Failed attempted retry of a process token validation. |
+| <a id="18356"></a> 18356 | 10 | No | Reason: An error occurred while attempting to change password. |
+| <a id="18357"></a> 18357 | 10 | No | Reason: An attempt to login using SQL authentication failed. Server is configured for Integrated authentication only. |
+| <a id="18358"></a> 18358 | 10 | No | Reason: Could not find a user matching the name provided. \[Database: '%.\*ls'\] |
+| <a id="18359"></a> 18359 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. \[Database: '%.\*ls'\] |
+| <a id="18360"></a> 18360 | 10 | No | Reason: Failed to unprotect memory containing sensitive information. \[Database: '%.\*ls'\] |
+| <a id="18361"></a> 18361 | 10 | No | Reason: Could not find a user matching the name provided. \[Database: '%.\*ls'\] |
+| <a id="18362"></a> 18362 | 10 | No | Reason: Attempting to use an invalid user type with SQL Server Authentication. \[Database: '%.\*ls'\] |
+| <a id="18363"></a> 18363 | 10 | No | Reason: An error occurred while evaluating the password. \[Database: '%.\*ls'\] |
+| <a id="18364"></a> 18364 | 10 | No | Reason: Password did not match that for the user provided. \[Database: '%.\*ls'\] |
+| <a id="18365"></a> 18365 | 10 | No | Reason: Invalid password provided. \[Database: '%.\*ls'\] |
+| <a id="18366"></a> 18366 | 10 | No | Reason: Password validation failed with an infrastructure error. Check for previous errors. \[Database: '%.\*ls'\] |
+| <a id="18367"></a> 18367 | 10 | No | Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. \[Database: '%.\*ls'\] |
+| <a id="18368"></a> 18368 | 10 | No | Reason: Login-based server access validation failed with an infrastructure error. Check for previous errors. \[Database: '%.\*ls'\] |
+| <a id="18369"></a> 18369 | 10 | No | attach |
+| <a id="18370"></a> 18370 | 10 | No | restore |
+| <a id="18371"></a> 18371 | 10 | No | Reason: The password hash is from an unsupported version of SQL Server. Reset the password or recreate the login. |
+| <a id="18372"></a> 18372 | 10 | No | Reason: An error occurred while obtaining a routing environment change notification. |
+| <a id="18373"></a> 18373 | 10 | No | Reason: Database could not accept user connections at this time. |
+| <a id="18374"></a> 18374 | 10 | Yes | Reason: An error occurred while recovering the Identity_Insert session state requested by the recovery login. |
+| <a id="18375"></a> 18375 | 10 | Yes | Reason: Failed to open the database '%.\*ls' configured in the session recovery object while recovering the connection. |
+| <a id="18376"></a> 18376 | 10 | Yes | Reason: Failed to open the database '%.\*ls' configured in the session recovery object while revalidating the login on the recovered connection. |
+| <a id="18377"></a> 18377 | 10 | No | Reason: The current collation did not match the database's collation as indicated by session recovery object in login. |
+| <a id="18378"></a> 18378 | 10 | Yes | Reason: An error occurred while recovering the @@identity session state requested by the recovery login. |
+| <a id="18379"></a> 18379 | 10 | No | Reason: The account is currently locked out. The system administrator can unlock it. |
+| <a id="18380"></a> 18380 | 10 | No | Reason: The certificate is invalid or expired. |
+| <a id="18381"></a> 18381 | 10 | No | Reason: The logical master database was not found. |
+| <a id="18382"></a> 18382 | 10 | No | Reason: Unable to retrieve client IP Address. |
+| <a id="18383"></a> 18383 | 10 | No | Reason: The client was blocked by the firewall. |
+| <a id="18384"></a> 18384 | 10 | No | Reason: Unable to open the logical master database. |
+| <a id="18385"></a> 18385 | 10 | No | Reason: Unable to connect to logical master database. |
+| <a id="18386"></a> 18386 | 10 | No | Reason: Remote authentication failed. |
+| <a id="18387"></a> 18387 | 10 | No | Reason: The DosGuard had an error while checking a connection. |
+| <a id="18388"></a> 18388 | 10 | No | Reason: The DosGuard rejected the connection. |
+| <a id="18389"></a> 18389 | 10 | No | Reason: Unable to retrieve server firewall rules. |
+| <a id="18390"></a> 18390 | 10 | No | Reason: An unknown error occurred while attempting to authenticate the user. |
+| <a id="18391"></a> 18391 | 10 | No | Reason: The login to SQL Azure DB failed due to empty username. |
+| <a id="18392"></a> 18392 | 10 | No | Reason: The login to SQL Azure DB failed due to empty password. |
+| <a id="18393"></a> 18393 | 10 | No | Reason: The login to SQL Azure DB failed due to empty password when using PreTDS7 client. |
+| <a id="18394"></a> 18394 | 10 | No | Reason: Opening the database requested by the user failed unexpectedly. |
+| <a id="18395"></a> 18395 | 10 | No | Reason: Authentication was successful, but database was not found on this logical server. |
+| <a id="18396"></a> 18396 | 10 | No | Reason: Authentication was successful, but database could not be found on current instance. |
+| <a id="18397"></a> 18397 | 10 | No | Reason: Unable to retrieve database firewall rules. |
+| <a id="18398"></a> 18398 | 10 | No | Reason: Catch exception from FindLogin during contained database authentication. |
+| <a id="18399"></a> 18399 | 10 | No | Reason: Unsecured connection to the database is disallowed. The secured connection string should be used instead. \[Database: '%.\*ls'\] |
+| <a id="18400"></a> 18400 | 16 | Yes | The background checkpoint thread has encountered an unrecoverable error. The checkpoint process is terminating so that the thread can clean up its resources. This is an informational message only. No user action is required. |
+| <a id="18401"></a> 18401 | 14 | Yes | Login failed for user '%.\*ls'. Reason: Server is in script upgrade mode. Only administrator can connect at this time.%.\*ls |
+| <a id="18451"></a> 18451 | 14 | Yes | Login failed for user '%.\*ls'. Only administrators may connect at this time.%.\*ls |
+| <a id="18452"></a> [18452](../mssqlserver-18452-database-engine-error.md) | 14 | Yes | Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.%.\*ls |
+| <a id="18453"></a> 18453 | 10 | Yes | Login succeeded for user '%.\*ls'. Connection made using Integrated authentication.%.\*ls |
+| <a id="18454"></a> 18454 | 10 | Yes | Login succeeded for user '%.\*ls'. Connection made using SQL Server authentication.%.\*ls |
+| <a id="18455"></a> 18455 | 10 | Yes | Login succeeded for user '%.\*ls'.%.\*ls |
+| <a id="18456"></a> [18456](../mssqlserver-18456-database-engine-error.md) | 14 | Yes | Login failed for user '%.\*ls'.%.\*ls%.\*ls |
+| <a id="18458"></a> 18458 | 14 | Yes | Login failed. The number of simultaneous users already equals the %d registered licenses for this server. To increase the maximum number of simultaneous users, obtain additional licenses and then register them through the Licensing item in Control Panel.%.\*ls |
+| <a id="18459"></a> 18459 | 14 | Yes | Login failed. The workstation licensing limit for SQL Server access has already been reached.%.\*ls |
+| <a id="18460"></a> 18460 | 14 | Yes | Login failed. The number of simultaneous users has already reached the limit of %d licenses for this '%ls' server. Additional licenses should be obtained and installed or you should upgrade to a full version.%.\*ls |
+| <a id="18461"></a> 18461 | 14 | Yes | Login failed for user '%.\*ls'. Reason: Server is in single user mode. Only one administrator can connect at this time.%.\*ls |
+| <a id="18462"></a> 18462 | 14 | No | The login failed for user "%.\*ls". The password change failed. The password for the user is too recent to change. %.\*ls |
+| <a id="18463"></a> 18463 | 14 | No | The login failed for user "%.\*ls". The password change failed. The password cannot be used at this time. %.\*ls |
+| <a id="18464"></a> 18464 | 14 | No | Login failed for user '%.\*ls'. Reason: Password change failed. The password does not meet operating system policy requirements because it is too short.%.\*ls |
+| <a id="18465"></a> 18465 | 14 | No | Login failed for user '%.\*ls'. Reason: Password change failed. The password does not meet operating system policy requirements because it is too long.%.\*ls |
+| <a id="18466"></a> 18466 | 14 | No | Login failed for user '%.\*ls'. Reason: Password change failed. The password does not meet operating system policy requirements because it is not complex enough.%.\*ls |
+| <a id="18467"></a> 18467 | 14 | No | The login failed for user "%.\*ls". The password change failed. The password does not meet the requirements of the password filter DLL. %.\*ls |
+| <a id="18468"></a> 18468 | 14 | No | The login failed for user "%.\*ls". The password change failed. An unexpected error occurred during password validation. %.\*ls |
+| <a id="18469"></a> 18469 | 10 | No | \[CLIENT: %.\*s%.\*ls\] |
+| <a id="18470"></a> 18470 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The account is disabled.%.\*ls |
+| <a id="18471"></a> 18471 | 14 | No | The login failed for user "%.\*ls". The password change failed. The user does not have permission to change the password. %.\*ls |
+| <a id="18482"></a> [18482](../mssqlserver-18482-database-engine-error.md) | 16 | Yes | Could not connect to server '%.\*ls' because '%.\*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.\*ls. |
+| <a id="18483"></a> [18483](../mssqlserver-18483-database-engine-error.md) | 16 | Yes | Could not connect to server '%.\*ls' because '%.\*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.\*ls. |
+| <a id="18485"></a> 18485 | 16 | Yes | Could not connect to server '%.\*ls' because it is not configured to accept remote logins. Use the remote access configuration option to allow remote logins.%.\*ls |
+| <a id="18486"></a> 18486 | 14 | Yes | Login failed for user '%.\*ls' because the account is currently locked out. The system administrator can unlock it. %.\*ls |
+| <a id="18487"></a> 18487 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The password of the account has expired.%.\*ls |
+| <a id="18488"></a> 18488 | 14 | Yes | Login failed for user '%.\*ls'. Reason: The password of the account must be changed.%.\*ls |
+| <a id="18489"></a> 18489 | 10 | No | The dedicated administrator connection is in use by "%.\*ls" on "%.\*ls".%.\*ls |
+| <a id="18491"></a> 18491 | 16 | Yes | SQL Server could not start because of an invalid serial number. The serial number information retrieved at startup appears invalid. To proceed, reinstall SQL Server. |
+| <a id="18492"></a> 18492 | 16 | Yes | SQL Server cannot start because the license agreement for this '%ls' version of SQL Server is invalid. The server is exiting. To proceed, reinstall SQL Server with a valid license. |
+| <a id="18493"></a> 18493 | 16 | Yes | The user instance login flag is not supported on this version of SQL Server. The connection will be closed.%.\*ls |
+| <a id="18494"></a> 18494 | 16 | Yes | The user instance login flag is not allowed when connecting to a user instance of SQL Server. The connection will be closed.%.\*ls |
+| <a id="18495"></a> 18495 | 16 | Yes | The user instance login flag cannot be used along with an attach database file name. The connection will be closed.%.\*ls |
+| <a id="18496"></a> 18496 | 10 | Yes | System Manufacturer: '%ls', System Model: '%ls'. |
+| <a id="18497"></a> 18497 | 10 | No | \[SERVER: %.\*s%.\*ls\] |
+| <a id="18498"></a> 18498 | 17 | No | Local time zone manager initialization failed. To identify the error, check the SQL Server error log. |
+| <a id="18596"></a> 18596 | 16 | No | %.\*ls cannot start because your system is low on memory. |
+| <a id="18597"></a> 18597 | 16 | No | Your %.\*ls installation is either corrupt or has been tampered with (%hs). Please uninstall then re-run setup to correct this problem |
+| <a id="18598"></a> 18598 | 16 | No | %.\*ls could not find the default instance (%.\*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem. |
+| <a id="18599"></a> 18599 | 16 | No | %.\*ls could not find the specified named instance (%.\*ls) - error %d. Please specify the name of an existing instance on the invocation of sqlservr.exe.\n\nIf you believe that your installation is corrupt or has been tampered with, uninstall then re-run setup to correct this problem. |
+| <a id="18749"></a> 18749 | 16 | No | MaxCmdsInTran parameter for log reader cannot be set with CDC enabled on the db |
+| <a id="18750"></a> 18750 | 16 | No | %ls: The parameter '%ls' is not valid. |
+| <a id="18751"></a> 18751 | 16 | No | %ls procedure was called with the wrong number of parameters. |
+| <a id="18752"></a> [18752](../mssqlserver-18752-database-engine-error.md) | 16 | No | Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection with session ID %I64d over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure. |
+| <a id="18755"></a> 18755 | 16 | No | Could not allocate memory for replication. Verify that SQL Server has sufficient memory for all operations. |
+| <a id="18756"></a> 18756 | 16 | No | Could not retrieve replication information for table %d. Verify that the table has a primary key, and then rerun the Log Reader Agent. |
+| <a id="18757"></a> 18757 | 16 | No | Unable to execute procedure. The database is not published. Execute the procedure in a database that is published for replication. |
+| <a id="18760"></a> 18760 | 16 | No | Invalid %ls statement for article %d. Verify that the stored procedures that propagate changes to Subscribers use the appropriate call syntax, and then rerun the Log Reader Agent. Use sp_helparticle and sp_changearticle to view and change the call syntax. |
+| <a id="18761"></a> 18761 | 16 | No | Commit record at {%08lx:%08lx:%04lx} has already been distributed. |
+| <a id="18762"></a> 18762 | 16 | No | Invalid begin LSN {%08lx:%08lx:%04lx} for commit record {%08lx:%08lx:%04lx}. Check DBTABLE. |
+| <a id="18763"></a> 18763 | 16 | No | Commit record {%08lx:%08lx:%04lx} reports oldest active LSN as (0:0:0). |
+| <a id="18764"></a> 18764 | 16 | No | Execution of filter stored procedure %d failed. See the SQL Server errorlog for more information. |
+| <a id="18765"></a> 18765 | 16 | No | The "%s" log sequence number (LSN) that was specified for the replication log scan is invalid. |
+| <a id="18766"></a> 18766 | 16 | No | The replbeginlsn field in the DBTABLE is invalid. |
+| <a id="18767"></a> 18767 | 16 | No | The specified begin LSN {%08lx:%08lx:%04lx} for replication log scan occurs before replbeginlsn {%08lx:%08lx:%04lx}. |
+| <a id="18768"></a> 18768 | 16 | No | The specified LSN {%08lx:%08lx:%04lx} for repldone log scan occurs before the current start of replication in the log {%08lx:%08lx:%04lx}. |
+| <a id="18769"></a> 18769 | 16 | No | The specified LSN {%08lx:%08lx:%04lx} for repldone log scan is not a replicated commit record. |
+| <a id="18770"></a> 18770 | 16 | No | The specified LSN {%08lx:%08lx:%04lx} for repldone log scan is not present in the transaction log. |
+| <a id="18771"></a> 18771 | 16 | No | Invalid storage type %d specified writing variant of type %d. |
+| <a id="18772"></a> 18772 | 16 | No | Invalid server data type (%d) specified in repl type lookup. |
+| <a id="18773"></a> 18773 | 16 | No | Could not locate text information records for the column "%.\*ls", ID %d during command construction. |
+| <a id="18774"></a> 18774 | 16 | No | The stored procedure %s must be executed within a transaction. |
+| <a id="18775"></a> 18775 | 16 | No | The Log Reader Agent encountered an unexpected log record of type %u encountered while processing DML operation. |
+| <a id="18776"></a> 18776 | 16 | No | An error occurred while waiting on the article cache access event. |
+| <a id="18777"></a> 18777 | 16 | No | %s: Error initializing MSMQ components |
+| <a id="18778"></a> 18778 | 16 | No | %s: Error opening Microsoft Message Queue %s |
+| <a id="18780"></a> 18780 | 16 | No | You have specified a value for the @dts_package_password parameter. You must also specify a value for the @dts_package_name parameter. |
+| <a id="18781"></a> 18781 | 16 | No | The value specified for the @backupdevicetype parameter is not valid. The value must be 'logical', 'disk', 'tape' or 'url'. |
+| <a id="18782"></a> 18782 | 16 | No | Could not locate backup header information for database '%s' in the specified backup device. Specify a backup device that contains a backup of the Publisher database. |
+| <a id="18783"></a> 18783 | 16 | No | The subscription setup script path has been truncated, because the snapshot folder directory path is too long. Reconfigure the Distributor to use a shorter path for this Publisher, and then retry the operation. |
+| <a id="18784"></a> 18784 | 16 | No | The alternate snapshot folder path generated by replication has been truncated. Reconfigure the publication to use a shorter alternate snapshot folder path, and then retry the operation. |
+| <a id="18786"></a> 18786 | 16 | No | The specified publication does not allow subscriptions to be initialized from a backup. To allow initialization from a backup, use sp_changepublication: set 'allow_initialize_from_backup' to 'true'. |
+| <a id="18787"></a> 18787 | 16 | No | Snapshot publications cannot use the option to initialize a subscription from a backup. This option is only supported for transactional publications. |
+| <a id="18788"></a> 18788 | 16 | No | Column data not found as scan task has been aborted. |
+| <a id="18790"></a> 18790 | 16 | No | Cannot enable the option to initialize a subscription from a backup. This is not supported for non-SQL Server Publishers; it is only supported for transactional publications from SQL Server Publishers. |
+| <a id="18791"></a> 18791 | 16 | No | The conditions for reading the log record of type %d have not be met. |
+| <a id="18795"></a> 18795 | 16 | No | The valid new types of a log based indexed view article are 'indexed view logbased', 'indexed view logbased manualfilter', 'indexed view logbased manualview', and 'indexed view logbased manualboth' only. |
+| <a id="18796"></a> 18796 | 16 | No | The valid new types of a log based table article are 'logbased', 'logbased manualfilter', 'logbased manualview', and 'logbased manualboth' only. |
+| <a id="18799"></a> 18799 | 16 | No | Only users who are members of the following roles can perform this operation: sysadmin fixed server role; dbowner or dbcreator fixed database role in the current database. |
+| <a id="18801"></a> 18801 | 16 | No | Unable to allocate memory for replication schema version node. |
+| <a id="18802"></a> 18802 | 16 | No | Cannot insert a new schema change into the systranschemas system table. HRESULT = '0x%x'. If the problem persists, contact Customer Support Services. |
+| <a id="18803"></a> 18803 | 16 | No | The topic %.\*ls is not a supported help topic. To see the list of supported topics, execute the stored procedure sp_replhelp N'helptopics'. |
+| <a id="18804"></a> 18804 | 16 | No | Peer-to-peer replication has been enabled, and the Log Reader Agent was unable to find an Extended-Originator-Record (EOR) for a transaction that did not originate at this server. Contact Customer Support Services. |
+| <a id="18805"></a> 18805 | 16 | No | The Log-Scan Process failed to construct a replicated command from log sequence number (LSN) {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
+| <a id="18806"></a> 18806 | 16 | No | Cannot initialize the replication resource. Ensure that SQL Server has sufficient memory. If the problem persists, restart SQL Server. |
+| <a id="18807"></a> 18807 | 16 | No | Cannot find an object ID for the replication system table '%s'. Verify that the system table exists and is accessible by querying it directly. If it does exist, stop and restart the Log Reader Agent; if it does not exist, drop and reconfigure replication. |
+| <a id="18808"></a> 18808 | 16 | No | Article information is not valid. Stop the Log Reader Agent, execute the stored procedure sp_replflush, and then restart the Log Reader Agent. |
+| <a id="18809"></a> 18809 | 16 | No | END_UPDATE log record {%08lx:%08lx:%04lx} encountered without matching BEGIN_UPDATE. |
+| <a id="18810"></a> 18810 | 16 | No | Cannot restart the scan on table '%s'. HRESULT = '0x%x'. Stop and restart the Log Reader Agent. If the problem persists, contact Customer Support Services. |
+| <a id="18811"></a> 18811 | 16 | No | Invalid %s log record. |
+| <a id="18812"></a> 18812 | 16 | No | Can not lock the database object in article cache. |
+| <a id="18815"></a> 18815 | 16 | No | Expecting %I64d bytes of data, but only %I64d were found in the transaction log. For more information, contact Customer Support Services. |
+| <a id="18817"></a> 18817 | 16 | No | Text information block not valid. Contact Customer Support Services. |
+| <a id="18818"></a> 18818 | 16 | No | Failed to scan to log sequence number (LSN) {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
+| <a id="18819"></a> 18819 | 16 | No | Failed to lock the current log record at log sequence number (LSN) {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
+| <a id="18821"></a> 18821 | 16 | No | The rowset does not contain any column with offset %d. Back up the publication database and contact Customer Support Services. |
+| <a id="18823"></a> 18823 | 16 | No | Invalid value %d for %s. |
+| <a id="18826"></a> 18826 | 16 | No | Failed to delete rows from the systranschemas table. HRESULT = '0x%x'. The rows will be deleted the next time replication executes the stored procedure sp_replcmds. |
+| <a id="18827"></a> 18827 | 16 | No | The Log Reader Agent scanned to the end of the log before processing all transactions in the hash table. %d transactions in the hash table, %d transactions processed, end of log LSN {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
+| <a id="18828"></a> 18828 | 16 | No | Invalid filter procedure definition. |
+| <a id="18829"></a> 18829 | 16 | No | Failed to scan to the delete log record of an update base on log sequence number (LSN) {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
+| <a id="18830"></a> 18830 | 16 | No | A bounded update was logged within the range of another bounded update within the same transaction. First BEGIN_UPDATE {%08lx:%08lx:%04lx}, current BEGIN_UPDATE {%08lx:%08lx:%04lx}. Contact Customer Support Services. |
+| <a id="18832"></a> 18832 | 16 | No | The Log Reader Agent scanned to the end of the log while processing a bounded update. BEGIN_UPDATE LSN {%08lx:%08lx:%04lx}, END_UPDATE LSN {%08lx:%08lx:%04lx}, current LSN {%08lx:%08lx:%04lx}. Back up the publication database and contact Customer Support Services. |
+| <a id="18834"></a> 18834 | 16 | No | An unexpected Text Information Begin (TIB) log record was encountered while processing the TIB for offset %ld. Last TIB processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d). Contact Customer Support Services. |
+| <a id="18835"></a> 18835 | 16 | No | Encountered an unexpected Text Information End (TIE) log record. Last Text Information Begin (TIB) processed: (textInfoFlags 0x%x, coloffset %ld, newSize %I64d, oldSize %I64d), text collection state %d. Contact product support. |
+| <a id="18836"></a> 18836 | 16 | No | %s, ti: {RowsetId %I64d, {TextTimeStamp %I64d, {RowId {PageId %ld, FileId %u}, SlotId %d}}, coloffset %ld, textInfoFlags 0x%x, textSize %I64d, offset %I64d, oldSize %I64d, newSize %I64d}. |
+| <a id="18837"></a> 18837 | 16 | No | Cannot find rowset ID %I64d in the current schema. Stop and restart the Log Reader Agent. If the problem persists, reinitialize all subscriptions to the publication. |
+| <a id="18838"></a> 18838 | 16 | No | The Log Reader Agent encountered a NULL command that is not valid. Restart the agent if it has stopped. If the problem persists, reinitialize all subscriptions to the publication. |
+| <a id="18840"></a> 18840 | 16 | No | Cannot locate database information in the article cache. Stop and restart SQL Server and the Log Reader Agent. If the problem persists, back up the publication database, and then contact Customer Support Services. |
+| <a id="18842"></a> 18842 | 16 | No | Failed to retrieve the oldest active log sequence number (LSN) from a commit record. Stop and restart SQL Server and the Log Reader Agent. If the problem persists, reinitialize all subscriptions to the publication. |
+| <a id="18843"></a> 18843 | 16 | No | Failed to allocate or reallocate buffer for replication command, old size %d, new size %d. |
+| <a id="18844"></a> 18844 | 16 | No | Invalid compensation range: begin {%08lx:%08lx:%04lx}, end {%08lx:%08lx:%04lx}. Reinitialize all subscriptions to the publication. |
+| <a id="18845"></a> 18845 | 16 | No | Cannot retrieve the rowset ID from log records generated from a text pointer based operation. Reinitialize all subscriptions to the publication. |
+| <a id="18846"></a> 18846 | 16 | No | Possible inconsistent state in the distribution database: dist_backup_lsn {%08lx:%08lx:%04lx}, dist_last_lsn {%08lx:%08lx:%04lx}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. |
+| <a id="18847"></a> 18847 | 16 | No | Cannot retrieve the peer-to-peer database information. Contact Customer Support Services. |
+| <a id="18849"></a> 18849 | 16 | No | Failed to evaluate the filter procedure or computed column. Cannot find the column offset information for column ID %d, rowsetId %I64d. Stop and restart the Log Reader Agent. If the problem persists, back up the publication database and then contact Customer Support Services. |
+| <a id="18850"></a> 18850 | 16 | No | Unexpected %s log record encountered, last FILESTREAMInfo node processed : {%d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, %d, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, {%08lx:%08lx:%04lx}} |
+| <a id="18851"></a> 18851 | 16 | No | Failed to %s the replication context for TxF: {%I64d, %.\*ls, %ld, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %I64d, %.\*ls, {%08lx:%08lx:%04lx}}. If the problem persists, contact product support. |
+| <a id="18852"></a> 18852 | 16 | No | Failed to read the TXF_REPLICATION_RECORD_WRITE structure. Last error returned '%ld'. If the problem persists, contact Customer Support Services. |
+| <a id="18853"></a> 18853 | 10 | No | Replication is skipping schema version logging because the systranschemas table is not present in database '%d'. This is an informational message only. No user action is required. |
+| <a id="18854"></a> 18854 | 16 | No | One or more subscriptions have been marked inactive. Drop and re-create all subscriptions for this node that are failing with this error. |
+| <a id="18855"></a> 18855 | 11 | No | Can not rename the database name because it is published or it is a distribution database used by replication. |
+| <a id="18856"></a> 18856 | 16 | No | Agent '%s' is retrying after an error. %d retries attempted. See agent job history in the Jobs folder for more details. |
+| <a id="18857"></a> 18857 | 16 | No | The subscription to this publication is not active yet. No user action is required. |
+| <a id="18858"></a> 18858 | 16 | No | Could not read data from replication table '%s'. If retrying does not fix the issue, drop and reconfigure replication. |
+| <a id="18859"></a> 18859 | 16 | No | Provided value for %ls parameter is invalid. Allowed values are %ls. |
+| <a id="18860"></a> 18860 | 16 | No | No RE Schema information found in cache for the table id %ld and transaction id %I64d. |
+| <a id="18861"></a> 18861 | 16 | No | RE Schema node could not be created in memory after 5 retries for Table id %ld and transaction id %I64d. |
+| <a id="18896"></a> 18896 | 16 | No | Failed to compare delete and insert log record for column ID %ld with table ID %ld |
+| <a id="18897"></a> 18897 | 16 | No | Access Denied. |
+| <a id="18898"></a> 18898 | 16 | No | Change Data Capture cannot be enabled for database '%s' because table '%s' already exists and is not a valid Microsoft system table. Drop the table and retry the operation. |
+| <a id="18899"></a> 18899 | 16 | No | Change Data Capture was not enabled for database '%s' because the required unique clustered index 'uncsystranschemas' on table 'dbo.systranschemas' is missing or invalid. Create or rebuild the index with 'startlsn' as its only key column and retry the operation. |

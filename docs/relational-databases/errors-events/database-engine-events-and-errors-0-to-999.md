@@ -8,7 +8,7 @@ ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: supportability
 ms.topic: error-reference
-monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
+monikerRange: " =azuresqldb-current || =azuresqldb-mi-current || >=sql-server-2017 || >=sql-server-linux-2017 || =fabric-sqldb || =fabric"
 ---
 # Database Engine events and errors (0 to 999)
 
@@ -31,9 +31,11 @@ SELECT message_id AS Error,
 FROM sys.messages
 /* replace language_id code with the desired sys.syslanguages.msglangid.
 1033 is for US English */
-WHERE language_id = 1033 
+WHERE language_id = 1033
 ORDER BY message_id;
 ```
+
+<a id="sql-server-version"></a>
 
 ## SQL Database Engine version
 

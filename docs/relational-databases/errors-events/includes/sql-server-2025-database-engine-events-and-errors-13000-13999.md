@@ -7,730 +7,730 @@ ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
 | :--- | :--- | :--- | :--- |
-| 13001 | 16 | No | file name |
-| 13002 | 16 | No | audit |
-| 13003 | 16 | No | audit specification |
-| 13004 | 16 | No | audit name |
-| 13005 | 16 | No | server role |
-| 13006 | 16 | No | server principal |
-| 13008 | 0 | No | receive |
-| 13010 | 0 | No | read |
-| 13012 | 0 | No | a USE database statement |
-| 13013 | 0 | No | a procedure, function or trigger |
-| 13014 | 0 | No | indexed views and/or indexes on computed columns and/or filtered indexes and/or query notifications and/or XML data type methods and/or spatial index operations |
-| 13015 | 0 | No | spatial index operations |
-| 13016 | 0 | No | an INTO clause |
-| 13018 | 0 | No | a COMPUTE clause |
-| 13019 | 0 | No | a SELECT INTO statement |
-| 13020 | 0 | No | option |
-| 13021 | 0 | No | offset option |
-| 13022 | 0 | No | statistics option |
-| 13024 | 0 | No | function name |
-| 13025 | 0 | No | varbinary (128) NOT NULL |
-| 13026 | 0 | No | parameter |
-| 13027 | 0 | No | convert specification |
-| 13028 | 0 | No | index |
-| 13029 | 0 | No | table |
-| 13030 | 0 | No | database |
-| 13031 | 0 | No | procedure |
-| 13032 | 0 | No | trigger |
-| 13033 | 0 | No | view |
-| 13034 | 0 | No | default |
-| 13035 | 0 | No | rule |
-| 13036 | 0 | No | system table |
-| 13037 | 0 | No | unknown type |
-| 13038 | 0 | No | SET option |
-| 13039 | 0 | No | column |
-| 13040 | 0 | No | type |
-| 13041 | 0 | No | character string |
-| 13042 | 0 | No | integer |
-| 13043 | 0 | No | identifier |
-| 13044 | 0 | No | number |
-| 13045 | 0 | No | indexes |
-| 13047 | 0 | No | object |
-| 13049 | 0 | No | built-in function name |
-| 13050 | 0 | No | aggregate function |
-| 13051 | 0 | No | XML INDEX |
-| 13052 | 0 | No | CLR type |
-| 13053 | 0 | No | xml schema collection |
-| 13054 | 0 | No | EXTENDED INDEX |
-| 13055 | 0 | No | SPATIAL INDEX |
-| 13056 | 0 | No | spatial |
-| 13057 | 0 | No | a planguide batch |
-| 13058 | 0 | No | geometry or geography |
-| 13059 | 0 | No | conversation priority |
-| 13060 | 0 | No | tablegroup |
-| 13076 | 0 | No | an assignment |
-| 13077 | 0 | No | a cursor declaration |
-| 13078 | 0 | No | replication filter |
-| 13079 | 0 | No | variable assignment |
-| 13080 | 0 | No | statistics |
-| 13081 | 0 | No | file |
-| 13082 | 0 | No | filegroup |
-| 13083 | 0 | No | server |
-| 13084 | 0 | No | write |
-| 13085 | 0 | No | function |
-| 13086 | 0 | No | database collation |
-| 13087 | 0 | No | drop |
-| 13088 | 0 | No | alter |
-| 13089 | 0 | No | message type |
-| 13090 | 0 | No | contract |
-| 13092 | 0 | No | service |
-| 13093 | 0 | No | queue |
-| 13094 | 0 | No | table valued function |
-| 13095 | 0 | No | event notification |
-| 13096 | 0 | No | synonym |
-| 13097 | 0 | No | lock |
-| 13098 | 0 | No | thread |
-| 13099 | 0 | No | communication buffer |
-| 13100 | 0 | No | Common Language Runtime critical section |
-| 13101 | 0 | No | partition scheme |
-| 13102 | 10 | No | DETACH |
-| 13103 | 0 | No | protocol version |
-| 13104 | 0 | No | RANGE |
-| 13105 | 0 | No | create |
-| 13106 | 0 | No | route |
-| 13107 | 0 | No | remote service binding |
-| 13108 | 0 | No | Initiator |
-| 13109 | 0 | No | Target |
-| 13110 | 0 | No | host synchronization object |
-| 13111 | 0 | No | generic waitable object |
-| 13112 | 0 | No | application role |
-| 13113 | 0 | No | schema |
-| 13114 | 0 | No | user |
-| 13115 | 0 | No | login |
-| 13116 | 0 | No | certificate |
-| 13117 | 0 | No | role |
-| 13118 | 0 | No | find |
-| 13119 | 0 | No | endpoint |
-| 13120 | 0 | No | sql:variable |
-| 13121 | 0 | No | sql:column |
-| 13122 | 0 | No | XML namespace |
-| 13123 | 0 | No | assembly |
-| 13124 | 0 | No | fulltext catalog |
-| 13125 | 16 | No | execute as |
-| 13126 | 16 | No | symmetric key |
-| 13127 | 16 | No | principal |
-| 13128 | 16 | No | security descriptor |
-| 13129 | 16 | No | hypothetical index |
-| 13130 | 16 | No | nonclustered index |
-| 13131 | 16 | No | credential |
-| 13132 | 0 | No | transfer |
-| 13133 | 0 | No | Cumulative wait time (ms) per second |
-| 13134 | 0 | No | Waits started per second |
-| 13135 | 0 | No | Waits in progress |
-| 13136 | 0 | No | Average wait time (ms) |
-| 13137 | 0 | No | Cumulative execution time (ms) per second |
-| 13138 | 0 | No | Execs started per second |
-| 13139 | 0 | No | Execs in progress |
-| 13140 | 0 | No | Average execution time (ms) |
-| 13141 | 16 | No | asymmetric key |
-| 13142 | 0 | No | an INSERT SELECT statement |
-| 13143 | 16 | No | partition function |
-| 13144 | 16 | No | partition scheme |
-| 13145 | 16 | No | encryption |
-| 13146 | 16 | No | signature |
-| 13147 | 16 | No | password |
-| 13148 | 16 | No | rename |
-| 13149 | 16 | No | end dialog |
-| 13150 | 16 | No | END CONVERSATION WITH ERROR |
-| 13151 | 16 | No | MOVE CONVERSATION |
-| 13152 | 16 | No | receive sequenced message |
-| 13153 | 16 | No | receive end conversation |
-| 13154 | 16 | No | receive end conversation with error |
-| 13155 | 16 | No | receive broker error |
-| 13156 | 16 | No | receive message acknowledgement |
-| 13157 | 16 | No | terminate conversation |
-| 13158 | 16 | No | broker error |
-| 13159 | 16 | No | countersignature |
-| 13160 | 16 | No | BEGIN CONVERSATION TIMER |
-| 13161 | 16 | No | fire conversation timer |
-| 13162 | 16 | No | END CONVERSATION WITH CLEANUP |
-| 13163 | 16 | No | BEGIN DIALOG CONVERSATION |
-| 13164 | 16 | No | SEND |
-| 13165 | 16 | No | conversation |
-| 13166 | 16 | No | conversation group |
-| 13167 | 16 | No | system |
-| 13168 | 16 | No | Service Broker |
-| 13169 | 16 | No | Database Mirroring |
-| 13170 | 0 | No | table or indexed view |
-| 13171 | 16 | No | conversation handle |
-| 13172 | 16 | No | GET CONVERSATION GROUP |
-| 13173 | 16 | No | master key |
-| 13174 | 16 | No | another assembly with same SQL name is already present in the current database |
-| 13175 | 16 | No | version, culture or public key mismatch |
-| 13176 | 0 | No | component |
-| 13177 | 16 | No | IL compilation |
-| 13178 | 16 | No | Inproc data access |
-| 13179 | 16 | No | DDL operations |
-| 13180 | 16 | No | execution cache cleanup |
-| 13181 | 16 | No | unspecified operation |
-| 13182 | 16 | No | dialog |
-| 13183 | 10 | No | The certificate's private key cannot be found |
-| 13184 | 10 | No | The certificate's private key size is incompatible with the crypto provider |
-| 13185 | 10 | No | The certificate's public key size is incompatible with the crypto provider |
-| 13186 | 10 | No | The certificate's private key size is incompatible with the encrypted key exchange key |
-| 13187 | 10 | No | The certificate's public key size is incompatible with the security header's signature |
-| 13188 | 10 | No | The certificate's private key is password protected |
-| 13189 | 10 | No | The key exchange key has an invalid size after being decrypted with the certificate private key |
-| 13190 | 10 | No | The database principal used to lookup the cert is invalid |
-| 13191 | 10 | No | The database principal has no mapping to a server principal |
-| 13192 | 10 | No | The certificate is disabled for BEGIN DIALOG |
-| 13193 | 16 | No | encryption algorithm |
-| 13194 | 16 | No | authentication protocol |
-| 13195 | 10 | No | Certificate not found |
-| 13196 | 10 | No | Certificate not yet valid |
-| 13197 | 10 | No | Certificate expired |
-| 13198 | 10 | No | Certificate is larger than maximum allowed size |
-| 13199 | 10 | No | message timestamp |
-| 13201 | 10 | No | security header timestamp |
-| 13202 | 10 | No | TO BROKER INSTANCE |
-| 13203 | 10 | No | TO SERVICE |
-| 13204 | 10 | No | FROM BROKER INSTANCE |
-| 13205 | 10 | No | FROM SERVICE |
-| 13206 | 10 | No | SERVICE CONTRACT |
-| 13207 | 10 | No | MESSAGE TYPE |
-| 13208 | 10 | No | MESSAGE INTEGRITY CHECK |
-| 13209 | 10 | No | KEY SALT |
-| 13210 | 10 | No | SESSION KEY |
-| 13211 | 10 | No | KEY EXCHANGE KEY |
-| 13212 | 10 | No | SOURCE CERTIFICATE ISSUER NAME |
-| 13213 | 10 | No | SOURCE CERTIFICATE SERIAL NUMBER |
-| 13214 | 10 | No | DESTINATION CERTIFICATE ISSUER NAME |
-| 13215 | 10 | No | DESTINATION CERTIFICATE SERIAL NUMBER |
-| 13216 | 10 | No | SECURITY HEADER SIGNATURE |
-| 13217 | 10 | No | MESSAGE BODY |
-| 13218 | 10 | No | STATEMENT |
-| 13219 | 10 | No | clustered index |
-| 13220 | 10 | No | primary xml index |
-| 13221 | 10 | No | manual failover |
-| 13222 | 10 | No | automatic failover |
-| 13223 | 10 | No | failover from partner |
-| 13224 | 10 | No | role synchronization |
-| 13225 | 10 | No | FORCE_SERVICE_ALLOW_DATA_LOSS |
-| 13226 | 10 | No | add |
-| 13227 | 10 | No | to |
-| 13228 | 10 | No | from |
-| 13229 | 10 | No | enable |
-| 13230 | 10 | No | disable |
-| 13231 | 10 | No | remap |
-| 13232 | 10 | No | INSERT |
-| 13233 | 10 | No | UPDATE |
-| 13234 | 10 | No | DELETE |
-| 13235 | 10 | No | WHEN MATCHED |
-| 13236 | 10 | No | WHEN NOT MATCHED |
-| 13237 | 10 | No | WHEN NOT MATCHED BY SOURCE |
-| 13238 | 10 | No | TOP or OFFSET |
-| 13239 | 10 | No | GROUP BY |
-| 13240 | 10 | No | HAVING |
-| 13241 | 10 | No | ORDER BY |
-| 13242 | 10 | No | COMPUTE |
-| 13243 | 10 | No | OUTPUT INTO |
-| 13244 | 10 | No | SELECT |
-| 13245 | 10 | No | WHERE |
-| 13246 | 10 | No | unexpected |
-| 13247 | 10 | No | The crypto API has detected bad data while trying to perform a decryption operation |
-| 13248 | 10 | No | OUTPUT |
-| 13249 | 10 | No | Temporary tables |
-| 13250 | 10 | No | Labels |
-| 13251 | 10 | No | availability group |
-| 13252 | 10 | No | type table |
-| 13254 | 10 | No | event |
-| 13255 | 10 | No | target |
-| 13256 | 10 | No | event action |
-| 13257 | 10 | No | event session |
-| 13258 | 10 | No | event package |
-| 13259 | 10 | No | event object |
-| 13260 | 10 | No | event predicate comparator |
-| 13261 | 10 | No | event attribute or predicate source |
-| 13262 | 10 | No | customizable attribute |
-| 13263 | 10 | No | event predicate |
-| 13264 | 10 | No | predicate source |
-| 13265 | 10 | No | event attribute |
-| 13266 | 10 | No | partitioned |
-| 13267 | 10 | No | not partitioned |
-| 13268 | 10 | No | resource pool |
-| 13269 | 10 | No | workload group |
-| 13270 | 10 | No | resource governor |
-| 13271 | 10 | No | move |
-| 13272 | 10 | No | UPDATETEXT |
-| 13273 | 10 | No | WRITETEXT |
-| 13274 | 10 | No | torn page (expected signature: 0x%08x; actual signature: 0x%08x) |
-| 13275 | 10 | No | incorrect checksum (expected: 0x%08x; actual: 0x%08x) |
-| 13276 | 10 | No | invalid protection option |
-| 13277 | 10 | No | invalid encryption key |
-| 13278 | 10 | No | unable to decrypt page |
-| 13279 | 10 | No | decryption failure (expected: 0x%08x; actual: 0x%08x) |
-| 13280 | 10 | No | unable to decrypt page due to missing DEK |
-| 13281 | 10 | No | CREATION_DISPOSITION |
-| 13282 | 10 | No | PROVIDER_KEY_NAME |
-| 13283 | 10 | No | key source |
-| 13284 | 10 | No | ENCRYPTION BY |
-| 13285 | 10 | No | public key |
-| 13286 | 10 | No | private key |
-| 13287 | 10 | No | cryptographic provider |
-| 13288 | 10 | No | cryptographic provider DLL path |
-| 13289 | 10 | No | cryptographic provider friendly name |
-| 13290 | 10 | No | version |
-| 13291 | 10 | No | guid |
-| 13292 | 10 | No | create credential for |
-| 13293 | 10 | No | cryptographic provider key name |
-| 13294 | 10 | No | key persistence |
-| 13295 | 10 | No | cryptographic provider key thumbprint length |
-| 13296 | 10 | No | cryptographic provider key blob length |
-| 13297 | 16 | No | encryption algorithm tag |
-| 13298 | 16 | No | name |
-| 13299 | 16 | No | thumbprint |
-| 13301 | 16 | No | IV(Initialization Vector) length |
-| 13302 | 16 | No | bit length |
-| 13303 | 16 | No | constraint |
-| 13304 | 16 | No | database encryption key |
-| 13305 | 10 | No | QUERY_STORE |
-| 13306 | 10 | No | DESIRED_STATE' or 'OPERATION_MODE |
-| 13307 | 10 | No | MAX_STORAGE_SIZE_MB |
-| 13308 | 10 | No | FLUSH_INTERVAL_SECONDS' or 'DATA_FLUSH_INTERVAL_SECONDS |
-| 13309 | 10 | No | QUERY_STORE CLEANUP_POLICY |
-| 13310 | 10 | No | STALE_QUERY_THRESHOLD_DAYS |
-| 13311 | 10 | No | column master key |
-| 13312 | 10 | No | column encryption key |
-| 13313 | 10 | No | key store provider name |
-| 13314 | 10 | No | FILESTREAM |
-| 13315 | 10 | No | ROWGUID |
-| 13316 | 10 | No | FOR XML |
-| 13317 | 10 | No | FOR JSON |
-| 13318 | 10 | No | encrypted value |
-| 13319 | 10 | No | key path |
-| 13320 | 10 | No | BLOCK |
-| 13321 | 10 | No | FILTER |
-| 13322 | 10 | No | INTERVAL_LENGTH_MINUTES |
-| 13323 | 10 | No | MAX_PLANS_PER_QUERY |
-| 13324 | 10 | No | QUERY_CAPTURE_MODE |
-| 13325 | 10 | No | SIZE_BASED_CLEANUP_MODE |
-| 13326 | 10 | No | external resource pool |
-| 13327 | 10 | No | external library |
-| 13328 | 10 | No | QUERY_TUNING_MODE |
-| 13329 | 10 | No | QDS server name |
-| 13330 | 10 | No | WAIT_STATS_CAPTURE_MODE |
-| 13331 | 10 | No | external language |
-| 13332 | 10 | No | maximum |
-| 13333 | 10 | No | total |
-| 13334 | 10 | No | Certificate chain validation failed |
-| 13335 | 10 | No | Certificate does not have subject alternative name |
-| 13336 | 10 | No | There is no trusted issuer found for this certificate |
-| 13371 | 10 | No | STATISTICS_INCREMENTAL |
-| 13372 | 10 | No | this operation cannot be performed inside a user transaction. |
-| 13373 | 16 | No | Anchor record |
-| 13374 | 16 | No | Page dictionary |
-| 13375 | 16 | No | Compression information structure |
-| 13376 | 10 | No | Fulltext Query String |
-| 13377 | 10 | No | Fulltext Query Language |
-| 13378 | 10 | No | Fulltext Query Max Keys |
-| 13379 | 10 | No | fulltext stoplist |
-| 13380 | 10 | No | Success - Consult EKM Provider for details |
-| 13381 | 10 | No | Failure - Consult EKM Provider for details |
-| 13382 | 10 | No | Insufficient Buffer - Consult EKM Provider for details |
-| 13383 | 10 | No | Not Supported - Consult EKM Provider for details |
-| 13384 | 10 | No | Object Not Found - Consult EKM Provider for details |
-| 13385 | 10 | No | Authentication Failure - Consult EKM Provider for details |
-| 13386 | 10 | No | Invalid Argument - Consult EKM Provider for details |
-| 13387 | 10 | No | Provider Error - No explanation is available, consult EKM Provider for details |
-| 13388 | 10 | No | Key Flags |
-| 13389 | 10 | No | Key Name |
-| 13390 | 10 | No | Key Type |
-| 13391 | 10 | No | Location: |
-| 13392 | 10 | No | Location relative to the specified target node: |
-| 13393 | 10 | No | search property list |
-| 13394 | 10 | No | MERGE |
-| 13395 | 10 | No | PAD_INDEX |
-| 13396 | 10 | No | FILLFACTOR |
-| 13397 | 10 | No | SORT_IN_TEMPDB |
-| 13398 | 10 | No | IGNORE_DUP_KEY |
-| 13399 | 10 | No | STATISTICS_NORECOMPUTE |
-| 13400 | 10 | No | Extended stored procedure API will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 13401 | 10 | No | Non-ANSI '\*=' and '=\*' outer join operators will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use ANSI outer joins instead. |
-| 13402 | 10 | No | The ability to INSERT NULL values into TIMESTAMP columns will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use DEFAULT instead. |
-| 13403 | 10 | No | The ability to use string literals as column aliases will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use AS clause instead. |
-| 13404 | 10 | No | The ability to use '#' and '##' as the name of temporary tables and stored procedures will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 13405 | 10 | No | The ability to use '@' and names that start with '@@' as Transact-SQL identifiers will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 13406 | 10 | No | The ability to use the DEFAULT keyword as a default value will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 13407 | 10 | No | FASTFIRSTROW hint will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use OPTION (FAST n) instead. |
-| 13408 | 10 | No | %ls will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
-| 13409 | 10 | No | Collation '%ls' will be removed in a future version of SQL Server. Avoid using this collation in new development work, and plan to modify applications that currently use it. |
-| 13410 | 10 | No | Creating credentials using mismatched password for sp_control_dbmasterkey_password will be removed in a future version of SQL Server. Avoid using this stored procedure with passwords that do not match the existing database master key's encryption password, and plan to modify applications that currently use it. |
-| 13501 | 16 | No | Temporal generated always column '%.\*ls' has invalid data type. |
-| 13502 | 16 | No | System-versioned table cannot have more than one 'GENERATED ALWAYS AS ROW START' column. |
-| 13503 | 16 | No | System-versioned table cannot have more than one 'GENERATED ALWAYS AS ROW END' column. |
-| 13504 | 16 | No | Temporal 'GENERATED ALWAYS AS ROW START' column definition missing. |
-| 13505 | 16 | No | Temporal 'GENERATED ALWAYS AS ROW END' column definition missing. |
-| 13506 | 16 | No | System-versioned table SYSTEM_TIME period definition start column name not matching 'GENERATED ALWAYS AS ROW START' column name. |
-| 13507 | 16 | No | System-versioned table SYSTEM_TIME period definition end column name not matching 'GENERATED ALWAYS AS ROW END' column name. |
-| 13508 | 16 | No | System-versioned table cannot have more than one SYSTEM_TIME period definition. |
-| 13509 | 16 | No | Cannot create generated always column when SYSTEM_TIME period is not defined. |
-| 13510 | 16 | No | Cannot set SYSTEM_VERSIONING to ON when SYSTEM_TIME period is not defined and the LEDGER=ON option is not specified. |
-| 13511 | 16 | No | Specified object '%.\*ls' cannot be used as history table. |
-| 13512 | 16 | No | You cannot specify SYSTEM_VERSIONING clause more than once. |
-| 13513 | 16 | No | SYSTEM_TIME period columns cannot have different datatype precision. |
-| 13514 | 16 | No | History table '%.\*ls' is already in use. |
-| 13515 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has custom unique keys defined. Consider dropping all unique keys and trying again. |
-| 13516 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has foreign keys defined. Consider dropping all foreign keys and trying again. |
-| 13517 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has table or column constraints defined. Consider dropping all table and column constraints and trying again. |
-| 13518 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has IDENTITY column specification. Consider dropping all IDENTITY column specifications and trying again. |
-| 13519 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has computed column specification. Consider dropping all computed column specifications and trying again. |
-| 13520 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is not available or it is placed on a read-only file group. |
-| 13521 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is configured for change data capture. Consider dropping this configuration and trying again. |
-| 13522 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has triggers defined. Consider dropping all triggers and trying again. |
-| 13523 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' has %d columns and table '%.\*ls' has %d columns. |
-| 13524 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' at ordinal %d in history table '%.\*ls' has a different name than the column '%.\*ls' at the same ordinal in table '%.\*ls'. |
-| 13525 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' has data type %s in history table '%.\*ls' which is different from corresponding column type %s in table '%.\*ls'. |
-| 13526 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same collation in tables '%.\*ls' and '%.\*ls'. |
-| 13527 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same CLR type in tables '%.\*ls' and '%.\*ls'. |
-| 13528 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same ANSI trimming semantics in tables '%.\*ls' and '%.\*ls'. |
-| 13529 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same XML Schema Collection in tables '%.\*ls' and '%.\*ls'. |
-| 13530 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because system column '%.\*ls' in history table '%.\*ls' corresponds to a period column in table '%.\*ls' and cannot be nullable. |
-| 13531 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same nullability attribute in tables '%.\*ls' and '%.\*ls'. |
-| 13532 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because system-versioned tables cannot have FILESTREAM columns. |
-| 13533 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same sparse storage attribute in tables '%.\*ls' and '%.\*ls'. |
-| 13534 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same column set property in tables '%.\*ls' and '%.\*ls'. |
-| 13535 | 16 | No | Data modification failed on system-versioned table '%.\*ls' because transaction time was earlier than period start time for affected records. |
-| 13536 | 16 | No | Cannot insert an explicit value into a GENERATED ALWAYS column in table '%.\*ls'. Use INSERT with a column list to exclude the GENERATED ALWAYS column, or insert a DEFAULT into GENERATED ALWAYS column. |
-| 13537 | 16 | No | Cannot update GENERATED ALWAYS columns in table '%.\*ls'. |
-| 13538 | 16 | No | You do not have the required permissions to complete the operation. |
-| 13539 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is not specified in two-part name format. |
-| 13540 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' contains invalid records with end of period set before start. |
-| 13541 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' contains invalid records with end of period set before start. |
-| 13542 | 16 | No | ADD PERIOD FOR SYSTEM_TIME on table '%.\*ls' failed because there are open records with start of period set to a value in the future. |
-| 13543 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' contains invalid records with end of period set to a value in the future. |
-| 13544 | 16 | No | Temporal FOR SYSTEM_TIME clause can only be used with system-versioned tables. '%.\*ls' is not a system-versioned table. |
-| 13545 | 16 | No | Truncate failed on table '%.\*ls' because it is not a supported operation on system-versioned tables. |
-| 13546 | 16 | No | Switching out partition failed on table '%.\*ls' because it is not a supported operation on system-versioned tables. Consider setting SYSTEM_VERSIONING to OFF and trying again. |
-| 13547 | 16 | No | Switching in partition failed on history table '%.\*ls' because it is not a supported operation on system-versioned tables. Consider setting SYSTEM_VERSIONING to OFF and trying again. |
-| 13548 | 16 | No | Cannot alter column '%.\*ls' on table '%.\*ls' because it is not a supported operation on system-versioned temporal or ledger tables. |
-| 13549 | 16 | No | Setting FILESTREAM ON failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
-| 13550 | 16 | No | Add column operation failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
-| 13551 | 16 | No | Drop column operation failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
-| 13552 | 16 | No | Drop table operation failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
-| 13553 | 16 | No | System versioned temporal table '%.\*ls' must have primary key defined. |
-| 13554 | 16 | No | Memory-optimized table '%.\*ls' cannot contain system-time PERIOD. |
-| 13555 | 16 | No | System versioned temporal table '%.\*ls' cannot have FILESTREAM columns. |
-| 13556 | 16 | No | Table '%.\*ls' is a FileTable. System versioning cannot be used on FileTables. |
-| 13557 | 16 | No | Cannot drop PRIMARY KEY constraint from a system-versioned temporal table '%.\*ls'. |
-| 13558 | 16 | No | Cannot add PRIMARY KEY constraint to a temporal history table '%.\*ls'. |
-| 13559 | 16 | No | Cannot insert rows in a temporal history table '%.\*ls'. |
-| 13560 | 16 | No | Cannot delete rows from a temporal history table '%.\*ls'. |
-| 13561 | 16 | No | Cannot update rows in a temporal history table '%.\*ls'. |
-| 13562 | 16 | No | Cannot perform MERGE operation on temporal history table '%.\*ls'. |
-| 13563 | 16 | No | Enabling Change Tracking for a temporal history table '%.\*ls' is not allowed. |
-| 13564 | 16 | No | Adding CHECK constraint to a temporal history table '%.\*ls' is not allowed. |
-| 13565 | 16 | No | Foreign key '%.\*ls' is not valid. A temporal history table cannot be used in a foreign key definition. |
-| 13566 | 16 | No | Temporal table '%.\*ls' is already in use. |
-| 13567 | 16 | No | Temporal history table '%.\*ls' cannot be created in a 'tempdb' database. |
-| 13568 | 16 | No | System-versioned temporal table '%.\*ls' cannot be created in a 'tempdb' database. |
-| 13569 | 16 | No | Cannot create a trigger on a system-versioned temporal table '%.\*ls'. |
-| 13570 | 16 | No | The use of replication is not supported with system-versioned temporal table '%s' |
-| 13571 | 16 | No | Enabling Change Data Capture for a temporal history table '%ls' is not allowed. |
-| 13572 | 16 | No | Creating table variables containing PERIOD is not allowed. |
-| 13573 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' contains overlapping records. |
-| 13574 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because temporal history table '%.\*ls' contains SYSTEM_TIME period. |
-| 13575 | 16 | No | ADD PERIOD FOR SYSTEM_TIME failed because table '%.\*ls' contains records where end of period is not equal to MAX datetime. |
-| 13576 | 16 | No | DML operations are not allowed because system-versioned temporal table '%.\*ls' is in read-only mode. |
-| 13577 | 16 | No | ALTER TABLE SWITCH statement failed on table '%.\*ls' because target table has SYSTEM_TIME PERIOD while source table does not have it. |
-| 13578 | 16 | No | ALTER TABLE SWITCH statement failed on table '%.\*ls' because target and source tables have different SYSTEM_TIME PERIOD definitions. |
-| 13579 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not use identical encryption in tables '%.\*ls' and '%.\*ls'. |
-| 13580 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has ROWGUID column specification. Consider dropping all ROWGUID column specifications and trying again. |
-| 13581 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same masking functions in tables '%.\*ls' and '%.\*ls'. |
-| 13582 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' has a FOREIGN KEY with cascading DELETE or UPDATE. |
-| 13583 | 16 | No | Cannot add UNIQUE KEY constraint to a temporal history table '%.\*ls'. |
-| 13584 | 16 | No | Flush has not been executed for table because appropriate lock could not be obtained or it does not exist anymore. |
-| 13585 | 16 | No | Computed column is defined with a user-defined function which is not allowed with system-versioned table '%.\*ls' because it performs user or system data access, or is assumed to perform this access. A function is assumed by default to perform data access if it is not schemabound. |
-| 13586 | 16 | No | Temporal FOR SYSTEM_TIME clause cannot be used on remote data source '%.\*ls'. |
-| 13587 | 16 | No | Period column '%.\*ls' in a system-versioned temporal table cannot be nullable. |
-| 13588 | 16 | No | Column '%.\*ls' in table '%.\*ls' cannot be dropped because it is a part of period definition. |
-| 13589 | 16 | No | Column '%.\*ls' in table '%.\*ls' cannot be specified as 'GENERATED ALWAYS' in ALTER COLUMN statement. |
-| 13590 | 16 | No | Temporal FOR SYSTEM_TIME clause can only be set once per temporal table. '%.\*ls' has more than one temporal FOR SYSTEM_TIME clause. |
-| 13591 | 16 | No | SYSTEM_VERSIONING is not turned ON for table '%.\*ls'. |
-| 13592 | 16 | No | Cannot drop SYSTEM_TIME period from table '%.\*ls' when SYSTEM_VERSIONING is ON. |
-| 13593 | 16 | No | SYSTEM_TIME period cannot be dropped from table '%.\*ls', because SYSTEM_TIME period does not exist. |
-| 13594 | 16 | No | Table '%.\*ls' does not contain SYSTEM_TIME period '%.\*ls'. |
-| 13595 | 16 | No | Temporal history table name '%.\*ls' is not correct for current table '%.\*ls'. |
-| 13596 | 16 | No | SYSTEM_VERSIONING is already turned ON for table '%.\*ls'. |
-| 13597 | 16 | No | Temporal SYSTEM_TIME period is already defined on table '%.\*ls'. |
-| 13598 | 16 | No | Temporal SYSTEM_TIME period cannot be defined on history table '%.\*ls'. |
-| 13599 | 16 | No | Period column '%.\*ls' in a system-versioned temporal table cannot be altered. |
-| 13600 | 16 | No | FOR JSON AUTO requires at least one table for generating JSON objects. Use FOR JSON PATH or add a FROM clause with a table name. |
-| 13601 | 16 | No | Property '%.\*ls' cannot be generated in JSON output due to a conflict with another column name or alias. FOR JSON PATH requires that the column expressions are ordered based on the JSON document paths specified in the column aliases. |
-| 13602 | 16 | No | The FOR JSON clause is not allowed in a %ls statement. |
-| 13603 | 16 | No | Property '%.\*ls' cannot be generated in JSON output due to invalid character in the column name or alias. Column name or alias that contains '..', starts or ends with '.' is not allowed in query that has FOR JSON clause. |
-| 13604 | 16 | No | FOR JSON cannot serialize CLR objects. Cast CLR types explicitly into one of the supported types in FOR JSON queries. |
-| 13605 | 16 | No | Column expressions and data sources without names or aliases cannot be formatted as JSON text using FOR JSON clause. Add alias to the unnamed column or table. |
-| 13606 | 16 | No | JSON text/path that has more than 128 nesting levels cannot be parsed. |
-| 13607 | 16 | No | JSON path is not properly formatted. Unexpected character '%lc' is found at position %d. |
-| 13608 | 16 | No | Property cannot be found on the specified JSON path. |
-| 13609 | 16 | No | JSON text is not properly formatted. Unexpected character '%lc' is found at position %d. |
-| 13610 | 16 | No | The argument %d of the "%.\*ls" must be a string literal. |
-| 13611 | 16 | No | Value referenced by JSON path is not an array or object and cannot be opened with OPENJSON. |
-| 13612 | 16 | No | Cannot convert a string value found in the JSON text to binary value because it is not Base64 encoded. |
-| 13613 | 16 | No | Base64 encoded string cannot be converted to binary value. Binary data would be truncated. |
-| 13614 | 16 | No | TEXT, NTEXT, SQL_VARIANT and IMAGE types cannot be used as column types in OPENJSON function with explicit schema. These types are not supported in WITH clause. |
-| 13615 | 16 | No | OPENJSON function cannot convert value found in the JSON text to sql_variant data type. The value found in JSON text would be truncated. |
-| 13616 | 16 | No | CLR types cannot be used as column types in OPENJSON function with explicit schema. CLR types are not supported in WITH clause. |
-| 13617 | 16 | No | Table types cannot be used as column types in OPENJSON function with explicit schema. This type is not supported in WITH clause. |
-| 13618 | 16 | No | AS JSON option can be specified only for column of nvarchar(max) type in WITH clause. |
-| 13619 | 16 | No | Unsupported JSON path found in argument %d of JSON_MODIFY. |
-| 13620 | 16 | No | ROOT option and WITHOUT_ARRAY_WRAPPER option cannot be used together in FOR JSON. Remove one of these options. |
-| 13621 | 16 | No | Array cannot be found in the specified JSON path. |
-| 13622 | 16 | No | An invalid value was specified for argument %d. |
-| 13623 | 16 | No | Scalar value cannot be found in the specified JSON path. |
-| 13624 | 16 | No | Object or array cannot be found in the specified JSON path. |
-| 13625 | 16 | No | String value in the specified JSON path would be truncated. |
-| 13626 | 16 | No | Openjson cannot have more than %d columns in with clause. |
-| 13627 | 16 | No | Column type %ls cannot be used in the OPENJSON column that returns '$.sql:identity()' value. |
-| 13636 | 16 | No | The JSON data type cannot be compared or sorted, except when using the IS NULL operator. |
-| 13638 | 16 | No | User error : Name parameter value in '%ls' cannot be null |
-| 13639 | 16 | No | Target string size is too small to represent the JSON instance. |
-| 13640 | 16 | No | Conversion of one or more characters from the JSON instance to target codepage %d will result in data loss. Choose a different target collation or use nvarchar. |
-| 13641 | 16 | No | There is not enough resources to perform the operation. One or more JSON character strings in the query exceeds the supported limit for the JSON type. |
-| 13642 | 20 | No | Encountered an unsupported version of the JSON type. Please run DBCC CHECKTABLE with EXTENDED_LOGICAL_CHECKS to identify the rows. The remedy is to delete the rows and insert the JSON documents as character strings. |
-| 13643 | 16 | No | Encountered corrupted JSON type. Please run DBCC CHECKTABLE with EXTENDED_LOGICAL_CHECKS to identify the rows. The remedy is to delete the rows and insert the JSON documents as character strings. |
-| 13644 | 16 | No | String value length exceeds maximum %d bytes in JSON type. |
-| 13645 | 16 | No | Nested level of JSON document exceeds limit %d. |
-| 13646 | 16 | No | Key string length exceeds limit %d bytes in JSON type. |
-| 13647 | 16 | No | Number of items in one object/array exceeds limit %d in JSON type. |
-| 13648 | 16 | No | Length of numeric string around '%.\*ls' exceeds limit %d characters in JSON type. |
-| 13649 | 16 | No | Number of unique keys exceeds limit %d in JSON type. |
-| 13650 | 16 | No | JSON path exceeds limit of %d bytes. |
-| 13654 | 16 | No | JSON column(s) cannot be natively imported through BULK INSERT or OPENROWSET(BULK) statement. Please use a format file to explicitly specify the type of the JSON column(s) and specify the format file in the BULK INSERT or OPENROWSET(BULK) statement. |
-| 13655 | 16 | No | JSON data type is not supported in distributed queries. Remote object '%.\*ls' has JSON column(s). |
-| 13656 | 16 | No | JSON data type cannot be used when its feature switch is off. |
-| 13657 | 16 | No | Cannot create alias types from a JSON data type. |
-| 13658 | 16 | No | JSON data type cannot be used in OpenJson function. |
-| 13659 | 16 | No | Index %d provided at position %d is not within the array of size %d. |
-| 13660 | 16 | No | %s not yet supported for advanced JSON array accessors. |
-| 13661 | 16 | No | JSON data type is not supported in CDC tracked table. |
-| 13662 | 16 | No | JSON data type is not supported in transactional replication. |
-| 13663 | 16 | No | JSON data type is not supported in generic replication features. |
-| 13664 | 16 | No | JSON path not valid for JSON index. |
-| 13665 | 16 | No | %s not yet supported for JSON native data type. |
-| 13666 | 16 | No | %s does not support CLR type as parameters |
-| 13667 | 16 | No | JSON aggregates do not support order-by within group when specified with grouping sets, cubes and rollups. Try your query without order-by within group. |
-| 13668 | 16 | No | JSON_QUERY using WITH ARRAY WRAPPER will cause a buffer overflow. Please cast the document to a LOB. |
-| 13670 | 16 | No | Input JSON is not a valid Vector : '%ls'. |
-| 13671 | 16 | No | Given Vector size is not supported. Maximum allowed size '%ld'. |
-| 13672 | 16 | No | Table '%.\*ls' needs to have a clustered primary key with less than %d columns in it in order to create a JSON index on it. |
-| 13674 | 16 | No | DROP JSON INDEX does not support any options. |
-| 13675 | 16 | No | Cannot create a JSON index on temp objects. '%.\*ls' is identified as a temp object. |
-| 13676 | 16 | No | Internal error occurred while creating the JSON index. Please run DBCC CHECKCATALOG and retry if it does not report any error. Please contact support in case of error. |
-| 13677 | 16 | No | Failed to create internal table for the JSON index. |
-| 13678 | 16 | No | Could not create the JSON index on object '%.\*ls' because that object is not a table. Create the index on the base table column. |
-| 13679 | 16 | No | '%.\*ls' is not a valid JSON index name because it starts with '%c' character. JSON index name should not start with '#' or '@' |
-| 13680 | 16 | No | Column '%.\*ls' on table '%.\*ls' is not of JSON data type, which is required to create a JSON index on it. |
-| 13681 | 16 | No | A JSON index '%.\*ls' already exists on column '%.\*ls' on table '%.\*ls', and multiple JSON indexes per column are not allowed. |
-| 13682 | 16 | No | Cannot create JSON index '%.\*ls' on table '%.\*ls', column '%.\*ls', because the column is computed. |
-| 13683 | 16 | No | Invalid JSON paths in JSON index. |
-| 13684 | 16 | No | String conversion from UTF-8 to UTF-16 failed. |
-| 13685 | 16 | No | A JSON index '%.\*ls' cannot be found on column '%.\*ls' on table '%.\*ls'. |
-| 13686 | 16 | No | Json_Contains matches pattern as LIKE. The pattern should be no longer than 4000 characters. |
-| 13687 | 16 | No | JSON data type is not supported in merge replication. |
-| 13688 | 16 | No | One or more of the specified ALTER INDEX options is invalid for a JSON index. |
-| 13689 | 16 | No | DATA_COMPRESSION is not compatible with JSON index '%.\*ls'. Please drop it and recreate it. |
-| 13690 | 16 | No | JSON index '%.\*ls' cannot be rebuilt. Drop and recreate it. |
-| 13691 | 16 | No | The JSON data type is not supported in a data mask. |
-| 13692 | 16 | No | The comparison_mode argument of JSON_CONTAINS must be 0 or 1. |
-| 13701 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has custom unique keys defined. Consider dropping all unique keys and trying again. |
-| 13702 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has foreign keys defined. Consider dropping all foreign keys and trying again. |
-| 13703 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has table or column constraints defined. Consider dropping all table and column constraints and trying again. |
-| 13704 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has IDENTITY column specification. Consider dropping all IDENTITY column specifications and trying again. |
-| 13705 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has computed column specification. Consider dropping all computed column specifications and trying again. |
-| 13706 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' is not available or it is placed on a read-only file group. |
-| 13707 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' is configured for change data capture. Consider dropping this configuration and trying again. |
-| 13708 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has triggers defined. Consider dropping all triggers and trying again. |
-| 13709 | 16 | No | System-versioned table schema modification failed because table '%.\*ls' has %d columns and table '%.\*ls' has %d columns. |
-| 13710 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' at ordinal %d in history table '%.\*ls' has a different name than the column '%.\*ls' at the same ordinal in table '%.\*ls'. |
-| 13711 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' has data type %s in history table '%.\*ls' which is different from corresponding column type %s in table '%.\*ls'. |
-| 13712 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same collation in tables '%.\*ls' and '%.\*ls'. |
-| 13713 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same CLR type in tables '%.\*ls' and '%.\*ls'. |
-| 13714 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same ANSI trimming semantics in tables '%.\*ls' and '%.\*ls'. |
-| 13715 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same XML Schema Collection in tables '%.\*ls' and '%.\*ls'. |
-| 13716 | 16 | No | System-versioned table schema modification failed because system column '%.\*ls' in history table '%.\*ls' corresponds to a period column in table '%.\*ls' and cannot be nullable. |
-| 13717 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same nullability attribute in tables '%.\*ls' and '%.\*ls'. |
-| 13718 | 16 | No | System-versioned table schema modification failed because system-versioned tables cannot have FILESTREAM columns. |
-| 13719 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same sparse storage attribute in tables '%.\*ls' and '%.\*ls'. |
-| 13720 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same column set property in tables '%.\*ls' and '%.\*ls'. |
-| 13721 | 16 | No | System-versioned table schema modification failed because temporal history table '%.\*ls' contains SYSTEM_TIME period. |
-| 13722 | 16 | No | Computed column is defined with a user-defined function which is not allowed with system-versioned table '%.\*ls' because it performs user or system data access, or is assumed to perform this access. A function is assumed by default to perform data access if it is not schemabound. |
-| 13723 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has ROWGUID column specification. Consider dropping all ROWGUID column specifications and trying again. |
-| 13724 | 16 | No | System-versioned table schema modification failed because adding computed column while system-versioning is ON is not supported. |
-| 13725 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same masking functions in tables '%.\*ls' and '%.\*ls'. |
-| 13726 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is referenced by one or more BLOCK security predicates. Consider removing the BLOCK security predicates referencing this table and trying again. |
-| 13727 | 16 | No | Temporal 'GENERATED ALWAYS AS %ls' column '%.\*ls' has invalid data type. |
-| 13728 | 16 | No | Temporal 'GENERATED ALWAYS AS %ls' column '%.\*ls' cannot be nullable. |
-| 13729 | 16 | No | Temporal 'GENERATED ALWAYS' column '%.\*ls' cannot be altered. |
-| 13730 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' in history table '%.\*ls' corresponds to a generated always column in table '%.\*ls' and cannot be nullable. |
-| 13731 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' in history table '%.\*ls' corresponds to a generated always column in table '%.\*ls' and cannot be nullable. |
-| 13732 | 16 | No | Temporal 'GENERATED ALWAYS AS %ls' column '%.\*ls' has invalid data length. |
-| 13733 | 16 | No | Temporal table cannot have more than one 'GENERATED ALWAYS AS %ls' column. |
-| 13734 | 16 | No | System-versioned table schema modification failed because online alter is not supported on system-versioned memory optimized table '%.\*ls'. |
-| 13735 | 16 | No | Cannot alter HIDDEN attribute on column '%.\*ls' in table '%.\*ls' because this column is not a generated always column. |
-| 13736 | 16 | No | ALTER TABLE SWITCH statement failed on table '%.\*ls' because column '%.\*ls' does not have the same GENERATED ALWAYS attribute in target and source tables. |
-| 13738 | 16 | No | History table '%.\*ls' can not be a memory-optimized table. |
-| 13739 | 16 | No | Memory optimized temporal table '%.\*ls' must be created with DURABILITY set to SCHEMA_AND_DATA. |
-| 13740 | 16 | No | The row size limit of %d bytes for memory optimized system versioned tables has been exceeded. Please simplify the table definition. |
-| 13741 | 16 | No | Cannot create UNIQUE index on temporal history table '%.\*ls'. |
-| 13742 | 16 | No | Table '%.\*ls' contains records where 'GENERATED ALWAYS AS %ls' is not equal to %ls. |
-| 13743 | 16 | No | %ld is not a valid value for system versioning history retention period. |
-| 13744 | 16 | No | '%.\*ls' is not a valid history retention period unit for system versioning. |
-| 13745 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not use identical encryption in tables '%.\*ls' and '%.\*ls'. |
-| 13746 | 16 | No | '%.\*ls' is not a system versioned temporal table. |
-| 13747 | 16 | No | Cannot apply history cleanup on table '%.\*ls' because it has infinite retention period. |
-| 13748 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' exceeds the maximum of 1023 columns. |
-| 13749 | 16 | No | The period of %ld %S_MSG is too big for system versioning history retention. |
-| 13750 | 16 | No | Temporal period column '%.\*ls' does not exist. |
-| 13751 | 16 | No | Temporal application time column '%.\*ls' has invalid data type. Allowed data types are datetime2, smalldatetime, datetimeoffset, date and datetime. |
-| 13752 | 16 | No | Column '%.\*ls' must be defined as NOT NULL in order to be used in a temporal application time period. |
-| 13753 | 16 | No | Temporal period columns cannot have different data types. |
-| 13754 | 16 | No | Temporal period columns cannot have different data type precision. |
-| 13755 | 16 | No | Temporal period '%.\*ls' has the same start and end time column. |
-| 13756 | 16 | No | Column '%.\*ls' is used in the temporal period '%.\*ls' and cannot be explicitly placed in the key list of a constraint where that same period without overlaps is used. |
-| 13757 | 16 | No | Temporal table '%.\*ls' already has history table defined. Consider dropping system_versioning first if you want to use different history table. |
-| 13758 | 16 | No | Cannot define foreign key constraint '%.\*ls' with cascaded DELETE or UPDATE on table '%.\*ls' because table is system-versioned. |
-| 13759 | 16 | No | Renaming a column failed on history table '%ls' because it is not a supported operation on system-versioned tables. Consider setting SYSTEM_VERSIONING to OFF and trying again. |
-| 13760 | 16 | No | Accessing history table for memory optimized temporal table using the SERIALIZABLE isolation level is not supported while SYSTEM_VERSIONING is ON. |
-| 13761 | 16 | No | The hint '%.\*ls' is not supported with history table for memory optimized temporal table while SYSTEM_VERSIONING is ON. |
-| 13762 | 16 | No | Cannot alter temporal table '%.\*ls' because this operation is currently not available. |
-| 13763 | 16 | No | Cannot query temporal table '%.\*ls' because this operation is currently not available. |
-| 13764 | 16 | No | Online alter column is not supported for system-versioned temporal table '%.\*ls'. |
-| 13765 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because the history table '%.\*ls' does not contain required clustered index. Consider creating a clustered columnstore or B-tree index starting with the column that matches end of SYSTEM_TIME period, on the history table. |
-| 13766 | 16 | No | Cannot drop the clustered index '%.\*ls' because it is being used for automatic cleanup of aged data. Consider setting HISTORY_RETENTION_PERIOD to INFINITE on the corresponding system-versioned temporal table if you need to drop this index. |
-| 13767 | 16 | No | The clustered index '%.\*ls' is being used for automatic cleanup of aged data, and can be converted to either a clustered columnstore or B-tree index starting with the column that matches end of SYSTEM_TIME period, on the history table. Consider setting HISTORY_RETENTION_PERIOD to INFINITE on the corresponding system-versioned temporal table if you need to rebuild this index with a modified column specification, not supported with temporal history retention. |
-| 13768 | 16 | No | Retention cleanup of history table for a temporal table (database id %lu, table id %ld) has not been executed. Either the cleanup is disabled on the database, appropriate lock could not be obtained or the temporal table does not exist anymore. |
-| 13769 | 16 | No | Setting SYSTEM_VERSIONING to ON failed for table '%.\*ls' because '%.\*ls' with REMOTE_DATA_ARCHIVE enabled cannot be used as a history table when a finite retention period is specified. |
-| 13770 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because REMOTE_DATA_ARCHIVE is enabled on the corresponding history table '%.\*ls'. |
-| 13771 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because corresponding history table '%.\*ls' has both clustered columnstore and non-clustered indexes. Consider dropping non-clustered indexes from the history table and try again. |
-| 13772 | 16 | No | Cannot create non-clustered index on temporal history table '%.\*ls' since it has finite retention period and clustered columnstore index defined. |
-| 13773 | 16 | No | Clustered column store temporal retention cleanup attempted on non-clustered column store table '%.\*ls'. |
-| 13774 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' has INSTEAD OF triggers defined. Consider dropping INSTEAD OF triggers and trying again. |
-| 13775 | 16 | No | System-versioned table schema modification failed because table '%.\*ls' has INSTEAD OF triggers defined. Consider dropping INSTEAD OF triggers and trying again. |
-| 13776 | 16 | No | Table '%.\*ls' does not exist or you do not have the required permissions to complete the operation. |
-| 13777 | 16 | No | Stored procedure 'sp_cleanup_temporal_history' is temporarily disabled. Please contact customer support for more information. |
-| 13778 | 16 | No | The only allowed ALTER TABLE operations on temporal in-memory history table '%.\*ls' are ADD INDEX, DROP INDEX and ALTER INDEX. |
-| 13779 | 16 | No | Defining a column store index on temporal in-memory history table '%.\*ls' is not supported. |
-| 13780 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because the history table '%.\*ls' is clustered column store that contains large object columns. |
-| 13781 | 16 | No | Wrong type for column '%.\*ls': the system-versioned temporal table '%.\*ls' cannot contain large object columns, because it has finite retention and the clustered column store history table '%.\*ls'. |
-| 13782 | 16 | No | Cannot create clustered column store index '%.\*ls' on table '%.\*ls' because it contains large object columns and is the history table of temporal table '%.\*ls' that has finite retention. |
-| 13783 | 16 | No | Data modification failed on system-versioned table '%.\*ls' because column '%.\*ls' cannot be output into the history table '%.\*ls'. |
-| 13784 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same sensitivity classification in tables '%.\*ls' and '%.\*ls'. |
-| 13785 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same sensitivity classification in tables '%.\*ls' and '%.\*ls'. |
-| 13795 | 16 | No | '%.\*ls' does not exist, or is not a temporal application time period. |
-| 13796 | 16 | No | Temporal application time period without overlaps can be defined only on a primary key or a unique constraint. |
-| 13797 | 16 | No | Temporal application time period is already defined on table '%.\*ls'. |
-| 13798 | 16 | No | A table cannot have more than one application time period definition. |
-| 13799 | 16 | No | '%.\*ls' is not allowed as application time period name. |
-| 13800 | 16 | No | INSERT BULK statement does not support recompile. |
-| 13801 | 16 | No | TEXT, NTEXT, SQL_VARIANT and IMAGE types cannot be used as column types in OPENROWSET function with inline schema. These types are not supported in WITH clause. |
-| 13802 | 16 | No | CLR types cannot be used as column types in OPENROWSET function with inline schema. These types are not supported in WITH clause. |
-| 13803 | 16 | No | Table types cannot be used as column types in OPENROWSET function with inline schema. These types are not supported in WITH clause. |
-| 13804 | 16 | No | Invalid escape character specified for bulk load. Escape character can be one single byte or Unicode character. |
-| 13805 | 17 | No | An internal error has occurred during wildcard expansion. |
-| 13806 | 16 | No | Unsupported data source specified. |
-| 13807 | 16 | No | Content of directory on path '%ls' cannot be listed. |
-| 13808 | 16 | No | Starting offset cannot be larger than the file size. |
-| 13809 | 10 | No | Warning: No datasets were found that match the expression '%ls'. |
-| 13810 | 16 | No | Column '%ls' is of type '%ls' which is not supported with file format '%ls'. |
-| 13811 | 16 | No | Bulk load data conversion error (truncation) for row %ls%I64d, column %d (%ls) in %ls. |
-| 13812 | 16 | No | Bulk load data conversion error (type mismatch or invalid character for the specified codepage) for row %ls%I64d, column %d (%ls). Underlying data description: %ls. |
-| 13813 | 16 | No | Bulk load data conversion error (overflow) for row %ls%I64d, column %d (%ls) in %ls. |
-| 13814 | 16 | No | Bulk load failed: Data file %ls does not have %ls encoding. |
-| 13815 | 16 | No | Consecutive wildcard characters present in path '%ls'. |
-| 13816 | 16 | No | File/directory path '%ls' is too long. Max length of the path is nvarchar(260). |
-| 13817 | 10 | No | The bulk load failed. Unexpected NULL value in data file row %ls%I64d, column %d in data file %ls. The destination column (%ls) is defined as NOT NULL. |
-| 13818 | 16 | No | Compression type '%1ls' is not supported. |
-| 13819 | 16 | No | Error occurred while reading '%1ls' for decoding with %2ls codec. |
-| 13820 | 16 | No | Error occurred while decoding '%1ls' using %2ls codec. Codec error code: %d. Codec error message: %3ls |
-| 13821 | 16 | No | File/directory path '%ls' is too long. Max length of the path is nvarchar(1024). |
-| 13822 | 16 | No | File '%ls' cannot be opened because it does not exist or it is used by another process. |
-| 13823 | 16 | No | Query failed because credential for specified path does not exist or you do not have permissions to reference the credential. |
-| 13824 | 16 | No | Wildcard expansion operation timed out after %lu seconds. |
-| 13825 | 16 | No | Provided URL format is incorrect. |
-| 13826 | 16 | No | Provided first row exceeds row count in first split of the data file %ls. Please retry after updating first row value or by disabling splitting. |
-| 13827 | 16 | No | %ls option cannot be used with %ls format. |
-| 13828 | 10 | No | Usage of filepath function with DATA_SOURCE '%.\*ls' might result in unexpected results if number of wildcards in data source LOCATION changes. |
-| 13829 | 16 | No | XML type cannot be used as column type in OPENROWSET function with inline schema. This type is not supported in WITH clause. |
-| 13830 | 10 | No | Azure Active Directory authentication to Azure Storage is not allowed in BULK INSERT/OPENROWSET. |
-| 13831 | 16 | No | Cannot parse rowset options: %ls |
-| 13832 | 16 | No | Path '%ls' has URL suffix which is not allowed. |
-| 13833 | 16 | No | Multiple paths are only allowed from the same storage account and container. |
-| 13834 | 16 | No | Bulk load data conversion error (NULL in non-nullable column) for row %ls%I64d, column %d (%ls) in %ls. |
-| 13835 | 16 | No | ERRORFILE path '%ls' must be in the same storage account as the '%ls', that has to be in private container. |
-| 13836 | 16 | No | For onelake container paths, only files in '\<Workspace\>/\<Artifact\>/Files' directory are allowed. |
-| 13837 | 16 | No | ERRORFILE path '%ls' and data path '%ls' must have the same onelake endpoint, workspace, artifact and folder. |
-| 13900 | 16 | No | Identifier '%.\*ls' in a MATCH clause could not be bound. |
-| 13901 | 16 | No | Identifier '%.\*ls' in a MATCH clause is not a node table or an alias for a node table. |
-| 13902 | 16 | No | Identifier '%.\*ls' in a MATCH clause is not an edge table or an alias for an edge table. |
-| 13903 | 16 | No | Edge table '%.\*ls' used in more than one MATCH pattern. |
-| 13904 | 16 | No | All node and edge tables within a single MATCH clause must reside in the same database. |
-| 13905 | 16 | No | A MATCH clause may not be directly combined with other expressions using OR or NOT. |
-| 13906 | 16 | No | Node table name or alias '%.\*s' marked as FOR PATH cannot be used outside the recursive section of a SHORTEST_PATH clause except in a LAST_NODE function. |
-| 13907 | 16 | No | Cannot modify permissions for graph column '%.\*s'. |
-| 13908 | 16 | No | Cannot access internal graph column '%.\*ls'. |
-| 13909 | 16 | No | The internal graph column '%.\*ls' cannot be added to an index; use pseudocolumn '%.\*ls' instead. |
-| 13910 | 16 | No | Cannot create a node or edge table as memory optimized. |
-| 13911 | 16 | No | Cannot create a node or edge table as a remote data archive. |
-| 13912 | 16 | No | A node or edge table cannot be created as or altered to a temporal table. |
-| 13913 | 16 | No | Internal graph columns cannot be altered. |
-| 13914 | 16 | No | Cannot create a node or edge table as a temporary table. |
-| 13915 | 16 | No | Cannot create a node or edge table as an external table. |
-| 13916 | 16 | No | The graph column '%.\*ls' cannot be used as a non-key column in an index or as a partitioning column. |
-| 13917 | 16 | No | After expanding the computed graph column '%.\*ls", the index '%.\*ls' on table '%.\*ls' exceeds the maximum number of columns in the key list. The maximum number of index key columns is %d. |
-| 13918 | 16 | No | Adding constraint to column '%.\*s' of a node or edge table is not allowed. |
-| 13919 | 16 | No | Identifier '%.\*ls' in a MATCH clause corresponds to a derived table. Derived tables are not supported in MATCH clauses. |
-| 13920 | 16 | No | Identifier '%.\*ls' in a MATCH clause is used with a JOIN clause or APPLY operator. JOIN and APPLY are not supported with MATCH clauses. |
-| 13921 | 16 | No | JSON data for INSERT/UPDATE of graph pseudocolumn '%.\*ls' is malformed. |
-| 13922 | 16 | No | Remote tables are not supported in MATCH clauses. |
-| 13923 | 16 | No | Pseudocolumn '%.\*s' is invalid because it references a node or edge table that is not in the current database. |
-| 13924 | 16 | No | Select \* is not permitted because it refers to a node or edge table '%.\*s' which is not in the current database. |
-| 13925 | 16 | No | Cannot drop or disable index or constraint '%.\*s' because the last unique index or constraint on '%.\*s' cannot be dropped or disabled. |
-| 13926 | 16 | No | The use of replication is not supported for node or edge table '%ls'. |
-| 13927 | 16 | No | Change Data Capture is not supported for node or edge table '%ls'. |
-| 13928 | 16 | No | Use pseudocolumn '%.\*ls' to add a constraint on a node or edge table. |
-| 13929 | 16 | No | The pseudocolumn '%.\*ls' cannot be part of an index unless the index is on a node or edge table that contains that pseudocolumn. |
-| 13930 | 16 | No | Edge constraint cannot be created on table '%.\*ls'. The table is not an edge table. |
-| 13931 | 16 | No | Edge constraint '%.\*ls' references invalid table '%.\*ls'. Table could not be found. |
-| 13932 | 16 | No | Cross-database edge constraints are not supported. |
-| 13933 | 16 | No | Edge constraint must reference node tables. |
-| 13934 | 16 | No | Could not drop node table '%.\*ls' because it is referenced by an edge constraint. |
-| 13935 | 16 | No | Cannot enable edge constraint '%.\*ls' as there are no online, unique, unfiltered $node_id indexes on one or more target node tables. |
-| 13936 | 10 | No | Warning: Edge constraint '%.\*ls' on table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
-| 13937 | 16 | No | Cannot disable clustered index '%.\*ls' on table '%.\*ls'. Permission denied to disable edge constraint '%.\*ls' on table '%.\*ls' that references this table. |
-| 13938 | 16 | No | The target table '%.\*ls' of the INSERT statement cannot be on either side of an edge constraint relationship when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. Found edge constraint '%.\*ls'. |
-| 13939 | 15 | No | The target table '%.\*ls' of the OUTPUT INTO clause cannot be on either side of an edge constraint relationship. Found edge constraint '%.\*ls'. |
-| 13940 | 16 | No | Cannot use a derived table '%.\*ls' in a MATCH clause. |
-| 13941 | 16 | No | Cannot create an edge constraint that references a node table with a disabled $node_id index. |
-| 13942 | 16 | No | The initial recursive quantifier must be 1: {1, ... }. |
-| 13943 | 16 | No | The final recursive quantifier must be greater than the initial recursive quantifier. |
-| 13944 | 16 | No | Cannot truncate table '%.\*ls' because it is being referenced by an EDGE constraint. |
-| 13945 | 16 | No | Cannot delete from a node table that is the target of both an edge constraint and a foreign key constraint on the $node_id column. |
-| 13946 | 16 | No | Cannot create a foreign key constraint referencing the $node_id or $edge_id column of a graph table. |
-| 13947 | 16 | No | Merge statements containing a MATCH clause do not support derived tables or views in the MATCH clause. |
-| 13948 | 16 | No | The table name or alias '%.\*s' must be marked as FOR PATH to be used in the recursive section of a SHORTEST_PATH clause. |
-| 13949 | 16 | No | The table name or alias '%.\*s' was marked as FOR PATH but was not used in the recursive section of a SHORTEST_PATH clause. |
-| 13950 | 16 | No | Node table name or alias '%.\*ls' was used more than once in a SHORTEST_PATH recursive section. |
-| 13951 | 16 | No | Aggregate function '%ls' is not supported with WITHIN GROUP (GRAPH PATH). |
-| 13952 | 16 | No | No columns in the aggregate '%ls' WITHIN GROUP(GRAPH PATH) reference a recursive path. |
-| 13953 | 16 | No | Columns in the aggregate '%ls' WITHIN GROUP(GRAPH PATH) reference more than one recursive path. |
-| 13954 | 16 | No | Identifier '%.\*ls' in aggregate '%ls' WITHIN GROUP(GRAPH PATH) is not referencing a recursive path and cannot be used. |
-| 13955 | 16 | No | Recursive MATCH queries cannot be used in a table-valued function. |
-| 13956 | 16 | No | Recursive MATCH queries cannot be used on the right side of APPLY. |
-| 13957 | 16 | No | Recursive MATCH queries cannot be used in subqueries. |
-| 13958 | 16 | No | Internal Error: Unable to compile MATCH query with derived table or view '%.\*ls'. |
-| 13959 | 16 | No | Introducing edge constraint '%.\*ls' on table '%.\*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or modify other constraints. |
-| 13960 | 16 | No | Cannot define edge constraint '%.\*ls' with cascaded DELETE on table '%.\*ls' because the table has an INSTEAD OF DELETE TRIGGER defined on it. |
-| 13961 | 16 | No | The alias or identifier '%.\*ls' cannot be used in the select list, order by, group by, or having context. |
-| 13962 | 16 | No | The alias or identifier '%.\*ls' is not the last node in a shortest path pattern. Only the last node in the path can be used with LAST_NODE(). |
-| 13963 | 16 | No | Node table name or alias '%.\*s' refers to a derived table and cannot be used by the LAST_NODE function. |
-| 13964 | 16 | No | The two aliases '%.\*s' and '%.\*s' refer to different underlying objects in a LAST_NODE equality expression. |
-| 13965 | 16 | No | The table name or alias '%.\*s' must use the LAST_NODE function to reference the last node in a shortest_path expression. |
-| 13966 | 16 | No | A recursive quantifier expression exceeds the limit of %d. Consider the '+' syntax instead. |
-| 13967 | 16 | No | Pseudocolumn '%.\*ls' is not supported for use as a partitioning column on a table or index. |
-| 13968 | 16 | No | An explicit DROP INDEX is not allowed on index '%.\*ls'. It is being used for edge constraint enforcement. |
-| 13969 | 16 | No | A node or edge table cannot be created as a ledger table. |
-| 13970 | 16 | No | Change Feed is not supported for node or edge table '%ls'. |
-| 13971 | 16 | No | The pseudo column used in the index key list does not match the underlying graph object type. |
+| <a id="13001"></a> 13001 | 16 | No | file name |
+| <a id="13002"></a> 13002 | 16 | No | audit |
+| <a id="13003"></a> 13003 | 16 | No | audit specification |
+| <a id="13004"></a> 13004 | 16 | No | audit name |
+| <a id="13005"></a> 13005 | 16 | No | server role |
+| <a id="13006"></a> 13006 | 16 | No | server principal |
+| <a id="13008"></a> 13008 | 0 | No | receive |
+| <a id="13010"></a> 13010 | 0 | No | read |
+| <a id="13012"></a> 13012 | 0 | No | a USE database statement |
+| <a id="13013"></a> 13013 | 0 | No | a procedure, function or trigger |
+| <a id="13014"></a> 13014 | 0 | No | indexed views and/or indexes on computed columns and/or filtered indexes and/or query notifications and/or XML data type methods and/or spatial index operations |
+| <a id="13015"></a> 13015 | 0 | No | spatial index operations |
+| <a id="13016"></a> 13016 | 0 | No | an INTO clause |
+| <a id="13018"></a> 13018 | 0 | No | a COMPUTE clause |
+| <a id="13019"></a> 13019 | 0 | No | a SELECT INTO statement |
+| <a id="13020"></a> 13020 | 0 | No | option |
+| <a id="13021"></a> 13021 | 0 | No | offset option |
+| <a id="13022"></a> 13022 | 0 | No | statistics option |
+| <a id="13024"></a> 13024 | 0 | No | function name |
+| <a id="13025"></a> 13025 | 0 | No | varbinary (128) NOT NULL |
+| <a id="13026"></a> 13026 | 0 | No | parameter |
+| <a id="13027"></a> 13027 | 0 | No | convert specification |
+| <a id="13028"></a> 13028 | 0 | No | index |
+| <a id="13029"></a> 13029 | 0 | No | table |
+| <a id="13030"></a> 13030 | 0 | No | database |
+| <a id="13031"></a> 13031 | 0 | No | procedure |
+| <a id="13032"></a> 13032 | 0 | No | trigger |
+| <a id="13033"></a> 13033 | 0 | No | view |
+| <a id="13034"></a> 13034 | 0 | No | default |
+| <a id="13035"></a> 13035 | 0 | No | rule |
+| <a id="13036"></a> 13036 | 0 | No | system table |
+| <a id="13037"></a> 13037 | 0 | No | unknown type |
+| <a id="13038"></a> 13038 | 0 | No | SET option |
+| <a id="13039"></a> 13039 | 0 | No | column |
+| <a id="13040"></a> 13040 | 0 | No | type |
+| <a id="13041"></a> 13041 | 0 | No | character string |
+| <a id="13042"></a> 13042 | 0 | No | integer |
+| <a id="13043"></a> 13043 | 0 | No | identifier |
+| <a id="13044"></a> 13044 | 0 | No | number |
+| <a id="13045"></a> 13045 | 0 | No | indexes |
+| <a id="13047"></a> 13047 | 0 | No | object |
+| <a id="13049"></a> 13049 | 0 | No | built-in function name |
+| <a id="13050"></a> 13050 | 0 | No | aggregate function |
+| <a id="13051"></a> 13051 | 0 | No | XML INDEX |
+| <a id="13052"></a> 13052 | 0 | No | CLR type |
+| <a id="13053"></a> 13053 | 0 | No | xml schema collection |
+| <a id="13054"></a> 13054 | 0 | No | EXTENDED INDEX |
+| <a id="13055"></a> 13055 | 0 | No | SPATIAL INDEX |
+| <a id="13056"></a> 13056 | 0 | No | spatial |
+| <a id="13057"></a> 13057 | 0 | No | a planguide batch |
+| <a id="13058"></a> 13058 | 0 | No | geometry or geography |
+| <a id="13059"></a> 13059 | 0 | No | conversation priority |
+| <a id="13060"></a> 13060 | 0 | No | tablegroup |
+| <a id="13076"></a> 13076 | 0 | No | an assignment |
+| <a id="13077"></a> 13077 | 0 | No | a cursor declaration |
+| <a id="13078"></a> 13078 | 0 | No | replication filter |
+| <a id="13079"></a> 13079 | 0 | No | variable assignment |
+| <a id="13080"></a> 13080 | 0 | No | statistics |
+| <a id="13081"></a> 13081 | 0 | No | file |
+| <a id="13082"></a> 13082 | 0 | No | filegroup |
+| <a id="13083"></a> 13083 | 0 | No | server |
+| <a id="13084"></a> 13084 | 0 | No | write |
+| <a id="13085"></a> 13085 | 0 | No | function |
+| <a id="13086"></a> 13086 | 0 | No | database collation |
+| <a id="13087"></a> 13087 | 0 | No | drop |
+| <a id="13088"></a> 13088 | 0 | No | alter |
+| <a id="13089"></a> 13089 | 0 | No | message type |
+| <a id="13090"></a> 13090 | 0 | No | contract |
+| <a id="13092"></a> 13092 | 0 | No | service |
+| <a id="13093"></a> 13093 | 0 | No | queue |
+| <a id="13094"></a> 13094 | 0 | No | table valued function |
+| <a id="13095"></a> 13095 | 0 | No | event notification |
+| <a id="13096"></a> 13096 | 0 | No | synonym |
+| <a id="13097"></a> 13097 | 0 | No | lock |
+| <a id="13098"></a> 13098 | 0 | No | thread |
+| <a id="13099"></a> 13099 | 0 | No | communication buffer |
+| <a id="13100"></a> 13100 | 0 | No | Common Language Runtime critical section |
+| <a id="13101"></a> 13101 | 0 | No | partition scheme |
+| <a id="13102"></a> 13102 | 10 | No | DETACH |
+| <a id="13103"></a> 13103 | 0 | No | protocol version |
+| <a id="13104"></a> 13104 | 0 | No | RANGE |
+| <a id="13105"></a> 13105 | 0 | No | create |
+| <a id="13106"></a> 13106 | 0 | No | route |
+| <a id="13107"></a> 13107 | 0 | No | remote service binding |
+| <a id="13108"></a> 13108 | 0 | No | Initiator |
+| <a id="13109"></a> 13109 | 0 | No | Target |
+| <a id="13110"></a> 13110 | 0 | No | host synchronization object |
+| <a id="13111"></a> 13111 | 0 | No | generic waitable object |
+| <a id="13112"></a> 13112 | 0 | No | application role |
+| <a id="13113"></a> 13113 | 0 | No | schema |
+| <a id="13114"></a> 13114 | 0 | No | user |
+| <a id="13115"></a> 13115 | 0 | No | login |
+| <a id="13116"></a> 13116 | 0 | No | certificate |
+| <a id="13117"></a> 13117 | 0 | No | role |
+| <a id="13118"></a> 13118 | 0 | No | find |
+| <a id="13119"></a> 13119 | 0 | No | endpoint |
+| <a id="13120"></a> 13120 | 0 | No | sql:variable |
+| <a id="13121"></a> 13121 | 0 | No | sql:column |
+| <a id="13122"></a> 13122 | 0 | No | XML namespace |
+| <a id="13123"></a> 13123 | 0 | No | assembly |
+| <a id="13124"></a> 13124 | 0 | No | fulltext catalog |
+| <a id="13125"></a> 13125 | 16 | No | execute as |
+| <a id="13126"></a> 13126 | 16 | No | symmetric key |
+| <a id="13127"></a> 13127 | 16 | No | principal |
+| <a id="13128"></a> 13128 | 16 | No | security descriptor |
+| <a id="13129"></a> 13129 | 16 | No | hypothetical index |
+| <a id="13130"></a> 13130 | 16 | No | nonclustered index |
+| <a id="13131"></a> 13131 | 16 | No | credential |
+| <a id="13132"></a> 13132 | 0 | No | transfer |
+| <a id="13133"></a> 13133 | 0 | No | Cumulative wait time (ms) per second |
+| <a id="13134"></a> 13134 | 0 | No | Waits started per second |
+| <a id="13135"></a> 13135 | 0 | No | Waits in progress |
+| <a id="13136"></a> 13136 | 0 | No | Average wait time (ms) |
+| <a id="13137"></a> 13137 | 0 | No | Cumulative execution time (ms) per second |
+| <a id="13138"></a> 13138 | 0 | No | Execs started per second |
+| <a id="13139"></a> 13139 | 0 | No | Execs in progress |
+| <a id="13140"></a> 13140 | 0 | No | Average execution time (ms) |
+| <a id="13141"></a> 13141 | 16 | No | asymmetric key |
+| <a id="13142"></a> 13142 | 0 | No | an INSERT SELECT statement |
+| <a id="13143"></a> 13143 | 16 | No | partition function |
+| <a id="13144"></a> 13144 | 16 | No | partition scheme |
+| <a id="13145"></a> 13145 | 16 | No | encryption |
+| <a id="13146"></a> 13146 | 16 | No | signature |
+| <a id="13147"></a> 13147 | 16 | No | password |
+| <a id="13148"></a> 13148 | 16 | No | rename |
+| <a id="13149"></a> 13149 | 16 | No | end dialog |
+| <a id="13150"></a> 13150 | 16 | No | END CONVERSATION WITH ERROR |
+| <a id="13151"></a> 13151 | 16 | No | MOVE CONVERSATION |
+| <a id="13152"></a> 13152 | 16 | No | receive sequenced message |
+| <a id="13153"></a> 13153 | 16 | No | receive end conversation |
+| <a id="13154"></a> 13154 | 16 | No | receive end conversation with error |
+| <a id="13155"></a> 13155 | 16 | No | receive broker error |
+| <a id="13156"></a> 13156 | 16 | No | receive message acknowledgement |
+| <a id="13157"></a> 13157 | 16 | No | terminate conversation |
+| <a id="13158"></a> 13158 | 16 | No | broker error |
+| <a id="13159"></a> 13159 | 16 | No | countersignature |
+| <a id="13160"></a> 13160 | 16 | No | BEGIN CONVERSATION TIMER |
+| <a id="13161"></a> 13161 | 16 | No | fire conversation timer |
+| <a id="13162"></a> 13162 | 16 | No | END CONVERSATION WITH CLEANUP |
+| <a id="13163"></a> 13163 | 16 | No | BEGIN DIALOG CONVERSATION |
+| <a id="13164"></a> 13164 | 16 | No | SEND |
+| <a id="13165"></a> 13165 | 16 | No | conversation |
+| <a id="13166"></a> 13166 | 16 | No | conversation group |
+| <a id="13167"></a> 13167 | 16 | No | system |
+| <a id="13168"></a> 13168 | 16 | No | Service Broker |
+| <a id="13169"></a> 13169 | 16 | No | Database Mirroring |
+| <a id="13170"></a> 13170 | 0 | No | table or indexed view |
+| <a id="13171"></a> 13171 | 16 | No | conversation handle |
+| <a id="13172"></a> 13172 | 16 | No | GET CONVERSATION GROUP |
+| <a id="13173"></a> 13173 | 16 | No | master key |
+| <a id="13174"></a> 13174 | 16 | No | another assembly with same SQL name is already present in the current database |
+| <a id="13175"></a> 13175 | 16 | No | version, culture or public key mismatch |
+| <a id="13176"></a> 13176 | 0 | No | component |
+| <a id="13177"></a> 13177 | 16 | No | IL compilation |
+| <a id="13178"></a> 13178 | 16 | No | Inproc data access |
+| <a id="13179"></a> 13179 | 16 | No | DDL operations |
+| <a id="13180"></a> 13180 | 16 | No | execution cache cleanup |
+| <a id="13181"></a> 13181 | 16 | No | unspecified operation |
+| <a id="13182"></a> 13182 | 16 | No | dialog |
+| <a id="13183"></a> 13183 | 10 | No | The certificate's private key cannot be found |
+| <a id="13184"></a> 13184 | 10 | No | The certificate's private key size is incompatible with the crypto provider |
+| <a id="13185"></a> 13185 | 10 | No | The certificate's public key size is incompatible with the crypto provider |
+| <a id="13186"></a> 13186 | 10 | No | The certificate's private key size is incompatible with the encrypted key exchange key |
+| <a id="13187"></a> 13187 | 10 | No | The certificate's public key size is incompatible with the security header's signature |
+| <a id="13188"></a> 13188 | 10 | No | The certificate's private key is password protected |
+| <a id="13189"></a> 13189 | 10 | No | The key exchange key has an invalid size after being decrypted with the certificate private key |
+| <a id="13190"></a> 13190 | 10 | No | The database principal used to lookup the cert is invalid |
+| <a id="13191"></a> 13191 | 10 | No | The database principal has no mapping to a server principal |
+| <a id="13192"></a> 13192 | 10 | No | The certificate is disabled for BEGIN DIALOG |
+| <a id="13193"></a> 13193 | 16 | No | encryption algorithm |
+| <a id="13194"></a> 13194 | 16 | No | authentication protocol |
+| <a id="13195"></a> 13195 | 10 | No | Certificate not found |
+| <a id="13196"></a> 13196 | 10 | No | Certificate not yet valid |
+| <a id="13197"></a> 13197 | 10 | No | Certificate expired |
+| <a id="13198"></a> 13198 | 10 | No | Certificate is larger than maximum allowed size |
+| <a id="13199"></a> 13199 | 10 | No | message timestamp |
+| <a id="13201"></a> 13201 | 10 | No | security header timestamp |
+| <a id="13202"></a> 13202 | 10 | No | TO BROKER INSTANCE |
+| <a id="13203"></a> 13203 | 10 | No | TO SERVICE |
+| <a id="13204"></a> 13204 | 10 | No | FROM BROKER INSTANCE |
+| <a id="13205"></a> 13205 | 10 | No | FROM SERVICE |
+| <a id="13206"></a> 13206 | 10 | No | SERVICE CONTRACT |
+| <a id="13207"></a> 13207 | 10 | No | MESSAGE TYPE |
+| <a id="13208"></a> 13208 | 10 | No | MESSAGE INTEGRITY CHECK |
+| <a id="13209"></a> 13209 | 10 | No | KEY SALT |
+| <a id="13210"></a> 13210 | 10 | No | SESSION KEY |
+| <a id="13211"></a> 13211 | 10 | No | KEY EXCHANGE KEY |
+| <a id="13212"></a> 13212 | 10 | No | SOURCE CERTIFICATE ISSUER NAME |
+| <a id="13213"></a> 13213 | 10 | No | SOURCE CERTIFICATE SERIAL NUMBER |
+| <a id="13214"></a> 13214 | 10 | No | DESTINATION CERTIFICATE ISSUER NAME |
+| <a id="13215"></a> 13215 | 10 | No | DESTINATION CERTIFICATE SERIAL NUMBER |
+| <a id="13216"></a> 13216 | 10 | No | SECURITY HEADER SIGNATURE |
+| <a id="13217"></a> 13217 | 10 | No | MESSAGE BODY |
+| <a id="13218"></a> 13218 | 10 | No | STATEMENT |
+| <a id="13219"></a> 13219 | 10 | No | clustered index |
+| <a id="13220"></a> 13220 | 10 | No | primary xml index |
+| <a id="13221"></a> 13221 | 10 | No | manual failover |
+| <a id="13222"></a> 13222 | 10 | No | automatic failover |
+| <a id="13223"></a> 13223 | 10 | No | failover from partner |
+| <a id="13224"></a> 13224 | 10 | No | role synchronization |
+| <a id="13225"></a> 13225 | 10 | No | FORCE_SERVICE_ALLOW_DATA_LOSS |
+| <a id="13226"></a> 13226 | 10 | No | add |
+| <a id="13227"></a> 13227 | 10 | No | to |
+| <a id="13228"></a> 13228 | 10 | No | from |
+| <a id="13229"></a> 13229 | 10 | No | enable |
+| <a id="13230"></a> 13230 | 10 | No | disable |
+| <a id="13231"></a> 13231 | 10 | No | remap |
+| <a id="13232"></a> 13232 | 10 | No | INSERT |
+| <a id="13233"></a> 13233 | 10 | No | UPDATE |
+| <a id="13234"></a> 13234 | 10 | No | DELETE |
+| <a id="13235"></a> 13235 | 10 | No | WHEN MATCHED |
+| <a id="13236"></a> 13236 | 10 | No | WHEN NOT MATCHED |
+| <a id="13237"></a> 13237 | 10 | No | WHEN NOT MATCHED BY SOURCE |
+| <a id="13238"></a> 13238 | 10 | No | TOP or OFFSET |
+| <a id="13239"></a> 13239 | 10 | No | GROUP BY |
+| <a id="13240"></a> 13240 | 10 | No | HAVING |
+| <a id="13241"></a> 13241 | 10 | No | ORDER BY |
+| <a id="13242"></a> 13242 | 10 | No | COMPUTE |
+| <a id="13243"></a> 13243 | 10 | No | OUTPUT INTO |
+| <a id="13244"></a> 13244 | 10 | No | SELECT |
+| <a id="13245"></a> 13245 | 10 | No | WHERE |
+| <a id="13246"></a> 13246 | 10 | No | unexpected |
+| <a id="13247"></a> 13247 | 10 | No | The crypto API has detected bad data while trying to perform a decryption operation |
+| <a id="13248"></a> 13248 | 10 | No | OUTPUT |
+| <a id="13249"></a> 13249 | 10 | No | Temporary tables |
+| <a id="13250"></a> 13250 | 10 | No | Labels |
+| <a id="13251"></a> 13251 | 10 | No | availability group |
+| <a id="13252"></a> 13252 | 10 | No | type table |
+| <a id="13254"></a> 13254 | 10 | No | event |
+| <a id="13255"></a> 13255 | 10 | No | target |
+| <a id="13256"></a> 13256 | 10 | No | event action |
+| <a id="13257"></a> 13257 | 10 | No | event session |
+| <a id="13258"></a> 13258 | 10 | No | event package |
+| <a id="13259"></a> 13259 | 10 | No | event object |
+| <a id="13260"></a> 13260 | 10 | No | event predicate comparator |
+| <a id="13261"></a> 13261 | 10 | No | event attribute or predicate source |
+| <a id="13262"></a> 13262 | 10 | No | customizable attribute |
+| <a id="13263"></a> 13263 | 10 | No | event predicate |
+| <a id="13264"></a> 13264 | 10 | No | predicate source |
+| <a id="13265"></a> 13265 | 10 | No | event attribute |
+| <a id="13266"></a> 13266 | 10 | No | partitioned |
+| <a id="13267"></a> 13267 | 10 | No | not partitioned |
+| <a id="13268"></a> 13268 | 10 | No | resource pool |
+| <a id="13269"></a> 13269 | 10 | No | workload group |
+| <a id="13270"></a> 13270 | 10 | No | resource governor |
+| <a id="13271"></a> 13271 | 10 | No | move |
+| <a id="13272"></a> 13272 | 10 | No | UPDATETEXT |
+| <a id="13273"></a> 13273 | 10 | No | WRITETEXT |
+| <a id="13274"></a> 13274 | 10 | No | torn page (expected signature: 0x%08x; actual signature: 0x%08x) |
+| <a id="13275"></a> 13275 | 10 | No | incorrect checksum (expected: 0x%08x; actual: 0x%08x) |
+| <a id="13276"></a> 13276 | 10 | No | invalid protection option |
+| <a id="13277"></a> 13277 | 10 | No | invalid encryption key |
+| <a id="13278"></a> 13278 | 10 | No | unable to decrypt page |
+| <a id="13279"></a> 13279 | 10 | No | decryption failure (expected: 0x%08x; actual: 0x%08x) |
+| <a id="13280"></a> 13280 | 10 | No | unable to decrypt page due to missing DEK |
+| <a id="13281"></a> 13281 | 10 | No | CREATION_DISPOSITION |
+| <a id="13282"></a> 13282 | 10 | No | PROVIDER_KEY_NAME |
+| <a id="13283"></a> 13283 | 10 | No | key source |
+| <a id="13284"></a> 13284 | 10 | No | ENCRYPTION BY |
+| <a id="13285"></a> 13285 | 10 | No | public key |
+| <a id="13286"></a> 13286 | 10 | No | private key |
+| <a id="13287"></a> 13287 | 10 | No | cryptographic provider |
+| <a id="13288"></a> 13288 | 10 | No | cryptographic provider DLL path |
+| <a id="13289"></a> 13289 | 10 | No | cryptographic provider friendly name |
+| <a id="13290"></a> 13290 | 10 | No | version |
+| <a id="13291"></a> 13291 | 10 | No | guid |
+| <a id="13292"></a> 13292 | 10 | No | create credential for |
+| <a id="13293"></a> 13293 | 10 | No | cryptographic provider key name |
+| <a id="13294"></a> 13294 | 10 | No | key persistence |
+| <a id="13295"></a> 13295 | 10 | No | cryptographic provider key thumbprint length |
+| <a id="13296"></a> 13296 | 10 | No | cryptographic provider key blob length |
+| <a id="13297"></a> 13297 | 16 | No | encryption algorithm tag |
+| <a id="13298"></a> 13298 | 16 | No | name |
+| <a id="13299"></a> 13299 | 16 | No | thumbprint |
+| <a id="13301"></a> 13301 | 16 | No | IV(Initialization Vector) length |
+| <a id="13302"></a> 13302 | 16 | No | bit length |
+| <a id="13303"></a> 13303 | 16 | No | constraint |
+| <a id="13304"></a> 13304 | 16 | No | database encryption key |
+| <a id="13305"></a> 13305 | 10 | No | QUERY_STORE |
+| <a id="13306"></a> 13306 | 10 | No | DESIRED_STATE' or 'OPERATION_MODE |
+| <a id="13307"></a> 13307 | 10 | No | MAX_STORAGE_SIZE_MB |
+| <a id="13308"></a> 13308 | 10 | No | FLUSH_INTERVAL_SECONDS' or 'DATA_FLUSH_INTERVAL_SECONDS |
+| <a id="13309"></a> 13309 | 10 | No | QUERY_STORE CLEANUP_POLICY |
+| <a id="13310"></a> 13310 | 10 | No | STALE_QUERY_THRESHOLD_DAYS |
+| <a id="13311"></a> 13311 | 10 | No | column master key |
+| <a id="13312"></a> 13312 | 10 | No | column encryption key |
+| <a id="13313"></a> 13313 | 10 | No | key store provider name |
+| <a id="13314"></a> 13314 | 10 | No | FILESTREAM |
+| <a id="13315"></a> 13315 | 10 | No | ROWGUID |
+| <a id="13316"></a> 13316 | 10 | No | FOR XML |
+| <a id="13317"></a> 13317 | 10 | No | FOR JSON |
+| <a id="13318"></a> 13318 | 10 | No | encrypted value |
+| <a id="13319"></a> 13319 | 10 | No | key path |
+| <a id="13320"></a> 13320 | 10 | No | BLOCK |
+| <a id="13321"></a> 13321 | 10 | No | FILTER |
+| <a id="13322"></a> 13322 | 10 | No | INTERVAL_LENGTH_MINUTES |
+| <a id="13323"></a> 13323 | 10 | No | MAX_PLANS_PER_QUERY |
+| <a id="13324"></a> 13324 | 10 | No | QUERY_CAPTURE_MODE |
+| <a id="13325"></a> 13325 | 10 | No | SIZE_BASED_CLEANUP_MODE |
+| <a id="13326"></a> 13326 | 10 | No | external resource pool |
+| <a id="13327"></a> 13327 | 10 | No | external library |
+| <a id="13328"></a> 13328 | 10 | No | QUERY_TUNING_MODE |
+| <a id="13329"></a> 13329 | 10 | No | QDS server name |
+| <a id="13330"></a> 13330 | 10 | No | WAIT_STATS_CAPTURE_MODE |
+| <a id="13331"></a> 13331 | 10 | No | external language |
+| <a id="13332"></a> 13332 | 10 | No | maximum |
+| <a id="13333"></a> 13333 | 10 | No | total |
+| <a id="13334"></a> 13334 | 10 | No | Certificate chain validation failed |
+| <a id="13335"></a> 13335 | 10 | No | Certificate does not have subject alternative name |
+| <a id="13336"></a> 13336 | 10 | No | There is no trusted issuer found for this certificate |
+| <a id="13371"></a> 13371 | 10 | No | STATISTICS_INCREMENTAL |
+| <a id="13372"></a> 13372 | 10 | No | this operation cannot be performed inside a user transaction. |
+| <a id="13373"></a> 13373 | 16 | No | Anchor record |
+| <a id="13374"></a> 13374 | 16 | No | Page dictionary |
+| <a id="13375"></a> 13375 | 16 | No | Compression information structure |
+| <a id="13376"></a> 13376 | 10 | No | Fulltext Query String |
+| <a id="13377"></a> 13377 | 10 | No | Fulltext Query Language |
+| <a id="13378"></a> 13378 | 10 | No | Fulltext Query Max Keys |
+| <a id="13379"></a> 13379 | 10 | No | fulltext stoplist |
+| <a id="13380"></a> 13380 | 10 | No | Success - Consult EKM Provider for details |
+| <a id="13381"></a> 13381 | 10 | No | Failure - Consult EKM Provider for details |
+| <a id="13382"></a> 13382 | 10 | No | Insufficient Buffer - Consult EKM Provider for details |
+| <a id="13383"></a> 13383 | 10 | No | Not Supported - Consult EKM Provider for details |
+| <a id="13384"></a> 13384 | 10 | No | Object Not Found - Consult EKM Provider for details |
+| <a id="13385"></a> 13385 | 10 | No | Authentication Failure - Consult EKM Provider for details |
+| <a id="13386"></a> 13386 | 10 | No | Invalid Argument - Consult EKM Provider for details |
+| <a id="13387"></a> 13387 | 10 | No | Provider Error - No explanation is available, consult EKM Provider for details |
+| <a id="13388"></a> 13388 | 10 | No | Key Flags |
+| <a id="13389"></a> 13389 | 10 | No | Key Name |
+| <a id="13390"></a> 13390 | 10 | No | Key Type |
+| <a id="13391"></a> 13391 | 10 | No | Location: |
+| <a id="13392"></a> 13392 | 10 | No | Location relative to the specified target node: |
+| <a id="13393"></a> 13393 | 10 | No | search property list |
+| <a id="13394"></a> 13394 | 10 | No | MERGE |
+| <a id="13395"></a> 13395 | 10 | No | PAD_INDEX |
+| <a id="13396"></a> 13396 | 10 | No | FILLFACTOR |
+| <a id="13397"></a> 13397 | 10 | No | SORT_IN_TEMPDB |
+| <a id="13398"></a> 13398 | 10 | No | IGNORE_DUP_KEY |
+| <a id="13399"></a> 13399 | 10 | No | STATISTICS_NORECOMPUTE |
+| <a id="13400"></a> 13400 | 10 | No | Extended stored procedure API will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="13401"></a> 13401 | 10 | No | Non-ANSI '\*=' and '=\*' outer join operators will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use ANSI outer joins instead. |
+| <a id="13402"></a> 13402 | 10 | No | The ability to INSERT NULL values into TIMESTAMP columns will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use DEFAULT instead. |
+| <a id="13403"></a> 13403 | 10 | No | The ability to use string literals as column aliases will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use AS clause instead. |
+| <a id="13404"></a> 13404 | 10 | No | The ability to use '#' and '##' as the name of temporary tables and stored procedures will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="13405"></a> 13405 | 10 | No | The ability to use '@' and names that start with '@@' as Transact-SQL identifiers will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="13406"></a> 13406 | 10 | No | The ability to use the DEFAULT keyword as a default value will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="13407"></a> 13407 | 10 | No | FASTFIRSTROW hint will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use OPTION (FAST n) instead. |
+| <a id="13408"></a> 13408 | 10 | No | %ls will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. |
+| <a id="13409"></a> 13409 | 10 | No | Collation '%ls' will be removed in a future version of SQL Server. Avoid using this collation in new development work, and plan to modify applications that currently use it. |
+| <a id="13410"></a> 13410 | 10 | No | Creating credentials using mismatched password for sp_control_dbmasterkey_password will be removed in a future version of SQL Server. Avoid using this stored procedure with passwords that do not match the existing database master key's encryption password, and plan to modify applications that currently use it. |
+| <a id="13501"></a> 13501 | 16 | No | Temporal generated always column '%.\*ls' has invalid data type. |
+| <a id="13502"></a> 13502 | 16 | No | System-versioned table cannot have more than one 'GENERATED ALWAYS AS ROW START' column. |
+| <a id="13503"></a> 13503 | 16 | No | System-versioned table cannot have more than one 'GENERATED ALWAYS AS ROW END' column. |
+| <a id="13504"></a> 13504 | 16 | No | Temporal 'GENERATED ALWAYS AS ROW START' column definition missing. |
+| <a id="13505"></a> 13505 | 16 | No | Temporal 'GENERATED ALWAYS AS ROW END' column definition missing. |
+| <a id="13506"></a> 13506 | 16 | No | System-versioned table SYSTEM_TIME period definition start column name not matching 'GENERATED ALWAYS AS ROW START' column name. |
+| <a id="13507"></a> 13507 | 16 | No | System-versioned table SYSTEM_TIME period definition end column name not matching 'GENERATED ALWAYS AS ROW END' column name. |
+| <a id="13508"></a> 13508 | 16 | No | System-versioned table cannot have more than one SYSTEM_TIME period definition. |
+| <a id="13509"></a> 13509 | 16 | No | Cannot create generated always column when SYSTEM_TIME period is not defined. |
+| <a id="13510"></a> 13510 | 16 | No | Cannot set SYSTEM_VERSIONING to ON when SYSTEM_TIME period is not defined and the LEDGER=ON option is not specified. |
+| <a id="13511"></a> 13511 | 16 | No | Specified object '%.\*ls' cannot be used as history table. |
+| <a id="13512"></a> 13512 | 16 | No | You cannot specify SYSTEM_VERSIONING clause more than once. |
+| <a id="13513"></a> 13513 | 16 | No | SYSTEM_TIME period columns cannot have different datatype precision. |
+| <a id="13514"></a> 13514 | 16 | No | History table '%.\*ls' is already in use. |
+| <a id="13515"></a> 13515 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has custom unique keys defined. Consider dropping all unique keys and trying again. |
+| <a id="13516"></a> 13516 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has foreign keys defined. Consider dropping all foreign keys and trying again. |
+| <a id="13517"></a> 13517 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has table or column constraints defined. Consider dropping all table and column constraints and trying again. |
+| <a id="13518"></a> 13518 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has IDENTITY column specification. Consider dropping all IDENTITY column specifications and trying again. |
+| <a id="13519"></a> 13519 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has computed column specification. Consider dropping all computed column specifications and trying again. |
+| <a id="13520"></a> 13520 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is not available or it is placed on a read-only file group. |
+| <a id="13521"></a> 13521 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is configured for change data capture. Consider dropping this configuration and trying again. |
+| <a id="13522"></a> 13522 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has triggers defined. Consider dropping all triggers and trying again. |
+| <a id="13523"></a> 13523 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' has %d columns and table '%.\*ls' has %d columns. |
+| <a id="13524"></a> 13524 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' at ordinal %d in history table '%.\*ls' has a different name than the column '%.\*ls' at the same ordinal in table '%.\*ls'. |
+| <a id="13525"></a> 13525 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' has data type %s in history table '%.\*ls' which is different from corresponding column type %s in table '%.\*ls'. |
+| <a id="13526"></a> 13526 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same collation in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13527"></a> 13527 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same CLR type in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13528"></a> 13528 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same ANSI trimming semantics in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13529"></a> 13529 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same XML Schema Collection in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13530"></a> 13530 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because system column '%.\*ls' in history table '%.\*ls' corresponds to a period column in table '%.\*ls' and cannot be nullable. |
+| <a id="13531"></a> 13531 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same nullability attribute in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13532"></a> 13532 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because system-versioned tables cannot have FILESTREAM columns. |
+| <a id="13533"></a> 13533 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same sparse storage attribute in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13534"></a> 13534 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same column set property in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13535"></a> 13535 | 16 | No | Data modification failed on system-versioned table '%.\*ls' because transaction time was earlier than period start time for affected records. |
+| <a id="13536"></a> 13536 | 16 | No | Cannot insert an explicit value into a GENERATED ALWAYS column in table '%.\*ls'. Use INSERT with a column list to exclude the GENERATED ALWAYS column, or insert a DEFAULT into GENERATED ALWAYS column. |
+| <a id="13537"></a> 13537 | 16 | No | Cannot update GENERATED ALWAYS columns in table '%.\*ls'. |
+| <a id="13538"></a> 13538 | 16 | No | You do not have the required permissions to complete the operation. |
+| <a id="13539"></a> 13539 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is not specified in two-part name format. |
+| <a id="13540"></a> 13540 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' contains invalid records with end of period set before start. |
+| <a id="13541"></a> 13541 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' contains invalid records with end of period set before start. |
+| <a id="13542"></a> 13542 | 16 | No | ADD PERIOD FOR SYSTEM_TIME on table '%.\*ls' failed because there are open records with start of period set to a value in the future. |
+| <a id="13543"></a> 13543 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' contains invalid records with end of period set to a value in the future. |
+| <a id="13544"></a> 13544 | 16 | No | Temporal FOR SYSTEM_TIME clause can only be used with system-versioned tables. '%.\*ls' is not a system-versioned table. |
+| <a id="13545"></a> 13545 | 16 | No | Truncate failed on table '%.\*ls' because it is not a supported operation on system-versioned tables. |
+| <a id="13546"></a> 13546 | 16 | No | Switching out partition failed on table '%.\*ls' because it is not a supported operation on system-versioned tables. Consider setting SYSTEM_VERSIONING to OFF and trying again. |
+| <a id="13547"></a> 13547 | 16 | No | Switching in partition failed on history table '%.\*ls' because it is not a supported operation on system-versioned tables. Consider setting SYSTEM_VERSIONING to OFF and trying again. |
+| <a id="13548"></a> 13548 | 16 | No | Cannot alter column '%.\*ls' on table '%.\*ls' because it is not a supported operation on system-versioned temporal or ledger tables. |
+| <a id="13549"></a> 13549 | 16 | No | Setting FILESTREAM ON failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
+| <a id="13550"></a> 13550 | 16 | No | Add column operation failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
+| <a id="13551"></a> 13551 | 16 | No | Drop column operation failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
+| <a id="13552"></a> 13552 | 16 | No | Drop table operation failed on table '%.\*ls' because it is not a supported operation on system-versioned temporal tables. |
+| <a id="13553"></a> 13553 | 16 | No | System versioned temporal table '%.\*ls' must have primary key defined. |
+| <a id="13554"></a> 13554 | 16 | No | Memory-optimized table '%.\*ls' cannot contain system-time PERIOD. |
+| <a id="13555"></a> 13555 | 16 | No | System versioned temporal table '%.\*ls' cannot have FILESTREAM columns. |
+| <a id="13556"></a> 13556 | 16 | No | Table '%.\*ls' is a FileTable. System versioning cannot be used on FileTables. |
+| <a id="13557"></a> 13557 | 16 | No | Cannot drop PRIMARY KEY constraint from a system-versioned temporal table '%.\*ls'. |
+| <a id="13558"></a> 13558 | 16 | No | Cannot add PRIMARY KEY constraint to a temporal history table '%.\*ls'. |
+| <a id="13559"></a> 13559 | 16 | No | Cannot insert rows in a temporal history table '%.\*ls'. |
+| <a id="13560"></a> 13560 | 16 | No | Cannot delete rows from a temporal history table '%.\*ls'. |
+| <a id="13561"></a> 13561 | 16 | No | Cannot update rows in a temporal history table '%.\*ls'. |
+| <a id="13562"></a> 13562 | 16 | No | Cannot perform MERGE operation on temporal history table '%.\*ls'. |
+| <a id="13563"></a> 13563 | 16 | No | Enabling Change Tracking for a temporal history table '%.\*ls' is not allowed. |
+| <a id="13564"></a> 13564 | 16 | No | Adding CHECK constraint to a temporal history table '%.\*ls' is not allowed. |
+| <a id="13565"></a> 13565 | 16 | No | Foreign key '%.\*ls' is not valid. A temporal history table cannot be used in a foreign key definition. |
+| <a id="13566"></a> 13566 | 16 | No | Temporal table '%.\*ls' is already in use. |
+| <a id="13567"></a> 13567 | 16 | No | Temporal history table '%.\*ls' cannot be created in a 'tempdb' database. |
+| <a id="13568"></a> 13568 | 16 | No | System-versioned temporal table '%.\*ls' cannot be created in a 'tempdb' database. |
+| <a id="13569"></a> 13569 | 16 | No | Cannot create a trigger on a system-versioned temporal table '%.\*ls'. |
+| <a id="13570"></a> 13570 | 16 | No | The use of replication is not supported with system-versioned temporal table '%s' |
+| <a id="13571"></a> 13571 | 16 | No | Enabling Change Data Capture for a temporal history table '%ls' is not allowed. |
+| <a id="13572"></a> 13572 | 16 | No | Creating table variables containing PERIOD is not allowed. |
+| <a id="13573"></a> 13573 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' contains overlapping records. |
+| <a id="13574"></a> 13574 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because temporal history table '%.\*ls' contains SYSTEM_TIME period. |
+| <a id="13575"></a> 13575 | 16 | No | ADD PERIOD FOR SYSTEM_TIME failed because table '%.\*ls' contains records where end of period is not equal to MAX datetime. |
+| <a id="13576"></a> 13576 | 16 | No | DML operations are not allowed because system-versioned temporal table '%.\*ls' is in read-only mode. |
+| <a id="13577"></a> 13577 | 16 | No | ALTER TABLE SWITCH statement failed on table '%.\*ls' because target table has SYSTEM_TIME PERIOD while source table does not have it. |
+| <a id="13578"></a> 13578 | 16 | No | ALTER TABLE SWITCH statement failed on table '%.\*ls' because target and source tables have different SYSTEM_TIME PERIOD definitions. |
+| <a id="13579"></a> 13579 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not use identical encryption in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13580"></a> 13580 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' has ROWGUID column specification. Consider dropping all ROWGUID column specifications and trying again. |
+| <a id="13581"></a> 13581 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same masking functions in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13582"></a> 13582 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' has a FOREIGN KEY with cascading DELETE or UPDATE. |
+| <a id="13583"></a> 13583 | 16 | No | Cannot add UNIQUE KEY constraint to a temporal history table '%.\*ls'. |
+| <a id="13584"></a> 13584 | 16 | No | Flush has not been executed for table because appropriate lock could not be obtained or it does not exist anymore. |
+| <a id="13585"></a> 13585 | 16 | No | Computed column is defined with a user-defined function which is not allowed with system-versioned table '%.\*ls' because it performs user or system data access, or is assumed to perform this access. A function is assumed by default to perform data access if it is not schemabound. |
+| <a id="13586"></a> 13586 | 16 | No | Temporal FOR SYSTEM_TIME clause cannot be used on remote data source '%.\*ls'. |
+| <a id="13587"></a> 13587 | 16 | No | Period column '%.\*ls' in a system-versioned temporal table cannot be nullable. |
+| <a id="13588"></a> 13588 | 16 | No | Column '%.\*ls' in table '%.\*ls' cannot be dropped because it is a part of period definition. |
+| <a id="13589"></a> 13589 | 16 | No | Column '%.\*ls' in table '%.\*ls' cannot be specified as 'GENERATED ALWAYS' in ALTER COLUMN statement. |
+| <a id="13590"></a> 13590 | 16 | No | Temporal FOR SYSTEM_TIME clause can only be set once per temporal table. '%.\*ls' has more than one temporal FOR SYSTEM_TIME clause. |
+| <a id="13591"></a> 13591 | 16 | No | SYSTEM_VERSIONING is not turned ON for table '%.\*ls'. |
+| <a id="13592"></a> 13592 | 16 | No | Cannot drop SYSTEM_TIME period from table '%.\*ls' when SYSTEM_VERSIONING is ON. |
+| <a id="13593"></a> 13593 | 16 | No | SYSTEM_TIME period cannot be dropped from table '%.\*ls', because SYSTEM_TIME period does not exist. |
+| <a id="13594"></a> 13594 | 16 | No | Table '%.\*ls' does not contain SYSTEM_TIME period '%.\*ls'. |
+| <a id="13595"></a> 13595 | 16 | No | Temporal history table name '%.\*ls' is not correct for current table '%.\*ls'. |
+| <a id="13596"></a> 13596 | 16 | No | SYSTEM_VERSIONING is already turned ON for table '%.\*ls'. |
+| <a id="13597"></a> 13597 | 16 | No | Temporal SYSTEM_TIME period is already defined on table '%.\*ls'. |
+| <a id="13598"></a> 13598 | 16 | No | Temporal SYSTEM_TIME period cannot be defined on history table '%.\*ls'. |
+| <a id="13599"></a> 13599 | 16 | No | Period column '%.\*ls' in a system-versioned temporal table cannot be altered. |
+| <a id="13600"></a> 13600 | 16 | No | FOR JSON AUTO requires at least one table for generating JSON objects. Use FOR JSON PATH or add a FROM clause with a table name. |
+| <a id="13601"></a> 13601 | 16 | No | Property '%.\*ls' cannot be generated in JSON output due to a conflict with another column name or alias. FOR JSON PATH requires that the column expressions are ordered based on the JSON document paths specified in the column aliases. |
+| <a id="13602"></a> 13602 | 16 | No | The FOR JSON clause is not allowed in a %ls statement. |
+| <a id="13603"></a> 13603 | 16 | No | Property '%.\*ls' cannot be generated in JSON output due to invalid character in the column name or alias. Column name or alias that contains '..', starts or ends with '.' is not allowed in query that has FOR JSON clause. |
+| <a id="13604"></a> 13604 | 16 | No | FOR JSON cannot serialize CLR objects. Cast CLR types explicitly into one of the supported types in FOR JSON queries. |
+| <a id="13605"></a> 13605 | 16 | No | Column expressions and data sources without names or aliases cannot be formatted as JSON text using FOR JSON clause. Add alias to the unnamed column or table. |
+| <a id="13606"></a> 13606 | 16 | No | JSON text/path that has more than 128 nesting levels cannot be parsed. |
+| <a id="13607"></a> 13607 | 16 | No | JSON path is not properly formatted. Unexpected character '%lc' is found at position %d. |
+| <a id="13608"></a> 13608 | 16 | No | Property cannot be found on the specified JSON path. |
+| <a id="13609"></a> 13609 | 16 | No | JSON text is not properly formatted. Unexpected character '%lc' is found at position %d. |
+| <a id="13610"></a> 13610 | 16 | No | The argument %d of the "%.\*ls" must be a string literal. |
+| <a id="13611"></a> 13611 | 16 | No | Value referenced by JSON path is not an array or object and cannot be opened with OPENJSON. |
+| <a id="13612"></a> 13612 | 16 | No | Cannot convert a string value found in the JSON text to binary value because it is not Base64 encoded. |
+| <a id="13613"></a> 13613 | 16 | No | Base64 encoded string cannot be converted to binary value. Binary data would be truncated. |
+| <a id="13614"></a> 13614 | 16 | No | TEXT, NTEXT, SQL_VARIANT and IMAGE types cannot be used as column types in OPENJSON function with explicit schema. These types are not supported in WITH clause. |
+| <a id="13615"></a> 13615 | 16 | No | OPENJSON function cannot convert value found in the JSON text to sql_variant data type. The value found in JSON text would be truncated. |
+| <a id="13616"></a> 13616 | 16 | No | CLR types cannot be used as column types in OPENJSON function with explicit schema. CLR types are not supported in WITH clause. |
+| <a id="13617"></a> 13617 | 16 | No | Table types cannot be used as column types in OPENJSON function with explicit schema. This type is not supported in WITH clause. |
+| <a id="13618"></a> 13618 | 16 | No | AS JSON option can be specified only for column of nvarchar(max) type in WITH clause. |
+| <a id="13619"></a> 13619 | 16 | No | Unsupported JSON path found in argument %d of JSON_MODIFY. |
+| <a id="13620"></a> 13620 | 16 | No | ROOT option and WITHOUT_ARRAY_WRAPPER option cannot be used together in FOR JSON. Remove one of these options. |
+| <a id="13621"></a> 13621 | 16 | No | Array cannot be found in the specified JSON path. |
+| <a id="13622"></a> 13622 | 16 | No | An invalid value was specified for argument %d. |
+| <a id="13623"></a> 13623 | 16 | No | Scalar value cannot be found in the specified JSON path. |
+| <a id="13624"></a> 13624 | 16 | No | Object or array cannot be found in the specified JSON path. |
+| <a id="13625"></a> 13625 | 16 | No | String value in the specified JSON path would be truncated. |
+| <a id="13626"></a> 13626 | 16 | No | Openjson cannot have more than %d columns in with clause. |
+| <a id="13627"></a> 13627 | 16 | No | Column type %ls cannot be used in the OPENJSON column that returns '$.sql:identity()' value. |
+| <a id="13636"></a> 13636 | 16 | No | The JSON data type cannot be compared or sorted, except when using the IS NULL operator. |
+| <a id="13638"></a> 13638 | 16 | No | User error : Name parameter value in '%ls' cannot be null |
+| <a id="13639"></a> 13639 | 16 | No | Target string size is too small to represent the JSON instance. |
+| <a id="13640"></a> 13640 | 16 | No | Conversion of one or more characters from the JSON instance to target codepage %d will result in data loss. Choose a different target collation or use nvarchar. |
+| <a id="13641"></a> 13641 | 16 | No | There is not enough resources to perform the operation. One or more JSON character strings in the query exceeds the supported limit for the JSON type. |
+| <a id="13642"></a> 13642 | 20 | No | Encountered an unsupported version of the JSON type. Please run DBCC CHECKTABLE with EXTENDED_LOGICAL_CHECKS to identify the rows. The remedy is to delete the rows and insert the JSON documents as character strings. |
+| <a id="13643"></a> 13643 | 16 | No | Encountered corrupted JSON type. Please run DBCC CHECKTABLE with EXTENDED_LOGICAL_CHECKS to identify the rows. The remedy is to delete the rows and insert the JSON documents as character strings. |
+| <a id="13644"></a> 13644 | 16 | No | String value length exceeds maximum %d bytes in JSON type. |
+| <a id="13645"></a> 13645 | 16 | No | Nested level of JSON document exceeds limit %d. |
+| <a id="13646"></a> 13646 | 16 | No | Key string length exceeds limit %d bytes in JSON type. |
+| <a id="13647"></a> 13647 | 16 | No | Number of items in one object/array exceeds limit %d in JSON type. |
+| <a id="13648"></a> 13648 | 16 | No | Length of numeric string around '%.\*ls' exceeds limit %d characters in JSON type. |
+| <a id="13649"></a> 13649 | 16 | No | Number of unique keys exceeds limit %d in JSON type. |
+| <a id="13650"></a> 13650 | 16 | No | JSON path exceeds limit of %d bytes. |
+| <a id="13654"></a> 13654 | 16 | No | JSON column(s) cannot be natively imported through BULK INSERT or OPENROWSET(BULK) statement. Please use a format file to explicitly specify the type of the JSON column(s) and specify the format file in the BULK INSERT or OPENROWSET(BULK) statement. |
+| <a id="13655"></a> 13655 | 16 | No | JSON data type is not supported in distributed queries. Remote object '%.\*ls' has JSON column(s). |
+| <a id="13656"></a> 13656 | 16 | No | JSON data type cannot be used when its feature switch is off. |
+| <a id="13657"></a> 13657 | 16 | No | Cannot create alias types from a JSON data type. |
+| <a id="13658"></a> 13658 | 16 | No | JSON data type cannot be used in OpenJson function. |
+| <a id="13659"></a> 13659 | 16 | No | Index %d provided at position %d is not within the array of size %d. |
+| <a id="13660"></a> 13660 | 16 | No | %s not yet supported for advanced JSON array accessors. |
+| <a id="13661"></a> 13661 | 16 | No | JSON data type is not supported in CDC tracked table. |
+| <a id="13662"></a> 13662 | 16 | No | JSON data type is not supported in transactional replication. |
+| <a id="13663"></a> 13663 | 16 | No | JSON data type is not supported in generic replication features. |
+| <a id="13664"></a> 13664 | 16 | No | JSON path not valid for JSON index. |
+| <a id="13665"></a> 13665 | 16 | No | %s not yet supported for JSON native data type. |
+| <a id="13666"></a> 13666 | 16 | No | %s does not support CLR type as parameters |
+| <a id="13667"></a> 13667 | 16 | No | JSON aggregates do not support order-by within group when specified with grouping sets, cubes and rollups. Try your query without order-by within group. |
+| <a id="13668"></a> 13668 | 16 | No | JSON_QUERY using WITH ARRAY WRAPPER will cause a buffer overflow. Please cast the document to a LOB. |
+| <a id="13670"></a> 13670 | 16 | No | Input JSON is not a valid Vector : '%ls'. |
+| <a id="13671"></a> 13671 | 16 | No | Given Vector size is not supported. Maximum allowed size '%ld'. |
+| <a id="13672"></a> 13672 | 16 | No | Table '%.\*ls' needs to have a clustered primary key with less than %d columns in it in order to create a JSON index on it. |
+| <a id="13674"></a> 13674 | 16 | No | DROP JSON INDEX does not support any options. |
+| <a id="13675"></a> 13675 | 16 | No | Cannot create a JSON index on temp objects. '%.\*ls' is identified as a temp object. |
+| <a id="13676"></a> 13676 | 16 | No | Internal error occurred while creating the JSON index. Please run DBCC CHECKCATALOG and retry if it does not report any error. Please contact support in case of error. |
+| <a id="13677"></a> 13677 | 16 | No | Failed to create internal table for the JSON index. |
+| <a id="13678"></a> 13678 | 16 | No | Could not create the JSON index on object '%.\*ls' because that object is not a table. Create the index on the base table column. |
+| <a id="13679"></a> 13679 | 16 | No | '%.\*ls' is not a valid JSON index name because it starts with '%c' character. JSON index name should not start with '#' or '@' |
+| <a id="13680"></a> 13680 | 16 | No | Column '%.\*ls' on table '%.\*ls' is not of JSON data type, which is required to create a JSON index on it. |
+| <a id="13681"></a> 13681 | 16 | No | A JSON index '%.\*ls' already exists on column '%.\*ls' on table '%.\*ls', and multiple JSON indexes per column are not allowed. |
+| <a id="13682"></a> 13682 | 16 | No | Cannot create JSON index '%.\*ls' on table '%.\*ls', column '%.\*ls', because the column is computed. |
+| <a id="13683"></a> 13683 | 16 | No | Invalid JSON paths in JSON index. |
+| <a id="13684"></a> 13684 | 16 | No | String conversion from UTF-8 to UTF-16 failed. |
+| <a id="13685"></a> 13685 | 16 | No | A JSON index '%.\*ls' cannot be found on column '%.\*ls' on table '%.\*ls'. |
+| <a id="13686"></a> 13686 | 16 | No | Json_Contains matches pattern as LIKE. The pattern should be no longer than 4000 characters. |
+| <a id="13687"></a> 13687 | 16 | No | JSON data type is not supported in merge replication. |
+| <a id="13688"></a> 13688 | 16 | No | One or more of the specified ALTER INDEX options is invalid for a JSON index. |
+| <a id="13689"></a> 13689 | 16 | No | DATA_COMPRESSION is not compatible with JSON index '%.\*ls'. Please drop it and recreate it. |
+| <a id="13690"></a> 13690 | 16 | No | JSON index '%.\*ls' cannot be rebuilt. Drop and recreate it. |
+| <a id="13691"></a> 13691 | 16 | No | The JSON data type is not supported in a data mask. |
+| <a id="13692"></a> 13692 | 16 | No | The comparison_mode argument of JSON_CONTAINS must be 0 or 1. |
+| <a id="13701"></a> 13701 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has custom unique keys defined. Consider dropping all unique keys and trying again. |
+| <a id="13702"></a> 13702 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has foreign keys defined. Consider dropping all foreign keys and trying again. |
+| <a id="13703"></a> 13703 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has table or column constraints defined. Consider dropping all table and column constraints and trying again. |
+| <a id="13704"></a> 13704 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has IDENTITY column specification. Consider dropping all IDENTITY column specifications and trying again. |
+| <a id="13705"></a> 13705 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has computed column specification. Consider dropping all computed column specifications and trying again. |
+| <a id="13706"></a> 13706 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' is not available or it is placed on a read-only file group. |
+| <a id="13707"></a> 13707 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' is configured for change data capture. Consider dropping this configuration and trying again. |
+| <a id="13708"></a> 13708 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has triggers defined. Consider dropping all triggers and trying again. |
+| <a id="13709"></a> 13709 | 16 | No | System-versioned table schema modification failed because table '%.\*ls' has %d columns and table '%.\*ls' has %d columns. |
+| <a id="13710"></a> 13710 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' at ordinal %d in history table '%.\*ls' has a different name than the column '%.\*ls' at the same ordinal in table '%.\*ls'. |
+| <a id="13711"></a> 13711 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' has data type %s in history table '%.\*ls' which is different from corresponding column type %s in table '%.\*ls'. |
+| <a id="13712"></a> 13712 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same collation in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13713"></a> 13713 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same CLR type in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13714"></a> 13714 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same ANSI trimming semantics in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13715"></a> 13715 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same XML Schema Collection in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13716"></a> 13716 | 16 | No | System-versioned table schema modification failed because system column '%.\*ls' in history table '%.\*ls' corresponds to a period column in table '%.\*ls' and cannot be nullable. |
+| <a id="13717"></a> 13717 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same nullability attribute in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13718"></a> 13718 | 16 | No | System-versioned table schema modification failed because system-versioned tables cannot have FILESTREAM columns. |
+| <a id="13719"></a> 13719 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same sparse storage attribute in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13720"></a> 13720 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same column set property in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13721"></a> 13721 | 16 | No | System-versioned table schema modification failed because temporal history table '%.\*ls' contains SYSTEM_TIME period. |
+| <a id="13722"></a> 13722 | 16 | No | Computed column is defined with a user-defined function which is not allowed with system-versioned table '%.\*ls' because it performs user or system data access, or is assumed to perform this access. A function is assumed by default to perform data access if it is not schemabound. |
+| <a id="13723"></a> 13723 | 16 | No | System-versioned table schema modification failed because history table '%.\*ls' has ROWGUID column specification. Consider dropping all ROWGUID column specifications and trying again. |
+| <a id="13724"></a> 13724 | 16 | No | System-versioned table schema modification failed because adding computed column while system-versioning is ON is not supported. |
+| <a id="13725"></a> 13725 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same masking functions in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13726"></a> 13726 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because history table '%.\*ls' is referenced by one or more BLOCK security predicates. Consider removing the BLOCK security predicates referencing this table and trying again. |
+| <a id="13727"></a> 13727 | 16 | No | Temporal 'GENERATED ALWAYS AS %ls' column '%.\*ls' has invalid data type. |
+| <a id="13728"></a> 13728 | 16 | No | Temporal 'GENERATED ALWAYS AS %ls' column '%.\*ls' cannot be nullable. |
+| <a id="13729"></a> 13729 | 16 | No | Temporal 'GENERATED ALWAYS' column '%.\*ls' cannot be altered. |
+| <a id="13730"></a> 13730 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' in history table '%.\*ls' corresponds to a generated always column in table '%.\*ls' and cannot be nullable. |
+| <a id="13731"></a> 13731 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' in history table '%.\*ls' corresponds to a generated always column in table '%.\*ls' and cannot be nullable. |
+| <a id="13732"></a> 13732 | 16 | No | Temporal 'GENERATED ALWAYS AS %ls' column '%.\*ls' has invalid data length. |
+| <a id="13733"></a> 13733 | 16 | No | Temporal table cannot have more than one 'GENERATED ALWAYS AS %ls' column. |
+| <a id="13734"></a> 13734 | 16 | No | System-versioned table schema modification failed because online alter is not supported on system-versioned memory optimized table '%.\*ls'. |
+| <a id="13735"></a> 13735 | 16 | No | Cannot alter HIDDEN attribute on column '%.\*ls' in table '%.\*ls' because this column is not a generated always column. |
+| <a id="13736"></a> 13736 | 16 | No | ALTER TABLE SWITCH statement failed on table '%.\*ls' because column '%.\*ls' does not have the same GENERATED ALWAYS attribute in target and source tables. |
+| <a id="13738"></a> 13738 | 16 | No | History table '%.\*ls' can not be a memory-optimized table. |
+| <a id="13739"></a> 13739 | 16 | No | Memory optimized temporal table '%.\*ls' must be created with DURABILITY set to SCHEMA_AND_DATA. |
+| <a id="13740"></a> 13740 | 16 | No | The row size limit of %d bytes for memory optimized system versioned tables has been exceeded. Please simplify the table definition. |
+| <a id="13741"></a> 13741 | 16 | No | Cannot create UNIQUE index on temporal history table '%.\*ls'. |
+| <a id="13742"></a> 13742 | 16 | No | Table '%.\*ls' contains records where 'GENERATED ALWAYS AS %ls' is not equal to %ls. |
+| <a id="13743"></a> 13743 | 16 | No | %ld is not a valid value for system versioning history retention period. |
+| <a id="13744"></a> 13744 | 16 | No | '%.\*ls' is not a valid history retention period unit for system versioning. |
+| <a id="13745"></a> 13745 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not use identical encryption in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13746"></a> 13746 | 16 | No | '%.\*ls' is not a system versioned temporal table. |
+| <a id="13747"></a> 13747 | 16 | No | Cannot apply history cleanup on table '%.\*ls' because it has infinite retention period. |
+| <a id="13748"></a> 13748 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' exceeds the maximum of 1023 columns. |
+| <a id="13749"></a> 13749 | 16 | No | The period of %ld %S_MSG is too big for system versioning history retention. |
+| <a id="13750"></a> 13750 | 16 | No | Temporal period column '%.\*ls' does not exist. |
+| <a id="13751"></a> 13751 | 16 | No | Temporal application time column '%.\*ls' has invalid data type. Allowed data types are datetime2, smalldatetime, datetimeoffset, date and datetime. |
+| <a id="13752"></a> 13752 | 16 | No | Column '%.\*ls' must be defined as NOT NULL in order to be used in a temporal application time period. |
+| <a id="13753"></a> 13753 | 16 | No | Temporal period columns cannot have different data types. |
+| <a id="13754"></a> 13754 | 16 | No | Temporal period columns cannot have different data type precision. |
+| <a id="13755"></a> 13755 | 16 | No | Temporal period '%.\*ls' has the same start and end time column. |
+| <a id="13756"></a> 13756 | 16 | No | Column '%.\*ls' is used in the temporal period '%.\*ls' and cannot be explicitly placed in the key list of a constraint where that same period without overlaps is used. |
+| <a id="13757"></a> 13757 | 16 | No | Temporal table '%.\*ls' already has history table defined. Consider dropping system_versioning first if you want to use different history table. |
+| <a id="13758"></a> 13758 | 16 | No | Cannot define foreign key constraint '%.\*ls' with cascaded DELETE or UPDATE on table '%.\*ls' because table is system-versioned. |
+| <a id="13759"></a> 13759 | 16 | No | Renaming a column failed on history table '%ls' because it is not a supported operation on system-versioned tables. Consider setting SYSTEM_VERSIONING to OFF and trying again. |
+| <a id="13760"></a> 13760 | 16 | No | Accessing history table for memory optimized temporal table using the SERIALIZABLE isolation level is not supported while SYSTEM_VERSIONING is ON. |
+| <a id="13761"></a> 13761 | 16 | No | The hint '%.\*ls' is not supported with history table for memory optimized temporal table while SYSTEM_VERSIONING is ON. |
+| <a id="13762"></a> 13762 | 16 | No | Cannot alter temporal table '%.\*ls' because this operation is currently not available. |
+| <a id="13763"></a> 13763 | 16 | No | Cannot query temporal table '%.\*ls' because this operation is currently not available. |
+| <a id="13764"></a> 13764 | 16 | No | Online alter column is not supported for system-versioned temporal table '%.\*ls'. |
+| <a id="13765"></a> 13765 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because the history table '%.\*ls' does not contain required clustered index. Consider creating a clustered columnstore or B-tree index starting with the column that matches end of SYSTEM_TIME period, on the history table. |
+| <a id="13766"></a> 13766 | 16 | No | Cannot drop the clustered index '%.\*ls' because it is being used for automatic cleanup of aged data. Consider setting HISTORY_RETENTION_PERIOD to INFINITE on the corresponding system-versioned temporal table if you need to drop this index. |
+| <a id="13767"></a> 13767 | 16 | No | The clustered index '%.\*ls' is being used for automatic cleanup of aged data, and can be converted to either a clustered columnstore or B-tree index starting with the column that matches end of SYSTEM_TIME period, on the history table. Consider setting HISTORY_RETENTION_PERIOD to INFINITE on the corresponding system-versioned temporal table if you need to rebuild this index with a modified column specification, not supported with temporal history retention. |
+| <a id="13768"></a> 13768 | 16 | No | Retention cleanup of history table for a temporal table (database id %lu, table id %ld) has not been executed. Either the cleanup is disabled on the database, appropriate lock could not be obtained or the temporal table does not exist anymore. |
+| <a id="13769"></a> 13769 | 16 | No | Setting SYSTEM_VERSIONING to ON failed for table '%.\*ls' because '%.\*ls' with REMOTE_DATA_ARCHIVE enabled cannot be used as a history table when a finite retention period is specified. |
+| <a id="13770"></a> 13770 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because REMOTE_DATA_ARCHIVE is enabled on the corresponding history table '%.\*ls'. |
+| <a id="13771"></a> 13771 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because corresponding history table '%.\*ls' has both clustered columnstore and non-clustered indexes. Consider dropping non-clustered indexes from the history table and try again. |
+| <a id="13772"></a> 13772 | 16 | No | Cannot create non-clustered index on temporal history table '%.\*ls' since it has finite retention period and clustered columnstore index defined. |
+| <a id="13773"></a> 13773 | 16 | No | Clustered column store temporal retention cleanup attempted on non-clustered column store table '%.\*ls'. |
+| <a id="13774"></a> 13774 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because table '%.\*ls' has INSTEAD OF triggers defined. Consider dropping INSTEAD OF triggers and trying again. |
+| <a id="13775"></a> 13775 | 16 | No | System-versioned table schema modification failed because table '%.\*ls' has INSTEAD OF triggers defined. Consider dropping INSTEAD OF triggers and trying again. |
+| <a id="13776"></a> 13776 | 16 | No | Table '%.\*ls' does not exist or you do not have the required permissions to complete the operation. |
+| <a id="13777"></a> 13777 | 16 | No | Stored procedure 'sp_cleanup_temporal_history' is temporarily disabled. Please contact customer support for more information. |
+| <a id="13778"></a> 13778 | 16 | No | The only allowed ALTER TABLE operations on temporal in-memory history table '%.\*ls' are ADD INDEX, DROP INDEX and ALTER INDEX. |
+| <a id="13779"></a> 13779 | 16 | No | Defining a column store index on temporal in-memory history table '%.\*ls' is not supported. |
+| <a id="13780"></a> 13780 | 16 | No | Setting finite retention period failed on system-versioned temporal table '%.\*ls' because the history table '%.\*ls' is clustered column store that contains large object columns. |
+| <a id="13781"></a> 13781 | 16 | No | Wrong type for column '%.\*ls': the system-versioned temporal table '%.\*ls' cannot contain large object columns, because it has finite retention and the clustered column store history table '%.\*ls'. |
+| <a id="13782"></a> 13782 | 16 | No | Cannot create clustered column store index '%.\*ls' on table '%.\*ls' because it contains large object columns and is the history table of temporal table '%.\*ls' that has finite retention. |
+| <a id="13783"></a> 13783 | 16 | No | Data modification failed on system-versioned table '%.\*ls' because column '%.\*ls' cannot be output into the history table '%.\*ls'. |
+| <a id="13784"></a> 13784 | 16 | No | Setting SYSTEM_VERSIONING to ON failed because column '%.\*ls' does not have the same sensitivity classification in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13785"></a> 13785 | 16 | No | System-versioned table schema modification failed because column '%.\*ls' does not have the same sensitivity classification in tables '%.\*ls' and '%.\*ls'. |
+| <a id="13795"></a> 13795 | 16 | No | '%.\*ls' does not exist, or is not a temporal application time period. |
+| <a id="13796"></a> 13796 | 16 | No | Temporal application time period without overlaps can be defined only on a primary key or a unique constraint. |
+| <a id="13797"></a> 13797 | 16 | No | Temporal application time period is already defined on table '%.\*ls'. |
+| <a id="13798"></a> 13798 | 16 | No | A table cannot have more than one application time period definition. |
+| <a id="13799"></a> 13799 | 16 | No | '%.\*ls' is not allowed as application time period name. |
+| <a id="13800"></a> 13800 | 16 | No | INSERT BULK statement does not support recompile. |
+| <a id="13801"></a> 13801 | 16 | No | TEXT, NTEXT, SQL_VARIANT and IMAGE types cannot be used as column types in OPENROWSET function with inline schema. These types are not supported in WITH clause. |
+| <a id="13802"></a> 13802 | 16 | No | CLR types cannot be used as column types in OPENROWSET function with inline schema. These types are not supported in WITH clause. |
+| <a id="13803"></a> 13803 | 16 | No | Table types cannot be used as column types in OPENROWSET function with inline schema. These types are not supported in WITH clause. |
+| <a id="13804"></a> 13804 | 16 | No | Invalid escape character specified for bulk load. Escape character can be one single byte or Unicode character. |
+| <a id="13805"></a> 13805 | 17 | No | An internal error has occurred during wildcard expansion. |
+| <a id="13806"></a> 13806 | 16 | No | Unsupported data source specified. |
+| <a id="13807"></a> 13807 | 16 | No | Content of directory on path '%ls' cannot be listed. |
+| <a id="13808"></a> 13808 | 16 | No | Starting offset cannot be larger than the file size. |
+| <a id="13809"></a> 13809 | 10 | No | Warning: No datasets were found that match the expression '%ls'. |
+| <a id="13810"></a> 13810 | 16 | No | Column '%ls' is of type '%ls' which is not supported with file format '%ls'. |
+| <a id="13811"></a> 13811 | 16 | No | Bulk load data conversion error (truncation) for row %ls%I64d, column %d (%ls) in %ls. |
+| <a id="13812"></a> 13812 | 16 | No | Bulk load data conversion error (type mismatch or invalid character for the specified codepage) for row %ls%I64d, column %d (%ls). Underlying data description: %ls. |
+| <a id="13813"></a> 13813 | 16 | No | Bulk load data conversion error (overflow) for row %ls%I64d, column %d (%ls) in %ls. |
+| <a id="13814"></a> 13814 | 16 | No | Bulk load failed: Data file %ls does not have %ls encoding. |
+| <a id="13815"></a> 13815 | 16 | No | Consecutive wildcard characters present in path '%ls'. |
+| <a id="13816"></a> 13816 | 16 | No | File/directory path '%ls' is too long. Max length of the path is nvarchar(260). |
+| <a id="13817"></a> 13817 | 10 | No | The bulk load failed. Unexpected NULL value in data file row %ls%I64d, column %d in data file %ls. The destination column (%ls) is defined as NOT NULL. |
+| <a id="13818"></a> 13818 | 16 | No | Compression type '%1ls' is not supported. |
+| <a id="13819"></a> 13819 | 16 | No | Error occurred while reading '%1ls' for decoding with %2ls codec. |
+| <a id="13820"></a> 13820 | 16 | No | Error occurred while decoding '%1ls' using %2ls codec. Codec error code: %d. Codec error message: %3ls |
+| <a id="13821"></a> 13821 | 16 | No | File/directory path '%ls' is too long. Max length of the path is nvarchar(1024). |
+| <a id="13822"></a> 13822 | 16 | No | File '%ls' cannot be opened because it does not exist or it is used by another process. |
+| <a id="13823"></a> 13823 | 16 | No | Query failed because credential for specified path does not exist or you do not have permissions to reference the credential. |
+| <a id="13824"></a> 13824 | 16 | No | Wildcard expansion operation timed out after %lu seconds. |
+| <a id="13825"></a> 13825 | 16 | No | Provided URL format is incorrect. |
+| <a id="13826"></a> 13826 | 16 | No | Provided first row exceeds row count in first split of the data file %ls. Please retry after updating first row value or by disabling splitting. |
+| <a id="13827"></a> 13827 | 16 | No | %ls option cannot be used with %ls format. |
+| <a id="13828"></a> 13828 | 10 | No | Usage of filepath function with DATA_SOURCE '%.\*ls' might result in unexpected results if number of wildcards in data source LOCATION changes. |
+| <a id="13829"></a> 13829 | 16 | No | XML type cannot be used as column type in OPENROWSET function with inline schema. This type is not supported in WITH clause. |
+| <a id="13830"></a> 13830 | 10 | No | Azure Active Directory authentication to Azure Storage is not allowed in BULK INSERT/OPENROWSET. |
+| <a id="13831"></a> 13831 | 16 | No | Cannot parse rowset options: %ls |
+| <a id="13832"></a> 13832 | 16 | No | Path '%ls' has URL suffix which is not allowed. |
+| <a id="13833"></a> 13833 | 16 | No | Multiple paths are only allowed from the same storage account and container. |
+| <a id="13834"></a> 13834 | 16 | No | Bulk load data conversion error (NULL in non-nullable column) for row %ls%I64d, column %d (%ls) in %ls. |
+| <a id="13835"></a> 13835 | 16 | No | ERRORFILE path '%ls' must be in the same storage account as the '%ls', that has to be in private container. |
+| <a id="13836"></a> 13836 | 16 | No | For onelake container paths, only files in '\<Workspace\>/\<Artifact\>/Files' directory are allowed. |
+| <a id="13837"></a> 13837 | 16 | No | ERRORFILE path '%ls' and data path '%ls' must have the same onelake endpoint, workspace, artifact and folder. |
+| <a id="13900"></a> 13900 | 16 | No | Identifier '%.\*ls' in a MATCH clause could not be bound. |
+| <a id="13901"></a> 13901 | 16 | No | Identifier '%.\*ls' in a MATCH clause is not a node table or an alias for a node table. |
+| <a id="13902"></a> 13902 | 16 | No | Identifier '%.\*ls' in a MATCH clause is not an edge table or an alias for an edge table. |
+| <a id="13903"></a> 13903 | 16 | No | Edge table '%.\*ls' used in more than one MATCH pattern. |
+| <a id="13904"></a> 13904 | 16 | No | All node and edge tables within a single MATCH clause must reside in the same database. |
+| <a id="13905"></a> 13905 | 16 | No | A MATCH clause may not be directly combined with other expressions using OR or NOT. |
+| <a id="13906"></a> 13906 | 16 | No | Node table name or alias '%.\*s' marked as FOR PATH cannot be used outside the recursive section of a SHORTEST_PATH clause except in a LAST_NODE function. |
+| <a id="13907"></a> 13907 | 16 | No | Cannot modify permissions for graph column '%.\*s'. |
+| <a id="13908"></a> 13908 | 16 | No | Cannot access internal graph column '%.\*ls'. |
+| <a id="13909"></a> 13909 | 16 | No | The internal graph column '%.\*ls' cannot be added to an index; use pseudocolumn '%.\*ls' instead. |
+| <a id="13910"></a> 13910 | 16 | No | Cannot create a node or edge table as memory optimized. |
+| <a id="13911"></a> 13911 | 16 | No | Cannot create a node or edge table as a remote data archive. |
+| <a id="13912"></a> 13912 | 16 | No | A node or edge table cannot be created as or altered to a temporal table. |
+| <a id="13913"></a> 13913 | 16 | No | Internal graph columns cannot be altered. |
+| <a id="13914"></a> 13914 | 16 | No | Cannot create a node or edge table as a temporary table. |
+| <a id="13915"></a> 13915 | 16 | No | Cannot create a node or edge table as an external table. |
+| <a id="13916"></a> 13916 | 16 | No | The graph column '%.\*ls' cannot be used as a non-key column in an index or as a partitioning column. |
+| <a id="13917"></a> 13917 | 16 | No | After expanding the computed graph column '%.\*ls", the index '%.\*ls' on table '%.\*ls' exceeds the maximum number of columns in the key list. The maximum number of index key columns is %d. |
+| <a id="13918"></a> 13918 | 16 | No | Adding constraint to column '%.\*s' of a node or edge table is not allowed. |
+| <a id="13919"></a> 13919 | 16 | No | Identifier '%.\*ls' in a MATCH clause corresponds to a derived table. Derived tables are not supported in MATCH clauses. |
+| <a id="13920"></a> 13920 | 16 | No | Identifier '%.\*ls' in a MATCH clause is used with a JOIN clause or APPLY operator. JOIN and APPLY are not supported with MATCH clauses. |
+| <a id="13921"></a> 13921 | 16 | No | JSON data for INSERT/UPDATE of graph pseudocolumn '%.\*ls' is malformed. |
+| <a id="13922"></a> 13922 | 16 | No | Remote tables are not supported in MATCH clauses. |
+| <a id="13923"></a> 13923 | 16 | No | Pseudocolumn '%.\*s' is invalid because it references a node or edge table that is not in the current database. |
+| <a id="13924"></a> 13924 | 16 | No | Select \* is not permitted because it refers to a node or edge table '%.\*s' which is not in the current database. |
+| <a id="13925"></a> 13925 | 16 | No | Cannot drop or disable index or constraint '%.\*s' because the last unique index or constraint on '%.\*s' cannot be dropped or disabled. |
+| <a id="13926"></a> 13926 | 16 | No | The use of replication is not supported for node or edge table '%ls'. |
+| <a id="13927"></a> 13927 | 16 | No | Change Data Capture is not supported for node or edge table '%ls'. |
+| <a id="13928"></a> 13928 | 16 | No | Use pseudocolumn '%.\*ls' to add a constraint on a node or edge table. |
+| <a id="13929"></a> 13929 | 16 | No | The pseudocolumn '%.\*ls' cannot be part of an index unless the index is on a node or edge table that contains that pseudocolumn. |
+| <a id="13930"></a> 13930 | 16 | No | Edge constraint cannot be created on table '%.\*ls'. The table is not an edge table. |
+| <a id="13931"></a> 13931 | 16 | No | Edge constraint '%.\*ls' references invalid table '%.\*ls'. Table could not be found. |
+| <a id="13932"></a> 13932 | 16 | No | Cross-database edge constraints are not supported. |
+| <a id="13933"></a> 13933 | 16 | No | Edge constraint must reference node tables. |
+| <a id="13934"></a> 13934 | 16 | No | Could not drop node table '%.\*ls' because it is referenced by an edge constraint. |
+| <a id="13935"></a> 13935 | 16 | No | Cannot enable edge constraint '%.\*ls' as there are no online, unique, unfiltered $node_id indexes on one or more target node tables. |
+| <a id="13936"></a> 13936 | 10 | No | Warning: Edge constraint '%.\*ls' on table '%.\*ls' was disabled as a result of disabling the index '%.\*ls'. |
+| <a id="13937"></a> 13937 | 16 | No | Cannot disable clustered index '%.\*ls' on table '%.\*ls'. Permission denied to disable edge constraint '%.\*ls' on table '%.\*ls' that references this table. |
+| <a id="13938"></a> 13938 | 16 | No | The target table '%.\*ls' of the INSERT statement cannot be on either side of an edge constraint relationship when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. Found edge constraint '%.\*ls'. |
+| <a id="13939"></a> 13939 | 15 | No | The target table '%.\*ls' of the OUTPUT INTO clause cannot be on either side of an edge constraint relationship. Found edge constraint '%.\*ls'. |
+| <a id="13940"></a> 13940 | 16 | No | Cannot use a derived table '%.\*ls' in a MATCH clause. |
+| <a id="13941"></a> 13941 | 16 | No | Cannot create an edge constraint that references a node table with a disabled $node_id index. |
+| <a id="13942"></a> 13942 | 16 | No | The initial recursive quantifier must be 1: {1, ... }. |
+| <a id="13943"></a> 13943 | 16 | No | The final recursive quantifier must be greater than the initial recursive quantifier. |
+| <a id="13944"></a> 13944 | 16 | No | Cannot truncate table '%.\*ls' because it is being referenced by an EDGE constraint. |
+| <a id="13945"></a> 13945 | 16 | No | Cannot delete from a node table that is the target of both an edge constraint and a foreign key constraint on the $node_id column. |
+| <a id="13946"></a> 13946 | 16 | No | Cannot create a foreign key constraint referencing the $node_id or $edge_id column of a graph table. |
+| <a id="13947"></a> 13947 | 16 | No | Merge statements containing a MATCH clause do not support derived tables or views in the MATCH clause. |
+| <a id="13948"></a> 13948 | 16 | No | The table name or alias '%.\*s' must be marked as FOR PATH to be used in the recursive section of a SHORTEST_PATH clause. |
+| <a id="13949"></a> 13949 | 16 | No | The table name or alias '%.\*s' was marked as FOR PATH but was not used in the recursive section of a SHORTEST_PATH clause. |
+| <a id="13950"></a> 13950 | 16 | No | Node table name or alias '%.\*ls' was used more than once in a SHORTEST_PATH recursive section. |
+| <a id="13951"></a> 13951 | 16 | No | Aggregate function '%ls' is not supported with WITHIN GROUP (GRAPH PATH). |
+| <a id="13952"></a> 13952 | 16 | No | No columns in the aggregate '%ls' WITHIN GROUP(GRAPH PATH) reference a recursive path. |
+| <a id="13953"></a> 13953 | 16 | No | Columns in the aggregate '%ls' WITHIN GROUP(GRAPH PATH) reference more than one recursive path. |
+| <a id="13954"></a> 13954 | 16 | No | Identifier '%.\*ls' in aggregate '%ls' WITHIN GROUP(GRAPH PATH) is not referencing a recursive path and cannot be used. |
+| <a id="13955"></a> 13955 | 16 | No | Recursive MATCH queries cannot be used in a table-valued function. |
+| <a id="13956"></a> 13956 | 16 | No | Recursive MATCH queries cannot be used on the right side of APPLY. |
+| <a id="13957"></a> 13957 | 16 | No | Recursive MATCH queries cannot be used in subqueries. |
+| <a id="13958"></a> 13958 | 16 | No | Internal Error: Unable to compile MATCH query with derived table or view '%.\*ls'. |
+| <a id="13959"></a> 13959 | 16 | No | Introducing edge constraint '%.\*ls' on table '%.\*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or modify other constraints. |
+| <a id="13960"></a> 13960 | 16 | No | Cannot define edge constraint '%.\*ls' with cascaded DELETE on table '%.\*ls' because the table has an INSTEAD OF DELETE TRIGGER defined on it. |
+| <a id="13961"></a> 13961 | 16 | No | The alias or identifier '%.\*ls' cannot be used in the select list, order by, group by, or having context. |
+| <a id="13962"></a> 13962 | 16 | No | The alias or identifier '%.\*ls' is not the last node in a shortest path pattern. Only the last node in the path can be used with LAST_NODE(). |
+| <a id="13963"></a> 13963 | 16 | No | Node table name or alias '%.\*s' refers to a derived table and cannot be used by the LAST_NODE function. |
+| <a id="13964"></a> 13964 | 16 | No | The two aliases '%.\*s' and '%.\*s' refer to different underlying objects in a LAST_NODE equality expression. |
+| <a id="13965"></a> 13965 | 16 | No | The table name or alias '%.\*s' must use the LAST_NODE function to reference the last node in a shortest_path expression. |
+| <a id="13966"></a> 13966 | 16 | No | A recursive quantifier expression exceeds the limit of %d. Consider the '+' syntax instead. |
+| <a id="13967"></a> 13967 | 16 | No | Pseudocolumn '%.\*ls' is not supported for use as a partitioning column on a table or index. |
+| <a id="13968"></a> 13968 | 16 | No | An explicit DROP INDEX is not allowed on index '%.\*ls'. It is being used for edge constraint enforcement. |
+| <a id="13969"></a> 13969 | 16 | No | A node or edge table cannot be created as a ledger table. |
+| <a id="13970"></a> 13970 | 16 | No | Change Feed is not supported for node or edge table '%ls'. |
+| <a id="13971"></a> 13971 | 16 | No | The pseudo column used in the index key list does not match the underlying graph object type. |

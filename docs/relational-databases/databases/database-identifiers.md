@@ -60,6 +60,11 @@ There are two classes of identifiers:
 
 - **Regular identifiers** comply with the format rules for identifiers. They aren't delimited when used in [!INCLUDE [tsql](../../includes/tsql-md.md)] statements. Regular identifiers must follow the [rules for regular identifiers](#rules-for-regular-identifiers): they can only contain letters, digits, and certain symbols (`_`, `@`, `#`, `$`), must start with a letter or one of `_`, `@`, `#`, and can't be a reserved word.
 
+  ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+  > [!NOTE]
+  > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+  ::: moniker-end
+
   ```sql
   USE AdventureWorks2025;
   GO

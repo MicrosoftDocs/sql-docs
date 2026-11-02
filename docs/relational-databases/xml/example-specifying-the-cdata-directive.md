@@ -21,6 +21,9 @@ If the directive is set to **CDATA**, the contained data isn't entity encoded, b
 
 The following query wraps the product model summary description in a CDATA section.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

@@ -48,15 +48,20 @@ The scenarios in the following examples illustrate how XML schema permissions wo
 
 This example creates a login and a sample database. It also adds a relational schema in the database. Initially, the login is granted ALTER permission on both relational schemas and other necessary permissions to create XML schema collections. The example then revokes the ALTER permission on one of the relational schemas in the database. This prevents the login from creating an XML schema collection.
 
+Connect directly to the server's `master` database to run the following commands to create a sample login and sample database.
+
 ```sql
 SETUSER;
 GO
-CREATE LOGIN TestLogin1 with password='SQLSvrPwd1';
+CREATE LOGIN TestLogin1 with password='<strong database>';
 GO
 CREATE DATABASE SampleDBForSchemaPermissions;
 GO
-use SampleDBForSchemaPermissions;
-GO
+```
+
+Connect directly to intended sample database and run the following code sample.
+
+```sql
 -- Create another relational schema in the db (in addition to dbo schema)
 CREATE SCHEMA myOtherDBSchema;
 GO
@@ -128,11 +133,13 @@ elementFormDefault="qualified">
 <xsd:element name="telephone" type="xsd:string" />
 </xsd:schema>';
 GO
+```
 
+Connect directly to the server's `master` database to run the following commands to clean up the sample objects.
+
+```sql
 -- Final cleanup
 SETUSER;
-GO
-USE master;
 GO
 DROP DATABASE SampleDBForSchemaPermissions;
 GO

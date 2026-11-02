@@ -55,6 +55,9 @@ These modes are in effect only for the execution of the query for which they're 
 
 The following `SELECT` statement retrieves information from the `Sales.Customer` and `Sales.SalesOrderHeader` tables in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This query specifies the `AUTO` mode in the `FOR XML` clause:
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

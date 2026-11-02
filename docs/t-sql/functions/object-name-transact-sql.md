@@ -38,11 +38,14 @@ OBJECT_NAME ( object_id [, database_id ] )
 ```  
   
 ## Arguments
- *object_id*  
- Is the ID of the object to be used. *object_id* is **int** and is assumed to be a schema-scoped object in the specified database, or in the current database context.  
+
+#### object_id
+
+ The ID of the object to be used. *object_id* is **int** and is assumed to be a schema-scoped object in the specified database, or in the current database context.  
   
- *database_id*  
- Is the ID of the database where the object is to be looked up. *database_id* is **int**.  
+#### database_id
+
+ The ID of the database where the object is to be looked up. *database_id* is **int**.  
   
 ## Return Types  
  **sysname**  
@@ -60,23 +63,26 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  The value returned by this system function uses the collation of the current database.  
   
- By default, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assumes that *object_id* is in the context of the current database. A query that references an *object_id* in another database returns NULL or incorrect results. For example, in the following query the context of the current database is [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] tries to return an object name for the specified object ID in that database instead of the database specified in the FROM clause of the query. Therefore, incorrect information is returned.  
-  
+ By default, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assumes that *object_id* is in the context of the current database. In SQL Server or Azure SQL Managed Instance, a query that references an *object_id* in another database returns `NULL` or incorrect results. For example, in the following query the context of the current database is [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] tries to return an object name for the specified object ID in that database instead of the database specified in the FROM clause of the query. Therefore, incorrect information is returned.  
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], cross-database queries aren't available.
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
 SELECT DISTINCT OBJECT_NAME(object_id)  
-FROM master.sys.objects;  
+FROM AdventureWorksDW.sys.objects;  
 GO  
 ```  
   
- You can resolve object names in the context of another database by specifying a database ID. The following example specifies the database ID for the `master` database in the `OBJECT_SCHEMA_NAME` function and returns the correct results.  
+ You can resolve object names in the context of another database by specifying a database ID. The following example specifies the database ID for another user database, `AdventureWorksDW2022`, with the `OBJECT_SCHEMA_NAME` function, and returns the correct results.  
   
 ```sql  
 USE AdventureWorks2022;  
 GO  
-SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
-FROM master.sys.objects;  
+SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, DB_ID(N'AdventureWorksDW2022')) AS schema_name
+FROM AdventureWorksDW2022.sys.objects;  
 GO  
 ```  
   
@@ -85,6 +91,11 @@ GO
 ### A. Using OBJECT_NAME in a WHERE clause  
  The following example returns columns from the `sys.objects` catalog view for the object specified by `OBJECT_NAME` in the `WHERE` clause of the `SELECT` statement.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

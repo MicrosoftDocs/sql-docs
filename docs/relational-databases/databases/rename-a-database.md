@@ -109,11 +109,11 @@ After renaming a database in [!INCLUDE [ssnoversion](../../includes/ssnoversion-
 
 ## Reset your default database after rename
 
-If the database you're renaming was set as the default database of a [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] login, they might encounter Error 4064, `Can't open user default database`. Use the following command to change the default to the renamed database:
+If the database you're renaming was set as the default database of a [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] login, they might encounter Error 4064, `Can't open user default database`. 
+
+Connect to the `master` database and use the following example command to change the default to the renamed database:
 
 ```sql
-USE [master]
-GO
 ALTER LOGIN [login] WITH DEFAULT_DATABASE=[new-database-name];
 GO
 ```

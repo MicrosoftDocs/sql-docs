@@ -697,6 +697,9 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
 
   1. Examine the resulting deployment script. Just before the section labeled "Pre-Deployment Script Template", you should see something that resembles the following Transact-SQL syntax:
 
+     > [!NOTE]
+     > In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], update the code sample to use a desired sample or test database instead of `tempdb`.
+
      ```sql
      :setvar CompletedBatches __completedBatches_CompareProjectDB_cd1e348a-8f92-44e0-9a96-d25d65900fca
      :setvar TotalBatchCount 17

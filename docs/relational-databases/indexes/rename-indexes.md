@@ -75,9 +75,14 @@ Requires ALTER permission on the index.
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  Copy and paste the following example into the query window and select **Execute**.  
   
-    ```  
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     --Renames the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table to IX_VendorID.   

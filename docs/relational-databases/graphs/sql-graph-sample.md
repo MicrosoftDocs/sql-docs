@@ -3,7 +3,7 @@ title: SQL Graph Database Sample
 description: "In this tutorial, create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/28/2023
+ms.date: 10/29/2026
 ms.service: sql
 ms.topic: reference
 ms.custom:
@@ -16,9 +16,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 # Create a graph database and run some pattern matching queries using T-SQL
 
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
+[!INCLUDE[sqlserver2017-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-fabricsqldb.md)]
 
-This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script works on both Azure SQL Database and [!INCLUDE[sssql17](../../includes/sssql17-md.md)] and later versions.
+This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. 
 
 ## Sample Schema
 
@@ -36,6 +36,8 @@ This script performs the following steps:
 1. Create node tables.
 1. Create edge tables.
 
+In SQL Server, create and connect to the GraphDemo database:
+
 ```sql
 -- Create a GraphDemo database
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE NAME = 'graphdemo')
@@ -44,7 +46,19 @@ GO
 
 USE GraphDemo;
 GO
+```
 
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], connect to the `master` database and create the `GraphDemo` database:
+
+```sql
+CREATE DATABASE GraphDemo;
+```
+
+In [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [create a SQL database named `GraphDemo` in the Fabric portal](/fabric/database/sql/create).
+
+Then, connect to the `GraphDemo` and run the sample:
+
+```
 -- Create NODE tables
 CREATE TABLE Person (
   ID INTEGER PRIMARY KEY,
@@ -174,12 +188,9 @@ AND Person.name != Person4.name;
 
 ## Clean Up
 
-Clean up the schema and database created for the sample in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Clean up the schema and database created for the sample in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. From the `GraphDemo` database, run the following to drop the sample tables:
 
 ```sql
-USE graphdemo;
-go
-
 DROP TABLE IF EXISTS likes;
 DROP TABLE IF EXISTS Person;
 DROP TABLE IF EXISTS Restaurant;
@@ -187,26 +198,11 @@ DROP TABLE IF EXISTS City;
 DROP TABLE IF EXISTS friendOf;
 DROP TABLE IF EXISTS livesIn;
 DROP TABLE IF EXISTS locatedIn;
-
-USE master;
-go
-DROP DATABASE graphdemo;
-go
 ```
 
-Clean up the schema and database created for the sample in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+From the `master` database, run the following to drop the `GraphDemo` database:
 
 ```sql
---Connect to the graphdemo database
-DROP TABLE IF EXISTS likes;
-DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Restaurant;
-DROP TABLE IF EXISTS City;
-DROP TABLE IF EXISTS friendOf;
-DROP TABLE IF EXISTS livesIn;
-DROP TABLE IF EXISTS locatedIn;
-
---Connect to the master database
 DROP DATABASE graphdemo;
 go
 ```

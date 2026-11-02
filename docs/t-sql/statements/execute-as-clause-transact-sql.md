@@ -168,6 +168,10 @@ For example, assume the following conditions:
 
 When the following `CREATE PROCEDURE` statement is run, the `CompanyDomain\SqlUser1` is implicitly created as a database principal in the `Sales` database.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample. 
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], Windows authentication is not supported. Instead, use Microsoft Entra ID authentication.
+
 ```sql
 USE Sales;
 GO

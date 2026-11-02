@@ -94,6 +94,11 @@ In Fabric Data Warehouse, you can't specify `seed` or `increment` values because
 
 The following example inserts all rows from the `Contact` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database into a new table named `NewContact`. The `IDENTITY` function sets the identification numbers to start at 100 instead of 1 in the `NewContact` table.  
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

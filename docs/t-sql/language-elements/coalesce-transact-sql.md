@@ -91,9 +91,6 @@ The `ISNULL` function and the `COALESCE` expression have a similar purpose but c
 1. The NULLability of the result expression is different for `ISNULL` and `COALESCE`. The `ISNULL` return value is always considered not nullable (assuming the return value is a non-nullable one). By contrast,`COALESCE` with non-null parameters is considered to be `NULL`. So the expressions `ISNULL(NULL, 1)` and `COALESCE(NULL, 1)`, although equal, have different nullability values. These values make a difference if you're using these expressions in computed columns, creating key constraints, or making the return value of a scalar user-defined function (UDF) deterministic, so that it can be indexed as shown in the following example:
 
     ```sql
-    USE tempdb;
-    GO
-
     -- This statement fails because the PRIMARY KEY cannot accept NULL values
     -- and the nullability of the COALESCE expression for col2
     -- evaluates to NULL.
@@ -158,13 +155,13 @@ In the first row, the `FirstNotNull` value is `PN1278`, not `Socks, Mens`. This 
 
 ### B. Return the non-null value in a wages table
 
-In the following example, the `wages` table includes three columns that contain information about the yearly wages of the employees: the hourly wage, salary, and commission. However, an employee receives only one type of pay. To determine the total amount paid to all employees, use `COALESCE` to receive only the non-null value found in `hourly_wage`, `salary`, and `commission`.
+In the following example, the `wages` table includes three columns that contain information about the yearly wages of the employees: the hourly wage, salary, and commission. However, an employee receives only one type of pay. To determine the total amount paid to all employees, use `COALESCE` to receive only the non-null value found in `hourly_wage`, `salary`, and `commission`. 
+
+Connect to a desired sample or test database to run these code samples.
 
 ```sql
 SET NOCOUNT ON;
 GO
-
-USE tempdb;
 
 IF OBJECT_ID('dbo.wages') IS NOT NULL
     DROP TABLE wages;

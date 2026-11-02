@@ -182,6 +182,11 @@ Examples in this section demonstrate the basic functionality of the `ORDER BY` c
 
 The following examples use a constant value to specify the number of employees that are returned in the query result set. In the first example, the first 10 undefined rows are returned because an `ORDER BY` clause isn't used. In the second example, an `ORDER BY` clause is used to return the top 10 recently hired employees.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

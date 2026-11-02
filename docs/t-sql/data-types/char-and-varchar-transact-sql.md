@@ -128,6 +128,11 @@ SELECT DATALENGTH(CONVERT(CHAR, @myVariable)) AS 'VarcharDefaultLength';
 
 The following example converts two columns to character types and applies a style that applies a specific format to the displayed data. A **money** type is converted to character data and style `1` is applied, which displays the values with commas every three digits to the left of the decimal point, and two digits to the right of the decimal point. A **datetime** type is converted to character data and style `3` is applied, which displays the data in the format `dd/mm/yy`. In the `WHERE` clause, a **money** type is cast to a character type to perform a string comparison operation.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

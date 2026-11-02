@@ -717,6 +717,11 @@ Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], in [!I
 
 To check if a configuration is enabled (1) or disabled (0) in a database, query [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md). For example, to check the value for `LEGACY_CARDINALITY_ESTIMATION`, use a query like this:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE <user_database>;
 

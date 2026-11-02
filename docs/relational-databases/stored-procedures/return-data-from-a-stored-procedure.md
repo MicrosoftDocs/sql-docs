@@ -31,6 +31,11 @@ If you include a `SELECT` statement in the body of a stored procedure (but not a
 
 This example shows a stored procedure that returns the `LastName` and `SalesYTD` values for all `SalesPerson` rows that also appear in the `vEmployee` view.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -58,6 +63,11 @@ If you specify the output keyword for a parameter in the procedure definition, t
 ### Examples of output parameters
 
 The following example shows a procedure with an input and an output parameter. The `@SalesPerson` parameter would receive an input value specified by the calling program. The `SELECT` statement uses the value passed into the input parameter to obtain the correct `SalesYTD` value. The `SELECT` statement also assigns the value to the `@SalesYTD` output parameter, which returns the value to the calling program when the procedure exits.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;
@@ -230,6 +240,11 @@ The example creates a procedure named `Sales.usp_GetSalesYTD`, which:
 - If reached, the final statement in the stored procedure invokes the stored procedure recursively without specifying an input value.
 
 At the end of the example, code is provided to execute the `Sales.usp_GetSalesYTD` procedure while specifying a family name for the input parameter and saving the output value in the variable `@SalesYTD`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

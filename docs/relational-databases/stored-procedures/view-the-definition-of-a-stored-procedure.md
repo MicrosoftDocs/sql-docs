@@ -59,6 +59,11 @@ In T-SQL, you can use one of the following three commands:
   
 1. In the query window, enter the following statement that uses the `sp_helptext` system stored procedure. Change the database name and stored procedure name to reference the database and stored procedure that you want.  
   
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
     ```sql  
     USE AdventureWorks2022;  
     GO  

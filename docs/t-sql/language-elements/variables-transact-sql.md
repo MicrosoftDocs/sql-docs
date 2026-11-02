@@ -69,6 +69,11 @@ DECLARE @IsActive AS BIT = 0;
 
 The scope of a variable is the range of Transact-SQL statements that can reference the variable. The scope of a variable lasts from the point it's declared until the end of the batch or stored procedure in which it's declared. For example, the following script generates a syntax error because the variable is declared in one batch (separated by the `GO` keyword) and referenced in another:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO
@@ -105,6 +110,11 @@ Must declare the scalar variable "@MyVariable".
 When you first declare a variable, its value is `NULL`. To assign a value to a variable, use the `SET` statement. This method is the preferred way to assign a value to a variable. You can also assign a value to a variable by referencing it in the select list of a `SELECT` statement.
 
 To assign a variable a value by using the `SET` statement, include the variable name and the value to assign to the variable. This method is the preferred way to assign a value to a variable. The following batch, for example, declares two variables, assigns values to them, and then uses them in the `WHERE` clause of a `SELECT` statement:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2025;

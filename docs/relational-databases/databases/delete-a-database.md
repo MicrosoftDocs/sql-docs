@@ -62,6 +62,8 @@ For more information, see [DROP DATABASE](../../t-sql/statements/drop-database-t
 
 1. Copy and paste the following example into the query window and select **Execute**. This example removes the `Sales` and `NewSales` databases.
 
+  In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you an only delete one database at a time.
+  
   ```sql
   USE master;
   GO

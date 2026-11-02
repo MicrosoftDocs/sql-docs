@@ -74,12 +74,15 @@ You must own the table or have `ALTER` permission on the table.
 
 The following example creates a table with an identity column and shows how the `SET IDENTITY_INSERT` setting can be used to fill a gap in the identity values caused by a `DELETE` statement.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO
 ```
 
-Create tool table.
+Create the `dbo.Tool` table.
 
 ```sql
 CREATE TABLE dbo.Tool
@@ -90,7 +93,7 @@ CREATE TABLE dbo.Tool
 GO
 ```
 
-Insert values into products table.
+Insert values into the `dbo.Tool` table.
 
 ```sql
 INSERT INTO dbo.Tool (Name)

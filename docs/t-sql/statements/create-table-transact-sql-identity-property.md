@@ -128,6 +128,9 @@ Azure Synapse Analytics doesn't support `PRIMARY KEY` or `UNIQUE` constraint or 
 
 The following example creates a new table using the `IDENTITY` property for an automatically incrementing identification number.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

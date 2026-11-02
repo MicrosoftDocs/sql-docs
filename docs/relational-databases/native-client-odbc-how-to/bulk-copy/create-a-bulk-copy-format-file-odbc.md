@@ -58,7 +58,10 @@ helpviewer_keywords:
   
  Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table that the sample used.  
   
-```  
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
+```sql  
 USE AdventureWorks2022;
 GO
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  
@@ -197,7 +200,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2022;
 GO
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  

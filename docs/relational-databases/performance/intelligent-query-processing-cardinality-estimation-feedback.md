@@ -58,6 +58,11 @@ When the Query Optimizer estimates the selectivity of predicates on a given tabl
 
 The following example uses partial correlation when the database compatibility is set to 120 or higher:
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2016_EXT;
 GO

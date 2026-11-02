@@ -73,6 +73,11 @@ For window function performance tuning guidance, see [OVER() Performance conside
 
 The following example divides rows into four groups of employees based on their year-to-date sales. Because the total number of rows isn't divisible by the number of groups, the first two groups have four rows, and the remaining groups have three rows each.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

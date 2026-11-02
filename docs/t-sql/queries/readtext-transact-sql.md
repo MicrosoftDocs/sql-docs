@@ -65,6 +65,9 @@ The following example reads the second through 26th characters of the `pr_info` 
 > [!NOTE]  
 >  To run this example, you must install the [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) sample database.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE pubs;  
 GO  

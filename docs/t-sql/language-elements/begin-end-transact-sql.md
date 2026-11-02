@@ -81,6 +81,11 @@ Although all [!INCLUDE [tsql](../../includes/tsql-md.md)] statements are valid w
 
 In the following example, `BEGIN` and `END` define sequences of logically related [!INCLUDE [tsql](../../includes/tsql-md.md)] statements to execute in order. The example also shows nested blocks.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO

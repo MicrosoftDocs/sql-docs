@@ -38,6 +38,11 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
   
 1.  To create a full-text catalog named `AdvWksDocFTCat`, the example uses a [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) statement:  
   
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
     ```sql
     USE AdventureWorks;  
     GO  

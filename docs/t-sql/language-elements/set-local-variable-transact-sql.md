@@ -223,6 +223,11 @@ GO
 
 The following example creates a local variable named `@state` and uses the local variable in a `SELECT` statement to find the first name (`FirstName`) and family name (`LastName`) of all employees who live in the state of `Oregon`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

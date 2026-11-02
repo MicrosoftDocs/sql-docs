@@ -224,7 +224,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### C. Inserting a record by using the parent-child relationship and inverse annotation specified in the XSD schema  
  This example illustrates how the updategram logic uses the parent-child relationship specified in the XSD to process updates, and how the **inverse** annotation is used. For more information about the **inverse** annotation, see [Specifying the sql:inverse Attribute on sql:relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- This example assumes that the following tables are in the **tempdb** database:  
+ This example uses tables in a desired sample or test database:
   
 -   `Cust (CustomerID, CompanyName)`, where `CustomerID` is the primary key  
   
@@ -288,10 +288,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 ##### To test the updategram  
   
-1.  Create these tables in the **tempdb** database:  
+1.  Create these tables in the desired sample or test database:  
   
-    ```  
-    USE tempdb  
+    ```sql  
     CREATE TABLE Cust(CustomerID varchar(5) primary key,   
                       CompanyName varchar(20))  
     GO  
@@ -306,7 +305,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      The directory path specified for the mapping schema (SampleUpdateSchema.xml) is relative to the directory where the template is saved. An absolute path also can be specified, for example:  
   
-    ```  
+    ```xml
     mapping-schema="C:\SqlXmlTest\SampleUpdateSchema.xml"  
     ```  
   

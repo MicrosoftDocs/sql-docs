@@ -68,6 +68,11 @@ For window function performance tuning guidance, see [OVER() Performance conside
 
 This example ranks the products in inventory, by the specified inventory locations, according to their quantities. `DENSE_RANK` partitions the result set by `LocationID` and logically orders the result set by `Quantity`. Products 494 and 495 have the same quantity. Because they both have the same quantity value, they both have a rank value of one.  
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -142,6 +147,11 @@ This example shows the four ranking functions
 - [ROW_NUMBER()](row-number-transact-sql.md)
 
 used in the same query. See each ranking function for function-specific examples.  
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql  
 USE AdventureWorks2022;  

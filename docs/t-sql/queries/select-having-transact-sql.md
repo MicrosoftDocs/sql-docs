@@ -52,6 +52,11 @@ You can't use the **text**, **image**, and **ntext** data types in a `HAVING` cl
 
 The following example uses a `HAVING` clause to retrieve the total for each `SalesOrderID` from the `SalesOrderDetail` table that exceeds `$100000.00`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO

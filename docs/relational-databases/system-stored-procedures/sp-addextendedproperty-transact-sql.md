@@ -162,6 +162,11 @@ Users can add extended properties to objects they own or have ALTER or CONTROL p
 
 The following example adds the property name `Caption` with a value of `AdventureWorks2022 Sample OLTP Database` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

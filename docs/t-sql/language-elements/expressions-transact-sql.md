@@ -153,6 +153,11 @@ The collation of any expression that evaluates to a character string is set by f
 
 In a programming language such as C or [!INCLUDE [msCoName](../../includes/msconame-md.md)] [!INCLUDE [visual-basic](../../includes/visual-basic-md.md)], an expression always evaluates to a single result. Expressions in a [!INCLUDE [tsql](../../includes/tsql-md.md)] select list follow a variation on this rule: The expression is evaluated individually for each row in the result set. A single expression can have a different value in each row of the result set, but each row has only one value for the expression. For example, in the following `SELECT` statement both the reference to `ProductID` and the term `1+2` in the select list are expressions:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

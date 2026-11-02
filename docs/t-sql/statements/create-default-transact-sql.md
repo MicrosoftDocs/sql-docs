@@ -92,6 +92,9 @@ To use `CREATE DEFAULT`, at a minimum, a user must have `CREATE DEFAULT` permiss
 
 The following example creates a character default called `unknown`.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

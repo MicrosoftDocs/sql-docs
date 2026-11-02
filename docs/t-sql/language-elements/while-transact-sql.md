@@ -80,6 +80,11 @@ If two or more `WHILE` loops are nested, the inner `BREAK` exits to the next out
 
 In the following example, if the average list price of a product is less than $300, the `WHILE` loop doubles the prices and then selects the maximum price. If the maximum price is less than or equal to $500, the `WHILE` loop restarts and doubles the prices again. This loop continues doubling the prices until the maximum price is greater than $500, and then exits the `WHILE` loop and prints a message.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

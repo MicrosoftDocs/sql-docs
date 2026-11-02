@@ -119,7 +119,14 @@ Run the following example against an empty database. The example:
 
     SELECT **Execute**.
 
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database.
+    ::: moniker-end
+
     ```sql
+    USE [master];
+    GO
     CREATE DATABASE PartitionTest;
     GO
 

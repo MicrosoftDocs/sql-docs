@@ -256,6 +256,11 @@ End Function
   
 1.  Create two tables in **tempdb** database:  
   
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
     ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
@@ -449,7 +454,7 @@ OrderDetail (OrderID, ProductID)
   
 1.  Create these tables:  
   
-    ```  
+    ```sql  
     CREATE TABLE Ord (  
              OrderID     int identity(1,1)  PRIMARY KEY,  
              CustomerID  varchar(5));  
@@ -834,7 +839,12 @@ End Sub
   
 1.  Create two tables in **tempdb** database:  
   
-    ```  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust (  
                   CustomerID     int         PRIMARY KEY,  
@@ -958,7 +968,12 @@ set objBL=Nothing
   
 1.  Create this table in **tempdb** database:  
   
-    ```  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust (     CustomerID uniqueidentifier,   
           LastName  varchar(20));  
@@ -967,7 +982,7 @@ set objBL=Nothing
   
 2.  Create a file in your preferred text or XML editor, and save it as SampleSchema.xml. Add the following XSD schema to the file:  
   
-    ```  
+    ```xml
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
@@ -989,7 +1004,7 @@ set objBL=Nothing
   
 3.  Create a file in your preferred text or XML editor, and save it as SampleXMLData.xml. Add the following XML document to the file:  
   
-    ```  
+    ```xml
     <ROOT>  
     <Customers CustomerID="6F9619FF-8B86-D011-B42D-00C04FC964FF"   
                LastName="Smith" />  
@@ -998,7 +1013,7 @@ set objBL=Nothing
   
 4.  Create a file in your preferred text or XML editor, and save it as ValidateAndBulkload.vbs. To this file, add the following VBScript code. Modify the connection string to provide the appropriate server and database name. Specify the appropriate path for the files that are specified as parameters to the Execute method. Also specify the appropriate path for the TempFilePath property.  
   
-    ```  
+    ```vb
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
     objBL.ErrorLogFile = "c:\error.log"  
@@ -1013,7 +1028,7 @@ set objBL=Nothing
   
      The schema must specify the corresponding **sql:datatype** for the **CustomerID** attribute when the value for **CustomerID** is specified as a GUID that includes braces ({ and }), such as:  
   
-    ```  
+    ```xml
     <ROOT>  
     <Customers CustomerID="{6F9619FF-8B86-D011-B42D-00C04FC964FF}"   
                LastName="Smith" />  
@@ -1022,7 +1037,7 @@ set objBL=Nothing
   
      This is the updated schema:  
   
-    ```  
+    ```xml
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
@@ -1047,7 +1062,7 @@ set objBL=Nothing
   
  This is the equivalent XDR schema:  
   
-```  
+```xml
 <?xml version="1.0" ?>  
 <Schema xmlns="urn:schemas-microsoft-com:xml-data"   
         xmlns:dt="urn:schemas-microsoft-com:datatypes"    
@@ -1070,7 +1085,7 @@ set objBL=Nothing
   
  The ConnectionCommand property enables you to use an existing ADO connection by using an ADO command object. This is illustrated in the following Visual Basic example:  
   
-```  
+```vb
 Private Sub Form_Load()  
 Dim objBL As New SQLXMLBulkLoad4  
 Dim objCmd As New ADODB.Command  
@@ -1096,7 +1111,12 @@ End Sub
   
 1.  Create two tables in **tempdb** database:  
   
-    ```  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
                    CustomerID   varchar(5) PRIMARY KEY,  
@@ -1111,7 +1131,7 @@ End Sub
   
 2.  Create a file in your preferred text or XML editor, and save it as SampleSchema.xml. Add the following XSD schema to the file:  
   
-    ```  
+    ```xml
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
@@ -1152,7 +1172,7 @@ End Sub
   
 3.  Create a file in your preferred text or XML editor, and save it as SampleXMLData.xml. Add the following XML document to the file:  
   
-    ```  
+    ```xml
     <ROOT>  
       <Customers>  
         <CustomerID>1111</CustomerID>  
@@ -1187,7 +1207,7 @@ End Sub
   
  This is the equivalent XDR schema:  
   
-```  
+```xml
 <?xml version="1.0" ?>  
 <Schema xmlns="urn:schemas-microsoft-com:xml-data"   
         xmlns:dt="urn:schemas-microsoft-com:xml:datatypes"    
@@ -1227,7 +1247,7 @@ End Sub
   
  Consider the following XSD schema, which maps a view of the Production.ProductModel table in the AdventureWorks sample database. In this table, the CatalogDescription field of **xml** data type is mapped to a **\<Desc>** element using the **sql:field** and **sql:datatype="xml"** annotations.  
   
-```  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
@@ -1264,7 +1284,7 @@ End Sub
   
 3.  Create a file in your preferred text or XML editor, and save it as SampleXMLData.xml. Copy the following XML document below and paste it into the file and save it in the same folder as was used for the previous step.  
   
-    ```  
+    ```xml
     <ProductModel ProductModelID="2005">  
         <Name>Mountain-100 (2005 model)</Name>  
         <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
@@ -1312,7 +1332,7 @@ End Sub
   
 4.  Create a file in your preferred text or XML editor, and save it as BulkloadXml.vbs. Copy the following VBScript code and paste it into the file. Save it in the same folder as was used for the previous XML data and schema files.  
   
-    ```  
+    ```vbs
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=MyServer;database=AdventureWorks;integrated security=SSPI"  
   

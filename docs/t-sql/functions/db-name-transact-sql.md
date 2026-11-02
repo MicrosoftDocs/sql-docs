@@ -73,6 +73,11 @@ GO
 
 This example returns the database name for database ID `3`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE master;
 GO

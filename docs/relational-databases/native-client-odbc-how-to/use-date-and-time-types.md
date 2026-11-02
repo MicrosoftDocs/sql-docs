@@ -17,7 +17,7 @@ This sample shows how to initialize the date/time data structures that were adde
 
 ## Examples
 
-You need an ODBC data source called `DateTime`. The default database for `DateTime` should be `tempdb`. This data source must be based on the ODBC driver for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
+You need an ODBC data source called `DateTime`. The default database for `DateTime` should be a sample or test database of your choosing. This data source must be based on the ODBC driver for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 
 If you build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in `%windir%\SysWOW64\odbcad32.exe`.
 
@@ -27,9 +27,9 @@ This sample connects to your computer's default [!INCLUDE [ssNoVersion](../../in
 
 This [!INCLUDE [tsql](../../includes/tsql-md.md)] code creates a table used by this sample.
 
+Connect to a sample or test database, and then run the code sample.
+
 ```sql
-USE tempdb;
-GO
 
 IF EXISTS (SELECT name
            FROM sysobjects
@@ -243,9 +243,6 @@ int main() {
 This [!INCLUDE [tsql](../../includes/tsql-md.md)] code deletes the table used by this sample.
 
 ```sql
-USE tempdb;
-GO
-
 IF EXISTS (SELECT name
            FROM sysobjects
            WHERE name = 'DateTimeTypes')

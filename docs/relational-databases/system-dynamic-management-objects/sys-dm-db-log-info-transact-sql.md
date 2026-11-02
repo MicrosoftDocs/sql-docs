@@ -71,7 +71,9 @@ The formula for how many VLFs are created based on a growth event is detailed in
 
 Requires the `VIEW SERVER STATE` permission in the database.
 
-### Permissions for SQL Server 2022 and later
+<a id="permissions-for-sql-server-2022-and-later"></a>
+
+### Permissions for SQL Server 2022 and later versions
 
 Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
@@ -92,6 +94,11 @@ HAVING COUNT(l.database_id) > 100;
 ### B. Determine the position of the last `VLF` in transaction log before shrinking the log file
 
 The following query can be used to determine the position of the last active VLF before running SHRINK FILE on transaction log to determine if transaction log can shrink.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

@@ -156,6 +156,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### A. Revoking CONTROL permission on a user from another user  
  The following example revokes `CONTROL` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] user `Wanida` from user `RolandX`.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  

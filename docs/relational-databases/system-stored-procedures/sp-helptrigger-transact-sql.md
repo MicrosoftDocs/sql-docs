@@ -79,6 +79,11 @@ Requires [Metadata Visibility Configuration](../security/metadata-visibility-con
 
 The following example executes `sp_helptrigger` to produce information about the triggers on the `Person.Person` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

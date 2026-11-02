@@ -50,6 +50,9 @@ SET FORCEPLAN { ON | OFF }
 ## Examples  
  The following example performs a join of four tables. The `SHOWPLAN_TEXT` setting is enabled, so [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns information about how it is processing the query differently after the `SET FORCE_PLAN` setting is enabled.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;  
 GO  

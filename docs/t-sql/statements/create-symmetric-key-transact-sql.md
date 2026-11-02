@@ -233,6 +233,11 @@ When you need to encrypt data in one database and decrypt it in another, you can
 
 The following example creates the same symmetric key in two databases:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to each of the two databases to run these code samples.
+::: moniker-end
+
 ```sql
 -- Create the key in the first database
 USE Database1;
@@ -244,7 +249,9 @@ KEY_SOURCE = 'My secret key source passphrase',
 IDENTITY_VALUE = 'My secret identity value'
 ENCRYPTION BY PASSWORD = '<password>';
 GO
+```
 
+```sql
 -- Create the identical key in the second database
 USE Database2;
 GO
@@ -263,7 +270,9 @@ To verify the keys are identical, compare the `key_guid` values in both database
 SELECT name, key_guid
 FROM Database1.sys.symmetric_keys
 WHERE name = 'SharedKey';
+```
 
+```sql
 SELECT name, key_guid
 FROM Database2.sys.symmetric_keys
 WHERE name = 'SharedKey';

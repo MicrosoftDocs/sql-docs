@@ -159,7 +159,7 @@ For essential information about the following formulas, see the notes that follo
 
 1. *ism_size* is assumed to be 8 MB for x64 platforms.
 
-#### Example: Estimate the memory requirements of `fdhost.exe`
+#### Example: Estimate the memory requirements of fdhost.exe
 
 This example is for a 64-bit computer that has 8 GB of RAM and 4 dual-core processors. The first calculation estimates the memory needed by `fdhost.exe` *F*. The number of crawl ranges is `8`.
 
@@ -169,9 +169,11 @@ The next calculation obtains the optimal value for `max server memory` (*M*). Th
 
 `M = 8192 - 640 - 500 = 7052`
 
-#### Example: Set `max server memory`
+#### Example: Set max server memory
 
-This example uses the [sp_configure](../system-stored-procedures/sp-configure-transact-sql.md) and [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] statements to set `max server memory` to the value calculated for *M* in the preceding example, `7052`:
+This example uses the [sp_configure](../system-stored-procedures/sp-configure-transact-sql.md) and [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] statements to set `max server memory` to the value calculated for *M* in the preceding example, `7052`.
+
+Configuring the server with `sp_configure`, including the `max server memory`, is not supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
 
 ```sql
 USE master;

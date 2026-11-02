@@ -23,6 +23,9 @@ The following examples illustrate the use of AUTO mode. Many of these queries ar
 
 This query retrieves customer, order, and order detail information for a specific customer.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -77,6 +80,9 @@ This is the partial result.
 
 The following query returns individual customer IDs and the number of orders that the customer has requested.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -99,6 +105,9 @@ This is the partial result:
 ## Example: Specify computed columns in AUTO mode
 
 This query returns concatenated individual customer names and the order information. Because the computed column is assigned to the innermost level encountered at that point, the `<SOH>` element in this example. The concatenated customer names are added as attributes of the `<SOH>` element in the result.
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
 
 ```sql
 USE AdventureWorks2022;

@@ -425,6 +425,11 @@ FROM cte;
 
 The following example shows the hierarchy of product assemblies and components that are required to build the bicycle for `ProductAssemblyID = 800`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -629,6 +634,11 @@ Lvl  N
 ### J. Use a common table expression within a CTAS statement
 
 The following example creates a new table containing the total number of sales orders per year for each sales representative at [!INCLUDE [ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

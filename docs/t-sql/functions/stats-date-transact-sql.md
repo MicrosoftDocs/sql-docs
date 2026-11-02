@@ -62,6 +62,11 @@ STATS_DATE ( object_id , stats_id )
 ### A. Return the dates of the most recent statistics for a table  
  The following example returns the date of the most recent update for each statistics object on the `Person.Address` table.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -89,6 +94,11 @@ GO
 ### B. Learn when a named statistics was last updated  
  The following example creates statistics on the LastName column of the DimCustomer table. It then runs a query to show the date of the statistics. Then it udpates the statistics and runs the query again to show the updated date.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 --First, create a statistics object  
 USE AdventureWorksPDW2012;  

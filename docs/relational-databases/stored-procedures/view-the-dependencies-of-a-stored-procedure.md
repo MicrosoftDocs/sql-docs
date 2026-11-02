@@ -77,7 +77,12 @@ System Function: **sys.dm_sql_referencing_entities**
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-    ```  
+    ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
@@ -100,7 +105,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 5.  After the procedure is created, the second example uses the sys.dm_sql_referencing_entities function to display the objects that depend on the procedure.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -120,7 +125,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
@@ -143,7 +148,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 5.  After the procedure is created, the second example uses the sys.dm_sql_referenced_entities function to display the objects that the procedure depends on.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     SELECT referenced_schema_name, referenced_entity_name,  
@@ -165,7 +170,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
@@ -188,7 +193,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects that depend on the procedure.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     SELECT OBJECT_SCHEMA_NAME ( referencing_id ) AS referencing_schema_name,  
@@ -215,7 +220,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
@@ -238,7 +243,7 @@ System Function: **sys.dm_sql_referencing_entities**
   
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects the procedure depends on.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2022;  
     GO  
     SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   

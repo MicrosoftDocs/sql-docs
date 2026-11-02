@@ -139,12 +139,14 @@ The modes are progressively slower from `LIMITED` to `DETAILED`, because more wo
 
 ## Use system functions to specify parameter values
 
+This section applies to SQL Server and Azure SQL Managed Instance. Cross-database queries are not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+
 You can use the [!INCLUDE [tsql](../../includes/tsql-md.md)] functions [DB_ID](../../t-sql/functions/db-id-transact-sql.md) and [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) to specify a value for the *database_id* and *object_id* parameters. However, passing values that aren't valid to these functions can cause unintended results. For example, if the database or object name can't be found because they don't exist or are spelled incorrectly, both functions return `NULL`. The `sys.dm_db_index_physical_stats` function interprets `NULL` as a wildcard value specifying all databases or all objects.
 
 Additionally, the `OBJECT_ID` function is processed before the `sys.dm_db_index_physical_stats` function is called and is therefore evaluated in the context of the current database, not the database specified in *database_id*. This behavior can cause the `OBJECT_ID` function to return a `NULL` value; or, if the object name exists in both the current database context and the specified database, an error message is returned. The following examples demonstrate these unintended results.
 
 ```sql
-USE master;
+USE [master];
 GO
 -- In this example, OBJECT_ID is evaluated in the context of the master database.
 -- Because Person.Address does not exist in master, the function returns NULL.
@@ -153,15 +155,18 @@ GO
 SELECT * FROM sys.dm_db_index_physical_stats
     (DB_ID(N'AdventureWorks2022'), OBJECT_ID(N'Person.Address'), NULL, NULL , 'DETAILED');
 GO
+```
+
+```sql
 -- This example demonstrates the results of specifying a valid object name
 -- that exists in both the current database context and
 -- in the database specified in the database_id parameter of the
 -- sys.dm_db_index_physical_stats function.
 -- An error is returned because the ID value returned by OBJECT_ID does not
 -- match the ID value of the object in the specified database.
-CREATE DATABASE Test;
+CREATE DATABASE [Test];
 GO
-USE Test;
+USE [Test];
 GO
 CREATE SCHEMA Person;
 GO

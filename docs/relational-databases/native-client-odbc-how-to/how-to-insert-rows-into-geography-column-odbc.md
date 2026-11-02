@@ -30,10 +30,9 @@ ms.topic: "reference"
   
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
-```sql
-use tempdb  
-GO  
-  
+ Connect to a sample or test database, and then run the code sample. You will likely need to change the `szDSN` to connect to a different server and database.
+
+```sql 
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'SpatialSample')  
    DROP TABLE SpatialSample  
   
@@ -204,10 +203,7 @@ int main() {
 }  
 ```  
   
-```sql
-use tempdb  
-GO  
-  
+```sql  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'SpatialSample')  
    DROP TABLE SpatialSample  
 GO  

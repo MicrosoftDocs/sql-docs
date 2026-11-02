@@ -112,6 +112,11 @@ GO
 
 The following example creates and populates a table with several variable-length columns. Two of the columns are then dropped and `DBCC CLEANTABLE` is run to reclaim the unused space. A query is run to verify the page counts and space used values before and after the `DBCC CLEANTABLE` command is executed.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

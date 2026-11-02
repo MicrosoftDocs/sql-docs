@@ -31,8 +31,14 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### A. Specifying sql:overflow-field for an element  
  This example assumes that the following script has been run so that a table named Customers2 exists in the tempdb database:  
   
-```  
-USE tempdb  
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
+USE [tempdb];
+GO
 CREATE TABLE Customers2 (  
 CustomerID       VARCHAR(10),   
 ContactName    VARCHAR(30),   
@@ -56,7 +62,7 @@ GO
   
  In the following example, the mapping schema retrieves the unconsumed data that is stored in the AddressOverflow column of the Customers2 table:  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
@@ -75,7 +81,7 @@ GO
   
 2.  Copy the following template and paste it into a text file. Save the file as OverflowT.xml in the same directory where you saved Overflow.xml. The query in the template selects the records in the Customers2 table.  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
         <sql:xpath-query mapping-schema="Overflow.xml">  
             /Customers2  
@@ -85,26 +91,26 @@ GO
   
      The directory path specified for the mapping schema (Overflow.xml) is relative to the directory where the template is saved. An absolute path also can be specified, for example:  
   
-    ```  
+    ```xml
     mapping-schema="C:\SqlXmlTest\Overflow.xml"  
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
 
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+   For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Here is the result set:  
-  
-```  
-<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
-  <Customers2 CustomerID="ALFKI" ContactName="Joe">  
-    <Address1>Maple St.</Address1>   
-    <Address2>Apt. E105</Address2>   
-    <City>Seattle</City>   
-    <State>WA</State>   
-    <Zip>98147</Zip>   
-  </Customers2>  
-</ROOT>  
-```  
+   Here is the result set:  
+      
+   ```xml
+    <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+      <Customers2 CustomerID="ALFKI" ContactName="Joe">  
+        <Address1>Maple St.</Address1>   
+        <Address2>Apt. E105</Address2>   
+        <City>Seattle</City>   
+        <State>WA</State>   
+        <Zip>98147</Zip>   
+      </Customers2>  
+    </ROOT>  
+   ```  
   
   

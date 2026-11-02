@@ -26,6 +26,9 @@ This article compares a single-level `FOR XML` query to a nested `FOR XML` query
 
 The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. There's no nested `FOR XML` in the query.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

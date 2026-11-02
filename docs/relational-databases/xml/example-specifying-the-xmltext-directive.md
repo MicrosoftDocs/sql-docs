@@ -21,9 +21,9 @@ This example illustrates how data in the overflow column is addressed by using t
 
 Consider the `Person` table. This table has an `Overflow` column that stores the unconsumed part of the XML document.
 
+Connect directly to intended sample database and run the following code sample.
+
 ```sql
-USE tempdb;
-GO
 CREATE TABLE Person(PersonID varchar(5), PersonName varchar(20), Overflow nvarchar(200));
 GO
 INSERT INTO Person VALUES
@@ -59,11 +59,9 @@ This is the result:
 
 If the overflow data has subelements and the same query is specified, the subelements in the `Overflow` column are added as the subelements of the enclosing `<Parent>` element.
 
-For example, change the data in the `Person` table so that the `Overflow` column now has subelements.
+For example, change the data in the `Person` table so that the `Overflow` column now has subelements. Connect directly to intended sample database and run the following code sample.
 
 ```sql
-USE tempdb;
-GO
 TRUNCATE TABLE Person;
 GO
 INSERT INTO Person VALUES

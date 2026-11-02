@@ -56,6 +56,11 @@ Use two hyphens (**--**) for single-line or nested comments. Comments inserted w
 ## Examples  
  The following example uses the -- commenting characters.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 -- Choose the AdventureWorks2022 database.  
 USE AdventureWorks2022;  

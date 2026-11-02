@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  The **\<relationship>** element identifies CustomerID in the Sales.SalesOrderHeader table as a foreign key that refers to the CustomerID primary key in the Sales.Customer table. Therefore, orders that belong to a customer appear as a child element of that **\<Customer>** element.  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
@@ -98,7 +98,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  This is the revised schema in which an unnamed relationship is specified:  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
@@ -134,7 +134,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Copy the following template below and paste it into a text file. Save the file as sql-relationshipT.xml in the same directory where you saved sql-relationship.xml.  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
         <sql:xpath-query mapping-schema="sql-relationship.xml">  
             /Customer[@CustomerID=1]  
@@ -144,7 +144,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      The directory path specified for the mapping schema (sql-relationship.xml) is relative to the directory where the template is saved. An absolute path also can be specified, for example:  
   
-    ```  
+    ```xml
     mapping-schema="C:\MyDir\sql-relationship.xml"  
     ```  
   
@@ -154,7 +154,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  Here is the result set:  
   
-```  
+```xml
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1">   
     <Order OrderID="43860" CustomerID="1" />   
@@ -168,7 +168,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### B. Specifying a relationship chain  
  For this example, assume that you want the following XML document using data obtained from the AdventureWorks database:  
   
-```  
+```xml
 <Order SalesOrderID="43659">  
   <Product Name="Mountain Bike Socks, M"/>   
   <Product Name="Sport-100 Helmet, Blue"/>  
@@ -183,7 +183,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  In the following schema, the **msdata:relationship** annotation on the **\<Product>** element specifies two values: OrderOD and ODProduct. The order in which these values are specified is important.  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
@@ -221,7 +221,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  Instead of specifying a named relationship, you can specify an anonymous relationship. In this case, the entire contents of **\<annotation>**...**\</annotation>**, which describes the two relationships, appear as a child element of **\<Product>**.  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
@@ -263,7 +263,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Copy the following template below and paste it into a text file. Save the file as relationshipChainT.xml in the same directory where you saved relationshipChain.xml.  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
         <sql:xpath-query mapping-schema="relationshipChain.xml">  
             /Order  
@@ -273,7 +273,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      The directory path specified for the mapping schema (relationshipChain.xml) is relative to the directory where the template is saved. An absolute path also can be specified, for example:  
   
-    ```  
+    ```xml
     mapping-schema="C:\MyDir\relationshipChain.xml"  
     ```  
   
@@ -283,7 +283,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  Here is the result set:  
   
-```  
+```xml
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Order SalesOrderID="43659">  
     <Product Name="Mountain Bike Socks, M" />   
@@ -300,7 +300,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### C. Specifying the relationship annotation on an attribute  
  The schema in this example includes a \<Customer> element with a \<CustomerID> child element and an OrderIDList attribute of IDREFS type. The \<Customer> element maps to the Sales.Customer table in the AdventureWorks database. By default, the scope of this mapping applies to all the child elements or attributes unless **sql:relation** is specified on the child element or attribute, in which case, the appropriate primary-key/foreign-key relationship must be defined using the \<relationship> element. And the child element or attribute, which specifies the different table using the **relation** annotation, must also specify the **relationship** annotation.  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
@@ -334,7 +334,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Copy the following template and paste it into a file. Save the file as relationship-on-attributeT.xml in the same directory where you saved relationship-on-attribute.xml. The query in the template selects a customer with the CustomerID of 1.  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
       <sql:xpath-query mapping-schema="relationship-on-attribute.xml">  
         /Customer[CustomerID=1]  
@@ -354,7 +354,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  Here is the result set:  
   
-```  
+```xml
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer OrderIDList="43860 44501 45283 46042">  
     <CustomerID>1</CustomerID>   
@@ -369,7 +369,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  The **\<Order>** element includes the **\<OrderDetail>** child element. **\<sql:relationship>** is specified on **\<OrderDetail>** child element, so the order details that pertain to an order appear as child elements of that **\<Order>** element.  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
@@ -424,7 +424,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Copy the following template and paste it into a text file. Save the file as relationship-multiple-elementsT.xml in the same directory where you saved relationship-multiple-elements.xml. The query in the template returns order information for a customer with the CustomerID of 1 and SalesOrderID of 43860.  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
       <sql:xpath-query mapping-schema="relationship-multiple-elements.xml">  
         /Customer[@CustomerID=1]/Order[@SalesOrderID=43860]  
@@ -444,7 +444,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  Here is the result set:  
   
-```  
+```xml
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Order SalesOrderID="43860" OrderDate="2001-08-01" CustomerID="1">  
      <OrderDetail SalesOrderID="43860" ProductID="761" OrderQty="2" />   
@@ -466,14 +466,14 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 ### E. Specifying the \<sql:relationship> without the parent attribute  
  This example illustrates specifying the **\<sql:relationship>** without the **parent** attribute. For example, assume you have the following employee tables:  
   
-```  
+```xml
 Emp1(SalesPersonID, FirstName, LastName, ReportsTo)  
 Emp2(SalesPersonID, FirstName, LastName, ReportsTo)  
 ```  
   
  The following XML view has the **\<Emp1>** and **\<Emp2>** elements mapping to the Sales.Emp1 and Sales.Emp2 tables:  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
@@ -511,7 +511,12 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 1.  Create these tables in the AdventureWorks database:  
   
-    ```  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
     USE AdventureWorks2022;
     CREATE TABLE Sales.Emp1 (  
            SalesPersonID int primary key,   
@@ -529,7 +534,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 2.  Add this sample data in the tables:  
   
-    ```  
+    ```sql  
     INSERT INTO Sales.Emp1 values (279, 'Nancy', 'Devolio',NULL)  
     INSERT INTO Sales.Emp1 values (282, 'Andrew', 'Fuller',1)  
     INSERT INTO Sales.Emp1 values (276, 'Janet', 'Leverling',1)  
@@ -541,9 +546,9 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 3.  Copy the schema code above and paste it into a text file. Save the file as relationship-noparent.xml.  
   
-4.  Copy the following template and paste it into a text file. Save the file as relationship-noparentT.xml in the same directory where you saved relationship-noparent.xml. The query in the template selects all the \<Emp1> elements (therefore, the parent is Emp1).  
+4.  Copy the following template and paste it into a text file. Save the file as relationship-noparentT.xml in the same directory where you saved relationship-noparent.xml. The query in the template selects all the `<Emp1>` elements (therefore, the parent is Emp1).  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
         <sql:xpath-query mapping-schema="relationship-noparent.xml">  
             /Emp1  
@@ -563,7 +568,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
  Here is a partial result set:  
   
-```  
+```xml
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
 <Emp1 SalesPersonID="276" LastName="Leverling">  
   <Order SalesOrderID="43663" CustomerID="510" />   

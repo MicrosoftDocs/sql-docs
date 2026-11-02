@@ -701,10 +701,9 @@ OUTER APPLY dbo.GetReports(d.DeptMgrID);
 
 The following example retrieves a snapshot of all query plans residing in the plan cache, by querying the `sys.dm_exec_cached_plans` dynamic management view to retrieve the plan handles of all query plans in the cache. Then the `CROSS APPLY` operator is specified to pass the plan handles to `sys.dm_exec_query_plan`. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.
 
-```sql
-USE master;
-GO
+Connect to a database, and then run the code sample.
 
+```sql
 SELECT dbid,
     object_id,
     query_plan

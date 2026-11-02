@@ -171,6 +171,11 @@ While **datetimeoffset** isn't supported in data warehousing in [!INCLUDE [fabri
 
 Use `AT TIME ZONE` to add offset based on time zone rules when you know that the original **datetime** values are provided in the same time zone:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO

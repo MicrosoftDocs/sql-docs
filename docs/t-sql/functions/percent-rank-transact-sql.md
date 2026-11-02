@@ -55,6 +55,11 @@ The range of values returned by `PERCENT_RANK` is greater than `0` and less than
 
 The following example uses the `CUME_DIST` function to compute the salary percentile for each employee within a given department. The value returned by the `CUME_DIST` function represents the percent of employees that have a salary less than or equal to the current employee in the same department. The `PERCENT_RANK` function computes the rank of the employee's salary within a department as a percentage. The `PARTITION BY` clause is specified to partition the rows in the result set by department. The `ORDER BY` clause in the `OVER` clause orders the rows in each partition. The `ORDER BY` clause in the `SELECT` statement sorts the rows in the whole result set.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

@@ -86,6 +86,11 @@ The two statements that follow use the SET SHOWPLAN_XML settings to show the way
 
 The first query uses the Equals comparison operator (`=`) in the WHERE clause on an indexed column. The second query uses the LIKE operator in the WHERE clause. This forces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use a clustered index scan and find the data meeting the WHERE clause condition. The values in the `EstimateRows` and the `EstimatedTotalSubtreeCost` attributes are smaller for the first indexed query, indicating that it is processed much faster and uses fewer resources than the non-indexed query.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

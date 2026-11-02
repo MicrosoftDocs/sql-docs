@@ -76,6 +76,11 @@ GO
 
 The following example executes a query as part of the Boolean expression. Because there are 10 bikes in the `Product` table that meet the condition in the `WHERE` clause, the first print statement executes. You can change `> 5` to `> 15`, to see how the second part of the statement could execute.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

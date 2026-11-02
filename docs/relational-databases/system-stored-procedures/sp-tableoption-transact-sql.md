@@ -111,6 +111,11 @@ To execute `sp_tableoption` requires `ALTER` permission on the table.
 
 The following example specifies that the **xml** data in the `HumanResources.JobCandidate` table be stored out of row.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

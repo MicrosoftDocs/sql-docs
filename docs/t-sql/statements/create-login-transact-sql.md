@@ -179,7 +179,9 @@ Specifies the name of an asymmetric key to be associated with this login. This k
 - Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](alter-server-role-transact-sql.md).
 - If the **CREDENTIAL** option is used, also requires **ALTER ANY CREDENTIAL** permission on the server.
 
-### Permissions for SQL Server 2022 and later
+<a id="permissions-for-sql-server-2022-and-later"></a>
+
+### Permissions for SQL Server 2022 and later versions
 Requires CREATE LOGIN permission on the server or membership in the **##MS_LoginManager##** fixed server role.
 
 ## After creating a login
@@ -313,20 +315,20 @@ CREATE LOGIN Andreas
 
 ### <a id="i-creating-a-login-for-a-microsoft-entra-user"></a> I. Create a login for a Microsoft Entra user
 
- The following example creates a login for the Microsoft Entra account joe@contoso.onmicrosoft.com that exists in the Microsoft Entra tenant named *contoso*.
+ The following example creates a login for the Microsoft Entra account `test@contoso.onmicrosoft.com` that exists in the Microsoft Entra tenant named *contoso*.
 
 ```sql
-CREATE LOGIN [joe@contoso.onmicrosoft.com] FROM EXTERNAL PROVIDER
+CREATE LOGIN [test@contoso.onmicrosoft.com] FROM EXTERNAL PROVIDER
 
 GO
 ```
 
 ### <a id="j-creating-a-login-for-a-federated-microsoft-entra-account"></a> J. Create a login for a federated Microsoft Entra account
 
- The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in a tenant called *contoso*. User bob can also be a guest user.
+ The following example creates a login for a federated Microsoft Entra account `test@contoso.com` that exists in a tenant called *contoso*. User `test` can also be a guest user.
 
 ```sql
-CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+CREATE LOGIN [test@contoso.com] FROM EXTERNAL PROVIDER
 GO
 ```
 
@@ -493,10 +495,10 @@ GO
 
 ### C. Create a login using a Microsoft Entra account
 
-This example creates a login in the Azure SQL logical server using the credentials of a user `bob@contoso.com` that exists in the Microsoft Entra domain called `contoso`. Connect to the `master` databases, then use the following code sample.
+This example creates a login in the Azure SQL logical server using the credentials of a user `test@contoso.com` that exists in the Microsoft Entra domain called `contoso`. Connect to the `master` databases, then use the following code sample.
 
 ```sql
-CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER;
+CREATE LOGIN [test@contoso.com] FROM EXTERNAL PROVIDER;
 GO
 ```
 
@@ -682,11 +684,11 @@ My query returns 0x241C11948AEEB749B0D22646DB1A19F2 as the SID. Your query will 
 
 ### <a id="c-creating-a-login-for-a-microsoft-entra-user"></a> C. Create a login for a Microsoft Entra user
 
- The following example creates a login for the Microsoft Entra account joe@contoso.onmicrosoft.com that exists in the tenant named *contoso*.
+ The following example creates a login for the Microsoft Entra account `test@contoso.onmicrosoft.com` that exists in the tenant named *contoso*.
 
 
 ```sql
-CREATE LOGIN [joe@contoso.onmicrosoft.com] FROM EXTERNAL PROVIDER
+CREATE LOGIN [test@contoso.onmicrosoft.com] FROM EXTERNAL PROVIDER
 
 GO
 ```
@@ -695,11 +697,11 @@ GO
 
 ### <a id="d-creating-a-login-for-a-federated-microsoft-entra-account"></a> D. Create a login for a federated Microsoft Entra account
 
- The following example creates a login for a federated Microsoft Entra account bob@contoso.com that exists in a tenant called *contoso*. User bob can also be a guest user.
+ The following example creates a login for a federated Microsoft Entra account test@contoso.com that exists in a tenant called *contoso*. User `test` can also be a guest user.
 
 
 ```sql
-CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+CREATE LOGIN [test@contoso.com] FROM EXTERNAL PROVIDER
 GO
 ```
 

@@ -75,6 +75,11 @@ The same type as *scalar_expression*.
 
 The following example returns the hire date of the last employee in each department for the given salary (`Rate`). The `PARTITION BY` clause partitions the employees by department and the `LAST_VALUE` function is applied to each partition independently. The `ORDER BY` clause specified in the `OVER` clause determines the logical order in which the `LAST_VALUE` function is applied to the rows in each partition.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

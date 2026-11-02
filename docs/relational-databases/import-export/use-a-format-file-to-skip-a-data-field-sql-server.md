@@ -38,7 +38,14 @@ The examples of modified format files in this article are based on the sample ta
 
 The script creates a test database and a table named `myTestSkipField`. Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database.
+::: moniker-end
+
 ```sql
+USE [master];
+GO
 CREATE DATABASE TestDatabase;
 GO
 
@@ -233,6 +240,11 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 ### Use [BULK INSERT (Transact-SQL)](../../T-SQL/statements/bulk-insert-Transact-SQL.md) and [non-XML format file](non-XML-format-files-SQL-server.md)
 
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE TestDatabase;  

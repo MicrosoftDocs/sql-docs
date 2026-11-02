@@ -462,6 +462,11 @@ Because `CHECK` constraints reference only the columns on which the column-level
 
 The following example creates a DML trigger in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when there's an attempt to insert a new purchase order into the `PurchaseOrderHeader` table. To get the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message appears and the insertion doesn't happen.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 :::code language="sql" source="../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql":::
 
 ### D. Use a database-scoped DDL trigger

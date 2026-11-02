@@ -37,6 +37,11 @@ The parameter values supplied with a procedure call must be constants or a varia
 
 The following examples demonstrate passing parameter values to the procedure `uspGetWhereUsedProductID`. They illustrate how to pass parameters as constants and variables and also how to use a variable to pass the value of a function. 
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;  
 GO  
@@ -109,6 +114,11 @@ The default value of a parameter is used when:
 If no value can be specified appropriately as a default for the parameter, specify `NULL` as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
 
 The following example creates the `uspGetSalesYTD` procedure with one input parameter, `@SalesPerson`. `NULL` is assigned as the default value for the parameter and is used in error handling statements to return a custom error message for cases when the procedure is executed without a value for the `@SalesPerson` parameter.  
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;  
@@ -210,6 +220,11 @@ The direction of a parameter is either input, a value is passed into the body of
 To specify an output parameter, the `OUTPUT` keyword must be specified in the definition of the parameter in the `CREATE PROCEDURE` statement. The procedure returns the current value of the output parameter to the calling program when the procedure exits. The calling program must also use the `OUTPUT` keyword when executing the procedure to save the parameter's value in a variable that can be used in the calling program.  
 
 The following example creates the `Production.usp_GetList` procedure, which returns a list of products that have prices that do not exceed a specified amount. The example shows using multiple `SELECT` statements and multiple `OUTPUT` parameters. `OUTPUT` parameters allow an external procedure, a batch, or more than one [!INCLUDE [tsql](../../includes/tsql-md.md)] statement to access a value set during the procedure execution.  
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;  

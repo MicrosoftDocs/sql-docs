@@ -37,6 +37,11 @@ To run the sample queries, you also have to set up Full-Text Search. For more in
 
 The following example finds all products with a price of `$80.99` that contain the word `Mountain`:
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO
@@ -181,6 +186,11 @@ For more information about the syntax and arguments of these functions, see [CON
 
 You can use `CONTAINS`, `CONTAINSTABLE`, `FREETEXT`, or `FREETEXTTABLE` to search a table for a specific word or phrase. For example, if you want to search the `ProductReview` table in the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase `learning curve`, you could use the `CONTAINS` predicate as follows:
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO
@@ -324,6 +334,11 @@ For information about combining `CONTAINS` with other predicates that use the lo
 ### Example
 
 The following example uses the `CONTAINS` predicate to search for descriptions in which the description ID isn't equal to 5 and the description contains both the word `Aluminum` and the word `spindle`. The search condition uses the `AND` Boolean operator. This example uses the `ProductDescription` table of the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2025;

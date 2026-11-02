@@ -73,6 +73,11 @@ To delete a DML trigger requires ALTER permission on the table or view on which 
   
 3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) statement to create the `Sales.bonus_reminder` trigger. To delete the trigger, execute the [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) statement.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 --Create the trigger.  
 USE AdventureWorks2022;  

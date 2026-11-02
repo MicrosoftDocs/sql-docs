@@ -177,6 +177,11 @@ An expression that contains the information to be returned for the object specif
 
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumes that *object_id* is in the current database context. A query that references an *object_id* in another database returns `NULL` or incorrect results. For example, in the following query, the current database context is the `master` database. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] tries to return the property value for the specified *object_id* in that database instead of the database that is specified in the query. The query returns incorrect results because the view `vEmployee` is not in the `master` database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE master;
 GO
@@ -197,6 +202,11 @@ GO
 ### A. Find the base type of an object
 
  The following example creates a `SYNONYM` `MyEmployeeTable` for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and then returns the base type of the `SYNONYM`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

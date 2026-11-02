@@ -54,13 +54,18 @@ One of the ways to prevent a user from creating an XML schema collection is by d
 
 The example creates a user, `TestLogin1`, and a database. It also creates a relational schema, in addition to the `dbo` schema, in the database. Initially, the `CREATE XML SCHEMA` permission allows the user to create a schema collection anywhere in the database. The example then denies `ALTER` permission to the user on one of the relational schemas. This prevents the user from creating an XML schema collection in that relational schema.
 
+Connect directly to the server's `master` database to run the following commands to create a sample login and sample database.
+
 ```sql
-CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1';
+CREATE LOGIN TestLogin1 WITH password='<strong password>';
 GO
 CREATE DATABASE SampleDBForSchemaPermissions;
 GO
-USE SampleDBForSchemaPermissions;
-GO
+```
+
+Connect directly to intended sample database and run the following code sample.
+
+```sql
 -- Create another relational schema in the database.
 CREATE SCHEMA myOtherDBSchema;
 GO
@@ -103,8 +108,11 @@ GO
 -- Final cleanup
 SETUSER;
 GO
-USE master;
-GO
+```
+
+Connect directly to the server's `master` database to run the following commands to clean up the sample objects.
+
+```sql
 DROP DATABASE SampleDBForSchemaPermissions;
 GO
 DROP LOGIN TestLogin1;
@@ -119,13 +127,18 @@ The example creates a user, `TestLogin1`, and a database. It also creates a rela
 
 The `REFERENCES` permission on the XML schema collection lets `TestLogin1` use the schema in creating a typed `xml` column in a table. If the `REFERENCES` permission on the XML schema collection is denied, it prevents the `TestLogin1` from using the XML schema collection.
 
+Connect directly to the server's `master` database to run the following commands to create a sample login and sample database.
+
 ```sql
-CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1';
+CREATE LOGIN TestLogin1 WITH password='<strong password>';
 GO
 CREATE DATABASE SampleDBForSchemaPermissions;
 GO
-USE SampleDBForSchemaPermissions;
-GO
+```
+
+Connect directly to intended sample database and run the following code sample.
+
+```sql
 -- Create another relational schema in the database.
 CREATE SCHEMA myOtherDBSchema;
 GO
@@ -183,8 +196,11 @@ GO
 -- Final cleanup
 SETUSER;
 GO
-USE master;
-GO
+```
+
+Connect directly to the server's `master` database to run the following commands to clean up the sample objects.
+
+```sql
 DROP DATABASE SampleDBForSchemaPermissions;
 GO
 DROP LOGIN TestLogin1;

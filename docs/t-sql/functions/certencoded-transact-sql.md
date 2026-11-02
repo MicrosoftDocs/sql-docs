@@ -47,7 +47,14 @@ Use **CERTENCODED** and **CERTPRIVATEKEY** together to return, in binary form, d
 ### Simple Example  
 This example creates a certificate named `Shipping04`, and then uses the **CERTENCODED** function to return the binary encoding of the certificate. This example sets the certificate expiry date to October 31, 2040.
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended databases already exist, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements. Connect directly to the `master` and desired user databases separately.
+::: moniker-end
+
 ```sql
+USE [master];
+GO
 CREATE DATABASE TEST1;
 GO
 USE TEST1

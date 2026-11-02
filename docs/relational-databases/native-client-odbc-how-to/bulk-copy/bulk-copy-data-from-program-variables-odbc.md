@@ -61,6 +61,9 @@ helpviewer_keywords:
   
  Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the tables that the sample used.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
 USE AdventureWorks2022;
@@ -284,7 +287,7 @@ SQLLEN lDataLengthB;
    SQLFreeHandle(SQL_HANDLE_ENV, henv);  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  

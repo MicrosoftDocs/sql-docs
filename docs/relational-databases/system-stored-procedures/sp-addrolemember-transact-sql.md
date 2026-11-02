@@ -86,6 +86,11 @@ The following example adds the Windows login `Contoso\Mary5` to the [!INCLUDE [s
 
 Because `Contoso\Mary5` is known as the database user `Mary5` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, the user name `Mary5` must be specified. The statement fails unless a `Contoso\Mary5` login exists. Test by using a login from your domain.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

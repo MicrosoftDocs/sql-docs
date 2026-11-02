@@ -141,6 +141,11 @@ GO
 
 This example shows a case-sensitive search for the string `TEST` in searched string `This is a Test`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE tempdb;
 GO

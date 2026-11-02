@@ -3,7 +3,8 @@ title: "USE (Transact-SQL)"
 description: Changes the database context to the specified database or database snapshot.
 author: uc-msft
 ms.author: umajay
-ms.date: 07/15/2025
+ms.reviewer: wiassaf
+ms.date: 10/28/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -42,7 +43,7 @@ USE { database_name }
 
 The name of the database or database snapshot to which the user context is switched. Database and database snapshot names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).
 
-In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database parameter can only refer to the current database. If a database other than the current database is provided, the `USE` statement doesn't switch between databases, and error code 40508 is returned. To change databases, you must directly connect to the database. The `USE` statement is marked as not applicable to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] at the top of this page, because even though you can have the `USE` statement in a batch, it doesn't do anything.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the desired database. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database parameter can only refer to the current database. If a database other than the current database is provided, the `USE` statement doesn't switch between databases, and error code 40508 is returned. 
 
 ## Remarks
 

@@ -49,6 +49,11 @@ The _partition\_by\_clause_ divides the FROM clause result set into partitions, 
 ## Examples  
 This example uses the `CUME_DIST` function to calculate the salary percentile for each employee within a given department. `CUME_DIST` returns a value that represents the percent of employees with a salary less than or equal to the current employee in the same department. The `PERCENT_RANK` function calculates the percent rank of the employee's salary within a department. To partition the result set rows by department, the example specifies the _partition\_by\_clause_ value. The ORDER BY clause of the OVER clause logically orders the rows in each partition. The ORDER BY clause of the SELECT statement determines the display order of the result set.
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;  
 GO  

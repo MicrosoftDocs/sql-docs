@@ -38,6 +38,11 @@ The [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] orders the
 
 The following example uses `CONTAINSTABLE` to return only the top three matches.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2025;
 GO

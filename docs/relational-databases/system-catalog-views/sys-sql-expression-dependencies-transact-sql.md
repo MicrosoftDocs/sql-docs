@@ -100,6 +100,11 @@ Requires VIEW DEFINITION permission on the database and SELECT permission on `sy
 
 The following example returns the tables and columns referenced in the view `Production.vProductAndDescription`. The view depends on the entities (tables and columns) returned in the `referenced_entity_name` and `referenced_column_name` columns.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -154,11 +159,18 @@ WHERE referenced_id = OBJECT_ID(N'Production.Product');
 
 The following example returns all cross-database dependencies. The example first creates the database `db1` and two stored procedures that reference tables in the databases `db2` and `db3`. The `sys.sql_expression_dependencies` table is then queried to report the cross-database dependencies between the procedures and the tables. `NULL` is returned in the `referenced_schema_name` column for the referenced entity `t3` because a schema name isn't specified for that entity in the definition of the procedure.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended databases already exist, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements. Connect directly to the  `master` and desired user databases separately.
+::: moniker-end
+
 ```sql
-CREATE DATABASE db1;
+USE [master];
+GO
+CREATE DATABASE [db1];
 GO
 
-USE db1;
+USE [db1];
 GO
 
 CREATE PROCEDURE p1 AS

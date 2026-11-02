@@ -38,7 +38,12 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 ## Examples  
  The following example returns the definition of the DEFAULT constraint that is applied to the `VacationHours` column of the `HumanResources.Employee` table.  
   
-```  
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
 USE AdventureWorks2022;  
 GO  
 SELECT d.definition   

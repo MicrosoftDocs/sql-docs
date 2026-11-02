@@ -31,6 +31,9 @@ The following examples illustrate the use of the TYPE directive with FOR XML que
 
 The following query retrieves customer contact information from the `Contacts` table. Because the `TYPE` directive is specified in `FOR XML`, the result is returned as **xml** type.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 Go

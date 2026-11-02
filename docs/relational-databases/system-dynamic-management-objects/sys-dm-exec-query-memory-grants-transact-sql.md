@@ -67,7 +67,9 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], requires the `VIEW DATABASE STATE` permission in the database.   
    
-### Permissions for SQL Server 2022 and later
+<a id="permissions-for-sql-server-2022-and-later"></a>
+
+### Permissions for SQL Server 2022 and later versions
 
 Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
@@ -94,12 +96,10 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
     
     <sup>1</sup> In this scenario, the wait type is typically RESOURCE_SEMAPHORE. For more information, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](sys-dm-os-wait-stats-transact-sql.md). 
   
--   Search cache for queries with memory grants using [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](sys-dm-exec-cached-plans-transact-sql.md) and [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](sys-dm-exec-query-plan-transact-sql.md)  
+-   Search cache for queries with memory grants using [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](sys-dm-exec-cached-plans-transact-sql.md) and [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](sys-dm-exec-query-plan-transact-sql.md). Connect to a sample or test database, and then run the code sample.
   
     ```sql  
     -- retrieve every query plan from the plan cache  
-    USE master;  
-    GO  
     SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
     GO  
     ```  

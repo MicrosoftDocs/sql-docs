@@ -29,6 +29,9 @@ If the column name is one of the XPath node tests, the content is mapped as show
 
 The following query shows the use of the node tests as column names. It adds text nodes and comments in the resulting XML.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

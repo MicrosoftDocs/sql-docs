@@ -211,6 +211,11 @@ ORDER BY RANK DESC;
 
 The following example searches for all product names containing the words `frame`, `wheel`, or `tire`, and different weights are given to each word. For each returned row matching these search criteria, the relative closeness (ranking value) of the match is shown. In addition, the highest ranking rows are returned first.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

@@ -264,6 +264,11 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 
 The following example shrinks the size of a data file named `DataFile1` in the `UserDB` user database to 7 MB.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE UserDB;
 GO

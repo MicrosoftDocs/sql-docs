@@ -81,9 +81,6 @@ User must own the table, or be a member of the **sysadmin** fixed server role, o
 A default named `today` is defined in the current database by using `CREATE DEFAULT`. The following example binds the default to the `HireDate` column of the `Employee` table. Whenever a row is added to the `Employee` table and data for the `HireDate` column isn't supplied, the column gets the value of the default `today`.
 
 ```sql
-USE master;
-GO
-
 EXECUTE sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```
 
@@ -92,9 +89,6 @@ EXECUTE sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 A default named `def_ssn` and an alias data type named `ssn` already exists. The following example binds the default `def_ssn` to `ssn`. When a table is created, the default is inherited by all columns that are assigned the alias data type `ssn`. Existing columns of type `ssn` also inherit the default `def_ssn`, unless `futureonly` is specified for the *@futureonly* value, or the column has a default bound directly to it. Defaults bound to columns always take precedence over defaults bound to data types.
 
 ```sql
-USE master;
-GO
-
 EXECUTE sp_bindefault 'def_ssn', 'ssn';
 ```
 
@@ -103,9 +97,6 @@ EXECUTE sp_bindefault 'def_ssn', 'ssn';
 The following example binds the default `def_ssn` to the alias data type `ssn`. Because `futureonly` is specified, no existing columns of type `ssn` are affected.
 
 ```sql
-USE master;
-GO
-
 EXECUTE sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```
 
@@ -114,9 +105,6 @@ EXECUTE sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 The following example shows using delimited identifiers, `[t.1]`, in *@objname*.
 
 ```sql
-USE master;
-GO
-
 CREATE TABLE [t.1] (c1 INT);
 
 -- Notice the period as part of the table name.

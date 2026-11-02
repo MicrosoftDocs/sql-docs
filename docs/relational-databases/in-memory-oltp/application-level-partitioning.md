@@ -18,21 +18,27 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
  For a related sample, see [Application Pattern for Partitioning Memory-Optimized Tables](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md).  
   
 ## Code Listing  
-  
+
+On Microsoft SQL Server, to use memory-optimized features, your database must have a FILEGROUP that is declared with `MEMORY_OPTIMIZED_DATA`. Azure SQL Database doesn't require creating this FILEGROUP.
+
+Connect to the `master` database to create the `hkTest` sample database.
+
 ```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  
   
-CREATE DATABASE hkTest  
--- enable for In-Memory OLTP - change file path as needed  
+CREATE DATABASE [hkTest]  
+-- enable for In-Memory OLTP - change file path as needed 
+-- Azure SQL Database doesn't require creating this FILEGROUP.
 ALTER DATABASE hkTest ADD FILEGROUP hkTest_mod CONTAINS MEMORY_OPTIMIZED_DATA  
 ALTER DATABASE hkTest ADD FILE( NAME = 'hkTest_mod' , FILENAME = 'c:\data\hkTest_mod') TO FILEGROUP hkTest_mod;  
 GO  
-  
-use hkTest  
-go  
-  
+```
+
+Connect to the `hkTest` database and run the rest of the sample code:
+
+```sql
 -- create memory-optimized table   
 if OBJECT_ID(N'hot',N'U') IS NOT NULL  
    drop table [hot]  

@@ -91,6 +91,11 @@ Any nulls in the data set are ignored.
 
 The following example uses `PERCENTILE_CONT` and `PERCENTILE_DISC` to find the median employee salary in each department. These functions might not return the same value. `PERCENTILE_CONT` interpolates the appropriate value, which might or might not exist in the data set, while `PERCENTILE_DISC` always returns an actual value from the set.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

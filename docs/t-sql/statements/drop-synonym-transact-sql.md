@@ -63,16 +63,17 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ## Examples  
  The following example first creates a synonym, `MyProduct`, and then drops the synonym.  
   
+ Connect to a sample or test database, and then run the code sample. This sample uses the `AdventureWorks2022` sample database.
+
 ```sql  
-USE tempdb;  
-GO  
 -- Create a synonym for the Product table in AdventureWorks2022.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2022.Production.Product;  
 GO  
+```
+
+```sql
 -- Drop synonym MyProduct.  
-USE tempdb;  
-GO  
 DROP SYNONYM MyProduct;  
 GO  
 ```  

@@ -28,6 +28,11 @@ A full-text catalog is a virtual object that does not belong to any filegroup.
 ### Create a full-text catalog with Transact-SQL
 Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). For example:
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql 
 USE AdventureWorks;  
 GO  
@@ -53,6 +58,11 @@ GO
 Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function **FULLTEXTCATALOGPROPERTY** to get the value of various properties related to full-text catalogs. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 For example, run the following query to get the count of indexes in the full-text catalog `Catalog1`.
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql 
 USE <database>;  

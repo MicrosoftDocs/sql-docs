@@ -146,6 +146,11 @@ GO
 
 The following example shows how single and double quotation marks are used in string expressions with `SET QUOTED_IDENTIFIER` set to `ON` and `OFF`.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 SET QUOTED_IDENTIFIER OFF;
 GO

@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 ## Syntax  
   
-```  
+```sql  
   
 fn_listextendedproperty (   
     { default | 'property_name' | NULL }   
@@ -140,7 +140,7 @@ fn_listextendedproperty (
   
  **objname** is fixed as Latin1_General_CI_AI. However you can workaround this by overriding collation in comparison.  
   
-```  
+```sql  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
 0 AS 'column_order', NULL AS 'column_name', NULL AS 'column_datatype',  
 NULL AS 'column_length', Cast(e.value AS varchar(500)) AS 'column_description'  
@@ -158,7 +158,12 @@ WHERE o.name = 'Employee';
 ### A. Displaying extended properties on a database  
  The following example displays all extended properties set on the database object itself.  
   
-```  
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
+```sql  
 USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
@@ -179,7 +184,7 @@ GO
 ### B. Displaying extended properties on all columns in a table  
  The following example lists extended properties for columns in the `ScrapReason` table. This is contained in the schema `Production`.  
   
-```  
+```sql  
 USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
@@ -204,7 +209,7 @@ GO
 ### C. Displaying extended properties on all tables in a schema  
  The following example lists extended properties for all tables contained in the `Sales` schema.  
   
-```  
+```sql  
 USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  

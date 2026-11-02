@@ -73,6 +73,9 @@ If an authenticator was included at the time of the ciphertext encryption, `DECR
 ## Examples  
 This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 -- Get the passphrase from the user.  

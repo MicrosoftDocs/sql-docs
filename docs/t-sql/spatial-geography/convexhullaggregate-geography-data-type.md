@@ -25,7 +25,7 @@ Returns a convex hull for a given set of **geography** objects.
   
 ## Syntax  
   
-```  
+```sql  
   
 ConvexHullAggregate ( geography_operand )  
 ```  
@@ -51,6 +51,11 @@ ConvexHullAggregate ( geography_operand )
 ## Examples  
  The following example returns a convex hull of the set of **geography** objects.  
   
+ ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+ > [!NOTE]
+ > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+ ::: moniker-end
+
  ```sql
  USE AdventureWorks2022  
  GO  

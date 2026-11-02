@@ -96,6 +96,9 @@ Requires CREATE FULLTEXT CATALOG permissions in the current database and REFEREN
 > [!NOTE]  
 >  For an example that adds several predefined, well-known search properties to this search property list, see [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). After adding search properties to the list, the database administrator would need to use another ALTER FULLTEXT INDEX statement with the START FULL POPULATION clause.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  

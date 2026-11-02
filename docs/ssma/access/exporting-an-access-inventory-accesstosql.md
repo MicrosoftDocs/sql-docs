@@ -144,6 +144,9 @@ After you export metadata about Access databases, you can query the metadata. Th
 
 Before you run any of the following queries, run a `USE database_name` query to make sure the queries run against the database that contains the exported metadata. For example, if you exported metadata to a database named `MyAccessMetadata`, you would add the following statement at the beginning of the [!INCLUDE [tsql](../../includes/tsql-md.md)] code:
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE MyAccessMetadata;
 GO

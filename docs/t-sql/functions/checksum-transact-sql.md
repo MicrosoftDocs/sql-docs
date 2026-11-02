@@ -63,11 +63,11 @@ Therefore, to detect whether values have changed, we recommend use of `CHECKSUM`
 `CHECKSUM` ignores the nchar and nvarchar dash character (`N'-'` or `nchar(45)`).  Therefore, a hash collision is **guaranteed** for any two strings where the only differences are dashes.  Put another way, `Select checksum(nchar(45));` and `Select checksum(N'-');` both return a value of `0`, so they have no effect on the hash of any additional characters in the string or any additional data in the checksum list.
 Practical problems:
 1. Checksum ignores negative signature in numeric string
-```
+```sql
 SELECT CHECKSUM(N'1'), CHECKSUM(N'-1');
 ```
 2. A checksum comparison cannot detect that code was commented-out in stored proc definition
-```
+```sql
 CREATE PROCEDURE Checksum_Test AS
 BEGIN
   RAISERROR('Error Raised',18,1);
@@ -114,6 +114,11 @@ These examples show the use of `CHECKSUM` to build hash indexes.
   
 To build the hash index, the first example adds a computed checksum column to the table we want to index. It then builds an index on the checksum column. 
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 -- Create a checksum index.  
 

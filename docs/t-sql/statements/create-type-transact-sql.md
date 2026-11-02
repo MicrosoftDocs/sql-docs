@@ -317,7 +317,10 @@ GRANT REFERENCES ON TYPE::dbo.udt_money TO public
 
 If this is done, then this data type and `REFERENCES` permission will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions).
 
-If you don't want every new database to inherit the definition and permissions for this user-defined data type from model, you can use a startup stored procedure to create and assign the appropriate permissions only in `tempdb` database. For example:
+If you don't want every new database to inherit the definition and permissions for this user-defined data type from `model`, you can use a startup stored procedure to create and assign the appropriate permissions only in `tempdb` database. For example:
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], connecting directly to `tempdb` and the `USE` statement aren't available.
 
 ```sql
 USE master

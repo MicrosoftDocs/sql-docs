@@ -56,6 +56,11 @@ GO
 ### B. Using CURRENT_USER as a DEFAULT constraint  
 This example creates a table that uses `CURRENT_USER` as a `DEFAULT` constraint, for the `order_person` column, on a sales row.
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;  
 GO  

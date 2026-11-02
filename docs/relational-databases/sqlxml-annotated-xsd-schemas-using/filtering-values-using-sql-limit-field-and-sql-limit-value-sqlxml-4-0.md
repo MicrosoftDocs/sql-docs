@@ -15,7 +15,9 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
   You can limit rows that are returned from a database query on the basis of some limiting value. The **sql:limit-field** and **sql:limit-value** annotations are used to identify the database column that contains limiting values and to specify a specific limiting value to be used to filter the data returned.  
   
  The **sql:limit-field** annotation is used to identify a column that contains a limiting value; it is allowed on each mapped element or attribute.  
@@ -34,7 +36,8 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  In these examples, templates are used to specify XPath queries against the mapping XSD schema.  
   
-### A. Limiting the customer addresses returned to a specific address type  
+### A. Limiting the customer addresses returned to a specific address type
+
  In this example, a database contains two tables:  
   
 -   Customer (CustomerID, CompanyName)  
@@ -47,7 +50,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  This is the schema:  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
@@ -91,8 +94,14 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 1.  Create two tables in the **tempdb** database:  
   
-    ```  
-    USE tempdb  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
+    USE [tempdb];
+    GO
     CREATE TABLE Customer (CustomerID int primary key,   
                            CompanyName varchar(30))  
     CREATE TABLE Addresses(CustomerID int,   
@@ -102,7 +111,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Add the sample data:  
   
-    ```  
+    ```sql
     INSERT INTO Customer values (1, 'Company A')  
     INSERT INTO Customer values (2, 'Company B')  
   
@@ -120,7 +129,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 4.  Create the following template (LimitFieldValueT.xml), and save it in the same where you saved the schema (LimitFieldValue.xml) in the previous step:  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
         <sql:xpath-query mapping-schema="LimitFieldValue.xml">  
             /Customer  
@@ -130,7 +139,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      The directory path specified for the mapping schema (LimitFieldValue.xml) is relative to the directory where the template is saved. An absolute path also can be specified, for example:  
   
-    ```  
+    ```xml
     mapping-schema="C:\MyDir\LimitFieldValue.xml"  
     ```  
   
@@ -140,7 +149,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
  This is the result:  
   
-```  
+```xml
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1" CompanyName="Company A">   
      <BillTo>Obere Str. 57 Berlin</BillTo>   
@@ -208,7 +217,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 1.  Create two tables in the **tempdb** database:  
   
-    ```  
+    ```sql  
     USE tempdb  
     CREATE TABLE Orders ([OrderID] int NOT NULL ) ON [PRIMARY]  
     ALTER TABLE Orders WITH NOCHECK ADD   
@@ -226,7 +235,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 2.  Add the sample data:  
   
-    ```  
+    ```sql  
     INSERT INTO Orders ([OrderID]) values (10248)  
     INSERT INTO Orders ([OrderID]) values (10250)  
     INSERT INTO Orders ([OrderID]) values (10251)  
@@ -243,7 +252,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 4.  Create the following test script (TestQuery.vbs), modify MyServer to the name of your SQL Server computer and save it in the same directory as you used in the previous step to save the schema:  
   
-    ```  
+    ```vb
     Set conn = CreateObject("ADODB.Connection")  
     conn.Open "Provider=SQLOLEDB;Data Source=MyServer;Database=tempdb;Integrated Security=SSPI"  
     conn.Properties("SQLXML Version") = "sqlxml.4.0"   
@@ -279,7 +288,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
      This is the result:  
   
-    ```  
+    ```xml
     <root>  
       <Order OrderID="10248"/>  
       <Order OrderID="10250"/>  

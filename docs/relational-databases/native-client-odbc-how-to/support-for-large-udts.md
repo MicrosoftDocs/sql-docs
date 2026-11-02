@@ -9,7 +9,7 @@ ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Support for Large UDTs
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance Synapse Analytics](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
   This sample solution contains two projects. One project creates an assembly (DLL) from C# source code. This assembly contains the CLR type. A table will be added to the database. A column in the table will be of a type defined in the assembly, By default, this sample will use the master database. The second project is a native C application that reads data from the table.  
   
@@ -30,7 +30,7 @@ ms.topic: "reference"
   
  The fourth ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the assembly from the master database.  
   
-```  
+```cpp
 // LargeStringUDT.cs  
 // compile with: /target:library  
 using System;  
@@ -103,9 +103,10 @@ public class LargeStringUDT : INullable, IBinarySerialize {
     }  
 }  
 ```  
-  
-```  
-USE [MASTER]  
+
+```sql  
+USE [master];
+GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = 'LargeStringUDTs')  
    DROP TABLE LargeStringUDTs  
 GO  
@@ -137,7 +138,7 @@ INSERT INTO dbo.LargeStringUDTs (LargeString) VALUES (Convert(LargeStringUDT, 'T
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib  
 #include <stdio.h>  
 #include <tchar.h>  
@@ -254,8 +255,9 @@ End:
 };  
 ```  
   
-```  
-USE [MASTER]  
+```sql  
+USE [master];
+GO
 IF EXISTS (SELECT * FROM sys.objects WHERE name = 'LargeStringUDTs')  
    DROP TABLE LargeStringUDTs  
 GO  

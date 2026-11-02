@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
 # TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-  Returns the ID for a specified data type name.  
+The `TYPE_ID` function returns the ID for a specified data type name.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +47,15 @@ TYPE_ID ( [ schema_name ] type_name )
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as TYPE_ID may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Remarks  
- TYPE_ID returns NULL if the type name is not valid, or if the caller does not have sufficient permission to reference the type.  
+ `TYPE_ID` returns `NULL` if the type name is not valid, or if the caller does not have sufficient permission to reference the type.  
   
 ## Examples  
   
 ### A. Looking up the TYPE ID values for single- and two-part type names  
- The following example returns type ID for single- and two-part type names.  
-  
+
+ The following example returns type ID for single- and two-part type names. Connect to a desired sample or test database to run these code samples.
+
 ```sql
-USE tempdb;  
-GO  
 CREATE TYPE NewType FROM int;  
 GO  
 CREATE SCHEMA NewSchema;  
@@ -85,7 +84,7 @@ GO
 ```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,   
     TYPE_ID('datetime') AS typeID FROM table1;  
-```  
+```
   
 ## Related content
 

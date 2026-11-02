@@ -60,13 +60,18 @@ The `sys.dm_cdc_log_scan_sessions` DMV contains up to 32 scan sessions and an ag
 ## Permissions  
  Requires VIEW DATABASE STATE permission to query the `sys.dm_cdc_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-objects.md).  
   
-### Permissions for SQL Server 2022 and later
+<a id="permissions-for-sql-server-2022-and-later"></a>
+
+### Permissions for SQL Server 2022 and later versions
 
 Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## Examples  
  The following example returns information for the most current session.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

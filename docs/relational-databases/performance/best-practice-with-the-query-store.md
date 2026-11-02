@@ -122,6 +122,11 @@ If you run your workload on [!INCLUDE [ssSDS](../../includes/sssds-md.md)], sign
 
 Query Store can silently change the operation mode. Regularly monitor the state of Query Store to ensure that Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE [QueryStoreDB];
 GO
@@ -329,6 +334,11 @@ Query Store associates query entry with a containing object, such as stored proc
 ## Check the status of forced plans regularly
 
 Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. As with plan hints and plan guides, forcing a plan isn't a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing starts failing. In that case, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan](../system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE [QueryStoreDB];

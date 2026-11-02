@@ -177,9 +177,9 @@ To find the base type of the base object of a synonym, use the OBJECTPROPERTYEX 
 ### Examples  
 The following example returns the base type of a synonym's base object that is a local object.  
   
+Connect to a sample or test database, and then run the code sample. These code samples use the `AdventureWorks2022` sample database.
+
 ```sql  
-USE tempdb;  
-GO
 CREATE SCHEMA SynSchema
 GO  
 CREATE SYNONYM SynSchema.MyEmployee   

@@ -64,6 +64,11 @@ All transactions committed before a `sp_wait_for_database_copy_sync` call are se
 
 The following example invokes `sp_wait_for_database_copy_sync` to ensure that all transactions are committed to the primary database, `AdventureWorks`, get sent to its active secondary database on the target server `serverSecondary`.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks;
 GO

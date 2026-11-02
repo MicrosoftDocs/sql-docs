@@ -28,9 +28,6 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 Returns information about each request that is executing in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and task architecture guide](../thread-and-task-architecture-guide.md).
 
-> [!NOTE]  
-> To call this from dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], see [sys.dm_pdw_exec_requests](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool or [!INCLUDE [fabric](../../includes/fabric.md)], use `sys.dm_exec_requests`.
-
 | Column name | Data type | Description |
 | --- | --- | --- |
 | `session_id` | **smallint** | ID of the session to which this request is related. Not nullable. |
@@ -94,7 +91,7 @@ Returns information about each request that is executing in [!INCLUDE [ssNoVersi
 | `is_resumable` | **bit** | **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br />Indicates whether the request is a resumable index operation. |
 | `page_resource` | **binary(8)** | **Applies to**: [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]<br /><br />An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../system-functions/sys-fn-pagerescracker-transact-sql.md). |
 | `page_server_reads` | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed by this request. Not nullable. |
-| `dist_statement_id` | **uniqueidentifier** | **Applies to**: SQL Server 2022 and later versions, Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics (serverless pools only), and Microsoft Fabric<br /><br />Unique ID for the statement for the request submitted. Not nullable. |
+| `dist_statement_id` | **uniqueidentifier** | **Applies to**: SQL Server 2022 and later versions, Azure SQL Database, SQL database in Fabric, Azure SQL Managed Instance, Azure Synapse Analytics (serverless pools only), and Microsoft Fabric Data Warehouse<br /><br />Unique ID for the statement for the request submitted. Not nullable. |
 
 ## Remarks
 
@@ -104,13 +101,15 @@ When executing parallel requests in [row mode](../query-processing-architecture-
 
 The `wait_resource` column contains similar information to `resource_description` in [sys.dm_tran_locks](sys-dm-tran-locks-transact-sql.md) but is formatted differently.
 
+To call this from dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], see [sys.dm_pdw_exec_requests](sys-dm-pdw-exec-requests-transact-sql.md). For serverless SQL pool or [!INCLUDE [fabric](../../includes/fabric.md)], use `sys.dm_exec_requests`.
+
 ## Permissions
 
 If the user has `VIEW SERVER STATE` permission on the server, the user sees all executing sessions on the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user sees only the current session. `VIEW SERVER STATE` can't be granted in Azure SQL Database so `sys.dm_exec_requests` is always limited to the current connection.
 
 In availability group scenarios, if the secondary replica is set to **read-intent only**, the connection to the secondary must specify its application intent in connection string parameters by adding `applicationintent=readonly`. Otherwise, the access check for `sys.dm_exec_requests` doesn't pass for databases in the availability group, even if `VIEW SERVER STATE` permission is present.
 
-For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, `sys.dm_exec_requests` requires VIEW SERVER PERFORMANCE STATE permission on the server.
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, `sys.dm_exec_requests` requires `VIEW SERVER PERFORMANCE STATE` permission on the server.
 
 ## Examples
 

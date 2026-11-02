@@ -171,6 +171,11 @@ OBJECTPROPERTY ( ID , property )
 
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumes that *object_id* is in the current database context. A query that references an *object_id* in another database returns `NULL` or incorrect results. For example, in the following query, the current database context is the `master` database. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] tries to return the property value for the specified *object_id* in that database instead of the database specified in the query. The query returns incorrect results because the view `vEmployee` is not in the `master` database.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE master;
 GO
@@ -191,6 +196,11 @@ GO
 ### A. Verify that an object is a table
 
  The following example tests whether `UnitMeasure` is a table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;

@@ -332,6 +332,9 @@ Subsequent executions of this query by the application are affected by this plan
 
 The following example creates a plan guide for a simple ad hoc `SQL` statement. The desired query plan for this statement is provided in the plan guide by specifying the XML showplan for the query directly in the `@hints` parameter. The example first executes the `SQL` statement to generate a plan in the plan cache. For the purposes of this example, it's assumed that the generated plan is the desired plan and no further query tuning is required. The XML showplan for the query is obtained by querying the `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`, and `sys.dm_exec_text_query_plan` dynamic management views and is assigned to the `@xml_showplan` variable. The `@xml_showplan` variable is then passed to the `sp_create_plan_guide` statement in the `@hints` parameter. Or, you can create a plan guide from a query plan in the plan cache by using the [sp_create_plan_guide_from_handle](sp-create-plan-guide-from-handle-transact-sql.md) stored procedure.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

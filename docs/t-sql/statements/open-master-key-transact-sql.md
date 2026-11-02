@@ -41,7 +41,7 @@ Opens the Database Master Key of the current database.
 ## Syntax  
   
 ```syntaxsql  
-OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'   
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<strong password>'   
 ```
 
 > [!NOTE]
@@ -70,19 +70,24 @@ Requires CONTROL permission on the database.
 
 The following example opens the Database Master Key of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, which has been encrypted with a password.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
-OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<strong password>';  
 GO  
 ```  
   
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
-The following example opens the database master, which has been encrypted with a password.  
-  
+The following example opens the database `master`, which has been encrypted with a password.  
+
 ```sql  
 USE master;  
-OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<strong password>';  
 GO  
 CLOSE MASTER KEY;  
 GO  

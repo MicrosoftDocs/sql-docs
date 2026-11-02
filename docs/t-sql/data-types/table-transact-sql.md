@@ -141,6 +141,11 @@ In general, you use table variables whenever possible except when there is a sig
 
 The following example creates a **table** variable that stores the values specified in the OUTPUT clause of the UPDATE statement. Two `SELECT` statements follow, which return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. Results in the `INSERTED.ModifiedDate` column differ from the values in the `ModifiedDate` column in the `Employee` table. This difference is because the `AFTER UPDATE` trigger, which updates the value of `ModifiedDate` to the current date, is defined on the `Employee` table. However, the columns returned from `OUTPUT` reflect the data before triggers are fired. For more information, see [OUTPUT Clause (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

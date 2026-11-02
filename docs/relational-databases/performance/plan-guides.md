@@ -137,6 +137,11 @@ where SalesOrderID =  @so_id',
   
  Only plan guides in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database are eligible to be matched to this query. However, if [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is the current database and the following statements are run:  
   
+ ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+ > [!NOTE]
+ > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+ ::: moniker-end
+
  ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;

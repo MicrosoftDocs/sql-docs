@@ -100,6 +100,11 @@ GO
 
 The following example returns a list of the effective permissions of the caller on the [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 SELECT * FROM fn_my_permissions(NULL, 'DATABASE');

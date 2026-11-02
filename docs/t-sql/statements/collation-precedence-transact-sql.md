@@ -118,10 +118,9 @@ The Unicode data type of the simple expression `N'abc'` has a higher data type p
 
 The following examples show how the collation rules work. To run the examples, create the following test table.
 
-```sql
-USE tempdb;
-GO
+Connect to a desired sample or test database to run these code samples.
 
+```sql
 CREATE TABLE TestTab
 (
     id INT,

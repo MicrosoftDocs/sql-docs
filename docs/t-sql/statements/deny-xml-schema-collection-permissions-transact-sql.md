@@ -107,6 +107,9 @@ DENY permission  [ ,...n ] ON
 ## Examples  
  The following example denies `EXECUTE` permission on the XML schema collection `Invoices4` to the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  

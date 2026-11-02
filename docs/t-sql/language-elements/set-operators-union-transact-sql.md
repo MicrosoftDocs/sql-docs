@@ -259,6 +259,11 @@ ORDER BY CustomerKey;
 ### F. Using UNION of two SELECT statements with ORDER BY  
  When any SELECT statement in a UNION statement includes an ORDER BY clause, that clause should be placed after all SELECT statements. The following example shows the incorrect and correct use of `UNION` in two `SELECT` statements in which a column is ordered with ORDER BY.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 -- Uses AdventureWorks  
   

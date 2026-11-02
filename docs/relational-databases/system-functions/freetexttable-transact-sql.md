@@ -115,6 +115,11 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ### B. Using FREETEXT in an INNER JOIN  
  The following example returns the description and rank of any products with a description that matches the meaning of `high level of performance`.  
   
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;  
 GO  

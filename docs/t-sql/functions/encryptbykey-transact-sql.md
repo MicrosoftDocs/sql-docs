@@ -97,6 +97,11 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ### A. Encrypting a string with a symmetric key  
  The following example adds a column to the `Employee` table, and then encrypts the value of the Social Security number that is stored in column `NationalIDNumber`.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

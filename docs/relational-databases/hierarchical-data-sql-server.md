@@ -72,6 +72,11 @@ Two alternatives to **hierarchyid** for representing hierarchical data are:
 
 When you use the parent/child approach, each row contains a reference to the parent. The following table defines a typical table used to contain the parent and the child rows in a parent/child relationship:
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -150,6 +155,11 @@ Whether to have depth-first, breadth-first, or both, and which to make the clust
 ### Create indexes
 
 The GetLevel() method can be used to create a breadth first ordering. In the following example, both breadth-first and depth-first indexes are created:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks2022;
@@ -280,6 +290,11 @@ Although a **hierarchyid** column doesn't necessarily represent a tree, an appli
 #### Example using error detection
 
 In the following example, the sample code computes the new child `EmployeeId` value, and then detects any key violation and returns to `INS_EMP` marker to recompute the `EmployeeId` value for the new row:
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE AdventureWorks;

@@ -190,6 +190,11 @@ The following code example creates `ProductInventory` as an in-memory system-ver
 > [!NOTE]  
 > Make sure that your database allows creation of memory-optimized tables. See [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE TemporalProductInventory;
 GO

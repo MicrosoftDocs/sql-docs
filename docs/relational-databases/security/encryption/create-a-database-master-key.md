@@ -36,6 +36,11 @@ Requires `CONTROL` permission on the database.
    > [!CAUTION]  
    > You need the password to open the database master key. Make sure you store this password safely and securely.
 
+   ::: moniker range="=azuresqldb-current"
+   > [!NOTE]
+   > In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+   ::: moniker-end
+
    ```sql
    USE AdventureWorks2025;
    GO

@@ -150,9 +150,6 @@ position
 The following example uses the `COLLATE` function to explicitly specify the collation of the expression that is searched.
 
 ```sql
-USE tempdb;
-GO
-
 SELECT PATINDEX('%ein%', 'Das ist ein Test' COLLATE Latin1_General_BIN);
 GO
 ```

@@ -160,6 +160,9 @@ ProductID   Name
 
 In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.
 
+> [!NOTE]
+> This linked server example doesn't apply to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]. The linked-server setup and four-part names aren't supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+
 ```sql
 EXEC sp_addlinkedserver Server_Remote;
 GO

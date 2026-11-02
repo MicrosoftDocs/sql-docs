@@ -45,6 +45,9 @@ DROP FULLTEXT INDEX ON table_name
 ## Examples  
  The following example drops the full-text index that exists on the `JobCandidate` table.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

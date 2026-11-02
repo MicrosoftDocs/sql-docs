@@ -143,6 +143,9 @@ Caller must own the schema that contains the table, or be a member of the **sysa
 
 The following example resets the current identity value, if needed, for the specified table in the database.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended sample or test database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO

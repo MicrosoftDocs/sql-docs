@@ -72,6 +72,11 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
   
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the definition of the `iuPerson` trigger.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -105,7 +110,7 @@ GO
   
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the dependencies of `iuPerson` trigger.  
   
-```  
+```sql  
 USE AdventureWorks2022;   
 GO  
 SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
@@ -131,7 +136,7 @@ GO
   
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view information about DML triggers (`TR`) in the database.  
   
-```  
+```sql  
 USE AdventureWorks2022;   
 GO  
 SELECT  name, parent_id, create_date, modify_date, is_instead_of_trigger  

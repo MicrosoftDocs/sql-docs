@@ -470,6 +470,11 @@ This returns results such as the following:
 
 Under the database compatibility level setting of 90, variable assignment is allowed in a statement containing a top-level `UNION` operator, but returns unexpected results. For example, in the following statements, local variable `@v` is assigned the value of the column `BusinessEntityID` from the union of two tables. By definition, when the `SELECT` statement returns more than one value, the variable is assigned the last value that is returned. In this case, the variable is correctly assigned the last value, however, the result set of the `SELECT UNION` statement is also returned.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 ALTER DATABASE AdventureWorks2022
     SET COMPATIBILITY_LEVEL = 110;

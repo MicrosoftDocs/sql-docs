@@ -252,6 +252,11 @@ OPTION **(** \<query_hint> [ **,**... *n* ] **)**
   
  Use caution when specifying the FROM clause to provide the criteria for the update operation. The results of an UPDATE statement are undefined if the statement includes a FROM clause that isn't specified in such a way that only one value is available for each column occurrence that is updated, that is if the UPDATE statement isn't deterministic. For example, in the UPDATE statement in the following script, both rows in `Table1` meet the qualifications of the FROM clause in the UPDATE statement; but it is undefined which row from `Table1` is used to update the row in `Table2.`  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -405,9 +410,9 @@ To achieve the same functionality of **\.WRITE** with other character or binary 
   
  When a common table expression (CTE) is the target of an UPDATE statement, all references to the CTE in the statement must match. For example, if the CTE is assigned an alias in the FROM clause, the alias must be used for all other references to the CTE. Unambiguous CTE references are required because a CTE doesn't have an object ID, which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to recognize the implicit relationship between an object and its alias. Without this relationship, the query plan may produce unexpected join behavior and unintended query results. The following examples demonstrate correct and incorrect methods of specifying a CTE when the CTE is the target object of the update operation.  
   
-```sql  
-USE tempdb;  
-GO  
+ Connect to a desired sample or test database to run these code samples.
+
+```sql
 -- UPDATE statement with CTE references that are correctly matched.  
 DECLARE @x TABLE (ID INT, Value INT);  
 DECLARE @y TABLE (ID INT, Value INT);  
@@ -435,9 +440,7 @@ GO
 
 UPDATE statement with CTE references that are incorrectly matched.  
 
-```sql  
-USE tempdb;  
-GO  
+```sql
 DECLARE @x TABLE (ID INT, Value INT);  
 DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
@@ -500,6 +503,11 @@ If optimized locking is enabled, some aspects of locking behavior for `UPDATE` c
 #### A. Using a simple UPDATE statement  
  The following example updates a single column for all rows in the `Person.Address` table.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -773,10 +781,13 @@ GO
   
 #### O. Updating data in a remote table by using a linked server  
  The following example updates a table on a remote server. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkedServer`, is then specified as part of the four-part object name in the form server.catalog.schema.object. Note that you must specify a valid server name for `@datasrc`.  
-  
+
+> [!NOTE]
+> This linked server example doesn't apply to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]. The linked-server setup, four-part names, `OPENQUERY`, and `OPENDATASOURCE` aren't supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+
 ```sql  
-USE master;  
-GO  
+USE master;
+GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   

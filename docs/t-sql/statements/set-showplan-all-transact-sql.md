@@ -94,6 +94,9 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  The values in the **EstimateRows** and the **TotalSubtreeCost** columns are smaller for the first indexed query, indicating that it is processed much faster and uses fewer resources than the nonindexed query.  
   
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;  
 GO  

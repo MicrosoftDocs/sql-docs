@@ -87,9 +87,6 @@ To bind a rule to a table column, you must have `ALTER` permission on the table.
 Assuming that a rule named `today` is created in the current database by using the `CREATE RULE` statement, the following example binds the rule to the `HireDate` column of the `Employee` table. When a row is added to `Employee`, the data for the `HireDate` column is checked against the `today` rule.
 
 ```sql
-USE master;
-GO
-
 EXECUTE sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```
 
@@ -98,9 +95,6 @@ EXECUTE sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 Assuming the existence of a rule named `rule_ssn` and an alias data type named `ssn`, the following example binds `rule_ssn` to `ssn`. In a `CREATE TABLE` statement, columns of type `ssn` inherit the `rule_ssn` rule. Existing columns of type `ssn` also inherit the `rule_ssn` rule, unless **futureonly** is specified for *@futureonly*, or `ssn` has a rule bound directly to it. Rules bound to columns always take precedence over defaults bound to data types.
 
 ```sql
-USE master;
-GO
-
 EXECUTE sp_bindrule 'rule_ssn', 'ssn';
 ```
 
@@ -109,9 +103,6 @@ EXECUTE sp_bindrule 'rule_ssn', 'ssn';
 The following example binds the `rule_ssn` rule to the alias data type `ssn`. Because `futureonly` is specified, no existing columns of type `ssn` are affected.
 
 ```sql
-USE master;
-GO
-
 EXECUTE sp_bindrule rule_ssn, 'ssn', 'futureonly';
 ```
 
@@ -120,9 +111,6 @@ EXECUTE sp_bindrule rule_ssn, 'ssn', 'futureonly';
 The following example shows the use of delimited identifiers in *@objname* parameter.
 
 ```sql
-USE master;
-GO
-
 CREATE TABLE [t.2] (c1 INT);
 
 -- Notice the period as part of the table name.

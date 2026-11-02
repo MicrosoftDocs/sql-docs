@@ -9,7 +9,7 @@ ms.subservice: native-client
 ms.topic: "reference"
 ---
 # Call SQLColumns on a Table with Sparse Columns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server Azure SQL Managed Instance Synapse Analytics](../../includes/applies-to-version/sql-asdbmi-asa.md)]
 
   This sample shows how to call SQLColumns on a table with sparse columns that were defined by using ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -26,7 +26,7 @@ ms.topic: "reference"
   
  The second ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
   
-```  
+```cpp
 // compile with: /EHsc /D "UNICODE" odbc32.lib  
 #include <windows.h>  
 #include <stdio.h>  
@@ -203,7 +203,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql  
 use tempdb  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'tbl_sparse_test')  
      DROP TABLE tbl_sparse_test  

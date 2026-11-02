@@ -135,6 +135,11 @@ You can adapt the examples in the [sp_describe_first_result_set](../system-store
 
 The following code returns information about the results of a [!INCLUDE [tsql](../../includes/tsql-md.md)] statement.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE @AdventureWorks2025;
 

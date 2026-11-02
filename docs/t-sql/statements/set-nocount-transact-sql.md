@@ -68,6 +68,11 @@ Requires membership in the **public** role.
 
 The following example prevents the message about the number of rows affected from being displayed. In the following example, `(5 rows affected)` is only returned to clients from the first `SELECT` statement.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

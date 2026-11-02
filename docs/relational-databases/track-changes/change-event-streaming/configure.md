@@ -149,6 +149,11 @@ The example in this section uses Microsoft Entra authentication. This method is 
 
 Replace the values in angle brackets (`<value>`) with values for your environment.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE <database name>;
 

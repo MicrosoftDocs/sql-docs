@@ -72,6 +72,11 @@ For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/
 ### A. Compare values between years  
  The following example uses the LAG function to return the difference in sales quotas for a specific employee over previous years. Notice that because there is no lag value available for the first row, the default of zero (0) is returned.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql   
 USE AdventureWorks2022;  
 GO  

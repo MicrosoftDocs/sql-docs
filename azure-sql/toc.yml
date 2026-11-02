@@ -83,6 +83,24 @@
           href: database/transparent-data-encryption-byok-identity.md
         - name: Cross-tenant CMK
           href: database/transparent-data-encryption-byok-cross-tenant.md
+      - name: Ransomware recovery
+        items:
+        - name: Overview
+          href: database/ransomware-recovery-overview.md
+        - name: Step 0 - Protect
+          href: database/ransomware-recovery-protect.md
+        - name: Step 1 - Detect
+          href: database/ransomware-recovery-detect.md
+        - name: Step 2 - Contain
+          href: database/ransomware-recovery-contain.md
+        - name: Step 3 - Assess
+          href: database/ransomware-recovery-assess.md
+        - name: Step 4 - Restore
+          href: database/ransomware-recovery-restore.md
+        - name: Step 5 - Validate
+          href: database/ransomware-recovery-validate.md
+        - name: Step 6 - Harden
+          href: database/ransomware-recovery-harden.md
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
       items:
@@ -271,10 +289,14 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: Azure SQL Database free tier
-      href: database/free-tier.md
-    - name: Azure SQL Database free tier FAQ
-      href: database/free-tier-faq.yml
+    - name: Free tier
+      items:
+      - name: Deploy a free database
+        href: database/free-tier.md
+      - name: Frequently asked questions
+        href: database/free-tier-faq.yml
+      - name: Upgrade to Hyperscale
+        href: database/free-tier-upgrade-to-hyperscale.md
     - name: Intelligent applications and AI
       href: database/ai-artificial-intelligence-intelligent-applications.md
     - name: Copilot with Azure SQL Database
@@ -750,8 +772,6 @@
         href: database/manage-hyperscale-database.md
       - name: Convert to Hyperscale
         href: database/convert-to-hyperscale.md
-      - name: Upgrade a free tier database to Hyperscale
-        href: database/free-tier-upgrade-to-hyperscale.md
       - name: Reverse migrate from Hyperscale
         href: database/reverse-migrate-from-hyperscale.md
       - name: Create zone-redundant database

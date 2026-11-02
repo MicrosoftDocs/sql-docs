@@ -76,6 +76,11 @@ sqlcmd -l 60
 
 You can also use the `-v` option to set a scripting variable that exists in a script. In the following script (the file name is `testscript.sql`), `ColumnName` is a scripting variable.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 
@@ -153,6 +158,11 @@ Variables that are defined by using `SET` are part of the **cmd.exe** environmen
 ### A. Use the setvar command in a script
 
 Many **sqlcmd** options can be controlled in a script by using the **setvar** command. In the following example, the script `test.sql` is created in which the `SQLCMDLOGINTIMEOUT` variable is set to `60` seconds and another scripting variable, `server`, is set to `testserver`. The following code is in `test.sql`.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 :setvar SQLCMDLOGINTIMEOUT 60

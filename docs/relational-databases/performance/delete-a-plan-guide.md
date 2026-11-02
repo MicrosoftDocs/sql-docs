@@ -44,7 +44,7 @@ Deleting an OBJECT plan guide requires ALTER permission on the object (for examp
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     --Create a procedure on which to define the plan guide.  
     IF OBJECT_ID(N'Sales.GetSalesOrderByCountry', N'P') IS NOT NULL  
         DROP PROCEDURE Sales.GetSalesOrderByCountry;  
@@ -79,17 +79,17 @@ Deleting an OBJECT plan guide requires ALTER permission on the object (for examp
   
 #### To delete all plan guides in a database  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+1. On the Standard bar, select **New Query**. 
+
+1. Connect to a user database.
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+1. Copy and paste the following example into the query window and select **Execute**.  
   
-    ```  
-    USE AdventureWorks2022;  
-    GO  
+    ```sql  
     EXEC sp_control_plan_guide N'DROP ALL';  
-    GO  
+    GO
     ```  
   
  For more information, see [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  

@@ -23,6 +23,9 @@ The following examples illustrate the use of PATH mode in generating XML from a 
 
 This query specifies a FOR XML PATH mode.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -111,6 +114,9 @@ This is the result:
 ## Specify XPath-like column names
 
 In the following query, the `ProductModelID` column name specified starts with '\@' and doesn't contain a slash mark ('/'). Therefore, an attribute of the `<row>` element that has the corresponding column value is created in the resulting XML.
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
 
 ```sql
 USE AdventureWorks2022;
@@ -244,6 +250,9 @@ For each product model, this query constructs a value list of product IDs. For e
 
 This is the query that produces the XML you want:
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -341,6 +350,9 @@ This is the result:
 ```
 
 The following query is similar to example C, except that it uses `WITH XMLNAMESPACES` to include namespaces in the XML result. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
 
 ```sql
 USE AdventureWorks2022;

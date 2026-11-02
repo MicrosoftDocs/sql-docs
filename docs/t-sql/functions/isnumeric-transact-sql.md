@@ -65,6 +65,11 @@ The [expression](../language-elements/expressions-transact-sql.md) to be evaluat
 
 The following example uses `ISNUMERIC` to return all the postal codes that aren't numeric values.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO
@@ -79,6 +84,11 @@ GO
 ## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]
 
 The following example uses `ISNUMERIC` to return whether the database name and ID are numeric values.
+
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to the `master` database and run the rest of the code sample.
+::: moniker-end
 
 ```sql
 USE master;

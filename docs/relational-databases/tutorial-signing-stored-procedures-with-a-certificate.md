@@ -38,6 +38,11 @@ For instructions on restoring a database in SQL Server Management Studio, see [R
 ## 1. Configure the Environment  
 To set the initial context of the example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] open a new Query and run the following code to open the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. This code changes the database context to [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] and creates a new server login and database user account (`TestCreditRatingUser`), using a password.  
   
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -104,6 +109,11 @@ For more information on signing stored procedures, see [ADD SIGNATURE &#40;Trans
 ## 4. Create a Certificate Account Using the Certificate  
 Run this code to create a database user (`TestCreditRatingcertificateAccount`) from the certificate. This account has no server login, and will ultimately control access to the underlying tables.  
   
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  
@@ -183,6 +193,11 @@ For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#
 ## <a name="CompleteExample"></a>Complete Example  
 This section displays the complete example code.  
   
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 /* Step 1 - Open the AdventureWorks2022 database */  
 USE AdventureWorks2022;  

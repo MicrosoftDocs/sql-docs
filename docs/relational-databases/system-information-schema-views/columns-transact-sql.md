@@ -58,6 +58,11 @@ To retrieve information from these views, specify the fully qualified name of **
 
 The **ORDINAL_POSITION** column of the **INFORMATION_SCHEMA.COLUMNS** view is not compatible with the bit pattern of columns returned by the COLUMNS_UPDATED function. To obtain a bit pattern that is compatible with COLUMNS_UPDATED, you must reference the **ColumnID** property of the COLUMNPROPERTY system function when you query the **INFORMATION_SCHEMA.COLUMNS** view. For example:  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 GO  

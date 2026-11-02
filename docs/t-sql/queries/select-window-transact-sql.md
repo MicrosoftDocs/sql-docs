@@ -107,6 +107,11 @@ The restrictions for usage of window specifications in the `OVER` clause with th
 
 The following example query shows uses a named window in the `OVER` clause.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 ALTER DATABASE AdventureWorks2025
 SET COMPATIBILITY_LEVEL = 160;

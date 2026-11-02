@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_checkpoint_stats dynamic management view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017  || =azuresqldb-current || =azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 
@@ -25,6 +25,9 @@ monikerRange: ">=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-cu
 Returns statistics about the [!INCLUDE [inmemory](../../includes/inmemory-md.md)] checkpoint operations in the current database. If the database has no [!INCLUDE [inmemory](../../includes/inmemory-md.md)] objects, `sys.dm_db_xtp_checkpoint_stats` returns an empty result set.
 
 For more information, see [[!INCLUDE [inmemory](../../includes/inmemory-md.md)] (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md).
+
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
 
 ```sql
 USE [In_Memory_db_name]
@@ -75,7 +78,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 
 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and earlier versions require `VIEW DATABASE STATE` permission on the database.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, require `VIEW DATABASE PERFORMANCE STATE` permission on the database.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Related content
 

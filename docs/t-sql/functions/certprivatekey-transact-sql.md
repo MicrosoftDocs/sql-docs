@@ -60,7 +60,14 @@ Use **CERTENCODED** and **CERTPRIVATEKEY** together to return different portions
   
 ## Examples  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> When you execute `CREATE DATABASE` without additional options in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the database is created on the logical server with default settings. In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], if the intended database already exists, you can skip the sample's `CREATE DATABASE` and unsupported `USE` statements and connect directly to that database.
+::: moniker-end
+
 ```sql
+USE [master];
+GO
 CREATE DATABASE TEST1;  
 GO  
 USE TEST1  

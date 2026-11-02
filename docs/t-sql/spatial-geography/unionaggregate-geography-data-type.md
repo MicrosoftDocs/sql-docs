@@ -24,7 +24,7 @@ Performs a union operation on a set of geography objects.
   
 ## Syntax  
   
-```  
+```sql  
   
 UnionAggregate ( geography_operand )  
 ```  
@@ -47,6 +47,11 @@ UnionAggregate ( geography_operand )
 ## Examples  
  The following example performs a `UnionAggregate` on a set of **geography** location points within a city.  
   
+ ::: moniker range="=azuresqldb-current || =fabric-sqldb"
+ > [!NOTE]
+ > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+ ::: moniker-end
+
  ```sql
  USE AdventureWorks2022  
  GO  

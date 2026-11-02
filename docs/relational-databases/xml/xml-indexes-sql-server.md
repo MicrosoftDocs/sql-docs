@@ -116,6 +116,9 @@ Regarding the primary XML index, instead of shredding each XML binary large obje
 
 The primary XML index isn't used when retrieving a full XML instance. For example, the following query retrieves from the table the whole XML instance that describes the manufacturing instructions for a specific product model.
 
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+
 ```sql
 USE AdventureWorks2022;
 

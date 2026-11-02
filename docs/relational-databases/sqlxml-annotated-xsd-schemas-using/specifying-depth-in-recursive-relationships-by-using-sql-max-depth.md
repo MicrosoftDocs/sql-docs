@@ -96,8 +96,14 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 1.  Create a sample table called Emp in the tempdb database to which the virtual root points.  
   
-    ```  
-    USE tempdb  
+    ::: moniker range="=azuresqldb-current"
+    > [!NOTE]
+    > In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available and direct connections to `tempdb` aren't supported. Connect to a desired sample or test database and run the rest of the code sample.
+    ::: moniker-end
+
+    ```sql  
+    USE [tempdb];
+    GO
     CREATE TABLE Emp (  
            EmployeeID int primary key,   
            FirstName  varchar(20),   
@@ -107,7 +113,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 2.  Add this sample data:  
   
-    ```  
+    ```sql  
     INSERT INTO Emp values (1, 'Nancy', 'Devolio',NULL)  
     INSERT INTO Emp values (2, 'Andrew', 'Fuller',1)  
     INSERT INTO Emp values (3, 'Janet', 'Leverling',1)  
@@ -121,7 +127,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 4.  Copy the following template and paste it into a text file. Save the file as maxDepthT.xml in the same directory where you saved maxDepth.xml. The query in the template returns all the employees in the Emp table.  
   
-    ```  
+    ```xml
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
       <sql:xpath-query mapping-schema="maxDepth.xml">  
         /Emp  
@@ -131,7 +137,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
      The directory path specified for the mapping schema (maxDepth.xml) is relative to the directory where the template is saved. An absolute path also can be specified, for example:  
   
-    ```  
+    ```xml
     mapping-schema="C:\MyDir\maxDepth.xml"  
     ```  
   
@@ -139,7 +145,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 
  This is the result:  
   
-```  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>   
 <root>  
   <Emp FirstName="Nancy" EmployeeID="1" LastName="Devolio">  
@@ -164,7 +170,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  For example, this XML fragment shows the subordinates of employee 1:  
   
-```  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>   
 <root>  
 <Emp FirstName="Nancy" EmployeeID="1" LastName="Devolio">  
@@ -178,7 +184,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  This is the revised schema:  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
@@ -236,7 +242,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 #### Example B  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
@@ -278,7 +284,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 #### Example C  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -326,7 +332,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
   
 #### Example D  
   
-```  
+```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  

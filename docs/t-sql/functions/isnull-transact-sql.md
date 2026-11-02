@@ -67,6 +67,11 @@ The value of *check_expression* is returned if it's not `NULL`. Otherwise, *repl
 
 The following example finds the average of the weight of all products. It substitutes the value `50` for all `NULL` entries in the `Weight` column of the `Product` table.
 
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql
 USE AdventureWorks2022;
 GO

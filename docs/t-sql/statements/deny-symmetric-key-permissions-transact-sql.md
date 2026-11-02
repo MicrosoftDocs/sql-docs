@@ -105,6 +105,11 @@ DENY permission [ ,...n ]
 ## Examples  
  The following example denies `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
+::: moniker range="=azuresqldb-current || =fabric-sqldb"
+> [!NOTE]
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], the `USE` statement isn't available. Instead, connect directly to intended database and run the rest of the code sample.
+::: moniker-end
+
 ```sql  
 USE AdventureWorks2022;  
 DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  

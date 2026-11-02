@@ -90,7 +90,7 @@ The Developer edition supports only one client for [SQL Server Distributed Repla
 | --- | :---: | :---: | :---: | :---: |
 | Log shipping | Yes | Yes | Yes | No |
 | Backup compression | Yes | Yes | No | No |
-| Database snapshot | Yes | Yes | No | No |
+| Database snapshot | Yes | Yes | Yes | Yes |
 | Always On failover cluster instances <sup>1</sup> | Yes | Yes | No | No |
 | Always On availability groups <sup>2</sup> | Yes | No | No | No |
 | Basic availability groups <sup>3</sup> | No | Yes | No | No |

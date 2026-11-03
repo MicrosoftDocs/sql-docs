@@ -196,7 +196,7 @@ In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)], only single-column `FULLS
 When `ON`, the statistics retain the creation sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When `OFF`, statistics sampling percentage gets reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is `OFF`.
 
 > [!NOTE]  
-> If the table is truncated, all statistics built on the truncated heap or B-tree (HoBT) will revert to using the default sampling percentage. Similarly, if statistics are updated on an object with no rows, it reverts to using the default sampling percentage even if `PERSIST_SAMPLE_PERCENT` was previously configured.
+> If statistics are updated on an object with no rows, for example after `TRUNCATE TABLE` and before the table is loaded again, they revert to using the default sampling percentage even if `PERSIST_SAMPLE_PERCENT` was previously configured.
 
 #### STATS_STREAM = *stats_stream*
 

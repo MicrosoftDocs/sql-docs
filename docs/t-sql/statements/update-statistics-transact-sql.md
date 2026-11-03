@@ -160,7 +160,7 @@ When `ON`, the statistics will retain the set sampling percentage for subsequent
 
 If `AUTO_UPDATE_STATISTICS` is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not. `RESAMPLE` behavior isn't affected by this option.
 
-If the table is truncated, all statistics built on the truncated heap or B-tree (HoBT) will revert to using the default sampling percentage. Similarly, if statistics are updated on an object with no rows, it reverts to using the default sampling percentage even if `PERSIST_SAMPLE_PERCENT` was previously configured.
+If statistics are updated on an object with no rows, for example after `TRUNCATE TABLE` and before the table is loaded again, they revert to using the default sampling percentage even if `PERSIST_SAMPLE_PERCENT` was previously configured.
 
 > [!NOTE]  
 > In [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], when rebuilding an index which previously had statistics updated with `PERSIST_SAMPLE_PERCENT`, the persisted sample percent is reset back to default. Starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP2 CU17, [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU26, and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU10, the persisted sample percent is kept even when rebuilding an index.

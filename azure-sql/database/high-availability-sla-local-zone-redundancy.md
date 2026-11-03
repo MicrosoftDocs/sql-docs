@@ -5,7 +5,7 @@ description: Learn about the architecture of Azure SQL Database that achieves av
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: peskount, mahyon
-ms.date: 10/21/2025
+ms.date: 10/23/2026
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: concept-article
@@ -254,7 +254,7 @@ For more on Azure SQL Database high availability and disaster recovery, review t
 
 A failover can be initiated using PowerShell, REST API, or Azure CLI:
 
-| Deployment type | PowerShell | REST API | Azure CLI | Portal (Preview) |
+| Deployment type | PowerShell | REST API | Azure CLI | Portal |
 | :--- | :--- | :--- | :--- | :--- |
 | Database | [Invoke-AzSqlDatabaseFailover](/powershell/module/az.sql/invoke-azsqldatabasefailover) | [Database failover](/rest/api/sql/databases/failover) | [az rest](/cli/azure/reference-index#az-rest) might be used to invoke a REST API call from Azure CLI | [Settings > Maintenance > Restart](restart-database.md) |
 | Elastic pool | [Invoke-AzSqlElasticPoolFailover](/powershell/module/az.sql/invoke-azsqlelasticpoolfailover) | [Elastic pool failover](/rest/api/sql/elastic-pools/failover) | [az rest](/cli/azure/reference-index#az-rest) might be used to invoke a REST API call from Azure CLI | [Settings > Maintenance > Restart](restart-database.md) |

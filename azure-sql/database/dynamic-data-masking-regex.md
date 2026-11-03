@@ -5,7 +5,7 @@ description: Use REGEXP_REPLACE in Azure SQL Database dynamic data masking to de
 author: madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto, wiassaf
-ms.date: 05/28/2026
+ms.date: 11/03/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -33,7 +33,7 @@ DDM lets database administrators and developers define masking rules for sensiti
 
 Azure SQL Database provides several built-in masking functions: `default()`, `email()`, `random()`, `partial()`, and `datetime()`. Most of these functions apply rigid patterns that you can't customize and aren't flexible for variable-length data.
 
-For example, the built-in `email()` mask always produces a format like `aXXX@xxxx.com` for an email address such as `alice.johnson@example.com`. This mask exposes only the first letter of the username and obscures the domain name. The fixed output isn't useful when you need to retain the domain name for business workflows.
+For example, the built-in `email()` mask always produces a format like `aXXX@XXXX.com` for an email address such as `alice.johnson@example.com`. This mask exposes only the first letter of the username and obscures the domain name. The fixed output isn't useful when you need to retain the domain name for business workflows.
 
 ## What is regex-based masking?
 

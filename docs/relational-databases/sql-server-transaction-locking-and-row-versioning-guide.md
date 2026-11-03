@@ -4,7 +4,7 @@ description: Transaction locking and row versioning guide
 author: thesqlsith
 ms.author: derekw
 ms.reviewer: wiassaf, dfurman
-ms.date: 04/22/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: performance
 ms.topic: concept-article
@@ -19,6 +19,7 @@ helpviewer_keywords:
   - "lock escalation, [SQL Server]"
   - "lock partitioning, [SQL Server]"
 monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+ai-usage: ai-assisted
 ---
 # Transaction locking and row versioning guide
 
@@ -1297,11 +1298,33 @@ Existing `ntext`, `text`, and `image` large object (LOB) data isn't updated to m
 
 Enough disk space should be allocated to accommodate this requirement.
 
+#### CPU used to read row versions
+
+When a statement needs an earlier version of a row, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] follows the version chain of the row, starting with the newest version, until it finds the version that is visible to the statement. Each version examined along the way is a *version read*. For example:
+
+- A `SNAPSHOT` transaction reads earlier versions of rows that were modified after the transaction started.
+- A statement that uses `READ COMMITTED` isolation with row versioning reads the last committed version of a row that is being modified by another active transaction.
+- In a database with ADR enabled, a statement reads the last committed version of a row that was modified by a rolled back transaction, until the original row is restored by the background logical revert process.
+
+The cost of a version read depends on where the version is stored:
+
+- Reading an in-row version doesn't require access to another page. However, reconstructing the earlier version of the row from the data stored in the row consumes CPU.
+- Reading an off-row version, either from the version store in `tempdb` or from the off-row PVS internal table, requires access to a version store page, in addition to the CPU used to process the version.
+
+Version reads are usually infrequent and inexpensive, because the version cleanup process removes row versions that are no longer needed. When version cleanup is delayed, for example by a long-running transaction or by an idle session with an open transaction, the cost of version reads increases in two ways:
+
+- **Version chains get longer.** Every modification of a frequently modified row adds another version to its version chain. Statements that need an earlier version of the row must traverse more versions to find it.
+- **More versions are stored off-row.** A row can hold only one in-row version, and only if the version that is already in the row is no longer needed. While version cleanup is delayed, further modifications of a row that was already modified during that time store their versions off-row. Off-row versions are more expensive to write and to read than in-row versions.
+
+As a result, the CPU usage and the number of logical reads of many queries can increase gradually, even though query plans and the workload don't change.
+
+To measure version reads for individual queries, use [version read metrics](#version-read-metrics). To find and resolve the reason why version cleanup is delayed in a database with ADR enabled, see [Monitor and troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md).
+
 <a id="monitoring-row-versioning-and-the-version-store"></a>
 
 #### Monitor row versioning and the version store
 
-For monitoring row versioning, version store, and snapshot isolation processes for performance and problems, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] provides tools in the form of Dynamic Management Views (DMVs) and performance counters.
+For monitoring row versioning, version store, and snapshot isolation processes for performance and problems, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] provides tools in the form of Dynamic Management Views (DMVs) and performance counters. [Version read metrics](#version-read-metrics) are also available.
 
 ##### DMVs
 
@@ -1374,6 +1397,66 @@ The following performance counters monitor the version store in `tempdb`, as wel
 
     > [!NOTE]  
     > The sum of Update Snapshot Transactions and NonSnapshot Version Transactions represents the total number of transactions that participate in version generation. The difference of Snapshot Transactions and Update Snapshot Transactions represents the number of read-only snapshot transactions.
+
+##### Version read metrics
+
+**Applies to**: [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)]
+
+Version read metrics report the number of row versions that statements read while traversing version chains, as described in [CPU used to read row versions](#cpu-used-to-read-row-versions). A row that is read in its current version doesn't add to the count. If a statement traverses three earlier versions of a row to find the version that is visible to it, the count increases by three.
+
+Version reads are counted separately for each type of version store:
+
+| Version store type | Description |
+| --- | --- |
+| `tempdb` version store | Versions stored in the version store in `tempdb`. This version store is used for databases that don't have ADR enabled. |
+| In-row PVS | Versions stored in the data row, either as a complete earlier version of the row or as the difference from the current version. |
+| Off-row PVS | Versions stored in the PVS internal table in the user database. |
+| Online index PVS | Versions stored in a separate PVS internal table while an online index operation is running. An online index operation might need these versions until it completes. Storing them separately lets the version cleanup process remove other versions in the meantime. |
+
+A single row read can produce version reads of more than one type. For example, a version chain can start with an in-row version and continue with off-row versions.
+
+Version read metrics are available in the following places:
+
+| Location | Scope | Details |
+| --- | --- | --- |
+| [SET STATISTICS IO](../t-sql/statements/set-statistics-io-transact-sql.md) | Each object accessed by a statement | A line for each table or indexed view with version reads follows the I/O output and shows the number of version reads for each version store type. |
+| Actual execution plan | Each plan operator and thread | The `RunTimeCountersPerThread` element of operators that read a table or an index includes the `ActualTempdbVersionsRead`, `ActualInRowPvsVersionsRead`, `ActualOffRowPvsVersionsRead`, and `ActualOnlineIndexPvsVersionsRead` attributes. If at least one of these values isn't zero, all four attributes are present, including those with zero values. Otherwise, none of them are present. |
+| [Extended events](extended-events/extended-events.md) | Each statement, batch, or remote procedure call | The `sql_statement_completed`, `sp_statement_completed`, `sql_batch_completed`, and `rpc_completed` events include the `tempdb_versions_read`, `inrow_pvs_versions_read`, `offrow_pvs_versions_read`, and `online_index_pvs_versions_read` fields. |
+| [sys.dm_exec_query_stats](system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md), [sys.dm_exec_procedure_stats](system-dynamic-management-objects/sys-dm-exec-procedure-stats-transact-sql.md), [sys.dm_exec_trigger_stats](system-dynamic-management-objects/sys-dm-exec-trigger-stats-transact-sql.md), [sys.dm_exec_function_stats](system-dynamic-management-objects/sys-dm-exec-function-stats-transact-sql.md) | Each cached query plan, stored procedure, trigger, or function | The `total_version_reads`, `last_version_reads`, `min_version_reads`, and `max_version_reads` columns. The values are the sum of version reads of all types. |
+| [sys.dm_exec_requests](system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md) | Each executing request | The `version_reads` column. The value is the sum of version reads of all types performed by the request so far. |
+| [sys.dm_exec_sessions](system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql.md) | Each session | The `version_reads` column. The value is the sum of version reads of all types performed by completed requests in the session. |
+
+Consider the following when you use version read metrics:
+
+- `sys.dm_exec_requests` and `sys.dm_exec_sessions` include version reads performed while a query is compiled, for example when statistics are created or updated automatically. `sys.dm_exec_query_stats` and the other execution statistics DMVs include only version reads performed while a query is executed. For this reason, the values reported for the same statement might differ.
+- Reads of the `inserted` and `deleted` tables in triggers aren't counted. The [!INCLUDE [Database Engine](../includes/ssde-md.md)] builds these tables by reading the row versions created by the triggering statement directly, without traversing version chains.
+- Reads of local temporary tables and table variables aren't counted, because these objects aren't versioned.
+- Memory-optimized tables use a different row versioning mechanism. Reads of memory-optimized tables aren't counted.
+- The `PVS off-row record retrieved/sec` and `PVS in-row diff retrieved/sec` counters in the [SQLServer:Databases](performance-monitor/sql-server-databases-object.md) performance object report the rate of PVS reads for an entire database, including reads by internal processes. These counters don't include version reads in `tempdb`, and don't attribute version reads to queries.
+- The `max_version_chain_traversed` and `average_version_chain_traversed` columns in [sys.dm_tran_active_snapshot_database_transactions](system-dynamic-management-objects/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) report the length of version chains traversed by each active transaction that uses row versioning. Version read metrics report the total number of versions read by each statement, operator, request, and session.
+
+The following example finds queries in the plan cache that read the most row versions, along with their average CPU time and logical reads:
+
+```sql
+SELECT TOP (10)
+       qs.total_version_reads,
+       qs.total_version_reads / qs.execution_count AS avg_version_reads,
+       qs.total_worker_time / qs.execution_count AS avg_worker_time_us,
+       qs.total_logical_reads / qs.execution_count AS avg_logical_reads,
+       qs.execution_count,
+       SUBSTRING(st.text,
+                 (qs.statement_start_offset / 2) + 1,
+                 ((CASE qs.statement_end_offset
+                       WHEN -1 THEN DATALENGTH(st.text)
+                       ELSE qs.statement_end_offset
+                   END - qs.statement_start_offset) / 2) + 1) AS statement_text
+FROM sys.dm_exec_query_stats AS qs
+CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
+WHERE qs.total_version_reads > 0
+ORDER BY qs.total_version_reads DESC;
+```
+
+If the queries that read the most row versions also consume the most CPU time or logical reads, and their version reads increase over time, check whether version cleanup is delayed. For more information, see [Monitor and troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md).
 
 ### Row versioning-based isolation level example
 

@@ -3,7 +3,7 @@ title: sys.dm_exec_sessions (Transact-SQL)
 description: sys.dm_exec_sessions returns one row per authenticated session on SQL Server.
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 09/20/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -87,6 +87,7 @@ The `sys.dm_exec_connections`, `sys.dm_exec_sessions`, and `sys.dm_exec_requests
 | `page_server_reads` | **bigint** | No | Number of page server reads performed, by requests in this session, during this session.<br /><br />**Applies to**: Azure SQL Database Hyperscale. |
 | `contained_availability_group_id` | **uniqueidentifier** | Yes | ID of the contained availability group.<br /><br />**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. |
 | `time_zone` | **nvarchar(128)** | No | Identifies the current session time zone setting value. Default is `LOCAL`. If session time zone is modified, then the value contains the specified time zone value from the `name` column in the `sys.time_zone_info` system view. |
+| `version_reads` | **bigint** | No | Number of row versions read from all version stores by completed requests in this session. Doesn't include the currently executing request. For more information, see [Version read metrics](../sql-server-transaction-locking-and-row-versioning-guide.md#version-read-metrics).<br /><br />**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]. |
 
 <sup>1</sup> Specifies when a page is marked dirty in the buffer pool. This value doesn't directly equate to actual writes, because the same page can be marked more than once. These counters are aggregated at the end of the batch.
 

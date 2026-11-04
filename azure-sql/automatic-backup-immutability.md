@@ -17,7 +17,7 @@ Azure SQL Database and Azure SQL Managed Instance protect automatic point-in-tim
 There are two levels of protection:
 
 - **Default immutability [Generally Available]:** The service automatically protects up to the most recent seven days of PITR backups. No configuration is required, and this default protection is included at no extra cost.
-- **Locked immutability aligned with PITR retention [Preview]:** You can optionally lock immutability to the database's configured PITR backup retention period. This extends immutability across the configured retention period, including retention periods longer than seven days.
+- **Locked immutability aligned with PITR retention [Preview]:** You can optionally lock immutability to the database's configured PITR backup retention period. This feature extends immutability across the configured retention period, including retention periods longer than seven days.
 
 > [!NOTE]  
 > To review the legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability, see [supplemental terms of use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). Azure SQL Database provides previews to give you a chance to evaluate and [share feedback with the product group](https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84) on features before they become generally available (GA).

@@ -8,10 +8,14 @@
     href: microsoft-php-drivers-for-sql-server-support-matrix.md
   - name: Download
     href: download-drivers-php-sql-server.md
-  - name: Installation on Linux and macOS
+  - name: Install on Windows
+    href: windows-install.md
+  - name: Install on Linux and macOS
     href: installation-tutorial-linux-mac.md
   - name: Loading the drivers
     href: loading-the-php-sql-driver.md
+  - name: Upgrade the drivers
+    href: upgrade-driver.md
   - name: Connect and query with PHP
     href: getting-started-with-the-php-sql-driver.md
   - name: Overview

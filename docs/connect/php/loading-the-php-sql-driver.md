@@ -1,10 +1,10 @@
 ---
-title: Loading the Microsoft Drivers for PHP
-description: Install and load the Microsoft Drivers for PHP for SQL Server.
+title: Load the Microsoft Drivers for PHP
+description: Configure and verify the SQLSRV and PDO_SQLSRV extensions for PHP.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 09/17/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -13,133 +13,220 @@ helpviewer_keywords:
   - "loading the driver"
 ---
 
-# Loading the Microsoft Drivers for PHP for SQL Server
+# Load the Microsoft Drivers for PHP for SQL Server
 
-This page provides instructions for loading the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] into the PHP process space.
+<a id="loading-the-microsoft-drivers-for-php-for-sql-server"></a>
 
-## Install the drivers on Windows with PIE
+The SQLSRV and PDO_SQLSRV drivers are PHP extensions. PHP loads them when the PHP process starts by reading `php.ini` and any additional `.ini` files.
 
-[PIE](https://github.com/php/pie), the PHP Installer for Extensions, installs the matching precompiled driver files and enables them in the PHP command-line configuration. Windows doesn't need a build toolchain.
+Loading is separate from installation. Copying or building the extension places a file on disk. PHP can't use SQLSRV or PDO_SQLSRV until the active configuration contains the correct entry and the PHP process restarts.
 
-1. Install a [supported PHP version](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support) and the [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md).
+## Protect web diagnostic pages
 
-1. Run `php --ini`. If **Loaded Configuration File** is `(none)`, copy **php.ini-development** from the PHP installation directory to **php.ini** in the same directory.
+Before creating a temporary `phpinfo()` page, configure the web server to allow only localhost requests or authenticated administrators. Keep that restriction until you delete the page. `phpinfo()` can expose environment variables, credentials, and server configuration. Remove the page immediately after verification.
 
-1. In **php.ini**, set the extension directory and enable the `openssl` and `zip` extensions:
+## Understand PHP configuration scope
 
-   ```ini
-   extension_dir = "ext"
-   extension=openssl
-   extension=zip
-   ```
+Each PHP server application programming interface (SAPI) can use a different executable and configuration:
 
-1. From a writable working directory, download the latest stable `pie.phar`. The command works in Command Prompt and PowerShell:
+| Runtime | Typical configuration source | How to identify it |
+|---|---|---|
+| Command-line interface (CLI) | The `php.ini` and scan directory reported by `php --ini` | Run `php --ini` with the exact executable |
+| IIS FastCGI | The PHP executable configured in the IIS FastCGI application | Use a temporary `phpinfo()` page |
+| Apache module | Apache's PHP module configuration | Use a temporary `phpinfo()` page |
+| PHP-FPM | The FPM executable, pool, `php.ini`, and scan directory | Run the versioned FPM binary with `-i` or use a temporary `phpinfo()` page |
+| Long-running worker | The executable and environment that started the worker | Inspect the worker service and restart it after changes |
 
-   ```console
-   curl.exe -fL --output pie.phar https://github.com/php/pie/releases/latest/download/pie.phar
-   ```
+Changing the CLI configuration doesn't change IIS, Apache, or PHP-FPM when they use another PHP installation or scan directory.
 
-   If you have the [GitHub CLI](https://cli.github.com/), verify that the PHP Foundation published the file:
+## Find the PHP configuration
 
-   ```console
-   gh attestation verify --owner php .\pie.phar
-   ```
+Run these commands with the PHP executable used by your application:
 
-1. Install both drivers by using the PHP executable on `PATH`:
-
-   ```console
-   php .\pie.phar install microsoft/sqlsrv
-   php .\pie.phar install microsoft/pdo_sqlsrv
-   ```
-
-1. Verify that the same PHP command-line runtime loads both drivers:
-
-   ```console
-   php --ri sqlsrv
-   php --ri pdo_sqlsrv
-   ```
-
-For other PIE installation methods, see the [PIE usage documentation](https://github.com/php/pie/blob/1.5.0/docs/usage.md).
-
-## Install the drivers on Linux and macOS
-
-Install the drivers and their platform dependencies with PIE as described in the [Linux and macOS installation tutorial](installation-tutorial-linux-mac.md).
-
-## Install prebuilt drivers manually
-
-You can download the prebuilt drivers from the [Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md) page. The Windows download is a ZIP that contains SQLSRV and PDO_SQLSRV driver files for each supported PHP version, architecture, and thread-safety mode. Select the files that match your PHP environment. See [System requirements](system-requirements-for-the-php-sql-driver.md#driver-versions) for the file list.
-
-You can also build the drivers from source either when building PHP or by using `phpize`. If you choose to build the drivers from source, you have the option of building them statically into PHP instead of building them as shared extensions by adding `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (on Linux and macOS) or `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) to the `./configure` command when building PHP. For more information on the PHP build system and `phpize`, see the [PHP documentation](http://php.net/manual/install.php).
-
-## Moving the driver file into your extension directory
-
-The driver file must be located in a directory where the PHP runtime can find it. It's easiest to put the driver file in your default PHP extension directory - to find the default directory, run `php -i | sls extension_dir` on Windows or `php -i | grep extension_dir` on Linux/macOS. If you aren't using the default extension directory, specify a directory in the PHP configuration file (php.ini), using the **extension_dir** option. For example, on Windows, if you put the driver file in your `c:\php\ext` directory, add the following line to php.ini:
-
-```ini
-extension_dir = "c:\PHP\ext"
+```console
+php --ini
+php -i | findstr /I "PHP Version Thread Safety Architecture extension_dir"
 ```
 
-## Loading the driver at PHP startup
+On Linux or macOS, replace `findstr` with `grep`:
 
-To load the SQLSRV driver when PHP is started, first move a driver file into your extension directory. Then, follow these steps:
-  
-1. To enable the **SQLSRV** driver, modify **php.ini** by adding the following line to the extension section, changing the filename as appropriate for your PHP version and thread safe versus non thread safe installation:
+```bash
+php -i | grep -E "PHP Version|Thread Safety|extension_dir"
+file "$(php -r 'echo PHP_BINARY;')"
+```
 
-    On Windows:
+The `file` command identifies the selected executable's architecture. For a universal macOS executable, follow [explicit architecture selection](system-requirements-for-the-php-sql-driver.md#choose-a-compatible-set).
 
-    ```ini
-    extension=php_sqlsrv_83_ts.dll
-    ```
+The **Loaded Configuration File** and **Scan for additional .ini files in** values identify the configuration used by the command-line process. A web server or [PHP FastCGI Process Manager (PHP-FPM)](https://www.php.net/manual/en/install.fpm.php) process might use a different PHP executable or configuration file. Use a temporary `phpinfo()` page to identify that process's values.
 
-    On Linux, if you downloaded the prebuilt binaries for your distribution:
+Before editing a file, record:
 
-    ```ini
-    extension=php_sqlsrv_83_nts.so
-    ```
+- The PHP executable path and version.
+- The loaded `php.ini`.
+- The additional `.ini` scan directory.
+- The extension directory.
+- The thread-safety mode and architecture.
+- Every process that you must restart.
 
-    If you compiled the SQLSRV binary from source, or installed it with PIE or PECL, its name is sqlsrv.so:
+Back up each configuration file that you change.
 
-    ```ini
-    extension=sqlsrv.so
-    ```
+<a id="install-the-drivers-on-windows-with-pie"></a>
 
-1. To enable the **PDO_SQLSRV** driver, the PHP Data Objects (PDO) extension must be available, either as a built-in extension or as a dynamically loaded extension.
+## Load the drivers on Windows
 
-    On Windows, the prebuilt PHP binaries come with PDO built-in, so there's no need to modify php.ini to load it. If, however, you compiled PHP from source and specified a separate PDO extension to be built, its name is `php_pdo.dll`, and you must copy it to your extension directory and add the following line to php.ini:
+For an installation with the [PHP Installer for Extensions (PIE)](https://github.com/php/pie), first [download and verify PIE](windows-install.md#install-with-pie). Run the following commands from the directory containing `pie.phar`, with the PHP executable that should load the drivers:
 
-    ```ini
-    extension=php_pdo.dll
-    ```
+```console
+php .\pie.phar install microsoft/sqlsrv
+php .\pie.phar install microsoft/pdo_sqlsrv
+```
 
-    On Linux, if you installed PHP using your system's package manager, PDO is probably installed as a dynamically loaded extension named pdo.so. The PDO extension must be loaded before the PDO_SQLSRV extension, or loading fails. Extensions are loaded using individual .ini files, and these files are read after php.ini. Therefore, if pdo.so is loaded through its own .ini file, a separate file loading the PDO_SQLSRV driver after PDO is required.
+PIE installs `php_sqlsrv.dll` and `php_pdo_sqlsrv.dll`. If PIE can't enable the extensions automatically, remove any existing SQLSRV and PDO_SQLSRV entries from the active `php.ini`, then add:
 
-    To find out which directory the extension-specific .ini files are located, run `php --ini` and note the directory listed under `Scan for additional .ini files in:`. Find the file that loads pdo.so. It should be prefixed with a number, such as 10-pdo.ini. The numerical prefix indicates the loading order of the .ini files, while files that don't have a numerical prefix are loaded alphabetically. Create a file to load the PDO_SQLSRV driver file called either 30-pdo_sqlsrv.ini (any number larger than the one that prefixes pdo.ini works) or pdo_sqlsrv.ini (if pdo.ini isn't prefixed with a number), and add the following line to it, changing the filename as appropriate:
+```ini
+extension=php_sqlsrv.dll
+extension=php_pdo_sqlsrv.dll
+```
 
-    ```ini
-    extension=php_pdo_sqlsrv_3_nts.so
-    ```
+Use only one entry for each driver. Restart the PHP process after changing its configuration.
 
-    As with SQLSRV, if you compiled the PDO_SQLSRV binary from source, or installed it with PIE or PECL, its name is pdo_sqlsrv.so:
+<a id="install-prebuilt-drivers-manually"></a>
 
-    ```ini
-    extension=pdo_sqlsrv.so
-    ```
+For a ZIP installation, copy the dynamic-link libraries (DLLs) that match the PHP minor version, architecture, and thread-safety mode into the `extension_dir` directory. A PHP 8.5 x64 thread-safe runtime uses these filenames:
 
-    Copy this file to the directory that contains the other .ini files.
+```text
+php_sqlsrv_85_ts_x64.dll
+php_pdo_sqlsrv_85_ts_x64.dll
+```
 
-    If you compiled PHP from source with built-in PDO support, you don't require a separate .ini file, and you can add the previous line to php.ini.
+Add both filenames to the `php.ini` used by the PHP process:
 
-1. Restart the web server.
+```ini
+extension=php_sqlsrv_85_ts_x64.dll
+extension=php_pdo_sqlsrv_85_ts_x64.dll
+```
 
-> [!NOTE]
-> To determine whether the driver is successfully loaded, run a script that calls [phpinfo()](https://php.net/manual/en/function.phpinfo.php).
+Replace `85`, `ts`, and `x64` with the values for your PHP runtime. Don't mix thread-safe and non-thread-safe files, 32-bit and 64-bit files, or files built for another PHP minor version.
 
-For more information about **php.ini** directives, see [Description of core php.ini directives](https://php.net/manual/en/ini.core.php).
+<a id="install-the-drivers-on-linux-and-macos"></a>
+
+## Load the drivers on Linux and macOS
+
+Install the drivers by using [PIE](https://github.com/php/pie). For more information, see the [Linux and macOS installation tutorial](installation-tutorial-linux-mac.md). PIE installs the extension files and attempts to enable them by using the platform's PHP configuration tools or by adding an `extension=` entry to an additional `.ini` file or the standard `php.ini`. If PIE reports that it couldn't enable an extension, add the entry yourself and verify the active configuration.
+
+<a id="moving-the-driver-file-into-your-extension-directory"></a>
+
+For a manual installation, select the prebuilt `.so` files that match your PHP version, architecture, thread-safety mode, and operating system's native libraries. Check the [prebuilt Linux and macOS requirements](system-requirements-for-the-php-sql-driver.md#linux-and-macos-driver-files); use PIE if they don't match your environment.
+
+For example, PHP 8.4 non-thread-safe files are named `SQLSRV_8.4_NTS.so` and `PDO_SQLSRV_8.4_NTS.so`. Place them in the directory returned by `php -i | grep extension_dir`. Rename them to `sqlsrv.so` and `pdo_sqlsrv.so` to use the following entries, or use the exact package filenames in the entries instead. Add the entries to your active PHP configuration in the load order described in this section:
+
+```ini
+extension=sqlsrv.so
+extension=pdo_sqlsrv.so
+```
+
+PHP Data Objects (PDO) must load before PDO_SQLSRV. PHP reads `php.ini` before scanning additional `.ini` files in alphabetical order. If your distribution loads `pdo.so` from a scanned file, place the PDO_SQLSRV entry in a later scanned file, such as `30-pdo_sqlsrv.ini` when PDO uses `10-pdo.ini`. Don't place the PDO_SQLSRV entry in `php.ini` in that case.
+
+## Choose the extension entries
+
+Use entries that match how the drivers were installed:
+
+| Platform and method | SQLSRV entry | PDO_SQLSRV entry |
+|---|---|---|
+| Windows with PIE | `extension=php_sqlsrv.dll` | `extension=php_pdo_sqlsrv.dll` |
+| Windows released ZIP | Exact versioned DLL name, such as `extension=php_sqlsrv_85_ts_x64.dll` | Exact versioned DLL name, such as `extension=php_pdo_sqlsrv_85_ts_x64.dll` |
+| Linux or macOS with PIE | `extension=sqlsrv.so` | `extension=pdo_sqlsrv.so` |
+| Linux or macOS released archive, renamed files | `extension=sqlsrv.so` | `extension=pdo_sqlsrv.so` |
+| Linux or macOS released archive, original files | Exact archive filename, such as `extension=SQLSRV_8.4_NTS.so` | Exact archive filename, such as `extension=PDO_SQLSRV_8.4_NTS.so` |
+
+Don't configure both a short name and a versioned name for the same extension. PHP can report that a module is already loaded, or it can continue loading an older file after an upgrade.
+
+<a id="loading-the-driver-at-php-startup"></a>
+
+## Restart PHP to load the drivers
+
+Restart the process after changing an extension file or configuration file. Restart the web server, PHP-FPM, queue workers, and other long-running PHP processes that load the driver.
+
+The SQLSRV and PDO_SQLSRV extensions can be loaded independently, but install and verify both when your application uses both drivers. PDO is built into many PHP packages. If PDO isn't built in, enable the PDO extension before PDO_SQLSRV.
+
+## Verify the loaded drivers
+
+For the command-line runtime, run:
+
+```console
+php --ri sqlsrv
+php --ri pdo_sqlsrv
+php -m | findstr /I "sqlsrv pdo_sqlsrv"
+```
+
+On Linux or macOS, use:
+
+```bash
+php --ri sqlsrv
+php --ri pdo_sqlsrv
+php -m | grep -E "sqlsrv|pdo_sqlsrv"
+```
+
+For a web server, [restrict diagnostic-page access](#protect-web-diagnostic-pages) before creating a temporary page containing `<?php phpinfo(); ?>`. Confirm the **Loaded Configuration File**, **extension_dir**, and separate `sqlsrv` and `pdo_sqlsrv` sections. Remove the page after verification.
+
+Also run a PHP-level check so verification covers both APIs rather than only module names. Save this program as `verify-php-drivers.php`:
+
+```php
+<?php
+$checks = [
+    'SQLSRV extension' => extension_loaded('sqlsrv'),
+    'SQLSRV API' => function_exists('sqlsrv_connect'),
+    'PDO_SQLSRV extension' => extension_loaded('pdo_sqlsrv'),
+    'PDO_SQLSRV API' => class_exists('PDO')
+        && in_array('sqlsrv', PDO::getAvailableDrivers(), true),
+];
+
+$failed = false;
+foreach ($checks as $name => $passed) {
+    echo $name . ': ' . ($passed ? 'loaded' : 'missing') . PHP_EOL;
+    $failed = $failed || !$passed;
+}
+
+exit($failed ? 1 : 0);
+```
+
+Run the program with each PHP executable that your application uses:
+
+```console
+php verify-php-drivers.php
+```
+
+Expected output:
+
+```output
+SQLSRV extension: loaded
+SQLSRV API: loaded
+PDO_SQLSRV extension: loaded
+PDO_SQLSRV API: loaded
+```
+
+For a web runtime, place the file temporarily in the document root and request it in a browser. Remove it after verification. This program doesn't open a database connection or print configuration values.
+
+Delete `verify-php-drivers.php` after you finish the CLI and web-runtime checks.
+
+## Troubleshoot driver loading
+
+| Symptom | Cause to check | Corrective action |
+|---|---|---|
+| `Unable to load dynamic library` | Wrong filename, `extension_dir`, PHP minor version, architecture, or thread-safety mode | Compare `php -i` with the selected driver file and use an absolute path temporarily to isolate path errors |
+| `The specified module could not be found` on Windows | The driver DLL or one of its dependencies isn't available | Confirm the DLL is in `extension_dir`, install the matching Visual C++ runtime, and inspect any remaining missing DLL dependency |
+| `undefined symbol` or shared-library error on Linux or macOS | Extension and PHP build mismatch, or missing ODBC dependency | Rebuild with the intended `php-config`, then inspect the reported missing library |
+| `Module "sqlsrv" is already loaded` | Duplicate entries or two scanned files | Search the loaded `php.ini` and scan directory, then keep one entry |
+| `could not find driver` from PDO | PDO_SQLSRV isn't loaded, or PDO loads after it | Check `php --ri pdo_sqlsrv` and move the PDO_SQLSRV entry after PDO |
+| CLI works but web requests fail | Different SAPI configuration or a process that wasn't restarted | Compare CLI and `phpinfo()` configuration values, edit the web configuration, and restart the web process |
+| Old `ExtensionVer` remains after an upgrade | The configuration still names an older versioned file | Replace the old entry with the file installed by the selected method, remove duplicates, and restart all PHP processes |
+
+PHP owns extension discovery and load order. PIE or a manual copy supplies the extension file. The operating system loader resolves native dependencies. The Microsoft ODBC Driver owns the database protocol after the extension loads.
 
 ## Related content
 
-- [Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+- [Install the PHP drivers for SQL Server on Windows](windows-install.md)
 - [System requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
-- [Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
+- [Upgrade the PHP drivers for SQL Server](upgrade-driver.md)
 - [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
 - [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md)

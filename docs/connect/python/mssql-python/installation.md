@@ -4,7 +4,7 @@ description: Learn how to install the mssql-python driver on Windows, Linux, and
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -41,15 +41,23 @@ pip install --upgrade mssql-python
 To install a specific version:
 
 ```bash
-pip install mssql-python==1.16.0
+pip install mssql-python==1.17.0
 ```
 
 The `pip install mssql-python` command also installs two companion packages that the driver requires at runtime:
 
-- `mssql-python-odbc` ships the Microsoft ODBC Driver 18 binaries.
-- `mssql-python-rs` ships the Rust runtime that powers bulk copy and the opt-in `mssql-odbc` provider.
+- `mssql-python-odbc==18.6.2.2` ships the Microsoft ODBC Driver 18 binaries.
+- `mssql-python-rs==0.4.0` ships the Rust runtime that powers bulk copy and the opt-in `mssql-odbc` provider.
 
-Starting with version 1.16.0, `mssql-python` pins exact versions of both packages. Earlier versions don't require `mssql-python-rs`. For the pins by version, see [Dependency requirements](support-lifecycle.md#dependency-requirements).
+The driver pins exact versions of both packages. Install or upgrade `mssql-python` rather than selecting companion versions independently. For the pins by version, see [Dependency requirements](support-lifecycle.md#dependency-requirements).
+
+The driver also requires `azure-identity>=1.12.0`, which pip installs automatically.
+
+Check that the installed packages satisfy their dependency requirements:
+
+```bash
+python -m pip check
+```
 
 ## Install from conda
 
@@ -92,7 +100,7 @@ print(f"Parameter style: {mssql_python.paramstyle}")
 Expected output:
 
 ```output
-mssql-python version: 1.16.0
+mssql-python version: 1.17.0
 DB-API level: 2.0
 Thread safety: 1
 Parameter style: pyformat

@@ -4,7 +4,7 @@ description: Find troubleshooting guidance for installation, connection, query, 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 09/17/2026
+ms.date: 11/03/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -39,6 +39,10 @@ For SQLSTATE `28000`, authentication mode mismatches, invalid credentials, and m
 
 For SQLSTATE `HYT00` or `HYT01`, network latency, slow servers, and connection timeout settings, see [Troubleshoot installation and connection issues](troubleshoot-installation-connection.md#connection-timeout).
 
+### Slow checkout after a network interruption
+
+For information about unresponsive pooled connections and replacement login attempts, see [Troubleshoot installation and connection issues](troubleshoot-installation-connection.md#slow-checkout-after-a-network-interruption).
+
 ### SSL certificate errors
 
 For untrusted certificate errors and safe local development options, see [Troubleshoot installation and connection issues](troubleshoot-installation-connection.md#ssl-certificate-errors).
@@ -57,11 +61,19 @@ For SQLSTATE `42000`, SQL syntax, string escaping, and parameterized queries, se
 
 For SQLSTATE `07001`, placeholder counts, and supported parameter styles, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#parameter-errors).
 
+### Incorrect row counts in multi-result batches
+
+For stale `rowcount` values after `nextset()`, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#incorrect-row-counts-in-multi-result-batches).
+
 ## Data type issues
 
 ### Datetime conversion errors
 
 For SQLSTATE `22007` and datetime parameter conversion, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#datetime-conversion-errors).
+
+### Timestamp constructor requires a microsecond argument
+
+For six-argument DB-API `Timestamp()` calls that raise `TypeError`, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#timestamp-constructor-requires-a-microsecond-argument).
 
 ### Decimal precision issues
 
@@ -96,6 +108,18 @@ For data changes that don't persist after the connection closes, see [Troublesho
 For SQLSTATE `40001`, retry guidance, and recurring deadlock analysis, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#deadlock-errors).
 
 ## Bulk load issues
+
+### Bulk copy fails after a package upgrade
+
+For native bulk copy import failures and incompatible companion packages, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#bulk-copy-fails-after-a-package-upgrade).
+
+### Unsupported destination names
+
+For four-part table names or malformed bulk copy targets, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#unsupported-destination-names).
+
+### Unicode or fractional seconds lost during bulk copy
+
+For UTF-8 text corruption, temporal precision fixes, and source precision limits, see [Troubleshoot query, data, and operation issues](troubleshoot-query-data-and-operations.md#unicode-or-fractional-seconds-lost-during-bulk-copy).
 
 ### Constraint violations during bulkcopy
 

@@ -4,7 +4,7 @@ description: This quickstart describes bulk copying data between databases using
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/14/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -100,7 +100,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.16.0",
+       "mssql-python>=1.17.0",
        "python-dotenv>=1.1.1",
        "pyarrow>=19.0.0",
    ]
@@ -493,6 +493,8 @@ code .
 1. To deploy your script to another machine, copy all files except for the `.venv` folder to the other machine. The virtual environment is recreated with the first run.
 
 ### How the code works
+
+Arrow fetch returns temporal values at microsecond precision. Although `bulkcopy_arrow()` can preserve 100-nanosecond values supplied by a nanosecond Arrow source, this quickstart can't recover a seventh fractional digit lost during fetch. For more information, see [Arrow temporal precision](arrow-integration.md#temporal-precision).
 
 The application performs a full round-trip data transfer in three phases:
 

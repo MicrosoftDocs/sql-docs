@@ -4,7 +4,7 @@ description: Reference for mssql-python connection string keywords, syntax, and 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 08/28/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -159,13 +159,13 @@ All connections use `Encrypt=yes` by default. For most applications, the default
 
 ### High availability and failover
 
-These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When the server name resolves to more than one IP address, the driver connects to all of those addresses at the same time and uses the first one that answers. Without it, the driver tries the addresses one at a time. An address that doesn't answer stalls until the operating system's TCP connect timeout expires, which can exhaust the login timeout before the driver reaches an address that answers. When DNS resolves to a single address, the driver makes a single connection attempt, so the setting is safe to leave on.
+These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When the server name resolves to more than one IP address, this setting enables parallel connection attempts and the driver uses the first one that succeeds. Omitting the keyword doesn't disable it with the Rust provider. The Microsoft provider's Transparent Network IP Resolution (TNIR) behavior is separate from this setting. For provider differences, see [Multi-address hosts](mssql-odbc-provider.md#known-issues).
 
 `MultiSubnetFailover=yes` has the following limits. You can't use it over a protocol other than TCP, connecting to a SQL Server instance configured with more than 64 IP addresses fails, and you can't use it with database mirroring. Database mirroring is deprecated in all supported versions of SQL Server. Use Always On availability groups instead.
 
 | Keyword | Aliases | Default | Description |
 | --------- | --------- | --------- | ------------- |
-| `MultiSubnetFailover` | `multisubnetfailover` | `no` | Connect to all resolved addresses at the same time and use the first connection that succeeds. |
+| `MultiSubnetFailover` | `multisubnetfailover` | `no` with `msodbcsql18`; normally `yes` with `mssql-odbc` | Connect to all resolved addresses at the same time and use the first connection that succeeds. For Rust-provider defaults and opt-outs, see [Multi-subnet failover defaults](mssql-odbc-provider.md#multi-subnet-failover-defaults). |
 | `ApplicationIntent` | `applicationintent` | `ReadWrite` | Declare application workload type. Use `ReadOnly` for read-only routing to secondary replicas. |
 | `ConnectRetryCount` | `connectretrycount` | `1` | Number of automatic reconnection attempts for [idle connection resiliency](/sql/connect/odbc/connection-resiliency). This is a driver-level feature for dropped idle connections, not a substitute for [application-level retry logic](retry-logic.md). |
 | `ConnectRetryInterval` | `connectretryinterval` | `10` | Seconds between idle connection resiliency reconnection attempts. |

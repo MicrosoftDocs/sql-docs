@@ -4,7 +4,7 @@ description: Learn how to configure, secure, test, and deploy FastAPI applicatio
 author: mahyon
 ms.author: mahyon
 ms.reviewer: vanto
-ms.date: 09/25/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -39,6 +39,7 @@ class Settings(BaseSettings):
     database_name: str
     pool_size: int = 20
     pool_idle_timeout: int = 300
+    login_timeout: int = 30
     jwt_secret: str
 
 
@@ -100,12 +101,18 @@ mssql_python.pooling(
 
 
 def get_db_dependency() -> Generator:
-    with mssql_python.connect(get_connection_string()) as conn:
+    with mssql_python.connect(
+        get_connection_string(), timeout=settings.login_timeout
+    ) as conn:
         with conn.cursor() as cursor:
             yield cursor
 ```
 
 The connection context manager commits after successful request processing, rolls back when request processing raises an exception, and closes the connection. Closing the connection returns it to the pool. For pool keys, sizing, identity isolation, and exhaustion guidance, see [Connection pooling with mssql-python](connection-pooling.md).
+
+With the default `msodbcsql18` provider, `LOGIN_TIMEOUT` sets the login timeout and supplies a temporary native connection-operation timeout during pooled-connection validation, in seconds. If validation fails, the driver discards the connection and attempts a replacement. Multiple validation operations, cleanup, and replacement can take longer than the configured value. This setting isn't an overall connection-checkout or request deadline, and it doesn't set a query timeout.
+
+With the opt-in `mssql-odbc` provider, pooled-connection reset isn't guaranteed to be bounded by the login timeout. For more information, see [Provider limitations](mssql-odbc-provider.md#known-issues).
 
 ## Handle database errors
 

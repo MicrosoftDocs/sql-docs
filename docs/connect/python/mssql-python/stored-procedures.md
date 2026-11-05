@@ -4,7 +4,7 @@ description: Learn how to execute stored procedures and work with output paramet
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 09/14/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -135,6 +135,8 @@ for row in customers:
 ```
 
 ### Multiple result sets
+
+For each result you advance to, `nextset()` refreshes `rowcount`. A data-modification result reports its own affected-row count and has `description is None`; don't call fetch methods for that result. A row-producing result starts with `rowcount == -1` before fetching. `SET NOCOUNT ON` suppresses affected-row results. For a batch that mixes these result types, see [Track each result in a batch](cursor-management.md#track-each-result-in-a-batch).
 
 Some stored procedures return multiple result sets. Use `nextset()` to navigate between them:
 

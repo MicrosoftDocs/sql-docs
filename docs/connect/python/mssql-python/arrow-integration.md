@@ -4,7 +4,7 @@ description: Learn how to use Apache Arrow fetch methods in mssql-python for hig
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 08/28/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -287,6 +287,12 @@ The method accepts the same options as `cursor.bulkcopy()`, including `batch_siz
 
 > [!NOTE]
 > Passing an Arrow source to `cursor.bulkcopy()` raises `TypeError` and directs you to `cursor.bulkcopy_arrow()`.
+
+### Temporal precision
+
+`bulkcopy_arrow()` can preserve a nanosecond timestamp source at the 100-nanosecond precision of **datetime2(7)**. Keep the values in Arrow format when you need the seventh fractional digit. Converting them to Python `datetime` objects first loses that digit because Python supports only microseconds.
+
+The Arrow fetch methods return `timestamp[us]` for **datetime2**, so fetching a **datetime2(7)** value through this driver and bulk copying it to another table doesn't preserve a seventh fractional digit that was already lost during fetch. The bulk copy precision fix doesn't change the fetch mappings in this article.
 
 ## Data type mappings
 

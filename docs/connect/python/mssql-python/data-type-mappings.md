@@ -4,7 +4,7 @@ description: Reference for how Python data types map to SQL Server types when us
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/21/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -30,8 +30,10 @@ When you pass Python values as parameters to `execute()` or `executemany()`, the
 | `bytes`, `bytearray` | **varbinary** | Binary data. |
 | `datetime.date` | **date** | Date only. |
 | `datetime.time` | **time** | Time only. |
-| `datetime.datetime` | **datetime2** | Date and time with nanosecond precision. |
+| `datetime.datetime` | **datetime2** | Date and time with microsecond precision. |
 | `uuid.UUID` | **uniqueidentifier** | 16-byte GUID. |
+
+These mappings describe parameterized execution. With tuple bulk copy, ISO-formatted strings can preserve all seven fractional-second digits for **datetime2(7)**. For **datetimeoffset(7)** strings, fractional precision is retained, but the offset is normalized to UTC. Strings for **time(7)** are parsed through Python `datetime.time` and lose the seventh fractional digit. Python `datetime` and `time` objects carry only six fractional-second digits. For more information, see [Datetime handling](datetime-handling.md).
 
 ### Integer type selection
 

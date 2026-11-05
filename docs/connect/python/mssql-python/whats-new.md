@@ -4,7 +4,7 @@ description: Learn about new features and changes in each version of the mssql-p
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -16,6 +16,62 @@ ai-usage: ai-assisted
 This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
 
 For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.17.0
+
+**Release date**: November 2, 2026
+
+### Enhancements
+
+#### Updated preview native provider
+
+The opt-in `mssql-odbc` provider in `mssql-python-rs` 0.4.0 adds Microsoft Entra ID integrated authentication, cancellation of running statements, and streaming of large Extensible Markup Language (XML) and user-defined type parameters. It also negotiates server-assisted Domain Name System (DNS) caching and enhanced routing when the server supports them. Its default multi-subnet failover behavior now enables parallel connection attempts for applicable Transmission Control Protocol (TCP) connections.
+
+The provider remains in preview. `msodbcsql18` remains the default provider. For current capabilities and limitations, see [Using the mssql-odbc driver (Preview)](mssql-odbc-provider.md).
+
+#### Faster connection pool reuse
+
+The driver skips redundant cleanup when it can confirm that a pooled connection is already clean. Connections with uncommitted work or changed session state still require cleanup before reuse. Checkout still validates the connection with a server round trip.
+
+For more information, see [Connection lifecycle](connection-pooling.md#connection-lifecycle).
+
+### Bug fixes
+
+#### Bulk copy after package upgrades
+
+The driver requires `mssql-python-rs==0.4.0`. The updated runtime fixes bulk copy failures caused by the native module layout after an upgrade. Installing or upgrading `mssql-python` with dependencies installs the matching runtime automatically.
+
+For more information, see [Dependency requirements](support-lifecycle.md#dependency-requirements).
+
+#### Bulk copy Unicode, destination names, and datetime precision
+
+`bulkcopy()` and `bulkcopy_arrow()` handle UTF-8 text correctly and fix loss of fractional seconds when loading **datetime2** values. For example, Arrow nanosecond timestamps can retain the seventh fractional digit in a **datetime2(7)** destination, rather than being truncated to microseconds. Python `datetime` objects remain limited to microsecond precision.
+
+A destination name with more than three parts now raises `RuntimeError` during metadata lookup, before rows are sent, instead of reaching a server-side error.
+
+For more information, see [Bulk copy](bulk-copy.md) and [Apache Arrow integration](arrow-integration.md).
+
+#### Bounded recovery from unresponsive pooled connections
+
+With the default `msodbcsql18` provider, checkout applies a temporary native connection-operation timeout during pooled validation. It uses a positive login timeout, or 15 seconds if the login timeout is zero or unspecified. After validation fails, the driver discards that connection and attempts a replacement login instead of validating each remaining idle connection.
+
+Multiple validation operations, cleanup, and a replacement login can exceed the temporary timeout. It isn't a total validation or `connect()` deadline. Microsoft Entra ID token acquisition isn't bounded by the login timeout.
+
+The opt-in `mssql-odbc` provider doesn't guarantee the same validation bounds. For more information, see [Connection health checks](connection-pooling.md#connection-health-checks) and [Native provider limitations](mssql-odbc-provider.md#known-issues).
+
+#### Accurate row counts after nextset()
+
+`Cursor.nextset()` refreshes `rowcount` for each subsequent data-modification result in a batch, stored procedure, or Transact-SQL (T-SQL) loop. A row-producing result starts with `rowcount == -1` before fetching. Earlier releases retained the first statement's count when advancing to another result.
+
+For more information, see [Row count](cursor-management.md#row-count).
+
+#### DB-API Timestamp() compatibility
+
+The `microsecond` argument to `Timestamp()` is optional and defaults to zero. The six-argument `Timestamp(year, month, day, hour, minute, second)` call now works as specified by [PEP 249](https://peps.python.org/pep-0249/).
+
+For more information, see [DB-API timestamp constructor](datetime-handling.md#db-api-timestamp-constructor).
+
+For the complete release details, see the [mssql-python 1.17.0 release](https://github.com/microsoft/mssql-python/releases/tag/v1.17.0).
 
 ## mssql-python 1.16.0
 

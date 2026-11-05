@@ -4,7 +4,7 @@ description: Learn how to opt a Django database alias into the mssql-python driv
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sharmag, sumitsar
-ms.date: 09/18/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -73,7 +73,7 @@ Timeouts, retries, isolation level, collation, and `return_rows_bulk_insert` beh
 
 ### Extra connection parameters
 
-`mssql-python` 1.15 validates `extra_params` against an allow list and rejects anything outside it. Supported keywords include `Authentication`, `Encrypt`, `TrustServerCertificate`, `HostnameInCertificate`, `ServerCertificate`, `ServerSPN`, `MultiSubnetFailover`, `ApplicationIntent`, `ConnectRetryCount`, `ConnectRetryInterval`, `KeepAlive`, `KeepAliveInterval`, `IpAddressPreference`, and `PacketSize`.
+`mssql-python` validates `extra_params` against an allow list and rejects anything outside it. Supported keywords include `Authentication`, `Encrypt`, `TrustServerCertificate`, `HostnameInCertificate`, `ServerCertificate`, `ServerSPN`, `MultiSubnetFailover`, `ApplicationIntent`, `ConnectRetryCount`, `ConnectRetryInterval`, `KeepAlive`, `KeepAliveInterval`, `IpAddressPreference`, and `PacketSize`.
 
 The driver rejects `DRIVER`, `DSN`, `SERVERNAME`, and `MARS_Connection`, along with pyodbc-only keywords such as `APP`, `LongAsMax`, `ColumnEncryption`, `WSID`, `AnsiNPW`, `QuotedId`, `Regional`, `UseFMTONLY`, `Current Language`, `Network Library`, `Description`, and `Connect Timeout`. Remove those keywords before you switch an alias, and use the `connection_timeout` option in place of `Connect Timeout`.
 

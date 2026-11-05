@@ -4,7 +4,7 @@ description: Learn how to handle datetime, date, time, and time zone data when y
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 07/16/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -67,6 +67,22 @@ cursor.execute(
 conn.commit()
 ```
 
+### DB-API timestamp constructor
+
+Use the DB-API `Timestamp()` constructor as an alternative to `datetime.datetime`. The `microsecond` argument is optional and defaults to zero:
+
+```python
+from mssql_python import Timestamp
+
+timestamp = Timestamp(2026, 11, 2, 14, 30, 45)
+precise_timestamp = Timestamp(2026, 11, 2, 14, 30, 45, 123456)
+
+print(timestamp)          # 2026-11-02 14:30:45
+print(precise_timestamp)  # 2026-11-02 14:30:45.123456
+```
+
+The constructor returns a Python `datetime.datetime` object that you can pass as a query parameter. For more information, see [PEP 249](https://peps.python.org/pep-0249/).
+
 ### Insert current timestamp
 
 You can insert the current date and time using `datetime.now()` or SQL Server's `GETDATE()` function:
@@ -107,6 +123,8 @@ cursor.execute(
 )
 conn.commit()
 ```
+
+Python `datetime` objects support six fractional digits, so they can't represent the seventh digit of **datetime2(7)**. For bulk loading data that already has 100-nanosecond precision, keep it in Arrow format and use `bulkcopy_arrow()` with a compatible nanosecond timestamp column. For more information, see [Arrow temporal precision](arrow-integration.md#temporal-precision).
 
 ## Retrieve datetime values
 

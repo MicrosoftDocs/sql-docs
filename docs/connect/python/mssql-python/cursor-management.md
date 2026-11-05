@@ -4,7 +4,7 @@ description: Learn best practices for managing cursors, handling multiple result
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/04/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -308,6 +308,8 @@ print(f"Deleted {cursor.rowcount} rows")
 
 ### Handle unknown row count
 
+`cursor.rowcount` returns `-1` when the row count isn't available. Check for `-1` before reporting the number of affected rows.
+
 ```python
 # Some operations might not return row count
 cursor.execute("EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 5")
@@ -317,6 +319,44 @@ if cursor.rowcount == -1:
 else:
     print(f"Affected {cursor.rowcount} rows")
 ```
+
+### Track each result in a batch
+
+`nextset()` refreshes `rowcount` for the result you advance to. For INSERT, UPDATE, and DELETE results, it reports that statement's affected-row count. For a row-producing result, it resets to `-1` before fetching. Check `description` before calling a fetch method because a data-modification result has no rows to fetch.
+
+```python
+cursor.execute("CREATE TABLE #BatchCounts (ID int)")
+cursor.execute("""
+    SET NOCOUNT OFF;
+    INSERT INTO #BatchCounts VALUES (1);
+    INSERT INTO #BatchCounts VALUES (2), (3);
+    SELECT ID FROM #BatchCounts ORDER BY ID;
+    UPDATE #BatchCounts SET ID = ID + 10;
+    DELETE FROM #BatchCounts WHERE ID = 99;
+""")
+
+while True:
+    if cursor.description is None:
+        print(f"Affected: {cursor.rowcount}")
+    else:
+        print(f"Before fetch: {cursor.rowcount}")
+        print([row.ID for row in cursor.fetchall()])
+    if not cursor.nextset():
+        break
+```
+
+Output:
+
+```output
+Affected: 1
+Affected: 2
+Before fetch: -1
+[1, 2, 3]
+Affected: 3
+Affected: 0
+```
+
+This also applies to results emitted by stored procedures and Transact-SQL (T-SQL) loops. `SET NOCOUNT ON` suppresses affected-row results, so don't enable it when your application needs those counts. For more information, see [Stored procedures](stored-procedures.md#result-sets).
 
 ## Skip rows
 

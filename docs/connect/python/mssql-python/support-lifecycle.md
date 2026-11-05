@@ -4,7 +4,7 @@ description: Learn about the support lifecycle, versioning policy, and compatibi
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: lifecycle
@@ -21,13 +21,14 @@ Always use the latest release to get new features, performance improvements, and
 
 ### Current version
 
-Version 1.16.0 is the current general availability (GA) release.
+Version 1.17.0 is the current general availability (GA) release.
 
 ### Version history
 
 | Version | Release date | Status | Key features |
 | --------- | -------------- | -------- | -------------- |
-| 1.16.0 | October 2026 | **Current** | Python 3.15, conda packages, opt-in [`mssql-odbc` native provider](mssql-odbc-provider.md), `row._mapping`, required `mssql-python-rs` companion package |
+| 1.17.0 | November 2, 2026 | **Current** | Bulk copy upgrade, Unicode, and datetime precision fixes; faster pool reuse and bounded checkout recovery; accurate `nextset()` row counts; optional `Timestamp()` microsecond |
+| 1.16.0 | October 2026 | Previous | Python 3.15, conda packages, opt-in [`mssql-odbc` native provider](mssql-odbc-provider.md), `row._mapping`, required `mssql-python-rs` companion package |
 | 1.15.0 | September 2026 | Previous | Native `setinputsizes()` handling, `memoryview` support in `Binary()`, module-level SQL Server type constants, ARM64 native core in Windows ARM64 wheels |
 | 1.14.0 | August 2026 | Previous | Native parameter binding pipeline, `connect(timeout=)` sets the authentication timeout, bulk copy accepts `timeout=0`, Arrow View types in bulk copy |
 | 1.13.0 | August 2026 | Previous | Apache Arrow bulk copy, `token_provider` parameter, identity-aware connection pooling, required `mssql-python-odbc` companion package |
@@ -46,7 +47,7 @@ Version 1.16.0 is the current general availability (GA) release.
 | 1.0.0 | November 2025 | Previous | Initial GA release |
 
 > [!IMPORTANT]
-> Only the current version (1.16.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates.
+> Only the current version (1.17.0) receives new features and bug fixes. Previous versions remain functional but don't receive updates.
 
 ## Python version compatibility
 
@@ -106,7 +107,7 @@ The mssql-python driver uses DDBC (Direct Database Connectivity) and doesn't req
 
 ## Feature compatibility
 
-The following tables list SQL Server features and their support status in the current version (1.16.0) of the mssql-python driver. If a feature you need isn't supported, such as Always Encrypted or MARS, consider using [pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
+The following tables list SQL Server features and their support status in the current version (1.17.0) of the mssql-python driver. If a feature you need isn't supported, such as Always Encrypted or MARS, consider using [pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) instead. For information about features added in earlier versions, see [What's new in mssql-python](whats-new.md).
 
 ### SQL Server features
 
@@ -145,12 +146,12 @@ The mssql-python driver has minimal dependencies:
 | Dependency | Purpose | Version |
 | ------------ | --------- | --------- |
 | azure-identity | Microsoft Entra ID authentication | Required (>= 1.12.0) |
-| mssql-python-odbc | Companion package that ships the ODBC driver binaries | Required as of mssql-python 1.13.0. Version 1.16.0 pins `== 18.6.2.2`. Versions 1.13.0 through 1.15.0 pin `== 18.6.2.1`. |
-| mssql-python-rs | Companion package that ships the Rust runtime for bulk copy and the [`mssql-odbc` provider](mssql-odbc-provider.md) | Required (== 0.3.0) as of mssql-python 1.16.0 |
+| mssql-python-odbc | Companion package that ships the ODBC driver binaries | Required as of mssql-python 1.13.0. Versions 1.16.0 and 1.17.0 pin `== 18.6.2.2`. Versions 1.13.0 through 1.15.0 pin `== 18.6.2.1`. |
+| mssql-python-rs | Companion package that ships the Rust runtime for bulk copy and the [`mssql-odbc` provider](mssql-odbc-provider.md) | Required as of mssql-python 1.16.0. Version 1.17.0 pins `== 0.4.0`; version 1.16.0 pins `== 0.3.0`. |
 
 The `pip install mssql-python` command installs both companion packages automatically. The `mssql-python-odbc` package supplies the ODBC driver binaries that the driver loads at startup. You don't need to install the Microsoft ODBC Driver for SQL Server separately. The `mssql-python-rs` package supplies the `mssql_py_core` module.
 
-The companion packages are required at runtime. The driver doesn't fall back to binaries inside the `mssql-python` wheel. For mssql-python 1.16.0, install `mssql-python-odbc==18.6.2.2` and `mssql-python-rs==0.3.0` explicitly in these conditions:
+The companion packages are required at runtime. The driver doesn't fall back to binaries inside the `mssql-python` wheel. For mssql-python 1.17.0, install `mssql-python-odbc==18.6.2.2` and `mssql-python-rs==0.4.0` explicitly in these conditions:
 
 - You install with `--no-deps`.
 - You install from a private index that doesn't mirror the companion packages.

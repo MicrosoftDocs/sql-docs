@@ -4,7 +4,7 @@ description: Learn how to work with string data types, Unicode, and character en
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -13,21 +13,21 @@ ai-usage: ai-assisted
 
 # Handle strings and Unicode
 
-Microsoft SQL provides multiple string types that the mssql-python driver maps to Python `str` objects. The key decision is whether to use `varchar` (non-Unicode) or `nvarchar` (Unicode):
+Microsoft SQL provides multiple string types that the mssql-python driver maps to Python `str` objects. Choose between **varchar**, whose encoding depends on its collation, and **nvarchar**, which uses UTF-16:
 
-- Use `nvarchar` when your data might contain characters outside ASCII, such as names, addresses, or user-generated content in any language.
-- Use `varchar` when data is strictly ASCII (codes, identifiers, email addresses) and you want to save storage. `varchar` uses 1 byte per character; `nvarchar` uses 2 bytes per character.
+- Use **nvarchar** when your data might contain characters outside ASCII, such as names, addresses, or user-generated content in any language.
+- Use **varchar** with a single-byte collation for ASCII data (codes, identifiers, email addresses) when you want to save storage. With a UTF-8 collation, **varchar** also supports Unicode and uses one to four bytes per character. **nvarchar** uses two or four bytes per character.
 
 | SQL Type | Unicode | Max Length | Python Type |
 | ---------- | --------- | ------------ | ------------- |
-| `char(n)` | No | 8,000 | `str` |
-| `varchar(n)` | No | 8,000 | `str` |
-| `varchar(max)` | No | 2 GB | `str` |
-| `nchar(n)` | Yes | 4,000 | `str` |
-| `nvarchar(n)` | Yes | 4,000 | `str` |
-| `nvarchar(max)` | Yes | 2 GB | `str` |
-| `text` | No | 2 GB (deprecated) | `str` |
-| `ntext` | Yes | 2 GB (deprecated) | `str` |
+| **char(n)** | With a UTF-8 collation | 8,000 | `str` |
+| **varchar(n)** | With a UTF-8 collation | 8,000 | `str` |
+| **varchar(max)** | With a UTF-8 collation | 2 GB | `str` |
+| **nchar(n)** | Yes | 4,000 | `str` |
+| **nvarchar(n)** | Yes | 4,000 | `str` |
+| **nvarchar(max)** | Yes | 2 GB | `str` |
+| **text** | No | 2 GB (deprecated) | `str` |
+| **ntext** | Yes | 2 GB (deprecated) | `str` |
 
 ## Basic string operations
 
@@ -146,10 +146,10 @@ conn.commit()
 
 ### Ensure nvarchar columns for Unicode
 
-Always define columns as nvarchar instead of varchar when your data might contain non-ASCII characters.
+Define columns as **nvarchar** when your data might contain non-ASCII characters and you don't use a UTF-8 collation on **varchar**.
 
 ```sql
--- For Unicode data, always use nvarchar, not varchar
+-- Use nvarchar without depending on a varchar collation
 CREATE TABLE #UnicodeDemo (
     ID INT IDENTITY PRIMARY KEY,
     Name NVARCHAR(100),        -- Supports Unicode
@@ -299,6 +299,12 @@ For most applications, the default behavior is correct. Override only when you s
 ### Connection encoding
 
 The mssql-python driver sends Transact-SQL (T-SQL) statements and `str` parameters as UTF-16LE. You can't change the outbound encoding, and you don't need to configure it. For the decoding settings that control how the driver reads text from the server, see [Encoding and decoding](connection-management.md#encoding-and-decoding).
+
+### Bulk copy into UTF-8 columns
+
+`bulkcopy()` and `bulkcopy_arrow()` encode text for each destination column's collation, including UTF-8 collations and legacy code pages. Use a UTF-8 collation on **varchar** columns when you need to bulk load Unicode without converting to **nvarchar**. The declared **varchar(n)** length limits bytes, not characters, so allow space for multibyte text.
+
+With a non-UTF-8 collation, characters outside the destination code page can still be replaced with `?`. Use **nvarchar** or a UTF-8 collation when the data contains characters that the legacy code page can't represent. For more information, see [Bulk copy operations](bulk-copy.md).
 
 ### VARCHAR columns with legacy collations
 

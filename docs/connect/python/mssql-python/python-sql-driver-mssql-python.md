@@ -4,7 +4,7 @@ description: mssql-python is Microsoft's Python driver for SQL Server, Azure SQL
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 10/14/2026
+ms.date: 11/04/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: get-started
@@ -28,13 +28,18 @@ ai-usage: ai-assisted
 
 ## Production baseline for Azure SQL
 
-Use this sample as a starting point for a production-oriented Azure SQL connection. It reads configuration from the environment, authenticates with managed identity, and enables Tabular Data Stream (TDS) 8.0 encryption. It also sets login and per-statement query timeouts, retries transient failures with exponential backoff (a fresh connection for connection errors, the same connection for query errors like deadlocks), logs outcomes, and relies on context managers to release resources.
+This sample connects to Azure SQL with managed identity and Tabular Data Stream (TDS) 8.0 encryption. It reads connection settings from environment variables and sets separate login and query timeouts. Each retry calls `connect()` again instead of reusing a failed connection object. Context managers release the connection and cursor after each attempt.
+
+Use this helper only for idempotent read queries that are safe to repeat. Don't use it to replay individual writes or partially completed transactions.
 
 The `ConnectRetryCount` and `ConnectRetryInterval` keywords in the connection string enable SQL Server *idle connection resiliency*: the driver transparently reconnects a dropped idle connection. That's distinct from the application-level retry in this sample, which retries a *query* that fails with a transient error such as a deadlock or query timeout. The two are complementary, so keep both.
+
+The Azure error check matches the standard English error 40501 message even when the diagnostic omits the error number. It also checks `ddbc_error` for known numbers when present. Matching is best-effort: localized or differently formatted messages might not match. For more information, see [Transient connection errors](retry-logic.md#azure-sql-specific-handling).
 
 ```python
 import logging
 import os
+import re
 import time
 
 import mssql_python
@@ -45,77 +50,69 @@ logging.basicConfig(
 )
 logger = logging.getLogger("app")
 
-# Transient errors that require a fresh connection to recover.
-CONNECT_RETRY_ERRORS = frozenset({
+TRANSIENT_DRIVER_ERRORS = frozenset({
     "Timeout expired",
     "Connection timeout expired",
     "Client unable to establish connection",
     "Communication link failure",
     "Connection failure during transaction",
-})
-
-# Transient errors that leave the connection usable, such as a deadlock victim
-# or a query timeout, so retry on the same connection.
-QUERY_RETRY_ERRORS = frozenset({
     "Serialization failure",
-    "Timeout expired",
+    "Statement completion unknown",
 })
 
+AZURE_THROTTLING_ERRORS = frozenset({
+    40197, 40501, 40540, 40613, 40680, 49918, 49919, 49920, 10928, 10929,
+})
 
-def connect_with_retry(conn_str: str, max_attempts: int = 3, login_timeout_s: int = 5) -> mssql_python.Connection:
-    """Open a connection, retrying transient failures with exponential backoff."""
-    for attempt in range(1, max_attempts + 1):
-        try:
-            conn = mssql_python.connect(
-                conn_str,
-                attrs_before={mssql_python.SQL_ATTR_LOGIN_TIMEOUT: login_timeout_s},
-            )
-            logger.info("connected on attempt %d/%d", attempt, max_attempts)
-            return conn
-        except mssql_python.OperationalError as exc:
-            if exc.driver_error not in CONNECT_RETRY_ERRORS or attempt == max_attempts:
-                logger.error("connect failed on attempt %d/%d: %s", attempt, max_attempts, exc.driver_error)
-                raise
-            delay = 2 ** (attempt - 1)  # 1s, 2s, 4s
-            logger.warning(
-                "connect attempt %d/%d hit transient error %r; retrying in %ds",
-                attempt, max_attempts, exc.driver_error, delay,
-            )
-            time.sleep(delay)
+_ERROR_NUMBER_RE = re.compile(r"\b(?:Error|Msg)\s+(\d+)\b")
+_AZURE_40501_MESSAGE = "The service is currently busy. Retry the request after 10 seconds."
 
 
-def execute_with_retry(
-    conn: mssql_python.Connection,
+def is_azure_throttling(error: BaseException) -> bool:
+    """Best-effort detection of Azure SQL throttling in ProgrammingError text."""
+    if not isinstance(error, mssql_python.ProgrammingError):
+        return False
+    ddbc_text = getattr(error, "ddbc_error", "") or ""
+    return (
+        _AZURE_40501_MESSAGE in ddbc_text
+        or any(int(m) in AZURE_THROTTLING_ERRORS for m in _ERROR_NUMBER_RE.findall(ddbc_text))
+    )
+
+
+def query_with_retry(
+    conn_str: str,
     sql: str,
     *params,
     max_attempts: int = 3,
+    login_timeout_s: int = 5,
     query_timeout_s: int = 10,
-) -> mssql_python.Cursor:
-    """Run sql on an open connection and return the ready-to-fetch cursor.
-
-    Retries errors that leave the connection usable so callers don't wrap each
-    query in its own function. Pass query values as parameters. Retry only
-    idempotent statements; wrap writes in an explicit transaction.
-    """
+) -> list:
+    """Fetch an idempotent read query, reconnecting before each retry."""
     for attempt in range(1, max_attempts + 1):
-        cursor = mssql_python.Cursor(conn, timeout=query_timeout_s)
         try:
-            cursor.execute(sql, *params)
-            if attempt > 1:
-                logger.info("query succeeded on attempt %d/%d", attempt, max_attempts)
-            return cursor
-        except mssql_python.OperationalError as exc:
-            cursor.close()
-            if exc.driver_error not in QUERY_RETRY_ERRORS or attempt == max_attempts:
+            with mssql_python.connect(conn_str, timeout=login_timeout_s) as conn:
+                conn.timeout = query_timeout_s
+                with conn.cursor() as cursor:
+                    cursor.execute(sql, *params)
+                    rows = cursor.fetchall()
+            logger.info("query succeeded on attempt %d/%d", attempt, max_attempts)
+            return rows
+        except mssql_python.Error as exc:
+            azure_throttling = is_azure_throttling(exc)
+            transient = (
+                isinstance(exc, mssql_python.OperationalError)
+                and exc.driver_error in TRANSIENT_DRIVER_ERRORS
+            )
+            if not (transient or azure_throttling) or attempt == max_attempts:
                 logger.error("query failed on attempt %d/%d: %s", attempt, max_attempts, exc.driver_error)
                 raise
-            delay = 2 ** (attempt - 1)  # 1s, 2s, 4s
+            delay = (10 if azure_throttling else 1) * (2 ** (attempt - 1))
             logger.warning(
                 "query attempt %d/%d hit transient error %r; retrying in %ds",
                 attempt, max_attempts, exc.driver_error, delay,
             )
             time.sleep(delay)
-    raise RuntimeError("unreachable: the retry loop exits by return or raise")
+    raise ValueError("max_attempts must be at least 1")
 
 
 def main() -> None:
@@ -150,11 +147,9 @@ def main() -> None:
     """
 
     try:
-        # Context managers close the cursor and connection automatically.
-        with connect_with_retry(conn_str) as conn:
-            with execute_with_retry(conn, query) as cursor:
-                for business_entity_id, first_name, last_name in cursor.fetchall():
-                    print(f"{business_entity_id}\t{first_name}\t{last_name}")
+        rows = query_with_retry(conn_str, query)
+        for business_entity_id, first_name, last_name in rows:
+            print(f"{business_entity_id}\t{first_name}\t{last_name}")
     except mssql_python.Error:
         logger.exception("query failed")
         raise
@@ -194,6 +189,7 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 
 | Article | Description |
 | --- | --- |
+| [mssql-odbc provider (Preview)](mssql-odbc-provider.md) | Select the preview native provider and review supported features and known issues. |
 | [Connection strings](connection-strings.md) | Connection string syntax, common keywords, and examples. |
 | [Build connection strings programmatically](build-connection-strings.md) | Compose connection strings safely from configuration and secrets. |
 | [Connection management](connection-management.md) | Open, reuse, and close connections cleanly. |
@@ -261,7 +257,6 @@ For deeper guidance on each concern in this sample, see [Microsoft Entra authent
 | [Installation and connection troubleshooting](troubleshoot-installation-connection.md) | Resolve installation, connection, container, and CI issues. |
 | [Query, data, and operation troubleshooting](troubleshoot-query-data-and-operations.md) | Resolve query, data type, performance, transaction, and bulk copy issues. |
 | [Module configuration](module-configuration.md) | Module-level settings, logging hooks, and feature flags. |
-| [Using the mssql-odbc driver (Preview)](mssql-odbc-provider.md) | Opt in to the Rust-based ODBC provider, what works today, and known differences from ODBC Driver 18. |
 
 ## Migrate to mssql-python
 

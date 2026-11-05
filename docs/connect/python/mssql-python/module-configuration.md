@@ -4,7 +4,7 @@ description: Learn how to configure global module settings in the mssql-python d
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/20/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -96,9 +96,6 @@ You can also set `native_uuid` per connection:
 conn = mssql_python.connect(connection_string, native_uuid=False)
 ```
 
-> [!NOTE]
-> The `native_uuid` setting was introduced in mssql-python version 1.5.0.
-
 ## Select the native ODBC provider
 
 The `native_provider` attribute and the `MSSQL_PYTHON_NATIVE_PROVIDER` environment variable select the native ODBC provider. For selection rules, supported features, and known issues, see [Using the mssql-odbc driver (Preview)](mssql-odbc-provider.md#enabling-the-driver).
@@ -175,7 +172,7 @@ Check which version of the driver is installed:
 import mssql_python
 
 # Driver version
-print(mssql_python.__version__)  # For example, '1.16.0'
+print(mssql_python.__version__)  # For example, '1.17.0'
 ```
 
 ## Configure settings at startup

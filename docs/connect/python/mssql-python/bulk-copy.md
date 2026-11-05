@@ -4,7 +4,7 @@ description: Learn how to efficiently insert large amounts of data using the bul
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/04/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -88,7 +88,7 @@ cursor.bulkcopy(
 
 ### Target table names
 
-The `table_name` argument accepts one-part, two-part, and three-part names, such as `MyTable`, `dbo.MyTable`, or `MyDatabase.dbo.MyTable`. Microsoft SQL rejects a server prefix on a bulk copy target with error 117. If the server name isn't in `sys.servers`, the error is 7202. Enclose a name part in brackets if it contains spaces or other special characters. Inside brackets, escape each `]` character as `]]`:
+The `table_name` argument accepts one-part, two-part, and three-part names, such as `MyTable`, `dbo.MyTable`, or `MyDatabase.dbo.MyTable`. A four-part name with a server prefix raises `RuntimeError` during metadata lookup, before any rows are sent. Connect directly to the destination server instead of including a server prefix in the table name. Enclose a name part in brackets if it contains spaces or other special characters. Inside brackets, escape each `]` character as `]]`:
 
 ```python
 # Schema dbo, table named Sales Data] 2026
@@ -282,6 +282,16 @@ Each Arrow column type must be compatible with its destination SQL column type. 
 Passing an Arrow source to `bulkcopy()` raises `TypeError` and directs you to `bulkcopy_arrow()`.
 
 For more information about Arrow support, including how to stream a result set from one table into another, see [Apache Arrow integration](arrow-integration.md).
+
+## Unicode and temporal precision
+
+Both bulk copy methods support Unicode text in **nvarchar** columns and UTF-8 text in **varchar** columns with a UTF-8 collation. Choose a destination collation that can represent your data. For more information, see [Collation and Unicode support](../../../relational-databases/collations/collation-and-unicode-support.md).
+
+For **datetime2**, bulk copy preserves fractional seconds up to the precision available in the input and destination type. Python `datetime` values have microsecond precision. An Arrow `timestamp[ns]` source can preserve 100-nanosecond values in **datetime2(7)** without first converting them to Python objects.
+
+For **smalldatetime**, tuple strings and Arrow timestamps round using whole seconds. A tuple string that rounds past midnight can retain the original date. To avoid this date rollover error, load values into a **datetime2** staging column and convert them to **smalldatetime** on the server.
+
+Temporal types have different conversion limits. For more information, see [Data type mappings](data-type-mappings.md), [Datetime handling](datetime-handling.md), and [Arrow temporal precision](arrow-integration.md#temporal-precision).
 
 ## Handle NULL values
 

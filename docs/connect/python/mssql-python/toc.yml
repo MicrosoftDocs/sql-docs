@@ -22,6 +22,8 @@
     href: python-sql-driver-mssql-python-arrow-quickstart.md
 - name: Connecting to SQL Server
   items:
+  - name: mssql-odbc provider (Preview)
+    href: mssql-odbc-provider.md
   - name: Connection strings
     href: connection-strings.md
   - name: Build connection strings programmatically
@@ -90,8 +92,6 @@
     href: schema-discovery.md
   - name: Data loading and movement patterns
     href: data-loading-movement-patterns.md
-- name: Using the mssql-odbc driver (Preview)
-  href: mssql-odbc-provider.md
 - name: Framework integration
   items:
   - name: Apache Arrow integration

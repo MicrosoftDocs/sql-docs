@@ -4,7 +4,7 @@ description: Learn performance optimization techniques for SQL Server applicatio
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 08/28/2026
+ms.date: 11/04/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -38,6 +38,8 @@ def get_data():
 ```
 
 ### Configure pool size for workload
+
+The driver skips redundant cleanup for connections it can confirm are already clean, but still validates them with a server round trip before reuse. Connections with uncommitted work or changed session state still require cleanup. For more information, see [Connection lifecycle](connection-pooling.md#connection-lifecycle).
 
 Adjust the pool size based on your concurrency requirements. If your application handles many simultaneous users, increase the pool. For lighter workloads, a smaller pool conserves server resources:
 
@@ -116,7 +118,7 @@ def run_worker(connection_string: str, poll_interval: float = 1.0):
             conn.close()
 ```
 
-With connection pooling enabled (the default), the pool handles idle connections for you. But if you disable pooling or use a single dedicated connection, set `Connection Timeout` and `Command Timeout` in your connection string to detect stale connections early rather than hanging.
+With connection pooling enabled (the default), checkout validates idle connections and replaces them when validation fails. With the default `msodbcsql18` provider, use a positive `connect(timeout=...)` value for login attempts and for the temporary native connection-operation timeout during validation. Multiple validation operations, cleanup, and a replacement login can exceed that value. Set `Connection.timeout` separately to bound statements on a dedicated or checked-out connection. The login timeout isn't a total validation or `connect()` deadline. For more information, see [Connection timeout](connection-management.md#connection-timeout) and the opt-in [Native provider limitations](mssql-odbc-provider.md#known-issues).
 
 ## Query optimization
 
@@ -192,6 +194,8 @@ def get_page(cursor, page: int, page_size: int = 50) -> list:
 ### Use SET NOCOUNT ON
 
 By default, SQL Server sends a "rows affected" message after every DML statement. `SET NOCOUNT ON` suppresses these messages and reduces network traffic. It's a session-level setting, so set it once after connecting rather than embedding it in every query.
+
+Leave `NOCOUNT` off when you need per-statement `rowcount` values while advancing through a batch with `nextset()`. For more information, see [Track each result in a batch](cursor-management.md#track-each-result-in-a-batch).
 
 ```python
 # Set once after connecting
@@ -638,36 +642,36 @@ The [Performance Dashboard Reports](../../../relational-databases/performance/pe
 
 ### Connection
 
-- [ ] Enable connection pooling.
-- [ ] Size the pool for your workload.
-- [ ] Reuse connections within operations.
-- [ ] Keep connections open in long-running services.
+- Enable connection pooling.
+- Size the pool for your workload.
+- Reuse connections within operations.
+- Keep connections open in long-running services.
 
 ### Queries
 
-- [ ] Select only the columns you need.
-- [ ] Use the appropriate fetch method for each query.
-- [ ] Implement server-side pagination.
-- [ ] Set `SET NOCOUNT ON` once after connecting.
-- [ ] Minimize round trips by batching queries.
-- [ ] Use `cursor.arrow()` when the destination is a DataFrame.
+- Select only the columns you need.
+- Use the appropriate fetch method for each query.
+- Implement server-side pagination.
+- Set `SET NOCOUNT ON` once after connecting.
+- Minimize round trips by batching queries.
+- Use `cursor.arrow()` when the destination is a DataFrame.
 
 ### Inserts
 
-- [ ] Use `execute()` for single-row inserts.
-- [ ] Use `executemany()` for small-to-moderate batches (~10-1,000 rows).
-- [ ] Use `bulkcopy()` when throughput matters more than per-row control.
-- [ ] Use `bulkcopy_arrow()` when the source is already columnar, and cast the table to the destination column types first.
+- Use `execute()` for single-row inserts.
+- Use `executemany()` for small-to-moderate batches (~10-1,000 rows).
+- Use `bulkcopy()` when throughput matters more than per-row control.
+- Use `bulkcopy_arrow()` when the source is already columnar, and cast the table to the destination column types first.
 
 ### Caching
 
-- [ ] Cache reference data with a TTL to avoid serving stale results.
+- Cache reference data with a TTL to avoid serving stale results.
 
 ### Resources
 
-- [ ] Process large results in chunks or with generators.
-- [ ] Clean up connections promptly.
-- [ ] Monitor memory usage with `tracemalloc` in long-running services.
+- Process large results in chunks or with generators.
+- Clean up connections promptly.
+- Monitor memory usage with `tracemalloc` in long-running services.
 
 ## Related content
 

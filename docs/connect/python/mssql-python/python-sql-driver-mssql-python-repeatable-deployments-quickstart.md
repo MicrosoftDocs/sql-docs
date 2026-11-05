@@ -4,7 +4,7 @@ description: Use uv to create repeatable Python environments for database applic
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/14/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -75,6 +75,15 @@ In the same directory, install the `mssql-python`, `python-dotenv`, and `rich` p
 uv add mssql-python python-dotenv rich
 ```
 
+For an existing project, first update any exact driver pin in `pyproject.toml` to `1.17.0`. Then update the driver and its pinned runtime dependencies through the lockfile:
+
+```console
+uv lock --upgrade-package mssql-python
+uv sync --locked
+```
+
+Review and commit the updated `uv.lock`. Don't override the companion package versions independently.
+
 ### Launch Visual Studio Code
 
 In the same directory, run the following command.
@@ -97,7 +106,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.16.0",
+       "mssql-python>=1.17.0",
        "python-dotenv>=1.1.1",
        "rich>=14.1.0",
    ]

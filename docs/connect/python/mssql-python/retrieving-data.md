@@ -4,7 +4,7 @@ description: Learn how to fetch query results using fetchone, fetchmany, fetchal
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 07/01/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -168,6 +168,8 @@ The `cursor.rowcount` attribute indicates:
 
 - For SELECT: Returns -1 after `execute()` until fetching begins. Once you start fetching, it reflects the cumulative number of rows fetched so far.
 - For INSERT/UPDATE/DELETE: Number of rows affected.
+
+After `nextset()` advances to another result, `rowcount` reflects the new result instead of the first statement in the batch. A SELECT result starts at `-1` before fetching, and a data-modification result reports its own affected-row count. For a complete mixed-result example, see [Track each result in a batch](cursor-management.md#track-each-result-in-a-batch).
 
 ```python
 cursor.execute("SELECT * FROM Production.Product")

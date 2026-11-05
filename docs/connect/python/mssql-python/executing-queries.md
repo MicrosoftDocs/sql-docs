@@ -4,7 +4,7 @@ description: Learn how to execute parameterized SQL queries, batch operations, a
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 07/01/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -117,6 +117,8 @@ conn.commit()
 ```
 
 ## Multi-statement batch execution
+
+When you pass a multi-statement Transact-SQL (T-SQL) batch to `cursor.execute()`, call `nextset()` to advance through the results. Each successful call refreshes `cursor.rowcount` for that result. Check `cursor.description` before fetching because INSERT, UPDATE, and DELETE results have affected-row counts rather than rows. For more information, see [Track each result in a batch](cursor-management.md#track-each-result-in-a-batch).
 
 Use `batch_execute()` on the connection to execute multiple different statements in a single call:
 

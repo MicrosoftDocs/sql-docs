@@ -4,7 +4,7 @@ description: Diagnose and resolve mssql-python query, data type, performance, tr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 09/14/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -105,6 +105,12 @@ ProgrammingError: [07001] Wrong number of parameters
    print(cursor.fetchone())
    ```
 
+## Incorrect row counts in multi-result batches
+
+If `rowcount` repeats the first statement's count after `nextset()`, upgrade the driver. Each successful `nextset()` refreshes the count for the new result. A row-producing result starts at `-1` before fetching. Check `cursor.description` before fetching because data-modification results contain counts rather than rows.
+
+Leave `SET NOCOUNT` off when you need affected-row results. For a complete example, see [Track each result in a batch](cursor-management.md#track-each-result-in-a-batch).
+
 ## Data type issues
 
 ### Datetime conversion errors
@@ -141,6 +147,10 @@ cursor.execute(
 cursor.execute("SELECT EventDate FROM #Events")
 print(cursor.fetchone())
 ```
+
+### Timestamp constructor requires a microsecond argument
+
+If `Timestamp(year, month, day, hour, minute, second)` raises `TypeError` for a missing `microsecond` argument, upgrade `mssql-python`. The current driver accepts the six-argument DB-API constructor and defaults `microsecond` to zero. For more information, see [DB-API timestamp constructor](datetime-handling.md#db-api-timestamp-constructor).
 
 ### Decimal precision issues
 
@@ -326,6 +336,27 @@ OperationalError: [40001] (1205) Transaction ... was deadlocked on lock resource
 For a full walkthrough of deadlock analysis, see [Deadlocks guide](../../../relational-databases/sql-server-deadlocks-guide.md). If you use Azure SQL Database, see [Analyze and prevent deadlocks](/azure/azure-sql/database/analyze-prevent-deadlocks).
 
 ## Bulk load issues
+
+### Bulk copy fails after a package upgrade
+
+If regular queries work but `bulkcopy()` or `bulkcopy_arrow()` fails to import or load the native bulk copy module, upgrade the driver with dependencies:
+
+```console
+python -m pip install --upgrade mssql-python
+python -m pip check
+```
+
+The driver requires a matching `mssql-python-rs` runtime. A partial upgrade or an installation with `--no-deps` can leave incompatible packages installed. If you use a private package index, mirror both companion packages and preserve the driver's declared dependency pins. For the current pins, see [Dependency requirements](support-lifecycle.md#dependency-requirements).
+
+### Unsupported destination names
+
+`bulkcopy()` and `bulkcopy_arrow()` accept at most three identifier parts. A four-part name such as `server.database.schema.table` raises `RuntimeError` during metadata lookup before any rows are sent. Connect directly to the destination server and use a one-part, two-part, or three-part table name. For bracket escaping and malformed-name errors, see [Target table names](bulk-copy.md#target-table-names).
+
+### Unicode or fractional seconds lost during bulk copy
+
+Upgrade the driver if bulk copy corrupts UTF-8 text or truncates fractional seconds when loading compatible **datetime2** values. The current bulk copy runtime handles UTF-8 text and preserves **datetime2** precision available in the source and destination types.
+
+Use **nvarchar** or a UTF-8 collation on **varchar** for Unicode text. Python `datetime` values and the driver's Arrow fetch methods are limited to microseconds. For 100-nanosecond values already held in an Arrow nanosecond timestamp column, load into **datetime2(7)** without converting to Python `datetime` first. For more information, see [Unicode and temporal precision](bulk-copy.md#unicode-and-temporal-precision) and [Arrow temporal precision](arrow-integration.md#temporal-precision).
 
 ### Constraint violations during bulkcopy
 

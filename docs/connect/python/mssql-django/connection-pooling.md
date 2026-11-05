@@ -4,7 +4,7 @@ description: Configure and manage connection pooling behavior for the mssql-djan
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sharmag, sumitsar
-ms.date: 09/18/2026
+ms.date: 11/04/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -18,6 +18,10 @@ This article explains how connection pooling works in `mssql-django` and how to 
 ## How connection pooling works
 
 By default, `mssql-django` uses driver-level connection pooling. The default pyodbc path uses pyodbc pooling, and the mssql-python path uses mssql-python pooling. When Django closes a connection, the active driver returns it to a pool instead of closing the underlying database connection. Subsequent connection requests reuse pooled connections, which reduces the overhead of establishing new database connections. For driver selection details, see [Select the database driver for mssql-django](select-database-driver.md).
+
+On the `mssql-python` path with the default `msodbcsql18` native provider, the driver validates a pooled connection before reuse. It applies a temporary native connection-operation timeout during validation, using a positive login timeout or 15 seconds when no positive value is supplied. If validation fails, the driver discards that connection and attempts a new physical connection instead of validating every idle connection in sequence. Multiple validation operations, cleanup, and a replacement login can add time. This isn't a total validation or connection-checkout deadline. Returning a connection to the pool isn't bounded by the checkout validation timeout. For more information, see [mssql-python connection pooling](../mssql-python/connection-pooling.md).
+
+Before you opt in to the preview `mssql-odbc` provider, review its [known issues](../mssql-python/mssql-odbc-provider.md#known-issues).
 
 ## Configure connection pooling
 

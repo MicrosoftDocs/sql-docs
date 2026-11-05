@@ -4,7 +4,7 @@ description: Learn how to build web applications with Flask and mssql-python for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 09/14/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -334,11 +334,11 @@ Each endpoint returns JSON. You can also open `http://localhost:5000/products` i
 
 ## Connection pooling
 
-Without connection pooling, each request opens and closes a TCP connection to Microsoft SQL, which adds latency. Connection pooling keeps a set of idle connections ready for reuse. To enable connection pooling call `mssql_python.pooling()` once at module level. With pooling enabled, `conn.close()` in the `close_db` teardown returns the connection to the pool instead of closing it.
+Connection pooling is enabled by default and keeps idle connections ready for reuse. Call `mssql_python.pooling()` once at module level before opening connections to change the pool size or idle timeout. With pooling enabled, `conn.close()` in the `close_db` teardown returns the connection to the pool instead of closing the physical connection.
 
 ### Enable connection pooling
 
-Enable pooling by calling `mssql_python.pooling()` at module level before any connections are opened:
+Configure pooling by calling `mssql_python.pooling()` at module level before any connections are opened:
 
 ```python
 # database.py with connection pooling
@@ -351,10 +351,14 @@ mssql_python.pooling(max_size=20, idle_timeout=300)
 def get_db():
     """Get a database cursor with connection pooling."""
     if "db_conn" not in g:
-        g.db_conn = mssql_python.connect(get_connection_string())
+        g.db_conn = mssql_python.connect(get_connection_string(), timeout=30)
         g.db_cursor = g.db_conn.cursor()
     return g.db_cursor
 ```
+
+With the default `msodbcsql18` provider, `timeout=30` sets the login timeout and supplies a temporary native connection-operation timeout during pooled-connection validation, in seconds. If validation fails, the driver discards the connection and attempts a replacement. Multiple validation operations, cleanup, and replacement can take longer than the configured value. This setting isn't an overall connection-checkout or request deadline, and it doesn't set a query timeout.
+
+With the opt-in `mssql-odbc` provider, pooled-connection reset isn't guaranteed to be bounded by the login timeout. For more information, see [Provider limitations](mssql-odbc-provider.md#known-issues).
 
 ## Error handling
 

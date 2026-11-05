@@ -4,7 +4,7 @@ description: Learn how to configure and use connection pooling to improve applic
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 10/13/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -123,7 +123,7 @@ The driver refreshes pooled connections whose token is within 5 minutes of expir
 
 **Release (returning a connection):**
 
-1. The driver rolls back any open transaction on the physical connection and turns autocommit on. If this cleanup fails, the driver closes the connection instead of returning it to the pool.
+1. If the driver can confirm that the physical connection is already clean, it skips redundant cleanup. Otherwise, it rolls back open transactions and turns autocommit on. Connections with changed session state still require a reset before reuse. If cleanup fails, the driver closes the connection instead of returning it to the pool.
 1. If the pool has capacity, it stores the connection for reuse.
 1. If the pool is at `max_size`, the driver closes the connection immediately.
 
@@ -135,6 +135,14 @@ The driver performs connection health checks before reusing a pooled connection.
 1. **Reset check**: Resets session state (isolation level, settings) for clean reuse.
 
 If either check fails, the pool discards the connection and creates a new one.
+
+With the default `msodbcsql18` provider, the driver applies a temporary native connection-operation timeout during pooled validation. It uses the positive login timeout from `connect(timeout=...)` or `attrs_before[SQL_ATTR_LOGIN_TIMEOUT]`. The explicit attribute takes precedence. If the login timeout is zero or unspecified, the temporary timeout is 15 seconds.
+
+After validation fails, the driver attempts a replacement login instead of validating each remaining idle connection with another timeout. Validation can involve multiple native operations, cleanup can add time, and the replacement login has its own timeout. The temporary timeout isn't a total validation or `connect()` deadline. Microsoft Entra ID token acquisition also occurs outside the login timeout. If the replacement login fails, the error reaches the caller.
+
+The driver still performs a server round trip before reusing a connection, even when it skips redundant cleanup. On successful checkout, the driver restores the physical connection's previous connection timeout and applies the requested autocommit mode.
+
+These validation bounds don't apply to the opt-in `mssql-odbc` provider, whose connection-operation timeout isn't a general deadline for connection attributes. For more information, see [Native provider limitations](mssql-odbc-provider.md#known-issues) and [Connection timeout](connection-management.md#connection-timeout).
 
 ### Automatic cleanup
 

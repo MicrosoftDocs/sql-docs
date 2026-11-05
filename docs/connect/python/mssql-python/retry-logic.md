@@ -4,7 +4,7 @@ description: Learn how to implement robust retry logic and handle transient fail
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 09/12/2026
+ms.date: 11/04/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -23,6 +23,8 @@ Transient failures are temporary errors that can occur when connecting to SQL Se
 Implementing retry logic improves application reliability, especially for cloud-hosted databases.
 
 Don't use retries to hide configuration or coding mistakes. A missing database, bad credentials, or exhausted connection pool needs a fix, not another attempt.
+
+With pooling and the default `msodbcsql18` provider, the driver temporarily applies a native connection-operation timeout during validation of a reused connection: the positive login timeout, or 15 seconds when the login timeout is zero or unspecified. This isn't a total validation or checkout deadline. Multiple native operations, cleanup, and opening a replacement connection can add time. If validation fails, the driver attempts a replacement instead of waiting on each remaining idle connection. This recovery doesn't replay your statements or retry pool exhaustion. For more information, see [Connection pooling](connection-pooling.md).
 
 ## Identify transient errors
 
@@ -73,7 +75,7 @@ def is_transient_error(error: BaseException) -> bool:
 
 Azure SQL throttling errors (`40197`, `40501`, `40613`, `49918`, `49919`, `49920`, and related codes) typically come through with SQLSTATE `42000`, which mssql-python maps to `ProgrammingError`. The engine error number isn't surfaced as an attribute, so the only signal is the server message text in the `ddbc_error` attribute.
 
-If your workload runs against Azure SQL and you need to retry throttling, scan `ddbc_error` for the known number. This is best-effort because the format of the server-side text isn't a stable contract:
+Check `ddbc_error` for known numbers when present and for the standard English error 40501 message. The number can be absent, and the message text isn't a stable contract. Localized or differently formatted diagnostics might not match:
 
 ```python
 import re
@@ -84,6 +86,7 @@ AZURE_THROTTLING_ERRORS = frozenset({
 })
 
 _ERROR_NUMBER_RE = re.compile(r"\b(?:Error|Msg)\s+(\d+)\b")
+_AZURE_40501_MESSAGE = "The service is currently busy. Retry the request after 10 seconds."
 
 
 def is_azure_throttling(error: BaseException) -> bool:
@@ -91,7 +94,10 @@ def is_azure_throttling(error: BaseException) -> bool:
     if not isinstance(error, mssql_python.ProgrammingError):
         return False
     ddbc_text = getattr(error, "ddbc_error", "") or ""
-    return any(int(m) in AZURE_THROTTLING_ERRORS for m in _ERROR_NUMBER_RE.findall(ddbc_text))
+    return (
+        _AZURE_40501_MESSAGE in ddbc_text
+        or any(int(m) in AZURE_THROTTLING_ERRORS for m in _ERROR_NUMBER_RE.findall(ddbc_text))
+    )
 
 
 def is_retryable(error: BaseException) -> bool:
@@ -100,7 +106,7 @@ def is_retryable(error: BaseException) -> bool:
 
 ### What not to retry
 
-Examples of errors that should fail fast instead of retrying include invalid credentials (`OperationalError` with driver text `Invalid authorization specification`), a missing or inaccessible database, syntax errors (`ProgrammingError`), missing objects, and connection pool exhaustion. The `is_transient_error` function above excludes all of these by construction.
+Examples of errors that should fail fast instead of retrying include invalid credentials (`OperationalError` with driver text `Invalid authorization specification`), a missing database or insufficient permissions, syntax errors (`ProgrammingError`), missing objects, and connection pool exhaustion. The `is_transient_error` function above excludes all of these by construction.
 
 ## Basic retry decorator
 
@@ -303,6 +309,10 @@ with ResilientConnection(connection_string) as db:
 
 ## Azure SQL specific handling
 
+Use the mssql-python exception mapping in [Identify transient errors](#identify-transient-errors) to classify errors from the following catalog.
+
+[!INCLUDE [transient-connection-errors](../../includes/transient-connection-errors.md)]
+
 ### Handle Azure throttling
 
 Azure SQL throttling errors need longer delays and more retries than standard transient errors. Reuse `is_azure_throttling` from [Identify transient errors](#identify-transient-errors):
@@ -310,7 +320,7 @@ Azure SQL throttling errors need longer delays and more retries than standard tr
 ```python
 def execute_with_throttle_handling(cursor, query: str, params: dict,
                                    max_retries: int = 10,
-                                   base_delay: float = 5.0):
+                                   base_delay: float = 10.0):
     """Execute with extended retry for Azure SQL throttling."""
     for attempt in range(max_retries + 1):
         try:
@@ -320,7 +330,7 @@ def execute_with_throttle_handling(cursor, query: str, params: dict,
             if is_azure_throttling(e):
                 if attempt < max_retries:
                     # Longer delays for throttling
-                    delay = base_delay * (2 ** min(attempt, 4))  # Cap at 80s
+                    delay = base_delay * (2 ** min(attempt, 4))  # Cap at 16 times the base delay
                     print(f"Throttled. Waiting {delay}s before retry...")
                     time.sleep(delay)
                     continue
@@ -585,7 +595,7 @@ Not every error is transient. Retrying a configuration or coding error wastes ti
 | Invalid column name (engine 207) | `ProgrammingError` | `Column not found` | The column doesn't exist. Check the schema. |
 | Incorrect syntax (engine 102) | `ProgrammingError` | `Syntax error or access violation` | Fix the query. |
 | Login failed (engine 18456) | `OperationalError` | `Invalid authorization specification` | Wrong credentials. Fix the connection string. |
-| Cannot open database (engine 4060) | `OperationalError` | `Server rejected the connection` | Database doesn't exist or isn't accessible to the login. Fix the target or permissions. |
+| Missing database or denied access (engine 4060) | `OperationalError` | `Server rejected the connection` | Database doesn't exist or isn't accessible to the login. Fix the target or permissions. |
 | Connection pool exhaustion | `OperationalError` | (varies) | Increase pool capacity, release connections promptly, or reduce concurrency. |
 | `ConnectionStringParseError` | Standalone | n/a | Typo in connection string keyword. Fix the string. |
 | Unsupported feature | `NotSupportedError` | `Optional feature not implemented` | Use an alternative approach. |
@@ -601,7 +611,7 @@ Not every error is transient. Retrying a configuration or coding error wastes ti
 | Connection dropped mid-transaction | `OperationalError` | `Connection failure during transaction` |
 | Deadlock victim (engine 1205) | `OperationalError` | `Serialization failure` |
 | Indeterminate transaction state | `OperationalError` | `Statement completion unknown` |
-| Azure SQL throttling (40197, 40501, 40613, 49918&ndash;49920) | `ProgrammingError` | `Syntax error or access violation` (engine number is only in `ddbc_error`; use `is_azure_throttling`) |
+| Azure SQL throttling (40197, 40501, 40613, 49918&ndash;49920) | `ProgrammingError` | `Syntax error or access violation` (use `is_azure_throttling` to match `ddbc_error` text) |
 
 ## Related content
 

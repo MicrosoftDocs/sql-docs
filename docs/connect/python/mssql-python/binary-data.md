@@ -4,7 +4,7 @@ description: Learn how to insert, retrieve, and work with binary data types when
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 07/16/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -273,6 +273,8 @@ Use the `bulkcopy()` method to efficiently insert multiple binary files in a sin
 
 > [!IMPORTANT]
 > `bulkcopy()` loads data over a **separate connection** to the server, so the destination table must already exist and be **committed and visible to other sessions**. If you create the table in the same script with autocommit off, call `conn.commit()` before `bulkcopy()`. Local temporary tables (`#name`) aren't supported because they're private to the session that created them. An uncommitted or unreachable destination causes `bulkcopy()` to fail with a `Failed to retrieve destination metadata` timeout.
+
+Use an unqualified table name, `schema.table`, or `database.schema.table`. Server-qualified four-part names are rejected before destination metadata is retrieved. For more information, see [Bulk copy operations](bulk-copy.md).
 
 By default, `bulkcopy()` maps each value in a row to a table column by ordinal position, so every column must have a value in order. When the table has an identity column or you only populate some columns, pass `column_mappings` to name the target columns explicitly. Otherwise the values shift onto the wrong columns and `bulkcopy()` fails.
 

@@ -4,7 +4,7 @@ description: Diagnose and resolve mssql-python installation, connection, contain
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 10/14/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -174,6 +174,20 @@ OperationalError: [HYT01] (0) Connection timeout expired
 - **Server under heavy load**
   - Try to connect during off-peak hours.
   - Contact your database administrator.
+
+### Slow checkout after a network interruption
+
+If a `connect()` call stalls while reusing a pooled connection, upgrade the driver and set a positive login timeout:
+
+```python
+conn = mssql_python.connect(connection_string, timeout=30)
+```
+
+With the default `msodbcsql18` provider, the driver uses that value as a temporary native connection-operation timeout during pooled validation, then attempts a replacement login if validation fails. An explicit `SQL_ATTR_LOGIN_TIMEOUT` in `attrs_before` takes precedence. If the login timeout is zero or unspecified, the temporary timeout is 15 seconds.
+
+Validation can involve multiple operations, cleanup can add time, and the replacement login has its own timeout. Microsoft Entra ID token acquisition isn't bounded by the login timeout. `timeout=30` isn't a 30-second deadline for validation or the whole call. If the server or network remains unavailable, handle the connection error with your application's retry policy.
+
+The opt-in `mssql-odbc` provider doesn't guarantee the same validation bounds. For more information, see [Connection health checks](connection-pooling.md#connection-health-checks), [Native provider limitations](mssql-odbc-provider.md#known-issues), and [Retry logic](retry-logic.md).
 
 ### SSL certificate errors
 

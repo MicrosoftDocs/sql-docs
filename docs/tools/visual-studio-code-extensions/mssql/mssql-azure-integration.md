@@ -22,13 +22,13 @@ This experience provides free tier provisioning only that you can't customize. Y
 
 To configure advanced settings or use paid tiers, deploy your database through the [Azure portal](https://portal.azure.com).
 
-The MSSQL extension for Visual Studio Code integrates with Azure so you can provision Azure SQL databases and connect to them without leaving the editor. A guided wizard on the **Deployments** page authenticates with your Azure account and creates a fully managed Azure SQL database in minutes. The provisioning experience starts with the free tier, so you can create and connect to a cloud database at no cost.
+The MSSQL extension for Visual Studio Code integrates with Azure so you can provision Azure SQL databases and connect to them without leaving the editor. A guided wizard on the **Deployments** page authenticates with your Azure account and creates a fully managed Azure SQL database in minutes. The provisioning experience uses the free tier's monthly allowances. Review [eligibility, limits, and pause or paid-overage behavior](/azure/azure-sql/database/free-tier) before creating resources. The free tier is intended primarily for development and proof-of-concept scenarios and has no SLA; supporting resources can have separate charges.
 
 ## Features
 
 Azure integration in the MSSQL extension offers the following capabilities:
 
-- Provision Azure SQL databases directly from Visual Studio Code, starting with the free tier at no cost.
+- Provision new Azure SQL databases directly from Visual Studio Code with the free tier's monthly allowances.
 - Authenticate with your Azure account using Microsoft Entra ID with persistent sign-in.
 - Configure subscription, resource group, server, and database on a single page in a guided wizard.
 - Choose what happens when the free monthly limit is reached: autopause until the next calendar month, or continue at standard serverless rates.
@@ -73,7 +73,17 @@ You can provision a new Azure SQL database from the MSSQL extension's **Deployme
 
 ## After provisioning
 
-After provisioning and connecting your Azure SQL database, continue your workflow in Visual Studio Code:
+Use the database you just provisioned rather than creating another database for a tutorial.
+
+1. [Verify the deployment](/azure/azure-sql/database/free-tier#verify-the-deployment), including the intended subscription, resource group, server, free tier configuration, and monthly-limit behavior. If provisioning fails or its status is uncertain, inspect the existing deployment before trying again; don't create another database or switch to a paid configuration as a fallback.
+1. Find the new saved connection in **Object Explorer**. If it isn't connected, use the saved connection to reconnect. For connection or authentication help, see [Connect to a database](mssql-database-connections.md).
+1. Open a query editor connected to the new database and run `SELECT DB_NAME() AS current_database;`. Confirm that the result matches the database name you provisioned before running sample statements.
+1. Follow [Use an existing database](mssql-run-first-query.md#use-an-existing-database) in the first-query quickstart, then create its sample table, insert rows, and query the results. Skip the generic **Create a database** step: `CREATE DATABASE Library` doesn't provision a free tier database. The sample table steps don't require Adventure Works or an imported database.
+1. When you finish, follow the quickstart's [sample-object cleanup](mssql-run-first-query.md#clean-up-resources) instructions. Keep your database if you plan to continue the project.
+
+[Track your remaining allowance](/azure/azure-sql/database/free-tier#track-free-usage) and review [pause and overage behavior](/azure/azure-sql/database/free-tier#considerations-and-limitations). Disconnect query editors and the Object Explorer connection when you're done. Open connections can prevent idle auto-pause; disconnecting doesn't restore vCore seconds already consumed.
+
+After you run your first query, you can continue your workflow in the same database. Review permissions, generated changes, and costs for any additional services before using these optional tools:
 
 - Open the [Schema Designer](mssql-schema-designer.md) to design and evolve your data model. With [GitHub Copilot integration in Schema Designer](mssql-schema-designer-copilot.md), you can describe your schema in natural language and let GitHub Copilot generate tables and relationships.
 - Use [Data API builder](mssql-data-api-builder.md) to generate REST, GraphQL, and Model Context Protocol (MCP) endpoints from your schema. It works with the same Azure SQL connection.

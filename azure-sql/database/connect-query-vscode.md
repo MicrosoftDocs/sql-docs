@@ -9,6 +9,7 @@ ms.date: 01/10/2025
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: quickstart
+ai-usage: ai-assisted
 keywords: connect to sql database
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ms.custom:
@@ -24,6 +25,8 @@ ms.custom:
 
 ## Prerequisites
 
+- **Optional free tier path**: For a new development or sample database, review the [Azure SQL Database free tier](free-tier.md) and provision a database through that offer. You can also [create it in the MSSQL extension](/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration). Use that database throughout this quickstart, then follow [Query an existing free tier database](#query-an-existing-free-tier-database) instead of the Adventure Works examples. Review eligibility, monthly limits, and pause or paid-overage behavior before creating resources.
+
 - A database in Azure SQL Database or Azure SQL Managed Instance. You can use one of these quickstarts to create and then configure a database in Azure SQL Database:
 
   | Action | Azure SQL Database | Azure SQL Managed Instance |
@@ -37,7 +40,7 @@ ms.custom:
   | | | Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
   > [!IMPORTANT]  
-  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > The Adventure Works scripts in this article require the sample tables. A new, empty free tier database doesn't contain them. Don't restore or import a database for the free tier path; use [Query an existing free tier database](#query-an-existing-free-tier-database) instead. With a SQL Managed Instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
 ## Install Visual Studio Code
 
@@ -120,7 +123,7 @@ Use Visual Studio Code to establish a connection to your server.
    | Property       | Suggested value | Description  |
    | --- | --- | --- |
    | **Server name** | The fully qualified server name | Something like: `<Contoso-server-name>.database.windows.net`. |
-   | **Database name** | mySampleDatabase | The database to connect to. |
+   | **Database name** | Your database name | For the free tier path, enter the name of the free database you already provisioned. For the Adventure Works path, enter the database that contains the sample tables, such as `mySampleDatabase`. |
    | **Authentication** | SQL Login | This tutorial uses SQL Authentication. |
    | **User name** | User name | The user name of the server admin account used to create the server. |
    | **Password (SQL Login)** | Password | The password of the server admin account used to create the server. |
@@ -129,7 +132,26 @@ Use Visual Studio Code to establish a connection to your server.
 
    If successful, a notification appears saying your profile is created and connected.
 
+## Query an existing free tier database
+
+Use this path if you connected to a new, empty Azure SQL Database free tier database.
+
+1. Run this query in the editor:
+
+   ```sql
+   SELECT DB_NAME() AS current_database;
+   ```
+
+1. Confirm that the result is the name of the free database you provisioned, not `master` or another database. If it doesn't match, reconnect to the intended database before continuing.
+1. Follow [Create a table](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#create-a-table), **Insert rows**, and **View the data** in the MSSQL first-query quickstart. These steps create `dbo.Authors` and query its five sample rows in your existing database. You need permission to create the table and modify its data. Skip that quickstart's generic **Create a database** step; `CREATE DATABASE Library` doesn't provision a free tier database.
+1. Follow that quickstart's [Clean up resources](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#clean-up-resources) instructions to remove only the sample table you created, after checking the database and table ownership. Don't drop your free database.
+1. [Track your remaining allowance](free-tier.md#track-free-usage) and review [pause and overage behavior](free-tier.md#considerations-and-limitations). Disconnect query editors and Object Explorer when you're done. Open connections can prevent idle auto-pause; disconnecting doesn't restore usage already consumed.
+
+You can continue building in the same database. Query completion doesn't establish workload compatibility or guarantee that future usage stays within the free allowance. Don't run the following Adventure Works examples unless you separately chose the sample-database path and have its required tables.
+
 ## Query data
+
+The remaining query, insert, update, and delete examples use Adventure Works, not the empty free tier database path.
 
 Run the following [SELECT](/sql/t-sql/queries/select-transact-sql) Transact-SQL statement to query for the top 20 products by category.
 

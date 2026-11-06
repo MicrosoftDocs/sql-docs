@@ -18,7 +18,9 @@ ai-usage: ai-assisted
 
 The MSSQL extension for Visual Studio Code centers around your connections to SQL Server, Azure SQL, and SQL database in Microsoft Fabric. This article shows you how to create connections with the Connection Dialog and which authentication types the extension supports. It also explains how to organize saved connections in the Object Explorer and how to choose the connection that the extension uses when you open a new SQL file.
 
-After you connect, see [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](mssql-run-first-query.md) to create a database, add data, and run Transact-SQL statements.
+Need a database? [Create Azure SQL Database free in the MSSQL extension](mssql-azure-integration.md) through the existing **Deployments** flow. Review the [free tier's eligibility, monthly allowances, and limitations](/azure/azure-sql/database/free-tier) first. This is a new, separate development database, not a conversion of your existing database. Local SQL Server and SQL database in Fabric are separate options, not the same Azure SQL Database free tier.
+
+After you connect, see [Quickstart: Run your first query with the MSSQL extension for Visual Studio Code](mssql-run-first-query.md) to add sample data and run Transact-SQL statements. If you already provisioned a free tier database, start with [Use an existing database](mssql-run-first-query.md#use-an-existing-database) and skip generic database creation.
 
 ## Connection Dialog
 
@@ -57,6 +59,8 @@ The **Database** field lets you connect to the server's default database or to a
 - Select a specific database from the dropdown list. After you fill in enough details to authenticate, the extension tries to fetch the list of databases on the server in the background. If the list loads successfully, you can pick from it.
 
 - If the database list can't be loaded - for example, when your login doesn't have permission to enumerate databases on the server - you can still type the database name directly into the field.
+
+For an Azure SQL Database free tier connection, select or enter the name of the database you already provisioned rather than leaving **\<Default\>** selected. After opening a query editor, run `SELECT DB_NAME() AS current_database;` and confirm that it matches your intended database before running sample statements.
 
 :::image type="content" source="media/mssql-database-connections/connection-database-dropdown.png" alt-text="Screenshot of the Database dropdown list in the Connection Dialog with a populated list of databases." lightbox="media/mssql-database-connections/connection-database-dropdown.png":::
 
@@ -197,6 +201,14 @@ This behavior is controlled by the `mssql.newEditorConnectionBehavior` setting, 
 | `defaultConnection` | New SQL editors are automatically connected to a specific connection that you've designated as your default. The default connection is identified by the `mssql.defaultConnectionId` setting.<br /><br />To use this mode, you also need to set `mssql.defaultConnectionId` to the ID of one of your saved connections. You can find the ID by looking at your saved connections in `settings.json`. If `mssql.defaultConnectionId` isn't set or no longer matches a saved connection, the extension prompts you to choose a default connection the next time you open a new SQL editor. |
 
 You can change these settings from the Visual Studio Code settings UI by searching for `mssql.newEditorConnectionBehavior` or `mssql.defaultConnectionId`.
+
+Regardless of this setting, check the active database when you open a new editor or change connections. A saved connection or a successful sign-in alone doesn't confirm that the editor targets the database you intended.
+
+## Finish a free tier session
+
+If you connected to an Azure SQL Database free tier database, [track your remaining allowance](/azure/azure-sql/database/free-tier#track-free-usage) and review [pause and overage behavior](/azure/azure-sql/database/free-tier#considerations-and-limitations). Disconnect query editors and the Object Explorer connection when you're done. Open sessions can prevent idle auto-pause; disconnecting doesn't restore vCore seconds already consumed.
+
+You can keep the saved connection for your next session. Continuing the same sample project doesn't require provisioning another database.
 
 ## Related content
 

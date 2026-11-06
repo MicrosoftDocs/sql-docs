@@ -60,6 +60,10 @@ sections:
         answer: |
          No, vCore seconds for each free tier database reset at the start of each calendar month.
 
+      - question: Is my entire application free when I use a free tier database?
+        answer: |
+         No. The offer covers the database's stated monthly compute and storage allowances, subject to its limits and your selected pause or paid-overage behavior. Application hosting, external AI models and inference, and other supporting resources can have separate charges. Review the resources your project uses before creating them.
+
   - name: Technical questions
     questions:
       - question: Help! I'm no longer able to sign in to my database.
@@ -70,13 +74,15 @@ sections:
         answer: |
          - Track usage throughout the month with the "Free amount remaining" Azure Metric. For more information, see [Track free usage](free-tier.md#track-free-usage).
          - Review the Azure SQL Database serverless [features that prevent auto-pause](serverless-tier-overview.md#review-interoperability-that-prevents-auto-pause) for tips on saving vCore seconds.
-         - Disconnect querying tools such as [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms), including the Object Explorer, when you're done using them. Leaving connections open can continue to consume credits by preventing auto-pause.
+         - Disconnect querying tools such as [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms) and the MSSQL extension for Visual Studio Code, including query editors and Object Explorer connections, when you're done using them. Leaving connections open can continue to consume vCore seconds by preventing idle auto-pause. Disconnecting doesn't restore usage already consumed.
 
       - question: Can I restore a database to a free tier database?
         answer: |
          <a id="can-i-restore-a-database-to-a-free-offer-database"></a>
 
          No. You can apply the free tier only to a new database. You can't restore or convert an existing database to the free tier.
+
+         For a development evaluation, create a separate free tier database and work with sample tables inside it. In the MSSQL first-query quickstart, use [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) and skip the generic `CREATE DATABASE` step. A query that succeeds doesn't establish compatibility for your existing workload.
 
          You also can't copy a free tier database. To copy it, first [convert the database to a paid service tier](#can-i-upgrade-to-a-larger-or-more-powerful-database).
 

@@ -3,7 +3,7 @@ title: "Supported Version and Edition Upgrades (SQL Server 2025)"
 description: The supported version and edition upgrades for SQL Server 2025.
 author: adbadram
 ms.author: adbadram
-ms.date: 11/18/2025
+ms.date: 11/06/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: upgrade-and-migration-article
@@ -71,7 +71,7 @@ The following table lists the supported upgrade scenarios from earlier versions 
 | --- | --- |
 | **[!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] Service Pack 3** | **[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]** |
 | Enterprise edition | Enterprise edition |
-| Developer edition | Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition |
+| Developer edition | Enterprise Developer edition<br />Enterprise edition |
 | Standard edition | Enterprise edition<br />Standard edition |
 | Web edition | Enterprise edition<br />Standard edition |
 | Express edition | Enterprise edition<br />Standard edition<br />Express edition |
@@ -79,7 +79,7 @@ The following table lists the supported upgrade scenarios from earlier versions 
 | Evaluation edition | Evaluation edition<br />Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition<br />Standard edition |
 | **[!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] Service Pack 3** | **[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]** |
 | Enterprise edition | Enterprise edition |
-| Developer edition | Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition |
+| Developer edition | Enterprise Developer edition<br />Enterprise edition |
 | Standard edition | Enterprise edition<br />Standard edition |
 | Web edition | Enterprise edition<br />Standard edition |
 | Express edition | Enterprise edition<br />Standard edition<br />Express edition |
@@ -87,7 +87,7 @@ The following table lists the supported upgrade scenarios from earlier versions 
 | Evaluation edition | Evaluation edition<br />Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition<br />Standard edition |
 | **[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]** | **[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]** |
 | Enterprise edition | Enterprise edition |
-| Developer edition | Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition |
+| Developer edition | Enterprise Developer edition<br />Enterprise edition |
 | Standard edition | Enterprise edition<br />Standard edition |
 | Web edition | Enterprise edition<br />Standard edition |
 | Express edition | Enterprise edition<br />Standard edition<br />Express edition |
@@ -95,7 +95,7 @@ The following table lists the supported upgrade scenarios from earlier versions 
 | Evaluation edition | Evaluation edition<br />Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition<br />Standard edition |
 | **[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]** | **[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]** |
 | Enterprise edition | Enterprise edition |
-| Developer edition | Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition |
+| Developer edition | Enterprise Developer edition<br />Enterprise edition |
 | Standard edition | Enterprise edition<br />Standard edition |
 | Web edition | Enterprise edition<br />Standard edition |
 | Express edition | Enterprise edition<br />Standard edition<br />Express edition |
@@ -103,14 +103,13 @@ The following table lists the supported upgrade scenarios from earlier versions 
 | Evaluation edition | Evaluation edition<br />Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition<br />Standard edition |
 | **[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]** | **[!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]** |
 | Enterprise edition | Enterprise edition |
-| Developer edition | Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition |
+| Developer edition | Enterprise Developer edition<br />Enterprise edition |
 | Standard edition | Enterprise edition<br />Standard edition |
 | Web edition | Enterprise edition<br />Standard edition |
 | Express edition | Enterprise edition<br />Standard edition<br />Express edition |
 | Business Intelligence edition | Enterprise edition |
 | Evaluation edition | Evaluation edition<br />Enterprise Developer edition<br />Standard Developer edition<br />Enterprise edition<br />Standard edition |
 | Release candidate <sup>1</sup> | Enterprise edition |
-| Developer edition | Enterprise edition |
 
 <sup>1</sup> Microsoft support to upgrade from release candidate software is specifically for customers who participated in the Early Adopter Program.
 

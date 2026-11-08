@@ -34,7 +34,7 @@ Contains information about the query and its associated overall aggregated runti
 | `context_settings_id` <sup>1</sup> | **bigint** | Foreign key. Joins to [sys.query_context_settings](sys-query-context-settings-transact-sql.md). |
 | `object_id` <sup>2</sup> | **bigint** | ID of the database object that the query is part of (stored procedure, trigger, CLR UDF/UDAgg, etc.). `0` if the query isn't executed as part of a database object (ad hoc query). See the [Remarks](#remarks) section in this article. |
 | `batch_sql_handle` <sup>3</sup> | **varbinary(64)** | ID of the statement batch the query is part of. Populated only if query references temporary tables or table variables. |
-| `query_hash` | **binary(8)** | Zobrist hash over the shape of the individual query, based on the bound (input) logical query tree. Query hints aren't included as part of the hash. |
+| `query_hash` | **binary(8)** | Zobrist hash over the shape of the individual query, based on the bound (input) logical query tree. Query hints in the statement's `OPTION` clause are included as part of the hash: the same statement with a different `OPTION` clause, or without one, has a different `query_hash`. Hints applied with [Query Store hints](../performance/query-store-hints.md) aren't included as part of the hash. |
 | `is_internal_query` <sup>2</sup> | **bit** | The query was generated internally. |
 | `query_parameterization_type` <sup>2</sup> | **tinyint** | Type of parameterization:<br /><br />`0` - None<br />`1` - User<br />`2` - Simple<br />`3` - Forced |
 | `query_parameterization_type_desc` <sup>4</sup> | **nvarchar(60)** | Textual description for the parameterization type. |

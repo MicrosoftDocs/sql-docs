@@ -4,7 +4,7 @@ description: "Learn about accelerated database recovery (ADR), which redesigned 
 author: dnethi
 ms.author: dinethi
 ms.reviewer: wiassaf, derekw, dfurman
-ms.date: 12/17/2025
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: concept-article
@@ -154,6 +154,8 @@ ADR benefits most workloads by improving database availability, and is particula
 The benefits of ADR require version storage and extra processing, which might introduce a performance overhead for certain workloads. For example, with write-intensive workloads generating many row versions, data pages might be split more often to accommodate the [in-row](sql-server-transaction-locking-and-row-versioning-guide.md#space-used-by-the-persistent-version-store-pvs) versions. Because all row versions are logged, the amount of generated transaction log can increase as well.
 
 For most workloads, the performance overhead of ADR ranges from not detectable to minor. In an optimal database management strategy, you balance the certain benefits of ADR against the potential performance overhead.
+
+In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)], you can measure how many row versions individual queries read by using [version read metrics](sql-server-transaction-locking-and-row-versioning-guide.md#version-read-metrics).
 
 ADR isn't supported in databases using [database mirroring](../database-engine/database-mirroring/database-mirroring-sql-server.md), an older and deprecated high availability feature.
 

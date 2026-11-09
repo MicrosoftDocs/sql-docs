@@ -842,6 +842,8 @@
       items:
       - name: Tune applications and databases for performance
         href: database/performance-guidance.md
+      - name: Improve performance by using a cache
+        href: database/how-to-cache.md
       - name: Use Query Performance Insights
         href: database/query-performance-insight-use.md
       - name: Enable automatic tuning

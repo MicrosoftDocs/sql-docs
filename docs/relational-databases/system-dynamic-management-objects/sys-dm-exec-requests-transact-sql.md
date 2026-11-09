@@ -4,7 +4,7 @@ description: sys.dm_exec_requests returns information about each request that is
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw
-ms.date: 10/02/2025
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -92,6 +92,7 @@ Returns information about each request that is executing in [!INCLUDE [ssNoVersi
 | `page_resource` | **binary(8)** | **Applies to**: [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]<br /><br />An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../system-functions/sys-fn-pagerescracker-transact-sql.md). |
 | `page_server_reads` | **bigint** | **Applies to**: Azure SQL Database Hyperscale<br /><br />Number of page server reads performed by this request. Not nullable. |
 | `dist_statement_id` | **uniqueidentifier** | **Applies to**: SQL Server 2022 and later versions, Azure SQL Database, SQL database in Fabric, Azure SQL Managed Instance, Azure Synapse Analytics (serverless pools only), and Microsoft Fabric Data Warehouse<br /><br />Unique ID for the statement for the request submitted. Not nullable. |
+| `version_reads` | **bigint** | **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)]<br /><br />Number of row versions read from all version stores by this request so far, including version reads performed while queries in the request are compiled. For more information, see [Version read metrics](../sql-server-transaction-locking-and-row-versioning-guide.md#version-read-metrics). Not nullable. |
 
 ## Remarks
 

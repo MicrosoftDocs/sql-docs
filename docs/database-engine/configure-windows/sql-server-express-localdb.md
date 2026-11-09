@@ -26,6 +26,9 @@ Microsoft SQL Server Express LocalDB is a feature of [!INCLUDE [ssexpress-md](..
 
 LocalDB installation copies a minimal set of files necessary to start the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. After LocalDB is installed, you can initiate a connection using a special connection string. When you connect, the necessary [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] that lets them write and test [!INCLUDE [tsql](../../includes/tsql-md.md)] code without having to manage a full server instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
+> [!TIP]
+> Want to build and test against a managed SQL database without installing SQL Server locally? [Try Azure SQL Database free](/azure/azure-sql/database/free-tier?view=azuresql-db&preserve-view=true). Get 100,000 vCore seconds, 32 GB of data, and 32 GB of backup storage per database each month for the life of your subscription, with up to 10 databases per subscription. Review eligibility and limits before approving creation; then verify your database, connect with your preferred tool, and run your first query.
+
 ## Installation media
 
 LocalDB is a feature you select during SQL Server Express installation, and is available when you download the media. For [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and later versions, LocalDB is included with the **Express** edition download. For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and earlier versions, the edition is called **Express Advanced**, and you can choose either that or the standalone **LocalDB** package when downloading.

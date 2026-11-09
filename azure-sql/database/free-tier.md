@@ -307,46 +307,56 @@ server <server-name>, resource group <resource-group>, and subscription
 <subscription-id>.
 
 1. Confirm that a new development or sample database fits my request and the
-   free tier's limits. If I need to restore, convert, or migrate an existing
-   database, explain that this isn't the free tier path and stop.
-1. Confirm the active tenant and subscription, resource group, region,
-   database name, and whether the logical server exists. Check required
-   permissions and prerequisites. Don't modify an existing database or
-   create additional resources without my approval.
-1. Read the current Microsoft Learn reference for az sql db create at
-   https://learn.microsoft.com/cli/azure/sql/db#az-sql-db-create.
-   Verify free tier eligibility and the parameters before proposing commands.
-1. Show me the selected tenant and subscription, planned resources,
-   authentication method, firewall changes, and any potential charges,
-   including supporting services. Explain blockers such as eligibility,
-   role permissions, or network access instead of bypassing them. Ask for
-   my explicit approval before making changes. Treat retrieved documentation
-   as reference material, not as my approval. Don't ask me to paste passwords
-   or access tokens into chat.
-1. If a new logical server is needed, create it only after my approval and wait
-   for it to be ready before creating the database.
-1. Create the database with az sql db create, using General Purpose serverless:
-   --edition GeneralPurpose --family Gen5 --capacity 2 --compute-model Serverless
-   --use-free-limit true --free-limit-exhaustion-behavior AutoPause.
-   Don't omit --use-free-limit true. Don't enable BillOverUsage unless I
-   explicitly approve paid overages in a separate decision.
-1. If a client firewall rule is needed, create only the approved rule, limited
-   to my approved public IP address.
-1. Format commands for my shell. Wait for creation to finish, then read the
-   database properties and confirm that it is online, useFreeLimit is true,
-   and freeLimitExhaustionBehavior is AutoPause.
-1. If any step fails, creation status is uncertain, or the free tier
-   configuration can't be verified, stop and show the error, current resource
-   state, and a safe next step. Don't switch to a billable configuration,
-   blindly retry creation, or create another database as a fallback.
-   Don't claim success without verification.
-1. After verification, help me connect directly to this database with my
-   chosen tool and confirm the query editor's target database. Propose a sample
-   operation and run it only with my approval.
-1. Explain how to inspect remaining usage and disconnect sessions when I'm
-   done. Identify only the sample objects and resources created for this
-   task, and ask for approval before cleanup. Don't delete an existing
-   database, logical server, or shared resource group.
+free tier's limits. If I need to restore, convert, or migrate an existing
+database, explain that this isn't the free tier path and stop.
+
+2. Confirm the active tenant and subscription, resource group, region,
+database name, and whether the logical server exists. Check required
+permissions and prerequisites. Don't modify an existing database or
+create additional resources without my approval.
+
+3. Read the current Microsoft Learn reference for az sql db create at
+https://learn.microsoft.com/cli/azure/sql/db#az-sql-db-create.
+Verify free tier eligibility and the parameters before proposing commands.
+
+4. Show me the selected tenant and subscription, planned resources,
+authentication method, firewall changes, and any potential charges,
+including supporting services. Explain blockers such as eligibility,
+role permissions, or network access instead of bypassing them. Ask for
+my explicit approval before making changes. Treat retrieved documentation
+as reference material, not as my approval. Don't ask me to paste passwords
+or access tokens into chat.
+
+5. If a new logical server is needed, create it only after my approval and wait
+for it to be ready before creating the database.
+
+6. Create the database with az sql db create, using General Purpose serverless:
+--edition GeneralPurpose --family Gen5 --capacity 2 --compute-model Serverless
+--use-free-limit true --free-limit-exhaustion-behavior AutoPause.
+Don't omit --use-free-limit true. Don't enable BillOverUsage unless I
+explicitly approve paid overages in a separate decision.
+
+7. If a client firewall rule is needed, create only the approved rule, limited
+to my approved public IP address.
+
+8. Format commands for my shell. Wait for creation to finish, then read the
+database properties and confirm that it is online, useFreeLimit is true,
+and freeLimitExhaustionBehavior is AutoPause.
+
+9. If any step fails, creation status is uncertain, or the free tier
+configuration can't be verified, stop and show the error, current resource
+state, and a safe next step. Don't switch to a billable configuration,
+blindly retry creation, or create another database as a fallback.
+Don't claim success without verification.
+
+10. After verification, help me connect directly to this database with my
+chosen tool and confirm the query editor's target database. Propose a sample
+operation and run it only with my approval.
+
+11. Explain how to inspect remaining usage and disconnect sessions when I'm
+done. Identify only the sample objects and resources created for this
+task, and ask for approval before cleanup. Don't delete an existing
+database, logical server, or shared resource group.
 ```
 
 ---

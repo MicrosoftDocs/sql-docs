@@ -1303,7 +1303,7 @@ Enough disk space should be allocated to accommodate this requirement.
 When a statement needs an earlier version of a row, the [!INCLUDE [Database Engine](../includes/ssde-md.md)] follows the version chain of the row, starting with the newest version, until it finds the version that is visible to the statement. Each version examined along the way is a *version read*. For example:
 
 - A `SNAPSHOT` transaction reads earlier versions of rows that were modified after the transaction started.
-- A statement that uses `READ COMMITTED` isolation with row versioning reads the last committed version of a row that is being modified by another active transaction.
+- A statement that uses `READ COMMITTED` isolation with row versioning reads the latest row version committed before the statement started, rather than the uncommitted changes made by another active transaction.
 - In a database with ADR enabled, a statement reads the last committed version of a row that was modified by a rolled back transaction, until the original row is restored by the background logical revert process.
 
 The cost of a version read depends on where the version is stored:

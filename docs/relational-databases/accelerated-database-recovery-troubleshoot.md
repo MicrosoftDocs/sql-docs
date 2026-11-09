@@ -4,7 +4,7 @@ description: "Monitor and troubleshoot accelerated database recovery and persist
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw, dfurman
-ms.date: 08/20/2026
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: troubleshooting-general
@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "accelerated database recovery [SQL Server], recovery-only"
   - "database recovery [SQL Server]"
 monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15 || =azuresqldb-mi-current || =azuresqldb-current || =fabric-sqldb"
+ai-usage: ai-assisted
 ---
 
 # Monitor and troubleshoot accelerated database recovery
@@ -124,13 +125,44 @@ Check the `pvs_percent_of_database_size` column to see the size of the PVS relat
 If the size of PVS is not decreasing, use the following troubleshooting steps to find and resolve the reason for large PVS size.
 
 > [!TIP]
-> Columns mentioned in the following troubleshooting steps refer to the columns in the result set of the diagnostic query in this section.
+> Unless otherwise noted, columns mentioned in the following troubleshooting steps refer to the columns in the result set of the diagnostic query in this section.
 
 Large PVS size might be caused by any of the following reasons:
 - [Long-running active transactions](#check-for-long-running-active-transactions)
-- [Long-running active snapshot scans](#check-for-long-running-active-transactions)
+- [Long-running active snapshot scans](#check-for-long-running-active-snapshot-scans)
 - [Long-running queries on secondary replicas](#check-for-long-running-queries-on-secondary-replicas)
 - [Aborted transactions](#check-for-large-number-of-aborted-transactions) 
+
+## Check for queries that read many row versions
+
+**Applies to**: [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../includes/fabric-sqldb.md)]
+
+When PVS cleanup is delayed, version chains get longer, and more row versions are stored off-row instead of in-row. Queries that need earlier versions of rows read more versions and consume more CPU, even if their query plans don't change. For more information, see [CPU used to read row versions](sql-server-transaction-locking-and-row-versioning-guide.md#cpu-used-to-read-row-versions).
+
+To check whether cached queries read many row versions, use the `total_version_reads` column in [sys.dm_exec_query_stats](system-dynamic-management-objects/sys-dm-exec-query-stats-transact-sql.md):
+
+```sql
+SELECT TOP (10)
+       qs.total_version_reads,
+       qs.total_version_reads / qs.execution_count AS avg_version_reads,
+       qs.total_worker_time / qs.execution_count AS avg_worker_time_us,
+       qs.total_logical_reads / qs.execution_count AS avg_logical_reads,
+       qs.execution_count,
+       SUBSTRING(st.text,
+                 (qs.statement_start_offset / 2) + 1,
+                 ((CASE qs.statement_end_offset
+                       WHEN -1 THEN DATALENGTH(st.text)
+                       ELSE qs.statement_end_offset
+                   END - qs.statement_start_offset) / 2) + 1) AS statement_text
+FROM sys.dm_exec_query_stats AS qs
+CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
+WHERE qs.total_version_reads > 0
+ORDER BY qs.total_version_reads DESC;
+```
+
+To see version reads of currently executing requests, use the `version_reads` column in [sys.dm_exec_requests](system-dynamic-management-objects/sys-dm-exec-requests-transact-sql.md). To see version reads of a single statement broken down by version store type, use [SET STATISTICS IO](../t-sql/statements/set-statistics-io-transact-sql.md) or the actual execution plan. For all available metrics, see [Version read metrics](sql-server-transaction-locking-and-row-versioning-guide.md#version-read-metrics).
+
+If queries read many row versions while PVS size is growing, use the following troubleshooting steps to find what is delaying PVS cleanup. After PVS cleanup resumes and removes row versions that are no longer needed, version reads and the CPU time of the affected queries typically decrease.
 
 ## Check for long-running active transactions
 

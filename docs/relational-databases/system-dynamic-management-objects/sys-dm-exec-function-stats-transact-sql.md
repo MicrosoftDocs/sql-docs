@@ -3,7 +3,7 @@ title: "sys.dm_exec_function_stats (Transact-SQL)"
 description: sys.dm_exec_function_stats (Transact-SQL)
 author: dimitri-furman
 ms.author: dfurman
-ms.date: "06/19/2023"
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: reference
@@ -19,6 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric-sqldb"
+ai-usage: ai-assisted
 ---
 # sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-fabricsqldb.md)]
@@ -66,6 +67,10 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 |**last_page_server_reads**|**bigint**|Number of page server reads performed the last time the function was executed.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
 |**min_page_server_reads**|**bigint**|Minimum number of page server reads that this function has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
 |**max_page_server_reads**|**bigint**|Maximum number of page server reads that this function has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|
+|**total_version_reads**|**bigint**|Total number of row versions read from all version stores by executions of this function since it was compiled. For more information, see [Version read metrics](../sql-server-transaction-locking-and-row-versioning-guide.md#version-read-metrics).<br /><br /> **Applies To:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].|
+|**last_version_reads**|**bigint**|Number of row versions read from all version stores the last time the function was executed.<br /><br /> **Applies To:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].|
+|**min_version_reads**|**bigint**|Minimum number of row versions that this function has ever read from all version stores during a single execution.<br /><br /> **Applies To:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].|
+|**max_version_reads**|**bigint**|Maximum number of row versions that this function has ever read from all version stores during a single execution.<br /><br /> **Applies To:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].|
   
 ## Permissions  
 

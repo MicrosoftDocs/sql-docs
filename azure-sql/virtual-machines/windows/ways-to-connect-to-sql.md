@@ -38,6 +38,8 @@ Your options for connectivity include:
 | **Private** | Connect to SQL Server in the same virtual network. |
 | **Local** | Connect to SQL Server locally on the same virtual machine. |
 
+[!INCLUDE [server-admin-login-security-note](../../includes/server-admin-login-security-note.md)]
+
 The following sections explain the **Public** and **Private** options in more detail.
 
 ## Connect to SQL Server over the internet

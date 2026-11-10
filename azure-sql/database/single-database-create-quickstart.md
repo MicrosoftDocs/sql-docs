@@ -44,7 +44,7 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 This quickstart creates a single database in the [serverless compute tier](serverless-tier-overview.md).
 
 > [!IMPORTANT]
-> Selecting serverless compute or the **Development** workload environment doesn't enable the free tier. To use the free tier, follow its [free-specific creation and verification instructions](free-tier.md#create-a-database). The database-creation steps below don't configure the free tier and can incur charges.
+> Selecting serverless compute or the **Development** workload environment doesn't enable the free tier. To use the free tier, follow its [free-specific creation and verification instructions](free-tier.md#create-a-database). The following database-creation steps don't configure the free tier and can incur charges.
 
 [!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
 

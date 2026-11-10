@@ -4,7 +4,7 @@ description: Create a single database in Azure SQL Database using the Azure port
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 01/23/2026
+ms.date: 11/09/2026
 ms.service: azure-sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
@@ -14,10 +14,14 @@ ms.custom:
   - mode-ui
   - references-regions
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 # Quickstart: Create a single database - Azure SQL Database
 
 In this quickstart, you create a [single database](single-database-overview.md) in Azure SQL Database using either the Azure portal, a PowerShell script, or an Azure CLI script. You then query the database using **Query editor** in the Azure portal.
+
+> [!TIP]
+> Need a free database for a new development project? Follow [Build and test apps with the Azure SQL Database free tier](free-tier.md) instead of the database-creation steps in this quickstart. The free tier has recurring monthly allowances and is distinct from Azure free account credits. Review account and subscription requirements, eligibility, and the choice to pause at the monthly limit or allow paid overages before creating resources.
 
 Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-database-essentials/) for an overview of the deployment process: 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=0c5d0700-b422-4a46-99bd-84c09ba65804]
@@ -39,7 +43,8 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 This quickstart creates a single database in the [serverless compute tier](serverless-tier-overview.md).
 
-[!INCLUDE [azure-sql-database-free-tier-note](../includes/azure-sql-database-free-tier-note.md)]
+> [!IMPORTANT]
+> Selecting serverless compute or the **Development** workload environment doesn't enable the free tier. To use the free tier, follow its [free-specific creation and verification instructions](free-tier.md#create-a-database). The database-creation steps below don't configure the free tier and can incur charges.
 
 [!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
 

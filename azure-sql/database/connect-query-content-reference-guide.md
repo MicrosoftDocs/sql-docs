@@ -5,7 +5,7 @@ description: Links to Azure SQL Database quickstarts showing how to connect to a
 author: cwebb-msft
 ms.author: chweb
 ms.reviewer: wiassaf
-ms.date: 09/21/2026
+ms.date: 11/09/2026
 ms.service: azure-sql
 ms.subservice: connect
 ms.topic: concept-article
@@ -25,6 +25,14 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 &nbsp;
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=c2edd421-da6b-4598-a142-5980e4f38de9]
+
+## Need a database?
+
+If you don't have a database for a new development project, start with the [Azure SQL Database free tier](free-tier.md). Review eligibility, monthly allowances, and pause or paid-overage behavior before creating resources. An Azure account and eligible subscription are required, and supporting services can have separate charges. This offer is for Azure SQL Database, not Azure SQL Managed Instance.
+
+After provisioning, [verify the intended database](free-tier.md#verify-the-deployment). For a first query that doesn't require an imported sample database, follow [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) in the MSSQL extension quickstart. Run its sample table and query steps in the database you provisioned, and skip its generic database-creation step.
+
+Already have a database? Choose a quickstart below. Check its sample-data prerequisites before running scripts; a newly created empty free tier database doesn't include the sample tables required by every quickstart.
 
 ## Quickstarts
 

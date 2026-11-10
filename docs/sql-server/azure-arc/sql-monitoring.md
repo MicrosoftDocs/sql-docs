@@ -25,7 +25,7 @@ To view metrics in the portal:
 1. Select an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 1. Select **Monitoring** > **Performance Dashboard**.
 
-Monitoring is automatic, assuming that you meet all prerequisites.
+Monitoring feature and the data collection is enabled by default when all prerequisites are met.
 
 :::image type="content" source="media/overview/performance-dashboard.png" alt-text="Screenshot of the performance dashboard for SQL Server enabled by Azure Arc." lightbox="media/overview/performance-dashboard.png":::
 

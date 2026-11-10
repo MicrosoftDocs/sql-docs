@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: danil, dinethi
-ms.date: 07/13/2026
+ms.date: 11/10/2026
 ms.service: azure-sql-database
 ms.subservice: backup-restore
 ms.topic: concept-article
@@ -360,9 +360,6 @@ Backups are automatically deleted after the retention period expires.
 If the default retention doesn't meet your compliance requirements, change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy).
 
 When you migrate your database from a DTU-based service tier to a vCore-based service tier, the migration preserves the PITR retention to ensure that your application's data recovery policy isn't compromised. 
-
-> [!NOTE]
-> For steps to delete personal data in Azure SQL Database backups to support your obligations under the GDPR, see [Change automated backup settings](automated-backups-change-settings.md). For general information about GDPR, see the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview) and the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## Use Azure Policy to enforce backup storage redundancy
 

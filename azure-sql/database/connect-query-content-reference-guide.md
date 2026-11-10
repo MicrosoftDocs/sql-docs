@@ -28,7 +28,7 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 ## Need a database?
 
-If you don't have a database for a new development project, start with the [Azure SQL Database free tier](free-tier.md). Review eligibility, monthly allowances, and pause or paid-overage behavior before creating resources. An Azure account and eligible subscription are required, and supporting services can have separate charges. This offer is for Azure SQL Database, not Azure SQL Managed Instance.
+If you don't have a database for a new development project, start with the [Azure SQL Database free tier](free-tier.md). Review eligibility, monthly allowances, and pause or paid-overage behavior before creating resources. You need an Azure account and eligible subscription, and supporting services can have separate charges. This offer is for Azure SQL Database, not Azure SQL Managed Instance.
 
 After provisioning, [verify the intended database](free-tier.md#verify-the-deployment). For a first query that doesn't require an imported sample database, follow [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) in the MSSQL extension quickstart. Run its sample table and query steps in the database you provisioned, and skip its generic database-creation step.
 

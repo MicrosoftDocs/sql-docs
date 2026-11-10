@@ -1,38 +1,45 @@
 ---
-title: Download
+title: Download Microsoft JDBC Driver for SQL Server
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 09/10/2026
+ms.date: 11/06/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 # Download Microsoft JDBC Driver for SQL Server
 
 The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs) available on the Java platform. The driver downloads are available to all users at no extra charge. They provide access to SQL Server from any Java application, application server, or Java-enabled applet.
 
+Use this page to download release packages and find Maven Central coordinates. To install the driver in an application, see [Install the JDBC driver](using-the-jdbc-driver.md).
+
 ## Download
 
-Version 13.6 is the latest general availability (GA) version. It supports Java 8, 11, 17, 21, 25, and 26. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. We're continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
+Version 13.6 is the latest general availability (GA) version. It supports Java 8, 11, 17, 21, 25, and 26. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. For the latest improvements to Java connectivity, use the latest version of the Microsoft JDBC Driver for SQL Server.
+
+The latest servicing release is [13.6.2](https://github.com/microsoft/mssql-jdbc/releases/tag/v13.6.2). Download its JARs and native authentication library from GitHub, or use the Maven Central coordinates in this article. The localized ZIP and TAR.GZ packages linked in this section contain version 13.6.0.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 13.6.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2378970)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 13.6.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2379145)**
 
 ### Version information
 
+The following version information applies to the ZIP and TAR.GZ packages:
+
 - Release number: 13.6.0
 - Released: September 10, 2026
 
-When you download the driver, there are multiple JAR files. The JAR file with `jre8` supports Java 8 and the JAR file with `jre11` supports Java 11 and up.
+When you download the driver, you get multiple JAR files. The JAR file with `jre8` supports Java 8. The JAR file with `jre11` supports Java 11 and later supported runtimes. For artifact selection and classpath guidance, see [Install the JDBC driver](using-the-jdbc-driver.md#choose-the-right-jar-file).
 
 > [!NOTE]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 
-This release of Microsoft JDBC Driver for SQL Server is available in the following languages:
+The 13.6.0 ZIP and TAR.GZ packages are available in the following languages:
 
 Microsoft JDBC Driver 13.6.0 for SQL Server (zip):
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378970&clcid=0x40a)
@@ -42,7 +49,7 @@ Microsoft JDBC Driver 13.6.0 for SQL Server (tar.gz):
 
 ### Release notes
 
-For details about this release, see [the release notes](release-notes-for-the-jdbc-driver.md) and [system requirements](system-requirements-for-the-jdbc-driver.md).
+For more information about this release, see [the release notes](release-notes-for-the-jdbc-driver.md) and [system requirements](system-requirements-for-the-jdbc-driver.md).
 
 ### Previous releases
 
@@ -50,21 +57,23 @@ To download previous releases, see [previous Microsoft JDBC Driver for SQL Serve
 
 ## Using the JDBC driver with Maven Central
 
-The JDBC driver can be added to a Maven project by adding it as a dependency in the POM.xml file with the following code:
+Add the JDBC driver to a Maven project by adding it as a dependency in the `pom.xml` file with the following code:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>13.6.0.jre11</version>
+    <version>13.6.2.jre11</version>
 </dependency>
 ```
 
 ## Unsupported drivers
 
-Unsupported driver versions aren't available for download here. We're continually improving the Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
+Unsupported driver versions aren't available for download here. For the latest improvements to Java connectivity, use the latest version of the Microsoft JDBC Driver for SQL Server.
 
 ## Related content
 
 - [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
+- [Install the JDBC driver](using-the-jdbc-driver.md)
+- [System requirements](system-requirements-for-the-jdbc-driver.md)
 - [JDBC driver GitHub repository](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md)

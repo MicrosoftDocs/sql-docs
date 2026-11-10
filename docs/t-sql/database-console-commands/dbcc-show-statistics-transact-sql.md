@@ -48,7 +48,7 @@ Important updates in past versions of SQL Server:
 
 - Starting in [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, the [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-objects/sys-dm-db-stats-properties-transact-sql.md) dynamic management view is available to programmatically retrieve header information contained in the statistics object for non-incremental statistics.
 
-- Starting in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 and [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, the [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-objects/sys-dm-db-incremental-stats-properties-transact-sql.md) dynamic management view is available to programmatically retrieve header information contained in the statistics object for incremental statistics.
+- Starting in [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] Service Pack 1, the [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-objects/sys-dm-db-incremental-stats-properties-transact-sql.md) dynamic management view is available to programmatically retrieve header information contained in the statistics object for incremental statistics.
 
 - Starting in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 CU 2, the [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-objects/sys-dm-db-stats-histogram-transact-sql.md) dynamic management view is available to programmatically retrieve histogram information contained in the statistics object.
 

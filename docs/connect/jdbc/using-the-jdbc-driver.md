@@ -1,589 +1,213 @@
 ---
-title: Using the JDBC driver
-description: This section provides quick start instructions to make a simple connection to a SQL Server database using the Microsoft JDBC Driver for SQL Server.
+title: Install the JDBC Driver
+description: Install Microsoft JDBC Driver for SQL Server with Maven, Gradle, or downloaded JAR files, and verify that Java can discover the driver.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 09/10/2026
+ms.date: 11/06/2026
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: quickstart
+ms.topic: install-set-up-deploy
+ai-usage: ai-assisted
 ---
-# Using the JDBC driver
+
+# Install the JDBC driver
+
+<a id="using-the-jdbc-driver"></a>
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This section provides quickstart instructions to make a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Before you connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must first be installed on either your local computer or a server, and the JDBC driver must be installed on your local computer.  
-  
+Install the Microsoft JDBC Driver for SQL Server in the same place your Java application resolves its other libraries. For most applications, use Maven or Gradle. Use a downloaded JAR when your build system can't restore packages from Maven Central or when an application server requires you to copy libraries into a specific folder.
+
+This article covers installation and driver discovery. To build and run a complete app that connects to a database, use the [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md).
+
 ## Choose the right JAR file
 
-The Microsoft JDBC Driver provides different Jars to be used in correspondence with your preferred Java Runtime Environment (JRE) settings, as under:
+Microsoft publishes two current artifacts for version 13.6.2:
 
-The Microsoft JDBC Driver 13.6 for SQL Server provides **mssql-jdbc-13.6.0.jre8.jar** and **mssql-jdbc-13.6.0.jre11.jar** class library files.
+| Java runtime | Maven version | Downloaded JAR | JDBC API level |
+| --- | --- | --- | --- |
+| Java 8 | `13.6.2.jre8` | `mssql-jdbc-13.6.2.jre8.jar` | JDBC 4.2. |
+| Java 11 and later versions | `13.6.2.jre11` | `mssql-jdbc-13.6.2.jre11.jar` | JDBC 4.3 partial compatibility. |
 
-The Microsoft JDBC Driver 13.4 for SQL Server provides **mssql-jdbc-13.4.0.jre8.jar** and **mssql-jdbc-13.4.0.jre11.jar** class library files.
+Use `13.6.2.jre11` unless your application must run on Java 8. The `jre11` artifact works on the Java versions listed for driver 13.6 in the [support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support). Use `13.6.2.jre8` only for Java 8 applications.
 
-The Microsoft JDBC Driver 13.2 for SQL Server provides **mssql-jdbc-13.2.0.jre8.jar** and **mssql-jdbc-13.2.0.jre11.jar** class library files.
+Don't place more than one `mssql-jdbc` JAR on the same application classpath. Multiple driver versions can cause class loading conflicts and make troubleshooting harder.
 
-The Microsoft JDBC Driver 12.10 for SQL Server provides **mssql-jdbc-12.10.0.jre8.jar** and **mssql-jdbc-12.10.0.jre11.jar** class library files.
+## Install with Maven
 
-The Microsoft JDBC Driver 12.8 for SQL Server provides **mssql-jdbc-12.8.0.jre8.jar** and **mssql-jdbc-12.8.0.jre11.jar** class library files.
+Add the driver dependency to your `pom.xml` file.
 
-The Microsoft JDBC Driver 12.6 for SQL Server provides **mssql-jdbc-12.6.0.jre8.jar** and **mssql-jdbc-12.6.0.jre11.jar** class library files.
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>13.6.2.jre11</version>
+</dependency>
+```
 
-The Microsoft JDBC Driver 12.4 for SQL Server provides **mssql-jdbc-12.4.0.jre8.jar** and **mssql-jdbc-12.4.0.jre11.jar** class library files.
+For Java 8 applications, use `13.6.2.jre8` instead:
 
-The Microsoft JDBC Driver 12.2 for SQL Server provides **mssql-jdbc-12.2.0.jre8.jar** and **mssql-jdbc-12.2.0.jre11.jar** class library files.
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>13.6.2.jre8</version>
+</dependency>
+```
 
-The Microsoft JDBC Driver 11.2 for SQL Server provides **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdbc-11.2.0.jre17.jar**, and **mssql-jdbc-11.2.0.jre18.jar** class library files.
+The base Maven dependency resolves only the driver JAR. A base application doesn't include optional feature libraries, such as Microsoft Entra authentication and Azure Key Vault support for Always Encrypted, unless you add them. For feature-specific dependencies, see [Feature dependencies](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
-The Microsoft JDBC Driver 10.2 for SQL Server provides **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, and **mssql-jdbc-10.2.0.jre17.jar** class library files.
+## Install with Gradle
 
-The Microsoft JDBC Driver 9.4 for SQL Server provides **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, and **mssql-jdbc-9.4.1.jre16.jar** class library files.
+For Gradle builds, add the dependency that matches your Java runtime.
 
-The Microsoft JDBC Driver 9.2 for SQL Server provides **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, and **mssql-jdbc-9.2.1.jre15.jar** class library files.
+```gradle
+implementation 'com.microsoft.sqlserver:mssql-jdbc:13.6.2.jre11'
+```
 
-The Microsoft JDBC Driver 8.4 for SQL Server provides **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar**, and **mssql-jdbc-8.4.1.jre14.jar** class library files.
+For Java 8 applications, use `13.6.2.jre8` instead:
 
-The Microsoft JDBC Driver 8.2 for SQL Server provides **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar**, and **mssql-jdbc-8.2.2.jre13.jar** class library files.
+```gradle
+implementation 'com.microsoft.sqlserver:mssql-jdbc:13.6.2.jre8'
+```
 
-The Microsoft JDBC Driver 7.4 for SQL Server provides **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, and **mssql-jdbc-7.4.1.jre12.jar** class library files.
+The Gradle notation uses the same Maven Central coordinates as Maven. Run your Gradle build after you add the dependency to verify dependency resolution in your environment.
 
-The Microsoft JDBC Driver 7.2 for SQL Server provides **mssql-jdbc-7.2.2.jre8.jar**, and **mssql-jdbc-7.2.2.jre11.jar** class library files.
+<a id="setting-the-classpath"></a>
 
-The Microsoft JDBC Driver 7.0 for SQL Server provides **mssql-jdbc-7.0.0.jre8.jar**, and **mssql-jdbc-7.0.0.jre10.jar** class library files.
+## Install from a downloaded package
 
-The Microsoft JDBC Driver 6.4 for SQL Server provides **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, and **mssql-jdbc-6.4.0.jre9.jar** class library files.
+Download the ZIP or TAR.GZ package from [Download Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md). Extract the package, then copy the JAR that matches your Java runtime into your application or application server library folder.
 
-The Microsoft JDBC Driver 6.2 for SQL Server provides **mssql-jdbc-6.2.2.jre7.jar**, and **mssql-jdbc-6.2.2.jre8.jar** class library files.
-  
-The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc41.jar**, and **sqljdbc42.jar** class library files.
-  
-The Microsoft JDBC Driver 4.1 for SQL Server provides the **sqljdbc41.jar** class library file.
+These full packages contain version 13.6.0. To install the latest servicing release manually, download the JAR that matches your Java runtime from the [13.6.2 GitHub release](https://github.com/microsoft/mssql-jdbc/releases/tag/v13.6.2) instead.
 
-Your choice will determine the available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## Setting the classpath
+The extracted package includes paths like the following examples:
 
-The Microsoft JDBC driver jars aren't part of the Java SDK and must be included in Classpath of user application.
+```console
+<installation directory>\sqljdbc_13.6\enu\jars\mssql-jdbc-13.6.0.jre8.jar
+<installation directory>\sqljdbc_13.6\enu\jars\mssql-jdbc-13.6.0.jre11.jar
+```
 
-If you're using JDBC Driver 13.6, set the classpath to include **mssql-jdbc-13.6.0.jre8.jar** or **mssql-jdbc-13.6.0.jre11.jar**.
+On Linux or macOS, the directory separator is `/`:
 
-If using JDBC Driver 13.4, set the classpath to include the **mssql-jdbc-13.4.0.jre8.jar** or **mssql-jdbc-13.4.0.jre11.jar**.
+```console
+<installation directory>/sqljdbc_13.6/enu/jars/mssql-jdbc-13.6.0.jre11.jar
+```
 
-If using JDBC Driver 13.2, set the classpath to include the **mssql-jdbc-13.2.0.jre8.jar** or **mssql-jdbc-13.2.0.jre11.jar**.
+If you use a manual classpath, include exactly one driver JAR.
 
-If using JDBC Driver 12.10, set the classpath to include the **mssql-jdbc-12.10.0.jre8.jar** or **mssql-jdbc-12.10.0.jre11.jar**.
-
-If using JDBC Driver 12.8, set the classpath to include the **mssql-jdbc-12.8.0.jre8.jar** or **mssql-jdbc-12.8.0.jre11.jar**.
-
-If using JDBC Driver 12.6, set the classpath to include the **mssql-jdbc-12.6.0.jre8.jar** or **mssql-jdbc-12.6.0.jre11.jar**.
-
-If using JDBC Driver 12.4, set the classpath to include the **mssql-jdbc-12.4.0.jre8.jar** or **mssql-jdbc-12.4.0.jre11.jar**.
-
-If using JDBC Driver 12.2, set the classpath to include the **mssql-jdbc-12.2.0.jre8.jar** or **mssql-jdbc-12.2.0.jre11.jar**.
-
-If using JDBC Driver 11.2, set the classpath to include the **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdbc-11.2.0.jre17.jar**, or **mssql-jdbc-11.2.0.jre18.jar**.
-
-If using JDBC Driver 10.2, set the classpath to include the **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar**.
-
-If using JDBC Driver 9.4, set the classpath to include the **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, or **mssql-jdbc-9.4.1.jre16.jar**.
-
-If using JDBC Driver 9.2, set the classpath to include the **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar**.
-
-If using JDBC Driver 8.4, set the classpath to include the **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar**, or **mssql-jdbc-8.4.1.jre14.jar**.
-
-If using JDBC Driver 8.2, set the classpath to include the **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar**, or **mssql-jdbc-8.2.2.jre13.jar**.
-
-If using JDBC Driver 7.4, set the classpath to include the **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, or **mssql-jdbc-7.4.1.jre12.jar**.
-
-If using JDBC Driver 7.2, set the classpath to include the **mssql-jdbc-7.2.2.jre8.jar** or **mssql-jdbc-7.2.2.jre11.jar**.
-
-If using JDBC Driver 7.0, set the classpath to include the **mssql-jdbc-7.0.0.jre8.jar** or **mssql-jdbc-7.0.0.jre10.jar**.
-
-If using JDBC Driver 6.4, set the classpath to include the **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, or **mssql-jdbc-6.4.0.jre9.jar**.
-
-If using JDBC Driver 6.2, set the classpath to include the **mssql-jdbc-6.2.2.jre7.jar** or **mssql-jdbc-6.2.2.jre8.jar**.
-
-If using JDBC Driver 4.1 or 4.2, set the classpath to include **sqljdbc41.jar** or **sqljdbc42.jar** file from the respective driver download.
-
-If the classpath is missing an entry for the right Jar file, an application will throw the common `Class not found` exception.  
-
-### For Microsoft JDBC Driver 13.6
-
-The **mssql-jdbc-13.6.0.jre8.jar** and **mssql-jdbc-13.6.0.jre11.jar** files are installed in the following locations:
+```powershell
+$env:CLASSPATH = ".;C:\Program Files\Microsoft JDBC Driver 13.6 for SQL Server\sqljdbc_13.6\enu\jars\mssql-jdbc-13.6.0.jre11.jar"
+```
 
 ```bash
-\<installation directory>\sqljdbc_\<version>\<language>\mssql-jdbc-13.6.0.jre8.jar
-
-\<installation directory>\sqljdbc_\<version>\<language>\mssql-jdbc-13.6.0.jre11.jar
+export CLASSPATH=".:/opt/mssql-jdbc/sqljdbc_13.6/enu/jars/mssql-jdbc-13.6.0.jre11.jar"
 ```
 
-The following snippet is an example of the CLASSPATH statement that you use for a Windows application:
+If you run from an integrated development environment (IDE), add the driver JAR as a project library or dependency instead of setting a global classpath. If you deploy to a servlet container, Jakarta EE server, or another application server, follow that server's library-loading guidance. Don't copy the driver into multiple classloader locations for the same application.
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 13.6 for SQL Server\sqljdbc_13.6\enu\mssql-jdbc-13.6.0.jre11.jar`
+## Verify driver discovery
 
-The following snippet is an example of the CLASSPATH statement that you use for a Unix/Linux application:
+Current driver JARs include `META-INF/services/java.sql.Driver`, so Java can discover `com.microsoft.sqlserver.jdbc.SQLServerDriver` through the standard JDBC service-provider mechanism. You don't need `Class.forName` for normal driver loading.
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_13.6/enu/mssql-jdbc-13.6.0.jre11.jar`
-
-Ensure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-13.6.0.jre8.jar** or **mssql-jdbc-13.6.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 13.4
-
-The **mssql-jdbc-13.4.0.jre8.jar** or **mssql-jdbc-13.4.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-13.4.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-13.4.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 13.4 for SQL Server\sqljdbc_13.4\enu\mssql-jdbc-13.4.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_13.4/enu/mssql-jdbc-13.4.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-13.4.0.jre8.jar**, **mssql-jdbc-13.4.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 13.2
-
-The **mssql-jdbc-13.2.0.jre8.jar** or **mssql-jdbc-13.2.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-13.2.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-13.2.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 13.2 for SQL Server\sqljdbc_13.2\enu\mssql-jdbc-13.2.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_13.2/enu/mssql-jdbc-13.2.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-13.2.0.jre8.jar**, **mssql-jdbc-13.2.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 12.10
-
-The **mssql-jdbc-12.10.0.jre8.jar** or **mssql-jdbc-12.10.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.10.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.10.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 12.10 for SQL Server\sqljdbc_12.10\enu\mssql-jdbc-12.10.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_12.10/enu/mssql-jdbc-12.10.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-12.10.0.jre8.jar**, **mssql-jdbc-12.10.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 12.8
-
-The **mssql-jdbc-12.8.0.jre8.jar** or **mssql-jdbc-12.8.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.8.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.8.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 12.8 for SQL Server\sqljdbc_12.8\enu\mssql-jdbc-12.8.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_12.8/enu/mssql-jdbc-12.8.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-12.8.0.jre8.jar**, **mssql-jdbc-12.8.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 12.6
-
-The **mssql-jdbc-12.6.0.jre8.jar** or **mssql-jdbc-12.6.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.6.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.6.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 12.6 for SQL Server\sqljdbc_12.6\enu\mssql-jdbc-12.6.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_12.6/enu/mssql-jdbc-12.6.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-12.6.0.jre8.jar**, **mssql-jdbc-12.6.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 12.4
-
-The **mssql-jdbc-12.4.0.jre8.jar** or **mssql-jdbc-12.4.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.4.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.4.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 12.4 for SQL Server\sqljdbc_12.4\enu\mssql-jdbc-12.4.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_12.4/enu/mssql-jdbc-12.4.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-12.4.0.jre8.jar**, **mssql-jdbc-12.4.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 12.2
-
-The **mssql-jdbc-12.2.0.jre8.jar** or **mssql-jdbc-12.2.0.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.2.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-12.2.0.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 12.2 for SQL Server\sqljdbc_12.2\enu\mssql-jdbc-12.2.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_12.2/enu/mssql-jdbc-12.2.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-12.2.0.jre8.jar**, **mssql-jdbc-12.2.0.jre11.jar**.
-
-### For Microsoft JDBC Driver 11.2
-
-The **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdbc-11.2.0.jre17.jar**, or **mssql-jdbc-11.2.0.jre18.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-11.2.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-11.2.0.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-11.2.0.jre17.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-11.2.0.jre18.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 11.2 for SQL Server\sqljdbc_11.2\enu\mssql-jdbc-11.2.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-11.2.0.jre8.jar**, **mssql-jdbc-11.2.0.jre11.jar**, **mssql-jdbc-11.2.0.jre17.jar**, **mssql-jdbc-11.2.0.jre18.jar**.
-
-### For Microsoft JDBC Driver 10.2
-
-The **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre17.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 10.2 for SQL Server\sqljdbc_10.2\enu\mssql-jdbc-10.2.0.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_10.2/enu/mssql-jdbc-10.2.0.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar**.
-
-
-### For Microsoft JDBC Driver 9.4
-
-The **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, or **mssql-jdbc-9.4.1.jre16.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.4.1.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.4.1.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.4.1.jre16.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.4 for SQL Server\sqljdbc_9.4\enu\mssql-jdbc-9.4.1.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.4/enu/mssql-jdbc-9.4.1.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, or **mssql-jdbc-9.4.1.jre16.jar**.
-
-### For Microsoft JDBC Driver 9.2
-
-The **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.1.jre15.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.2 for SQL Server\sqljdbc_9.2\enu\mssql-jdbc-9.2.1.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.2/enu/mssql-jdbc-9.2.1.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar**.
-
-
-### For Microsoft JDBC Driver 8.4
-
-The **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar**, or **mssql-jdbc-8.4.1.jre14.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre14.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.4 for SQL Server\sqljdbc_8.4\enu\mssql-jdbc-8.4.1.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.4/enu/mssql-jdbc-8.4.1.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar**, or **mssql-jdbc-8.4.1.jre14.jar**.
-
-
-### For Microsoft JDBC Driver 8.2
-
-The **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar**, or **mssql-jdbc-8.2.2.jre13.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre13.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.2.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar**, or **mssql-jdbc-8.2.2.jre13.jar**.
-
-### For Microsoft JDBC Driver 7.4
-
-The **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, or **mssql-jdbc-7.4.1.jre12.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre11.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre12.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.4 for SQL Server\sqljdbc_7.4\enu\mssql-jdbc-7.4.1.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.4/enu/mssql-jdbc-7.4.1.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, or **mssql-jdbc-7.4.1.jre12.jar**.
-
-### For Microsoft JDBC Driver 7.2
-
-The **mssql-jdbc-7.2.2.jre8.jar** or **mssql-jdbc-7.2.2.jre11.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre11.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.2.jre11.jar`
-
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar`
-
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-7.2.2.jre8.jar** or **mssql-jdbc-7.2.2.jre11.jar**.
-  
-### For Microsoft JDBC Driver 7.0
-
-The **mssql-jdbc-7.0.0.jre8.jar** or **mssql-jdbc-7.0.0.jre10.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
-
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.0 for SQL Server\sqljdbc_7.0\enu\mssql-jdbc-7.0.0.jre10.jar`  
-  
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
-  
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
-  
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-7.0.0.jre8.jar** or **mssql-jdbc-7.0.0.jre10.jar**.
-
-### For Microsoft JDBC Driver 6.4
-
-The **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, or **mssql-jdbc-6.4.0.jre9.jar** files are installed in the following location:  
-
-```bash  
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
-  
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre8.jar
-
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
-  
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
-  
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
-  
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
-  
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, or **mssql-jdbc-6.4.0.jre9.jar**.
-
-### For Microsoft JDBC Driver 6.2
-
-The **mssql-jdbc-6.2.2.jre7.jar** or **mssql-jdbc-6.2.2.jre8.jar** files are installed in the following locations:
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
-  
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
-  
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
-  
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
-  
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
-  
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either mssql-jdbc-6.2.2.jre7.jar or mssql-jdbc-6.2.2.jre8.jar.  
-
-### For Microsoft JDBC Driver 4.1, 4.2, and 6.0
-
-The sqljdbc.jar file, sqljdbc4.jar file, sqljdbc41.jar, or sqljdbc42.jar file are installed in the following location:  
-
-```bash
-\<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar  
-  
-\<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar  
-  
-\<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar  
-  
-\<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
-```
-
-The following snippet is an example of the CLASSPATH statement that's used for a Windows application:  
-  
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.0 for SQL Server\sqljdbc_4.2\enu\sqljdbc42.jar`  
-  
-The following snippet is an example of the CLASSPATH statement that's used for a Unix/Linux application:  
-
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_4.2/enu/sqljdbc42.jar`  
-  
-Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar.  
-  
-> [!NOTE]  
-> On Windows systems, directory names longer than the 8.3 filename convention or folder names with spaces may cause problems with classpaths. If you suspect these types of problems, temporarily move the sqljdbc.jar file, sqljdbc4.jar file, or the sqljdbc41.jar file into a simple directory name such as `C:\Temp`, change the classpath, and determine whether that addresses the problem.  
-  
-### Applications that are run directly at the command prompt
-
-The classpath is configured in the operating system. Append sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the classpath of the system. Alternatively, you can specify the classpath on the Java command line that runs the application with the `java -classpath` option.  
-  
-### Applications that run in an IDE  
-
-Each IDE vendor provides a different method to set the classpath in its IDE. Just setting the classpath in the operating system won't work. You must add sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the IDE classpath.  
-  
-### Servlets and JSPs  
-
-Servlets and JSPs are run in a servlet/JSP engine such as Tomcat. The classpath must be set according to the servlet/JSP engine documentation. Just setting the classpath in the operating system won't work. Some servlet/JSP engines provide setup screens that you can use to set the classpath of the engine. In that situation, you must append the correct JDBC Driver JAR file to the existing engine classpath and restart the engine. In other situations, you can deploy the driver by copying sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to a specific directory, such as lib, during engine installation. The engine driver classpath can also be specified in an engine-specific configuration file.  
-  
-### Enterprise Java Beans  
-
-Enterprise Java Beans (EJB) are run in an EJB container. EJB containers are sourced from various vendors. Java applets run in a browser but are downloaded from a web server. Copy sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the web server root and specify the name of the JAR file in the HTML archive tab of the applet, for example, `<applet ... archive=mssql-jdbc-***.jar>`.  
-  
-## Make a simple connection to a database
-
-To use the sqljdbc.jar class library, applications must first register the driver as follows:  
-  
-`Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
-
-When the driver is loaded, you can establish a connection with a connection URL and the getConnection method of the DriverManager class:
+Use this no-network check to confirm that your application sees the intended driver JAR:
 
 ```java
-String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;user=MyUserName;password=<password>;encrypt=false;";  
-Connection con = DriverManager.getConnection(connectionUrl);  
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.util.Enumeration;
+
+public class DriverDiscoveryCheck {
+    public static void main(String[] args) throws Exception {
+        Enumeration<Driver> drivers = DriverManager.getDrivers();
+        boolean found = false;
+
+        while (drivers.hasMoreElements()) {
+            Driver driver = drivers.nextElement();
+            if (driver.getClass().getName().equals("com.microsoft.sqlserver.jdbc.SQLServerDriver")) {
+                System.out.println(driver.getClass().getName());
+                System.out.println(driver.getMajorVersion() + "." + driver.getMinorVersion());
+                System.out.println(driver.getClass().getProtectionDomain().getCodeSource().getLocation());
+                found = true;
+            }
+        }
+
+        if (!found) {
+            throw new IllegalStateException("Microsoft JDBC Driver not discovered");
+        }
+    }
+}
 ```
 
-> [!WARNING]  
-> The above connection string uses `encrypt=false`, which isn't recommended for production use. For more information about encrypting your database connection with JDBC, see [Connecting with encryption](connecting-with-ssl-encryption.md).
+Compile and run it with the driver on the classpath:
 
-Starting from JDBC API 4.0, the `DriverManager.getConnection()` method is enhanced to load JDBC drivers automatically. Therefore, applications don't need to call the `Class.forName` method to register or load the driver when using driver jar libraries.  
-  
-When you call the getConnection method of the DriverManager class, it locates an appropriate driver from the set of registered JDBC drivers. sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file includes "META-INF/services/java.sql.Driver" file, which contains the **com.microsoft.sqlserver.jdbc.SQLServerDriver** as a registered driver. The existing applications, which currently load the drivers by using the Class.forName method, continue to work without modification.  
-  
-> [!NOTE]  
-> sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar class library can't be used with older versions of the Java Runtime Environment (JRE). See [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) for the list of JRE versions supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+```console
+javac DriverDiscoveryCheck.java
+java -cp ".;<path-to-driver-jar>" DriverDiscoveryCheck
+```
 
-For more information about how to connect with data sources and use a connection URL, see [Building the connection URL](../../connect/jdbc/building-the-connection-url.md) and [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).  
+On Linux and macOS, use `:` instead of `;` as the classpath separator:
 
-> [!TIP]
-> The previous example uses `DriverManager` for simplicity. For production applications, consider using the `SQLServerDataSource` class instead, which provides connection pooling and additional configurability. For more information and examples, see [Connecting and retrieving data](connecting-and-retrieving-data.md) and [Data source sample](data-source-sample.md).
+```console
+java -cp ".:<path-to-driver-jar>" DriverDiscoveryCheck
+```
+
+This check verifies driver discovery only. It doesn't verify your connection URL, credentials, Transport Layer Security (TLS), firewall rules, or database permissions.
+
+## Diagnose classpath problems
+
+If Java can't load the driver, check these common causes:
+
+- The driver JAR isn't on the application classpath or module path.
+- The application has more than one `mssql-jdbc` JAR.
+- The application uses the Java 11 artifact on Java 8.
+- The application server loads a different copy of the driver from a shared library folder.
+- A feature-specific dependency is missing. The base driver can load, but a feature such as Microsoft Entra authentication or Azure Key Vault support fails when that code path runs.
+
+If you see `ClassNotFoundException` for `com.microsoft.sqlserver.jdbc.SQLServerDriver`, Java can't find the driver JAR. If you see `NoClassDefFoundError` for an Azure, Bouncy Castle, ANTLR, OSGi, or Gson type, check [Feature dependencies](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+<a id="make-a-simple-connection-to-a-database"></a>
+
+## Connect to a database
+
+Use the [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md) to build a complete application and run a parameterized query. The quickstart includes database setup choices, Microsoft Entra authentication for Azure SQL and Fabric, SQL authentication for local development, expected output, and cleanup.
+
+For full connection-string syntax and secure defaults, see [Build the connection URL](building-the-connection-url.md) and [Set the connection properties](setting-the-connection-properties.md).
+
+## Historical classpath anchors
+
+The following anchors previously pointed to per-version classpath sections. Current setup guidance is version-independent: choose the artifact for your Java runtime, place one driver JAR on the application classpath, and keep optional feature libraries with the application that uses them. For older driver version details, use the [support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md) and [release notes](release-notes-for-the-jdbc-driver.md).
+
+<a id="for-microsoft-jdbc-driver-136"></a>
+<a id="for-microsoft-jdbc-driver-134"></a>
+<a id="for-microsoft-jdbc-driver-132"></a>
+<a id="for-microsoft-jdbc-driver-1210"></a>
+<a id="for-microsoft-jdbc-driver-128"></a>
+<a id="for-microsoft-jdbc-driver-126"></a>
+<a id="for-microsoft-jdbc-driver-124"></a>
+<a id="for-microsoft-jdbc-driver-122"></a>
+<a id="for-microsoft-jdbc-driver-112"></a>
+<a id="for-microsoft-jdbc-driver-102"></a>
+<a id="for-microsoft-jdbc-driver-94"></a>
+<a id="for-microsoft-jdbc-driver-92"></a>
+<a id="for-microsoft-jdbc-driver-84"></a>
+<a id="for-microsoft-jdbc-driver-82"></a>
+<a id="for-microsoft-jdbc-driver-74"></a>
+<a id="for-microsoft-jdbc-driver-72"></a>
+<a id="for-microsoft-jdbc-driver-70"></a>
+<a id="for-microsoft-jdbc-driver-64"></a>
+<a id="for-microsoft-jdbc-driver-62"></a>
+<a id="for-microsoft-jdbc-driver-41-42-and-60"></a>
+<a id="applications-that-are-run-directly-at-the-command-prompt"></a>
+<a id="applications-that-run-in-an-ide"></a>
+<a id="servlets-and-jsps"></a>
+<a id="enterprise-java-beans"></a>
 
 ## Related content
 
-- [Overview of the JDBC driver](overview-of-the-jdbc-driver.md)
-- [Building the connection URL](building-the-connection-url.md)
-- [Set the connection properties](setting-the-connection-properties.md)
-- [Connecting and retrieving data](connecting-and-retrieving-data.md)
+- [Download Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md)
+- [System requirements for the JDBC driver](system-requirements-for-the-jdbc-driver.md)
+- [Support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
+- [Feature dependencies](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+- [Java and Maven quickstart](getting-started-with-the-jdbc-driver.md)

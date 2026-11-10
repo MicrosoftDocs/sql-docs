@@ -1,204 +1,194 @@
 ---
-title: Feature dependencies
-description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
+title: Feature Dependencies for Microsoft JDBC Driver
+description: Add optional Java libraries and native components for Microsoft JDBC Driver features such as Microsoft Entra authentication, Always Encrypted, OSGi, and useFMTOnly.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 09/10/2026
+ms.date: 11/06/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 # Feature dependencies of the Microsoft JDBC Driver for SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article lists libraries that the Microsoft JDBC Driver for SQL Server depends on. The project has the following dependencies:
+A basic application that declares only the `com.microsoft.sqlserver:mssql-jdbc` dependency resolves only the driver JAR at runtime. Some driver features use optional Java libraries or native components. Add those dependencies only when your application uses the corresponding feature.
 
-## Compile time
+Use the dependency versions that match your driver version. The versions in this article come from the published POMs for driver 13.6.2. For any other release, read the POM that shipped with that release. This article lists the current release first and keeps historical dependency information for older applications.
 
-- `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
-- `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Entra Authentication Library for JDBC driver version 8.4 and below for Microsoft Entra authentication features and Azure Key Vault feature. (optional)
-- `com.microsoft.azure:msal4j`: Microsoft Authentication Library (MSAL) For Java. (optional)
-- `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
-- `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
-- `org.osgi:org.osgi.service.jdbc`: OSGi Companion Code for JDBC.
-- `com.google.code.gson`: JSON parser for Always Encrypted with secure enclaves feature. (optional)
-- `org.bouncycastle.bcprov-jdk18on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature for JAVA 8 only. (optional)
+<a id="compile-time"></a>
 
-## Run time
+## Compile-time dependencies
 
-Projects that require any of the preceding features must explicitly declare the respective dependencies in their POM file that match the dependencies of the version of the driver used.
+The published POMs for the `jre8` and `jre11` artifacts declare these feature dependencies:
 
-**For example:** If you're using the Microsoft Entra authentication feature with JDBC driver version 10.2 and above, you must declare the `azure-identity` dependency in your project POM file. See the following snippet:
+| Feature | Dependency | Version | POM status |
+| --- | --- | --- | --- |
+| Azure Key Vault provider for Always Encrypted | `com.azure:azure-security-keyvault-keys` | `4.11.1` | Optional. |
+| Microsoft Entra authentication and Azure Key Vault provider identity | `com.azure:azure-identity` | `1.18.4` | Optional. |
+| Azure SDK HTTP transport used by Azure SDK dependencies | `com.azure:azure-core-http-netty` | `1.16.6` | Optional. |
+| `useFmtOnly` parsing support | `org.antlr:antlr4-runtime` | `4.9.3` | Optional. |
+| Always Encrypted with secure enclaves | `com.google.code.gson:gson` | `2.11.0` | Optional. |
+| Always Encrypted with secure enclaves | `org.bouncycastle:bcprov-jdk18on` | `1.84` | Optional. |
+| Client certificate authentication | `org.bouncycastle:bcpkix-jdk18on` | `1.84` | Optional. |
+| OSGi support | `org.osgi:org.osgi.core` | `6.0.0` | Provided by the OSGi framework. |
+| OSGi service JDBC support | `org.osgi:org.osgi.service.jdbc` | `1.1.0` | Provided by the OSGi framework. |
+
+The POM marks the feature libraries in the previous table as optional. Maven and Gradle don't add optional dependencies transitively for a normal application dependency, so add the dependencies your feature needs to your application directly. The two OSGi API dependencies use `provided` scope instead. An OSGi framework supplies them at runtime, so don't add them to a standard Java application.
+
+<a id="run-time"></a>
+
+## Runtime dependencies
+
+For a base application, add only the driver dependency:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>10.2.0.jre11</version>
-</dependency>
-
-<dependency>
-    <groupId>com.azure</groupId>
-    <artifactId>azure-identity</artifactId>
-    <version>1.4.3</version>
+    <version>13.6.2.jre11</version>
 </dependency>
 ```
 
-**For example:** If you're using the Microsoft Entra authentication feature with JDBC driver version 8.4 and below, you must declare the `adal4j` and `client-runtimes` dependencies in your project POM file. See the following snippet:
+If your application uses Microsoft Entra authentication modes that rely on Azure Identity, add `azure-identity` and the pinned Azure SDK HTTP transport. `azure-identity` brings `azure-core-http-netty` transitively, but at a lower version than the driver POM declares, so declare the transport yourself to get the version the driver was built against:
 
 ```xml
-<dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.0.jre11</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>adal4j</artifactId>
-    <version>1.6.5</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.rest</groupId>
-    <artifactId>client-runtime</artifactId>
-    <version>1.7.4</version>
-</dependency>
-```
-
-**For example:** If you're using the Azure Key Vault feature with JDBC driver version 10.2 and above, you must declare the `azure-security-keyvault-keys` and `azure-identity` dependencies in your project POM file. See the following snippet:
-
-```xml
-<dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>10.2.0.jre11</version>
-</dependency>
-
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.4.3</version>
+    <version>1.18.4</version>
 </dependency>
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-core-http-netty</artifactId>
+    <version>1.16.6</version>
+</dependency>
+```
 
+If your application uses the Azure Key Vault provider for Always Encrypted, add `azure-security-keyvault-keys`, `azure-identity`, and the pinned Azure SDK HTTP transport:
+
+```xml
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-keys</artifactId>
-    <version>4.3.6</version>
+    <version>4.11.1</version>
+</dependency>
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.18.4</version>
+</dependency>
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-core-http-netty</artifactId>
+    <version>1.16.6</version>
 </dependency>
 ```
 
-**For example:** If you're using the Azure Key Vault feature with JDBC driver version 8.4 and below, you must declare the `azure-keyvault`, `adal4j`, and `client-runtime` dependencies in your project POM file. See the following snippet:
+If your application uses Always Encrypted with secure enclaves, add the enclave dependencies that your attestation path uses:
 
 ```xml
 <dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.0.jre11</version>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.11.0</version>
 </dependency>
-
 <dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>adal4j</artifactId>
-    <version>1.6.5</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.rest</groupId>
-    <artifactId>client-runtime</artifactId>
-    <version>1.7.4</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure-keyvault</artifactId>
-    <version>1.2.4</version>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcprov-jdk18on</artifactId>
+    <version>1.84</version>
 </dependency>
 ```
 
-> [!NOTE]
-> Make sure to use the version of the POM file that's shipped with the version of the JDBC driver you're using. The dependencies and versions may have changed.
+If your application loads a Public-Key Cryptography Standards (PKCS) #1 private key for client certificate authentication, add `bcpkix-jdk18on`:
 
-If you're using Maven to build or test your project, Maven automatically downloads dependent libraries in the POM file along with their transitive libraries. You can also use the [Maven Dependency Plugin](https://maven.apache.org/plugins/maven-dependency-plugin/copy-dependencies-mojo.html) to download all project dependencies to a desired location. If you're not using Maven, you have to download dependencies and transitive dependencies manually to make sure you have all the correct versions of each library. Once you've downloaded the required dependent libraries, add them to your project classpath to run your application.
+```xml
+<dependency>
+    <groupId>org.bouncycastle</groupId>
+    <artifactId>bcpkix-jdk18on</artifactId>
+    <version>1.84</version>
+</dependency>
+```
+
+If your application uses `useFmtOnly`, add the ANTLR runtime:
+
+```xml
+<dependency>
+    <groupId>org.antlr</groupId>
+    <artifactId>antlr4-runtime</artifactId>
+    <version>4.9.3</version>
+</dependency>
+```
+
+If you're not using Maven or Gradle, download the same libraries and their transitive dependencies, then place them on the same application classpath as the driver.
 
 ## Dependency requirements for the JDBC driver
 
 ### Work with the Azure Key Vault provider
 
-- JDBC driver version 13.6.0—Dependency versions: Azure-security-keyvault-keys (version 4.11.1), and Azure-identity (version 1.18.4), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 13.4.0—Dependency versions: Azure-security-keyvault-keys (version 4.10.5), and Azure-identity (version 1.18.2), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 13.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.9.2), and Azure-identity (version 1.15.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 12.10.0—Dependency versions: Azure-security-keyvault-keys (version 4.9.2), and Azure-identity (version 1.15.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 12.8.0—Dependency versions: Azure-security-keyvault-keys (version 4.7.3), and Azure-identity (version 1.12.2), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 12.6.0—Dependency versions: Azure-security-keyvault-keys (version 4.7.3), and Azure-identity (version 1.11.1), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 12.4.0—Dependency versions: Azure-security-keyvault-keys (version 4.6.1), and Azure-identity (version 1.9.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 12.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.5.3), and Azure-identity (version 1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 11.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.4.1), and Azure-identity (version 1.5.0), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 10.2.0—Dependency versions: Azure-security-keyvault-keys (version 4.3.6), and Azure-identity (version 1.4.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 9.4.1—Dependency versions: Azure-security-keyvault-keys (version 4.2.8), and Azure-identity (version 1.3.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 9.2.1—Dependency versions: Azure-security-keyvault-keys (version 4.2.1), and Azure-identity (version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 8.4.1—Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (version 1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 8.2.2—Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (version 1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 7.4.1—Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (version 1.6.10), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 7.2.2—Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 7.0.0—Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 6.4.0—Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](azure-key-vault-sample-version-6.2.2.md))
-- JDBC driver version 6.2.2—Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](azure-key-vault-sample-version-6.2.2.md))
-- JDBC driver version 6.0.0—Dependency versions: Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0), and their dependencies ( [sample application](azure-key-vault-sample-version-6.0.0.md))
+Use these direct dependencies:
 
-> [!NOTE]
-> With 6.2.2 and 6.4.0 driver versions, the azure-keyvault-java dependency had been updated to version 1.0.0. However, the new version was not compatible with the previous version (0.9.7) and breaks the existing implementation in the driver. The new implementation in the driver required API changes, which in turn breaks client programs that use the Azure Key Vault Provider.
->
-> This problem is resolved with latest driver version(s) (7.0.0 onward). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
+| Dependency | Version |
+| --- | --- |
+| `com.azure:azure-security-keyvault-keys` | `4.11.1` |
+| `com.azure:azure-identity` | `1.18.4` |
+| `com.azure:azure-core-http-netty` | `1.16.6` |
 
-<a name='work-with-azure-active-directory-authentication'></a>
+The current Azure Key Vault sample targets the modern Azure SDK path. For more information, see [Azure Key Vault sample version 9.2 and later](azure-key-vault-sample-version-9.2.md).
+
+### Choose authentication dependencies
+
+The following table lists authentication dependencies beyond the driver JAR. Microsoft Authentication Library for Java (MSAL4J), published as `com.microsoft.azure:msal4j`, provides several Microsoft Entra authentication paths. Include each Java library's transitive dependencies. Native dynamic-link libraries (DLLs) must match your Java virtual machine (JVM) architecture.
+
+| Authentication method or path | Additional Java libraries | Native components or configuration |
+| --- | --- | --- |
+| SQL password authentication (`authentication=SqlPassword`) | None. | None. |
+| Windows integrated authentication (`integratedSecurity=true`, `authenticationScheme=NativeAuthentication`) | None. | The versioned `mssql-jdbc_auth` DLL for your JVM architecture. Windows only. |
+| Java Kerberos (`integratedSecurity=true`, `authenticationScheme=JavaKerberos`) | None beyond the driver and Java runtime. | Configure Kerberos credentials. The Windows authentication DLL isn't required. |
+| NT LAN Manager (NTLM) (`integratedSecurity=true`, `authenticationScheme=NTLM`) | None. | Configure the domain, user name, and password. The Windows authentication DLL isn't required. |
+| `ActiveDirectoryPassword` (deprecated) | MSAL4J. | No authentication DLL required. |
+| `ActiveDirectoryManagedIdentity` | `azure-identity` and the pinned `azure-core-http-netty` transport. | Run in an environment that provides the managed identity. |
+| `ActiveDirectoryServicePrincipal` | MSAL4J. | Configure the application's client ID and secret. |
+| `ActiveDirectoryServicePrincipalCertificate` | MSAL4J. Also add `bcpkix-jdk18on` when loading a PKCS#1 private key. | Configure the application's client ID and certificate. |
+| `ActiveDirectoryIntegrated`, Windows native path | None. | The versioned `mssql-jdbc_auth` wrapper and `mssql-auth.dll`, as described in the following section. |
+| `ActiveDirectoryIntegrated`, Java fallback | MSAL4J. | Configure Kerberos credentials. The Windows authentication DLLs aren't required. |
+| `ActiveDirectoryInteractive` | MSAL4J. | Interactive sign-in through a browser. |
+| `ActiveDirectoryDefault` | `azure-identity` and the pinned `azure-core-http-netty` transport. | Configure a credential supported by the default credential chain. |
+| Caller-supplied `accessToken` or access-token callback | The driver doesn't require a token-acquisition library for this path. | Your application or callback supplies the token and its own token-acquisition dependencies. |
+
+> [!IMPORTANT]
+> `ActiveDirectoryPassword` is deprecated and doesn't support multifactor authentication. For migration guidance, see [Microsoft Entra password authentication deprecation](connecting-using-azure-active-directory-authentication.md#connect-using-activedirectorypassword-authentication-mode).
+
+The `azure-identity` dependency shown in this article includes MSAL4J transitively. You can use that dependency for the MSAL4J paths, or add MSAL4J and its transitive dependencies directly. The two `ActiveDirectoryIntegrated` rows describe alternative paths, not dependencies that every application must install together.
+
+<a id="work-with-azure-active-directory-authentication"></a>
 
 ### Work with Microsoft Entra authentication
 
-- JDBC driver version 13.6.0—Dependency versions: Azure-identity (version 1.18.4), and its dependencies.
-- JDBC driver version 13.4.0—Dependency versions: Azure-identity (version 1.18.2), and its dependencies.
-- JDBC driver version 13.2.0—Dependency versions: Azure-identity (version 1.15.3), and its dependencies.
-- JDBC driver version 12.10.0—Dependency versions: Azure-identity (version 1.15.3), and its dependencies.
-- JDBC driver version 12.8.0—Dependency versions: Azure-identity (version 1.12.2), `Msal4j` (version 1.15.1), and their dependencies.
-- JDBC driver version 12.6.0—Dependency versions: Azure-identity (version 1.11.1), `Msal4j` (version 1.14.1), and their dependencies.
-- JDBC driver version 12.4.0—Dependency versions: Azure-identity (version 1.9.0), `Msal4j` (version 1.13.8), and their dependencies.
-- JDBC driver version 12.2.0—Dependency versions: Azure-identity (version 1.7.0), `Msal4j` (version 1.13.3), and their dependencies.
-- JDBC driver version 11.2.0—Dependency versions: Azure-identity (version 1.5.0), and their dependencies.
-- JDBC driver version 10.2.0—Dependency versions: Azure-identity (version 1.4.3), and their dependencies.
-- JDBC driver version 9.4.1—Dependency versions: Azure-identity (version 1.3.3), and their dependencies.
-- JDBC driver version 9.2.1—Dependency versions: Azure-identity (version 1.1.3), and their dependencies.
-- JDBC Driver version 8.4.1—Dependency versions: `Adal4j` (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies.
-- JDBC Driver version 8.2.2—Dependency versions: `Adal4j` (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, `sqljdbc_auth.dll` has been renamed to `mssql-jdbc_auth-\<version>-\<arch>.dll`.
-- JDBC Driver version 7.4.1—Dependency versions: `Adal4j` (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies
-- JDBC Driver version 7.2.2—Dependency versions: `Adal4j` (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies
-- JDBC Driver version 7.0.0—Dependency versions: `Adal4j` (version 1.6.0) and its dependencies
-- JDBC Driver version 6.4.0—Dependency versions: `Adal4j` (version 1.4.0) and its dependencies
-- JDBC Driver version 6.2.2—Dependency versions: `Adal4j` (version 1.4.0) and its dependencies
-- JDBC Driver version 6.0.0—Dependency versions: `Adal4j` (version 1.3.0), and its dependencies. In this version of the driver, you can connect using _ActiveDirectoryIntegrated_ Authentication Mode, only on a Windows operating system, and by using sqljdbc_auth.dll and Active Directory Authentication Library for SQL Server (ADALSQL.DLL).
+Add `com.azure:azure-identity` when your authentication mode uses Azure Identity credentials. Microsoft Entra authentication modes include `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryServicePrincipalCertificate`, `ActiveDirectoryInteractive`, and `ActiveDirectoryDefault`.
 
-From driver version 6.4.0 onward, applications don't necessarily require using ADALSQL.DLL on Windows operating systems. For *non-Windows operating systems*, the driver requires a Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. For more information about how to connect to Active Directory by using Kerberos, see [Set Kerberos ticket on Windows, Linux, and macOS](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos).
+For `authentication=ActiveDirectoryIntegrated`, the driver selects one of two authentication paths:
 
-For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by default and doesn't require Kerberos ticket setup or Azure library dependencies. If sqljdbc_auth.dll isn't available, the driver looks for the Kerberos ticket to authenticate to Active Directory as on other operating systems.
+- On Windows, if the native wrapper loads, the driver uses the native authentication path. The Java virtual machine (JVM) loads the versioned, architecture-specific wrapper `mssql-jdbc_auth-<version>-<arch>.dll`, which ships with the JDBC driver download and is also published to Maven Central as `com.microsoft.sqlserver:mssql-jdbc_auth`. For example, driver 13.6.2 for an x64 JVM loads `mssql-jdbc_auth-13.6.2.x64.dll`. Place that wrapper on the `java.library.path`. The wrapper then loads `mssql-auth.dll` when the driver requests a token. The JDBC package doesn't include `mssql-auth.dll`. Install Microsoft ODBC Driver 18 for SQL Server or Microsoft OLE DB Driver 19 for SQL Server to get it, and let that installer place the file.
+- If the native wrapper isn't loaded, the driver uses Microsoft Authentication Library for Java (MSAL4J) on both Windows and non-Windows systems. Configure Kerberos for this path and include MSAL4J with its transitive dependencies on the application classpath. The `azure-identity` dependency shown in this article includes MSAL4J transitively. The Windows native DLLs aren't required for this Java authentication path.
 
-From driver version 8.2.2 onward, `sqljdbc_auth.dll` is renamed to `mssql-jdbc_auth-\<version>-\<arch>.dll`. For example, `mssql-jdbc_auth-8.2.2.x64.dll`.
+If neither the native wrapper nor MSAL4J is available, the driver reports that it failed to load both the authentication DLL and the MSAL4J Java library. Add the Java dependencies and configure Kerberos, or configure the native path on Windows.
 
-In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Azure Active Directory Authentication Library (**ADAL.DLL**) also must be installed for Active Directory Integrated authentication. Microsoft Azure Active Directory Authentication Library can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
+If the wrapper loads but can't load `mssql-auth.dll`, the driver raises a separate error that names `mssql-auth.dll` and includes a hexadecimal Windows error code. It doesn't switch to MSAL4J after this failure. Install Microsoft ODBC Driver 18 for SQL Server or Microsoft OLE DB Driver 19 for SQL Server, and confirm that the installed architecture matches the JVM.
 
-(Version 13.4+) The legacy ADAL dependency (`adalsql.dll`/`adal.dll`) has been fully removed. **Authentication=ActiveDirectoryIntegrated** now uses `mssql-auth.dll`, a component installed by the latest Microsoft ODBC Driver 18 for SQL Server and Microsoft OLE DB Driver 19 for SQL Server.
+For the authentication walkthrough and mode-specific setup, see [Connect using Microsoft Entra authentication](connecting-using-azure-active-directory-authentication.md).
 
-If you receive the following error, install the library from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md):
+## Historical dependency notes
 
-```output
-Unable to load mssql-auth.dll. Error code: 0x7e.
-For more information, see:
-https://go.microsoft.com/fwlink/?LinkID=513072
-```
-
-You can get a [sample application](connecting-using-azure-active-directory-authentication.md) that uses this feature.
+Applications on older driver versions might still use previous-generation Azure SDK libraries such as `com.microsoft.azure:adal4j`, `com.microsoft.azure:azure-keyvault`, and `com.microsoft.rest:client-runtime`. Keep those versions aligned with the POM for the driver version you run. Don't mix dependency sets from different major driver versions unless you tested the exact application.
 
 ## Related content
 
-- [JDBC Driver GitHub repository](https://github.com/microsoft/mssql-jdbc)
+- [Install the JDBC driver](using-the-jdbc-driver.md)
+- [Microsoft Entra authentication](connecting-using-azure-active-directory-authentication.md)
+- [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md)
+- [Using Always Encrypted with secure enclaves](using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)
+- [JDBC driver GitHub repository](https://github.com/microsoft/mssql-jdbc)
 - [JDBC driver API reference](reference/jdbc-driver-api-reference.md)

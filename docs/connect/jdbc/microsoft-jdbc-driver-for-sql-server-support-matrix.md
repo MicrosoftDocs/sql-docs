@@ -4,7 +4,7 @@ description: This page contains the support matrix and support life-cycle policy
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, machavan, sunilbs
-ms.date: 09/10/2026
+ms.date: 11/06/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: feature-availability
@@ -78,7 +78,7 @@ All currently supported JDBC driver versions, as shown in the previous matrix, s
 - Azure Synapse Analytics
 - Azure SQL Managed Instance
 - SQL database in Microsoft Fabric
-- Microsoft Fabric Data Warehouse
+- Warehouse in Microsoft Fabric
 
 Feature support is separate from compatibility with server versions. For details on feature support, see the [Driver Feature Support Matrix](../driver-feature-matrix.md#table2) or the release notes for each driver version.
 
@@ -112,16 +112,18 @@ For the best experience, use the latest JDBC driver.
 | 4.2 | 1.7, 1.8 | 4.1, 4.2 |
 | 4.1 | 1.7 | 4.0 |
 | 4.0 | 1.5, 1.6, 1.7 | 3.0, 4.0 |
-| 3.0 | 1.5, 1.6, | 3.0, 4.0 |
+| 3.0 | 1.5, 1.6 | 3.0, 4.0 |
 | 2.0 | 1.5, 1.6 | 3.0, 4.0 |
 | 1.2 | 1.4, 1.5, 1.6 | 3.0 |
 | 1.1 | 1.4 | 3.0 |
 | 1.0 | 1.4 | 3.0 |
 | 2000 | 1.4 | 3.0 |
 
-### Java 4.3 partial compatibility
+<a id="java-43-partial-compatibility"></a>
 
-The JRE 11+ jars are built against the JDBC 4.3 interface surface, but not every method added in JDBC 4.3 is implemented. The following table summarizes runtime behavior on current drivers (7.0 and later).
+### JDBC 4.3 partial compatibility
+
+The JARs for Java 11 and later versions are built against the JDBC 4.3 interface surface, but not every method added in JDBC 4.3 is implemented. The following table summarizes runtime behavior on current drivers (7.0 and later).
 
 | JDBC 4.3 addition | Behavior |
 | --- | --- |
@@ -135,7 +137,7 @@ Applications that rely on JDBC 4.3 sharding APIs need an alternative driver or a
 
 The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows, Windows Server, Linux, Unix, AIX, macOS, and others.
 
-The JDBC product team tests our driver on Windows, Ubuntu Linux, and macOS.
+The JDBC product team tests the driver on Windows, Ubuntu Linux, and macOS.
 
 ## Application server support
 

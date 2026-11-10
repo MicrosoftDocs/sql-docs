@@ -3,7 +3,7 @@ title: "sys.dm_exec_query_stats (Transact-SQL)"
 description: sys.dm_exec_query_stats returns aggregate performance statistics for cached query plans in the Database Engine.
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 12/16/2024
+ms.date: 11/02/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -19,6 +19,7 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || =fabric-sqldb"
+ai-usage: ai-assisted
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
 
@@ -113,6 +114,10 @@ To call this DMV from a dedicated SQL pool in [!INCLUDE [ssazuresynapse-md](../.
 | `last_page_server_reads` | **bigint** | Number of remote page server reads performed the last time the plan was executed.<br /><br />**Applies To:** Azure SQL Database Hyperscale |
 | `min_page_server_reads` | **bigint** | Minimum number of remote page server reads that this plan has ever performed during a single execution.<br /><br />**Applies To:** Azure SQL Database Hyperscale |
 | `max_page_server_reads` | **bigint** | Maximum number of remote page server reads that this plan has ever performed during a single execution.<br /><br />**Applies To:** Azure SQL Database Hyperscale |
+| `total_version_reads` | **bigint** | Total number of row versions read from all version stores by executions of this plan since it was compiled. For more information, see [Version read metrics](../sql-server-transaction-locking-and-row-versioning-guide.md#version-read-metrics).<br /><br />**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] |
+| `last_version_reads` | **bigint** | Number of row versions read from all version stores the last time the plan was executed.<br /><br />**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] |
+| `min_version_reads` | **bigint** | Minimum number of row versions that this plan has ever read from all version stores during a single execution.<br /><br />**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] |
+| `max_version_reads` | **bigint** | Maximum number of row versions that this plan has ever read from all version stores during a single execution.<br /><br />**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)] |
 
 > [!NOTE]  
 > <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than one millisecond, the value is `0`.

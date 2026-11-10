@@ -72,7 +72,7 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 ## Examples  
   
 ### A. Monitoring hidden and nonhidden schedulers  
- The following query outputs the state of workers and tasks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] across all schedulers. This query was executed on a computer system that has the following:  
+ The following query outputs the state of workers and tasks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] across all schedulers. This query was executed on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], on a computer system that has the following:  
   
 -   Two processors (CPUs)  
   
@@ -125,7 +125,7 @@ active_workers_count work_queue_count
   
  The output provides the following information:  
   
--   There are five schedulers. Two schedulers have an ID value < 1048576. Schedulers with ID >= 1048576 are known as hidden schedulers. Scheduler `255` represents the dedicated administrator connection (DAC). There is one DAC scheduler per instance. Resource monitors that coordinate memory pressure use scheduler `257` and scheduler `258`, one per NUMA node  
+-   There are five schedulers. Two schedulers have an ID value < 255 and process regular queries. Scheduler `255` represents the dedicated administrator connection (DAC). There is one DAC scheduler per instance. Resource monitors that coordinate memory pressure use scheduler `257` and scheduler `258`, one per NUMA node. In current versions, the DAC scheduler has ID `1048576`, and the schedulers with a `HIDDEN` status have higher IDs.  
   
 -   There are 23 active tasks in the output. These tasks include user requests in addition to resource management tasks that have been started by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Examples of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tasks are RESOURCE MONITOR (one per NUMA node), LAZY WRITER (one per NUMA node), LOCK MONITOR, CHECKPOINT, and LOG WRITER.  
   
@@ -157,7 +157,7 @@ SELECT
     active_workers_count,  
     work_queue_count  
   FROM sys.dm_os_schedulers  
-  WHERE scheduler_id < 255;  
+  WHERE scheduler_id < 1048576;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

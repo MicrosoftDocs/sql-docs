@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-  DML trigger statements use two special tables: the *deleted* and *inserted* tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary, memory-resident tables to test the effects of certain data modifications and to set conditions for DML trigger actions. You cannot directly modify the data in the tables or perform data definition language (DDL) operations on the tables, such as CREATE INDEX.  
+  DML trigger statements use two special tables: the *deleted* and *inserted* tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically creates and manages these tables. For `AFTER` triggers, it builds them from [row versions](../sql-server-transaction-locking-and-row-versioning-guide.md#row-versioning-based-isolation-levels-in-the-database-engine). You can use these tables to test the effects of certain data modifications and to set conditions for DML trigger actions. You cannot directly modify the data in the tables or perform data definition language (DDL) operations on the tables, such as CREATE INDEX.  
 
  ## Understanding the inserted and deleted tables
 
@@ -109,7 +109,7 @@ ON e.BusinessEntityID = p.BusinessEntityID;
   
 ## Performance considerations
 
-Because the inserted and deleted tables are virtual, memory-resident tables, properties such as statistics or indexes are not available. Though some cardinality information is exposed from these tables, you should exercise care when considering the number of rows to be temporarily stored there. Inserting a large number of rows in these tables and querying or joining them with other tables may result in sub-optimal query plans and slow query executions. Be sure to carefully design and test your application to meet your query performance needs.
+The inserted and deleted tables don't have statistics or indexes. Though some cardinality information is exposed from these tables, you should exercise care when considering the number of rows to be temporarily stored there. Inserting a large number of rows in these tables and querying or joining them with other tables may result in sub-optimal query plans and slow query executions. Be sure to carefully design and test your application to meet your query performance needs.
 
 ## Related content
 

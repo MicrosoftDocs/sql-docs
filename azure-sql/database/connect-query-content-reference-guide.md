@@ -32,7 +32,7 @@ If you don't have a database for a new development project, start with the [Azur
 
 After provisioning, [verify the intended database](free-tier.md#verify-the-deployment). For a first query that doesn't require an imported sample database, follow [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) in the MSSQL extension quickstart. Run its sample table and query steps in the database you provisioned, and skip its generic database-creation step.
 
-Already have a database? Choose a quickstart below. Check its sample-data prerequisites before running scripts; a newly created empty free tier database doesn't include the sample tables required by every quickstart.
+Already have a database? Choose a quickstart in the following list. Check its sample-data prerequisites before running scripts; a newly created empty free tier database doesn't include the sample tables required by every quickstart.
 
 ## Quickstarts
 

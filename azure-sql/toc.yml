@@ -293,10 +293,12 @@
       items:
       - name: Deploy a free database
         href: database/free-tier.md
-      - name: Frequently asked questions
-        href: database/free-tier-faq.yml
+      - name: Learn SQL with AdventureWorksLT
+        href: database/free-tier-sample.md
       - name: Upgrade to Hyperscale
         href: database/free-tier-upgrade-to-hyperscale.md
+      - name: Frequently asked questions
+        href: database/free-tier-faq.yml
     - name: Intelligent applications and AI
       href: database/ai-artificial-intelligence-intelligent-applications.md
     - name: Copilot with Azure SQL Database

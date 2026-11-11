@@ -66,6 +66,10 @@ sections:
 
   - name: Technical questions
     questions:
+      - question: Can I learn SQL with sample data in a free tier database?
+        answer: |
+         Yes. Select **Sample** under **Use existing data** on **Additional settings** when you create the database in the Azure portal. Follow [Learn SQL with AdventureWorksLT](free-tier-sample.md) to explore the sample schema, practice read-only T-SQL queries, and use an AI coding assistant prompt to build a product explorer. The tutorial uses the same database rather than restoring a backup or creating another database from a query.
+
       - question: Help! I'm no longer able to sign in to my database.
         answer: |
          Check the overview page for the database [on the Azure portal](https://portal.azure.com) to see whether you have any remaining free credits for the month. If you choose the **Auto-pause the database until next month** option, once the free limits are met, the database is inaccessible until the start of the next calendar month. To continue usage with charges, go to the **Compute + Storage** tab and change the option to enable billing for usage of the database beyond the free amount.

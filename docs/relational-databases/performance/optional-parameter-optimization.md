@@ -81,7 +81,7 @@ WHERE bedrooms = @bedrooms
       OR @bedrooms IS NULL;
 ```
 
-Even if [parameter markers](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse) can sniff the `@bedrooms = 10` parameter, and you know that the cardinality for the number of bedrooms is likely to be very low, the optimizer doesn't produce a plan that seeks on an index that exists on the bedroom column, because that isn't a valid plan for the case where `@bedrooms` is `NULL`. The generated plan doesn't include a scan of the index.
+Even if [parameter markers](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse) can sniff the `@bedrooms = 10` parameter, and you know that the cardinality for the number of bedrooms is likely to be very low, the optimizer doesn't produce a plan that seeks on an index that exists on the bedroom column, because that isn't a valid plan for the case where `@bedrooms` is `NULL`. The generated plan includes a scan of the index.
 
 Imagine if you could rewrite this query as two separate statements. Depending on the runtime value of the parameter, you could evaluate the following example:
 

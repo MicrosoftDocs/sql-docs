@@ -63,6 +63,7 @@ Use the Azure portal to create the new free Azure SQL Database. To create a free
 
    The **Cost summary** card on the right side of the page shows an **Estimated Cost/Month** of zero. The database is created with default settings, including the option to pause the database when the free limits are reached. You can change these database settings later.
 
+1. Optionally, to practice SQL with sample data, open **Additional settings** and set **Use existing data** to **Sample** before creating the database. For the sample-specific steps and exercises, see [Learn SQL with AdventureWorksLT](free-tier-sample.md#create-a-database-with-sample-data).
 1. Select **Review + create**.
 1. Review and select **Create**.
 
@@ -381,6 +382,8 @@ After you create and verify the database, connect directly to it with the tool o
 - Use the [query editor in the Azure portal](query-editor.md) to run queries without installing a tool.
 - Use [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms), [connect with the MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-database-connections), or use [`sqlcmd`](/sql/tools/sqlcmd/sqlcmd-utility) for interactive queries. In the MSSQL first-query quickstart, start with [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) to skip generic database creation and use sample tables in your provisioned database.
 - To query the database from an application, choose a driver or provider from [Microsoft SQL drivers and frameworks](/sql/connect/sql-connection-libraries/). For example, use `Microsoft.Data.SqlClient` for .NET or `mssql-python` for Python. Then follow the [language quickstarts](connect-query-content-reference-guide.md#libraries) to connect and run your first query.
+
+If you selected **Sample** during creation, continue with [Learn SQL with AdventureWorksLT](free-tier-sample.md). The tutorial covers read-only queries, joins, and summaries, and includes a prompt for building a product explorer with an AI coding assistant.
 
 ## Monitor and track service usage
 

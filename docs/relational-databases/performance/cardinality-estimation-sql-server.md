@@ -267,7 +267,7 @@ Queries can be forced to use the legacy cardinality estimator *without modifying
    ```
 
   > [!NOTE]  
-  > For more information, see [Query Store hints](query-store-hints.md) (Preview). Currently, this feature is available only in Azure SQL Database.
+  > For more information, see [Query Store hints](query-store-hints.md).
 
 ### How to force a particular query plan
 

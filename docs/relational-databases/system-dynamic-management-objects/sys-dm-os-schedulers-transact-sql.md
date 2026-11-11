@@ -131,7 +131,7 @@ active_workers_count work_queue_count
   
 -   NUMA node `0` is mapped to CPU `1` and NUMA node `1` is mapped to CPU `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically starts on a NUMA node other than node 0.  
   
--   With `runnable_tasks_count` returning `0`, there are no actively running tasks. However, active sessions may exist.  
+-   With `runnable_tasks_count` returning `0`, no worker is waiting to be scheduled on the runnable queue.  
   
 -   Scheduler `255` representing DAC has `3` workers associated with it. These workers are allocated at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup and do not change. These workers are used to process DAC queries only. The two tasks on this scheduler represent a connection manager and an idle worker.  
   

@@ -211,7 +211,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
       INDEX index_name [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
          ( column_name [ ASC | DESC ] [ ,... n ] )
     | INDEX index_name CLUSTERED COLUMNSTORE [ ORDER (column_name [ , ...n ] ) ]
-    | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
+    | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] ) [ ORDER (column_name [ , ...n ] ) ]
     }
     [ INCLUDE ( column_name [ ,... n ] ) ]
     [ WHERE <filter_predicate> ]
@@ -576,7 +576,7 @@ Specifies to create a nonclustered columnstore index on the table. The underlyin
 
 The nonclustered columnstore index is stored and managed as a clustered columnstore index. It's called a nonclustered columnstore index to because the columns can be limited and it exists as a secondary index on a table.
 
-You can specify an order for the data in a nonclustered columnstore index in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and in [!INCLUDE [ssazure-sqlmi-autd](../../includes/applies-to-version/ssazure-sqlmi-autd.md)]. For more information, see [Performance tuning with ordered columnstore indexes](../../relational-databases/indexes/ordered-columnstore-indexes.md).
+You can specify an order for the data in a nonclustered columnstore index starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and in [!INCLUDE [ssazure-sqlmi-autd](../../includes/applies-to-version/ssazure-sqlmi-autd.md)]. For more information, see [Performance tuning with ordered columnstore indexes](../../relational-databases/indexes/ordered-columnstore-indexes.md).
 
 #### ON *partition_scheme_name* ( *column_name* )
 

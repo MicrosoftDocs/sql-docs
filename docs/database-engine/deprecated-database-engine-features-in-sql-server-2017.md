@@ -79,7 +79,7 @@ The following [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] featur
 | Deprecated feature | Replacement | Feature name | Feature ID |
 | --- | --- | --- | --- |
 | Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 aren't deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm | 253 |
-| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. | Deprecated hash algorithm | None |
+| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. | Deprecated hash algorithm | None |
 
 ### Remote servers
 

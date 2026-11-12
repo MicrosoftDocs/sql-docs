@@ -52,7 +52,7 @@ Is a restricted SELECT statement, in which the ORDER BY clause and the INTO keyw
 
 ## Result value
 
-Returns TRUE when the comparison specified is TRUE for all pairs (*scalar_expression*, *x*), when *x* is a value in the single-column set. Otherwise returns **FALSE**.
+Returns TRUE when the comparison specified is TRUE for all pairs (*scalar_expression*, *x*), when *x* is a value in the single-column set. Returns **FALSE** when the comparison is FALSE for at least one pair. Otherwise, returns **UNKNOWN**.
 
 ## Remarks
 

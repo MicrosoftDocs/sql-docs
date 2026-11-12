@@ -59,7 +59,7 @@ Is a subquery that has a result set of one column. The data type of the column r
 
 ## Result value
 
-SOME or ANY returns **TRUE** when the comparison specified is TRUE for any pair (*scalar_expression*, *x*) where *x* is a value in the single-column set; otherwise, returns **FALSE**.
+SOME or ANY returns **TRUE** when the comparison specified is TRUE for any pair (*scalar_expression*, *x*) where *x* is a value in the single-column set, and **FALSE** when the comparison is FALSE for every pair. Otherwise, returns **UNKNOWN**.
 
 ## Remarks
 

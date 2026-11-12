@@ -102,12 +102,14 @@ The following lists the types of values that cannot be stored by using **sql_var
 - **geometry**
 - **hierarchyid**
 - **image**
+- **json**
 - **ntext**
 - **nvarchar(max)**
 - **rowversion** (**timestamp**)
 - **text**
 - **varchar(max)**
 - **varbinary(max)**
+- **vector**
 - User-defined types
 - **xml**
 

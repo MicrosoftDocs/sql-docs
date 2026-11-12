@@ -131,23 +131,12 @@ PRINT @info;
 [!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```json
-{
-    "name": "John",
-    "skills": ["C#", "SQL"]
-} {
-    "name": "Mike",
-    "skills": ["C#", "SQL"]
-} {
-    "name": "Mike",
-    "skills": ["C#", "SQL"],
-    "surname": "Smith"
-} {
-    "skills": ["C#", "SQL"],
-    "surname": "Smith"
-} {
-    "skills": ["C#", "SQL", "Azure"],
-    "surname": "Smith"
-}
+{"name":"John","skills":["C#","SQL"]}
+{"name":"Mike","skills":["C#","SQL"]}
+{"name":"Mike","skills":["C#","SQL"],"surname":"Smith"}
+{"name":null,"skills":["C#","SQL"],"surname":"Smith"}
+{"skills":["C#","SQL"],"surname":"Smith"}
+{"skills":["C#","SQL","Azure"],"surname":"Smith"}
 ```
 
 ## B. Multiple updates

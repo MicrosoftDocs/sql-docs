@@ -796,7 +796,7 @@ The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] uses the resourc
 
 The maximum size for all caches is a function of the buffer pool size and can't exceed the maximum server memory. For more information about configuring the maximum server memory, see the `max server memory` setting in `sp_configure`.
 
-The user worker threads remove execution plans from the plan cache when single cache memory pressure exists. They enforce policies for maximum single cache size and maximum single cache entries.
+The user worker threads remove execution plans from the plan cache when single cache memory pressure exists. They enforce policies for maximum single cache size and maximum single cache entries. The maximum number of entries in the SQL Plans cache, and in the Object Plans cache, is four times the size of its hash table: 160,036 entries on 64-bit systems, or 640,004 with [trace flag 174](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf174). Each cache has its own limit. A cache that reaches this limit removes a plan for each new plan it inserts, even when it uses little memory.
 
 The following examples illustrate which execution plans get removed from the plan cache:
 

@@ -78,7 +78,7 @@ BACKUP SYMMETRIC KEY symmetric_key
 CLOSE SYMMETRIC KEY symmetric_key;
 ```
 
-In the following example, the symmetric key is opened and backed up to an Azure Blob storage.
+In the following example, the symmetric key is opened and backed up to Azure Blob Storage.
 
 ```sql
 OPEN SYMMETRIC KEY symmetric_key

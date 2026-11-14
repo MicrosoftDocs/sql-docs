@@ -775,7 +775,7 @@ Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV output:
 - The `usecounts` column shows the value `1` in the first record. This value represents the plan executed once with `SET ANSI_DEFAULTS OFF`.
 - The `usecounts` column shows the value `2` in the second record. This value represents the plan executed with `SET ANSI_DEFAULTS ON`, because it was executed twice.
 - The different `memory_object_address` refers to a different execution plan entry in the plan cache. However, the `sql_handle` value is the same for both entries because they refer to the same batch.
-  - The execution with `ANSI_DEFAULTS` set to `OFF` has a new `plan_handle`, and it's available for reuse for calls that have the same set of `SET` options. The new plan handle is necessary because the execution context was reinitialized due to changed `SET` options. But that change doesn't trigger a recompile: both entries refer to the same plan and query, as evidenced by the same `query_plan_hash` and `query_hash` values.
+  - SQL Server compiles a separate plan for the execution with `ANSI_DEFAULTS` set to `OFF` and caches it with a new `plan_handle`. The existing plan remains cached for calls with the original `SET` options. The matching `query_hash` and `query_plan_hash` values indicate the same query and plan shape across the two separately compiled plans.
 
 This situation means that you have two plan entries in the cache corresponding to the same batch. It underscores the importance of making sure that the plan cache affecting `SET` options are the same when the same queries are executed repeatedly. This approach optimizes plan reuse and keeps the plan cache size to its required minimum.
 

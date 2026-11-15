@@ -177,22 +177,21 @@ The state of a database file (for example, online or offline), is maintained ind
 
 When a database is in the RESTORING state, most `ALTER DATABASE` statements fail. The exception is setting database mirroring options. A database might be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.
 
-The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options.
+Changing the following options can remove cached plans for the affected database.
 
 - COLLATE
 - MODIFY FILEGROUP DEFAULT
 - MODIFY FILEGROUP READ_ONLY
 - MODIFY FILEGROUP READ_WRITE
-- MODIFY_NAME
+- MODIFY NAME
 - OFFLINE
-- ONLINE
 - PAGE_VERIFY
 - READ_ONLY
 - READ_WRITE
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
+After cached plans are removed, subsequent executions of affected queries require compilation, which can temporarily reduce query performance.
 
-The plan cache is also flushed in the following scenarios:
+The following operations can also remove cached plans:
 
 - A database has the `AUTO_CLOSE` database option set to ON. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.
 - You run several queries against a database that has default options. Then, the database is dropped.

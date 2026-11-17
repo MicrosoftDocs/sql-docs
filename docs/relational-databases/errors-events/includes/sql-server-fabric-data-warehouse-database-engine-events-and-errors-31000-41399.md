@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 > [!NOTE]  
@@ -162,6 +162,7 @@ ms.topic: include
 | <a id="31778"></a> 31778 | 16 | No | The AI functions configuration setting '%.\*ls' cannot be an empty string. |
 | <a id="31779"></a> 31779 | 16 | No | The AI service rejected the AI functions configuration of this session with error %d: %ls Review the settings applied with sp_aifunc_default_conf. |
 | <a id="31780"></a> 31780 | 17 | No | Failure occurred during authorization: %.\*ls %.\*ls (RootActivityId: %.\*ls) |
+| <a id="31781"></a> 31781 | 16 | No | Cannot ALTER user-defined function '%.\*ls' to EXTERNAL FUNCTION. Use DROP and CREATE instead. |
 | <a id="31801"></a> 31801 | 17 | No | Incorrect JSON |
 | <a id="31802"></a> 31802 | 17 | No | JSON value casted to incorrect type |
 | <a id="31803"></a> 31803 | 17 | No | Missing JSON key '%ls' |
@@ -1221,6 +1222,7 @@ ms.topic: include
 | <a id="37397"></a> 37397 | 16 | No | Error storing Babylon policy for DBID %d. Major error: %d, Minor error: %d, State: %d |
 | <a id="37398"></a> 37398 | 21 | No | Fatal error: Unable to pull policies for %d consecutive attempts. |
 | <a id="37399"></a> 37399 | 16 | No | TYPE, SID, Default Database, Default Language, Password option not allowed for External logins |
+| <a id="37400"></a> 37400 | 16 | No | GRANT, DENY, and REVOKE are not supported for external tables governed by OneLake Security. |
 | <a id="37401"></a> 37401 | 16 | Yes | Error refreshing the external access control policy from metadata. Error code %d. |
 | <a id="37402"></a> 37402 | 16 | No | Setting LEDGER to ON failed because ledger view '%.\*ls' is not specified in two-part name format. |
 | <a id="37403"></a> 37403 | 16 | No | Error in parsing the external json policy element/event with error message %s. |
@@ -1378,7 +1380,6 @@ ms.topic: include
 | <a id="37556"></a> 37556 | 16 | No | Key validation failed since an attempt to get algorithm info for that key failed. Provider error code: %d. (%.\*ls). For more information, see [https://go.microsoft.com/fwlink/?linkid=2323435](https://go.microsoft.com/fwlink/?linkid=2323435). |
 | <a id="37557"></a> 37557 | 16 | No | A server principal with the object ID '%ls' already exists with the name '%ls'. |
 | <a id="37558"></a> 37558 | 16 | No | A login with the object ID '%ls' already has an account with the user name '%ls'. |
-| <a id="37559"></a> 37559 | 16 | No | Object_id is not a valid option |
 | <a id="37560"></a> 37560 | 16 | No | Encryption scan cannot be suspended because it is already in suspended state. |
 | <a id="37561"></a> 37561 | 16 | No | Database encryption key cannot be altered because the database is not encrypted. |
 | <a id="37562"></a> 37562 | 16 | No | When key change is in progress, only suspend and resume operations are allowed. |

@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -465,6 +465,7 @@ ms.topic: include
 | <a id="25659"></a> 25659 | 17 | No | The %S_MSG, "%.\*ls", encountered a configuration error during initialization. The customizable attribute %ls is used internally only. |
 | <a id="25664"></a> 25664 | 16 | No | Internal Extended Event error: invalid package ID. |
 | <a id="25665"></a> 25665 | 10 | No | This target does not support the NO_EVENT_LOSS event retention mode. The ALLOW_SINGLE_EVENT_LOSS retention mode is used instead. |
+| <a id="25666"></a> 25666 | 16 | No | The %S_MSG "%.\*ls" exceeds the maximum number of target parameters or event customizable attributes. |
 | <a id="25699"></a> 25699 | 17 | No | The Extended Event engine failed unexpectedly while performing an operation. |
 | <a id="25701"></a> 25701 | 15 | No | Invalid event session name "%.\*ls". Temporary event sessions are not allowed. |
 | <a id="25702"></a> 25702 | 16 | No | The event session option, "%.\*ls", is set more than once. Remove the duplicate session option and re-issue the statement. |

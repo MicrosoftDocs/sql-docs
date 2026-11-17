@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -60,6 +60,7 @@ ms.topic: include
 | <a id="16217"></a> 16217 | 16 | No | Conflicting query hints and/or internal configuration settings forcing both single node and distributed plans were detected |
 | <a id="16218"></a> 16218 | 15 | No | '%.\*ls' option is not supported when creating index on expression. |
 | <a id="16220"></a> 16220 | 16 | No | The value for %.\*ls is out of range. The value must be greater than or equal to %I64u and less than or equal to %I64u. |
+| <a id="16231"></a> 16231 | 16 | No | The term '%.\*ls' is not permitted in a merge replication subscriber information expression, because it carries the substitution token 'suser_sname' or 'system_user' somewhere other than as a whole-term, unqualified SUSER_SNAME() call. Dynamic snapshot generation replaces those tokens textually and would corrupt this value. Rename the referenced object, or remove the token from the string literal. |
 | <a id="16310"></a> 16310 | 16 | No | '%.\*ls' is not supported in this version of Azure SQL Edge. |
 | <a id="16401"></a> 16401 | 16 | No | Page id not hosted by the current page server. |
 | <a id="16501"></a> 16501 | 16 | No | %ls is not supported with this set of options. |

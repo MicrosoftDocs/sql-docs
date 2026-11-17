@@ -3,7 +3,7 @@ title: "Supported Version and Edition Upgrades (SQL Server 2025)"
 description: The supported version and edition upgrades for SQL Server 2025.
 author: adbadram
 ms.author: adbadram
-ms.date: 11/06/2026
+ms.date: 11/12/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: upgrade-and-migration-article
@@ -143,10 +143,11 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
 | Upgrade from | Upgrade to |
 | --- | --- |
 | Enterprise (Server+CAL and Core) | Enterprise edition |
-| Evaluation Enterprise | Enterprise (Server+CAL or Core License)<br />Standard<br />Developer<br /><br />Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation doesn't apply to stand-alone instances installed on a Windows Server failover cluster participating in an availability group. |
+| Evaluation Enterprise | Enterprise (Server+CAL or Core License)<br />Enterprise Developer<br />Standard<br /><br />Upgrading from Evaluation to another edition is supported for stand-alone installations, but isn't supported for clustered installations. This limitation doesn't apply to stand-alone instances installed on a Windows Server failover cluster participating in an availability group. |
 | Standard | Enterprise (Server+CAL or Core License) |
-| Developer | Enterprise (Server+CAL or Core License)<br />Standard |
-| Express | Enterprise (Server+CAL or Core License)<br />Developer<br />Standard |
+| Enterprise Developer | Enterprise (Server+CAL or Core License) |
+| Standard Developer | Enterprise (Server+CAL or Core License)<br />Standard |
+| Express | Enterprise (Server+CAL or Core License)<br />Enterprise Developer<br />Standard Developer<br />Standard |
 
 Additionally you can also perform an edition upgrade between [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Enterprise (Server+CAL license) and [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] Enterprise (Core License):
 

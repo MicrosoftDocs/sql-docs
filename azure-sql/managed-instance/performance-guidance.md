@@ -280,7 +280,7 @@ Some database applications have read-heavy workloads. Caching layers might reduc
 
 ## Increase memory for your instance
 
-To improve performance of your [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) instance, you can use the [flexible memory](resource-limits.md#flexible-memory) feature to choose the amount of memory you want to allocate to your instance based on your workload.
+Use flexible memory to adjust instance memory based on your workload without changing the number of vCores. For supported hardware and service tiers, see [Flexible memory](resource-limits.md#flexible-memory).
 
 ## Related content
 

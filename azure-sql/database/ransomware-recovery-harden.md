@@ -4,7 +4,7 @@ description: Learn how to harden your Azure database environment after recovery 
 author: sudhanshukhera
 ms.author: skhera
 ms.title: Step 6 - Harden - Close the gaps that let the attack succeed
-ms.date: 10/31/2026
+ms.date: 11/06/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -20,7 +20,7 @@ Begin this step after production traffic is restored. Convert every identified c
 ## 1. Close every protection gap from Step 0
 
 - Work through every item in the [Step 0 Protection Checklist](ransomware-recovery-protect.md#step-0-protect-prepare-your-azure-sql-databases) that you didn't have in place before the attack. Confirm that audit logs are routed to WORM storage in a separate subscription or tenant.
-- Confirm the restored database has extended PITR retention and LTR configured. On Azure SQL Database, confirm LTR backup immutability is enabled and locked for regulated workloads. On SQL Managed Instance, LTR backup immutability is **in preview**; confirm availability and verify protection and restorability of the intended backups before relying on it. Where the preview is unavailable or unsuitable, retain a validated alternative. If that alternative uses `COPY_ONLY`, apply the [portable backup prerequisites](ransomware-recovery-protect.md#immutable-backup): service-managed TDE isn't supported for that workflow, and required customer-managed keys must remain available.
+- Confirm the restored database has extended PITR retention and LTR configured. On Azure SQL Database, confirm LTR backup immutability is enabled and locked for regulated workloads. On SQL Managed Instance, [LTR backup immutability](../managed-instance/backup-immutability.md) is **in preview**; verify protection and restorability of the intended backups before relying on it. Where the preview is unsuitable, retain a validated alternative. If that alternative uses `COPY_ONLY`, apply the [portable backup prerequisites](ransomware-recovery-protect.md#immutable-backup): service-managed TDE isn't supported for that workflow, and required customer-managed keys must remain available.
 
 ## 2. Maintain heightened monitoring for at least 30 days
 

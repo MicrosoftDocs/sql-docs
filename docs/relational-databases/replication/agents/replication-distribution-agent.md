@@ -1,10 +1,10 @@
 ---
 title: "Replication Distribution Agent"
 description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 05/30/2025
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Distribution Agent"
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
-monikerRange: "=azuresqldb-current || >=sql-server-2017"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || =azuresqldb-mi-current" 
 ---
 # Replication Distribution Agent
 
-[!INCLUDE [sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The Replication Distribution Agent is an executable that moves the snapshot (for snapshot replication and transactional replication) and the transactions held in the distribution database tables (for transactional replication) to the destination tables at the Subscribers.
 
@@ -43,7 +43,7 @@ distrib [ -? ]
 [ -Distributor distributor ]
 [ -DistributorLogin distributor_login ]
 [ -DistributorPassword distributor_password ]
-[ -DistributorSecurityMode [ 0 | 1 ] ]
+[ -DistributorSecurityMode [ 0 | 1 | 5] ]
 [ -EncryptionLevel [ 0 | 1 | 2 | 3 | 4 ] ]
 [ -ErrorFile error_path_and_file_name ]
 [ -ExtendedEventConfigFile configuration_path_and_file_name ]
@@ -73,7 +73,7 @@ distrib [ -? ]
 [ -SubscriberDatabasePath subscriber_path ]
 [ -SubscriberLogin subscriber_login ]
 [ -SubscriberPassword subscriber_password ]
-[ -SubscriberSecurityMode [ 0 | 1 ] ]
+[ -SubscriberSecurityMode [ 0 | 1 | 5 ] ]
 [ -SubscriberType [ 0 | 1 | 3 ] ]
 [ -SubscriptionStreams [ 1 | 2 | ...64 ] ]
 [ -SubscriptionTableName subscription_table ]
@@ -140,11 +140,11 @@ The Distributor login name.
 
 #### -DistributorPassword *distributor_password*
 
-The Distributor password.
+The Distributor password. Not used when DistributorSecurityMode is 5.
 
-#### -DistributorSecurityMode [ 0 \| 1 ]
+#### -DistributorSecurityMode [ 0 \| 1 \| 5]
 
-Specifies the security mode of the Distributor. A value of 0 indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode, and a value of 1 indicates Windows Authentication Mode (default).
+Specifies the security mode for the agent authentication to the Distributor. A value of 0 indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode, and a value of 1 indicates Windows Authentication Mode (default). Value of `5` indicates Microsoft Entra managed identity authentication with default managed identity of the resource hosting the agent. Applicable only when resource hosting the agent and Distributor are Azure SQL Managed Instance resources.
 
 <a id="encryption-level"></a>
 
@@ -293,11 +293,11 @@ The Subscriber login name. If `SubscriberSecurityMode` is `0` (for [!INCLUDE [ss
 
 #### -SubscriberPassword *subscriber_password*
 
-The Subscriber password. If `SubscriberSecurityMode` is `0` (for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.
+The Subscriber password. If `SubscriberSecurityMode` is `0` (for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified. Not used when SubscriberSecurityMode is 5.
 
-#### -SubscriberSecurityMode [ 0 \| 1 ]
+#### -SubscriberSecurityMode [ 0 \| 1 \| 5 ]
 
-Specifies the security mode of the Subscriber. A value of `0` indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and a value of `1` indicates Windows Authentication Mode (default).
+Specifies the security mode for authentication to the Subscriber. A value of `0` indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and a value of `1` indicates Windows Authentication Mode (default). A value of `5` indicates Microsoft Entra managed identity authentication using the default managed identity of the resource hosting the agent. This value applies only when both the Publisher and Distributor are Azure SQL Managed Instance resources, and the Subscriber is an Azure SQL Managed Instance or Azure SQL Database resource.
 
 #### -SubscriberType [ 0 \| 1 \| 3 ]
 

@@ -8975,7 +8975,7 @@ items:
           href: tools/visual-studio-code-extensions/mssql/mssql-schema-designer.md
         - name: Schema designer with GitHub Copilot
           href: tools/visual-studio-code-extensions/mssql/mssql-schema-designer-copilot.md
-        - name: Local SQL Server container
+        - name: Build local with Azure SQL Database container
           href: tools/visual-studio-code-extensions/mssql/mssql-local-container.md
         - name: Database operations
           href: tools/visual-studio-code-extensions/mssql/mssql-database-operations.md

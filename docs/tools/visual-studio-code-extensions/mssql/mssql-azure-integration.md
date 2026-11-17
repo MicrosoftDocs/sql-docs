@@ -4,7 +4,7 @@ titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn how to use the MSSQL extension for Visual Studio Code to connect to Azure and provision Azure SQL databases directly from your editor.
 author: cwebb-msft
 ms.author: chweb
-ms.reviewer: roblescarlos, tsiddique
+ms.reviewer: yoleichen
 ms.date: 08/17/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
@@ -63,11 +63,6 @@ You can provision a new Azure SQL database from the MSSQL extension's **Deployme
    - **Optional Settings**: Add a profile name, connection group, data source, or tags.
 
    :::image type="content" source="media/mssql-azure-integration/create-new-database.png" alt-text="Screenshot showing the Create screen.":::
-
-1. For the free tier, choose what happens when the monthly limit is reached:
-
-   - **Auto-pause** the database until the next calendar month.
-   - **Continue at standard serverless rates**.
 
 1. Select **Create Database**. The extension creates the database and adds the connection to your saved profiles. The new connection autoconnects when provisioning completes.
 

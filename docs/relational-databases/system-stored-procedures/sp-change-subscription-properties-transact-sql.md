@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_change_subscription_properties (Transact-SQL)"
 description: sp_change_subscription_properties updates information for pull subscriptions.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -100,7 +100,8 @@ This table describes the properties of articles and the values for those propert
 | `merge_job_password` | | Password for the Windows account under which the agent runs. |
 | `publisher_login` | | Publisher login. Changing `publisher_login` is only supported for subscriptions to merge publications. |
 | `publisher_password` | | Publisher password. Changing `publisher_password` is only supported for subscriptions to merge publications. |
-| `publisher_security_mode` | `1` | Use Windows Authentication when connecting to the Publisher. Changing `publisher_security_mode` is only supported for subscriptions to merge publications. |
+| `publisher_security_mode` | `5` | Use Microsoft Entra managed identity authentication with default managed identity of Subscriber when connecting to the Publisher. Applicable only for transactional replication when both Subscriber and Publisher are Azure SQL Managed Instance resources. |
+| | `1` | Use Windows Authentication when connecting to the Publisher. Changing `publisher_security_mode` is only supported for subscriptions to merge publications. |
 | | `0` | Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. |
 | `use_ftp` | `true` | To retrieve snapshots, use FTP instead of the regular protocol. |
 | | `false` | Use the regular protocol to retrieve snapshots. |

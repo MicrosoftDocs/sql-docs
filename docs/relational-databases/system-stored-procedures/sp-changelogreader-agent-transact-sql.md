@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_changelogreader_agent (Transact-SQL)"
 description: sp_changelogreader_agent changes security properties of a Log Reader agent.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -64,6 +64,7 @@ The security mode used by the agent when connecting to the Publisher. *@publishe
 - `2` specifies Microsoft Entra password authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `5` specifies Microsoft Entra managed identity authentication to Publisher by using the default managed identity of the Distributor. This value is applicable only in transactional replication when both the Distributor and Publisher are Azure SQL Managed Instance resources.
 
 > [!IMPORTANT]  
 > [!INCLUDE [ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]
@@ -85,7 +86,9 @@ The name of the Publisher. *@publisher* is **sysname**, with a default of `NULL`
 
 #### [ @job_security_mode = ] *job_security_mode*
 
-[!INCLUDE [ssinternalonly-md](../../includes/ssinternalonly-md.md)]
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication of the agent to the Distributor.
+- `1` specifies Windows authentication of the agent to the Distributor.
+- `5` specifies Microsoft Entra managed identity authentication of the agent to the Distributor by using the default managed identity of the Distributor. This value is applicable only in transactional replication when both the Distributor and Publisher are Azure SQL Managed Instance resources.
 
 ## Return code values
 

@@ -33,7 +33,7 @@ ALTER DATABASE [<database name>]
 ```
 
 > [!NOTE]
-> If Service Broker is disabled on a database migrated to Azure SQL Managed Instance, enabling Service Broker on the target SQL managed instance isn't available. To use Service Broker on the target SQL managed instance, enable it on the source SQL Server database before you migrate to SQL managed instance. 
+> If Service Broker is disabled on the source SQL Server database, the disabled setting is preserved during migration to Azure SQL Managed Instance. You can't enable Service Broker yourself on the migrated database on the managed instance. To use Service Broker on the target SQL managed instance, enable it on the source SQL Server database before you migrate to SQL managed instance.
 
 ## Enable Service Broker in a database
 

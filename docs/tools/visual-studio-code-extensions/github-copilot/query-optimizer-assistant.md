@@ -1,11 +1,11 @@
 ---
 title: "Quickstart: Query Optimizer Assistant with GitHub Copilot"
 titleSuffix: MSSQL Extension for Visual Studio Code
-description: Learn how GitHub Copilot helps developers optimize queries and analyze performance bottlenecks in SQL database code.
+description: Use GitHub Copilot to optimize SQL queries, investigate Query Store performance, and analyze execution plans in the MSSQL extension for Visual Studio Code.
 author: cwebb-msft
 ms.author: chweb
-ms.reviewer: roblescarlos
-ms.date: 06/01/2026
+ms.reviewer: yoleichen
+ms.date: 07/07/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: quickstart
@@ -19,7 +19,7 @@ ai-usage: ai-assisted
 
 # Quickstart: Query optimizer assistant
 
-GitHub Copilot helps developers optimize queries and analyze performance bottlenecks without needing expertise in database internals, especially developers without deep Transact-SQL (T-SQL) expertise. GitHub Copilot can break down complex SQL, interpret execution plans, and suggest indexing strategies or refactoring opportunities. Developers can keep their apps functional and performant, while staying focused on feature delivery.
+GitHub Copilot helps you optimize queries and investigate performance bottlenecks in the MSSQL extension for Visual Studio Code. You can ask for help with Transact-SQL (T-SQL) and object-relational mapping (ORM) code, interpret execution plans, or use agent tools to investigate captured Query Store data.
 
 ## Get started
 
@@ -27,9 +27,7 @@ GitHub Copilot helps developers optimize queries and analyze performance bottlen
 
 ## Optimize performance with GitHub Copilot
 
-GitHub Copilot offers multiple ways to help developers write performant, production-ready database code without requiring deep expertise in query tuning or execution plan analysis. Whether you're building new features or investigating a performance issue, GitHub Copilot can provide insights, recommend optimizations, and help restructure queries. You can access all these capabilities within your existing workflow in Visual Studio Code.
-
-The following sections describe common use cases and examples of what you can ask via the chat participant.
+Use the `@mssql` chat participant to review SQL and ORM queries, explain execution plans, and suggest improvements. The examples start with query optimization and code-first scenarios, followed by a Query Store agent example in preview.
 
 ### Optimize queries
 
@@ -197,6 +195,34 @@ Using Entity Framework Core, how can you analyze and optimize a LINQ query that 
 In Sequelize, how do you restructure a query that fetches order history with product details to minimize N+1 query issues?
 ```
 
+<a id="investigate-query-store-performance-preview"></a>
+
+## Investigate queries with agent mode (preview)
+
+Use the preview [Query Store agent tools](agent-mode.md#query-store-performance-tools-preview) directly in agent mode. You don't need the dashboard, but you need captured Query Store data and permission to read it. See [prerequisites](../mssql/mssql-query-performance-dashboard.md#prerequisites).
+
+The `#mssql_query_store_analyze_query` tool retrieves SQL text, stored plans, runtime statistics, execution history, and waits. You don't pass SQL text or plan XML to it.
+
+| Input | What to provide |
+| --- | --- |
+| Query | Required `queryId` from Query Store. If unknown, ask the agent to find top queries first. |
+| Connection | Required `profileId` or `connectionId` backed by a saved profile. Name the profile or connection in your prompt. |
+| Database | Optional `database`; defaults to the connection's or profile's database. |
+| Time frame | Optional `hours` (default 24), or both `startUtc` and `endUtc` as ISO 8601 UTC timestamps. |
+| Plans | Optional `planIds` to prioritize summaries; defaults to plans with the most total duration. |
+
+Replace the example query ID, database, and profile with your own:
+
+```copilot-prompt
+#mssql_query_store_analyze_query Analyze query 4 in AdventureWorksLT using my LocalDev profile for the past 24 hours. Explain the main findings. Don't make changes.
+```
+
+In the [Query Performance Dashboard (preview)](../mssql/mssql-query-performance-dashboard.md), **Chat** is an optional shortcut in a query row's actions menu (**...**) or the query detail page. It opens agent mode with the query ID, profile, database, and selected time range filled in.
+
+:::image type="content" source="../mssql/media/mssql-query-performance-dashboard/query-performance-dashboard-chat-menu.png" alt-text="Screenshot of the query overview actions menu with the optional Chat entry point for a Query Store investigation.":::
+
+Diagnostic reads don't modify your database. Test recommended changes before applying them.
+
 ## Share your experience
 
 [!INCLUDE [copilot-feedback](../includes/copilot-feedback.md)]
@@ -204,6 +230,8 @@ In Sequelize, how do you restructure a query that fetches order history with pro
 ## Related content
 
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](overview.md)
+- [Query Performance Dashboard (preview)](../mssql/mssql-query-performance-dashboard.md)
+- [Quickstart: Use GitHub Copilot agent mode](agent-mode.md)
 - [Quickstart: Chat with the `@mssql` participant (ask mode)](chat-ask-mode.md)
 - [Quickstart: Generate code](code-generation.md)
 - [Quickstart: Use the schema explorer and designer](schema-explorer-designer.md)

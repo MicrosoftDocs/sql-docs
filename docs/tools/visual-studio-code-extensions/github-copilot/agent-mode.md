@@ -1,11 +1,11 @@
 ---
 title: "Quickstart: Use GitHub Copilot Agent Mode"
 titleSuffix: MSSQL Extension for Visual Studio Code
-description: Learn how to use GitHub Copilot Agent Mode with the MSSQL extension to connect to databases, explore schemas, and run SQL queries directly from the GitHub Copilot chat in Visual Studio Code.
+description: Use GitHub Copilot agent mode with the MSSQL extension to connect to databases, explore schemas, run queries, and investigate Query Store performance.
 author: cwebb-msft
 ms.author: chweb
-ms.reviewer: roblescarlos
-ms.date: 06/01/2026
+ms.reviewer: yoleichen
+ms.date: 07/07/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: quickstart
@@ -19,7 +19,7 @@ ai-usage: ai-assisted
 
 # Quickstart: Use GitHub Copilot agent mode
 
-Agent mode lets GitHub Copilot orchestrate the tools contributed by the MSSQL extension for Visual Studio Code. When the extension is installed and active, GitHub Copilot can list Microsoft SQL Server connections, connect to a server and database, retrieve schema metadata, and execute queries, all from natural-language prompts, with your approval on each action.
+Agent mode lets GitHub Copilot orchestrate the tools contributed by the MSSQL extension for Visual Studio Code. When the extension is installed and active, GitHub Copilot can list Microsoft SQL Server connections, connect to a server and database, retrieve schema metadata, execute queries, and investigate Query Store performance, all from natural-language prompts. Approval requirements depend on the tool.
 
 All actions use the same connection context and credentials as the MSSQL extension. Agent mode doesn't introduce another authentication or permission changes.
 
@@ -29,7 +29,7 @@ All actions use the same connection context and credentials as the MSSQL extensi
 ## Key takeaways
 
 - Agent mode picks up MSSQL extension tools automatically. No `@mssql` mention required.
-- Every tool call requires your approval before execution.
+- Review and approve tool calls when prompted. Query Store diagnostic reads don't request confirmation; forcing or unforcing a plan requires review and confirmation.
 - Agent mode is *schema-aware* through its tools: each tool call returns real data from your connected database.
 - For architectural context across all surfaces, see [How GitHub Copilot works with the MSSQL extension](how-it-works.md).
 
@@ -39,6 +39,7 @@ Agent mode is best for:
 
 - **Multi-step workflows.** "Connect to LocalDev, switch to AdventureWorks, then show me every table with a foreign key to Customer."
 - **Exploration at scale.** "Find any stored procedures that reference SalesOrderHeader and summarize what each one does."
+- **Performance investigations.** "Use Query Store to find the highest CPU queries in the past 24 hours, then analyze the top query's history, waits, and plans."
 - **Delegated changes.** "Add audit columns to every table in the Sales schema and regenerate the related stored procedures."
 
 Use [ask mode](chat-ask-mode.md) when a single question or a one-shot query answers your need. Use [slash commands](slash-commands.md) when you already know which action you want. Use [plan mode](plan-mode.md) when you want a written plan before any changes.
@@ -47,7 +48,7 @@ For details about how agent mode selects and executes tools, see the [Visual Stu
 
 ## What is agent mode?
 
-Agent Mode lets GitHub Copilot perform SQL-related actions using the MSSQL extension, and user confirmation is required before execution.
+Agent mode lets GitHub Copilot perform SQL-related actions by using the MSSQL extension. Tools that require confirmation present the requested action for your review before execution.
 
 You can invoke these actions by using chat variables such as `#mssql_connect`, or by issuing equivalent natural-language requests, for example:
 
@@ -59,7 +60,7 @@ Connect to my Library database using my LocalDev profile
 
 ## MSSQL Agent Mode tool reference
 
-This section provides a detailed reference for the SQL-specific tools available in GitHub Copilot Agent Mode. The MSSQL extension contributes these tools, enabling GitHub Copilot to execute actions through chat variables or natural language prompts. All tools require user confirmation before execution.
+This section provides a detailed reference for the SQL-specific tools available in GitHub Copilot Agent Mode. The MSSQL extension contributes these tools, enabling GitHub Copilot to execute actions through chat variables or natural language prompts. Query Store diagnostic tools read captured performance data without requesting confirmation. Review and approve other actions when prompted.
 
 :::image type="content" source="media/agent-mode/agent-tools.png" alt-text="Screenshot of list of SQL-specific tools contributed by the MSSQL extension in Copilot Agent Mode.":::
 
@@ -172,17 +173,49 @@ Use the following phrases to interact with GitHub Copilot.
 
 :::image type="content" source="media/agent-mode/agent-tool-run-query-2.png" alt-text="Screenshot of another example using an agent tool to connect to a database and retrieve data." lightbox="media/agent-mode/agent-tool-run-query-2.png":::
 
+### Query Store performance tools (preview)
+
+Use these tools to investigate captured query performance instead of manually constructing diagnostic SQL. They require a database that supports Query Store, captured data for the period you request, and permission to read that data. You can identify a target through an existing connection or a saved connection profile and database name.
+
+| Tool name | Description |
+| --- | --- |
+| `mssql_query_store_status` | Reads Query Store state, read-only reasons, and the available history. |
+| `mssql_query_store_top_queries` | Finds queries ranked by a resource metric or execution count in a time window. |
+| `mssql_query_store_query_details` | Reads one query's text, runtime statistics, and plans with their statistics. |
+| `mssql_query_store_query_history` | Reads a query's performance over time, including statistics for the plans that ran in each interval. |
+| `mssql_query_store_wait_stats` | Reads wait time by category for a database, query, or plan. Requires Query Store wait-statistics support and capture. |
+| `mssql_query_store_plan_summary` | Summarizes a stored plan's statement information, warnings, missing-index recommendations, and costly operators. |
+| `mssql_query_store_analyze_query` | Combines query details, plans, execution history, waits, and summaries of the main plans in one diagnostic call. |
+| `mssql_open_performance_dashboard` | Opens the Query Performance Dashboard for a database, or at a specific query and tab. |
+| `mssql_query_store_plan_forcing` | Forces or unforces a query plan after you review and confirm the generated SQL. |
+| `mssql_query_store_verify_forced_plan` | Checks whether executions after a plan was forced used that plan. |
+
+To start an investigation, identify the database and period in your prompt:
+
+```copilot-prompt
+Use Query Store to find the queries with the highest total CPU time in AdventureWorksLT in the past 24 hours. Analyze the top query, explain its execution history and waits, and open it in the performance dashboard. Don't make changes.
+```
+
+Replace the example database name with your database. You can also reference a tool explicitly, such as `#mssql_query_store_analyze_query`, when you already know the query ID and target database.
+
+The dashboard's **Chat** action opens agent mode and sends a prompt that explicitly references `#mssql_query_store_analyze_query` and supplies the selected query's server, database, saved profile ID, query ID, and time range. For a walkthrough and follow-up prompts, see [Investigate Query Store performance](query-optimizer-assistant.md#investigate-query-store-performance-preview).
+
+> [!IMPORTANT]
+> Diagnostic reads don't modify the database or require confirmation. Forcing or unforcing a plan is a separate change: the tool presents the exact SQL and any warnings for your review and confirmation. Verifying a forced plan is read-only. Diagnose the issue and review the evidence before requesting a plan change.
+
+Query Store retention and capture settings determine the available data. If Query Store is off or the requested period has no captured data, the tools can't provide a performance diagnosis for that period. For setup details, see [Query Performance Dashboard prerequisites](../mssql/mssql-query-performance-dashboard.md#prerequisites).
+
 ## How tools are managed in Agent Mode
 
 GitHub Copilot can use MSSQL-specific tools and other extension-contributed tools while it processes your request. You can see these tools in the Agent Mode interface under the **Tools** menu, where you can also turn specific tools on or off.
 
-When you invoke a tool, especially if it interacts with your machine or database, GitHub Copilot asks for confirmation to ensure secure execution. You can allow the tool for just the current session, the workspace, or permanently.
+When a tool requires confirmation, GitHub Copilot asks you to review the requested action before it runs. You can allow the tool for just the current session, the workspace, or permanently. Query Store diagnostic reads don't request confirmation; plan forcing and unforcing do.
 
 For more information about tool visibility and approvals, see [Manage tool approvals](https://code.visualstudio.com/docs/copilot/chat/copilot-chat#_builtin-chat-modes).
 
 ### Agent Mode confirmation workflow
 
-When GitHub Copilot selects a tool, it prompts you with a confirmation dialog that shows details about the requested action. You must explicitly approve the request before it can execute any commands that interact with your machine or database:
+For tools that require confirmation, GitHub Copilot shows details about the requested action. Review the request before choosing an approval option:
 
 - **Allow in this session**
 - **Allow in this workspace**
@@ -278,6 +311,7 @@ to include the new email column.
 ## Related content
 
 - [How GitHub Copilot works with the MSSQL extension](how-it-works.md)
+- [Query Performance Dashboard (preview)](../mssql/mssql-query-performance-dashboard.md)
 - [Quickstart: Chat with the `@mssql` participant (ask mode)](chat-ask-mode.md)
 - [Quickstart: Use plan mode for spec-driven database design](plan-mode.md)
 - [Quickstart: Use GitHub Copilot slash commands](slash-commands.md)

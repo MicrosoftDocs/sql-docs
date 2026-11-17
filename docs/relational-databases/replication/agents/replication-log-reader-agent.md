@@ -1,10 +1,10 @@
 ---
 title: "Replication Log Reader Agent"
 description: The Replication Log Reader Agent monitors SQL Server databases configured for transactional replication and copies transactions to the distribution database.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 05/30/2025
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
@@ -37,7 +37,7 @@ logread [ -? ]
 [ -Distributor server_name[ \instance_name ] ]
 [ -DistributorLogin distributor_login ]
 [ -DistributorPassword distributor_password ]
-[ -DistributorSecurityMode [ 0 | 1 ] ]
+[ -DistributorSecurityMode [ 0 | 1 | 5] ]
 [ -EncryptionLevel [ 0 | 1 | 2 | 3 | 4 ] ]
 [ -ExtendedEventConfigFile configuration_path_and_file_name ]
 [ -HistoryVerboseLevel [ 0 | 1 | 2 ] ]
@@ -53,7 +53,7 @@ logread [ -? ]
 [ -PollingInterval polling_interval ]
 [ -ProfileName profile_name ]
 [ -PublisherFailoverPartner server_name[ \instance_name ] ]
-[ -PublisherSecurityMode [ 0 | 1 ] ]
+[ -PublisherSecurityMode [ 0 | 1 | 5] ]
 [ -PublisherLogin publisher_login ]
 [ -PublisherPassword publisher_password ]
 [ -QueryTimeOut query_time_out_seconds ]
@@ -90,15 +90,15 @@ The Distributor name. Specify `<server_name>` for the default instance of [!INCL
 
 #### -DistributorLogin *distributor_login*
 
-The Distributor login name.
+The Distributor login name. Not used when DistributorSecurityMode is 5.
 
 #### -DistributorPassword *distributor_password*
 
 The Distributor password.
 
-#### -DistributorSecurityMode [ 0 \| 1 ]
+#### -DistributorSecurityMode [ 0 \| 1 \| 5]
 
-Specifies the security mode of the Distributor. A value of `0` indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of `1` indicates Windows Authentication Mode.
+Specifies the security mode for the agent authentication to Distributor. A value of `0` indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of `1` indicates Windows Authentication Mode. Value of `5` indicates Microsoft Entra managed identity authentication with default managed identity of the resource hosting agent - Publisher or remote Distributor. Applicable only when both Publisher and Distributor are Azure SQL Managed Instance resources.
 
 <a id="encryption-level"></a>
 
@@ -214,9 +214,9 @@ Specifies an agent profile to use for agent parameters. If `ProfileName` is `NUL
 
 Specifies the failover partner instance of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).
 
-#### -PublisherSecurityMode [ 0 \| 1 ]
+#### -PublisherSecurityMode [ 0 \| 1 \| 5]
 
-Specifies the security mode of the Publisher. A value of `0` indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of `1` indicates Windows Authentication Mode.
+Specifies the security mode of the Publisher. A value of `0` indicates [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of `1` indicates Windows Authentication Mode. Value of `5` indicates Microsoft Entra managed identity authentication with default managed identity of the resource hosting agent - Publisher or remote Distributor. Applicable only when both Publisher and Distributor are Azure SQL Managed Instance resources.
 
 #### -PublisherLogin *publisher_login*
 

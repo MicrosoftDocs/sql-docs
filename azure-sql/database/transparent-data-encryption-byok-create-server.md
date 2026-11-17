@@ -23,7 +23,7 @@ This how-to guide outlines the steps to create an [Azure SQL Database logical se
 
 ## Prerequisites
 
-- This how-to guide assumes that you've already created an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) and imported a key into it to use as the TDE protector for Azure SQL Database. For more information, see [transparent data encryption with BYOK support](transparent-data-encryption-byok-overview.md).
+- This article assumes that you already created an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) and imported a key into it to use as the TDE protector for Azure SQL Database. For new TDE protectors, use an AES-256 symmetric key stored in Azure Key Vault Premium. For more information, see [transparent data encryption with BYOK support](transparent-data-encryption-byok-overview.md).
 - Soft-delete and Purge protection must be enabled on the key vault.
 - You must have created a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) and provided it the required TDE permissions (*Get, Wrap Key, Unwrap Key*) on the above key vault. For creating a user-assigned managed identity, see [Create a user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal).
 - You must have Azure PowerShell installed and running.

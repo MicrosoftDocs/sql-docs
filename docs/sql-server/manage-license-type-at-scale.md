@@ -4,7 +4,7 @@ description: Learn how to preview, automate, and enforce transitions to pay-as-y
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rajpo
-ms.date: 09/07/2026
+ms.date: 11/05/2026
 ms.service: sql
 ms.topic: how-to
 ai-usage: ai-assisted
@@ -52,6 +52,7 @@ The following table provides details about each automation method:
 | Transition all supported resources in a subscription or tenant to pay-as-you-go licensing | [`manage-payg-transition.ps1`](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/manage-payg-transition.ps1) |
 | Run a pay-as-you-go transition on a recurring schedule | [`manage-payg-transition.ps1`](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/manage-payg-transition/manage-payg-transition.ps1) in scheduled mode |
 | Continuously enforce pay-as-you-go licensing for one resource type and remediate drift | A resource-specific Azure Policy sample |
+| Manage SQL resources in Fabric Database Hub | [Switch SQL resources to PAYG in Fabric Database Hub](#switch-sql-resources-to-pay-as-you-go-in-fabric-database-hub) |
 | Change one resource manually | The product-specific licensing article |
 
 ## Review supported resources and license values
@@ -254,6 +255,19 @@ The policy packages use a shared deployment flow:
    ```
 
 1. In Azure Policy, review the assignment's compliance results and remediation task. Then confirm the license type on the remediated resources.
+
+## Switch SQL resources to pay-as-you-go in Fabric Database Hub
+
+Use [Microsoft Fabric](https://fabric.microsoft.com/) to switch SQL resources to pay-as-you-go (PAYG) licensing in **Database Hub**.
+
+1. Go to [Microsoft Fabric](https://fabric.microsoft.com/) and sign in.
+1. In the navigation menu, select **Databases** to open **Database Hub**.
+1. On **Overview**, under **What needs attention?**, go to the **Optimization** tile. Find the **Optimize your cost with PAYG license** opportunity, and select **X resources are ready to switch**.
+1. Review the **Estate** view, which is filtered to that recommendation.
+1. Locate the SQL resource, and select the **Optimize your cost with PAYG license** recommendation.
+1. In the issue details pane, select **Enable PAYG licensing**.
+1. In the **Switch license to PAYG** confirmation dialog, select **Switch**.
+1. Wait for the **Switching to PAYG licensing** status message. If prompted, select **View status in Azure portal** to track completion in Azure.
 
 ## Validate the pay-as-you-go transition
 

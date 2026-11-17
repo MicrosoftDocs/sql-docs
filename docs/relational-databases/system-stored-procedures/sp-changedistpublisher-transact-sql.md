@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_changedistpublisher (Transact-SQL)"
 description: "Changes the properties of the distribution Publisher."
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -60,7 +60,8 @@ This table describes the properties of Publishers and the values for those prope
 | `distribution_db` | | Name of the distribution database. |
 | `login` | | Login name. |
 | `password` | | Strong password for the supplied login. |
-| `security_mode` <sup>1</sup> | `1` | Use Windows Authentication when connecting to the Publisher. |
+| `security_mode` <sup>1</sup> | `5` | Use Microsoft Entra managed identity authentication using default managed identity of Distributor when connecting to the Publisher. Applicable only in the transactional replication when both Distributor and Publisher are Azure SQL Managed Instance resources.|
+| | `1` | Use Windows Authentication when connecting to the Publisher. 
 | | `0` | Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. |
 | `working_directory` | | Working directory used to store data and schema files for the publication. |
 | `NULL` (default) | | All available *@property* options are printed. |

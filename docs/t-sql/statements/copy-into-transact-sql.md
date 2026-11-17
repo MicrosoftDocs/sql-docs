@@ -312,7 +312,7 @@ DATEFORMAT only applies to CSV and specifies the date format of the date mapping
 - If `IDENTITY_INSERT` is OFF, and table has an identity column
   - You must specify a column list that doesn't map an input field to the identity column.
 - If `IDENTITY_INSERT` is ON, and table has an identity column
-  - If you pass a column list, it must map an input field to the identity column.
+  - You must specify a column list that maps an input field to the identity column.
 - Default value isn't supported for the IDENTITY column in the column list.
 - You can set `IDENTITY_INSERT` for only one table at a time.
 

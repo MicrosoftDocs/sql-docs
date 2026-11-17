@@ -3,7 +3,7 @@ title: "sys.dm_os_linux_cpu_stats (Transact-SQL)"
 description: sys.dm_os_linux_cpu_stats returns a table with detailed Linux CPU statistics, offering system-level insights beyond SQL Server.
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 01/13/2026
+ms.date: 11/12/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -122,10 +122,9 @@ SELECT scheduler_id,
        current_tasks_count,
        work_queue_count,
        is_online,
-       is_scheduler_online,
        load_factor
 FROM sys.dm_os_schedulers
-WHERE scheduler_id < 255;
+WHERE scheduler_id < 1048576;
 ```
 
 ## Related content

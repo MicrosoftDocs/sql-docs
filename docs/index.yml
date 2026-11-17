@@ -166,8 +166,6 @@ additionalContent:
           links: 
             - text: Get a free Azure account
               url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn
-            - text: Azure SQL Decision Tree
-              url: /azure/azure-sql/azure-sql-decision-tree
             - text: Azure SQL Database
               url: /azure/azure-sql/database/single-database-create-quickstart
             - text: Azure SQL Managed Instance

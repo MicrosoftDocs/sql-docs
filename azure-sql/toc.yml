@@ -4,8 +4,6 @@
   items:
   - name: What is Azure SQL?
     href: azure-sql-iaas-vs-paas-what-is-overview.md
-  - name: Azure SQL decision tree
-    href: azure-sql-decision-tree.md
   - name: Migrate to Azure SQL
     href: migration-guides/index.yml
   - name: Migrating SQL Server Workloads FAQ

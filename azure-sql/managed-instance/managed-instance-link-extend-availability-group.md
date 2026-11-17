@@ -3,24 +3,21 @@ title: Extend an Always On availability group
 description: Learn how to use a Managed Instance link to replicate databases when extending an Always On availability group between SQL Server and Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: danil
-ms.date: 09/28/2026
+ms.reviewer: vanto
+ms.date: 11/05/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
 
-# Extend an Always On availability group to Azure SQL Managed Instance (preview)
+# Extend an Always On availability group to Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article teaches you how to extend an Always On availability group with multiple databases between SQL Server and Azure SQL Managed Instance with the [Managed Instance link](managed-instance-link-feature-overview.md) by using SQL Server Management Studio (SSMS), PowerShell, or Azure CLI. 
 
 This article covers [multiple-database link mode](managed-instance-link-feature-overview.md#link-modes), which replicates all databases in an availability group through one link. Single-database link mode replicates one database per link.
-
-> [!NOTE]
-> Support for linking multiple databases in an Always On availability group between SQL Server and Azure SQL Managed Instance is currently in [preview](doc-changes-updates-release-notes-whats-new.md#preview).
 
 ## Overview
 
@@ -32,7 +29,7 @@ Either SQL Server or Azure SQL Managed Instance can be the initial primary. Crea
 
 ## Supportability
 
-The following requirements apply to extending an availability group through a multiple-database link during preview. SQL Server on both Windows and Linux is supported. You must install the required cumulative update (CU). Earlier builds don't support this feature.
+The following requirements apply to extending an availability group through a multiple-database link. SQL Server on both Windows and Linux is supported. You must install the required cumulative update (CU). Earlier builds don't support this feature.
 
 | SQL Server version | Required update | Supported editions |
 | --- | --- | --- |
@@ -41,17 +38,17 @@ The following requirements apply to extending an availability group through a mu
 
 | Managed Instance | Supported update policies |
 | --- | --- |
-| General Purpose and Business Critical | SQL Server 2025 and Always-up-to-date [update policy](update-policy.md) |
+| General Purpose and Business Critical | SQL Server 2022, SQL Server 2025, and Always-up-to-date [update policies](update-policy.md) |
 
-SQL managed instances using the SQL Server 2022 update policy aren't supported for multiple-database link mode.
+Consider the following points:
 
-Consider the following:
-
-- Standard edition isn't supported because basic availability groups support only one database.
-- SQL Server 2019 and earlier versions aren't supported for multiple-database link mode because they lack the required technology introduced in SQL Server 2022.
-- To create the link *from* SQL Managed Instance or reverse roles back to SQL Server, your SQL managed instance must use the [update policy](update-policy.md) that matches your SQL Server version. For one-way replication and cutover from SQL Server, the destination update policy must match, or be higher than, your SQL Server version.
-   - SQL Server 2022 supports one-way replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Failback with role reversal isn't supported in this configuration.
-   - SQL Server 2025 supports replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Failback with role reversal is supported only when the managed instance uses the **SQL Server 2025** update policy.
+- SQL Server Standard edition isn't supported because basic availability groups support only one database.
+- SQL Server 2019 and earlier versions aren't supported for multiple-database link mode because the required technology is available starting with SQL Server 2022.
+- For one-way replication and cutover from SQL Server, the destination update policy must match, or be higher than, your SQL Server version.
+- To create the link *from* SQL Managed Instance or reverse roles back to SQL Server, your SQL managed instance must use the [update policy](update-policy.md) that matches your SQL Server version.
+- For example:
+   - SQL Server 2022 supports one-way replication to instances configured with the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2022** update policy.
+   - SQL Server 2025 supports one-way replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2025** update policy.
 
 For SQL Server versions and editions that support single-database links, see [Managed Instance link version supportability](managed-instance-link-feature-overview.md#version-supportability).
 
@@ -65,7 +62,7 @@ To extend your availability group between SQL Server and Azure SQL Managed Insta
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - A [supported SQL Server version and edition](#supportability) with the required service update installed. You can use an existing Always On availability group or standalone databases that SSMS places in a new single-node availability group. Contained availability groups aren't supported.
 - Azure SQL Managed Instance with an [update policy](update-policy.md) appropriate for your scenario. A matching policy is required when SQL Managed Instance is the initial primary or for role reversal. [Get started](instance-create-quickstart.md) if you don't have a SQL managed instance.
-- [SQL Server Management Studio (SSMS) 22.10.2 or later](/ssms/install/install).
+- [SQL Server Management Studio (SSMS) 22.12.1 or later](/ssms/install/install).
 - For scripted configuration, [Azure PowerShell](/powershell/azure/install-azure-powershell) with the Az module version 16.3.0 or later and Az.Sql version 7.1.0 or later, or [Azure CLI](/cli/azure/install-azure-cli) version 2.90.0 or later. You can also use [Azure Cloud Shell](/azure/cloud-shell/overview). Verify that the installed modules or CLI meet these version requirements.
 - A properly [prepared environment](managed-instance-link-preparation.md).
 - For a multiple-node availability group, a configured availability group listener. Use the listener's IP address when configuring the link, not an individual SQL Server replica's IP address. Using the listener lets the link continue working after a local availability group failover.
@@ -90,7 +87,7 @@ For Azure SQL Managed Instance, you need to be a member of the [SQL Managed Inst
 
 ## Enable multiple-database link mode
 
-Support for multiple-database link mode is disabled by default during preview. Use the built-in `sys.sp_multidb_milink` stored procedure to enable it on every SQL Server replica in the availability group, or on the SQL Server instance where you plan to create a single-node group.
+Support for multiple-database link mode is disabled by default. Use the built-in `sys.sp_multidb_milink` stored procedure to enable it on every SQL Server replica in the availability group, or on the SQL Server instance where you plan to create a single-node group.
 
 > [!WARNING]
 > Remove all existing links before enabling or disabling multiple-database link mode. Changing the setting while links are active can result in unpredictable SQL Server behavior. Don't mix single-database and multiple-database links. When changing modes, remove the links first, change the setting on every SQL Server replica, and then create new links.

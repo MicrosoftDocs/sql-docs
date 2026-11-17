@@ -73,7 +73,7 @@ Before we can configure TDE for Azure SQL Database with a cross-tenant CMK, we n
      ```
 
 1. Go to the [Azure portal](https://portal.azure.com) > **Microsoft Entra ID** > **Enterprise applications** and search for the application that was created.
-1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, and [create a key](/azure/key-vault/keys/quick-create-portal).
+1. Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't have one, and [create a key](/azure/key-vault/keys/quick-create-portal). For new TDE protectors, use an AES-256 symmetric key stored in Azure Key Vault Premium. For supported key types and requirements, see [Transparent Data Encryption with customer-managed keys](transparent-data-encryption-byok-overview.md).
 1. [Create or set the access policy](/azure/key-vault/general/assign-access-policy).
    1. Select the *Get, Wrap Key, Unwrap Key* permissions under **Key permissions** when creating the access policy.
    1. Select the multitenant application created in the first step in the **Principal** option when creating the access policy.

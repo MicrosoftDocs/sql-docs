@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_adddistributiondb (Transact-SQL)"
 description: Creates a new distribution database and installs the Distributor schema.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -96,6 +96,7 @@ The security mode to use when connecting to the Distributor. *@security_mode* is
 
 - `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication
 - `1` specifies Windows authentication
+- `5` specifies Microsoft Entra authentication by using default managed identity of the resource connecting to it. This value is applicable only when both Distributor and the resource connecting to it are Azure SQL Managed Instance resources.
 
 #### [ @login = ] N'*login*'
 

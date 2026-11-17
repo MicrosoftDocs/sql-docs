@@ -4,8 +4,8 @@ titleSuffix: MSSQL Extension for Visual Studio Code
 description: Introduction to the GitHub Copilot integration with the MSSQL extension for Visual Studio Code that provides AI-assisted SQL development.
 author: cwebb-msft
 ms.author: chweb
-ms.reviewer: roblescarlos
-ms.date: 06/01/2026
+ms.reviewer: yoleichen
+ms.date: 07/07/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -44,6 +44,7 @@ GitHub Copilot for the MSSQL extension provides AI assistance for SQL developmen
 - Explore, design, and modify database schemas using code-first and data-first approaches.
 - Suggest SQL syntax, relationships, and constraints based on your schema context.
 - Write, optimize, and troubleshoot SQL queries.
+- Investigate captured Query Store performance, execution history, waits, and plans through agent tools (preview).
 - Generate mock data and seed scripts for testing and development.
 - Autogenerate object-relational mapping (ORM) migrations or T-SQL change scripts.
 - Explain business logic in stored procedures, views, and functions.
@@ -101,6 +102,7 @@ GitHub Copilot offers several interaction modes. Use this table to pick the righ
 | Add audit columns to every table and update related procedures | No | Yes | Recommended | Yes |
 | Design a full data model from a product requirements document | No | No | Yes | Recommended |
 | Connect, switch database, run query in chat | [Slash commands](slash-commands.md) | No | Recommended | No |
+| Investigate captured Query Store performance | No | No | [Recommended](query-optimizer-assistant.md#investigate-query-store-performance-preview) | No |
 | Design a schema visually with artificial intelligence assistance | [Schema Designer scenarios](schema-designer-scenarios.md) | No | No | No |
 
 For a deeper explanation of each mode, see [How GitHub Copilot works with the MSSQL extension](how-it-works.md).
@@ -113,6 +115,7 @@ Each surface has different schema awareness. Know which surface to use when you 
 | --- | --- | --- | --- |
 | Chat participant (`@mssql`) | MSSQL extension | Yes (connected database) | [Chat with `@mssql` (ask mode)](chat-ask-mode.md) |
 | Agent mode tools | MSSQL extension contributes tools | Yes (via tool calls) | [Agent mode](agent-mode.md) |
+| Query Performance Dashboard **Chat** (preview) | Dashboard hands off to agent tools | Yes (via tool calls) | [Query Store performance investigation](query-optimizer-assistant.md#investigate-query-store-performance-preview) |
 | Plan mode | Visual Studio Code | Yes (via `@mssql` context) | [Plan mode](plan-mode.md) |
 | Slash commands | MSSQL extension | Yes | [Slash commands](slash-commands.md) |
 | Inline completions (ghost text) | GitHub Copilot model directly | **No** | [Inline completions](inline-completions.md) |
@@ -126,14 +129,15 @@ Inline completions (ghost text in `.sql` files) **don't see your connected datab
 | Feature | Status | Description |
 | --- | --- | --- |
 | [Chat with `@mssql` (ask mode)](chat-ask-mode.md) | GA | Natural-language conversations with the `@mssql` chat participant. Schema-aware suggestions based on your connected database and active files. |
-| [Agent mode](agent-mode.md) | GA | Multi-step workflows where GitHub Copilot orchestrates MSSQL extension tools (connect, list databases, run query). Requires your approval on each tool invocation. |
+| [Agent mode](agent-mode.md) | GA | Multi-step workflows where GitHub Copilot orchestrates MSSQL extension tools (connect, list databases, run query). Approval requirements depend on the tool. |
+| [Query Store performance tools](agent-mode.md#query-store-performance-tools-preview) | Preview | Diagnose captured query performance, inspect execution history and waits, summarize plans, and open the Query Performance Dashboard. |
 | [Plan mode](plan-mode.md) | GA | Reason about a data model before writing SQL data definition language. Pair with product requirements documents for spec-driven design. |
 | [Slash commands](slash-commands.md) | GA | Structured prompts for common tasks: connect, list databases, run query, show schema. Faster than typing a full natural-language prompt. |
 | [Inline completions](inline-completions.md) | GA | Ghost text while typing. Useful for common SQL patterns. Doesn't see your database schema. |
 | [Custom instructions](custom-instructions.md) | GA | Teach GitHub Copilot your team's Transact-SQL (T-SQL) conventions. Applies across ask, edit, agent, and inline completions. |
 | [Smart query builder](smart-query-builder.md) | GA | Generate SQL and object-relational mapping (ORM) queries from natural language with schema awareness. |
 | [Code generation](code-generation.md) | GA | Scaffold stored procedures, tables, and ORM data access code from your schema. |
-| [Query optimizer assistant](query-optimizer-assistant.md) | GA | Performance suggestions, indexing strategies, execution plan analysis. |
+| [Query optimizer assistant](query-optimizer-assistant.md) | GA; Query Store workflow in preview | Performance suggestions, indexing strategies, execution plan analysis, and evidence-based Query Store investigations. |
 | [Business logic explainer](business-logic-explainer.md) | GA | Natural-language explanations of stored procedures, views, and user-defined functions. |
 | [Security analyzer](security-analyzer.md) | GA | Detect SQL injection patterns, overly permissive roles, and unencrypted sensitive data. |
 | [Localization and formatting helper](localization-formatting-helper.md) | GA | Collation, Unicode, and region-specific query patterns. |
@@ -216,6 +220,14 @@ This access is required to enable contextual conversations about your database.
 :::image type="content" source="media/overview/vscode-copilot-access-prompt.png" alt-text="Screenshot of placeholder for Copilot access notification.":::
 
 Once you approve access, a GitHub Copilot chat window opens in the context of the selected database. You're now ready to ask questions, generate Transact-SQL, and explore schema insights using natural language.
+
+### Start from the Query Performance Dashboard (preview)
+
+For a performance investigation, open the [Query Performance Dashboard](../mssql/mssql-query-performance-dashboard.md), select a time frame, and choose a query. Select **Chat** from the query row's actions menu (**...**) or from the query detail page.
+
+The dashboard opens GitHub Copilot Chat in agent mode and sends a prompt that identifies the server, database, saved connection profile, query ID, and selected time range. It explicitly references `#mssql_query_store_analyze_query` to retrieve query statistics, execution history, waits, and plan summaries. You don't need an `@mssql` mention or a manually attached plan file.
+
+Query Store diagnostic reads don't request confirmation or modify your database. Forcing or unforcing a plan is a separate action that requires review and confirmation. For prerequisites and example prompts, see [Investigate Query Store performance](query-optimizer-assistant.md#investigate-query-store-performance-preview).
 
 ## Manage database context
 

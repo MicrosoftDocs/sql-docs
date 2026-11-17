@@ -143,6 +143,7 @@ The following table details the duration of management operations in the [Next-g
 |--|--|--|--|
 | <center> ***Create operations*** </center> |
 | Creating a new instance| [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 30 minutes |
+| Creating a new zone-redundant instance | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) with [zone redundancy](#zone-redundancy) | 95% of operations finish in 4 hours |
 | <center> ***Update operations*** </center> |
 | Changing basic instance properties such as the license type or Microsoft Entra |  None | Up to 1 minute |
 | Scaling storage<sup>1</sup> | None | 99% complete in 5 minutes|
@@ -151,6 +152,8 @@ The following table details the duration of management operations in the [Next-g
 | Scaling IOPS | None | 99% of operations finish in 5 minutes |
 | Changing to **Business Critical** service tier | [Resizing the VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  | 
 | Changing to **General Purpose** service tier | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration) |
+| Enabling zone redundancy | [Creating new VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 4 hours + [time to seed databases](#seeding-duration) |
+| Disabling zone redundancy | [Creating new VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 30 minutes + [time to seed databases](#seeding-duration) |
 | Changing hardware or maintenance window | [Creating or resizing VM group](management-operations-overview.md#vm-group-operations) | 95% of operations finish in 60 minutes  |
 | Changing update policy | [Resizing the VM group](management-operations-overview.md#vm-group-operations) <br /> + [Database seeding](management-operations-overview.md#seeding) | 95% of operations finish in 60 minutes + [time to seed databases](#seeding-duration)  | 
 | <center> ***Delete operations*** </center> |

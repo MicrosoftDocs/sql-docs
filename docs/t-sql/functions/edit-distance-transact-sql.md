@@ -4,7 +4,7 @@ description: EDIT_DISTANCE calculates the number of insertions, deletions, subst
 author: uc-msft
 ms.author: umajay
 ms.reviewer: abhtiwar, wiassaf
-ms.date: 09/04/2026
+ms.date: 10/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,17 +15,14 @@ dev_langs:
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb || >=sql-server-2017 || =fabric"
 ---
 
-# EDIT_DISTANCE (Transact-SQL) preview
+# EDIT_DISTANCE (Transact-SQL)
 
 [!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
-
-[!INCLUDE [preview](../../includes/preview.md)]
 
 Calculates the *edit distance* between two strings, which is the minimum number of insertions, deletions, substitutions, and transpositions needed to transform one string into the other.
 
 > [!NOTE]  
-> - `EDIT_DISTANCE` is in preview.
-> - `EDIT_DISTANCE` is available in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+> - `EDIT_DISTANCE` is generally available starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU11. On earlier SQL Server 2025 builds, the function is in preview. If it isn't enabled by default on your build, enable [PREVIEW_FEATURES](../statements/alter-database-scoped-configuration-transact-sql.md#preview-features) by setting it to `ON`.
 > - `EDIT_DISTANCE` is available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Syntax
@@ -103,10 +100,10 @@ Source    Target    ActualDistance LimitedDistance
 Chocolate Sweets    8              3
 ```
 
-For more examples, see the [EDIT_DISTANCE example](../../relational-databases/fuzzy-string-match/overview.md#example-edit_distance) in the [Fuzzy string matching overview](../../relational-databases/fuzzy-string-match/overview.md).
+For more examples, see the [Examples](../../relational-databases/fuzzy-string-match/overview.md#examples) section in the [Fuzzy string matching overview](../../relational-databases/fuzzy-string-match/overview.md).
 
 ## Related content
 
-- [EDIT_DISTANCE_SIMILARITY (Transact-SQL) preview](edit-distance-similarity-transact-sql.md)
-- [JARO_WINKLER_DISTANCE (Transact-SQL) preview](jaro-winkler-distance-transact-sql.md)
-- [JARO_WINKLER_SIMILARITY (Transact-SQL) preview](jaro-winkler-similarity-transact-sql.md)
+- [EDIT_DISTANCE_SIMILARITY (Transact-SQL)](edit-distance-similarity-transact-sql.md)
+- [JARO_WINKLER_DISTANCE (Transact-SQL)](jaro-winkler-distance-transact-sql.md)
+- [JARO_WINKLER_SIMILARITY (Transact-SQL)](jaro-winkler-similarity-transact-sql.md)

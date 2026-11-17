@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_changesubscription (Transact-SQL)"
 description: Changes the properties of a snapshot or transactional push subscription or a pull subscription involved in queued updating transactional replication.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -78,7 +78,8 @@ The new value for the specified *@property*. *@value* is **nvarchar(4000)**, and
 | `subscriber_location` <sup>1</sup> | | Location of the database as understood by the OLE DB provider. |
 | `subscriber_login` | | Login name at the Subscriber. |
 | `subscriber_password` | | Strong password for the supplied login. |
-| `subscriber_security_mode` | `1` | Use Windows Authentication when connecting to the Subscriber. |
+| `subscriber_security_mode` | `5` | Use Microsoft Entra managed identity authentication with default managed identity of Distributor when connecting to the push Subscriber. Applicable only in the transactional replication when Distributor is Azure SQL Managed Instance resource and Subscriber is Azure SQL Managed Instance or Azure SQL Database resource.|
+| | `1` | Use Windows Authentication when connecting to the Subscriber.  |
 | | `0` | Use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Subscriber. |
 | `subscriber_provider` <sup>1</sup> | | Unique programmatic identifier (PROGID) with which the OLE DB provider for the non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data source is registered. |
 | `subscriber_providerstring` <sup>1</sup> | | OLE DB provider-specific connection string that identifies the data source. |

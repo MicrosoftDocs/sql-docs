@@ -1181,6 +1181,8 @@
       items:
       - name: Secure your instance
         href: managed-instance/secure-managed-instance.md
+      - name: LTR backup immutability
+        href: managed-instance/backup-immutability.md
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: SQL Server Audit in Azure SQL Managed Instance

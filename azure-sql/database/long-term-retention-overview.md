@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database & Azure SQL Managed Instance support s
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dinethi, strrodic
-ms.date: 10/23/2026
+ms.date: 11/06/2026
 ai-usage: ai-assisted
 ms.service: azure-sql
 ms.subservice: backup-restore
@@ -33,7 +33,7 @@ By using the LTR feature, you can store specified full SQL Database and SQL Mana
 
 > [!NOTE]  
 > - In Azure SQL Database, you can [configure long-term retention backups as immutable](backup-immutability.md).
-> - In Azure SQL Managed Instance, it's not currently possible to configure backups as [immutable](/azure/storage/blobs/immutable-storage-overview). LTR backups are nonmodifiable, but you can delete them through Azure portal, Azure CLI, PowerShell, or REST API. As a workaround in Azure SQL Managed Instance, you can take [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server?view=azuresqldb-mi-current&preserve-view=true) and retain them in your own Azure Storage account as an immutable file.
+> - In Azure SQL Managed Instance, you can [configure long-term retention backups as immutable](../managed-instance/backup-immutability.md). This feature is in preview.
 
 To enable LTR, you can define a policy using a combination of four parameters: weekly backup retention (W), monthly backup retention (M), yearly backup retention (Y), and week of the year (WeekOfYear). If you specify W, one backup every week is copied to long-term storage. If you specify M, the first backup of each month is copied to the long-term storage. If you specify Y, one backup during the week specified by WeekOfYear is copied to the long-term storage. If the specified WeekOfYear is in the past when the policy is configured, the first LTR backup is created the following year. Each backup is kept in long-term storage according to the policy parameters that are configured when the LTR backup is created.
 

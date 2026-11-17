@@ -176,7 +176,7 @@ SQL Managed Instance offers several ways to save on costs:
 - **Instance pools**: If you have multiple managed instances, you can save on costs by using [instance pools](instance-pools-overview.md), which also support [reservations](instance-pools-overview.md#reservations-pricing).
 - **Instance stop and start**: You can [stop and start](instance-stop-start-how-to.md) your managed instance to save on costs. When you stop your instance, you only pay for storage, and you can restart it at any time.
 - **Free DR replica**: You can save on licensing costs by designating a secondary replica for [disaster recovery (DR) only](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas). 
-- **Flexible memory**: With [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) instances, you can save on costs by using the [flexible memory](resource-limits.md#flexible-memory) feature, which allows you to choose the amount of memory you want to allocate to your instance. 
+- **Flexible memory**: Use [flexible memory](resource-limits.md#flexible-memory) to match instance memory to your workload without adding vCores.
 
 ## vCore-based purchasing model
 
@@ -188,7 +188,7 @@ In the vCore model, you can choose hardware configurations as follows:
 - **Premium Series** logical CPUs are based on Intel&reg; 8370C (Ice Lake) 2.8-GHz processors, with **7 GB of RAM per CPU vCore** (up to 128 vCores), fast NVMe SSD, hyper-threaded logical core, and compute sizes between 4 and 128 cores.
 - **Premium Series Memory-Optimized** logical CPUs are based on Intel&reg; 8370C (Ice Lake) 2.8-GHz processors, with **13.6 GB of RAM per CPU vCore** (up to 64 vCores), fast NVMe SSD, hyper-threaded logical core, and compute sizes between 4 and 64 cores.
 
-Additionally, with the [Next-gen General Purpose service tier](service-tiers-next-gen-general-purpose-use.md), you can choose the amount of memory to allocate to your instance when you use the [flexible memory](resource-limits.md#flexible-memory) feature. 
+Use flexible memory to adjust instance memory without changing the number of vCores. For supported hardware and service tiers, see [Flexible memory](resource-limits.md#flexible-memory).
 
 Find more information about the difference between hardware configurations in [SQL Managed Instance resource limits](resource-limits.md#hardware-configuration-characteristics).
 

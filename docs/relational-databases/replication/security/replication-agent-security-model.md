@@ -1,9 +1,9 @@
 ---
 title: "Replication Agent Security Model"
 description: In SQL Server, the replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections.
-author: adbadram
-ms.author: adbadram
-ms.date: 10/01/2025
+author: MladjoA
+ms.author: mlandzic
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
@@ -24,7 +24,7 @@ helpviewer_keywords:
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
-The replication agent security model is a little bit different for Azure SQL Managed Instance, as there are no Windows accounts under which the agents will run. Instead, everything must be done through SQL Server authentication. 
+The replication agent security model for Azure SQL Managed Instance is different. You can't configure the accounts that the agents use to run. The service configures this setting. You can still configure how agents authenticate to the Azure SQL Managed Instance resources that participate in transactional replication. Use Microsoft Entra managed identity authentication for connections whenever possible. SQL authentication is supported but it requires you to manage sensitive logins and passwords.
   
 > [!IMPORTANT]  
 >  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  

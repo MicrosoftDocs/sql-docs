@@ -2,9 +2,9 @@
 title: "Configure link with scripts"
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure a link between SQL Server and Azure SQL Managed Instance with Transact-SQL (T-SQL) and Azure PowerShell or Azure CLI scripts.
-author: djordje-jeremic
-ms.author: djjeremi
-ms.reviewer: djjeremi
+author: danimir
+ms.author: danil
+ms.reviewer: vanto
 ms.date: 10/07/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

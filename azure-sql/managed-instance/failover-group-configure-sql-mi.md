@@ -484,7 +484,7 @@ To avoid problems from a lower service tier or under-resourced geo-secondary get
   - Upgrading or downgrading the service tier. 
   - Changing the number of vCores.
   - Scaling the storage size.
-  - [Changing the memory allocation](resource-limits.md#flexible-memory) of your [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) instance.
+   - [Changing the memory allocation](resource-limits.md#flexible-memory) of your instance.
 
 When trying to scale the service tier, vCores, and storage at the same time (for example, scaling up vCores and service tier while scaling down storage), don't change all three simultaneously. Instead, use one of the following approaches:
 

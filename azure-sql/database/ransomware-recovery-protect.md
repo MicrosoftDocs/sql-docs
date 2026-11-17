@@ -4,7 +4,7 @@ description: Learn how to protect your Azure database environment and prepare fo
 author: sudhanshukhera
 ms.author: skhera
 ms.title: Step 0 - Protect - Prepare your Azure SQL databases
-ms.date: 10/31/2026
+ms.date: 11/06/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: how-to
@@ -169,7 +169,7 @@ To create an alert, see [Create or edit a metric alert rule](/azure/azure-monito
 **What to configure:** Turn on [long-term retention (LTR)](long-term-retention-overview.md):
 1. Your SQL Server (or Managed Instance) → **Backups** → **Retention policies** → select the database → **Configure policies**
 2. Set weekly, monthly, or yearly retention as needed
-3. On Azure SQL Database, also enable and **lock** LTR backup immutability (see [Immutable Backup](#immutable-backup) below) so an attacker can't shorten retention or delete the clean point. For SQL Managed Instance, LTR backup immutability is **in preview**; confirm availability and protection settings for your instance before relying on it.
+3. On Azure SQL Database, also enable and **lock** LTR backup immutability (see [Immutable Backup](#immutable-backup) below) so an attacker can't shorten retention or delete the clean point. For SQL Managed Instance, [LTR backup immutability](../managed-instance/backup-immutability.md) is **in preview**.
 
 What LTR gives you:
 - **GA on both services**, retaining weekly, monthly, or yearly backups for up to **10 years**
@@ -183,7 +183,7 @@ Step-by-step: [Manage LTR for Azure SQL Database](long-term-backup-retention-con
 | Azure SQL Database | ✅ GA | Up to 10 years | ✅ Supported |
 | Azure SQL Managed Instance | ✅ GA | Up to 10 years | **Preview** |
 
-**Limitation:** Sufficiently privileged subscription access can still change or delete mutable LTR policies or backups. Locked LTR immutability reduces this risk for Azure SQL Database. For SQL Managed Instance, LTR immutability is **in preview**; confirm availability and protection settings for your instance before relying on it. LTR doesn't create a security boundary from a compromised subscription.
+**Limitation:** Sufficiently privileged subscription access can still change or delete mutable LTR policies or backups. Locked LTR immutability reduces this risk for Azure SQL Database, and for SQL Managed Instance, where it's **in preview**. LTR doesn't create a security boundary from a compromised subscription.
 
 ### Immutable backup
 
@@ -195,19 +195,19 @@ There are **two types of backup immutability**: automatic PITR protection and LT
 |---|---|---|---|
 | [**Automatic backup immutability**](../automatic-backup-immutability.md) | Up to the **most recent seven days** of PITR backups, regardless of your configured PITR retention period | Supported Azure SQL Database and SQL Managed Instance databases | **Included and on by default for supported databases.** No onboarding or configuration is required. |
 | [**SQL Database LTR backup immutability**](backup-immutability.md) (time-based or legal hold) | LTR backups written to WORM storage for a user-defined period | **Azure SQL Database** | Enable and lock time-based protection, or apply a legal hold to an eligible backup |
-| **SQL Managed Instance LTR backup immutability (preview)** | LTR backups covered by the preview's protection settings | **SQL Managed Instance** | Confirm preview availability and supported configuration with your Microsoft contact |
+| [**SQL Managed Instance LTR backup immutability (preview)**](../managed-instance/backup-immutability.md) (time-based or legal hold) | LTR backups, for their configured retention period or until a legal hold is removed | **SQL Managed Instance** | Enable and lock time-based protection, or apply a legal hold to an existing backup |
 
 **What to configure:** Nothing for automatic backup immutability on supported databases; it is already active. For Azure SQL Database workloads requiring immutable long-term retention, enable and **lock** a [time-based immutability policy](backup-immutability-time-based.md). Apply a [legal hold](backup-immutability-legal-hold.md) only through your organization's counsel-led or records-management process. The following portal steps apply to **Azure SQL Database**:
 1. Your logical server → **Data management** → **Backups** → **Retention Policies** → choose the database → **Configure Policies**
 2. Under **LTR Immutability**, check **Enable time-based immutability policy**, then check **Lock the time-based immutable policy**
 
-**SQL Managed Instance (preview):** Confirm availability and supported configuration with your Microsoft contact. Verify protection of the intended LTR backups and test restoration before counting this feature as a recovery control.
+**SQL Managed Instance (preview):** Follow the steps in [LTR backup immutability](../managed-instance/backup-immutability.md). Verify protection of the intended LTR backups and test restoration before counting this feature as a recovery control.
 
 **Limitations:**
 - Automatic backup immutability is **not available for the Hyperscale service tier** of Azure SQL Database.
 - For Azure SQL Managed Instance, automatic backup immutability is available only with the **Always-up-to-date** or **SQL Server 2025** update policy, not the **SQL Server 2022** update policy.
 - Automatic backup immutability covers seven days only. If your PITR retention is 35 days, days 8 through 35 are still mutable.
-- SQL Managed Instance LTR backup immutability is **in preview**. Do not assume that the SQL Database configuration steps or legal-hold capabilities apply to the MI preview.
+- SQL Managed Instance LTR backup immutability, including legal hold, is **in preview**. For its configuration steps, see [LTR backup immutability](../managed-instance/backup-immutability.md).
 - If you need an independent portable MI copy, verify the `COPY_ONLY` full-backup prerequisites: MI databases encrypted with **service-managed TDE cannot use the `COPY_ONLY` workflow**. For eligible databases using customer-managed TDE, retain the required key versions and test restoration to the intended target before protecting the completed backup with Blob immutability. If ineligible, use available PITR/LTR recovery and establish a separately tested export or migration alternative before relying on a portable immutable copy. See [copy-only backup limitations](/sql/relational-databases/backup-restore/copy-only-backups-sql-server).
 - For **Azure SQL Database**, time-based immutability doesn't apply retroactively to existing LTR backups. To protect eligible existing LTR backups, use the SQL Database legal-hold workflow through your organization's approved process.
 

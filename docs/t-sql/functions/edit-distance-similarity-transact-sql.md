@@ -4,7 +4,7 @@ description: EDIT_DISTANCE_SIMILARITY calculates a similarity value ranging from
 author: uc-msft
 ms.author: umajay
 ms.reviewer: abhtiwar, wiassaf
-ms.date: 09/04/2026
+ms.date: 10/16/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -15,18 +15,14 @@ dev_langs:
 monikerRange: "=azuresqldb-current || =azuresqldb-mi-current || =fabric-sqldb || >=sql-server-2017 || =fabric"
 ---
 
-# EDIT_DISTANCE_SIMILARITY (Transact-SQL) preview
+# EDIT_DISTANCE_SIMILARITY (Transact-SQL)
 
 [!INCLUDE [sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricse-fabricdw-fabricsqldb.md)]
-
-[!INCLUDE [preview](../../includes/preview.md)]
 
 Calculates a similarity score between two strings based on their *edit distance*. The score ranges from 0 (no similarity) to 100 (an exact match).
 
 > [!NOTE]  
->
-> - `EDIT_DISTANCE_SIMILARITY` is currently in preview.
-> - SQL Server support for `EDIT_DISTANCE_SIMILARITY` introduced in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)].
+> - `EDIT_DISTANCE_SIMILARITY` is generally available starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU11. On earlier SQL Server 2025 builds, the function is in preview. If it isn't enabled by default on your build, enable [PREVIEW_FEATURES](../statements/alter-database-scoped-configuration-transact-sql.md#preview-features) by setting it to `ON`.
 > - `EDIT_DISTANCE_SIMILARITY` is available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Syntax
@@ -44,7 +40,7 @@ EDIT_DISTANCE_SIMILARITY (
 
 An alphanumeric expression of character data. *character_expression* can be a constant, variable, or column. The character expression can't be of type **varchar(max)** or **nvarchar(max)**.
 
-## Return types
+## Return value
 
 **int**
 
@@ -72,10 +68,10 @@ WordUK WordUS Similarity
 Colour Color  83
 ```
 
-For additional examples, see [Example *EDIT_DISTANCE_SIMILARITY()*](../../relational-databases/fuzzy-string-match/overview.md#example-edit_distance_similarity).
+For more examples, see the [Examples](../../relational-databases/fuzzy-string-match/overview.md#examples) section in the [Fuzzy string matching overview](../../relational-databases/fuzzy-string-match/overview.md).
 
 ## Related content
 
-- [EDIT_DISTANCE (Transact-SQL) preview](edit-distance-transact-sql.md)
-- [JARO_WINKLER_DISTANCE (Transact-SQL) preview](jaro-winkler-distance-transact-sql.md)
-- [JARO_WINKLER_SIMILARITY (Transact-SQL) preview](jaro-winkler-similarity-transact-sql.md)
+- [EDIT_DISTANCE (Transact-SQL)](edit-distance-transact-sql.md)
+- [JARO_WINKLER_DISTANCE (Transact-SQL)](jaro-winkler-distance-transact-sql.md)
+- [JARO_WINKLER_SIMILARITY (Transact-SQL)](jaro-winkler-similarity-transact-sql.md)

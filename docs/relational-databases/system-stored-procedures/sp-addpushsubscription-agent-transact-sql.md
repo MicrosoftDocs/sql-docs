@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_addpushsubscription_agent (Transact-SQL)"
 description: Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -95,6 +95,7 @@ The security mode to use when connecting to a Subscriber when synchronizing. *@s
 - `2` specifies Microsoft Entra password authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `5` specifies Microsoft Entra managed identity authentication using default managed identity of the Distributor. Applicable only in the transactional replication when Distributor is Azure SQL Managed Instance and subscriber is either Azure SQL Managed Instance or Azure SQL Database resource.
 
 > [!IMPORTANT]  
 > For queued updating subscriptions, use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for connections to Subscribers, and specify a different account for the connection to each Subscriber. For all other subscriptions, use Windows Authentication.

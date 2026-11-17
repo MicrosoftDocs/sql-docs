@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -55,6 +55,7 @@ ms.topic: include
 | <a id="7222"></a> 7222 | 16 | No | Only a SQL Server provider is allowed on this instance. |
 | <a id="7223"></a> 7223 | 10 | No | Warning: Enabling 'remote proc trans' is not supported on this instance. Defaulting to disabled. |
 | <a id="7224"></a> 7224 | 16 | No | Enabling 'remote proc trans' is not supported on this instance. |
+| <a id="7225"></a> 7225 | 16 | No | The current user does not have permission to execute queries against linked server '%.\*ls'. |
 | <a id="7301"></a> 7301 | 16 | No | Cannot obtain the required interface ("%ls") from OLE DB provider "%ls" for linked server "%ls". |
 | <a id="7302"></a> 7302 | 16 | No | Cannot create an instance of OLE DB provider "%ls" for linked server "%ls". |
 | <a id="7303"></a> 7303 | 16 | No | Cannot initialize the data source object of OLE DB provider "%ls" for linked server "%ls". |

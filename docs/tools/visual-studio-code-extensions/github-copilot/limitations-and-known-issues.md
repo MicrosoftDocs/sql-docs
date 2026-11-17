@@ -4,8 +4,8 @@ titleSuffix: MSSQL Extension for Visual Studio Code
 description: Learn about the limitations, nongoals, and known constraints of GitHub Copilot integration with the MSSQL extension for Visual Studio Code.
 author: cwebb-msft
 ms.author: chweb
-ms.reviewer: roblescarlos
-ms.date: 06/01/2026
+ms.reviewer: yoleichen
+ms.date: 07/07/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: concept-article
@@ -23,7 +23,7 @@ This article outlines the limitations and known constraints of GitHub Copilot in
 
 ## Functional limitations
 
-- GitHub Copilot **doesn't have permission to write data**. Developers must manually review and execute all generated SQL or object-relational mapping (ORM) code.
+- **Review generated SQL and object-relational mapping (ORM) changes before applying them.** Recommendations aren't applied just because Copilot suggests them. Agent tools can execute actions with your database permissions. For example, Query Store plan forcing and unforcing require review and confirmation of the generated SQL.
 
 - The `@mssql` chat participant **needs an active database connection** through the editor to provide schema-aware suggestions.
 
@@ -47,11 +47,11 @@ This article outlines the limitations and known constraints of GitHub Copilot in
 
 - **Internet connectivity is required**. GitHub Copilot needs access to the GitHub Copilot cloud service to provide suggestions.
 
-- GitHub Copilot **only accesses open files and the active database connection**. It can't browse folders or repositories unless you explicitly open them in the editor.
+- The `@mssql` chat participant uses your active database connection and file context. Query Store agent tools can also target a saved connection profile and database. These tools don't grant extra database permissions.
 
 - GitHub Copilot **doesn't support offline usage** or disconnected development.
 
-- **Advanced performance tuning** (for example, full telemetry analysis, workload insights) is out of scope. The assistant might suggest optimizations for individual queries but doesn't replace professional tuning tools.
+- **Query Store performance investigations are in preview.** Agent tools can read query rankings, execution history, waits, and stored plans, but the diagnosis depends on what Query Store captures and retains. Wait statistics also require wait-statistics capture. These tools don't provide a complete view of application, server, or infrastructure performance, or replace workload testing. See [Investigate Query Store performance](query-optimizer-assistant.md#investigate-query-store-performance-preview).
 
 - GitHub Copilot might struggle with deeply nested or multi-join queries, particularly when working with large datasets or under-specified schema context.
 
@@ -91,6 +91,7 @@ For more information, see:
 - [How GitHub Copilot handles data - Learning pathway](https://learn.github.com/learning-pathways/github-copilot)
 - [GitHub Copilot for MSSQL extension for Visual Studio Code](overview.md)
 - [How GitHub Copilot works with the MSSQL extension](how-it-works.md)
+- [Quickstart: Use GitHub Copilot agent mode](agent-mode.md)
 - [Quickstart: Chat with the `@mssql` participant (ask mode)](chat-ask-mode.md)
 - [Quickstart: Use inline GitHub Copilot completions in SQL files](inline-completions.md)
 - [Quickstart: Use custom instructions to align GitHub Copilot with your T-SQL conventions](custom-instructions.md)

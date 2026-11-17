@@ -3,7 +3,7 @@ title: "sys.schemas (Transact-SQL)"
 description: sys.schemas contains a row for each database schema.
 author: dimitri-furman
 ms.author: dfurman
-ms.date: 07/18/2024
+ms.date: 11/16/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sys.schemas catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
+monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric || =fabric-sqldb"
 ---
 # Schema catalog view - sys.schemas
 
-[!INCLUDE [sql-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
 Contains a row for each database schema.
 

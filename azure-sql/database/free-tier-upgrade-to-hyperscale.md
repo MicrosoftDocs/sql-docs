@@ -23,7 +23,7 @@ To move an existing [Azure SQL Database free tier](free-tier.md) database to [Hy
 1. Disable the free tier and wait for the update to complete. The database remains a General Purpose serverless database, without the free allowance.
 1. Convert the database to Hyperscale and wait for conversion and cutover to complete.
 
-Don't combine disabling the free tier and the Hyperscale configuration in one update. Confirm that the free tier is disabled before you request Hyperscale.
+Don't combine these updates. Confirm that the free tier is disabled before you request Hyperscale.
 
 > [!IMPORTANT]
 > Leaving the free tier is permanent for this database. You can't return the database to the free tier, even if Hyperscale conversion fails or you later move back to General Purpose. Paid General Purpose usage can accrue after you disable the free tier, and Hyperscale billing begins after cutover. Review [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/azure-sql-database/single/) before you proceed.
@@ -49,11 +49,11 @@ The option to pay for overages isn't the same as leaving the free tier. The Azur
 
 The scripting examples use Hyperscale serverless on standard-series (Gen5) hardware, with a maximum of 2 vCores, a minimum of 0.5 vCores, and one high availability replica. These settings are examples, not a sizing recommendation. Replicas add cost.
 
-The examples explicitly disable auto-pause with `-1`, so minimum compute charges continue during inactivity. Hyperscale serverless auto-pause and auto-resume are in preview. To use that preview instead, review [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md) for eligibility and configuration.
+The examples disable auto-pause with `-1`, so minimum compute charges continue during inactivity. For preview eligibility and configuration, see [serverless auto-pause and auto-resume](serverless-tier-auto-pause-resume.md).
 
 ## Upgrade the database
 
-Choose one method. Each method updates the existing database; you don't need to create a replacement database or move application data manually.
+Choose one method to update the existing database without moving data manually.
 
 # [Portal](#tab/azure-portal)
 
@@ -70,9 +70,9 @@ Then, request Hyperscale in a separate update:
 
 1. In **Compute + storage**, select **Hyperscale** from the **Service tier** list.
 1. Choose **Serverless** or **Provisioned** for the **Compute tier**, and review the hardware configuration, vCores, and high availability replicas. Review auto-pause settings if you select serverless.
-1. Review the estimated cost and **Cutover mode**. Automatic cutover completes conversion as soon as the database is ready. Manual cutover lets you choose when the final connectivity interruption occurs.
+1. Review the estimated cost and **Cutover mode**. For automatic and manual cutover behavior, see [Cutover](convert-to-hyperscale.md#cutover).
 1. Select **Apply**.
-1. On the database **Overview** page, open the ongoing-operation notification to monitor conversion. If you select manual cutover, select **Cutover** when the database is ready, within the documented cutover window. For details, see [Cutover](convert-to-hyperscale.md#cutover).
+1. On the database **Overview** page, open the ongoing-operation notification to monitor conversion. For manual cutover, select **Cutover** when ready, within the [cutover window](convert-to-hyperscale.md#cutover).
 1. After cutover, confirm that the database is online and its active service tier is Hyperscale. For an additional check, use [Verify the upgrade](#verify-the-upgrade).
 
 # [Azure CLI](#tab/azure-cli)
@@ -129,7 +129,7 @@ az sql db show "${scope[@]}" \
     --output table
 ```
 
-The conversion uses automatic cutover. To control cutover timing instead, follow the [Azure CLI manual cutover steps](convert-to-hyperscale.md?tabs=azure-cli#convert-a-database-to-hyperscale), after disabling the free tier.
+The conversion uses automatic cutover. For [Azure CLI manual cutover](convert-to-hyperscale.md?tabs=azure-cli#convert-a-database-to-hyperscale), first disable the free tier and verify that `useFreeLimit` is `false`.
 
 For parameter details, see [az sql db update](/cli/azure/sql/db#az-sql-db-update).
 
@@ -191,7 +191,7 @@ $db | Select-Object DatabaseName, Status, UseFreeLimit,
     CurrentServiceObjectiveName, RequestedServiceObjectiveName, HighAvailabilityReplicaCount
 ```
 
-Don't use `-AsJob` unless your automation explicitly waits for completion and checks the result before continuing. The conversion uses automatic cutover. For manual cutover, follow the [PowerShell manual cutover steps](convert-to-hyperscale.md?tabs=azure-powershell#convert-a-database-to-hyperscale), after disabling the free tier.
+Don't use `-AsJob` unless your automation waits for completion and checks the result. The conversion uses automatic cutover. For [PowerShell manual cutover](convert-to-hyperscale.md?tabs=azure-powershell#convert-a-database-to-hyperscale), first disable the free tier and verify that `UseFreeLimit` is `false`.
 
 For parameter details, see [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase).
 
@@ -242,7 +242,7 @@ After conversion and cutover complete, confirm that:
 - The compute, auto-pause, and replica settings match your intended configuration.
 - Your application can connect and run a representative query.
 
-During conversion, the requested SKU or edition can describe the target before the active service objective changes. Don't treat the requested configuration alone as proof that cutover is complete.
+The requested SKU or edition can show the target before cutover. Check the current service objective, not just the requested configuration.
 
 To check the active service tier from a SQL connection, run this query in the upgraded database:
 

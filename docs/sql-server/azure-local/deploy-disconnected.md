@@ -174,6 +174,8 @@ Review the supported endpoints and security requirements before using [sp_invoke
 
 Local model inference doesn't establish that developer tools can operate without cloud connectivity. Validate each tool's authentication, client, and connectivity requirements separately before including it in a disconnected workflow.
 
+- **Developer tools:** Review GitHub Copilot bring-your-own-key support for [VS Code](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key) and [SQL Server Management Studio (SSMS)](/ssms/github-copilot/ai-models) for supported model endpoints and client requirements before connecting either tool to a local endpoint. In SSMS, custom models are limited to Copilot Chat, and supporting services such as embeddings, intent detection, and repository indexing might still use the Copilot API. Validate each tool's authentication and connectivity requirements before using it in a disconnected environment; a local model doesn't guarantee a fully disconnected workflow.
+
 ## Licensing and support boundaries
 
 Choose the SQL Server licensing model before finalizing VM sizing and availability topology. Evaluate edition requirements, virtual-core licensing, eligible physical-core licensing with unlimited virtualization, Software Assurance or subscription rights, and non-production entitlements. Azure Local disconnected operations platform capacity is licensed separately.

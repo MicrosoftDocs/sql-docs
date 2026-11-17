@@ -5,7 +5,7 @@ description: Learn how Azure SQL Managed Instance automatically backs up all dat
 author: dnethi
 ms.author: dinethi
 ms.reviewer: dinethi, wiassaf, mlandzic, strrodic, danil
-ms.date: 01/15/2026
+ms.date: 11/08/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: concept-article
@@ -131,7 +131,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 1 to 35 days. | Enabled by default, same as source. <sup>2</sup> | Not enabled by default. Retention is up to 10 years. |
 | **Azure storage** | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant or geo-zone redundant (GZRS). Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
-| **Configure backups as [immutable](/azure/storage/blobs/immutable-storage-overview)** | Not supported | Not supported | Not supported |
+| **Configure backups as [immutable](/azure/storage/blobs/immutable-storage-overview)** | Not supported | Not supported | [Supported (preview)](backup-immutability.md) |
 | **Update policy** <sup>3</sup> | Must match, or upgrade | Must match, or upgrade | Must match, or upgrade |
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
@@ -343,9 +343,6 @@ Backups are automatically deleted after the retention expires.
 ## Compliance through backup retention
 
 If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy).
-
-> [!NOTE]  
-> The [Change automated backup settings for Azure SQL Managed Instance](automated-backups-change-settings.md) article provides steps about how to delete personal data from the device or service and can be used to support your obligations under the GDPR. For general information about GDPR, see the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview) and the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## Related content
 

@@ -4,8 +4,8 @@ titleSuffix: MSSQL Extension for Visual Studio Code
 description: Understand the architecture behind the GitHub Copilot integration with the MSSQL extension for Visual Studio Code, including chat, agent, inline completions, and embedded experiences.
 author: cwebb-msft
 ms.author: chweb
-ms.reviewer: roblescarlos
-ms.date: 06/01/2026
+ms.reviewer: yoleichen
+ms.date: 07/07/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: concept-article
@@ -22,6 +22,7 @@ The GitHub Copilot integration with the MSSQL extension for Visual Studio Code e
 ## Key takeaways
 
 - The `@mssql` chat participant, agent mode tools, Schema Designer, and Data API builder all have *schema awareness* when connected to a database.
+- The Query Performance Dashboard's **Chat** action hands query and time-range context to Query Store agent tools for performance investigations (preview).
 - *Inline completions* (ghost text while typing in a `.sql` file) come from GitHub Copilot's model directly and don't see your connected database schema.
 - For schema-aware suggestions while writing SQL, use the `@mssql` chat participant in chat instead of inline ghost text.
 
@@ -30,7 +31,8 @@ The GitHub Copilot integration with the MSSQL extension for Visual Studio Code e
 | Surface | Provided by | Schema-aware? | Best for |
 | --- | --- | --- | --- |
 | [Chat participant (`@mssql`)](chat-ask-mode.md) | MSSQL extension | Yes (connected database) | Questions, explanations, query authoring |
-| [Agent mode tools](agent-mode.md) | MSSQL extension contributes tools | Yes (via tool calls) | Multi-step workflows, delegated changes |
+| [Agent mode tools](agent-mode.md) | MSSQL extension contributes tools | Yes (via tool calls) | Multi-step workflows, delegated changes, Query Store investigations (preview) |
+| [Query Performance Dashboard Chat](query-optimizer-assistant.md#investigate-query-store-performance-preview) (preview) | Dashboard hands off to agent tools | Yes (via tool calls) | Investigating a selected query with its captured performance data |
 | [Plan mode](plan-mode.md) | Visual Studio Code | Yes (via `@mssql` context) | Reasoning before writing SQL data definition language (DDL) |
 | [Slash commands](slash-commands.md) | MSSQL extension | Yes | Structured prompts for common tasks |
 | [Inline completions](inline-completions.md) | GitHub Copilot model directly | No | Generic ghost text while typing |
@@ -51,13 +53,23 @@ For a scenario-driven walkthrough, see [Quickstart: Chat with the `@mssql` parti
 
 ## Agent mode tools
 
-Agent mode lets GitHub Copilot autonomously plan and execute work. The MSSQL extension contributes a set of *tools* (for example, `connect`, `list_databases`, `run_query`) that agent mode can call on your behalf, always with your approval.
+Agent mode lets GitHub Copilot autonomously plan and execute work. The MSSQL extension contributes a set of *tools* (for example, `connect`, `list_databases`, `run_query`) that agent mode can call on your behalf. The approval requirements depend on the tool: Query Store diagnostic reads don't request confirmation, while forcing or unforcing a plan requires review and confirmation.
 
 Unlike the chat participant (which needs an explicit `@mssql` mention), agent mode picks up the MSSQL extension's tools automatically when the extension is active. You write natural-language prompts like "Connect to my LocalDev profile and show me the tables in AdventureWorks," and agent mode chooses which tools to invoke.
 
 Agent mode is *schema-aware* through its tools. Each tool call returns real data from your connected database.
 
 For the full tool reference and example prompts, see [Quickstart: Use GitHub Copilot agent mode](agent-mode.md).
+
+### Query Performance Dashboard handoff (preview)
+
+The [Query Performance Dashboard](../mssql/mssql-query-performance-dashboard.md) uses Query Store data to show query rankings, execution history, waits, comparisons, and plans. Its **Chat** action isn't a separate embedded chat pipeline like Schema Designer or Data API builder. It opens GitHub Copilot Chat in agent mode and sends a prompt that identifies the selected query's server, database, saved connection profile, Query Store query ID, and time range.
+
+The prompt explicitly references `#mssql_query_store_analyze_query`. That tool retrieves query text and runtime statistics, plan statistics, execution history, waits, and summaries of the main stored plans. The prompt asks for a brief assessment followed by a question about what to investigate next, and requires confirmation before applying changes.
+
+In agent mode, Copilot can use additional Query Store tools to find top queries, read history or waits, summarize plans, and reopen the dashboard for a query. These tools retrieve captured performance evidence rather than rely only on schema context, pasted SQL, or a manually attached plan. An existing connection or saved connection profile supplies the target and credentials; database permissions still apply.
+
+For a walkthrough, see [Investigate Query Store performance](query-optimizer-assistant.md#investigate-query-store-performance-preview). For the available tools and their approval behavior, see [Query Store performance tools](agent-mode.md#query-store-performance-tools-preview).
 
 ## Plan mode
 

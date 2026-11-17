@@ -108,15 +108,13 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
   - Supported for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics
 
 - Symmetric keys (AES)
-  - Supported in Azure Key Vault Premium (preview) and Azure Key Vault Managed HSM
+  - Supported in Azure Key Vault Premium and Azure Key Vault Managed HSM
   - Supported key sizes: 128-bit, 192-bit, and 256-bit
-  - Supported only for Azure SQL Database, currently in public preview. You may see this capability appear over time depending on your region and service deployment status. 
-
-> [!NOTE]
-> Transparent Data Encryption with symmetric keys (AES) is currently in preview. Preview features are released with limited capabilities, but Microsoft makes them available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
+  - AES-256 is recommended for new TDE protectors
+  - Supported only for Azure SQL Database
 
 ### Limitations for symmetric (AES) keys
-When using symmetric (AES) keys as the TDE protector, only keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM are supported for ongoing key lifecycle operations. Customers can import a key from an on-premises hardware security module (HSM) one time into Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. After the initial import, all subsequent key lifecycle operations including point-in-time recovery, geo-disaster recovery, and key revalidation must rely on the Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM infrastructure. Customers are responsible for maintaining local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and do not apply to asymmetric (RSA) keys.
+When you use symmetric (AES) keys as the TDE protector, only keys stored in Azure Key Vault Premium or Azure Key Vault Managed HSM are supported for ongoing key lifecycle operations. You can import a key from an on-premises hardware security module (HSM) one time into Azure Key Vault Premium or Azure Key Vault Managed HSM. After the initial import, all subsequent key lifecycle operations, including point-in-time recovery, geo-disaster recovery, and key revalidation, must rely on the Azure Key Vault Premium or Azure Key Vault Managed HSM infrastructure. You're responsible for maintaining local backups of imported keys to support recovery and revalidation scenarios. These limitations apply only to symmetric (AES) keys and don't apply to asymmetric (RSA) keys.
 
 ### Key state and validity requirements
 
@@ -139,7 +137,7 @@ The same requirements for configuring Azure Key Vault or Azure Managed HSM keys 
 
 ## Key management
 
-Rotating the TDE protector for a database means to switch to a new asymmetric key that protects the database. Key rotation is an online operation and should only take a few seconds to complete. The operation only decrypts and re-encrypts the database encryption key, not the entire database. 
+Rotating the TDE protector for a database means switching to a new supported key that protects the database. Key rotation is an online operation and should only take a few seconds to complete. The operation only decrypts and re-encrypts the database encryption key, not the entire database.
 
 You can rotate the TDE protector by switching the configuration to use a new key stored in Azure Key Vault or Azure Key Vault Managed HSM. Depending on the Azure SQL offering and supported configuration, this can include:
 
@@ -148,7 +146,9 @@ You can rotate the TDE protector by switching the configuration to use a new key
 - Switching between supported key types, such as asymmetric (RSA) and symmetric (AES) keys
 
 > [!NOTE]  
-> Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview. You may see this capability appear over time depending on your region and service deployment status.
+> Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database.
+
+For Azure SQL Database, use an AES-256 symmetric key for new TDE protectors. If the current TDE protector uses RSA, manually rotate it to a new AES-256 key. Automatic rotation moves the TDE protector to a newer version of the same key and doesn't change the key type.
 
 Once a valid user-assigned managed identity has been assigned to a database, rotating the key at the database level is a database CRUD operation that involves updating the encryption protector property of the database. [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) and the property `-EncryptionProtector` can be used to rotate keys. To create a new database configured with database level CMK, [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) can be used with the `-EncryptionProtector`, `-AssignIdentity`, and `-UserAssignedIdentityId` parameters.
 

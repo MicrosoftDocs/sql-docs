@@ -2,9 +2,9 @@
 title: Prepare environment for Managed Instance link with WSFC
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment with WSFC for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
-author: djordje-jeremic
-ms.author: djjeremi
-ms.reviewer: danil
+author: danimir
+ms.author: danil
+ms.reviewer: vanto
 ms.date: 06/09/2022
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement

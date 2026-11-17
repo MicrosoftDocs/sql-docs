@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -306,9 +306,17 @@ ms.topic: include
 | <a id="19557"></a> 19557 | 16 | No | Invalid value '%.\*ls' for TrustServerCertificate. Valid values are Yes or No. For more information, see %.\*ls. |
 | <a id="19558"></a> 19558 | 16 | No | Duplicate key '%.\*ls' in %.\*ls. |
 | <a id="19559"></a> 19559 | 16 | No | The key 'Encrypt' must be specified in %.\*ls. |
-| <a id="19561"></a> 19561 | 16 | No | As a result of executing sys.sp_mi_dag_repair, database '%.\*ls' was removed from availability group '%.\*ls'. |
-| <a id="19562"></a> 19562 | 16 | No | As a result of executing sys.sp_mi_dag_repair, internal availability group '%.\*ls' was removed from availability group '%.\*ls'. |
-| <a id="19563"></a> 19563 | 16 | No | Can not execute sp_mi_dag_repair on availability group '%.\*ls' as the local availability replica is not in the primary role. |
+| <a id="19561"></a> 19561 | 16 | No | As a result of executing sys.sp_milink_repair, database '%.\*ls' was removed from availability group '%.\*ls'. |
+| <a id="19562"></a> 19562 | 16 | No | As a result of executing sys.sp_milink_repair, internal availability group '%.\*ls' was removed from availability group '%.\*ls'. |
+| <a id="19563"></a> 19563 | 16 | No | Can not execute sp_milink_repair on availability group '%.\*ls' as the local availability replica is not in the primary role. |
+| <a id="19566"></a> 19566 | 16 | No | Database '%.\*ls' cannot be reseeded because it is not part of an availability group. |
+| <a id="19567"></a> 19567 | 16 | No | Database '%.\*ls' cannot be reseeded because the local availability replica is offline. Bring the local availability replica online and try again. |
+| <a id="19568"></a> 19568 | 16 | No | Database '%.\*ls' cannot be reseeded because its availability group is not part of any Managed Instance link. |
+| <a id="19569"></a> 19569 | 16 | No | Database '%.\*ls' cannot be reseeded because it was not found in the availability group '%.\*ls'. |
+| <a id="19570"></a> 19570 | 16 | No | Database '%.\*ls' cannot be reseeded because its internal link with Managed Instance could not be found. Run sys.sp_milink_repair to repair the internal links. Alternatively, remove and re-add the database to the availability group to restart the seeding process. |
+| <a id="19571"></a> 19571 | 16 | No | Database '%.\*ls' cannot be reseeded because the local availability replica is a secondary replica. The operation can only be performed when the local availability replica is in the primary role. |
+| <a id="19572"></a> 19572 | 10 | No | Started reseeding of internal Managed Instance link for database '%.\*ls' in availability group '%.\*ls'. |
+| <a id="19573"></a> 19573 | 16 | No | Database '%.\*ls' cannot be reseeded because its availability group '%.\*ls' is not part of the specified Managed Instance link '%.\*ls'. Verify the Managed Instance link name and try again. |
 | <a id="19601"></a> 19601 | 16 | No | System error. |
 | <a id="19602"></a> 19602 | 16 | No | System error. |
 | <a id="19603"></a> 19603 | 16 | No | System error. |

@@ -1,9 +1,9 @@
 ---
 title: "Replication Security Best Practices"
 description: Learn about the best approach for securing replication connections in SQL Server in a variety of different circumstances.
-author: adbadram
-ms.author: adbadram
-ms.date: 09/25/2024
+author: MladjoA
+ms.author: mlandzic
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
@@ -62,6 +62,11 @@ helpviewer_keywords:
     -   Ensure that a given agent (for example the Distribution Agent for a subscription) makes connections under the same account at each computer.  
   
     -   In situations that require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).
+
+## Use Microsoft Entra managed identity authentication with Azure SQL Managed Instance
+
+For transaction replication configurations where all participants are Azure SQL Managed Instance and Azure SQL Database resources, use Microsoft Entra managed identity authentication both for connections between participants and for connections from agents to participants.  
+
 
 ## Improve security posture with database master key
 

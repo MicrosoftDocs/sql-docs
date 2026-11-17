@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -490,6 +490,7 @@ ms.topic: include
 | <a id="42293"></a> 42293 | 16 | No | Conversion of vector from %ls to %ls storage format is not supported. |
 | <a id="42294"></a> 42294 | 16 | No | A sparse vector %ls must be an integer in the range \[%d, %d\]. |
 | <a id="42295"></a> 42295 | 16 | No | The %ls function does not support sparse vectors. |
+| <a id="42296"></a> 42296 | 16 | No | Sparse vector columns are not supported in database '%.\*ls'. |
 | <a id="42299"></a> 42299 | 16 | No | Vector Internal error. |
 | <a id="42301"></a> 42301 | 16 | No | Could not create the semantic index on object '%.\*ls', because the object is not a user table. |
 | <a id="42302"></a> 42302 | 16 | No | Could not create the semantic index on the column '%.\*ls' on table '%.\*ls', because it is not of supported type. |
@@ -1279,6 +1280,7 @@ ms.topic: include
 | <a id="45985"></a> 45985 | 16 | No | The server cannot be dropped because immutable point-in-time restore (PITR) backups are still within retention and server delete protection is enabled. Retry the operation after all immutable PITR backups have expired. |
 | <a id="45986"></a> 45986 | 16 | No | Server delete protection is a permanent setting and cannot be disabled once enabled. |
 | <a id="45987"></a> 45987 | 16 | No | Creating a General Purpose v1 (GPv1) managed instance or changing an existing managed instance to GPv1 is not supported in API versions 2026-11-01 and later. To perform either operation, use an API version earlier than 2026-11-01. |
+| <a id="45995"></a> 45995 | 16 | No | Changing the failover mode of an existing link to Manual is not allowed. To use manual failover, delete the link and recreate it with Manual failover mode selected during link creation. |
 | <a id="46501"></a> 46501 | 15 | No | External table references '%S_MSG' that does not exist. |
 | <a id="46502"></a> 46502 | 15 | No | Type with name '%.\*ls' already exists. |
 | <a id="46503"></a> 46503 | 15 | No | Invalid format for option '%S_MSG'. |
@@ -1694,6 +1696,7 @@ ms.topic: include
 | <a id="47150"></a> 47150 | 16 | No | Option 'autoseeding_system_databases' and 'reuse_system_databases' cannot be set at same time for creating availability group '%.\*ls'. remove one option and retry the operation. |
 | <a id="47151"></a> 47151 | 16 | No | Failed to create availability group '%.\*ls' with contained clause. It is invalid for this edition. Remove contained clause and retry the operation. |
 | <a id="47152"></a> 47152 | 16 | No | Availability group '%.\*ls' that has EXTERNAL or NONE cluster type contains too many databases. Remove some databases from the availability group and retry the operation. |
+| <a id="47153"></a> 47153 | 16 | No | The availability group configuration data is invalid. The configuration could not be applied. |
 | <a id="47201"></a> 47201 | 16 | No | Procedure expects '%u' parameters. |
 | <a id="47202"></a> 47202 | 16 | No | Procedure expects '%u' parameters and '%u' for _ex version. |
 | <a id="47203"></a> 47203 | 16 | No | Procedure expects at least '%u' parameters and '%u' max. |
@@ -1869,6 +1872,7 @@ ms.topic: include
 | <a id="49541"></a> 49541 | 16 | No | Orchestrator for volume type %d is undefined, unable to retrieve data associated with the orchestrator. |
 | <a id="49542"></a> 49542 | 16 | No | DBCC SHRINKFILE and SHRINKDATABASE are not supported while the database is in Shared Data Cluster mode. The operation has been blocked. Try again after the database exits cluster mode. |
 | <a id="49543"></a> 49543 | 16 | No | Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.\*ls). The segment header chain of compressed blob data at page %S_PGID, slot %d is invalid. |
+| <a id="49544"></a> 49544 | 16 | No | Object ID %d, index ID %d, partition ID %I64d. The index is invalid because it contains records with the key that requires at least %d bytes, which exceeds the maximum index key size of %d bytes. Index key checks were skipped. Rebuild the index with fewer or narrower key columns or delete rows where the key exceeds the supported size. |
 | <a id="49600"></a> 49600 | 22 | No | SQL tiered storage table schema is corrupt. |
 | <a id="49602"></a> 49602 | 16 | No | Failure waiting for %ls latch in '%ls'. |
 | <a id="49603"></a> 49603 | 16 | No | CREATE FILE encountered operating system error %ls while attempting to copy the physical file '%.\*ls'. |

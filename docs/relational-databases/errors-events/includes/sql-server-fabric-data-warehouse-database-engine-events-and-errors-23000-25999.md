@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -102,7 +102,7 @@ ms.topic: include
 | <a id="23639"></a> 23639 | 16 | No | LOB data could not be read while extracting column values for change event. HRESULT: '0x%08x'. |
 | <a id="23640"></a> 23640 | 16 | No | Change Event Streaming serializer not initialized. |
 | <a id="23641"></a> 23641 | 16 | No | The value in provided argument '@include_old_lob_values' is incompatible with value '0' provided in argument '@include_old_values'. To use '@include_old_lob_values' with value '1', the parameter '@include_old_values' is expected to be '1'. |
-| <a id="23642"></a> 23642 | 16 | No | Destination location parameter is not in the expected format. Expected format is \[Event Hubs Namespace Host name\]/\[Event Hubs Instance\] or \[Event Hubs Namespace Host name\]:\[Port\]/\[Event Hubs Instance\] |
+| <a id="23642"></a> 23642 | 16 | No | Destination location parameter is not in the expected format. Expected format is \[Event Hubs Namespace Host name\]/\[Event Hubs Instance\] or \[Event Hubs Namespace Host name\]:9093/\[Event Hubs Instance\] |
 | <a id="23643"></a> 23643 | 16 | No | Change Event Streaming for '%ls' is already enabled for stream group '%ls'. |
 | <a id="23644"></a> 23644 | 16 | No | Table name supplied in the argument '%ls' is either not configured for Change Event Streaming or it does not exist for the supplied stream group. |
 | <a id="23645"></a> 23645 | 16 | No | The value provided for the 'Port number' in the destination location parameter is invalid. It must be a numeric value between 0 and 65535. |
@@ -156,7 +156,7 @@ ms.topic: include
 | <a id="23694"></a> 23694 | 16 | No | Unable to establish a secure connection to the broker. |
 | <a id="23695"></a> 23695 | 16 | No | The requested AMQP entity does not exist on the broker. |
 | <a id="23696"></a> 23696 | 16 | No | The AMQP resource was removed or disabled after a connection to the resource was established. |
-| <a id="23697"></a> 23697 | 16 | No | Failed to create Change Event Streaming stream group object. Destination location is not in the expected format. Expected format is \[Event Hubs Namespace Host name\]/\[Event Hubs Instance\] or \[Event Hubs Namespace Host name\]:\[Port\]/\[Event Hubs Instance\] |
+| <a id="23697"></a> 23697 | 16 | No | Failed to create Change Event Streaming stream group object. Destination location is not in the expected format. Expected format is \[Event Hubs Namespace Host name\]/\[Event Hubs Instance\] or \[Event Hubs Namespace Host name\]:9093/\[Event Hubs Instance\] |
 | <a id="23698"></a> 23698 | 16 | No | Aborting Change Event Streaming Publish task for partition %ld timed out. Change Event Streaming is not disabled. Retry this operation later. |
 | <a id="23699"></a> 23699 | 16 | No | Invalid table state encountered while processing Change Event Streaming table. |
 | <a id="23701"></a> 23701 | 16 | No | Database '%ls' went to suspect state. Backup cannot be performed on a database that is in suspect state. |
@@ -176,6 +176,7 @@ ms.topic: include
 | <a id="23813"></a> 23813 | 16 | No | The loaded external Kafka library does not implement a function required by Change Event Streaming. |
 | <a id="23814"></a> 23814 | 17 | No | Change Event Streaming could not prepare the Microsoft Entra credential for destination authentication. |
 | <a id="23815"></a> 23815 | 10 | No | Warning: The @destination_type value '%ls' is deprecated and will be removed in a future update. Use 'AzureEventHubs' instead. The 'AzureEventHubs' destination type uses the Apache Kafka protocol. For migration guidance, see [https://go.microsoft.com/fwlink/?LinkId=2375810](https://go.microsoft.com/fwlink/?LinkId=2375810) |
+| <a id="23816"></a> 23816 | 16 | No | Change Event Streaming could not serialize an event because an internal formatting or encoding conversion failed. |
 | <a id="23996"></a> 23996 | 16 | No | The request could not be performed because of an device I/O error. |
 | <a id="23997"></a> 23997 | 16 | No | System error occurred {ErrorCode: %d}. |
 | <a id="23998"></a> 23998 | 16 | No | Not enough memory available in the system to process the request. |
@@ -210,6 +211,7 @@ ms.topic: include
 | <a id="24529"></a> 24529 | 10 | No | There is not enough capacity to resize pool '%ls' to %ld backend instances. |
 | <a id="24530"></a> 24530 | 10 | No | Tenant ring selection failed while creating or activating a pool. |
 | <a id="24531"></a> 24531 | 10 | No | Statement ID: %ls |
+| <a id="24532"></a> 24532 | 16 | No | Security sync failed: %.\*ls |
 | <a id="24533"></a> 24533 | 16 | No | USE statement does not support switching to '%ls' database. |
 | <a id="24534"></a> 24534 | 16 | No | USE statement does not support switching to '%ls' database. Use a new connection to connect to '%ls' database. |
 | <a id="24535"></a> 24535 | 16 | No | Transactional data stored in physical metadata doesn't align with database transactional data. |
@@ -395,7 +397,7 @@ ms.topic: include
 | <a id="24810"></a> 24810 | 16 | No | Updating source database is not supported. |
 | <a id="24811"></a> 24811 | 16 | No | SOURCE_DATABASE can only be altered only for warehouse snapshots in LIVE mode. |
 | <a id="24812"></a> 24812 | 18 | No | Setting SOURCE_DATABASE failed. |
-| <a id="24813"></a> 24813 | 16 | No | Reserved error message. |
+| <a id="24813"></a> 24813 | 16 | No | Clustering metadata repair failed: %ls |
 | <a id="24814"></a> 24814 | 18 | No | Retrieving table storage path failed. |
 | <a id="24815"></a> 24815 | 16 | No | Ingestion failed because the total LOB size (%I64u) bytes of the current row exceeds the defined limit (%I64u) bytes. |
 | <a id="24816"></a> 24816 | 18 | No | An unexpected error related to collations occurred. |
@@ -457,7 +459,7 @@ ms.topic: include
 | <a id="24872"></a> 24872 | 18 | No | Internal error. Redirection for proxy database failed. |
 | <a id="24873"></a> 24873 | 16 | No | No active distributed query found for the specified distributed_statement_id '%ls'. The query may have completed or is not a distributed query. |
 | <a id="24874"></a> 24874 | 16 | No | We couldn't access the underlying data source because you don't have sufficient permissions. Make sure you have access and then try again. |
-| <a id="24875"></a> 24875 | 16 | No | We couldn't access the underlying data source. Check your permission to the data source. If you have the right permission then try again later. |
+| <a id="24875"></a> 24875 | 18 | No | We couldn't access the underlying data source. Check your permission to the data source. If you have the right permission then try again later. |
 | <a id="24876"></a> 24876 | 16 | No | This stored procedure is part of a feature that is not yet available in your environment. If this is unexpected, please contact support. |
 | <a id="24877"></a> 24877 | 18 | No | MDSync provided an invalid commit id. Discovered table id: %d. Temp table id: %d. |
 | <a id="24878"></a> 24878 | 18 | No | Internal error occurred during DW table checksum creation. '%ls' |
@@ -486,6 +488,7 @@ ms.topic: include
 | <a id="24902"></a> 24902 | 18 | No | An internal error occurred while creating a table checkpoint. Retry the operation and contact support if the problem persists. |
 | <a id="24903"></a> 24903 | 16 | No | Fabric Catalog operations are only valid against unified user tables. |
 | <a id="24904"></a> 24904 | 18 | No | An internal error occurred while processing row-level security information. |
+| <a id="24905"></a> 24905 | 16 | No | %ls is not supported inside a user transaction for unified tables. |
 | <a id="25002"></a> 25002 | 16 | No | The specified Publisher is not enabled as a remote Publisher at this Distributor. Ensure the value specified for the parameter @publisher is correct, and that the Publisher is enabled as a remote Publisher at the Distributor. |
 | <a id="25003"></a> 25003 | 16 | No | Upgrade of the distribution database MSmerge_subscriptions table failed. Rerun the upgrade procedure in order to upgrade the distribution database. |
 | <a id="25005"></a> 25005 | 16 | No | It is invalid to drop the default constraint on the rowguid column that is used by merge replication. |

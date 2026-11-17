@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -78,6 +78,8 @@ ms.topic: include
 | <a id="16235"></a> 16235 | 16 | No | EXT_LOAD_ADJUST_MEMORY is not supported for this statement or input configuration. |
 | <a id="16310"></a> 16310 | 16 | No | '%.\*ls' is not supported in this version of Azure SQL Edge. |
 | <a id="16320"></a> 16320 | 16 | No | '%.\*ls' is not supported while the database is in Shared Data (SDA) cluster mode. Retry after the database exits cluster mode. |
+| <a id="16321"></a> 16321 | 16 | No | '%.\*ls' cannot proceed because a Shared Data (SDA) transition is in progress on the database. Retry after the database exits cluster mode. |
+| <a id="16322"></a> 16322 | 16 | No | '%.\*ls' cannot run while the database is transitioning into Shared Data (SDA) cluster mode. Retry after the transition completes. |
 | <a id="16401"></a> 16401 | 16 | No | Page id not hosted by the current page server. |
 | <a id="16501"></a> 16501 | 16 | No | %ls is not supported with this set of options. |
 | <a id="16502"></a> 16502 | 16 | No | Cannot execute stored procedure '%ls'. The security check for the current user is failing. Only members of the sysadmin role can perform this operation. |
@@ -478,6 +480,7 @@ ms.topic: include
 | <a id="17262"></a> 17262 | 16 | Yes | Replicated master not available for server state initialization during startup. |
 | <a id="17263"></a> 17263 | 16 | Yes | Contained availability group master database not available for server state initialization during startup. |
 | <a id="17264"></a> 17264 | 10 | Yes | CPU vectorization level(s) detected: %ls |
+| <a id="17265"></a> 17265 | 10 | Yes | Row difference generation uses the %ls implementation at startup. AVX-512 option: %ls. Widest supported implementation: %ls. |
 | <a id="17300"></a> [17300](../mssqlserver-17300-database-engine-error.md) | 16 | Yes | SQL Server was unable to run a new system task, either because there is insufficient memory or the number of configured sessions exceeds the maximum allowed in the server. Verify that the server has adequate memory. Use sp_configure with option 'user connections' to check the maximum number of user connections allowed. Use sys.dm_exec_sessions to check the current number of sessions, including user processes. |
 | <a id="17303"></a> 17303 | 16 | Yes | The session with SPID %d was found to be invalid during termination, possibly because of corruption in the session structure. Contact Product Support Services. |
 | <a id="17305"></a> 17305 | 16 | Yes | SQL server is started in a safe boot mode. No new connections can be created. This is informational message. |

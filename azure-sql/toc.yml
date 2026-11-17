@@ -4,8 +4,6 @@
   items:
   - name: What is Azure SQL?
     href: azure-sql-iaas-vs-paas-what-is-overview.md
-  - name: Azure SQL decision tree
-    href: azure-sql-decision-tree.md
   - name: Migrate to Azure SQL
     href: migration-guides/index.yml
   - name: Migrating SQL Server Workloads FAQ
@@ -293,7 +291,7 @@
       items:
       - name: Deploy a free database
         href: database/free-tier.md
-      - name: Learn SQL with AdventureWorksLT
+      - name: Query sample data
         href: database/free-tier-sample.md
       - name: Upgrade to Hyperscale
         href: database/free-tier-upgrade-to-hyperscale.md
@@ -1181,6 +1179,8 @@
       items:
       - name: Secure your instance
         href: managed-instance/secure-managed-instance.md
+      - name: LTR backup immutability
+        href: managed-instance/backup-immutability.md
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: SQL Server Audit in Azure SQL Managed Instance

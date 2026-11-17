@@ -2,9 +2,9 @@
 title: "Fail over link"
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to fail over a link between SQL Server and Azure SQL Managed Instance with SQL Server Management Studio (SSMS) and PowerShell.
-author: djordje-jeremic
-ms.author: djjeremi
-ms.reviewer: danil
+author: danimir
+ms.author: danil
+ms.reviewer: vanto
 ms.date: 12/06/2024
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
@@ -351,4 +351,3 @@ For other replication and migration scenarios, consider:
 
 - [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
 - [Log Replay Service (LRS)](log-replay-service-overview.md)
-

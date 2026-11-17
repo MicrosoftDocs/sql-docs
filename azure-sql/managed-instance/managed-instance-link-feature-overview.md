@@ -2,10 +2,10 @@
 title: Managed Instance link overview
 titleSuffix: Azure SQL Managed Instance
 description: This article describes the Managed Instance link, which you can use to replicate data continuously between SQL Server and Azure SQL Managed Instance for scenarios such as migrating to the cloud with minimal downtime, or disaster recovery.
-author: djordje-jeremic
-ms.author: djjeremi
+author: danimir
+ms.author: danil
 ms.reviewer: vanto
-ms.date: 09/28/2026
+ms.date: 11/05/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: concept-article
@@ -23,7 +23,7 @@ To get started, review [prepare your environment for the link](managed-instance-
 
 ## Overview
 
-The Managed Instance link uses [distributed availability groups](/sql/database-engine/availability-groups/windows/distributed-availability-groups) to extend your data estate in a safe and secure manner. It replicates data in near real-time from SQL Server hosted anywhere to Azure SQL Managed Instance, or from Azure SQL Managed Instance to SQL Server 2022 or later hosted anywhere. 
+The Managed Instance link uses [distributed availability groups](/sql/database-engine/availability-groups/windows/distributed-availability-groups) to extend your data estate in a safe and secure manner. It replicates databases in near real-time from SQL Server hosted anywhere to Azure SQL Managed Instance, or from Azure SQL Managed Instance to SQL Server 2022 or later hosted anywhere.
 
 The link supports single node and multiple-node SQL Server instances with or without existing availability groups. Through the link, you can use benefits of Azure without migrating your entire SQL Server data estate to the cloud. 
 
@@ -48,12 +48,14 @@ You can use databases that are replicated through the link between SQL Server an
 
 The Managed Instance link supports two modes. The mode determines whether a link replicates one database or all databases in an existing SQL Server Always On availability group.
 
-| Link mode | Replication scope | Configuration guide |
-| --- | --- | --- |
-| **Single-database** | One database per link. To replicate multiple databases, create a separate link for each database. The SQL Server availability group used by each link contains one database. | Configure the link with [SSMS](managed-instance-link-configure-how-to-ssms.md) or [scripts](managed-instance-link-configure-how-to-scripts.md). |
-| **Multiple-database (preview)** | All databases in an existing SQL Server availability group through one link. You don't need to split the existing group into single-database availability groups. Each database has an internal replication group within the customer-visible link. | [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md). |
+| Link mode | Replication scope | SQL Server availability | Configuration guide |
+| --- | --- | --- | --- |
+| **Single-database** | One database per link. To replicate multiple databases, create a separate link for each database. The SQL Server availability group used by each link contains one database. | SQL Server 2016, 2017, 2019, 2022, and 2025 with the [required service update](#version-supportability). | Configure the link with [SSMS](managed-instance-link-configure-how-to-ssms.md) or [scripts](managed-instance-link-configure-how-to-scripts.md). |
+| **Multiple-database** | All databases in an existing SQL Server Always On availability group through one link. You don't need to split the existing availability group into single-database availability groups. | SQL Server 2022 and later with the [required service update](managed-instance-link-extend-availability-group.md#supportability). | [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md). |
 
-Multiple-database mode requires specific SQL Server cumulative updates, supported editions, and opt-in on every SQL Server replica. A matching SQL Managed Instance update policy is required when SQL Managed Instance is the initial primary or when you reverse roles back to SQL Server. Replication can't target a lower version, regardless of which instance is the destination. For one-way replication and cutover from SQL Server to SQL Managed Instance, the destination update policy must match or be higher than the source SQL Server version. SQL Server 2022 supports the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** policies. SQL Server 2025 supports the **SQL Server 2025** and **Always-up-to-date** policies, but not **SQL Server 2022**. You can't replicate data or fail back to SQL Server after cutover if the policies don't match. For these requirements, see [Multiple-database link supportability](managed-instance-link-extend-availability-group.md#supportability).
+Multiple-database mode requires specific SQL Server cumulative updates, supported editions, and opt-in on every SQL Server replica. A matching SQL Managed Instance update policy is required when SQL Managed Instance is the initial primary or when you reverse roles back to SQL Server. Replication can't target a lower version, regardless of which instance is the destination. For one-way replication and cutover from SQL Server to SQL Managed Instance, the destination update policy must match or be higher than the source SQL Server version.
+
+SQL Server 2022 supports replication to managed instances configured with the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** update policies. SQL Server 2025 supports replication to managed instances configured with the **SQL Server 2025** and **Always-up-to-date** update policies, but not the **SQL Server 2022** update policy. You can't replicate data or fail back to SQL Server after cutover if the policies don't match. For these requirements, see [Multiple-database link supportability](managed-instance-link-extend-availability-group.md#supportability).
 
 Links in single-database link mode and multiple-database link mode can't coexist on the same SQL Server instance. You can't change a link's mode in place. To switch modes, remove all existing links, [change the mode on every SQL Server replica](managed-instance-link-extend-availability-group.md#enable-multiple-database-link-mode), and then recreate the links.
 
@@ -108,7 +110,7 @@ Azure SQL Managed Instance supports multiple links from the same or different SQ
 
 In single-database mode, each link replicates one database. In multiple-database mode, one link can replicate multiple databases, and every replicated database counts toward the same instance-wide database limit. Creating more links doesn't increase that limit. For example, a managed instance with a 100-database limit and 10 existing databases has capacity for 90 more databases, whether you replicate them through one multiple-database link or separate single-database links from appropriately configured SQL Server instances.
 
-A single SQL Server instance can create multiple parallel links with several SQL managed instances, even in different Azure regions. All links on that SQL Server instance must use the same link mode.
+A single SQL Server instance can create multiple parallel links with several managed instances, even in different Azure regions. All links on that SQL Server instance must use the same link mode.
 
 ## Use the link
 
@@ -126,9 +128,9 @@ After you create the link, follow best practices to maintain the link:
 
 - [Best practices to maintain the link](managed-instance-link-best-practices.md)
 
-## Extend an Always On availability group to Azure (preview)
+## Extend an Always On availability group to Azure
 
-Use [multiple-database link mode](#link-modes) to extend an existing SQL Server Always On availability group to Azure SQL Managed Instance. For preview requirements and setup, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
+Use [multiple-database link mode](#link-modes) to extend an existing SQL Server Always On availability group to Azure SQL Managed Instance. For requirements and setup, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 
 ## Disaster recovery
 
@@ -157,7 +159,7 @@ To offload your workload to your SQL managed instance, connect your application 
 - The [VNet-local endpoint](/azure/azure-sql/managed-instance/connectivity-architecture-overview#vnet-local-endpoint), which is accessible from within the virtual network that hosts your SQL managed instance or from peered networks. This is the recommended approach when your application runs in Azure or connects through a VPN or ExpressRoute.
 - The [public endpoint](/azure/azure-sql/managed-instance/connectivity-architecture-overview#public-endpoint), which is accessible over the internet. Use this approach when your application needs to connect from outside the virtual network and peering or private endpoints aren't available. The public endpoint carries client traffic only and can't be used for the link's data replication, which always uses the VNet-local endpoint.
 
-The link allows for consolidation and deconsolidation of workloads in Azure. For example, you can replicate databases from multiple SQL Server instances to a single SQL Managed Instance deployment in Azure (consolidation), or you can replicate databases from a single SQL Server instance to multiple SQL managed instances in any Azure region worldwide (deconsolidation). The latter option provides you with an efficient way to quickly bring your workloads closer to your customers in any region worldwide, which you can use as read-only replicas.
+The link allows for consolidation and deconsolidation of workloads in Azure. For example, you can replicate databases from multiple SQL Server instances to a single SQL Managed Instance deployment in Azure (consolidation), or you can replicate databases from a single SQL Server instance to multiple managed instances in any Azure region worldwide (deconsolidation). The latter option provides you with an efficient way to quickly bring your workloads closer to your customers in any region worldwide, which you can use as read-only replicas.
 
 ## Migrate to Azure
 
@@ -183,7 +185,7 @@ You can reduce your on-premises management and operation costs while enjoying th
 
 ## License-free passive DR replica
 
-You can save on vCore licensing costs if you activate the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for secondary passive disaster recovery only SQL managed instances that don't have any workloads. 
+You can save on vCore licensing costs if you activate the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) for secondary passive disaster recovery only managed instances that don't have any workloads.
 
 To get started, review [License-free passive replica](managed-instance-link-disaster-recovery.md#license-free-passive-dr-replica). 
 
@@ -222,7 +224,7 @@ Data replication limitations include:
 Configuration limitations include: 
 
 - If there are multiple SQL Server instances on a server, you can configure a link for each instance, but you must configure each instance to use a separate database mirroring endpoint, with a dedicated port per instance. Only the default instance should use port 5022 for the database mirroring endpoint. 
-- In single-database link mode, each link replicates one database. You can replicate multiple databases by establishing separate single-database links. To replicate all databases in an existing availability group through one link, use [multiple-database link mode (preview)](managed-instance-link-extend-availability-group.md). The required cumulative updates and opt-in are mandatory on every SQL Server replica; see [AG extension supportability](managed-instance-link-extend-availability-group.md#supportability).
+- In single-database link mode, each link replicates one database. You can replicate multiple databases by establishing separate single-database links. To replicate all databases in an existing availability group through one link, use [multiple-database link mode](managed-instance-link-extend-availability-group.md). The required cumulative updates and opt-in are mandatory on every SQL Server replica; see [AG extension supportability](managed-instance-link-extend-availability-group.md#supportability).
 - Single-database link mode requires an availability group containing only one database. This restriction doesn't apply to multiple-database link mode, which replicates all databases in the existing group. Don't remove databases from your availability group to use multiple-database mode; follow [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 - A single General Purpose or Business Critical SQL Managed Instance supports up to 100 links, and a single Next-gen General Purpose SQL Managed Instance supports up to 500 links, from the same, or from multiple SQL Server sources.
 - A Managed Instance link can replicate a database of any size if it fits into the chosen storage size of the target SQL Managed Instance deployment.
@@ -240,8 +242,8 @@ Feature limitations include:
    - If you're migrating a database that is configured as a Publisher in a transactional replication topology by using the link, you must reconfigure the database as a Publisher on the target instance after the migration is complete.
 - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 - If you're using Transparent Data Encryption (TDE) to encrypt SQL Server databases, you need to export the database encryption key from SQL Server and upload it to Azure Key Vault, and you need to also configure the BYOK TDE option on SQL Managed Instance before creating the link.
-- If [accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-concepts) is disabled on your source SQL Server 2019 and later instances, you can no longer enable it after migrating to Azure SQL Managed Instance. Additionally, if the persistent version store (PVS) isn't set to `PRIMARY`, you can experience issues with restore operations on the target SQL managed instance.
-- If [Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) is disabled on the source SQL Server instance, you can't use Service Broker on the target SQL managed instance after migration.
+- Starting with SQL Server 2019, if [accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-concepts) is disabled on a source database, the disabled setting is preserved when you migrate that database to Azure SQL Managed Instance. You can't enable accelerated database recovery yourself on the migrated database. Contact Microsoft Support to enable it on that database. This is a per-database setting, so other databases on the managed instance aren't affected. Additionally, if the persistent version store (PVS) isn't set to `PRIMARY`, you can experience issues with restore operations on the target SQL managed instance.
+- If [Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) is disabled on a source SQL Server database, the disabled setting is preserved when you migrate that database to Azure SQL Managed Instance. You can't enable Service Broker yourself on the migrated database. Contact Microsoft Support to enable it on that database. This is a per-database setting, so other databases on the managed instance aren't affected.
 - You can't link SQL Managed Instance databases that are encrypted with service-managed TDE keys to SQL Server. You can link an encrypted database to SQL Server only if you encrypted it with a customer-managed key and the destination server has access to the same key that's used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). 
 - You can't establish a link between SQL Server and SQL Managed Instance if the functionality that you use on the SQL Server instance isn't supported on the SQL managed instance. For example: 
     - You can't replicate databases with file tables and file streams, because SQL Managed Instance doesn't support file tables or file streams.

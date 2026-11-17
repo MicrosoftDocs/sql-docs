@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_adddistributor (Transact-SQL)"
 description: Adds an entry in the sys.servers and marks the server entry as a Distributor, storing property information.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 08/18/2026
+author: mladjoa
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
@@ -71,7 +71,11 @@ The password of the **distributor_admin** login. *@password* is **sysname**, wit
 
 #### [ @security_mode = ] *security_mode*
 
-[!INCLUDE [ssinternalonly-md](../../includes/ssinternalonly-md.md)]
+Determines the authentication type to be used when connecting from the Publisher to the remote Distributor. @security_mode is int, with a default of 1.
+
+0 specifies SQL Server authentication
+1 specifies Windows authentication
+5 specifies Microsoft Entra authentication using default managed identity of the Publisher. Applicable only when both Publisher and remote Distributor are Azure SQL Managed Instance resources.
 
 #### [ @encrypt_distributor_connection = ] N'*encrypt_distributor_connection*'
 

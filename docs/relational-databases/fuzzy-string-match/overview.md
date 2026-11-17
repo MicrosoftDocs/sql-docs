@@ -3,8 +3,8 @@ title: Fuzzy String Match
 description: Look up data with fuzzy or approximate values.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: abhtiwar, wiassaf
-ms.date: 09/15/2026
+ms.reviewer: abhtiwar, randolphwest, wiassaf
+ms.date: 10/16/2026
 ms.service: sql
 ms.topic: overview
 ms.custom:
@@ -16,12 +16,11 @@ monikerRange: "=azuresqldb-current || =fabric-sqldb"
 
 [!INCLUDE [sqlserver2025-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2025-asdb-asmi-fabricsqldb.md)]
 
-Use fuzzy, or approximate, string matching to check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption. Corruption includes spelling errors, transposed characters, missing characters, or abbreviations. Fuzzy string matching uses algorithms to detect similar sounding strings.
+Use fuzzy, or approximate, string matching to check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption. Corruption includes spelling errors, transposed characters, missing characters, or abbreviations. Fuzzy string matching uses algorithms to detect similar strings.
 
 > [!NOTE]  
-> Fuzzy string matching is currently in preview for [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] and requires enabling the [preview feature database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features).
->
-> Fuzzy string matching is available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
+> - Fuzzy string matching functions are generally available starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)] CU11. On earlier SQL Server 2025 builds, these functions are in preview. If they're not enabled by default on your build, set [PREVIEW_FEATURES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#preview-features) to `ON`.
+> - Fuzzy string matching is available in Azure SQL Managed Instance with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy).
 
 ## Fuzzy functions
 
@@ -43,7 +42,7 @@ Use fuzzy, or approximate, string matching to check if two strings are similar, 
 
 The following examples demonstrate the fuzzy string matching functions.
 
-### Example table
+### A. Create sample word pairs
 
 Before you can run example queries, create and populate an example table.
 
@@ -80,7 +79,7 @@ VALUES ('Colour', 'Color'),
        ('Cheque', 'Check'); -- Bank cheque vs. check
 ```
 
-### Example *EDIT_DISTANCE*
+### B. Find word pairs within an edit distance threshold
 
 ```sql
 SELECT WordUK,
@@ -115,7 +114,7 @@ Centre                         Center                         2
 Theatre                        Theater                        2
 ```
 
-### Example *EDIT_DISTANCE_SIMILARITY*
+### C. Find word pairs above an edit distance similarity threshold
 
 ```sql
 SELECT WordUK,
@@ -147,7 +146,7 @@ Programme                      Program                        78
 Grey                           Gray                           75
 ```
 
-### Example *JARO_WINKLER_DISTANCE*
+### D. Find word pairs within a Jaro-Winkler distance threshold
 
 ```sql
 SELECT WordUK,
@@ -177,7 +176,7 @@ Programme                      Program                        0.0444444444444444
 Metre                          Meter                          0.0466666666666667
 ```
 
-### Example *JARO_WINKLER_SIMILARITY*
+### E. Find word pairs above a Jaro-Winkler similarity threshold
 
 ```sql
 SELECT WordUK,
@@ -211,9 +210,9 @@ Analyse                        Analyze                        94
 Defence                        Defense                        94
 ```
 
-### Example query with all functions
+### F. Compare all fuzzy string matching functions
 
-The following query demonstrates all of the regular expression functions currently available.
+The following query demonstrates all of the fuzzy string matching functions currently available.
 
 ```sql
 SELECT T.source_string,
@@ -255,7 +254,7 @@ END
 
 ## Related content
 
-- [EDIT_DISTANCE (Transact-SQL) preview](../../t-sql/functions/edit-distance-transact-sql.md)
-- [EDIT_DISTANCE_SIMILARITY (Transact-SQL) preview](../../t-sql/functions/edit-distance-similarity-transact-sql.md)
-- [JARO_WINKLER_DISTANCE (Transact-SQL) preview](../../t-sql/functions/jaro-winkler-distance-transact-sql.md)
-- [JARO_WINKLER_SIMILARITY (Transact-SQL) preview](../../t-sql/functions/jaro-winkler-similarity-transact-sql.md)
+- [EDIT_DISTANCE (Transact-SQL)](../../t-sql/functions/edit-distance-transact-sql.md)
+- [EDIT_DISTANCE_SIMILARITY (Transact-SQL)](../../t-sql/functions/edit-distance-similarity-transact-sql.md)
+- [JARO_WINKLER_DISTANCE (Transact-SQL)](../../t-sql/functions/jaro-winkler-distance-transact-sql.md)
+- [JARO_WINKLER_SIMILARITY (Transact-SQL)](../../t-sql/functions/jaro-winkler-similarity-transact-sql.md)

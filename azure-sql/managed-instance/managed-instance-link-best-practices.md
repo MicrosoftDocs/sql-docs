@@ -2,9 +2,9 @@
 title: Managed Instance link best practices
 titleSuffix: Azure SQL Managed Instance
 description: Learn about best practices when using the link feature for Azure SQL Managed Instance.
-author: djordje-jeremic
-ms.author: djjeremi
-ms.reviewer: danil
+author: danimir
+ms.author: danil
+ms.reviewer: vanto
 ms.date: 01/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
@@ -191,4 +191,3 @@ To learn more about the link:
 For other replication and migration scenarios, consider:
 - [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
 - [Log Replay Service (LRS)](log-replay-service-overview.md)
-

@@ -36,8 +36,10 @@ This article discusses both automated and manual methods to rotate the TDE prote
    -  Switching to a different key
    -  Switching between supported key types, such as asymmetric (RSA) and symmetric (AES) keys
 
-      > [!NOTE]  
-      > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview. You may see this capability appear over time depending on your region and service deployment status.
+- For Azure SQL Database, use AES-256 symmetric keys for new TDE protectors. If the current TDE protector uses RSA, manually rotate it to a new AES-256 key. Changing from RSA to AES requires switching to a different key rather than creating a new version of the existing key.
+
+> [!NOTE]  
+> Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database.
 
 ## Prerequisites
 

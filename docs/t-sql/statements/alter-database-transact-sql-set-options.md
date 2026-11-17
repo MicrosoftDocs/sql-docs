@@ -1910,7 +1910,7 @@ SET
 }
 
 <db_encryption_option> ::=
-  ENCRYPTION { ON | OFF }
+  ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_update_option> ::=
   { READ_ONLY | READ_WRITE }
@@ -2222,13 +2222,27 @@ You can determine this option's status by examining the `is_cursor_close_on_comm
 
 Controls the database encryption state.
 
-#### ENCRYPTION { ON | OFF }
+#### ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
-Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent data encryption for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
+- `ON`
 
-When encryption is enabled at the database level, all file groups are encrypted. Any new file groups inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation fails.
+  Sets the database to be encrypted.
 
-You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+- `OFF`
+
+  Sets the database to not be encrypted.
+
+- `SUSPEND`
+
+  Pauses the encryption scan that runs after you enable or disable transparent data encryption, or after you change the encryption key. This option is in preview.
+
+- `RESUME`
+
+  Resumes a paused encryption scan. This option is in preview.
+
+For more information about database encryption, see [Transparent data encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent data encryption for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
+
+You can see the encryption state of the database and the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-objects/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 #### \<db_update_option> ::=
 

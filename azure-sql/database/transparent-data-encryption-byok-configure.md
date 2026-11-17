@@ -22,8 +22,8 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 This article shows how to use a key from Azure Key Vault for transparent data encryption (TDE) on Azure SQL Database. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md). If you want Azure portal instructions on how to enable TDE with a customer-managed key from Azure Key Vault, see [Create server configured with user-assigned managed identity and customer-managed TDE](transparent-data-encryption-byok-create-server.md).
 
-> [!NOTE] 
-> Azure SQL Database supports both asymmetric (RSA) and symmetric (AES) keys for customer-managed Transparent Data Encryption, depending on the configuration. Support for symmetric (AES) keys is currently in public preview and is limited to Azure SQL Database. You might see this capability appear over time depending on your region and service deployment status. For details, see [Transparent Data Encryption with customer-managed keys (BYOK)](transparent-data-encryption-byok-overview.md).
+> [!NOTE]
+> For Azure SQL Database, use an AES-256 symmetric key stored in Azure Key Vault Premium or Azure Key Vault Managed HSM for new TDE protectors. Azure SQL Managed Instance requires an asymmetric RSA key. For supported key types and migration guidance, see [Transparent Data Encryption with customer-managed keys](transparent-data-encryption-byok-overview.md).
 
 ## Prerequisites for PowerShell
 
@@ -161,9 +161,9 @@ az sql db create --name <dbname> --server <servername> --resource-group <rgname>
 ## Grant Azure Key Vault permissions to your server
 
 ```azurecli
-# create Azure Key Vault, key and grant permission
-az keyvault create --name <kvname> --resource-group <rgname> --location <location> --enable-soft-delete true
-az keyvault key create --name <keyname> --vault-name <kvname> --protection software
+# create a Premium Azure Key Vault, an AES-256 key, and grant permission
+az keyvault create --name <kvname> --resource-group <rgname> --location <location> --sku premium --enable-purge-protection true --enable-rbac-authorization false
+az keyvault key create --name <keyname> --vault-name <kvname> --kty oct-HSM --size 256 --protection hsm
 az keyvault set-policy --name <kvname>  --object-id <objectid> --resource-group <rgname> --key-permissions wrapKey unwrapKey get
 ```
 

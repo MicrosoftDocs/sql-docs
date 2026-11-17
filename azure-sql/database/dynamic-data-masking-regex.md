@@ -1,11 +1,11 @@
 ---
-title: "Regex-based dynamic data masking (preview)"
+title: "Regex-based dynamic data masking"
 titleSuffix: Azure SQL Database
 description: Use REGEXP_REPLACE in Azure SQL Database dynamic data masking to define pattern-driven masks for emails, phone numbers, and other structured string data.
 author: madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto, wiassaf
-ms.date: 11/03/2026
+ms.date: 11/06/2026
 ms.service: azure-sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -14,20 +14,17 @@ ms.custom:
 monikerRange: "=azuresql || =azuresql-db"
 ai-usage: ai-assisted
 ---
-# Regex-based dynamic data masking in Azure SQL Database (preview)
+# Regex-based dynamic data masking in Azure SQL Database
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 This article shows you how to use the `REGEXP_REPLACE` masking function to define pattern-driven [dynamic data masking](dynamic-data-masking-overview.md) rules in Azure SQL Database. Regex-based masking lets you mask variable-length string data and preserve specific segments that built-in masks can't express.
 
-> [!IMPORTANT]
-> Regex-based dynamic data masking is currently in preview for Azure SQL Database. Preview features are provided "as is" and are excluded from the service-level agreements and limited warranty. Use this feature only in nonproduction environments. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
-
 ## Overview
 
 Dynamic data masking (DDM) in Azure SQL Database dynamically hides sensitive data in query results before the data is sent to the application. This feature reduces accidental exposure of sensitive information and removes the need to add masking logic to your application code.
 
-DDM lets database administrators and developers define masking rules for sensitive columns centrally in the database. Nonprivileged users see obfuscated values, while the actual data remains intact in storage.
+DDM lets database administrators and developers define masking rules for sensitive columns centrally in the database. Nonprivileged users see masked values, while the actual data remains intact in storage.
 
 ## Limitations of built-in masking functions
 
@@ -73,7 +70,7 @@ The regular expression to evaluate against the column value. The maximum length 
 The replacement string applied to every match of *pattern_expression*.
 
 > [!NOTE]
-> When you use `REGEXP_REPLACE` as a masking function, only the *pattern_expression* and *string_replacement* arguments work. The native T-SQL [`REGEXP_REPLACE`](/sql/t-sql/functions/regexp-replace-transact-sql) function also supports *start*, *occurrence*, and *flags* arguments, but you can't override them when you use it as a masking function. The fixed values are *start* = 1, *occurrence* = 0 (replace all matches), and *flags* = `'c'` (case-sensitive).
+> When you use `REGEXP_REPLACE` as a masking function, only the *pattern_expression* and *string_replacement* arguments work. The native T-SQL [`REGEXP_REPLACE`](/sql/t-sql/functions/regexp-replace-transact-sql) function also supports *start*, *occurrence*, and *flags* arguments, but you can't override them when you use it in a masking function. The fixed values are *start* = 1, *occurrence* = 0 (replace all matches), and *flags* = `'c'` (case-sensitive).
 
 The `REGEXP_REPLACE` masking function supports columns of data type `char`, `nchar`, `varchar`, or `nvarchar`, and LOB types (`varchar(max)` and `nvarchar(max)`) up to 2 MB.
 
@@ -195,7 +192,8 @@ WHERE is_masked = 1;
 ## Considerations
 
 - **Regex masks are pattern-dependent.** Validate your regex patterns on representative data before you apply them to production columns.
-- **Unmatched values stay unmasked.** An unmatched pattern returns raw data to nonprivileged users, which can expose sensitive information.
+- **Unmatched values stay masked.** An unmatched pattern returns data with default mask applied to nonprivileged users.
+
 - **Test thoroughly with representative data.** Cover edge cases such as null values, empty strings, and atypical formats your regex might not catch.
 - **Use in nonproduction environments during preview.** Validate thoroughly before you consider this feature for production workloads.
 

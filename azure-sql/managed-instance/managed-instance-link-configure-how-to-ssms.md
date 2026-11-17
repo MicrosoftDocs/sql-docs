@@ -2,9 +2,9 @@
 title: "Configure link with SSMS"
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure a link between SQL Server and Azure SQL Managed Instance with SQL Server Management Studio (SSMS).
-author: djordje-jeremic
-ms.author: djjeremi
-ms.reviewer: danil
+author: danimir
+ms.author: danil
+ms.reviewer: vanto
 ms.date: 09/28/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
@@ -41,12 +41,12 @@ To replicate your databases to your secondary replica through the link, you need
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- The latest [SQL Server Management Studio (SSMS)](/ssms/install/install). Multiple-database link mode requires SSMS 22.10.2 or later.
+- The latest [SQL Server Management Studio (SSMS)](/ssms/install/install). Multiple-database link mode requires SSMS 22.12.1 or later.
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 Consider the following:
 
-- This article describes single-database link mode, which replicates one database per link. For an existing Always On availability group with multiple databases, follow [Extend an Always On availability group to Azure SQL Managed Instance (preview)](managed-instance-link-extend-availability-group.md).
+- This article describes single-database link mode, which replicates one database per link. For an existing Always On availability group with multiple databases, follow [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 - Collation between SQL Server and SQL Managed Instance should be the same. A mismatch in collation can cause a mismatch in server name casing and prevent a successful connection from SQL Server to SQL Managed Instance.
 - Error 1475 on your initial SQL Server primary indicates that you need to start a new backup chain by creating a full backup without the `COPY ONLY` option.
 - To establish a link, or fail over, *from* SQL Managed Instance to SQL Server 2025, you must configure your SQL managed instance with the [SQL Server 2025 update policy](update-policy.md#sql-server-2025-update-policy). Data replication and failover *from* SQL Managed Instance to SQL Server 2025 isn't supported by instances configured with a mismatched update policy.
@@ -106,7 +106,7 @@ After you create the link, your source database gets a read-only copy on your ta
 1. On the **Specify Link Options** page, provide a name for your link. If you select multiple databases, the wizard automatically appends the database name to the end of the name you provide so you don't have to include it yourself. Check the boxes if you want to enable connectivity troubleshooting and, for SQL Server 2022 or SQL Server 2025, if you plan to use the link for two-way disaster recovery. Select **Next**.
 
    > [!NOTE]
-   > To replicate multiple databases through one link, use [multiple-database link mode (preview)](managed-instance-link-extend-availability-group.md) with SSMS 22.10.2 or later and enable the mode on every SQL Server replica. No access request is required. The steps in this article configure single-database links.
+   > To replicate multiple databases through one link, use [multiple-database link mode](managed-instance-link-extend-availability-group.md) with SSMS 22.12.1 or later and enable the mode on every SQL Server replica. No access request is required. The steps in this article configure single-database links.
 
 1. On the **Requirements** page, the wizard validates requirements to establish a link to your secondary. Select **Next** after all the requirements are validated, or resolve any requirements that aren't met and then select **Re-run Validation**. 
 1. On the **Select Databases** page, choose the database you want to replicate to your secondary replica via the link. Selecting multiple databases creates multiple distributed availability groups, one for each link. Select **Next**. 

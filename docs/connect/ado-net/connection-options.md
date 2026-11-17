@@ -4,7 +4,7 @@ description: Reference for every Microsoft.Data.SqlClient connection string keyw
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 10/21/2026
+ms.date: 11/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -251,7 +251,7 @@ Microsoft Entra ID methods need the `Microsoft.Data.SqlClient.Extensions.Azure` 
 | --- | --- | --- | --- | --- |
 | `Encrypt` | None | `Encrypt` | `Mandatory` | `Strict` uses TDS 8.0 and always validates the server certificate. `Mandatory`, `true`, or `yes` encrypts the connection. `Optional`, `false`, or `no` encrypts the whole connection only when the server requires it. When the server supports encryption but doesn't require it, only the login packet is encrypted. |
 | `Trust Server Certificate` | `TrustServerCertificate` | `TrustServerCertificate` | `false` | `true` skips server certificate validation. Ignored when `Encrypt=Strict`. Don't use it in production. |
-| `Host Name In Certificate` | `HostNameInCertificate` | `HostNameInCertificate` | Empty | A fallback name for certificate validation. SqlClient first validates the certificate against the server name in `Data Source`. It checks `Host Name In Certificate` only when that name doesn't match, so a wrong value doesn't cause a failure when the server name already matches. It doesn't pin a certificate. To require a specific certificate, use `Server Certificate`. It doesn't change the network destination or bypass trust chain and expiration checks. Leave it unset when the server name already matches the certificate. |
+| `Host Name In Certificate` | `HostNameInCertificate` | `HostNameInCertificate` | Empty | The name SqlClient expects in the server certificate, used instead of the server name in `Data Source`. Starting with versions 7.1.2 and 7.0.4, a value that isn't in the certificate fails the connection, even when the server name matches. Version 6.1.8 enforces this only with managed networking. In earlier versions, SqlClient checked this name only when the server name didn't match the certificate. It doesn't pin a certificate. To require a specific certificate, use `Server Certificate`. It doesn't change the network destination or bypass trust chain and expiration checks. Leave it unset when the server name already matches the certificate. |
 | `Server Certificate` | `ServerCertificate` | `ServerCertificate` | Empty | The path of a PEM, DER, or CER file that must exactly match the server certificate. The driver checks the match only when it validates the certificate, so use it with `Encrypt=Mandatory` or `Encrypt=Strict` and `Trust Server Certificate=false`. A matching file replaces chain and host name validation, so it works with a self-signed certificate that the client doesn't trust. |
 
 For the full validation rules, see [Encryption and certificate validation](encryption-and-certificate-validation.md).

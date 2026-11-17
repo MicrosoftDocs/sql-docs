@@ -4,7 +4,7 @@ description: Configure TLS encryption, validate SQL Server certificates, and cho
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, paulmedynski, cmalhotra
-ms.date: 09/21/2026
+ms.date: 11/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -61,7 +61,7 @@ If the connection uses a Domain Name System (DNS) alias that isn't in the certif
 Server=tcp:sql-alias.contoso.com,1433;Database=<database>;Integrated Security=true;Encrypt=true;TrustServerCertificate=false;HostNameInCertificate=sql-server.contoso.com;MultiSubnetFailover=true;
 ```
 
-`HostNameInCertificate` changes the name SqlClient expects during certificate validation. It doesn't change the network destination or bypass trust-chain and expiration checks. Leave it unset when the server name already matches the certificate.
+`HostNameInCertificate` replaces the server name that SqlClient expects during certificate validation. Starting with versions 7.1.2 and 7.0.4, a value that isn't in the certificate fails the connection, even when the server name matches the certificate. Version 6.1.8 enforces this only with managed networking. It doesn't change the network destination or bypass trust-chain and expiration checks. Leave it unset when the server name already matches the certificate.
 
 ### Pin a specific server certificate
 

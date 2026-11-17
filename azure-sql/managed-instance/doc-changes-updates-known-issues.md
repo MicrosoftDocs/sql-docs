@@ -5,7 +5,7 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: bluefooted
 ms.author: pamela
 ms.reviewer: vanto
-ms.date: 10/12/2026
+ms.date: 11/12/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: troubleshooting-known-issue
@@ -28,7 +28,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Linked server queries that use MSDASQL fail with error 7416](#linked-server-queries-that-use-msdasql-fail-with-error-7416) | April 2026 | Has workaround | |
 | [Restore operation failures after migrating to SQL Managed Instance](#restore-operation-failures-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
 | [Unable to use Service Broker after migrating to SQL Managed Instance](#unable-to-use-service-broker-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
-| [Unable to use accelerated database recovery after migrating to SQL Managed Instance](#unable-to-use-accelerated-database-recovery-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
+| [Unable to use accelerated database recovery after migrating to SQL Managed Instance](#unable-to-use-accelerated-database-recovery-after-migrating-to-sql-managed-instance) | March 2026 | Resolved | May 2026 |
 | [Database becomes unavailable after server restart following MI link failover](#database-becomes-unavailable-after-server-restart-following-mi-link-failover) | May 2026 | Has workaround | |
 | [Misleading error message when connecting to a read replica using invalid credentials](#misleading-error-message-when-connecting-to-a-read-replica-using-invalid-credentials) | February 2026 |No resolution| |
 | [Modifying backup retention period for the free offer](#modifying-backup-retention-period-for-the-free-offer) | June 2025 | Has workaround | |
@@ -300,6 +300,14 @@ If you enable transactional replication on a database in a failover group, the S
 Error logs that are available in SQL Managed Instance aren't persisted, and their size isn't included in the maximum storage limit. Error logs might be automatically erased if failover occurs. Gaps might exist in the error log history because SQL Managed Instance was moved several times on several virtual machines.
 
 ## Resolved
+
+### Unable to use accelerated database recovery after migrating to SQL Managed Instance
+
+**(Resolved in May 2026)** Starting with SQL Server 2019, if you migrate a database to Azure SQL Managed Instance, and the source database has [accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-concepts) disabled, you can't use accelerated database recovery on the target SQL managed instance. 
+
+To work around this issue, make sure you [enable accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-management#enable-accelerated-database-recovery) on the source SQL Server database before you migrate it to SQL Managed Instance. If you already migrated the database without enabling accelerated database recovery, you can enable it on the source SQL Server database, and then re-migrate the database to SQL managed instance.
+
+SQL Server 2017 and earlier versions don't support accelerated database recovery, so this issue doesn't apply to databases migrated from those versions of SQL Server.
 
 ### The event_file target of the system_health event session is not accessible
 

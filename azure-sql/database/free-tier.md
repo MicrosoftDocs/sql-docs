@@ -49,7 +49,7 @@ Choose the Azure portal, Azure CLI, PowerShell, Terraform, an Azure Resource Man
 
 # [Portal](#tab/azure-portal)
 
-Use the Azure portal to create the new free Azure SQL Database. To create a free tier database, follow these steps:
+To create a free tier database in the Azure portal:
 
 1. Go to [Azure SQL hub at aka.ms/azuresqlhub](https://aka.ms/azuresqlhub).
 1. In the pane **Create a database**, select **Start free**.
@@ -217,7 +217,7 @@ Use the [Terraform AzAPI provider](/azure/developer/terraform/azapi/overview-aza
 
 Keep Terraform state and plan files secure, and don't commit them to source control. For the resource properties, see the [database template reference](/azure/templates/microsoft.sql/2023-08-01/servers/databases).
 
-After deployment, [verify the free tier configuration](#verify-the-deployment). If creation fails or its status is uncertain, inspect the existing resource before retrying. Don't remove `useFreeLimit` or enable paid overages as a fallback. To connect from your computer, use the server's existing connectivity configuration or [add a firewall rule for your approved client IP address](firewall-create-server-level-portal-quickstart.md).
+After deployment, [verify the free tier configuration](#verify-the-deployment). If creation fails or its status is uncertain, inspect the resource before retrying. Don't remove `useFreeLimit` or enable paid overages as a fallback. To connect, use the server's existing connectivity or [add a firewall rule for your approved client IP address](firewall-create-server-level-portal-quickstart.md).
 
 # [ARM template](#tab/arm-template)
 
@@ -294,7 +294,7 @@ Use an [ARM template](/azure/azure-resource-manager/templates/overview) to creat
 
 For the resource properties, see the [database template reference](/azure/templates/microsoft.sql/2023-08-01/servers/databases). Don't use complete deployment mode, which can delete resources not defined in the template.
 
-After deployment, [verify the free tier configuration](#verify-the-deployment). If creation fails or its status is uncertain, inspect the existing resource before retrying. Don't remove `useFreeLimit` or enable paid overages as a fallback. To connect from your computer, use the server's existing connectivity configuration or [add a firewall rule for your approved client IP address](firewall-create-server-level-portal-quickstart.md).
+After deployment, [verify the free tier configuration](#verify-the-deployment). If creation fails or its status is uncertain, inspect the resource before retrying. Don't remove `useFreeLimit` or enable paid overages as a fallback. To connect, use the server's existing connectivity or [add a firewall rule for your approved client IP address](firewall-create-server-level-portal-quickstart.md).
 
 # [Agent prompt](#tab/agent-prompt)
 
@@ -374,14 +374,12 @@ Use the database's **Overview** and **Compute + storage** pages in the Azure por
 
 ## Query the database
 
-After you create and verify the database, connect directly to it with the tool or language of your choice. Confirm the query editor's target database before running statements.
+After you create and verify the database, choose a tool or language from [Connect and query Azure SQL Database](connect-query-content-reference-guide.md). Confirm the query editor's target database before running statements.
 
 > [!IMPORTANT]
 > A tutorial's generic `CREATE DATABASE` statement doesn't provision a free tier database. Keep using the database you created through the free tier offer. Choose sample table instructions that don't require another database, a restore, or an import.
 
-- Use the [query editor in the Azure portal](query-editor.md) to run queries without installing a tool.
-- Use [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms), [connect with the MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-database-connections), or use [`sqlcmd`](/sql/tools/sqlcmd/sqlcmd-utility) for interactive queries. In the MSSQL first-query quickstart, start with [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) to skip generic database creation and use sample tables in your provisioned database.
-- To query the database from an application, choose a driver or provider from [Microsoft SQL drivers and frameworks](/sql/connect/sql-connection-libraries/). For example, use `Microsoft.Data.SqlClient` for .NET or `mssql-python` for Python. Then follow the [language quickstarts](connect-query-content-reference-guide.md#libraries) to connect and run your first query.
+In the MSSQL first-query quickstart, start with [Use an existing database](/sql/tools/visual-studio-code-extensions/mssql/mssql-run-first-query#use-an-existing-database) to use sample tables in your provisioned database without creating another database.
 
 If you selected **Sample** during creation, continue with [Learn SQL with AdventureWorksLT](free-tier-sample.md). The tutorial covers read-only queries, joins, and summaries, and includes a prompt for building a product explorer with an AI coding assistant.
 
@@ -407,9 +405,9 @@ For setup and preview prerequisites, see [Monitor a Microsoft SQL database](/fab
 
 ## Upgrade to Hyperscale
 
-As your workload grows, you can [upgrade your existing free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md). The guide covers prerequisites, separate updates to disable the free tier and convert the database, and verification.
+As your workload grows, follow [Upgrade a free tier database to Hyperscale](free-tier-upgrade-to-hyperscale.md) for prerequisites, steps, and verification.
 
-Allowing paid overages doesn't disable the free tier. Leaving the free tier is permanent for this database, and paid General Purpose usage can accrue even if the subsequent Hyperscale conversion fails. Review the upgrade guide before making changes.
+Allowing paid overages doesn't disable the free tier. Leaving it is permanent, and paid General Purpose usage can accrue even if Hyperscale conversion fails.
 
 <a id="tips-on-managing-vcore-seconds"></a>
 <a id="monthly-free-limits"></a>

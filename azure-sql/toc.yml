@@ -291,7 +291,7 @@
       items:
       - name: Deploy a free database
         href: database/free-tier.md
-      - name: Learn SQL with AdventureWorksLT
+      - name: Query sample data
         href: database/free-tier-sample.md
       - name: Upgrade to Hyperscale
         href: database/free-tier-upgrade-to-hyperscale.md

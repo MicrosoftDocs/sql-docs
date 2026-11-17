@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_changepublication_snapshot (Transact-SQL)"
 description: sp_changepublication_snapshot Changes properties of the Snapshot Agent for the specified publication.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -143,6 +143,7 @@ The security mode used by the agent when connecting to the Publisher. *@publishe
 
 - `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication
 - `1` specifies Windows authentication
+- `5` specifies Microsoft Entra managed identity authentication using default managed identity of Distributor. Applicable only when both Distributor and Publisher are Azure SQL Managed Instance resources.
 
 > [!IMPORTANT]  
 > [!INCLUDE [ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]
@@ -151,22 +152,22 @@ The security mode used by the agent when connecting to the Publisher. *@publishe
 
 The login used when connecting to the Publisher. *@publisher_login* is **sysname**, with a default of `NULL`.
 
-*@publisher_login* must be specified when *@publisher_security_mode* is `0`. If *@publisher_login* is `NULL` and *@publisher_security_mode* is `1`, then the Windows account specified in *@job_login* is used when connecting to the Publisher.
+*@publisher_login* must be specified when *@publisher_security_mode* is `0`. If *@publisher_login* is `NULL` and *@publisher_security_mode* is `1`, then the Windows account specified in *@job_login* is used when connecting to the Publisher. Not used if *@publisher_security_mode* is `5`.
 
 #### [ @publisher_password = ] N'*publisher_password*'
 
-The password used when connecting to the Publisher. *@publisher_password* is **sysname**, with a default of `NULL`.
+The password used when connecting to the Publisher. *@publisher_password* is **sysname**, with a default of `NULL`. Not used if *@publisher_security_mode* is `5`.
 
 > [!IMPORTANT]  
 > Don't use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.
 
 #### [ @job_login = ] N'*job_login*'
 
-The login for the Windows account under which the agent runs. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. This can't be changed for a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] publisher.
+The login for the Windows account under which the agent runs. *@job_login* is **nvarchar(257)**, with a default of `NULL`. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. This can't be changed for a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] publisher. Not used if *@job_security_mode* is `5`.
 
 #### [ @job_password = ] N'*job_password*'
 
-The password for the Windows account under which the agent runs. *@job_password* is **sysname**, with a default of `NULL`. You must supply this parameter when creating a new Snapshot Agent job.
+The password for the Windows account under which the agent runs. *@job_password* is **sysname**, with a default of `NULL`. You must supply this parameter when creating a new Snapshot Agent job. Not used if *@job_security_mode* is `5`.
 
 > [!IMPORTANT]  
 > When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.
@@ -180,7 +181,9 @@ Specifies a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] publi
 
 #### [ @job_security_mode = ] *job_security_mode*
 
-[!INCLUDE [ssinternalonly-md](../../includes/ssinternalonly-md.md)]
+- `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] authentication of the agent to the Distributor.
+- `1` specifies Windows authentication of the agent to the Distributor.
+- `5` specifies Microsoft Entra managed identity authentication of the agent to the Distributor by using the default managed identity of the Distributor. This value is applicable only in transactional replication when both the Distributor and the Publisher are Azure SQL Managed Instance resources.
 
 ## Return code values
 

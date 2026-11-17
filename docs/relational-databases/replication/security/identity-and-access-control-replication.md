@@ -1,9 +1,9 @@
 ---
 title: "Identity and Access Control (Replication)"
 description: "Identity and Access Control (Replication)"
-author: adbadram
-ms.author: adbadram
-ms.date: 09/25/2024
+author: MladjoA
+ms.author: mlandzic
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to
@@ -41,8 +41,10 @@ monikerRange: "=azuresqldb-mi-current || >=sql-server-2017"
   
  Filtering published data allows you to restrict access to data and allows you to specify the data that is available at the Subscriber. For example, you can filter the **Customer** table so that corporate partners only receive information about those customers whose **ShareInfo** column has a value of "yes." For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
 
-## Manage Logins and Passwords in Replication
-Specify the logins and passwords for replication agents when you configure replication. After configuring replication, you can change logins and passwords. For more information, see [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). If you change the password for an account used by a replication agent, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
+## Manage authentication in replication 
+Whenever possible, use Windows authentication with SQL Server resources participating in replication and Microsoft Entra managed identity authentication with Azure SQL Managed Instance and Azure SQL Database resources participating in replication. By using these authentication methods, you don't need to manage or specify sensitive authentication information like a login or password.
+
+Specify the logins and passwords for replication agents when you configure replication only if that is your only viable option. After configuring replication, you can change logins and passwords. For more information, see [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). If you change the password for an account used by a replication agent, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
 
 Support for the use of group Managed Service Accounts (gMSA) was introduced in SQL Server 2014.
 

@@ -5,7 +5,7 @@ description: This article provides an overview of the resource limits for Azure 
 author: vladai78
 ms.author: vladiv
 ms.reviewer: sachinp, wiassaf
-ms.date: 09/28/2026
+ms.date: 11/02/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -129,8 +129,8 @@ The following table lists the maximum storage size based on the number of vCores
 | Hardware generation | General Purpose<sup>1</sup> | Next-gen General Purpose | Business Critical<sup>2</sup> |
 | --- | --- | --- | --- |
 | **Standard-series (Gen5)** | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for 16, 24 vCores<br />- 32 TB for 32, 40, 64, 80 vCores | - 1 TB for 4, 8, 16 vCores<br />- 2 TB for 24 vCores<br />- 4 TB for 32, 40, 64, 80 vCores |
-| **Premium-series** | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores<br />- 2 TB for 8, 10, 12 vCores<br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24, 32, 40, 48, 56 vCores<br />- 5.5 TB or 16 TB (depending on the region) for 64, 80, 96, 128 vCores<sup>3</sup> |
-| **Memory optimized premium-series** | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4, 6 vCores<br />- 8 TB for 8, 10, 12 vCores<br />- 16 TB for 16, 20, 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores<br />- 2 TB for 8, 10, 12 vCores<br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24 vCores<br />- 5.5 TB or 8 TB (depending on the region) for 32, 40 vCores<sup>4</sup><br />- 12 TB for 48, 56 vCores<br />- 16 TB for 64, 80, 96, 128 vCores |
+| **Premium-series** | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4 vCores<br />- 4 TB for 6 vCores<br />- 8 TB for 8 vCores<br />- 10 TB for 10 vCores<br />- 12 TB for 12 vCores<br />- 16 TB for 16 vCores<br />- 20 TB for 20 vCores<br />- 24 TB for 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores<br />- 2 TB for 8, 10, 12 vCores<br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24, 32, 40, 48, 56 vCores<br />- 5.5 TB or 16 TB (depending on the region) for 64, 80, 96, 128 vCores<sup>3</sup> |
+| **Memory optimized premium-series** | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes | - 2 TB for 4 vCores<br />- 4 TB for 6 vCores<br />- 8 TB for 8 vCores<br />- 10 TB for 10 vCores<br />- 12 TB for 12 vCores<br />- 16 TB for 16 vCores<br />- 20 TB for 20 vCores<br />- 24 TB for 24 vCores<br />- 32 TB for 32, 40, 48, 56, 64, 80, 96, 128 vCores | - 1 TB for 4, 6 vCores<br />- 2 TB for 8, 10, 12 vCores<br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24 vCores<br />- 5.5 TB or 8 TB (depending on the region) for 32, 40 vCores<sup>4</sup><br />- 12 TB for 48, 56 vCores<br />- 16 TB for 64, 80, 96, 128 vCores |
 
 <sup>1</sup> In the General Purpose service tier, `tempdb` uses local SSD storage.
 
@@ -153,7 +153,7 @@ The following table lists the maximum storage size based on the number of vCores
 | Max log file size | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
 | Data/Log IOPS (approximate) | 500 - 7500 per file<br />\*[Increase file size to get more IOPS](#iops-and-throughput) | Reserved storage * 3 - up to the VM limit. 300 in case of 32 GB, 64 GB, and 96 GB of reserved storage.<br />VM limit depends on the number of vCores<br />6400 IOPS for a VM with 4 vCores - 80 K IOPS for a VM with 128 vCores | 16 K - 320 K (4000 IOPS/vCore)<br />Add more vCores to get better IO performance. |
 | Data throughput (approximate) | 100 - 250 MiB/s per file<br />\*[Increase the file size to get better IO performance](#iops-and-throughput) | IOPS / 30 MBps - up to the VM limit. 75 MBps in case of 32 GB, 64 GB, and 96 GB of reserved storage. | Not limited. |
-| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#iops-and-throughput) | Standard-series:<br />4.5 MiB/s per vCore<br />Max 120 MiB/s<br /><br />Premium-series and Memory optimized premium-series:<br /> 4.5 MiB/s per vCore<br />Max 192 MiB/s | Standard-series:<br />16 MiB/s per vCore<br />Max 160 MiB/s<br /><br />Premium-series and Memory optimized premium-series:<br />16 MiB/s per vCore<br />Max 192 MiB/s |
+| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#iops-and-throughput) | 6 MiB/s per vCore<br />Max 220 MiB/s per instance<br />Applies to all hardware configurations. | Standard-series:<br />16 MiB/s per vCore<br />Max 160 MiB/s<br /><br />Premium-series and Memory optimized premium-series:<br />16 MiB/s per vCore<br />Max 192 MiB/s |
 | Storage IO latency (approximate<sup>1</sup>) | 5-10 ms | 3-5 ms | 1-2 ms |
 | In-memory OLTP | Not supported | Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions | 30000 | 30000 | 30000 |
@@ -224,6 +224,8 @@ The following table shows the max IOPS and throughput per number of vCores alloc
 | 40 | 64,000 | 1,152 |
 | 48 | 76,800 | 1,152 |
 | 56 - 128 | 80,000 | 1,200 |
+
+Log write throughput has a separate instance-level limit of 6 MiB/s per vCore, up to 220 MiB/s per instance, across all Next-gen General Purpose hardware configurations. Increasing IOPS doesn't increase this log write throughput limit.
 
 #### IOPS pricing in Next-gen General Purpose
 
@@ -305,12 +307,11 @@ Find more information about the [resource limits in SQL Managed Instance pools i
 
 ## Flexible memory
 
-By default, the amount of memory allocated to Azure SQL Managed Instance is a static value determined by the selected number of vCores. The flexible memory feature allows you to change the amount of memory allocated to your SQL managed instance without changing the number of vCores. This feature is useful for workloads that require more memory than the default allocation for a given number of vCores.
+By default, the memory allocated to your SQL managed instance depends on the number of vCores you select. Flexible memory lets you adjust instance memory without changing the number of vCores. This feature is useful for workloads that require more memory than the default allocation for a given number of vCores.
 
-The flexible memory feature is available in the following service tiers and deployment configurations on [Premium-series](#hardware-configuration-characteristics) hardware:
+Flexible memory is generally available on [Premium-series](#hardware-configuration-characteristics) hardware for [Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md) and Business Critical instances, with either [local](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) or [zone redundancy](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability).
 
-- **[Next-gen General Purpose](service-tiers-next-gen-general-purpose-use.md)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for locally redundant instances and is currently in preview for zone-redundant instances. Zone-redundant Next-gen General Purpose instances require Azure Elastic SAN zone-redundant storage (ZRS), which isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
-- **[Business Critical](../database/service-tiers-sql-database-vcore.md#business-critical)**: [locally redundant](high-availability-sla-local-zone-redundancy.md#locally-redundant-availability) and [zone-redundant](high-availability-sla-local-zone-redundancy.md#zone-redundant-availability) instances. Flexible memory is generally available (GA) for the Business Critical service tier.
+Zone-redundant Next-gen General Purpose instances require Azure Elastic SAN zone-redundant storage (ZRS), which isn't available in some multi-zone regions that support zone redundancy for SQL Managed Instance. For Elastic SAN ZRS availability, see [Create and deploy an Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-create#limitations).
 
 You can change the amount of memory allocated to your SQL managed instance at any time for new and existing instances by using the Azure portal or the REST API. The memory allocation change applies to all databases in the instance and performs a failover of the instance as the final operation step. Check [management operations duration](management-operations-duration.md#management-operation-duration) to determine the estimated time for the operation to complete.
 

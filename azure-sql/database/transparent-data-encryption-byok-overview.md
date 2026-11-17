@@ -5,7 +5,7 @@ description: Learn how customer-managed keys in Azure Key Vault protect Azure SQ
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 10/06/2026
+ms.date: 10/14/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
@@ -131,16 +131,14 @@ Depending on the Azure SQL offering and TDE configuration, the TDE protector can
   - Supported for Azure SQL Database and Azure SQL Managed Instance
 
 - Symmetric keys (AES)
-  - Supported in Azure Key Vault Premium (preview) and Azure Key Vault Managed HSM
+  - Supported in Azure Key Vault Premium and Azure Key Vault Managed HSM
   - Supported key sizes: 128-bit, 192-bit, and 256-bit
-  - Supported only for Azure SQL Database, currently in public preview
-
-> [!NOTE]
-> Transparent Data Encryption with symmetric keys (AES) is currently in preview. Preview features are released with limited capabilities, but Microsoft makes them available on a *preview* basis so customers can get early access and provide feedback. Preview features are subject to separate [supplemental preview terms](https://go.microsoft.com/fwlink/?linkid=2240967), and aren't subject to SLAs. Support is provided as best effort in certain cases. However, Microsoft Support is eager to get your feedback on the preview functionality, and might provide best effort support in certain cases. Preview features might have limited or restricted functionality, and might be available only in selected geographic areas.
+  - AES-256 is recommended for new TDE protectors
+  - Supported only for Azure SQL Database
 
 #### Key management behavior for symmetric (AES) keys
 
-You can use symmetric (AES) keys stored in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM as the TDE protector. To get started with a key from an on-premises hardware security module (HSM), import the key into either service. After the initial import, all ongoing key lifecycle operations take place in Azure Key Vault Premium (preview) or Azure Key Vault Managed HSM. Point-in-time recovery, geo-disaster recovery, and key revalidation all depend on the key remaining available there. Maintain local backups of imported keys to support recovery and revalidation scenarios. This behavior applies only to symmetric (AES) keys, not to asymmetric (RSA) keys.
+You can use symmetric (AES) keys stored in Azure Key Vault Premium or Azure Key Vault Managed HSM as the TDE protector. To get started with a key from an on-premises hardware security module (HSM), import the key into either service. After the initial import, all ongoing key lifecycle operations take place in Azure Key Vault Premium or Azure Key Vault Managed HSM. Point-in-time recovery, geo-disaster recovery, and key revalidation all depend on the key remaining available there. Maintain local backups of imported keys to support recovery and revalidation scenarios. This behavior applies only to symmetric (AES) keys, not to asymmetric (RSA) keys.
 
 #### Key state and validity requirements
 
@@ -190,14 +188,10 @@ To import HSM-protected keys into Azure Managed HSM, see [Import HSM-protected k
 
   - **Monitor** and configure Azure Key Vault **alerts**. For more information on monitoring and alerting, see [Monitor Azure Key Vault](/azure/key-vault/general/monitor-key-vault) and [Configure Azure Key Vault alerts](/azure/key-vault/general/alert).
 
-- To align with long-term cryptographic resilience planning, consider using AES-256 symmetric keys as the TDE protector.
+- For Azure SQL Database, use an AES-256 symmetric key stored in Azure Key Vault Premium as the TDE protector. AES-256 provides greater long-term cryptographic resilience than RSA against potential advances in quantum computing. If your existing TDE protector uses an RSA key, create an AES-256 key and [manually rotate the TDE protector](transparent-data-encryption-byok-key-rotation.md#manual-key-rotation) to use the new key. Changing from RSA to AES requires switching the TDE protector to a different key. Rotation is an online operation that decrypts and re-encrypts only the database encryption key (DEK), not the database files.
 
-  Large-scale quantum computing is expected to break public-key cryptographic algorithms such as RSA. Symmetric cryptography, including AES, is considered quantum-resilient at sufficiently large key sizes.
-
-  Microsoft's broader quantum-safe security strategy emphasizes crypto-agility. Adopt stronger symmetric algorithms where they're supported, and plan for future cryptographic transitions as guidance and standards evolve.
-
-  > [!IMPORTANT]  
-  > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
+  > [!IMPORTANT]
+  > TDE with symmetric (AES) keys is supported only for Azure SQL Database. Azure SQL Managed Instance requires an asymmetric (RSA) key.
 
 - Set a resource lock on the key vault to control who can delete this critical resource and prevent accidental or unauthorized deletion. Learn more about [resource locks](/azure/azure-resource-manager/management/lock-resources).
 
@@ -235,14 +229,10 @@ To import HSM-protected keys into Azure Managed HSM, see [Import HSM-protected k
 
   - **Monitor** and configure Azure Key Vault Managed HSM **alerts**. For more information on monitoring and alerting, see [Monitor Azure Key Vault](/azure/key-vault/general/monitor-key-vault) and [Configure Azure Key Vault alerts](/azure/key-vault/general/alert).
 
-- To align with long-term cryptographic resilience planning, consider using AES-256 symmetric keys as the TDE protector.
+- For Azure SQL Database, use an AES-256 symmetric key stored in Azure Key Vault Managed HSM as the TDE protector. AES-256 provides greater long-term cryptographic resilience than RSA against potential advances in quantum computing. If your existing TDE protector uses an RSA key, create an AES-256 key and [manually rotate the TDE protector](transparent-data-encryption-byok-key-rotation.md#manual-key-rotation) to use the new key. Changing from RSA to AES requires switching the TDE protector to a different key. Rotation is an online operation that decrypts and re-encrypts only the database encryption key (DEK), not the database files.
 
-  Large-scale quantum computing is expected to break public-key cryptographic algorithms such as RSA. Symmetric cryptography, including AES, is considered quantum-resilient at sufficiently large key sizes.
-
-  Microsoft's broader quantum-safe security strategy emphasizes crypto-agility. Adopt stronger symmetric algorithms where they're supported, and plan for future cryptographic transitions as guidance and standards evolve.
-
-  > [!IMPORTANT]  
-  > Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
+  > [!IMPORTANT]
+  > TDE with symmetric (AES) keys is supported only for Azure SQL Database. Azure SQL Managed Instance requires an asymmetric (RSA) key.
 
 - Set a resource lock on the managed HSM to control who can delete this critical resource and prevent accidental or unauthorized deletion. Learn more about [resource locks](/azure/azure-resource-manager/management/lock-resources).
 
@@ -295,8 +285,10 @@ You can rotate the TDE protector by switching the configuration to use a new key
 - Switching to a different key
 - Switching between supported key types, such as asymmetric (RSA) and symmetric (AES) keys
 
+For Azure SQL Database, use AES-256 symmetric keys for new TDE protectors. If the current TDE protector uses RSA, manually rotate it to a new AES-256 key. Automatic rotation moves the TDE protector to a newer version of the same key and doesn't change the key type.
+
 > [!NOTE]  
-> Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database and is in public preview.
+> Transparent Data Encryption with symmetric keys (AES) is currently supported only for Azure SQL Database.
 
 [Rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md) can either be done manually or by using the automated rotation feature.
 
@@ -321,7 +313,7 @@ To avoid issues while establishing or during geo-replication, when automatic rot
 
 ## Inaccessible TDE protector
 
-When TDE is configured to use a customer-managed key, continuous access to the TDE protector is required for the database to stay online. If the server loses access to the customer-managed TDE protector in Azure Key Vault or Azure Managed HSM, in up to 10 minutes a database starts denying all connections with the corresponding error message and change its state to *Inaccessible*. The only action allowed on a database in the Inaccessible state is deleting it.
+When you configure TDE to use a customer-managed key, the database needs continuous access to the TDE protector to stay online. If the server loses access to the customer-managed TDE protector in Azure Key Vault or Azure Managed HSM, in up to 10 minutes a database starts denying all connections with the corresponding error message and changes its state to *Inaccessible*. The only action allowed on a database in the Inaccessible state is deleting it.
 
 ### Inaccessible state
 
@@ -331,13 +323,24 @@ If the server loses access to the customer-managed TDE protector in Azure Key Va
 
 ### Restore database access after an Azure Key Vault or Azure Managed HSM error
 
-After access to the key is restored, bringing the database back online requires additional time and steps, which might vary based on the duration of key unavailability and the size of the data within the database.
+If Azure SQL Database or Azure SQL Managed Instance loses access to the TDE protector in Azure Key Vault or Azure Managed HSM, restore access to the key as soon as possible.
+If you restore key access within 30 minutes of losing access, the database recovers automatically within one hour after key access is restored.
+If key access isn't restored within 30 minutes, the database becomes inaccessible and automatic recovery is no longer possible.
 
-If key access is restored within 30 minutes, the database automatically heals within the subsequent hour. However, if key access is restored after more than 30 minutes, automatic healing of the database isn't possible. In such cases, restoring the database involves extra procedures through the Azure portal and can be time-consuming, depending on the database's size.
+> [!IMPORTANT]
+> Revalidation requires access to the **original key** that was previously used as the TDE protector. Creating a new key version doesn't resolve the issue.
 
-Once the database is back online, previously configured server-level settings, including failover group configurations, tags, and database-level settings such as elastic pool configurations, read scale, auto pause, point-in-time restore history, long-term retention policy, and others are lost. Hence, it's recommended that customers implement a notification system to detect the loss of encryption key access within 30 minutes. After the 30-minute window has expired, we advise validating all server and database level settings on the recovered database.
+To restore database access:
 
-Following is a view of the extra steps required on the portal to bring an inaccessible database back online.
+1. Resolve the issue that caused Azure SQL Database or Azure SQL Managed Instance to lose access to the original TDE protector key version. If the key was deleted, recover the original key. If the key version has expired, extend its expiration date.
+1. In the Azure portal, open your logical server or managed instance, and select **Transparent data encryption**. Select **Retry existing key**.
+1. Select **Validate key** to start revalidation.
+
+After you start revalidation, recovery time depends on the size of the database.
+
+After recovery, you might lose some previously configured server-level and database-level settings. These settings can include failover group configurations, tags, elastic pool configurations, read scale, auto pause, point-in-time restore history, and long-term retention policies. If key access wasn't restored within 30 minutes, verify all server-level and database-level settings.
+
+Configure alerts for loss of encryption key access so you can respond promptly and restore access within the 30-minute window.
 
 :::image type="content" source="media/transparent-data-encryption-byok-overview/customer-managed-tde-inaccessible-database.jpg" alt-text="Screenshot of a TDE BYOK inaccessible database.":::
 

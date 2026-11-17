@@ -229,7 +229,7 @@ The encryption_scan_state column has been added to the `sys.dm_database_encrypti
 If the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] instance restarts while its encryption scan is suspended, a message is logged in the error log during startup. The message indicates that an existing scan has been paused.
 
 > [!IMPORTANT]  
-> Suspend and Resume TDE scan feature isn't currently available in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+> Suspending and resuming a TDE scan is in preview for Azure SQL Database. It isn't currently available in Azure SQL Managed Instance or Azure Synapse Analytics. For more information, see [Suspend and resume a TDE scan](/azure/azure-sql/database/transparent-data-encryption-tde-overview#suspend-and-resume-a-tde-scan).
 
 ## TDE and transaction logs
 

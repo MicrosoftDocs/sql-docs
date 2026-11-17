@@ -1,9 +1,10 @@
 ---
 title: "Replication Snapshot Agent"
 description: In SQL Server, the Replication Snapshot Agent prepares snapshot files, stores them in a folder, and records synchronization jobs in the distribution database.
-author: adbadram
-ms.author: adbadram
-ms.date: 05/30/2025
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: reference
@@ -14,10 +15,10 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Snapshot Agent"
   - "command prompt [SQL Server replication]"
   - "Snapshot Agent, parameter reference"
-monikerRange: "=azuresqldb-current || >=sql-server-2017"
+monikerRange: "=azuresqldb-current || >=sql-server-2017 || =azuresqldb-mi-current"
 ---
 # Replication Snapshot Agent
-[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The Replication Snapshot Agent is an executable file that prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database.  
   
 > [!NOTE]  
@@ -39,7 +40,7 @@ snapshot [ -?]
 [-DistributorDeadlockPriority [-1|0|1] ]  
 [-DistributorLogin distributor_login]  
 [-DistributorPassword distributor_password]  
-[-DistributorSecurityMode [0|1] ]  
+[-DistributorSecurityMode [0|1|5] ]  
 [-DynamicFilterHostName dynamic_filter_host_name]  
 [-DynamicFilterLogin dynamic_filter_login]  
 [-DynamicSnapshotLocation dynamic_snapshot_location]   
@@ -63,7 +64,7 @@ snapshot [ -?]
 [-PublisherFailoverPartner server_name[\instance_name] ]  
 [-PublisherLogin publisher_login]  
 [-PublisherPassword publisher_password]   
-[-PublisherSecurityMode [0|1] ]  
+[-PublisherSecurityMode [0|1|5] ]  
 [-QueryTimeOut query_time_out_seconds]  
 [-ReplicationType [1|2] ]  
 [-RowDelimiter row_delimiter]  
@@ -108,8 +109,8 @@ snapshot [ -?]
  **-DistributorPassword** _distributor_password_  
  Is the password used when connecting to the Distributor using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.
   
- **-DistributorSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
+ **-DistributorSecurityMode** [ **0**| **1** | **5**]  
+ Specifies the security mode for the agent authentication to Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode. Value of `5` indicates Microsoft Entra managed identity authentication with default managed identity of the resource hosting agent - Publisher or remote Distributor. Applicable only when both Publisher and Distributor are Azure SQL Managed Instance resources.
   
  **-DynamicFilterHostName** _dynamic_filter_host_name_  
  Is used to set a value for [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) in filtering when a dynamic snapshot is created. For example, if the subset filter clause `rep_id = HOST_NAME()` is specified for an article, and you set the **DynamicFilterHostName** property to "FBJones" before calling the Merge Agent, only rows having "FBJones" in the **rep_id** column will be replicated.  
@@ -236,8 +237,8 @@ A valid TLS/SSL certificate is defined with a fully qualified domain name of the
  **-PublisherPassword**  _publisher_password_  
  Is the password used when connecting to the Publisher using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. 
   
- **-PublisherSecurityMode** [ **0**| **1**]  
- Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
+ **-PublisherSecurityMode** [ **0**| **1** | **5**]  
+ Specifies the security mode for the agent authentication to Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode. Value of `5` indicates Microsoft Entra managed identity authentication with default managed identity of the resource hosting agent - Publisher or remote Distributor. Applicable only when both Publisher and Distributor are Azure SQL Managed Instance resources.
   
  **-QueryTimeOut** _query_time_out_seconds_  
  Is the number of seconds before the query times out. The default is 1800 seconds.  

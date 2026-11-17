@@ -5,7 +5,7 @@ description: Learn about the MSSQL extension for Visual Studio Code, which provi
 author: cwebb-msft
 ms.author: chweb
 ms.reviewer: yoleichen
-ms.date: 08/17/2026
+ms.date: 11/09/2026
 ms.service: sql
 ms.subservice: vs-code-sql-extensions
 ms.topic: overview
@@ -65,11 +65,13 @@ The following table provides an overview of the features available in the MSSQL 
 | [Database object search](mssql-database-operations.md#database-object-search) | GA | Find tables, views, functions, and stored procedures with type-aware search |
 | [Import flat file](mssql-database-operations.md#import-flat-file) | GA | Import `.csv` and `.txt` files into new SQL Server tables |
 | [Query profiler](mssql-query-profiler.md) | GA | Real-time database activity monitoring with Extended Events |
+| [Query Performance Dashboard](mssql-query-performance-dashboard.md) | Public preview | Analyze Query Store data, compare query performance, and review execution history, waits, and plans |
 | [Schema designer with GitHub Copilot](mssql-schema-designer-copilot.md) | GA | Natural language schema design with visual change tracking and ORM script generation |
 | [Data API builder](mssql-data-api-builder.md) | GA | Create REST, GraphQL, and MCP endpoints for SQL databases |
 | [SQL notebooks](mssql-sql-notebooks.md) | GA | Jupyter-based SQL notebooks with rich results and multi-kernel support |
 | [SQL Formatter](mssql-sql-formatter.md) | GA | Format T-SQL on demand or on save with configurable formatting options |
 | [Azure integration](mssql-azure-integration.md) | GA | Provision Azure SQL databases directly from Visual Studio Code, starting with the free tier |
+| [Local-to-cloud deployment wizard](mssql-local-to-cloud-deployment.md) | Public preview | Deploy local database schema or schema and data to a free-tier Azure SQL Database with compatibility checks |
 | [Shortcuts configuration](#shortcuts-configuration) | GA | Manage keyboard shortcuts for frequently used queries and other editor commands |
 
 ### Connection dialog

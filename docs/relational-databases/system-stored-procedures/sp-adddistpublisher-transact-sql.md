@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_adddistpublisher (Transact-SQL)"
 description: "Configures a Publisher to use a specified distribution database."
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -60,12 +60,13 @@ The name of the distribution database. *@distribution_db* is **sysname**, with n
 
 #### [ @security_mode = ] *security_mode*
 
-The implemented security mode. This parameter is only used by replication agents to connect to the Publisher for queued updating subscriptions or with a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *@security_mode* is **int**, and can be one of these values.
+Determines the authentication mode that replication agents use to connect to the Publisher for queued updating subscriptions, with a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, or transactional replication between Azure SQL Managed Instance resources. *@security_mode* is **int**, and can be one of these values.
 
 | Value | Description |
 | --- | --- |
 | `0` | Replication agents at the Distributor use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication to connect to the Publisher. |
 | `1` (default) | Replication agents at the Distributor use Windows Authentication to connect to the Publisher. |
+| `5`  | Replication agents at the Distributor use Microsoft Entra authentication with default managed identity of the Distributor. Applicable only when both Distributor and Publisher are Azure SQL Managed Instance resources. |
 
 #### [ @login = ] N'*login*'
 

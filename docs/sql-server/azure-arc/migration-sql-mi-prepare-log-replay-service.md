@@ -162,7 +162,7 @@ RESTORE HEADERONLY
 
 ## Configure source SQL Server database
 
-Enable accelerated database recovery and Service Broker on your source SQL Server instance if you plan to use these features on the target SQL Managed Instance after migration, as these features can't be enabled after migration if they aren't already enabled on the source SQL Server instance. 
+Service Broker is enabled by default on SQL Server. If you disable Service Broker on the source database and plan to use it after migration, enable it before migrating. Enable accelerated database recovery on the source SQL Server database if you plan to use it on the migrated database on SQL Managed Instance. These database settings are preserved during migration. If either feature is disabled on the source database, you can't enable it on the migrated database on the managed instance.
 
 [!INCLUDE [prepare-database-for-migration](../../../azure-sql/includes/sql-managed-instance/prepare-database-for-migration.md)]
 

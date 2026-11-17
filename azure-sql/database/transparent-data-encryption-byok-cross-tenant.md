@@ -61,7 +61,7 @@ The following diagram represents the steps for a scenario that utilizes an Azure
 
 1. [Create](/azure/key-vault/general/quick-create-portal) or use existing key vault or managed HSM and grant [key permissions](transparent-data-encryption-byok-overview.md) to the multitenant application
 
-   1. [Create](/azure/key-vault/keys/quick-create-portal) a new or use an existing key
+   1. [Create](/azure/key-vault/keys/quick-create-portal) a new key or use an existing key. For new TDE protectors, use an AES-256 symmetric key stored in Azure Key Vault Premium or Azure Key Vault Managed HSM. For supported key types and requirements, see [Transparent Data Encryption with customer-managed keys](transparent-data-encryption-byok-overview.md).
 
    1. [Retrieve the key from Azure Key Vault or Azure Managed HSM](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault) and record the **Key Identifier**
 

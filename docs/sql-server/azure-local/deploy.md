@@ -142,7 +142,7 @@ For details, see the [REST endpoint permissions and prerequisites](../../relatio
 
 - **SQL Server integration:** Send authorized REST requests from SQL Server 2025 to a compatible chat-completion endpoint and process the response in your application workflow.
 - **Local model inference:** Foundry Local on Azure Local is in preview. Use supported chat-capable catalog models or [bring-your-own models](/azure/azure-sovereign-clouds/private/foundry-local/concept-bring-your-own-models), and complete the offering's deployment and access prerequisites.
-- **Developer tools:** Review [GitHub Copilot bring your own key](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key) for supported model endpoints and client requirements before connecting Visual Studio Code to a local endpoint.
+- **Developer tools:** Review GitHub Copilot bring-your-own-key support for [VS Code](https://docs.github.com/en/copilot/concepts/models/bring-your-own-key) and [SQL Server Management Studio (SSMS)](/ssms/github-copilot/ai-models) for supported model endpoints and client requirements before connecting either tool to a local endpoint. In SSMS, custom models are limited to Copilot Chat, and supporting services such as embeddings, intent detection, and repository indexing might still use the Copilot API. Validate each tool's authentication and connectivity requirements before using it in a disconnected environment; a local model doesn't guarantee a fully disconnected workflow.
 
 For more information, see the [Foundry Local documentation](/azure/foundry-local/) and the endpoint requirements in [sp_invoke_external_rest_endpoint](../../relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md).
 

@@ -1,10 +1,10 @@
 ---
 title: "sys.sp_addpublication_snapshot (Transact-SQL)"
 description: sp_addpublication_snapshot creates the Snapshot Agent for the specified publication.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: vanto
-ms.date: 06/19/2026
+author: MladjoA
+ms.author: mlandzic
+ms.reviewer: WilliamDAssafMSFT
+ms.date: 11/08/2026
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -144,6 +144,7 @@ The the security mode used by the agent when connecting to the Publisher. *@publ
 - `2` specifies Microsoft Entra password authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `3` specifies Microsoft Entra integrated authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
 - `4` specifies Microsoft Entra token authentication, starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 6.
+- `5` specifies Microsoft Entra managed identity authentication by using the default managed identity of the Distributor. This value applies only to transactional replication when both the Publisher and Distributor are Azure SQL Managed Instance resources.
 
 #### [ @publisher_login = ] N'*publisher_login*'
 

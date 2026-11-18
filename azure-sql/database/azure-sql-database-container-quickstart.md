@@ -16,7 +16,7 @@ monikerRange: "=azuresql || =azuresql-db"
 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-In this quickstart, you get started with the Azure SQL Database container, create a local database, and run your first query. Then, use [Azure SQL Dev Hub](https://microsoft.github.io/azure-sql-dev-hub/) to build an application with samples, prompts, and AI coding agent skills.
+In this quickstart, you get started with the Azure SQL Database container, create a local database, and run your first query. Then, use [Azure SQL Dev Hub](https://aka.ms/azuresql-hub) to build an application with samples, prompts, and AI coding agent skills.
 
 > [!NOTE]
 > Azure SQL Database container is in public preview.
@@ -32,7 +32,7 @@ The container is free for local development and testing. You don't need an Azure
 > [!IMPORTANT]
 > The container is for development, testing, CI, and demos, not production. It doesn't provide Azure-managed services such as automated backups, high availability, or elastic pools. For production, deploy your database and application to Azure services, not the local container.
 
-For more information, see [What is the Azure SQL Database container?](https://microsoft.github.io/azure-sql-database-container/what-is-the-container.html).
+For more information, see [What is the Azure SQL Database container?](https://aka.ms/azuresqldb-container).
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ For more information, see [What is the Azure SQL Database container?](https://mi
 - Internet access for the initial image download. Local queries can run offline afterward; external services still require connectivity.
 - An available host port, such as `1433`, and a unique container name. The examples use `sqldb`. Choose a different name or host port if either is already in use.
 
-Review the [container prerequisites](https://microsoft.github.io/azure-sql-database-container/prerequisites.html) for current platform and runtime requirements.
+Review the [container prerequisites](https://microsoft.github.io/azure-sql-dev-hub/container/get-started.html#prerequisites) for current platform and runtime requirements.
 
 ## Choose a container runtime
 
@@ -119,7 +119,7 @@ This check connects inside the container, not through the published host port. T
 
 If SQL doesn't accept connections, inspect the logs with `docker logs --tail 80 sqldb`, `podman logs --tail 80 sqldb`, `wslc logs --tail 80 sqldb`, or `container logs -n 80 sqldb`. Check the password policy and available resources before retrying.
 
-If you prefer a graphical setup experience, follow [Build locally with Azure SQL Database container and SQL Server container](/sql/tools/visual-studio-code-extensions/mssql/mssql-local-container) in the MSSQL extension for Visual Studio Code. Choose **Azure SQL Database container (Preview)**, not **SQL Server container**.
+If you prefer a graphical setup experience, follow [Build locally with Azure SQL Database container and SQL Server container](../../docs/tools/visual-studio-code-extensions/mssql/mssql-local-container.md) in the MSSQL extension for Visual Studio Code, or [Connect and Query an Azure SQL Database Container | Microsoft Learn](/ssms/quickstarts/ssms-connect-query-azure-sql-database-container?view=sql-server-ver17) for SSMS.
 
 ## Create a database and run a query
 
@@ -159,13 +159,13 @@ You now have a local database for application development. Use the same database
 
 ## Build with Azure SQL Dev Hub
 
-Visit [Azure SQL Dev Hub](https://microsoft.github.io/azure-sql-dev-hub/) to choose an application scenario and get started with prompts, samples, and agent skills. You can build a task-tracking app, create an API, or explore vector search for a retrieval-augmented generation (RAG) application.
+Visit [Azure SQL Dev Hub](https://aka.ms/azuresql-hub) to choose an application scenario and get started with prompts, samples, and agent skills. You can build a task-tracking app, create an API, or explore vector search for a retrieval-augmented generation (RAG) application.
 
 Some Dev Hub prompts, such as the JavaScript app prompt, target cloud databases and require Microsoft Entra authentication. Before running a prompt locally, adapt both its instructions and connection configuration to your container's server, mapped port, database name, and authentication method. If you use the setup guide's default SQL-authentication path, replace cloud-only authentication requirements with your configured SQL credentials, keep credentials out of source control, and trust the self-signed certificate only for the local container connection. Review generated SQL, permissions, and schema changes before you run them.
 
 When you're ready to move to Azure, create a database in Azure SQL Database, deploy your schema and data, and update your application's connection configuration. An Azure subscription is required for cloud resources. The [Azure SQL Database free tier](free-tier.md) is a separate cloud option with its own allowances and limits.
 
-Before deployment, test against Azure SQL Database in Azure. Preview restrictions, defaults, and feature support can differ from the cloud service. Review the [known limitations](https://microsoft.github.io/azure-sql-database-container/known-limitations.html).
+Before deployment, test against Azure SQL Database in Azure. Preview restrictions, defaults, and feature support can differ from the cloud service. Review the [known limitations](https://microsoft.github.io/azure-sql-dev-hub/container/faq.html#feature-availability).
 
 ## Clean up resources
 

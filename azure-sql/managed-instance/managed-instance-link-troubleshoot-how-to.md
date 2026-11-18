@@ -5,11 +5,12 @@ description: Learn how to troubleshoot common issues with a link between SQL Ser
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 06/25/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: 
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 # Troubleshoot link - Azure SQL Managed Instance
 
@@ -23,7 +24,7 @@ Many issues with creating the link can be resolved by [checking the network](#te
 
 ## Initial seeding
 
-When establishing a link between SQL Server and Azure SQL Managed Instance, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive part of the operation. Once initial seeding completes data is synchronized, and only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of data, workload intensity on the primary databases, and the speed of the link between networks of the primary and secondary replicas. 
+When you establish a link between SQL Server and Azure SQL Managed Instance, an initial seeding phase occurs before data replication starts. During initial seeding, the primary replica transfers a full backup of the database to the secondary replica and restores it there. The database is in the `RESTORING` state on the secondary replica and isn't available for use during this phase. The initial seeding phase is the longest and most expensive part of the operation. When initial seeding finishes, the database becomes available in read-only mode on the secondary replica, and only subsequent data changes are replicated. The time it takes for initial seeding to finish depends on the size of the data, workload intensity on the primary databases, and the speed of the link between the primary and secondary replica networks.
 
 If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably affected. You can use the stated seeding speed, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100-GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded to a different link. If the link can only transfer 10 GB per hour, then seeding a 100-GB database can take about 10 hours. If there are multiple databases to replicate via multiple links, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase might take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth.
 
@@ -149,6 +150,19 @@ Some possible *replicaState* values are:
 - *LinkFailoverInProgress*: Failover is in progress
 
 For a complete list of link state properties, review the [Distributed Availability Groups - GET](/rest/api/sql/distributed-availability-groups/get?view=rest-sql-2024-05-01-preview&tabs=HTTP&preserve-view=true#definitions) REST API command. 
+
+## Troubleshoot multiple-database link mode
+
+Multiple-database link mode replicates all databases in a SQL Server Always On availability group through a single Managed Instance link. You can extend an existing availability group or create a new one. This mode isn't enabled by default. To learn how to enable and configure it, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
+
+Each database progresses through seeding and replication individually. Use the following stored procedures on supported SQL Server versions to check database-level health and resolve issues:
+
+- `sys.sp_milink_check`: Provides replication health information for individual databases. Use it to determine whether a database is in the seeding or replication phase and identify whether progress has stopped.
+- `sys.sp_milink_reseed`: Restarts seeding for an individual database when seeding isn't progressing, without requiring you to remove and re-add the database to the availability group.
+- `sys.sp_milink_repair`: Repairs replication for an individual database when replication isn't progressing.
+
+> [!NOTE]
+> If these stored procedures aren't available on your SQL Server instance, verify that you installed the required cumulative update (CU). For supported SQL Server versions and required updates, see [Multiple-database link supportability](managed-instance-link-extend-availability-group.md#supportability).
 
 ## Planned failover times out
 

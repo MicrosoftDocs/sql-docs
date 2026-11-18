@@ -19,13 +19,13 @@ Microsoft.Data.SqlClient is the supported .NET data provider for SQL Server, Azu
 
 ## Choose a release
 
-Use a supported General Availability (GA) release for production applications. The latest GA release is [Microsoft.Data.SqlClient 7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1).
+Use a supported General Availability (GA) release for production applications. The latest GA release is [Microsoft.Data.SqlClient 7.1.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.2).
 
 | Release line | Latest version | Support level | Choose it when |
 | --- | --- | --- | --- |
-| 7.1 | [7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1) | Standard Term Support (STS) | You need current driver features and can update on the regular release cadence. |
-| 7.0 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | Standard Term Support (STS) | You need servicing fixes while you prepare to upgrade before support ends on December 17, 2026. |
-| 6.1 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | Long Term Support (LTS) | You prefer a longer support period and don't need features introduced in 7.x. |
+| 7.1 | [7.1.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.2) | Standard Term Support (STS) | You need current driver features and can update on the regular release cadence. |
+| 7.0 | [7.0.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.4) | Standard Term Support (STS) | You need servicing fixes while you prepare to upgrade before support ends on December 17, 2026. |
+| 6.1 | [6.1.8](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.8) | Long Term Support (LTS) | You prefer a longer support period and don't need features introduced in 7.x. |
 
 For current patch versions, support dates, target frameworks, and database compatibility, see [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md).
 
@@ -43,10 +43,10 @@ The command selects the latest stable version compatible with the project. To pi
 dotnet add package Microsoft.Data.SqlClient --version <version>
 ```
 
-The command adds a `PackageReference` element to your project file. For version 7.1.1, the project file contains this line:
+The command adds a `PackageReference` element to your project file. For version 7.1.2, the project file contains this line:
 
 ```xml
-<PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+<PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.2" />
 ```
 
 If you also add `Microsoft.Data.SqlClient.Extensions.Azure`, its `PackageReference` uses the same version.

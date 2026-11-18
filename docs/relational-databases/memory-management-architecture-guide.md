@@ -1,8 +1,8 @@
 ---
 title: Memory Management Architecture Guide
 description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.date: 12/29/2025
 ms.service: sql
 ms.subservice: supportability

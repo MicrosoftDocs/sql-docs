@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -623,7 +623,7 @@ ms.topic: include
 | <a id="933"></a> 933 | 21 | Yes | Database '%.\*ls' cannot be started because some of the database functionality is not available in the current edition of SQL Server. |
 | <a id="934"></a> 934 | 21 | Yes | SQL Server cannot load database '%.\*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture. |
 | <a id="935"></a> 935 | 21 | Yes | The script level for '%.\*ls' in database '%.\*ls' cannot be downgraded from %d to %d, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database. |
-| <a id="936"></a> 936 | 16 | No | This snapshot "%.\*ls" is invalid because its source database was dropped. Undo the database drop (mark the database for recovery) or recreate the snapshot from a valid source |
+| <a id="936"></a> 936 | 16 | No | Could not access snapshot "%.\*ls" because its source database is not available (it was dropped or is in recovery). If the source database was dropped, mark it for recovery or recreate the snapshot from a valid source. |
 | <a id="938"></a> 938 | 21 | Yes | The target database version %d is not supported by the current code version %d. Change target version to a supported level and restart the server. |
 | <a id="939"></a> 939 | 16 | Yes | Database '%.\*ls' cannot be started because Persistent Version Store initialization failed with error %d. Refer to previous errors in the error log to identify the cause and correct any associated problems. |
 | <a id="941"></a> 941 | 16 | No | Database '%.\*ls' cannot be opened because it is not started. Retry when the database is started. |

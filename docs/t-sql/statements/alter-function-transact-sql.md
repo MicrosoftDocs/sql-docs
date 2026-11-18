@@ -3,7 +3,7 @@ title: "ALTER FUNCTION (Transact-SQL)"
 description: ALTER FUNCTION (Transact-SQL)
 author: uc-msft
 ms.author: umajay
-ms.date: 05/27/2025
+ms.date: 11/10/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -30,6 +30,16 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 > You can specify `CREATE OR ALTER FUNCTION` to create a new function if one does not exist by that name, or alter an existing function, in a single statement.
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For supported function syntax and options in Warehouse and SQL analytics endpoints
+> in Microsoft Fabric, see
+> [CREATE FUNCTION](create-function-sql-data-warehouse.md?view=fabric&preserve-view=true).
+> `CREATE OR ALTER FUNCTION` uses those same definition and inlining requirements.
+
+::: moniker-end
 
 ## Syntax
 

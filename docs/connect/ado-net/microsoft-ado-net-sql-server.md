@@ -45,7 +45,7 @@ For higher security and to support configuration across environments, keep conne
 
 The C# snippet in this article omits `using` directives and class wrappers for brevity.
 
-The snippet assumes a project that targets .NET 8 or later versions and references the `Microsoft.Data.SqlClient` and `Microsoft.Data.SqlClient.Extensions.Azure` 7.1.1 packages. The host, such as the .NET Generic Host or ASP.NET Core, supplies the <xref:Microsoft.Extensions.Logging.ILogger> and the `IConfiguration`, and configuration supplies the server name in `Sql:Server` and the database name in `Sql:Database`.
+The snippet assumes a project that targets .NET 8 or later versions and references the `Microsoft.Data.SqlClient` and `Microsoft.Data.SqlClient.Extensions.Azure` 7.1.2 packages. The host, such as the .NET Generic Host or ASP.NET Core, supplies the <xref:Microsoft.Extensions.Logging.ILogger> and the `IConfiguration`, and configuration supplies the server name in `Sql:Server` and the database name in `Sql:Database`.
 
 ```csharp
 public static async Task<string> QueryDatabaseNameAsync(

@@ -80,7 +80,7 @@ The transaction log records each transaction made in a database. For more inform
 
 ## Permissions
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] requires `VIEW SERVER STATE` permission on the server to run `DBCC SQLPERF(LOGSPACE)`. To reset wait and latch statistics requires `ALTER SERVER STATE` permission on the server.
+To run `DBCC SQLPERF(LOGSPACE)`, SQL Server 2019 and earlier versions require `VIEW SERVER STATE` permission on the server. SQL Server 2022 and later versions require `VIEW SERVER PERFORMANCE STATE` permission on the server. To reset wait and latch statistics requires `ALTER SERVER STATE` permission on the server.
 
 [!INCLUDE [ssSDS](../../includes/sssds-md.md)] Premium and Business Critical tiers require the `VIEW DATABASE STATE` permission in the database. [!INCLUDE [ssSDS](../../includes/sssds-md.md)] Standard, Basic, and General Purpose tiers require the [!INCLUDE [ssSDS](../../includes/sssds-md.md)] admin account.
 

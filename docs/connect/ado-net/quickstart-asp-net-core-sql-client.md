@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 # Quickstart: Use Microsoft.Data.SqlClient in an ASP.NET Core app
 
-In this quickstart, you build an ASP.NET Core minimal API with Microsoft.Data.SqlClient 7.1.1.
+In this quickstart, you build an ASP.NET Core minimal API with Microsoft.Data.SqlClient 7.1.2.
 
 You start with an empty folder, the .NET SDK, and a SQL Server or Azure SQL database that you can reach from your computer. You finish with a web API that adds a message to a table and reads it back by ID.
 
@@ -45,8 +45,8 @@ In an empty folder, run these commands:
 ```console
 dotnet new web --framework net10.0 --name SqlClientWebQuickstart
 cd SqlClientWebQuickstart
-dotnet add package Microsoft.Data.SqlClient --version 7.1.1
-dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.1
+dotnet add package Microsoft.Data.SqlClient --version 7.1.2
+dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.2
 dotnet user-secrets init
 ```
 

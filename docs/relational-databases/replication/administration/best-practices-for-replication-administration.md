@@ -1,8 +1,8 @@
 ---
 title: Best Practices for Replication Administration
 description: SQL Server replication administration requires planning. Review best practices for backup and restore, Replication Monitor thresholds, and schema change propagation.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

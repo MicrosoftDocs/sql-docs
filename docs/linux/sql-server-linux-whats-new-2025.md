@@ -4,10 +4,11 @@ description: In this article, learn about the major features and services availa
 author: AttinderPalSingh
 ms.author: atsingh
 ms.reviewer: amitkh
-ms.date: 08/11/2026
+ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: linux
 ms.topic: whats-new
+ai-usage: ai-assisted
 ms.custom:
   - intro-whats-new
   - linux-related-content
@@ -24,9 +25,18 @@ This article describes the major features and services available for [!INCLUDE [
 
 This section describes updates for each release of [!INCLUDE [sssql25-md](../includes/sssql25-md.md)].
 
+- [Cumulative Update 10](#cumulative-update-10)
 - [Cumulative Update 3](#cumulative-update-3)
 - [Cumulative Update 1](#cumulative-update-1)
 - [GA release](#general-availability)
+
+### Cumulative Update 10
+
+The following updates apply to [!INCLUDE [sssql25-md](../includes/sssql25-md.md)] Cumulative Update (CU) 10.
+
+- **Updated time zone mappings**. SQL Server on Linux maps Vancouver to `British Columbia Standard Time`; Edmonton, Yellowknife, and Inuvik to `Alberta Standard Time`; and Winnipeg and Rainy River to `Manitoba Standard Time`. It also adds mappings for `America/Coyhaique` to `Magallanes Standard Time` and `Europe/Kiev` to `FLE Standard Time`, and updates `Asia/Almaty` and `Asia/Qostanay` to `Qyzylorda Standard Time`.
+
+  For the complete list, see [Time zone mapping for SQL Server 2025 CU 10 and later versions](configure/time-zone.md#sql-server-2025-cu-10-and-later-versions).
 
 ### Cumulative Update 3
 

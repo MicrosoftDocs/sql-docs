@@ -1,9 +1,9 @@
 ---
 title: Cardinality Estimation Feedback
 description: Learn about query processing feedback features, part of the Intelligent Query Processing (IQP) feature set.
-author: adbadram
-ms.author: adbadram
-ms.reviewer: derekw, wiassaf
+author: thesqlsith 
+ms.author: derekw
+ms.reviewer: rajpo, wiassaf
 ms.date: 12/08/2025
 ms.service: sql
 ms.subservice: configuration

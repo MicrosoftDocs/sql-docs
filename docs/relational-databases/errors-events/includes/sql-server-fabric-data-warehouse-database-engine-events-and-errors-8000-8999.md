@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -576,6 +576,7 @@ ms.topic: include
 | <a id="8827"></a> 8827 | 16 | No | Column '%.\*ls.%.\*ls' is invalid in the QUALIFY clause because it is not contained in either an aggregate function or the GROUP BY clause. |
 | <a id="8828"></a> 8828 | 16 | No | Input parameter of QUANTILE function is outside of range \[0, 1\]. |
 | <a id="8829"></a> 8829 | 16 | No | For STRING_AGG(DISTINCT expression, separator), the WITHIN GROUP (ORDER BY) clause must order by the same expression as the DISTINCT argument. |
+| <a id="8830"></a> 8830 | 16 | No | Internal table access error: failed to access sys.index_usage_stats_internal with HRESULT: 0x%x. |
 | <a id="8901"></a> 8901 | 16 | No | Table error: Object ID %d has inconsistent metadata. This error cannot be repaired and prevents further processing of this object. |
 | <a id="8902"></a> 8902 | 17 | No | Memory allocation error during DBCC processing. |
 | <a id="8903"></a> 8903 | 16 | No | Extent %S_PGID in database ID %d is allocated in both GAM %S_PGID and SGAM %S_PGID. |

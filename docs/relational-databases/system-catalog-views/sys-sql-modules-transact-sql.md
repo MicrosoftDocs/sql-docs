@@ -4,7 +4,7 @@ description: sys.sql_modules returns a row for each object that is a SQL languag
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, srdjanmatin
-ms.date: 06/29/2026
+ms.date: 11/10/2026
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -43,7 +43,7 @@ For more information, see [Scalar User-Defined Functions for In-Memory OLTP](../
 | `uses_native_compilation` | **bit** | `0` = not natively compiled<br />`1` = is natively compiled<br /><br />The default value is `0`.<br /><br /> **Applies to**: [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and later versions. |
 | `is_inlineable` | **bit** | Indicates whether the module can be inlined or not. Inlineability is based on the conditions specified in the [requirements](../user-defined-functions/scalar-udf-inlining.md#requirements).<br /><br />`0` = can't be inlined<br />`1` = can be inlined.<br /><br />For scalar user-defined functions (UDFs), the value is `1` if the UDF can be inlined, and `0` otherwise. It always contains a value of `1` for inline table-valued functions (TVFs), and `0` for all other module types.<br /><br />**Applies to**: [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. |
 | `inline_type` | **bit** | Indicates whether inlining is turned on for the module currently. <br />0 = inlining is turned off<br />1 = inlining is turned on.<br />For scalar user-defined functions (UDFs), the value is `1` if inlining is turned on (explicitly or implicitly). The value is always `1` for inline table-valued functions (TVFs), and `0` for other module types.<br /><br />**Applies to**: [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. |
-| `inline_eligibility_mask` | **tinyint** | Indicates which inlining technique is applicable for the module currently. <br />0 = no eligible inlining technique <br />1 = scalar UDF inlining <br />2 = inlining via expression block <br />3 = inlining via expression block or scalar UDF inlining. <br /> <br />For scalar user-defined functions (UDFs), a value of `1` or greater is only possible if inlining is turned on (explicitly or implicitly). The value is always `1` for inline table-valued functions (TVFs), and `0` for other module types.<br /><br />**Applies to**: [!INCLUDE [applies-to-version/fabricse-fabricdw](../../includes/fabric-se-dw.md)] only. |
+| `inline_eligibility_mask` | **tinyint** | Indicates which inlining technique is applicable for the module currently. <br />0 = no eligible inlining technique <br />1 = Scalar UDF inlining <br />2 = Expression Block inlining <br />3 = Expression Block inlining or Scalar UDF inlining. <br /> <br />For scalar user-defined functions (UDFs), a value of `1` or greater is only possible if inlining is turned on (explicitly or implicitly). The value is always `1` for inline table-valued functions (TVFs), and `0` for other module types.<br /><br />For inlining requirements in Microsoft Fabric Data Warehouse, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true#inlining-of-scalar-udf).<br /><br/>**Applies to**: [!INCLUDE [applies-to-version/fabricse-fabricdw](../../includes/fabric-se-dw.md)] only. |
 
 ## Remarks
 

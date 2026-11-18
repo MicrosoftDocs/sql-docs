@@ -4,7 +4,7 @@ description: Find Microsoft.Data.SqlClient release notes, current stable and pre
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, davidengel, paulmedynski, cmalhotra
-ms.date: 10/21/2026
+ms.date: 11/13/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -19,9 +19,9 @@ Microsoft.Data.SqlClient ships independently of .NET. This article summarizes th
 
 | Release line | Latest version | Release date | Support |
 | --- | --- | --- | --- |
-| 7.1 | [7.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.1) | September 2026 | Standard Term Support (STS) |
-| 7.0 | [7.0.3](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.3) | September 2026 | Standard Term Support (STS) |
-| 6.1 | [6.1.7](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.7) | September 2026 | Long Term Support (LTS) |
+| 7.1 | [7.1.2](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.1.2) | November 2026 | Standard Term Support (STS) |
+| 7.0 | [7.0.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/7.0.4) | November 2026 | Standard Term Support (STS) |
+| 6.1 | [6.1.8](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.8) | October 2026 | Long Term Support (LTS) |
 
 Don't use preview releases in production. Preview APIs and behavior can change before General Availability (GA).
 
@@ -33,9 +33,30 @@ These releases changed how existing applications connect. They're listed newest 
 
 | Version | Change | What to do |
 | --- | --- | --- |
+| [7.1.2, 7.0.4, 6.1.8](#hostnameincertificate-enforced) | A configured `HostNameInCertificate` must match the server certificate, even when the certificate already matches the server name. | Remove `HostNameInCertificate` when the server name matches the certificate, or set it to a name in the certificate. |
 | [7.0](#entra-auth-extension-package) | Microsoft Entra authentication moves to `Microsoft.Data.SqlClient.Extensions.Azure`. | Add the extension package when you use an `Active Directory` authentication mode. |
 | [5.0](#encrypt-strict) | `Encrypt=Strict` adds TDS 8.0. `SqlConnectionStringBuilder.Encrypt` changes from `bool` to `SqlConnectionEncryptOption`. | Recompile code that uses `SqlConnectionStringBuilder.Encrypt`. |
 | [4.0](#encrypt-default-true) | `Encrypt` defaults to `true`. | Trust the server certificate, or set `TrustServerCertificate=true` only for development. |
+
+<a id="hostnameincertificate-enforced"></a>
+
+### HostNameInCertificate enforcement in 7.1.2, 7.0.4, and 6.1.8
+
+Starting with versions 7.1.2, 7.0.4, and 6.1.8, when you set `HostNameInCertificate`, SqlClient validates the server certificate against that name instead of the server name in `Data Source`. Earlier versions checked `HostNameInCertificate` only when the certificate didn't match the server name, so a wrong value had no effect when the server name already matched. In 7.1.2 and 7.0.4, this change applies to both native and managed networking, on .NET and .NET Framework. In 6.1.8, it applies only to managed networking, which is the default on Linux and macOS and opt-in on Windows. With native networking, 6.1.8 still accepts a `HostNameInCertificate` value that isn't in the certificate when the server name matches. Native networking includes every .NET Framework application.
+
+After the upgrade, a `HostNameInCertificate` value that isn't in the certificate fails the connection. With native networking, the message is:
+
+```output
+A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate's CN name does not match the passed value.)
+```
+
+With managed networking, the inner `AuthenticationException` message is:
+
+```output
+Certificate name mismatch. The provided 'DataSource' or 'HostNameInCertificate' does not match the name in the certificate.
+```
+
+Remove `HostNameInCertificate` when the server name already matches the certificate, or set it to a name that the certificate contains. A `ServerCertificate` file that exactly matches the server certificate still passes validation. For details, see [Encryption and certificate validation in Microsoft.Data.SqlClient](encryption-and-certificate-validation.md#connect-through-an-alias).
 
 <a id="entra-auth-extension-package"></a>
 
@@ -99,15 +120,18 @@ Version 7.1 also includes the certificate and enclave validation fixes serviced 
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
+| [7.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.2.md) | November 2026 | Updated dependency minimums to address [CVE-2026-84008](https://github.com/advisories/GHSA-846f-f764-76mx). A configured `HostNameInCertificate` must now match the server certificate. For details, see [HostNameInCertificate enforcement](#hostnameincertificate-enforced). Fixed `SqlDataReader.HasRows` returning `false` when several informational messages precede the first row. Malformed PRELOGIN responses now fail with a corrupted-stream error instead of `IndexOutOfRangeException`. Malformed row and authentication responses also fail with that error, and the affected connection doesn't return to the pool. Always Encrypted enclave sessions are now isolated by attestation protocol. Fixed unobserved exceptions when a managed networking MARS connection closes during a receive, and a native networking load failure on Linux and macOS when managed networking is selected. |
 | [7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.1.md) | September 2026 | Fixed an `ArgumentException` for zero-valued `decimal` and `SqlDecimal` parameters whose precision equals their scale. Fixed connection opens that fail when `ClearPool` or `ClearAllPools` runs during an in-flight open. Connection pool V2 now checks access token expiry before it reuses a pooled connection, which matches the default pool. The token fix affects only applications that opt in to connection pool V2. |
 | [7.1.0](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0.md) | September 2026 | General availability release, including the cumulative changes from the 7.1 preview cycle. |
 
 > [!IMPORTANT]
-> Upgrade directly referenced companion packages to 7.1.1 alongside the core driver, including `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. Aligned assemblies retain `AssemblyVersion 7.0.0.0`, so updating from 7.0.2, 7.0.3, or 7.1.0 doesn't require new .NET Framework binding redirects. When you update from 7.0.0 or 7.0.1, review the one-time assembly version changes described in the [7.0.2 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md).
+> Upgrade directly referenced companion packages to 7.1.2 alongside the core driver, including `Microsoft.Data.SqlClient.Extensions.Azure`, `Microsoft.Data.SqlClient.Extensions.Abstractions`, and `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider`. Let `Microsoft.Data.SqlClient.Internal.Logging` resolve transitively. Aligned assemblies retain `AssemblyVersion 7.0.0.0`, so updating from 7.0.2, 7.0.3, 7.0.4, 7.1.0, or 7.1.1 doesn't require new .NET Framework binding redirects. When you update from 7.0.0 or 7.0.1, review the one-time assembly version changes described in the [7.0.2 release notes](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md).
 
 The [Azure Key Vault Provider 7.1.0 release](https://github.com/dotnet/SqlClient/blob/main/release-notes/add-ons/AzureKeyVaultProvider/7.1/7.1.0.md) implements the asynchronous key store provider methods and fixes cache growth and duplicate key clients under concurrency. These asynchronous methods benefit direct provider calls; the driver's command execution paths still use synchronous key operations. The [Azure extension](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Azure/7.1/7.1.0.md) and [extension abstractions](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Abstractions/7.1/7.1.0.md) releases align versions without public API changes.
 
 The companion packages also ship as 7.1.1 with no functional changes, so you can update every package in the family to the same version. For details, see the [Azure Key Vault Provider 7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/add-ons/AzureKeyVaultProvider/7.1/7.1.1.md), [Azure extension 7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Azure/7.1/7.1.1.md), and [extension abstractions 7.1.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Abstractions/7.1/7.1.1.md) release notes.
+
+The [Azure extension 7.1.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/Extensions/Azure/7.1/7.1.2.md) adds guidance to interactive authentication errors with the Microsoft Authentication Library (MSAL) code `window_handle_required` on Windows. This error occurs when the Web Account Manager (WAM) broker has no parent window, for example in an Azure Functions local worker process. If your app has a window, supply its handle through `ActiveDirectoryAuthenticationProvider.SetParentActivityOrWindowFunc`. For a host without a window, use `Authentication=Active Directory Default` with a non-interactive credential. Interactive authentication without WAM requires a custom `ApplicationClientId` in `ActiveDirectoryAuthenticationProviderOptions` and `UseWamBroker=false`. The other 7.1.2 companion packages contain no functional changes.
 
 For preview history, see the release notes for [preview1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview1.md), [preview2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview2.md), and [preview3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.1/7.1.0-preview3.md).
 
@@ -132,6 +156,7 @@ Packet multiplexing for asynchronous reads remains preview functionality and is 
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
+| [7.0.4](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.4.md) | November 2026 | Updated SNI to 6.0.4 and updated dependency minimums to address [CVE-2026-84008](https://github.com/advisories/GHSA-846f-f764-76mx). A configured `HostNameInCertificate` must now match the server certificate. For details, see [HostNameInCertificate enforcement](#hostnameincertificate-enforced). Fixed `SqlDataReader.HasRows` returning `false` when several informational messages precede the first row, an `InvalidOperationException` from the statistics timer, unobserved exceptions when a managed networking MARS connection closes during a receive, and `GetTextReader` with `CommandBehavior.SequentialAccess` on big-endian platforms. Malformed PRELOGIN, row, and authentication responses now fail with a corrupted-stream error, and the affected connection doesn't return to the pool. Always Encrypted enclave sessions are now isolated by attestation protocol. The aligned Azure extension adds guidance to the WAM `window_handle_required` error. |
 | [7.0.3](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.3.md) | September 2026 | Updated SNI to 6.0.3. Fixed `SqlBulkCopy` metadata access, tracing allocations, `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` TNIR defaults on .NET Framework, authentication state preservation, and configurable retry assembly resolution. Conflicting SSPI and token authentication settings now throw `InvalidOperationException`. The aligned Azure extension fixes Entra authority parsing for Dataverse and Dynamics 365 connections. |
 | [7.0.2](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.2.md) | June 2026 | Aligned the core driver and companion packages, hardened TDS token parsing, corrected Always Encrypted signature-verification cache handling, and fixed errors in cancellation and null-buffer `GetBytes` and `GetChars` calls. |
 | [7.0.1](https://github.com/dotnet/SqlClient/blob/main/release-notes/7.0/7.0.1.md) | April 2026 | Fixed `SqlBulkCopy` metadata queries for SQL Server 2016 and Azure Synapse Analytics dedicated SQL pools, corrected vector field metadata, added the missing .NET Framework `System.Data.Common` dependency, and added type forwarding for authentication abstractions. |
@@ -159,6 +184,7 @@ Don't deploy version 6.1.0. Version 6.1.1 reverted the affected packet detection
 
 | Version | Released | Customer-relevant changes |
 | --- | --- | --- |
+| [6.1.8](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.8.md) | October 2026 | Updated the minimum versions of `System.Security.Cryptography.Pkcs` and, on .NET 9, `Microsoft.Extensions.Caching.Memory` and `System.Configuration.ConfigurationManager`. With managed networking, a configured `HostNameInCertificate` must now match the server certificate. For details, see [HostNameInCertificate enforcement](#hostnameincertificate-enforced). Interactive authentication errors with the WAM code `window_handle_required` now include guidance. Fixed `SqlDataReader.HasRows` returning `false` when several informational messages precede the first row, an `InvalidOperationException` from the statistics timer on MARS connections, and Microsoft Entra authority URLs that include an OAuth endpoint suffix, such as `/oauth2/authorize`, which the Dataverse endpoint returns. Always Encrypted enclave sessions are now isolated by attestation protocol. |
 | [6.1.7](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.7.md) | September 2026 | Updated SNI to 6.0.3. Fixed `ServerCertificate` validation on managed SNI, Always Encrypted enclave attestation key verification, `AccessTokenCallback` TNIR defaults on .NET Framework, token authentication state in connection pool keys, callback-based prelogin certificate validation, and configurable retry assembly resolution. |
 | [6.1.6](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.6.md) | June 2026 | Added opt-in Windows Web Account Manager (WAM) broker support, hardened TDS token parsing, corrected cached column master key signature failures, and fixed `GetChars` argument validation. |
 | [6.1.5](https://github.com/dotnet/SqlClient/blob/main/release-notes/6.1/6.1.5.md) | April 2026 | Removed unnecessary Service Principal Name (SPN) and Domain Name System (DNS) work for non-integrated authentication, made `ExecuteScalar` propagate server errors returned after data, and corrected vector metadata types. |

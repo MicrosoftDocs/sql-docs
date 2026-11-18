@@ -1,9 +1,9 @@
 ---
 title: Data Integrity
 description: This article discuss data integrity in Azure SQL Managed Instance, including Microsoft's monitoring, actions, and responsibility.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: dfurman, oslake, adbadram, dinethi
+author: dnethi 
+ms.author: dinethi 
+ms.reviewer: dfurman, oslake
 ms.date: 07/20/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview

@@ -98,6 +98,8 @@ You can get ESUs for SQL Server on Azure VMs in the following supported regions:
 #### [Europe, the Middle East, and Africa](#tab/emea)
 
 - France Central
+- Germany West Central
+- Italy North
 - North Europe
 - Norway East
 - South Africa North

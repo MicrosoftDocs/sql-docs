@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: Backup Compression Algorithm"
 description: Find out about the backup compression algorithm option. See how it determines the algorithm to use for backup compression, and learn how to set it.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: wiassaf, dinethi
 ms.date: 10/23/2026
 ms.service: sql

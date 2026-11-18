@@ -1,8 +1,8 @@
 ---
 title: Discontinued Database Engine Functionality
 description: Learn which database engine functionality and features were discontinued in SQL Server.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql

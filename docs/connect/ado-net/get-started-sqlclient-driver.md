@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 # Quickstart: Connect and query with Microsoft.Data.SqlClient
 
-In this quickstart, you build a .NET console app with Microsoft.Data.SqlClient 7.1.1.
+In this quickstart, you build a .NET console app with Microsoft.Data.SqlClient 7.1.2.
 
 You start with an empty folder, the .NET SDK, and a SQL Server or Azure SQL database that you can reach from your computer. You finish with a console app that creates a table, inserts two rows with parameters, and reads them back.
 
@@ -53,8 +53,8 @@ In an empty folder, run these commands:
 ```console
 dotnet new console --framework net10.0 --name SqlClientQuickstart
 cd SqlClientQuickstart
-dotnet add package Microsoft.Data.SqlClient --version 7.1.1
-dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.1
+dotnet add package Microsoft.Data.SqlClient --version 7.1.2
+dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.2
 ```
 
 ### [.NET Framework](#tab/netframework)
@@ -82,8 +82,8 @@ Replace the contents of `SqlClientQuickstart.csproj` with this project file:
 Then add the packages:
 
 ```console
-dotnet add package Microsoft.Data.SqlClient --version 7.1.1
-dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.1
+dotnet add package Microsoft.Data.SqlClient --version 7.1.2
+dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.2
 ```
 
 ---

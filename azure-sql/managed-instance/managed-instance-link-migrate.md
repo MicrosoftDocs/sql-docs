@@ -5,10 +5,11 @@ description: Learn how to use the Managed Instance link to migrate your SQL Serv
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 09/28/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.custom:
   - ignite-2023
 ---
@@ -19,7 +20,9 @@ ms.custom:
 
 This article teaches you to migrate your SQL Server database to Azure SQL Managed Instance by using the [Managed Instance link](managed-instance-link-feature-overview.md) in single-database link mode.
 
-For a detailed migration guide, review [Migrate to Azure SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md). To compare migration tools, review [Compare LRS with Managed Instance link](log-replay-service-compare-mi-link.md).
+To migrate multiple databases together through one link, you can extend an existing Always On availability group or create a new one. For this workflow, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
+
+For a detailed migration guide, review [Migrate to Azure SQL Managed Instance](/data-migration/sql-server/managed-instance/guide). To compare migration tools, review [Compare LRS with Managed Instance link](log-replay-service-compare-mi-link.md).
 
 > [!NOTE]  
 > You can now migrate your SQL Server instance enabled by Azure Arc to Azure SQL Managed Instance directly through the Azure portal. For more information, see [Migrate to Azure SQL Managed Instance](/sql/sql-server/azure-arc/migrate-to-azure-sql-managed-instance).
@@ -36,11 +39,11 @@ Migrating with the link gives you:
 - The most minimum downtime migration compared to all other solutions available today.
 - Instantaneous cutover to the target SQL Managed Instance.
 - The ability to migrate anytime you're ready.
-- The ability to migrate single or multiple databases from a single or multiple SQL Server instances to the same or multiple SQL managed instances in Azure.
+- You can migrate multiple databases by using a separate link for each database in single-database link mode, or one link for an availability group in multiple-database link mode.
 - The only true online migration to the Business Critical service tier.
 
 > [!NOTE]  
-> In single-database link mode, you can migrate one database per link and establish multiple links from the same SQL Server instance to SQL Managed Instance. To replicate an existing Always On availability group with multiple databases through one link, use [multiple-database link mode (preview)](managed-instance-link-extend-availability-group.md). Review the AG extension requirements before configuring the link.
+> In single-database link mode, you can migrate one database per link and establish multiple links from the same SQL Server instance to SQL Managed Instance. To replicate an existing Always On availability group with multiple databases through one link, use [multiple-database link mode](managed-instance-link-extend-availability-group.md). Review the AG extension requirements before configuring the link.
 
 ## Cutover behavior
 
@@ -60,6 +63,8 @@ Reverse migration back to SQL Server from Azure SQL Managed Instance might be su
 
 If your source SQL Server version is earlier than SQL Server 2022, reverse migration isn't possible. When you migrate your database to SQL Managed Instance, it undergoes an internal upgrade to a newer database version that isn't compatible with earlier SQL Server versions. Reverse migration database compatibility is only available when SQL Managed Instance is configured with the corresponding update policy.
 
+You can't migrate SQL Managed Instance databases encrypted with service-managed TDE keys to SQL Server. To migrate an encrypted database to SQL Server, the database must use a customer-managed key, and the destination SQL Server instance must have access to the same key. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+
 ## Prerequisites
 
 To use the link with Azure SQL Managed Instance for migration, you need the following prerequisites:
@@ -69,27 +74,19 @@ To use the link with Azure SQL Managed Instance for migration, you need the foll
 
 ## Assess and discover
 
-After you've verified that your source environment is supported, start with the pre-migration stage. Discover all of the existing data sources, assess migration feasibility, and identify any blocking issues that might prevent your migration. In the Discover phase, scan the network to identify all SQL Server instances and features used by your organization.
-
-You can use the following tools to discover SQL sources in your environment:
-
-- [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/migration-assessment): SQL Server enabled by Azure Arc automatically produces an assessment for migration to Azure, simplifying the discovery process and readiness assessment for migration.
-- [Azure Migrate](/azure/migrate/migrate-services-overview) to assess migration suitability of on-premises servers, perform performance-based sizing, and provide cost estimations for running them in Azure.
-- [Microsoft Assessment and Planning Toolkit (the "MAP Toolkit")](https://www.microsoft.com/download/details.aspx?id=7826) to assess your current IT infrastructure. The toolkit provides a powerful inventory, assessment, and reporting tool to simplify the migration planning process.
-
-After data sources have been discovered, assess any on-premises SQL Server instances that can be migrated to Azure SQL Managed Instance to identify migration blockers or compatibility issues.
-
-You can use the [migration readiness assessment](/sql/sql-server/azure-arc/migration-assessment) to assess your source SQL Server instance.
-
-For detailed guidance, review [pre-migration](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
+[!INCLUDE [migration-assess-discover](../includes/sql-managed-instance/migration-assess-discover.md)]
 
 ## Create target instance
 
 After you've assessed your existing environment, and determined the appropriate service tier and hardware configuration for your target SQL managed instance, deploy your target instance by using the [Azure portal](instance-create-quickstart.md), [PowerShell](scripts/create-configure-managed-instance-powershell.md) or the [Azure CLI](scripts/create-configure-managed-instance-cli.md).
 
+If you want to retain reverse failover capabilities, your SQL Server version must match the update policy on your managed instance. For example, provision your managed instance with the **SQL Server 2022** update policy for SQL Server 2022, or the **SQL Server 2025** update policy for SQL Server 2025. The **Always-up-to-date** update policy on your managed instance doesn't support reverse failover to SQL Server. For more information, see [Update policy](update-policy.md) and [Reverse a migration](#reverse-a-migration).
+
 ## Configure link
 
-After your target SQL managed instance is created, configure a link between the database on your SQL Server instance and Azure SQL Managed Instance. First, [prepare your environment](managed-instance-link-preparation.md) and then configure a link by using [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md) or [scripts](managed-instance-link-configure-how-to-scripts.md).
+After you create your target SQL managed instance, configure a link between SQL Server and Azure SQL Managed Instance. Use single-database link mode to replicate one database per link, or multiple-database link mode to replicate all databases in a SQL Server Always On availability group through a single Managed Instance link.
+
+First, [prepare your environment](managed-instance-link-preparation.md), including [preparing your databases](managed-instance-link-preparation.md#prepare-databases). For single-database link mode, configure a link by using [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md) or [scripts](managed-instance-link-configure-how-to-scripts.md). Multiple-database link mode isn't enabled by default; for requirements and steps to enable and configure it, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 
 ## Check replication lag
 
@@ -124,7 +121,11 @@ If replication lag is high, wait for the secondary replica to catch up with the 
 
 ## Migrate multiple databases
 
-If you plan to migrate multiple databases from instances on the same server, for optimal performance and predictability, migrate 8 databases per instance at a time. For example, if you have 10 instances with 32 linked databases each, migrate 8 databases at a time from each instance by using planned failovers, and repeat the process until all databases are migrated.
+You can migrate multiple databases by using either single-database or multiple-database link mode. Single-database link mode replicates one database per link, so each database requires a separate link. Multiple-database link mode replicates all databases in a SQL Server Always On availability group through a single Managed Instance link on [supported SQL Server versions and cumulative updates](managed-instance-link-extend-availability-group.md#supportability).
+
+In single-database link mode, if you plan to migrate multiple databases from instances on the same server, for optimal performance and predictability, migrate 8 databases per instance at a time. For example, if you have 10 instances with 32 linked databases each, migrate 8 databases at a time from each instance by using planned failovers, and repeat the process until all databases are migrated.
+
+In multiple-database link mode, the seeding and failover process is managed automatically, so you don't need to manually migrate a limited number of databases at a time as you do in single-database link mode. For requirements and configuration steps, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 
 ## Data sync and cutover
 
@@ -142,7 +143,7 @@ After your link is established, and you're ready to migrate, follow these steps 
 
 After you've cut over to the SQL managed instance target, monitor your application, test performance and remediate any issues.
 
-For details, review [post-migration](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md#post-migration).
+For details, review [post-migration](/data-migration/sql-server/managed-instance/guide#post-migration).
 
 ## Known issues with migration
 

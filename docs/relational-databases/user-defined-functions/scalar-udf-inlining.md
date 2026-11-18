@@ -4,7 +4,7 @@ description: The scalar UDF inlining feature improves performance of queries tha
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: karam, wiassaf, srdjanmatin
-ms.date: 06/29/2026
+ms.date: 11/10/2026
 ms.service: sql
 ms.topic: concept-article
 ms.custom:
@@ -20,6 +20,18 @@ This article introduces scalar UDF inlining, a feature under the [Intelligent qu
 ## T-SQL scalar user-defined functions
 
 User-defined functions (UDFs) that are implemented in [!INCLUDE [tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL scalar user-defined functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE [tsql](../../includes/tsql-md.md)] queries. Some computations, such as complex business rules, are easier to express in imperative UDF form. UDFs help you build such logic without requiring expertise in writing SQL queries. For more information about UDFs, see [Create user-defined functions (Database Engine)](create-user-defined-functions-database-engine.md).
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> Microsoft Fabric Warehouse and SQL analytics endpoints use **Expression Block inlining**
+> and **Scalar UDF inlining** to execute eligible functions as part of distributed queries.
+> The following performance problems concern execution without inlining. The
+> benchmarks shown later are SQL Server measurements, not Microsoft Fabric results. For
+> supported capabilities and requirements in Microsoft Fabric, see
+> [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true).
+
+::: moniker-end
 
 ## Performance of scalar UDFs
 
@@ -48,7 +60,9 @@ Eligible scalar UDFs can be automatically inlined during query compilation when 
 
 By default, `CREATE OR ALTER FUNCTION` requires the function body to meet the requirements for inlining. To create an intentionally non-inlineable function, specify the `WITH INLINE = AUTO` function option. This option permits the function to be created, but it doesn't make the function inlineable.
 
-For Fabric Data Warehouse-specific requirements and supported constructs, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) and [Inlining of scalar UDF](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true#inlining-of-scalar-udf). For examples of code changes to make a noninlinable UDF inlinable, see [How to create scalar user-defined functions in Fabric Data Warehouse (preview)](/fabric/data-warehouse/how-to-inline-udf).
+For Fabric Data Warehouse-specific requirements and supported constructs, see [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true) and [Inlining of scalar UDF](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true#inlining-of-scalar-udf).
+For examples of supported use and changes to function definitions or calling queries,
+see [Create scalar user-defined functions in Microsoft Fabric Data Warehouse](/fabric/data-warehouse/how-to-inline-udf).
 
 ## Examples
 
@@ -257,6 +271,18 @@ If all the preconditions are satisfied and [!INCLUDE [ssNoVersion](../../include
 
 - The plan XML doesn't have a `<UserDefinedFunction>` XML node for a UDF that is inlined successfully.
 - Certain Extended Events are emitted.
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> In Warehouse and SQL analytics endpoints in Microsoft Fabric, inlining is enabled by
+> default. The compatibility-level, database-scoped configuration, query-hint, and
+> `INLINE = ON` or `INLINE = OFF` examples in the following sections aren't the
+> configuration contract for these items. See
+> [CREATE FUNCTION](../../t-sql/statements/create-function-sql-data-warehouse.md?view=fabric&preserve-view=true)
+> for supported function options.
+
+::: moniker-end
 
 ## Enable scalar UDF inlining
 

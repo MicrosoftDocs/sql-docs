@@ -2,10 +2,10 @@
 title: Known Issues
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions.
-author: bluefooted
-ms.author: pamela
+author: danimir
+ms.author: danil
 ms.reviewer: vanto
-ms.date: 11/12/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: service-overview
 ms.topic: troubleshooting-known-issue
@@ -28,7 +28,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Linked server queries that use MSDASQL fail with error 7416](#linked-server-queries-that-use-msdasql-fail-with-error-7416) | April 2026 | Has workaround | |
 | [Restore operation failures after migrating to SQL Managed Instance](#restore-operation-failures-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
 | [Unable to use Service Broker after migrating to SQL Managed Instance](#unable-to-use-service-broker-after-migrating-to-sql-managed-instance) | March 2026 | Has workaround | |
-| [Unable to use accelerated database recovery after migrating to SQL Managed Instance](#unable-to-use-accelerated-database-recovery-after-migrating-to-sql-managed-instance) | March 2026 | Resolved | May 2026 |
+| [Unable to use accelerated database recovery after migrating to SQL Managed Instance](#unable-to-use-accelerated-database-recovery-after-migrating-to-sql-managed-instance) | March 2026 | Resolved | October 2026 |
 | [Database becomes unavailable after server restart following MI link failover](#database-becomes-unavailable-after-server-restart-following-mi-link-failover) | May 2026 | Has workaround | |
 | [Misleading error message when connecting to a read replica using invalid credentials](#misleading-error-message-when-connecting-to-a-read-replica-using-invalid-credentials) | February 2026 |No resolution| |
 | [Modifying backup retention period for the free offer](#modifying-backup-retention-period-for-the-free-offer) | June 2025 | Has workaround | |
@@ -36,36 +36,36 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Login to read-secondary failed due to long wait on "HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING"](#login-to-read-secondary-failed-due-to-long-wait-on-hadr_database_wait_for_transition_to_versioning) | April 2025 | Has workaround | |
 | [Interim guidance on 2024 time zone updates for Paraguay](#interim-guidance-on-2024-time-zone-updates-for-paraguay) | March 2025 | Resolved | February 2026 |
 | [Error 8992 when running DBCC CHECKDB on a SQL Server database that originated from SQL Managed Instance](#error-8992-when-running-dbcc-checkdb-on-a-sql-server-database-that-originated-from-sql-managed-instance) | March 2025 | Has workaround | |
-| [Differential backups aren't taken when an instance is linked to SQL Server](#differential-backups-arent-taken-when-an-instance-is-linked-to-sql-server) | Sept 2024 | By design | |
-| [List of long-term backups in Azure portal shows backup files for active and deleted databases with the same name](#list-of-long-term-backups-in-azure-portal-shows-backup-files-for-active-and-deleted-databases-with-the-same-name) | Mar 2024 | Has workaround | |
-| [Temporary instance inaccessibility using the failover group listener during scaling operation](#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) | Jan 2024 | Resolved | April 2025 |
-| [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system_health-event-session-is-not-accessible) | Dec 2023 | Resolved | March 2026 |
-| [Procedure sp_send_dbmail might fail when @query parameter is used](#procedure-sp_send_dbmail-might-fail-when-query-parameter-is-used) | Dec 2023 | Has workaround | |
-| [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
-| [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | Resolved | Aug 2023 |
-| [When you use SQL Server authentication, usernames with '@' aren't supported](#when-you-use-sql-server-authentication-usernames-with-at-sign-arent-supported) | Oct 2021 | Resolved | Feb 2022 |
-| [Misleading error message on Azure portal suggesting recreation of the Service Principal](#misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal) | Sep 2021 | | Oct 2021 |
-| [Changing the connection type doesn't affect connections through the failover group endpoint](#changing-the-connection-type-doesnt-affect-connections-through-the-failover-group-endpoint) | Jan 2021 | Resolved | Nov 2025 |
-| [Distributed transactions can be executed after removing SQL managed instance from Server Trust Group](#distributed-transactions-can-be-executed-after-removing-sql-managed-instance-from-server-trust-group) | Oct 2020 | Has workaround | |
-| [Can't create SQL Managed Instance with the same name as logical server previously deleted](#cant-create-sql-managed-instance-with-the-same-name-as-logical-server-previously-deleted) | Aug 2020 | Has workaround | |
-| [Service Principal can't access Microsoft Entra ID and AKV](#service-principal-cant-access-azure-ad-and-akv) | Aug 2020 | Has workaround | |
+| [Differential backups aren't taken when an instance is linked to SQL Server](#differential-backups-arent-taken-when-an-instance-is-linked-to-sql-server) | September 2024 | By design | |
+| [List of long-term backups in Azure portal shows backup files for active and deleted databases with the same name](#list-of-long-term-backups-in-azure-portal-shows-backup-files-for-active-and-deleted-databases-with-the-same-name) | March 2024 | Has workaround | |
+| [Temporary instance inaccessibility using the failover group listener during scaling operation](#temporary-instance-inaccessibility-using-the-failover-group-listener-during-scaling-operation) | January 2024 | Resolved | April 2025 |
+| [The event_file target of the system_health event session is not accessible](#the-event_file-target-of-the-system-health-event-session-is-not-accessible) | December 2023 | Resolved | March 2026 |
+| [Procedure sp_send_dbmail might fail when @query parameter is used](#procedure-sp_send_dbmail-might-fail-when-query-parameter-is-used) | December 2023 | Has workaround | |
+| [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | December 2022 | No resolution | |
+| [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | November 2022 | Resolved | August 2023 |
+| [When you use SQL Server authentication, usernames with '@' aren't supported](#when-you-use-sql-server-authentication-usernames-with-at-sign-arent-supported) | October 2021 | Resolved | February 2022 |
+| [Misleading error message on Azure portal suggesting recreation of the Service Principal](#misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal) | September 2021 | | October 2021 |
+| [Changing the connection type doesn't affect connections through the failover group endpoint](#changing-the-connection-type-doesnt-affect-connections-through-the-failover-group-endpoint) | January 2021 | Resolved | November 2025 |
+| [Distributed transactions can be executed after removing SQL managed instance from Server Trust Group](#distributed-transactions-can-be-executed-after-removing-sql-managed-instance-from-server-trust-group) | October 2020 | Has workaround | |
+| [Can't create SQL Managed Instance with the same name as logical server previously deleted](#cant-create-sql-managed-instance-with-the-same-name-as-logical-server-previously-deleted) | August 2020 | Has workaround | |
+| [Service Principal can't access Microsoft Entra ID and AKV](#service-principal-cant-access-azure-ad-and-akv) | August 2020 | Has workaround | |
 | [Restoring manual backup without CHECKSUM might fail](#restoring-manual-backup-without-checksum-might-fail) | May 2020 | Resolved | June 2020 |
-| [Permissions on resource group not applied to SQL Managed Instance](#permissions-on-resource-group-not-applied-to-sql-managed-instance) | Feb 2020 | Resolved | Nov 2020 |
-| [Microsoft Entra logins and users aren't supported in SSDT](#azure-ad-logins-and-users-arent-supported-in-ssdt) | Nov 2019 | No Workaround | |
-| [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | Oct 2019 | Resolved | August 2020 |
-| [Change service tier and create instance operations are blocked by ongoing database restore](#change-service-tier-and-create-instance-operations-are-blocked-by-ongoing-database-restore) | Sep 2019 | Has workaround | |
-| [Resource Governor on a readable secondary replica needs reconfiguration after failover](#resource-governor-on-a-readable-secondary-replica-needs-reconfiguration-after-failover) | Sep 2019 | Has workaround | |
-| [Cross-database Service Broker dialogs need reinitialization after service tier upgrade](#cross-database-service-broker-dialogs-need-reinitialization-after-service-tier-upgrade) | Aug 2019 | Resolved | January 2020 |
-| [Impersonation of Microsoft Entra login types isn't supported](#impersonation-of-azure-ad-login-types-isnt-supported) | Jul 2019 | No Workaround | |
-| [Transactional replication must be reconfigured after geo-failover](#transactional-replication-must-be-reconfigured-after-geo-failover) | Mar 2019 | No Workaround | |
+| [Permissions on resource group not applied to SQL Managed Instance](#permissions-on-resource-group-not-applied-to-sql-managed-instance) | February 2020 | Resolved | November 2020 |
+| [Microsoft Entra logins and users aren't supported in SSDT](#azure-ad-logins-and-users-arent-supported-in-ssdt) | November 2019 | No Workaround | |
+| [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | October 2019 | Resolved | August 2020 |
+| [Change service tier and create instance operations are blocked by ongoing database restore](#change-service-tier-and-create-instance-operations-are-blocked-by-ongoing-database-restore) | September 2019 | Has workaround | |
+| [Resource Governor on a readable secondary replica needs reconfiguration after failover](#resource-governor-on-a-readable-secondary-replica-needs-reconfiguration-after-failover) | September 2019 | Has workaround | |
+| [Cross-database Service Broker dialogs need reinitialization after service tier upgrade](#cross-database-service-broker-dialogs-need-reinitialization-after-service-tier-upgrade) | August 2019 | Resolved | January 2020 |
+| [Impersonation of Microsoft Entra login types isn't supported](#impersonation-of-azure-ad-login-types-isnt-supported) | July 2019 | No Workaround | |
+| [Transactional replication must be reconfigured after geo-failover](#transactional-replication-must-be-reconfigured-after-geo-failover) | March 2019 | No Workaround | |
 | [Exceeding storage space with small database files](#exceeding-storage-space-with-small-database-files) | | Has workaround | |
 | [GUID values shown instead of database names](#guid-values-shown-instead-of-database-names) | | Has workaround | |
 | [Error logs aren't persisted](#error-logs-arent-persisted) | | No Workaround | |
 | [CLR modules and linked servers sometimes can't reference a local IP address](#clr-modules-and-linked-servers-sometimes-cant-reference-a-local-ip-address) | | Has workaround | |
-| Database consistency not verified using `DBCC CHECKDB` after restore database from Azure Blob Storage. | | Resolved | Nov 2019 |
-| Point-in-time database restore from Business Critical tier to General Purpose tier doesn't succeed if source database contains in-memory OLTP objects. | | Resolved | Oct 2019 |
-| Database mail feature with external (non-Azure) mail servers using secure connection | | Resolved | Oct 2019 |
-| Contained databases not supported in SQL Managed Instance | | Resolved | Aug 2019 |
+| Database consistency not verified using `DBCC CHECKDB` after restore database from Azure Blob Storage. | | Resolved | November 2019 |
+| Point-in-time database restore from Business Critical tier to General Purpose tier doesn't succeed if source database contains in-memory OLTP objects. | | Resolved | October 2019 |
+| Database mail feature with external (non-Azure) mail servers using secure connection | | Resolved | October 2019 |
+| Contained databases not supported in SQL Managed Instance | | Resolved | August 2019 |
 
 ## Has workaround
 
@@ -303,11 +303,13 @@ Error logs that are available in SQL Managed Instance aren't persisted, and thei
 
 ### Unable to use accelerated database recovery after migrating to SQL Managed Instance
 
-**(Resolved in May 2026)** Starting with SQL Server 2019, if you migrate a database to Azure SQL Managed Instance, and the source database has [accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-concepts) disabled, you can't use accelerated database recovery on the target SQL managed instance. 
+**(Resolved in October 2026)** Starting with SQL Server 2019, if you migrated a database to Azure SQL Managed Instance with [accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-concepts) disabled on the source database, you couldn't use accelerated database recovery on the target SQL managed instance.
 
-To work around this issue, make sure you [enable accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-management#enable-accelerated-database-recovery) on the source SQL Server database before you migrate it to SQL Managed Instance. If you already migrated the database without enabling accelerated database recovery, you can enable it on the source SQL Server database, and then re-migrate the database to SQL managed instance.
+To work around this issue before the fix, you could [enable accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-management#enable-accelerated-database-recovery) on the source SQL Server database before migration. If you already migrated the database without enabling accelerated database recovery, you could enable it on the source database and then migrate the database again.
 
-SQL Server 2017 and earlier versions don't support accelerated database recovery, so this issue doesn't apply to databases migrated from those versions of SQL Server.
+SQL Server 2017 and earlier versions don't support accelerated database recovery, so this issue didn't apply to databases migrated from those versions.
+
+<a id="the-event_file-target-of-the-system-health-event-session-is-not-accessible"></a>
 
 ### The event_file target of the system_health event session is not accessible
 

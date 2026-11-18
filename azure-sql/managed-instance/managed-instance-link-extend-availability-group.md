@@ -4,7 +4,7 @@ description: Learn how to use a Managed Instance link to replicate databases whe
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 11/05/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
@@ -15,13 +15,13 @@ ai-usage: ai-assisted
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to extend an Always On availability group with multiple databases between SQL Server and Azure SQL Managed Instance with the [Managed Instance link](managed-instance-link-feature-overview.md) by using SQL Server Management Studio (SSMS), PowerShell, or Azure CLI. 
+This article teaches you how to extend an Always On availability group with multiple databases between SQL Server and Azure SQL Managed Instance by using the [Managed Instance link](managed-instance-link-feature-overview.md) with SQL Server Management Studio (SSMS), PowerShell, or Azure CLI.
 
 This article covers [multiple-database link mode](managed-instance-link-feature-overview.md#link-modes), which replicates all databases in an availability group through one link. Single-database link mode replicates one database per link.
 
 ## Overview
 
-When you extend an Always On availability group between SQL Server and Azure SQL Managed Instance, you create a link that replicates multiple databases in an availability group to the target replica. The link uses a distributed availability group to replicate changes in near-real time from the current primary replica to read-only database copies on the secondary replica. This ensures that the read-only copies on the secondary remain up-to-date with the primary.
+When you extend an Always On availability group between SQL Server and Azure SQL Managed Instance, you create a link that replicates multiple databases in an availability group to the target replica. The link uses a distributed availability group to replicate changes in near-real time from the current primary replica to read-only database copies on the secondary replica. This process ensures that the read-only copies on the secondary stay up-to-date with the primary.
 
 You can use an existing availability group or start with standalone databases. When you select standalone databases in SSMS, the wizard creates a single-node availability group on the initial primary and replicates the selected databases through one link.
 
@@ -33,12 +33,10 @@ The following requirements apply to extending an availability group through a mu
 
 | SQL Server version | Required update | Supported editions |
 | --- | --- | --- |
-| SQL Server 2022 (16.x) | CU27 or later | Enterprise and Developer |
-| SQL Server 2025 (17.x) | CU9 or later | Enterprise and Developer |
+| SQL Server 2022 (16.x) | CU28 or later | Enterprise and Developer |
+| SQL Server 2025 (17.x) | CU11 or later | Enterprise and Developer |
 
-| Managed Instance | Supported update policies |
-| --- | --- |
-| General Purpose and Business Critical | SQL Server 2022, SQL Server 2025, and Always-up-to-date [update policies](update-policy.md) |
+All Azure SQL Managed Instance service tiers are supported, with any of the following [update policies](update-policy.md): **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date**.
 
 Consider the following points:
 
@@ -47,8 +45,8 @@ Consider the following points:
 - For one-way replication and cutover from SQL Server, the destination update policy must match, or be higher than, your SQL Server version.
 - To create the link *from* SQL Managed Instance or reverse roles back to SQL Server, your SQL managed instance must use the [update policy](update-policy.md) that matches your SQL Server version.
 - For example:
-   - SQL Server 2022 supports one-way replication to instances configured with the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2022** update policy.
-   - SQL Server 2025 supports one-way replication to instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2025** update policy.
+   - SQL Server 2022 supports one-way replication to managed instances configured with the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2022** update policy.
+   - SQL Server 2025 supports one-way replication to managed instances configured with the **SQL Server 2025** and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2025** update policy.
 
 For SQL Server versions and editions that support single-database links, see [Managed Instance link version supportability](managed-instance-link-feature-overview.md#version-supportability).
 
@@ -66,7 +64,7 @@ To extend your availability group between SQL Server and Azure SQL Managed Insta
 - For scripted configuration, [Azure PowerShell](/powershell/azure/install-azure-powershell) with the Az module version 16.3.0 or later and Az.Sql version 7.1.0 or later, or [Azure CLI](/cli/azure/install-azure-cli) version 2.90.0 or later. You can also use [Azure Cloud Shell](/azure/cloud-shell/overview). Verify that the installed modules or CLI meet these version requirements.
 - A properly [prepared environment](managed-instance-link-preparation.md).
 - For a multiple-node availability group, a configured availability group listener. Use the listener's IP address when configuring the link, not an individual SQL Server replica's IP address. Using the listener lets the link continue working after a local availability group failover.
-- No existing links on any SQL Server replica when you enable multiple-database link mode. Before you start, remove all links that use the older single-database link mode.
+- No existing single-database mode links on any SQL Server replica when you enable multiple-database link mode. Before you start, remove all links that use single-database link mode.
 - Sufficient available database capacity and storage on the target managed instance for all databases in your availability group. Review [resource limits](resource-limits.md).
 
 ## Permissions
@@ -116,22 +114,22 @@ EXEC sys.sp_multidb_milink 0;
 
 ## Prepare the availability group databases
 
-Set each SQL Server database you want to replicate to the [full recovery model](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server), and then create a full backup. Both existing availability group databases and standalone databases require this preparation. Use the [SSMS backup procedure](managed-instance-link-configure-how-to-ssms.md#prepare-databases) in the link configuration guide.
+Both existing availability group databases and standalone databases require this preparation.
 
-> [!CAUTION]
-> If your databases use Transparent Data Encryption (TDE), prepare the encryption certificates or keys on the destination before creating the link. Without them, the link can't replicate the encrypted databases.
-
-For SQL Server databases, [migrate the TDE certificate to SQL Managed Instance](tde-certificate-migrate.md). For encrypted SQL Managed Instance databases linked to SQL Server, use a customer-managed key accessible to the destination SQL Server. Review [TDE preparation for the link](managed-instance-link-preparation.md#migrate-a-certificate-of-a-tde-protected-database-optional) for the requirements in each direction.
-
-The link replicates all databases in the selected availability group. You can't choose a subset, so check the target SQL managed instance's available capacity before you create the link. The destination must not contain databases with the same names as the databases you want to replicate. Existing databases with different names are allowed, subject to the instance's capacity limits.
-
-The link supports replicating user databases only. Replication of system databases isn't supported. To replicate instance-level objects stored in `master` or `msdb`, script them out and run T-SQL scripts on the destination instance.
+[!INCLUDE [managed-instance-link-prepare-databases](../includes/sql-managed-instance/managed-instance-link-prepare-databases.md)]
 
 ## Configure the listener and certificates
 
 For a multiple-node availability group, use the listener's IP address when configuring the link, both in SSMS and in scripts. The listener directs connections to the current primary replica. Don't use the IP address of an individual SQL Server replica as the link's partner endpoint. Without the listener, the link doesn't continue working after a local availability group failover. For a single-node availability group, including one created by the SSMS wizard for standalone databases, use that SQL Server instance's IP endpoint.
 
 The SSMS wizard exchanges certificates between Azure SQL Managed Instance and only the current SQL Server primary replica. It doesn't configure certificate trust on the other SQL Server replicas. You must manually copy and configure the required certificates on every other SQL Server replica so that the link can continue working after a local availability group failover. This manual step applies to both SSMS and scripted configuration. Review [Establish trust between instances](managed-instance-link-configure-how-to-scripts.md#establish-trust-between-instances) for the certificate exchange steps.
+
+Alternatively, you can use the SSMS preview feature **Enable multi-node availability group support in the Managed Instance link wizard**, which assists you with configuring all nodes of your Always On availability group with the required authentication certificates. In SSMS 22.12.1, go to **Tools** > **Manage Preview Features** and enable the preview feature.
+
+:::image type="content" source="media/managed-instance-link-multidb-mode/enable-multi-node-support-ssms.png" alt-text="Screenshot of SSMS showing Tools > Manage Preview Features and the option to enable multi-node availability group support in the Managed Instance link wizard.":::
+
+> [!NOTE]
+> Automatic configuration of authentication certificates on all nodes of an Always On availability group is available through the SSMS preview feature **Enable multi-node availability group support in the Managed Instance link wizard**. To enable it, go to **Tools** > **Manage Preview Features**.
 
 ## Prepare for scripted link creation
 
@@ -198,7 +196,7 @@ Multiple-database mode replicates the databases in your availability group throu
 
 ### [PowerShell](#tab/powershell)
 
-Follow [Configure link with scripts](managed-instance-link-configure-how-to-scripts.md) to set up the link. Use [Prepare for scripted link creation](#prepare-for-scripted-link-creation) as your ordered checklist. At the link creation step, use the `New-AzSqlInstanceLink` example in this section instead of the single-database command. It specifies `-LinkMode MultiDatabase` and includes every database in the availability group.
+To set up the link, see [Configure link with scripts](managed-instance-link-configure-how-to-scripts.md). Use [Prepare for scripted link creation](#prepare-for-scripted-link-creation) as your checklist. At the link creation step, use the `New-AzSqlInstanceLink` example in this section instead of the single-database command. It specifies `-LinkMode MultiDatabase` and includes every database in the availability group.
 
 Update the installed Az and Az.Sql modules:
 
@@ -262,7 +260,7 @@ New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedIn
 
 ### [Azure CLI](#tab/azure-cli)
 
-Follow [Configure link with scripts](managed-instance-link-configure-how-to-scripts.md) to set up the link. Use [Prepare for scripted link creation](#prepare-for-scripted-link-creation) as your ordered checklist. At the link creation step, use the `az sql mi link create` example in this section instead of the single-database command. It specifies `--link-mode MultiDatabase` and includes every database in the availability group.
+To set up the link, see [Configure link with scripts](managed-instance-link-configure-how-to-scripts.md). Use [Prepare for scripted link creation](#prepare-for-scripted-link-creation) as your checklist. At the link creation step, use the `az sql mi link create` example in this section instead of the single-database command. It specifies `--link-mode MultiDatabase` and includes every database in the availability group.
 
 Use Azure CLI version 2.90.0 or later. Check your installed version with [az version](/cli/azure/reference-index#az-version). Use [az sql mi link create](/cli/azure/sql/mi/link#az-sql-mi-link-create) to create the SQL managed instance side of the link, using the link and availability group names from the scripted setup steps.
 
@@ -499,7 +497,20 @@ Use the existing [failover procedures](managed-instance-link-failover-how-to.md)
 
 ## Monitor and troubleshoot replication
 
-Use the following dynamic management views (DMVs) and catalog view on SQL Server to check the main availability group, replica connectivity, and each database's replication health:
+Each database starts in the seeding phase, during which a full backup is transferred to and restored on the secondary replica. During seeding, the database is in the `RESTORING` state on the secondary replica and isn't available for use. After seeding completes, the database comes online on the secondary replica in read-only mode and enters the replication phase, during which changes from the primary replica are continuously replicated.
+
+Use `sys.sp_milink_check` to determine whether an individual database is in the seeding or replication phase. If seeding isn't progressing for a database, use `sys.sp_milink_reseed` to restart seeding. If replication isn't progressing, use `sys.sp_milink_repair` to repair replication.
+
+As part of general availability, multiple-database link mode includes three stored procedures on supported SQL Server versions to help you monitor replication health and troubleshoot individual databases:
+
+- `sys.sp_milink_check`: Provides replication health information for individual databases. Use it to identify databases that are stuck during seeding or replication.
+- `sys.sp_milink_reseed`: Restarts seeding for an individual database that's stuck during seeding, without requiring you to remove and re-add the database to the availability group.
+- `sys.sp_milink_repair`: Repairs unhealthy replication for an individual database in a multiple-database link.
+
+> [!NOTE]
+> If these stored procedures aren't available on your SQL Server instance, verify that you installed the required cumulative update (CU). For supported SQL Server versions and required updates, see [Supportability](#supportability).
+
+Use the following dynamic management views (DMVs) and catalog view on SQL Server to check the main availability group, replica connectivity, and link health:
 
 | View | Information |
 | --- | --- |
@@ -523,14 +534,16 @@ If the internal replication DMVs aren't available, or executing the `sys.sp_mult
 
 Consider the following limitations when extending an availability group through a multiple-database link:
 
+- The link supports replicating user databases only. It doesn't support replication of system databases.
+- The link replicates all databases in the selected availability group. You can't choose a subset. Check the target SQL Managed Instance's available database capacity before you create the link.
+- The destination must not contain databases with the same names as the databases you want to replicate. Existing databases with different names are allowed, subject to the instance's capacity limits.
 - Link names must use lowercase letters. Hyphens are allowed, but a name can't begin or end with a hyphen.
-- Don't downgrade any SQL Server replica below SQL Server 2022 CU27 or SQL Server 2025 CU9, as applicable, while a link in multiple-database mode is active. Downgrading below the required CU can cause unpredictable issues even without a failover.
+- Don't downgrade any SQL Server replica below SQL Server 2022 CU28 or SQL Server 2025 CU11, as applicable, while a link in multiple-database mode is active. Downgrading below the required CU can cause unpredictable issues even without a failover.
 - Contained availability groups aren't supported.
 - Single-database links and multiple-database links can't coexist on the same SQL Server instance.
 - You can't change a link's mode in place. To switch between single-database and multiple-database link modes, remove all existing links, change the mode on every SQL Server replica, and then recreate the links in the new mode.
-- When you create a link for an existing availability group, all databases in that group must be replicated. You can't select only a subset of the databases in that group.
-- The remaining database capacity on the target SQL managed instance limits the number of databases you can replicate. General Purpose and Business Critical support up to 100 databases per instance, and Next-gen General Purpose supports up to 500. Existing databases count toward these limits. For example, an instance with a 100-database limit and 10 existing databases has capacity for 90 more databases. For more information, see [resource limits](resource-limits.md).
-- Adding databases to the availability group beyond the target SQL managed instance's available database capacity can succeed on SQL Server, but replication to SQL Managed Instance fails. This condition can leave the link in an inconsistent state that requires manual removal of the nonreplicated databases from the availability group.
+- The remaining database capacity on the target SQL Managed Instance limits the number of databases you can replicate. General Purpose and Business Critical support up to 100 databases per instance, and Next-gen General Purpose supports up to 500. Existing databases count toward these limits. For example, an instance with a 100-database limit and 10 existing databases has capacity for 90 more databases. For more information, see [resource limits](resource-limits.md).
+- Adding databases to the availability group beyond the target SQL Managed Instance's available database capacity can succeed on SQL Server, but replication to SQL Managed Instance fails. This condition can leave the link in an inconsistent state that requires manual removal of the nonreplicated databases from the availability group.
 - Adding databases is propagated through the link, but removing a database on one side doesn't automatically remove it on the other side. If you remove a database from the availability group, its copy remains on SQL Managed Instance. If you remove a database from the link on SQL Managed Instance, the database remains in the availability group without replication through the link and requires manual cleanup.
 - When adding databases to an existing link through SSMS, you can only add databases with a **Ready** state. You can't add databases that belong to another availability group or have a name that already exists on the destination.
 

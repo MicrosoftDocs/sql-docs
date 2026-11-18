@@ -5,7 +5,7 @@ description: Prepare your SQL Server instance enabled by Azure Arc for migration
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 06/25/2026
+ms.date: 11/18/2026
 ms.topic: how-to
 ---
 
@@ -81,8 +81,7 @@ To prepare your SQL Server instance, complete the following steps:
 - [Restart SQL Server and validate the configuration](#restart-sql-server-and-validate-the-configuration).
 - [Set database to full recovery model](#set-database-to-full-recovery-model).
 - [Import Azure-trusted root certificate authority keys to SQL Server](#import-azure-trusted-root-certificate-authority-keys-to-sql-server).
-- [Enable accelerated database recovery](#enable-accelerated-database-recovery) if you're on SQL Server 2019 or later, and plan to use it on the target SQL managed instance.
-- [Enable Service Broker](#enable-service-broker) if you plan to use it on the target SQL managed instance.
+- [Enable Service Broker](#prepare-databases-with-service-broker-disabled) if you plan to use it on the target SQL managed instance.
 
 You need to [restart SQL Server](#restart-sql-server-and-validate-the-configuration) for these changes to take effect.
 
@@ -365,7 +364,7 @@ Follow the steps in the [Configure SSMS for government clouds](/azure/azure-sql/
 
 If you're linking a SQL Server database protected by Transparent Data Encryption (TDE) to a SQL managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the SQL managed instance before using the link. For detailed steps, see [Migrate a certificate of a TDE-protected database to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/tde-certificate-migrate).
 
-SQL Managed Instance databases that are encrypted with service-managed TDE keys can't be linked to SQL Server. You can only link an encrypted database to SQL Server if you encrypted it with a customer-managed key and the destination server has access to the same key used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md).
+SQL Managed Instance databases that are encrypted with service-managed TDE keys can't be linked to SQL Server. You can only link an encrypted database to SQL Server if you encrypted it with a customer-managed key and the destination server has access to the same key used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
 
 > [!NOTE]  
 > Azure Key Vault is supported by SQL Server on Linux starting with [Cumulative Update 14 for SQL Server 2022](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate14).

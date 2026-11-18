@@ -5,7 +5,7 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 10/07/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurepowershell, devx-track-azurecli, ignite-2023, build-2024
@@ -92,29 +92,9 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 <sup>1</sup> Configuring Azure SQL Managed Instance as your initial primary is supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
 
-## Set up database recovery and backup
+## Prepare databases
 
-If SQL Server is your initial primary, then databases that will be replicated via the link must be in the full recovery model and have at least one backup.  Since Azure SQL Managed Instance takes backups automatically, skip this step if SQL Managed Instance is your initial primary.
-
-When you create a link, the initial seeding between the primary and secondary replicas happens by taking a full backup of the database on the primary replica, transferring it to the secondary replica, and restoring it there. When you take the full backup, we recommend that you use the `WITH CHECKSUM` option to ensure that the backup is valid and doesn't have any corruption. For more information, see [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).
-
-Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
-
-```sql
--- Run on SQL Server
--- Set full recovery model for all databases you want to replicate.
-ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
-GO
-
--- Execute backup for all databases you want to replicate.
-BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>'
-GO
-```
-
-For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
-
-> [!NOTE]
-> The link supports replication of user databases only. Replication of system databases is not supported. To replicate instance-level objects (stored in `master` or `msdb` databases), we recommend that you script them out and run T-SQL scripts on the destination instance.
+[!INCLUDE [managed-instance-link-prepare-databases](../includes/sql-managed-instance/managed-instance-link-prepare-databases.md)]
 
 
 ## Establish trust between instances
@@ -134,7 +114,7 @@ The following lists an overview of the process to secure database mirroring endp
 1. Generate a certificate on SQL Server and obtain its public key.
 1. Obtain a public key of the SQL Managed Instance certificate.
 1. Exchange the public keys between SQL Server and SQL Managed Instance.
-1. Import Azure-trusted root certificate authority keys to SQL Server
+1. Import Azure-trusted root certificate authority keys to SQL Server.
 
 The following sections describe these steps in detail.
 

@@ -4,7 +4,7 @@ description: Migrate SQL Server databases to Azure SQL Managed Instance by using
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 11/05/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: migration
 ms.topic: how-to
@@ -21,7 +21,7 @@ ms.custom:
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article explains how to migrate SQL Server databases to Azure SQL Managed Instance using [Log Replay Service (LRS)](log-replay-service-overview.md). LRS is a free cloud service for Azure SQL Managed Instance migrations, built on SQL Server log-shipping technology. Learn the complete process from prerequisites to cutover, including best practices for a successful database migration.
+This article teaches you how to migrate SQL Server databases to Azure SQL Managed Instance using [Log Replay Service (LRS)](log-replay-service-overview.md). LRS is a free cloud service for Azure SQL Managed Instance migrations, built on SQL Server log-shipping technology. Learn the complete process from prerequisites to cutover, including best practices for a successful database migration.
 
 > [!NOTE]  
 > It's now possible to migrate your SQL Server instance enabled by Azure Arc to Azure SQL Managed Instance directly through the Azure portal. To learn more, review [Migrate to Azure SQL Managed Instance](/sql/sql-server/azure-arc/migrate-to-azure-sql-managed-instance).
@@ -58,7 +58,7 @@ Make sure that you meet the following requirements for SQL Server:
 - For SQL Server 2016 and later, you can [take your backup directly](#take-backups-directly-to-your-blob-storage-account) to your Azure Blob Storage account.
 - Although having `CHECKSUM` enabled for backups isn't required, it's highly recommended to prevent unintentionally migrating a corrupt database, and for faster restore operations.
 - Any version of Windows Server is supported based on the SQL Server version supportability.
-- For SQL Server 2019 and later, accelerated database recovery should be enabled, with the persistent version store set to `PRIMARY`. For more information, see [Known issues after migrating to SQL Managed Instance](#known-issues-after-migrating-to-sql-managed-instance) in this article.
+- If you use accelerated database recovery, ensure that the persistent version store is set to `PRIMARY`. For more information, see [Prepare databases that use accelerated database recovery (ADR)](#prepare-databases-that-use-accelerated-database-recovery-adr).
 - To use Service Broker on a database migrated to Azure SQL Managed Instance without contacting Microsoft Support, enable Service Broker on the source database before migration. For more information, see [Known issues after migrating to SQL Managed Instance](#known-issues-after-migrating-to-sql-managed-instance) in this article.
 
 ### Azure
@@ -68,7 +68,7 @@ Make sure that you meet the following requirements for Azure:
 - PowerShell Az.SQL module version 4.0.0 or later ([installed](https://www.powershellgallery.com/packages/Az.Sql/) or accessed through [Azure Cloud Shell](/azure/cloud-shell/)).
 - Azure CLI version 2.42.0 or later ([installed](/cli/azure/install-azure-cli)).
 - A provisioned Azure Blob Storage container.
-- A shared access signature (SAS) security token with `Read` and `List` permissions generated for the Blob Storage container, or a managed identity that can access the container. Granting more permissions than `Read` and `List` will cause LRS to fail.
+- A shared access signature (SAS) security token with `Read` and `List` permissions only generated for the Blob Storage container, or a managed identity that can access the container. Granting more permissions than `Read` and `List` causes LRS to fail.
 - Place backup files for an individual database inside a separate folder in a storage account by using a flat-file structure (mandatory). Nesting folders inside database folders isn't supported.
 
 ### Azure RBAC permissions
@@ -107,6 +107,12 @@ Configuring a maintenance window isn't required but is highly recommended for la
 
 > [!NOTE]  
 > While a maintenance window controls the predictability of *planned* updates, it doesn't guarantee that unplanned failovers, or security patch updates won't occur. An unplanned failover or a security patch (which takes precedence over all other updates) can still interrupt your migration.
+
+## Prepare databases
+
+Before you start the migration, prepare your source databases.
+
+[!INCLUDE [prepare-database-for-migration](../includes/sql-managed-instance/prepare-database-for-migration.md)]
 
 ## Migrate multiple databases
 
@@ -630,7 +636,6 @@ Consider the following limitations when migrating with LRS:
 - There are two scenarios, at the beginning and end of the migration process, where a migration is aborted if a failover occurs, and the migration job must be manually restarted from the beginning as the database is dropped from SQL Managed Instance:
   - If a failover occurs when the first full database backup is in the process of being restored to SQL Managed Instance when the migration job is first started, then the migration job must be manually restarted from the beginning.
   - If a failover occurs after migration cutover is initiated, the migration job must be manually restarted from the beginning. Ensure the last backup file is as small as possible to minimize cutover time and reduce the risk of a failover during the cutover process.
-- Starting with SQL Server 2019, if [accelerated database recovery](/sql/relational-databases/accelerated-database-recovery-concepts) is disabled on a source database, the disabled setting is preserved when you migrate that database to Azure SQL Managed Instance. You can't enable accelerated database recovery yourself on the migrated database. Contact Microsoft Support to enable it on that database. This is a per-database setting, so other databases on the managed instance aren't affected. Additionally, if the persistent version store (PVS) isn't set to `PRIMARY`, you can experience issues with restore operations on the target SQL managed instance.
 - If [Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) is disabled on a source SQL Server database, the disabled setting is preserved when you migrate that database to Azure SQL Managed Instance. You can't enable Service Broker yourself on the migrated database. Contact Microsoft Support to enable it on that database. This is a per-database setting, so other databases on the managed instance aren't affected.
 
 > [!NOTE]  
@@ -690,7 +695,7 @@ If LRS fails to start after some time and you get an error, check for the most c
 
 - [Overview of Log Replay Service with Azure SQL Managed Instance](log-replay-service-overview.md)
 - [Overview of the Managed Instance link](managed-instance-link-feature-overview.md)
-- [Migrate from SQL Server to Azure SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md)
+- [Migrate from SQL Server to Azure SQL Managed Instance](/data-migration/sql-server/managed-instance/guide)
 - [T-SQL differences between SQL Server and Azure SQL Managed Instance](transact-sql-tsql-differences-sql-server.md)
 - [Best practices to cost and size workloads migrated to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-costs)
 - [Compare LRS with Managed Instance link](log-replay-service-compare-mi-link.md)

@@ -5,11 +5,12 @@ description: Learn how to configure a link between SQL Server and Azure SQL Mana
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 09/28/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023, build-2024
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 # Configure link with SSMS - Azure SQL Managed Instance
 
@@ -71,27 +72,11 @@ For Azure SQL Managed Instance, you need to be a member of the [SQL Managed Inst
 
 ## Prepare databases
 
-If SQL Server is your initial primary, you need to create a backup of your database. Since Azure SQL Managed Instance takes backups automatically, skip this step if SQL Managed Instance is your initial primary. 
-
-When you create a link, the initial seeding between the primary and secondary replicas happens by taking a full backup of the database on the primary replica, transferring it to the secondary replica, and restoring it there. When you take the full backup, we recommend that you use the `WITH CHECKSUM` option to ensure that the backup is valid and doesn't have any corruption. For more information, see [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).
-
-Use SSMS to back up your database on SQL Server. Follow these steps:
-
-1. Connect to your SQL Server in SQL Server Management Studio (SSMS). 
-1. In **Object Explorer**, right-click the database, hover over **Tasks**, and then choose **Back up**. 
-1. Choose **Full** for backup type. 
-1. Ensure the **Back up to** option has the backup path to a disk with sufficient free storage space available. 
-1. (Optional but recommended) On the **Media Options** tab, check the box for **Perform checksum before writing to media** to have SQL Server verify the integrity of the backup after it's created.
-1. Select **OK** to complete the full backup. 
-
-For more information, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
-
-> [!NOTE]
-> The link supports replicating user databases only. Replication of system databases isn't supported. To replicate instance-level objects stored in `master` or `msdb`, script them out and run T-SQL scripts on the destination instance.
+[!INCLUDE [managed-instance-link-prepare-databases](../includes/sql-managed-instance/managed-instance-link-prepare-databases.md)]
 
 ## Create link to replicate database
 
-Before starting the wizard, use [trace flag 12381 on supported SQL Server builds](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381) to prevent premature log truncation during seeding, especially for large databases. Log backups can continue while required records are retained. Monitor SQL Server log growth and free disk space, and disable the flag when seeding finishes for all links you're creating.
+Before starting the wizard, enable [trace flag 12381 on supported SQL Server builds](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381) if you need to take transaction log backups during initial seeding. Initial seeding is the first phase of establishing the link, during which a full database backup is transferred to the secondary replica and restored. The trace flag prevents premature log truncation during this phase, see [Known issues](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381). Log backups can continue while required records are retained. Monitor SQL Server log growth and free disk space, and disable the flag when seeding finishes for all links you're creating.
 
 In the following steps, use the **New Managed Instance link** wizard in SSMS to create a link between your initial primary and your secondary replica. 
 

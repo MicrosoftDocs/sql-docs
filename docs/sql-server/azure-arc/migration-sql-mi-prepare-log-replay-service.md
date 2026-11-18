@@ -5,7 +5,7 @@ description: Prepare your SQL Server instance enabled by Azure Arc for migration
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 06/25/2026
+ms.date: 11/18/2026
 ms.topic: how-to
 ---
 
@@ -162,7 +162,7 @@ RESTORE HEADERONLY
 
 ## Configure source SQL Server database
 
-Service Broker is enabled by default on SQL Server. If you disable Service Broker on the source database and plan to use it after migration, enable it before migrating. Enable accelerated database recovery on the source SQL Server database if you plan to use it on the migrated database on SQL Managed Instance. These database settings are preserved during migration. If either feature is disabled on the source database, you can't enable it on the migrated database on the managed instance.
+Service Broker is enabled by default on SQL Server. If you disable Service Broker on the source database and plan to use it after migration, enable it before migrating. This database setting is preserved during migration. If Service Broker is disabled on the source database, you can't enable it on the migrated database on the managed instance.
 
 [!INCLUDE [prepare-database-for-migration](../../../azure-sql/includes/sql-managed-instance/prepare-database-for-migration.md)]
 

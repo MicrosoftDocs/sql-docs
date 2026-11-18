@@ -83,7 +83,7 @@ monikerRange: "=azuresqldb-current || =azure-sqldw-latest || >=sql-server-2017 |
   
 |Function|Description|  
 |--------------|-----------------|  
-|CURRENT_DATE( ) (ODBC 3.0)|Returns the current date.|  
+|CURRENT_DATE( ) (ODBC 3.0)|Returns the current date. |  
 |CURDATE( ) (ODBC 3.0)|Returns the current date.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Returns the current local time. The time-precision argument determines the seconds precision of the returned value|  
 |CURTIME() (ODBC 3.0)|Returns the current local time.|  

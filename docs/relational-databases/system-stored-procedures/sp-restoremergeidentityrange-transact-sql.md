@@ -1,8 +1,8 @@
 ---
 title: "sys.sp_restoremergeidentityrange (Transact-SQL)"
 description: sp_restoremergeidentityrange ensures that automatic identity range management functions properly after a Publisher is restored from a backup.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql

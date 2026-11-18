@@ -1,8 +1,8 @@
 ---
 title: "Common Actions Requiring an Updated Backup"
 description: "Common Actions Requiring an Updated Backup"
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

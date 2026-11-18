@@ -1,8 +1,8 @@
 ---
 title: Strategies for Backup and Restore (Merge)
 description: Merge replication backup and restore strategies protect your publication, distribution, and subscription databases. Learn how to restore and resync SQL Server data.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

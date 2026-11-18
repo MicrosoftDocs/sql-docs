@@ -1,8 +1,8 @@
 ---
 title: Enable Coordinated Backups (Transactional)
 description: Coordinated backups keep the transaction log intact until the Distributor's transactions are saved. See how to enable, verify, and disable them in SQL Server.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

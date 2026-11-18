@@ -1,8 +1,8 @@
 ---
 title: "sys.sp_restoredbreplication (Transact-SQL)"
 description: sp_restoredbreplication removes replication settings when restoring a database to a non-originating server.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql

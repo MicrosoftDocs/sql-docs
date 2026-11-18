@@ -1,8 +1,8 @@
 ---
 title: "Replication Queue Reader Agent"
 description: "Replication Queue Reader Agent"
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2025 Known Issues
 description: Known issues, causes, and workarounds for SQL Server 2025 (17.x), covering upgrades, replication, PolyBase, session behavior, platform compatibility (Windows and Linux), backup compression, and other platform-specific limitations.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.date: 10/23/2026
 ms.service: sql
 ms.subservice: release-landing

@@ -193,9 +193,7 @@ WHERE is_masked = 1;
 
 - **Regex masks are pattern-dependent.** Validate your regex patterns on representative data before you apply them to production columns.
 - **Unmatched values stay masked.** An unmatched pattern returns data with default mask applied to nonprivileged users.
-
 - **Test thoroughly with representative data.** Cover edge cases such as null values, empty strings, and atypical formats your regex might not catch.
-- **Use in nonproduction environments during preview.** Validate thoroughly before you consider this feature for production workloads.
 
 ## Related content
 

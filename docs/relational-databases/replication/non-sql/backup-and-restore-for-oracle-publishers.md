@@ -1,8 +1,8 @@
 ---
 title: Backup and Restore for Oracle Publishers
 description: Backup and restore Oracle publishers in SQL Server replication with confidence. Follow these guidelines to keep publications, distributors, and subscribers in sync.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

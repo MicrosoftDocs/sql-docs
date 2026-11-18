@@ -1,8 +1,8 @@
 ---
 title: "sp_replrestart (Transact-SQL)"
 description: sp_replrestart is used by transactional replication during backup and restore.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.reviewer: vanto
 ms.date: 06/23/2025
 ms.service: sql

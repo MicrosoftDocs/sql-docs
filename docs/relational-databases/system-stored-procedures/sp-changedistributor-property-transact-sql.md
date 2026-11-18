@@ -1,8 +1,8 @@
 ---
 title: "sys.sp_changedistributor_property (Transact-SQL)"
 description: sp_changedistributor_property changes the properties of the Distributor.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: vanto
 ms.date: 06/19/2026
 ms.service: sql

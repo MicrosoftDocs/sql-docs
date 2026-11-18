@@ -1,8 +1,8 @@
 ---
 title: Install, Configure, or Uninstall SQL Server on Windows from the Command Prompt
 description: This article describes command prompt parameters for SQL Server installation on Windows. You can specify features to install, configure, or uninstall.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.date: 11/18/2025
 ms.service: sql
 ms.subservice: install

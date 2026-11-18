@@ -1,9 +1,10 @@
 ---
 title: "Supported Version and Edition Upgrades (SQL Server 2025)"
 description: The supported version and edition upgrades for SQL Server 2025.
-author: adbadram
-ms.author: adbadram
-ms.date: 11/12/2026
+author: pochiraju
+ms.author: rajpo
+ms.reviewer: wiassaf
+ms.date: 11/06/2026
 ms.service: sql
 ms.subservice: install
 ms.topic: upgrade-and-migration-article

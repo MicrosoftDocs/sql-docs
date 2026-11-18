@@ -1,8 +1,8 @@
 ---
 title: SQL Server Express LocalDB
 description: Become familiar with SQL Server Express LocalDB. Developers can use this lightweight Database Engine for writing and testing Transact-SQL code.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.date: 03/23/2026
 ms.service: sql
 ms.subservice: configuration

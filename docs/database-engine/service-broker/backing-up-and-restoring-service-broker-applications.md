@@ -1,8 +1,8 @@
 ---
 title: Back Up and Restore Service Broker Applications
 description: "Backup and restore procedures for a Service Broker service are integrated with the database in which the service runs."
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.reviewer: vanto
 ms.date: 08/29/2025
 ms.service: sql

@@ -5,7 +5,7 @@ description: Learn about using SQL Server transactional replication with Azure S
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: vanto
-ms.date: 09/28/2026
+ms.date: 11/17/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: concept-article
@@ -32,7 +32,13 @@ You can use transactional replication to push changes made in an Azure SQL manag
 
 The key components in transactional replication are the **Publisher**, **Distributor**, and **Subscriber**, as shown in the following picture:
 
-:::image type="content" source="./media/replication-transactional-overview/replication-to-sql-database.png" alt-text="Diagram of replication with Azure SQL.":::
+:::image type="content" source="./media/replication-transactional-overview/replication-azure-sql-managed-instance-to-any-sql.png" alt-text="Diagram of replication with Azure SQL.":::
+
+The **Publisher** publishes changes made on some tables (articles) by sending the updates to the Distributor. The publisher can be an Azure SQL managed instance or a SQL Server instance.
+
+The **Distributor** collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either an Azure SQL managed instance or a SQL Server instance (any version as long it's equal to or higher than the Publisher version).
+
+The **Subscriber** receives changes made on the Publisher. A SQL Server instance and Azure SQL managed instance can both be push and pull subscribers, though a pull subscription isn't supported when the distributor is an Azure SQL managed instance and the subscriber isn't. A database in Azure SQL Database can only be a push subscriber.
 
 | Role | Azure SQL Database | Azure SQL Managed Instance |
 | :--- | :--- | :--- |
@@ -41,15 +47,7 @@ The key components in transactional replication are the **Publisher**, **Distrib
 | **Pull subscriber** | No | Yes |
 | **Push subscriber** | Yes | Yes |
 
-The **Publisher** publishes changes made on some tables (articles) by sending the updates to the Distributor. The publisher can be an Azure SQL managed instance or a SQL Server instance.
-
-The **Distributor** collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either an Azure SQL managed instance or a SQL Server instance (any version as long it's equal to or higher than the Publisher version).
-
-The **Subscriber** receives changes made on the Publisher. A SQL Server instance and Azure SQL managed instance can both be push and pull subscribers, though a pull subscription isn't supported when the distributor is an Azure SQL managed instance and the subscriber isn't. A database in Azure SQL Database can only be a push subscriber.
-
-Azure SQL Managed Instance can support being a Subscriber from the following versions of SQL Server:
-
-- SQL Server 2016 and later versions
+Azure SQL Managed Instance can support being a Subscriber from SQL Server 2017 and later versions.
 
 > [!NOTE]  
 > For other versions of SQL Server that do not support publishing to objects in Azure, you can use the [republishing data](/sql/relational-databases/replication/republish-data) method to move data to newer versions of SQL Server.
@@ -83,13 +81,6 @@ Transactional replication is useful in the following scenarios:
 - Keep several distributed databases in synchronized state.
 - Migrate databases from one SQL Server instance or Azure SQL Managed Instance to another database by continuously publishing the changes.
 
-### Compare Data Sync with transactional replication
-
-| Category | Data Sync | Transactional replication |
-| --- | --- | --- |
-| Advantages | - Active-active support<br />- Bi-directional between on-premises and Azure SQL Database | - Lower latency<br />- Transactional consistency<br />- Reuse existing topology after migration |
-| Disadvantages | - No transactional consistency<br />- Higher performance impact | - Can't publish from Azure SQL Database<br />- High maintenance cost |
-
 ## Common configurations
 
 In general, the publisher and the distributor must be either in the cloud or on-premises. The following configurations are supported:
@@ -119,12 +110,12 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 
 ## Requirements
 
-- Use SQL Authentication for connectivity between replication participants.
+- Use Microsoft Entra managed identity authentication between Azure SQL replication participants. SQL authentication is still supported, but not recommended.
 - Use an Azure Storage Account share for the working directory used by replication.
 - Open TCP outbound port 445 in the subnet security rules to access the Azure file share.
 - Open TCP outbound port 1433 when the SQL managed instance is the Publisher/Distributor, and the Subscriber isn't. You may also need to change the SQL managed instance NSG outbound security rule for `allow_linkedserver_outbound` for the port 1433 **Destination Service tag** from `virtualnetwork` to `internet`.
 - Place both the publisher and distributor in the cloud, or both on-premises.
-- Configure VPN peering between the virtual networks of replication participants if the virtual networks are different.
+- Configure VNet peering between the virtual networks of replication participants if the virtual networks are different.
 
 > [!NOTE]  
 > You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](/azure/storage/files/storage-troubleshoot-windows-file-connection-problems) to resolve this issue.

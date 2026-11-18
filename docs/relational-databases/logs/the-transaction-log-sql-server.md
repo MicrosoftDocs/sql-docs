@@ -1,8 +1,8 @@
 ---
 title: The Transaction Log
 description: Learn about the transaction log. Every SQL Server database records all transactions and database modifications that you need if there's a system failure.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.reviewer: vanto
 ms.date: 08/25/2025
 ms.service: sql

@@ -1,8 +1,8 @@
 ---
 title: Editions and Supported Features of SQL Server 2025
 description: Learn details of the features supported by the various editions of SQL Server 2025.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.date: 11/19/2025
 ms.service: sql
 ms.subservice: release-landing

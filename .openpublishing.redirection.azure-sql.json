@@ -949,6 +949,12 @@
       "source_path_from_root": "/azure-sql/database/query-performance-monitoring-telemetry.md",
       "redirect_url": "/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/azure-sql-decision-tree.md",
+      "redirect_url": "/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview",
+      "redirect_document_id": false
     }
+
   ]
 }

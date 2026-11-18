@@ -5,10 +5,11 @@ description: Learn how to prepare your environment to create a link between SQL 
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 09/28/2026
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.custom:
   - ignite-2023
   - sfi-image-nochange
@@ -66,9 +67,7 @@ To prepare your SQL Server instance, you need to validate that:
 - You've [created a database master key](#create-a-database-master-key-in-the-master-database) in the `master` database.
 - You've [enabled the availability groups feature](#enable-availability-groups).
 - You've [added the proper trace flags](#enable-startup-trace-flags) at startup.
-- Your backups use [checksums](#use-backups-with-checksums).
-- You've enabled [accelerated database recovery](#enable-accelerated-database-recovery) if you're on SQL Server 2019 or later, and plan to use it on the target SQL managed instance.
-- You've enabled [Service Broker](#enable-service-broker) if you plan to use it on the target SQL managed instance.
+- You enabled [Service Broker](#prepare-databases-with-service-broker-disabled) if you plan to use it on the target SQL managed instance.
 
 You need to restart SQL Server for these changes to take effect.
 
@@ -113,7 +112,7 @@ SELECT * FROM sys.symmetric_keys WHERE name LIKE '%DatabaseMasterKey%';
 
 The link feature relies on the Always On availability groups feature, which is disabled by default when you first install SQL Server. For more information, see [Enable the Always On availability groups feature](/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server).
 
-If you already have an Always On availability group with multiple databases, follow [Extend an Always On availability group to Azure SQL Managed Instance (preview)](managed-instance-link-extend-availability-group.md). This scenario requires specific cumulative updates and a separate opt-in on every SQL Server replica. Enabling Always On availability groups alone doesn't enable multiple-database link mode. Review the [supportability requirements](managed-instance-link-extend-availability-group.md#supportability) and [stored-procedure opt-in](managed-instance-link-extend-availability-group.md#enable-multiple-database-link-mode) before creating the link.
+To replicate multiple databases through one link, extend an existing Always On availability group or create a new one. For the workflow and supported SQL Server versions, editions, and cumulative updates, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md). Multiple-database link mode must be enabled on every SQL Server replica. Enabling Always On availability groups alone doesn't enable this mode. Follow the [steps to enable multiple-database link mode](managed-instance-link-extend-availability-group.md#enable-multiple-database-link-mode) before creating the link.
 
 > [!NOTE]  
 > For SQL Server on Linux, see [Enable Always On availability groups](/sql/linux/sql-server-linux-create-availability-group#enable-the-availability-groups-feature).
@@ -181,10 +180,6 @@ To enable these trace flags at startup, use the following steps:
 
 For more information, see the [syntax to enable trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql).
 
-### Use backups with checksums
-
-When you create a link, the initial seeding between the primary and secondary replicas is done by taking a full backup of the database on the primary replica, transferring it to the secondary replica, and restoring it there. When you take the full backup, we recommend that you use the `WITH CHECKSUM` option to ensure that the backup is valid and doesn't have any corruption. For more information, see [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).
-
 ### Restart SQL Server and validate the configuration
 
 After you've ensured that you're on a supported version of SQL Server, enabled the Always On availability groups feature, and added your startup trace flags, restart your SQL Server instance to apply all of these changes:
@@ -216,7 +211,6 @@ Your SQL Server version should be one of the supported versions applied with the
 :::image type="content" source="media/managed-instance-link-preparation/ssms-results-expected-outcome.png" alt-text="Screenshot that shows the expected outcome in SSMS.":::
 
 
-[!INCLUDE [prepare-database-for-migration](../includes/sql-managed-instance/prepare-database-for-migration.md)]
  
 Before creating links, review [Prevent premature log truncation with trace flag 12381](managed-instance-link-troubleshoot-how-to.md#prevent-premature-log-truncation-with-trace-flag-12381), especially for large databases or many databases in multiple-database link mode. On supported builds, enable the flag before seeding, monitor SQL Server log growth and free disk space, and disable it when seeding finishes for all links being created.
 
@@ -305,14 +299,46 @@ Follow the steps in the [Configure SSMS for government clouds](#configure-ssms-f
 
 [!INCLUDE [azure-sql-managed-instance-link-check-network](../includes/sql-managed-instance/azure-sql-managed-instance-link-check-network.md)]
 
-## Migrate a certificate of a TDE-protected database (optional)
+## Prepare databases
 
-If you're linking a SQL Server database protected by Transparent Data Encryption (TDE) to a SQL managed instance, you must migrate the corresponding encryption certificate from the on-premises or Azure VM SQL Server instance to the SQL managed instance before using the link. For detailed steps, see [Migrate a certificate of a TDE-protected database to Azure SQL Managed Instance](tde-certificate-migrate.md).
+Before you configure the link, prepare your source databases.
 
-SQL Managed Instance databases that are encrypted with service-managed TDE keys can't be linked to SQL Server. You can only link an encrypted database to SQL Server if it was encrypted with a customer-managed key and the destination server has access to the same key used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+### Configure databases to use full recovery model
 
-> [!NOTE]  
-> Azure Key Vault is supported by SQL Server on Linux starting with [Cumulative Update 14 for SQL Server 2022](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate14).
+If SQL Server is your initial primary, each database you replicate through the link must use the full recovery model. If SQL Managed Instance is your initial primary, skip this step.
+
+Run the following Transact-SQL script on SQL Server for each database you want to replicate. Replace `<DatabaseName>` with the database name.
+
+```sql
+ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL;
+GO
+```
+
+### Create full database backup
+
+If SQL Server is your initial primary, each database you replicate through the link must have at least one full backup. If SQL Managed Instance is your initial primary, skip this step because it takes backups automatically.
+
+Run the following Transact-SQL script on SQL Server for each database you want to replicate. Replace `<DatabaseName>` with the database name and `<DiskPath>` with the full path and file name for the backup.
+
+```sql
+BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>';
+GO
+```
+
+For more information, see [Create a full database backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+
+### Prepare encrypted databases for replication to SQL Server
+
+SQL Managed Instance databases encrypted with service-managed TDE keys can't be migrated to SQL Server. You can migrate an encrypted database to SQL Server only if it uses a customer-managed key and the destination server has access to the same key used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+
+> [!CAUTION]
+> If your databases use Transparent Data Encryption (TDE), prepare the encryption certificates or keys on the destination before creating the link. Without them, the link can't replicate the encrypted databases.
+
+[!INCLUDE [prepare-database-for-migration](../includes/sql-managed-instance/prepare-database-for-migration.md)]
+
+### Replicate server-level objects
+
+The link supports replication of user databases only. It doesn't support replication of system databases. You must manually transfer server-level objects, such as logins and SQL Server Agent jobs. Script these objects from `master` or `msdb` on the source instance, and run the Transact-SQL scripts on the destination instance.
 
 ## Install SSMS
 

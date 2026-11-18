@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/27/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -295,6 +295,7 @@ ms.topic: include
 | <a id="11578"></a> 11578 | 16 | No | The stored procedure sp_show_substrait_query_plan is not available in this edition of SQL Server. |
 | <a id="11579"></a> 11579 | 16 | No | Using stored procedures is not supported. Modify the input parameter and re-run sp_show_substrait_query_plan. |
 | <a id="11580"></a> 11580 | 16 | No | sp_showmemo_for_qo_verify cannot deliver its result set when invoked through a nested output connection, such as INSERT ... EXEC. Run sp_showmemo_for_qo_verify directly so that its single result set can be returned to the caller. |
+| <a id="11581"></a> 11581 | 16 | No | sp_showmemo_for_qo_verify cannot capture this statement during compilation. Deferred compilation, including RECOMPILE with query parameters or local variables, is not supported. |
 | <a id="11601"></a> 11601 | 15 | No | %ls statements with a '%.\*ls' option are not allowed. |
 | <a id="11602"></a> 11602 | 10 | No | %ls statements are not verified. |
 | <a id="11603"></a> 11603 | 15 | No | %ls statements are not allowed at the top level. |
@@ -473,6 +474,7 @@ ms.topic: include
 | <a id="12203"></a> 12203 | 16 | No | %s |
 | <a id="12204"></a> 12204 | 20 | No | %s |
 | <a id="12221"></a> 12221 | 20 | Yes | Internal Query Processor Error: The backend query processor could not produce a query plan. For more information, contact Customer Support Services. |
+| <a id="12222"></a> 12222 | 16 | No | Column alias '%ls' in the OPENROWSET column alias list isn't supported. Remove the column alias list, and use column aliases in the SELECT list instead. |
 | <a id="12300"></a> [12300](../mssqlserver-12300-database-engine-error.md) | 15 | No | Computed columns are not supported with %S_MSG. |
 | <a id="12301"></a> [12301](../mssqlserver-12301-database-engine-error.md) | 15 | No | Nullable columns in the index key are not supported with %S_MSG. |
 | <a id="12302"></a> [12302](../mssqlserver-12302-database-engine-error.md) | 15 | No | Updating columns that are part of the PRIMARY KEY constraint is not supported with %S_MSG. |

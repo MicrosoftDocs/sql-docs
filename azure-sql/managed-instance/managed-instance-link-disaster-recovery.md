@@ -5,10 +5,11 @@ description: Learn how to use the Managed Instance link to recover your SQL Serv
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 03/06/2025
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.custom:
   - ignite-2023
   - build-2024
@@ -74,13 +75,15 @@ For Azure SQL Managed Instance, you should be a member of the [SQL Managed Insta
 
 For SQL Server 2016 to SQL Server 2019, failover to Azure SQL Managed Instance from SQL Server is one way. Failing back, or restoring your database to SQL Server isn't possible. However, you can recover your data back to SQL Server by using data movement options such as [transactional replication](replication-transactional-overview.md) or [exporting a bacpac](../database/database-export.md). Failing over to Azure SQL Managed Instance breaks the link and drops the distributed availability group. 
 
-With SQL Server 2022, you can choose to perform a one-way failover, such as for migration, by breaking the link in the process of failover. Be sure to choose the appropriate option for your business when you fail over your SQL Server 2022 database. 
+With SQL Server 2022 and later, you can choose to perform a one-way failover, such as for migration, by breaking the link during failover. Both single-database and multiple-database link modes are supported. Multiple-database link mode replicates all databases in a SQL Server Always On availability group through a single Managed Instance link. Multiple-database link mode isn't enabled by default; for requirements and steps to enable and configure it, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md). Choose the appropriate failover option for your business needs.
 
 To fail over, review [Fail over the link](managed-instance-link-failover-how-to.md). 
 
 ## Two-way failover (SQL Server 2022 - 2025)
 
 SQL Server 2022 and later introduces online failover with fail back, which allows you to seamlessly failover to Azure SQL Managed Instance and then fail back online to SQL Server by using the Managed Instance link, with minimal downtime. 
+
+Two-way failover is supported in both single-database and multiple-database link modes when the managed instance uses the update policy that matches your SQL Server version. Multiple-database link mode replicates all databases in a SQL Server Always On availability group through a single Managed Instance link. Multiple-database link mode isn't enabled by default; for requirements and steps to enable and configure it, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 
 To fail over, review [Fail over the link](managed-instance-link-failover-how-to.md). 
 

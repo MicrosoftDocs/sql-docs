@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: danil, bonova
-ms.date: 09/30/2026
+ms.date: 10/30/2026
 ms.service: azure-sql
 ms.subservice: service-overview
 ms.topic: product-comparison
@@ -26,9 +26,9 @@ Most of the standard SQL language, query processing, and database management fea
 - Security features - [Application roles](/sql/relational-databases/security/authentication-access/application-roles), [Dynamic data masking](dynamic-data-masking-overview.md), [Row Level Security](/sql/relational-databases/security/row-level-security), and Advanced Threat Protection (see getting started guides for [SQL Database](threat-detection-configure.md) and [SQL Managed Instance](../managed-instance/threat-detection-configure.md).)
 - Multi-model capabilities - [Graph processing](/sql/relational-databases/graphs/sql-graph-overview), [JSON data](json-features.md), [OPENXML](/sql/t-sql/functions/openxml-transact-sql), [Spatial](/sql/relational-databases/spatial/spatial-data-sql-server), [OPENJSON](/sql/t-sql/functions/openjson-transact-sql), and [XML indexes](/sql/t-sql/statements/create-xml-index-transact-sql). For more information, see [Multi-model capabilities of Azure SQL Database and SQL Managed Instance](../multi-model-features.md).
 
-Azure manages your databases and guarantees their high-availability. Some features that might affect high-availability or can't be used in PaaS world have limited functionalities in Azure SQL Database and Azure SQL Managed Instance.
+Azure manages your databases and guarantees their high availability. Some features that might affect high availability or can't be used in PaaS world have limited functionalities in Azure SQL Database and Azure SQL Managed Instance.
 
-If you need more details about the differences, you can find them in the separate pages:
+If you need more details about the differences, see the following articles:
 
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
 - [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md)
@@ -117,7 +117,7 @@ The following table lists the major features of SQL Server and provides informat
 | [System catalog views](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql) | Some, see individual views | Yes, see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
 | [TempDB](/sql/relational-databases/databases/tempdb-database) | Yes. [32-GB size per core for every database](resource-limits-vcore-single-databases.md). | Yes. [24-GB size per vCore for entire GP tier and limited by instance size on BC tier](../managed-instance/resource-limits.md#service-tier-characteristics)  |
 | [Temporary tables](/sql/t-sql/statements/create-table-transact-sql#database-scoped-global-temporary-tables-azure-sql-database) | Local and database-scoped global temporary tables | Local and instance-scoped global temporary tables |
-| Time zone choice | No | Yes, see [Time zones](../managed-instance/timezones-overview.md), and it must be configured when the SQL Managed Instance is created. |
+| Time zone choice | Yes, at database and session scope (preview). | Yes, at database and session scope (preview), only with the always-up-to-date update policy. See [Time zones](../managed-instance/timezones-overview.md). |
 | [Trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) | No | Yes, but only limited set of global trace flags. See [DBCC differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#dbcc) |
 | [Transactional replication](../managed-instance/replication-transactional-overview.md) | Yes, [Transactional and snapshot replication subscriber only](migrate-to-database-from-sql-server.md) | Yes, see [limitations of replication in SQL Managed Instance](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication). |
 | [Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-tde) | Yes, see [TDE for Azure SQL](transparent-data-encryption-tde-overview.md) | Yes, see [TDE for Azure SQL](transparent-data-encryption-tde-overview.md) |
@@ -130,13 +130,13 @@ The following table lists the major features of SQL Server and provides informat
 
 ## Platform capabilities
 
-The Azure platform provides a number of PaaS capabilities that are added as an additional value to the standard database features. There are a number of external services that can be used with Azure SQL Database and Azure SQL Managed Instance.
+The Azure platform provides a number of PaaS capabilities that it adds as extra value to the standard database features. You can use many external services with Azure SQL Database and Azure SQL Managed Instance.
 
 | **Platform feature** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 | --- | --- | --- |
 | **Active geo-replication** | Yes, see [Active geo-replication](active-geo-replication-overview.md?view=azuresql-db&preserve-view=true) - all service tiers. | No, see [failover groups](../managed-instance/failover-group-sql-mi.md?view=azuresql-mi&preserve-view=true) as an alternative. |
 | **Auto-scale** | Yes, but only in [serverless model](serverless-tier-overview.md?view=azuresql-db&preserve-view=true). In the non-serverless model, the change of service tier (change of vCore, storage, or DTU) is fast and online. The service tier change requires minimal or no downtime. | No, you need to choose reserved compute and storage. The change of service tier (vCore or max storage) is online and requires minimal or no downtime. |
-| **Automatic backups** | Yes, see [automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes, see [automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
+| **Automatic backups** | Yes, see [automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true). Full backups are taken every seven days, differential every 12 hours, and log backups every 5-10 minutes. | Yes, see [automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true). Full backups are taken every seven days, differential every 12 hours, and log backups every 5-10 minutes. |
 | **Automatic tuning (indexes)**| Yes, see [Automatic tuning](automatic-tuning-overview.md?view=azuresql-db&preserve-view=true)| No |
 | [Availability Zones](/azure/reliability/availability-zones-overview) | Yes | Yes. For General Purpose service tier in preview, and for Business Critical service tier generally available |
 | [Azure Resource Health](/azure/service-health/resource-health-overview) | Yes | Yes |
@@ -149,19 +149,19 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | **Long-term retention (LTR)**| Yes, see [long-term retention](long-term-retention-overview.md?view=azuresql-db&preserve-view=true), keep automatically taken backups up to 10 years. | Yes, see [long-term retention](long-term-retention-overview.md?view=azuresql-mi&preserve-view=true), keep automatically taken backups up to 10 years. |
 | **Pause/resume** | Yes, in [serverless model](serverless-tier-overview.md?view=azuresql-db&preserve-view=true) | Yes, with [Stop / start](../managed-instance/instance-stop-start-how-to.md?view=azuresql-mi&preserve-view=true) |
 | [Policy-based management](/sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management) | No | No |
-| **Public IP address** | Yes. The access can be restricted using firewall or service endpoints.  | Yes. Needs to be explicitly enabled and port 3342 must be enabled in NSG rules. Public IP can be disabled if needed. See [Public endpoint](../managed-instance/public-endpoint-overview.md?view=azuresql-mi&preserve-view=true) for more details. |
+| **Public IP address** | Yes. Restrict access by using firewall or service endpoints.  | Yes. You need to explicitly enable it and enable port 3342 in NSG rules. You can disable Public IP if needed. See [Public endpoint](../managed-instance/public-endpoint-overview.md?view=azuresql-mi&preserve-view=true) for more details. |
 | [Point in time database restore](/sql/relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model) | Yes, see [Point-in-time restore](recovery-using-backups.md?view=azuresql-db&preserve-view=true#point-in-time-restore) | Yes, see [Point-in-time restore](../managed-instance/recovery-using-backups.md?view=azuresql-mi&preserve-view=true#point-in-time-restore) |
-| **Resource pools** | Yes, as [Elastic pools](elastic-pool-overview.md?view=azuresql-db&preserve-view=true) | Yes. A single instance of SQL Managed Instance can have multiple databases that share the same pool of resources. In addition, you can deploy [multiple instances of SQL Managed Instance in instance pools](../managed-instance/instance-pools-overview.md?view=azuresql-mi&preserve-view=true) that can share the resources. |
-| **Scaling up or down (online)**| Yes, you can either change DTU or reserved vCores or max storage with the minimal downtime. | Yes, you can change reserved vCores or max storage with the minimal downtime. |
+| **Resource pools** | Yes, as [Elastic pools](elastic-pool-overview.md?view=azuresql-db&preserve-view=true) | Yes. A single instance of SQL Managed Instance can have multiple databases that share the same pool of resources. In addition, you can deploy [multiple instances of SQL Managed Instance in instance pools](../managed-instance/instance-pools-overview.md?view=azuresql-mi&preserve-view=true) that share the resources. |
+| **Scaling up or down (online)**| Yes, you can either change DTU or reserved vCores or max storage with minimal downtime. | Yes, you can change reserved vCores or max storage with minimal downtime. |
 | [SQL Alias](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) | No, use [DNS Alias](dns-alias-overview.md?view=azuresql-db&preserve-view=true) | No, use [Cliconfg](https://techcommunity.microsoft.com/t5/Azure-Database-Support-Blog/Lesson-Learned-33-How-to-make-quot-cliconfg-quot-to-work-with/ba-p/369022) to set up alias on the client machines. |
 | [Database watcher (preview)](../database-watcher-overview.md) | Yes | Yes |
 | [Database Hub in Microsoft Fabric (preview)](/fabric/database/hub) | Yes | Yes | 
-| **SQL Data Sync**| Yes, but SQL Data Sync will be retired in 2027. Instead, see [SQL Data Sync retirement: Migrate to alternative solutions](sql-data-sync-retirement-migration.md). | No, use [transactional replication](../managed-instance/replication-transactional-overview.md?view=azuresql-mi&preserve-view=true). |
+| **SQL Data Sync**| Yes, but SQL Data Sync retires in 2027. Instead, see [SQL Data Sync retirement: Migrate to alternative solutions](sql-data-sync-retirement-migration.md). | No, use [transactional replication](../managed-instance/replication-transactional-overview.md?view=azuresql-mi&preserve-view=true). |
 | [SQL Server Analysis Services (SSAS)](/sql/analysis-services/analysis-services) | No, [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) is a separate Azure cloud service. | No, [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) is a separate Azure cloud service. |
 | [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services) | Yes, with a managed SSIS in Azure Data Factory (ADF) environment, where packages are stored in SSISDB hosted by Azure SQL Database and executed on Azure SSIS Integration Runtime (IR), see [Create Azure-SSIS IR in ADF](/azure/data-factory/create-azure-ssis-integration-runtime). <br/><br/>To compare the SSIS features in SQL Database and SQL Managed Instance, see [Compare SQL Database to SQL Managed Instance](/azure/data-factory/create-azure-ssis-integration-runtime#comparison-of-sql-database-and-sql-managed-instance). | Yes, with a managed SSIS in Azure Data Factory (ADF) environment, where packages are stored in SSISDB hosted by SQL Managed Instance and executed on Azure SSIS Integration Runtime (IR), see [Create Azure-SSIS IR in ADF](/azure/data-factory/create-azure-ssis-integration-runtime). <br/><br/>To compare the SSIS features in SQL Database and SQL Managed Instance, see [Compare SQL Database to SQL Managed Instance](/azure/data-factory/create-azure-ssis-integration-runtime#comparison-of-sql-database-and-sql-managed-instance). |
 | [SQL Server Reporting Services (SSRS)](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports) | No - [see Power BI](/power-bi/) | No - use [Power BI paginated reports](/power-bi/paginated-reports/paginated-reports-report-builder-power-bi) instead or host SSRS on an Azure VM. While SQL Managed Instance can't run SSRS as a service, it can host [SSRS catalog databases](/sql/reporting-services/install-windows/ssrs-report-server-create-a-report-server-database#database-server-version-requirements) for a reporting server installed on Azure Virtual Machine, using SQL Server authentication. |
 | [Query Performance Insight](query-performance-insight-use.md) | Yes | No. Use built-in reports in SQL Server Management Studio. |
-| [VNet](/azure/virtual-network/virtual-networks-overview) | Partial, it enables restricted access using [VNet Endpoints](vnet-service-endpoint-rule-overview.md?view=azuresql-db&preserve-view=true) | Yes, [SQL Managed Instance is injected in the VNet](../managed-instance/transact-sql-tsql-differences-sql-server.md?view=azuresql-mi&preserve-view=true#subnet). |
+| [VNet](/azure/virtual-network/virtual-networks-overview) | Partial, it enables restricted access by using [VNet Endpoints](vnet-service-endpoint-rule-overview.md?view=azuresql-db&preserve-view=true) | Yes, [SQL Managed Instance is injected in the VNet](../managed-instance/transact-sql-tsql-differences-sql-server.md?view=azuresql-mi&preserve-view=true#subnet). |
 | **VNet Service endpoint** | Yes, see [virtual network service endpoints](vnet-service-endpoint-rule-overview.md?view=azuresql-db&preserve-view=true). | Yes, see [service endpoint policies](../managed-instance/service-endpoint-policies-configure.md?view=azuresql-mi&preserve-view=true). |
 | **VNet Global peering** | Yes, using [Private IP and service endpoints](vnet-service-endpoint-rule-overview.md?view=azuresql-db&preserve-view=true) | Yes, using [Virtual network peering](../managed-instance/failover-group-sql-mi.md?view=azuresql-mi&preserve-view=true#enabling-replication-traffic-between-two-instances). |
 | **Private connectivity** | Yes, using [Private Link](/azure/private-link/private-endpoint-overview) | Yes, using [VNet-local endpoint or private endpoint](../managed-instance/connectivity-architecture-overview.md?view=azuresql-mi&preserve-view=true#communication-overview) |
@@ -212,7 +212,7 @@ Azure SQL Database and Azure SQL Managed Instance support various data tools tha
 
 ## Migration methods
 
-You can use different migration methods to move your data between SQL Server, Azure SQL Database, and Azure SQL Managed Instance. Some methods are **Online** and picking-up all changes that are made on the source while you're running migration, while in **Offline** methods you need to stop your workload that is modifying data on the source while the migration is in progress.
+You can use different migration methods to move your data between SQL Server, Azure SQL Database, and Azure SQL Managed Instance. Some methods are **Online** and pick up all changes that you make on the source while you're running migration. In **Offline** methods, you need to stop your workload that modifies data on the source while the migration is in progress.
 
 | Source | Azure SQL Database | Azure SQL Managed Instance |
 | --- | --- | --- |
@@ -225,7 +225,7 @@ You can use different migration methods to move your data between SQL Server, Az
 Microsoft continues to add features to Azure SQL Database. Visit the Service Updates webpage for Azure for the newest updates using these filters:
 
 - Filtered to [Azure SQL Database](https://azure.microsoft.com/updates/?service=sql-database).
-- Filtered to [General Availability \(GA\) announcements](https://azure.microsoft.com/updates/?service=sql-database&update-type=general-availability) for SQL Database features.
+- Filtered to [General Availability (GA) announcements](https://azure.microsoft.com/updates/?service=sql-database&update-type=general-availability) for SQL Database features.
 
 For more information about Azure SQL Database and Azure SQL Managed Instance, see:
 

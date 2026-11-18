@@ -2,8 +2,8 @@
 title: Deprecated Database Engine Features
 titleSuffix: SQL Server 2025
 description: Find out about deprecated Database Engine features that are still available in SQL Server 2025 (17.x), but shouldn't be used in new applications.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: vanto
 ms.date: 11/18/2025
 ms.service: sql

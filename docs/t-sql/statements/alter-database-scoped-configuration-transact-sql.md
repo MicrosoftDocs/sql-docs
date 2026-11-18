@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: derekw, bobward, jovanpop, mariyaali
-ms.date: 10/06/2026
+ms.date: 10/27/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -233,7 +233,7 @@ Enables an optimized mechanism for query plan forcing, applicable to all forms o
 
 The `ALLOW_BUILTIN_TVF_IN_ALL_COMPAT_LEVELS` database-scoped configuration is **in preview**.
 
-When enabled, it allows the following built-in table-valued functions (TVFs) to be used regardless of the database compatibility level:
+When enabled, you can use the following built-in table-valued functions (TVFs) regardless of the database compatibility level:
 
 - [GENERATE_SERIES](../functions/generate-series-transact-sql.md)
 - [OPENJSON](../functions/openjson-transact-sql.md)
@@ -624,7 +624,7 @@ For database compatibility level 140 or lower versions, this database scoped con
 
 #### TIME_ZONE = { '*time_zone_value*' | LOCAL }
 
-**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)].
+**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
 Specifies the time zone value. *time_zone_value* is **nvarchar(128)**, with a default of `LOCAL`.
 
@@ -693,7 +693,7 @@ Sets [!INCLUDE [tsql](../../includes/tsql-md.md)] and query processing behaviors
 
 ## Permissions
 
-Requires `ALTER ANY DATABASE SCOPED CONFIGURATION` on the database. A user with `CONTROL` permission on a database can grant this permission.
+You need `ALTER ANY DATABASE SCOPED CONFIGURATION` permission on the database. A user with `CONTROL` permission on a database can grant this permission.
 
 ## Remarks
 

@@ -4,8 +4,6 @@
   items:
   - name: What is Azure SQL?
     href: azure-sql-iaas-vs-paas-what-is-overview.md
-  - name: Azure SQL decision tree
-    href: azure-sql-decision-tree.md
   - name: Migrate to Azure SQL
     href: migration-guides/index.yml
   - name: Migrating SQL Server Workloads FAQ
@@ -293,7 +291,7 @@
       items:
       - name: Deploy a free database
         href: database/free-tier.md
-      - name: Learn SQL with AdventureWorksLT
+      - name: Query sample data
         href: database/free-tier-sample.md
       - name: Upgrade to Hyperscale
         href: database/free-tier-upgrade-to-hyperscale.md
@@ -326,6 +324,8 @@
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
+    - name: Build with Azure SQL Database container
+      href: database/azure-sql-database-container-quickstart.md
     - name: Create database
       items:
       - name: Azure portal, PowerShell, Az CLI
@@ -1509,7 +1509,7 @@
         href: managed-instance/managed-instance-link-configure-how-to-ssms.md
       - name: Configure link with scripts
         href: managed-instance/managed-instance-link-configure-how-to-scripts.md
-      - name: Extend an Always On availability group (preview)
+      - name: Extend an Always On availability group
         href: managed-instance/managed-instance-link-extend-availability-group.md
       - name: Fail over a link
         href: managed-instance/managed-instance-link-failover-how-to.md

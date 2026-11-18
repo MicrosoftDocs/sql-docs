@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 > [!NOTE]  
@@ -1037,7 +1037,8 @@ ms.topic: include
 | <a id="35544"></a> 35544 | 10 | No | Empty internal distributed availability group. |
 | <a id="35545"></a> 35545 | 10 | No | Internal distributed availability group naming inconsistency. |
 | <a id="35546"></a> 35546 | 10 | No | An internal distributed availability group detected with more than one associated availability database. |
-| <a id="35547"></a> 35547 | 10 | No | Use sys.sp_mi_dag_repair on the distributed availability group. |
+| <a id="35547"></a> 35547 | 10 | No | Use sys.sp_milink_repair on the distributed availability group. |
+| <a id="35555"></a> 35555 | 15 | No | the database default collation or a column/parameter still uses this collation. Remove all references to that collation before disabling the feature |
 | <a id="36001"></a> 36001 | 16 | No | %s '%s' already exists in the database. |
 | <a id="36002"></a> 36002 | 16 | No | instance_id already exists in the database. |
 | <a id="36003"></a> 36003 | 16 | No | %s '%s' already exists for the given DAC instance. |
@@ -1349,6 +1350,7 @@ ms.topic: include
 | <a id="37577"></a> 37577 | 16 | No | Current scenario is blocked for Fabric DW. |
 | <a id="37578"></a> 37578 | 16 | No | An internal error has occurred. Please retry the operation. If the issue persists, contact support for assistance. |
 | <a id="37579"></a> 37579 | 16 | No | The security policy '%.\*ls' cannot reference tables with vector indexes. Table '%.\*ls' has a vector index. |
+| <a id="37599"></a> 37599 | 16 | No | The number of column encryption keys sent by the client for enclave computations exceeds the maximum allowed limit of %d. |
 | <a id="37601"></a> 37601 | 17 | Yes | \[Auditing\]\[%ls\] Could not allocate memory for %ls. |
 | <a id="37602"></a> 37602 | 16 | Yes | \[Auditing\]\[%ls\] Error while reading AuditPolicy from WinFab property. \[ErrorCode: %d\]. |
 | <a id="37603"></a> 37603 | 16 | Yes | \[Auditing\]\[%ls\] The 'State' in AuditPolicy is 'UNKNOWN'. \[ErrorCode: %d\]. |

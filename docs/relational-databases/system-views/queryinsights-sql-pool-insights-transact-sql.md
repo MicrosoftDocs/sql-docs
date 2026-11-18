@@ -1,10 +1,10 @@
 ---
 title: "queryinsights.sql_pool_insights (Transact-SQL)"
-description: The queryinsights.sql_pool_insights in Microsoft Fabric provides actionable insights into the configuration and utilization of SQL pools.
+description: The queryinsights.sql_pool_insights in Microsoft Fabric provides actionable insights into the configuration, pressure, and vnode utilization of SQL pools.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mariyaali
-ms.date: 11/12/2025
+ms.date: 11/18/2026
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -23,7 +23,7 @@ monikerRange: "=fabric"
 
 [!INCLUDE [Fabric SE DW](../../includes/applies-to-version/fabric-se-dw.md)]
 
-  The `queryinsights.sql_pool_insights` in [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse monitors resource allocation, tracks configuration changes, and identifies periods when pools are under pressure. 
+  The `queryinsights.sql_pool_insights` in [!INCLUDE [fabric](../../includes/fabric.md)] Data Warehouse monitors resource allocation, tracks configuration changes, identifies periods when pools are under pressure, and shows how many virtual nodes (vnodes) each pool used compared to its limit.
 
 | Column name                | Data type        | Description                                                                 |
 | ---                        | ---              | ---                                                                         |
@@ -33,6 +33,9 @@ monikerRange: "=fabric"
 | `is_optimized_for_reads` | **bit**          | Indicates if the pool is configured for read-optimized workloads.            |
 | `current_workspace_capacity` | **nvarchar(16)**| Capacity currently used by the workspace.                               |
 | `is_pool_under_pressure` | **bit**          | Indicates if the pool is under pressure.                                    |
+| `vnodes_used` | **int** | Highest number of vnodes the pool used during the reporting interval, across all warehouses and SQL analytics endpoints in the workspace that use the pool. `NULL` when vnode data isn't available for the interval. |
+| `max_vnodes_available` | **int** | Maximum number of vnodes the pool can use, based on the workspace capacity and `max_resource_percentage`. `NULL` when vnode data isn't available. |
+| `includes_cache_vnodes` | **bit** | `1` when `vnodes_used` includes vnodes kept warm for caching. |
 
 ## Remarks
 
@@ -83,6 +86,52 @@ SELECT sql_pool_name,
 FROM queryinsights.sql_pool_insights
 WHERE sql_pool_name = 'SELECT'
 ORDER BY timestamp;
+```
+
+### C. Calculate vnode utilization
+
+Show how close each pool came to its vnode limit in the last 24 hours:
+
+```sql
+SELECT
+    sql_pool_name,
+    [timestamp],
+    vnodes_used,
+    max_vnodes_available,
+    CAST(100.0 * vnodes_used / NULLIF(max_vnodes_available, 0) AS decimal(5,1)) AS utilization_pct,
+    includes_cache_vnodes,
+    is_pool_under_pressure
+FROM queryinsights.sql_pool_insights
+WHERE vnodes_used IS NOT NULL
+  AND [timestamp] >= DATEADD(DAY, -1, SYSUTCDATETIME())
+ORDER BY sql_pool_name, [timestamp];
+```
+
+### D. Find queries that ran during high utilization
+
+Match pool rows to queries by time. This shows which queries ran while the pool was busy. It doesn't show how many vnodes each query used.
+
+```sql
+WITH busy AS (
+    SELECT sql_pool_name, [timestamp]
+    FROM queryinsights.sql_pool_insights
+    WHERE vnodes_used >= 0.9 * max_vnodes_available
+      AND [timestamp] >= DATEADD(DAY, -1, SYSUTCDATETIME())
+)
+SELECT DISTINCT
+    b.sql_pool_name,
+    b.[timestamp] AS busy_at,
+    r.distributed_statement_id,
+    r.start_time,
+    r.end_time,
+    r.total_elapsed_time_ms,
+    r.login_name,
+    LEFT(r.command, 200) AS command_text
+FROM busy AS b
+JOIN queryinsights.exec_requests_history AS r
+    ON r.sql_pool_name = b.sql_pool_name
+   AND b.[timestamp] BETWEEN r.start_time AND r.end_time
+ORDER BY b.[timestamp] DESC, r.total_elapsed_time_ms DESC;
 ```
 
 ## Next step

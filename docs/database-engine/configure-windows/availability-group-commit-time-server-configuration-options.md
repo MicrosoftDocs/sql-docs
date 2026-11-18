@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: availability group commit time (ms)"
 description: "Learn to modify the commit time for an availability group replica and the options that control the cache's behavior. See when to change this option in SQL Server."
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: vanto
 ms.date: 08/26/2025
 ms.service: sql

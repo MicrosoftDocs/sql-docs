@@ -2,7 +2,7 @@
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/15/2026
+ms.date: 11/12/2026
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -1559,6 +1559,7 @@ ms.topic: include
 | <a id="47201"></a> 47201 | 16 | No | Procedure expects '%u' parameters. |
 | <a id="47202"></a> 47202 | 16 | No | Procedure expects '%u' parameters and '%u' for _ex version. |
 | <a id="47203"></a> 47203 | 16 | No | Procedure expects at least '%u' parameters and '%u' max. |
+| <a id="47204"></a> 47204 | 16 | No | Output parameter '%.\*ls' has declared size %u bytes, which is less than the required size of %u bytes. |
 | <a id="47301"></a> 47301 | 16 | No | Data Retention cleanup is disabled for this database. Data Retention cleanup must be enabled on a database to enable data cleanup. |
 | <a id="47302"></a> 47302 | 16 | No | Data Retention Cleanup cannot be applied on table '%.\*ls' because it has infinite retention period. |
 | <a id="47303"></a> 47303 | 16 | No | Data retention cleanup on table(database id %lu, table id %ld) cannot be executed. Either data retention cleanup is disabled on the database, appropriate lock could not be obtained or the table does not exist anymore. |

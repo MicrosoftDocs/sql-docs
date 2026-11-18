@@ -1,9 +1,10 @@
 ---
 title: "Replication Security Best Practices"
 description: Learn about the best approach for securing replication connections in SQL Server in a variety of different circumstances.
-author: MladjoA
-ms.author: mlandzic
-ms.date: 11/08/2026
+author: pochiraju
+ms.author: rajpo
+ms.reviewer: mlandzic
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication
 ms.topic: how-to

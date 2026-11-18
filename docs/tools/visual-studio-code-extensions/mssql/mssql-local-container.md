@@ -317,7 +317,7 @@ Don't run this statement against a table from another project. Stop the containe
 
 ## Move from local to cloud
 
-- By using the MSSQL extension, you can deploy your local database to the cloud. Learn more from [Local to Cloud](/azure/azure-sql/database/move-local-to-cloud).
+- By using the MSSQL extension, you can deploy your local database to the cloud. Learn more from [Local to Cloud](mssql-local-to-cloud-deployment.md).
 
 ## Related content
 

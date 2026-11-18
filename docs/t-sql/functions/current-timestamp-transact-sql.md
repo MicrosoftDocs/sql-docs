@@ -82,7 +82,7 @@ SELECT SYSDATETIME(),
        CURRENT_TIMESTAMP,
        GETDATE(),
        GETUTCDATE(),
-       CURRENT_DATE;
+       CURRENT_DATE; --Introduced in SQL Server 2025
 ```
 
 [!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
@@ -108,7 +108,7 @@ SELECT CONVERT (DATE, SYSDATETIME()),
        CONVERT (DATE, CURRENT_TIMESTAMP),
        CONVERT (DATE, GETDATE()),
        CONVERT (DATE, GETUTCDATE()),
-       CURRENT_DATE;
+       CURRENT_DATE;  --Introduced in SQL Server 2025
 ```
 
 [!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]

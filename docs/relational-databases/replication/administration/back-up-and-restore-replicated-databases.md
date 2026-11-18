@@ -1,8 +1,8 @@
 ---
 title: "Back Up and Restore Replicated Databases"
 description: Review overview information and links to additional information about backup and restore strategies for each type of replication in SQL Server.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

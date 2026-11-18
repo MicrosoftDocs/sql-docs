@@ -5,7 +5,7 @@ description: Learn how to fail over a link between SQL Server and Azure SQL Mana
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 12/06/2024
+ms.date: 11/18/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.custom: ignite-2023
@@ -299,11 +299,15 @@ GO
 
 ## Fail over multiple databases
 
-If you plan to fail over multiple databases from instances on the same server, for optimal performance and predictability, fail over 8 databases per instance at a time. For example, if you have 10 instances with 32 linked databases each, fail over 8 databases at a time from each instance, and repeat the process until all databases are failed over.
+You can fail over multiple databases by using either single-database or multiple-database link mode. Single-database link mode replicates one database per link, so each database requires a separate link. Multiple-database link mode replicates all databases in a SQL Server Always On availability group through a single Managed Instance link on [supported SQL Server versions and cumulative updates](managed-instance-link-extend-availability-group.md#supportability).
+
+In single-database link mode, if you plan to fail over multiple databases from instances on the same server, for optimal performance and predictability, fail over eight databases per instance at a time. For example, if you have 10 instances with 32 linked databases each, fail over eight databases at a time from each instance, and repeat the process until all databases are failed over.
+
+In multiple-database link mode, the seeding and failover process is managed automatically, so you don't need to manually fail over a limited number of databases at a time as you do in single-database link mode. For requirements and configuration steps, see [Extend an Always On availability group to Azure SQL Managed Instance](managed-instance-link-extend-availability-group.md).
 
 ## View database after failover
 
-For SQL Server 2022, if you chose to maintain the link, you can check that the distributed availability group exists under **Availability Groups** in **Object Explorer** in SQL Server Management Studio. 
+For SQL Server 2022 and later, if you chose to maintain the link, you can check that the distributed availability group exists under **Availability Groups** in **Object Explorer** in SQL Server Management Studio.
 
 If you dropped the link during failover, you can use **Object Explorer** to confirm the distributed availability group no longer exists. If you chose to keep the availability group, the database will still be **Synchronized**. 
 

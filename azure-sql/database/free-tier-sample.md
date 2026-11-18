@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Learn SQL with AdventureWorksLT in Azure SQL Database"
+title: "Tutorial: Query sample data in Azure SQL Database"
 description: Learn SQL with AdventureWorksLT sample data and build a product explorer in Azure SQL Database. Start with the free tier or use a paid database.
 ms.service: azure-sql-database
 ms.subservice: development
@@ -8,7 +8,7 @@ ms.date: 11/10/2026
 ai-usage: ai-assisted
 ---
 
-# Tutorial: Learn SQL with AdventureWorksLT in Azure SQL Database
+# Tutorial: Query sample data in Azure SQL Database
 
 Start learning SQL with a database that already contains related tables and sample data. When you create a database in the Azure portal, selecting **Sample** on the **Additional settings** tab populates the new database with **AdventureWorksLT**. You don't need to design tables or import a backup to start querying.
 
@@ -25,7 +25,7 @@ In this tutorial, you:
 > - Read, filter, sort, join, and summarize sample data.
 > - Give an AI coding assistant a prompt for a product explorer with create, read, update, and delete (CRUD) operations.
 
-The SQL query examples in this tutorial are read-only; the application exercise changes sample data. You use the sample database you created, not a second database created by a query.
+The SQL query examples are read-only; the application exercise changes sample data. Results can differ if your sample version or data has changed.
 
 ## Prerequisites
 
@@ -44,9 +44,7 @@ For either creation path, before you select **Review + create**, choose the samp
 1. Confirm that the page states that **AdventureWorksLT will be created as the sample database**.
 1. Complete creation. If you selected the free tier, [verify the free tier deployment](free-tier.md#verify-the-deployment).
 
-**Sample** selects the initial data, not the pricing model. For free tier eligibility, charges, and pause behavior, see the [free tier guide](free-tier.md).
-
-The sample is an explicit creation choice, not something every new database contains. If you already have an empty database, these steps don't add the sample to it. Create a separate learning database with **Sample**, or use the [documented AdventureWorks installation options](/sql/samples/adventureworks-install-configure) appropriate for your platform. Don't overwrite a database you need.
+**Sample** selects the initial data, not the pricing model, and applies only during creation. For an existing empty database, create a separate learning database with **Sample**, or review the [AdventureWorks installation options](/sql/samples/adventureworks-install-configure) for your platform. Don't overwrite a database you need.
 
 ## Connect to your sample database
 
@@ -101,7 +99,7 @@ ORDER BY c.column_id;
 
 `IsNullable = 1` means a column can contain `NULL`, representing missing or unknown information. `MaxLengthBytes` is a byte count, not always a character count; `-1` denotes a large-value type. You might see alias types such as `Name`.
 
-If `SalesLT` tables aren't present, check the selected database and whether **Sample** was chosen during creation. Don't substitute tables from the full AdventureWorks schema or silently generate replacement tables.
+If `SalesLT` tables aren't present, check the selected database and whether **Sample** was chosen during creation.
 
 ## 1. Read your first rows
 
@@ -122,7 +120,7 @@ ORDER BY ProductID;
 - `TOP (5)` limits the output to five rows.
 - `ORDER BY` makes the result predictable. `ProductID` is a unique tie-breaker in later examples, too.
 
-In the sample used to validate this tutorial, the first row is product `680`, **HL Road Frame - Black, 58**, with a list price of `1431.50`. Results can differ if your sample version or data has changed.
+The sample's first row is product `680`, **HL Road Frame - Black, 58**, with a list price of `1431.50`.
 
 **Try it:** Return ten rows instead of five. Add `Color` to the selected columns.
 
@@ -144,7 +142,7 @@ ORDER BY ListPrice DESC, ProductID;
 
 `WHERE` keeps only matching rows. `AND` requires both conditions to be true. `DESC` puts the highest prices first. The `N` prefix denotes a Unicode string literal; text values use single quotation marks.
 
-The validated sample returns **Mountain-100 Black, 38** first, with a list price of `3374.99`.
+The sample returns **Mountain-100 Black, 38** first, with a list price of `3374.99`.
 
 **Try it:** Change the color to `N'Red'` or change the minimum price.
 
@@ -162,7 +160,7 @@ WHERE Color IS NULL
 ORDER BY ProductID;
 ```
 
-Use `IS NULL`, not `= NULL`. A missing value isn't the same as an empty string, zero, or a color named "None". The validated sample includes **LL Fork** among these results.
+Use `IS NULL`, not `= NULL`. A missing value isn't the same as an empty string, zero, or a color named "None". The sample includes **LL Fork** among these results.
 
 **Try it:** Use `IS NOT NULL` to find products with a recorded color.
 
@@ -187,7 +185,7 @@ ORDER BY p.ProductID;
 
 `p`, `pc`, and `pm` are short aliases. Each `ON` clause follows a foreign-key relationship. `LEFT JOIN` keeps a product even when its nullable category or model relationship has no value. `AS ProductName` gives the result column a meaningful label.
 
-For product `680`, the validated result shows category **Road Frames** and model **HL Road Frame**.
+For product `680`, the result shows category **Road Frames** and model **HL Road Frame**.
 
 **Try it:** Add a `WHERE` clause that keeps only category `N'Helmets'`. A filter on `pc.Name` then excludes products without a matching category.
 
@@ -211,7 +209,7 @@ ORDER BY ProductCount DESC, pc.ProductCategoryID;
 
 `GROUP BY` forms one group per category. `COUNT(p.ProductID)` counts matching products, not the placeholder row produced by a left join with no match. `AVG` calculates the average list price, and `CAST` displays it to two decimal places. `HAVING` filters groups after aggregation.
 
-The validated sample's **Road Bikes** category contains `43` products with an average list price of `1597.45`. This groups by the product's directly assigned category; it doesn't roll up the category hierarchy.
+The sample's **Road Bikes** category contains `43` products with an average list price of `1597.45`. This grouping uses the product's directly assigned category; it doesn't roll up the category hierarchy.
 
 **Try it:** Remove `HAVING` and `TOP (5)` to include empty categories. Their product count is zero and their average is `NULL`, not zero.
 
@@ -234,19 +232,19 @@ ORDER BY LineSales DESC, p.ProductID;
 
 `INNER JOIN` returns matching order-line/product pairs. `SUM` adds quantities and line totals within each product group. Use the existing `LineTotal` column rather than multiplying list price by quantity: order lines have their own unit price and discount.
 
-This value represents the sum of sample order-line amounts, not profit or a measure of paid invoices. It excludes order-level tax and freight. The validated sample's first result is **Touring-1000 Blue, 60**, with `26` units and line sales of `37191.49`. Historical sample dates aren't evidence of recent business activity.
+This value represents the sum of sample order-line amounts, not profit or a measure of paid invoices. It excludes order-level tax and freight. The sample's first result is **Touring-1000 Blue, 60**, with `26` units and line sales of `37191.49`. Historical sample dates aren't evidence of recent business activity.
 
 **Try it:** Sort by `UnitsOrdered DESC, p.ProductID` instead.
 
 ## Build a product explorer with an AI coding assistant
 
-Use an AI coding assistant to turn your sample database into a product explorer with CRUD operations for products, categories, and models. Start with a prompt that describes what you want to build, and let the agent discover the schema and work out the implementation details.
+Use the following prompt with an AI coding assistant to build a product explorer with CRUD operations for products, categories, and models.
 
-Configure your assistant's database connection securely, then replace the server and database placeholders in the prompt. Don't put credentials in the prompt. If the assistant can't inspect your database, it can help you provide the schema information it needs.
+Configure your assistant's database connection securely, then replace the server and database placeholders. Don't put credentials in the prompt.
 
 Review the agent's plan and generated code before running it. This prompt builds an application; it doesn't add AI inference to the application.
 
-```text
+```prompt
 Build a local product explorer using the AdventureWorksLT sample
 data in my existing Azure SQL Database:
 

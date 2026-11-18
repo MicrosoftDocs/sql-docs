@@ -25,6 +25,8 @@ In this section, you'll see an overview of available articles that can help you 
 - [Create a single database using the Azure portal](single-database-create-quickstart.md).
 - After creating the database, you would need to [secure your database by configuring firewall rules](firewall-create-server-level-portal-quickstart.md).
 
+For local development without an Azure subscription, see [Build with Azure SQL Database container](azure-sql-database-container-quickstart.md).
+
 ## Automate management operations
 
 You can use PowerShell or the Azure CLI to create, configure, and scale your database.

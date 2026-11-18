@@ -35,8 +35,8 @@ In an empty folder, run these commands:
 ```console
 dotnet new console --framework net10.0 --name SqlClientConnect
 cd SqlClientConnect
-dotnet add package Microsoft.Data.SqlClient --version 7.1.1
-dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.1
+dotnet add package Microsoft.Data.SqlClient --version 7.1.2
+dotnet add package Microsoft.Data.SqlClient.Extensions.Azure --version 7.1.2
 ```
 
 ### [.NET Framework](#tab/netframework)
@@ -59,8 +59,8 @@ Replace the contents of `SqlClientConnect.csproj` with this project file, which 
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
-    <PackageReference Include="Microsoft.Data.SqlClient.Extensions.Azure" Version="7.1.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient.Extensions.Azure" Version="7.1.2" />
   </ItemGroup>
 
 </Project>

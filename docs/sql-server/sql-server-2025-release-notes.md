@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2025 Release Notes
 description: Find information about SQL Server 2025 (17.x) limitations, known issues, help resources, and other release notes.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: vanto
 ms.date: 08/19/2026
 ms.service: sql

@@ -3,7 +3,7 @@ title: "sys.dm_hs_database_replicas (Transact-SQL)"
 description: The sys.dm_hs_database_replicas dynamic management function returns information about Azure SQL Database Hyperscale secondary replicas.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: adbadram, dfurman
+ms.reviewer: dfurman
 ms.date: 08/11/2025
 ms.service: sql
 ms.subservice: system-objects

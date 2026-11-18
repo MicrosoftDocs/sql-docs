@@ -1,8 +1,8 @@
 ---
 title: "Server Configuration: media retention"
 description: Learn about the media retention option. See how to use it to specify how long SQL Server retains transaction log and database backups.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 08/26/2025
 ms.service: sql
 ms.subservice: configuration

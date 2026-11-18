@@ -32,6 +32,8 @@ landingContent:
         links:
           - text: Create SQL Database
             url: hyperscale-database-create-quickstart.md
+          - text: Build with Azure SQL Database container
+            url: azure-sql-database-container-quickstart.md
           - text: Configure firewall
             url: firewall-create-server-level-portal-quickstart.md
           - text: Try for free 

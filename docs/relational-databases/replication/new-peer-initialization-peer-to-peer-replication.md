@@ -1,8 +1,8 @@
 ---
 title: New Peer Initialization (Peer-to-Peer)
 description: Use the New Peer Initialization page in SSMS to specify whether peers were initialized manually or from a backup. Explore both options and their sync_type values.
-author: adbadram
-ms.author: adbadram
+author: dnethi
+ms.author: dinethi
 ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: replication

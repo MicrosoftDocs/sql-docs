@@ -1,8 +1,8 @@
 ---
 title: "SQL Server 2025: Hardware and Software Requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2025.
-author: adbadram
-ms.author: adbadram
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: jopilov, rdorr
 ms.date: 07/20/2026
 ms.service: sql

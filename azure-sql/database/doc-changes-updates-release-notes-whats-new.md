@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: vanto
-ms.date: 10/29/2026
+ms.date: 11/16/2026
 ms.service: azure-sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -53,11 +53,10 @@ The following table lists the features of Azure SQL Database that are currently 
 | **MAX_ROLLOVER_FILES in extended event sessions using Azure Storage blobs** | For new extended event sessions, you can specify the `MAX_ROLLOVER_FILES` option to retain only the specified number of the most recent Azure Storage blobs. For more information, see [event_file target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#event_file-target). |
 | **Migration to Azure SQL Database by using Azure Arc** | Migrate databases from a SQL Server instance enabled by Azure Arc to Azure SQL Database directly from the Azure portal. This migration path is currently in preview. For more information, see [Migrate to Azure SQL Database](/sql/sql-server/azure-arc/migrate-to-azure-sql-database). |
 | **Multiple geo-replicas for Hyperscale** | The ability to create up to four geo-replicas for Azure SQL Hyperscale is in preview. Learn more about [multiple geo-replicas for Hyperscale](https://aka.ms/sqlhs-multi-geo-announcement). |
-| **Multiple secondaries for failover groups** | You can [configure multiple secondary servers for failover groups](failover-group-sql-db.md#multiple-secondaries) in Azure SQL Database. |
+| **Multiple partner servers for failover groups** | You can [configure multiple partner (secondary) servers for failover groups](failover-group-sql-db.md#multiple-secondaries) in Azure SQL Database. |
 | **Network Security Perimeter** | [Azure Network Security Perimeter](network-security-perimeter.md) allows organizations to define a logical network isolation boundary for PaaS resources (for example, Azure Storage and SQL Database) that are deployed outside your organization's virtual networks. It restricts public network access to PaaS resources outside of the perimeter, and access can be exempted by using explicit access rules for public inbound and outbound. |
 | **Query Store for readable secondary replicas** | [Query Store for readable secondary replicas](/sql/relational-databases/performance/query-store-for-secondary-replicas) enables Query Store insights for workloads that run on secondary replicas. When enabled, secondary replicas stream query execution information (such as runtime and wait statistics) to the primary replica, where the data is persisted in Query Store and made visible across all replicas. |
 | **Regex-based dynamic data masking** | Use the `REGEXP_REPLACE` masking function to define pattern-driven masking rules for variable-length string data such as email addresses, phone numbers, and identifiers. For more information, see [Regex-based dynamic data masking in Azure SQL Database (preview)](dynamic-data-masking-regex.md). |
-| **Restart database in the Azure portal** | You can [restart your SQL database or elastic pool](restart-database.md) from the Azure portal. |
 | **Soft delete retention for logical server** | You can [configure a soft delete retention period](deleted-logical-server-restore.md) for a logical server and restore a deleted server within the retention period. |
 
 ## General availability (GA)
@@ -66,6 +65,7 @@ The following table lists features of Azure SQL Database that became generally a
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| **Restart a database or an elastic pool in the Azure portal** | November 2026 | You can [restart your SQL database or elastic pool](restart-database.md) from the Azure portal. |
 | **Approximate or fuzzy string matching** | November 2026 | Check if two strings are similar, and calculate the difference between two strings. Use this capability to identify strings that might be different because of character corruption. [What is fuzzy string matching?](/sql/relational-databases/fuzzy-string-match/overview) |
 | **Vector indexes and VECTOR_SEARCH** | September 2026 | DiskANN vector indexes and `VECTOR_SEARCH` are now generally available in Azure SQL Database, with full DML support, iterative filtering, the `SELECT TOP (N) WITH APPROXIMATE` syntax, and the `FORCE_ANN_ONLY` table hint. Earlier vector index versions and the `TOP_N` parameter are deprecated. For more information, see [CREATE VECTOR INDEX](/sql/t-sql/statements/create-vector-index-transact-sql?view=azuresqldb-current&preserve-view=true) and [VECTOR_SEARCH](/sql/t-sql/functions/vector-search-transact-sql?view=azuresqldb-current&preserve-view=true). For more information, see [Vector indexes and vector search general availability](https://aka.ms/azuresql-vectorindex-ga).|
 | **Azure SQL portal Query editor** | September 2026 | The [Azure portal Query editor](query-editor.md) is now generally available. The classic query editor portal experience remains in preview. New features for the query editor at GA: a **Cancel** button, resizable result set grid, stored procedure definitions, and automatic query saving.|

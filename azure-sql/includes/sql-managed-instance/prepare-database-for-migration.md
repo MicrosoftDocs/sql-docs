@@ -35,29 +35,18 @@ If you use [accelerated database recovery (ADR)](/sql/relational-databases/accel
 
 ### Prepare databases with Service Broker disabled
 
-[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) is enabled by default for all versions of SQL Server. If you disabled Service Broker on the database you're migrating and you plan to use it on SQL Managed Instance, enable Service Broker on the source SQL Server database before you migrate to SQL Managed Instance. If you don't enable Service Broker on the source SQL Server database, the migration process preserves the disabled setting. You can't enable Service Broker yourself on a migrated database, but you can contact Microsoft Support to enable it. This is a database-level setting, so other databases on the managed instance aren't affected.
+If you've disabled [Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker), which is enabled by default on SQL Server, re-enable it on the source database before migration if you plan to use it on SQL Managed Instance. Otherwise, the migrated database retains the disabled setting, and you must contact Microsoft Support to enable Service Broker. This setting applies only to the migrated database and doesn't affect other databases on the managed instance.
 
-To check if Service Broker is enabled, run the following Transact-SQL script on SQL Server instance:
-
-```sql
-SELECT name AS [Database Name], is_broker_enabled AS [Service Broker Enabled]
-FROM sys.databases
-WHERE name = '<database name>';
-```
-
-If Service Broker is disabled, enable it by running the following Transact-SQL script on the source SQL Server database:
+Run this script on the source SQL Server instance. Replace `<database name>` with your database name.
 
 ```sql
 USE master;
 GO
+DECLARE @database_name sysname = N'<database name>';
+DECLARE @sql nvarchar(max) =
+    N'ALTER DATABASE ' + QUOTENAME(@database_name) + N' SET ENABLE_BROKER;';
 
-ALTER DATABASE [<database name>]
-    SET ENABLE_BROKER;
+IF (SELECT is_broker_enabled FROM sys.databases WHERE name = @database_name) = 0
+    EXEC sys.sp_executesql @sql;
 GO
 ```
-
-### Check database integrity (optional)
-
-As a best practice, consider running [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) on each source SQL Server database before you take the full backup required for migration. This check identifies physical and logical consistency errors. Existing database corruption can transfer to the managed instance during migration. Investigate and resolve any errors before you proceed.
-
-`DBCC CHECKDB` can consume significant resources, so schedule the check during a suitable maintenance window.

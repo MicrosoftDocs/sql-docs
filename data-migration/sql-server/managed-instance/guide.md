@@ -199,6 +199,12 @@ After you successfully complete the migration stage, go through a series of post
 
 The post-migration phase is crucial for reconciling any data accuracy issues, verifying completeness, and addressing performance issues with the workload.
 
+### Logins and Agent jobs
+
+Migrating user databases doesn't transfer server-level objects. For instructions to migrate logins, see [Logins and groups](overview.md#logins-and-groups).
+
+If you have SQL Server Agent jobs, manually copy them to SQL Managed Instance. Script the jobs on the source instance, and run the generated Transact-SQL scripts on the destination managed instance.
+
 ### Monitor and remediate applications
 
 After you migrate to a SQL managed instance, track the application behavior and performance of your workload. This process includes the following activities:

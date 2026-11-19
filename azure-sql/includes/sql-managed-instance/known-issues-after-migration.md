@@ -1,10 +1,11 @@
 ---
-author: bluefooted
-ms.author: pamela
+author: danimir
+ms.author: danil
 ms.reviewer: vanto
-ms.date: 11/12/2026
+ms.date: 11/19/2026
 ms.service: azure-sql-managed-instance
 ms.topic: include
+ai-usage: ai-assisted
 ---
 
 ### Restore operation failures after migrating to SQL Managed Instance
@@ -15,6 +16,4 @@ To work around this issue, make sure you set the [persistent version store (PVS)
 
 ### Unable to use Service Broker after migrating to SQL Managed Instance
 
-If you migrate a database to Azure SQL Managed Instance, and [Service Broker is disabled on the source database](/sql/database-engine/service-broker/how-to-activate-service-broker-message-delivery-in-databases-transact-sql), the disabled setting is transferred with the database. You can't enable Service Broker yourself on the migrated database. This is a per-database setting, so other databases on the managed instance aren't affected.
-
-To prevent this issue, enable Service Broker on the source SQL Server database before you migrate it to SQL Managed Instance. If you already migrated the database without enabling Service Broker, contact Microsoft Support to enable it on the migrated database. Alternatively, you can resolve the issue yourself by enabling Service Broker on the source SQL Server database, and then re-migrating the database to SQL Managed Instance.
+If you migrate a database to Azure SQL Managed Instance with [Service Broker disabled on the source database](/sql/database-engine/service-broker/how-to-activate-service-broker-message-delivery-in-databases-transact-sql), the disabled setting is migrated with the database, and you can't enable it yourself. This is a per-database setting, so other databases on the managed instance aren't affected. To resolve this issue, either enable Service Broker on the source database and migrate it again, or contact Microsoft Support.

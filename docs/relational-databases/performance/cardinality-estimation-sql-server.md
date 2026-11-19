@@ -194,7 +194,6 @@ You can ensure your database is at a particular level by using the following [!I
 
 > [!IMPORTANT]  
 > The database engine version numbers for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] aren't comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is based on the same code base as the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database engine. Most importantly, the database engine in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] always has the newest SQL database engine bits. Version 12 of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is newer than version 15 of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
-> As of **November 2019**, in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't update Database Compatibility Level for existing databases. It's up to customers to do at their own discretion.
 
 ```sql
 SELECT ServerProperty('ProductVersion');

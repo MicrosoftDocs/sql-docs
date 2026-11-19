@@ -4,7 +4,7 @@ description: The Microsoft ODBC Driver for SQL Server connects C and C++ applica
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, randolphwest, davidengel, sunilbs, mcimfl
-ms.date: 10/18/2026
+ms.date: 11/05/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -25,7 +25,8 @@ The ODBC variant of **sqlcmd** and the **bcp** utility use this driver, but they
 ## Choose your starting point
 
 - To install the driver, go to [System requirements, installation, and driver files](windows/system-requirements-installation-and-driver-files.md) for Windows, or [Install the ODBC driver on Linux](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md), [Install the ODBC driver on macOS](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md), and [Install the unixODBC driver manager](linux-mac/installing-the-driver-manager.md).
-- To write your first application, go to [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md). For data source name (DSN) and connection string options, use [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md). If your compiler can't find the headers or your build won't link, go to [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md).
+- To write your first application, go to [Connect to and query a database with C++](cpp-code-example-app-connect-access-sql-db.md). If your compiler can't find the headers or your build won't link, go to [Develop C and C++ applications with the ODBC driver](develop-cpp-applications.md).
+- To choose a data source name (DSN), connection string, authentication method, or encryption setting, use [Configure ODBC connections to Microsoft SQL](configure-connections.md). For exact keyword and attribute names, use [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md).
 - To connect to Azure SQL with passwordless authentication, go to [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md).
 - To make an existing app resilient to transient failures, go to [Connection resiliency](connection-resiliency.md) and [High availability and disaster recovery](odbc-driver-support-for-high-availability-disaster-recovery.md).
 - To upgrade from version 17, go to [Major version differences](major-version-differences.md) and [Connection encryption troubleshooting](connection-troubleshooting.md).
@@ -315,8 +316,8 @@ For availability group listeners and failover settings, use [High availability a
 
 | Article | Description |
 | --- | --- |
+| [Configure ODBC connections to Microsoft SQL](configure-connections.md) | Choose DSN or DSN-less configuration, authentication, encryption, routing, retries, and application-specific connection options. |
 | [DSN and connection string keywords and attributes](dsn-connection-string-attribute.md) | The full catalog of connection string keywords, DSN entries, and `SQLSetConnectAttr` attributes, with accepted values for each. |
-| [Connection string keywords and data source names (Linux and macOS)](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) | How `odbc.ini` and `odbcinst.ini` define a DSN on Linux and macOS, plus Transport Layer Security (TLS) and Transmission Control Protocol (TCP) keep-alive settings specific to those platforms. |
 | [ODBC Data Source Administrator DSN (Windows)](windows/odbc-administrator-dsn-creation.md) | Configure a data source through the Windows user interface instead of a connection string. |
 | [Driver-aware connection pooling (Windows)](windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md) | Which connection string keywords and attributes put a connection in its own pool, and which ones cost an extra round trip to reset. |
 

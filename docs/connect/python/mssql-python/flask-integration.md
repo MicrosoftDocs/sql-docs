@@ -4,7 +4,7 @@ description: Learn how to build web applications with Flask and mssql-python for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -358,7 +358,7 @@ def get_db():
 
 With the default `msodbcsql18` provider, `timeout=30` sets the login timeout and supplies a temporary native connection-operation timeout during pooled-connection validation, in seconds. If validation fails, the driver discards the connection and attempts a replacement. Multiple validation operations, cleanup, and replacement can take longer than the configured value. This setting isn't an overall connection-checkout or request deadline, and it doesn't set a query timeout.
 
-With the opt-in `mssql-odbc` provider, pooled-connection reset isn't guaranteed to be bounded by the login timeout. For more information, see [Provider limitations](mssql-odbc-provider.md#known-issues).
+The opt-in `mssql-odbc` provider applies the same timeout to each request when it resets a pooled connection. When it cancels a request, it waits separately for the cancellation to finish, so the total wait can be longer than the timeout. For more information, see [Native provider supported features](mssql-odbc-provider.md#supported-features).
 
 ## Error handling
 

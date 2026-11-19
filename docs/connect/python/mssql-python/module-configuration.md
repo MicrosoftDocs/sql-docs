@@ -4,7 +4,7 @@ description: Learn how to configure global module settings in the mssql-python d
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -172,7 +172,7 @@ Check which version of the driver is installed:
 import mssql_python
 
 # Driver version
-print(mssql_python.__version__)  # For example, '1.17.0'
+print(mssql_python.__version__)  # For example, '1.18.0'
 ```
 
 ## Configure settings at startup

@@ -4,7 +4,7 @@ description: Learn how to build safe parameterized queries to prevent SQL inject
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 07/01/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -62,6 +62,8 @@ cursor.execute("""
     AND ProductSubcategoryID = %(cat)s
 """, {"search": "%Road%", "cat": 2})
 ```
+
+When you pass parameters as a dictionary, the driver replaces each `%(name)s` placeholder with a positional parameter. It doesn't replace placeholder text inside string literals, quoted or bracketed identifiers, or comments. To get a literal `%` in the statement text, write `%%`, including inside string literals and comments. You don't need to escape `%` in parameter values.
 
 ## Data types in parameters
 
@@ -492,7 +494,7 @@ for product_id in range(1, 100):
 
 ### Prepared statements
 
-Use prepared statements for queries that you run often. The driver prepares statements automatically, so running the same query template with different parameters benefits from preparation.
+Use prepared statements for queries that you run often. The driver prepares statements automatically. When you run the same statement again on the same cursor, and each parameter has the same type and size as the previous run, the driver reuses the prepared statement instead of preparing it again. The driver also caches the converted text of `pyformat` statements, so it doesn't convert the placeholders again on each run.
 
 ```python
 query = "SELECT Name, ListPrice FROM Production.Product WHERE ProductSubcategoryID = %(cat)s"

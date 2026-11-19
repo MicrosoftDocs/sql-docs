@@ -4,7 +4,7 @@ description: Learn about new features and changes in each version of the mssql-p
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: whats-new
@@ -16,6 +16,86 @@ ai-usage: ai-assisted
 This article lists what changed in each release of the mssql-python driver, newest first. Each section covers new features, behavior changes, and bug fixes for one version.
 
 For the versions that Microsoft currently supports, see [Support lifecycle](support-lifecycle.md).
+
+## mssql-python 1.18.0
+
+**Release date**: November 18, 2026
+
+### Enhancements
+
+#### Custom application names
+
+Set `APP` or `Application Name` in your connection string to identify your workload in server-side monitoring. For example, `APP=orders-api` appears as `MSSQL-Python|orders-api` in `APP_NAME()` and `sys.dm_exec_sessions.program_name`. Synchronous connections, the experimental native async path, and bulk copy all send the same name.
+
+The default name is `MSSQL-Python`. Before this version, the native async and bulk-copy paths sent `mssql-python`. If a monitoring filter matches `mssql-python` exactly, update it.
+
+For more information, see [Application name](connection-strings.md#application-name).
+
+#### Faster row fetching and conversion
+
+Common fetch patterns do less repeated work:
+
+- `dict(row._mapping)` no longer rebuilds the column-name lookup each time you call it.
+- `fetchone()`, `fetchmany(1)`, `fetchval()`, and iterating over a cursor reuse setup from the previous fetch on that cursor.
+- `fetchall()` and `fetchmany()` with output converters skip an internal text conversion before they call your converter. Converters still run in the same order and receive SQL `NULL` the same way.
+- Repeated `fetchmany(1)` calls on text results keep their setup after each row. The driver still doesn't read rows ahead.
+
+When a fetch can't use the faster path, the driver uses the existing Python code. No application change is required.
+
+#### Faster repeated parameterized queries
+
+The driver converts `pyformat` placeholders in one pass and caches the result, so running the same statement again skips the conversion. When you run the same statement again on the same cursor, and each parameter has the same type and size as the previous run, the driver reuses the prepared statement instead of preparing it again.
+
+For more information, see [Build parameterized queries](parameterized-queries.md).
+
+#### Updated Rust runtime
+
+The driver requires `mssql-python-rs==0.5.0`. This version spends less time processing SQL text and sending parameters when you use the opt-in `mssql-odbc` provider or the native async path.
+
+The `mssql-odbc` provider now applies `SQL_ATTR_CONNECTION_TIMEOUT` to the request that resets a pooled connection. Before this version, the timeout applied only to cleanup after a canceled request.
+
+On macOS, `Encrypt=Strict` connections over TCP that go through the Rust runtime, such as the `mssql-odbc` provider and the native async path, now use Apple's Network.framework for TLS. These connections can negotiate TLS 1.3. Other `Encrypt` settings don't change.
+
+The `mssql-odbc` provider now supports table-valued parameters at the ODBC level, including `NULL` cells and cell values sent with data-at-execution streaming. The `mssql-python` cursor doesn't have an API for passing table-valued parameters.
+
+The `msodbcsql18` provider remains the default. For more information, see [Use the mssql-odbc driver (Preview)](mssql-odbc-provider.md) and [Dependency requirements](support-lifecycle.md#dependency-requirements).
+
+### Bug fixes
+
+#### Synapse pooled connection close
+
+Closing a pooled connection with autocommit on no longer fails on Azure Synapse dedicated SQL pools. When the driver returned the connection to the pool, it sent `SET TRANSACTION ISOLATION LEVEL READ COMMITTED`, which dedicated SQL pools don't support. The driver no longer sends that statement.
+
+#### Explicit pooled checkout timeouts
+
+If you set `SQL_ATTR_CONNECTION_TIMEOUT` shorter than the login timeout, the check that runs before the pool reuses a connection now keeps your value. Before this fix, the check replaced it with the longer login timeout. After the check succeeds, the driver restores your original value.
+
+For more information, see [Connection health checks](connection-pooling.md#connection-health-checks).
+
+#### Arrow reader shutdown
+
+Before this fix, closing an Arrow reader from another thread sent a cancel request even when no fetch was running. That request closed the cursor, and the reading thread's next fetch raised `ProgrammingError`. Now `close()` cancels only a fetch that's running, and it returns after the fetch stops. A reader from an earlier query can't close or read a later result on the same cursor. Errors that the close didn't cause still reach your code.
+
+For more information, see [Apache Arrow integration](arrow-integration.md).
+
+#### Pyformat placeholder handling
+
+The driver no longer replaces `%(name)s` text inside string literals, quoted or bracketed identifiers, or comments. An escaped percent sign (`%%`) now always becomes a single `%` and no longer causes a mismatch between placeholders and parameter values.
+
+#### Rust runtime fixes
+
+These fixes are in `mssql-python-rs` 0.5.0. They apply to the `mssql-odbc` provider and the native async path.
+
+- The connection timeout now limits each connection-level request, including the requests that check a pooled connection before reuse.
+- Prepared statements no longer fail when the driver frees a statement descriptor at the same time it invalidates a prepared plan.
+- The driver now cleans up prepared statement handles after a canceled request.
+- Changing the transaction isolation level no longer discards valid cursor state.
+- Opening a connection on a thread with a small stack no longer overflows the stack.
+- An oversized length in a scalar `sql_variant` value now raises a protocol error. Before this fix, the length wrapped around and unread bytes were left in the stream. Valid values aren't affected.
+
+In the `mssql-odbc` provider, values sent with data-at-execution streaming now go in their bound parameter positions. Before this fix, the provider moved them after the other parameters. When you ran streamed parameters and then a parameter array on the same prepared statement, values could reach the wrong parameters.
+
+For the complete release details, see the [mssql-python 1.18.0 release](https://github.com/microsoft/mssql-python/releases/tag/v1.18.0).
 
 ## mssql-python 1.17.0
 

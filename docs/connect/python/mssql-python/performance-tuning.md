@@ -4,7 +4,7 @@ description: Learn performance optimization techniques for SQL Server applicatio
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/04/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -118,7 +118,7 @@ def run_worker(connection_string: str, poll_interval: float = 1.0):
             conn.close()
 ```
 
-With connection pooling enabled (the default), checkout validates idle connections and replaces them when validation fails. With the default `msodbcsql18` provider, use a positive `connect(timeout=...)` value for login attempts and for the temporary native connection-operation timeout during validation. Multiple validation operations, cleanup, and a replacement login can exceed that value. Set `Connection.timeout` separately to bound statements on a dedicated or checked-out connection. The login timeout isn't a total validation or `connect()` deadline. For more information, see [Connection timeout](connection-management.md#connection-timeout) and the opt-in [Native provider limitations](mssql-odbc-provider.md#known-issues).
+With connection pooling enabled (the default), checkout validates idle connections and replaces them when validation fails. With the default `msodbcsql18` provider, use a positive `connect(timeout=...)` value for login attempts and for the temporary native connection-operation timeout during validation. Multiple validation operations, cleanup, and a replacement login can exceed that value. Set `Connection.timeout` separately to bound statements on a dedicated or checked-out connection. The login timeout isn't a total validation or `connect()` deadline. For more information, see [Connection timeout](connection-management.md#connection-timeout). For the opt-in `mssql-odbc` provider, see [Native provider supported features](mssql-odbc-provider.md#supported-features).
 
 ## Query optimization
 

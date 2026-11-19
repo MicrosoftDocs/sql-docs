@@ -4,7 +4,7 @@ description: Learn how to use Apache Arrow fetch methods in mssql-python for hig
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -106,6 +106,8 @@ cursor.execute("SELECT COUNT(*) FROM Production.TransactionHistory")
 ```
 
 You can also call `reader.close()` directly. Calling it more than once is safe, and the `reader.closed` property reports whether you closed it.
+
+You can call `reader.close()` from another thread. If a fetch is running, `close()` cancels it and returns after the fetch stops. If no fetch is running, `close()` doesn't send a cancel request. Closing a reader from an earlier query doesn't affect a later query on the same cursor. Don't run queries on the same connection or cursor from more than one thread at a time.
 
 ## Common patterns
 

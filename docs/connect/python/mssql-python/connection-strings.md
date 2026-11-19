@@ -4,7 +4,7 @@ description: Reference for mssql-python connection string keywords, syntax, and 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -159,7 +159,7 @@ All connections use `Encrypt=yes` by default. For most applications, the default
 
 ### High availability and failover
 
-These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When the server name resolves to more than one IP address, this setting enables parallel connection attempts and the driver uses the first one that succeeds. Omitting the keyword doesn't disable it with the Rust provider. The Microsoft provider's Transparent Network IP Resolution (TNIR) behavior is separate from this setting. For provider differences, see [Multi-address hosts](mssql-odbc-provider.md#known-issues).
+These keywords cover Always On availability groups, Azure SQL targets, and idle connection resiliency. Set `ApplicationIntent=ReadOnly` to route read-heavy workloads (reports, analytics) to secondary replicas, reducing load on the primary. Set `MultiSubnetFailover=yes` when the target is Azure SQL Database, Azure SQL Managed Instance, SQL database in Microsoft Fabric, an availability group listener, or a failover cluster instance. When the server name resolves to more than one IP address, this setting enables parallel connection attempts and the driver uses the first one that succeeds. Omitting the keyword doesn't disable it with the Rust provider. The Microsoft provider's Transparent Network IP Resolution (TNIR) behavior is separate from this setting. For provider differences, see [Native provider supported features](mssql-odbc-provider.md#supported-features).
 
 `MultiSubnetFailover=yes` has the following limits. You can't use it over a protocol other than TCP, connecting to a SQL Server instance configured with more than 64 IP addresses fails, and you can't use it with database mirroring. Database mirroring is deprecated in all supported versions of SQL Server. Use Always On availability groups instead.
 
@@ -181,12 +181,29 @@ The defaults work for most applications. Increase `PacketSize` (up to 32767) for
 | `KeepAliveInterval` | `keepaliveinterval` | None | TCP keep-alive retry interval in seconds. |
 | `IpAddressPreference` | `ipaddresspreference` | None | IP address family preference: `IPv4First`, `IPv6First`, `UsePlatformDefault`. |
 
+### Application name
+
+Set an application name so you can tell your workloads apart in server-side monitoring.
+
+| Keyword | Alias | Default | Description |
+| --- | --- | --- | --- |
+| `APP` | `Application Name` | `MSSQL-Python` | The name the server reports for your connection. |
+
+The driver adds `MSSQL-Python|` to the start of your value. For example, `APP=orders-api` reports `MSSQL-Python|orders-api` to the server.
+
+You can also pass `app="orders-api"` to `connect()`. As with other connection keywords, a keyword argument overrides the value in the connection string.
+
+The name appears in `APP_NAME()` and `sys.dm_exec_sessions.program_name`. In Azure Synapse dedicated SQL pools, query `sys.dm_pdw_exec_sessions.app_name` instead. For more information, see [sys.dm_pdw_exec_sessions](../../../relational-databases/system-dynamic-management-objects/sys-dm-pdw-exec-sessions-transact-sql.md).
+
+Synchronous connections, the experimental native async path, and bulk copy all send the same name. Different names create separate connection pools, so use one name for each workload.
+
+Your value can't be empty and must be valid Unicode. The full name, including `MSSQL-Python|`, can be up to 128 UTF-16 code units, which leaves 115 for your value. Some characters, such as emoji, use two code units. An invalid value raises `ValueError`. Passing a value that isn't a string to the `app` argument raises `TypeError`.
+
 ### Reserved keywords
 
 | Keyword | Description |
 | --------- | ------------- |
 | `Driver` | Reserved for internal use. The driver manages this value automatically. |
-| `APP` | Reserved. Always set to `"MSSQL-Python"` by the driver. |
 
 ## Microsoft Entra authentication modes
 
@@ -349,13 +366,12 @@ Validation runs before the driver opens a connection, so a keyword that other SQ
 | `User ID` | `UID` |
 | `Password` | `PWD` |
 | `Connection Timeout`, `Connect Timeout`, `Timeout`, `Login Timeout` | The `timeout` parameter of `connect()`. For more information, see [Connection timeout](#connection-timeout). |
-| `Application Name` | None. The driver sets this value and reports `Application Name` as an unknown keyword. |
-| `APP` | None. The driver sets this value and reports `APP` as a reserved keyword. For more information, see [Reserved keywords](#reserved-keywords). |
+| `Application Name`, `APP` | Supported. The driver adds its own name to the start of your value. For more information, see [Application name](#application-name). |
 | `Pooling`, `Max Pool Size` | None. Configure pooling in code. For more information, see [Connection pooling](connection-pooling.md). |
 | `Workstation ID`, `WSID` | None. Remove the keyword from the connection string. |
 | `MultipleActiveResultSets`, `MARS_Connection` | None. Remove the keyword. To run queries concurrently, use separate connections. For more information, see [Multiple cursors](cursor-management.md#multiple-cursors). |
 
-For `APP` and `Driver`, the driver reports a reserved keyword error rather than an unknown keyword error, because it controls both values.
+The driver sets `Driver` itself, so it reports a reserved keyword error for `Driver` instead of an unknown keyword error.
 
 ## Related content
 

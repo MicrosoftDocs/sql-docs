@@ -4,7 +4,7 @@ description: Learn how to open, close, and manage database connections using con
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -163,7 +163,7 @@ conn.timeout = 60
 
 If you set `SQL_ATTR_LOGIN_TIMEOUT` in `attrs_before`, that value takes precedence over the `timeout` argument.
 
-For a pooled connection with the default `msodbcsql18` provider, the driver also uses a positive login timeout as a temporary native connection-operation timeout during validation. A zero or unspecified login timeout uses 15 seconds for that setting. Validation can involve multiple operations, and cleanup and a replacement login can add time. This isn't a total validation or `connect()` deadline. The opt-in `mssql-odbc` provider doesn't guarantee the same pooled-validation bounds. For more information, see [Connection health checks](connection-pooling.md#connection-health-checks) and [Native provider limitations](mssql-odbc-provider.md#known-issues).
+For a pooled connection, the driver also uses the login timeout to limit the check it runs before it reuses the connection. If the login timeout is zero or not set, the check uses 15 seconds. If you already set a shorter `SQL_ATTR_CONNECTION_TIMEOUT` on the connection, the check uses your value. The timeout applies to each request in the check, not to the check as a whole. If the check fails, the driver opens a new connection with its own login, so `connect()` can take longer than the login timeout. For more information, see [Connection health checks](connection-pooling.md#connection-health-checks).
 
 > [!NOTE]
 > Microsoft Entra ID token acquisition happens before the driver connects, so the authentication timeout doesn't bound it.

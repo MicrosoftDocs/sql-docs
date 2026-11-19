@@ -4,7 +4,7 @@ description: Diagnose and resolve common issues when using the mssql-django Djan
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sharmag, sumitsar
-ms.date: 09/18/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -96,7 +96,7 @@ The keyword name in the message is lowercased, so a keyword you wrote as `LongAs
 
 - **pyodbc-only keyword in `extra_params`**
 
-  The mssql-python path validates `extra_params` against an allow list. `DRIVER` and `APP` are reserved for the driver and produce the `Reserved keyword` form. `DSN`, `SERVERNAME`, `MARS_Connection`, and pyodbc-only keywords such as `LongAsMax`, `ColumnEncryption`, `WSID`, `AnsiNPW`, `QuotedId`, `Regional`, `UseFMTONLY`, `Current Language`, `Network Library`, `Description`, and `Connect Timeout` aren't in the allow list and produce the `Unknown keyword` form. Remove the keyword, or use the default pyodbc path for an alias that needs that ODBC option.
+  The mssql-python path validates `extra_params` against an allow list. If `extra_params` includes `DRIVER`, the connection fails with the `Reserved keyword` error, because `mssql-python` sets the driver itself. Versions of `mssql-python` earlier than 1.18.0 return the same error for `APP`. `DSN`, `SERVERNAME`, `MARS_Connection`, and pyodbc-only keywords such as `LongAsMax`, `ColumnEncryption`, `WSID`, `AnsiNPW`, `QuotedId`, `Regional`, `UseFMTONLY`, `Current Language`, `Network Library`, `Description`, and `Connect Timeout` aren't in the allow list and return the `Unknown keyword` error. Remove the keyword, or use the default pyodbc path for an alias that needs that ODBC option.
 
 - **Driver option expected to control mssql-python**
 

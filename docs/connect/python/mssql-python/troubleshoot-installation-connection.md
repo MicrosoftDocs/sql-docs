@@ -4,7 +4,7 @@ description: Diagnose and resolve mssql-python installation, connection, contain
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto, sumitsar
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -183,11 +183,11 @@ If a `connect()` call stalls while reusing a pooled connection, upgrade the driv
 conn = mssql_python.connect(connection_string, timeout=30)
 ```
 
-With the default `msodbcsql18` provider, the driver uses that value as a temporary native connection-operation timeout during pooled validation, then attempts a replacement login if validation fails. An explicit `SQL_ATTR_LOGIN_TIMEOUT` in `attrs_before` takes precedence. If the login timeout is zero or unspecified, the temporary timeout is 15 seconds.
+With the default `msodbcsql18` provider, the driver checks a pooled connection before reusing it, and each request in that check uses this value as its timeout. If you set `SQL_ATTR_LOGIN_TIMEOUT` in `attrs_before`, the driver uses that value instead. If the login timeout is zero or not set, the driver uses 15 seconds.
 
-Validation can involve multiple operations, cleanup can add time, and the replacement login has its own timeout. Microsoft Entra ID token acquisition isn't bounded by the login timeout. `timeout=30` isn't a 30-second deadline for validation or the whole call. If the server or network remains unavailable, handle the connection error with your application's retry policy.
+If the check fails, the driver logs in on a new connection, and that login gets its own full login timeout. The check can send more than one request, so `timeout=30` doesn't limit the whole call to 30 seconds. Microsoft Entra ID token acquisition doesn't count against the login timeout. If the server or network stays unavailable, handle the connection error with your application's retry policy.
 
-The opt-in `mssql-odbc` provider doesn't guarantee the same validation bounds. For more information, see [Connection health checks](connection-pooling.md#connection-health-checks), [Native provider limitations](mssql-odbc-provider.md#known-issues), and [Retry logic](retry-logic.md).
+The opt-in `mssql-odbc` provider applies the same timeout to each request when it resets a pooled connection. When it cancels a request, it waits separately for the cancellation to finish, so the total wait can be longer than the timeout. For more information, see [Connection health checks](connection-pooling.md#connection-health-checks), [Native provider supported features](mssql-odbc-provider.md#supported-features), and [Retry logic](retry-logic.md).
 
 ### SSL certificate errors
 

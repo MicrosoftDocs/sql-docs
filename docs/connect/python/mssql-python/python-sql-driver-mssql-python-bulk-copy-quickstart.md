@@ -4,7 +4,7 @@ description: This quickstart describes bulk copying data between databases using
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: vanto
-ms.date: 11/02/2026
+ms.date: 11/18/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart-sdk
@@ -100,7 +100,7 @@ code .
    readme = "README.md"
    requires-python = ">=3.11"
    dependencies = [
-       "mssql-python>=1.17.0",
+       "mssql-python>=1.18.0",
        "python-dotenv>=1.1.1",
        "pyarrow>=19.0.0",
    ]

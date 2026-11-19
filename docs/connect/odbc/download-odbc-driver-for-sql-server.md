@@ -1,13 +1,14 @@
 ---
 title: Download ODBC Driver for SQL Server
-description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database.
+description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to Microsoft SQL products.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/14/2026
+ms.date: 11/12/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ms.custom:
   - linux-related-content
   - ignite-2024
@@ -17,19 +18,27 @@ ms.custom:
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw-fabricsqldb.md)]
 
-Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server. Use Microsoft ODBC Driver 18 for SQL Server to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
+The Microsoft ODBC Driver for SQL Server provides run-time support for native-code applications that connect to Microsoft SQL products. Use Driver 18 to create new applications or to access features in newer database versions.
 
 ## Prerequisites
 
-ODBC Driver 18.6 and earlier versions require the Microsoft Visual C++ Redistributable to be installed on Windows. If this component isn't already installed, download and install the version that matches your system architecture (x64, x86, or ARM64) from [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist).
+Driver 18.6 and earlier versions, including all Driver 17 releases, require the Visual C++ v14 Redistributable on Windows. Starting with Driver 18.7, the driver installer includes the runtime. When you install the Redistributable separately, use the latest supported version from [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist). The latest supported version meets every minimum in the following table.
 
-Starting with ODBC Driver 18.7, the Visual C++ Redistributable doesn't need to be preinstalled.
+| Driver version | Architecture | Separate Visual C++ install required | Minimum Visual C++ version |
+| --- | --- | --- | --- |
+| 18.7.1.1 | x86, x64, ARM64 | No. The installer includes version 14.44.35211.0. | Not applicable |
+| 17.11.1.1 | x86, x64 | Yes. Download [x86](https://aka.ms/vc14/vc_redist.x86.exe) or [x64](https://aka.ms/vc14/vc_redist.x64.exe). | 14.15 |
+| 18.6.2.1 | x86, x64, ARM64 | Yes. Download [x86](https://aka.ms/vc14/vc_redist.x86.exe), [x64](https://aka.ms/vc14/vc_redist.x64.exe), or [ARM64](https://aka.ms/vc14/vc_redist.arm64.exe). | 14.34 |
+
+The minimum is the major and minor version. It follows the [Visual C++ Redistributable compatibility rule](/cpp/windows/determining-which-dlls-to-redistribute), which requires the Redistributable's major version to match the toolset and its minor version to be the same or higher.
+
+Choose an installer that matches the Windows operating-system architecture. For Driver 18, the x64 installer installs x64 and 32-bit drivers, and the ARM64 installer installs ARM64 and 32-bit drivers. Driver 17.11.1.1 has x86 and x64 installers only; use Driver 18 for native ARM64 applications. Use the x86 installer only on 32-bit Windows. The Visual C++ v14 Redistributable you install separately must match the architecture of each application that uses the driver. Its version must be at least as recent as the newest Microsoft C++ (MSVC) build tools used to build any application component. For more information, see [C++ binary compatibility between Visual Studio versions: Restrictions](/cpp/porting/binary-compat-2015-2017#restrictions).
 
 Linux and macOS don't require this component. For Linux and macOS prerequisites, see the installation guides linked in the [Download for Linux and macOS](#download-for-linux-and-macos) section.
 
 ## Download for Windows
 
-The redistributable installer for Microsoft ODBC Driver 18 for SQL Server installs the client components, which are required during run time to take advantage of newer SQL Server features. It optionally installs the header files needed to develop an application that uses the ODBC API. Starting with version 17.4.2, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
+The redistributable installer for Microsoft ODBC Driver 18 for SQL Server installs the client components required to run an application that uses the driver. It can also install the header files needed to develop an application that uses the ODBC application programming interface (API).
 
 Version 18.7.1.1 is the latest general availability (GA) version. If you have a previous version of Microsoft ODBC Driver 18 for SQL Server installed, installing 18.7.1.1 upgrades it to 18.7.1.1. You can install the Microsoft ODBC Driver 18 for SQL Server side by side with Microsoft ODBC Driver 17 for SQL Server.
 
@@ -38,7 +47,7 @@ Version 18.7.1.1 is the latest general availability (GA) version. If you have a 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (ARM64)](https://go.microsoft.com/fwlink/?linkid=2378647)**  
 
 > [!NOTE]
-> Use the x86 installer on 32-bit machines, the x64 installer on x64 machines, or the arm64 installer on ARM64 machines. The x64 and arm64 installers install both 64-bit and 32-bit drivers.
+> Use the x86 installer on 32-bit Windows, the x64 installer on x64 Windows, or the ARM64 installer on ARM64 Windows. The x64 and ARM64 installers each install drivers for native 64-bit and 32-bit applications.
 
 ### Version information    
 
@@ -50,7 +59,7 @@ Version 18.7.1.1 is the latest general availability (GA) version. If you have a 
 
 ## Available languages
 
-This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
+Select a language to download a localized Driver 18.7.1.1 package:
 
 **Microsoft ODBC Driver 18.7.1.1 for SQL Server (x64):**  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x404) | [Czech](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x405) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x412) | [Polish](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x415) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x40a) | [Turkish](https://go.microsoft.com/fwlink/?linkid=2378279&clcid=0x41f)
@@ -63,15 +72,17 @@ This release of Microsoft ODBC Driver for SQL Server can be installed in the fol
 
 ## Version 17
 
-Version 17.11.1 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.11.1 upgrades it to 17.11.1.
+Version 17.11.1.1 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.11.1.1 upgrades it to 17.11.1.1.
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2361646)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2361647)**  
 
+The Windows downloads for Driver 17.11.1.1 are x86 and x64 installers. For native ARM64 applications on Windows, use Driver 18.
+
 - Release number: 17.11.1.1
 - Released: April 30, 2026
 
-This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
+Select a language to download a localized Driver 17.11.1.1 package:
 
 Microsoft ODBC Driver 17.11.1.1 for SQL Server (x64):
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2361646&clcid=0x40a)
@@ -81,7 +92,7 @@ Microsoft ODBC Driver 17.11.1.1 for SQL Server (x86):
 
 ### Release notes for Windows
 
-For details about this release on Windows, see [the Windows release notes](windows\release-notes-odbc-sql-server-windows.md).
+For more information about this release on Windows, see [the Windows release notes](windows\release-notes-odbc-sql-server-windows.md).
 
 ### Previous releases for Windows
 
@@ -89,18 +100,18 @@ To download previous releases for Windows, see [previous Microsoft ODBC Driver f
 
 ## Download for Linux and macOS
 
-The Microsoft ODBC Driver for SQL Server can be downloaded and installed using package managers for Linux and macOS using the relevant installation instructions:  
+Use a package manager on Linux or macOS to download and install the Microsoft ODBC Driver for SQL Server. For instructions, see:
 [Install ODBC for SQL Server (Linux)](linux-mac\installing-the-microsoft-odbc-driver-for-sql-server.md)  
 [Install ODBC for SQL Server (macOS)](linux-mac\install-microsoft-odbc-driver-sql-server-macos.md)  
 
-If you need to download the packages for offline installation, all versions are available via the below links.
+For offline installation, select the link for your distribution and driver version.
 
-> [!Note]
-> Packages named `msodbcsql18-*` are the latest version. Packages named `msodbcsql-*` are version 13 of the driver.
+> [!NOTE]
+> Packages named `msodbcsql18-*` are for Driver 18 and include multiple releases. For the latest release, see the [Linux and macOS release notes](linux-mac/release-notes-odbc-sql-server-linux-mac.md). Packages named `msodbcsql-*` are for Driver 13.
 
 ### Alpine
 
-Packages are signed using Pretty Good Privacy (PGP) signatures to verify integrity and authenticity.
+Verify package integrity and authenticity by using the published Pretty Good Privacy (PGP) signatures.
 
 - [18.7.1.1 Alpine driver ARM package](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_arm64.apk) ([PGP Signature](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_arm64.sig))
 - [18.7.1.1 Alpine driver package](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_amd64.sig))
@@ -178,14 +189,14 @@ Packages are signed using Pretty Good Privacy (PGP) signatures to verify integri
 - Ubuntu 16.04 .deb packages: [v13](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/) [v17](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - Ubuntu 14.04 .deb packages: [v13](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) [v17](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)
 
-See also [Installing the Linux driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+For more information about installing the Linux driver, see [Install ODBC for SQL Server (Linux)](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ### macOS
 
-- See the [Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release) for details.
+- For more information about macOS packages, see the [Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release).
 
-See also [Installing the macOS driver](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+For more information about installing the macOS driver, see [Install ODBC for SQL Server (macOS)](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 ### Release notes for Linux and macOS
 
-For details about releases for Linux and macOS, see [the Linux and macOS release notes](linux-mac\release-notes-odbc-sql-server-linux-mac.md).
+For more information about releases for Linux and macOS, see [the Linux and macOS release notes](linux-mac\release-notes-odbc-sql-server-linux-mac.md).

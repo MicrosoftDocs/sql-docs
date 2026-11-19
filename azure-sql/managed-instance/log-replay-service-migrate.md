@@ -49,7 +49,7 @@ Before you begin, consider the requirements in this section for both your SQL Se
 
 Make sure that you meet the following requirements for SQL Server:
 
-- SQL Server versions 2008 to 2022.
+- SQL Server versions 2008 and later.
 - Your SQL Server database is using the full recovery model (mandatory).
 - A full backup of databases (one or multiple files).
 - A differential backup (one or multiple files).
@@ -59,7 +59,7 @@ Make sure that you meet the following requirements for SQL Server:
 - Although having `CHECKSUM` enabled for backups isn't required, it's highly recommended to prevent unintentionally migrating a corrupt database, and for faster restore operations.
 - Any version of Windows Server is supported based on the SQL Server version supportability.
 - If you use accelerated database recovery, ensure that the persistent version store is set to `PRIMARY`. For more information, see [Prepare databases that use accelerated database recovery (ADR)](#prepare-databases-that-use-accelerated-database-recovery-adr).
-- To use Service Broker on a database migrated to Azure SQL Managed Instance without contacting Microsoft Support, enable Service Broker on the source database before migration. For more information, see [Known issues after migrating to SQL Managed Instance](#known-issues-after-migrating-to-sql-managed-instance) in this article.
+- For databases with Service Broker disabled, enable it on the source database before migration if you plan to use it on Azure SQL Managed Instance. Migration preserves the disabled setting, so you won't be able to use Service Broker on that database or enable it yourself without contacting Microsoft Support. For more information, see [Known issues after migrating to SQL Managed Instance](#known-issues-after-migrating-to-sql-managed-instance) in this article.
 
 ### Azure
 
@@ -88,7 +88,7 @@ When you're using LRS, consider the following best practices:
 - Configure a [maintenance window](#configure-a-maintenance-window) so system updates are scheduled at a specific day and time outside of the migration window to prevent delaying or interrupting the migration.
 - Plan to complete a single LRS migration job within a maximum of 30 days. On expiration of this time frame, the LRS job is automatically canceled.
 - To prevent unintentionally migrating a corrupt database, and for a faster database restore, enable `CHECKSUM` when you're taking your backups. Although SQL Managed Instance performs a basic integrity check on backups without `CHECKSUM`, catching all forms of corruption isn't guaranteed. Taking backups with `CHECKSUM` is the only way to ensure the backup restored to SQL Managed Instance isn't corrupt. The basic integrity check on backups without `CHECKSUM` increases the restore time of a database.
-- When migrating to the **Business Critical** service tier, account for a [prolonged delay](#longer-cutover-in-the-business-critical-service-tier) in database availability after cutover, while databases are seeded to secondary replicas. For especially large databases with minimal downtime requirements, consider migrating to the General Purpose service tier first and then upgrading to the **Business Critical** service tier, or using the [Managed Instance link](managed-instance-link-migrate.md) to migrate your data.
+- When migrating to the **Business Critical** service tier, account for a [prolonged delay](#longer-cutover-in-the-business-critical-service-tier) in database availability after cutover while databases are seeded to secondary replicas. For especially large databases with minimal downtime requirements, use the [Managed Instance link](managed-instance-link-migrate.md) to migrate your data. If you can't use the Managed Instance link, consider a workaround: migrate to the **General Purpose** service tier first and then perform an online upgrade to the **Business Critical** service tier.
 - Uploading thousands of database files to restore can lead to excessive migration times and even failure. Consolidate databases into fewer files to speed up the migration process, and ensure its success.
 - To minimize cutover time and reduce the risk of failure, make sure your last backup is as small as possible.
 
@@ -98,8 +98,8 @@ System updates for SQL Managed Instance take precedence over database migrations
 
 Migration is affected differently based on the service tier:
 
-- In the General Purpose service tier, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases.
-- In the **Business Critical** service tier, all pending LRS migrations are canceled and automatically restarted after the update is applied. This system behavior might prolong migration time, especially for large databases.
+- In the **General Purpose** service tier, all pending LRS migrations are suspended and resumed only after the update is applied. This system behavior might prolong migration time, especially for large databases.
+- In the **Business Critical** service tier, all pending LRS migrations are canceled and automatically restarted after the update is applied. This system behavior might prolong migration time, especially for large databases. To avoid this issue, consider using the [Managed Instance link](managed-instance-link-feature-overview.md) to migrate your data.
 
 To achieve a predictable time for database migrations, consider configuring a [maintenance window](maintenance-window.md) to schedule system updates for a specific day and time, and run and complete migration jobs outside the designated maintenance window time frame. For example, for a migration that starts on Monday, configure your custom maintenance window on Sunday to allow for the most time to complete the migration.
 
@@ -107,6 +107,10 @@ Configuring a maintenance window isn't required but is highly recommended for la
 
 > [!NOTE]  
 > While a maintenance window controls the predictability of *planned* updates, it doesn't guarantee that unplanned failovers, or security patch updates won't occur. An unplanned failover or a security patch (which takes precedence over all other updates) can still interrupt your migration.
+
+## Assess and discover
+
+Assess your SQL Server database for migration readiness before you migrate. You can use the **Migrate SQL Server** feature in SQL Server Management Studio (SSMS) to [assess readiness for migration](/ssms/migrate/migrate-sql-server-azure-sql?tabs=sql-standard#assess-readiness-for-migration).
 
 ## Prepare databases
 
@@ -690,6 +694,17 @@ If LRS fails to start after some time and you get an error, check for the most c
 - Are the database name, resource group name, and managed instance name spelled correctly?
 - If you started LRS in autocomplete mode, was a valid file name for the last backup file specified?
 - Does the backup URI path contain keywords `backup` or `backups`? Rename the container or folders that are using `backup` or `backups` as these are reserved keywords.
+
+## Post-migration steps
+
+After migrating your databases:
+
+- Update your application's connection string to point to the destination instance.
+- Migrate the logins your applications require.
+- If you have SQL Server Agent jobs, manually copy them to SQL Managed Instance.
+- Monitor application performance and validate the migration.
+
+For instructions, see [Post-migration steps](/data-migration/sql-server/managed-instance/guide#post-migration).
 
 ## Related content
 

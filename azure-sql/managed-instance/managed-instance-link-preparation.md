@@ -318,27 +318,20 @@ GO
 
 If SQL Server is your initial primary, each database you replicate through the link must have at least one full backup. If SQL Managed Instance is your initial primary, skip this step because it takes backups automatically.
 
+Although `CHECKSUM` isn't required, it's highly recommended to help detect database corruption when taking the backup and reduce the risk of migrating a corrupt database.
+
 Run the following Transact-SQL script on SQL Server for each database you want to replicate. Replace `<DatabaseName>` with the database name and `<DiskPath>` with the full path and file name for the backup.
 
 ```sql
-BACKUP DATABASE [<DatabaseName>] TO DISK = N'<DiskPath>';
+BACKUP DATABASE [<DatabaseName>]
+    TO DISK = N'<DiskPath>'
+    WITH CHECKSUM;
 GO
 ```
 
 For more information, see [Create a full database backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
-### Prepare encrypted databases for replication to SQL Server
-
-SQL Managed Instance databases encrypted with service-managed TDE keys can't be migrated to SQL Server. You can migrate an encrypted database to SQL Server only if it uses a customer-managed key and the destination server has access to the same key used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
-
-> [!CAUTION]
-> If your databases use Transparent Data Encryption (TDE), prepare the encryption certificates or keys on the destination before creating the link. Without them, the link can't replicate the encrypted databases.
-
 [!INCLUDE [prepare-database-for-migration](../includes/sql-managed-instance/prepare-database-for-migration.md)]
-
-### Replicate server-level objects
-
-The link supports replication of user databases only. It doesn't support replication of system databases. You must manually transfer server-level objects, such as logins and SQL Server Agent jobs. Script these objects from `master` or `msdb` on the source instance, and run the Transact-SQL scripts on the destination instance.
 
 ## Install SSMS
 

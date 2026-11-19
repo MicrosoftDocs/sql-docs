@@ -74,7 +74,7 @@ To use the link with Azure SQL Managed Instance for migration, you need the foll
 
 ## Assess and discover
 
-[!INCLUDE [migration-assess-discover](../includes/sql-managed-instance/migration-assess-discover.md)]
+Assess your SQL Server database for migration readiness before you migrate. You can use the **Migrate SQL Server** feature in SQL Server Management Studio (SSMS) to [assess readiness for migration](/ssms/migrate/migrate-sql-server-azure-sql?tabs=sql-standard#assess-readiness-for-migration).
 
 ## Create target instance
 
@@ -97,6 +97,7 @@ Use the following T-SQL query on both SQL Server and SQL Managed Instance to mon
 ```sql
 -- Execute on SQL Server and SQL Managed Instance 
 USE master
+-- Replace <DAGname> with the distributed availability group name, which is typically the link name.
 DECLARE @link_name varchar(max) = '<DAGname>'
 SELECT
    ag.name [Link name], 
@@ -159,6 +160,17 @@ To avoid this problem, don't drop the link until the first full backup finishes 
 
 [!INCLUDE [known-issues-after-migration](../includes/sql-managed-instance/known-issues-after-migration.md)]
 
+
+## Post-migration steps
+
+After migrating your databases:
+
+- Update your application's connection string to point to the destination instance.
+- Migrate the logins your applications require.
+- If you have SQL Server Agent jobs, manually copy them to SQL Managed Instance.
+- Monitor application performance and validate the migration.
+
+For instructions, see [Post-migration steps](/data-migration/sql-server/managed-instance/guide#post-migration).
 
 ## Related content
 

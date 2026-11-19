@@ -36,13 +36,13 @@ The following requirements apply to extending an availability group through a mu
 | SQL Server 2022 (16.x) | CU28 or later | Enterprise and Developer |
 | SQL Server 2025 (17.x) | CU11 or later | Enterprise and Developer |
 
-All Azure SQL Managed Instance service tiers are supported, with any of the following [update policies](update-policy.md): **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date**.
+All Azure SQL Managed Instance service tiers are supported, with any of the following [update policies](update-policy.md): SQL Server 2022, SQL Server 2025, and **Always-up-to-date**.
 
 Consider the following points:
 
 - SQL Server Standard edition isn't supported because basic availability groups support only one database.
 - SQL Server 2019 and earlier versions aren't supported for multiple-database link mode because the required technology is available starting with SQL Server 2022.
-- For one-way replication and cutover from SQL Server, the destination update policy must match, or be higher than, your SQL Server version.
+- For one-way replication and cutover from SQL Server, the update policy on SQL Managed Instance must match, or be higher than, your SQL Server version.
 - To create the link *from* SQL Managed Instance or reverse roles back to SQL Server, your SQL managed instance must use the [update policy](update-policy.md) that matches your SQL Server version.
 - For example:
    - SQL Server 2022 supports one-way replication to managed instances configured with the **SQL Server 2022**, **SQL Server 2025**, and **Always-up-to-date** policies. Two-way replication, including failback with role reversal, is supported only when the managed instance uses the **SQL Server 2022** update policy.
@@ -63,7 +63,7 @@ To extend your availability group between SQL Server and Azure SQL Managed Insta
 - [SQL Server Management Studio (SSMS) 22.12.1 or later](/ssms/install/install).
 - For scripted configuration, [Azure PowerShell](/powershell/azure/install-azure-powershell) with the Az module version 16.3.0 or later and Az.Sql version 7.1.0 or later, or [Azure CLI](/cli/azure/install-azure-cli) version 2.90.0 or later. You can also use [Azure Cloud Shell](/azure/cloud-shell/overview). Verify that the installed modules or CLI meet these version requirements.
 - A properly [prepared environment](managed-instance-link-preparation.md).
-- For a multiple-node availability group, a configured availability group listener. Use the listener's IP address when configuring the link, not an individual SQL Server replica's IP address. Using the listener lets the link continue working after a local availability group failover.
+- For a multiple-node availability group, a configured availability group listener endpoint. Use the listener endpoint's IP address when configuring the link, not an individual SQL Server replica's IP address. Using the listener endpoint lets the link continue working after a local availability group failover.
 - No existing single-database mode links on any SQL Server replica when you enable multiple-database link mode. Before you start, remove all links that use single-database link mode.
 - Sufficient available database capacity and storage on the target managed instance for all databases in your availability group. Review [resource limits](resource-limits.md).
 
@@ -118,9 +118,11 @@ Both existing availability group databases and standalone databases require this
 
 [!INCLUDE [managed-instance-link-prepare-databases](../includes/sql-managed-instance/managed-instance-link-prepare-databases.md)]
 
-## Configure the listener and certificates
+<a id="configure-the-listener-and-certificates"></a>
 
-For a multiple-node availability group, use the listener's IP address when configuring the link, both in SSMS and in scripts. The listener directs connections to the current primary replica. Don't use the IP address of an individual SQL Server replica as the link's partner endpoint. Without the listener, the link doesn't continue working after a local availability group failover. For a single-node availability group, including one created by the SSMS wizard for standalone databases, use that SQL Server instance's IP endpoint.
+## Configure the listener endpoint and authentication certificates
+
+For a multiple-node availability group, use the SQL Server listener endpoint's IP address when configuring the link, both in SSMS and in scripts. The listener endpoint directs connections to the current primary replica. Don't use the IP address of an individual SQL Server replica as the link's partner endpoint. Without the listener endpoint, the link doesn't continue working after a local availability group failover. For a single-node availability group, including one created by the SSMS wizard for standalone databases, use that SQL Server instance's IP endpoint.
 
 The SSMS wizard exchanges certificates between Azure SQL Managed Instance and only the current SQL Server primary replica. It doesn't configure certificate trust on the other SQL Server replicas. You must manually copy and configure the required certificates on every other SQL Server replica so that the link can continue working after a local availability group failover. This manual step applies to both SSMS and scripted configuration. Review [Establish trust between instances](managed-instance-link-configure-how-to-scripts.md#establish-trust-between-instances) for the certificate exchange steps.
 
@@ -503,9 +505,11 @@ Use `sys.sp_milink_check` to determine whether an individual database is in the 
 
 As part of general availability, multiple-database link mode includes three stored procedures on supported SQL Server versions to help you monitor replication health and troubleshoot individual databases:
 
-- `sys.sp_milink_check`: Provides replication health information for individual databases. Use it to identify databases that are stuck during seeding or replication.
-- `sys.sp_milink_reseed`: Restarts seeding for an individual database that's stuck during seeding, without requiring you to remove and re-add the database to the availability group.
-- `sys.sp_milink_repair`: Repairs unhealthy replication for an individual database in a multiple-database link.
+| Stored procedure | Information |
+| --- | --- |
+| `sys.sp_milink_check` | Provides replication health information for individual databases. Use it to identify databases that are stuck during seeding or replication. |
+| `sys.sp_milink_reseed` | Restarts seeding for an individual database that's stuck during seeding, without requiring you to remove and re-add the database to the availability group. |
+| `sys.sp_milink_repair` | Repairs unhealthy replication for an individual database in a multiple-database link. |
 
 > [!NOTE]
 > If these stored procedures aren't available on your SQL Server instance, verify that you installed the required cumulative update (CU). For supported SQL Server versions and required updates, see [Supportability](#supportability).

@@ -55106,7 +55106,12 @@
     },
     {
       "source_path": "docs/connect/odbc/linux/connection-string-keywords-and-data-source-names-dsns.md",
-      "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
+      "redirect_url": "/sql/connect/odbc/configure-connections",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md",
+      "redirect_url": "/sql/connect/odbc/configure-connections",
       "redirect_document_id": false
     },
     {
@@ -55206,7 +55211,7 @@
     },
     {
       "source_path": "docs/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md",
-      "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
+      "redirect_url": "/sql/connect/odbc/configure-connections",
       "redirect_document_id": false
     },
     {

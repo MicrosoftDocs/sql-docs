@@ -3,21 +3,26 @@ title: ODBC DSN and Connection String Keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 author: dlevy-msft-sql
 ms.author: dlevy
-ms.reviewer: vanto, davidengel, sunilbs, mcimfl
-ms.date: 09/27/2026
+ms.reviewer: vanto, davidengel, sunilbs, mcimfl, randolphwest
+ms.date: 11/05/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 # DSN and connection string keywords and attributes
 
-This article lists the keywords for connection strings and DSNs, and connection attributes for `SQLSetConnectAttr` and `SQLGetConnectAttr`, available in the ODBC Driver for SQL Server.
+This article lists the keywords that the Microsoft ODBC Driver for SQL Server accepts in data source names (DSNs) and connection strings. It also lists connection attributes for `SQLSetConnectAttr` and `SQLGetConnectAttr`.
+
+## Choose a DSN or DSN-less connection
+
+For guidance on choosing connection methods, authentication, encryption, routing, retries, and application settings, see [Configure ODBC connections to Microsoft SQL](configure-connections.md). Use this article to look up exact keywords and connection attributes.
 
 ## Supported DSN and connection string keywords and connection attributes
 
 The following table lists the available keywords and attributes for each platform (L: Linux; M: macOS; W: Windows). Select the keyword or attribute for more details.
 
-| DSN / Connection String Keyword | Connection Attribute | Platform |
+| DSN / connection string keyword | Connection attribute | Platform |
 | --- | --- | --- |
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Address](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -46,8 +51,8 @@ The following table lists the available keywords and attributes for each platfor
 | [GetDataExtensions](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) (v18.0 and later versions) | [SQL_COPT_SS_GETDATA_EXTENSIONS](windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md#getdataextensions) | LMW |
 | [HostnameInCertificate](dsn-connection-string-attribute.md#hostnameincertificate) (v18.0 and later versions) | | LMW |
 | [IpAddressPreference](dsn-connection-string-attribute.md#ipaddresspreference) (v18.1 and later versions) | | LMW |
-| [KeepAlive](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4 and later versions; DSN only before 17.8) | | LMW |
-| [KeepAliveInterval](linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4 and later versions; DSN only before 17.8) | | LMW |
+| [KeepAlive](configure-connections.md#linux-and-macos-keep-alive-configuration) (v17.4 and later versions; DSN only before 17.8) | | LMW |
+| [KeepAliveInterval](configure-connections.md#linux-and-macos-keep-alive-configuration) (v17.4 and later versions; DSN only before 17.8) | | LMW |
 | [KeystoreAuthentication](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -58,10 +63,11 @@ The following table lists the available keywords and attributes for each platfor
 | [MultiSubnetFailover](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MULTISUBNET_FAILOVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmultisubnetfailover) | LMW |
 | [Net](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Network](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [PacketSize](#packetsize) (Driver 18.7) | [SQL_ATTR_PACKET_SIZE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [PWD](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [QueryLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquery) | W |
 | [QueryLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfquerylog) | W |
-| [QueryLogTIme](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_INTERVAL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfqueryinterval) | W |
+| [QueryLogTime](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_QUERY_INTERVAL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfqueryinterval) | W |
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
 | [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Replication](dsn-connection-string-attribute.md#replication) | | LMW |
@@ -77,6 +83,7 @@ The following table lists the available keywords and attributes for each platfor
 | [TrustServerCertificate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRUST_SERVER_CERTIFICATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstrustservercertificate) | LMW |
 | [UID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [UseFMTONLY](dsn-connection-string-attribute.md#usefmtonly) | | LMW |
+| [vectorTypeSupport](vector-data-type.md#enable-vector-support) (v18.6.1.1 and later versions) | [SQL_COPT_SS_VECTOR_TYPE_SUPPORT](vector-data-type.md#enable-vector-support) | LMW |
 | [WorkstationID](#connection-string-keyword-unification) (v18.7 and later versions) | | LMW |
 | [WSID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | | [SQL_ATTR_ACCESS_MODE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_ACCESS_MODE) | LMW |
@@ -89,7 +96,7 @@ The following table lists the available keywords and attributes for each platfor
 | | [SQL_ATTR_AUTOCOMMIT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_AUTOCOMMIT) | LMW |
 | | [SQL_ATTR_CONNECTION_DEAD](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | | [SQL_ATTR_CONNECTION_TIMEOUT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
-| | [SQL_ATTR_DBC_INFO_TOKEN](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
+| | [SQL_ATTR_DBC_INFO_TOKEN](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_LOGIN_TIMEOUT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_LOGIN_TIMEOUT) | LMW |
 | | [SQL_ATTR_METADATA_ID](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | | [SQL_ATTR_ODBC_CURSORS](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_ODBC_CURSORS) | LMW |
@@ -126,6 +133,8 @@ The following table lists the available keywords and attributes for each platfor
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
 
+`SQL_ATTR_DBC_INFO_TOKEN` is reserved for Windows Driver Manager driver-aware connection pooling. Applications don't set this attribute.
+
 Here are some connection string keywords and connection attributes that aren't documented in [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), and [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
 
 ### Description
@@ -134,7 +143,7 @@ Describes the data source.
 
 ### SQL_COPT_SS_ANSI_OEM
 
-Controls ANSI to OEM conversion of data.
+Controls conversion between Windows and original equipment manufacturer (OEM) code pages.
 
 | Attribute value | Description |
 | --- | --- |
@@ -161,9 +170,11 @@ Controls the use of SQL Server fallback connections. This option is no longer su
 
 ## New connection string keywords and connection attributes
 
+The following sections describe keyword behavior, connection attributes, and their accepted values. Driver-specific restrictions are stated with the relevant option.
+
 ### Connection string keyword unification
 
-Starting with version 18.7, the ODBC Driver for SQL Server supports additional connection string keywords that align with property names in the `Microsoft.Data.SqlClient` data provider. This support enables applications to use a single connection string across Microsoft SQL Server data providers and drivers without renaming keywords.
+Starting with version 18.7, the ODBC Driver for SQL Server supports additional connection string keywords that align with property names in the `Microsoft.Data.SqlClient` data provider. This support reduces keyword renaming when moving between Microsoft SQL data providers and drivers. Each provider still has its own supported keywords and values.
 
 #### Keyword aliases
 
@@ -187,7 +198,7 @@ The driver applies the following rules to these aliases:
 
 #### ConnectTimeout keyword
 
-The `ConnectTimeout` keyword configures the same login timeout as the [`SQL_ATTR_LOGIN_TIMEOUT`](../../odbc/reference/syntax/sqlsetconnectattr-function.md) connection attribute. Applications can specify the timeout in the connection string instead of calling [`SQLSetConnectAttr`](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
+The `ConnectTimeout` keyword configures the same login timeout as the [SQL_ATTR_LOGIN_TIMEOUT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) connection attribute. Applications can specify the timeout in the connection string instead of calling [SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
 
 If an application explicitly sets `SQL_ATTR_LOGIN_TIMEOUT` before calling a connection function, the connection attribute takes precedence over the `ConnectTimeout` connection string value.
 
@@ -200,37 +211,37 @@ If an application explicitly sets `SQL_ATTR_LOGIN_TIMEOUT` before calling a conn
 
 #### Example
 
-The following connection string uses the unified keyword spellings:
+The following connection string uses the unified keyword spellings. Replace `<server>`, `<database>`, `<user_id>`, and `<password>` with your values. For Azure SQL Database, use `<server>.database.windows.net` as the hostname:
 
 ```ini
-Driver={ODBC Driver 18 for SQL Server};Server=tcp:myserver.database.windows.net;Database=mydb;UID=myuser;PWD=mypassword;MultipleActiveResultSets=Yes;WorkstationID=app-node-01;ConnectTimeout=30;
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:<server>;Database=<database>;UID=<user_id>;PWD=<password>;Encrypt=yes;TrustServerCertificate=no;MultipleActiveResultSets=Yes;WorkstationID=app-node-01;ConnectTimeout=30;
 ```
 
 The aliases in the preceding connection string configure the same options as the original ODBC keywords in the following connection string:
 
 ```ini
-Driver={ODBC Driver 18 for SQL Server};Server=tcp:myserver.database.windows.net;Database=mydb;UID=myuser;PWD=mypassword;MARS_Connection=Yes;WSID=app-node-01;
+Driver={ODBC Driver 18 for SQL Server};Server=tcp:<server>;Database=<database>;UID=<user_id>;PWD=<password>;Encrypt=yes;TrustServerCertificate=no;MARS_Connection=Yes;WSID=app-node-01;
 ```
 
-Both strings enable MARS and set the workstation ID to `app-node-01`. The first string also waits up to 30 seconds for the login to complete. `ConnectTimeout` has no equivalent in earlier versions. To set the login timeout in an earlier version, call [`SQLSetConnectAttr`](../../odbc/reference/syntax/sqlsetconnectattr-function.md) with `SQL_ATTR_LOGIN_TIMEOUT`.
+Both strings enable MARS and set the workstation ID to `app-node-01`. The first string also waits up to 30 seconds for the login to complete. `ConnectTimeout` has no equivalent keyword in Driver 17 or earlier Driver 18 releases. To set their login timeout, call [SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md) with `SQL_ATTR_LOGIN_TIMEOUT`.
 
 ### Authentication - SQL_COPT_SS_AUTHENTICATION
 
-Sets the authentication mode to use when connecting to SQL Server. For more information, see [Using Microsoft Entra ID with the ODBC Driver](using-azure-active-directory.md).
+Sets the authentication mode for the connection. For more information, see [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md).
 
 | Keyword value | Attribute value | Description |
 | --- | --- | --- |
-| | `SQL_AU_NONE` (default) | Not set. Combination of other attributes determines authentication mode. |
-| `SqlPassword` | `SQL_AU_PASSWORD` | SQL Server authentication with username and password. |
+| | `SQL_AU_NONE` (default) | Without an explicitly set attribute, other connection settings determine authentication. Explicitly setting this attribute overrides the DSN or connection string's `Authentication` selection. |
+| `SqlPassword` | `SQL_AU_PASSWORD` | SQL authentication with a user name and password. |
 | `ActiveDirectoryIntegrated` | `SQL_AU_AD_INTEGRATED` | Microsoft Entra integrated authentication. |
 | `ActiveDirectoryInteractive` | `SQL_AU_AD_INTERACTIVE` | Microsoft Entra interactive authentication. |
-| `ActiveDirectoryMsi` | `SQL_AU_AD_MSI` | Microsoft Entra managed identity authentication. For user-assigned identity, `UID` is set to the object ID of the user identity. |
+| `ActiveDirectoryMsi` | `SQL_AU_AD_MSI` | Microsoft Entra managed identity authentication. For a user-assigned identity, set `UID` to its client ID on Azure App Service or Azure Container Instances; use its object ID on other supported hosts. Omit `UID` for a system-assigned identity. |
 | `ActiveDirectoryServicePrincipal` | `SQL_AU_AD_SPA` | Microsoft Entra service principal authentication. `UID` is set to the client ID of the service principal. `PWD` is set to the client secret. |
-| `ActiveDirectoryPassword` | `SQL_AU_AD_PASSWORD` | [DEPRECATED] Microsoft Entra password authentication.<br /><br />`ActiveDirectoryPassword` is deprecated. For more information, see [`ActiveDirectoryPassword` is deprecated](using-azure-active-directory.md#activedirectorypassword-is-deprecated). |
-| | `SQL_AU_RESET` | Unset. Overrides any DSN or connection string setting. |
+| `ActiveDirectoryPassword` | `SQL_AU_AD_PASSWORD` | Deprecated Microsoft Entra user name and password authentication. For more information, see [ActiveDirectoryPassword deprecation](using-azure-active-directory.md#activedirectorypassword-is-deprecated). |
+| | `SQL_AU_RESET` | Clears an explicitly set authentication attribute so the DSN or connection string's `Authentication` setting can apply again. |
 
 > [!NOTE]  
-> When using `Authentication` keyword or attribute, explicitly specify `Encrypt` setting to the desired value in connection string, DSN, or connection attribute. Refer to [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) for details.
+> When using the `Authentication` keyword or attribute, explicitly set `Encrypt` in the connection string, DSN, or connection attribute. For behavior and defaults, see [Encrypt](#encrypt).
 
 ### ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
@@ -244,24 +255,28 @@ Controls transparent column encryption (Always Encrypted). For more information,
 
 ### ConcatNullYieldsNull - SQL_COPT_SS_CONCAT_NULL
 
-Controls the use of ISO handling of `NULL` when concatenating strings. For more information, see [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).
+Controls International Organization for Standardization (ISO) handling of `NULL` when concatenating strings. For more information, see [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).
 
 | Keyword value | Attribute value | Description |
 | --- | --- | --- |
 | `Yes` (default) | `SQL_CN_ON` | `NULL` concatenation yields `NULL`. |
-| `No` | `SQL_CN_OFF` | `NULL` concatenation yields string. |
+| `No` | `SQL_CN_OFF` | `NULL` concatenation yields a string. |
 
 ### Encrypt
 
-Specifies whether connections use TLS encryption over the network. Version 17 accepts `yes` and `no`. Version 18.0 and later versions also accept `mandatory` as a synonym for `yes`, `optional` as a synonym for `no`, and `strict`, which selects TDS 8.0 encryption and has no version 17 equivalent. The default value is `yes` in version 18.0 and later versions, and `no` in earlier versions.
+Specifies whether connections use Transport Layer Security (TLS) encryption over the network. Driver 17 accepts `yes` and `no`. Driver 18 also accepts `mandatory` as a synonym for `yes`, `optional` as a synonym for `no`, and `strict`, which selects Tabular Data Stream (TDS) 8.0 encryption and has no Driver 17 equivalent.
+
+Driver 18 defaults to `yes`. Driver 17 ordinarily defaults to `no`, but defaults to `yes` when a nonempty `Authentication` setting or an access token is supplied. Set `Encrypt` explicitly rather than relying on these authentication-dependent defaults.
 
 Regardless of the setting for `Encrypt`, the server login credentials (user name and password) are always encrypted.
 
 The `Encrypt`, `TrustServerCertificate`, and server-side `Force Encryption` settings determine whether connections are encrypted over the network. The following tables show the effect of these settings.
 
-#### ODBC Driver 18 and newer
+<a id="odbc-driver-18-and-newer"></a>
 
-| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encryption** | **Result** |
+#### ODBC Driver 18 and later versions
+
+| Encrypt setting | Trust server certificate | Server force encryption | Result |
 | --- | --- | --- | --- |
 | No | No | No | Server certificate isn't checked.<br />Data sent between client and server isn't encrypted. |
 | No | Yes | No | Server certificate isn't checked.<br />Data sent between client and server isn't encrypted. |
@@ -276,9 +291,11 @@ The `Encrypt`, `TrustServerCertificate`, and server-side `Force Encryption` sett
 > [!NOTE]  
 > The `Strict` value is only available against servers that support TDS 8.0 connections.
 
-### ODBC Driver 17 and older
+<a id="odbc-driver-17-and-older"></a>
 
-| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encryption** | **Result** |
+#### ODBC Driver 17 and earlier versions
+
+| Encrypt setting | Trust server certificate | Server force encryption | Result |
 | --- | --- | --- | --- |
 | No | No | No | Server certificate isn't checked.<br />Data sent between client and server isn't encrypted. |
 | No | Yes | No | Server certificate isn't checked.<br />Data sent between client and server isn't encrypted. |
@@ -300,7 +317,7 @@ Controls the Transparent Network IP Resolution feature, a legacy multi-IP fallba
 
 ### UseFMTONLY
 
-Controls the use of `SET FMTONLY` for metadata when connecting to SQL Server 2012 and newer.
+Controls the use of `SET FMTONLY` for metadata when connecting to SQL Server 2012 and later versions.
 
 | Keyword value | Description |
 | --- | --- |
@@ -309,37 +326,41 @@ Controls the use of `SET FMTONLY` for metadata when connecting to SQL Server 201
 
 ### Replication
 
-Specifies the use of a replication login on ODBC Driver version 17.8 and newer.
+Specifies the use of a replication login on ODBC Driver version 17.8 and later versions.
 
 | Keyword value | Description |
 | --- | --- |
 | `No` (default) | Replication login isn't used. |
 | `Yes` | Triggers with the `NOT FOR REPLICATION` option don't fire on the connection. |
 
-###  RetryExec
+### PacketSize
 
-Configurable retry logic is available starting in version 18.1. It automatically re-executes specific ODBC function calls based on configurable conditions. Enable this feature through the connection string by using the `RetryExec` keyword, along with a list of retry rules. Each retry rule has three colon-separated components: an error match, retry policy, and a query match.
+Driver 18.7 supports `PacketSize` to request the network packet size in bytes. The negotiated size can differ from the requested value. Use `SQL_ATTR_PACKET_SIZE` to set the corresponding connection attribute or retrieve the negotiated size. For attribute limits and behavior, see [SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md). Driver 17 applications use the attribute rather than the `PacketSize` keyword.
 
-The query match determines the retry rule to use for a given execution. It matches the incoming command text (`SQLExecDirect`) or the prepared command text in the statement object (`SQLExecute`). If more than one rule matches, the first matching rule in the list is used. This behavior allows you to list rules in order of increasing generality. If no rule matches, no retry is applied.
+### RetryExec
 
-When the execution results in an error and there's an applicable retry rule, its error match determines if the execution should be retried.
+Configurable retry logic is available in Driver 18.1 and later versions. Driver 17 doesn't support `RetryExec`. Enable it with the `RetryExec` connection string keyword and a list of rules that control re-execution of `SQLExecDirect` and `SQLExecute`.
+
+After an execution error, the driver selects the first rule whose error list contains that error code. It then checks that rule's query prefix against the incoming command text for `SQLExecDirect` or the prepared text for `SQLExecute`. If the prefix doesn't match, the driver doesn't retry the command or continue to later rules. A later match-all rule isn't a fallback for an error code already listed in an earlier rule.
+
+Retry only operations that are safe to repeat. A retry can execute a command more than once, and a connection failure doesn't establish that a previous write failed to complete.
 
 The value of the `RetryExec` keyword is a list of semicolon-separated retry rules.  
 `RetryExec={rule1;rule2}`
 
 A retry rule is as follows: `<errormatch>:<retrypolicy>:<querymatch>`
 
-- **Error Match**: A comma-separated list of error codes. For example, specifying `1000,2000` lists the error codes you want to retry.
+- **Error match:** A comma-separated list of error codes, such as `1000,2000`.
 
-- **Retry Policy**: Specifies the delay until the next retry. The first parameter is the number of retries, and the second parameter is the delay. For example, `3,10+7` means three tries starting at 10, and each following retry increments by 7 seconds. If you don't specify `+7`, each following retry exponentially doubles.
+- **Retry policy:** The retry count followed by the initial delay in seconds. For example, `3,10+7` allows three retries after the initial execution, with delays of 10, 17, and 24 seconds: four executions in total if every attempt fails. Without `+`, the delay doubles for each retry. A trailing `+` without an increment uses the initial delay as the increment.
 
-- **Query Match**: Specifies the query you want to match. If you don't specify anything, the rule applies to all queries. Specifying `SELECT` means all queries that start with `SELECT`.
+- **Query match:** The command-text prefix. An empty prefix applies to all commands. For example, `SELECT` matches commands that start with `SELECT`.
 
 Combining all three components together for use in a connection string:
 
 `RetryExec={1000,2000:3,10+7:SELECT}`
 
-This rule means: For errors `1000` and `2000` on a query that starts with `SELECT`, retry twice with an initial delay of 10 seconds, and add 7 seconds for each following attempt.
+For errors `1000` and `2000` on a command that starts with `SELECT`, this rule allows three retries, after 10, 17, and 24 seconds.
 
 **Examples**
 
@@ -359,25 +380,25 @@ Specify the preceding three rules together in the connection string as follows:
 
 `RetryExec={49918,40501,10928:5,10+5:SELECT c1;49919:2,10+:CREATE;40501,40540:4,5}`
 
-Place the most general (match-all) rule at the end, to allow the two more specific rules before it to match their respective queries.
+In this combination, error `40501` selects the first rule and retries only commands starting with `SELECT c1`. The final rule doesn't provide a fallback for other commands that fail with `40501`. To apply the final policy to all commands with that error, remove `40501` from the first rule's error list. Prefer nonoverlapping error lists when each code needs one policy.
 
-## ClientCertificate
+### ClientCertificate
 
 Specifies the certificate for authentication with loopback connections. This option is available only in SQL Server on Linux. The options are:
 
-| Option Value | Description |
+| Option value | Description |
 | --- | --- |
-| `sha1:<hash_value>` | The ODBC driver uses the SHA1 hash to locate a certificate in the Windows Certificate Store. |
+| `sha1:<hash_value>` | The ODBC driver uses the Secure Hash Algorithm 1 (SHA-1) hash to locate a certificate in the Windows Certificate Store. |
 | `subject:<subject>` | The ODBC driver uses the subject to locate a certificate in the Windows Certificate Store. |
 | `file:<file_location>[,password:<password>]` | The ODBC driver uses a certificate file. |
 
-If the certificate is in `PFX` format and the private key inside the `PFX` certificate is password protected, include the `password` keyword. For certificates in `PEM` and `DER` formats, include the `ClientKey` attribute.
+If the certificate is in Personal Information Exchange (PFX) format and its private key is password protected, include the `password` keyword. For certificates in Privacy Enhanced Mail (PEM) and Distinguished Encoding Rules (DER) formats, include the `ClientKey` keyword.
 
-## ClientKey
+### ClientKey
 
 Specifies the file location of the private key for `PEM` or `DER` certificates specified by the `ClientCertificate` attribute. Format:
 
-| Option Value | Description |
+| Option value | Description |
 | --- | --- |
 | `file:<file_location>[,password:<password>]` | Specifies the location of the private key file. |
 
@@ -395,11 +416,11 @@ The possible options are `IPv4First`, `IPv6First`, and `UsePlatformDefault`. `Us
 
 ### ServerCertificate
 
-Starting with version 18.1, use this option with strict encryption mode. Use the `ServerCertificate` keyword to specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. The match is done instead of standard certificate validation (expiry, host name, trust chain, etc.). The accepted certificate formats are `PEM`, `DER`, and `CER`. If you specify this option, the SQL Server certificate is checked by seeing if the `ServerCertificate` provided is an exact match.
+Starting with version 18.1, use this option only with strict encryption mode. Use the `ServerCertificate` keyword to specify the path to a certificate file to match against the server's TLS certificate. File matching replaces normal hostname and trust-chain validation, but the driver still checks the server certificate's validity dates. Use a PEM- or DER-encoded certificate file. Files with a `.cer` extension are accepted when they use one of these encodings. The server certificate must exactly match the certificate in the specified file.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 
-Use a Microsoft Entra access token for authentication. For more information, see [Using Microsoft Entra ID with the ODBC Driver](using-azure-active-directory.md).
+Use a Microsoft Entra ID access token for authentication. For more information, see [Use Microsoft Entra ID with the ODBC driver](using-azure-active-directory.md).
 
 | Attribute value | Description |
 | --- | --- |
@@ -412,7 +433,7 @@ Communicates with a loaded keystore provider library. Controls transparent colum
 
 | Attribute value | Description |
 | --- | --- |
-| `CEKEYSTOREDATA *` | Communication data structure for keystore provider library |
+| `CEKEYSTOREDATA *` | Communication data structure for a keystore provider library. |
 
 ### SQL_COPT_SS_CEKEYSTOREPROVIDER
 
@@ -420,11 +441,11 @@ Loads a keystore provider library for Always Encrypted, or retrieves the names o
 
 | Attribute value | Description |
 | --- | --- |
-| `char *` | Path to a keystore provider library |
+| `char *` | Path to a keystore provider library. |
 
 ### SQL_COPT_SS_ENLIST_IN_XA
 
-To enable XA transactions with an XA-compliant Transaction Processor (TP), the application needs to call `SQLSetConnectAttr` with `SQL_COPT_SS_ENLIST_IN_XA` and a pointer to an `XACALLPARAM` object. This option is supported on Windows (17.3 and later versions), Linux, and macOS.
+To enlist a connection in [XA distributed transactions](use-xa-with-dtc.md), call `SQLSetConnectAttr` with `SQL_COPT_SS_ENLIST_IN_XA` and a pointer to an `XACALLPARAM` object. This option is supported on Windows (17.3 and later versions), Linux, and macOS.
 
 ```cpp
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -446,17 +467,19 @@ For more information about XA transactions, see [Using XA Transactions](use-xa-w
 
 ### SQL_COPT_SS_LONGASMAX
 
-Sends long data types to servers as max data types.
+Controls whether the driver sends long character and binary parameters as **varchar(max)**, **nvarchar(max)**, and **varbinary(max)**. Driver 18 supports this option; Driver 17 doesn't.
 
 | Attribute value | Description |
 | --- | --- |
-| `No` (default) | Don't convert long types to max types when sending. |
-| `Yes` | Convert data from long types to max types when sending. |
+| `SQL_XL_OFF` (`0`, default) | Don't convert long types to max types when sending. |
+| `SQL_XL_ON` (`1`) | Convert long types to max types when sending. |
+
+These are numeric values for `SQLSetConnectAttr`. The corresponding `LongAsMax` connection string keyword uses `No` and `Yes`.
 
 ### SQL_COPT_SS_SPID
 
-Retrieves the session ID of the connection. This property is equivalent to the T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) variable, except that it doesn't incur an extra round trip to the server.
+Retrieves the session ID of the connection. This property is equivalent to the Transact-SQL (T-SQL) [@@SPID](../../t-sql/functions/spid-transact-sql.md) variable, except that it doesn't incur an extra round trip to the server.
 
 | Attribute value | Description |
 | --- | --- |
-| `DWORD` | SPID |
+| `DWORD` | Session ID. |

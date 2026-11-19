@@ -26,10 +26,10 @@
     href: linux-mac/installing-the-driver-manager.md
 - name: Configure and connect
   items:
+  - name: Configure ODBC connections to Microsoft SQL
+    href: configure-connections.md
   - name: DSN and connection string keywords and attributes
     href: dsn-connection-string-attribute.md
-  - name: Connection string keywords and data source names (Linux and macOS)
-    href: linux-mac/connection-string-keywords-and-data-source-names-dsns.md
   - name: ODBC Data Source Administrator DSN (Windows)
     href: windows/odbc-administrator-dsn-creation.md
   - name: Driver-aware connection pooling (Windows)

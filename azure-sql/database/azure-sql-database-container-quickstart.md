@@ -119,7 +119,7 @@ This check connects inside the container, not through the published host port. T
 
 If SQL doesn't accept connections, inspect the logs with `docker logs --tail 80 sqldb`, `podman logs --tail 80 sqldb`, `wslc logs --tail 80 sqldb`, or `container logs -n 80 sqldb`. Check the password policy and available resources before retrying.
 
-If you prefer a graphical setup experience, follow [Build locally with Azure SQL Database container and SQL Server container](../../docs/tools/visual-studio-code-extensions/mssql/mssql-local-container.md) in the MSSQL extension for Visual Studio Code, or [Connect and Query an Azure SQL Database Container | Microsoft Learn](/ssms/quickstarts/ssms-connect-query-azure-sql-database-container?view=sql-server-ver17) for SSMS.
+If you prefer a graphical setup experience, follow [Build locally with Azure SQL Database container and SQL Server container](/sql/tools/visual-studio-code-extensions/mssql/mssql-local-container) in the MSSQL extension for Visual Studio Code, or [Connect and Query an Azure SQL Database Container | Microsoft Learn](/ssms/quickstarts/ssms-connect-query-azure-sql-database-container?view=sql-server-ver17&preserve-view=true) for SSMS.
 
 ## Create a database and run a query
 

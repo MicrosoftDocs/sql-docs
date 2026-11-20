@@ -51,6 +51,11 @@ Logins in the `master` database are common for the people who manage the [!INCLU
 
 If the person or group that needs to access the database doesn't have a login and if they only need access to one or few databases, create a **Windows user** or a **SQL user with password**. Also called a [contained database user](../contained-database-users-making-your-database-portable.md). A contained database user isn't associated with a login in the `master` database. This is an excellent choice when you want to be able to easily move your database between instances of [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)]. To use this option on [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], an administrator must first enable contained databases for the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)], and the database be enabled for containment. For more information, see [Make your database portable by using contained databases](../contained-database-users-making-your-database-portable.md).
 
+#### Create a special purpose user
+
+There are two special purpose users: a user mapped to a certificate and a user mapped to an asymmetric key. These users can be granted permissions and can sign modules. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md). 
+
+
 > [!IMPORTANT]  
 > When connecting as a contained database user, you must provide the name of the database as part of the connection string. To specify the database in [!INCLUDE [ssmanstudiofull-md](../../../includes/ssmanstudiofull-md.md)] (SSMS), in the **Connect to** dialog box, select **Options**, and then select the **Connection Properties** tab.
 

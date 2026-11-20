@@ -5,7 +5,7 @@ description: This article describes the Managed Instance link, which you can use
 author: danimir
 ms.author: danil
 ms.reviewer: vanto
-ms.date: 11/18/2026
+ms.date: 11/20/2026
 ms.service: azure-sql-managed-instance
 ms.subservice: data-movement
 ms.topic: concept-article
@@ -171,14 +171,14 @@ The link feature also facilitates migrating from SQL Server to SQL Managed Insta
 - The most performant, minimal downtime migration, compared to all other solutions available today.
 - True online migration to SQL Managed Instance in any service tier. 
 
-Because the link feature enables minimal downtime migration, you can migrate to your managed instance as you maintain your primary workload online. Although it's currently possible to achieve online migrations to the *General Purpose* service tier with other solutions, the link feature is the only solution that allows true online migrations to the *Business Critical* service tier. For an in-depth migration comparison between migrating with the link and the Log Replay Service, see [Compare the Managed Instance link to LRS](log-replay-service-compare-mi-link.md).
+The link feature enables minimal-downtime migration, so you can migrate to your managed instance while keeping your primary workload online, and then perform a short cutover. Although other solutions, such as log shipping with Log Replay Service (LRS), support online migrations to the *General Purpose* service tier, the link feature is the only solution that allows true online migrations to the *Business Critical* service tier. For an in-depth migration comparison between the link and LRS, see [Compare the Managed Instance link to LRS](log-replay-service-compare-mi-link.md). To migrate with the link, follow [Migrate with the link](managed-instance-link-migrate.md).
 
 > [!NOTE]
-> You can now migrate your SQL Server instance enabled by Azure Arc to Azure SQL Managed Instance directly through the Azure portal. For more information, see [Migrate to Azure SQL Managed Instance](/sql/sql-server/azure-arc/migrate-to-azure-sql-managed-instance).
+> The Managed Instance link offers a minimal-downtime migration solution for Azure SQL Managed Instance with near real-time replication. For how-to instructions, see [Migrate with the link](managed-instance-link-migrate.md).
 
 ## Copy data on-premises
 
-With SQL Server 2022 and later, you can establish your link from SQL Managed Instance to SQL Server, unlocking additional scenarios, such as creating a near real-time database replica outside of Azure, testing business continuity plans, and meeting compliance requirements. 
+With SQL Server 2022 and later, you can establish your link from SQL Managed Instance to SQL Server, unlocking additional scenarios, such as creating a near real-time database replica outside of Azure, testing business continuity plans, and meeting compliance requirements. Follow the link creation instructions for [SSMS](managed-instance-link-configure-how-to-ssms.md) or [scripts](managed-instance-link-configure-how-to-scripts.md), choosing SQL Managed Instance as the initial primary and SQL Server as the secondary replica.
 
 ## Automated backups
 

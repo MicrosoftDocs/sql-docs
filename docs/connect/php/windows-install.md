@@ -4,7 +4,7 @@ description: Install and enable the SQLSRV and PDO_SQLSRV drivers for PHP on Win
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 11/02/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -16,6 +16,8 @@ ai-usage: ai-assisted
 Use this article to install the SQLSRV and PDO_SQLSRV drivers for PHP on Windows. The drivers are PHP extensions that use the [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md).
 
 Before you start, confirm that your PHP version, architecture, and thread-safety mode are supported in the [support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md). The PHP runtime used by a command-line process and the runtime used by a web server can use different `php.ini` files. Configure and verify each runtime separately.
+
+Version 5.14.0 supports PHP 8.4, 8.5, and 8.6. PHP 8.3 and earlier versions aren't supported. New releases are published through the PHP Installer for Extensions (PIE) instead of the PHP Extension Community Library (PECL). Prebuilt Windows ZIP packages remain available.
 
 At the end of the procedure, both `sqlsrv_connect()` and the PDO `sqlsrv` driver should be available to the intended CLI or web application, and each API should complete a test query. A successful file copy alone isn't a completed installation.
 
@@ -112,7 +114,7 @@ PIE changes the selected PHP installation. It doesn't configure IIS, select an I
 
 Use this method when you need to select the driver files yourself or when PIE isn't suitable.
 
-1. Download the Windows ZIP for the released driver version from the [Microsoft Drivers for PHP for SQL Server releases](https://github.com/microsoft/msphpsql/releases) page.
+1. Download [Windows_5.14.0RTW.zip](https://github.com/microsoft/msphpsql/releases/download/v5.14.0/Windows_5.14.0RTW.zip).
 
 1. Run `php -i | findstr /I "PHP Version Thread Safety Architecture extension_dir"` and record the PHP version, thread-safety mode, architecture, and extension directory.
 
@@ -123,16 +125,16 @@ Use this method when you need to select the driver files yourself or when PIE is
    php_pdo_sqlsrv_<php-version>_<ts-or-nts>_<x86-or-x64>.dll
    ```
 
-   For example, a PHP 8.5 x64 thread-safe runtime uses `php_sqlsrv_85_ts_x64.dll` and `php_pdo_sqlsrv_85_ts_x64.dll`.
+   For example, a PHP 8.6 x64 thread-safe runtime uses `php_sqlsrv_86_ts_x64.dll` and `php_pdo_sqlsrv_86_ts_x64.dll`.
 
 1. Add the matching extension names to the `php.ini` used by the runtime:
 
    ```ini
-   extension=php_sqlsrv_85_ts_x64.dll
-   extension=php_pdo_sqlsrv_85_ts_x64.dll
+   extension=php_sqlsrv_86_ts_x64.dll
+   extension=php_pdo_sqlsrv_86_ts_x64.dll
    ```
 
-   Replace `85`, `ts`, and `x64` with the values for your PHP runtime. Don't mix thread-safe and non-thread-safe files, 32-bit and 64-bit files, or files built for another PHP minor version.
+   Replace `86`, `ts`, and `x64` with the values for your PHP runtime. Don't mix thread-safe and non-thread-safe files, 32-bit and 64-bit files, or files built for another PHP minor version.
 
 1. Verify the runtime with `php --ri sqlsrv`, `php --ri pdo_sqlsrv`, and `php -m`. For a web server, [restrict diagnostic-page access](loading-the-php-sql-driver.md#protect-web-diagnostic-pages) before creating a temporary `phpinfo()` page. Verify the **Loaded Configuration File** and both driver sections, then remove the page.
 

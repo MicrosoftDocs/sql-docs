@@ -4,10 +4,11 @@ description: "API reference for the PDOStatement::getAttribute function in the M
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +29,9 @@ $*attribute*: An integer, one of the PDO::ATTR_* or PDO::SQLSRV_ATTR_\* constant
 On success, returns a (mixed) value for a predefined PDO attribute or custom driver attribute. Returns null on failure.  
   
 ## Remarks  
+
+`PDO::SQLSRV_ATTR_PARAM_METADATA` returns the statement's declaration map normalized to 1-based parameter positions. It doesn't include per-binding overrides or adaptive size history. For more information, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
+
 See [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) for a sample.  
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  

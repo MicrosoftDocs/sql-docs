@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server support a wide range o
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 11/02/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -74,7 +74,7 @@ Before you download or build a driver, complete these checks:
 
 ## PHP
 
-Download PHP binaries from the [PHP website](https://php.net). Choose a PHP version listed in [PHP version support](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
+Download PHP binaries from the [PHP website](https://php.net). Version 5.14.0 supports PHP 8.4, 8.5, and 8.6. PHP 8.3 and earlier versions aren't supported. For other driver releases, see [PHP version support](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
 
 - Enable the driver file that matches your PHP version. For filenames, see [Driver versions](#driver-versions). Download the files from [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). For configuration instructions, see [Load the Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md).
 
@@ -103,13 +103,13 @@ The table includes historical combinations for upgrade planning. Use the current
 
 A blank cell doesn't mean the PHP driver necessarily rejects that ODBC version. Individual features can require newer ODBC versions than the base combination.
 
-|PHP driver version &#8594;<br />&#8595; ODBC driver version|5.13|5.12|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|------------------|---|---|---|---|---|---|---|---|---|---|---|---|
-|ODBC Driver 18    |Yes|Yes|Yes|Yes|   |   |   |   |   |   |   |   |
-|ODBC Driver 17    |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|ODBC Driver 13.1  |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|ODBC Driver 13    |   |   |   |   |   |   |   |   |   |   |Yes|   |
-|ODBC Driver 11    |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|PHP driver version &#8594;<br />&#8595; ODBC driver version|5.14|5.13|5.12|5.11|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|------------------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|ODBC Driver 18    |Yes|Yes|Yes|Yes|Yes|   |   |   |   |   |   |   |   |
+|ODBC Driver 17    |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|ODBC Driver 13.1  |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|ODBC Driver 13    |   |   |   |   |   |   |   |   |   |   |   |Yes|   |
+|ODBC Driver 11    |   |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 
 If you're using the SQLSRV driver, [sqlsrv_client_info](sqlsrv-client-info.md) returns information about which version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server is being used by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. If you're using the PDO_SQLSRV driver, you can use [PDO::getAttribute](pdo-getattribute.md) to discover the version.
 
@@ -127,20 +127,16 @@ For supported operating systems, see [Supported operating systems](microsoft-php
 
 Each release of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ships SQLSRV and PDO_SQLSRV driver files in thread-safe and non-thread-safe variants. On Windows, each variant is also built for 32-bit and 64-bit PHP. Match the driver file to your PHP version, thread-safety mode, and architecture. To enable a driver file after you download it, see [Loading the Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md).
 
-On Linux and macOS, install the drivers with PIE, the PHP Installer for Extensions, as described in the [Linux and macOS installation instructions](installation-tutorial-linux-mac.md). PIE replaces the deprecated [PHP Extension Community Library (PECL)](https://pecl.php.net/) package system and names the installed extension `sqlsrv.so` or `pdo_sqlsrv.so`. The following tables list the filenames for the prebuilt binary packages that you manually download from the [Microsoft Drivers for PHP for SQL Server releases](https://github.com/Microsoft/msphpsql/releases) page.
+On Linux and macOS, install the drivers with PIE, the PHP Installer for Extensions, as described in the [Linux and macOS installation instructions](installation-tutorial-linux-mac.md). Starting with 5.14.0, new releases are published through PIE instead of the deprecated [PHP Extension Community Library (PECL)](https://pecl.php.net/) package system. PIE names the installed extension `sqlsrv.so` or `pdo_sqlsrv.so`. The following tables list the filenames for the prebuilt binary packages that you manually download from the [5.14.0 release](https://github.com/microsoft/msphpsql/releases/tag/v5.14.0).
 
-The following tables list the files in the 5.13 release packages. In filenames, `ts` and `TS` mean thread-safe, and `nts` and `NTS` mean non-thread-safe.
+The following tables list the files in the 5.14.0 release packages. In filenames, `ts` and `TS` mean thread-safe, and `nts` and `NTS` mean non-thread-safe.
 
 ### Windows driver files
 
-The `Windows_5.13.xRTW.zip` package contains these files.
+The `Windows_5.14.0RTW.zip` package contains these files.
 
 | SQLSRV file | PDO_SQLSRV file | PHP version | Thread safe? | Architecture |
 |---|---|:---:|:---:|:---:|
-| `php_sqlsrv_83_nts_x86.dll` | `php_pdo_sqlsrv_83_nts_x86.dll` | 8.3 | no | 32-bit |
-| `php_sqlsrv_83_ts_x86.dll` | `php_pdo_sqlsrv_83_ts_x86.dll` | 8.3 | yes | 32-bit |
-| `php_sqlsrv_83_nts_x64.dll` | `php_pdo_sqlsrv_83_nts_x64.dll` | 8.3 | no | 64-bit |
-| `php_sqlsrv_83_ts_x64.dll` | `php_pdo_sqlsrv_83_ts_x64.dll` | 8.3 | yes | 64-bit |
 | `php_sqlsrv_84_nts_x86.dll` | `php_pdo_sqlsrv_84_nts_x86.dll` | 8.4 | no | 32-bit |
 | `php_sqlsrv_84_ts_x86.dll` | `php_pdo_sqlsrv_84_ts_x86.dll` | 8.4 | yes | 32-bit |
 | `php_sqlsrv_84_nts_x64.dll` | `php_pdo_sqlsrv_84_nts_x64.dll` | 8.4 | no | 64-bit |
@@ -149,31 +145,35 @@ The `Windows_5.13.xRTW.zip` package contains these files.
 | `php_sqlsrv_85_ts_x86.dll` | `php_pdo_sqlsrv_85_ts_x86.dll` | 8.5 | yes | 32-bit |
 | `php_sqlsrv_85_nts_x64.dll` | `php_pdo_sqlsrv_85_nts_x64.dll` | 8.5 | no | 64-bit |
 | `php_sqlsrv_85_ts_x64.dll` | `php_pdo_sqlsrv_85_ts_x64.dll` | 8.5 | yes | 64-bit |
+| `php_sqlsrv_86_nts_x86.dll` | `php_pdo_sqlsrv_86_nts_x86.dll` | 8.6 | no | 32-bit |
+| `php_sqlsrv_86_ts_x86.dll` | `php_pdo_sqlsrv_86_ts_x86.dll` | 8.6 | yes | 32-bit |
+| `php_sqlsrv_86_nts_x64.dll` | `php_pdo_sqlsrv_86_nts_x64.dll` | 8.6 | no | 64-bit |
+| `php_sqlsrv_86_ts_x64.dll` | `php_pdo_sqlsrv_86_ts_x64.dll` | 8.6 | yes | 64-bit |
 
 Use a non-thread-safe driver file with a non-thread-safe PHP build, and a thread-safe driver file with a thread-safe PHP build. The command-line interface (CLI) can use either build. To confirm which build you have, run `php -i` and check the **Thread Safety** value.
 
 ### Linux and macOS driver files
 
-The `Linux_5.13.xRTW.tar.gz` and `Mac_5.13.xRTW.tar.gz` packages contain these files. The Linux archive contains x64 binaries, and the macOS archive contains Arm64 binaries.
+The `Linux_5.14.0RTW.tar.gz` and `Mac_5.14.0RTW.tar.gz` packages contain these files in the `Linux` and `Mac` directories, respectively. The Linux archive contains x64 binaries, and the macOS archive contains Arm64 binaries.
 
-Prebuilt files must also match your operating system's native libraries. The Linux 5.13.3 binaries require glibc 2.38 and later versions and a C++ runtime that provides `GLIBCXX_3.4.32`. The macOS 5.13.3 binaries declare macOS 26 as their minimum deployment target. These binary requirements are separate from operating-system support for source builds.
+Prebuilt files must also match your operating system's native libraries. The Linux 5.14.0 binaries require glibc 2.38 and later versions and a C++ runtime that provides `GLIBCXX_3.4.32`. On musl-based distributions such as Alpine, build the extensions with PIE instead. The macOS 5.14.0 binaries declare macOS 26 as their minimum deployment target and link to Homebrew's unixODBC libraries under `/opt/homebrew/opt/unixodbc/lib`. These binary requirements are separate from operating-system support for source builds.
 
 Use PIE when the archive's architecture or native-library requirements don't match your PHP installation. PIE builds for the installed PHP and native libraries. Don't replace system libraries manually to load a prebuilt extension.
 
 | SQLSRV file | PDO_SQLSRV file | PHP version | Thread safe? |
 |---|---|:---:|:---:|
-| `SQLSRV_8.3_NTS.so` | `PDO_SQLSRV_8.3_NTS.so` | 8.3 | no |
-| `SQLSRV_8.3_TS.so` | `PDO_SQLSRV_8.3_TS.so` | 8.3 | yes |
 | `SQLSRV_8.4_NTS.so` | `PDO_SQLSRV_8.4_NTS.so` | 8.4 | no |
 | `SQLSRV_8.4_TS.so` | `PDO_SQLSRV_8.4_TS.so` | 8.4 | yes |
 | `SQLSRV_8.5_NTS.so` | `PDO_SQLSRV_8.5_NTS.so` | 8.5 | no |
 | `SQLSRV_8.5_TS.so` | `PDO_SQLSRV_8.5_TS.so` | 8.5 | yes |
+| `SQLSRV_8.6_NTS.so` | `PDO_SQLSRV_8.6_NTS.so` | 8.6 | no |
+| `SQLSRV_8.6_TS.so` | `PDO_SQLSRV_8.6_TS.so` | 8.6 | yes |
 
 Copy each file you need into your PHP extension directory. You can keep the package filename and write `extension=SQLSRV_8.4_NTS.so`, or rename the file to `sqlsrv.so` and write the short form `extension=sqlsrv`. Apply the same naming choice to PDO_SQLSRV. To find the extension directory, run `php -i | grep extension_dir`. Follow [Load the drivers on Linux and macOS](loading-the-php-sql-driver.md#load-the-drivers-on-linux-and-macos) to enable the extensions in the correct configuration file and load PHP Data Objects (PDO) before PDO_SQLSRV.
 
 ### Earlier releases
 
-For the driver files included in releases before 5.13, download the package for that release from the [Microsoft Drivers for PHP for SQL Server releases](https://github.com/Microsoft/msphpsql/releases) page and list its contents. Releases before 5.12 publish a separate package for each operating system and PHP version instead of a single package per platform.
+For the driver files included in releases before 5.14, download the package for that release from the [Microsoft Drivers for PHP for SQL Server releases](https://github.com/Microsoft/msphpsql/releases) page and list its contents. Releases before 5.12 publish a separate package for each operating system and PHP version instead of a single package per platform.
 
 ## Verify the selected environment
 

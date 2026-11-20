@@ -4,7 +4,7 @@ description: The Microsoft Drivers for PHP for SQL Server are PHP extensions for
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 10/20/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: overview
@@ -19,7 +19,7 @@ The Microsoft Drivers for PHP for SQL Server are PHP extensions that you can use
 - **SQLSRV** exposes a procedural API (`sqlsrv_*` functions) tailored to SQL Server features.
 - **PDO_SQLSRV** implements the [PHP Data Objects (PDO)](https://www.php.net/manual/en/book.pdo.php) interface. You can keep the PDO calls in existing database code, but review its queries and driver-specific settings before switching databases.
 
-Both drivers connect to Azure SQL Database, SQL database in Microsoft Fabric, Azure SQL Managed Instance, and [all supported versions and editions](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility) of SQL Server, including Express editions. Both drivers accept PHP streams as input parameters. SQLSRV supports retrieving large binary and character values as streams. Don't assume PDO_SQLSRV has the same output-streaming behavior.
+Both drivers connect to Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, SQL database in Microsoft Fabric, Fabric Data Warehouse, and [all supported versions and editions](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility) of SQL Server, including Express editions. Both drivers accept PHP streams as input parameters. SQLSRV supports retrieving large binary and character values as streams. Don't assume PDO_SQLSRV has the same output-streaming behavior.
 
 ## Choose your starting point
 

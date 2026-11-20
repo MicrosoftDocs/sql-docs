@@ -4,10 +4,11 @@ description: "API reference for the PDOStatement::bindValue function in the Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,6 +33,8 @@ $*data_type*: The optional (integer) data type represented by a PDO::PARAM_* con
 TRUE on success, otherwise FALSE.  
   
 ## Remarks  
+
+Set `PDO::SQLSRV_ATTR_PARAM_METADATA` on the statement after `prepare` to declare the SQL type and length for input strings bound with `bindValue`. `bindValue` doesn't take a driver-options argument. For the metadata shape and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   

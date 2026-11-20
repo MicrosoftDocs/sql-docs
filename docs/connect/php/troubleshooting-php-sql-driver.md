@@ -4,7 +4,7 @@ description: Diagnose and resolve common installation, connection, query, and da
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 08/25/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: troubleshooting
@@ -75,16 +75,28 @@ pie install microsoft/sqlsrv
 pie install microsoft/pdo_sqlsrv
 ```
 
-Or with PECL:
-
-```bash
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
-```
-
 If the install still fails after the headers are installed, the build tool chain might be incomplete. Install `phpize`, `re2c`, and a C++ compiler (`build-essential` on Debian and Ubuntu, `gcc-c++ make` on Red Hat and Fedora, `build-base` on Alpine). PIE offers to install missing build tools for you on Linux and macOS.
 
 For the full install path, see [Installation tutorial for Linux and macOS](installation-tutorial-linux-mac.md).
+
+### PIE build fails on PHP 8.3
+
+**Symptoms**:
+
+PIE reports `Found package: microsoft/sqlsrv:v5.14.0`, and then reports that the `make` command failed. When the build output is long, PIE saves it to a file whose name starts with `/tmp/pie_make_output_`. The build output contains:
+
+```text
+error: #error "The SQLSRV and PDO_SQLSRV drivers require PHP 8.4, 8.5 or 8.6."
+```
+
+**Fix**:
+
+Version 5.14.0 supports PHP 8.4, 8.5, and 8.6. Without a version, PIE selects 5.14.0 on PHP 8.3, and the build stops. Upgrade PHP to a supported version, or install 5.13.3, which supports PHP 8.3:
+
+```bash
+pie install microsoft/sqlsrv:5.13.3
+pie install microsoft/pdo_sqlsrv:5.13.3
+```
 
 ### Multiple PHP versions installed
 
@@ -614,22 +626,23 @@ The image builds and PHP starts, but `PDO::__construct()` throws an ODBC driver-
 
 **Fix**:
 
-Verify the ODBC driver is installed *in the runtime image*, not only the build stage. Install `msodbcsql18` and `unixodbc-dev` in the same stage that ships to production. In a multi-stage build, install them in the final stage. A single-stage Debian-based install looks like this:
+Verify the ODBC driver is installed *in the runtime image*, not only the build stage. Install `msodbcsql18` and `unixodbc-dev` in the same stage that ships to production. In a multistage build, install them in the final stage. A single-stage Debian-based install that builds the drivers with PIE looks like this. The image tag selects Debian 12 (bookworm) to match the Microsoft package repository in the `echo` line.
 
 ```dockerfile
-# Pin to a specific PHP minor version in production, for example php:8.4.11-cli.
-FROM php:8.4-cli
+# Pin to a specific PHP patch version in production, for example php:8.4.11-cli-bookworm.
+FROM php:8.4-cli-bookworm
+COPY --from=ghcr.io/php/pie:bin /pie /usr/bin/pie
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        curl gnupg2 apt-transport-https ca-certificates \
+        curl gnupg2 ca-certificates unzip \
     && curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /usr/share/keyrings/microsoft.gpg \
     && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/debian/12/prod bookworm main" > /etc/apt/sources.list.d/mssql-release.list \
     && apt-get update \
     && ACCEPT_EULA=Y apt-get install -y --no-install-recommends msodbcsql18 unixodbc-dev \
-    # $PHPIZE_DEPS ships in the official php image and includes gcc, make, autoconf, and re2c.
-    && apt-get install -y --no-install-recommends $PHPIZE_DEPS \
-    && pecl install sqlsrv pdo_sqlsrv \
-    && docker-php-ext-enable sqlsrv pdo_sqlsrv \
-    && apt-get purge -y --auto-remove $PHPIZE_DEPS \
+    # $PHPIZE_DEPS ships in the official php image and includes gcc, make, autoconf, and re2c. PIE also checks for libtool.
+    && apt-get install -y --no-install-recommends $PHPIZE_DEPS libtool \
+    && pie install microsoft/sqlsrv \
+    && pie install microsoft/pdo_sqlsrv \
+    && apt-get purge -y --auto-remove $PHPIZE_DEPS libtool \
     && rm -rf /var/lib/apt/lists/*
 ```
 

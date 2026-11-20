@@ -4,7 +4,7 @@ description: "API reference for the PDO::prepare function in the Microsoft PDO_S
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 06/06/2024
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
@@ -39,6 +39,8 @@ Returns a `PDOStatement` object on success. On failure, returns a `PDOException`
 
 The [!INCLUDE [ssDriverPHP](../../includes/ssdriverphp_md.md)] doesn't evaluate prepared statements until execution.
 
+To declare input string SQL types and lengths, set `PDO::SQLSRV_ATTR_PARAM_METADATA` on the returned statement, not in the `prepare` options array. For adaptive sizing, set `PDO::SQLSRV_ATTR_DEFAULT_STR_LENGTH` on the connection before calling `prepare`; the new statement copies that setting. For examples and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
+
 The following table lists the possible *key_pair* values.
 
 | Key | Description |
@@ -48,7 +50,7 @@ The following table lists the possible *key_pair* values.
 | `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` | Specifies the type of scrollable cursor. Only valid when `PDO::ATTR_CURSOR` is set to `PDO::CURSOR_SCROLL`. See later in this article for the values this attribute can take. |
 | `PDO::SQLSRV_ATTR_DECIMAL_PLACES` | Specifies the number of decimal places when formatting fetched money values. This option works only when `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` is true. For more information, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](formatting-decimals-pdo-sqlsrv-driver.md). |
 | `PDO::SQLSRV_ATTR_DIRECT_QUERY` | When `True`, specifies direct query execution. `False` means prepared statement execution. For more information about `PDO::SQLSRV_ATTR_DIRECT_QUERY`, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md). |
-| `PDO::SQLSRV_ATTR_ENCODING` | `PDO::SQLSRV_ENCODING_UTF8` (default)<br />`PDO::SQLSRV_ENCODING_SYSTEM`<br />`PDO::SQLSRV_ENCODING_BINARY` |
+| `PDO::SQLSRV_ATTR_ENCODING` | `PDO::SQLSRV_ENCODING_UTF8` (default)<br />`PDO::SQLSRV_ENCODING_UTF8_VARCHAR` (version 5.14.0 and later)<br />`PDO::SQLSRV_ENCODING_SYSTEM`<br />`PDO::SQLSRV_ENCODING_BINARY` |
 | `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` | Specifies whether to retrieve date and time types as [PHP DateTime](https://php.net/manual/class.datetime.php) objects. For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md). |
 | `PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE` | Handles numeric fetches from columns with numeric SQL types. For more information, see [PDO::setAttribute](pdo-setattribute.md). |
 | `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` | Specifies whether to add leading zeroes to decimal strings when appropriate. If set, this option enables the `PDO::SQLSRV_ATTR_DECIMAL_PLACES` option for formatting money types. For more information, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](formatting-decimals-pdo-sqlsrv-driver.md). |

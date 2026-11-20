@@ -4,17 +4,49 @@ description: This page discusses what was changed in each version of the Microso
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 08/07/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.custom: linux-related-content
 ms.topic: release-notes
+ai-usage: ai-assisted
 helpviewer_keywords:
   - "what's new in version 1.1"
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## 5.14.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?LinkId=2389231)**
+
+[GitHub release tag v5.14.0 (Linux and macOS packages)](https://github.com/microsoft/msphpsql/releases/tag/v5.14.0)
+
+- Release number: 5.14.0
+- Released: November 20, 2026
+
+### What's new in 5.14.0
+
+| New item | Details |
+| :------- | :------ |
+| PHP 8.6 support. | Added PHP 8.6 support to SQLSRV and PDO_SQLSRV. For implementation details, see the [driver change](https://github.com/microsoft/msphpsql/pull/1691). |
+| Explicit PDO input string declarations. | Use `PDO::SQLSRV_ATTR_PARAM_METADATA` for `bindParam`, `bindValue`, and `execute` values, or pass declaration options to `bindParam`. Choose **varchar** or **nvarchar** and a SQL length independently of the source encoding. |
+| Opt-in adaptive PDO string sizing. | Set the connection attribute `PDO::SQLSRV_ATTR_DEFAULT_STR_LENGTH` before creating a statement. Declarations grow for longer input values, retain per-parameter sizes, and promote to **max** when needed. Existing defaults and output-buffer lengths are unchanged. |
+| Opt-in UTF-8 **varchar** parameter encoding. | Use `PDO::SQLSRV_ENCODING_UTF8_VARCHAR` with PDO_SQLSRV, or `"CharacterSet" => SQLSRV_ENC_UTF8_VARCHAR` (`utf-8-varchar`) with SQLSRV. The driver reads PHP strings as UTF-8 and sends **varchar** parameters. Lossless non-ASCII input requires a UTF-8 database collation and a compatible destination column. A UTF-8 collation on the column alone isn't sufficient. Table-valued parameter columns honor per-column encoding overrides. For details, see [Send UTF-8 strings as varchar parameters](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md#send-utf-8-strings-as-varchar-parameters). |
+| Connection option aliases. | Both drivers accept `ConnectTimeout` for `LoginTimeout`, `FailoverPartner` for `Failover_Partner`, and `WorkstationID` for `WSID`. Names are case-insensitive, and the last occurrence of an option or its alias wins. |
+| Password aliases. | SQLSRV accepts `Password` for `PWD` in the connection options array. PDO_SQLSRV accepts `PWD` or `Password` in the data source name (DSN). A non-null password passed to the PDO constructor, including an empty string, takes precedence over the DSN password. Pass credentials to the constructor when a DSN might be logged or shared. |
+| Faster PDO_SQLSRV fetches with bound parameters. | Fetch time no longer grows with the number of bound parameters. For details, see [issue 1685](https://github.com/microsoft/msphpsql/issues/1685). |
+| Malformed command text is rejected. | Both drivers now report a query encoding error for command text that isn't valid in its encoding. Previous versions converted the invalid bytes to replacement characters. |
+| Reliability fixes. | Correct Azure Key Vault credential buffer sizing for Always Encrypted, release named-parameter query rewrites when preparation fails, bound brace validation in connection options to the value length, and erase driver-owned copies of PDO DSN passwords. |
+| Removed PHP 8.3 support. | Use PHP 8.4, 8.5, or 8.6 with this release. |
+| New releases use PHP Installer for Extensions (PIE) instead of PHP Extension Community Library (PECL). | Install with `pie install microsoft/sqlsrv` and `pie install microsoft/pdo_sqlsrv`. Existing PECL releases remain available. Prebuilt binaries remain available on GitHub. |
+
+For contracts, examples, and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
+
+For the complete list of changes, see the [5.14.0 change log](https://github.com/microsoft/msphpsql/blob/v5.14.0/CHANGELOG.md).
+
+For platform requirements, see the [support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md).
 
 ## 5.13.3
 

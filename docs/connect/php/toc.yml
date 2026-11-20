@@ -101,6 +101,8 @@
     items:
     - name: Perform parameterized queries
       href: how-to-perform-parameterized-queries.md
+    - name: Declare input string types and lengths (PDO_SQLSRV)
+      href: pdo-input-string-declarations.md
     - name: Send data as a stream
       href: how-to-send-data-as-a-stream.md
     - name: Perform transactions

@@ -4,7 +4,7 @@ description: Upgrade the SQLSRV and PDO_SQLSRV drivers and their ODBC dependency
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 11/02/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,11 +17,14 @@ Upgrade SQLSRV and PDO_SQLSRV together so that both extensions use the same rele
 
 An upgrade changes native code loaded into PHP processes. A mixed deployment can continue running the previous release, fail at PHP startup, or expose different driver versions to the CLI and web application. Inventory every PHP runtime and retain the previous files and configuration until verification finishes.
 
+Version 5.14.0 requires PHP 8.4, 8.5, or 8.6 and Microsoft ODBC Driver 17 or 18. Upgrade PHP 8.3 and earlier versions before installing these drivers. On PHP 8.3, PIE selects 5.14.0 and the build fails. For the error and fix, see [PIE build fails on PHP 8.3](troubleshooting-php-sql-driver.md#pie-build-fails-on-php-83). To stay on PHP 8.3, install 5.13.3 with `pie install microsoft/sqlsrv:5.13.3` and `pie install microsoft/pdo_sqlsrv:5.13.3`. New releases starting with 5.14.0 are published through the PHP Installer for Extensions (PIE), not the PHP Extension Community Library (PECL). Running `pecl upgrade` doesn't install 5.14.0.
+
 ## Choose the upgrade path
 
 | Current installation | Target installation | Procedure |
 |---|---|---|
 | PIE | PIE | Run PIE with the same PHP executable or explicit `php-config`, then verify every SAPI |
+| PECL | PIE | Install both PIE packages for a supported PHP runtime, replace the old driver entries, and preserve PDO load order |
 | Windows released ZIP | Windows released ZIP | Replace both versioned DLLs and update both configuration entries together |
 | Windows released ZIP | PIE | Install both PIE packages, replace versioned DLL entries with PIE entries, and remove duplicates |
 | Linux or macOS released archive | PIE | Install both PIE packages, replace archive-filename entries with `sqlsrv.so` and `pdo_sqlsrv.so`, and preserve PDO load order |

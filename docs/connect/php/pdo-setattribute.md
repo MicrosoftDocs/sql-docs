@@ -4,10 +4,11 @@ description: "API reference for the PDO::setAttribute function in the Microsoft 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,6 +30,8 @@ bool PDO::setAttribute ( $attribute, $value );
 Returns true on success, otherwise false.  
   
 ## Remarks  
+
+Set `PDO::SQLSRV_ATTR_DEFAULT_STR_LENGTH` at the connection level to an integer from 0 through 8,000 before creating a statement. The default, `0`, disables adaptive sizing. New statements copy the setting and grow eligible input string declarations as needed; existing statements retain their setting. For examples, precedence, and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
   
 |Attribute|Processed by|Supported values|Description|  
 |-------------|----------------|--------------------|---------------|  
@@ -42,7 +45,7 @@ Returns true on success, otherwise false.
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 to the PHP memory limit.|Sets the size of the buffer that holds the result set when using a client-side cursor.<br /><br />The default is 10240 KB, if not specified in the php.ini file.<br /><br />Zero and negative numbers are not allowed.<br /><br />For more information about queries that create a client-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Integer between 0 and 4 (inclusive)|Specifies the number of decimal places when formatting fetched money values.<br /><br />Any negative integer or value more than 4 will be ignored.<br /><br />This option works only when PDO::SQLSRV_ATTR_FORMAT_DECIMALS is true.<br /><br />This option may also be set at the statement level. If so, then the statement level option overrides this one.<br /><br />For more information, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true or false|Specifies direct or prepared query execution. For more information, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
-|PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Sets the character set encoding used by the driver to communicate with the server.<br /><br />PDO::SQLSRV_ENCODING_BINARY is not supported.<br /><br />The default is PDO::SQLSRV_ENCODING_UTF8.|  
+|PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_UTF8_VARCHAR (version 5.14.0 and later)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Sets the character set encoding used by the driver to communicate with the server.<br /><br />PDO::SQLSRV_ENCODING_BINARY is not supported.<br /><br />The default is PDO::SQLSRV_ENCODING_UTF8.|
 |PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true or false|Specifies whether to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If left false, the default behavior is to return them as strings.<br /><br />This option may also be set at the statement level. If so, then the statement level option overrides this one.<br /><br />For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true or false|Handles numeric fetches from columns with numeric SQL types (bit, integer, smallint, tinyint, float, or real).<br /><br />When connection option flag ATTR_STRINGIFY_FETCHES is on, the return value is a string even when SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is on.<br /><br />When the returned PDO type in bind column is PDO_PARAM_INT, the return value from an integer column is an int even if SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is off.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true or false|Specifies whether to add leading zeroes to decimal strings when appropriate. If set, this option enables the PDO::SQLSRV_ATTR_DECIMAL_PLACES option for formatting money types. If left false, the default behavior of returning exact precision and omitting leading zeroes for values less than 1 is used.<br /><br />This option may also be set at the statement level. If so, then the statement level option overrides this one.<br /><br />For more information, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 

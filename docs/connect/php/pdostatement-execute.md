@@ -4,10 +4,11 @@ description: "API reference for the PDOStatement::execute function in the Micros
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,6 +32,8 @@ true on success, false otherwise.
 Statements executed with PDOStatement::execute must first be prepared with [PDO::prepare](../../connect/php/pdo-prepare.md). See [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) for information on how to specify direct or prepared statement execution.  
   
 All values of the input parameters array are treated as PDO::PARAM_STR values.  
+
+Set `PDO::SQLSRV_ATTR_PARAM_METADATA` on the statement after `prepare` to declare SQL string types and lengths separately from the input values. For positional parameters, metadata uses 1-based positions, while the `execute` values array starts at index 0. Unique named parameters are also supported. For examples and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
   
 If the prepared statement includes parameter markers, you must either call PDOStatement::bindParam to bind the PHP variables to the parameter markers or pass an array of input-only parameter values.  
   

@@ -150,7 +150,7 @@ Review [Limitations of the missing index feature](#limitations-of-the-missing-in
 
 ## Persist missing indexes with Query Store
 
-Missing index suggestions in DMVs are cleared by events such as instance restarts, failovers, and setting a database offline. Additionally, when the metadata for a table changes, all missing index information about that table is deleted from these dynamic management objects. Table metadata changes can occur when columns are added or dropped from a table, for example, or when an index is created on a column of a table. Performing an [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) operation on an index on a table also clears missing index requests for that table.
+Missing index suggestions in DMVs are cleared by events such as instance restarts, failovers, and setting a database offline. Additionally, when the metadata for a table changes, all missing index information about that table is deleted from these dynamic management objects. Table metadata changes can occur when columns are added or dropped from a table, for example, or when an index is created on a column of a table. Rebuilding an index on a table with [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) can also clear missing index requests for that table.
 
 Similarly, execution plans stored in the plan cache are cleared by events such as instance restarts, failovers, and setting a database offline. Execution plans might be removed from cache due to memory pressure and recompilations.
 

@@ -4,10 +4,11 @@ description: "Learn about constants defined in the Microsoft SQLSRV and PDO_SQLS
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: "02/11/2019"
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
+ai-usage: ai-assisted
 helpviewer_keywords:
   - "constants"
 ---
@@ -36,6 +37,22 @@ The **TransactionIsolation** key, which is used with [PDO::__construct](../../co
   
 For more information about the **TransactionIsolation** key, see [Connection Options](../../connect/php/connection-options.md).  
   
+### Input string declaration constants
+
+These constants apply only to PDO_SQLSRV, not SQLSRV.
+
+| Constant | Purpose |
+| --- | --- |
+| `PDO::SQLSRV_ATTR_PARAM_METADATA` | Statement attribute containing a map from 1-based positions or unique parameter names to declaration arrays. Set it after `prepare`. |
+| `PDO::SQLSRV_ATTR_DEFAULT_STR_LENGTH` | Connection attribute controlling the initial adaptive string length for new statements. Accepts integers from 0 through 8,000; the default, 0, disables adaptive sizing. |
+| `PDO::SQLSRV_PARAM_DECLARED_STR_TYPE` | Required declaration key for the SQL string type. |
+| `PDO::SQLSRV_PARAM_DECLARED_STR_LENGTH` | Required declaration key for the SQL length. |
+| `PDO::SQLSRV_PARAM_DECLARED_STR_TYPE_VARCHAR` | Declares **varchar**. Bounded lengths are 1 through 8,000 bytes. |
+| `PDO::SQLSRV_PARAM_DECLARED_STR_TYPE_NVARCHAR` | Declares **nvarchar**. Bounded lengths are 1 through 4,000 UTF-16 code units. |
+| `PDO::SQLSRV_PARAM_DECLARED_STR_LENGTH_MAX` | Declares the selected type with **max** length. |
+
+For metadata shapes, encoding, precedence, examples, and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
+
 ### Encoding Constants  
 The PDO::SQLSRV_ATTR_ENCODING attribute can be passed to [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md), [PDO::prepare](../../connect/php/pdo-prepare.md), [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md), and [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md).  
   
@@ -46,6 +63,7 @@ The available values to pass to PDO::SQLSRV_ATTR_ENCODING are
 |PDO::SQLSRV_ENCODING_BINARY|Data is a raw byte stream from the server without performing encoding or translation.<br /><br />Not valid for PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Data is 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.|  
 |PDO::SQLSRV_ENCODING_UTF8|Data is in the UTF-8 encoding. This is the default encoding.|  
+|PDO::SQLSRV_ENCODING_UTF8_VARCHAR|Data is in the UTF-8 encoding, and string parameters without an explicit SQL type are sent as **varchar** instead of **nvarchar**. Reads return UTF-8. Added in version 5.14.0. For requirements and precedence rules, see [Send UTF-8 strings as varchar parameters](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md#send-utf-8-strings-as-varchar-parameters).|
 |PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection's encoding if specified in a prepare statement.|  
   
 ### Query Timeout  
@@ -138,13 +156,14 @@ The following table lists the constants that are used to describe PHP data types
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|Stream|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
-1. **SQLSRV_PHPTYPE_STREAM** and **SQLSRV_PHPTYPE_STRING** accept a parameter that specifies the stream encoding. The following table contains the SQLSRV constants that are acceptable parameters, and a description of the corresponding encoding.  
+<sup>1</sup> **SQLSRV_PHPTYPE_STREAM** and **SQLSRV_PHPTYPE_STRING** accept a parameter that specifies the stream encoding. The following table lists the SQLSRV constants that are acceptable parameters, and a description of the corresponding encoding.
   
 |SQLSRV constant|Description|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Data is returned as a raw byte stream from the server without performing encoding or translation.|  
 |SQLSRV_ENC_CHAR|Data is returned in 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.<br /><br />This is the default encoding.|  
 |"UTF-8"|Data is returned in the UTF-8 encoding. This constant was added in version 1.1 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For more information about UTF-8 support, see [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
+|SQLSRV_ENC_UTF8_VARCHAR|Data is in the UTF-8 encoding, and string parameters without an explicit SQL type are sent as **varchar** instead of **nvarchar**. Reads return UTF-8. The constant's value is the string `"utf-8-varchar"`. Added in version 5.14.0. For requirements and precedence rules, see [Send UTF-8 strings as varchar parameters](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md#send-utf-8-strings-as-varchar-parameters).|
   
 > [!NOTE]  
 > When you use **SQLSRV_PHPTYPE_STREAM** or **SQLSRV_PHPTYPE_STRING**, the encoding must be specified. If no parameter is supplied, an error will be returned.  
@@ -197,15 +216,15 @@ The following table lists the constants that are used to describe SQL Server dat
 |SQLSRV_SQLTYPE_VARCHAR('max')|varchar(MAX)|  
 |SQLSRV_SQLTYPE_XML|xml|  
   
-1.  This is a legacy type that maps to the varbinary(max) type.  
+<sup>1</sup> This is a legacy type that maps to the varbinary(max) type.
   
-2.  This is a legacy type that maps to the newer nvarchar type.  
+<sup>2</sup> This is a legacy type that maps to the newer nvarchar type.
   
-3.  This is a legacy type that maps to the newer varchar type.  
+<sup>3</sup> This is a legacy type that maps to the newer varchar type.
   
-4.  Support for this type was added in version 1.1 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+<sup>4</sup> Support for this type was added in version 1.1 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-5.	These constants should be used in type comparison operations and don't replace the function-like constants with similar syntax. For binding parameters, you should use the function-like constants.
+<sup>5</sup> These constants should be used in type comparison operations and don't replace the function-like constants with similar syntax. For binding parameters, use the function-like constants.
 
   
 The following table lists the SQLTYPE constants that accept parameters and the range of values allowed for the parameter.  

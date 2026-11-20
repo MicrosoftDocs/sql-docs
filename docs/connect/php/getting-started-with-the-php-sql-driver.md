@@ -4,7 +4,7 @@ description: Connect to SQL Server, Azure SQL, or SQL database in Microsoft Fabr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 09/21/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: quickstart
@@ -97,6 +97,9 @@ If `brew` isn't installed, [install Homebrew](https://brew.sh/), open a new term
 # [Ubuntu](#tab/ubuntu)
 
 Run the following block in a terminal on a [supported Ubuntu version](microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems):
+
+> [!NOTE]
+> Version 5.14.0 supports PHP 8.4, 8.5, and 8.6. On Ubuntu releases that install PHP 8.3, such as Ubuntu 24.04, `pie install` selects 5.14.0 and the build fails. On those releases, either install a supported PHP version first, or replace the two `pie install` lines with `pie install microsoft/sqlsrv:5.13.3` and `pie install microsoft/pdo_sqlsrv:5.13.3`. For details, see [PIE build fails on PHP 8.3](troubleshooting-php-sql-driver.md#pie-build-fails-on-php-83).
 
 ```bash
 sudo apt-get update
@@ -457,7 +460,7 @@ php --ri pdo_sqlsrv
 odbcinst -q -d | grep "ODBC Driver 18 for SQL Server"
 ```
 
-If a `php --ri` command reports *Extension not present*, rerun the PIE installation commands. Use the path from `php --ini` to confirm that the command-line runtime loads the configuration that PIE updated.
+If PIE reports that `make` failed and `php --version` shows PHP 8.3, see the note before the installation block. If a `php --ri` command reports *Extension not present*, rerun the PIE installation commands. Use the path from `php --ini` to confirm that the command-line runtime loads the configuration that PIE updated.
 
 ---
 

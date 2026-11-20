@@ -4,10 +4,11 @@ description: "API reference for the PDOStatement::bindParam function in the Micr
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +31,9 @@ $*data_type*: An optional (integer) PDO::PARAM_* constant. Default is PDO::PARAM
   
 $*length*: An optional (integer) length of the data type. You can specify PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE to indicate the default size when using PDO::PARAM_INT or PDO::PARAM_BOOL in $*data_type*.  
   
-$*driver_options*: The optional (mixed) driver-specific options. For example, you could specify PDO::SQLSRV_ENCODING_UTF8 to bind the column to a variable as a string encoded in UTF-8.  
+$*driver_options*: The optional (mixed) driver-specific options. For example, you could specify PDO::SQLSRV_ENCODING_UTF8 to bind the column to a variable as a string encoded in UTF-8. Starting with version 5.14.0, you can specify PDO::SQLSRV_ENCODING_UTF8_VARCHAR to send a UTF-8 string as a **varchar** parameter. For more information, see [Send UTF-8 strings as varchar parameters](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md#send-utf-8-strings-as-varchar-parameters).
+
+`$driver_options` also accepts an input string declaration array. Use `PDO::SQLSRV_PARAM_DECLARED_STR_TYPE` and `PDO::SQLSRV_PARAM_DECLARED_STR_LENGTH` to specify the SQL type and length, with optional `PDO::SQLSRV_ATTR_ENCODING` for the source encoding. Keep `$length` at `0`: a positive fourth argument selects output-buffer behavior, not an input SQL length. The array replaces the whole statement metadata entry for this binding. For examples and restrictions, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
   
 ## Return Value  
 TRUE on success, otherwise FALSE.  

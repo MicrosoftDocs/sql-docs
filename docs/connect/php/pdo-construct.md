@@ -4,10 +4,11 @@ description: "API reference for the PDO::__construct function in the Microsoft P
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,8 +29,10 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: Optional. A string that contains the user's password. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, specify the password. To connect using Windows Authentication, specify `""`.  
   
-*$driver_options*: Optional. You can specify PDO Driver Manager attributes, and [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] specific driver attributes -- PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. An invalid attribute does not generate an exception. Invalid attributes generate exceptions when specified with [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: Optional. You can specify PDO Driver Manager attributes, and [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] specific driver attributes -- PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. When `PDO::ATTR_ERRMODE` is `PDO::ERRMODE_EXCEPTION`, the default, an invalid attribute or attribute value makes the constructor throw a `PDOException` with SQLSTATE `IMSSP`. [PDO::setAttribute](../../connect/php/pdo-setattribute.md) validates attributes the same way.
   
+Set `PDO::SQLSRV_ATTR_DEFAULT_STR_LENGTH` in `$driver_options` to specify the initial adaptive length for eligible input strings in new statements. The default is `0` (disabled); accepted values are integers from 0 through 8,000. An invalid value reports SQLSTATE `IMSSP`. For examples and limitations, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
+
 ## Return Value  
 Returns a PDO object. If failure, returns a PDOException object.  
   

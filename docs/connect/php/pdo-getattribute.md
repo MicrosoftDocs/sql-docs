@@ -4,10 +4,11 @@ description: "API reference for the PDO::getAttribute function in the Microsoft 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 07/23/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
+ai-usage: ai-assisted
 ---
 # PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +29,9 @@ mixed PDO::getAttribute ( $attribute )
 On success, returns the value of a connection option, predefined PDO attribute, or custom driver attribute. On failure, returns null.  
   
 ## Remarks  
+
+`PDO::SQLSRV_ATTR_DEFAULT_STR_LENGTH` returns the connection's adaptive string sizing setting as an integer from 0 through 8,000. The default is `0` (disabled). It doesn't report existing statements' sizes. For more information, see [Declare input string types and lengths (PDO_SQLSRV)](pdo-input-string-declarations.md).
+
 The following table contains the list of supported attributes.  
   
 |Attribute|Processed by|Supported Values|Description|  
@@ -44,7 +48,7 @@ The following table contains the list of supported attributes.
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|See PDO documentation|See the PDO documentation.|  
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 to the PHP memory limit.|Configures the size of the buffer that holds the result set for a client-side cursor.<br /><br />The default is 10,240 KB (10 MB).<br /><br />For more information about client-side cursors, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Specifies direct or prepared query execution. For more information, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
-|PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Specifies the character set encoding used by the driver to communicate with the server.<br /><br />The default is PDO::SQLSRV_ENCODING_UTF8.|  
+|PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_UTF8_VARCHAR (version 5.14.0 and later)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Specifies the character set encoding used by the driver to communicate with the server.<br /><br />The default is PDO::SQLSRV_ENCODING_UTF8.|
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true or false|Handles numeric fetches from columns with numeric SQL types (bit, integer, smallint, tinyint, float, or real).<br /><br />When connection option flag ATTR_STRINGIFY_FETCHES is on, even when SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is on, the return value is a string.<br /><br />When the returned PDO type in bind column is PDO_PARAM_INT, the return value from an integer column is an int even if SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is off.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Sets the query timeout in seconds.<br /><br />The default is 0, which means the driver will wait indefinitely for results.<br /><br />Negative numbers are not allowed.|  
 

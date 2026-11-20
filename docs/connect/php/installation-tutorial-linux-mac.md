@@ -4,7 +4,7 @@ description: Install the Microsoft Drivers for PHP for SQL Server and their ODBC
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 11/02/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -17,6 +17,8 @@ ms.custom: intro-installation, linux-related-content
 <a id="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>
 
 These instructions install PHP, the Microsoft ODBC Driver for SQL Server, and the SQLSRV and PDO_SQLSRV extensions. Each tab uses the PHP package provided by the repository that tab installs from, so the version in the commands differs from one tab to the next. Replace it with another PHP version listed in the [support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md) if that repository offers a different one.
+
+Version 5.14.0 supports PHP 8.4, 8.5, and 8.6. PHP 8.3 and earlier versions aren't supported. Starting with 5.14.0, new releases are published through the PHP Installer for Extensions (PIE), not the PHP Extension Community Library (PECL).
 
 The SQLSRV and PDO_SQLSRV drivers use the same ODBC dependency and can be installed independently. Install both extensions if your application uses both drivers.
 
@@ -89,6 +91,8 @@ Run one command for each extension. These commands use PIE's default PHP install
 pie install microsoft/sqlsrv
 pie install microsoft/pdo_sqlsrv
 ```
+
+Without a version, PIE selects the latest release. On PHP 8.3, PIE selects 5.14.0, and the build fails. For the error, see [PIE build fails on PHP 8.3](troubleshooting-php-sql-driver.md#pie-build-fails-on-php-83). Upgrade PHP, or install 5.13.3 with `pie install microsoft/sqlsrv:5.13.3` and `pie install microsoft/pdo_sqlsrv:5.13.3`.
 
 PIE attempts to enable each extension through the platform's PHP configuration tools or an `extension=` entry, and warns if it can't. PHP uses a server application programming interface (SAPI) for each execution environment. On Debian, Ubuntu, and SUSE, the command-line, Apache, and [PHP FastCGI Process Manager (PHP-FPM)](https://www.php.net/manual/en/install.fpm.php) configurations can differ. A successful command-line installation doesn't confirm that a web server loads the drivers.
 
@@ -225,11 +229,11 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Install on Red Hat
 
 > [!NOTE]
-> These commands use the stock PHP 8.3 packages on Red Hat Enterprise Linux 10. On Red Hat Enterprise Linux 9, first provide PHP 8.3, 8.4, or 8.5 with matching `php-cli`, `php-devel`, `php-pdo`, `php-xml`, and `php-fpm` packages. The default PHP version on Red Hat Enterprise Linux 9 doesn't meet the current drivers' requirements. Skip the PHP installation command in step 1, and use the package and service names for your PHP installation in the remaining steps.
+> Before running these commands on Red Hat Enterprise Linux 9 or 10, configure a repository that provides PHP 8.4, 8.5, or 8.6 and matching `php-cli`, `php-devel`, `php-pdo`, `php-xml`, and `php-fpm` packages for your operating-system release. The stock PHP 8.3 packages on Red Hat Enterprise Linux 10 and the default PHP version on Red Hat Enterprise Linux 9 don't meet the current drivers' requirements. Use the package and service names for your selected PHP installation in the remaining steps.
 
 ### Step 1. Install PHP (Red Hat)
 
-On Red Hat Enterprise Linux 10, install PHP and its development package:
+After configuring a repository with a supported PHP version, install PHP and its matching development package:
 
 ```bash
 sudo dnf install php php-cli php-devel php-pdo php-xml -y
@@ -349,7 +353,8 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Install on SUSE
 
-These commands use the PHP 8 packages provided by SUSE Linux Enterprise Server 15 SP7. For other SUSE releases, check that the available PHP version is listed in the [support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md).
+> [!NOTE]
+> The `php8` packages on SUSE Linux Enterprise Server 15 SP7 provide PHP 8.3, which the current drivers don't support. Before running these commands, configure a repository that provides PHP 8.4, 8.5, or 8.6 for your SUSE release, and check that the PHP version is listed in the [support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md). Use the package names for your selected PHP installation in the remaining steps.
 
 ### Step 1. Install PHP (SUSE)
 
@@ -547,7 +552,7 @@ Homebrew's `httpd` formula serves `$(brew --prefix)/var/www` on port 8080 by def
 
 ## Legacy PECL installation
 
-PECL is deprecated for current driver releases. Use PIE for new installations and upgrades. If an existing deployment is pinned to PECL, keep its package versions aligned with the PHP runtime and plan a move to PIE.
+New releases starting with 5.14.0 aren't published to PECL. PECL can't install or upgrade to 5.14.0. Use PIE for new installations and upgrades. If an existing deployment is pinned to an earlier PECL release, keep its package versions aligned with the PHP runtime until you [upgrade with PIE](upgrade-driver.md).
 
 <a id="testing-your-installation"></a>
 

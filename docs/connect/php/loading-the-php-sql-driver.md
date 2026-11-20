@@ -4,7 +4,7 @@ description: Configure and verify the SQLSRV and PDO_SQLSRV extensions for PHP.
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sumitsar, jathakkar
-ms.date: 11/02/2026
+ms.date: 11/20/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -92,21 +92,21 @@ Use only one entry for each driver. Restart the PHP process after changing its c
 
 <a id="install-prebuilt-drivers-manually"></a>
 
-For a ZIP installation, copy the dynamic-link libraries (DLLs) that match the PHP minor version, architecture, and thread-safety mode into the `extension_dir` directory. A PHP 8.5 x64 thread-safe runtime uses these filenames:
+For a ZIP installation, copy the dynamic-link libraries (DLLs) that match the PHP minor version, architecture, and thread-safety mode into the `extension_dir` directory. The 5.14.0 ZIP supports PHP 8.4, 8.5, and 8.6. A PHP 8.6 x64 thread-safe runtime uses these filenames:
 
 ```text
-php_sqlsrv_85_ts_x64.dll
-php_pdo_sqlsrv_85_ts_x64.dll
+php_sqlsrv_86_ts_x64.dll
+php_pdo_sqlsrv_86_ts_x64.dll
 ```
 
 Add both filenames to the `php.ini` used by the PHP process:
 
 ```ini
-extension=php_sqlsrv_85_ts_x64.dll
-extension=php_pdo_sqlsrv_85_ts_x64.dll
+extension=php_sqlsrv_86_ts_x64.dll
+extension=php_pdo_sqlsrv_86_ts_x64.dll
 ```
 
-Replace `85`, `ts`, and `x64` with the values for your PHP runtime. Don't mix thread-safe and non-thread-safe files, 32-bit and 64-bit files, or files built for another PHP minor version.
+Replace `86`, `ts`, and `x64` with the values for your PHP runtime. Don't mix thread-safe and non-thread-safe files, 32-bit and 64-bit files, or files built for another PHP minor version.
 
 <a id="install-the-drivers-on-linux-and-macos"></a>
 
@@ -134,7 +134,7 @@ Use entries that match how the drivers were installed:
 | Platform and method | SQLSRV entry | PDO_SQLSRV entry |
 |---|---|---|
 | Windows with PIE | `extension=php_sqlsrv.dll` | `extension=php_pdo_sqlsrv.dll` |
-| Windows released ZIP | Exact versioned DLL name, such as `extension=php_sqlsrv_85_ts_x64.dll` | Exact versioned DLL name, such as `extension=php_pdo_sqlsrv_85_ts_x64.dll` |
+| Windows released ZIP | Exact versioned DLL name, such as `extension=php_sqlsrv_86_ts_x64.dll` | Exact versioned DLL name, such as `extension=php_pdo_sqlsrv_86_ts_x64.dll` |
 | Linux or macOS with PIE | `extension=sqlsrv.so` | `extension=pdo_sqlsrv.so` |
 | Linux or macOS released archive, renamed files | `extension=sqlsrv.so` | `extension=pdo_sqlsrv.so` |
 | Linux or macOS released archive, original files | Exact archive filename, such as `extension=SQLSRV_8.4_NTS.so` | Exact archive filename, such as `extension=PDO_SQLSRV_8.4_NTS.so` |

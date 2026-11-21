@@ -227,6 +227,7 @@ This section describes new behaviors introduced with compatibility level 170.
 | The ability to create AI embeddings (vector arrays) from text expressions has been added the Database engine. For more information, see [AI functions](../functions/ai-functions-transact-sql.md). | Introduces the `AI_GENERATE_CHUNKS` function, which enables chunking of text input for AI model consumption, improving integration with AI services. |
 | Parameterized queries can have multiple cached query plans for different selectivity categories of a parameter. Parameter sensitive plan optimization is enabled by default in compatibility level 160 for select queries only | When [Parameter sensitive plan optimization](../../relational-databases/performance/parameter-sensitive-plan-optimization.md#remarks) is operating under compatibility level 170, DML query support as well as support for `tempdb` is also available |
 | Parameterized queries which have optional parameters might suffer from suboptimal plans due to parameter sniffing. | Query plan optimization for optional parameters, improving performance by generating more appropriate plans for NULL and non-NULL values. |
+| The query optimizer estimates the CPU cost of an Eager Table Spool operator as in earlier versions. | The estimated CPU cost of an Eager Table Spool operator is about 10 times higher. The `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_160` query hint returns to the earlier estimate. |
 
 ## Differences between compatibility level 150 and level 160
 

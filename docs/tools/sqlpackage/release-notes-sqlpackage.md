@@ -4,7 +4,7 @@ description: Review features, fixes, and changes in current and previous release
 author: cwebb-msft
 ms.author: chweb
 ms.reviewer: mahyon, llali
-ms.date: 09/15/2026
+ms.date: 11/24/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: release-notes
@@ -34,6 +34,63 @@ The **Applies to** column in each section is scoped as follows:
 ## Current releases (170.x)
 
 The following releases are the currently supported versions of SqlPackage.
+
+## 170.6.60 SqlPackage
+
+**Release date:** November 24, 2026
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 170.6.60
+```
+
+| Platform | Download |
+| --- | --- |
+| Windows .NET 10 | [.zip file](https://go.microsoft.com/fwlink/?linkid=2389039) |
+| Windows .NET Framework | [.msi file](https://go.microsoft.com/fwlink/?linkid=2389128) |
+| macOS .NET 10 | [.zip file](https://go.microsoft.com/fwlink/?linkid=2389040) |
+| Linux .NET 10 | [.zip file](https://go.microsoft.com/fwlink/?linkid=2389220) |
+
+### Features
+
+| Feature | Details | Applies to |
+| --- | --- | --- |
+| Deployment | Added `PrePlanScript` handling for deployment script generation, with `RunAndRollback` and `RunOnce` modes to control whether pre-plan changes are reverted or retained. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Added public deployment history and fast comparison options. When `LogDeployment` and `EnableFastComparison` are enabled, unchanged publish operations skip loading the target schema and no longer produce target-model validation warnings. Deployments that use deployment contributors continue to load the target schema. [GitHub issue](https://github.com/microsoft/DacFx/issues/828) | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Updated Azure SQL Database container validation to reject unsupported `DatabaseEdition` and `DatabaseServiceObjective` settings with a clear error before creating a database. | SqlPackage CLI; DacFx API / Schema compare |
+| Export | Added options to export Azure SQL Database-compatible BACPAC files by excluding unsupported objects and their required dependencies. These options prevent exclusions that would lose table data and can generate a JSON compatibility report. | SqlPackage CLI; DacFx API / Schema compare |
+| Fabric Data Warehouse | Added support for `CREATE EXTERNAL DATA SOURCE` in Data Warehouse in Microsoft Fabric projects. | MSBuild / SQL projects; DacFx API / Schema compare |
+| Fabric Data Warehouse | Added support for `GROUP BY ALL` and `ORDER BY ALL` in Data Warehouse in Microsoft Fabric projects, including deployment and schema comparison for views, stored procedures, and inline table-valued functions. | MSBuild / SQL projects; DacFx API / Schema compare |
+| Platform | Reduced memory usage during database extraction, model resolution, and source-position tracking. Updated in-memory schema-model processing to reduce memory allocations. | SqlPackage CLI; MSBuild / SQL projects; DacFx API / Schema compare |
+| Platform | Updated [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/6.1.8) to version 6.1.8. | Platform |
+| ScriptDom | Updated ScriptDom to version 180.154.0. | Platform |
+| Schema compare | Added support for SQL project references when comparing or publishing projects, preventing referenced objects from appearing as incorrect differences. [GitHub issue](https://github.com/microsoft/DacFx/issues/437) | DacFx API / Schema compare |
+| Schema compare | Added support for SQLCMD variable values when comparing or publishing projects, preventing variable-based cross-database references from appearing as incorrect differences. [GitHub issue](https://github.com/microsoft/vscode-mssql/issues/21080) | DacFx API / Schema compare |
+| Schema compare | Reduced repeated dependency processing when including or excluding differences, improving responsiveness for large comparisons. | DacFx API / Schema compare |
+| SQL projects | Added build-time warnings for pre-plan scripts that contain full-text or index operations that can't safely run inside the deployment transaction. | MSBuild / SQL projects |
+| SQL projects | Added public `TSqlModel` APIs to load, remove, and query DACPAC and SQL project references, including navigation of referenced objects for IntelliSense integrations. | DacFx API / Schema compare |
+| SQL projects | Updated .NET Framework SQL project incremental builds to use a hardened cache format. Incompatible build caches are regenerated automatically. | MSBuild / SQL projects |
+
+### Fixes
+
+| Feature | Details | Applies to |
+| --- | --- | --- |
+| Deployment | Fixed refactor-log renames and schema moves on SQL database in Microsoft Fabric and Data Warehouse in Microsoft Fabric so deployments preserve existing objects and data instead of generating drop-and-create operations. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed Data Warehouse in Microsoft Fabric deployments for unsupported column changes by rebuilding tables when allowed, preserving dependencies, and honoring table recreation and data-loss settings. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed Data Warehouse in Microsoft Fabric table rebuilds that add non-nullable columns with default values so generated scripts populate the values without unsupported temporary constraints. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed scoped deployments that use refactor-log renames by loading renamed objects and reporting name collisions instead of producing invalid or incomplete deployment plans. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed deployment scripts that use the sqlcmd `:connect` directive so transient connection failures use the standard retry behavior. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed deployment history initialization failures on SQL database in Microsoft Fabric and Data Warehouse in Microsoft Fabric. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed `PrePlanScript` handling so SQLCMD parsing errors trigger failure and rollback, and DACPACs that contain table data are rejected before pre-plan scripts run. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed deployment scripts for temporal tables whose schema or table names contain apostrophes, closing brackets, or Unicode characters. | SqlPackage CLI; DacFx API / Schema compare |
+| Deployment | Fixed generated SQL used by data import, data export, and encrypted-column deployments so database and object names that contain apostrophes or closing brackets are handled correctly. | SqlPackage CLI; DacFx API / Schema compare |
+| Export | Fixed fallback size estimation for large-object columns during BACPAC export. | SqlPackage CLI |
+| Export | Fixed BACPAC export failures with `SQL71501` unresolved-login errors for Microsoft Entra users in Azure SQL Database. | SqlPackage CLI |
+| Extract | Fixed extraction of user-defined `cdc` schemas when Change Data Capture isn't enabled, preventing those schemas and their objects from being omitted from imported SQL projects. [GitHub issue](https://github.com/microsoft/vscode-mssql/issues/22100) | SqlPackage CLI; DacFx API / Schema compare |
+| Extract | Fixed generated placeholder passwords in extracted DACPACs that could cause publishing to Azure SQL Database to fail password-policy validation. [GitHub issue](https://github.com/microsoft/DacFx/issues/852) | SqlPackage CLI; DacFx API / Schema compare |
+| Schema compare | Fixed data-phase index settings so saved deployment and schema compare configurations retain their values when reloaded. [GitHub issue](https://github.com/microsoft/vscode-mssql/issues/19185) | DacFx API / Schema compare |
+| Schema compare | Fixed SQL project updates when different object types share a name so each generated script is preserved. [GitHub issue](https://github.com/microsoft/DacFx/issues/830) | DacFx API / Schema compare |
+| SQL projects | Fixed SQL database in Microsoft Fabric and Data Warehouse in Microsoft Fabric projects that reference `master.dacpac` so system objects resolve correctly during build, schema compare, and deployment. [GitHub issue](https://github.com/microsoft/DacFx/issues/850) | MSBuild / SQL projects; DacFx API / Schema compare |
+| Table designer | Fixed Table Designer **Preview** and **Apply** failures when connected to Azure SQL Database containers. [GitHub issue](https://github.com/microsoft/DacFx/issues/882) | DacFx API / Schema compare |
 
 ## 170.5.96.0 SqlPackage
 

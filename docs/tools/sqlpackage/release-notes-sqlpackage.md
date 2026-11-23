@@ -4,7 +4,7 @@ description: Review features, fixes, and changes in current and previous release
 author: cwebb-msft
 ms.author: chweb
 ms.reviewer: mahyon, llali
-ms.date: 11/25/2026
+ms.date: 11/24/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: release-notes

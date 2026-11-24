@@ -4,7 +4,7 @@ description: This article describes the system requirements for the Microsoft OD
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 11/12/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -35,6 +35,7 @@ Compatibility indicates that you can use a driver with the listed database versi
 | 18.2 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | 18.1 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | 18.0 | | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| 17.12 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | 17.11 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | 17.10 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | 17.9 | | Yes | Yes | Yes | | | Yes | Yes |
@@ -74,6 +75,8 @@ The following table shows which Windows operating system versions each driver re
 | 18.2 | | Yes | Yes | Yes | Yes |
 | 18.1 | | Yes | Yes | Yes | Yes |
 | 18.0 | | Yes | Yes | Yes | Yes |
+| 17.12 | Yes | Yes | Yes | Yes | Yes |
+| 17.11 | Yes | Yes | Yes | Yes | Yes |
 | 17.10 | Yes | Yes | Yes | Yes | Yes |
 | 17.9 | | Yes | Yes | Yes | Yes |
 | 17.8 | | | Yes | Yes | |
@@ -160,11 +163,12 @@ The query should return no matching registrations. To reinstall the driver, run 
 
 ### C runtime compatibility
 
-Driver 18.6 and earlier versions, including all Driver 17 releases, require the Visual C++ v14 Redistributable on Windows. Starting with Driver 18.7, the driver installer includes the runtime. When you install the Redistributable separately, use the latest supported version from [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist). The latest supported version meets every minimum in the following table.
+Driver 17.11 and earlier versions and Driver 18.0 through 18.6 require a separate installation of the Visual C++ v14 Redistributable on Windows. Starting with Driver 17.12 and Driver 18.7, the driver installer includes the runtime. When you install the Redistributable separately, use the latest supported version from [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist). The latest supported version meets every minimum in the following table.
 
 | Driver version | Architecture | Separate Visual C++ install required | Minimum Visual C++ version |
 | --- | --- | --- | --- |
 | 18.7.1.1 | x86, x64, ARM64 | No. The installer includes version 14.44.35211.0. | Not applicable |
+| 17.12.1.1 | x86, x64 | No. The installer includes version 14.44.35211.0. | Not applicable |
 | 17.11.1.1 | x86, x64 | Yes. Download [x86](https://aka.ms/vc14/vc_redist.x86.exe) or [x64](https://aka.ms/vc14/vc_redist.x64.exe). | 14.15 |
 | 18.6.2.1 | x86, x64, ARM64 | Yes. Download [x86](https://aka.ms/vc14/vc_redist.x86.exe), [x64](https://aka.ms/vc14/vc_redist.x64.exe), or [ARM64](https://aka.ms/vc14/vc_redist.arm64.exe). | 14.34 |
 

@@ -99,12 +99,12 @@ Fill out optional information on the **Networking** tab. If you omit this inform
 
 The following table provides details for information on the **Networking** tab: 
 
-   | Setting| Suggested value | Description |
-   | ------ | --------------- | ----------- |
-   | **Virtual network / subnet** | Create new, or use an existing virtual network |  If a network or subnet is unavailable, it must be [modified to satisfy the network requirements](vnet-existing-add-subnet.md) before you select it as a target for the new SQL managed instance.  |
-   | **Connection type** | Choose a suitable connection type.|For more information, see [connection types](../database/connectivity-architecture.md#connection-policy).|
-   | **Public endpoint**  | Select **Disable**. | For a SQL managed instance to be accessible through the public data endpoint, you need to enable this option. | 
-   | **Allow access from** (if **Public endpoint** is enabled) | Select **No Access**  |The portal configures the security group with a public endpoint. </br> </br> Based on your scenario, select one of the following options: </br> <ul> <li>**Azure services**: We recommend this option when you're connecting from Power BI or another multitenant service. </li> <li> **Internet**: Use for test purposes when you want to quickly spin up a SQL managed instance. Not recommended for production environments. </li> <li> **No access**: This option creates a **Deny** security rule. Modify this rule to make a SQL managed instance accessible through a public endpoint. </li> </ul> </br> For more information on public endpoint security, see [Use Azure SQL Managed Instance securely with public endpoints](public-endpoint-overview.md).|
+   | Setting | Suggested value | Description |
+   | ------- | --------------- | ----------- |
+   | **Virtual network / subnet** | Create new, or use an existing virtual network | If a network or subnet is unavailable, you must [modify it to satisfy the network requirements](vnet-existing-add-subnet.md) before you select it as a target for the new SQL managed instance. |
+   | **Connection type** | Choose a suitable connection type. Redirect is recommended.|For more information, see [connection types](connection-types-overview.md). |
+   | **Public endpoint** | Select **Disable**. | To make a SQL managed instance accessible through the public data endpoint, you need to enable this option. |
+   | **Allow access from** (if **Public endpoint** is enabled) | Select **No Access**  |The portal configures the security group with a public endpoint. </br> </br> Based on your scenario, select one of the following options: </br> <ul> <li>**Azure services**: We recommend this option when you're connecting from Power BI or another multitenant service. </li> <li> **Internet**: Use for test purposes when you want to quickly spin up a SQL managed instance. Not recommended for production environments. </li> <li> **No access**: This option creates a **Deny** security rule. Modify this rule to make a SQL managed instance accessible through a public endpoint. </li> </ul> </br> For more information on public endpoint security, see [Use Azure SQL Managed Instance securely with public endpoints](public-endpoint-overview.md). |
 
 Select **Review + create** to review your choices before you create a SQL managed instance. Or, configure security settings by selecting **Next: Security settings**.
 

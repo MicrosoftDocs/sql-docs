@@ -4,7 +4,7 @@ description: Learn what's new and changed in released versions of the Microsoft 
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -16,6 +16,13 @@ ms.custom:
 [!INCLUDE [Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC driver for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+
+## 17.12.1, November 2026
+
+| Feature | Description |
+| --- | --- |
+| New distributions supported. | Ubuntu 26.04 |
+| Bug fixes | [List of bugs fixed](../bug-fixes.md). |
 
 ## 18.7.1, September 2026
 

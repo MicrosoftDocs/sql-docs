@@ -97,7 +97,7 @@ The Azure portal provides a **Workload environment** option that helps to preset
 
    :::image type="content" source="media/single-database-create-quickstart/networking.png" alt-text="Screenshot of the Azure portal showing the networking tab for firewall rules." lightbox="media/single-database-create-quickstart/networking.png":::
 
-1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2.
+1. Under **Connection policy**, choose the appropriate [connection policy](connectivity-connection-policy.md), configure your networks as instructed on the linked page, and leave the **Minimum TLS version** at the default of TLS 1.2.
 1. Select **Next: Security**.
 
    :::image type="content" source="media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption." lightbox="media/single-database-create-quickstart/networking-connections.png":::

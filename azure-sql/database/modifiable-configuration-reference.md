@@ -72,7 +72,7 @@ Settings you provide (or accept defaults for) when you create the database, plus
 | **Firewall rules** | Logical server and database | IP-based rules. | **Yes**.<br /><br />See [Server-level and database-level firewall rules](firewall-configure.md). |
 | **Virtual network rules** | Logical server | Subnet-based service endpoints. | **Yes**.<br /><br />See [Virtual network service endpoints](vnet-service-endpoint-rule-overview.md). |
 | **Private endpoints** | Logical server | Private endpoint connections to the logical server. | **Yes**.<br /><br />See [Azure Private Link for Azure SQL Database](private-endpoint-overview.md). |
-| **Connection policy** | Logical server | Default, Proxy, Redirect. | **Yes**.<br /><br />See [Azure SQL Database connection policy](connectivity-architecture.md#connection-policy). |
+| **Connection policy** | Logical server | Default, Proxy, Redirect. | **Yes**.<br /><br />See [Azure SQL Database connection policy](connectivity-connection-policy.md). |
 | **Minimum TLS version** | Logical server | TLS 1.2 | **Yes**.<br /><br />TLS 1.2 is the default. TLS 1.0 and 1.1 are retired. See [Minimum TLS version](connectivity-settings.md#minimum-tls-version) and [TLS 1.3 support](/sql/relational-databases/security/networking/tls-1-3). |
 
 ## Security

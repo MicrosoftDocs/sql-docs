@@ -4,7 +4,7 @@ description: This release notes article describes the changes in each release of
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -34,6 +34,24 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 | Enhanced routing | Added load-balanced routing for Azure SQL Database Hyperscale named-replica reader endpoints. |
 | Bug fixes | [Bug fixes](../bug-fixes.md). |
 
+## 17.12
+
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2388792)**  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2388986)**  
+
+Version number: 17.12.1.1  
+Released: November 25, 2026  
+
+To download the installer in a language other than the one detected for you, use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2388792&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2388986&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Bug fixes | [Bug fixes](../bug-fixes.md). |
+
+## Previous releases
+
 ## 17.11
 
 :::image type="icon" source="../../../includes/media/download.svg" border="false"::: **[Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2361646)**  
@@ -50,8 +68,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | Install all features | Modify installer to install both features (Core and SDK) by default. |
 | Bug fixes | [Bug fixes](../bug-fixes.md). |
-
-## Previous Releases
 
 ## 18.6
 

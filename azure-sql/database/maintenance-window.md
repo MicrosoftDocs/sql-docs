@@ -103,7 +103,7 @@ To get the maximum benefit from maintenance windows, make sure your client appli
 
 In Azure SQL Database, any connections using the proxy connection policy could be affected by both the chosen maintenance window and a gateway node maintenance window. However, client connections using the recommended redirect connection policy are unaffected by a gateway node maintenance reconfiguration.
 
-For more on the client connection policy in Azure SQL Database, see [Azure SQL Database Connection policy](../database/connectivity-architecture.md#connection-policy).
+For more information about the client connection policy in Azure SQL Database, see [Choosing the connection policy](connectivity-connection-policy.md).
 
 ## Retrieve list of maintenance events
 

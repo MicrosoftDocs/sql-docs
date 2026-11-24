@@ -35,6 +35,8 @@ monikerRange: "=azuresql || =azuresql-db"
 
 ## How to set up Private Link
 
+To connect to Azure SQL Database via Private Link, first you create and approve the private endpoint in the virtual network in which you want to make that resource available. 
+
 ### Creation process
 
 Private Endpoints can be created using the Azure portal, PowerShell, or the Azure CLI:
@@ -91,16 +93,21 @@ Azure Private Link for Azure SQL Database now supports IPv6 connectivity, in pre
 
 For configuration requirements and step-by-step guidance, see [Configure Azure Private Link over IPv6 (preview)](/azure/private-link/private-link-ipv6).
 
-## Disable public access to your logical server
+## Use Redirect connection policy with private endpoints
 
-In Azure SQL Database logical SQL server, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
+Use private endpoints with the [Redirect connection policy](connectivity-connection-policy.md) for reduced latency, improved throughput, and better connection reliability. To use Redirect, configure your clients and networks to meet the following prerequisites:
 
-First, ensure that your private endpoint connections are enabled and configured. Then, to disable public access to your logical server:
+- Allow **inbound** flows to the virtual network hosting the private endpoint over port range 1433 through 65535.
+- Allow **outbound** flows from all networks hosting your database clients to the virtual network hosting the private endpoint over port range 1433 through 65535.
 
-1. Go to the **Networking** page of your logical server.
-1. Select the **Deny public network access** checkbox.
+After meeting the prerequisites, you need to explicitly [Change the connection policy to Redirect](connectivity-settings.md#change-the-connection-policy). If you set the connection policy to Redirect before setting up the private endpoint, you might have to toggle the connection policy after setting up the private endpoint.
 
-   :::image type="content" source="media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows how to disable public network access for the private endpoint connection." lightbox="media/private-endpoint/pec-deny-public-access.png":::
+Use the **latest version of drivers that have redirect support built in**. Redirect support is included in ODBC, OLE DB, .NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied. See [SQL Connectivity and Drivers](https://learn.microsoft.com/sql/connect/).
+
+> [!NOTE]
+> Changing the connection policy to Redirect affects all clients at once. Ensure your client fleet is configured to allow the required traffic flows over the port ranges shown in the preceding section. If you can't adjust some clients or networks for Redirect, set the connection policy to Proxy. This setting impairs the performance and reliability of all connections to that logical server.
+>
+> Don't use the Default connection policy with private endpoints. Always try to configure your clients and networks for Redirect and only use Proxy as an alternative.
 
 ## Test connectivity to SQL Database from an Azure VM in same virtual network
 
@@ -115,7 +122,10 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
    - Nmap
    - [SQL Server Management Studio (SSMS)](https://aka.ms/ssms)
 
-### Check connectivity using Telnet
+> [!NOTE]  
+> Use the **Fully Qualified Domain Name (FQDN)** of the server in connection strings for your clients (`<server>.database.windows.net`). Login attempts made directly to the IP address or by using the private link FQDN (`<server>.privatelink.database.windows.net`) fail. This behavior is by design, since private endpoint routes traffic to the SQL Gateway in the region. You need to specify the correct FQDN for logins to succeed.
+
+### [Telnet](#tab/telnet)
 
 [Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you might need to enable this feature explicitly.
 
@@ -129,7 +139,7 @@ When Telnet connects successfully, it outputs a blank screen at the command wind
 
 :::image type="content" source="media/private-endpoint/telnet-result.png" alt-text="Diagram of the Telnet window with blank screen." lightbox="media/private-endpoint/telnet-result.png":::
 
-### Check connectivity by using PowerShell
+### [PowerShell](#tab/powershell)
 
 Use PowerShell command to check the connectivity:
 
@@ -137,7 +147,7 @@ Use PowerShell command to check the connectivity:
 Test-NetConnection -computer myserver.database.windows.net -port 1433
 ```
 
-### Check Connectivity using PsPing
+### [PsPing](#tab/psping)
 
 **[PsPing](/sysinternals/downloads/PsPing)** can be used as follows to check that the private endpoint is listening for connections on port 1433.
 
@@ -161,7 +171,7 @@ Connecting to 10.9.0.4:1433: from 10.6.0.4:49958: 2.28ms
 
 The output show that **PsPing** could ping the private IP address associated with the private endpoint.
 
-### Check connectivity using Nmap
+### [nmap](#tab/nmap)
 
 Nmap (Network Mapper) is a free and open-source tool used for network discovery and security auditing. For more information and the download link, visit https://Nmap.org. You can use this tool to ensure that the private endpoint is listening for connections on port 1433.
 
@@ -181,12 +191,9 @@ Nmap done: 256 IP addresses (1 host up) scanned in 207.00 seconds
 
 The result shows that one IP address is up; which corresponds to the IP address for the private endpoint.
 
-### Check connectivity using SQL Server Management Studio (SSMS)
+### [SSMS](#tab/ssms)
 
-> [!NOTE]  
-> Use the **Fully Qualified Domain Name (FQDN)** of the server in connection strings for your clients (`<server>.database.windows.net`). Any login attempts made directly to the IP address or using the private link FQDN (`<server>.privatelink.database.windows.net`) shall fail. This behavior is by design, since private endpoint routes traffic to the SQL Gateway in the region and the correct FQDN needs to be specified for logins to succeed.
-
-Follow the steps here to use [SSMS to connect to the SQL Database](connect-query-ssms.md). After you connect to the SQL Database using SSMS, the following query shall reflect client_net_address that matches the private IP address of the Azure VM you're connecting from:
+Follow the steps in [SQL Server Management Studio to connect to the SQL Database](connect-query-ssms.md). After you connect to the SQL Database by using SSMS, run the following query to see `client_net_address` that matches the private IP address of the Azure VM you're connecting from:
 
 ```sql
 SELECT client_net_address
@@ -194,21 +201,18 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;
 ```
 
-## Use Redirect connection policy with private endpoints
+---
 
-We recommend that customers use the private link with the **Redirect connection policy** for reduced latency and improved throughput. For connections to use this mode, clients need to meet the following prerequisites:
+## Disable public access to your logical server
 
-- Allow **inbound** communication to the VNET hosting the private endpoint to port range 1433 to 65535.
+In Azure SQL Database logical SQL server, you can disable all public access to your logical server and allow connections only from your virtual network.
 
-- Allow **outbound** communication from the VNET hosting the client to port range 1433 to 65535.
+First, ensure that your private endpoint connections are enabled and configured. Then, to disable public access to your logical server:
 
-- Use the **latest version of drivers that have redirect support built in.** Redirect support is included in ODBC, OLE DB, .NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
+1. Go to the **Networking** page of your logical server.
+1. Select the **Deny public network access** checkbox.
 
-After meeting the prerequisite, clients need to explicitly [choose **Redirect** connection policy](connectivity-architecture.md#connection-policy). If the connection policy has been set to **Redirect** before the private endpoint was set up, you might have to toggle the connection policy after setting up the private endpoint.
-
-If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to **Proxy**.
-
-Existing private endpoints using **Default** connection policy will be using the Proxy connection policy with port 1433. The reason for doing this is to avoid any disruption to client traffic from reaching SQL Database due to requisite port ranges for redirection not being open.
+   :::image type="content" source="media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows how to disable public network access for the private endpoint connection." lightbox="media/private-endpoint/pec-deny-public-access.png":::
 
 ## On-premises connectivity over private peering
 

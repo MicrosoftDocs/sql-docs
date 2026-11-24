@@ -212,9 +212,11 @@ You can also query [sys.fn_get_audit_file](/sql/relational-databases/system-func
 
 ## Change the connection policy
 
-[Connection policy](connectivity-architecture.md#connection-policy) determines how customers connect. We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput.
+Connection policy determines how you connect. Use the `Redirect` connection policy instead of either `Proxy` or `Default` for the lowest latency and highest throughput.
 
-It's possible to change the connection policy by using the Azure portal, Azure PowerShell, and the Azure CLI.
+See [Choosing the connection policy](connectivity-connection-policy.md) for a comparison between the available policies, their impact on connectivity performance and reliability, and how to configure your network environment for each.
+
+You can change the connection policy by using the Azure portal, Azure PowerShell, and the Azure CLI.
 
 ### [Portal](#tab/azure-portal)
 

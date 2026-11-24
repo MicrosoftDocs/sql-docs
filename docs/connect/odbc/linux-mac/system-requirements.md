@@ -4,7 +4,7 @@ description: This lists the system requirements for the ODBC Driver for SQL Serv
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -80,52 +80,55 @@ The driver supports the x64 architecture on all listed operating systems. The Ar
 The following table shows the operating systems supported by previous versions of the ODBC Driver for SQL Server on Linux and macOS. These versions are in maintenance mode and receive only critical security updates. For new projects, we recommend using ODBC Driver 18.  
 All versions support the x64 architecture. The Arm64 architecture on macOS is supported starting with version 17.8.
 
-| Driver version&nbsp;&#8594;<br />&#8595; Operating System | 17.11 | 17.10 | 17.9 | 17.8 | 17.7 | 17.6 | 17.5 | 17.4 | 17.3 | 17.2 | 17.1 | 17.0 | 13.1 | 13 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Apple OS X 10.11 (El Capitan) | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Apple macOS 10.12 (Sierra) | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Apple macOS 10.13 (High Sierra) | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Apple macOS 10.14 (Mojave) | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No |
-| Apple macOS 10.15 (Catalina) | No | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No |
-| Apple macOS 11.0 (Big Sur) | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
-| Apple macOS 12.0 (Monterey) | No | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No |
-| Apple macOS 14.0 (Sonoma) | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Apple macOS 15.0 (Sequoia) | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Apple macOS 26 (Tahoe) | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.11 | No | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No |
-| Alpine Linux 3.12 | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.13 | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.14 | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.15 | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.21 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.22 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Alpine Linux 3.23 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Debian Linux 8 | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Debian Linux 9 | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No |
-| Debian Linux 10 | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| Debian Linux 11 | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No |
-| Debian Linux 12 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
-| Debian Linux 13 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Oracle Linux 7 | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
-| Oracle Linux 8 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No |
-| Oracle Linux 9 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Oracle Linux 10 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Red Hat Enterprise Linux 6 | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Red Hat Enterprise Linux 7 | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Red Hat Enterprise Linux 8 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| Red Hat Enterprise Linux 9 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
-| Red Hat Enterprise Linux 10 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| SUSE Linux Enterprise Server 11<sup>1</sup> | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| SUSE Linux Enterprise Server 12 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| SUSE Linux Enterprise Server 15 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No |
-| SUSE Linux Enterprise Server 16 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Ubuntu Linux 14.04 | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Ubuntu Linux 16.04 | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Ubuntu Linux 18.04 | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No |
-| Ubuntu Linux 20.04 | No | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No |
-| Ubuntu Linux 22.04 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
-| Ubuntu Linux 24.04 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| Ubuntu Linux 25.10 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Driver version&nbsp;&#8594;<br />&#8595; Operating System | 17.12 | 17.11 | 17.10 | 17.9 | 17.8 | 17.7 | 17.6 | 17.5 | 17.4 | 17.3 | 17.2 | 17.1 | 17.0 | 13.1 | 13 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Apple OS X 10.11 (El Capitan) | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Apple macOS 10.12 (Sierra) | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Apple macOS 10.13 (High Sierra) | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Apple macOS 10.14 (Mojave) | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No |
+| Apple macOS 10.15 (Catalina) | No | No | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No |
+| Apple macOS 11.0 (Big Sur) | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| Apple macOS 12.0 (Monterey) | No | No | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No |
+| Apple macOS 14.0 (Sonoma) | No | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Apple macOS 15.0 (Sequoia) | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Apple macOS 26 (Tahoe) | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Apple macOS 27 (Golden Gate) | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.11 | No | No | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No |
+| Alpine Linux 3.12 | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.13 | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.14 | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.15 | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.21 | No | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.22 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.23 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Alpine Linux 3.24 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Debian Linux 8 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Debian Linux 9 | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No |
+| Debian Linux 10 | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
+| Debian Linux 11 | No | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No |
+| Debian Linux 12 | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
+| Debian Linux 13 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Oracle Linux 7 | No | No | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No |
+| Oracle Linux 8 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No |
+| Oracle Linux 9 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Oracle Linux 10 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Red Hat Enterprise Linux 6 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Red Hat Enterprise Linux 7 | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Red Hat Enterprise Linux 8 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
+| Red Hat Enterprise Linux 9 | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
+| Red Hat Enterprise Linux 10 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| SUSE Linux Enterprise Server 11<sup>1</sup> | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| SUSE Linux Enterprise Server 12 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| SUSE Linux Enterprise Server 15 | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No |
+| SUSE Linux Enterprise Server 16 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Ubuntu Linux 14.04 | No | No | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Ubuntu Linux 16.04 | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Ubuntu Linux 18.04 | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No |
+| Ubuntu Linux 20.04 | No | No | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No | No | No |
+| Ubuntu Linux 22.04 | Yes | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No |
+| Ubuntu Linux 24.04 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Ubuntu Linux 25.10 | Yes | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No |
+| Ubuntu Linux 26.04 | Yes | No | No | No | No | No | No | No | No | No | No | No | No | No | No |
 
 <sup>1</sup> ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only
 

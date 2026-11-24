@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release of the M
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 09/07/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: release-notes
@@ -14,6 +14,20 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release of the [!INCLUDE [msCoName](../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], starting with the most recent versions.
+
+### Bug fixes in the Microsoft ODBC Driver 17.12.1.1 for SQL Server
+
+- Fix validation of decrypted `time(n)`, `datetime2(n)`, and `datetimeoffset(n)` values in Always Encrypted to safely reject undersized ciphertext.
+- Fix Azure Key Vault endpoint hostname validation to reject lookalike hosts that don't match trusted DNS suffixes.
+- Fix length validation when parsing `LOGINACK` and `ENVCHANGE` tokens in server responses.
+- Fix property length validation when reading `sql_variant` data.
+- Fix XA operation handling when a connection is lost to report resource-manager failure without retrying commit or rollback.
+- Fix enforcement of the configured authentication timeout during TLS handshake operations.
+- Fix delayed connection cleanup by releasing retained network packets on POSIX disconnect-timeout errors.
+- Fix spurious TLS failures or hangs caused by stale entries in the OpenSSL error queue.
+- Fix duplicate and misleading diagnostics when Azure Key Vault token acquisition fails.
+- Fix dynamic OpenSSL loading to support OpenSSL 4.
+- Fix the missing `libgssapi-krb5-2` dependency in Debian packages.
 
 ### Bug fixes in the Microsoft ODBC Driver 18.7.1.1 for SQL Server
 

@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: dlevy-msft-sql
 ms.author: dlevy
 ms.reviewer: davidengel, sunilbs, mcimfl, vanto
-ms.date: 11/11/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: concept-article
@@ -258,16 +258,16 @@ if ! command -v gpg >/dev/null 2>&1; then
     exit 1
 fi
 
-driver_package="msodbcsql17_17.11.1.1-1_amd64.apk"
-tools_package="mssql-tools_17.11.1.1-1_amd64.apk"
+driver_package="msodbcsql17_17.12.1.1-1_amd64.apk"
+tools_package="mssql-tools_17.12.1.1-1_amd64.apk"
 driver_signature="${driver_package%.apk}.sig"
 tools_signature="${tools_package%.apk}.sig"
 
 # Download the packages and signatures.
-curl -fSLO "https://download.microsoft.com/download/607ebe2c-e17c-4c34-b367-10a75b83bef9/$driver_package"
-curl -fSLO "https://download.microsoft.com/download/aca0282f-6a67-49c0-ae08-887d59d16d1a/$tools_package"
-curl -fSLO "https://download.microsoft.com/download/607ebe2c-e17c-4c34-b367-10a75b83bef9/$driver_signature"
-curl -fSLO "https://download.microsoft.com/download/aca0282f-6a67-49c0-ae08-887d59d16d1a/$tools_signature"
+curl -fSLO "https://download.microsoft.com/download/01432586-9668-4062-a363-adc7810ae83e/$driver_package"
+curl -fSLO "https://download.microsoft.com/download/2409b65e-ebd8-429d-bc9c-8821f7526d02/$tools_package"
+curl -fSLO "https://download.microsoft.com/download/01432586-9668-4062-a363-adc7810ae83e/$driver_signature"
+curl -fSLO "https://download.microsoft.com/download/2409b65e-ebd8-429d-bc9c-8821f7526d02/$tools_signature"
 curl -fSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc
 
 # Verify the package signatures before installation.
@@ -380,7 +380,7 @@ sudo zypper install -y unixODBC-devel
 ```bash
 ubuntu_version=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2)
 case "$ubuntu_version" in
-    14.04|16.04|18.04|20.04|22.04|24.04|25.10) ;;
+    14.04|16.04|18.04|20.04|22.04|24.04|26.04) ;;
     *) echo "Ubuntu $ubuntu_version is not currently supported." >&2; exit 1 ;;
 esac
 

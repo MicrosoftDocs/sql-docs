@@ -4,7 +4,7 @@ description: Review features, fixes, and changes in current and previous release
 author: cwebb-msft
 ms.author: chweb
 ms.reviewer: mahyon, llali
-ms.date: 11/24/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: release-notes
@@ -90,6 +90,7 @@ dotnet tool install -g microsoft.sqlpackage --version 170.6.60
 | Schema compare | Fixed data-phase index settings so saved deployment and schema compare configurations retain their values when reloaded. [GitHub issue](https://github.com/microsoft/vscode-mssql/issues/19185) | DacFx API / Schema compare |
 | Schema compare | Fixed SQL project updates when different object types share a name so each generated script is preserved. [GitHub issue](https://github.com/microsoft/DacFx/issues/830) | DacFx API / Schema compare |
 | SQL projects | Fixed SQL database in Microsoft Fabric and Data Warehouse in Microsoft Fabric projects that reference `master.dacpac` so system objects resolve correctly during build, schema compare, and deployment. [GitHub issue](https://github.com/microsoft/DacFx/issues/850) | MSBuild / SQL projects; DacFx API / Schema compare |
+| SQL projects | Fixed SDK-style SQL project builds with .NET Framework so SQLCLR assemblies are included in the generated DACPAC. [GitHub issue](https://github.com/microsoft/DacFx/issues/785) | MSBuild / SQL projects |
 | Table designer | Fixed Table Designer **Preview** and **Apply** failures when connected to Azure SQL Database containers. [GitHub issue](https://github.com/microsoft/DacFx/issues/882) | DacFx API / Schema compare |
 
 ## 170.5.96.0 SqlPackage

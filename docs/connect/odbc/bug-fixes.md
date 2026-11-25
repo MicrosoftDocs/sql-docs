@@ -15,6 +15,10 @@ helpviewer_keywords:
 
 This page contains a listing of bugs fixed in each release of the [!INCLUDE [msCoName](../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], starting with the most recent versions.
 
+### Bug fixes in the Microsoft ODBC Driver 18.7.2.1 for SQL Server
+
+- Fix dynamic OpenSSL loading to support OpenSSL 4.
+
 ### Bug fixes in the Microsoft ODBC Driver 17.12.1.1 for SQL Server
 
 - Fix validation of decrypted `time(n)`, `datetime2(n)`, and `datetimeoffset(n)` values in Always Encrypted to safely reject undersized ciphertext.

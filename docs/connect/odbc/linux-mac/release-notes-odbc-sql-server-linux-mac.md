@@ -17,6 +17,12 @@ ms.custom:
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE [msCoName](../../../includes/msconame-md.md)] ODBC driver for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
 
+## 18.7.2, November 2026
+
+| Feature | Description |
+| --- | --- |
+| Bug fixes | [List of bugs fixed](../bug-fixes.md). |
+
 ## 17.12.1, November 2026
 
 | Feature | Description |

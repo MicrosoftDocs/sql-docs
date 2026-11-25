@@ -114,6 +114,8 @@ For offline installation, select the link for your distribution and driver versi
 
 Verify package integrity and authenticity by using the published Pretty Good Privacy (PGP) signatures.
 
+- [18.7.2.1 Alpine driver ARM package](https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/msodbcsql18_18.7.2.1-1_arm64.apk) ([PGP Signature](https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/msodbcsql18_18.7.2.1-1_arm64.sig))
+- [18.7.2.1 Alpine driver package](https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/msodbcsql18_18.7.2.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/msodbcsql18_18.7.2.1-1_amd64.sig))
 - [18.7.1.1 Alpine driver ARM package](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_arm64.apk) ([PGP Signature](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_arm64.sig))
 - [18.7.1.1 Alpine driver package](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/msodbcsql18_18.7.1.1-1_amd64.sig))
 - [18.7.1.1 Alpine tools ARM package](https://download.microsoft.com/download/a5dcc5e7-6124-49d3-8df4-48d738a0e784/mssql-tools18_18.7.1.1-1_arm64.apk) ([PGP Signature](https://download.microsoft.com/download/a5dcc5e7-6124-49d3-8df4-48d738a0e784/mssql-tools18_18.7.1.1-1_arm64.sig))

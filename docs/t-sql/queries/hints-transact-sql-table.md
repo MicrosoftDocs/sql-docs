@@ -4,7 +4,7 @@ description: Table hints override the default behavior of the query optimizer du
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 03/12/2026
+ms.date: 11/24/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -326,12 +326,14 @@ Specifies that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] not read rows th
 
 `READPAST` can only be specified in transactions operating at the `READ COMMITTED` or `REPEATABLE READ` isolation levels.
 
-When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON` and either of the following conditions is true, a statement reads row versions, and `READPAST` doesn't skip locked rows:
+When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, reads at the `READ COMMITTED` isolation level use row versions instead of locks. A statement reads a table at the `READ COMMITTED` isolation level when either of the following conditions is true:
 
 - The transaction isolation level of the session is `READ COMMITTED`.
-- The `READCOMMITTED` table hint is also specified in the query.
+- The query specifies the `READCOMMITTED` table hint on that table.
 
-To skip locked rows in such a statement, remove the `READCOMMITTED` table hint if present, and include the `READCOMMITTEDLOCK` table hint in the query. `READPAST` also skips locked rows when it's combined with another table hint that takes locks, such as `UPDLOCK`, `XLOCK`, or `REPEATABLEREAD`.
+Because these reads return the last committed version of each row, `READPAST` doesn't skip locked rows. For example, `READPAST` doesn't skip locked rows in the tables of a `SELECT` statement, in the source of an `INSERT ... SELECT` statement, or in a table that an `UPDATE` or `DELETE` statement reads in a join or subquery. In the target table of an `UPDATE` or `DELETE` statement, `READPAST` still skips locked rows.
+
+To skip locked rows in a table that the statement doesn't modify, remove the `READCOMMITTED` table hint if present, and include the `READCOMMITTEDLOCK` table hint on that table. `READPAST` also skips locked rows when you combine it with another table hint that takes locks, such as `UPDLOCK`, `XLOCK`, or `REPEATABLEREAD`.
 
 #### READUNCOMMITTED
 

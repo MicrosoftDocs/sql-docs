@@ -166,14 +166,17 @@ For character-encoding, conversion, parameter-binding, and buffer-sizing guidanc
 
 ## <a id="bkmk-openssl"></a> OpenSSL
 
-Starting with ODBC Driver 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have version 1.0 or 1.1 without separate driver files. Starting with version 17.9, the driver supports OpenSSL 3.0 in addition to the previous versions. When multiple versions of OpenSSL are present, the driver attempts to load a supported version from its library search paths.
+Starting with ODBC Driver 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have version 1.0 or 1.1 without separate driver files. Starting with version 17.9, the driver supports OpenSSL 3.0 in addition to the previous versions. Starting with version 17.12, the driver also supports OpenSSL 4.0. ODBC Driver 18 supports OpenSSL 1.0, 1.1, and 3.0, and adds support for OpenSSL 4.0 starting with version 18.7.2. When multiple versions of OpenSSL are present, the driver attempts to load a supported version from its library search paths.
 
 | Driver version | Supported OpenSSL versions |
 | --- | --- |
 | 17.4 through 17.8 | 1.0, 1.1 |
-| 17.9 and later 17.x versions, and all Driver 18 versions | 1.0, 1.1, 3.0 |
+| 17.9 through 17.11 | 1.0, 1.1, 3.0 |
+| 17.12 and later 17.x versions | 1.0, 1.1, 3.0, 4.0 |
+| 18.x versions earlier than 18.7.2 | 1.0, 1.1, 3.0 |
+| 18.7.2 and later 18.x versions | 1.0, 1.1, 3.0, 4.0 |
 
-OpenSSL 4 isn't supported. On macOS, a Homebrew `openssl` link that points to OpenSSL 4 can prevent the driver from loading OpenSSL even when OpenSSL 3 is installed. Check the library path as well as the installed versions.
+On macOS, a Homebrew `openssl` link that points to OpenSSL 4 can prevent a driver version that doesn't support OpenSSL 4 from loading OpenSSL even when OpenSSL 3 is installed. Check the library path as well as the installed versions.
 
 > [!NOTE]
 > A potential conflict might occur if the application that uses the driver, or one of its components, links with or dynamically loads a different version of OpenSSL. If several versions of OpenSSL are present on the system and the application uses it, ensure that the version loaded by the application and the driver don't mismatch. The errors could corrupt memory and might not manifest in obvious or consistent ways.

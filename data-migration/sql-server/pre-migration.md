@@ -122,7 +122,7 @@ If your assessment encounters multiple blockers, consider migrating to one of th
 
 ### Assess with SQL Server enabled by Arc
 
-To assess your SQL Server instances for migration to Azure, use SQL Server enabled by Azure Arc. This feature, currently in preview, automatically produces an assessment for migration to Azure, simplifying the discovery process and readiness assessment for migration. 
+To assess your SQL Server instances for migration to Azure, use SQL Server enabled by Azure Arc. This tool automatically produces assessments for migration to Azure, simplifying the discovery process and readiness assessment for migration. 
 
 To assess your instances using SQL Server enabled by Azure Arc, follow these steps:
 

@@ -5,7 +5,7 @@ description: Dynamic data masking (DDM) limits sensitive data exposure by maskin
 author: madhumitatripathy
 ms.author: matripathy
 ms.reviewer: vanto
-ms.date: 11/03/2026
+ms.date: 11/25/2026
 ms.service: azure-sql
 ms.subservice: security
 ms.topic: concept-article
@@ -40,7 +40,7 @@ This feature can't be set using the Azure portal for SQL Managed Instance or SQL
 
   | Masking function | Masking logic |
   | --- | --- |
-  | **Default** | **Full masking according to the data types of the designated fields**<br /><br />Use `xxxx` for string data types (**char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext**), or fewer `x` characters if the size of the field is fewer than 4 characters.<br />Use a zero value for numeric data types (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br />Use `1900-01-01` for date/time data types (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br />Use a single byte with the value `0x30` (the ASCII character `0`) for binary data types (**binary**, **varbinary**, **image**).<br />Use the default value of the current type for **sql_variant**.<br />Use the document `<masked />` for **xml**.<br />Use an empty value for special data types (**timestamp**, **table**, **HierarchyID**, **uniqueidentifier**, and spatial types). |
+  | **Default** | **Full masking according to the data types of the designated fields**<br /><br />Use `xxxx` for string data types (**char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext**), or fewer `x` characters if the size of the field is fewer than 4 characters.<br />Use a zero value for numeric data types (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br />Use `1900-01-01` for date/time data types (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br />Use a single byte with the value `0x30` (the ASCII character `0`) for binary data types (**binary**, **varbinary**, **image**).<br />Use the default value of the current type for **sql_variant**.<br />Use the document `<masked />` for **xml**.<br />Use `00000000-0000-0000-0000-000000000000` for **uniqueidentifier**.<br />Use eight zero bytes (`0x0000000000000000`) for **rowversion**. You can't add a mask to an existing **rowversion** column.<br />Use a single byte with the value `0x00` for **hierarchyid** and for spatial data types (**geography**, **geometry**). |
   | **Credit card** | **Masking method, which exposes the last four digits of the designated fields** and adds a constant string as a prefix in the form of a credit card.<br /><br />`XXXX-XXXX-XXXX-1234` |
   | **Email** | **Masking method, which exposes the first letter and replaces the domain with XXXX.com** using a constant string prefix in the form of an email address.<br /><br />`aXXX@XXXX.com` |
   | **Random number** | **Masking method, which generates a random number** according to the selected boundaries and actual data types. If the designated boundaries are equal, then the masking function is a constant number.<br /><br />:::image type="content" source="media/dynamic-data-masking-overview/random-number.png" alt-text="Screenshot that shows the masking method for generating a random number."::: |

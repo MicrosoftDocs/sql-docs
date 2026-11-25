@@ -162,7 +162,7 @@ Database-level actions support the auditing of specific actions directly on data
 
 | Action | Description |
 | --- | --- |
-| `SELECT` | This event is raised whenever a `SELECT` is issued. |
+| `SELECT` | This event is raised whenever a `SELECT` is issued. It's also raised when an `UPDATE` or `DELETE` statement uses `SELECT` permission on the object, for example because it has a `WHERE` clause. |
 | `UPDATE` | This event is raised whenever an `UPDATE` is issued. |
 | `INSERT` | This event is raised whenever an `INSERT` is issued. |
 | `DELETE` | This event is raised whenever a `DELETE` is issued. |

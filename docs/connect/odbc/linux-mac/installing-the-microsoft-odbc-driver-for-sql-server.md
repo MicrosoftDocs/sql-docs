@@ -60,15 +60,15 @@ if ! command -v gpg >/dev/null 2>&1; then
     exit 1
 fi
 
-driver_package="msodbcsql18_18.7.1.1-1_${architecture}.apk"
+driver_package="msodbcsql18_18.7.2.1-1_${architecture}.apk"
 tools_package="mssql-tools18_18.7.1.1-1_${architecture}.apk"
 driver_signature="${driver_package%.apk}.sig"
 tools_signature="${tools_package%.apk}.sig"
 
 # Download the packages and signatures.
-curl -fSLO "https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/$driver_package"
+curl -fSLO "https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/$driver_package"
 curl -fSLO "https://download.microsoft.com/download/a5dcc5e7-6124-49d3-8df4-48d738a0e784/$tools_package"
-curl -fSLO "https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/$driver_signature"
+curl -fSLO "https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/$driver_signature"
 curl -fSLO "https://download.microsoft.com/download/a5dcc5e7-6124-49d3-8df4-48d738a0e784/$tools_signature"
 curl -fSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc
 
@@ -433,9 +433,9 @@ case "$(uname -m)" in
     *) echo "Unsupported Alpine architecture: $(uname -m)" >&2; exit 1 ;;
 esac
 
-driver_apk="msodbcsql18_18.7.1.1-1_${architecture}.apk"
-curl -fSL -O "https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/$driver_apk"
-curl -fSL -o "$driver_apk.sig" "https://download.microsoft.com/download/ade174b7-8cea-4543-91a6-c33ae320c2f0/${driver_apk%.apk}.sig"
+driver_apk="msodbcsql18_18.7.2.1-1_${architecture}.apk"
+curl -fSL -O "https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/$driver_apk"
+curl -fSL -o "$driver_apk.sig" "https://download.microsoft.com/download/5b705670-6f53-4df8-a084-d6c6098d95d7/${driver_apk%.apk}.sig"
 curl -fSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc
 gpg --import microsoft.asc
 gpg --verify "$driver_apk.sig" "$driver_apk"
@@ -452,9 +452,9 @@ if [[ "$(uname -m)" != "x86_64" ]]; then
     exit 1
 fi
 
-driver_apk="msodbcsql17_17.11.1.1-1_amd64.apk"
-curl -fSL -O "https://download.microsoft.com/download/607ebe2c-e17c-4c34-b367-10a75b83bef9/$driver_apk"
-curl -fSL -o "$driver_apk.sig" "https://download.microsoft.com/download/607ebe2c-e17c-4c34-b367-10a75b83bef9/${driver_apk%.apk}.sig"
+driver_apk="msodbcsql17_17.12.1.1-1_amd64.apk"
+curl -fSL -O "https://download.microsoft.com/download/01432586-9668-4062-a363-adc7810ae83e/$driver_apk"
+curl -fSL -o "$driver_apk.sig" "https://download.microsoft.com/download/01432586-9668-4062-a363-adc7810ae83e/${driver_apk%.apk}.sig"
 curl -fSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc
 gpg --import microsoft.asc
 gpg --verify "$driver_apk.sig" "$driver_apk"

@@ -4,7 +4,7 @@ description: The queryinsights.sql_pool_insights in Microsoft Fabric provides ac
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mariyaali
-ms.date: 11/18/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -49,6 +49,10 @@ In Fabric Data Warehouse, resource isolation is enforced between `SELECT` and `N
 - The database logs new records when pool configuration, workspace capacity, or pressure state changes.
 - The database logs pressure state changes if the pressure is sustained for **1 minute** or longer.
 - The SQL Database Engine logs events only when the warehouse is active. If there's no activity on the warehouse, events pause and resume once activity is detected. This condition means that during periods of inactivity, event logging can have gaps until the warehouse becomes active again.
+
+### Known issue
+
+When a warehouse has [warehouse snapshots](/fabric/data-warehouse/warehouse-snapshot), `queryinsights.sql_pool_insights` can return duplicate rows for the same `sql_pool_name` and `timestamp`. Duplicate rows have identical values. Until a fix is available, use `SELECT DISTINCT` to remove them before you aggregate.
 
 ## Permissions
 

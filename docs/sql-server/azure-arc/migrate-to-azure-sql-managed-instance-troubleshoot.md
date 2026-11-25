@@ -36,7 +36,7 @@ If you encounter issues with the Arc agent, such as an unhealthy extension state
 
 The system runs [migration readiness assessments](migration-assessment.md) every Sunday at 11 PM (23:00) local to the server. Assessments for SQL Server instances newly enabled by Azure Arc can take several days to appear in the Azure portal. Use **Run assessment** to trigger an on-demand assessment. The assessment appears after a few minutes.
 
-If the database migration readiness assessments page is blank in the Azure portal, the scheduled assessment likely didn't run, or there was a problem running the assessment on the SQL Server instance. Disabling the Arc agent prevents assessments from running. Ensure the Arc agent is enabled. For more information, see [Change assessment settings](migration-assessment.md#change-assessment-settings).
+If the database migration readiness assessments page is blank in the Azure portal, the scheduled assessment likely didn't run, or there was a problem running the assessment on the SQL Server instance. Disabling the Arc agent prevents assessments from running. Ensure the Arc agent is enabled. For more information, see [Re-enable migration assessment](migration-assessment.md#re-enable-migration-assessment) and [Run migration assessment](migration-assessment.md#run-migration-assessment).
 
 Consider the following known issue:
 - When `xp_cmdshell` is enabled and used, the assessment records a warning for SQL Managed Instance because you can still migrate the database. However, it disrupts the functionality of the object that specifically uses `xp_cmdshell`. Use the remediation guidance provided in the assessment to mitigate the issue.

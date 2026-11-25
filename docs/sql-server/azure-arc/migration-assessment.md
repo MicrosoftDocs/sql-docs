@@ -4,8 +4,9 @@ description: Select the optimal Azure SQL target by using migration assessment w
 author: ajithkr-ms
 ms.author: ajithkr
 ms.reviewer: vanto
-ms.date: 04/27/2026
+ms.date: 11/23/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 
 # Assess migration readiness - SQL Server enabled by Azure Arc
@@ -83,7 +84,7 @@ Best-fit recommendations include the service tier and right-sizing based on perf
 
 The migration target type recommendation is based on the estimated costs and the selected migration strategy. Select one of the following migration strategies:
 
-- **Modernize to platform as a service (PaaS)**: This default strategy suggests PaaS target types (SQL Managed Instance or SQL Database), if they're ready, over infrastructure as a service (IaaS) (SQL Server on Azure Virtual Machines). The Azure SQL PaaS target types offer automated performance tuning, backups, software patching, and high availability. These tasks entail enormous effort and cost if they're performed manually.
+- **Modernize to platform as a service (PaaS)**: This default strategy prioritizes Azure SQL Database for its operational and scaling conveniences. The Azure SQL PaaS target types offer automated performance tuning, backups, software patching, and high availability. These built-in features save you extra effort and cost.
 - **Minimize cost**: Suggests a target type that has the least migration issues and is the most cost effective. This strategy prioritizes the least monthly cost and doesn't consider the inherent advantages of the Azure SQL PaaS target types.
 
 ## Prerequisites
@@ -114,11 +115,13 @@ The **Assessment completed at** information indicates when the assessment was la
 
 ### Review migration strategy
 
-The migration strategy is shown with details of the reasoning behind the recommended migration target type. The **Recommended Target** banner indicates the suggested target type based on the migration strategy and the estimated costs of the recommended configurations of the different target types:
+The overview shows the selected migration strategy and highlights the recommended target type. The recommendation depends on the migration strategy, as described in [Migration target type recommendation](#migration-target-type-recommendation). The available target types are:
 
 - Azure SQL Managed Instance
 - SQL Server on Azure Virtual Machines
 - Azure SQL Database
+
+Platform benefits are collapsed by default. Expand them to compare operational and scaling benefits across the target types. The comparison covers backups and restores, infrastructure, compute, and storage growth.
 
 :::image type="content" source="media/migration-assessment/assessment-overview.png" alt-text="Screenshot that shows how to get to the detailed assessment results." lightbox="media/migration-assessment/assessment-overview.png":::
 
@@ -155,11 +158,24 @@ The **Compatibility** tab shows information on all the issues and warnings that 
 
 ##### SKU recommendation
 
-The **SKU Recommendation** tab includes the monthly cost estimate with the compute and storage components of the cost. The recommended configuration (SKU) and the reasoning behind the recommendation is detailed for SQL Managed Instance and SQL Server on Azure Virtual Machines target types. For SQL Database, a list of all database recommendations are shown. To view the reasoning behind the configuration recommendation for each database, select the corresponding hyperlink in the **Recommendation reason** column.
+The **SKU Recommendation** tab shows the estimated monthly cost and recommended configuration (SKU). For SQL Managed Instance and SQL Server on Azure Virtual Machines, it also explains the recommendation.
+
+SQL Database recommendations support single databases and elastic pools, where databases share compute resources. When elastic pool recommendations are available, the tab contains two sections:
+
+- **Elastic pool**: Shows the monthly cost estimate and recommended pools. Each pool includes its database count, compute and storage recommendations, compute and storage costs, and total cost.
+- **Single database**: Shows the monthly cost estimate and individual database recommendations. Select the corresponding hyperlink in the **Recommendation reason** column to review the reasoning for each database.
+
+When elastic pool recommendations are available, select a pool name in the **Elastic pool** section. The **Recommendation details** pane shows:
+
+- The pool name, compute and storage recommendations, and compute, storage, and total costs.
+- The databases in the pool, with migration readiness and database size.
+- The recommendation reason, including performance requirements and how the recommended pool meets them.
+
+In this pane, use the search box to find databases in the pool. Use the **Migration readiness** filter to filter the database list by readiness.
 
 ### Review estimated monthly cost
 
-The total estimated monthly cost for the instance is calculated based on the target configuration recommended. This price calculation considers the pricing options in the assessment settings. The compute and storage components of the estimated cost are shown in the details section.
+The total estimated monthly cost for the instance is based on the target configuration recommendation. This price calculation uses the pricing options in the settings section at the top of the **Overview** tab. The details section shows the compute and storage components of the estimated cost.
 
 > [!NOTE]
 > Price estimation takes some time after an assessment is computed. If an assessment was recently completed, allow some time for the price estimation to finish. If new databases are added after the last assessment ran, the assessment and prices won't include these databases. Select **Run Assessment** to trigger an immediate assessment, or wait for the next scheduled assessment to run.
@@ -188,7 +204,13 @@ After the new assessment is finished, it replaces the last successful assessment
 
 ## Change assessment settings
 
-You can change the assessment settings by selecting **Assessment settings**. Update the migration strategy and pricing options to suit your needs. Select **Update** to let the settings take effect. Details of the pricing options and the migration strategy appear in the [SQL Server migration assessment features](#sql-server-migration-assessment-features) section.
+Use the settings section at the top of the **Overview** tab for pricing what-if analysis.
+
+1. Select **Edit settings**.
+1. Change the migration strategy and pricing options to compare estimated monthly costs under different pricing assumptions.
+1. Select **Done** to apply the changes.
+
+For available options, see [SQL Server migration assessment features](#sql-server-migration-assessment-features).
 
 ## Disable migration assessment
 

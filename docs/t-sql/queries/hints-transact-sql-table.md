@@ -326,7 +326,7 @@ Specifies that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] not read rows th
 
 `READPAST` can only be specified in transactions operating at the `READ COMMITTED` or `REPEATABLE READ` isolation levels.
 
-When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, statements using the `READ COMMITTED` isolation level don't take locks on the rows they read. Because there are no locked rows, the `READPAST` hint doesn't skip any rows. This behavior occurs even if you use the `READCOMMITTED` table hint.
+When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, statements using the `READ COMMITTED` isolation level don't take locks on the rows they read but don't modify. Because these reads don't wait for locks that other transactions hold, the `READPAST` hint doesn't skip any rows. This behavior occurs even if you use the `READCOMMITTED` table hint.
 
 The `READPAST` hint doesn't skip locked rows because reads use the last committed version of each row instead. For example, `READPAST` doesn't skip locked rows in the tables of a `SELECT` statement, in the source of an `INSERT ... SELECT` statement, or in a table that an `UPDATE` or `DELETE` statement reads in a join or subquery. In the target table of an `UPDATE` or `DELETE` statement, `READPAST` still skips locked rows.
 

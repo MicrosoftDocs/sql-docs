@@ -333,7 +333,7 @@ When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, reads at the 
 
 Because these reads return the last committed version of each row, `READPAST` doesn't skip locked rows. For example, `READPAST` doesn't skip locked rows in the tables of a `SELECT` statement, in the source of an `INSERT ... SELECT` statement, or in a table that an `UPDATE` or `DELETE` statement reads in a join or subquery. In the target table of an `UPDATE` or `DELETE` statement, `READPAST` still skips locked rows.
 
-If you include the `READCOMMITTEDLOCK` table hint for a table, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] uses row locks even if the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, and `READPAST` skips locked rows. `READPAST` also skips locked rows when you combine it with another table hint that takes locks, such as `UPDLOCK`, `XLOCK`, or `REPEATABLEREAD`.
+If you include the `READCOMMITTEDLOCK` table hint for a table, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] reads that table by using locks even if the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, so `READPAST` skips locked rows. `READPAST` also skips locked rows when you combine it with another table hint that takes locks, such as `UPDLOCK`, `XLOCK`, or `REPEATABLEREAD`.
 
 #### READUNCOMMITTED
 

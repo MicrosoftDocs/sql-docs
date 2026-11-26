@@ -4,7 +4,7 @@ description: Table hints override the default behavior of the query optimizer du
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 11/24/2026
+ms.date: 11/25/2026
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -326,14 +326,11 @@ Specifies that the [!INCLUDE [ssDE](../../includes/ssde-md.md)] not read rows th
 
 `READPAST` can only be specified in transactions operating at the `READ COMMITTED` or `REPEATABLE READ` isolation levels.
 
-When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, reads at the `READ COMMITTED` isolation level use row versions instead of locks. A statement reads a table at the `READ COMMITTED` isolation level when either of the following conditions is true:
+When the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, statements using the `READ COMMITTED` isolation level don't take locks on the rows they read but don't modify. Because these reads don't wait for locks that other transactions hold, the `READPAST` hint doesn't skip any rows. This behavior occurs even if you use the `READCOMMITTED` table hint.
 
-- The transaction isolation level of the session is `READ COMMITTED`.
-- The query specifies the `READCOMMITTED` table hint on that table.
+The `READPAST` hint doesn't skip locked rows because reads use the last committed version of each row instead. For example, `READPAST` doesn't skip locked rows in the tables of a `SELECT` statement, in the source of an `INSERT ... SELECT` statement, or in a table that an `UPDATE` or `DELETE` statement reads in a join or subquery. In the target table of an `UPDATE` or `DELETE` statement, `READPAST` still skips locked rows.
 
-Because these reads return the last committed version of each row, `READPAST` doesn't skip locked rows. For example, `READPAST` doesn't skip locked rows in the tables of a `SELECT` statement, in the source of an `INSERT ... SELECT` statement, or in a table that an `UPDATE` or `DELETE` statement reads in a join or subquery. In the target table of an `UPDATE` or `DELETE` statement, `READPAST` still skips locked rows.
-
-To skip locked rows in a table that the statement doesn't modify, remove the `READCOMMITTED` table hint if present, and include the `READCOMMITTEDLOCK` table hint on that table. `READPAST` also skips locked rows when you combine it with another table hint that takes locks, such as `UPDLOCK`, `XLOCK`, or `REPEATABLEREAD`.
+If you include the `READCOMMITTEDLOCK` table hint for a table, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] reads that table by using locks even if the `READ_COMMITTED_SNAPSHOT` database option is set to `ON`, so `READPAST` skips locked rows. `READPAST` also skips locked rows when you combine it with another table hint that takes locks, such as `UPDLOCK`, `XLOCK`, or `REPEATABLEREAD`.
 
 #### READUNCOMMITTED
 

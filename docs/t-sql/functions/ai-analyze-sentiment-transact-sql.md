@@ -66,7 +66,7 @@ Returns **nvarchar** with one of the following values:
 AI functions return `NULL` if the AI model can't process the text. Common reasons include:
 
 - [Responsible AI](https://www.microsoft.com/ai/tools-practices) rules block inappropriate content in the input text.
-- Input text exceeds token limits. The current model supports up to 15 KB of text.
+- Input text exceeds token limits. The current model supports up to 99 KB of text.
 
 ## Examples
 

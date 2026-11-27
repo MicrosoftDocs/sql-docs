@@ -956,6 +956,7 @@ Specifies whether the [!INCLUDE [ssDE](../../includes/ssde-md.md)] tracks, which
 
 Switches a block of data in one of the following ways:
 
+- Reassigns all data of a table to an already-existing empty non=partitioned table.
 - Reassigns all data of a table as a partition to an already-existing partitioned table.
 - Switches a partition from one partitioned table to another.
 - Reassigns all data in one partition of a partitioned table to an existing non-partitioned table.

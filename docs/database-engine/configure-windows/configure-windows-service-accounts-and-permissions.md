@@ -190,7 +190,7 @@ Managed service accounts, group-managed service accounts, and virtual accounts a
   Virtual accounts are *managed local accounts* that provide the following features to simplify service administration. The virtual account is automanaged, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during SQL Server setup, a virtual account using the instance name as the service name is used, in the format `NT SERVICE\<SERVICENAME>`. Services that run as virtual accounts access network resources by using the credentials of the computer account in the format `<domain_name>\<computer_name>$`. When specifying a virtual account to start SQL Server, leave the password blank. If the virtual account fails to register the Service Principal Name (SPN), register the SPN manually. For more information on registering an SPN manually, see [Register a Service Principal Name for Kerberos connections](register-a-service-principal-name-for-kerberos-connections.md).
 
   > [!NOTE]  
-  > Virtual accounts can't be used for SQL Server failover cluster instance, because the virtual account wouldn't have the same SID on each node of the cluster.
+  > Virtual accounts can't be used for SQL Server failover cluster instance.
 
   The following table lists examples of virtual account names.
 

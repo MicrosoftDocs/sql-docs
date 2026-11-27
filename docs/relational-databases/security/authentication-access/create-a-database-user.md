@@ -4,7 +4,8 @@ description: Learn how to create the most common types of database users by usin
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 06/30/2025
+ms.date: 11/23/2026
+ai-usage: ai-assisted
 ms.service: sql
 ms.subservice: security
 ms.topic: how-to
@@ -58,6 +59,10 @@ Select **SQL user with password** or a **SQL user with login** based on a **SQL 
 
 > [!TIP]  
 > For people inside your organization, Windows authentication is a better choice, because they won't have to remember an additional password, and because Windows authentication offers additional security features such as Kerberos.
+
+#### Create a special purpose user
+
+You can't connect to a database as a special purpose user, but you can grant these users permissions, and they can own objects. There are three types: **SQL user without login**, **User mapped to a certificate**, and **User mapped to an asymmetric key**. Use a user mapped to a certificate or an asymmetric key for module signing. When you sign a module with that certificate or key, code in the module gets the permissions granted to the user. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) and [Tutorial: Signing stored procedures with a certificate](../../tutorial-signing-stored-procedures-with-a-certificate.md).
 
 ## Background
 

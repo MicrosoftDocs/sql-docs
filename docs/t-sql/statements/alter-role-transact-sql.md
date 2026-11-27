@@ -88,7 +88,7 @@ WITH NAME = *new_name*
  Changing the name of a database role doesn't change ID number, owner, or permissions of the role.  
   
 ## Permissions  
- To run this command you need one or more of these permissions or memberships:  
+ To add or remove role members, you need one or more of these permissions or memberships:  
   
 -   **ALTER** permission on the role  
 -   **ALTER ANY ROLE** permission on the database  
@@ -97,6 +97,8 @@ WITH NAME = *new_name*
 Additionally, to change the membership in a fixed database role you need:  
   
 -   Membership in the **db_owner** fixed database role  
+
+To change the name of a role, you need **ALTER ANY ROLE** permission on the database or membership in the **db_securityadmin** fixed database role.
   
 ## Limitations and restrictions  
  You can't change the name of a fixed database role.  

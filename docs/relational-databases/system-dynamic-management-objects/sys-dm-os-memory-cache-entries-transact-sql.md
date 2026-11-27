@@ -40,7 +40,7 @@ Returns information about all entries in caches in [!INCLUDE [ssNoVersion](../..
 | `is_dirty` | **bit** | Indicates whether this cache entry is marked for removal. 1 = marked for removal. Not nullable. |
 | `disk_ios_count` | **int** | Number of I/Os incurred while this entry was created. Not nullable. |
 | `context_switches_count` | **int** | Number of context switches incurred while this entry was created. Not nullable. |
-| `original_cost` | **int** | Original cost of the entry. This value is an approximation of the number of I/Os incurred, CPU instruction cost, and the amount of memory consumed by entry. The greater the cost, the lower the chance that the item will be removed from the cache. Not nullable. |
+| `original_cost` | **int** | Original cost of the entry. This value is an approximation of the number of I/Os incurred, CPU instruction cost, and the amount of memory consumed by entry. The greater the cost, the lower the chance that the item will be removed from the cache. Reusing the entry can increase this value. Not nullable. |
 | `current_cost` | **int** | Current cost of the cache entry. This value is updated during the process of entry purging. Current cost is reset to its original value on entry reuse. Not nullable. |
 | `memory_object_address` | **varbinary(8)** | Address of the associated memory object. Nullable. |
 | `pages_allocated_count` | **bigint** | **Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)].<br /><br />Number of 8-KB pages to store this cache entry. Not nullable. |

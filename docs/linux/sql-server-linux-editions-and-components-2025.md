@@ -106,7 +106,7 @@ The Developer editions continue to support only one client for [SQL Server Distr
 | --- | :---: | :---: | :---: |
 | Log shipping | Yes | Yes | No |
 | Backup compression | Yes | Yes | No |
-| Database snapshot | Yes | Yes | No |
+| Database snapshot | Yes | Yes | Yes |
 | Always On failover cluster instances <sup>1</sup> | Yes | Yes | No |
 | Always On availability groups <sup>2</sup> | Yes | No | No |
 | Basic availability groups <sup>3</sup> | No | Yes | No |

@@ -194,7 +194,6 @@ Clearing the plan cache causes a recompilation of all subsequent execution plans
 
 The plan cache is also flushed in the following scenarios:
 
-- A database has the `AUTO_CLOSE` database option set to ON. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.
 - You run several queries against a database that has default options. Then, the database is dropped.
 - A database snapshot for a source database is dropped.
 - You successfully rebuild the transaction log for a database.

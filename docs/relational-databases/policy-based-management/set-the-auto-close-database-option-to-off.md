@@ -14,7 +14,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rule checks whether the AUTO_ CLOSE option is set OFF. When AUTO_CLOSE is set ON, this option can cause performance degradation on frequently accessed databases because of the increased overhead of opening and closing the database after each connection. AUTO_CLOSE also flushes the procedure cache after each connection.
+This rule checks whether the `AUTO_CLOSE` option is set to `OFF`. If you set `AUTO_CLOSE` to `ON`, performance can suffer on frequently accessed databases. The database shuts down after the last user disconnects and reopens for the next connection. Each shutdown also removes the database's cached plans, so queries have to compile again after the database reopens.
 
 ## Best practices recommendations
 

@@ -1,6 +1,6 @@
 ---
 title: "DBCC FREESYSTEMCACHE (Transact-SQL)"
-description: "DBCC FREESYSTEMCACHE releases all unused cache entries from all caches."
+description: "DBCC FREESYSTEMCACHE releases all unused cache entries from all caches or from a specified cache."
 author: uc-msft
 ms.author: umajay
 ms.date: 12/05/2022
@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2017 || >=sql-server-linux-20
 
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
-Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache or from a specified Resource Governor pool cache.
+Releases all unused cache entries from all caches or from a specified cache. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache, from a specified cache, or from a specified Resource Governor pool cache.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -37,7 +37,7 @@ Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](
 
 ```syntaxsql
 DBCC FREESYSTEMCACHE
-    ( 'ALL' [ , pool_name ] )
+    ( { 'ALL' | 'cache_name' } [ , pool_name ] )
     [ WITH
     { [ MARK_IN_USE_FOR_REMOVAL ] , [ NO_INFOMSGS ]  }
     ]
@@ -45,11 +45,19 @@ DBCC FREESYSTEMCACHE
 
 ## Arguments
 
-#### ( 'ALL' [ , *pool_name* ] )
+#### ( { 'ALL' | '*cache_name*' } [ , *pool_name* ] )
 
 - ALL
 
   Specifies all supported caches.
+
+- *cache_name*
+
+  Specifies a single cache, such as `SQL Plans`, `Object Plans`, `TokenAndPermUserStore`, or `Temporary Tables & Table Variables`. Most, but not all, caches can be individually freed using this command. To list the cache names, run:
+
+  ```sql
+  SELECT name FROM sys.dm_os_memory_cache_counters;
+  ```
 
 - *pool_name*
 
@@ -58,8 +66,6 @@ DBCC FREESYSTEMCACHE
   ```sql
   SELECT name FROM sys.dm_resource_governor_resource_pools;
   ```
-
-Most, but not all, caches can be individually freed using this command.
 
 #### MARK_IN_USE_FOR_REMOVAL
 
@@ -71,7 +77,7 @@ Suppresses all informational messages.
 
 ## Remarks
 
-Running `DBCC FREESYSTEMCACHE` clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message:
+Running `DBCC FREESYSTEMCACHE ('ALL')` clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message:
 
 ```output
 SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.
@@ -109,6 +115,15 @@ The following example uses the MARK_IN_USE_FOR_REMOVAL clause to release entries
 
 ```sql
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;
+```
+
+### C. Release a single cache
+
+The first statement frees ad hoc and prepared plans from the `SQL Plans` cache. Stored procedure plans, in the `Object Plans` cache, are kept. The second statement frees the temporary tables cached in `tempdb`, without removing the plans that use them.
+
+```sql
+DBCC FREESYSTEMCACHE ('SQL Plans');
+DBCC FREESYSTEMCACHE ('Temporary Tables & Table Variables');
 ```
 
 ## Related content

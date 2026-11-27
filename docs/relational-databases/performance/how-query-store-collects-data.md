@@ -66,6 +66,9 @@ SQL Server Query Store works much like a flight data recorder, constantly collec
  During the read of the Query Store data, in-memory and on-disk data are unified transparently. 
  
  If a session is terminated or the client application restarts or crashes, query statistics won't be recorded. 
+
+> [!NOTE]
+> Query Store doesn't record all the executions in a database that has `AUTO_CLOSE` set to `ON`, which closes when its last connection ends. Running `sys.sp_query_store_flush_db` before each disconnection doesn't prevent the loss. Set `AUTO_CLOSE` to `OFF` on databases where Query Store is enabled.
   
  ![Query Store process plan information](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

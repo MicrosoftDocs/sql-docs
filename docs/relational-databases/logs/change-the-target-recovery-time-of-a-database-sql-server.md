@@ -50,7 +50,7 @@ Requires `ALTER` permission on the database.
 
    - ***target_recovery_time***
 
-     Beginning with [!INCLUDE [ssSQL16_md](../../includes/sssql16-md.md)], the default value is 1 minute. When greater than 0 (the default for older versions), specifies the upper-bound on the recovery time for the specified database in the event of a crash.
+     Beginning with [!INCLUDE [ssSQL16_md](../../includes/sssql16-md.md)], the default value is 1 minute. For older versions, the default is 0, which indicates that the database uses automatic checkpoints. When greater than 0, specifies the upper-bound on the recovery time for the specified database in the event of a crash.
 
    - **SECONDS**
 

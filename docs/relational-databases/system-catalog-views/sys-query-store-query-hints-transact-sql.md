@@ -46,9 +46,7 @@ Query Store hints are created by [sys.sp_query_store_set_hints](../system-stored
 
 ## Permissions
 
-[!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and previous versions require `VIEW SERVER STATE` permission on the server.
-
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions require `VIEW SERVER PERFORMANCE STATE` permission on the server.
+Requires the `VIEW DATABASE PERFORMANCE STATE` permission on the database.
 
 ## Examples
 

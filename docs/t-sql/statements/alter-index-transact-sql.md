@@ -246,7 +246,7 @@ Specifies that only one partition of an index is rebuilt or reorganized. `PARTIT
 
 - *WITH ( <single_partition_rebuild_index_option> )*
 
-  `SORT_IN_TEMPDB`, `MAXDOP`, `DATA_COMPRESSION`, and `XML_COMPRESSION` are the options that can be specified when you rebuild a single partition using the `(PARTITION = partition_number)` syntax. XML indexes can't be specified in a single partition rebuild operation.
+  `SORT_IN_TEMPDB`, `MAXDOP`, `RESUMABLE`, `MAX_DURATION`, `DATA_COMPRESSION`, `XML_COMPRESSION`, and `ONLINE`, including `WAIT_AT_LOW_PRIORITY`, are the options that can be specified when you rebuild a single partition using the `(PARTITION = partition_number)` syntax. XML indexes can't be specified in a single partition rebuild operation.
 
 #### DISABLE
 

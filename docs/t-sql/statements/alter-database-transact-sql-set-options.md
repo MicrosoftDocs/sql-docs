@@ -1588,17 +1588,17 @@ Not all database options use the `WITH <termination>` clause or can be specified
  | `<accelerated_database_recovery>` | No | Yes |
  | `<optimized_locking>` | No | Yes |
 
-The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:
+Changing the following options can remove cached plans for the affected database:
 
 :::row:::
     :::column:::
         OFFLINE
     :::column-end:::
     :::column:::
-        ONLINE
+        PAGE_VERIFY
     :::column-end:::
     :::column:::
-        MODIFY_NAME
+        MODIFY NAME
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -1624,7 +1624,7 @@ The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnover
     :::column-end:::
 :::row-end:::
 
-The plan cache is also flushed in the following scenarios.
+The following operations can also remove cached plans.
 
 - A database has the AUTO_CLOSE database option set to ON. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.
 - You run several queries against a database that has default options. Then, the database is dropped.
@@ -1633,7 +1633,7 @@ The plan cache is also flushed in the following scenarios.
 - You restore a database backup.
 - You detach a database.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
+After cached plans are removed, subsequent executions of affected queries require compilation, which can temporarily reduce query performance.
 
 ## Examples
 

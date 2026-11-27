@@ -324,6 +324,7 @@ Minimal logging for this statement has the following requirements:
 -   The target table is an empty or non-empty heap.  
 -   The target table is not used in replication.  
 -   The `TABLOCK` hint is specified for the target table.  
+-   The `SELECT` query doesn't read the target table.  
   
 Rows that are inserted into a heap as the result of an insert action in a MERGE statement may also be minimally logged.  
   

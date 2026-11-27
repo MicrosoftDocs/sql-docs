@@ -26,10 +26,10 @@ In [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)], the *availability mode* 
 
 If the primary replica is configured for *asynchronous-commit mode*, it doesn't wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*).
 
-If a given secondary replica is configured for asynchronous-commit mode, the primary replica doesn't wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*).
+If a given secondary replica is configured for asynchronous-commit mode, the primary replica doesn't wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the *session-timeout period*). When the primary and secondary replicas have different session-timeout values, the longer of the two applies.
 
 > [!NOTE]  
-> If a synchronous-commit secondary replica exceeds the primary replica's session-timeout period (default is [10 seconds](#HowSyncWorks)), the primary replica temporarily marks the synchronization state of every database on this secondary replica as `NOT SYNCHRONIZING` and the replica state as `NOT_HEALTHY`. When the secondary replica reconnects with the primary replica, they resume synchronous-commit mode.
+> If a synchronous-commit secondary replica exceeds the session-timeout period (default is [10 seconds](overview-of-always-on-availability-groups-sql-server.md#session-timeout-period)), the primary replica temporarily marks the synchronization state of every database on this secondary replica as `NOT SYNCHRONIZING` and the replica state as `NOT_HEALTHY`. When the secondary replica reconnects with the primary replica, they resume synchronous-commit mode.
 
 <a id="SupportedAvModes"></a>
 

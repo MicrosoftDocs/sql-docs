@@ -19,7 +19,7 @@ The `optimize for ad hoc workloads` option is used to improve the efficiency of 
 
 The compiled plan stub allows the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to recognize that this ad hoc batch was compiled previously, and only stores a compiled plan stub. When this batch is invoked (compiled or executed) again, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] compiles the batch, removes the compiled plan stub from the plan cache, and adds the full compiled plan to the plan cache.
 
-You can find compiled plan stubs by querying the `sys.dm_exec_cached_plans` catalog view and looking for "Compiled Plan" in the `cacheobjtype` column. The stub has a unique `plan_handle`. The compiled plan stub doesn't have an execution plan associated with it, and querying for the plan handle doesn't return a graphical or XML showplan.
+You can find compiled plan stubs by querying the `sys.dm_exec_cached_plans` catalog view and looking for "Compiled Plan Stub" in the `cacheobjtype` column. The stub has a unique `plan_handle`. The compiled plan stub doesn't have an execution plan associated with it, and querying for the plan handle doesn't return a graphical or XML showplan.
 
 [Trace flag 8032](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf8032) reverts the cache limit parameters to the [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] RTM setting, which in general allows caches to be larger. Use this setting when frequently reused cache entries don't fit into the cache and when the `optimize for ad hoc workloads` option failed to resolve the problem with plan cache.
 
@@ -30,7 +30,7 @@ You can find compiled plan stubs by querying the `sys.dm_exec_cached_plans` cata
 
 Setting the `optimize for ad hoc workloads` option to `1` affects only new plans; plans that are already in the plan cache are unaffected.
 
-To affect already cached query plans immediately, the plan cache needs to be cleared using [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), or [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] has to restart.
+To apply this setting to subsequent executions of already cached queries, run [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) in each affected database. This command clears the plan cache for the current database only.
 
 ## Recommendations
 

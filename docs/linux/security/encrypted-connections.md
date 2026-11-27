@@ -21,7 +21,7 @@ helpviewer_keywords:
 
 ## Operating system support
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the same TLS protocols on both Windows and Linux: 1.3, 1.2, 1.1, and 1.0.
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Linux supports TLS 1.2, 1.1, and 1.0. Starting with [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)], it also supports TLS 1.3.
 
 Starting in [!INCLUDE [sssql25-md](../../includes/sssql25-md.md)]:
 

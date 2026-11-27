@@ -20,6 +20,8 @@ monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-cur
 
 [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi-md](../../../includes/ssazuremi-md.md)] support Tabular Data Stream (TDS) 8.0.
 
+On Linux, TDS 8.0 requires [!INCLUDE [sssql25-md](../../../includes/sssql25-md.md)] or a later version.
+
 The [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol is an application layer protocol used by clients to connect to SQL Server. SQL Server uses Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of SQL Server and a client application.
 
 TDS is a secure protocol, but in previous versions of SQL Server, encryption could be turned off or not enabled. To meet the standards of mandatory encryption while using SQL Server, an iteration of the TDS protocol was introduced: TDS 8.0.

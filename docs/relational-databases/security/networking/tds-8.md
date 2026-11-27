@@ -104,7 +104,7 @@ To use TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `
 - [Microsoft Drivers for PHP for SQL Server](../../../connect/php/microsoft-php-driver-for-sql-server.md) version 5.10 or higher
 - [Python SQL Driver - mssql-python](../../../connect/python/mssql-python/python-sql-driver-mssql-python.md)
 
-In order to prevent a man-in-the-middle attack with `strict` connection encryption, users can't set the `TrustServerCertificate` option to `true` and allow any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate `ServerName` that should be trusted. The certificate supplied by the server would need to pass the certificate validation. For more information on certificate validation, see [Certificate requirements for SQL Server](../../../database-engine/configure-windows/certificate-requirements.md)
+In order to prevent a man-in-the-middle attack with `strict` connection encryption, the driver ignores the `TrustServerCertificate` option and always validates the certificate the server provides. To trust a certificate issued for a name other than the server name in the connection string, use the `HostNameInCertificate` option to specify that name. The certificate supplied by the server would need to pass the certificate validation. For more information on certificate validation, see [Certificate requirements for SQL Server](../../../database-engine/configure-windows/certificate-requirements.md)
 
 ## Additional changes to connection string encryption properties
 

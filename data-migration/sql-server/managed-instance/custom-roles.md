@@ -4,7 +4,7 @@ titleSuffix: Azure Database Migration Service
 description: Learn to use the custom roles for SQL Server to Azure SQL Managed Instance migrations.
 author: abhims14
 ms.author: abhishekum
-ms.date: 07/09/2026
+ms.date: 11/26/2026
 ms.service: azure-database-migration-service
 ms.topic: how-to
 ms.collection:
@@ -47,6 +47,8 @@ Use the `AssignableScopes` section of the role definition JSON string to control
                     "Microsoft.Sql/managedInstances/databases/read",
                     "Microsoft.Sql/managedInstances/databases/write",
                     "Microsoft.Sql/managedInstances/databases/delete",
+                    "Microsoft.Sql/managedInstances/administrators/read",
+                    "Microsoft.Sql/managedInstances/administrators/write",
                     "Microsoft.DataMigration/locations/operationResults/read",
                     "Microsoft.DataMigration/locations/operationStatuses/read",
                     "Microsoft.DataMigration/locations/sqlMigrationServiceOperationResults/read",
@@ -101,6 +103,8 @@ For more information, see [Create or update Azure custom roles using the Azure p
 | `Microsoft.Sql/managedInstances/databases/read` | Gets existing managed database. |
 | `Microsoft.Sql/managedInstances/databases/write` | Creates a new database or updates an existing database. |
 | `Microsoft.Sql/managedInstances/databases/delete` | Deletes an existing managed database. |
+| `Microsoft.Sql/managedInstances/administrators/read` | Gets a specific Microsoft Entra ID administrator object. |
+| `Microsoft.Sql/managedInstances/administrators/write` | Adds or updates a specific Microsoft Entra ID administrator object. |
 | `Microsoft.DataMigration/locations/operationResults/read` | Get the status of a long-running operation related to a 202 Accepted response. |
 | `Microsoft.DataMigration/locations/operationStatuses/read` | Get the status of a long-running operation related to a 202 Accepted response. |
 | `Microsoft.DataMigration/locations/sqlMigrationServiceOperationResults/read` | Retrieve Service Operation Results. |

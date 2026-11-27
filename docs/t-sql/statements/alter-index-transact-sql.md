@@ -835,7 +835,7 @@ To evaluate how changing `PAGE` and `ROW` compression affects a table, an index,
 
 ## Statistics
 
-When you rebuild an index, the statistics on the index are updated with full scan for non-partitioned indexes, and with the default sampling ratio for partitioned indexes. No other statistics on the table are updated as a part of index rebuild.
+When you rebuild an index, the statistics on the index are updated with full scan for non-partitioned indexes, and with the default sampling ratio for partitioned indexes and for resumable index rebuilds. No other statistics on the table are updated as a part of index rebuild.
 
 ## Permissions
 

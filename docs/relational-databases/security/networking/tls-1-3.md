@@ -85,7 +85,7 @@ For more information on certificate validation, see [Encryption and certificate 
 
 SQL Server 2025 introduces secure-by-default configurations for several features that now use TDS 8.0 with encryption enabled by default:
 
-- **SQL Server Agent**: Uses Microsoft OLE DB Driver for SQL Server version 19 with `Encrypt=Mandatory` and requires valid server certificates with `TrustServerCertificate` set to `No`. When the only TLS version enabled is TLS 1.3, you must configure `Encrypt=Strict` (Force Strict Encryption).
+- **SQL Server Agent**: Uses Microsoft ODBC Driver 18 for SQL Server, and sets its connection encryption from the instance configuration, as described in [SQL Server Agent connection encryption](connect-with-strict-encryption.md#sql-server-agent-connection-encryption). When the only TLS version enabled is TLS 1.3, you must configure `Encrypt=Strict` (Force Strict Encryption).
 
 - **Always On availability groups and FCIs**: Uses ODBC Driver for SQL Server version 18 with `Encrypt=Mandatory` by default. Unlike other features, Always On availability groups and FCIs allow `TrustServerCertificate=Yes` for self-signed scenarios.
 

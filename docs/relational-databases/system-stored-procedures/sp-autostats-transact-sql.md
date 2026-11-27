@@ -81,7 +81,7 @@ The result set for a table or indexed view includes statistics created for index
 
 If the specified index is disabled, or the specified table has a disabled clustered index, an error message is displayed.
 
-`AUTO_UPDATE_STATISTICS` is always OFF for memory-optimized tables.
+Starting with database compatibility level 130, automatic statistics updates are supported for memory-optimized tables when the database's `AUTO_UPDATE_STATISTICS` option is enabled. `sp_autostats` can display the setting for their statistics, but it can't change the per-statistic setting for a memory-optimized table. For more information, see [Statistics for memory-optimized tables](../in-memory-oltp/statistics-for-memory-optimized-tables.md).
 
 ## Permissions
 

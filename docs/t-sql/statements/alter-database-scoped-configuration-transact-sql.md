@@ -312,7 +312,7 @@ For database compatibility level 140 or lower versions, this database scoped con
 
 **Applies to**: [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [fabric-sqldb](../../includes/fabric-sqldb.md)], [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)] with the **SQL Server 2025** or **Always-up-to-date** [update policy](/azure/azure-sql/managed-instance/update-policy)
 
-Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled and in `READ_WRITE` mode. For more information, see [Degree of parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md). The default is `OFF`.
+Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled and in `READ_WRITE` mode. For more information, see [Degree of parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-degree-parallelism-feedback.md). DOP feedback isn't enabled by default for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 #### ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 

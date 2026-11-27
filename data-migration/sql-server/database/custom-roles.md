@@ -39,6 +39,8 @@ Use the `AssignableScopes` section of the role definition JSON string to control
                     "Microsoft.Sql/servers/databases/read",
                     "Microsoft.Sql/servers/databases/write",
                     "Microsoft.Sql/servers/databases/delete",
+                    "Microsoft.Sql/servers/administrators/read",
+                    "Microsoft.Sql/servers/administrators/write",
                     "Microsoft.DataMigration/locations/operationResults/read",
                     "Microsoft.DataMigration/locations/operationStatuses/read",
                     "Microsoft.DataMigration/locations/sqlMigrationServiceOperationResults/read",
@@ -82,6 +84,8 @@ For more information, see [Create or update Azure custom roles using the Azure p
 | `Microsoft.Sql/servers/databases/read` | Get an existing SQL database. |
 | `Microsoft.Sql/servers/databases/write` | Create a new database or update an existing database. |
 | `Microsoft.Sql/servers/databases/delete` | Delete an existing SQL database. |
+| `Microsoft.Sql/servers/administrators/read` | Gets a specific Microsoft Entra ID administrator object. |
+| `Microsoft.Sql/servers/administrators/write` | Adds or updates a specific Microsoft Entra ID administrator object. |
 | `Microsoft.DataMigration/locations/operationResults/read` | Get the results of a long-running operation related to a 202 Accepted response. |
 | `Microsoft.DataMigration/locations/operationStatuses/read` | Get the status of a long-running operation related to a 202 Accepted response. |
 | `Microsoft.DataMigration/locations/sqlMigrationServiceOperationResults/read` | Retrieve service operation results. |

@@ -388,7 +388,7 @@ Controls automatic options.
 
   The database remains open after the last user exits.
 
-  The AUTO_CLOSE option is useful for desktop databases because it allows for database files to be managed as regular files. They can be moved, copied to make backups, or even emailed to other users. The AUTO_CLOSE process is asynchronous; repeatedly opening and closing the database doesn't reduce performance.
+  The AUTO_CLOSE option is useful for desktop databases because it allows for database files to be managed as regular files. They can be moved, copied to make backups, or even emailed to other users. The AUTO_CLOSE process is asynchronous, but repeatedly closing and reopening a database can reduce performance because the database must start up again and queries may need to reload pages into the buffer pool.
 
 > [!NOTE]  
 > The AUTO_CLOSE option isn't available in a contained database or on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].

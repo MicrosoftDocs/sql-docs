@@ -998,7 +998,7 @@ Controls whether cleanup automatically activates when the total amount of data g
 
 - `AUTO`
 
-  Size-based cleanup is automatically activated when size on disk reaches 90% of **MAX_STORAGE_SIZE_MB**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **MAX_STORAGE_SIZE_MB**. This value is the default configuration value.
+  Size-based cleanup is automatically activated when size on disk reaches 90% of **MAX_STORAGE_SIZE_MB**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **MAX_STORAGE_SIZE_MB**. This value is the default configuration value. Size-based cleanup runs at most once every 15 minutes. If Query Store reaches **MAX_STORAGE_SIZE_MB** again before then, it stays in read-only mode until the next cleanup.
 
 - `OFF`
 

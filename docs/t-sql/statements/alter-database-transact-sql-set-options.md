@@ -391,7 +391,7 @@ Controls automatic options.
   The AUTO_CLOSE option is useful for desktop databases because it allows for database files to be managed as regular files. They can be moved, copied to make backups, or even emailed to other users. The AUTO_CLOSE process is asynchronous; repeatedly opening and closing the database doesn't reduce performance.
 
 > [!NOTE]  
-> The AUTO_CLOSE option isn't available in a contained database or on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+> The AUTO_CLOSE option isn't available on [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. In a contained database, AUTO_CLOSE can be set but isn't recommended. For more information, see [Security best practices with contained databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md#denial-of-service-through-auto_close).
 > You can determine this option's status by examining the `is_auto_close_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsAutoClose` property of the [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md) function.
 >  
 > When AUTO_CLOSE is set to ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view and the [DATABASEPROPERTYEX](../functions/databasepropertyex-transact-sql.md) function returns NULL because the database is unavailable to retrieve the data. To resolve this issue, run a USE statement to open the database.
